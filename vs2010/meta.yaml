@@ -1,0 +1,16 @@
+package:
+  name: vs2010
+  version: "10.00.40219.1"
+
+build:
+  skip: True  [not win]
+
+outputs:
+  - name: vs2010_{{ target_platform }}
+    script: install_activate.bat
+    run_exports:
+      - vc 10
+
+about:
+  summary: Activation and version verification of MSVC 10 (VS 2010) compiler
+  license: BSD 3-clause

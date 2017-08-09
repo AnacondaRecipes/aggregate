@@ -1,0 +1,15 @@
+package:
+  name: vs2008
+  version: "9.00.30729.1"
+
+build:
+  skip: True  [not win]
+
+outputs:
+  - name: vs2008_{{ target_platform }}
+    script: install_activate.bat
+    run_exports:
+      - vc 9
+about:
+  summary: Activation and version verification of MSVC 9 (VS 2008) compiler
+  license: BSD 3-clause
