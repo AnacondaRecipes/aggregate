@@ -1,0 +1,15 @@
+package:
+  name: vs2015
+  version: "14.0.25123"
+
+build:
+  skip: True  [not win]
+
+outputs:
+  - name: vs2015_{{ target_platform }}
+    script: install_activate.bat
+    run_exports:
+      - vc 14
+about:
+  summary: Activation and version verification of MSVC 14 (VS 2015) compiler
+  license: BSD 3-clause
