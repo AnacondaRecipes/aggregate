@@ -1,0 +1,30 @@
+c_compiler:         # [win]
+  - vs2008          # [win]
+  - vs2015          # [win]
+cxx_compiler:       # [win]
+  - vs2008          # [win]
+  - vs2015          # [win]
+hdf5:
+  - 1.8
+  - 1.10
+macos_min_version:
+  - 10.9
+numpy:
+  - 1.7             # [py<34]
+  - 1.9             # [py35]
+  - 1.11            # [py>35]
+python:
+  - 2.7
+  - 3.5
+  - 3.6
+target_platform:
+  - win-64          # [win]
+  - win-32          # [win]
+vc:
+  - 9               # [win]
+  - 14              # [win]
+zip_keys:
+  -                 # [win]
+    - vc            # [win]
+    - c_compiler    # [win]
+    - cxx_compiler  # [win]
