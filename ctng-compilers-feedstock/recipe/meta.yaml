@@ -1,0 +1,105 @@
+package:
+  name: compilers_{{ ctng_target_platform }}
+  version: {{ ctng_gcc }}
+
+source:
+  path: .
+
+build:
+  detect_binary_files_with_prefix: False
+  binary_relocation: False
+
+requirements:
+  build:
+    - crosstool-ng
+  run:
+    - {{ pin_subpackage('gcc_' ~ ctng_target_platform, exact=True) }}
+    - {{ pin_subpackage('gxx_' ~ ctng_target_platform, exact=True) }}
+    - {{ pin_subpackage('gfortran_' ~ ctng_target_platform, exact=True) }}
+
+outputs:
+  - name: gcc_{{ ctng_target_platform }}
+    script: install-gcc.sh
+    requirements:
+      run:
+        - {{ pin_subpackage('binutils_' ~ ctng_target_platform, exact=True) }}
+    run_exports:
+      - {{ pin_subpackage('libgcc_' ~ ctng_target_platform, min_pin='x.x.x.x.x.x.x.x.x', max_pin='None') }}
+    about:
+      summary: GNU C Compiler
+      home: https://gcc.gnu.org/
+      license: GPL
+
+  - name: gxx_{{ ctng_target_platform }}
+    script: install-g++.sh
+    requirements:
+      # For cpp and crt{i,n}.o
+      - {{ pin_subpackage('gcc_' ~ ctng_target_platform, exact=True) }}
+    run_exports:
+      - {{ pin_subpackage('libstdcxx_' ~ ctng_target_platform, min_pin='x.x.x.x.x.x.x.x.x', max_pin='None') }}
+    about:
+      summary: GNU C++ Compiler
+      home: https://gcc.gnu.org/
+      license: GPL
+
+  - name: gfortran_{{ ctng_target_platform }}
+    script: install-gfortran.sh
+    requirements:
+      # For cpp and crt{i,n}.o
+      - {{ pin_subpackage('gcc_' ~ ctng_target_platform, exact=True) }}
+    run_exports:
+      - {{ pin_subpackage('libgfortran_' ~ ctng_target_platform, min_pin='x.x.x.x.x.x.x.x.x', max_pin='None') }}
+    about:
+      summary: GNU Fortran Compiler
+      home: https://gcc.gnu.org/
+      license: GPL
+
+  - name: binutils_{{ ctng_target_platform }}
+    script: install-binutils.sh
+    version: {{ ctng_binutils }}
+    about:
+      summary: The GNU Binutils are a collection of binary tools.
+      home: https://www.gnu.org/software/binutils/
+      license: GPL
+
+  - name: libstdcxx_{{ ctng_target_platform }}
+    target: {{ ctng_target_platform }}
+    script: install-libstdc++.sh
+    about:
+      summary: The GNU C++ Runtime Library
+      home: https://gcc.gnu.org/
+      license: GPL3 with runtime exception
+
+  - name: libgcc_{{ ctng_target_platform }}
+    target: {{ ctng_target_platform }}
+    script: install-libgcc.sh
+    about:
+      summary: The GCC low-level runtime library
+      home: https://gcc.gnu.org/onlinedocs/gccint/Libgcc.html
+      license: GPL
+
+  - name: libgfortran_{{ ctng_target_platform }}
+    target: {{ ctng_target_platform }}
+    script: install-libgfortran.sh
+    about:
+      summary: The GNU Fortran Runtime Library
+      home: https://gcc.gnu.org/
+      license: GPL
+
+  - name: gdb_{{ ctng_target_platform }}
+    target: {{ ctng_target_platform }}
+    version: {{ ctng_gdb }}
+    script: install-gdb.sh
+    about:
+      summary: The GNU Project Debugger
+      home: https://www.gnu.org/software/gdb/
+      license: GPL
+
+  - name: duma_{{ ctng_target_platform }}
+    target: {{ ctng_target_platform }}
+    version: {{ ctng_duma }}
+    script: install-duma.sh
+    about:
+      summary: DUMA is an open-source library to detect buffer overruns and under-runs in C and C++ programs.
+      home: http://duma.sourceforge.net/
+      license: GPL
