@@ -1,0 +1,392 @@
+# llvm recipe adapted to build macOS conda compilers. build.sh spins multiple times
+# in order to bootstrap the compilers so they do not depend on system libs (libc++)
+
+{% set version="4.0.1" %}
+{% set native_compiler_subdir=build_platform %}
+{% set cctools_version = '895' %}
+{% set cctools_sha256 = 'ce66034fa35117f9ae76bbb7dd72d8068c405778fa42e877e8a13237a10c5cb7' %}
+{% set ld64_version = '274.2' %}
+{% set ld64_sha256 = '175d89c419e99d49a7a5f7e4196d3cef4c9e19cc17a425c332e86df6b516f7d7' %}
+{% set dyld_version = '433.5' %}
+{% set dyld_sha256 = '13e370ed12c137f0153a96bab12e1d46896db07f8a40bac6b0529585ceac9260' %}
+{% set tapi_version = '1.30' %}
+{% set tapi_sha256 = 'be2f3732c4ba7e9d78696fe43f0b31fa4963925ee6e4e5e11cc45603a83ff9a1' %}
+
+package:
+  name: llvm
+  version: {{ version }}
+
+source:
+  # - git_url: https://github.com/llvm/llvm
+  #   git_tag: master
+  - url: http://releases.llvm.org/{{ version }}/llvm-{{ version }}.src.tar.xz
+  - url: http://releases.llvm.org/{{ version }}/cfe-{{ version }}.src.tar.xz
+    folder: tools/clang
+    patches:
+      - 0001-clang-Allow-disabling-libXML.patch
+      - 0002-clang-add-conda-specific-env-var-CONDA_BUILD_SYSROOT.patch
+#  - url: http://releases.llvm.org/{{ version }}/lldb-{{ version }}.src.tar.xz
+#    folder: tools/lldb
+  - url: http://releases.llvm.org/{{ version }}/polly-{{ version }}.src.tar.xz
+    folder: tools/polly
+  - url: http://releases.llvm.org/{{ version }}/compiler-rt-{{ version }}.src.tar.xz
+    folder: projects/compiler-rt
+    patches:
+      - 0001-cmake-Cache-results-of-find_darwin_sdk_dir.patch
+      - 0002-compiler-rt-Determine-COMPILER_RT_SUPPORTED_ARCH-eve.patch
+  - url: http://releases.llvm.org/{{ version }}/libunwind-{{ version }}.src.tar.xz
+    folder: projects/libunwind
+  - url: http://releases.llvm.org/{{ version }}/libcxx-{{ version }}.src.tar.xz
+    folder: projects/libcxx
+  - url: http://releases.llvm.org/{{ version }}/libcxxabi-{{ version }}.src.tar.xz
+    folder: projects/libcxxabi
+  - url: http://releases.llvm.org/{{ version }}/openmp-{{ version }}.src.tar.xz
+    folder: projects/openmp
+  - url: https://opensource.apple.com/tarballs/tapi/tapi-{{ tapi_version }}.tar.gz
+    sha256: {{ tapi_sha256 }}
+    folder: projects/tapi
+    patches:
+      - 0001-tapi-llvm-4.0.1-compat-remove-TimeValue-header-include.patch 
+      - 0002-tapi-llvm-4.0.1-compat-add-missing-StringSwitch-include.patch
+      - 0003-tapi-llvm-4.0.1-compat-modernise-error-handling.patch        
+      - 0004-tapi-cross-compat.patch
+  - url: https://opensource.apple.com/tarballs/cctools/cctools-{{ cctools_version }}.tar.gz
+    sha256: {{ cctools_sha256 }}
+    folder: cctools
+    patches:
+      - 001-remove_static_part.patch
+      - 100-add_sdkroot_headers.patch
+      - 110-import_to_include.patch
+      - 120-fix_time_bugs.patch
+      - 130-add_compileguards.patch
+      - 140-remove_sysctl_osversion_detection.patch
+      - 160-map_64bit_arches.patch
+      - 170-fix_printf_format_bugs.patch
+      - 180-add_CROSS_SYSROOT.patch
+      - 190-default_arch.patch
+      - 210-dont_typedef_NxConstantString.patch
+      - 220-cross_prefixes_and_EXEEXT.patch
+      - 230-progname_fixes.patch
+      - 240-use_strerror.patch
+      - 250-dont_assume_getattrlist.patch
+      - 260-ppc64_reenable.patch
+      - 270-dont_assume_vm_sync.patch
+      - 280-missing_includes.patch
+      - 290-error_as_weak_symbol.patch
+      - 300-undef___unused_for_sysctl.patch
+      - 340-win_O_BINARY.patch
+      - 350-win_fileio_mode.patch
+      - 360-win_TMPDIR_to_TEMP.patch
+      - 370-win_execute.patch
+      - 380-win_avoid_mmap_ofile.patch
+      - 400-cctools-_WIN64-fixes.patch
+      - 410-remove_inc_arch_sparc_reg_h_PC.patch
+      - 420-autoconfiscate.patch
+  - url: https://opensource.apple.com/tarballs/ld64/ld64-{{ ld64_version }}.tar.gz
+    sha256: {{ ld64_sha256 }}
+    folder: cctools/ld64
+    patches:
+      - 100-ld64-add_sdkroot_headers.patch
+      - 150-ld64-allow_glibc_or_bsd_qsort_r.patch
+      - 180-ld64-add_CROSS_SYSROOT.patch
+      - 200-ld64-add_typename.patch
+      - 280-ld64-missing_includes.patch
+      - 320-ld64-extern_C_log2_only_if___APPLE__.patch
+      - 330-ld64-extern_C___assert_rtn.patch
+      - 340-ld64-win_O_BINARY.patch
+      - 350-ld64-win_fileio_mode.patch
+      - 390-ld64-_WIN64-fixes.patch
+      - 420-ld64-autoconfiscate.patch
+      - 500-ld64-add-fake-CrashReporterClient.h.patch
+      - 510-ld64-fix-incorrect-fname-case.patch
+      - 520-ld64-fix-usr-local-and-usr-ordering.patch
+      - 530-ld64-add-conda-specific-env-vars-to-modify-lib-search-paths.patch
+    # Because macOS 10.9's clang is too old (problems with atomics)
+  - url: http://releases.llvm.org/4.0.1/clang+llvm-4.0.1-x86_64-apple-darwin.tar.xz                       [osx]
+    folder: bootstrap                                                                                     [osx]
+  # We copy headers necessary for building cctools/ld64 from dyld and MacOSX10.9.sdk (on all OSes).
+  # older versions of these files are added by 100-add_sdkroot_headers.patch, we overwrite those...
+  - url: https://opensource.apple.com/tarballs/dyld/dyld-{{ dyld_version }}.tar.gz
+    sha256: {{ dyld_sha256 }}
+    folder: bootstrap/dyld
+  - url: https://github.com/phracker/MacOSX-SDKs/releases/download/MacOSX10.11.sdk/MacOSX10.9.sdk.tar.xz
+    folder: bootstrap/MacOSX10.9.sdk
+
+requirements:
+  build:
+    # we use selectors rather than jinja2 here because we only want to use the native
+    #   compiler to build llvm and clang (which are natively cross-compilers.)
+    # We might want to split the runtime libs below into a separate recipe,
+    #    so that this recipe can use jinja2 instead.
+    - gcc_{{ native_compiler_subdir }}  # [linux]
+    - gxx_{{ native_compiler_subdir }}  # [linux]
+    # build.sh sets HAVE_TERMINFO_*=OFF instead; could effect quality (colours etc) of console output?
+    # - ncurses                           # [linux]
+    - cmake
+    - swig
+    - autoconf
+    - automake
+    # macOS has its own uuid library. It includes uuid_string_t which llvm uses.
+    - libuuid  # [not osx]
+    # ld64 needs this.
+    - xar
+    # We only use the static library from this and only get away with that as it depends on nothing.
+    - zlib
+
+outputs:
+  - name: llvm-lto-tapi
+    script: install-llvm-lto-tapi.sh
+    requirements:
+      build:
+        - cmake
+      run:
+        # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
+        # but that is not possible when bootstrapping as it would cause a build dependency cycle.
+        - {{ pin_subpackage('libcxx_' ~ cross_target_platform, exact=True) }}        # [osx]
+
+  - name: cctools
+    version: {{ cctools_version }}
+    script: install-cctools.sh
+    requirements:
+        # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
+        # but that is not possible when bootstrapping as it would cause a build dependency cycle.
+        - {{ pin_subpackage('libcxx_' ~ cross_target_platform, exact=True) }}        # [osx]
+    about:
+      home: https://opensource.apple.com/source
+      license: Apple Public Source License 2.0
+      license_family: Other
+      license_file: cctools/APPLE_LICENSE
+      summary: Assembler, archiver, ranlib, libtool, otool et al for Darwin Mach-O files
+
+  - name: ld64
+    version: {{ ld64_version }}
+    script: install-ld64.sh
+    requirements:
+      build:
+        - {{ pin_subpackage('llvm-lto-tapi', exact=True) }}
+      run:
+        - {{ pin_subpackage('llvm-lto-tapi', exact=True) }}
+        # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
+        # but that is not possible when bootstrapping as it would cause a build dependency cycle.
+        - {{ pin_subpackage('libcxx_' ~ cross_target_platform, exact=True) }}        # [osx]
+    about:
+      home: https://opensource.apple.com/source
+      license: Apple Public Source License 2.0
+      license_family: Other
+      license_file: cctools/ld64/APPLE_LICENSE
+      summary: Darwin Mach-O linker
+
+  - name: llvm
+    script: install-llvm.sh
+    requirements:
+      build:
+        - cmake
+      run:
+        - {{ pin_subpackage('llvm-lto-tapi', exact=True) }}
+        # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
+        # but that is not possible when bootstrapping as it would cause a build dependency cycle.
+        - {{ pin_subpackage('libcxx_' ~ cross_target_platform, exact=True) }}        # [osx]
+        - {{ pin_subpackage('cctools', exact=True) }}
+        - {{ pin_subpackage('ld64', exact=True) }}
+    about:
+      home: https://llvm.org/
+      license: University of Illinois/NCSA Open Source License
+      license_family: Other
+      license_file: LICENSE.TXT
+      summary: The LLVM Compiler Infrastructure
+      description: |
+        The LLVM Project is a collection of modular and reusable compiler and toolchain
+        technologies. Despite its name, LLVM has little to do with traditional virtual
+        machines. The name "LLVM" itself is not an acronym; it is the full name of the
+        project.
+
+  - name: clang
+    script: install-clang.sh
+    requirements:
+      build:
+        - cmake
+      run:
+        # llvm pinned using min_pin, max_pin because:
+        # conda_build.exceptions.RecipeError: Mismatching hashes in recipe. Exact pins in dependencies that contribute to the hash often cause this. Can you change one or more exact pins to version bound constraints?
+        # Involved packages were:
+        # Mismatching package: llvm; consumer package: clang
+        # Mismatching package: llvm; consumer package: lldb
+        - {{ pin_subpackage('llvm', exact=True) }}
+        - {{ pin_subpackage('compiler-rt_' ~ cross_target_platform, exact=True) }}
+        # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
+        # but that is not possible when bootstrapping as it would cause a build dependency cycle.
+        - {{ pin_subpackage('libcxx_' ~ cross_target_platform, exact=True) }}        # [osx]
+    # We do *not* list compiler_rt as a run_export as it is statically linked into binaries.
+    # The sanitizers *are* dylibs (on macOS <= 10.10 use DYLD_INSERT_LIBRARIES to use them).
+    about:
+      home: http://clang.llvm.org/
+      license: University of Illinois/NCSA Open Source License
+      license_family: Other
+      license_file: tools/clang/LICENSE.TXT
+      summary: A C language family frontend for LLVM
+      description: |
+        The goal of the Clang project is to create a new C based language front-end:
+        C, C++, Objective C/C++, OpenCL C and others for the LLVM compiler
+
+# Disabled because:
+# On MacOSX lldb needs to be code signed. See:
+# https://llvm.org/svn/llvm-project/lldb/trunk/docs/code-signing.txt
+# https://github.com/Homebrew/legacy-homebrew/commit/8da6986730e06b51a9686afa2ad9eeb241f8708a
+#  - name: lldb
+#    script: install-lldb.sh
+#    requirements:
+#      build:
+#        - cmake
+#      run:
+#        # llvm pinned using min_pin, max_pin because:
+#        # conda_build.exceptions.RecipeError: Mismatching hashes in recipe. Exact pins in dependencies that contribute to the hash often cause this. Can you change one or more exact pins to version bound constraints?
+#        # Involved packages were:
+#        # Mismatching package: llvm; consumer package: clang
+#        # Mismatching package: llvm; consumer package: lldb
+#        - {{ pin_subpackage('llvm', exact=True) }}
+#        # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
+#        # but that is not possible when bootstrapping as it would cause a build dependency cycle.
+#        - {{ pin_subpackage('libcxx_' ~ cross_target_platform, exact=True) }}        # [osx]
+#    about:
+#      home: http://lldb.llvm.org/
+#      license: University of Illinois/NCSA Open Source License
+#      license_family: Other
+#      license_file: tools/lldb/LICENSE.TXT
+#      summary: The LLDB Debugger
+#      description: |
+#        LLDB is a next generation, high-performance debugger. It is built as a set
+#        of reusable components which highly leverage existing libraries in the larger
+#        LLVM Project, such as the Clang expression parser and LLVM disassembler
+
+  - name: clangxx
+    script: install-clangxx.sh
+    requirements:
+      # Need clang present during build otherwise we have a dangling symlink
+      build:
+        - {{ pin_subpackage('clang', exact=True) }}
+      run:
+        - {{ pin_subpackage('clang', exact=True) }}
+    run_exports:
+      - {{ pin_subpackage('libcxx_' ~ cross_target_platform, min_pin='x.x.x.x.x.x.x.x.x', max_pin='None') }}
+    about:
+      home: http://clang.llvm.org/
+      license: University of Illinois/NCSA Open Source License
+      license_family: Other
+      license_file: tools/clang/LICENSE.TXT
+      summary: A C language family frontend for LLVM
+      description: |
+        The goal of the Clang project is to create a new C based language front-end:
+        C, C++, Objective C/C++, OpenCL C and others for the LLVM compiler
+
+  - name: polly
+    script: install-polly.sh
+    requirements:
+      build:
+        - cmake
+      run:
+        - {{ pin_subpackage('llvm', exact=True) }}
+        # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
+        # but that is not possible when bootstrapping as it would cause a build dependency cycle.
+        - {{ pin_subpackage('libcxx_' ~ cross_target_platform, exact=True) }}        # [osx]
+    about:
+      home: http://polly.llvm.org/
+      license: University of Illinois/NCSA Open Source License
+      license_family: Other
+      license_file: tools/polly/LICENSE.txt
+      summary: LLVM Framework for High-Level Loop and Data-Locality Optimizations
+      description: |
+        Polly is a high-level loop and data-locality optimizer and optimization
+        infrastructure for LLVM. It uses an abstract mathematical representation
+        based on integer polyhedra to analyze and optimize the memory access
+        pattern of a program
+
+  - name: libcxx_{{ cross_target_platform }}
+    script: install-libcxx.sh
+    target: {{ cross_target_platform }}
+    requirements:
+      build:
+        - cmake
+      run:
+        - {{ pin_subpackage('libcxxabi_' ~ cross_target_platform, exact=True) }}
+    about:
+      home: http://libcxx.llvm.org/
+      license: MIT license or UIUC License
+      license_family: Other
+      license_file: projects/libcxx/LICENSE.TXT
+      summary: C++ Standard Library
+      description: |
+        libc++ is a new implementation of the C++ standard library, targeting
+        C++11
+
+  - name: libcxxabi_{{ cross_target_platform }}
+    script: install-libcxxabi.sh
+    target: {{ cross_target_platform }}
+    requirements:
+      build:
+        - cmake
+    about:
+      home: http://libcxxabi.llvm.org/
+      license: MIT license or UIUC License
+      license_family: Other
+      license_file: projects/libcxxabi/LICENSE.TXT
+      summary: C++ Standard Library Support
+      description: |
+        libc++abi is a new implementation of low level support for a standard
+        C++ library
+
+  - name: libunwind_{{ cross_target_platform }}
+    script: install-libunwind.sh
+    target: {{ cross_target_platform }}
+    requirements:
+      build:
+        - cmake
+      run:
+        # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
+        # but that is not possible when bootstrapping as it would cause a build dependency cycle.
+        - {{ pin_subpackage('libcxx_' ~ cross_target_platform, exact=True) }}        # [osx]
+    about:
+      home: http://libcxxabi.llvm.org/
+      license: MIT license or UIUC License
+      license_family: Other
+      license_file: projects/libcxxabi/LICENSE.TXT
+      summary: C++ Standard Library Support
+      description: |
+        libc++abi is a new implementation of low level support for a standard
+        C++ library
+
+  - name: openmp_{{ cross_target_platform }}
+    script: install-openmp.sh
+    target: {{ cross_target_platform }}
+    requirements:
+      build:
+        - cmake
+    about:
+      home: http://openmp.llvm.org/
+      license: MIT license or UIUC License
+      license_family: Other
+      license_file: projects/openmp/LICENSE.txt
+      summary: Support for the OpenMP language
+      description: |
+        The OpenMP subproject of LLVM contains the components required to build an
+        executable OpenMP program that are outside the compiler itself.
+
+  - name: compiler-rt_{{ cross_target_platform }}
+    script: install-compiler-rt.sh
+    target: {{ cross_target_platform }}
+    requirements:
+      build:
+        - cmake
+    about:
+      home: http://compiler-rt.llvm.org/
+      license: MIT license or UIUC License
+      license_family: Other
+      license_file: projects/compiler-rt/LICENSE.TXT
+      summary: compiler-rt runtime libraries
+      description: |
+        builtins - low-level target-specific hooks required by code generation and other
+          runtime components
+        sanitizer runtimes - AddressSanitizer, ThreadSanitizer, UndefinedBehaviorSanitizer,
+          MemorySanitizer, LeakSanitizer, DataFlowSanitizer
+        profile - library which is used to collect coverage information
+        BlocksRuntime - target-independent implementation of Apple "Blocks" runtime
+          interfaces
