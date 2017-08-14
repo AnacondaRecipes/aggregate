@@ -1,687 +1,687 @@
 [submodule "imagesize-feedstock"]
-	url = https://github.com/AnacondaRecipes/imagesize-feedstock.git
+	url = ../imagesize-feedstock.git
 	path = imagesize-feedstock
 [submodule "m4-feedstock"]
-	url = https://github.com/AnacondaRecipes/m4-feedstock.git
+	url = ../m4-feedstock.git
 	path = m4-feedstock
 [submodule "perl-feedstock"]
-	url = https://github.com/AnacondaRecipes/perl-feedstock.git
+	url = ../perl-feedstock.git
 	path = perl-feedstock
 [submodule "libtool-feedstock"]
-	url = https://github.com/AnacondaRecipes/libtool-feedstock.git
+	url = ../libtool-feedstock.git
 	path = libtool-feedstock
 [submodule "autoconf-feedstock"]
-	url = https://github.com/AnacondaRecipes/autoconf-feedstock.git
+	url = ../autoconf-feedstock.git
 	path = autoconf-feedstock
 [submodule "automake-feedstock"]
-	url = https://github.com/AnacondaRecipes/automake-feedstock.git
+	url = ../automake-feedstock.git
 	path = automake-feedstock
 [submodule "pkg-config-feedstock"]
-	url = https://github.com/AnacondaRecipes/pkg-config-feedstock.git
+	url = ../pkg-config-feedstock.git
 	path = pkg-config-feedstock
 [submodule "zlib-feedstock"]
-	url = https://github.com/AnacondaRecipes/zlib-feedstock.git
+	url = ../zlib-feedstock.git
 	path = zlib-feedstock
 [submodule "curl-feedstock"]
-	url = https://github.com/AnacondaRecipes/curl-feedstock.git
+	url = ../curl-feedstock.git
 	path = curl-feedstock
 [submodule "expat-feedstock"]
-	url = https://github.com/AnacondaRecipes/expat-feedstock.git
+	url = ../expat-feedstock.git
 	path = expat-feedstock
 [submodule "libiconv-feedstock"]
-	url = https://github.com/AnacondaRecipes/libiconv-feedstock.git
+	url = ../libiconv-feedstock.git
 	path = libiconv-feedstock
 [submodule "xz-feedstock"]
-	url = https://github.com/AnacondaRecipes/xz-feedstock.git
+	url = ../xz-feedstock.git
 	path = xz-feedstock
 [submodule "bzip2-feedstock"]
-	url = https://github.com/AnacondaRecipes/bzip2-feedstock.git
+	url = ../bzip2-feedstock.git
 	path = bzip2-feedstock
 [submodule "libffi-feedstock"]
-	url = https://github.com/AnacondaRecipes/libffi-feedstock.git
+	url = ../libffi-feedstock.git
 	path = libffi-feedstock
 [submodule "ca-certificates-feedstock"]
-	url = https://github.com/AnacondaRecipes/ca-certificates-feedstock.git
+	url = ../ca-certificates-feedstock.git
 	path = ca-certificates-feedstock
 [submodule "openssl-feedstock"]
-	url = https://github.com/AnacondaRecipes/openssl-feedstock.git
+	url = ../openssl-feedstock.git
 	path = openssl-feedstock
 [submodule "git-feedstock"]
-	url = https://github.com/AnacondaRecipes/git-feedstock.git
+	url = ../git-feedstock.git
 	path = git-feedstock
 [submodule "ncurses-feedstock"]
-	url = https://github.com/AnacondaRecipes/ncurses-feedstock.git
+	url = ../ncurses-feedstock.git
 	path = ncurses-feedstock
 [submodule "readline-feedstock"]
-	url = https://github.com/AnacondaRecipes/readline-feedstock.git
+	url = ../readline-feedstock.git
 	path = readline-feedstock
 [submodule "sqlite-feedstock"]
-	url = https://github.com/AnacondaRecipes/sqlite-feedstock.git
+	url = ../sqlite-feedstock.git
 	path = sqlite-feedstock
 [submodule "yaml-feedstock"]
-	url = https://github.com/AnacondaRecipes/yaml-feedstock.git
+	url = ../yaml-feedstock.git
 	path = yaml-feedstock
 [submodule "python-feedstock"]
-	url = https://github.com/AnacondaRecipes/python-feedstock.git
+	url = ../python-feedstock.git
 	path = python-feedstock
 [submodule "certifi-feedstock"]
-	url = https://github.com/AnacondaRecipes/certifi-feedstock.git
+	url = ../certifi-feedstock.git
 	path = certifi-feedstock
 [submodule "setuptools-feedstock"]
-	url = https://github.com/AnacondaRecipes/setuptools-feedstock.git
+	url = ../setuptools-feedstock.git
 	path = setuptools-feedstock
 [submodule "pyparsing-feedstock"]
-	url = https://github.com/AnacondaRecipes/pyparsing-feedstock.git
+	url = ../pyparsing-feedstock.git
 	path = pyparsing-feedstock
 [submodule "six-feedstock"]
-	url = https://github.com/AnacondaRecipes/six-feedstock.git
+	url = ../six-feedstock.git
 	path = six-feedstock
 [submodule "packaging-feedstock"]
-	url = https://github.com/AnacondaRecipes/packaging-feedstock.git
+	url = ../packaging-feedstock.git
 	path = packaging-feedstock
 [submodule "idna-feedstock"]
-	url = https://github.com/AnacondaRecipes/idna-feedstock.git
+	url = ../idna-feedstock.git
 	path = idna-feedstock
 [submodule "asn1crypto-feedstock"]
-	url = https://github.com/AnacondaRecipes/asn1crypto-feedstock.git
+	url = ../asn1crypto-feedstock.git
 	path = asn1crypto-feedstock
 [submodule "pycparser-feedstock"]
-	url = https://github.com/AnacondaRecipes/pycparser-feedstock.git
+	url = ../pycparser-feedstock.git
 	path = pycparser-feedstock
 [submodule "cffi-feedstock"]
-	url = https://github.com/AnacondaRecipes/cffi-feedstock.git
+	url = ../cffi-feedstock.git
 	path = cffi-feedstock
 [submodule "cython-feedstock"]
-	url = https://github.com/AnacondaRecipes/cython-feedstock.git
+	url = ../cython-feedstock.git
 	path = cython-feedstock
 [submodule "py-feedstock"]
-	url = https://github.com/AnacondaRecipes/py-feedstock.git
+	url = ../py-feedstock.git
 	path = py-feedstock
 [submodule "pytest-feedstock"]
-	url = https://github.com/AnacondaRecipes/pytest-feedstock.git
+	url = ../pytest-feedstock.git
 	path = pytest-feedstock
 [submodule "coverage-feedstock"]
-	url = https://github.com/AnacondaRecipes/coverage-feedstock.git
+	url = ../coverage-feedstock.git
 	path = coverage-feedstock
 [submodule "pytest-cov-feedstock"]
-	url = https://github.com/AnacondaRecipes/pytest-cov-feedstock.git
+	url = ../pytest-cov-feedstock.git
 	path = pytest-cov-feedstock
 [submodule "cryptography-feedstock"]
-	url = https://github.com/AnacondaRecipes/cryptography-feedstock.git
+	url = ../cryptography-feedstock.git
 	path = cryptography-feedstock
 [submodule "ruamel_yaml-feedstock"]
-	url = https://github.com/AnacondaRecipes/ruamel_yaml-feedstock.git
+	url = ../ruamel_yaml-feedstock.git
 	path = ruamel_yaml-feedstock
 [submodule "vcversioner-feedstock"]
-	url = https://github.com/AnacondaRecipes/vcversioner-feedstock.git
+	url = ../vcversioner-feedstock.git
 	path = vcversioner-feedstock
 [submodule "jsonschema-feedstock"]
-	url = https://github.com/AnacondaRecipes/jsonschema-feedstock.git
+	url = ../jsonschema-feedstock.git
 	path = jsonschema-feedstock
 [submodule "wheel-feedstock"]
-	url = https://github.com/AnacondaRecipes/wheel-feedstock.git
+	url = ../wheel-feedstock.git
 	path = wheel-feedstock
 [submodule "pip-feedstock"]
-	url = https://github.com/AnacondaRecipes/pip-feedstock.git
+	url = ../pip-feedstock.git
 	path = pip-feedstock
 [submodule "chardet-feedstock"]
-	url = https://github.com/AnacondaRecipes/chardet-feedstock.git
+	url = ../chardet-feedstock.git
 	path = chardet-feedstock
 [submodule "pysocks-feedstock"]
-	url = https://github.com/AnacondaRecipes/pysocks-feedstock.git
+	url = ../pysocks-feedstock.git
 	path = pysocks-feedstock
 [submodule "urllib3-feedstock"]
-	url = https://github.com/AnacondaRecipes/urllib3-feedstock.git
+	url = ../urllib3-feedstock.git
 	path = urllib3-feedstock
 [submodule "requests-feedstock"]
-	url = https://github.com/AnacondaRecipes/requests-feedstock.git
+	url = ../requests-feedstock.git
 	path = requests-feedstock
 [submodule "pyopenssl-feedstock"]
-	url = https://github.com/AnacondaRecipes/pyopenssl-feedstock.git
+	url = ../pyopenssl-feedstock.git
 	path = pyopenssl-feedstock
 [submodule "conda-env-feedstock"]
-	url = https://github.com/AnacondaRecipes/conda-env-feedstock.git
+	url = ../conda-env-feedstock.git
 	path = conda-env-feedstock
 [submodule "pycosat-feedstock"]
-	url = https://github.com/AnacondaRecipes/pycosat-feedstock.git
+	url = ../pycosat-feedstock.git
 	path = pycosat-feedstock
 [submodule "conda-feedstock"]
-	url = https://github.com/AnacondaRecipes/conda-feedstock.git
+	url = ../conda-feedstock.git
 	path = conda-feedstock
 [submodule "alabaster-feedstock"]
-	url = https://github.com/AnacondaRecipes/alabaster-feedstock.git
+	url = ../alabaster-feedstock.git
 	path = alabaster-feedstock
 [submodule "appnope-feedstock"]
-	url = https://github.com/AnacondaRecipes/appnope-feedstock.git
+	url = ../appnope-feedstock.git
 	path = appnope-feedstock
 [submodule "astroid-feedstock"]
-	url = https://github.com/AnacondaRecipes/astroid-feedstock.git
+	url = ../astroid-feedstock.git
 	path = astroid-feedstock
 [submodule "astropy-feedstock"]
-	url = https://github.com/AnacondaRecipes/astropy-feedstock.git
+	url = ../astropy-feedstock.git
 	path = astropy-feedstock
 [submodule "babel-feedstock"]
-	url = https://github.com/AnacondaRecipes/babel-feedstock.git
+	url = ../babel-feedstock.git
 	path = babel-feedstock
 [submodule "beautifulsoup4-feedstock"]
-	url = https://github.com/AnacondaRecipes/beautifulsoup4-feedstock.git
+	url = ../beautifulsoup4-feedstock.git
 	path = beautifulsoup4-feedstock
 [submodule "bkcharts-feedstock"]
-	url = https://github.com/AnacondaRecipes/bkcharts-feedstock.git
+	url = ../bkcharts-feedstock.git
 	path = bkcharts-feedstock
 [submodule "bleach-feedstock"]
-	url = https://github.com/AnacondaRecipes/bleach-feedstock.git
+	url = ../bleach-feedstock.git
 	path = bleach-feedstock
 [submodule "bottleneck-feedstock"]
-	url = https://github.com/AnacondaRecipes/bottleneck-feedstock.git
+	url = ../bottleneck-feedstock.git
 	path = bottleneck-feedstock
 [submodule "cairo-feedstock"]
-	url = https://github.com/AnacondaRecipes/cairo-feedstock.git
+	url = ../cairo-feedstock.git
 	path = cairo-feedstock
 [submodule "cloudpickle-feedstock"]
-	url = https://github.com/AnacondaRecipes/cloudpickle-feedstock.git
+	url = ../cloudpickle-feedstock.git
 	path = cloudpickle-feedstock
 [submodule "clyent-feedstock"]
-	url = https://github.com/AnacondaRecipes/clyent-feedstock.git
+	url = ../clyent-feedstock.git
 	path = clyent-feedstock
 [submodule "colorama-feedstock"]
-	url = https://github.com/AnacondaRecipes/colorama-feedstock.git
+	url = ../colorama-feedstock.git
 	path = colorama-feedstock
 [submodule "configparser-feedstock"]
-	url = https://github.com/AnacondaRecipes/configparser-feedstock.git
+	url = ../configparser-feedstock.git
 	path = configparser-feedstock
 [submodule "contextlib2-feedstock"]
-	url = https://github.com/AnacondaRecipes/contextlib2-feedstock.git
+	url = ../contextlib2-feedstock.git
 	path = contextlib2-feedstock
 [submodule "cycler-feedstock"]
-	url = https://github.com/AnacondaRecipes/cycler-feedstock.git
+	url = ../cycler-feedstock.git
 	path = cycler-feedstock
 [submodule "cytoolz-feedstock"]
-	url = https://github.com/AnacondaRecipes/cytoolz-feedstock.git
+	url = ../cytoolz-feedstock.git
 	path = cytoolz-feedstock
 [submodule "dask-feedstock"]
-	url = https://github.com/AnacondaRecipes/dask-feedstock.git
+	url = ../dask-feedstock.git
 	path = dask-feedstock
 [submodule "dbus-feedstock"]
-	url = https://github.com/AnacondaRecipes/dbus-feedstock.git
+	url = ../dbus-feedstock.git
 	path = dbus-feedstock
 [submodule "distributed-feedstock"]
-	url = https://github.com/AnacondaRecipes/distributed-feedstock.git
+	url = ../distributed-feedstock.git
 	path = distributed-feedstock
 [submodule "tk-feedstock"]
-	url = https://github.com/AnacondaRecipes/tk-feedstock.git
+	url = ../tk-feedstock.git
 	path = tk-feedstock
 [submodule "docutils-feedstock"]
-	url = https://github.com/AnacondaRecipes/docutils-feedstock.git
+	url = ../docutils-feedstock.git
 	path = docutils-feedstock
 [submodule "entrypoints-feedstock"]
-	url = https://github.com/AnacondaRecipes/entrypoints-feedstock.git
+	url = ../entrypoints-feedstock.git
 	path = entrypoints-feedstock
 [submodule "click-feedstock"]
-	url = https://github.com/AnacondaRecipes/click-feedstock.git
+	url = ../click-feedstock.git
 	path = click-feedstock
 [submodule "et_xmlfile-feedstock"]
-	url = https://github.com/AnacondaRecipes/et_xmlfile-feedstock.git
+	url = ../et_xmlfile-feedstock.git
 	path = et_xmlfile-feedstock
 [submodule "fastcache-feedstock"]
-	url = https://github.com/AnacondaRecipes/fastcache-feedstock.git
+	url = ../fastcache-feedstock.git
 	path = fastcache-feedstock
 [submodule "flask-feedstock"]
-	url = https://github.com/AnacondaRecipes/flask-feedstock.git
+	url = ../flask-feedstock.git
 	path = flask-feedstock
 [submodule "fontconfig-feedstock"]
-	url = https://github.com/AnacondaRecipes/fontconfig-feedstock.git
+	url = ../fontconfig-feedstock.git
 	path = fontconfig-feedstock
 [submodule "jinja2-feedstock"]
-	url = https://github.com/AnacondaRecipes/jinja2-feedstock.git
+	url = ../jinja2-feedstock.git
 	path = jinja2-feedstock
 [submodule "jupyter-feedstock"]
-	url = https://github.com/AnacondaRecipes/jupyter-feedstock.git
+	url = ../jupyter-feedstock.git
 	path = jupyter-feedstock
 [submodule "libsodium-feedstock"]
-	url = https://github.com/AnacondaRecipes/libsodium-feedstock.git
+	url = ../libsodium-feedstock.git
 	path = libsodium-feedstock
 [submodule "libtiff-feedstock"]
-	url = https://github.com/AnacondaRecipes/libtiff-feedstock.git
+	url = ../libtiff-feedstock.git
 	path = libtiff-feedstock
 [submodule "lxml-feedstock"]
-	url = https://github.com/AnacondaRecipes/lxml-feedstock.git
+	url = ../lxml-feedstock.git
 	path = lxml-feedstock
 [submodule "zict-feedstock"]
-	url = https://github.com/AnacondaRecipes/zict-feedstock.git
+	url = ../zict-feedstock.git
 	path = zict-feedstock
 [submodule "wrapt-feedstock"]
-	url = https://github.com/AnacondaRecipes/wrapt-feedstock.git
+	url = ../wrapt-feedstock.git
 	path = wrapt-feedstock
 [submodule "werkzeug-feedstock"]
-	url = https://github.com/AnacondaRecipes/werkzeug-feedstock.git
+	url = ../werkzeug-feedstock.git
 	path = werkzeug-feedstock
 [submodule "wcwidth-feedstock"]
-	url = https://github.com/AnacondaRecipes/wcwidth-feedstock.git
+	url = ../wcwidth-feedstock.git
 	path = wcwidth-feedstock
 [submodule "typing-feedstock"]
-	url = https://github.com/AnacondaRecipes/typing-feedstock.git
+	url = ../typing-feedstock.git
 	path = typing-feedstock
 [submodule "tornado-feedstock"]
-	url = https://github.com/AnacondaRecipes/tornado-feedstock.git
+	url = ../tornado-feedstock.git
 	path = tornado-feedstock
 [submodule "toolz-feedstock"]
-	url = https://github.com/AnacondaRecipes/toolz-feedstock.git
+	url = ../toolz-feedstock.git
 	path = toolz-feedstock
 [submodule "terminado-feedstock"]
-	url = https://github.com/AnacondaRecipes/terminado-feedstock.git
+	url = ../terminado-feedstock.git
 	path = terminado-feedstock
 [submodule "tblib-feedstock"]
-	url = https://github.com/AnacondaRecipes/tblib-feedstock.git
+	url = ../tblib-feedstock.git
 	path = tblib-feedstock
 [submodule "isort-feedstock"]
-	url = https://github.com/AnacondaRecipes/isort-feedstock.git
+	url = ../isort-feedstock.git
 	path = isort-feedstock
 [submodule "zeromq-feedstock"]
-	url = https://github.com/AnacondaRecipes/zeromq-feedstock.git
+	url = ../zeromq-feedstock.git
 	path = zeromq-feedstock
 [submodule "xlsxwriter-feedstock"]
-	url = https://github.com/AnacondaRecipes/xlsxwriter-feedstock.git
+	url = ../xlsxwriter-feedstock.git
 	path = xlsxwriter-feedstock
 [submodule "xlrd-feedstock"]
-	url = https://github.com/AnacondaRecipes/xlrd-feedstock.git
+	url = ../xlrd-feedstock.git
 	path = xlrd-feedstock
 [submodule "widgetsnbextension-feedstock"]
-	url = https://github.com/AnacondaRecipes/widgetsnbextension-feedstock.git
+	url = ../widgetsnbextension-feedstock.git
 	path = widgetsnbextension-feedstock
 [submodule "unixodbc-feedstock"]
-	url = https://github.com/AnacondaRecipes/unixodbc-feedstock.git
+	url = ../unixodbc-feedstock.git
 	path = unixodbc-feedstock
 [submodule "testpath-feedstock"]
-	url = https://github.com/AnacondaRecipes/testpath-feedstock.git
+	url = ../testpath-feedstock.git
 	path = testpath-feedstock
 [submodule "locket-feedstock"]
-	url = https://github.com/AnacondaRecipes/locket-feedstock.git
+	url = ../locket-feedstock.git
 	path = locket-feedstock
 [submodule "libxcb-feedstock"]
-	url = https://github.com/AnacondaRecipes/libxcb-feedstock.git
+	url = ../libxcb-feedstock.git
 	path = libxcb-feedstock
 [submodule "libxslt-feedstock"]
-	url = https://github.com/AnacondaRecipes/libxslt-feedstock.git
+	url = ../libxslt-feedstock.git
 	path = libxslt-feedstock
 [submodule "libpng-feedstock"]
-	url = https://github.com/AnacondaRecipes/libpng-feedstock.git
+	url = ../libpng-feedstock.git
 	path = libpng-feedstock
 [submodule "heapdict-feedstock"]
-	url = https://github.com/AnacondaRecipes/heapdict-feedstock.git
+	url = ../heapdict-feedstock.git
 	path = heapdict-feedstock
 [submodule "html5lib-feedstock"]
-	url = https://github.com/AnacondaRecipes/html5lib-feedstock.git
+	url = ../html5lib-feedstock.git
 	path = html5lib-feedstock
 [submodule "greenlet-feedstock"]
-	url = https://github.com/AnacondaRecipes/greenlet-feedstock.git
+	url = ../greenlet-feedstock.git
 	path = greenlet-feedstock
 [submodule "futures-feedstock"]
-	url = https://github.com/AnacondaRecipes/futures-feedstock.git
+	url = ../futures-feedstock.git
 	path = futures-feedstock
 [submodule "functools32-feedstock"]
-	url = https://github.com/AnacondaRecipes/functools32-feedstock.git
+	url = ../functools32-feedstock.git
 	path = functools32-feedstock
 [submodule "bokeh-feedstock"]
-	url = https://github.com/AnacondaRecipes/bokeh-feedstock.git
+	url = ../bokeh-feedstock.git
 	path = bokeh-feedstock
 [submodule "freetype-feedstock"]
-	url = https://github.com/AnacondaRecipes/freetype-feedstock.git
+	url = ../freetype-feedstock.git
 	path = freetype-feedstock
 [submodule "gst-plugins-base-feedstock"]
-	url = https://github.com/AnacondaRecipes/gst-plugins-base-feedstock.git
+	url = ../gst-plugins-base-feedstock.git
 	path = gst-plugins-base-feedstock
 [submodule "h5py-feedstock"]
-	url = https://github.com/AnacondaRecipes/h5py-feedstock.git
+	url = ../h5py-feedstock.git
 	path = h5py-feedstock
 [submodule "ipykernel-feedstock"]
-	url = https://github.com/AnacondaRecipes/ipykernel-feedstock.git
+	url = ../ipykernel-feedstock.git
 	path = ipykernel-feedstock
 [submodule "itsdangerous-feedstock"]
-	url = https://github.com/AnacondaRecipes/itsdangerous-feedstock.git
+	url = ../itsdangerous-feedstock.git
 	path = itsdangerous-feedstock
 [submodule "jdcal-feedstock"]
-	url = https://github.com/AnacondaRecipes/jdcal-feedstock.git
+	url = ../jdcal-feedstock.git
 	path = jdcal-feedstock
 [submodule "lazy-object-proxy-feedstock"]
-	url = https://github.com/AnacondaRecipes/lazy-object-proxy-feedstock.git
+	url = ../lazy-object-proxy-feedstock.git
 	path = lazy-object-proxy-feedstock
 [submodule "markupsafe-feedstock"]
-	url = https://github.com/AnacondaRecipes/markupsafe-feedstock.git
+	url = ../markupsafe-feedstock.git
 	path = markupsafe-feedstock
 [submodule "mistune-feedstock"]
-	url = https://github.com/AnacondaRecipes/mistune-feedstock.git
+	url = ../mistune-feedstock.git
 	path = mistune-feedstock
 [submodule "mpmath-feedstock"]
-	url = https://github.com/AnacondaRecipes/mpmath-feedstock.git
+	url = ../mpmath-feedstock.git
 	path = mpmath-feedstock
 [submodule "msgpack-python-feedstock"]
-	url = https://github.com/AnacondaRecipes/msgpack-python-feedstock.git
+	url = ../msgpack-python-feedstock.git
 	path = msgpack-python-feedstock
 [submodule "multipledispatch-feedstock"]
-	url = https://github.com/AnacondaRecipes/multipledispatch-feedstock.git
+	url = ../multipledispatch-feedstock.git
 	path = multipledispatch-feedstock
 [submodule "networkx-feedstock"]
-	url = https://github.com/AnacondaRecipes/networkx-feedstock.git
+	url = ../networkx-feedstock.git
 	path = networkx-feedstock
 [submodule "nltk-feedstock"]
-	url = https://github.com/AnacondaRecipes/nltk-feedstock.git
+	url = ../nltk-feedstock.git
 	path = nltk-feedstock
 [submodule "nose-feedstock"]
-	url = https://github.com/AnacondaRecipes/nose-feedstock.git
+	url = ../nose-feedstock.git
 	path = nose-feedstock
 [submodule "numpydoc-feedstock"]
-	url = https://github.com/AnacondaRecipes/numpydoc-feedstock.git
+	url = ../numpydoc-feedstock.git
 	path = numpydoc-feedstock
 [submodule "olefile-feedstock"]
-	url = https://github.com/AnacondaRecipes/olefile-feedstock.git
+	url = ../olefile-feedstock.git
 	path = olefile-feedstock
 [submodule "openpyxl-feedstock"]
-	url = https://github.com/AnacondaRecipes/openpyxl-feedstock.git
+	url = ../openpyxl-feedstock.git
 	path = openpyxl-feedstock
 [submodule "partd-feedstock"]
-	url = https://github.com/AnacondaRecipes/partd-feedstock.git
+	url = ../partd-feedstock.git
 	path = partd-feedstock
 [submodule "path.py-feedstock"]
-	url = https://github.com/AnacondaRecipes/path.py-feedstock.git
+	url = ../path.py-feedstock.git
 	path = path.py-feedstock
 [submodule "patsy-feedstock"]
-	url = https://github.com/AnacondaRecipes/patsy-feedstock.git
+	url = ../patsy-feedstock.git
 	path = patsy-feedstock
 [submodule "pep8-feedstock"]
-	url = https://github.com/AnacondaRecipes/pep8-feedstock.git
+	url = ../pep8-feedstock.git
 	path = pep8-feedstock
 [submodule "pexpect-feedstock"]
-	url = https://github.com/AnacondaRecipes/pexpect-feedstock.git
+	url = ../pexpect-feedstock.git
 	path = pexpect-feedstock
 [submodule "pickleshare-feedstock"]
-	url = https://github.com/AnacondaRecipes/pickleshare-feedstock.git
+	url = ../pickleshare-feedstock.git
 	path = pickleshare-feedstock
 [submodule "pillow-feedstock"]
-	url = https://github.com/AnacondaRecipes/pillow-feedstock.git
+	url = ../pillow-feedstock.git
 	path = pillow-feedstock
 [submodule "pixman-feedstock"]
-	url = https://github.com/AnacondaRecipes/pixman-feedstock.git
+	url = ../pixman-feedstock.git
 	path = pixman-feedstock
 [submodule "ply-feedstock"]
-	url = https://github.com/AnacondaRecipes/ply-feedstock.git
+	url = ../ply-feedstock.git
 	path = ply-feedstock
 [submodule "prompt_toolkit-feedstock"]
-	url = https://github.com/AnacondaRecipes/prompt_toolkit-feedstock.git
+	url = ../prompt_toolkit-feedstock.git
 	path = prompt_toolkit-feedstock
 [submodule "psutil-feedstock"]
-	url = https://github.com/AnacondaRecipes/psutil-feedstock.git
+	url = ../psutil-feedstock.git
 	path = psutil-feedstock
 [submodule "ptyprocess-feedstock"]
-	url = https://github.com/AnacondaRecipes/ptyprocess-feedstock.git
+	url = ../ptyprocess-feedstock.git
 	path = ptyprocess-feedstock
 [submodule "pycrypto-feedstock"]
-	url = https://github.com/AnacondaRecipes/pycrypto-feedstock.git
+	url = ../pycrypto-feedstock.git
 	path = pycrypto-feedstock
 [submodule "pyflakes-feedstock"]
-	url = https://github.com/AnacondaRecipes/pyflakes-feedstock.git
+	url = ../pyflakes-feedstock.git
 	path = pyflakes-feedstock
 [submodule "pygments-feedstock"]
-	url = https://github.com/AnacondaRecipes/pygments-feedstock.git
+	url = ../pygments-feedstock.git
 	path = pygments-feedstock
 [submodule "pylint-feedstock"]
-	url = https://github.com/AnacondaRecipes/pylint-feedstock.git
+	url = ../pylint-feedstock.git
 	path = pylint-feedstock
 [submodule "pytables-feedstock"]
-	url = https://github.com/AnacondaRecipes/pytables-feedstock.git
+	url = ../pytables-feedstock.git
 	path = pytables-feedstock
 [submodule "python-dateutil-feedstock"]
-	url = https://github.com/AnacondaRecipes/python-dateutil-feedstock.git
+	url = ../python-dateutil-feedstock.git
 	path = python-dateutil-feedstock
 [submodule "pytz-feedstock"]
-	url = https://github.com/AnacondaRecipes/pytz-feedstock.git
+	url = ../pytz-feedstock.git
 	path = pytz-feedstock
 [submodule "pywavelets-feedstock"]
-	url = https://github.com/AnacondaRecipes/pywavelets-feedstock.git
+	url = ../pywavelets-feedstock.git
 	path = pywavelets-feedstock
 [submodule "pyyaml-feedstock"]
-	url = https://github.com/AnacondaRecipes/pyyaml-feedstock.git
+	url = ../pyyaml-feedstock.git
 	path = pyyaml-feedstock
 [submodule "sympy-feedstock"]
-	url = https://github.com/AnacondaRecipes/sympy-feedstock.git
+	url = ../sympy-feedstock.git
 	path = sympy-feedstock
 [submodule "subprocess32-feedstock"]
-	url = https://github.com/AnacondaRecipes/subprocess32-feedstock.git
+	url = ../subprocess32-feedstock.git
 	path = subprocess32-feedstock
 [submodule "statsmodels-feedstock"]
-	url = https://github.com/AnacondaRecipes/statsmodels-feedstock.git
+	url = ../statsmodels-feedstock.git
 	path = statsmodels-feedstock
 [submodule "ssl_match_hostname-feedstock"]
-	url = https://github.com/AnacondaRecipes/ssl_match_hostname-feedstock.git
+	url = ../ssl_match_hostname-feedstock.git
 	path = ssl_match_hostname-feedstock
 [submodule "sqlalchemy-feedstock"]
-	url = https://github.com/AnacondaRecipes/sqlalchemy-feedstock.git
+	url = ../sqlalchemy-feedstock.git
 	path = sqlalchemy-feedstock
 [submodule "spyder-feedstock"]
-	url = https://github.com/AnacondaRecipes/spyder-feedstock.git
+	url = ../spyder-feedstock.git
 	path = spyder-feedstock
 [submodule "sphinx-feedstock"]
-	url = https://github.com/AnacondaRecipes/sphinx-feedstock.git
+	url = ../sphinx-feedstock.git
 	path = sphinx-feedstock
 [submodule "sphinxcontrib-websupport-feedstock"]
-	url = https://github.com/AnacondaRecipes/sphinxcontrib-websupport-feedstock.git
+	url = ../sphinxcontrib-websupport-feedstock.git
 	path = sphinxcontrib-websupport-feedstock
 [submodule "scandir-feedstock"]
-	url = https://github.com/AnacondaRecipes/scandir-feedstock.git
+	url = ../scandir-feedstock.git
 	path = scandir-feedstock
 [submodule "seaborn-feedstock"]
-	url = https://github.com/AnacondaRecipes/seaborn-feedstock.git
+	url = ../seaborn-feedstock.git
 	path = seaborn-feedstock
 [submodule "singledispatch-feedstock"]
-	url = https://github.com/AnacondaRecipes/singledispatch-feedstock.git
+	url = ../singledispatch-feedstock.git
 	path = singledispatch-feedstock
 [submodule "sip-feedstock"]
-	url = https://github.com/AnacondaRecipes/sip-feedstock.git
+	url = ../sip-feedstock.git
 	path = sip-feedstock
 [submodule "snowballstemmer-feedstock"]
-	url = https://github.com/AnacondaRecipes/snowballstemmer-feedstock.git
+	url = ../snowballstemmer-feedstock.git
 	path = snowballstemmer-feedstock
 [submodule "sortedcollections-feedstock"]
-	url = https://github.com/AnacondaRecipes/sortedcollections-feedstock.git
+	url = ../sortedcollections-feedstock.git
 	path = sortedcollections-feedstock
 [submodule "sortedcontainers-feedstock"]
-	url = https://github.com/AnacondaRecipes/sortedcontainers-feedstock.git
+	url = ../sortedcontainers-feedstock.git
 	path = sortedcontainers-feedstock
 [submodule "rope-feedstock"]
-	url = https://github.com/AnacondaRecipes/rope-feedstock.git
+	url = ../rope-feedstock.git
 	path = rope-feedstock
 [submodule "qtawesome-feedstock"]
-	url = https://github.com/AnacondaRecipes/qtawesome-feedstock.git
+	url = ../qtawesome-feedstock.git
 	path = qtawesome-feedstock
 [submodule "qtconsole-feedstock"]
-	url = https://github.com/AnacondaRecipes/qtconsole-feedstock.git
+	url = ../qtconsole-feedstock.git
 	path = qtconsole-feedstock
 [submodule "qtpy-feedstock"]
-	url = https://github.com/AnacondaRecipes/qtpy-feedstock.git
+	url = ../qtpy-feedstock.git
 	path = qtpy-feedstock
 [submodule "patch-feedstock"]
-	url = https://github.com/AnacondaRecipes/patch-feedstock.git
+	url = ../patch-feedstock.git
 	path = patch-feedstock
 [submodule "backports_abc-feedstock"]
-	url = https://github.com/AnacondaRecipes/backports_abc-feedstock.git
+	url = ../backports_abc-feedstock.git
 	path = backports_abc-feedstock
 [submodule "flask-cors-feedstock"]
-	url = https://github.com/AnacondaRecipes/flask-cors-feedstock.git
+	url = ../flask-cors-feedstock.git
 	path = flask-cors-feedstock
 [submodule "datashape-feedstock"]
-	url = https://github.com/AnacondaRecipes/datashape-feedstock.git
+	url = ../datashape-feedstock.git
 	path = datashape-feedstock
 [submodule "bitarray-feedstock"]
-	url = https://github.com/AnacondaRecipes/bitarray-feedstock.git
+	url = ../bitarray-feedstock.git
 	path = bitarray-feedstock
 [submodule "jedi-feedstock"]
-	url = https://github.com/AnacondaRecipes/jedi-feedstock.git
+	url = ../jedi-feedstock.git
 	path = jedi-feedstock
 [submodule "libssh2-feedstock"]
-	url = https://github.com/AnacondaRecipes/libssh2-feedstock.git
+	url = ../libssh2-feedstock.git
 	path = libssh2-feedstock
 [submodule "gevent-feedstock"]
-	url = https://github.com/AnacondaRecipes/gevent-feedstock.git
+	url = ../gevent-feedstock.git
 	path = gevent-feedstock
 [submodule "pkgconfig-feedstock"]
-	url = https://github.com/AnacondaRecipes/pkgconfig-feedstock.git
+	url = ../pkgconfig-feedstock.git
 	path = pkgconfig-feedstock
 [submodule "odo-feedstock"]
-	url = https://github.com/AnacondaRecipes/odo-feedstock.git
+	url = ../odo-feedstock.git
 	path = odo-feedstock
 [submodule "icu-feedstock"]
-	url = https://github.com/AnacondaRecipes/icu-feedstock.git
+	url = ../icu-feedstock.git
 	path = icu-feedstock
 [submodule "xlwt-feedstock"]
-	url = https://github.com/AnacondaRecipes/xlwt-feedstock.git
+	url = ../xlwt-feedstock.git
 	path = xlwt-feedstock
 [submodule "jpeg-feedstock"]
-	url = https://github.com/AnacondaRecipes/jpeg-feedstock.git
+	url = ../jpeg-feedstock.git
 	path = jpeg-feedstock
 [submodule "conda-verify-feedstock"]
-	url = https://github.com/AnacondaRecipes/conda-verify-feedstock.git
+	url = ../conda-verify-feedstock.git
 	path = conda-verify-feedstock
 [submodule "filelock-feedstock"]
-	url = https://github.com/AnacondaRecipes/filelock-feedstock.git
+	url = ../filelock-feedstock.git
 	path = filelock-feedstock
 [submodule "glob2-feedstock"]
-	url = https://github.com/AnacondaRecipes/glob2-feedstock.git
+	url = ../glob2-feedstock.git
 	path = glob2-feedstock
 [submodule "patchelf-feedstock"]
-	url = https://github.com/AnacondaRecipes/patchelf-feedstock.git
+	url = ../patchelf-feedstock.git
 	path = patchelf-feedstock
 [submodule "conda-build-feedstock"]
-	url = https://github.com/AnacondaRecipes/conda-build-feedstock.git
+	url = ../conda-build-feedstock.git
 	path = conda-build-feedstock
 [submodule "glib-feedstock"]
-	url = https://github.com/AnacondaRecipes/glib-feedstock.git
+	url = ../glib-feedstock.git
 	path = glib-feedstock
 [submodule "libxml2-feedstock"]
-	url = https://github.com/AnacondaRecipes/libxml2-feedstock.git
+	url = ../libxml2-feedstock.git
 	path = libxml2-feedstock
 [submodule "matplotlib-feedstock"]
-	url = https://github.com/AnacondaRecipes/matplotlib-feedstock.git
+	url = ../matplotlib-feedstock.git
 	path = matplotlib-feedstock
 [submodule "pango-feedstock"]
-	url = https://github.com/AnacondaRecipes/pango-feedstock.git
+	url = ../pango-feedstock.git
 	path = pango-feedstock
 [submodule "pcre-feedstock"]
-	url = https://github.com/AnacondaRecipes/pcre-feedstock.git
+	url = ../pcre-feedstock.git
 	path = pcre-feedstock
 [submodule "pkginfo-feedstock"]
-	url = https://github.com/AnacondaRecipes/pkginfo-feedstock.git
+	url = ../pkginfo-feedstock.git
 	path = pkginfo-feedstock
 [submodule "aiohttp-feedstock"]
-	url = https://github.com/AnacondaRecipes/aiohttp-feedstock.git
+	url = ../aiohttp-feedstock.git
 	path = aiohttp-feedstock
 [submodule "arrow-feedstock"]
-	url = https://github.com/AnacondaRecipes/arrow-feedstock.git
+	url = ../arrow-feedstock.git
 	path = arrow-feedstock
 [submodule "alembic-feedstock"]
-	url = https://github.com/AnacondaRecipes/alembic-feedstock.git
+	url = ../alembic-feedstock.git
 	path = alembic-feedstock
 [submodule "async-timeout-feedstock"]
-	url = https://github.com/AnacondaRecipes/async-timeout-feedstock.git
+	url = ../async-timeout-feedstock.git
 	path = async-timeout-feedstock
 [submodule "elasticsearch-feedstock"]
-	url = https://github.com/AnacondaRecipes/elasticsearch-feedstock.git
+	url = ../elasticsearch-feedstock.git
 	path = elasticsearch-feedstock
 [submodule "elasticsearch-dsl-feedstock"]
-	url = https://github.com/AnacondaRecipes/elasticsearch-dsl-feedstock.git
+	url = ../elasticsearch-dsl-feedstock.git
 	path = elasticsearch-dsl-feedstock
 [submodule "nodejs-feedstock"]
-	url = https://github.com/AnacondaRecipes/nodejs-feedstock.git
+	url = ../nodejs-feedstock.git
 	path = nodejs-feedstock
 [submodule "parsedatetime-feedstock"]
-	url = https://github.com/AnacondaRecipes/parsedatetime-feedstock.git
+	url = ../parsedatetime-feedstock.git
 	path = parsedatetime-feedstock
 [submodule "pyjwt-feedstock"]
-	url = https://github.com/AnacondaRecipes/pyjwt-feedstock.git
+	url = ../pyjwt-feedstock.git
 	path = pyjwt-feedstock
 [submodule "python-editor-feedstock"]
-	url = https://github.com/AnacondaRecipes/python-editor-feedstock.git
+	url = ../python-editor-feedstock.git
 	path = python-editor-feedstock
 [submodule "sqlalchemy-utils-feedstock"]
-	url = https://github.com/AnacondaRecipes/sqlalchemy-utils-feedstock.git
+	url = ../sqlalchemy-utils-feedstock.git
 	path = sqlalchemy-utils-feedstock
 [submodule "pyzmq-feedstock"]
-	url = https://github.com/AnacondaRecipes/pyzmq-feedstock.git
+	url = ../pyzmq-feedstock.git
 	path = pyzmq-feedstock
 [submodule "webencodings-feedstock"]
-	url = https://github.com/AnacondaRecipes/webencodings-feedstock.git
+	url = ../webencodings-feedstock.git
 	path = webencodings-feedstock
 [submodule "unicodecsv-feedstock"]
-	url = https://github.com/AnacondaRecipes/unicodecsv-feedstock.git
+	url = ../unicodecsv-feedstock.git
 	path = unicodecsv-feedstock
 [submodule "jbig-feedstock"]
-	url = https://github.com/AnacondaRecipes/jbig-feedstock.git
+	url = ../jbig-feedstock.git
 	path = jbig-feedstock
 [submodule "ipython-feedstock"]
-	url = https://github.com/AnacondaRecipes/ipython-feedstock.git
+	url = ../ipython-feedstock.git
 	path = ipython-feedstock
 [submodule "ipython_genutils-feedstock"]
-	url = https://github.com/AnacondaRecipes/ipython_genutils-feedstock.git
+	url = ../ipython_genutils-feedstock.git
 	path = ipython_genutils-feedstock
 [submodule "ipywidgets-feedstock"]
-	url = https://github.com/AnacondaRecipes/ipywidgets-feedstock.git
+	url = ../ipywidgets-feedstock.git
 	path = ipywidgets-feedstock
 [submodule "jupyter_client-feedstock"]
-	url = https://github.com/AnacondaRecipes/jupyter_client-feedstock.git
+	url = ../jupyter_client-feedstock.git
 	path = jupyter_client-feedstock
 [submodule "jupyter_console-feedstock"]
-	url = https://github.com/AnacondaRecipes/jupyter_console-feedstock.git
+	url = ../jupyter_console-feedstock.git
 	path = jupyter_console-feedstock
 [submodule "jupyter_core-feedstock"]
-	url = https://github.com/AnacondaRecipes/jupyter_core-feedstock.git
+	url = ../jupyter_core-feedstock.git
 	path = jupyter_core-feedstock
 [submodule "nbconvert-feedstock"]
-	url = https://github.com/AnacondaRecipes/nbconvert-feedstock.git
+	url = ../nbconvert-feedstock.git
 	path = nbconvert-feedstock
 [submodule "nbformat-feedstock"]
-	url = https://github.com/AnacondaRecipes/nbformat-feedstock.git
+	url = ../nbformat-feedstock.git
 	path = nbformat-feedstock
 [submodule "notebook-feedstock"]
-	url = https://github.com/AnacondaRecipes/notebook-feedstock.git
+	url = ../notebook-feedstock.git
 	path = notebook-feedstock
 [submodule "pandocfilters-feedstock"]
-	url = https://github.com/AnacondaRecipes/pandocfilters-feedstock.git
+	url = ../pandocfilters-feedstock.git
 	path = pandocfilters-feedstock
 [submodule "pathlib2-feedstock"]
-	url = https://github.com/AnacondaRecipes/pathlib2-feedstock.git
+	url = ../pathlib2-feedstock.git
 	path = pathlib2-feedstock
 [submodule "traitlets-feedstock"]
-	url = https://github.com/AnacondaRecipes/traitlets-feedstock.git
+	url = ../traitlets-feedstock.git
 	path = traitlets-feedstock
 [submodule "simplegeneric-feedstock"]
-	url = https://github.com/AnacondaRecipes/simplegeneric-feedstock.git
+	url = ../simplegeneric-feedstock.git
 	path = simplegeneric-feedstock
 [submodule "enum34-feedstock"]
-	url = https://github.com/AnacondaRecipes/enum34-feedstock.git
+	url = ../enum34-feedstock.git
 	path = enum34-feedstock
 [submodule "funcsigs-feedstock"]
-	url = https://github.com/AnacondaRecipes/funcsigs-feedstock.git
+	url = ../funcsigs-feedstock.git
 	path = funcsigs-feedstock
 [submodule "ipaddress-feedstock"]
-	url = https://github.com/AnacondaRecipes/ipaddress-feedstock.git
+	url = ../ipaddress-feedstock.git
 	path = ipaddress-feedstock
 [submodule "decorator-feedstock"]
-	url = https://github.com/AnacondaRecipes/decorator-feedstock.git
+	url = ../decorator-feedstock.git
 	path = decorator-feedstock
 [submodule "pyqt-feedstock"]
-	url = https://github.com/AnacondaRecipes/pyqt-feedstock.git
+	url = ../pyqt-feedstock.git
 	path = pyqt-feedstock
 [submodule "harfbuzz-feedstock"]
-	url = https://github.com/AnacondaRecipes/harfbuzz-feedstock.git
+	url = ../harfbuzz-feedstock.git
 	path = harfbuzz-feedstock
 [submodule "hdf5-feedstock"]
-	url = https://github.com/AnacondaRecipes/hdf5-feedstock.git
+	url = ../hdf5-feedstock.git
 	path = hdf5-feedstock
 [submodule "pyodbc-feedstock"]
-	url = https://github.com/AnacondaRecipes/pyodbc-feedstock.git
+	url = ../pyodbc-feedstock.git
 	path = pyodbc-feedstock
 [submodule "cdecimal-feedstock"]
-	url = https://github.com/AnacondaRecipes/cdecimal-feedstock.git
+	url = ../cdecimal-feedstock.git
 	path = cdecimal-feedstock
 [submodule "libuuid-feedstock"]
-	url = https://github.com/AnacondaRecipes/libuuid-feedstock.git
+	url = ../libuuid-feedstock.git
 	path = libuuid-feedstock
