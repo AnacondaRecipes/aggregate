@@ -1,6 +1,6 @@
 package:
   name: clang_{{ target_platform }}
-  version: {{ macos_min_version }}
+  version: 4.0.1
 
 build:
   skip: True  [not osx]
@@ -8,5 +8,9 @@ build:
 outputs:
   - name: clang_{{ target_platform }}
     script: install-clang.sh
+    requirements:
+      - clang
   - name: clangxx_{{ target_platform }}
     script: install-clangxx.sh
+    requirements:
+      - clangxx

@@ -1,7 +1,14 @@
 #!/bin/bash
 
-mkdir -p ${PREFIX}/etc/conda/activate.d/
+set -e -x
 
-cp ${RECIPE_DIR}/activate.sh ${PREFIX}/etc/conda/activate.d/conda_"${PKG_NAME}".sh
-# hard-code the sdk version we build for
-sed -i '' "s/@macos_min_version@/${macos_min_version}/" ${PREFIX}/etc/conda/activate.d/conda_"${PKG_NAME}".sh
+CHOST=${macos_machine}
+echo CHOST is ${CHOST}
+
+mkdir -p "${PREFIX}"/etc/conda/{de,}activate.d/
+cp "${SRC_DIR}"/activate-clang++.sh "${PREFIX}"/etc/conda/activate.d/activate_"${PKG_NAME}".sh
+cp "${SRC_DIR}"/deactivate-clang++.sh "${PREFIX}"/etc/conda/deactivate.d/deactivate_"${PKG_NAME}".sh
+
+pushd "${PREFIX}"/bin
+  ln -s clang++ ${CHOST}-clang++
+popd
