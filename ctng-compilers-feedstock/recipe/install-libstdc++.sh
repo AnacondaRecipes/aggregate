@@ -15,6 +15,7 @@ popd
 
 mkdir -p ${PREFIX}/lib
 mv ${PREFIX}/${CHOST}/lib/* ${PREFIX}/lib
+mkdir -p ${PREFIX}/${CHOST}/sysroot/lib || true
 symtargets=$(find ${PREFIX}/lib -name "libstdc++*.so*")
 for symtarget in ${symtargets}; do
   symtargetname=$(basename ${symtarget})
@@ -28,4 +29,4 @@ find ${PREFIX}/lib -name "*\.la" -exec rm -rf {} \;
 
 # Install Runtime Library Exception
 install -Dm644 ${SRC_DIR}/.build/src/gcc-${PKG_VERSION}/COPYING.RUNTIME \
-        ${PREFIX}/share/licenses/gcc-libs/RUNTIME.LIBRARY.EXCEPTION
+        ${PREFIX}/share/licenses/libstdc++/RUNTIME.LIBRARY.EXCEPTION

@@ -9,8 +9,9 @@ export PATH=${SRC_DIR}/gcc_built/bin:${SRC_DIR}/.build/${CHOST}/buildtools/bin:$
 mkdir -p ${PREFIX}/lib/
 rm -f ${PREFIX}/lib/libgfortran* || true
 
-cp -f ${SRC_DIR}/gcc_built/${CHOST}/sysroot/lib/libgfortran*.so* ${PREFIX}/lib/
+cp -f --no-dereference ${SRC_DIR}/gcc_built/${CHOST}/sysroot/lib/libgfortran*.so* ${PREFIX}/lib/
 
+mkdir -p ${PREFIX}/${CHOST}/sysroot/lib || true
 symtargets=$(find ${PREFIX}/lib -name "libgfortran*.so*")
 for symtarget in ${symtargets}; do
   symtargetname=$(basename ${symtarget})
@@ -19,4 +20,4 @@ done
 
 # Install Runtime Library Exception
 install -Dm644 $SRC_DIR/.build/src/gcc-${PKG_VERSION}/COPYING.RUNTIME \
-        ${PREFIX}/share/licenses/gcc-libs/RUNTIME.LIBRARY.EXCEPTION
+        ${PREFIX}/share/licenses/libgfortran/RUNTIME.LIBRARY.EXCEPTION
