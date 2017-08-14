@@ -84,7 +84,7 @@ function _tc_activation() {
 
 env > /tmp/old-env-$$.txt
 _tc_activation \
-  deactivate host @CHOST@ @CHOST@- \
+  activate host @CHOST@ @CHOST@- \
   ar as checksyms codesign_allocate indr install_name_tool libtool lipo nm nmedit otool \
   pagestuff ranlib redo_prebinding seg_addr_table seg_hack segedit size strings strip \
   ld \
