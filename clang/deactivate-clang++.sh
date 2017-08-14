@@ -85,7 +85,8 @@ function _tc_activation() {
 env > /tmp/old-env-$$.txt
 _tc_activation \
   deactivate host @CHOST@ @CHOST@- \
-  c++ g++ \
+  clang++ \
+  "CXX,${CXX:-@CHOST@-clang++}" \
   "CXXFLAGS,${CXXFLAGS:-@CXXFLAGS@}" \
   "DEBUG_CXXFLAGS,${DEBUG_CXXFLAGS:-@DEBUG_CXXFLAGS@}"
 

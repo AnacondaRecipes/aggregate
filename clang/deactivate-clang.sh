@@ -89,6 +89,7 @@ _tc_activation \
   pagestuff ranlib redo_prebinding seg_addr_table seg_hack segedit size strings strip \
   ld \
   clang \
+  "CC,${CC:-@CHOST@-clang}" \
   "CPPFLAGS,${CPPFLAGS:-@CPPFLAGS@}" \
   "CFLAGS,${CFLAGS:-@CFLAGS@}" \
   "LDFLAGS,${LDFLAGS:-@LDFLAGS@}" \

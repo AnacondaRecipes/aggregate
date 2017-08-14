@@ -86,7 +86,7 @@ env > /tmp/old-env-$$.txt
 _tc_activation \
   activate host @CHOST@ @CHOST@- \
   clang++ \
-  "CXX,${CXX:-${CLANGXX}} \
+  "CXX,${CXX:-@CHOST@-clang++}" \
   "CXXFLAGS,${CXXFLAGS:-@CXXFLAGS@}" \
   "DEBUG_CXXFLAGS,${DEBUG_CXXFLAGS:-@DEBUG_CXXFLAGS@}"
 
