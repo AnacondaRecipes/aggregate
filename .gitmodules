@@ -922,3 +922,7 @@
 	url = ../python-feedstock.git
 	path = python-2.7-feedstock
 	branch = master-2.7
+[submodule "libgfortran-feedstock"]
+	path = libgfortran-feedstock
+	url = ../libgfortran-feedstock
+	branch = master
