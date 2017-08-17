@@ -914,3 +914,11 @@
 	url = ../libuuid-feedstock.git
 	path = libuuid-feedstock
         branch = master
+[submodule "python-3.5-feedstock"]
+	url = ../python-feedstock.git
+	path = python-3.5-feedstock
+	branch = master-3.5
+[submodule "python-2.7-feedstock"]
+	url = ../python-feedstock.git
+	path = python-2.7-feedstock
+	branch = master-2.7
