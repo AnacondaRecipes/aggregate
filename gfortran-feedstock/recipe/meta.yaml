@@ -1,55 +1,59 @@
-{% set gfortran_version = [4.8.5] %}
-{% set libgfortran_version = [3, 0, 0] %}
+# This is the old GCC 4.8.5 package stripped back to contain only
+# the bits needed for gfortran. The lib dependencies are directly
+# included to allow different versions of those to be installed.
 
+{% set gfortran_version = [4, 8, 5] %}
+{% set libgfortran_version = [3, 0, 0] %}
+{% set chost = "x86_64-apple-darwin11.4.2" %}
+{% set gfortran_ver = "4.8.5" %}
+{% set libgfortran_ver = "3.0.0" %}
 
 package:
   name: gfortran
-  version: {{ gfortran_version|join('.') }}
+  version: {{ gfortran_ver }}
 
 build:
   number: 0
-  skip: true                                                  # [not osx]
+  skip: True                                                  # [not osx]
   always_include_files:
-    - bin/gfortran                                            # [osx]
-    - bin/cpp
-    - lib/libgfortran.{{ libgfortran_version[0] }}.dylib      # [osx]
 
-    # Including libquadmath for the time
-    # being. This will need to be broken
-    # out in the long term.
-    - lib/libquadmath.dylib                                   # [osx]
-    - lib/libquadmath.{{ libquadmath_version[0] }}.dylib      # [osx]
+    - bin/gfortran
+    - bin/{{ chost }}-gfortran
 
-    # Including libgcc_s for the time
-    # being. This will need to be broken
-    # out in the long term.
-    - lib/libgcc_s.{{ libgcc_s_version[0] }}.dylib            # [osx]
-    - lib/libgcc_s_ppc64.{{ libgcc_s_version[0] }}.dylib      # [osx]
-    - lib/libgcc_s_x86_64.{{ libgcc_s_version[0] }}.dylib     # [osx]
+    - libexec/gcc/{{ chost }}/{{ gfortran_ver }}/collect2
+    - libexec/gcc/{{ chost }}/{{ gfortran_ver }}/f951
+    - libexec/gcc/{{ chost }}/{{ gfortran_ver }}/lto-wrapper
+
+    - lib/libgfortran.spec
+    # For -fopenmp:
+    - lib/libgomp.spec
+
+    # For -static:
+    - lib/libgfortran.a
+    - lib/libgomp.a
+
+    - lib/gcc/{{ chost }}/{{ gfortran_ver }}/libgcc.a
+
+    - lib/gcc/{{ chost }}/{{ gfortran_ver }}/finclude/**
+
+    # include{,-fixed} may not be needed unless -fopenmp is passed (not sure on that):
+    - lib/gcc/{{ chost }}/{{ gfortran_ver }}/include-fixed/**
+    - lib/gcc/{{ chost }}/{{ gfortran_ver }}/include/**
+
+    # Only one weak symbol is used from libstdc++ so we may not need it:
+    # - lib/libstdc++.6.dylib
+
+    # Libraries from gccs requirements/run:
+    # .. we may need to relocate these at some point (if we get conflicts):
+    - lib/libcloog-isl.4.dylib
+    - lib/libgmp.10.dylib
+    - lib/libisl.10.dylib
 
 requirements:
   build:
-    - gcc {{ gfortran_version|join('.') }}
+    - gcc {{ gfortran_ver }}
   run:
-    - libgfortran >={{ libgfortran_version|join('.') }}
-
-test:
-  commands:
-    - test -f "${PREFIX}/lib/libgfortran.dylib"                                   # [osx]
-    - test -f "${PREFIX}/lib/libgfortran.{{ libgfortran_version[0] }}.dylib"      # [osx]
-
-    # Including libquadmath for the time
-    # being. This will need to be broken
-    # out in the long term.
-    - test -f "${PREFIX}/lib/libquadmath.dylib"                                   # [osx]
-    - test -f "${PREFIX}/lib/libquadmath.{{ libquadmath_version[0] }}.dylib"      # [osx]
-
-    # Including libgcc_s for the time
-    # being. This will need to be broken
-    # out in the long term.
-    - test -f "${PREFIX}/lib/libgcc_s.{{ libgcc_s_version[0] }}.dylib"            # [osx]
-    - test -f "${PREFIX}/lib/libgcc_s_ppc64.{{ libgcc_s_version[0] }}.dylib"      # [osx]
-    - test -f "${PREFIX}/lib/libgcc_s_x86_64.{{ libgcc_s_version[0] }}.dylib"     # [osx]
+    - libgfortran >={{ libgfortran_ver }}
 
 about:
   home: http://gcc.gnu.org/
@@ -59,5 +63,6 @@ about:
 extra:
   recipe-maintainers:
     - jakirkham
+    - mingwandroid
     - msarahan
     - pelson
