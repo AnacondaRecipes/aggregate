@@ -5,6 +5,10 @@ package:
 build:
   skip: True  [not osx]
 
+requirements:
+  build:
+    - libcxx_{{ target_platform }}
+
 outputs:
   - name: clang_{{ target_platform }}
     script: install-clang.sh
@@ -14,3 +18,8 @@ outputs:
     script: install-clangxx.sh
     requirements:
       - clangxx
+      - libcxx_{{ target_platform }}
+    # Since transitive run_exports are not currently possible:
+    # (here I would like the run dependency on clangxx to pull in the run_exports from it).
+    run_exports:
+      - {{ pin_compatible('libcxx_' ~ target_platform, min_pin='x.x.x.x.x.x.x.x.x', max_pin=None) }}

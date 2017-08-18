@@ -267,7 +267,7 @@ outputs:
       run:
         - {{ pin_subpackage('clang', exact=True) }}
     run_exports:
-      - {{ pin_subpackage('libcxx_' ~ cross_target_platform, min_pin='x.x.x.x.x.x.x.x.x', max_pin='None') }}
+      - {{ pin_subpackage('libcxx_' ~ cross_target_platform, min_pin='x.x.x.x.x.x.x.x.x', max_pin=None) }}
     about:
       home: http://clang.llvm.org/
       license: University of Illinois/NCSA Open Source License
