@@ -4,6 +4,8 @@ package:
 
 build:
   skip: True  [not win]
+  track_features:
+    - vc9
 
 outputs:
   - name: vs2008_{{ target_platform }}
