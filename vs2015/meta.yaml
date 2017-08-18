@@ -4,6 +4,8 @@ package:
 
 build:
   skip: True  [not win]
+  track_features:
+    - vc14
 
 outputs:
   - name: vs2015_{{ target_platform }}

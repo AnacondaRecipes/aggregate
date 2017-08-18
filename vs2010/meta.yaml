@@ -4,6 +4,8 @@ package:
 
 build:
   skip: True  [not win]
+  track_features:
+    - vc10
 
 outputs:
   - name: vs2010_{{ target_platform }}
