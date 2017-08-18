@@ -84,15 +84,15 @@ function _tc_activation() {
 
 env > /tmp/old-env-$$.txt
 _tc_activation \
-  activate host @CHOST@ @CHOST@- \
+  deactivate host @CHOST@ @CHOST@- \
   gfortran \
   "FFLAGS,${FFLAGS:-@FFLAGS@}" \
   "FORTRANFLAGS,${FORTRANFLAGS:-@FFLAGS@}" \
   "DEBUG_FFLAGS,${DEBUG_FFLAGS:-@FFLAGS@ @DEBUG_FFLAGS@}"
 
 # extra ones:
-export FC="$GFORTRAN"
-export F95="$GFORTRAN"
+unset FC
+unset F95
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"

@@ -3,10 +3,10 @@
 # included to allow different versions of those to be installed.
 
 {% set gfortran_version = [4, 8, 5] %}
-{% set libgfortran_version = [3, 0, 0] %}
+{% set libgfortran_version = [3, 0, 1] %}
 {% set chost = "x86_64-apple-darwin11.4.2" %}
 {% set gfortran_ver = "4.8.5" %}
-{% set libgfortran_ver = "3.0.0" %}
+{% set libgfortran_ver = "3.0.1" %}
 
 package:
   name: gfortran
@@ -48,6 +48,9 @@ build:
     - lib/libcloog-isl.4.dylib
     - lib/libgmp.10.dylib
     - lib/libisl.10.dylib
+
+  run_exports:
+    - libgfortran >={{ libgfortran_ver }}
 
 requirements:
   build:
