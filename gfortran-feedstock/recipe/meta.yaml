@@ -9,7 +9,7 @@
 {% set libgfortran_ver = "3.0.1" %}
 
 package:
-  name: gfortran
+  name: gfortran_{{ target_platform }}
   version: {{ gfortran_ver }}
 
 build:
@@ -64,7 +64,7 @@ requirements:
   build:
     - gcc {{ gfortran_ver }}
   run:
-    - libgfortran >={{ libgfortran_ver }}
+    - libgfortran_{{ target_platform }} >={{ libgfortran_ver }}
 
 about:
   home: http://gcc.gnu.org/
