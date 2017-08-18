@@ -1,0 +1,42 @@
+{% set version = '1.6.1' %}
+
+# This package is linked to Apple's ld64, but they use a very early version
+# of it, not this fork. Still, it should work OK. We do not need lzma and
+# may not even need bzip2 nor libxml2 however the build system ignores
+# --without-lzma (and probably the others too) and finds system libraries.
+# Also, I link the transitive static libraries into libxar.
+
+package:
+  name: xar
+  version: {{ version }}
+
+source:
+  url: https://github.com/mackyle/xar/archive/xar-{{ version }}.tar.gz
+
+requirements:
+  build:
+    - autoconf
+    - libxml2
+    - bzip2
+    - zlib
+    - xz
+    - openssl  # [not osx]
+
+about:
+  home: http://mackyle.github.io/xar
+  license: BSD 3-clause
+  license_family: BSD
+  license_file: xar/LICENSE
+  summary: eXtensible ARchiver
+  description: |
+    A fork/clone of the subversion xar repository from
+    http://xar.googlecode.com/svn/ that includes several
+    enhancements and bug fixes including very basic command
+    line signature support. This is not a general purpose
+    package and exists only as a dependency for ld64. As
+    such, on Darwin, it is entirely statically linked, except
+    for libcrypto, which you must ensure gets resolved to
+    /usr/lib/libcrypto.dylib when this library is consumed.
+  doc_url: http://mackyle.github.io/xar/xar.html
+  doc_source_url: https://raw.githubusercontent.com/mackyle/xar/master/xar/xar.spec.in
+  dev_url: https://github.com/mackyle/xar
