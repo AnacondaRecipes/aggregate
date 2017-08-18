@@ -15,6 +15,10 @@ package:
 build:
   number: 0
   skip: True                                                  # [not osx]
+  binary_has_prefix_files:
+    - lib/libgcc_ext.10.4.dylib
+    - lib/libgcc_ext.10.5.dylib
+
   always_include_files:
 
     - bin/gfortran
@@ -42,6 +46,10 @@ build:
 
     # Only one weak symbol is used from libstdc++ so we may not need it:
     # - lib/libstdc++.6.dylib
+
+    # Stub libraries:
+    - lib/libgcc_ext.10.4.dylib
+    - lib/libgcc_ext.10.5.dylib
 
     # Libraries from gccs requirements/run:
     # .. we may need to relocate these at some point (if we get conflicts):
