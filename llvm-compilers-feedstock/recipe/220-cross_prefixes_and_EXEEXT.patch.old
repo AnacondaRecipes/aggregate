@@ -1,18 +1,6 @@
-diff -urN cctools.orig/ar/ar.c cctools/ar/ar.c
---- cctools.orig/ar/ar.c	2017-08-01 13:57:33.000000000 +0100
-+++ cctools/ar/ar.c	2017-08-01 14:17:08.000000000 +0100
-@@ -280,7 +280,7 @@
- 	if(run_ranlib){
- 	    /* run ranlib -f or -q on the archive */
- 	    reset_execute_list();
--	    add_execute_list_with_prefix("ranlib");
-+	    add_execute_list_with_prefix(RANLIBPROG);
- 	    if(options & AR_S)
- 		add_execute_list("-f");
- 	    else
 diff -urN cctools.orig/as/driver.c cctools/as/driver.c
---- cctools.orig/as/driver.c	2017-08-01 13:57:33.000000000 +0100
-+++ cctools/as/driver.c	2017-08-01 14:17:54.000000000 +0100
+--- cctools.orig/as/driver.c	2017-08-20 09:51:58.000000000 +0100
++++ cctools/as/driver.c	2017-08-05 13:42:40.000000000 +0100
 @@ -29,7 +29,7 @@
  {
      const char *LIB = "../libexec/as/";
@@ -22,24 +10,43 @@ diff -urN cctools.orig/as/driver.c cctools/as/driver.c
  
      int i, j;
      uint32_t count, verbose, run_clang;
-diff -urN cctools.orig/misc/libtool.c cctools/misc/libtool.c
---- cctools.orig/misc/libtool.c	2017-08-01 14:08:16.000000000 +0100
-+++ cctools/misc/libtool.c	2017-08-01 14:17:08.000000000 +0100
-@@ -3417,7 +3417,7 @@
- 	 */
- 	for(i = 0; i < narchs || (i == 0 && narchs == 0); i++){
- 	    reset_execute_list();
--	    add_execute_list_with_prefix("ld");
-+	    add_execute_list_with_prefix(LDPROG);
- 	    if(narchs != 0 && cmd_flags.arch_only_flag.name == NULL)
- 		add_execute_list("-arch_multiple");
- 	    if(archs != NULL){
-@@ -3539,7 +3539,7 @@
- 	 */
- 	if(narchs > 1){
- 	    reset_execute_list();
--	    add_execute_list_with_prefix("lipo");
-+	    add_execute_list_with_prefix(LIPOPROG);
- 	    add_execute_list("-create");
- 	    add_execute_list("-output");
- 	    add_execute_list(cmd_flags.output);
+diff -urN cctools.orig/libstuff/execute.c cctools/libstuff/execute.c
+--- cctools.orig/libstuff/execute.c	2017-08-20 01:56:16.000000000 +0100
++++ cctools/libstuff/execute.c	2017-08-20 09:58:32.000000000 +0100
+@@ -159,7 +159,8 @@
+ char *str)
+ {
+ 	int i;
+-	char *p;
++	char *p, *triplet;
++	char no_triplet[] = "";
+ 	char *prefix, buf[MAXPATHLEN], resolved_name[PATH_MAX];
+ 	uint32_t bufsize;
+ 
+@@ -177,6 +178,17 @@
+ 	    p = rindex(p, '/');
+ 	    if(p != NULL)
+ 		    p[1] = '\0';
++	    /*
++	     * Determine the GNU style triplet.
++	     */
++	    triplet = &p[2];
++	    if (triplet - p >= bufsize)
++	      triplet = &no_triplet[0];
++	    else{
++	      p = rindex(p, '-');
++	      if(p != NULL)
++			p[1] = '\0';
++	    }
+ 	}
+ 	strcpy(resolved_name, buf);
+ 	prefix = realpath(buf, resolved_name);
+@@ -191,7 +203,7 @@
+ 	   *(p++) = '\0';
+ 	}
+ 
+-	return(makestr(prefix, str, NULL));
++	return(makestr(prefix, triplet, str, NULL));
+ }
+ 
+ /*

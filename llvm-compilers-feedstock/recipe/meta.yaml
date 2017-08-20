@@ -65,8 +65,9 @@ source:
       - 180-add_CROSS_SYSROOT.patch
       - 190-default_arch.patch
       - 210-dont_typedef_NxConstantString.patch
-      - 220-cross_prefixes_and_EXEEXT.patch
-      - 230-progname_fixes.patch
+      # - 220-cross_prefixes_and_EXEEXT.patch
+      # - 230-progname_fixes.patch
+      - 220-cross-prefixes-EXEEXT-and-progname_fixes.patch
       - 240-use_strerror.patch
       - 250-dont_assume_getattrlist.patch
       - 260-ppc64_reenable.patch

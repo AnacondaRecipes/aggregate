@@ -5920,7 +5920,7 @@ diff -urN a/libprunetrie/Makefile.in b/libprunetrie/Makefile.in
 +
 +MYWARNINGS      =
 +MYDEFS          = -DDEBUG -DBINDIR="\"$(bindir)\"" -DLDPROG="\"$(LDPROG)\"" \
-+		  -DASPROG="\"$(ASPROG)\"" $(LTO_DEFS)
++		  -DASPROG="\"$(ASPROG)\"" -DOBJCUNIQUEPROG="\"$(OBJCUNIQUEPROG)\"" $(LTO_DEFS)
 +
 +MYCOMPILEFLAGS	= $(WARNINGS) $(MYWARNINGS) $(DEFS) $(MYDEFS) \
 +		$(CPPFLAGS) $(MYINCLUDES) $(CFLAGS) $(MDYNAMICNOPIC)
@@ -7126,7 +7126,7 @@ diff -urN a/man/Makefile.in b/man/Makefile.in
 diff -urN a/misc/Makefile.in b/misc/Makefile.in
 --- a/misc/Makefile.in	1970-01-01 01:00:00.000000000 +0100
 +++ b/misc/Makefile.in	2013-11-18 23:05:40.077460808 +0000
-@@ -0,0 +1,162 @@
+@@ -0,0 +1,163 @@
 +builddir = @builddir@
 +top_builddir = @top_builddir@
 +srcdir = @srcdir@
@@ -7159,13 +7159,14 @@ diff -urN a/misc/Makefile.in b/misc/Makefile.in
 +transform       = @program_transform_name@
 +LDPROG		= $(shell echo ld | sed '$(transform)')
 +LIPOPROG	= $(shell echo lipo | sed '$(transform)')
++OBJCUNIQUEPROG	= $(shell echo objcunique | sed '$(transform)')
 +
 +MYINCLUDES      = -I$(builddir) -I$(srcdir) -I$(top_builddir)/include \
 +                  -I$(top_srcdir)/include -I$(top_srcdir)/libprunetrie -include $(top_builddir)/include/config.h $(FORHDRS)
 +
 +MYWARNINGS      =
 +MYDEFS          = -DBINDIR="\"$(bindir)\"" -DLDPROG="\"$(LDPROG)\"" \
-+		  -DLIPOPROG="\"$(LIPOPROG)\"" $(LTO_DEFS)
++		  -DLIPOPROG="\"$(LIPOPROG)\"" -DOBJCUNIQUEPROG="\"$(OBJCUNIQUEPROG)\"" $(LTO_DEFS)
 +MYLDFLAGS	= -L$(top_builddir)/libstuff
 +MYLIBS		= -lstuff @DL_LIBS@
 +
