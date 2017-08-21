@@ -88,7 +88,7 @@ requirements:
     - libffi            [linux]
     - libgcc            [linux and not ppc64le]
     - libgfortran       [linux]
-    - libiconv          [unix]
+    - libiconv          [not linux and not win]
     - libpng
     - libsodium         [linux]
     - libssh2
