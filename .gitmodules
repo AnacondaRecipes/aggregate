@@ -926,3 +926,19 @@
 	path = libgfortran-feedstock
 	url = ../libgfortran-feedstock
 	branch = master
+[submodule "hypothesis-feedstock"]
+	path = hypothesis-feedstock
+	url = ../hypothesis-feedstock
+	branch = master
+[submodule "cryptography-vectors-feedstock"]
+	path = cryptography-vectors-feedstock
+	url = ../cryptography-vectors-feedstock
+	branch = master
+[submodule "pretend-feedstock"]
+	path = pretend-feedstock
+	url = ../pretend-feedstock
+	branch = master
+[submodule "constructor-feedstock"]
+	path = constructor-feedstock
+	url = ../constructor-feedstock
+	branch = master
