@@ -946,3 +946,7 @@
 	path = pycairo-feedstock
 	url = ../pycairo-feedstock
 	branch = master
+[submodule "coloredlogs-feedstock"]
+	path = coloredlogs-feedstock
+	url = ../coloredlogs-feedstock
+	branch = master
