@@ -942,3 +942,7 @@
 	path = constructor-feedstock
 	url = ../constructor-feedstock
 	branch = master
+[submodule "pycairo-feedstock"]
+	path = pycairo-feedstock
+	url = ../pycairo-feedstock
+	branch = master
