@@ -3,8 +3,10 @@ boost:
 c_compiler:                    # [win]
   - vs2008                     # [win]
   - vs2015                     # [win]
+  - vs2015                     # [win]
 cxx_compiler:                  # [win]
   - vs2008                     # [win]
+  - vs2015                     # [win]
   - vs2015                     # [win]
 expat:
   - 2.1
@@ -55,10 +57,12 @@ target_platform:
 vc:
   - 9                          # [win]
   - 14                         # [win]
+  - 14                         # [win]
 zip_keys:
   -                            # [win or osx]
     - vc                       # [win]
     - c_compiler               # [win]
     - cxx_compiler             # [win]
+    - python                   # [win]
     - macos_min_version        # [osx]
     - macos_machine            # [osx]
