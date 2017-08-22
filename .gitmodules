@@ -950,3 +950,7 @@
 	path = coloredlogs-feedstock
 	url = ../coloredlogs-feedstock
 	branch = master
+[submodule "boto3-feedstock"]
+	path = boto3-feedstock
+	url = ../boto3-feedstock
+	branch = master
