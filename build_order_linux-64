@@ -122,7 +122,7 @@ typing-feedstock
 sphinx-feedstock
 numpydoc-feedstock
 olefile-feedstock
-jpeg-9b-feedstock
+jpeg-feedstock
 libtiff-feedstock
 pillow-feedstock
 fastcache-feedstock
