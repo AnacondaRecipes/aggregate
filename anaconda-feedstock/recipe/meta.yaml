@@ -1,3 +1,10 @@
+package:
+  name: anaconda-release
+  version: 5.0.0.dev1
+
+build:
+  pin_depends: strict
+
 requirements:
   is_meta_pkg: True
   build:
