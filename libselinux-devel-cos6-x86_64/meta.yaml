@@ -1,0 +1,33 @@
+package:
+  name: libselinux-devel-cos6-x86_64
+  version: 2.0.94
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libselinux-devel-2.0.94-7.el6.x86_64.rpm
+    sha256: d1700bab7dff967f45f82635480572bad973cd3982cf561a57e730adefaebc13
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libselinux-2.0.94-7.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libselinux-cos6-x86_64 ==2.0.94
+    - libsepol-devel-cos6-x86_64 >=2.0.32
+
+
+outputs:
+  - name: libselinux-devel-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - libselinux-cos6-x86_64 ==2.0.94
+        - libsepol-devel-cos6-x86_64 >=2.0.32
+
+    about:
+      home: http://www.selinuxproject.org
+      license: Public-Domain
+      license_family: Public-Domain
+      summary: "(CDT) Header files and libraries used to build SELinux"
+      description: |
+        The libselinux-devel package contains the libraries and header files needed
+        for developing SELinux applications.

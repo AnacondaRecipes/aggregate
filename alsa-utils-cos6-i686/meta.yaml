@@ -1,0 +1,25 @@
+package:
+  name: alsa-utils-cos6-i686
+  version: 1.1.0
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/alsa-utils-1.1.0-10.el6.i686.rpm
+    sha256: 0096773e3eeb792609e3c9f17b6aea3be78a57895e5e53410ff62a91cf022b05
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/alsa-utils-1.1.0-10.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: alsa-utils-cos6-i686
+    noarch: generic
+
+    about:
+      home: http://www.alsa-project.org/
+      license: GPL (>= 2)
+      license_family: GPL3
+      summary: "(CDT) Advanced Linux Sound Architecture (ALSA) utilities"
+      description: |
+        This package contains command line utilities for the Advanced Linux Sound
+        Architecture (ALSA).

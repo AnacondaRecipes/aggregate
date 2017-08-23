@@ -1,0 +1,27 @@
+package:
+  name: gperf-cos6-x86_64
+  version: 3.0.3
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/gperf-3.0.3-9.1.el6.x86_64.rpm
+    sha256: 00b53e5e4b0b00aeae5f970b50b4f3f17f645664774fcfa4410e183bbc840e4a
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/gperf-3.0.3-9.1.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: gperf-cos6-x86_64
+    noarch: generic
+
+    about:
+      home: http://www.gnu.org/software/gperf/
+      license: GPL (>= 2)
+      license_family: GPL3
+      summary: "(CDT) A perfect hash function generator"
+      description: |
+        Gperf is a perfect hash function generator written in C++. Simply stated, a
+        perfect hash function is a hash function and a data structure that allows
+        recognition of a key word in a set of words using exactly one probe into the
+        data structure.

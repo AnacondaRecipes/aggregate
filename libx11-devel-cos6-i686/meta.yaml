@@ -1,0 +1,30 @@
+package:
+  name: libx11-devel-cos6-i686
+  version: 1.6.4
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libX11-devel-1.6.4-3.el6.i686.rpm
+    sha256: 6d5115f0c72b587f577e28017bb45647a98598a0b2931770a8340da8e964b93b
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libX11-1.6.4-3.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libx11-cos6-i686 ==1.6.4
+
+
+outputs:
+  - name: libx11-devel-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - libx11-cos6-i686 ==1.6.4
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Development files for libX11"
+      description: |
+        X.Org X11 libX11 development package

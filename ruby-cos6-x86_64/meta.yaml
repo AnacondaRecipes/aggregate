@@ -1,0 +1,33 @@
+package:
+  name: ruby-cos6-x86_64
+  version: 1.8.7.374
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/ruby-1.8.7.374-5.el6.x86_64.rpm
+    sha256: 3d5ffcf5a9e71171bc418098b1e6b7522b32a018e23a063e42fa47703c099d42
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/ruby-1.8.7.374-5.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - ruby-libs-cos6-x86_64 ==1.8.7.374
+
+
+outputs:
+  - name: ruby-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - ruby-libs-cos6-x86_64 ==1.8.7.374
+
+    about:
+      home: http://www.ruby-lang.org/
+      license: Ruby or GPLv2
+      license_family: GPL2
+      summary: "(CDT) An interpreter of object-oriented scripting language"
+      description: |
+        Ruby is the interpreted scripting language for quick and easy object-oriented
+        programming.  It has many features to process text files and to do system
+        management tasks (as in Perl).  It is simple, straight-forward, and
+        extensible.

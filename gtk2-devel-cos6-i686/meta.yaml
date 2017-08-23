@@ -1,0 +1,42 @@
+package:
+  name: gtk2-devel-cos6-i686
+  version: 2.24.23
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/gtk2-devel-2.24.23-9.el6.i686.rpm
+    sha256: 354fe896a22dc8828244ab3c6f56425836909ce333899c9359cb14e1f5728b29
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/gtk2-2.24.23-9.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - atk-devel-cos6-i686 >=1.29.4
+    - cairo-devel-cos6-i686 >=1.6.0
+    - gdk-pixbuf2-devel-cos6-i686 >=2.24.1
+    - glib2-devel-cos6-i686 >=2.28.0
+    - gtk2-cos6-i686 ==2.24.23
+    - pango-devel-cos6-i686 >=1.20.0
+
+
+outputs:
+  - name: gtk2-devel-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - atk-devel-cos6-i686 >=1.29.4
+        - cairo-devel-cos6-i686 >=1.6.0
+        - gdk-pixbuf2-devel-cos6-i686 >=2.24.1
+        - glib2-devel-cos6-i686 >=2.28.0
+        - gtk2-cos6-i686 ==2.24.23
+        - pango-devel-cos6-i686 >=1.20.0
+
+    about:
+      home: http://www.gtk.org
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) Development files for GTK+"
+      description: |
+        This package contains the libraries amd header files that are needed for
+        writing applications with the GTK+ widget toolkit. If you plan to develop
+        applications with GTK+, consider installing the gtk2-devel-docs package.

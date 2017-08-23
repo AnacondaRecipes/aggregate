@@ -1,0 +1,33 @@
+package:
+  name: xorg-x11-server-xvfb-cos6-i686
+  version: 1.17.4
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/xorg-x11-server-Xvfb-1.17.4-16.el6.centos.i686.rpm
+    sha256: 7a95512dee6193cd30a4c82a91b545cafaa9224a9c52cb20d7796adf70aa591a
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/xorg-x11-server-1.17.4-16.el6.centos.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - xorg-x11-server-common-cos6-i686 >=1.17.4
+
+
+outputs:
+  - name: xorg-x11-server-xvfb-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - xorg-x11-server-common-cos6-i686 >=1.17.4
+
+    about:
+      home: http://www.x.org
+      license: MIT and GPLv2
+      license_family: GPL2
+      summary: "(CDT) A X Windows System virtual framebuffer X server."
+      description: |
+        Xvfb (X Virtual Frame Buffer) is an X server that is able to run on machines
+        with no display hardware and no physical input devices. Xvfb simulates a dumb
+        framebuffer using virtual memory.  Xvfb does not open any devices, but behaves
+        otherwise as an X display.  Xvfb is normally used for testing servers.

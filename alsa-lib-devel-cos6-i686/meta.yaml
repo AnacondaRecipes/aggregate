@@ -1,0 +1,33 @@
+package:
+  name: alsa-lib-devel-cos6-i686
+  version: 1.1.0
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/alsa-lib-devel-1.1.0-4.el6.i686.rpm
+    sha256: f9c87fc78b745e1a60486fc19bd0dda9b9c057191d7bd42cacced60dc5e00861
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/alsa-lib-1.1.0-4.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - alsa-lib-cos6-i686 ==1.1.0
+
+
+outputs:
+  - name: alsa-lib-devel-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - alsa-lib-cos6-i686 ==1.1.0
+
+    about:
+      home: http://www.alsa-project.org/
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) Development files from the ALSA library"
+      description: |
+        The Advanced Linux Sound Architecture (ALSA) provides audio and MIDI
+        functionality to the Linux operating system.  This package includes the ALSA
+        development libraries for developing against the ALSA libraries and
+        interfaces.

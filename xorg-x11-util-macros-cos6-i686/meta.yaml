@@ -1,0 +1,25 @@
+package:
+  name: xorg-x11-util-macros-cos6-i686
+  version: 1.19.0
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/xorg-x11-util-macros-1.19.0-3.el6.noarch.rpm
+    sha256: 937647195e65052a89cd1e740fa45c5bb1c1f3e5e2fb710fecc066a06f90872f
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/xorg-x11-util-macros-1.19.0-3.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: xorg-x11-util-macros-cos6-i686
+    noarch: generic
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X.Org X11 Autotools macros"
+      description: |
+        X.Org X11 autotools macros required for building the various packages that
+        comprise the X Window System.

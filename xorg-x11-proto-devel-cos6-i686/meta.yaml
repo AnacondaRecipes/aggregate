@@ -1,0 +1,24 @@
+package:
+  name: xorg-x11-proto-devel-cos6-i686
+  version: 7.7
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/xorg-x11-proto-devel-7.7-14.el6.noarch.rpm
+    sha256: 34147662e82b9729652f013cb3578b02ca72786263bc7ab167d713da7ed28790
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/xorg-x11-proto-devel-7.7-14.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: xorg-x11-proto-devel-cos6-i686
+    noarch: generic
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X.Org X11 Protocol headers"
+      description: |
+        X.Org X11 Protocol headers

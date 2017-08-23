@@ -1,0 +1,34 @@
+package:
+  name: java-1.7.0-openjdk-cos6-i686
+  version: 1.7.0.131
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/java-1.7.0-openjdk-1.7.0.131-2.6.9.0.el6_8.i686.rpm
+    sha256: 5e812e4583b71107b72779cfc77f78c7fdc1a147a56126136f87d14cc3b4efb8
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/java-1.7.0-openjdk-1.7.0.131-2.6.9.0.el6_8.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - jpackage-utils-cos6-i686 >=1.7.3
+    - libjpeg-cos6-i686 ==1.2.1
+    - ca-certificates-cos6-i686 ==2016.2.10
+
+
+outputs:
+  - name: java-1.7.0-openjdk-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - jpackage-utils-cos6-i686 >=1.7.3
+        - libjpeg-cos6-i686 ==1.2.1
+        - ca-certificates-cos6-i686 ==2016.2.10
+
+    about:
+      home: http://openjdk.java.net/
+      license: ASL 1.1 and ASL 2.0 and GPL+ and GPLv2 and GPLv2 with exceptions and LGPL+ and LGPLv2 and MPLv1.0 and MPLv1.1 and Public Domain and W3C
+      license_family: GPL2
+      summary: "(CDT) OpenJDK Runtime Environment"
+      description: |
+        The OpenJDK runtime environment.

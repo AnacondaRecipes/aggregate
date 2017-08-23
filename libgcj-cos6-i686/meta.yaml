@@ -1,0 +1,37 @@
+package:
+  name: libgcj-cos6-i686
+  version: 4.4.7
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libgcj-4.4.7-18.el6.i686.rpm
+    sha256: 0e02c76bb78f74f67d52040ca8592bc0d636b00eb9bdf17e1697734b3db64254
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/gcc-4.4.7-18.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - glib2-cos6-i686 >=2.4.0
+    - gtk2-cos6-i686 >=2.4.0
+    - libart_lgpl-cos6-i686 >=2.1.0
+    - zip-cos6-i686 >=2.1
+
+
+outputs:
+  - name: libgcj-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - glib2-cos6-i686 >=2.4.0
+        - gtk2-cos6-i686 >=2.4.0
+        - libart_lgpl-cos6-i686 >=2.1.0
+        - zip-cos6-i686 >=2.1
+
+    about:
+      home: http://gcc.gnu.org
+      license: GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions
+      license_family: GPL3
+      summary: "(CDT) Java runtime library for gcc"
+      description: |
+        The Java(tm) runtime library. You will need this package to run your Java
+        programs compiled using the Java compiler from GNU Compiler Collection (gcj).

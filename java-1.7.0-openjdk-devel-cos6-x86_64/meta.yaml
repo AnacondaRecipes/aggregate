@@ -1,0 +1,30 @@
+package:
+  name: java-1.7.0-openjdk-devel-cos6-x86_64
+  version: 1.7.0.131
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/java-1.7.0-openjdk-devel-1.7.0.131-2.6.9.0.el6_8.x86_64.rpm
+    sha256: 7872f4fef9d877d2e9de8d9e1c11cd64e6afaf3620266997706fcdad9d9b196d
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/java-1.7.0-openjdk-1.7.0.131-2.6.9.0.el6_8.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - java-1.7.0-openjdk-cos6-x86_64 ==1.7.0.131
+
+
+outputs:
+  - name: java-1.7.0-openjdk-devel-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - java-1.7.0-openjdk-cos6-x86_64 ==1.7.0.131
+
+    about:
+      home: http://openjdk.java.net/
+      license: ASL 1.1 and ASL 2.0 and GPL+ and GPLv2 and GPLv2 with exceptions and LGPL+ and LGPLv2 and MPLv1.0 and MPLv1.1 and Public Domain and W3C
+      license_family: GPL2
+      summary: "(CDT) OpenJDK Development Environment"
+      description: |
+        The OpenJDK development tools.

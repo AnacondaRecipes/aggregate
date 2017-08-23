@@ -1,0 +1,42 @@
+package:
+  name: gtk2-devel-cos6-x86_64
+  version: 2.24.23
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/gtk2-devel-2.24.23-9.el6.x86_64.rpm
+    sha256: ec76f800b0b0c8a2428d4f647b858e785ec11ad86bf96109649568bbc6cd4752
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/gtk2-2.24.23-9.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - atk-devel-cos6-x86_64 >=1.29.4
+    - cairo-devel-cos6-x86_64 >=1.6.0
+    - gdk-pixbuf2-devel-cos6-x86_64 >=2.24.1
+    - glib2-devel-cos6-x86_64 >=2.28.0
+    - gtk2-cos6-x86_64 ==2.24.23
+    - pango-devel-cos6-x86_64 >=1.20.0
+
+
+outputs:
+  - name: gtk2-devel-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - atk-devel-cos6-x86_64 >=1.29.4
+        - cairo-devel-cos6-x86_64 >=1.6.0
+        - gdk-pixbuf2-devel-cos6-x86_64 >=2.24.1
+        - glib2-devel-cos6-x86_64 >=2.28.0
+        - gtk2-cos6-x86_64 ==2.24.23
+        - pango-devel-cos6-x86_64 >=1.20.0
+
+    about:
+      home: http://www.gtk.org
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) Development files for GTK+"
+      description: |
+        This package contains the libraries amd header files that are needed for
+        writing applications with the GTK+ widget toolkit. If you plan to develop
+        applications with GTK+, consider installing the gtk2-devel-docs package.

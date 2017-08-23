@@ -998,3 +998,7 @@
 	path = pandoc-feedstock
 	url = ../pandoc-feedstock
 	branch = master
+[submodule "gstreamer-feedstock"]
+	path = gstreamer-feedstock
+	url = ../gstreamer-feedstock
+	branch = master
