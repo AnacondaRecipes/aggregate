@@ -990,3 +990,11 @@
 	path = qt-feedstock
 	url = ../qt-feedstock
 	branch = master
+[submodule "gmp-feedstock"]
+	path = gmp-feedstock
+	url = ../gmp-feedstock
+	branch = master
+[submodule "pandoc-feedstock"]
+	path = pandoc-feedstock
+	url = ../pandoc-feedstock
+	branch = master
