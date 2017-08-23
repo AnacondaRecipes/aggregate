@@ -986,3 +986,7 @@
 	path = humanfriendly-feedstock
 	url = ../humanfriendly-feedstock
 	branch = master
+[submodule "qt-feedstock"]
+	path = qt-feedstock
+	url = ../qt-feedstock
+	branch = master
