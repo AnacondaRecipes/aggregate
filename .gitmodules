@@ -954,3 +954,35 @@
 	path = boto3-feedstock
 	url = ../boto3-feedstock
 	branch = master
+[submodule "anyjson-feedstock"]
+	path = anyjson-feedstock
+	url = ../anyjson-feedstock
+	branch = master
+[submodule "backports.functools_lru_cache-feedstock"]
+	path = backports.functools_lru_cache-feedstock
+	url = ../backports.functools_lru_cache-feedstock
+	branch = master
+[submodule "capturer-feedstock"]
+	path = capturer-feedstock
+	url = ../capturer-feedstock
+	branch = master
+[submodule "chai-feedstock"]
+	path = chai-feedstock
+	url = ../chai-feedstock
+	branch = master
+[submodule "flake8-import-order-feedstock"]
+	path = flake8-import-order-feedstock
+	url = ../flake8-import-order-feedstock
+	branch = master
+[submodule "gmpy2-feedstock"]
+	path = gmpy2-feedstock
+	url = ../gmpy2-feedstock
+	branch = master
+[submodule "graphite2-feedstock"]
+	path = graphite2-feedstock
+	url = ../graphite2-feedstock
+	branch = master
+[submodule "humanfriendly-feedstock"]
+	path = humanfriendly-feedstock
+	url = ../humanfriendly-feedstock
+	branch = master
