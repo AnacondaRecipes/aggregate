@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+
+PKGS="
 tk-feedstock
 libtool-feedstock
 m4-feedstock
@@ -236,3 +239,13 @@ pytest-cov-feedstock
 sqlalchemy-utils-feedstock
 xar-feedstock
 anaconda-feedstock
+"
+
+PKG_LIST=""
+for PKG in ${PKGS}; do
+ PKG_LIST="${PKG_LIST} ${PKG}"
+done
+
+echo $PKG_LIST
+
+conda-build -m ./conda_build_config.yaml --override-channels -c c3i_test --skip-existing ${PKG_LIST}
