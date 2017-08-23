@@ -1,24 +1,28 @@
 #!/usr/bin/env bash
 
+export CONDA_ADD_PIP_AS_PYTHON_DEPENDENCY=0
+
 PKGS="
-tk-feedstock
-libtool-feedstock
-m4-feedstock
-perl-feedstock
-autoconf-feedstock
-automake-feedstock
-pkg-config-feedstock
-ncurses-feedstock
-libedit-feedstock
-sqlite-feedstock
-readline-feedstock
-zlib-feedstock
-xz-feedstock
-bzip2-feedstock
-ca-certificates-feedstock
-openssl-feedstock
-libffi-feedstock
-python-feedstock
+#tk-feedstock
+#libtool-feedstock
+#m4-feedstock
+#perl-feedstock
+#autoconf-feedstock
+#automake-feedstock
+#pkg-config-feedstock
+#ncurses-feedstock
+#libedit-feedstock
+#sqlite-feedstock
+#readline-feedstock
+#zlib-feedstock
+#xz-feedstock
+#bzip2-feedstock
+#ca-certificates-feedstock
+#openssl-feedstock
+#libffi-feedstock
+#python-2.7-feedstock
+#python-3.5-feedstock
+#python-feedstock
 certifi-feedstock
 setuptools-feedstock
 alabaster-feedstock
@@ -28,8 +32,12 @@ python-editor-feedstock
 sqlalchemy-feedstock
 alembic-feedstock
 cython-feedstock
-patsy-feedstock
-statsmodels-feedstock
+pcre-feedstock
+gettext-feedstock
+glib-feedstock
+libxml2-feedstock
+fontconfig-feedkstock
+icu-feedstock
 jdcal-feedstock
 et_xmlfile-feedstock
 openpyxl-feedstock
@@ -142,7 +150,6 @@ pkgconfig-feedstock
 hdf5-feedstock
 h5py-feedstock
 itsdangerous-feedstock
-pcre-feedstock
 locket-feedstock
 partd-feedstock
 cdecimal-feedstock
@@ -179,6 +186,8 @@ click-feedstock
 flask-feedstock
 flask-cors-feedstock
 bitarray-feedstock
+patsy-feedstock
+statsmodel-feedstock
 seaborn-feedstock
 libxslt-feedstock
 lxml-feedstock
@@ -248,4 +257,4 @@ done
 
 echo $PKG_LIST
 
-conda-build -m ./conda_build_config.yaml --override-channels -c c3i_test --skip-existing ${PKG_LIST}
+conda-build -m ./conda_build_config.yaml --override-channels -c c3i_test -c local --skip-existing ${PKG_LIST} --debug
