@@ -1,0 +1,41 @@
+{% set name = "colour" %}
+{% set version = "0.1.4" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "1357f37ddfd0d7c0e770f0772901635b3a38025a2480a44280510faca30fb509" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  {{ hash_type }}: {{ hash_value }}
+
+build:
+  number: 0
+  script: python setup.py install  --single-version-externally-managed --record=record.txt
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+
+about:
+  home: http://github.com/vaab/colour
+  license: 2-Clause BSD License
+  license_family: BSD
+  license_file: LICENSE
+  summary: converts and manipulates various color representations
+  description: |
+    Damn simple and pythonic way to manipulate color representation.
+    Full conversion between RGB, HSL, 6-digit hex, 3-digit hex, human color
+    One object (Color) or bunch of single purpose function (rgb2hex, hsl2rgb ...)
+  doc_url: https://pypi.python.org/pypi/colour
+  doc_source_url: https://raw.githubusercontent.com/vaab/colour/master/README.rst
+  dev_url: http://github.com/vaab/colour
+
+extra:
+  recipe-maintainers:
+    - mingwandroid
