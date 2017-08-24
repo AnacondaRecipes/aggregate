@@ -1,0 +1,24 @@
+package:
+  name: mesa-libegl-cos6-x86_64
+  version: 11.0.7
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/mesa-libEGL-11.0.7-4.el6.x86_64.rpm
+    sha256: 1b5638595636d26590e1a2140c9d64a452b63d985a507197206d0e85b7796753
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/mesa-11.0.7-4.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: mesa-libegl-cos6-x86_64
+    noarch: generic
+
+    about:
+      home: http://www.mesa3d.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Mesa libEGL runtime libraries"
+      description: |
+        Mesa libEGL runtime libraries

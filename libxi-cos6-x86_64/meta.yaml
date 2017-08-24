@@ -1,0 +1,30 @@
+package:
+  name: libxi-cos6-x86_64
+  version: 1.7.8
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libXi-1.7.8-1.el6.x86_64.rpm
+    sha256: 3b7b5b08f2865e0da73dab056feb525f28f627a82fbc1ae03f3b26a0c1eaa355
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXi-1.7.8-1.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libx11-cos6-x86_64 >=1.5.99.902
+
+
+outputs:
+  - name: libxi-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - libx11-cos6-x86_64 >=1.5.99.902
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X.Org X11 libXi runtime library"
+      description: |
+        X.Org X11 libXi runtime library

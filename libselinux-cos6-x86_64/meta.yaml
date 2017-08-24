@@ -1,0 +1,40 @@
+package:
+  name: libselinux-cos6-x86_64
+  version: 2.0.94
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libselinux-2.0.94-7.el6.x86_64.rpm
+    sha256: e7a34a5deb2a708631fec7b759f5a3c4a81046ac3a48f34080f01eee18e8b130
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libselinux-2.0.94-7.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libsepol-cos6-x86_64 >=2.0.32
+
+
+outputs:
+  - name: libselinux-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - libsepol-cos6-x86_64 >=2.0.32
+
+    about:
+      home: http://www.selinuxproject.org
+      license: Public-Domain
+      license_family: Public-Domain
+      summary: "(CDT) SELinux library and simple utilities"
+      description: |
+        Security-enhanced Linux is a feature of the Linux® kernel and a number of
+        utilities with enhanced security functionality designed to add mandatory
+        access controls to Linux.  The Security-enhanced Linux kernel contains new
+        architectural components originally developed to improve the security of the
+        Flask operating system. These architectural components provide general support
+        for the enforcement of many kinds of mandatory access control policies,
+        including those based on the concepts of Type Enforcement®, Role-based Access
+        Control, and Multi-level Security.  libselinux provides an API for SELinux
+        applications to get and set process and file security contexts and to obtain
+        security policy decisions.  Required for any applications that use the SELinux
+        API.

@@ -1,0 +1,31 @@
+package:
+  name: gtkmm24-devel-cos6-i686
+  version: 2.18.2
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/gtkmm24-devel-2.18.2-1.el6.i686.rpm
+    sha256: 818b4326e79921cce626a288eca39ce8b5794ebb5e8dc33b332c06c8d546f0f6
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/gtkmm24-2.18.2-1.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - gtkmm24-cos6-i686 ==2.18.2
+
+
+outputs:
+  - name: gtkmm24-devel-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - gtkmm24-cos6-i686 ==2.18.2
+
+    about:
+      home: http://gtkmm.sourceforge.net/
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) Headers for developing programs that will use gtkmm24."
+      description: |
+        This package contains the static libraries and header files needed for
+        developing gtkmm applications.

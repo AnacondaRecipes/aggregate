@@ -1,0 +1,33 @@
+package:
+  name: libxcursor-cos6-x86_64
+  version: 1.1.14
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libXcursor-1.1.14-2.1.el6.x86_64.rpm
+    sha256: 528eb987e058ee4907c0007544c06e28d9b905b94ec9f0995c5081d507ed96b7
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXcursor-1.1.14-2.1.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libx11-cos6-x86_64 >=1.5.99.902
+
+
+outputs:
+  - name: libxcursor-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - libx11-cos6-x86_64 >=1.5.99.902
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Cursor management library"
+      description: |
+        This is  a simple library designed to help locate and load cursors. Cursors
+        can be loaded from files or memory. A library of common cursors exists which
+        map to the standard X cursor names.Cursors can exist in several sizes and the
+        library automatically picks the best size.

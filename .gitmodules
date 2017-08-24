@@ -1022,3 +1022,15 @@
 	path = scikit-learn-feedstock
 	url = ../scikit-learn-feedstock
 	branch = master
+[submodule "xcb-proto-feedstock"]
+	path = xcb-proto-feedstock
+	url = ../xcb-proto-feedstock
+	branch = master
+[submodule "pthread-stubs-feedstock"]
+	path = pthread-stubs-feedstock
+	url = ../pthread-stubs-feedstock
+	branch = master
+[submodule "gperf-feedstock"]
+	path = gperf-feedstock
+	url = ../gperf-feedstock
+	branch = master

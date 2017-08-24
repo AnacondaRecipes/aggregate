@@ -1,0 +1,30 @@
+package:
+  name: libxtst-cos6-x86_64
+  version: 1.2.3
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libXtst-1.2.3-1.el6.x86_64.rpm
+    sha256: 6b4b8f77bac8c59617f67510690ca21d9b0ab245d81e9df1406fc827aac9ef1a
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXtst-1.2.3-1.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libx11-cos6-x86_64 >=1.5.99.902
+
+
+outputs:
+  - name: libxtst-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - libx11-cos6-x86_64 >=1.5.99.902
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X.Org X11 libXtst runtime library"
+      description: |
+        X.Org X11 libXtst runtime library

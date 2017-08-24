@@ -1,0 +1,31 @@
+package:
+  name: pciutils-devel-cos6-i686
+  version: 3.1.10
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/pciutils-devel-3.1.10-4.el6.i686.rpm
+    sha256: e289369aed3aa5f7c5bcb4c6f2506368f70ba95e72d848923e436545529f9ff3
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/pciutils-3.1.10-4.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - pciutils-libs-cos6-i686 ==3.1.10
+
+
+outputs:
+  - name: pciutils-devel-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - pciutils-libs-cos6-i686 ==3.1.10
+
+    about:
+      home: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
+      license: GPL (>= 2)
+      license_family: GPL3
+      summary: "(CDT) Linux PCI development library"
+      description: |
+        This package contains a library for inspecting and setting devices connected
+        to the PCI bus.

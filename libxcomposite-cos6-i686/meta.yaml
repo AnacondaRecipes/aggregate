@@ -1,0 +1,24 @@
+package:
+  name: libxcomposite-cos6-i686
+  version: 0.4.3
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libXcomposite-0.4.3-4.el6.i686.rpm
+    sha256: a49030789b4701f3b6607b19b5c902a7df774f16a24dc72552df3563c4db2638
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXcomposite-0.4.3-4.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: libxcomposite-cos6-i686
+    noarch: generic
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X Composite Extension library"
+      description: |
+        X Composite Extension library

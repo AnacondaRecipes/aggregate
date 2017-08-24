@@ -1,0 +1,32 @@
+package:
+  name: libdrm-devel-cos6-i686
+  version: 2.4.65
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libdrm-devel-2.4.65-2.el6.i686.rpm
+    sha256: 52c6cf3272e33d826b11d8cd3bf295d855f7ab24c6ec3d25a6663ee245d6c027
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libdrm-2.4.65-2.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    # - kernel-headers-cos6-i686 >=2.6.27
+    - libdrm-cos6-i686 ==2.4.65
+
+
+outputs:
+  - name: libdrm-devel-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        # - kernel-headers-cos6-i686 >=2.6.27
+        - libdrm-cos6-i686 ==2.4.65
+
+    about:
+      home: http://dri.sourceforge.net
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Direct Rendering Manager development package"
+      description: |
+        Direct Rendering Manager development package

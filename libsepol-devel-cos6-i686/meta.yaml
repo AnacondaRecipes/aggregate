@@ -1,0 +1,31 @@
+package:
+  name: libsepol-devel-cos6-i686
+  version: 2.0.41
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libsepol-devel-2.0.41-4.el6.i686.rpm
+    sha256: 3a211f164f7a1cceb7b8dfbbf96469b6869ad5954d48c82f2ab214ef26ba2434
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libsepol-2.0.41-4.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libsepol-cos6-i686 ==2.0.41
+
+
+outputs:
+  - name: libsepol-devel-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - libsepol-cos6-i686 ==2.0.41
+
+    about:
+      home: http://www.selinuxproject.org
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) Header files and libraries used to build policy manipulation tools"
+      description: |
+        The libsepol-devel package contains the libraries and header files needed for
+        developing applications that manipulate binary policies.

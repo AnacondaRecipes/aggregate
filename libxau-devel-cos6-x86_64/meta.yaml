@@ -1,0 +1,30 @@
+package:
+  name: libxau-devel-cos6-x86_64
+  version: 1.0.6
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libXau-devel-1.0.6-4.el6.x86_64.rpm
+    sha256: b527f511f3d2d3b1f8084bb4692244564b5be4d920bd2d5d33e0696ff4ac877f
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXau-1.0.6-4.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libxau-cos6-x86_64 ==1.0.6
+
+
+outputs:
+  - name: libxau-devel-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - libxau-cos6-x86_64 ==1.0.6
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Development files for libXau"
+      description: |
+        X.Org X11 libXau development package

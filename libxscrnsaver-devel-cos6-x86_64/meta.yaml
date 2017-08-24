@@ -1,0 +1,30 @@
+package:
+  name: libxscrnsaver-devel-cos6-x86_64
+  version: 1.2.2
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libXScrnSaver-devel-1.2.2-2.el6.x86_64.rpm
+    sha256: 8a63dcfa4a48120facd315b74309c472cedf66b0373e791374884ddc43eab150
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXScrnSaver-1.2.2-2.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libxscrnsaver-cos6-x86_64 ==1.2.2
+
+
+outputs:
+  - name: libxscrnsaver-devel-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - libxscrnsaver-cos6-x86_64 ==1.2.2
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X.Org X11 libXScrnSaver development package"
+      description: |
+        X.Org X11 libXss development package

@@ -1,0 +1,24 @@
+package:
+  name: libxdamage-cos6-x86_64
+  version: 1.1.3
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libXdamage-1.1.3-4.el6.x86_64.rpm
+    sha256: 34b28487164c8b2d75638d595011948831be35197bc868f23b1cda8cca690db9
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXdamage-1.1.3-4.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: libxdamage-cos6-x86_64
+    noarch: generic
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X Damage extension library"
+      description: |
+        X.Org X11 libXdamage runtime library.

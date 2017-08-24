@@ -1,0 +1,30 @@
+package:
+  name: mesa-libegl-devel-cos6-i686
+  version: 11.0.7
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/mesa-libEGL-devel-11.0.7-4.el6.i686.rpm
+    sha256: c6fafc09cf1480c5dc87315afcf57cde354070df856678116302802cb5164866
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/mesa-11.0.7-4.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - mesa-libegl-cos6-i686 ==11.0.7
+
+
+outputs:
+  - name: mesa-libegl-devel-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - mesa-libegl-cos6-i686 ==11.0.7
+
+    about:
+      home: http://www.mesa3d.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Mesa libEGL development package"
+      description: |
+        Mesa libEGL development package

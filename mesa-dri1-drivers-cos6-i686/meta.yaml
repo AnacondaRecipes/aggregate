@@ -1,0 +1,24 @@
+package:
+  name: mesa-dri1-drivers-cos6-i686
+  version: 7.11
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/mesa-dri1-drivers-7.11-8.el6.i686.rpm
+    sha256: da5e429635f9f1274e4f2fe97ce0575aa8181f2a4f530b97f40241e2db227210
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/mesa-dri1-drivers-7.11-8.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: mesa-dri1-drivers-cos6-i686
+    noarch: generic
+
+    about:
+      home: http://www.mesa3d.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Mesa graphics libraries"
+      description: |
+        Mesa DRI1 drivers

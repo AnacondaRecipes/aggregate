@@ -1,0 +1,30 @@
+package:
+  name: libxi-devel-cos6-i686
+  version: 1.7.8
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libXi-devel-1.7.8-1.el6.i686.rpm
+    sha256: 7bc24bf5d202485e6966fc0fabad3050edcfde98319f14bd86412875b1ad2a66
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXi-1.7.8-1.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libxi-cos6-i686 ==1.7.8
+
+
+outputs:
+  - name: libxi-devel-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - libxi-cos6-i686 ==1.7.8
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X.Org X11 libXi development package"
+      description: |
+        X.Org X11 libXi development package

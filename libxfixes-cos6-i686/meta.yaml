@@ -1,0 +1,30 @@
+package:
+  name: libxfixes-cos6-i686
+  version: 5.0.3
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libXfixes-5.0.3-1.el6.i686.rpm
+    sha256: 5da33bafc8cad666725f82b7262a140d90f74e4666ca412599b5005a78935f8a
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXfixes-5.0.3-1.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libx11-cos6-i686 >=1.6
+
+
+outputs:
+  - name: libxfixes-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - libx11-cos6-i686 >=1.6
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X Fixes library"
+      description: |
+        X Fixes library.
