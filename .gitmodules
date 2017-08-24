@@ -1034,3 +1034,7 @@
 	path = gperf-feedstock
 	url = ../gperf-feedstock
 	branch = master
+[submodule "gobject-introspection-feedstock"]
+	path = gobject-introspection-feedstock
+	url = ../gobject-introspection-feedstock
+	branch = master

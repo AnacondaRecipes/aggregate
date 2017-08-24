@@ -1,0 +1,30 @@
+package:
+  name: libxrender-devel-cos6-i686
+  version: 0.9.10
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libXrender-devel-0.9.10-1.el6.i686.rpm
+    sha256: 400d7e12266d48331a0fad48f762784305a160af942b15a7d4a58673b5c2c8b5
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXrender-0.9.10-1.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libxrender-cos6-i686 ==0.9.10
+
+
+outputs:
+  - name: libxrender-devel-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - libxrender-cos6-i686 ==0.9.10
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X.Org X11 libXrender development package"
+      description: |
+        X.Org X11 libXrender development package
