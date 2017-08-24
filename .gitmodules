@@ -1002,3 +1002,23 @@
 	path = gstreamer-feedstock
 	url = ../gstreamer-feedstock
 	branch = master
+[submodule "scipy-feedstock"]
+	path = scipy-feedstock
+	url = ../scipy-feedstock
+	branch = master
+[submodule "numpy-feedstock"]
+	path = numpy-feedstock
+	url = ../numpy-feedstock
+	branch = master
+[submodule "numexpr-feedstock"]
+	path = numexpr-feedstock
+	url = ../numexpr-feedstock
+	branch = master
+[submodule "scikit-image-feedstock"]
+	path = scikit-image-feedstock
+	url = ../scikit-image-feedstock
+	branch = master
+[submodule "scikit-learn-feedstock"]
+	path = scikit-learn-feedstock
+	url = ../scikit-learn-feedstock
+	branch = master
