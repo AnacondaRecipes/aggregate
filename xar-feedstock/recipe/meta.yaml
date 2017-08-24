@@ -14,13 +14,16 @@ source:
   url: https://github.com/mackyle/xar/archive/xar-{{ version }}.tar.gz
 
 requirements:
-  build:
-    - autoconf
+  host:
     - libxml2
     - bzip2
     - zlib
     - xz
     - openssl  # [not osx]
+
+  build:
+    - autoconf
+    - {{ compiler('c') }}
 
 about:
   home: http://mackyle.github.io/xar
