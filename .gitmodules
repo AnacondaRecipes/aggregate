@@ -1038,3 +1038,47 @@
 	path = gobject-introspection-feedstock
 	url = ../gobject-introspection-feedstock
 	branch = master
+[submodule "jupyterlab-feedstock"]
+	path = jupyterlab-feedstock
+	url = ../jupyterlab-feedstock
+	branch = master
+[submodule "jupyterlab_launcher-feedstock"]
+	path = jupyterlab_launcher-feedstock
+	url = ../jupyterlab_launcher-feedstock
+	branch = master
+[submodule "mpfr-feedstock"]
+	path = mpfr-feedstock
+	url = ../mpfr-feedstock
+	branch = master
+[submodule "mpc-feedstock"]
+	path = mpc-feedstock
+	url = ../mpc-feedstock
+	branch = master
+[submodule "flex-feedstock"]
+	path = flex-feedstock
+	url = ../flex-feedstock
+	branch = master
+[submodule "bison-feedstock"]
+	path = bison-feedstock
+	url = ../bison-feedstock
+	branch = master
+[submodule "lzo-feedstock"]
+	path = lzo-feedstock
+	url = ../lzo-feedstock
+	branch = master
+[submodule "blosc-feedstock"]
+	path = blosc-feedstock
+	url = ../blosc-feedstock
+	branch = master
+[submodule "snappy-feedstock"]
+	path = snappy-feedstock
+	url = ../snappy-feedstock
+	branch = master
+[submodule "verboselogs-feedstock"]
+	path = verboselogs-feedstock
+	url = ../verboselogs-feedstock
+	branch = master
+[submodule "pep8-naming-feedstock"]
+	path = pep8-naming-feedstock
+	url = ../pep8-naming-feedstock
+	branch = master
