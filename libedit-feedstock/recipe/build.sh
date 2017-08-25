@@ -6,3 +6,5 @@
             LDFLAGS="${LDFLAGS} -L${PREFIX}/lib"
 make -j ${CPU_COUNT}
 make install
+# This symlink conflicts with a file in readline
+rm -f ${PREFIX}/share/man/man3/history.3
