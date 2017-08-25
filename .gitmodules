@@ -1098,3 +1098,7 @@
 	path = cmake-feedstock
 	url = ../cmake-feedstock
 	branch = master
+[submodule "numpy-1.8"]
+	path = numpy-1.8
+	url = ../numpy-feedstock
+	branch = numpy18
