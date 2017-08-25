@@ -42,6 +42,8 @@ outputs:
 
   - name: mkl
     script: repack.sh
+    provides_features:
+      blas: mkl
     requirements:
       run:
       # icc_rt is here to keep consistency with older MKL packages.  Intel has split these off into a
@@ -88,7 +90,8 @@ outputs:
 
   - name: intel-openmp
     script: repack.sh
-    requirements:
+    provides_features:
+      openmp: intel
     number: {{ openmp_buildnum }}
     about:
       home: https://software.intel.com/en-us/node/522690
