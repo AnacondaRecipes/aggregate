@@ -58,7 +58,7 @@ build:
     - lib/libisl.10.dylib
 
   run_exports:
-    - libgfortran >={{ libgfortran_ver }}
+    - libgfortran_{{ target_platform }} >={{ libgfortran_ver }}
 
 requirements:
   build:

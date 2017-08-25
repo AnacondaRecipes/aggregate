@@ -1082,3 +1082,7 @@
 	path = pep8-naming-feedstock
 	url = ../pep8-naming-feedstock
 	branch = master
+[submodule "imageio-feedstock"]
+	path = imageio-feedstock
+	url = ../imageio-feedstock
+	branch = master
