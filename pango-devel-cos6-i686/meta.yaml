@@ -1,0 +1,39 @@
+package:
+  name: pango-devel-cos6-i686
+  version: 1.28.1
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/pango-devel-1.28.1-11.el6.i686.rpm
+    sha256: bf2effc6dc9d35fbd5b0505dbcd3971733cd0ca4f909423fbed66aaaf8c33ede
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/pango-1.28.1-11.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - cairo-devel-cos6-i686 >=1.7.6
+    - fontconfig-devel-cos6-i686 >=2.6
+    - freetype-devel-cos6-i686 >=2.1.3
+    - glib2-devel-cos6-i686 >=2.17.3
+    - pango-cos6-i686 ==1.28.1
+
+
+outputs:
+  - name: pango-devel-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - cairo-devel-cos6-i686 >=1.7.6
+        - fontconfig-devel-cos6-i686 >=2.6
+        - freetype-devel-cos6-i686 >=2.1.3
+        - glib2-devel-cos6-i686 >=2.17.3
+        - pango-cos6-i686 ==1.28.1
+
+    about:
+      home: http://www.pango.org
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) Development files for pango"
+      description: |
+        The pango-devel package includes the header files and developer documentation
+        for the pango package.

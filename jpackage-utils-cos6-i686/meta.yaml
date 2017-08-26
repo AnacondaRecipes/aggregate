@@ -1,0 +1,28 @@
+package:
+  name: jpackage-utils-cos6-i686
+  version: 1.7.5
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/jpackage-utils-1.7.5-3.16.el6.noarch.rpm
+    sha256: 6e11b3db12e4fcbf850b6d67d0a3f8328b7e9968085275b0a5f43ff8715e87e3
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/jpackage-utils-1.7.5-3.16.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: jpackage-utils-cos6-i686
+    noarch: generic
+
+    about:
+      home: http://www.jpackage.org/
+      license: BSD
+      license_family: BSD
+      summary: "(CDT) JPackage utilities"
+      description: |
+        Utilities for the JPackage Project <http://www.jpackage.org/>.  It contains
+        also the License, man pages, documentation, XSL files of general use with
+        maven2, a header file for spec files, etc. Please See the
+        /usr/share/doc/jpackage-utils-1.7.5/jpackage-utils-README file for more
+        information.

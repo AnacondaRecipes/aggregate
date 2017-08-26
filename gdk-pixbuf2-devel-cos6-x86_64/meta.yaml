@@ -1,0 +1,31 @@
+package:
+  name: gdk-pixbuf2-devel-cos6-x86_64
+  version: 2.24.1
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/gdk-pixbuf2-devel-2.24.1-6.el6_7.x86_64.rpm
+    sha256: f6dcd9fee4829caf414074fd45e577a9f4334747b6b429462ab4d64e7ab51b5c
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/gdk-pixbuf2-2.24.1-6.el6_7.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - gdk-pixbuf2-cos6-x86_64 ==2.24.1
+
+
+outputs:
+  - name: gdk-pixbuf2-devel-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - gdk-pixbuf2-cos6-x86_64 ==2.24.1
+
+    about:
+      home: http://www.gt.org
+      license: LGPLv2+ and (LGPLv2+ or MPLv1.1) and Public Domain
+      license_family: LGPL
+      summary: "(CDT) Development files for gdk-pixbuf"
+      description: |
+        This package contains the libraries and header files that are needed for
+        writing applications that are using gdk-pixbuf.

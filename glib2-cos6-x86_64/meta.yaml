@@ -1,0 +1,27 @@
+package:
+  name: glib2-cos6-x86_64
+  version: 2.28.8
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/glib2-2.28.8-9.el6.x86_64.rpm
+    sha256: 076a0aae60831596470567ef636dbdd2caeecefeeff8bbd2529d64b7eac53b0d
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/glib2-2.28.8-9.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: glib2-cos6-x86_64
+    noarch: generic
+
+    about:
+      home: http://www.gtk.org
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) A library of handy utility functions"
+      description: |
+        GLib is the low-level core library that forms the basis for projects such as
+        GTK+ and GNOME. It provides data structure handling for C, portability
+        wrappers, and interfaces for such runtime functionality as an event loop,
+        threads, dynamic loading, and an object system.

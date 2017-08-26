@@ -12,7 +12,7 @@ source:
 requirements:
   build:
     - jpackage-utils-cos6-x86_64 >=1.7.3
-    - libjpeg-cos6-x86_64 ==1.2.1
+    - libjpeg-turbo-cos6-x86_64 ==1.2.1
     - ca-certificates-cos6-x86_64 ==2016.2.10
 
 
@@ -22,7 +22,7 @@ outputs:
     requirements:
       run:
         - jpackage-utils-cos6-x86_64 >=1.7.3
-        - libjpeg-cos6-x86_64 ==1.2.1
+        - libjpeg-turbo-cos6-x86_64 ==1.2.1
         - ca-certificates-cos6-x86_64 ==2016.2.10
 
     about:

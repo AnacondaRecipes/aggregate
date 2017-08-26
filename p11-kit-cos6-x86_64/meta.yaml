@@ -1,0 +1,26 @@
+package:
+  name: p11-kit-cos6-x86_64
+  version: 0.18.5
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/p11-kit-0.18.5-2.el6_5.2.x86_64.rpm
+    sha256: 72c0d0603374442745817291b41eff329e97557aa89d6d8b112f5c033d16ee15
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/p11-kit-0.18.5-2.el6_5.2.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: p11-kit-cos6-x86_64
+    noarch: generic
+
+    about:
+      home: http://p11-glue.freedesktop.org/p11-kit.html
+      license: BSD
+      license_family: BSD
+      summary: "(CDT) Library for loading and sharing PKCS#11 modules"
+      description: |
+        p11-kit provides a way to load and enumerate PKCS#11 modules, as well as a
+        standard configuration setup for installing PKCS#11 modules in such a way that
+        they're discoverable.

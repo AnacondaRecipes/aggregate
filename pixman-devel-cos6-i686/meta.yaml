@@ -1,0 +1,30 @@
+package:
+  name: pixman-devel-cos6-i686
+  version: 0.32.8
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/pixman-devel-0.32.8-1.el6.i686.rpm
+    sha256: 94844b27d6c68a516413f16942a16e8bdb9995112fafa1115c944bb17e3371f8
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/pixman-0.32.8-1.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - pixman-cos6-i686 ==0.32.8
+
+
+outputs:
+  - name: pixman-devel-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - pixman-cos6-i686 ==0.32.8
+
+    about:
+      home: http://cgit.freedesktop.org/pixman/
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Pixel manipulation library development package"
+      description: |
+        Development library for pixman.

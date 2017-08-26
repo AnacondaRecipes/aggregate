@@ -1,0 +1,30 @@
+package:
+  name: db4-cos6-i686
+  version: 4.7.25
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/db4-4.7.25-22.el6.i686.rpm
+    sha256: f31ac30c01cea731c61bf0b96046118b6b255f1aa61b90b9c2f4b53245df7a61
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/db4-4.7.25-22.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: db4-cos6-i686
+    noarch: generic
+
+    about:
+      home: http://www.oracle.com/database/berkeley-db/
+      license: Sleepycat and BSD
+      license_family: BSD
+      summary: "(CDT) The Berkeley DB database library (version 4) for C"
+      description: |
+        The Berkeley Database (Berkeley DB) is a programmatic toolkit that provides
+        embedded database support for both traditional and client/server applications.
+        The Berkeley DB includes B+tree, Extended Linear Hashing, Fixed and Variable-
+        length record access methods, transactions, locking, logging, shared memory
+        caching, and database recovery. The Berkeley DB supports C, C++, Java, and
+        Perl APIs. It is used by many applications, including Python and Perl, so this
+        should be installed on all systems.

@@ -1,0 +1,33 @@
+package:
+  name: ca-certificates-cos6-x86_64
+  version: 2016.2.10
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/ca-certificates-2016.2.10-65.4.el6.noarch.rpm
+    sha256: 617d0a9720633c965135c7bdd0a5bd1254c99765ca0c9d22a42770c13ed14bcb
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/ca-certificates-2016.2.10-65.4.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - p11-kit-cos6-x86_64 >=0.18.4
+    - p11-kit-trust-cos6-x86_64 >=0.18.4
+
+
+outputs:
+  - name: ca-certificates-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - p11-kit-cos6-x86_64 >=0.18.4
+        - p11-kit-trust-cos6-x86_64 >=0.18.4
+
+    about:
+      home: http://www.mozilla.org/
+      license: Public-Domain
+      license_family: Public-Domain
+      summary: "(CDT) The Mozilla CA root certificate bundle"
+      description: |
+        This package contains the set of CA certificates chosen by the Mozilla
+        Foundation for use with the Internet PKI.

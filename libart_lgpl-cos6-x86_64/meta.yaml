@@ -1,0 +1,25 @@
+package:
+  name: libart_lgpl-cos6-x86_64
+  version: 2.3.20
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libart_lgpl-2.3.20-5.1.el6.x86_64.rpm
+    sha256: 99f401bfed3af9d72228c5be231202b0f1574780a6d40558fa635b4d1fcca9ec
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libart_lgpl-2.3.20-5.1.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: libart_lgpl-cos6-x86_64
+    noarch: generic
+
+    about:
+      home: http://www.gnome.org/
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) Library of graphics routines used by libgnomecanvas"
+      description: |
+        Graphics routines used by the GnomeCanvas widget and some other applications.
+        libart renders vector paths and the like.

@@ -1,0 +1,30 @@
+package:
+  name: libxrandr-cos6-i686
+  version: 1.5.1
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libXrandr-1.5.1-1.el6.i686.rpm
+    sha256: d01413a208b19e47d419dc86e3e0730f5fa2a9379d2f5452ee7ad2dcae207f7a
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXrandr-1.5.1-1.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libx11-cos6-i686 >=1.6.0
+
+
+outputs:
+  - name: libxrandr-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - libx11-cos6-i686 >=1.6.0
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X.Org X11 libXrandr runtime library"
+      description: |
+        X.Org X11 libXrandr runtime library

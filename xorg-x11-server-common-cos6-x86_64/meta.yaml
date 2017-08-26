@@ -1,0 +1,30 @@
+package:
+  name: xorg-x11-server-common-cos6-x86_64
+  version: 1.17.4
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/xorg-x11-server-common-1.17.4-16.el6.centos.x86_64.rpm
+    sha256: ecc55667668f6bb8069461499efc7d8d259193ebe88ee8bec59606b878c0e848
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/xorg-x11-server-1.17.4-16.el6.centos.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - pixman-cos6-x86_64 >=0.30.0
+
+
+outputs:
+  - name: xorg-x11-server-common-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - pixman-cos6-x86_64 >=0.30.0
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Xorg server common files"
+      description: |
+        Common files shared among all X servers.

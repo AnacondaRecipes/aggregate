@@ -1,0 +1,32 @@
+package:
+  name: glib2-devel-cos6-x86_64
+  version: 2.28.8
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/glib2-devel-2.28.8-9.el6.x86_64.rpm
+    sha256: be49b3b0d1e846e1adab9ed194c2905f3afe98491e66777df4d7030b2b41b172
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/glib2-2.28.8-9.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - glib2-cos6-x86_64 ==2.28.8
+    - pkgconfig-cos6-x86_64 >=0.14
+
+
+outputs:
+  - name: glib2-devel-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - glib2-cos6-x86_64 ==2.28.8
+        - pkgconfig-cos6-x86_64 >=0.14
+
+    about:
+      home: http://www.gtk.org
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) A library of handy utility functions"
+      description: |
+        The glib2-devel package includes the header files for the GLib library.

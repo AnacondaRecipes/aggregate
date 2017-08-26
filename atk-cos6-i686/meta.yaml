@@ -1,0 +1,27 @@
+package:
+  name: atk-cos6-i686
+  version: 1.30.0
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/atk-1.30.0-1.el6.i686.rpm
+    sha256: 1fb6cdc8bdeaab448dc07d6c326fe402e3170e7b4e9fff84de45c6fc9aeee216
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/atk-1.30.0-1.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: atk-cos6-i686
+    noarch: generic
+
+    about:
+      home: http://developer.gnome.org/projects/gap/
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) Interfaces for accessibility support"
+      description: |
+        The ATK library provides a set of interfaces for adding accessibility support
+        to applications and graphical user interface toolkits. By supporting the ATK
+        interfaces, an application or toolkit can be used with tools such as screen
+        readers, magnifiers, and alternative input devices.

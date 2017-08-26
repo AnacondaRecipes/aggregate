@@ -1,0 +1,33 @@
+package:
+  name: atk-devel-cos6-x86_64
+  version: 1.30.0
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/atk-devel-1.30.0-1.el6.x86_64.rpm
+    sha256: 2469c560033cc10d449d0a5065b3c5c4c78d5e7e9ca6cbf43ae66e8175af4ab3
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/atk-1.30.0-1.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - atk-cos6-x86_64 ==1.30.0
+    - glib2-devel-cos6-x86_64 >=2.6.0
+
+
+outputs:
+  - name: atk-devel-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - atk-cos6-x86_64 ==1.30.0
+        - glib2-devel-cos6-x86_64 >=2.6.0
+
+    about:
+      home: http://developer.gnome.org/projects/gap/
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) Development files for the ATK accessibility toolkit"
+      description: |
+        This package includes libraries, header files, and developer documentation
+        needed for development of applications or toolkits which use ATK.

@@ -1,0 +1,30 @@
+package:
+  name: libjpeg-turbo-cos6-x86_64
+  version: 1.2.1
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libjpeg-turbo-1.2.1-3.el6_5.x86_64.rpm
+    sha256: c3dcce9a0f3cbcc5c618fd75ed57dd993b5b74bb4cb195800b5fedef501fc825
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libjpeg-turbo-1.2.1-3.el6_5.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: libjpeg-turbo-cos6-x86_64
+    noarch: generic
+
+    about:
+      home: http://sourceforge.net/projects/libjpeg-turbo
+      license: wxWidgets
+      license_family: Other
+      summary: "(CDT) A MMX/SSE2 accelerated library for manipulating JPEG image files"
+      description: |
+        The libjpeg-turbo package contains a library of functions for manipulating
+        JPEG images. It also contains simple client programs for accessing the libjpeg
+        functions. It contains cjpeg, djpeg, jpegtran, rdjpgcom and wrjpgcom. Cjpeg
+        compresses an image file into JPEG format. Djpeg decompresses a JPEG file into
+        a regular image file. Jpegtran can perform various useful transformations on
+        JPEG files. Rdjpgcom displays any text comments included in a JPEG file.
+        Wrjpgcom inserts text comments into a JPEG file.

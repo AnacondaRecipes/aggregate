@@ -1,0 +1,25 @@
+package:
+  name: p11-kit-trust-cos6-i686
+  version: 0.18.5
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/p11-kit-trust-0.18.5-2.el6_5.2.i686.rpm
+    sha256: 14a9fcb6d4fd540640c404c45b7a53e2514c21a6552b0b1d79b53518e9444512
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/p11-kit-0.18.5-2.el6_5.2.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: p11-kit-trust-cos6-i686
+    noarch: generic
+
+    about:
+      home: http://p11-glue.freedesktop.org/p11-kit.html
+      license: BSD
+      license_family: BSD
+      summary: "(CDT) System trust module from p11-kit"
+      description: |
+        The p11-kit-trust package contains a system trust PKCS#11 module which
+        contains certificate anchors and black lists.
