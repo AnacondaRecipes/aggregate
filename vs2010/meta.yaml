@@ -8,7 +8,7 @@ build:
     - vc10
 
 outputs:
-  - name: vs2010_{{ target_platform }}
+  - name: vs2010_{{ cross_compiler_target_platform }}
     script: install_activate.bat
     run_exports:
       - vc 10

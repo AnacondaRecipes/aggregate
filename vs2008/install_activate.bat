@@ -4,19 +4,12 @@ set VER=9
 mkdir "%PREFIX%\etc\conda\activate.d"
 COPY "%RECIPE_DIR%\activate.bat" "%PREFIX%\etc\conda\activate.d\vs%YEAR%_compiler_vars.bat"
 
-
-if "%ARCH%" == "64" (
-    :: 64-bit
-    echo SET "CMAKE_GENERATOR=Visual Studio %VER% %YEAR% Win64" >> "%PREFIX%\etc\conda\activate.d\vs%YEAR%_compiler_vars.bat"
-) else (
-    :: 32-bit
-    echo SET "CMAKE_GENERATOR=Visual Studio %VER% %YEAR%" >> "%PREFIX%\etc\conda\activate.d\vs%YEAR%_compiler_vars.bat"
-)
-
-IF "%target_platform%" == "win-64" (
+IF "%cross_compiler_target_platform%" == "win-64" (
   set "target_platform=amd64"
+  echo SET "CMAKE_GENERATOR=Visual Studio %VER% %YEAR% Win64" >> "%PREFIX%\etc\conda\activate.d\vs%YEAR%_compiler_vars.bat"
   ) else (
   set "target_platform=x86"
+    echo SET "CMAKE_GENERATOR=Visual Studio %VER% %YEAR%" >> "%PREFIX%\etc\conda\activate.d\vs%YEAR%_compiler_vars.bat"
   )
 
 echo CALL "%%VSINSTALLDIR%%\..\..\VC\vcvarsall.bat" %target_platform% >> "%PREFIX%\etc\conda\activate.d\vs%YEAR%_compiler_vars.bat"
