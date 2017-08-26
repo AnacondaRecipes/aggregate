@@ -12,12 +12,24 @@ cxx_compiler:                  # [win]
   - vs2015                     # [win]
 CONDA_BUILD_SYSROOT:           # [osx]
   - /opt/MacOSX10.9.sdk        # [osx]
+dbus:
+  - 1
 expat:
   - 2.1
+fontconfig:
+  - 2.12
+freetype:
+  - 2.8
+gstreamer:
+  - 1.12
+gst_plugins_base:
+  - 1.12
 geos:
   - 3.6.0
 giflib:
   - 5.1
+glib:
+  - 2.53
 hdf4:
   - 4.2
 hdf5:
