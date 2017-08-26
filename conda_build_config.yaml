@@ -1,6 +1,6 @@
 blas_impl:
   - mkl                        # [x86 or x86_64]
-  - openblas
+  # - openblas
 boost:
   - 1.64
 bzip2:
@@ -13,6 +13,8 @@ cxx_compiler:                  # [win]
   - vs2008                     # [win]
   - vs2015                     # [win]
   - vs2015                     # [win]
+fortran_compiler:              # [win]
+  - intel-fortran              # [win]
 CONDA_BUILD_SYSROOT:           # [osx]
   - /opt/MacOSX10.9.sdk        # [osx]
 VERBOSE_AT:
