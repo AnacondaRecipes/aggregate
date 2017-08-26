@@ -12,10 +12,10 @@ build:
 requirements:
   build:
     - crosstool-ng
-  run:
-    - {{ pin_subpackage('gcc_' ~ ctng_target_platform, exact=True) }}
-    - {{ pin_subpackage('gxx_' ~ ctng_target_platform, exact=True) }}
-    - {{ pin_subpackage('gfortran_' ~ ctng_target_platform, exact=True) }}
+  # run:
+  #   - {{ pin_subpackage('gcc_' ~ ctng_target_platform, min_pin='x.x.x.x.x.x.x.x.x', max_pin='x.x.x.x.x.x.x.x.x') }}
+  #   - {{ pin_subpackage('gxx_' ~ ctng_target_platform, min_pin='x.x.x.x.x.x.x.x.x', max_pin='x.x.x.x.x.x.x.x.x') }}
+  #   - {{ pin_subpackage('gfortran_' ~ ctng_target_platform, min_pin='x.x.x.x.x.x.x.x.x', max_pin='x.x.x.x.x.x.x.x.x') }}
 
 outputs:
   - name: gcc_{{ ctng_target_platform }}
