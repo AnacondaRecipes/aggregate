@@ -8,7 +8,7 @@ build:
     - vc9
 
 outputs:
-  - name: vs2008_{{ target_platform }}
+  - name: vs2008_{{ cross_compiler_target_platform }}
     script: install_activate.bat
     run_exports:
       - vc 9

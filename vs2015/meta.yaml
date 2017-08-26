@@ -8,7 +8,7 @@ build:
     - vc14
 
 outputs:
-  - name: vs2015_{{ target_platform }}
+  - name: vs2015_{{ cross_compiler_target_platform }}
     script: install_activate.bat
     run_exports:
       - vc 14
