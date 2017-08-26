@@ -23,6 +23,12 @@ requirements:
     - zlib
     - xz
     - openssl  # [not osx]
+    # Eat static.
+    ignore_run_deps:
+      - libxml2
+      - bzip2
+      - zlib
+      - xz
 
 about:
   home: http://mackyle.github.io/xar

@@ -1,5 +1,7 @@
 boost:
   - 1.64
+bzip2:
+  - 1.0
 c_compiler:                    # [win]
   - vs2008                     # [win]
   - vs2015                     # [win]
@@ -62,6 +64,8 @@ vc:
   - 9                          # [win]
   - 14                         # [win]
   - 14                         # [win]
+zlib:
+  - 1.2
 zip_keys:
   -                            # [win or osx]
     - vc                       # [win]

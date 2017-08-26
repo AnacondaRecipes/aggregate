@@ -1086,3 +1086,15 @@
 	path = imageio-feedstock
 	url = ../imageio-feedstock
 	branch = master
+[submodule "boost-feedstock"]
+	path = boost-feedstock
+	url = ../boost-feedstock
+	branch = master
+[submodule "gettext-feedstock"]
+	path = gettext-feedstock
+	url = ../gettext-feedstock
+	branch = master
+[submodule "cmake-feedstock"]
+	path = cmake-feedstock
+	url = ../cmake-feedstock
+	branch = master

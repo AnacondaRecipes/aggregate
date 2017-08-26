@@ -1,0 +1,30 @@
+package:
+  name: libx11-cos6-x86_64
+  version: 1.6.4
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libX11-1.6.4-3.el6.x86_64.rpm
+    sha256: 10a698d15cfef14bb09a2ce4e569e8f42dca5c7197dacc04978f86d7b01c2224
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libX11-1.6.4-3.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libx11-common-cos6-x86_64 ==1.6.4
+
+
+outputs:
+  - name: libx11-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - libx11-common-cos6-x86_64 ==1.6.4
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Core X11 protocol client library"
+      description: |
+        Core X11 protocol client library.
