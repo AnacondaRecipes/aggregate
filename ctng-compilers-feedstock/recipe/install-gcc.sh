@@ -117,7 +117,7 @@ elif [[ ${kernel_arch} == i686 ]]; then
   kernel_arch=x86
 fi
 
-make -C ${SRC_DIR}/.build/src/linux-* CROSS_COMPILE=${CHOST}- O=${SRC_DIR}/.build/${CHOST}/build/build-kernel-headers ARCH=${kernel_arch} INSTALL_HDR_PATH=${PREFIX}/${CHOST}/sysroot/usr V=1 headers_install
+make -C ${SRC_DIR}/.build/src/linux-* CROSS_COMPILE=${CHOST}- O=${SRC_DIR}/.build/${CHOST}/build/build-kernel-headers ARCH=${kernel_arch} INSTALL_HDR_PATH=${PREFIX}/${CHOST}/sysroot/usr ${VERBOSE_AT} headers_install
 
 if [[ ${ctng_libc} == gnu ]]; then
   # Install libc libraries

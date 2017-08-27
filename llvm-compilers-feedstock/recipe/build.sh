@@ -1,8 +1,5 @@
 #!/bin/bash
 
-VERBOSE_CM="VERBOSE=1"
-VERBOSE_AT="V=1"
-
 # Ensure we do not end up linking to a shared libz
 rm -f "${PREFIX}"/lib/libz*${SHLIB_EXT}
 # .. if this doesn't work we will need to pass LLVM_ENABLE_ZLIB

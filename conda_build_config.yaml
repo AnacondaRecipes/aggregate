@@ -12,6 +12,10 @@ cxx_compiler:                  # [win]
   - vs2015                     # [win]
 CONDA_BUILD_SYSROOT:           # [osx]
   - /opt/MacOSX10.9.sdk        # [osx]
+VERBOSE_AT:
+  - V=1
+VERBOSE_CM:
+  - VERBOSE=1
 dbus:
   - 1
 expat:

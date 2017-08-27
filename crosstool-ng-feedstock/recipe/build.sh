@@ -11,5 +11,5 @@ if [[ $(uname) == Darwin ]]; then
 fi
 ./bootstrap
 ./configure --prefix=${PREFIX}
-make V=1
+make -j${CPU_COUNT} ${VERBOSE_AT}
 make install
