@@ -64,7 +64,7 @@ function _tc_activation() {
           ;;
       esac
       if [ "${pass}" = "apply" ]; then
-        thing=$(echo ${thing} | tr 'a-z+-' 'A-ZX_')
+        thing=$(echo ${thing} | tr 'a-z+-.' 'A-ZX__')
         eval oldval="\$${from}$thing"
         if [ -n "${oldval}" ]; then
           eval export "${to}'${thing}'=\"${oldval}\""
@@ -85,7 +85,7 @@ function _tc_activation() {
 env > /tmp/old-env-$$.txt
 _tc_activation \
   activate host @CHOST@ @CHOST@- \
-  addr2line ar as c++filt elfedit gprof ld nm objcopy objdump ranlib readelf size strings strip
+  addr2line ar as c++filt elfedit gprof ld ld.gold nm objcopy objdump ranlib readelf size strings strip
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"

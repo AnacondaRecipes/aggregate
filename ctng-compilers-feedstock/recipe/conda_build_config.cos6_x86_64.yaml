@@ -37,7 +37,7 @@ ctng_vendor:
 ctng_target_platform:
   - linux-64
 FINAL_CPPFLAGS:
-  - -D_FORTIFY_SOURCE=2 -O
+  - -D_FORTIFY_SOURCE=2 -O2
 FINAL_CFLAGS:
   - -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe
 FINAL_CXXFLAGS:

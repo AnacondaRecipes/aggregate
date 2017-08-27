@@ -247,7 +247,13 @@ function write_ctng_config_before() {
       echo "CT_GDB_GDBSERVER_HAS_IPA_LIB=y"                             >> "${_dst}"
       echo "CT_GDB_GDBSERVER_STATIC=n"                                  >> "${_dst}"
       echo "CT_BINUTILS_HAS_GOLD=y"                                     >> "${_dst}"
-      echo "CT_BINUTILS_LINKERS_LIST=\"gold,ld\""                       >> "${_dst}"
+      echo "CT_BINUTILS_GOLD_SUPPORT=y"                                 >> "${_dst}"
+      # Support for building glibc with gold is not yet complete, never mind really old
+      # versions of glibc. In general it sounds like gold is not ready for prime-time.
+      # https://github.com/bminor/glibc/commit/f300dc7358e785dd92259514f57acd10f695d142
+      # https://github.com/bminor/glibc/commit/19f1a11e7ea2a5082bae9d9a079338c5658ba954
+      echo "CT_BINUTILS_LINKER_LD_GOLD=y"                               >> "${_dst}"
+      echo "CT_BINUTILS_LINKERS_LIST=\"ld,gold\""                       >> "${_dst}"
     fi
     echo "CT_GDB_NATIVE=${_native_gdb}"                                 >> "${_dst}"
     echo "CT_GDB_CROSS_PYTHON=n"                                        >> "${_dst}"
