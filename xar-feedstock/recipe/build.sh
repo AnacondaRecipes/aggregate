@@ -10,7 +10,7 @@ pushd xar
               --with-lzma=${PREFIX}  \
               --disable-shared       \
               --enable-static
-  make
+  make -j${CPU_COUNT} ${VERBOSE_AT}
   make install
   # Since libxar is linked to ld64 it's imperative that we
   # do not have any transitive static library dependencies.
