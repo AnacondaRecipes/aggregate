@@ -1118,3 +1118,7 @@
 	path = setuptools_scm-feedstock
 	url = ../setuptools_scm-feedstock
 	branch = master
+[submodule "blaze-feedstock"]
+	path = blaze-feedstock
+	url = ../blaze-feedstock
+	branch = master
