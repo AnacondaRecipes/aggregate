@@ -13,6 +13,14 @@ package:
 source:
   url: https://github.com/mackyle/xar/archive/xar-{{ version }}.tar.gz
 
+build:
+  # Eat static.
+  ignore_run_deps:
+    - libxml2
+    - bzip2
+    - zlib
+    - xz
+
 requirements:
   build:
     # not osx because on that system, this is a compiler bootstrapping package
@@ -23,12 +31,6 @@ requirements:
     - zlib
     - xz
     - openssl  # [not osx]
-    # Eat static.
-    ignore_run_deps:
-      - libxml2
-      - bzip2
-      - zlib
-      - xz
 
 about:
   home: http://mackyle.github.io/xar
