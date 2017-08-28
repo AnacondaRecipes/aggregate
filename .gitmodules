@@ -1102,3 +1102,7 @@
 	path = numpy-1.8-feedstock
 	url = ../numpy-feedstock
 	branch = numpy18
+[submodule "mock-feedstock"]
+	path = mock-feedstock
+	url = ../mock-feedstock
+	branch = master
