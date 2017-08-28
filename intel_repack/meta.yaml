@@ -1,0 +1,105 @@
+{% set version='2018.0.0' %}
+{% set icc_rt_ver='16.0.3' %}
+{% set buildnum='4' %}
+{% set icc_rt_buildnum='14' %}
+{% set mkl_include_buildnum='2' %}
+{% set openmp_buildnum='7' %}
+
+package:
+  name: intel_repacks
+  version: {{ version }}
+
+build:
+  number: {{ buildnum }}
+  binary_relocation: false
+  detect_binary_files_with_prefix: false
+
+source:
+  - url: https://anaconda.org/intel/mkl/{{ version }}/download/{{ target_platform }}/mkl-{{ version }}-intel_{{ buildnum }}.tar.bz2
+    folder: mkl
+  - url: https://anaconda.org/intel/mkl-include/{{ version }}/download/{{ target_platform }}/mkl-include-{{ version }}-intel_{{ mkl_include_buildnum }}.tar.bz2
+    folder: mkl-include
+  - url: https://anaconda.org/intel/openmp/{{ version }}/download/{{ target_platform }}/openmp-{{ version }}-intel_{{ openmp_buildnum }}.tar.bz2
+    folder: intel-openmp
+  - url: https://anaconda.org/intel/icc_rt/{{ icc_rt_ver }}/download/{{ target_platform }}/icc_rt-{{ icc_rt_ver }}-intel_{{ icc_rt_buildnum }}.tar.bz2
+    folder: icc_rt
+
+outputs:
+  - name: icc_rt
+    script: repack.sh
+    version: {{ icc_rt_ver }}
+    number: {{ icc_rt_buildnum }}
+    about:
+      home: https://software.intel.com/en-us/intel-compilers
+      license: proprietary - Intel
+      license_family: Proprietary
+      license_file: LICENSE.txt
+      summary: runtimes for the Intel C/C++ compiler
+      description: |
+        Runtimes for the Intel C Compiler. This package is a repackaged set of binaries obtained directly
+        from Intel\'s anaconda.org channel.
+      doc_url: https://software.intel.com/en-us/intel-compilers
+
+  - name: mkl
+    script: repack.sh
+    provides_features:
+      blas: mkl
+    requirements:
+      run:
+      # icc_rt is here to keep consistency with older MKL packages.  Intel has split these off into a
+      #    separate package. We follow their structure, but add this dependency for backwards compatibility.
+        - icc_rt
+        - intel-openmp
+    about:
+      home: https://software.intel.com/en-us/mkl
+      license: proprietary - Intel
+      license_family: Proprietary
+      license_file: LICENSE.txt
+      summary: Math library for Intel and compatible processors
+      description: |
+        Intel Math Kernel Library is a BLAS implementation tuned for high performance on Intel CPUs.
+        This package is a repackaged set of binaries obtained directly from Intel\'s anaconda.org channel.
+      doc_url: https://software.intel.com/en-us/mkl/documentation
+
+  - name: mkl-include
+    script: repack.sh
+    number: {{ mkl_include_buildnum }}
+    requirements:
+    about:
+      home: https://software.intel.com/en-us/mkl
+      license: proprietary - Intel
+      license_family: Proprietary
+      license_file: LICENSE.txt
+      summary: MKL headers for developing software that uses MKL
+      description: |
+        Intel Math Kernel Library is a BLAS implementation tuned for high performance on Intel CPUs.
+        This package is a repackaged set of binaries obtained directly from Intel\'s anaconda.org channel.
+      doc_url: https://software.intel.com/en-us/mkl/documentation
+
+  - name: mkl-devel
+    requirements:
+      run:
+        - {{ pin_subpackage('mkl', exact=True) }}
+        - {{ pin_subpackage('mkl-include', exact=True) }}
+    # when stuff is built with MKL, ensure that constraint makes mkl runtime libs as new or
+    #     newer than build version
+    run_exports:
+      - {{ pin_subpackage('mkl', max_pin=None) }}
+    about:
+      summary: Metapacakge of MKL headers and libraries for developing software that uses MKL
+
+  - name: intel-openmp
+    script: repack.sh
+    provides_features:
+      openmp: intel
+    number: {{ openmp_buildnum }}
+    about:
+      home: https://software.intel.com/en-us/node/522690
+      license: proprietary - Intel
+      license_family: Proprietary
+      license_file: LICENSE.txt
+      summary: Math library for Intel and compatible processors
+      description: |
+        Intel openmp runtime implementation
+        This package is a repackaged set of binaries obtained directly from Intel\'s anaconda.org channel.
+      doc_url: https://software.intel.com/en-us/node/522690
