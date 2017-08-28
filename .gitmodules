@@ -1106,3 +1106,15 @@
 	path = mock-feedstock
 	url = ../mock-feedstock
 	branch = master
+[submodule "pbr-feedstock"]
+	path = pbr-feedstock
+	url = ../pbr-feedstock
+	branch = master
+[submodule "mako-feedstock"]
+	path = mako-feedstock
+	url = ../mako-feedstock
+	branch = master
+[submodule "setuptools_scm-feedstock"]
+	path = setuptools_scm-feedstock
+	url = ../setuptools_scm-feedstock
+	branch = master
