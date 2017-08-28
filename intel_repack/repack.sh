@@ -9,7 +9,7 @@ if [[ `uname` == "MINGW64_NT-10.0" ]]; then
     src=$(cygpath -u "$SRC_DIR/$PKG_NAME/")
     cp -rv $src/* "$PREFIX/"
 else
-    cp -rv "$SRC_DIR/$PKG_NAME/" "$PREFIX/"
+    mv -v $SRC_DIR/$PKG_NAME/* "$PREFIX/"
 fi
 
 rm -rf $PREFIX/info
