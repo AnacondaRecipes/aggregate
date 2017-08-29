@@ -1126,7 +1126,3 @@
 	path = anaconda-project-feedstock
 	url = ../anaconda-project-feedstock
 	branch = master
-[submodule "numpy-1.9-feedstock"]
-	path = numpy-1.9-feedstock
-	url = ../numpy-feedstock
-	branch = numpy19
