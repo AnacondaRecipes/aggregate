@@ -1122,3 +1122,7 @@
 	path = blaze-feedstock
 	url = ../blaze-feedstock
 	branch = master
+[submodule "anaconda-project-feedstock"]
+	path = anaconda-project-feedstock
+	url = ../anaconda-project-feedstock
+	branch = master
