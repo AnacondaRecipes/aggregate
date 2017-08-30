@@ -24,7 +24,7 @@ VERBOSE_CM:
 dbus:
   - 1
 expat:
-  - 2.1
+  - 2.2
 fontconfig:
   - 2.12
 freetype:
