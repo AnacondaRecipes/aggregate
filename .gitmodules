@@ -1130,3 +1130,11 @@
 	path = numpy-1.9-feedstock
 	url = ../numpy-feedstock
 	branch = numpy19
+[submodule "rhash-feedstock"]
+	path = rhash-feedstock
+	url = ../rhash-feedstock
+	branch = master
+[submodule "libuv-feedstock"]
+	path = libuv-feedstock
+	url = ../libuv-feedstock
+	branch = master
