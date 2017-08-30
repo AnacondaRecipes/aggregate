@@ -1,0 +1,64 @@
+package:
+  name: cmake-binary
+  version: 3.9.1  # [linux64 or win or osx]
+  version: 3.6.3  # [linux32]
+
+source:
+  - url: https://repo.continuum.io/pkgs/free/linux-32/cmake-3.6.3-0.tar.bz2      # [linux32]
+    folder: cmake-bin                                                            # [linux32]
+    sha256: 3da2fcd9e742378f104938b8ffdb6205dd12d1b3d659c925580bc20d1d762423     # [linux32]
+  - url: https://repo.continuum.io/pkgs/free/linux-32/curl-7.54.1-0.tar.bz2      # [linux32]
+    folder: cmake-bin                                                            # [linux32]
+    sha256: 16c35b8f6297c5c2e94b9330854c523d6492c509                             # [linux32]
+  - url: https://repo.continuum.io/pkgs/free/linux-32/expat-2.1.0-0.tar.bz2      # [linux32]
+    folder: cmake-bin                                                            # [linux32]
+    sha256: 44cb0ec5d9f09080532f6ba9a084125cab77617303e3d15004c8639b6886507f     # [linux32]
+  - url: https://repo.continuum.io/pkgs/free/linux-32/krb5-1.13.2-0.tar.bz2      # [linux32]
+    folder: cmake-bin                                                            # [linux32]
+    sha256: 85051dd1d5f2e445e2210d9b66abd059fdd4a2010110ef36040cd45fdd3faf38     # [linux32]
+  - url: https://repo.continuum.io/pkgs/free/linux-32/libssh2-1.8.0-0.tar.bz2    # [linux32]
+    folder: cmake-bin                                                            # [linux32]
+    sha256: bf297dda04b90092a8d1365dd93fc9de99d14d67213303bd7e2c8e8b9467736b     # [linux32]
+  - url: https://repo.continuum.io/pkgs/free/linux-32/ncurses-5.9-10.tar.bz2     # [linux32]
+    folder: cmake-bin                                                            # [linux32]
+    sha256: 0429ff6a84ac2538d21712c896907e060a23c1004571c9c24990ecdd33d3de85     # [linux32]
+  - url: https://repo.continuum.io/pkgs/free/linux-32/openssl-1.0.2l-0.tar.bz2   # [linux32]
+    folder: cmake-bin                                                            # [linux32]
+    sha256: 297a5bd913f553772de286c20d1aad16e1374e8f49b45046fdd50d4a70170d09     # [linux32]
+  - url: https://repo.continuum.io/pkgs/free/linux-32/xz-5.2.3-0.tar.bz2         # [linux32]
+    folder: cmake-bin                                                            # [linux32]
+    sha256: 15d0cee74f649f7a2f530e332e9548757fb7e97665cd2660883a69d2c33a5521     # [linux32]
+  - url: https://repo.continuum.io/pkgs/free/linux-32/zlib-1.2.11-0.tar.bz2      # [linux32]
+    folder: cmake-bin                                                            # [linux32]
+    sha256: 3c871e456c13baa7e563bbff0fcf100c8f7e39b4d00cd337485e162d2df417fa     # [linux32]
+  - url: https://repo.continuum.io/pkgs/free/linux-32/bzip2-1.0.6-3.tar.bz2      # [linux32]
+    folder: cmake-bin                                                            # [linux32]
+    sha256: 4ecbe0f83d3aef6c7b847651a22817986ad12f1371362cd7f42db6c99485bfea     # [linux32]
+  - url: https://cmake.org/files/v3.9/cmake-3.9.1-Linux-x86_64.tar.gz            # [linux64]
+    folder: cmake-bin                                                            # [linux64]
+    sha256: ecbaf72981ccd09d9dade6d580cf1213eef15ef95a675dd9d4f0d693f134644f     # [linux64]
+  - url: https://cmake.org/files/v3.9/cmake-3.9.1-Darwin-x86_64.tar.gz           # [osx]
+    folder: cmake-bin                                                            # [osx]
+    sha256: b99918b38ba37aaa81314f8a96ced123317d6101b67512bbfa25814a256dcd91     # [osx]
+  - url: https://cmake.org/files/v3.9/cmake-3.9.1-win64-x64.zip                  # [win32]
+    folder: cmake-bin                                                            # [win32]
+    sha256: a3226743c0b160f8f402aa72103a2ec391a8ba5556c49ddd047b1c62a9f75ffb     # [win32]
+  - url: https://cmake.org/files/v3.9/cmake-3.9.1-win32-x86.zip                  # [win64]
+    folder: cmake-bin                                                            # [win64]
+    sha256: e0d9501bd34e3100e925dcb2e07f5f0ce8980bdbe5fce0ae950b21368d54c1a1     # [win64]
+
+build:
+  script: robocopy cmake-bin %PREFIX%\  # [win]
+
+about:
+  home: http://www.cmake.org/
+  license: BSD 3-clause
+  license_family: BSD
+  summary: CMake is an extensible, open-source system that manages the build process
+  description: |
+    CMake is an open-source, cross-platform family of tools designed to build,
+    test and package software.
+  dev_url: https://gitlab.kitware.com/cmake/cmake/
+  doc_url: https://cmake.org/documentation/
+  doc_source_url: https://github.com/Kitware/CMake/blob/master/README.rst
+
