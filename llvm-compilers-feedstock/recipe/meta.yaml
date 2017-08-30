@@ -25,6 +25,7 @@ source:
     patches:
       - 0001-clang-Allow-disabling-libXML.patch
       - 0002-clang-add-conda-specific-env-var-CONDA_BUILD_SYSROOT.patch
+      - 0003-clang-Fix-normalizeProgramName-s-handling-of-dots-outside-.patch
 #  - url: http://releases.llvm.org/{{ version }}/lldb-{{ version }}.src.tar.xz
 #    folder: tools/lldb
   - url: http://releases.llvm.org/{{ version }}/polly-{{ version }}.src.tar.xz
