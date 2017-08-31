@@ -144,7 +144,7 @@ outputs:
       run:
         # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
         # but that is not possible when bootstrapping as it would cause a build dependency cycle.
-        - {{ pin_subpackage('libcxx_' ~ cross_target_platform, exact=True) }}        # [osx]
+        - {{ pin_subpackage('libcxx', exact=True) }}        # [osx]
     build:
       ignore_run_exports:
         - zlib
@@ -155,7 +155,7 @@ outputs:
     requirements:
         # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
         # but that is not possible when bootstrapping as it would cause a build dependency cycle.
-        - {{ pin_subpackage('libcxx_' ~ cross_target_platform, exact=True) }}        # [osx]
+        - {{ pin_subpackage('libcxx', exact=True) }}        # [osx]
     build:
       ignore_run_exports:
         - zlib
@@ -176,7 +176,7 @@ outputs:
         - {{ pin_subpackage('llvm-lto-tapi', exact=True) }}
         # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
         # but that is not possible when bootstrapping as it would cause a build dependency cycle.
-        - {{ pin_subpackage('libcxx_' ~ cross_target_platform, exact=True) }}        # [osx]
+        - {{ pin_subpackage('libcxx', exact=True) }}        # [osx]
     build:
       ignore_run_exports:
         - zlib
@@ -196,7 +196,7 @@ outputs:
         - {{ pin_subpackage('llvm-lto-tapi', exact=True) }}
         # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
         # but that is not possible when bootstrapping as it would cause a build dependency cycle.
-        - {{ pin_subpackage('libcxx_' ~ cross_target_platform, exact=True) }}        # [osx]
+        - {{ pin_subpackage('libcxx', exact=True) }}        # [osx]
         - {{ pin_subpackage('cctools', exact=True) }}
         - {{ pin_subpackage('ld64', exact=True) }}
     build:
@@ -226,10 +226,10 @@ outputs:
         # Mismatching package: llvm; consumer package: clang
         # Mismatching package: llvm; consumer package: lldb
         - {{ pin_subpackage('llvm', exact=True) }}
-        - {{ pin_subpackage('compiler-rt_' ~ cross_target_platform, exact=True) }}
+        - {{ pin_subpackage('compiler-rt', exact=True) }}
         # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
         # but that is not possible when bootstrapping as it would cause a build dependency cycle.
-        - {{ pin_subpackage('libcxx_' ~ cross_target_platform, exact=True) }}        # [osx]
+        - {{ pin_subpackage('libcxx', exact=True) }}        # [osx]
     build:
       ignore_run_exports:
         - zlib
@@ -286,7 +286,7 @@ outputs:
     run_exports:
       # impose this requirement across the build/host boundary
       strong:
-        - {{ pin_subpackage('libcxx_' ~ cross_target_platform, min_pin='x.x.x.x.x.x.x.x.x', max_pin=None) }}
+        - {{ pin_subpackage('libcxx', min_pin='x.x.x.x.x.x.x.x.x', max_pin=None) }}
     build:
       ignore_run_exports:
         - zlib
@@ -309,7 +309,7 @@ outputs:
         - {{ pin_subpackage('llvm', exact=True) }}
         # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
         # but that is not possible when bootstrapping as it would cause a build dependency cycle.
-        - {{ pin_subpackage('libcxx_' ~ cross_target_platform, exact=True) }}        # [osx]
+        - {{ pin_subpackage('libcxx', exact=True) }}        # [osx]
     build:
       ignore_run_exports:
         - zlib
@@ -332,7 +332,7 @@ outputs:
       build:
         - cmake-binary
       run:
-        - {{ pin_subpackage('libcxxabi_' ~ cross_target_platform, exact=True) }}
+        - {{ pin_subpackage('libcxxabi', exact=True) }}
     build:
       ignore_run_exports:
         - zlib
@@ -374,7 +374,7 @@ outputs:
       run:
         # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
         # but that is not possible when bootstrapping as it would cause a build dependency cycle.
-        - {{ pin_subpackage('libcxx_' ~ cross_target_platform, exact=True) }}        # [osx]
+        - {{ pin_subpackage('libcxx', exact=True) }}        # [osx]
     build:
       ignore_run_exports:
         - zlib
