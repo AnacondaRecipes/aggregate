@@ -24,7 +24,9 @@ outputs:
       run:
         - {{ pin_subpackage('binutils_' ~ ctng_target_platform, exact=True) }}
     run_exports:
-      - {{ pin_subpackage('libgcc_' ~ ctng_target_platform, min_pin='x.x.x.x.x.x.x.x.x', max_pin=None) }}
+      # impose this requirement across the build/host boundary
+      strong:
+        - {{ pin_subpackage('libgcc-ng', min_pin='x.x.x.x.x.x.x.x.x', max_pin=None) }}
     about:
       summary: GNU C Compiler
       home: https://gcc.gnu.org/
@@ -45,9 +47,11 @@ outputs:
         # gets installed into the build prefix, we need to install those strong run-exports into the
         # the host prefix (and if those prefixes are the same then we still install them). This came
         # up again with ICU, and I was about to add a similar pin to gcc for libgcc, but no, I wont.
-        - {{ pin_subpackage('libstdcxx_' ~ ctng_target_platform, exact=True) }}
+        - {{ pin_subpackage('libstdcxx-ng', exact=True) }}
     run_exports:
-      - {{ pin_subpackage('libstdcxx_' ~ ctng_target_platform, min_pin='x.x.x.x.x.x.x.x.x', max_pin=None) }}
+      # impose this requirement across the build/host boundary
+      strong:
+        - {{ pin_subpackage('libstdcxx-ng', min_pin='x.x.x.x.x.x.x.x.x', max_pin=None) }}
     about:
       summary: GNU C++ Compiler
       home: https://gcc.gnu.org/
@@ -62,9 +66,11 @@ outputs:
       run:
         # For cpp and crt{i,n}.o
         - {{ pin_subpackage('gcc_' ~ ctng_target_platform, exact=True) }}
-        - {{ pin_subpackage('libgfortran_' ~ ctng_target_platform, exact=True) }}
+        - {{ pin_subpackage('libgfortran-ng', exact=True) }}
     run_exports:
-      - {{ pin_subpackage('libgfortran_' ~ ctng_target_platform, min_pin='x.x.x.x.x.x.x.x.x', max_pin=None) }}
+      # impose this requirement across the build/host boundary
+      strong:
+        - {{ pin_subpackage('libgfortran-ng', min_pin='x.x.x.x.x.x.x.x.x', max_pin=None) }}
     about:
       summary: GNU Fortran Compiler
       home: https://gcc.gnu.org/
@@ -78,7 +84,7 @@ outputs:
       home: https://www.gnu.org/software/binutils/
       license: GPL
 
-  - name: libstdcxx_{{ ctng_target_platform }}
+  - name: libstdcxx-ng
     target: {{ ctng_target_platform }}
     script: install-libstdc++.sh
     about:
@@ -86,7 +92,7 @@ outputs:
       home: https://gcc.gnu.org/
       license: GPL3 with runtime exception
 
-  - name: libgcc_{{ ctng_target_platform }}
+  - name: libgcc-ng
     target: {{ ctng_target_platform }}
     script: install-libgcc.sh
     about:
@@ -94,7 +100,7 @@ outputs:
       home: https://gcc.gnu.org/onlinedocs/gccint/Libgcc.html
       license: GPL
 
-  - name: libgfortran_{{ ctng_target_platform }}
+  - name: libgfortran-ng
     target: {{ ctng_target_platform }}
     script: install-libgfortran.sh
     about:

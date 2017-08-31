@@ -284,7 +284,9 @@ outputs:
       run:
         - {{ pin_subpackage('clang', exact=True) }}
     run_exports:
-      - {{ pin_subpackage('libcxx_' ~ cross_target_platform, min_pin='x.x.x.x.x.x.x.x.x', max_pin=None) }}
+      # impose this requirement across the build/host boundary
+      strong:
+        - {{ pin_subpackage('libcxx_' ~ cross_target_platform, min_pin='x.x.x.x.x.x.x.x.x', max_pin=None) }}
     build:
       ignore_run_exports:
         - zlib
@@ -323,7 +325,7 @@ outputs:
         based on integer polyhedra to analyze and optimize the memory access
         pattern of a program
 
-  - name: libcxx_{{ cross_target_platform }}
+  - name: libcxx
     script: install-libcxx.sh
     target: {{ cross_target_platform }}
     requirements:
@@ -344,7 +346,7 @@ outputs:
         libc++ is a new implementation of the C++ standard library, targeting
         C++11
 
-  - name: libcxxabi_{{ cross_target_platform }}
+  - name: libcxxabi
     script: install-libcxxabi.sh
     target: {{ cross_target_platform }}
     requirements:
@@ -363,7 +365,7 @@ outputs:
         libc++abi is a new implementation of low level support for a standard
         C++ library
 
-  - name: libunwind_{{ cross_target_platform }}
+  - name: libunwind
     script: install-libunwind.sh
     target: {{ cross_target_platform }}
     requirements:
@@ -386,7 +388,7 @@ outputs:
         libc++abi is a new implementation of low level support for a standard
         C++ library
 
-  - name: openmp_{{ cross_target_platform }}
+  - name: llvm-openmp
     script: install-openmp.sh
     target: {{ cross_target_platform }}
     requirements:
@@ -405,7 +407,7 @@ outputs:
         The OpenMP subproject of LLVM contains the components required to build an
         executable OpenMP program that are outside the compiler itself.
 
-  - name: compiler-rt_{{ cross_target_platform }}
+  - name: compiler-rt
     script: install-compiler-rt.sh
     target: {{ cross_target_platform }}
     requirements:

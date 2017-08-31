@@ -57,13 +57,14 @@ build:
     - lib/libisl.10.dylib
 
   run_exports:
-    - libgfortran_{{ target_platform }} >={{ libgfortran_ver }}
+    strong:
+      - libgfortran-ng >={{ libgfortran_ver }}
 
 requirements:
   build:
     - gcc {{ gfortran_ver }}
   run:
-    - libgfortran_{{ target_platform }} >={{ libgfortran_ver }}
+    - libgfortran-ng >={{ libgfortran_ver }}
 
 about:
   home: http://gcc.gnu.org/
