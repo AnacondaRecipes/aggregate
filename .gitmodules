@@ -1150,3 +1150,27 @@
 	path = dask-core-feedstock
 	url = ../dask-core-feedstock
 	branch = master
+[submodule "hdijupyterutils-feedstock"]
+	path = hdijupyterutils-feedstock
+	url = ../hdijupyterutils-feedstock
+	branch = master
+[submodule "sparkmagic-feedstock"]
+	path = sparkmagic-feedstock
+	url = ../sparkmagic-feedstock
+	branch = master
+[submodule "autovizwidget-feedstock"]
+	path = autovizwidget-feedstock
+	url = ../autovizwidget-feedstock
+	branch = master
+[submodule "pyspark-feedstock"]
+	path = pyspark-feedstock
+	url = ../pyspark-feedstock
+	branch = master
+[submodule "pypandoc-feedstock"]
+	path = pypandoc-feedstock
+	url = ../pypandoc-feedstock
+	branch = master
+[submodule "py4j-feedstock"]
+	path = py4j-feedstock
+	url = ../py4j-feedstock
+	branch = master
