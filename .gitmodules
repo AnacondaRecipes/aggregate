@@ -1138,3 +1138,15 @@
 	path = libuv-feedstock
 	url = ../libuv-feedstock
 	branch = master
+[submodule "ipython-5.x-feedstock"]
+	path = ipython-5.x-feedstock
+	url = ../ipython-feedstock
+	branch = 5.x
+[submodule "backports.shutil_get_terminal_size-feedstock"]
+	path = backports.shutil_get_terminal_size-feedstock
+	url = ../backports.shutil_get_terminal_size-feedstock
+	branch = master
+[submodule "dask-core-feedstock"]
+	path = dask-core-feedstock
+	url = ../dask-core-feedstock
+	branch = master
