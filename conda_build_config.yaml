@@ -5,17 +5,17 @@ boost:
   - 1.64
 bzip2:
   - 1.0
-c_compiler:                    # [win]
+c_compiler:
   - vs2008                     # [win]
   - vs2015                     # [win]
   - vs2015                     # [win]
-cxx_compiler:                  # [win]
+cxx_compiler:
   - vs2008                     # [win]
   - vs2015                     # [win]
   - vs2015                     # [win]
-fortran_compiler:              # [win]
+fortran_compiler:
   - intel-fortran              # [win]
-CONDA_BUILD_SYSROOT:           # [osx]
+CONDA_BUILD_SYSROOT:
   - /opt/MacOSX10.9.sdk        # [osx]
 VERBOSE_AT:
   - V=1
@@ -63,17 +63,18 @@ libtiff:
   - 4.0
 libxml2:
   - 2.9
-macos_min_version:              # [osx]
-  - 10.9                        # [osx]
-macos_machine:                  # [osx]
-  - x86_64-apple-darwin13.4.0   # [osx]
-MACOSX_DEPLOYMENT_TARGET:       # [osx]
-  - 10.9                        # [osx]
+macos_min_version:
+  - 10.9
+macos_machine:
+  - x86_64-apple-darwin13.4.0
+MACOSX_DEPLOYMENT_TARGET:
+  - 10.9
 mkl:
   - 2018
 # we build for an old version of numpy for forward compatibility
 numpy:
-  - 1.8
+  - 1.8  # [not win or py<35]
+  - 1.9  # [win and py>=35]
 openblas:
   - 0.2.19
 perl:
@@ -99,9 +100,9 @@ target_platform:
   - win-64                     # [win]
   - win-32                     # [win]
 vc:
-  - 9                          # [win]
-  - 14                         # [win]
-  - 14                         # [win]
+  - 9
+  - 14
+  - 14
 zlib:
   - 1.2
 xz:
