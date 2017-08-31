@@ -98,7 +98,7 @@ cross_compiler_target_platform:
   - win-64                     # [win]
 target_platform:
   - win-64                     # [win]
-  - win-32                     # [win]
+  - win-32                     # [win and not blas_impl != "mkl"]
 vc:
   - 9
   - 14
