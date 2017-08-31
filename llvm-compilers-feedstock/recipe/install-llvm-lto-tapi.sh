@@ -1,6 +1,7 @@
 #!/bin/bash
 
 . activate "${PREFIX}"
+PATH=${PREFIX}/cmake-bin/bin:${PATH}
 cd "${SRC_DIR}"
 
 DEST="${PWD}"/install-llvm-lto-tapi

@@ -37,6 +37,7 @@ export LDFLAGS=${LDFLAGS}" -L${PREFIX}/lib"
 export CFLAGS=${CFLAGS}" -I${PREFIX}/include"
 export CXXFLAGS=${CXXFLAGS}" -I${PREFIX}/include"
 
+PATH=${PREFIX}/cmake-bin/bin:${PATH}
 OLD_PREFIX=${PREFIX}
 PREFIX=${SRC_DIR}/prefix
 # We want to stop using the bootstrap compiler so will remove it from PATH

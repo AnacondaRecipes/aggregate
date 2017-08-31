@@ -25,7 +25,7 @@ source:
     patches:
       - 0001-clang-Allow-disabling-libXML.patch
       - 0002-clang-add-conda-specific-env-var-CONDA_BUILD_SYSROOT.patch
-      - 0003-clang-Fix-normalizeProgramName-s-handling-of-dots-outside-.patch
+      - 0003-clang-Fix-normalizeProgramName-s-handling-of-dots-ou.patch
 #  - url: http://releases.llvm.org/{{ version }}/lldb-{{ version }}.src.tar.xz
 #    folder: tools/lldb
   - url: http://releases.llvm.org/{{ version }}/polly-{{ version }}.src.tar.xz
@@ -124,7 +124,7 @@ requirements:
     - gxx_{{ native_compiler_subdir }}  # [linux]
     # build.sh sets HAVE_TERMINFO_*=OFF instead; could effect quality (colours etc) of console output?
     # - ncurses                           # [linux]
-    - cmake
+    - cmake-binary
     - swig
     - autoconf
     - automake
@@ -140,7 +140,7 @@ outputs:
     script: install-llvm-lto-tapi.sh
     requirements:
       build:
-        - cmake
+        - cmake-binary
       run:
         # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
         # but that is not possible when bootstrapping as it would cause a build dependency cycle.
@@ -191,7 +191,7 @@ outputs:
     script: install-llvm.sh
     requirements:
       build:
-        - cmake
+        - cmake-binary
       run:
         - {{ pin_subpackage('llvm-lto-tapi', exact=True) }}
         # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
@@ -218,7 +218,7 @@ outputs:
     script: install-clang.sh
     requirements:
       build:
-        - cmake
+        - cmake-binary
       run:
         # llvm pinned using min_pin, max_pin because:
         # conda_build.exceptions.RecipeError: Mismatching hashes in recipe. Exact pins in dependencies that contribute to the hash often cause this. Can you change one or more exact pins to version bound constraints?
@@ -253,7 +253,7 @@ outputs:
 #    script: install-lldb.sh
 #    requirements:
 #      build:
-#        - cmake
+#        - cmake-binary
 #      run:
 #        # llvm pinned using min_pin, max_pin because:
 #        # conda_build.exceptions.RecipeError: Mismatching hashes in recipe. Exact pins in dependencies that contribute to the hash often cause this. Can you change one or more exact pins to version bound constraints?
@@ -302,7 +302,7 @@ outputs:
     script: install-polly.sh
     requirements:
       build:
-        - cmake
+        - cmake-binary
       run:
         - {{ pin_subpackage('llvm', exact=True) }}
         # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
@@ -328,7 +328,7 @@ outputs:
     target: {{ cross_target_platform }}
     requirements:
       build:
-        - cmake
+        - cmake-binary
       run:
         - {{ pin_subpackage('libcxxabi_' ~ cross_target_platform, exact=True) }}
     build:
@@ -349,7 +349,7 @@ outputs:
     target: {{ cross_target_platform }}
     requirements:
       build:
-        - cmake
+        - cmake-binary
     build:
       ignore_run_exports:
         - zlib
@@ -368,7 +368,7 @@ outputs:
     target: {{ cross_target_platform }}
     requirements:
       build:
-        - cmake
+        - cmake-binary
       run:
         # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
         # but that is not possible when bootstrapping as it would cause a build dependency cycle.
@@ -391,7 +391,7 @@ outputs:
     target: {{ cross_target_platform }}
     requirements:
       build:
-        - cmake
+        - cmake-binary
     build:
       ignore_run_exports:
         - zlib
@@ -410,7 +410,7 @@ outputs:
     target: {{ cross_target_platform }}
     requirements:
       build:
-        - cmake
+        - cmake-binary
     build:
       ignore_run_exports:
         - zlib
