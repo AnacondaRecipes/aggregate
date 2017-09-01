@@ -88,7 +88,7 @@ python:
   - 3.5
   - 3.6
 scipy:
-  - 0.17
+  - 0.19
 sqlite:
   - 3
 # This differs from target_platform in that it determines what subdir the compiler
