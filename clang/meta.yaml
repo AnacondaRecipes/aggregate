@@ -7,7 +7,7 @@ build:
 
 requirements:
   build:
-    - libcxx_{{ target_platform }}
+    - libcxx
 
 outputs:
   - name: clang_{{ target_platform }}
@@ -18,7 +18,7 @@ outputs:
     script: install-clangxx.sh
     requirements:
       - clangxx
-      - libcxx_{{ target_platform }}
+      - libcxx
     # Since transitive run_exports are not currently possible:
     # (here I would like the run dependency on clangxx to pull in the run_exports from it).
     run_exports:

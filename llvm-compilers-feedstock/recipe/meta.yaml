@@ -1,7 +1,15 @@
 # llvm recipe adapted to build macOS conda compilers. build.sh spins multiple times
 # in order to bootstrap the compilers so they do not depend on system libs (libc++)
 
+{% set releases_url="releases" %}
 {% set version="4.0.1" %}
+{% set version_dir="4.0.1" %}
+
+# Patches need to be rebased
+# {% set releases_url="prereleases" %}
+# {% set version="5.0.0rc4" %}
+# {% set version_dir="5.0.0/rc4" %}
+
 {% set native_compiler_subdir=build_platform %}
 {% set cctools_version = '895' %}
 {% set cctools_sha256 = 'ce66034fa35117f9ae76bbb7dd72d8068c405778fa42e877e8a13237a10c5cb7' %}
@@ -13,35 +21,35 @@
 {% set tapi_sha256 = 'be2f3732c4ba7e9d78696fe43f0b31fa4963925ee6e4e5e11cc45603a83ff9a1' %}
 
 package:
-  name: llvm
+  name: llvm-suite
   version: {{ version }}
 
 source:
   # - git_url: https://github.com/llvm/llvm
   #   git_tag: master
-  - url: http://releases.llvm.org/{{ version }}/llvm-{{ version }}.src.tar.xz
-  - url: http://releases.llvm.org/{{ version }}/cfe-{{ version }}.src.tar.xz
+  - url: http://{{ releases_url }}.llvm.org/{{ version_dir }}/llvm-{{ version }}.src.tar.xz
+  - url: http://{{ releases_url }}.llvm.org/{{ version_dir }}/cfe-{{ version }}.src.tar.xz
     folder: tools/clang
     patches:
       - 0001-clang-Allow-disabling-libXML.patch
       - 0002-clang-add-conda-specific-env-var-CONDA_BUILD_SYSROOT.patch
       - 0003-clang-Fix-normalizeProgramName-s-handling-of-dots-ou.patch
-#  - url: http://releases.llvm.org/{{ version }}/lldb-{{ version }}.src.tar.xz
+#  - url: http://{{ releases_url }}.llvm.org/{{ version_dir }}/lldb-{{ version }}.src.tar.xz
 #    folder: tools/lldb
-  - url: http://releases.llvm.org/{{ version }}/polly-{{ version }}.src.tar.xz
+  - url: http://{{ releases_url }}.llvm.org/{{ version_dir }}/polly-{{ version }}.src.tar.xz
     folder: tools/polly
-  - url: http://releases.llvm.org/{{ version }}/compiler-rt-{{ version }}.src.tar.xz
+  - url: http://{{ releases_url }}.llvm.org/{{ version_dir }}/compiler-rt-{{ version }}.src.tar.xz
     folder: projects/compiler-rt
     patches:
       - 0001-cmake-Cache-results-of-find_darwin_sdk_dir.patch
       - 0002-compiler-rt-Determine-COMPILER_RT_SUPPORTED_ARCH-eve.patch
-  - url: http://releases.llvm.org/{{ version }}/libunwind-{{ version }}.src.tar.xz
+  - url: http://{{ releases_url }}.llvm.org/{{ version_dir }}/libunwind-{{ version }}.src.tar.xz
     folder: projects/libunwind
-  - url: http://releases.llvm.org/{{ version }}/libcxx-{{ version }}.src.tar.xz
+  - url: http://{{ releases_url }}.llvm.org/{{ version_dir }}/libcxx-{{ version }}.src.tar.xz
     folder: projects/libcxx
-  - url: http://releases.llvm.org/{{ version }}/libcxxabi-{{ version }}.src.tar.xz
+  - url: http://{{ releases_url }}.llvm.org/{{ version_dir }}/libcxxabi-{{ version }}.src.tar.xz
     folder: projects/libcxxabi
-  - url: http://releases.llvm.org/{{ version }}/openmp-{{ version }}.src.tar.xz
+  - url: http://{{ releases_url }}.llvm.org/{{ version_dir }}/openmp-{{ version }}.src.tar.xz
     folder: projects/openmp
   - url: https://opensource.apple.com/tarballs/tapi/tapi-{{ tapi_version }}.tar.gz
     sha256: {{ tapi_sha256 }}
