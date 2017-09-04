@@ -1,0 +1,11 @@
+diff -urN compiler-rt-5.0.0rc4.src.orig/cmake/Modules/CompilerRTDarwinUtils.cmake compiler-rt-5.0.0rc4.src/cmake/Modules/CompilerRTDarwinUtils.cmake
+--- compiler-rt-5.0.0rc4.src.orig/cmake/Modules/CompilerRTDarwinUtils.cmake	2017-09-01 19:52:31.000000000 +0100
++++ compiler-rt-5.0.0rc4.src/cmake/Modules/CompilerRTDarwinUtils.cmake	2017-09-01 19:52:40.000000000 +0100
+@@ -143,6 +143,7 @@
+     string(REPLACE "\n" ";" EXCLUDES ${EXCLUDES})
+     set(${output_var} ${EXCLUDES} PARENT_SCOPE)
+   endif()
++  set(DARWIN_${sdk_name}_CACHED_SYSROOT ${var_internal} CACHE STRING "Darwin SDK path for SDK ${sdk_name}." FORCE)
+ endfunction()
+ 
+ # this function takes an OS, architecture and minimum version and provides a
