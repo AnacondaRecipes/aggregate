@@ -1174,3 +1174,7 @@
 	path = py4j-feedstock
 	url = ../py4j-feedstock
 	branch = master
+[submodule "ruby-feedstock"]
+	path = ruby-feedstock
+	url = ../ruby-feedstock
+	branch = master

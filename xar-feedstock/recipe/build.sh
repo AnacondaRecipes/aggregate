@@ -6,6 +6,7 @@ pushd xar
   # (here the xar executable dynamically links them, while
   #  the shared library just contains undefined references)
   rm -f "${PREFIX}"/lib/lib{xml2,bz2,z,lzma,iconv}*.dylib
+  export CFLAGS="${CFLAGS} -isysroot /opt/MacOSX10.9.sdk"
   ./configure --prefix=${PREFIX}     \
               --with-lzma=${PREFIX}  \
               --disable-shared       \

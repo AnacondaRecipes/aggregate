@@ -73,7 +73,15 @@ elif [[ $(uname) == Darwin ]]; then
   export CFLAGS=${CFLAGS}" -mmacosx-version-min=${MACOSX_DEPLOYMENT_TARGET}"
   SYSROOT_DIR=${SRC_DIR}/bootstrap/MacOSX${MACOSX_DEPLOYMENT_TARGET}.sdk
   CFLAG_SYSROOT="--sysroot ${SYSROOT_DIR}"
-
+  # I have no idea why the system clang on 10.12.6 does not support --sysroot.
+  # You shouldn't be building toolchains on this version of macOS anyway.
+  if [[ $(uname) == Darwin ]] && [[ $(uname -r) =~ 16.* ]]; then
+    echo "Warning: It is unlikely that you can build llvm-based compilers on"
+    echo "Warning: this version of macOS, please use macOS 10.9 instead."
+    BS_CFLAG_SYSROOT="-isysroot ${SYSROOT_DIR}"
+  else
+    BS_CFLAG_SYSROOT="${CFLAG_SYSROOT}"
+  fi
 fi
 
 if [[ ${MACOSX_DEPLOYMENT_TARGET} == 10.9 ]]; then
@@ -153,11 +161,11 @@ if [[ ! -f ${PREFIX}/bin/${DARWIN_TARGET}-ld ]]; then
         # libstuff which is linked to libtool. Horrible.
         # .. you had better be running this on macOS 10.9 with the
         # .. compiler command line tools installed, otherwise YMMV
-        CC=${_usr_bin_CC}" ${CFLAG_SYSROOT}"     \
-        CXX=${_usr_bin_CXX}"  ${CFLAG_SYSROOT}"  \
-          ../cctools/configure                   \
-            "${_cctools_config[@]}"              \
-            --prefix=${BOOTSTRAP}                \
+        CC=${_usr_bin_CC}" ${BS_CFLAG_SYSROOT}"     \
+        CXX=${_usr_bin_CXX}"  ${BS_CFLAG_SYSROOT}"  \
+          ../cctools/configure                      \
+            "${_cctools_config[@]}"                 \
+            --prefix=${BOOTSTRAP}                   \
             --with-llvm=${BOOTSTRAP}
       popd
       pushd cctools_build_libtool/libstuff
@@ -203,11 +211,11 @@ if [[ ! -f ${PREFIX}/bin/${DARWIN_TARGET}-ld ]]; then
     # ld: unknown option: -no_deduplicate
     # .. you had better be running this on macOS 10.9 with the
     # .. compiler command line tools installed, otherwise YMMV
-    CC=${_usr_bin_CC}" ${CFLAG_SYSROOT}"    \
-    CXX=${_usr_bin_CXX}" ${CFLAG_SYSROOT}"  \
-      ../cctools/configure                  \
-        "${_cctools_config[@]}"             \
-        --prefix=${PREFIX}                  \
+    CC=${_usr_bin_CC}" ${BS_CFLAG_SYSROOT}"    \
+    CXX=${_usr_bin_CXX}" ${BS_CFLAG_SYSROOT}"  \
+      ../cctools/configure                     \
+        "${_cctools_config[@]}"                \
+        --prefix=${PREFIX}                     \
         --with-llvm=${PREFIX}
     make -j${CPU_COUNT} ${VERBOSE_AT}
     make install
