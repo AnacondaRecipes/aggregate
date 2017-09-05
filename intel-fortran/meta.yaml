@@ -1,0 +1,11 @@
+package:
+    name: intel-fortran
+    version: 2017.4.210
+
+outputs:
+  - name: intel-fortran_{{ cross_compiler_target_platform }}
+    script: install_activate.bat
+
+about:
+    license: BSD 3-clause
+    summary: Activation and version verification of Intel Fortran compiler
