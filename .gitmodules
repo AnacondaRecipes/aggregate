@@ -1178,3 +1178,7 @@
 	path = ruby-feedstock
 	url = ../ruby-feedstock
 	branch = master
+[submodule "pytest-runner-feedstock"]
+	path = pytest-runner-feedstock
+	url = ../pytest-runner-feedstock
+	branch = master
