@@ -49,8 +49,9 @@ hdf5:
 icu:
   - 58
 ipython:
-  - 5.4                        # [py27]
-  - 6.1                        # [not py27]
+  - 5.4
+  - 6.1
+  - 6.1
 jpeg:
   - 9
 libdap4:
@@ -120,3 +121,6 @@ zip_keys:
     - macos_machine             # [osx]
     - MACOSX_DEPLOYMENT_TARGET  # [osx]
     - CONDA_BUILD_SYSROOT       # [osx]
+  -
+    - python
+    - ipython
