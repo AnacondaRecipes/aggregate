@@ -1186,3 +1186,7 @@
 	path = iso8601-feedstock
 	url = ../iso8601-feedstock
 	branch = master
+[submodule "mccabe-feedstock"]
+	path = mccabe-feedstock
+	url = ../mccabe-feedstock
+	branch = master
