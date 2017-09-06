@@ -1182,3 +1182,7 @@
 	path = pytest-runner-feedstock
 	url = ../pytest-runner-feedstock
 	branch = master
+[submodule "iso8601-feedstock"]
+	path = iso8601-feedstock
+	url = ../iso8601-feedstock
+	branch = master
