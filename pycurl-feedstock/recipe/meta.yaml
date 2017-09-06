@@ -1,0 +1,43 @@
+package:
+  name: pycurl
+  version: 7.43.0
+
+source:
+  url: https://pypi.python.org/packages/12/3f/557356b60d8e59a1cce62ffc07ecc03e4f8a202c86adae34d895826281fb/pycurl-7.43.0.tar.gz
+  md5: c94bdba01da6004fa38325e9bd6b9760
+  patches:
+    - msvc_warnings.patch                     # [win]
+
+build:
+  number: 3
+  detect_binary_files_with_prefix: False
+
+requirements:
+  build:
+    - python
+  host:
+    - curl
+    - openssl
+  run:
+    - python
+    - curl 7.55.*
+    - openssl 1.0.2*
+
+test:
+  imports:
+    - curl
+    - pycurl
+
+about:
+  home: http://pycurl.sourceforge.net/
+  license: LGPL, MIT
+  license_family: LGPL
+  summary: A Python Interface To The cURL library
+  description: |
+    PycURL is a Python interface to libcurl, the multiprotocol file transfer library.
+    Similarly to the urllib Python module, PycURL can be used to fetch objects identified
+    by a URL from a Python program.
+  doc_url: http://pycurl.io/docs/latest/index.html
+  doc_source_url: https://github.com/pycurl/pycurl/blob/master/doc/index.rst
+  dev_url: https://github.com/pycurl/pycurl
+

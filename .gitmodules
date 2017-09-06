@@ -1190,3 +1190,7 @@
 	path = mccabe-feedstock
 	url = ../mccabe-feedstock
 	branch = master
+[submodule "pandas-feedstock"]
+	path = pandas-feedstock
+	url = ../pandas-feedstock
+	branch = master
