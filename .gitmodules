@@ -1257,4 +1257,7 @@
 [submodule "thrift-feedstock"]
 	path = thrift-feedstock
 	url = ../thrift-feedstock
+[submodule "scrapy-feedstock"]
+	path = scrapy-feedstock
+	url = ../scrapy-feedstock
 	branch = master
