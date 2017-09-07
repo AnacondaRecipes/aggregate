@@ -1194,3 +1194,7 @@
 	path = pandas-feedstock
 	url = ../pandas-feedstock
 	branch = master
+[submodule "hdf5-1.8-feedstock"]
+	path = hdf5-1.8-feedstock
+	url = ../hdf5-feedstock
+	branch = master-1.8
