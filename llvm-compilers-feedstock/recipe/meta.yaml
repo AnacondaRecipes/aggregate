@@ -3,6 +3,7 @@
 
 {% set releases_url="releases" %}
 {% set version="4.0.1" %}
+{% set version_dash="4.0.1" %}
 {% set version_dir="4.0.1" %}
 {% set llvm_sha256 = 'da783db1f82d516791179fe103c71706046561f7972b18f0049242dee6712b51' %}
 {% set cfe_sha256 = '61738a735852c23c3bdbe52d035488cdb2083013f384d67c1ba36fabebd8769b' %}
@@ -15,17 +16,18 @@
 {% set clang_llvm_bin_sha256 = '5ef4f1f72d0fe4cf03d8eaefb972b4d24219da67124a869ae75e3a6aeb1578f6' %}
 
 # {% set releases_url="prereleases" %}
-# {% set version="5.0.0rc4" %}
-# {% set version_dir="5.0.0/rc4" %}
-# {% set llvm_sha256 = 'ae72a3a652245d222d932da8bc46e3b3f1eab5cbf01a9c0fbe940da4642f7021' %}
-# {% set cfe_sha256 = '616ad29ae6998af6b1857829b53076b88b422931d27e33b60f553e56f5944eba' %}
-# {% set polly_sha256 = 'ca93da79b990f79d283fea921e039ad826dd3a4e524af1ba3952e0e2ee4fd33b' %}
-# {% set compiler_rt_sha256 = '2e646281587cdf31cb24370e4aefaa9d3a2ee0cc34d93608073c93dc0aca1804' %}
-# {% set libcxx_sha256 = '85e96ebe855924206be3512f87b56faf87e03cf166e174c554cb2871b5024faa' %}
-# {% set libcxxabi_sha256 = '457561663ba4fd044db592118efe5dd46115b8a8a8878c6fa9129e5e4d3b7a60' %}
-# {% set libunwind_sha256 = '01c25cfd65c6058668af3ecf000f601b8d9c424d6b46033a12c2ebd5378186a9' %}
-# {% set openmp_sha256 = 'fb0a18f28015cc79924617ee2034d64024cb111c6ed6a5df1cd7c26a212cb92a' %}
-# {% set clang_llvm_bin_sha256 = '525bb26459ce0f1845c983efcb88d829709dc88d48f7c9eccd2963fdecbb9b0b' %}
+# {% set version="5.0.0rc5" %}
+# {% set version_dash="5.0.0-rc5" %}
+# {% set version_dir="5.0.0/rc5" %}
+# {% set llvm_sha256 = '00fec4a3195f3bd233501373a4812c71a9183e8a8643ad31a1114e1372fa1f87' %}
+# {% set cfe_sha256 = 'bd19a5eb92731745721f67f12a82af8787eda4fc992ed79c9c4b0aac5e31de3a' %}
+# {% set polly_sha256 = '0a29d0c7c5aba7f556a9a8c2078021180dc23b90d3c9679515b90b4faea4be54' %}
+# {% set compiler_rt_sha256 = 'd1b2fa9222bd60b8920ec30c6931995a7497c176ed3208645594ac34287ba2c5' %}
+# {% set libcxx_sha256 = 'd0962eeaaa58406f2d6eeeb3e2ae8fdad9a8e63117eecd7e0fa7fed024305dcd' %}
+# {% set libcxxabi_sha256 = '8d51002c69146ea7010606412ee6ea49f9c1c2be630698a431a084c83208a1f9' %}
+# {% set libunwind_sha256 = 'a5e45128d1fb6a71bb5e584476c62f3fd6a9b128560c95ed696d2b0bb5681b28' %}
+# {% set openmp_sha256 = 'c18ba10cb81e5627f1e77d045efe30db13584eb2df957552d0946010c546bbc5' %}
+# {% set clang_llvm_bin_sha256 = '5d70313ed1cfdf25e36aefae07bab97e8ebfbb8e5ba5bd1bc80aa992cad19b08' %}
 
 {% set native_compiler_subdir=build_platform %}
 {% set cctools_version = '895' %}
@@ -87,6 +89,7 @@ source:
       - 0002-tapi-llvm-4.0.1-compat-add-missing-StringSwitch-include.patch
       - 0003-tapi-llvm-4.0.1-compat-modernise-error-handling.patch        
       - 0004-tapi-cross-compat.patch
+      # - 0005-tapi-5.0.0-Move-Support-MachO-to-BinaryFormat-MachO.patch
   - url: https://opensource.apple.com/tarballs/cctools/cctools-{{ cctools_version }}.tar.gz
     sha256: {{ cctools_sha256 }}
     folder: cctools
@@ -140,7 +143,7 @@ source:
       - 520-ld64-fix-usr-local-and-usr-ordering.patch
       - 530-ld64-add-conda-specific-env-vars-to-modify-lib-search-paths.patch
     # Because macOS 10.9's clang is too old (problems with atomics)
-  - url: http://{{ releases_url }}.llvm.org/{{ version_dir }}/clang+llvm-{{ version }}-x86_64-apple-darwin.tar.xz       [osx]
+  - url: http://{{ releases_url }}.llvm.org/{{ version_dir }}/clang+llvm-{{ version_dash }}-x86_64-apple-darwin.tar.xz       [osx]
     sha256: {{ clang_llvm_bin_sha256 }}
     folder: bootstrap                                                                                     [osx]
   # We copy headers necessary for building cctools/ld64 from dyld and MacOSX10.9.sdk (on all OSes).
