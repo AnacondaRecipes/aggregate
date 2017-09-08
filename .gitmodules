@@ -1198,3 +1198,11 @@
 	path = hdf5-1.8-feedstock
 	url = ../hdf5-feedstock
 	branch = master-1.8
+[submodule "pycodestyle-feedstock"]
+	path = pycodestyle-feedstock
+	url = ../pycodestyle-feedstock
+	branch = master
+[submodule "simplejson-feedstock"]
+	path = simplejson-feedstock
+	url = ../simplejson-feedstock
+	branch = master
