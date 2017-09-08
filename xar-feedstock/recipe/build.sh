@@ -1,13 +1,23 @@
 #!/bin/bash
 
+if [[ -n ${HOST} ]]; then
+  # Since this is involved in bootstrapping on
+  # macOS we will not have HOST set to anything.
+  HOST_CFG="--host=${HOST}"
+elif [[ $(uname) == Darwin ]]; then
+  export CFLAGS="${CFLAGS} -isysroot /opt/MacOSX10.9.sdk"
+  export AR=ar
+  export RANLIB=ranlib
+fi
+
 pushd xar
   ./autogen.sh --noconfigure
   # Because --disable-shared happily links to shared libs:
   # (here the xar executable dynamically links them, while
   #  the shared library just contains undefined references)
   rm -f "${PREFIX}"/lib/lib{xml2,bz2,z,lzma,iconv}*.dylib
-  export CFLAGS="${CFLAGS} -isysroot /opt/MacOSX10.9.sdk"
   ./configure --prefix=${PREFIX}     \
+              ${HOST_CFG}            \
               --with-lzma=${PREFIX}  \
               --disable-shared       \
               --enable-static
@@ -29,7 +39,9 @@ pushd xar
   _statics+=(libxml2.a)
   _statics+=(libz.a)
   _statics+=(liblzma.a)
-  _statics+=(libiconv.a)
+  if [[ $(uname) == Darwin ]]; then
+    _statics+=(libiconv.a)
+  fi
   _statics+=(libbz2.a)
   mkdir -p tmp_reform
   pushd tmp_reform
@@ -40,11 +52,11 @@ pushd xar
          ls $(dirname ${_full_a})/*.a
          exit 1
       fi
-      ar -x ${_full_a}
+      ${AR} -x ${_full_a}
     done
     [[ -f ../libxar.a ]] && rm -rf ../libxar.a
-    ar crv ../libxar.a *.o
+    ${AR} crv ../libxar.a *.o
   popd
-  ranlib libxar.a
+  ${RANLIB} libxar.a
   cp -f libxar.a ${PREFIX}/lib
 popd
