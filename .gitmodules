@@ -1206,3 +1206,7 @@
 	path = simplejson-feedstock
 	url = ../simplejson-feedstock
 	branch = master
+[submodule "flake8-feedstock"]
+	path = flake8-feedstock
+	url = ../flake8-feedstock
+	branch = master
