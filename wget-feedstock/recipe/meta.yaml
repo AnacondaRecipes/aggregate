@@ -10,9 +10,10 @@ requirements:
   build:
     - {{ compiler('c') }}
     - pkg-config
-  run:
-    - openssl
+    - openssl 1.0.*
     - zlib
+  run:
+    - openssl 1.0.*
 
 test:
   commands:

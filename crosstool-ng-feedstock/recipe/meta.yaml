@@ -9,21 +9,24 @@ source:
   git_tag: {{ commit }}
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
+    - {{ compiler('c') }}
     - autoconf
     - automake
     - bison
     - flex
     - git
-    - libtool
+  host:
     - ncurses
+    - libtool
     # There are two packages called 'wget' on defaults, one, the real wget and the other
     # a pythonic implementation from Anatoly Techtonik. At present, conda is installing
-    # the latter unless I force the version.
-    - wget ==1.18
+    # the latter unless I force the version(trying without this now, I believe Ilan may
+    # have removed Anatoly's?
+    - wget
   run:
     - ncurses
     - libtool
