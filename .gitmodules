@@ -1210,3 +1210,11 @@
 	path = flake8-feedstock
 	url = ../flake8-feedstock
 	branch = master
+[submodule "furl-feedstock"]
+	path = furl-feedstock
+	url = ../furl-feedstock
+	branch = master
+[submodule "phonenumbers-feedstock"]
+	path = phonenumbers-feedstock
+	url = ../phonenumbers-feedstock
+	branch = master
