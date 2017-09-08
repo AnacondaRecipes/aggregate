@@ -1,0 +1,31 @@
+package:
+  name: wget
+  version: 1.19.1
+
+source:
+  url: http://ftp.gnu.org/gnu/wget/wget-1.19.1.tar.xz
+  md5: d30d82186b93fcabb4116ff513bfa9bd
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - pkg-config
+  run:
+    - openssl
+    - zlib
+
+test:
+  commands:
+    - wget --help
+    - wget --version
+
+about:
+  home: https://www.gnu.org/software/wget/
+  license: GPL3
+  license_file: COPYING
+  summary: utility for non-interactive download of files from the Web
+  description: |
+    wget is a free software package for retrieving files using HTTP, HTTPS and FTP,
+    the most widely-used Internet protocols.
+  doc_url: https://www.gnu.org/software/wget/
+  doc_source_url: https://savannah.gnu.org/projects/wget/
