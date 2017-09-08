@@ -1234,3 +1234,15 @@
 	path = nb_conda_kernels-feedstock
 	url = ../nb_conda_kernels-feedstock
 	branch = master
+[submodule "botocore-feedstock"]
+	path = botocore-feedstock
+	url = ../botocore-feedstock
+	branch = master
+[submodule "jmespath-feedstock"]
+	path = jmespath-feedstock
+	url = ../jmespath-feedstock
+	branch = master
+[submodule "s3transfer-feedstock"]
+	path = s3transfer-feedstock
+	url = ../s3transfer-feedstock
+	branch = master
