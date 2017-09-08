@@ -4,14 +4,19 @@ package:
 
 build:
   number: 0
+  always_include_files:
+    - etc/jupyter/nbconfig/notebook.json
+    - etc/jupyter/jupyter_notebook_config.json
 
 requirements:
   build:
     - python
+    - widgetsnbextension
     - ipywidgets
     - jupyterlab
   run:
     - python
+    - widgetsnbextension
     - ipywidgets
     - jupyterlab
 
