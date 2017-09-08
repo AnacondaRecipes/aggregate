@@ -4,32 +4,32 @@
 # symlinks so the old filenames find the new
 # libraries
 
-{% set gcc_linux_ver = '7.1.0' %}
+{% set gcc_linux_ver = '7.2.0' %}
 {% set gcc_macos_ver = '4.8.5' %}
 
 package:
   name: libgcc
-  version: {{ gcc_linux_ver }}  [linux]
-  version: {{ gcc_macos_ver }}  [osx]
+  version: {{ gcc_linux_ver }}  # [linux]
+  version: {{ gcc_macos_ver }}  # [osx]
 
 requirements:
   build:
-    - libgcc_linux-64 >={{ gcc_linux_ver }}       [linux]
-    - libgfortran_linux-64 >={{ gcc_linux_ver }}  [linux]
-    - libstdcxx_linux-64 >={{ gcc_linux_ver }}    [linux]
-    - gcc >={{ gcc_macos_ver }}                   [osx]
+    - libgcc-ng >={{ gcc_linux_ver }}             # [linux]
+    - libgfortran-ng >={{ gcc_linux_ver }}        # [linux]
+    - libstdcxx-ng >={{ gcc_linux_ver }}          # [linux]
+    - gcc >={{ gcc_macos_ver }}                   # [osx]
   run:
-    - libgcc_linux-64 >={{ gcc_linux_ver }}       [linux]
-    - libgfortran_linux-64 >={{ gcc_linux_ver }}  [linux]
-    - libstdcxx_linux-64 >={{ gcc_linux_ver }}    [linux]
-    - libgfortran >= 4.8.5 >={{ gcc_macos_ver }}  [osx]
+    - libgcc-ng >={{ gcc_linux_ver }}             # [linux]
+    - libgfortran-ng >={{ gcc_linux_ver }}        # [linux]
+    - libstdcxx-ng >={{ gcc_linux_ver }}          # [linux]
+    - libgfortran >= 4.8.5 >={{ gcc_macos_ver }}  # [osx]
 
 build:
   number: 10  [osx]
-  number: 0   [linux]
+  number: 1   [linux]
   always_include_files:
-    - lib/libstdc++.6.dylib        [osx]
-    - lib/libstdc++.dylib          [osx]
+    - lib/libstdc++.6.dylib        # [osx]
+    - lib/libstdc++.dylib          # [osx]
 
 about:
   home: http://gcc.gnu.org/
