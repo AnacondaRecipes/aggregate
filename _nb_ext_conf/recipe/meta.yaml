@@ -1,0 +1,36 @@
+package:
+  name: _nb_ext_conf
+  version: 0.5.0
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - notebook >=4.2.0
+    - nb_anacondacloud
+    - nb_conda
+    - nb_conda_kernels
+    - nbpresent
+    - ipywidgets
+    - jupyterlab
+  run:
+    - python
+    - notebook >=4.2.0
+    - nb_anacondacloud
+    - nb_conda
+    - nb_conda_kernels
+    - nbpresent
+    - ipywidgets
+    - jupyerlab
+
+test:
+  commands:
+    - jupyter-nbextension list
+    - jupyter-serverextension list
+
+about:
+  home: https://github.com/ContinuumIO/anaconda-nb-extensions-meta-config
+  license: BSD
+  summary: A configuration metapackage for enabling Anaconda-bundled jupyter extensions
