@@ -23,7 +23,7 @@ requirements:
     - nb_conda_kernels
     - nbpresent
     - ipywidgets
-    - jupyerlab
+    - jupyterlab
 
 test:
   commands:
