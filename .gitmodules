@@ -1218,3 +1218,19 @@
 	path = phonenumbers-feedstock
 	url = ../phonenumbers-feedstock
 	branch = master
+[submodule "nbpresent-feedstock"]
+	path = nbpresent-feedstock
+	url = ../nbpresent-feedstock
+	branch = master
+[submodule "nb_anacondacloud-feedstock"]
+	path = nb_anacondacloud-feedstock
+	url = ../nb_anacondacloud-feedstock
+	branch = master
+[submodule "nb_conda-feedstock"]
+	path = nb_conda-feedstock
+	url = ../nb_conda-feedstock
+	branch = master
+[submodule "nb_conda_kernels-feedstock"]
+	path = nb_conda_kernels-feedstock
+	url = ../nb_conda_kernels-feedstock
+	branch = master
