@@ -1246,3 +1246,7 @@
 	path = s3transfer-feedstock
 	url = ../s3transfer-feedstock
 	branch = master
+[submodule "grin-feedstock"]
+	path = grin-feedstock
+	url = ../grin-feedstock
+	branch = master
