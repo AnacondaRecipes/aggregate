@@ -1,0 +1,38 @@
+package:
+  name: boto
+  version: 2.48.0
+
+source:
+  fn: boto-2.48.0.tar.gz
+  url: https://pypi.python.org/packages/66/e7/fe1db6a5ed53831b53b8a6695a8f134a58833cadb5f2740802bc3730ac15/boto-2.48.0.tar.gz
+  md5: ce4589dd9c1d7f5d347363223ae1b970
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+
+build:
+  number: 1
+  script: python setup.py install
+
+test:
+  commands:
+    - asadmin -h    # [py2k]
+    - s3put -h
+    - taskadmin -h  # [py2k]
+  imports:
+    - boto
+
+about:
+  home: https://github.com/boto/boto/
+  license: MIT
+  summary: Amazon Web Services Library
+  description: |
+    Boto aims to support the full breadth and depth of Amazon Web Services.
+    NOTE: Boto3, the next version of Boto, is stable and recommended for
+    general use.
+  doc_url: http://docs.pythonboto.org/en/latest/
+  doc_source_url: https://github.com/boto/boto/blob/develop/docs/source/index.rst
+  dev_url: https://github.com/boto/boto/
