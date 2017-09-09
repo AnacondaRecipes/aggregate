@@ -2,7 +2,8 @@
 # On Linux it is just a metapackage to the
 # new cross-compiler runtime libs with some
 # symlinks so the old filenames find the new
-# libraries
+# libraries, except for gfortran since 4 and
+# 3 are not compatible.
 
 {% set gcc_linux_ver = '7.2.0' %}
 {% set gcc_macos_ver = '4.8.5' %}
@@ -15,22 +16,22 @@ package:
 requirements:
   build:
     - libgcc-ng >={{ gcc_linux_ver }}             # [linux]
-    - libgfortran-ng >={{ gcc_linux_ver }}        # [linux]
+    - gcc ==4.8.5                                 # [linux]
     - libstdcxx-ng >={{ gcc_linux_ver }}          # [linux]
     - gcc >={{ gcc_macos_ver }}                   # [osx]
   run:
     - libgcc-ng >={{ gcc_linux_ver }}             # [linux]
-    - libgfortran-ng >={{ gcc_linux_ver }}        # [linux]
     - libstdcxx-ng >={{ gcc_linux_ver }}          # [linux]
     - libgfortran >= 4.8.5 >={{ gcc_macos_ver }}  # [osx]
 
 build:
-  number: 10  [osx]
-  number: 1   [linux]
+  number: 10                       # [osx]
+  number: 2                        # [linux]
   always_include_files:
     - lib/libstdc++.6.dylib        # [osx]
     - lib/libstdc++.dylib          # [osx]
-
+    - lib/libgfortran.so.3         # [linux]
+    - lib/libgfortran.so.3.0.0     # [linux]
 about:
   home: http://gcc.gnu.org/
   summary: Shared libraries for the GNU Compiler Collection

@@ -1,5 +1,5 @@
 package:
-  name: _ipyw_jlab_ext_conf
+  name: _ipyw_jlab_nb_ext_conf
   version: 0.1.0
 
 build:
