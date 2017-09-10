@@ -42,8 +42,7 @@ pushd ${SRC_DIR}/.build/${CHOST}/build/build-cc-gcc-final/
   make -C gcc prefix=${PREFIX} install-mkheaders
 
   if [[ -d ${CHOST}/libgomp ]]; then
-    make -C ${CHOST}/libgomp prefix=${PREFIX} install-nodist_toolexeclibHEADERS \
-    install-nodist_libsubincludeHEADERS
+    make -C ${CHOST}/libgomp prefix=${PREFIX} install-nodist_{libsubinclude,toolexeclib}HEADERS
   fi
 
   if [[ -d ${CHOST}/libitm ]]; then
