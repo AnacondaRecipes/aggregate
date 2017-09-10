@@ -1250,3 +1250,7 @@
 	path = grin-feedstock
 	url = ../grin-feedstock
 	branch = master
+[submodule "fastparquet-feedstock"]
+	path = fastparquet-feedstock
+	url = ../fastparquet-feedstock
+	branch = master
