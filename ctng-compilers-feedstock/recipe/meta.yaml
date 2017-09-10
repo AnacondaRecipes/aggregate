@@ -8,6 +8,7 @@ source:
 build:
   detect_binary_files_with_prefix: False
   binary_relocation: False
+  number: 1
 
 requirements:
   build:

@@ -179,6 +179,7 @@ function write_ctng_config_before() {
   echo "CT_CC_GCC_LIBGOMP=y"                                            >> "${_dst}"
   echo "CT_CC_GCC_LIBQUADMATH=y"                                        >> "${_dst}"
   echo "CT_CC_GCC_USE_LTO=y"                                            >> "${_dst}"
+  echo "CT_CC_GCC_LIBSANITIZER=y"                                       >> "${_dst}"
   echo "CT_CC_GCC_ENABLE_PLUGINS=n"                                     >> "${_dst}"
   # What about:
   # 1. --with-linker-hash-style=gnu (faster dynamic loading)? Should be possible
