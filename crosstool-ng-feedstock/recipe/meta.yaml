@@ -13,7 +13,8 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}
+    # TODO :: We need some [not bootstrapping] selector or something?
+    # - {{ compiler('c') }}
     - autoconf
     - automake
     - bison
