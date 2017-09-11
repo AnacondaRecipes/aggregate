@@ -1254,3 +1254,7 @@
 	path = fastparquet-feedstock
 	url = ../fastparquet-feedstock
 	branch = master
+[submodule "thrift-feedstock"]
+	path = thrift-feedstock
+	url = ../thrift-feedstock
+	branch = master
