@@ -22,7 +22,7 @@ requirements:
   run:
     - libgcc-ng >={{ gcc_linux_ver }}             # [linux]
     - libstdcxx-ng >={{ gcc_linux_ver }}          # [linux]
-    - libgfortran >= 4.8.5 >={{ gcc_macos_ver }}  # [osx]
+    - libgfortran >={{ gcc_macos_ver }}           # [osx]
 
 build:
   number: 10                       # [osx]
