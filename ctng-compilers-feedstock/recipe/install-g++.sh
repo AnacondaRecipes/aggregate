@@ -42,7 +42,7 @@ cp "${SRC_DIR}"/activate-g++.sh ${PREFIX}/etc/conda/activate.d/activate-${PKG_NA
 cp "${SRC_DIR}"/deactivate-g++.sh ${PREFIX}/etc/conda/deactivate.d/deactivate-${PKG_NAME}.sh
 
 # Test:
-${PREFIX}/bin/${CHOST}-g++ -fsanitize=signed-integer-overflow "${RECIPE_DIR}"/hello-world.cpp
+${PREFIX}/bin/${CHOST}-g++ "${RECIPE_DIR}"/hello-world.cpp
 
 # Strip executables, we may want to install to a different prefix
 # and strip in there so that we do not change files that are not
