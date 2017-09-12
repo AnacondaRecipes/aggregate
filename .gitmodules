@@ -1262,3 +1262,7 @@
 	path = scrapy-feedstock
 	url = ../scrapy-feedstock
 	branch = master
+[submodule "krb5-feedstock"]
+	path = krb5-feedstock
+	url = ../krb5-feedstock
+	branch = master
