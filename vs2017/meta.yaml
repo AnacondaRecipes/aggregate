@@ -1,0 +1,22 @@
+package:
+  name: vs2017_buildtools
+  version: "15.0.26730.3"
+
+build:
+  skip: True  [not win]
+  track_features:
+    # VS 2017 is binary-compatible with VS 2015/vc14.  Tools are "v141".
+    - vc14
+
+outputs:
+  - name: vs2017_{{ cross_compiler_target_platform }}
+    script: install_activate.bat
+    run_exports:
+      - vc 14
+      - {{ pin_subpackage('vs2017_runtime') }}
+  - name: vs2017_runtime
+    script: install_runtime.bat
+
+about:
+  summary: Activation and version verification of MSVC 14.1 (VS 2017) compiler
+  license: BSD 3-clause
