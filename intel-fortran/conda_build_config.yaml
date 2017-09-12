@@ -11,9 +11,9 @@ compiler_version:
 # This is to keep consistent with Intel's conda package naming
 intel_fortran_version:
   # for VS 2008 / py27
-  - 2013.0.6
+  - 13.1.6
   # for VS 2010 / py34
-  - 2016.0.4
+  - 16.0.4
   # for VS 2015 / py3.5+
   - 2017.0.4
 
