@@ -15,7 +15,8 @@ outputs:
     track_features:
       - vc{{ vcver }}
     run_exports:
-      - vc {{ vcver }}
+      strong:
+        - vc {{ vcver }}
     about:
       summary: Activation and version verification of MSVC {{ vcver }} (VS {{ vsyear }}) compiler
       license: BSD 3-clause

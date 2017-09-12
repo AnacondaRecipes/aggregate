@@ -15,7 +15,8 @@ outputs:
     script: install_activate.bat
     track_features:
       # VS 2017 is binary-compatible with VS 2015/vc14.  Tools are "v141".
-      - vc{{ vcfeature }}
+      strong:
+        - vc{{ vcfeature }}
     run_exports:
       - vc {{ vcver }}
     about:
