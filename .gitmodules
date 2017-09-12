@@ -1270,3 +1270,7 @@
 	path = plotly-feedstock
 	url = ../plotly-feedstock
 	branch = master
+[submodule "pywin32-feedstock"]
+	path = pywin32-feedstock
+	url = ../pywin32-feedstock
+	branch = master
