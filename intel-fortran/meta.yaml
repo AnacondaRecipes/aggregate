@@ -1,11 +1,22 @@
 package:
     name: intel-fortran
-    version: 2017.4.210
+    version: {{ intel_fortran_version }}
+
+build:
+  skip: True  # [not win]
 
 outputs:
   - name: intel-fortran_{{ cross_compiler_target_platform }}
     script: install_activate.bat
-
-about:
-    license: BSD 3-clause
-    summary: Activation and version verification of Intel Fortran compiler
+    run_exports:
+      strong:
+        - {{ pin_subpackage('icc_rt', max_pin=None) }}
+    about:
+      license: BSD 3-clause
+      summary: Activation and version verification of Intel Fortran compiler
+  - name: icc_rt
+    script: install_runtime.bat
+    about:
+      license: Intel proprietary
+      summary: Intel runtime libraries for C, C++ and Fortran compilers
+      license_file: LICENSE.txt

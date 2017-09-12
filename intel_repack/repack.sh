@@ -5,11 +5,11 @@ cp $SRC_DIR/$PKG_NAME/info/LICENSE.txt $SRC_DIR
 # for subpackages, we have named our extracted locations according to the subpackage name
 #    That's what this $PKG_NAME is doing - picking the right subfolder to rsync
 
-if [[ `uname` == "MINGW64_NT-10.0" ]]; then
+if [[ `uname` == "MINGW64_NT-10.0" || `uname` == "MSYS_NT-10.0" ]]; then
     src=$(cygpath -u "$SRC_DIR/$PKG_NAME/")
     cp -rv $src/* "$PREFIX/"
 else
-    mv -v $SRC_DIR/$PKG_NAME/* "$PREFIX/"
+    cp -rv $SRC_DIR/$PKG_NAME/* "$PREFIX/"
 fi
 
 rm -rf $PREFIX/info

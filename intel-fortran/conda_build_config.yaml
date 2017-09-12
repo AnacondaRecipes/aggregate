@@ -1,0 +1,22 @@
+# this is the folder naming in Program Files.  It's a little different from how Intel
+#     name their conda packages.
+compiler_version:
+  # for VS 2008 / py27
+  - 2013.6.241
+  # for VS 2010 / py34
+  - 2016.4.246
+  # for VS 2015 / py3.5+
+  - 2017.4.210
+
+# This is to keep consistent with Intel's conda package naming
+intel_fortran_version:
+  # for VS 2008 / py27
+  - 2013.0.6
+  # for VS 2010 / py34
+  - 2016.0.4
+  # for VS 2015 / py3.5+
+  - 2017.0.4
+
+zip_keys:
+  - compiler_version
+  - intel_fortran_version
