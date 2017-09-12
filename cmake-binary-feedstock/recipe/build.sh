@@ -6,8 +6,9 @@ if [[ $(uname) == Darwin ]]; then
     rm -rf bin/cmake-gui
     cp -rf bin doc man share ${PREFIX}/cmake-bin
   popd
-else
+elif [[ $(uname) == Linux ]]; then
   cp -rf cmake-bin ${PREFIX}/
+else
   [[ -d curl-bin ]]    && cp -rf curl-bin/*    ${PREFIX}/cmake-bin/
   [[ -d expat-bin ]]   && cp -rf expat-bin/*   ${PREFIX}/cmake-bin/
   [[ -d krb5-bin ]]    && cp -rf krb5-bin/*    ${PREFIX}/cmake-bin/
