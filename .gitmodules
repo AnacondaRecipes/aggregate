@@ -1266,3 +1266,7 @@
 	path = krb5-feedstock
 	url = ../krb5-feedstock
 	branch = master
+[submodule "plotly-feedstock"]
+	path = plotly-feedstock
+	url = ../plotly-feedstock
+	branch = master
