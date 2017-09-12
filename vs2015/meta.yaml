@@ -1,17 +1,40 @@
+{% set vcver="14" %}
+{% set vsyear="2015" %}
+{% set fullver="14.0.25123" %}
+
 package:
-  name: vs2015
-  version: "14.0.25123"
+  name: vs{{ vsyear }}
+  version: {{ fullver }}
 
 build:
   skip: True  [not win]
-  track_features:
-    - vc14
 
 outputs:
-  - name: vs2015_{{ cross_compiler_target_platform }}
+  - name: vs{{ vsyear }}_{{ cross_compiler_target_platform }}
     script: install_activate.bat
+    track_features:
+      - vc{{vcver}}
     run_exports:
-      - vc 14
-about:
-  summary: Activation and version verification of MSVC 14 (VS 2015) compiler
-  license: BSD 3-clause
+      - vc {{ vcver }}
+    about:
+      summary: Activation and version verification of MSVC {{ vcver }} (VS {{ vsyear }}) compiler
+      license: BSD 3-clause
+  - name: vs{{ vsyear }}_runtime
+    script: install_runtime.bat
+  - name: vc
+    version: {{ vcver }}
+    track_features:
+      - vc{{vcver}}
+    requirements:
+      run:
+        - {{ pin_subpackage('vs' ~ vsyear ~ '_runtime') }}
+    about:
+      home: https://github.com/conda/conda/wiki/VC-features
+      license: Modified BSD License (3-clause)
+      license_family: BSD
+      summary: A meta-package to track VC features.
+      description: |
+          This metapackage is used to activate vc features without
+          depending on Python.
+      doc_url: https://github.com/conda/conda/wiki/VC-features
+      dev_url: https://github.com/conda/conda/wiki/VC-features
