@@ -39,7 +39,7 @@ ctng_target_platform:
 FINAL_CPPFLAGS:
   - -D_FORTIFY_SOURCE=2 -O2
 FINAL_CFLAGS:
-  - -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe
+  - -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -pipe
 FINAL_CXXFLAGS:
   - -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -pipe
 FINAL_FFLAGS:
