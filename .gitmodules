@@ -1270,3 +1270,7 @@
 	path = pywin32-feedstock
 	url = ../pywin32-feedstock
 	branch = master
+[submodule "orderedmultidict-feedstock"]
+	path = orderedmultidict-feedstock
+	url = ../orderedmultidict-feedstock
+	branch = master
