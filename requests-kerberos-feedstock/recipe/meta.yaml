@@ -1,0 +1,37 @@
+package:
+  name: requests-kerberos
+  version: 0.11.0
+
+source:
+  fn: requests-kerberos-0.11.0.tar.gz
+  url: https://pypi.io/packages/source/r/requests-kerberos/requests-kerberos-0.11.0.tar.gz
+  md5: 8882186877e474c568e4f85aacbdbdca
+
+build:
+  number: 1
+  script: python setup.py install --old-and-unmanageable --record=record.txt
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+    - requests >=1.1.0
+    - winkerberos >=0.5           [win]
+    - pykerberos >=1.1.8,<2.0.0   [not win]
+
+test:
+  imports:
+    - requests_kerberos
+
+about:
+  home: https://github.com/requests/requests-kerberos
+  license: Other
+  license_file: LICENSE
+  summary: Kerberos authentication handler for python-requests
+  description: |
+    Requests is an HTTP library, written in Python, for human beings.
+    This library adds optional Kerberos/GSSAPI authentication support and supports mutual authentication.
+  doc_url: https://pypi.python.org/pypi/requests-kerberos
+  doc_source_url: https://github.com/requests/requests-kerberos/blob/master/README.rst
