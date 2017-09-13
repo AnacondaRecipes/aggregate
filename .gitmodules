@@ -1278,3 +1278,7 @@
 	path = gsl-feedstock
 	url = ../gsl-feedstock
 	branch = master
+[submodule "msinttypes-feedstock"]
+	path = msinttypes-feedstock
+	url = ../msinttypes-feedstock
+	branch = master

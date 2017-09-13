@@ -12,7 +12,7 @@ IF "%cross_compiler_target_platform%" == "win-64" (
 echo SET "TARGET_PLATFORM=" >> "%OUT_FN%"
 :: Folder layout changed between 2013 and 2016
 IF %PKG_VERSION:~0,4% GEQ 2016 (
-   echo CALL "C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_%PKG_VERSION%\windows\bin\ifortvars.bat" %intel_platform% %%c_compiler%% >> "%OUT_FN%"
+   echo CALL "C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_%compiler_version%\windows\bin\ifortvars.bat" %intel_platform% %%c_compiler%% >> "%OUT_FN%"
 ) ELSE (
   echo CALL "C:\Program Files (x86)\Intel\Composer XE 2013 SP1\bin\ifortvars.bat" %intel_platform% %%c_compiler%% >> "%OUT_FN%"
 )
