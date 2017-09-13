@@ -1274,3 +1274,7 @@
 	path = orderedmultidict-feedstock
 	url = ../orderedmultidict-feedstock
 	branch = master
+[submodule "gsl-feedstock"]
+	path = gsl-feedstock
+	url = ../gsl-feedstock
+	branch = master
