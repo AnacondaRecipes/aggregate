@@ -1282,3 +1282,7 @@
 	path = msinttypes-feedstock
 	url = ../msinttypes-feedstock
 	branch = master
+[submodule "wincertstore-feedstock"]
+	path = wincertstore-feedstock
+	url = ../wincertstore-feedstock
+	branch = master
