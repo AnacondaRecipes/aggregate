@@ -1,0 +1,30 @@
+package:
+  name: libxt-cos6-x86_64
+  version: 1.1.4
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libXt-1.1.4-6.1.el6.x86_64.rpm
+    sha256: 3823da22fbd520ede2c8005671b26b1e7a6353ffff3ce61a62abd972ae027423
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXt-1.1.4-6.1.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libx11-cos6-x86_64 >=1.5.99.902
+
+
+outputs:
+  - name: libxt-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - libx11-cos6-x86_64 >=1.5.99.902
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X.Org X11 libXt runtime library"
+      description: |
+        X.Org X11 libXt runtime library
