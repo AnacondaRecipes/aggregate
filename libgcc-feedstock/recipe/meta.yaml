@@ -7,6 +7,7 @@
 
 {% set gcc_linux_ver = '7.2.0' %}
 {% set gcc_macos_ver = '4.8.5' %}
+{% set gcc_macos_fortran_ver = '3.0.1' %}
 
 package:
   name: libgcc
@@ -18,11 +19,11 @@ requirements:
     - libgcc-ng >={{ gcc_linux_ver }}             # [linux]
     - gcc ==4.8.5                                 # [linux]
     - libstdcxx-ng >={{ gcc_linux_ver }}          # [linux]
-    - gcc >={{ gcc_macos_ver }}                   # [osx]
+    - gcc =={{ gcc_macos_ver }}                   # [osx]
   run:
     - libgcc-ng >={{ gcc_linux_ver }}             # [linux]
     - libstdcxx-ng >={{ gcc_linux_ver }}          # [linux]
-    - libgfortran >={{ gcc_macos_ver }}           # [osx]
+    - libgfortran =={{ gcc_macos_fortran_ver }}   # [osx]
 
 build:
   number: 10                       # [osx]
