@@ -58,13 +58,13 @@ build:
 
   run_exports:
     strong:
-      - libgfortran-ng >={{ libgfortran_ver }}
+      - libgfortran >={{ libgfortran_ver }}
 
 requirements:
   build:
     - gcc {{ gfortran_ver }}
   run:
-    - libgfortran-ng >={{ libgfortran_ver }}
+    - libgfortran >={{ libgfortran_ver }}
 
 about:
   home: http://gcc.gnu.org/
