@@ -82,7 +82,7 @@ mkl:
 #    1.11 seems to be the oldest on win that works with scipy 0.19.  Compiler errors otherwise.
 numpy:
   - 1.9   # [unix]
-  - 1.11   # [unix]
+  - 1.11   # [win]
 openblas:
   - 0.2.19
 perl:
