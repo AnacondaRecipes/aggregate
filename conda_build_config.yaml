@@ -16,11 +16,9 @@ cxx_compiler:
 fortran_compiler:
   - intel-fortran              # [win]
 fortran_compiler_version:
-  - 13.1.6                 # [win]
-  # for vs2010              # [vc==10]
-  #- 16.0.4                 # [vc==10]
-  - 2017.0.4                 # [win]
-  - 2017.0.4                 # [win]
+  - 13.1.6                     # [win]
+  - 16.0.4                     # [win]
+  - 16.0.4                     # [win]
 CONDA_BUILD_SYSROOT:
   - /opt/MacOSX10.9.sdk        # [osx]
 VERBOSE_AT:
@@ -81,9 +79,10 @@ MACOSX_DEPLOYMENT_TARGET:
 mkl:
   - 2018
 # we build for an old version of numpy for forward compatibility
-#   numpy 1.9 was chosen because it's the earliest numpy version that supported VS2015.
+#    1.11 seems to be the oldest on win that works with scipy 0.19.  Compiler errors otherwise.
 numpy:
-  - 1.9
+  - 1.9   # [unix]
+  - 1.11   # [unix]
 openblas:
   - 0.2.19
 perl:
