@@ -1,0 +1,21 @@
+package:
+  name: jom
+  version: 1.1.2
+
+source:
+  url: http://download.qt.io/official_releases/jom/jom_1_1_2.zip            # [win]
+  sha256: 4136b9c5fadc8a15a3db115e037f25f5f5009c9f1290231f8aab28776d190ef2  # [win]
+
+build:
+  skip: True  # [not win]
+
+about:
+  home: https://wiki.qt.io/Jom
+  license: GPL3
+  license_family: GPL3
+  summary: Parallel fork of nmake
+  description: |
+    jom is a clone of nmake to support the execution of multiple independent
+    commands in parallel. It adds the -j command line switch similar to GNU
+    make.
+  dev_url: https://github.com/qt-labs/jom
