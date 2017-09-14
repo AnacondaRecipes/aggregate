@@ -1,0 +1,24 @@
+package:
+  name: libsm-cos6-x86_64
+  version: 1.2.1
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libSM-1.2.1-2.el6.x86_64.rpm
+    sha256: 5bbbb484f3c7a2d7cdc090b6f88fef66a290d256685cfccb9fac60c08b83050f
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libSM-1.2.1-2.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: libsm-cos6-x86_64
+    noarch: generic
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X.Org X11 SM runtime library"
+      description: |
+        The X.Org X11 SM (Session Management) runtime library.

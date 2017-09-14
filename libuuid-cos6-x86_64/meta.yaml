@@ -1,0 +1,30 @@
+package:
+  name: libuuid-cos6-x86_64
+  version: 2.17.2
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libuuid-2.17.2-12.28.el6.x86_64.rpm
+    sha256: d31c4e93f9f6f7b87ae54524ef83c60dc003b3e3827b420d63cc823483e7cb77
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/util-linux-ng-2.17.2-12.28.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: libuuid-cos6-x86_64
+    noarch: generic
+
+    about:
+      home: ftp://ftp.kernel.org/pub/linux/utils/util-linux-ng
+      license: BSD
+      license_family: BSD
+      summary: "(CDT) Universally unique ID library"
+      description: |
+        This is the universally unique ID library, part of util-linux-ng.  The libuuid
+        library generates and parses 128-bit universally unique id's (UUID's).  A UUID
+        is an identifier that is unique across both space and time, with respect to
+        the space of all UUIDs.  A UUID can be used for multiple purposes, from
+        tagging objects with an extremely short lifetime, to reliably identifying very
+        persistent objects across a network.  See also the "uuid" package, which is a
+        separate implementation.

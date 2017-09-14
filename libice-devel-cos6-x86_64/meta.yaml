@@ -1,0 +1,30 @@
+package:
+  name: libice-devel-cos6-x86_64
+  version: 1.0.6
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libICE-devel-1.0.6-1.el6.x86_64.rpm
+    sha256: fab86a3941b48369968e73dc4fd6e10f8433bdd1bfd2458ff3921a8d1b4ede85
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libICE-1.0.6-1.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libice-cos6-x86_64 ==1.0.6
+
+
+outputs:
+  - name: libice-devel-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - libice-cos6-x86_64 ==1.0.6
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X.Org X11 ICE development package"
+      description: |
+        The X.Org X11 ICE (Inter-Client Exchange) development package.

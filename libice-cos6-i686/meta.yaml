@@ -1,0 +1,24 @@
+package:
+  name: libice-cos6-i686
+  version: 1.0.6
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libICE-1.0.6-1.el6.i686.rpm
+    sha256: b0b4e98058cfa3d75429b5bb1f209b475c8bcecf14f8ce8382f8ec5e24ac4c32
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libICE-1.0.6-1.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: libice-cos6-i686
+    noarch: generic
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X.Org X11 ICE runtime library"
+      description: |
+        The X.Org X11 ICE (Inter-Client Exchange) runtime library.
