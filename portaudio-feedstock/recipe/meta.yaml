@@ -5,6 +5,8 @@ package:
 source:
   url: http://www.portaudio.com/archives/pa_stable_v19_20111121.tgz
   md5: 25c85c1cc5e9e657486cbc299c6c035a
+  patches:
+    - 0001-Fix-too-small-memset.patch
 
 build:
   number: 1
