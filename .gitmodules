@@ -1298,3 +1298,7 @@
 	path = texlive-core-feedstock
 	url = ../texlive-core-feedstock
 	branch = master
+[submodule "boost-cpp-feedstock"]
+	path = boost-cpp-feedstock
+	url = ../boost-cpp-feedstock
+	branch = master
