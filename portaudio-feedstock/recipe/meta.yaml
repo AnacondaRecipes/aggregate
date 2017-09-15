@@ -1,0 +1,26 @@
+package:
+  name: portaudio
+  version: 19
+
+source:
+  url: http://www.portaudio.com/archives/pa_stable_v19_20111121.tgz
+  md5: 25c85c1cc5e9e657486cbc299c6c035a
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+
+about:
+  home: http://www.portaudio.com/
+  license: MIT
+  license_file: LICENSE.txt
+  summary: A cross platform, open-source, audio I/O library
+  description: |
+    PortAudio is a free, cross-platform, open-source, audio I/O library. It
+    lets you write simple audio programs in 'C' or C++ that will compile and run on many platforms including Windows, Macintosh OS X, and Unix
+    (OSS/ALSA).
+  doc_url: http://www.portaudio.com/docs.html
+  dev_url: https://github.com/EddieRingle/portaudio
