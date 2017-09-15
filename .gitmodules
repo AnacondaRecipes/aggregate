@@ -1302,3 +1302,7 @@
 	path = boost-cpp-feedstock
 	url = ../boost-cpp-feedstock
 	branch = master
+[submodule "xlwings-feedstock"]
+	path = xlwings-feedstock
+	url = ../xlwings-feedstock
+	branch = master
