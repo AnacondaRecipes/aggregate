@@ -7,7 +7,11 @@ source:
   sha256: 4136b9c5fadc8a15a3db115e037f25f5f5009c9f1290231f8aab28776d190ef2  # [win]
 
 build:
-  skip: True  # [not win]
+  skip: True                      # [not win]
+  script: copy jom.exe %PREFIX%\  # [win]
+
+test:
+  command: jom.exe --help
 
 about:
   home: https://wiki.qt.io/Jom
