@@ -1290,3 +1290,7 @@
 	path = numpy-1.11-feedstock
 	url = ../numpy-feedstock
 	branch = numpy111
+[submodule "win_inet_pton-feedstock"]
+	path = win_inet_pton-feedstock
+	url = ../win_inet_pton-feedstock
+	branch = master
