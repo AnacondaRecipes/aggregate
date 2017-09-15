@@ -105,7 +105,7 @@ cross_compiler_target_platform:
   - win-32                     # [win]
   - win-64                     # [win]
 target_platform:
-  # - win-64                     # [win]
+  - win-64                     # [win]
   - win-32                     # [win]
 vc:
   - 9
