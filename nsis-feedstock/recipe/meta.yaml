@@ -1,0 +1,35 @@
+{% set version = "3.01" %}
+
+package:
+  name: nsis
+  version: {{ version }}
+
+source:
+  fn: nsis-{{ version }}.zip
+  url: http://sourceforge.net/projects/nsis/files/NSIS%20{{ version.split(".")[0] }}/{{ version }}/nsis-{{ version }}.zip
+  sha256: daa17556c8690a34fb13af25c87ced89c79a36a935bf6126253a9d9a5226367c
+
+build:
+  number: 6
+  skip: True  # [unix]
+
+about:
+  home: http://nsis.sourceforge.net/Main_Page
+  license: Common public License Version 1.0, zlib
+  license_file: COPYING
+  license_family: Other
+  summary: A professional open source system to create Windows installers
+  description: |
+    NSIS (Nullsoft Scriptable Install System) is designed to be as small and
+    flexible as possible and is therefore very suitable for internet
+    distribution.
+  doc_url: http://nsis.sourceforge.net/Docs/
+  doc_source_url: http://nsis.sourceforge.net/Main_Page
+  dev_url: https://github.com/NSIS-Dev
+
+extra:
+  recipe-maintainers:
+    - jakirkham
+    - mingwandroid
+    - msarahan
+    - patricksnape
