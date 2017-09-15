@@ -5,9 +5,9 @@ package:
   version: {{ version }}
 
 source:
-  fn: nsis-{{ version }}.zip
-  url: http://sourceforge.net/projects/nsis/files/NSIS%20{{ version.split(".")[0] }}/{{ version }}/nsis-{{ version }}.zip
-  sha256: daa17556c8690a34fb13af25c87ced89c79a36a935bf6126253a9d9a5226367c
+  - url: http://sourceforge.net/projects/nsis/files/NSIS%20{{ version.split(".")[0] }}/{{ version }}/nsis-{{ version }}.zip
+    sha256: daa17556c8690a34fb13af25c87ced89c79a36a935bf6126253a9d9a5226367c
+    folder: nsis-zip
 
 build:
   number: 6
@@ -16,7 +16,7 @@ build:
 about:
   home: http://nsis.sourceforge.net/Main_Page
   license: Common public License Version 1.0, zlib
-  license_file: COPYING
+  license_file: nsis-zip/COPYING
   license_family: Other
   summary: A professional open source system to create Windows installers
   description: |

@@ -1,4 +1,4 @@
-robocopy . "%PREFIX%"\NSIS /S /XF bld.bat
-if errorlevel 1 exit 1
-robocopy . "%RECIPE_DIR%"\NSIS /S /XF bld.bat
-if errorlevel 1 exit 1
+robocopy nsis-zip "%PREFIX%"\NSIS /S
+robocopy "%RECIPE_DIR%"\NSIS "%PREFIX%"\NSIS /S
+:: Checking the ErrorLevel from robocopy is pointless.
+exit /b 0
