@@ -1294,3 +1294,7 @@
 	path = win_inet_pton-feedstock
 	url = ../win_inet_pton-feedstock
 	branch = master
+[submodule "texlive-core-feedstock"]
+	path = texlive-core-feedstock
+	url = ../texlive-core-feedstock
+	branch = master
