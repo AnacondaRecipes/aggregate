@@ -1306,3 +1306,7 @@
 	path = xlwings-feedstock
 	url = ../xlwings-feedstock
 	branch = master
+[submodule "yasm-feedstock"]
+	path = yasm-feedstock
+	url = ../yasm-feedstock
+	branch = master
