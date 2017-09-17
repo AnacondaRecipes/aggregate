@@ -4,7 +4,7 @@ package:
 
 source:
   git_url: https://github.com/ContinuumIO/menuinst.git
-  git_tag: 1.4.x
+  git_tag: 9b8b50704e8e06edcbe6f15c9ce4404e9fc2c445
 
 build:
   entry_points:
