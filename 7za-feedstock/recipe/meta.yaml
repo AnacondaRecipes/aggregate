@@ -1,0 +1,23 @@
+package:
+  name: 7za
+  version: "920"
+
+source:
+  fn: 7za920.zip
+  url: http://sourceforge.net/projects/sevenzip/files/7-Zip/9.20/7za920.zip/download
+  md5: 2fac454a90ae96021f4ffc607d4c00f8
+
+about:
+  home: http://www.7-zip.org/
+  license: LGPL
+  license_file: license.txt
+  summary: Open-source file archiver primarily used to compress files
+  description: |
+    7za, or 7zip, is a file archiver with a high compression
+    ratio. Operates with the 7z archive format, but can read and
+    write several other archive formats. Can be used with a
+    command line interface, graphical user interface, or with
+    a window-based shell integration. Along with archiver tools, 7za
+    comes with a file managee to create, extract and test
+    archives as well as copy, move, and delete files.
+  doc_url: https://anaconda.org/anaconda/7za
