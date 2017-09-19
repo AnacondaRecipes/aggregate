@@ -1,5 +1,6 @@
 :: Set env vars that tell distutils to use the compiler that we put on path
 SET DISTUTILS_USE_SDK=1
+:: This is probably not good. It is for the pre-UCRT msvccompiler.py *not* _msvccompiler.py
 SET MSSdk=1
 
 :: http://stackoverflow.com/a/26874379/1170370
@@ -34,6 +35,11 @@ set "MSYS2_ENV_CONV_EXCL=CL"
 
 :: For Python 3.5+, ensure that we link with the dynamic runtime.  See
 :: http://stevedower.id.au/blog/building-for-python-3-5-part-two/ for more info
-set "PY_VCRUNTIME_REDIST=%PREFIX%\\bin\\vcruntime140.dll"
+set "PY_VCRUNTIME_REDIST=%PREFIX%\vcruntime140.dll"
+
+:: partial static linking to avoid strict dependency on vcruntime (the version-specific part of the VS runtime)
+set "CFLAGS=%CFLAGS% -c -MD -GL"
+set "CXXFLAGS=%CXXFLAGS% -c -MD -GL"
+set "LDFLAGS_SHARED=%LDFLAGS_SHARED% -LTCG ucrt.lib"
 
 :: other things added by install_activate.bat at package build time
