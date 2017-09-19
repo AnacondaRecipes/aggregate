@@ -1310,3 +1310,7 @@
 	path = yasm-feedstock
 	url = ../yasm-feedstock
 	branch = master
+[submodule "win_unicode_console-feedstock"]
+	path = win_unicode_console-feedstock
+	url = ../win_unicode_console-feedstock
+	branch = master
