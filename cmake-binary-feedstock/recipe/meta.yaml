@@ -9,7 +9,7 @@ source:
     sha256: 3da2fcd9e742378f104938b8ffdb6205dd12d1b3d659c925580bc20d1d762423     # [linux32]
   - url: https://repo.continuum.io/pkgs/free/linux-32/curl-7.54.1-0.tar.bz2      # [linux32]
     folder: curl-bin                                                             # [linux32]
-    sha256: 16c35b8f6297c5c2e94b9330854c523d6492c509                             # [linux32]
+    sha256: c18e79bc9e395fbf3f8181ade2712fe1f533e72cd1f40cc7b54a7781da2896e9     # [linux32]
   - url: https://repo.continuum.io/pkgs/free/linux-32/expat-2.1.0-0.tar.bz2      # [linux32]
     folder: expat-bin                                                            # [linux32]
     sha256: 44cb0ec5d9f09080532f6ba9a084125cab77617303e3d15004c8639b6886507f     # [linux32]
