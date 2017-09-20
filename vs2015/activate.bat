@@ -37,9 +37,9 @@ set "MSYS2_ENV_CONV_EXCL=CL"
 :: http://stevedower.id.au/blog/building-for-python-3-5-part-two/ for more info
 set "PY_VCRUNTIME_REDIST=%PREFIX%\vcruntime140.dll"
 
-:: partial static linking to avoid strict dependency on vcruntime (the version-specific part of the VS runtime)
-set "CFLAGS=%CFLAGS% -c -MD -GL"
-set "CXXFLAGS=%CXXFLAGS% -c -MD -GL"
+:: ensure that we use the DLL part of the ucrt
+set "CFLAGS=%CFLAGS% -MD -GL"
+set "CXXFLAGS=%CXXFLAGS% -MD -GL"
 set "LDFLAGS_SHARED=%LDFLAGS_SHARED% -LTCG ucrt.lib"
 
 :: other things added by install_activate.bat at package build time
