@@ -1314,3 +1314,7 @@
 	path = win_unicode_console-feedstock
 	url = ../win_unicode_console-feedstock
 	branch = master
+[submodule "d2to1-feedstock"]
+	path = d2to1-feedstock
+	url = ../d2to1-feedstock
+	branch = master
