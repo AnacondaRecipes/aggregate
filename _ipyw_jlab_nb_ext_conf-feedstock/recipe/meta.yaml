@@ -9,7 +9,7 @@ build:
     - etc/jupyter/jupyter_notebook_config.json
 
 requirements:
-  build:
+  host:
     - python
     - widgetsnbextension
     - ipywidgets
