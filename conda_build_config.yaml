@@ -51,7 +51,7 @@ hdf5:
   - 1.8                # [not ppc64le]
   - 1.10               # [not ppc64le]
 icu:
-  - 58
+  - 58                 # [not ppc64le]
 ipython:
   - 5.4                # [not ppc64le]
   - 5.3                    # [ppc64le]
