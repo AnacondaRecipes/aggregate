@@ -1,0 +1,36 @@
+{% set name = "lockfile" %}
+{% set version = "0.12.2" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "6aed02de03cba24efabcd600b30540140634fc06cfa603822d508d5361e9f799" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  '{{ hash_type }}': '{{ hash_value }}'
+
+build:
+  script: python setup.py install
+
+requirements:
+  host:
+    - python
+    - pbr
+  run:
+    - python
+
+test:
+  imports:
+    - lockfile
+
+about:
+  home: http://launchpad.net/pylockfile
+  license: MIT
+  license_file: LICENSE
+  summary: Platform-independent file locking module
+  description: |
+    lockfile exports a LockFile class which provides a simple API for locking files.
+  doc_url: http://docs.openstack.org/developer/pylockfile/
+  doc_source_url: http://git.openstack.org/cgit/openstack/pylockfile/tree/doc/source/index.rst

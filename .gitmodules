@@ -1318,3 +1318,7 @@
 	path = d2to1-feedstock
 	url = ../d2to1-feedstock
 	branch = master
+[submodule "progress-feedstock"]
+	path = progress-feedstock
+	url = ../progress-feedstock
+	branch = master

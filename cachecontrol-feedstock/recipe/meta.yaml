@@ -1,0 +1,42 @@
+{% set name = "CacheControl" %}
+{% set version = "0.12.3" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "a9fc50e216c7c101f4ec4312f012dea501c2859cb256c7a68186a172ab71f632" %}
+
+package:
+  name: {{ name.lower() }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  '{{ hash_type }}': '{{ hash_value }}'
+
+build:
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - requests
+  run:
+    - python
+    - requests
+    - msgpack-python
+
+test:
+  imports:
+    - cachecontrol
+
+about:
+  home: https://github.com/ionrock/cachecontrol
+  license: Apache Software License
+  license_family: Apache
+  license_file: LICENSE.txt
+  summary: httplib2 caching algorithms for use with requests
+  description: |
+    CacheControl is a port of the caching algortihms in httplib2
+    for use with requests session object.
+  doc_url: http://cachecontrol.readthedocs.org
+  doc_source_url: https://github.com/ionrock/cachecontrol/blob/master/docs/index.rst
+  dev_url: https://github.com/ionrock/cachecontrol
