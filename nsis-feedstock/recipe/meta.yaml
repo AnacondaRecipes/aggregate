@@ -10,7 +10,7 @@ source:
     folder: nsis-zip
 
 build:
-  number: 6
+  number: 7
   skip: True  # [unix]
 
 about:
