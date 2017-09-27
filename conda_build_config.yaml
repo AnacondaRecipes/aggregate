@@ -71,6 +71,8 @@ libtiff:
   - 4.0
 libxml2:
   - 2.9
+lzo:
+  - 2
 macos_min_version:
   - 10.9
 macos_machine:
