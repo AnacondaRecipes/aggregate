@@ -1322,3 +1322,7 @@
 	path = progress-feedstock
 	url = ../progress-feedstock
 	branch = master
+[submodule "snuggs-feedstock"]
+	path = snuggs-feedstock
+	url = ../snuggs-feedstock
+	branch = master
