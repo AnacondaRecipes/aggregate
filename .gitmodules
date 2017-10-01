@@ -1326,3 +1326,7 @@
 	path = snuggs-feedstock
 	url = ../snuggs-feedstock
 	branch = master
+[submodule "metakernel-feedstock"]
+	path = metakernel-feedstock
+	url = ../metakernel-feedstock
+	branch = master
