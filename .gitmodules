@@ -1330,3 +1330,7 @@
 	path = metakernel-feedstock
 	url = ../metakernel-feedstock
 	branch = master
+[submodule "saspy-feedstock"]
+	path = saspy-feedstock
+	url = ../saspy-feedstock
+	branch = master
