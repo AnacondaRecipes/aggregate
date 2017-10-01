@@ -1334,3 +1334,7 @@
 	path = saspy-feedstock
 	url = ../saspy-feedstock
 	branch = master
+[submodule "sas_kernel-feedstock"]
+	path = sas_kernel-feedstock
+	url = ../sas_kernel-feedstock
+	branch = master
