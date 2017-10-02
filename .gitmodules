@@ -1342,3 +1342,7 @@
 	path = pyquery-feedstock
 	url = ../pyquery-feedstock
 	branch = master
+[submodule "elasticsearch-async-feedstock"]
+	path = elasticsearch-async-feedstock
+	url = ../elasticsearch-async-feedstock
+	branch = master
