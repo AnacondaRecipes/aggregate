@@ -1338,3 +1338,7 @@
 	path = sas_kernel-feedstock
 	url = ../sas_kernel-feedstock
 	branch = master
+[submodule "pyquery-feedstock"]
+	path = pyquery-feedstock
+	url = ../pyquery-feedstock
+	branch = master
