@@ -1,0 +1,18 @@
+{% set name = "functools_lru_cache" %}
+{% set version = "1.4" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+requirements:
+  run:
+    - backports.functools_lru_cache {{ version }}
+
+about:
+  home: https://github.com/jaraco/backports.functools_lru_cache
+  license: MIT
+  license_family: MIT
+  summary: 'Backport of functools.lru_cache from Python 3.3 as published at ActiveState.'
+  doc_url: https://pypi.python.org/pypi/backports.functools_lru_cache
+  dev_url: https://github.com/jaraco/backports.functools_lru_cache
