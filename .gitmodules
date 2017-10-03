@@ -921,7 +921,7 @@
 [submodule "python-2.7-feedstock"]
 	url = ../python-feedstock.git
 	path = python-2.7-feedstock
-	branch = master-2.7
+	branch = master-2.7.14
 [submodule "libgfortran-feedstock"]
 	path = libgfortran-feedstock
 	url = ../libgfortran-feedstock
@@ -1346,3 +1346,15 @@
 	path = elasticsearch-async-feedstock
 	url = ../elasticsearch-async-feedstock
 	branch = master
+[submodule "poppler-feedstock"]
+	path = poppler-feedstock
+	url = ../poppler-feedstock
+	branch = master
+[submodule "poppler-data-feedstock"]
+	path = poppler-data-feedstock
+	url = ../poppler-data-feedstock
+	branch = master
+[submodule "python-2.7.13-feedstock"]
+	path = python-2.7.13-feedstock
+	url = ../python-feedstock
+	branch = master-2.7
