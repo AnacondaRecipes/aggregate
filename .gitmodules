@@ -1430,3 +1430,7 @@
 	path = asyncpg-feedstock
 	url = ../asyncpg-feedstock
 	branch = master
+[submodule "asyncpgsa-feedstock"]
+	path = asyncpgsa-feedstock
+	url = ../asyncpgsa-feedstock
+	branch = master
