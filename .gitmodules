@@ -1434,3 +1434,7 @@
 	path = asyncpgsa-feedstock
 	url = ../asyncpgsa-feedstock
 	branch = master
+[submodule "typed-ast-feedstock"]
+	path = typed-ast-feedstock
+	url = ../typed-ast-feedstock
+	branch = master
