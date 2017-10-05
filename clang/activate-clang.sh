@@ -94,7 +94,8 @@ _tc_activation \
   "CFLAGS,${CFLAGS:-@CFLAGS@}" \
   "LDFLAGS,${LDFLAGS:-@LDFLAGS@}" \
   "LDFLAGS_CC,${LDFLAGS_CC:-@LDFLAGS_CC@}" \
-  "DEBUG_CFLAGS,${DEBUG_CFLAGS:-@DEBUG_CFLAGS@}"
+  "DEBUG_CFLAGS,${DEBUG_CFLAGS:-@DEBUG_CFLAGS@}" \
+  "_PYTHON_SYSCONFIGDATA_NAME,${_PYTHON_SYSCONFIGDATA_NAME:-@_PYTHON_SYSCONFIGDATA_NAME@}"
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"

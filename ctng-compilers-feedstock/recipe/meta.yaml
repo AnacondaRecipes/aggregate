@@ -8,7 +8,7 @@ source:
 build:
   detect_binary_files_with_prefix: False
   binary_relocation: False
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -19,65 +19,60 @@ requirements:
   #   - {{ pin_subpackage('gfortran_' ~ ctng_target_platform, min_pin='x.x.x.x.x.x.x.x.x', max_pin='x.x.x.x.x.x.x.x.x') }}
 
 outputs:
-  - name: gcc_{{ ctng_target_platform }}
+  - name: gcc_impl_{{ ctng_target_platform }}
     script: install-gcc.sh
     requirements:
       run:
-        - {{ pin_subpackage('binutils_' ~ ctng_target_platform, exact=True) }}
+        - {{ pin_subpackage('binutils_impl_' ~ ctng_target_platform, exact=True) }}
+        # libstdcxx-ng is a runtime dep of gcc because LTO requires it.
+        - {{ pin_subpackage('libstdcxx-ng', max_pin=None) }}
     run_exports:
       # impose this requirement across the build/host boundary
       strong:
-        - {{ pin_subpackage('libgcc-ng', min_pin='x.x.x.x.x.x.x.x.x', max_pin=None) }}
+        - {{ pin_subpackage('libgcc-ng', max_pin=None) }}
     about:
       summary: GNU C Compiler
       home: https://gcc.gnu.org/
       license: GPL
 
-  - name: gxx_{{ ctng_target_platform }}
+  - name: gxx_impl_{{ ctng_target_platform }}
     script: install-g++.sh
     requirements:
       build:
         # For cpp and crt{i,n}.o
-        - {{ pin_subpackage('gcc_' ~ ctng_target_platform, exact=True) }}
+        - {{ pin_subpackage('gcc_impl_' ~ ctng_target_platform, exact=True) }}
       run:
         # For cpp and crt{i,n}.o
-        - {{ pin_subpackage('gcc_' ~ ctng_target_platform, exact=True) }}
-        # TODO ::
-        # This is nonsense! Running this gxx cannot run depend on the libstdcxx it links to as that
-        # breaks being able to cross-compile anything. Instead, when any package with strong run-exports
-        # gets installed into the build prefix, we need to install those strong run-exports into the
-        # the host prefix (and if those prefixes are the same then we still install them). This came
-        # up again with ICU, and I was about to add a similar pin to gcc for libgcc, but no, I wont.
-        - {{ pin_subpackage('libstdcxx-ng', exact=True) }}
+        - {{ pin_subpackage('gcc_impl_' ~ ctng_target_platform, exact=True) }}
     run_exports:
       # impose this requirement across the build/host boundary
       strong:
-        - {{ pin_subpackage('libstdcxx-ng', min_pin='x.x.x.x.x.x.x.x.x', max_pin=None) }}
+        - {{ pin_subpackage('libstdcxx-ng', max_pin=None) }}
     about:
       summary: GNU C++ Compiler
       home: https://gcc.gnu.org/
       license: GPL
 
-  - name: gfortran_{{ ctng_target_platform }}
+  - name: gfortran_impl_{{ ctng_target_platform }}
     script: install-gfortran.sh
     requirements:
       build:
         # For cpp and crt{i,n}.o
-        - {{ pin_subpackage('gcc_' ~ ctng_target_platform, exact=True) }}
+        - {{ pin_subpackage('gcc_impl_' ~ ctng_target_platform, exact=True) }}
       run:
         # For cpp and crt{i,n}.o
-        - {{ pin_subpackage('gcc_' ~ ctng_target_platform, exact=True) }}
-        - {{ pin_subpackage('libgfortran-ng', exact=True) }}
+        - {{ pin_subpackage('gcc_impl_' ~ ctng_target_platform, exact=True) }}
+        - {{ pin_subpackage('libgfortran-ng', max_pin=None) }}
     run_exports:
       # impose this requirement across the build/host boundary
       strong:
-        - {{ pin_subpackage('libgfortran-ng', min_pin='x.x.x.x.x.x.x.x.x', max_pin=None) }}
+        - {{ pin_subpackage('libgfortran-ng', max_pin=None) }}
     about:
       summary: GNU Fortran Compiler
       home: https://gcc.gnu.org/
       license: GPL
 
-  - name: binutils_{{ ctng_target_platform }}
+  - name: binutils_impl_{{ ctng_target_platform }}
     script: install-binutils.sh
     version: {{ ctng_binutils }}
     about:

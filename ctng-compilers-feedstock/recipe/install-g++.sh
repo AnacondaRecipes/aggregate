@@ -9,12 +9,7 @@ export PATH=${SRC_DIR}/gcc_built/bin:${SRC_DIR}/.build/${CHOST}/buildtools/bin:$
 
 pushd ${SRC_DIR}/.build/$CHOST/build/build-cc-gcc-final/
 
-make -C gcc prefix=${PREFIX} c++.install-common install-lto-wrapper
-make -C lto-plugin prefix=${PREFIX} install
-install -dm755 ${PREFIX}/lib/bfd-plugins/
-
-# statically linked, so this so does not exist
-# ln -s $PREFIX/lib/gcc/$CHOST/liblto_plugin.so ${PREFIX}/lib/bfd-plugins/
+make -C gcc prefix=${PREFIX} c++.install-common
 
 # How it used to be:
 # install -m755 -t ${PREFIX}/bin/ gcc/{cc1plus,lto1}
@@ -36,10 +31,6 @@ make -C $CHOST/libstdc++-v3/python prefix=${PREFIX} install
 make -C libcpp prefix=${PREFIX} install
 
 popd
-
-mkdir -p ${PREFIX}/etc/conda/{de,}activate.d
-cp "${SRC_DIR}"/activate-g++.sh ${PREFIX}/etc/conda/activate.d/activate-${PKG_NAME}.sh
-cp "${SRC_DIR}"/deactivate-g++.sh ${PREFIX}/etc/conda/deactivate.d/deactivate-${PKG_NAME}.sh
 
 # Test:
 ${PREFIX}/bin/${CHOST}-g++ "${RECIPE_DIR}"/hello-world.cpp
