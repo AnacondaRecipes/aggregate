@@ -1426,3 +1426,7 @@
 	path = uvloop-feedstock
 	url = ../uvloop-feedstock
 	branch = master
+[submodule "asyncpg-feedstock"]
+	path = asyncpg-feedstock
+	url = ../asyncpg-feedstock
+	branch = master
