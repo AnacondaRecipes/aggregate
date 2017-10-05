@@ -1358,3 +1358,67 @@
 	path = poppler-data-feedstock
 	url = ../poppler-data-feedstock
 	branch = master
+[submodule "gdal-feedstock"]
+	path = gdal-feedstock
+	url = ../gdal-feedstock
+	branch = master
+[submodule "libgdal-feedstock"]
+	path = libgdal-feedstock
+	url = ../libgdal-feedstock
+	branch = master
+[submodule "giflib-feedstock"]
+	path = giflib-feedstock
+	url = ../giflib-feedstock
+	branch = master
+[submodule "geos-feedstock"]
+	path = geos-feedstock
+	url = ../geos-feedstock
+	branch = master
+[submodule "freexl-feedstock"]
+	path = freexl-feedstock
+	url = ../freexl-feedstock
+	branch = master
+[submodule "hdf4-feedstock"]
+	path = hdf4-feedstock
+	url = ../hdf4-feedstock
+	branch = master
+[submodule "json-c-feedstock"]
+	path = json-c-feedstock
+	url = ../json-c-feedstock
+	branch = master
+[submodule "kealib-feedstock"]
+	path = kealib-feedstock
+	url = ../kealib-feedstock
+	branch = master
+[submodule "libdap4-feedstock"]
+	path = libdap4-feedstock
+	url = ../libdap4-feedstock
+	branch = master
+[submodule "libkml-feedstock"]
+	path = libkml-feedstock
+	url = ../libkml-feedstock
+	branch = master
+[submodule "libnetcdf-feedstock"]
+	path = libnetcdf-feedstock
+	url = ../libnetcdf-feedstock
+	branch = master
+[submodule "openjpeg-feedstock"]
+	path = openjpeg-feedstock
+	url = ../openjpeg-feedstock
+	branch = master
+[submodule "postgresql-feedstock"]
+	path = postgresql-feedstock
+	url = ../postgresql-feedstock
+	branch = master
+[submodule "proj.4-feedstock"]
+	path = proj.4-feedstock
+	url = ../proj.4-feedstock
+	branch = master
+[submodule "xerces-c-feedstock"]
+	path = xerces-c-feedstock
+	url = ../xerces-c-feedstock
+	branch = master
+[submodule "libspatialite-feedstock"]
+	path = libspatialite-feedstock
+	url = ../libspatialite-feedstock
+	branch = master
