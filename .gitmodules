@@ -1422,3 +1422,7 @@
 	path = libspatialite-feedstock
 	url = ../libspatialite-feedstock
 	branch = master
+[submodule "uvloop-feedstock"]
+	path = uvloop-feedstock
+	url = ../uvloop-feedstock
+	branch = master
