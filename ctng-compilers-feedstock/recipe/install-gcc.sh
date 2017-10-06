@@ -10,14 +10,16 @@ export PATH=${SRC_DIR}/gcc_built/bin:${SRC_DIR}/.build/${CHOST}/buildtools/bin:$
 pushd ${SRC_DIR}/.build/${CHOST}/build/build-cc-gcc-final/
   # We may not have built with plugin support so failure here is not fatal:
   make prefix=${PREFIX} install-lto-plugin || true
-  make -C gcc prefix=${PREFIX} install-driver install-cpp install-gcc-ar install-headers install-plugin
-  # This is how it used to be ..
-  # install -m755 -t ${PREFIX}/bin/ gcc/gcov{,-tool}
-  # install -m755 -t ${PREFIX}/bin/ gcc/{cc1,collect2}
-  # .. and this is the new version.
-  # from a full build.log
-  # for file in gnat1 brig1 cc1 cc1plus f951 go1  lto1 cc1obj cc1objplus; do   if [ -f $file ] ; then     rm -f /home/ray/mcf-x-cos6_64/cb_host.20170628_093818/cross-compiler/work/gcc_built/libexec/gcc/x86_64-conda_cos6-linux-gnu/7.1.0/$file;     /home/ray/mcf-x-cos6_64/cb_host.20170628_093818/cross-compiler/work/.build/tools/bin/install -c $file /home/ray/mcf-x-cos6_64/cb_host.20170628_093818/cross-compiler/work/gcc_built/libexec/gcc/x86_64-conda_cos6-linux-gnu/7.1.0/$file;   else true;   fi; done
-  # for file in  collect2 ..; do   if [ x"$file" != x.. ]; then     rm -f /home/ray/mcf-x-cos6_64/cb_host.20170628_093818/cross-compiler/work/gcc_built/libexec/gcc/x86_64-conda_cos6-linux-gnu/7.1.0/$file;     /home/ray/mcf-x-cos6_64/cb_host.20170628_093818/cross-compiler/work/.build/tools/bin/install -c $file /home/ray/mcf-x-cos6_64/cb_host.20170628_093818/cross-compiler/work/gcc_built/libexec/gcc/x86_64-conda_cos6-linux-gnu/7.1.0/$file;   else true; fi; done
+  make -C gcc prefix=${PREFIX} install-driver install-cpp install-gcc-ar install-headers install-plugin install-lto-wrapper
+  # not sure if this is the same as the line above.  Run both, just in case
+  make -C lto-plugin prefix=${PREFIX} install
+  install -dm755 ${PREFIX}/lib/bfd-plugins/
+
+  # statically linked, so this so does not exist
+  # ln -s $PREFIX/lib/gcc/$CHOST/liblto_plugin.so ${PREFIX}/lib/bfd-plugins/
+
+  make -C libcpp prefix=${PREFIX} install
+
   # Include languages we do not have any other place for here (and also lto1)
   for file in gnat1 brig1 cc1 go1 lto1 cc1obj cc1objplus; do
     if [[ -f gcc/${file} ]]; then
@@ -160,10 +162,6 @@ sed -i -e "/\*link_libgcc:/,+1 s+%.*+& -rpath ${PREFIX}/lib+" $specdir/specs
 # Install Runtime Library Exception
 install -Dm644 $SRC_DIR/.build/src/gcc-${PKG_VERSION}/COPYING.RUNTIME \
         ${PREFIX}/share/licenses/gcc/RUNTIME.LIBRARY.EXCEPTION
-
-mkdir -p ${PREFIX}/etc/conda/{de,}activate.d
-cp "${SRC_DIR}"/activate-gcc.sh ${PREFIX}/etc/conda/activate.d/activate-${PKG_NAME}.sh
-cp "${SRC_DIR}"/deactivate-gcc.sh ${PREFIX}/etc/conda/deactivate.d/deactivate-${PKG_NAME}.sh
 
 # Next problem: macOS targetting uClibc ends up with broken symlinks in sysroot/usr/lib:
 if [[ $(uname) == Darwin ]]; then

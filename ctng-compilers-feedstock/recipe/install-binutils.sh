@@ -14,10 +14,6 @@ pushd ${SRC_DIR}/.build/*-*-*-*/build/build-cc-gcc-core-pass-2/gcc/
   cp -a liblto* ${PREFIX}/libexec/gcc/${CHOST}/${TOP_PKG_VERSION}/
 popd
 
-mkdir -p ${PREFIX}/etc/conda/{de,}activate.d
-cp "${SRC_DIR}"/activate-binutils.sh ${PREFIX}/etc/conda/activate.d/activate-${PKG_NAME}.sh
-cp "${SRC_DIR}"/deactivate-binutils.sh ${PREFIX}/etc/conda/deactivate.d/deactivate-${PKG_NAME}.sh
-
 # Strip executables, we may want to install to a different prefix
 # and strip in there so that we do not change files that are not
 # part of this package.
