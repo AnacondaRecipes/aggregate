@@ -19,8 +19,9 @@ outputs:
     requirements:
       - clangxx
       - libcxx
+      - {{ pin_subpackage('clang_' ~ target_platform, exact=True) }}
     # Since transitive run_exports are not currently possible:
     # (here I would like the run dependency on clangxx to pull in the run_exports from it).
     run_exports:
       strong:
-        - {{ pin_compatible('libcxx', min_pin='x.x.x.x.x.x.x.x.x', max_pin=None) }}
+        - {{ pin_compatible('libcxx', max_pin=None) }}
