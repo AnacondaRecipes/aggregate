@@ -12,7 +12,7 @@ FINAL_LDFLAGS_CC="-Wl,-pie -Wl,-headerpad_max_install_names"
 FINAL_DEBUG_CFLAGS="-Og -g -Wall -Wextra -fcheck=all -fbacktrace -fimplicit-none -fvar-tracking-assignments"
 FINAL_DEBUG_CXXFLAGS="-Og -g -Wall -Wextra -fcheck=all -fbacktrace -fimplicit-none -fvar-tracking-assignments"
 FINAL_DEBUG_FFLAGS="-Og -g -Wall -Wextra -fcheck=all -fbacktrace -fimplicit-none -fvar-tracking-assignments"
-FINAL_PYTHON_SYSCONFIGDATA_NAME="_sysconfig_x86_64_apple_darwin13_4_0"
+FINAL_PYTHON_SYSCONFIGDATA_NAME="_sysconfigdata_x86_64_apple_darwin13_4_0"
 
 find "${RECIPE_DIR}" -name "*activate*.sh" -exec cp {} . \;
 
