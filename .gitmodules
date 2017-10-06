@@ -1438,3 +1438,7 @@
 	path = typed-ast-feedstock
 	url = ../typed-ast-feedstock
 	branch = master
+[submodule "ws4py-feedstock"]
+	path = ws4py-feedstock
+	url = ../ws4py-feedstock
+	branch = master
