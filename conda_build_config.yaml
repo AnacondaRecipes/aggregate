@@ -5,6 +5,8 @@ boost:
   - 1.64
 bzip2:
   - 1.0
+cairo:
+  - 1.14
 c_compiler:
   - vs2008                     # [win]
   - vs2015                     # [win]
@@ -88,8 +90,12 @@ numpy:
   - 1.11   # [win]
 openblas:
   - 0.2.19
+openjpeg:
+  - 2.1
 perl:
   - 5.26
+pixman:
+  - 0.34
 proj4:
   - 4
 python:
