@@ -1458,3 +1458,11 @@
 	path = ipaddr-feedstock
 	url = ../ipaddr-feedstock
 	branch = master
+[submodule "make-feedstock"]
+	path = make-feedstock
+	url = ../make-feedstock
+	branch = master
+[submodule "udunits2-feedstock"]
+	path = udunits2-feedstock
+	url = ../udunits2-feedstock
+	branch = master
