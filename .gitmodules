@@ -1454,3 +1454,7 @@
 	path = infinity-feedstock
 	url = ../infinity-feedstock
 	branch = master
+[submodule "ipaddr-feedstock"]
+	path = ipaddr-feedstock
+	url = ../ipaddr-feedstock
+	branch = master
