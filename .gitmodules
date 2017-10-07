@@ -1446,3 +1446,11 @@
 	path = colour-feedstock
 	url = ../colour-feedstock
 	branch = master
+[submodule "intervals-feedstock"]
+	path = intervals-feedstock
+	url = ../intervals-feedstock
+	branch = master
+[submodule "infinity-feedstock"]
+	path = infinity-feedstock
+	url = ../infinity-feedstock
+	branch = master
