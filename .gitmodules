@@ -1473,3 +1473,7 @@
 	path = libpq-feedstock
 	url = ../libpq-feedstock
 	branch = master
+[submodule "cached-property-feedstock"]
+	path = cached-property-feedstock
+	url = ../cached-property-feedstock
+	branch = master
