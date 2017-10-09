@@ -1466,3 +1466,7 @@
 	path = udunits2-feedstock
 	url = ../udunits2-feedstock
 	branch = master
+[submodule "libglu-feedstock"]
+	path = libglu-feedstock
+	url = ../libglu-feedstock
+	branch = master
