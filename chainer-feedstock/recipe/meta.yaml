@@ -1,0 +1,90 @@
+{% set name = "chainer" %}
+{% set version = "2.1.0" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "f122ad04a44872422b9f222990dd13d574cfe3397e9cf4b6e92f832ae3b360cd" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ file_ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  {{ hash_type }}: {{ hash_value }}
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+    - filelock
+    - mock
+    - nose
+    - numpy >=1.9.0
+    - protobuf >=2.6.0
+    - six >=1.9.0
+
+test:
+  imports:
+    - chainer
+    - chainer.dataset
+    - chainer.datasets
+    - chainer.function_hooks
+    - chainer.functions
+    - chainer.functions.activation
+    - chainer.functions.array
+    - chainer.functions.connection
+    - chainer.functions.evaluation
+    - chainer.functions.loss
+    - chainer.functions.math
+    - chainer.functions.noise
+    - chainer.functions.normalization
+    - chainer.functions.pooling
+    - chainer.functions.theano
+    - chainer.functions.util
+    - chainer.initializers
+    - chainer.iterators
+    - chainer.links
+    - chainer.links.activation
+    - chainer.links.caffe
+    - chainer.links.caffe.protobuf2
+    - chainer.links.caffe.protobuf3
+    - chainer.links.connection
+    - chainer.links.loss
+    - chainer.links.model
+    - chainer.links.model.vision
+    - chainer.links.normalization
+    - chainer.links.theano
+    - chainer.optimizers
+    - chainer.serializers
+    - chainer.testing
+    - chainer.training
+    - chainer.training.extensions
+    - chainer.training.triggers
+    - chainer.training.updaters
+    - chainer.utils
+
+about:
+  home: https://chainer.org/
+  license: MIT License
+  license_family: MIT
+  license_file: ''
+  summary: A flexible framework of neural networks
+  description: |
+    Chainer is a Python-based deep learning framework aiming at flexibility.
+    It provides automatic differentiation APIs based on the define-by-run
+    approach (a.k.a. dynamic computational graphs) as well as object-oriented
+    high-level APIs to build and train neural networks. It also supports
+    CUDA/cuDNN using CuPy for high performance training and inference.
+  doc_url: https://docs.chainer.org/en/stable
+  dev_url: https://github.com/chainer/chainer
+
+extra:
+  recipe-maintainers:
+    - nehaljwani
