@@ -1477,3 +1477,19 @@
 	path = cached-property-feedstock
 	url = ../cached-property-feedstock
 	branch = master
+[submodule "cherrypy-feedstock"]
+	path = cherrypy-feedstock
+	url = ../cherrypy-feedstock
+	branch = master
+[submodule "cheroot-feedstock"]
+	path = cheroot-feedstock
+	url = ../cheroot-feedstock
+	branch = master
+[submodule "portend-feedstock"]
+	path = portend-feedstock
+	url = ../portend-feedstock
+	branch = master
+[submodule "tempora-feedstock"]
+	path = tempora-feedstock
+	url = ../tempora-feedstock
+	branch = master
