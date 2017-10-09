@@ -1,0 +1,22 @@
+package:
+  name: fonts-anaconda
+  version: 1
+
+build:
+  noarch: generic
+
+requirements:
+  build:
+    - font-ttf-ubuntu
+    - font-ttf-inconsolata
+    - font-ttf-dejavu-sans-mono
+    - font-ttf-source-code-pro
+  run:
+    - font-ttf-ubuntu
+    - font-ttf-inconsolata
+    - font-ttf-dejavu-sans-mono
+    - font-ttf-source-code-pro
+
+about:
+  license: Unknown
+  license_family: Other

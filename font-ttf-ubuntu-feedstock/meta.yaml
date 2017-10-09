@@ -1,0 +1,17 @@
+package:
+  name: font-ttf-ubuntu
+  version: 0.83
+
+source:
+  url: http://font.ubuntu.com/download/ubuntu-font-family-0.83.zip
+
+build:
+  noarch: generic
+
+about:
+  home: http://font.ubuntu.com/
+  summary: The Ubuntu Font Family
+  description: |
+    A unique, custom designed font that has a very distinctive look and feel.
+  license: Ubuntu Font Licence Version 1.0
+  license_family: Other

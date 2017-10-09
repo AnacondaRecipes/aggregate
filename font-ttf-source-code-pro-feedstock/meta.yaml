@@ -1,0 +1,15 @@
+package:
+  name: font-ttf-source-code-pro
+  version: 2.030
+
+source:
+  url: https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.tar.gz
+
+build:
+  noarch: generic
+
+about:
+  home: http://adobe-fonts.github.io/source-code-pro/
+  summary: A set of fonts that have been designed to work well in UI environments
+  license: SIL Open Font License, Version 1.1
+  license_family: Other

@@ -1,0 +1,21 @@
+package:
+  name: font-ttf-dejavu-sans-mono
+  version: 2.37
+
+source:
+  url: http://sourceforge.net/projects/dejavu/files/dejavu/2.37/dejavu-sans-ttf-2.37.zip
+
+build:
+  noarch: generic
+
+about:
+  home: https://dejavu-fonts.github.io/
+  summary: Monospace font for pretty code listings with many mathematical and other symbols
+  description: |
+    DejaVu fonts are a font family based on the Vera Fonts. Its purpose is to provide a
+    wider range of characters while maintaining the original look and feel through the
+    process of collaborative development Monospace font for pretty code listings.
+    Next to that, DejaVu contains a lot of mathematical and other symbols, arrows, braille
+    patterns, etc
+  license: BSD-3
+  license_family: BSD
