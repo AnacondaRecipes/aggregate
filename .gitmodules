@@ -1469,4 +1469,7 @@
 [submodule "libglu-feedstock"]
 	path = libglu-feedstock
 	url = ../libglu-feedstock
+[submodule "libpq-feedstock"]
+	path = libpq-feedstock
+	url = ../libpq-feedstock
 	branch = master

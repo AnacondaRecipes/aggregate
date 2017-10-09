@@ -11,15 +11,19 @@ source:
   patches:
     - 0001-Also-look-in-libtinfo-for-tgetent.patch
 
+build:
+  number: 1
+  run_exports:
+    # no info available.  Guessing at x.x.  Change if you know better.
+    - {{ pin_subpackage('libedit', max_pin='x.x') }}
+
 requirements:
   build:
     - autoconf
     - automake
     - {{ compiler('c') }}
   host:
-    - ncurses 6.0.*
-  run:
-    - ncurses 6.0.*
+    - ncurses
 
 about:
   home: http://thrysoee.dk/editline/

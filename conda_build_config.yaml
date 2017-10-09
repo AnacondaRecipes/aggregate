@@ -91,7 +91,9 @@ numpy:
 openblas:
   - 0.2.19
 openjpeg:
-  - 2.1
+  - 2.2
+openssl:
+  - 1.0.2
 perl:
   - 5.26
 pixman:
