@@ -1493,3 +1493,7 @@
 	path = tempora-feedstock
 	url = ../tempora-feedstock
 	branch = master
+[submodule "opentracing-feedstock"]
+	path = opentracing-feedstock
+	url = ../opentracing-feedstock
+	branch = master
