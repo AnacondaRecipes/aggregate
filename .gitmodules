@@ -1501,3 +1501,7 @@
 	path = aiobotocore-feedstock
 	url = ../aiobotocore-feedstock
 	branch = master
+[submodule "dill-feedstock"]
+	path = dill-feedstock
+	url = ../dill-feedstock
+	branch = master
