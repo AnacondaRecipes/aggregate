@@ -1,0 +1,51 @@
+{% set name = "colander" %}
+{% set version = "1.4" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "e20e9acf190e5711cf96aa65a5405dac04b6e841028fc361d953a9923dbc4e72" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ file_ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  {{ hash_type }}: {{ hash_value }}
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+    - translationstring
+    - iso8601
+
+test:
+  imports:
+    - colander
+    - colander.tests
+
+about:
+  home: https://github.com/Pylons/colander
+  license: BSD-like
+  license_family: BSD
+  license_url: http://www.repoze.org/LICENSE.txt
+  license_file: LICENSE.txt
+  summary: A serialization, deserialization, and validation library
+  description: |
+    Colander is useful as a system for validating and deserializing data
+    obtained via XML, JSON, an HTML form post or any other equally simple
+    data serialization.
+  doc_url: http://docs.pylonsproject.org/projects/colander/
+  doc_source_url: https://github.com/Pylons/colander/blob/master/docs/index.rst
+  dev_url: https://github.com/Pylons/colander
+
+extra:
+  recipe-maintainers:
+    - nehaljwani
