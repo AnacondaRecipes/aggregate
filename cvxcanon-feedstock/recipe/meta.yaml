@@ -1,0 +1,51 @@
+{% set name = "CVXcanon" %}
+{% set version = "0.1.1" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "70d7ca2e9200e2eb5d2d74131249110d8582c4227c92e553891e73c53c630fc5" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ file_ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  {{ hash_type }}: {{ hash_value }}
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - numpy
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  run:
+    - python
+    - numpy
+    - scipy
+
+test:
+  imports:
+    - _CVXcanon
+    - CVXcanon
+
+about:
+  home: https://github.com/jacklzhu/CVXcanon
+  license: GPL3
+  summary: Low-level library to perform the matrix building step in CVXPY
+  description: |
+    CVXcanon  is a low-level library to perform the matrix building step in cvxpy,
+    a convex optimization modeling software.
+  doc_url: https://pypi.python.org/pypi/CVXcanon/0.0.21
+  doc_source_url: https://github.com/cvxgrp/CVXcanon/blob/master/README.md
+  dev_url: https://github.com/cvxgrp/CVXcanon
+
+extra:
+  recipe-maintainers:
+    - nehaljwani
