@@ -1513,3 +1513,11 @@
 	path = pyasn1-feedstock
 	url = ../pyasn1-feedstock
 	branch = master
+[submodule "attrs-feedstock"]
+	path = attrs-feedstock
+	url = ../attrs-feedstock
+	branch = master
+[submodule "pympler-feedstock"]
+	path = pympler-feedstock
+	url = ../pympler-feedstock
+	branch = master
