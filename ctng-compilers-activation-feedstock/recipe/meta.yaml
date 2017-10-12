@@ -6,7 +6,7 @@ source:
   path: .
 
 build:
-  number: 6
+  number: 7
 
 source:
   path: .
@@ -24,6 +24,9 @@ outputs:
         - gcc_impl_{{ ctng_target_platform }} {{ ctng_gcc }}
         # for activation of binutils env vars
         - {{ pin_subpackage('binutils_' ~ ctng_target_platform, exact=True) }}
+    run_exports:
+      strong:
+	- libgcc-ng {{ ctng_gcc }}
     about:
       summary: GNU C Compiler (activation scripts)
       home: https://gcc.gnu.org/
