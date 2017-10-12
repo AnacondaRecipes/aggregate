@@ -1,0 +1,47 @@
+{% set name = "w3lib" %}
+{% set version = "1.18.0" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "c48731d5d73cde86f9c3c2bd6898d165f670120427353a7c8f9d6c685561d3c4" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ file_ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  {{ hash_type }}: {{ hash_value }}
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - six >=1.4.1
+  run:
+    - python
+    - six >=1.4.1
+
+test:
+  imports:
+    - w3lib
+
+about:
+  home: https://github.com/scrapy/w3lib
+  license: BSD
+  summary: Library of web-related functions
+  description: |
+    Python library of web-related functions such as extract base url from HTML snippets,
+    translate entites on HTML strings, convert raw HTTP headers to dicts and vice-versa,
+    construct HTTP auth header, converting HTML pages to unicode, etc.
+  doc_url: http://w3lib.readthedocs.org/en/latest/
+  doc_source_url: https://github.com/scrapy/w3lib/blob/master/docs/index.rst
+  dev_url: https://github.com/scrapy/w3lib
+
+extra:
+  recipe-maintainers:
+    - nehaljwani
