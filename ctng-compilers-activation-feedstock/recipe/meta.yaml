@@ -40,7 +40,7 @@ outputs:
         - {{ pin_subpackage('binutils_' ~ ctng_target_platform, exact=True) }}
     run_exports:
       strong:
-        - {{ pin_compatible('libstdcxx-ng_' ~ ctng_target_platform, max_pin=None) }}
+        - libstdcxx-ng_{{ ctng_target_platform }} {{ ctng_gcc }}
     about:
       summary: GNU C++ Compiler (activation scripts)
       home: https://gcc.gnu.org/
@@ -57,7 +57,7 @@ outputs:
         - {{ pin_subpackage('binutils_' ~ ctng_target_platform, exact=True) }}
     run_exports:
       strong:
-        - {{ pin_compatible('libgfortran-ng_' ~ ctng_target_platform, max_pin=None) }}
+        - libgfortran-ng_{{ctng_target_platform}} {{ ctng_gcc }}
     about:
       summary: GNU Fortran Compiler (activation scripts)
       home: https://gcc.gnu.org/
