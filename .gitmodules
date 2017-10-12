@@ -1521,3 +1521,7 @@
 	path = pympler-feedstock
 	url = ../pympler-feedstock
 	branch = master
+[submodule "tqdm-feedstock"]
+	path = tqdm-feedstock
+	url = ../tqdm-feedstock
+	branch = master
