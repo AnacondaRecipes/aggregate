@@ -13,7 +13,7 @@ package:
   version: {{ gfortran_ver }}
 
 build:
-  number: 0
+  number: 1
   skip: True                                                  # [not osx]
   binary_has_prefix_files:
     - lib/libgcc_ext.10.*.dylib
@@ -43,8 +43,8 @@ build:
     - lib/gcc/{{ chost }}/{{ gfortran_ver }}/include-fixed/**
     - lib/gcc/{{ chost }}/{{ gfortran_ver }}/include/**
 
-    # Only one weak symbol is used from libstdc++ so we may not need it:
-    # - lib/libstdc++.6.dylib
+    # Only one weak symbol is used from libstdc++ but we still need it:
+    - lib/libstdc++.6.dylib
 
     # Stub libraries:
     - lib/libgcc_ext.10.4.dylib
