@@ -26,7 +26,7 @@ outputs:
         - {{ pin_subpackage('binutils_' ~ ctng_target_platform, exact=True) }}
     run_exports:
       strong:
-	- libgcc-ng {{ ctng_gcc }}
+        - libgcc-ng {{ ctng_gcc }}
     about:
       summary: GNU C Compiler (activation scripts)
       home: https://gcc.gnu.org/
