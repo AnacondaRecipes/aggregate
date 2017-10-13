@@ -1,0 +1,26 @@
+package:
+  name: gconf2-cos6-x86_64
+  version: 2.28.0
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/GConf2-2.28.0-7.el6.x86_64.rpm
+    sha256: 11e90578ddc04eea96ec8a6d465e5893cfa44e32e47b684119a3be8c94a3018b
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/GConf2-2.28.0-7.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: gconf2-cos6-x86_64
+    noarch: generic
+
+    about:
+      home: http://projects.gnome.org/gconf/
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) A process-transparent configuration system"
+      description: |
+        GConf is a process-transparent configuration database API used to store user
+        preferences. It has pluggable backends and features to support workgroup
+        administration.
