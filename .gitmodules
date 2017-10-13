@@ -1525,3 +1525,7 @@
 	path = tqdm-feedstock
 	url = ../tqdm-feedstock
 	branch = master
+[submodule "pysal-feedstock"]
+	path = pysal-feedstock
+	url = ../pysal-feedstock
+	branch = master
