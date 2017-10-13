@@ -1529,3 +1529,11 @@
 	path = pysal-feedstock
 	url = ../pysal-feedstock
 	branch = master
+[submodule "gunicorn-feedstock"]
+	path = gunicorn-feedstock
+	url = ../gunicorn-feedstock
+	branch = master
+[submodule "paste-feedstock"]
+	path = paste-feedstock
+	url = ../paste-feedstock
+	branch = master
