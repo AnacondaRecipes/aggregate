@@ -1,0 +1,30 @@
+package:
+  name: orbit2-cos6-x86_64
+  version: 2.14.17
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/ORBit2-2.14.17-6.el6_8.x86_64.rpm
+    sha256: 08c017cdfa0eb0ffbe99b64b73c02949b7e4e4e208469fb42b06cde0af461484
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/ORBit2-2.14.17-6.el6_8.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: orbit2-cos6-x86_64
+    noarch: generic
+
+    about:
+      home: http://www.gnome.org/projects/ORBit2
+      license: LGPLv2+ and GPLv2+
+      license_family: GPL2
+      summary: "(CDT) A high-performance CORBA Object Request Broker"
+      description: |
+        ORBit is a high-performance CORBA (Common Object Request Broker Architecture)
+        ORB (object request broker). It allows programs to send requests and receive
+        replies from other programs, regardless of the locations of the two programs.
+        CORBA is an architecture that enables communication between program objects,
+        regardless of the programming language they're written in or the operating
+        system they run on.  You will need to install this package and ORBit-devel if
+        you want to write programs that use CORBA technology.
