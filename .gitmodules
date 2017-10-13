@@ -1545,3 +1545,7 @@
 	path = envisage-feedstock
 	url = ../envisage-feedstock
 	branch = master
+[submodule "fabric-feedstock"]
+	path = fabric-feedstock
+	url = ../fabric-feedstock
+	branch = master
