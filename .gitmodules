@@ -1537,3 +1537,7 @@
 	path = paste-feedstock
 	url = ../paste-feedstock
 	branch = master
+[submodule "pyserial-feedstock"]
+	path = pyserial-feedstock
+	url = ../pyserial-feedstock
+	branch = master
