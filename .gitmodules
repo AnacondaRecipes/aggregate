@@ -1541,3 +1541,7 @@
 	path = pyserial-feedstock
 	url = ../pyserial-feedstock
 	branch = master
+[submodule "envisage-feedstock"]
+	path = envisage-feedstock
+	url = ../envisage-feedstock
+	branch = master
