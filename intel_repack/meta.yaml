@@ -1,5 +1,6 @@
 {% set version='2018.0.0' %}
 {% set buildnum='4' %}
+{% set dstbuildnum='5' %}
 {% set mkl_include_buildnum='2' %}
 {% set openmp_buildnum='7' %}
 
@@ -8,7 +9,7 @@ package:
   version: {{ version }}
 
 build:
-  number: {{ buildnum }}
+  number: {{ dstbuildnum }}
   binary_relocation: false
   detect_binary_files_with_prefix: false
 

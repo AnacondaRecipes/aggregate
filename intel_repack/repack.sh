@@ -14,7 +14,12 @@ fi
 
 rm -rf $PREFIX/info
 
-if [[ `uname` == Darwin && -d $SRC_DIR/$PKG_NAME/lib ]]; then
-    # Strip off support for PPC - saves about 100 MB
-    python $RECIPE_DIR/deuniversalize.py --ignore-wrong-arch $SRC_DIR/$PKG_NAME/lib/* $PREFIX/lib
+if [[ $(uname) == Darwin && -d $SRC_DIR/$PKG_NAME/lib ]]; then
+  # Strip off support for PPC - saves about 100 MB
+  python $RECIPE_DIR/deuniversalize.py --ignore-wrong-arch $SRC_DIR/$PKG_NAME/lib/* $PREFIX/lib
+  if [[ -f ${PREFIX}/lib/libmkl_intel_thread.dylib ]]; then
+    # See: https://github.com/ContinuumIO/anaconda-issues/issues/6423
+    # and: https://github.com/JuliaPy/PyPlot.jl/issues/315
+    install_name_tool -change @rpath/libiomp5.dylib @loader_path/libiomp5.dylib ${PREFIX}/lib/libmkl_intel_thread.dylib
+  fi
 fi
