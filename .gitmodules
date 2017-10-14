@@ -1569,3 +1569,7 @@
 	path = transaction-feedstock
 	url = ../transaction-feedstock
 	branch = master
+[submodule "multidict-feedstock"]
+	path = multidict-feedstock
+	url = ../multidict-feedstock
+	branch = master
