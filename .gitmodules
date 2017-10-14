@@ -1557,3 +1557,7 @@
 	path = yarl-feedstock
 	url = ../yarl-feedstock
 	branch = master
+[submodule "ldap3-feedstock"]
+	path = ldap3-feedstock
+	url = ../ldap3-feedstock
+	branch = master
