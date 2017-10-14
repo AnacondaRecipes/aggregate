@@ -1549,3 +1549,7 @@
 	path = fabric-feedstock
 	url = ../fabric-feedstock
 	branch = master
+[submodule "webob-feedstock"]
+	path = webob-feedstock
+	url = ../webob-feedstock
+	branch = master
