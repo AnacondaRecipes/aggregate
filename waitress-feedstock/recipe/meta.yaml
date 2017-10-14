@@ -1,0 +1,53 @@
+{% set name = "waitress" %}
+{% set version = "1.1.0" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "d33cd3d62426c0f1b3cd84ee3d65779c7003aae3fc060dee60524d10a57f05a9" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ file_ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  {{ hash_type }}: {{ hash_value }}
+
+build:
+  number: 0
+  entry_points:
+    - waitress-serve=waitress.runner:run
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+
+test:
+  imports:
+    - waitress
+    - waitress.tests
+    - waitress.tests.fixtureapps
+  commands:
+    - waitress-serve --help
+
+about:
+  home: https://github.com/Pylons/waitress
+  license: ZPL 2.1
+  license_family: Other
+  license_file: LICENSE.txt
+  summary: Production-quality WSGI server with very acceptable performance
+  description: |
+    Waitress is meant to be a production-quality pure-Python WSGI server with
+    very acceptable performance. It has no dependencies except ones which live
+    in the Python standard library.
+  doc_url: http://docs.pylonsproject.org/projects/waitress/en/latest/
+  doc_source_url: https://github.com/Pylons/waitress/blob/master/docs/index.rst
+  dev_url: https://github.com/Pylons/waitress
+
+extra:
+  recipe-maintainers:
+    - nehaljwani
