@@ -1561,3 +1561,7 @@
 	path = ldap3-feedstock
 	url = ../ldap3-feedstock
 	branch = master
+[submodule "luigi-feedstock"]
+	path = luigi-feedstock
+	url = ../luigi-feedstock
+	branch = master
