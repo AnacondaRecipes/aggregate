@@ -1553,3 +1553,7 @@
 	path = webob-feedstock
 	url = ../webob-feedstock
 	branch = master
+[submodule "yarl-feedstock"]
+	path = yarl-feedstock
+	url = ../yarl-feedstock
+	branch = master
