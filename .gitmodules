@@ -1573,3 +1573,7 @@
 	path = multidict-feedstock
 	url = ../multidict-feedstock
 	branch = master
+[submodule "routes-feedstock"]
+	path = routes-feedstock
+	url = ../routes-feedstock
+	branch = master
