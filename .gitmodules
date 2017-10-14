@@ -1565,3 +1565,7 @@
 	path = luigi-feedstock
 	url = ../luigi-feedstock
 	branch = master
+[submodule "transaction-feedstock"]
+	path = transaction-feedstock
+	url = ../transaction-feedstock
+	branch = master
