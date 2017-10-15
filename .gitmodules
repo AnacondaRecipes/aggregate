@@ -1577,3 +1577,7 @@
 	path = routes-feedstock
 	url = ../routes-feedstock
 	branch = master
+[submodule "automat-feedstock"]
+	path = automat-feedstock
+	url = ../automat-feedstock
+	branch = master
