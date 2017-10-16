@@ -1,0 +1,21 @@
+diff --git a/configure b/configure
+index f4f9e2b13..4730758e0 100755
+--- a/configure
++++ b/configure
+@@ -273,14 +273,14 @@ if [ "$TF_NEED_MKL" == "1" ]; then # TF_NEED_MKL
+       ln -sf $MKL_INSTALL_PATH/${MKL_ML_OMP_LIB_PATH} third_party/mkl/
+       ln -sf $MKL_INSTALL_PATH/include third_party/mkl/
+       ln -sf $MKL_INSTALL_PATH/include third_party/eigen3/mkl_include
+-      loc=$(locate -e libdl.so.2 | sed -n 1p)
++      loc=$(ldconfig -p | grep libdl | sed -n 1p | rev | cut -d' ' -f1 | rev)
+       ln -sf $loc third_party/mkl/libdl.so.2
+   elif [ -e "$MKL_INSTALL_PATH/${MKL_RT_LIB_PATH}" ]; then
+       ln -sf $MKL_INSTALL_PATH/${MKL_RT_LIB_PATH} third_party/mkl/
+       ln -sf $MKL_INSTALL_PATH/${MKL_RT_OMP_LIB_PATH} third_party/mkl/
+       ln -sf $MKL_INSTALL_PATH/include third_party/mkl/
+       ln -sf $MKL_INSTALL_PATH/include third_party/eigen3/mkl_include
+-      loc=$(locate -e libdl.so.2 | sed -n 1p)
++      loc=$(ldconfig -p | grep libdl | sed -n 1p | rev | cut -d' ' -f1 | rev)
+       ln -sf $loc third_party/mkl/libdl.so.2
+   else
+       echo "ERROR: $MKL_INSTALL_PATH/${MKL_ML_LIB_PATH} nor $MKL_INSTALL_PATH/${MKL_RT_LIB_PATH} exists";
