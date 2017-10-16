@@ -1,0 +1,98 @@
+{% set version = "1.3.0" %}
+
+package:
+  name: tensorflow-gpu-base
+  version: {{ version }}
+
+source:
+  fn: tensorflow-{{ version }}.tar.gz
+  url: https://github.com/tensorflow/tensorflow/archive/v{{ version }}.tar.gz
+  sha256: e1af1bb767b57c3416de0d43a5f74d174c42b85231dffd36f3630173534d4307
+  patches:
+    # The GitHub archive for protobuf has changed since the v1.3.0 release
+    - remove-github-protobuf-source-url.patch
+    # Fix for compilation error in image_ops_gpu.cu.pic.o with CUDA 7.5
+    # https://github.com/tensorflow/tensorflow/issues/10258
+    # https://github.com/tensorflow/tensorflow/pull/10366
+    #- 10366.patch
+    # do not use locate during configuration
+    - do-not-use-locate.patch  [linux]
+    # Patches need to get two test to pass on CentOS 6
+    #- stable-image-rotate-test.patch  [linux]
+    #- relax-tolerence-in-special_math_test.patch  [linux]
+    # ppc64le unit test patches
+    - skip-read-only-debugger_cli_common-test.patch  [ppc64le]
+    - larger-tolerence-in-linalg_grad_test.patch  [ppc64le]
+    - 10522.patch   [ppc64le]
+    - update-highwayhash.patch  [ppc64le]
+
+build:
+  number: 0
+  msvc_compiler: 14.0    [win]
+  string: py{{py}}cuda{{ CUDA_VERSION }}cudnn{{ CUDNN_VERSION }}_0
+  script_env:
+    - CUDA_VERSION
+    - CUDNN_VERSION
+
+requirements:
+  build:
+    # conda build requirements
+    - bazel >=0.4.5      [not win]
+    - cmake >=3.5        [win]
+    - pip
+    - python
+    - swig
+    - zlib
+    # GPU requirements
+    - cudatoolkit {{ CUDA_VERSION }}*
+    - cudnn {{ CUDNN_VERSION }}*
+    # requirements specified by the package itself
+    - wheel >=0.26
+    - six >=1.10.0
+    - protobuf >=3.3.0
+    - numpy 1.11*        [not ppc64le]
+    - numpy 1.12*        [ppc64le]
+    - mock >=2.0.0       [py2k]
+    - backports.weakref ==1.0rc1
+    # the following packages are required for testing
+    - portpicker
+    - pyreadline         [win]
+    - scipy
+    - scikit-learn
+    - gcc                [not ppc64le]
+  run:
+    - python
+    - six >=1.10.0
+    - protobuf >=3.3.0
+    - protobuf >=3.2.0
+    - numpy >=1.11       [not ppc64le]
+    - numpy >=1.12       [ppc64le]
+    - mock >=2.0.0       [py2k]
+    - backports.weakref ==1.0rc1
+    - cudatoolkit {{ CUDA_VERSION }}*
+    - cudnn {{ CUDNN_VERSION }}*
+    - vs2015_runtime >=14.0.25420  [win]
+    - libgcc             [not ppc64le]
+
+test:
+  # the tensorflow import is tested by the run_test.sh script.
+  # See comments in that file for the LD_LIBRARY_PATH requirements
+  #imports:
+  #  - tensorflow
+  files:
+    - gpu_test.py
+  commands:
+    - conda inspect linkages -p $PREFIX tensorflow-gpu-base  [linux]
+
+about:
+  home: http://tensorflow.org/
+  license: Apache 2.0
+  license_family: Apache
+  summary: TensorFlow is a machine learning library, base GPU package, tensorflow only.
+  description: |
+    TensorFlow provides multiple APIs.The lowest level API, TensorFlow Core
+    provides you with complete programming control.
+    Base GPU package contains only tensorflow, not tensorflow-tensorboard.
+  dev_url: https://github.com/tensorflow/tensorflow
+  doc_url: https://www.tensorflow.org/get_started/get_started
+  doc_source_url: https://github.com/tensorflow/tensorflow/tree/master/tensorflow/docs_src
