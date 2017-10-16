@@ -1,0 +1,28 @@
+From 92a252788194253c2c1c382e698c03ffe75ea223 Mon Sep 17 00:00:00 2001
+From: Joan Puigcerver <joapuipe@gmail.com>
+Date: Thu, 1 Jun 2017 10:41:11 +0200
+Subject: [PATCH] Fixes issue #10258
+
+On CUDA versions previous to 8.0, only __shared__ variables could be declared as static in the device code.
+---
+ tensorflow/contrib/image/kernels/image_ops.h | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/tensorflow/contrib/image/kernels/image_ops.h b/tensorflow/contrib/image/kernels/image_ops.h
+index 692e33fcf30..b45264ff63d 100644
+--- a/tensorflow/contrib/image/kernels/image_ops.h
++++ b/tensorflow/contrib/image/kernels/image_ops.h
+@@ -66,7 +66,13 @@ class ProjectiveGenerator {
+         projection;
+ 
+     // TODO(ringwalt): Add a fill value input.
++#if (defined __CUDA_ARCH__) && (CUDART_VERSION < 8000)
++    // On CUDA versions previous to 8.0, only __shared__ variables
++    // could be declared as static in the device code.
++    const T fill_value = T(0);
++#else
+     static const T fill_value = T(0);
++#endif
+     switch (interpolation_) {
+       case INTERPOLATION_NEAREST:
+         // Switch the order of x and y again for indexing into the image.
