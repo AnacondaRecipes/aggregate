@@ -1,0 +1,47 @@
+{% set version = "0.1.5" %}
+
+package:
+  name: tensorflow-tensorboard
+  version: {{ version }}
+
+source:
+  fn: tensorflow-{{ version }}.tar.gz
+  url: https://github.com/tensorflow/tensorboard/archive/{{ version }}.tar.gz
+  sha256: 4e8180547afb99368cd9b650d1c3310abff7d5b82dcce0542bfb6b64bed31ed2
+
+build:
+  number: 0
+  entry_points:
+    - tensorboard = tensorboard.main:main
+
+requirements:
+  build:
+    - bazel >=0.4.5
+    - python
+    # no version dependency on setuptools should be required but the 36.x
+    # version in defaults is break the build and needs to be avoided
+    - setuptools <30
+  run:
+    - python
+    - werkzeug >=0.11.10
+    - six >=1.10.0
+    - protobuf >=3.2.0
+    - numpy >=1.11
+    - markdown >=2.6.8
+    - html5lib ==0.9999999
+    - bleach ==1.5.0
+
+test:
+  requires:
+    - tensorflow >=1.2.0
+  imports:
+    - tensorboard
+  commands:
+    - tensorboard --help
+
+about:
+  home: http://tensorflow.org/
+  license: Apache 2.0
+  license_family: Apache
+  summary: TensorBoard lets you watch Tensors Flow
+  dev_url: https://github.com/tensorflow/tensorboard
