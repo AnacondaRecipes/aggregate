@@ -1,0 +1,3573 @@
+From 7c212f272d45a9bd96419508f51f5f4e45187b8d Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sat, 24 Jun 2017 23:11:08 -0500
+Subject: [PATCH] Fix compiler errors
+
+---
+ .../contrib/batching/kernels/batch_kernels.cc      |   2 +-
+ tensorflow/contrib/batching/ops/batch_ops.cc       |   4 +-
+ .../contrib/cloud/ops/bigquery_reader_ops.cc       |   4 +-
+ tensorflow/contrib/cudnn_rnn/ops/cudnn_rnn_ops.cc  |  10 +-
+ tensorflow/contrib/framework/ops/variable_ops.cc   |   2 +-
+ tensorflow/contrib/image/ops/image_ops.cc          |   4 +-
+ .../input_pipeline/ops/input_pipeline_ops.cc       |   2 +-
+ tensorflow/contrib/nccl/ops/nccl_ops.cc            |   2 +-
+ tensorflow/contrib/rnn/ops/gru_ops.cc              |   4 +-
+ tensorflow/contrib/rnn/ops/lstm_ops.cc             |   8 +-
+ tensorflow/contrib/seq2seq/ops/beam_search_ops.cc  |   2 +-
+ .../hybrid/core/ops/hard_routing_function_op.cc    |   2 +-
+ .../core/ops/k_feature_routing_function_op.cc      |   2 +-
+ .../hybrid/core/ops/routing_function_op.cc         |   2 +-
+ .../hybrid/core/ops/routing_gradient_op.cc         |   2 +-
+ .../ops/stochastic_hard_routing_function_op.cc     |   2 +-
+ .../ops/stochastic_hard_routing_gradient_op.cc     |   2 +-
+ .../hybrid/core/ops/unpack_path_op.cc              |   2 +-
+ .../contrib/tensor_forest/ops/tensor_forest_ops.cc |  20 +--
+ .../framework/shape_inference_testutil_test.cc     |   4 +-
+ tensorflow/core/kernels/lookup_table_op.h          |   2 +-
+ tensorflow/core/kernels/resource_variable_ops.cc   |   2 +-
+ tensorflow/core/kernels/sdca_internal.cc           |   2 +-
+ tensorflow/core/ops/array_ops.cc                   | 124 +++++++++---------
+ tensorflow/core/ops/candidate_sampling_ops.cc      |   2 +-
+ tensorflow/core/ops/control_flow_ops.cc            |   6 +-
+ tensorflow/core/ops/ctc_ops.cc                     |   6 +-
+ tensorflow/core/ops/data_flow_ops.cc               |  68 +++++-----
+ tensorflow/core/ops/dataset_ops.cc                 |   2 +-
+ tensorflow/core/ops/functional_ops.cc              |   2 +-
+ tensorflow/core/ops/image_ops.cc                   |  30 ++---
+ tensorflow/core/ops/io_ops.cc                      |  26 ++--
+ tensorflow/core/ops/linalg_ops.cc                  |  10 +-
+ tensorflow/core/ops/lookup_ops.cc                  |  24 ++--
+ tensorflow/core/ops/math_ops.cc                    |  22 ++--
+ tensorflow/core/ops/nn_ops.cc                      | 100 +++++++--------
+ tensorflow/core/ops/parsing_ops.cc                 |   8 +-
+ tensorflow/core/ops/random_ops.cc                  |   6 +-
+ tensorflow/core/ops/resource_variable_ops.cc       |  10 +-
+ tensorflow/core/ops/sdca_ops.cc                    |   2 +-
+ tensorflow/core/ops/set_ops.cc                     |   6 +-
+ tensorflow/core/ops/sparse_ops.cc                  |  34 ++---
+ tensorflow/core/ops/spectral_ops.cc                |  24 ++--
+ tensorflow/core/ops/state_ops.cc                   |  10 +-
+ tensorflow/core/ops/string_ops.cc                  |   6 +-
+ tensorflow/core/ops/training_ops.cc                |  76 +++++------
+ .../core/platform/default/thread_annotations.h     |   8 +-
+ .../tools/graph_transforms/fold_old_batch_norms.cc |   2 +-
+ .../tools/graph_transforms/quantize_nodes.cc       | 140 ++++++++++-----------
+ .../tools/graph_transforms/sparsify_gather.cc      |   2 +-
+ tensorflow/tools/tfprof/internal/tfprof_options.h  |   2 +-
+ 51 files changed, 422 insertions(+), 424 deletions(-)
+
+diff --git a/tensorflow/contrib/batching/kernels/batch_kernels.cc b/tensorflow/contrib/batching/kernels/batch_kernels.cc
+index 1e09572..8f4d206 100644
+--- a/tensorflow/contrib/batching/kernels/batch_kernels.cc
++++ b/tensorflow/contrib/batching/kernels/batch_kernels.cc
+@@ -519,7 +519,7 @@ class BatchKernel : public AsyncOpKernel {
+   void ComputeAsync(OpKernelContext* c, DoneCallback done) final {
+     BatchResource* br;
+     std::function<Status(BatchResource * *r)> creator =
+-        [this](BatchResource** r) {
++        [this](BatchResource** r) -> ::tensorflow::Status {
+           std::unique_ptr<BatchResource> new_resource;
+           TF_RETURN_IF_ERROR(BatchResource::Create(
+               num_batch_threads_, max_batch_size_, batch_timeout_micros_,
+diff --git a/tensorflow/contrib/batching/ops/batch_ops.cc b/tensorflow/contrib/batching/ops/batch_ops.cc
+index 85e0ccb..361fb94 100644
+--- a/tensorflow/contrib/batching/ops/batch_ops.cc
++++ b/tensorflow/contrib/batching/ops/batch_ops.cc
+@@ -33,7 +33,7 @@ REGISTER_OP("Batch")
+     .Attr("shared_name: string = ''")
+     .Attr("batching_queue: string = ''")
+     .Attr("T: list(type)")
+-    .SetShapeFn([](shape_inference::InferenceContext* c) {
++    .SetShapeFn([](shape_inference::InferenceContext* c) -> ::tensorflow::Status {
+       std::vector<shape_inference::ShapeHandle> in_shapes;
+       TF_RETURN_IF_ERROR(c->input("in_tensors", &in_shapes));
+       std::vector<shape_inference::ShapeHandle> out_shapes(in_shapes.size());
+@@ -99,7 +99,7 @@ REGISTER_OP("Unbatch")
+     .Attr("container: string = ''")
+     .Attr("shared_name: string = ''")
+     .Attr("T: type")
+-    .SetShapeFn([](shape_inference::InferenceContext* c) {
++    .SetShapeFn([](shape_inference::InferenceContext* c) -> ::tensorflow::Status {
+       shape_inference::ShapeHandle out_shape;
+       TF_RETURN_IF_ERROR(
+           c->ReplaceDim(c->input(0), 0, c->UnknownDim(), &out_shape));
+diff --git a/tensorflow/contrib/cloud/ops/bigquery_reader_ops.cc b/tensorflow/contrib/cloud/ops/bigquery_reader_ops.cc
+index fbba04a..6882966 100644
+--- a/tensorflow/contrib/cloud/ops/bigquery_reader_ops.cc
++++ b/tensorflow/contrib/cloud/ops/bigquery_reader_ops.cc
+@@ -32,7 +32,7 @@ REGISTER_OP("BigQueryReader")
+     .Attr("test_end_point: string = ''")
+     .Output("reader_handle: Ref(string)")
+     .SetIsStateful()
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->Vector(2));
+       return Status::OK();
+     })
+@@ -63,7 +63,7 @@ REGISTER_OP("GenerateBigQueryReaderPartitions")
+     .Attr("num_partitions: int")
+     .Attr("test_end_point: string = ''")
+     .Output("partitions: string")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->Vector(InferenceContext::kUnknownDim));
+       return Status::OK();
+     })
+diff --git a/tensorflow/contrib/cudnn_rnn/ops/cudnn_rnn_ops.cc b/tensorflow/contrib/cudnn_rnn/ops/cudnn_rnn_ops.cc
+index 2c631b0..8dce60f 100644
+--- a/tensorflow/contrib/cudnn_rnn/ops/cudnn_rnn_ops.cc
++++ b/tensorflow/contrib/cudnn_rnn/ops/cudnn_rnn_ops.cc
+@@ -84,7 +84,7 @@ REGISTER_OP("CudnnRNNParamsSize")
+     .Attr("seed: int = 0")
+     .Attr("seed2: int = 0")
+     .Output("params_size: S")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->Vector(1));
+       return Status::OK();
+     })
+@@ -138,7 +138,7 @@ REGISTER_OP("CudnnRNN")
+     .Attr("seed: int = 0")
+     .Attr("seed2: int = 0")
+     .Attr("is_training: bool = true")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       auto input_shape = c->input(0);
+       auto input_h_shape = c->input(1);
+       auto seq_length = c->Dim(input_shape, 0);
+@@ -197,7 +197,7 @@ REGISTER_OP("CudnnRNNBackprop")
+     .Attr("dropout: float = 0.0")
+     .Attr("seed: int = 0")
+     .Attr("seed2: int = 0")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       auto input_shape = c->input(0);
+       auto input_h_shape = c->input(1);
+       auto input_c_shape = c->input(2);
+@@ -244,7 +244,7 @@ REGISTER_OP("CudnnRNNParamsToCanonical")
+     .Attr("dropout: float = 0.0")
+     .Attr("seed: int = 0")
+     .Attr("seed2: int = 0")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(3), 1, &unused));
+       int num_params;
+@@ -287,7 +287,7 @@ REGISTER_OP("CudnnRNNCanonicalToParams")
+     .Attr("dropout: float = 0.0")
+     .Attr("seed: int = 0")
+     .Attr("seed2: int = 0")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->Vector(InferenceContext::kUnknownDim));
+       return Status::OK();
+     })
+diff --git a/tensorflow/contrib/framework/ops/variable_ops.cc b/tensorflow/contrib/framework/ops/variable_ops.cc
+index 8f909f8..0f938ad 100644
+--- a/tensorflow/contrib/framework/ops/variable_ops.cc
++++ b/tensorflow/contrib/framework/ops/variable_ops.cc
+@@ -26,7 +26,7 @@ REGISTER_OP("ZeroInitializer")
+     .Output("output_ref: Ref(T)")
+     .Attr("T: realnumbertype")
+     .SetAllowsUninitializedInput()
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+         c->set_output(0, c->input(0));
+         return Status::OK();
+     })
+diff --git a/tensorflow/contrib/image/ops/image_ops.cc b/tensorflow/contrib/image/ops/image_ops.cc
+index 6b24eaf..e766907 100644
+--- a/tensorflow/contrib/image/ops/image_ops.cc
++++ b/tensorflow/contrib/image/ops/image_ops.cc
+@@ -32,7 +32,7 @@ REGISTER_OP("ImageProjectiveTransform")
+     .Attr("dtype: {uint8, int32, int64, float32, float64}")
+     .Attr("interpolation: string")
+     .Output("transformed_images: dtype")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->input(0));
+       c->set_output_handle_dtype(0, c->input_handle_dtype(0));
+       c->set_output_handle_shape(0, c->input_handle_shape(0));
+@@ -67,7 +67,7 @@ REGISTER_OP("BipartiteMatch")
+     .Output("row_to_col_match_indices: int32")
+     .Output("col_to_row_match_indices: int32")
+     .SetIsStateful()
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 2, &input));
+       c->set_output(0, c->MakeShape({c->Dim(input, 0)}));
+diff --git a/tensorflow/contrib/input_pipeline/ops/input_pipeline_ops.cc b/tensorflow/contrib/input_pipeline/ops/input_pipeline_ops.cc
+index 052dbfe..a039b20 100644
+--- a/tensorflow/contrib/input_pipeline/ops/input_pipeline_ops.cc
++++ b/tensorflow/contrib/input_pipeline/ops/input_pipeline_ops.cc
+@@ -26,7 +26,7 @@ REGISTER_OP("ObtainNext")
+     .Input("list: string")
+     .Input("counter: Ref(int64)")
+     .Output("out_element: string")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused_input, input1;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &unused_input));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &input1));
+diff --git a/tensorflow/contrib/nccl/ops/nccl_ops.cc b/tensorflow/contrib/nccl/ops/nccl_ops.cc
+index d767636..fe89258 100644
+--- a/tensorflow/contrib/nccl/ops/nccl_ops.cc
++++ b/tensorflow/contrib/nccl/ops/nccl_ops.cc
+@@ -71,7 +71,7 @@ REGISTER_OP("NcclBroadcastRecv")
+     .Attr("num_devices: int")
+     .Attr("shared_name: string")
+     .SetIsStateful()
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle out;
+       TF_RETURN_IF_ERROR(c->MakeShapeFromShapeTensor(0, &out));
+       c->set_output(0, out);
+diff --git a/tensorflow/contrib/rnn/ops/gru_ops.cc b/tensorflow/contrib/rnn/ops/gru_ops.cc
+index e91d1e8..5975b21 100644
+--- a/tensorflow/contrib/rnn/ops/gru_ops.cc
++++ b/tensorflow/contrib/rnn/ops/gru_ops.cc
+@@ -32,7 +32,7 @@ REGISTER_OP("GRUBlockCell")
+     .Output("u: T")
+     .Output("c: T")
+     .Output("h: T")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle x, h_prev;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 2, &x));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 2, &h_prev));
+@@ -110,7 +110,7 @@ REGISTER_OP("GRUBlockCellGrad")
+     .Output("d_h_prev: T")
+     .Output("d_c_bar: T")
+     .Output("d_r_bar_u_bar: T")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle x, h_prev, w_ru;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 2, &x));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 2, &h_prev));
+diff --git a/tensorflow/contrib/rnn/ops/lstm_ops.cc b/tensorflow/contrib/rnn/ops/lstm_ops.cc
+index 699cc6c..38a1520 100644
+--- a/tensorflow/contrib/rnn/ops/lstm_ops.cc
++++ b/tensorflow/contrib/rnn/ops/lstm_ops.cc
+@@ -42,7 +42,7 @@ REGISTER_OP("LSTMBlockCell")
+     .Attr("cell_clip: float = 3.0")
+     .Attr("use_peephole: bool = false")
+     .Attr("T: {float}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle x, cs_prev;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 2, &x));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 2, &cs_prev));
+@@ -129,7 +129,7 @@ REGISTER_OP("LSTMBlockCellGrad")
+     .Output("wco_grad: T")
+     .Attr("use_peephole: bool")
+     .Attr("T: {float}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle x, cs_prev;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 2, &x));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 2, &cs_prev));
+@@ -197,7 +197,7 @@ REGISTER_OP("BlockLSTM")
+     .Attr("cell_clip: float = 3.0")
+     .Attr("use_peephole: bool = false")
+     .Attr("T: {float}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle x, b;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 3, &x));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(c->num_inputs() - 1), 1, &b));
+@@ -289,7 +289,7 @@ REGISTER_OP("BlockLSTMGrad")
+     .Output("b_grad: T")
+     .Attr("use_peephole: bool")
+     .Attr("T: {float}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle x, cs_prev, h_prev, w, wci, wco, wcf, b;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 3, &x));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(2), 2, &cs_prev));
+diff --git a/tensorflow/contrib/seq2seq/ops/beam_search_ops.cc b/tensorflow/contrib/seq2seq/ops/beam_search_ops.cc
+index 6c445cd..ba3416c 100644
+--- a/tensorflow/contrib/seq2seq/ops/beam_search_ops.cc
++++ b/tensorflow/contrib/seq2seq/ops/beam_search_ops.cc
+@@ -28,7 +28,7 @@ REGISTER_OP("GatherTree")
+     .Input("sequence_length: T")
+     .Output("beams: T")
+     .Attr("T: {int32}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle step_ids, parent_ids, sequence_length;
+ 
+       // step_ids, parent_ids, and output are all shaped:
+diff --git a/tensorflow/contrib/tensor_forest/hybrid/core/ops/hard_routing_function_op.cc b/tensorflow/contrib/tensor_forest/hybrid/core/ops/hard_routing_function_op.cc
+index 690fadd..24262b7 100644
+--- a/tensorflow/contrib/tensor_forest/hybrid/core/ops/hard_routing_function_op.cc
++++ b/tensorflow/contrib/tensor_forest/hybrid/core/ops/hard_routing_function_op.cc
+@@ -59,7 +59,7 @@ REGISTER_OP("HardRoutingFunction")
+     .Input("tree_biases: float")
+     .Output("path_probability: float")
+     .Output("path: int32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input;
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(0), 1, &input));
+       int64 tree_depth;
+diff --git a/tensorflow/contrib/tensor_forest/hybrid/core/ops/k_feature_routing_function_op.cc b/tensorflow/contrib/tensor_forest/hybrid/core/ops/k_feature_routing_function_op.cc
+index 9bc42eb..4fb82c6 100644
+--- a/tensorflow/contrib/tensor_forest/hybrid/core/ops/k_feature_routing_function_op.cc
++++ b/tensorflow/contrib/tensor_forest/hybrid/core/ops/k_feature_routing_function_op.cc
+@@ -56,7 +56,7 @@ REGISTER_OP("KFeatureRoutingFunction")
+     .Input("tree_parameters: float")
+     .Input("tree_biases: float")
+     .Output("probabilities: float")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input, params;
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(0), 1, &input));
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(1), 1, &params));
+diff --git a/tensorflow/contrib/tensor_forest/hybrid/core/ops/routing_function_op.cc b/tensorflow/contrib/tensor_forest/hybrid/core/ops/routing_function_op.cc
+index 6b67cb2..c7c3bba 100644
+--- a/tensorflow/contrib/tensor_forest/hybrid/core/ops/routing_function_op.cc
++++ b/tensorflow/contrib/tensor_forest/hybrid/core/ops/routing_function_op.cc
+@@ -56,7 +56,7 @@ REGISTER_OP("RoutingFunction")
+     .Input("tree_parameters: float")
+     .Input("tree_biases: float")
+     .Output("probabilities: float")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input, params;
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(0), 1, &input));
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(1), 1, &params));
+diff --git a/tensorflow/contrib/tensor_forest/hybrid/core/ops/routing_gradient_op.cc b/tensorflow/contrib/tensor_forest/hybrid/core/ops/routing_gradient_op.cc
+index 131e819..b482020 100644
+--- a/tensorflow/contrib/tensor_forest/hybrid/core/ops/routing_gradient_op.cc
++++ b/tensorflow/contrib/tensor_forest/hybrid/core/ops/routing_gradient_op.cc
+@@ -49,7 +49,7 @@ REGISTER_OP("RoutingGradient")
+     .Input("tree_biases: float")
+     .Input("routes: float")
+     .Output("routing_gradient: float")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input, params;
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(0), 1, &input));
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(1), 1, &params));
+diff --git a/tensorflow/contrib/tensor_forest/hybrid/core/ops/stochastic_hard_routing_function_op.cc b/tensorflow/contrib/tensor_forest/hybrid/core/ops/stochastic_hard_routing_function_op.cc
+index 26a7d79..5f76c8c 100644
+--- a/tensorflow/contrib/tensor_forest/hybrid/core/ops/stochastic_hard_routing_function_op.cc
++++ b/tensorflow/contrib/tensor_forest/hybrid/core/ops/stochastic_hard_routing_function_op.cc
+@@ -59,7 +59,7 @@ REGISTER_OP("StochasticHardRoutingFunction")
+     .Input("tree_biases: float")
+     .Output("path_probability: float")
+     .Output("path: int32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input;
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(0), 1, &input));
+       int64 tree_depth;
+diff --git a/tensorflow/contrib/tensor_forest/hybrid/core/ops/stochastic_hard_routing_gradient_op.cc b/tensorflow/contrib/tensor_forest/hybrid/core/ops/stochastic_hard_routing_gradient_op.cc
+index 0b5afe4..c3eddc9 100644
+--- a/tensorflow/contrib/tensor_forest/hybrid/core/ops/stochastic_hard_routing_gradient_op.cc
++++ b/tensorflow/contrib/tensor_forest/hybrid/core/ops/stochastic_hard_routing_gradient_op.cc
+@@ -52,7 +52,7 @@ REGISTER_OP("StochasticHardRoutingGradient")
+     .Output("data_gradient: float")
+     .Output("parameter_gradient: float")
+     .Output("bias_gradient: float")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input, params;
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(0), 2, &input));
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(1), 1, &params));
+diff --git a/tensorflow/contrib/tensor_forest/hybrid/core/ops/unpack_path_op.cc b/tensorflow/contrib/tensor_forest/hybrid/core/ops/unpack_path_op.cc
+index 555674c..c03d0eb 100644
+--- a/tensorflow/contrib/tensor_forest/hybrid/core/ops/unpack_path_op.cc
++++ b/tensorflow/contrib/tensor_forest/hybrid/core/ops/unpack_path_op.cc
+@@ -42,7 +42,7 @@ REGISTER_OP("UnpackPath")
+     .Input("path: int32")
+     .Input("path_values: float")
+     .Output("unpacked_path: float")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input, params;
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(0), 1, &input));
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(1), 2, &params));
+diff --git a/tensorflow/contrib/tensor_forest/ops/tensor_forest_ops.cc b/tensorflow/contrib/tensor_forest/ops/tensor_forest_ops.cc
+index 79976a8..0818f93 100644
+--- a/tensorflow/contrib/tensor_forest/ops/tensor_forest_ops.cc
++++ b/tensorflow/contrib/tensor_forest/ops/tensor_forest_ops.cc
+@@ -31,7 +31,7 @@ REGISTER_OP("BestSplits")
+     .Input("accumulator_sums: float")
+     .Input("accumulator_sqaures: float")
+     .Output("split_indices: int32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle finished_nodes;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &finished_nodes));
+       c->set_output(0, c->Vector(c->Dim(finished_nodes, 0)));
+@@ -95,7 +95,7 @@ REGISTER_OP("CountExtremelyRandomStats")
+     .Output("pcw_totals_sums_delta: float")
+     .Output("pcw_totals_squares_delta: float")
+     .Output("leaves: int32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       int64 num_classes;
+       TF_RETURN_IF_ERROR(c->GetAttr("num_classes", &num_classes));
+       bool regression;
+@@ -243,7 +243,7 @@ REGISTER_OP("FinishedNodes")
+     .Input("current_epoch: int32")
+     .Output("finished: int32")
+     .Output("stale: int32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->Vector(InferenceContext::kUnknownDim));
+       c->set_output(1, c->Vector(InferenceContext::kUnknownDim));
+       return Status::OK();
+@@ -307,7 +307,7 @@ REGISTER_OP("GrowTree")
+     .Output("tree_updates: int32")
+     .Output("threshold_updates: float")
+     .Output("new_end_of_tree: int32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->Vector(InferenceContext::kUnknownDim));
+       c->set_output(1, c->Matrix(InferenceContext::kUnknownDim, 2));
+       c->set_output(2, c->Vector(InferenceContext::kUnknownDim));
+@@ -363,7 +363,7 @@ REGISTER_OP("SampleInputs")
+     .Output("accumulators_to_update: int32")
+     .Output("new_split_feature_rows: int32")
+     .Output("new_split_threshold_rows: float")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle candidate_split_features;
+       TF_RETURN_IF_ERROR(
+           c->WithRank(c->input(7), 2, &candidate_split_features));
+@@ -429,7 +429,7 @@ REGISTER_OP("ScatterAddNdim")
+     .Input("input: Ref(float)")
+     .Input("indices: int32")
+     .Input("deltas: float")
+-    .SetShapeFn([](InferenceContext* c) { return Status::OK(); })
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status { return Status::OK(); })
+     .Doc(R"doc(
+   Add elements in deltas to mutable input according to indices.
+ 
+@@ -468,7 +468,7 @@ REGISTER_OP("TopNInsert")
+     .Output("shortlist_ids: int64")
+     .Output("update_ids: int64")
+     .Output("update_scores: float32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->Vector(InferenceContext::kUnknownDim));
+       c->set_output(1, c->Vector(InferenceContext::kUnknownDim));
+       c->set_output(2, c->Vector(InferenceContext::kUnknownDim));
+@@ -493,7 +493,7 @@ REGISTER_OP("TopNRemove")
+     .Input("remove_ids: int64")
+     .Output("shortlist_ids: int64")
+     .Output("new_length: int64")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->Vector(InferenceContext::kUnknownDim));
+       c->set_output(1, c->Vector(InferenceContext::kUnknownDim));
+       return Status::OK();
+@@ -522,7 +522,7 @@ REGISTER_OP("TreePredictions")
+     .Input("node_per_class_weights: float")
+ 
+     .Output("predictions: float")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       // The output of TreePredictions is
+       // [node_pcw(evaluate_tree(x), c) for c in classes for x in input_data].
+       DimensionHandle num_classes = c->Dim(c->input(6), 1);
+@@ -573,7 +573,7 @@ REGISTER_OP("UpdateFertileSlots")
+     .Output("accumulator_to_node_map_updates: int32")
+     .Output("accumulators_cleared: int32")
+     .Output("accumulators_allocated: int32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->Matrix(c->MakeDim(2), InferenceContext::kUnknownDim));
+       c->set_output(1, c->Matrix(c->MakeDim(2), InferenceContext::kUnknownDim));
+       c->set_output(2, c->Vector(InferenceContext::kUnknownDim));
+diff --git a/tensorflow/core/framework/shape_inference_testutil_test.cc b/tensorflow/core/framework/shape_inference_testutil_test.cc
+index b0af0e5..f250071 100644
+--- a/tensorflow/core/framework/shape_inference_testutil_test.cc
++++ b/tensorflow/core/framework/shape_inference_testutil_test.cc
+@@ -37,14 +37,14 @@ REGISTER_OP("OpOneOut")
+     .Output("o1: T")
+     .Attr("N: int >= 1")
+     .Attr("T: numbertype")
+-    .SetShapeFn([](InferenceContext* c) { return (*global_fn_ptr)(c); });
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status { return (*global_fn_ptr)(c); });
+ REGISTER_OP("OpTwoOut")
+     .Input("inputs: N * T")
+     .Output("o1: T")
+     .Output("o2: T")
+     .Attr("N: int >= 1")
+     .Attr("T: numbertype")
+-    .SetShapeFn([](InferenceContext* c) { return (*global_fn_ptr)(c); });
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status { return (*global_fn_ptr)(c); });
+ 
+ string RunInferShapes(const string& op_name, const string& ins,
+                       const string& expected_outs, OpShapeInferenceFn fn) {
+diff --git a/tensorflow/core/kernels/lookup_table_op.h b/tensorflow/core/kernels/lookup_table_op.h
+index ff23a09..4686847 100644
+--- a/tensorflow/core/kernels/lookup_table_op.h
++++ b/tensorflow/core/kernels/lookup_table_op.h
+@@ -57,7 +57,7 @@ class LookupTableOp : public OpKernel {
+                                       use_node_name_sharing_));
+     }
+ 
+-    auto creator = [ctx, this](lookup::LookupInterface** ret) {
++    auto creator = [ctx, this](lookup::LookupInterface** ret) -> ::tensorflow::Status {
+       lookup::LookupInterface* container = new Container(ctx, this);
+       if (!ctx->status().ok()) {
+         container->Unref();
+diff --git a/tensorflow/core/kernels/resource_variable_ops.cc b/tensorflow/core/kernels/resource_variable_ops.cc
+index 07f9489..47f20f5 100644
+--- a/tensorflow/core/kernels/resource_variable_ops.cc
++++ b/tensorflow/core/kernels/resource_variable_ops.cc
+@@ -162,7 +162,7 @@ class AssignVariableOp : public OpKernel {
+         context,
+         LookupOrCreateResource<Var>(
+             context, HandleFromInput(context, 0), &variable,
+-            [this, context](Var** ptr) {
++            [this, context](Var** ptr) -> ::tensorflow::Status {
+               *ptr = new Var(dtype_);
+               PersistentTensor unused;
+               Tensor* tmp;
+diff --git a/tensorflow/core/kernels/sdca_internal.cc b/tensorflow/core/kernels/sdca_internal.cc
+index 5042cfa..6459509 100644
+--- a/tensorflow/core/kernels/sdca_internal.cc
++++ b/tensorflow/core/kernels/sdca_internal.cc
+@@ -124,7 +124,7 @@ Status ModelWeights::Initialize(OpKernelContext* const context) {
+   // Reads in the weights, and allocates and initializes the delta weights.
+   const auto initialize_weights = [&](
+       const OpInputList& weight_inputs, OpOutputList* const weight_outputs,
+-      std::vector<FeatureWeightsDenseStorage>* const feature_weights) {
++      std::vector<FeatureWeightsDenseStorage>* const feature_weights) -> ::tensorflow::Status {
+     for (int i = 0; i < weight_inputs.size(); ++i) {
+       Tensor* delta_t;
+       TF_RETURN_IF_ERROR(
+diff --git a/tensorflow/core/ops/array_ops.cc b/tensorflow/core/ops/array_ops.cc
+index b9e56a1..fd7e84b 100644
+--- a/tensorflow/core/ops/array_ops.cc
++++ b/tensorflow/core/ops/array_ops.cc
+@@ -170,7 +170,7 @@ REGISTER_OP("ParallelConcat")
+     .Attr("N: int >= 1")
+     .Attr("T: type")
+     .Attr("shape: shape")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       // Validate that the shape attr is correct.
+       TensorShapeProto passed_shape_proto;
+       TF_RETURN_IF_ERROR(c->GetAttr("shape", &passed_shape_proto));
+@@ -235,7 +235,7 @@ REGISTER_OP("Pack")
+     .Attr("N: int >= 1")
+     .Attr("T: type")
+     .Attr("axis: int = 0")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       // Validate shapes of all inputs are compatible
+       ShapeHandle cur = c->input(c->num_inputs() - 1);
+       for (int i = c->num_inputs() - 2; i >= 0; --i) {
+@@ -300,7 +300,7 @@ REGISTER_OP("Unpack")
+     .Attr("num: int >= 0")
+     .Attr("T: type")
+     .Attr("axis: int = 0")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle s = c->input(0);
+       ShapeHandle out;
+       if (c->RankKnown(s)) {
+@@ -359,7 +359,7 @@ REGISTER_OP("Concat")
+     .Output("output: T")
+     .Attr("N: int >= 2")
+     .Attr("T: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return shape_inference::ConcatShape(c, c->num_inputs() - 1);
+     })
+     .Doc(R"doc(
+@@ -421,7 +421,7 @@ REGISTER_OP("ConcatOffset")
+     .Input("shape: N * int32")
+     .Output("offset: N * int32")
+     .Attr("N: int >= 2")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       for (int i = 1; i < c->num_inputs(); ++i) {
+         c->set_output(i - 1, c->input(i));
+       }
+@@ -454,7 +454,7 @@ REGISTER_OP("Split")
+     .Output("output: num_split * T")
+     .Attr("num_split: int >= 1")
+     .Attr("T: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       DimensionHandle split_dimension;
+       TF_RETURN_IF_ERROR(c->MakeDimForScalarInput(0, &split_dimension));
+       int num_split = c->num_outputs();
+@@ -501,7 +501,7 @@ REGISTER_OP("SplitV")
+     .Attr("num_split: int >= 1")
+     .Attr("T: type")
+     .Attr("Tlen: {int32, int64} = DT_INT64")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       DimensionHandle split_dimension;
+       TF_RETURN_IF_ERROR(c->MakeDimForScalarInput(2, &split_dimension));
+       int32 num_outputs = c->num_outputs();
+@@ -605,7 +605,7 @@ REGISTER_OP("Const")
+     .Output("output: dtype")
+     .Attr("value: tensor")
+     .Attr("dtype: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       const TensorProto* proto = nullptr;
+       TF_RETURN_IF_ERROR(c->GetAttr("value", &proto));
+       TF_RETURN_IF_ERROR(TensorShape::IsValidShape(proto->tensor_shape()));
+@@ -631,7 +631,7 @@ REGISTER_OP("ImmutableConst")
+     .Attr("shape: shape")
+     .Attr("memory_region_name: string")
+     .Output("tensor: dtype")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TensorShape shape_from_attr;
+       TF_RETURN_IF_ERROR(c->GetAttr("shape", &shape_from_attr));
+       TensorShapeProto shape_proto;
+@@ -684,7 +684,7 @@ REGISTER_OP("Diag")
+     .Input("diagonal: T")
+     .Output("output: T")
+     .Attr("T: {float, double, int32, int64, complex64, complex128}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle in = c->input(0);
+       TF_RETURN_IF_ERROR(c->WithRankAtMost(in, 3, &in));
+       // Output shape is original concatenated with itself.
+@@ -722,7 +722,7 @@ REGISTER_OP("DiagPart")
+     .Input("input: T")
+     .Output("diagonal: T")
+     .Attr("T: {float, double, int32, int64, complex64, complex128}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle in = c->input(0);
+       if (!c->RankKnown(in)) {
+         c->set_output(0, c->UnknownShape());
+@@ -777,7 +777,7 @@ REGISTER_OP("MatrixDiag")
+     .Input("diagonal: T")
+     .Output("output: T")
+     .Attr("T: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle in;
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(0), 1, &in));
+       if (!c->RankKnown(in)) {
+@@ -831,7 +831,7 @@ REGISTER_OP("MatrixSetDiag")
+     .Input("diagonal: T")
+     .Output("output: T")
+     .Attr("T: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input;
+       ShapeHandle diag;
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(0), 2, &input));
+@@ -883,7 +883,7 @@ REGISTER_OP("MatrixDiagPart")
+     .Input("input: T")
+     .Output("diagonal: T")
+     .Attr("T: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle in;
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(0), 2, &in));
+       if (!c->RankKnown(in)) {
+@@ -1005,7 +1005,7 @@ REGISTER_OP("Reverse")
+     .Attr(
+         "T: {uint8, int8, int32, int64, bool, half, float, double, complex64, "
+         "complex128, string}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input = c->input(0);
+       ShapeHandle dims;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 1, &dims));
+@@ -1082,7 +1082,7 @@ REGISTER_OP("ReverseV2")
+     .Attr(
+         "T: {uint8, int8, int32, int64, bool, half, float, double, complex64, "
+         "complex128, string}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input = c->input(0);
+       ShapeHandle axis;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 1, &axis));
+@@ -1160,7 +1160,7 @@ REGISTER_OP("EditDistance")
+     .Attr("normalize: bool = true")
+     .Attr("T: type")
+     .Output("output: float")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TF_RETURN_IF_ERROR(shape_inference::ValidateSparseTensor(
+           c, c->input(0), c->input(1), c->input(2)));
+       TF_RETURN_IF_ERROR(shape_inference::ValidateSparseTensor(
+@@ -1255,7 +1255,7 @@ REGISTER_OP("Fill")
+     .Input("value: T")
+     .Output("output: T")
+     .Attr("T: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &unused));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+@@ -1301,7 +1301,7 @@ REGISTER_OP("_ParallelConcatStart")
+     .Attr("shape: shape")
+     .Attr("dtype: type")
+     .SetIsStateful()
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TensorShapeProto shape_proto;
+       TF_RETURN_IF_ERROR(c->GetAttr("shape", &shape_proto));
+       ShapeHandle output_shape;
+@@ -1353,7 +1353,7 @@ REGISTER_OP("Gather")
+     .Output("output: Tparams")
+     .Attr("Tparams: type")
+     .Attr("Tindices: {int32,int64}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(0), 1, &unused));
+       ShapeHandle params_subshape;
+@@ -1401,7 +1401,7 @@ REGISTER_OP("GatherNd")
+     .Output("output: Tparams")
+     .Attr("Tparams: type")
+     .Attr("Tindices: {int32,int64}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle params = c->input(0);
+       ShapeHandle indices;
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(1), 1, &indices));
+@@ -1646,7 +1646,7 @@ REGISTER_OP("Reshape")
+     .Output("output: T")
+     .Attr("T: type")
+     .Attr("Tshape: {int32, int64} = DT_INT32")
+-    .SetShapeFn([](InferenceContext* c) { return SetOutputShapeForReshape(c); })
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status { return SetOutputShapeForReshape(c); })
+     .Doc(R"Doc(
+ Reshapes a tensor.
+ 
+@@ -1720,7 +1720,7 @@ REGISTER_OP("_MklReshape")
+     .Output("mkl_output: uint8")
+     .Attr("T: type")
+     .Attr("Tshape: {int32, int64} = DT_INT32")
+-    .SetShapeFn([](InferenceContext* c) { return SetOutputShapeForReshape(c); })
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status { return SetOutputShapeForReshape(c); })
+     .Doc(R"Doc( MKL implementation of ReshapeOp.
+ )Doc");
+ #endif  // INTEL_MKL
+@@ -1730,7 +1730,7 @@ REGISTER_OP("InvertPermutation")
+     .Input("x: T")
+     .Output("y: T")
+     .Attr("T: {int32, int64} = DT_INT32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle x;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &x));
+       c->set_output(0, x);
+@@ -1766,7 +1766,7 @@ REGISTER_OP("Transpose")
+     .Output("y: T")
+     .Attr("T: type")
+     .Attr("Tperm: {int32, int64} = DT_INT32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input = c->input(0);
+       ShapeHandle perm_shape = c->input(1);
+       const Tensor* perm = c->input_tensor(1);
+@@ -1838,7 +1838,7 @@ REGISTER_OP("Unique")
+     .Output("idx: out_idx")
+     .Attr("T: type")
+     .Attr("out_idx: {int32, int64} = DT_INT32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->Vector(InferenceContext::kUnknownDim));
+       c->set_output(1, c->input(0));
+       return Status::OK();
+@@ -1875,7 +1875,7 @@ REGISTER_OP("UniqueWithCounts")
+     .Output("count: out_idx")
+     .Attr("T: type")
+     .Attr("out_idx: {int32, int64} = DT_INT32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       auto uniq = c->Vector(InferenceContext::kUnknownDim);
+       c->set_output(0, uniq);
+       c->set_output(1, c->input(0));
+@@ -1969,7 +1969,7 @@ REGISTER_OP("ReverseSequence")
+     .Attr("batch_dim: int = 0")
+     .Attr("T: type")
+     .Attr("Tlen: {int32, int64} = DT_INT64")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input = c->input(0);
+       ShapeHandle seq_lens_shape;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 1, &seq_lens_shape));
+@@ -2155,7 +2155,7 @@ REGISTER_OP("Slice")
+     .Output("output: T")
+     .Attr("T: type")
+     .Attr("Index: {int32,int64}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input = c->input(0);
+       ShapeHandle begin_shape;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 1, &begin_shape));
+@@ -2239,7 +2239,7 @@ REGISTER_OP("StridedSlice")
+     .Attr("ellipsis_mask: int = 0")
+     .Attr("new_axis_mask: int = 0")
+     .Attr("shrink_axis_mask: int = 0")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input = c->input(0);
+       ShapeHandle begin_shape, end_shape, strides_shape;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 1, &begin_shape));
+@@ -2436,7 +2436,7 @@ REGISTER_OP("StridedSliceGrad")
+     .Attr("ellipsis_mask: int = 0")
+     .Attr("new_axis_mask: int = 0")
+     .Attr("shrink_axis_mask: int = 0")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle out;
+       TF_RETURN_IF_ERROR(c->MakeShapeFromShapeTensor(0, &out));
+       c->set_output(0, out);
+@@ -2517,7 +2517,7 @@ REGISTER_OP("Tile")
+     .Output("output: T")
+     .Attr("T: type")
+     .Attr("Tmultiples: {int32, int64} = DT_INT32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input = c->input(0);
+       // NOTE(mrry): Represent `multiples` as a `TensorShape` because (i)
+       // it is a vector of non-negative integers, and (ii) doing so allows
+@@ -2575,7 +2575,7 @@ each repeated tile of `input` into `output`.
+ REGISTER_OP("Where")
+     .Input("input: bool")
+     .Output("index: int64")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->Matrix(c->UnknownDim(), c->Rank(c->input(0))));
+       return Status::OK();
+     })
+@@ -2622,7 +2622,7 @@ REGISTER_OP("BroadcastArgs")
+     .Input("s1: T")
+     .Output("r0: T")
+     .Attr("T: {int32, int64} = DT_INT32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       ShapeHandle shape_x = c->input(0);
+       ShapeHandle shape_y = c->input(1);
+@@ -2656,7 +2656,7 @@ REGISTER_OP("BroadcastGradientArgs")
+     .Output("r0: T")
+     .Output("r1: T")
+     .Attr("T: {int32, int64} = DT_INT32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       // TODO(mrry): Implement constant_value for BroadcastGradientArgs?
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &unused));
+@@ -2785,7 +2785,7 @@ REGISTER_OP("MirrorPadGrad")
+     .Attr("T: type")
+     .Attr("Tpaddings: {int32, int64} = DT_INT32")
+     .Attr(GetMirrorPadModeAttrString())
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle paddings;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 2, &paddings));
+       DimensionHandle pad_0 = c->Dim(paddings, 0);
+@@ -2851,7 +2851,7 @@ REGISTER_OP("Placeholder")
+     .Output("output: dtype")
+     .Attr("dtype: type")
+     .Attr("shape: shape = { unknown_rank: true }")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       PartialTensorShape shape;
+       TF_RETURN_IF_ERROR(c->GetAttr("shape", &shape));
+ 
+@@ -2889,7 +2889,7 @@ REGISTER_OP("PlaceholderV2")
+     .Output("output: dtype")
+     .Attr("dtype: type")
+     .Attr("shape: shape")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TensorShapeProto shape;
+       TF_RETURN_IF_ERROR(c->GetAttr("shape", &shape));
+       ShapeHandle output;
+@@ -2917,7 +2917,7 @@ REGISTER_OP("PlaceholderWithDefault")
+     .Output("output: dtype")
+     .Attr("dtype: type")
+     .Attr("shape: shape")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input = c->input(0);
+       PartialTensorShape shape;
+       TF_RETURN_IF_ERROR(c->GetAttr("shape", &shape));
+@@ -2949,7 +2949,7 @@ REGISTER_OP("ExpandDims")
+     .Output("output: T")
+     .Attr("T: type")
+     .Attr("Tdim: {int32, int64} = DT_INT32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input = c->input(0);
+ 
+       const Tensor* dim_t = c->input_tensor(1);
+@@ -3037,7 +3037,7 @@ REGISTER_OP("Squeeze")
+     .Output("output: T")
+     .Attr("T: type")
+     .Attr("squeeze_dims: list(int) >= 0 = []")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input = c->input(0);
+       if (!c->RankKnown(input)) {
+         // Input shape unknown.
+@@ -3135,7 +3135,7 @@ REGISTER_OP("ListDiff")
+     .Output("idx: out_idx")
+     .Attr("T: type")
+     .Attr("out_idx: {int32, int64} = DT_INT32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &unused));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 1, &unused));
+@@ -3358,7 +3358,7 @@ REGISTER_OP("SpaceToBatchND")
+     .Attr("T: type")
+     .Attr("Tblock_shape: {int32, int64} = DT_INT32")
+     .Attr("Tpaddings: {int32, int64} = DT_INT32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return SpaceToBatchShapeHelper(c, c->input(0), c->input(1),
+                                      c->input_tensor(1), c->input(2),
+                                      c->input_tensor(2));
+@@ -3498,7 +3498,7 @@ REGISTER_OP("SpaceToBatch")
+     .Attr("T: type")
+     .Attr("Tpaddings: {int32, int64} = DT_INT32")
+     .Attr("block_size: int >= 2")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input_shape;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 4, &input_shape));
+ 
+@@ -3623,7 +3623,7 @@ REGISTER_OP("BatchToSpaceND")
+     .Attr("T: type")
+     .Attr("Tblock_shape: {int32, int64} = DT_INT32")
+     .Attr("Tcrops: {int32, int64} = DT_INT32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return BatchToSpaceShapeHelper(c, c->input(0), c->input(1),
+                                      c->input_tensor(1), c->input(2),
+                                      c->input_tensor(2));
+@@ -3762,7 +3762,7 @@ REGISTER_OP("BatchToSpace")
+     .Attr("T: type")
+     .Attr("block_size: int >= 2")
+     .Attr("Tidx: {int32, int64} = DT_INT32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input_shape;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 4, &input_shape));
+ 
+@@ -3875,7 +3875,7 @@ REGISTER_OP("SpaceToDepth")
+     .Output("output: T")
+     .Attr("T: type")
+     .Attr("block_size: int >= 2")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 4, &input));
+ 
+@@ -3984,7 +3984,7 @@ REGISTER_OP("DepthToSpace")
+     .Output("output: T")
+     .Attr("T: type")
+     .Attr("block_size: int >= 2")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 4, &input));
+ 
+@@ -4101,7 +4101,7 @@ REGISTER_OP("ExtractImagePatches")
+     .Attr("rates: list(int) >= 4")
+     .Attr("T: realnumbertype")
+     .Attr(GetPaddingAttrString())
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input_shape;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 4, &input_shape));
+ 
+@@ -4210,7 +4210,7 @@ REGISTER_OP("Bitcast")
+     .Output("output: type")
+     .Attr("T: numbertype")
+     .Attr("type: numbertype")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input = c->input(0);
+       if (!c->RankKnown(input)) {
+         // Input shape unknown.
+@@ -4285,7 +4285,7 @@ REGISTER_OP("OneHot")
+     .Output("output: T")
+     .Attr("T: type")
+     .Attr("TI: {uint8, int32, int64} = DT_INT64")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       int32 axis;
+       TF_RETURN_IF_ERROR(c->GetAttr("axis", &axis));
+       if (axis < -1) return errors::InvalidArgument("axis must be >= -1");
+@@ -4436,7 +4436,7 @@ REGISTER_OP("QuantizeAndDequantizeV2")
+     .Attr("range_given: bool = false")
+     .Output("output: T")
+     .Attr("T: {float, double}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(2), 0, &unused));
+@@ -4515,7 +4515,7 @@ REGISTER_OP("QuantizeV2")
+     .Output("output_max: float")
+     .Attr("T: quantizedtype")
+     .Attr("mode: {'MIN_COMBINED', 'MIN_FIRST'} = 'MIN_COMBINED'")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TF_RETURN_IF_ERROR(shape_inference::UnchangedShape(c));
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+@@ -4592,7 +4592,7 @@ REGISTER_OP("Dequantize")
+     .Output("output: float")
+     .Attr("T: quantizedtype")
+     .Attr("mode: {'MIN_COMBINED', 'MIN_FIRST'} = 'MIN_COMBINED'")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TF_RETURN_IF_ERROR(shape_inference::UnchangedShape(c));
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+@@ -4650,7 +4650,7 @@ REGISTER_OP("QuantizedConcat")
+     .Output("output_max: float")
+     .Attr("N: int >= 2")
+     .Attr("T: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       const int n = (c->num_inputs() - 1) / 3;
+       TF_RETURN_IF_ERROR(shape_inference::ConcatShape(c, n));
+       ShapeHandle unused;
+@@ -4687,7 +4687,7 @@ REGISTER_OP("QuantizedReshape")
+     .Output("output_max: float")
+     .Attr("T: type")
+     .Attr("Tshape: {int32, int64} = DT_INT32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TF_RETURN_IF_ERROR(SetOutputShapeForReshape(c));
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(2), 0, &unused));
+@@ -4720,7 +4720,7 @@ REGISTER_OP("QuantizedInstanceNorm")
+     .Attr("given_y_max: float = 0")
+     .Attr("variance_epsilon: float = 1e-5")
+     .Attr("min_separation: float = 1e-3")
+-    .SetShapeFn([](shape_inference::InferenceContext* c) {
++    .SetShapeFn([](shape_inference::InferenceContext* c) -> ::tensorflow::Status {
+       shape_inference::ShapeHandle unused;
+       // x should be a rank 4 tensor.
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 4, &unused));
+@@ -4949,7 +4949,7 @@ REGISTER_OP("FakeQuantWithMinMaxVars")
+     .Input("min: float")
+     .Input("max: float")
+     .Output("outputs: float")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TF_RETURN_IF_ERROR(shape_inference::UnchangedShape(c));
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+@@ -4977,7 +4977,7 @@ REGISTER_OP("FakeQuantWithMinMaxVarsGradient")
+     .Output("backprops_wrt_input: float")
+     .Output("backprop_wrt_min: float")
+     .Output("backprop_wrt_max: float")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       // gradients and inputs are same size.
+       ShapeHandle inputs;
+       TF_RETURN_IF_ERROR(c->Merge(c->input(0), c->input(1), &inputs));
+@@ -5013,7 +5013,7 @@ REGISTER_OP("FakeQuantWithMinMaxVarsPerChannel")
+     .Input("min: float")
+     .Input("max: float")
+     .Output("outputs: float")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input, min, max;
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(0), 1, &input));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 1, &min));
+@@ -5049,7 +5049,7 @@ REGISTER_OP("FakeQuantWithMinMaxVarsPerChannelGradient")
+     .Output("backprops_wrt_input: float")
+     .Output("backprop_wrt_min: float")
+     .Output("backprop_wrt_max: float")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle inputs;
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(0), 1, &inputs));
+       TF_RETURN_IF_ERROR(c->WithRankAtMost(inputs, 4, &inputs));
+@@ -5095,7 +5095,7 @@ REGISTER_OP("_MklConcat")
+     .Output("mkl_output: uint8")
+     .Attr("N: int >= 2")
+     .Attr("T: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return shape_inference::ConcatShape(c, c->num_inputs() - 3);
+     })
+     .Doc(R"doc(
+diff --git a/tensorflow/core/ops/candidate_sampling_ops.cc b/tensorflow/core/ops/candidate_sampling_ops.cc
+index 18700be..59d321b 100644
+--- a/tensorflow/core/ops/candidate_sampling_ops.cc
++++ b/tensorflow/core/ops/candidate_sampling_ops.cc
+@@ -379,7 +379,7 @@ REGISTER_OP("ComputeAccidentalHits")
+     .Attr("num_true: int")
+     .Attr("seed: int = 0")
+     .Attr("seed2: int = 0")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       int64 num_true;
+       TF_RETURN_IF_ERROR(c->GetAttr("num_true", &num_true));
+ 
+diff --git a/tensorflow/core/ops/control_flow_ops.cc b/tensorflow/core/ops/control_flow_ops.cc
+index 95f3f0d..7cc43c8 100644
+--- a/tensorflow/core/ops/control_flow_ops.cc
++++ b/tensorflow/core/ops/control_flow_ops.cc
+@@ -90,7 +90,7 @@ REGISTER_OP("RefSelect")
+     .Output("output: Ref(T)")
+     .Attr("T: type")
+     .Attr("N: int >= 1")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 0, &unused));
+       ShapeHandle first_input = c->input(1);
+@@ -196,7 +196,7 @@ REGISTER_OP("Enter")
+     .Attr("frame_name: string")
+     .Attr("is_constant: bool = false")
+     .Attr("parallel_iterations: int = 10")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->UnknownShape());
+ 
+       // Handle resource shape / dtype, if present.
+@@ -303,7 +303,7 @@ output: The same tensor as `data`.
+ REGISTER_OP("LoopCond")
+     .Input("input: bool")
+     .Output("output: bool")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return shape_inference::UnchangedShapeWithRank(c, 0);
+     })
+     .Doc(R"doc(
+diff --git a/tensorflow/core/ops/ctc_ops.cc b/tensorflow/core/ops/ctc_ops.cc
+index 3d8c533..bc332ec 100644
+--- a/tensorflow/core/ops/ctc_ops.cc
++++ b/tensorflow/core/ops/ctc_ops.cc
+@@ -34,7 +34,7 @@ REGISTER_OP("CTCLoss")
+     .Attr("ignore_longer_outputs_than_inputs: bool = false")
+     .Output("loss: float")
+     .Output("gradient: float")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle inputs;
+       ShapeHandle labels_indices;
+       ShapeHandle labels_values;
+@@ -92,7 +92,7 @@ REGISTER_OP("CTCGreedyDecoder")
+     .Output("decoded_values: int64")
+     .Output("decoded_shape: int64")
+     .Output("log_probability: float")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle inputs;
+       ShapeHandle sequence_length;
+ 
+@@ -147,7 +147,7 @@ REGISTER_OP("CTCBeamSearchDecoder")
+     .Output("decoded_values: top_paths * int64")
+     .Output("decoded_shape: top_paths * int64")
+     .Output("log_probability: float")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle inputs;
+       ShapeHandle sequence_length;
+ 
+diff --git a/tensorflow/core/ops/data_flow_ops.cc b/tensorflow/core/ops/data_flow_ops.cc
+index c80ff98..97dbe8c 100644
+--- a/tensorflow/core/ops/data_flow_ops.cc
++++ b/tensorflow/core/ops/data_flow_ops.cc
+@@ -32,7 +32,7 @@ REGISTER_OP("DynamicPartition")
+     .Output("outputs: num_partitions * T")
+     .Attr("num_partitions: int")
+     .Attr("T: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       int64 num_partitions;
+       TF_RETURN_IF_ERROR(c->GetAttr("num_partitions", &num_partitions));
+ 
+@@ -117,7 +117,7 @@ REGISTER_OP("DynamicStitch")
+     .Output("merged: T")
+     .Attr("N : int >= 1")
+     .Attr("T : type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       int64 num_partitions;
+       TF_RETURN_IF_ERROR(c->GetAttr("N", &num_partitions));
+ 
+@@ -643,7 +643,7 @@ REGISTER_OP("QueueDequeueV2")
+     .Output("components: component_types")
+     .Attr("component_types: list(type) >= 1")
+     .Attr("timeout_ms: int = -1")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       if (c->num_outputs() == 1) {
+         c->set_output(0, c->input_handle_shape(0));
+       } else {
+@@ -886,7 +886,7 @@ num_accumulated: The number of gradients aggregated in the given accumulator.
+ REGISTER_OP("AccumulatorSetGlobalStep")
+     .Input("handle: Ref(string)")
+     .Input("new_global_step: int64")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+       return Status::OK();
+@@ -908,7 +908,7 @@ REGISTER_OP("ConditionalAccumulator")
+     .Attr("container: string = ''")
+     .Attr("shared_name: string = ''")
+     .SetIsStateful()
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->Vector(2));
+       return Status::OK();
+     })
+@@ -936,7 +936,7 @@ REGISTER_OP("AccumulatorApplyGradient")
+     .Input("local_step: int64")
+     .Input("gradient: dtype")
+     .Attr("dtype: numbertype")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+       return Status::OK();
+@@ -957,7 +957,7 @@ REGISTER_OP("AccumulatorTakeGradient")
+     .Input("handle: Ref(string)")
+     .Input("num_required: int32")
+     .Output("average: dtype")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+       // Shape of output is the shape of the accumulator referenced
+@@ -989,7 +989,7 @@ REGISTER_OP("SparseConditionalAccumulator")
+     .Attr("container: string = ''")
+     .Attr("shared_name: string = ''")
+     .SetIsStateful()
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->Vector(2));
+       return Status::OK();
+     })
+@@ -1020,7 +1020,7 @@ REGISTER_OP("SparseAccumulatorApplyGradient")
+     .Input("gradient_shape: int64")
+     .Attr("dtype: numbertype")
+     .Attr("has_known_shape: bool")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+       return Status::OK();
+@@ -1052,7 +1052,7 @@ REGISTER_OP("SparseAccumulatorTakeGradient")
+     .Output("values: dtype")
+     .Output("shape: int64")
+     .Attr("dtype: numbertype")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+       // Shape of output is the shape of the accumulator referenced
+@@ -1149,7 +1149,7 @@ REGISTER_OP("TensorArrayV3")
+     .Output("handle: resource")
+     .Output("flow: float")
+     .SetIsStateful()
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 0, &unused));
+       c->set_output(0, c->Vector(2));
+@@ -1185,7 +1185,7 @@ REGISTER_OP("TensorArrayGradV3")
+     .Output("flow_out: float")
+     .Attr("source: string")
+     .SetIsStateful()
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       DimensionHandle unused_dim;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+@@ -1247,7 +1247,7 @@ REGISTER_OP("TensorArrayWriteV3")
+     .Input("flow_in: float")
+     .Output("flow_out: float")
+     .Attr("T: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       DimensionHandle unused_dim;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+@@ -1274,7 +1274,7 @@ REGISTER_OP("TensorArrayReadV3")
+     .Input("flow_in: float")
+     .Output("value: dtype")
+     .Attr("dtype: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       DimensionHandle unused_dim;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+@@ -1300,7 +1300,7 @@ REGISTER_OP("TensorArrayGatherV3")
+     .Output("value: dtype")
+     .Attr("dtype: type")
+     .Attr("element_shape: shape = { unknown_rank: true }")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       DimensionHandle unused_dim;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &unused));
+@@ -1332,7 +1332,7 @@ REGISTER_OP("TensorArrayScatterV3")
+     .Input("flow_in: float")
+     .Output("flow_out: float")
+     .Attr("T: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       DimensionHandle unused_dim;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &unused));
+@@ -1360,7 +1360,7 @@ REGISTER_OP("TensorArrayConcatV3")
+     .Output("lengths: int64")
+     .Attr("dtype: type")
+     .Attr("element_shape_except0: shape = { unknown_rank: true }")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       DimensionHandle unused_dim;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+@@ -1407,7 +1407,7 @@ REGISTER_OP("TensorArraySplitV3")
+     .Input("flow_in: float")
+     .Output("flow_out: float")
+     .Attr("T: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       DimensionHandle unused_dim;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+@@ -1450,7 +1450,7 @@ REGISTER_OP("TensorArraySizeV3")
+     .Input("handle: resource")
+     .Input("flow_in: float")
+     .Output("size: int32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       DimensionHandle unused_dim;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+@@ -1467,7 +1467,7 @@ size: The current size of the TensorArray.
+ 
+ REGISTER_OP("TensorArrayCloseV3")
+     .Input("handle: resource")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       DimensionHandle unused_dim;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+@@ -1508,7 +1508,7 @@ REGISTER_OP("TensorArrayV2")
+     .Attr("tensor_array_name: string = ''")
+     .Output("handle: string")
+     .SetIsStateful()
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 0, &unused));
+       c->set_output(0, c->Vector(2));
+@@ -1530,7 +1530,7 @@ REGISTER_OP("TensorArrayGradV2")
+     .Output("grad_handle: string")
+     .Attr("source: string")
+     .SetIsStateful()
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       DimensionHandle unused_dim;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+@@ -1556,7 +1556,7 @@ REGISTER_OP("TensorArrayWriteV2")
+     .Input("flow_in: float")
+     .Output("flow_out: float")
+     .Attr("T: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       DimensionHandle unused_dim;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+@@ -1583,7 +1583,7 @@ REGISTER_OP("TensorArrayReadV2")
+     .Input("flow_in: float")
+     .Output("value: dtype")
+     .Attr("dtype: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       DimensionHandle unused_dim;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+@@ -1627,7 +1627,7 @@ REGISTER_OP("TensorArrayGatherV2")
+     .Output("value: dtype")
+     .Attr("dtype: type")
+     .Attr("element_shape: shape = { unknown_rank: true }")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       DimensionHandle unused_dim;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &unused));
+@@ -1654,7 +1654,7 @@ REGISTER_OP("TensorArrayScatterV2")
+     .Input("flow_in: float")
+     .Output("flow_out: float")
+     .Attr("T: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       DimensionHandle unused_dim;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &unused));
+@@ -1680,7 +1680,7 @@ REGISTER_OP("TensorArrayConcatV2")
+     .Output("lengths: int64")
+     .Attr("dtype: type")
+     .Attr("element_shape_except0: shape = { unknown_rank: true }")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       DimensionHandle unused_dim;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+@@ -1709,7 +1709,7 @@ REGISTER_OP("TensorArraySplitV2")
+     .Input("flow_in: float")
+     .Output("flow_out: float")
+     .Attr("T: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       DimensionHandle unused_dim;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+@@ -1731,7 +1731,7 @@ REGISTER_OP("TensorArraySizeV2")
+     .Input("handle: string")
+     .Input("flow_in: float")
+     .Output("size: int32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       DimensionHandle unused_dim;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+@@ -1741,12 +1741,12 @@ REGISTER_OP("TensorArraySizeV2")
+     .Doc("Deprecated. Use TensorArraySizeV3");
+ REGISTER_OP("TensorArrayClose")
+     .Input("handle: Ref(string)")
+-    .SetShapeFn([](InferenceContext* c) { return Status::OK(); })
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status { return Status::OK(); })
+     .Deprecated(16, "Use TensorArrayCloseV3");
+ // TODO(cwhipkey): mark this deprecated in favor of V3.
+ REGISTER_OP("TensorArrayCloseV2")
+     .Input("handle: string")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       DimensionHandle unused_dim;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+@@ -1797,7 +1797,7 @@ REGISTER_OP("BarrierInsertMany")
+     .Input("values: T")
+     .Attr("T: type")
+     .Attr("component_index: int")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle keys = c->input(1);
+       ShapeHandle values = c->input(2);
+       ShapeHandle handle;
+@@ -1939,7 +1939,7 @@ REGISTER_OP("GetSessionTensor")
+     .Input("handle: string")
+     .Output("value: dtype")
+     .Attr("dtype: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 0, &unused));
+       return shape_inference::UnknownShape(c);
+@@ -1954,7 +1954,7 @@ dtype: The type of the output value.
+ 
+ REGISTER_OP("DeleteSessionTensor")
+     .Input("handle: string")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 0, &unused));
+       return Status::OK();
+diff --git a/tensorflow/core/ops/dataset_ops.cc b/tensorflow/core/ops/dataset_ops.cc
+index f9f762d..12c230c 100644
+--- a/tensorflow/core/ops/dataset_ops.cc
++++ b/tensorflow/core/ops/dataset_ops.cc
+@@ -439,7 +439,7 @@ REGISTER_OP("IteratorGetNext")
+     .Output("components: output_types")
+     .Attr("output_types: list(type) >= 1")
+     .Attr("output_shapes: list(shape) >= 1")
+-    .SetShapeFn([](shape_inference::InferenceContext* c) {
++    .SetShapeFn([](shape_inference::InferenceContext* c) -> ::tensorflow::Status {
+       shape_inference::ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 0, &unused));
+       std::vector<PartialTensorShape> output_shapes;
+diff --git a/tensorflow/core/ops/functional_ops.cc b/tensorflow/core/ops/functional_ops.cc
+index 63b1520..b888db6 100644
+--- a/tensorflow/core/ops/functional_ops.cc
++++ b/tensorflow/core/ops/functional_ops.cc
+@@ -28,7 +28,7 @@ REGISTER_OP("SymbolicGradient")
+     .Attr("Tin: list(type)")
+     .Attr("Tout: list(type)")
+     .Attr("f: func")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       if (c->num_inputs() < c->num_outputs()) {
+         return errors::InvalidArgument("len(inputs) < len(outputs)");
+       }
+diff --git a/tensorflow/core/ops/image_ops.cc b/tensorflow/core/ops/image_ops.cc
+index cfcf2d1..50f2fc8 100644
+--- a/tensorflow/core/ops/image_ops.cc
++++ b/tensorflow/core/ops/image_ops.cc
+@@ -187,7 +187,7 @@ REGISTER_OP("ResizeBilinearGrad")
+     .Output("output: T")
+     .Attr("T: {float, half, double}")
+     .Attr("align_corners: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->input(1));
+       return Status::OK();
+     })
+@@ -233,7 +233,7 @@ REGISTER_OP("ResizeNearestNeighborGrad")
+     .Output("output: T")
+     .Attr("T: {uint8, int8, int32, half, float, double}")
+     .Attr("align_corners: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 4, &input));
+       ShapeHandle unused;
+@@ -277,7 +277,7 @@ REGISTER_OP("RandomCrop")
+     .Attr("seed2: int = 0")
+     .SetIsStateful()
+     .Deprecated(8, "Random crop is now pure Python")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle image;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 3, &image));
+       DimensionHandle channels = c->Dim(image, -1);
+@@ -426,7 +426,7 @@ REGISTER_OP("AdjustContrast")
+     .Output("output: float")
+     .Attr("T: {uint8, int8, int16, int32, int64, float, double}")
+     .Deprecated(2, "Use AdjustContrastv2 instead")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return shape_inference::UnchangedShapeWithRankAtLeast(c, 3);
+     })
+     .Doc(R"Doc(
+@@ -438,7 +438,7 @@ REGISTER_OP("AdjustContrastv2")
+     .Input("images: float")
+     .Input("contrast_factor: float")
+     .Output("output: float")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return shape_inference::UnchangedShapeWithRankAtLeast(c, 3);
+     })
+     .Doc(R"Doc(
+@@ -464,7 +464,7 @@ REGISTER_OP("AdjustHue")
+     .Input("images: float")
+     .Input("delta: float")
+     .Output("output: float")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return shape_inference::UnchangedShapeWithRankAtLeast(c, 3);
+     })
+     .Doc(R"Doc(
+@@ -487,7 +487,7 @@ REGISTER_OP("AdjustSaturation")
+     .Input("images: float")
+     .Input("scale: float")
+     .Output("output: float")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return shape_inference::UnchangedShapeWithRankAtLeast(c, 3);
+     })
+     .Doc(R"Doc(
+@@ -567,7 +567,7 @@ contents: 0-D. PNG-encoded image.
+ REGISTER_OP("DecodeGif")
+     .Input("contents: string")
+     .Output("image: uint8")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 0, &unused));
+       c->set_output(0,
+@@ -637,7 +637,7 @@ REGISTER_OP("DrawBoundingBoxes")
+     .Input("boxes: float")
+     .Output("output: T")
+     .Attr("T: {float, half} = DT_FLOAT")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return shape_inference::UnchangedShapeWithRankAtLeast(c, 3);
+     })
+     .Doc(R"doc(
+@@ -678,7 +678,7 @@ REGISTER_OP("SampleDistortedBoundingBox")
+     .Attr("max_attempts: int = 100")
+     .Attr("use_image_if_no_bounding_boxes: bool = false")
+     .SetIsStateful()
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->Vector(3));
+       c->set_output(1, c->Vector(3));
+       c->set_output(2, c->MakeShape({1, 1, 4}));
+@@ -771,7 +771,7 @@ REGISTER_OP("ExtractGlimpse")
+     .Attr("centered: bool = true")
+     .Attr("normalized: bool = true")
+     .Attr("uniform_noise: bool = true")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 4, &input));
+       ShapeHandle offsets;
+@@ -839,7 +839,7 @@ REGISTER_OP("CropAndResize")
+     .Attr("T: {uint8, int8, int16, int32, int64, half, float, double}")
+     .Attr("method: {'bilinear'} = 'bilinear'")
+     .Attr("extrapolation_value: float = 0")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       // Get inputs and validate ranks.
+       ShapeHandle input;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 4, &input));
+@@ -903,7 +903,7 @@ REGISTER_OP("CropAndResizeGradImage")
+     .Output("output: T")
+     .Attr("T: {float, half, double}")
+     .Attr("method: {'bilinear'} = 'bilinear'")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle out;
+       TF_RETURN_IF_ERROR(c->MakeShapeFromShapeTensor(3, &out));
+       TF_RETURN_IF_ERROR(c->WithRank(out, 4, &out));
+@@ -942,7 +942,7 @@ REGISTER_OP("CropAndResizeGradBoxes")
+     .Output("output: float")
+     .Attr("T: {uint8, int8, int16, int32, int64, half, float, double}")
+     .Attr("method: {'bilinear'} = 'bilinear'")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->input(2));
+       return Status::OK();
+     })
+@@ -977,7 +977,7 @@ REGISTER_OP("NonMaxSuppression")
+     .Input("max_output_size: int32")
+     .Output("selected_indices: int32")
+     .Attr("iou_threshold: float = 0.5")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->Vector(c->UnknownDim()));
+       return Status::OK();
+     })
+diff --git a/tensorflow/core/ops/io_ops.cc b/tensorflow/core/ops/io_ops.cc
+index 0bce6fc..558e101 100644
+--- a/tensorflow/core/ops/io_ops.cc
++++ b/tensorflow/core/ops/io_ops.cc
+@@ -62,7 +62,7 @@ REGISTER_OP("SaveV2")
+     .Input("shape_and_slices: string")
+     .Input("tensors: dtypes")
+     .Attr("dtypes: list(type)")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       ShapeHandle s;
+       DimensionHandle unused_dim;
+@@ -101,7 +101,7 @@ REGISTER_OP("RestoreV2")
+     .Input("shape_and_slices: string")
+     .Output("tensors: dtypes")
+     .Attr("dtypes: list(type)")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle shape0, shape1, shape2;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 0, &shape0));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 1, &shape1));
+@@ -141,7 +141,7 @@ REGISTER_OP("MergeV2Checkpoints")
+     .Input("checkpoint_prefixes: string")
+     .Input("destination_prefix: string")
+     .Attr("delete_old_dirs: bool = true")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &unused));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+@@ -169,7 +169,7 @@ REGISTER_OP("Save")
+     .Input("tensor_names: string")
+     .Input("data: T")
+     .Attr("T: list(type)")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       ShapeHandle s;
+       DimensionHandle unused_dim;
+@@ -204,7 +204,7 @@ REGISTER_OP("SaveSlices")
+     .Input("shapes_and_slices: string")
+     .Input("data: T")
+     .Attr("T: list(type)")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       ShapeHandle s;
+       DimensionHandle unused_dim;
+@@ -261,7 +261,7 @@ REGISTER_OP("Restore")
+     .Output("tensor: dt")
+     .Attr("dt: type")
+     .Attr("preferred_shard: int = -1")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 0, &unused));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+@@ -305,7 +305,7 @@ REGISTER_OP("RestoreSlice")
+     .Output("tensor: dt")
+     .Attr("dt: type")
+     .Attr("preferred_shard: int = -1")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 0, &unused));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+@@ -605,7 +605,7 @@ REGISTER_OP("ReaderReadUpTo")
+     .Input("num_records: int64")
+     .Output("keys: string")
+     .Output("values: string")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &unused));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 1, &unused));
+@@ -636,7 +636,7 @@ REGISTER_OP("ReaderReadUpToV2")
+     .Input("num_records: int64")
+     .Output("keys: string")
+     .Output("values: string")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 0, &unused));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+@@ -736,7 +736,7 @@ reader_handle: Handle to a Reader.
+ REGISTER_OP("ReaderRestoreState")
+     .Input("reader_handle: Ref(string)")
+     .Input("state: string")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &unused));
+       DimensionHandle unused_handle;
+@@ -760,7 +760,7 @@ state: Result of a ReaderSerializeState of a Reader with type
+ REGISTER_OP("ReaderRestoreStateV2")
+     .Input("reader_handle: resource")
+     .Input("state: string")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 0, &unused));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+@@ -808,7 +808,7 @@ Reads and outputs the entire contents of the input filename.
+ REGISTER_OP("WriteFile")
+     .Input("filename: string")
+     .Input("contents: string")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 0, &unused));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+@@ -824,7 +824,7 @@ contents: scalar. The content to be written to the output file.
+ REGISTER_OP("MatchingFiles")
+     .Input("pattern: string")
+     .Output("filenames: string")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRankAtMost(c->input(0), 1, &unused));
+       c->set_output(0, c->Vector(InferenceContext::kUnknownDim));
+diff --git a/tensorflow/core/ops/linalg_ops.cc b/tensorflow/core/ops/linalg_ops.cc
+index 872824b..202e1b0 100644
+--- a/tensorflow/core/ops/linalg_ops.cc
++++ b/tensorflow/core/ops/linalg_ops.cc
+@@ -190,7 +190,7 @@ REGISTER_OP("MatrixDeterminant")
+     .Input("input: T")
+     .Output("output: T")
+     .Attr("T: {float, double}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input;
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(0), 2, &input));
+ 
+@@ -285,7 +285,7 @@ REGISTER_OP("SelfAdjointEig")
+     .Output("output: T")
+     .Attr("T: {double, float}")
+     .Deprecated(11, "Use SelfAdjointEigV2 instead.")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input;
+       TF_RETURN_IF_ERROR(MakeBatchSquareMatrix(c, c->input(0), &input));
+ 
+@@ -347,7 +347,7 @@ REGISTER_OP("MatrixSolve")
+     .Output("output: T")
+     .Attr("adjoint: bool = False")
+     .Attr("T: {double, float, complex64, complex128}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return MatrixSolveShapeFn(c, true /* square (*/);
+     })
+     .Doc(R"doc(
+@@ -374,7 +374,7 @@ REGISTER_OP("MatrixTriangularSolve")
+     .Attr("lower: bool = True")
+     .Attr("adjoint: bool = False")
+     .Attr("T: {double, float}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return MatrixSolveShapeFn(c, true /* square (*/);
+     })
+     .Doc(R"doc(
+@@ -415,7 +415,7 @@ REGISTER_OP("MatrixSolveLs")
+     .Output("output: T")
+     .Attr("T: {double, float}")
+     .Attr("fast: bool = True")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle l2_regularizer;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(2), 0, &l2_regularizer));
+       return MatrixSolveShapeFn(c, false /* square */);
+diff --git a/tensorflow/core/ops/lookup_ops.cc b/tensorflow/core/ops/lookup_ops.cc
+index dac02da..286e4b8 100644
+--- a/tensorflow/core/ops/lookup_ops.cc
++++ b/tensorflow/core/ops/lookup_ops.cc
+@@ -72,7 +72,7 @@ REGISTER_OP("LookupTableFind")
+     .Output("values: Tout")
+     .Attr("Tin: type")
+     .Attr("Tout: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+       DimensionHandle unused_dim;
+@@ -106,7 +106,7 @@ REGISTER_OP("LookupTableFindV2")
+     .Output("values: Tout")
+     .Attr("Tin: type")
+     .Attr("Tout: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 0, &handle));
+ 
+@@ -137,7 +137,7 @@ REGISTER_OP("LookupTableInsert")
+     .Input("values: Tout")
+     .Attr("Tin: type")
+     .Attr("Tout: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+       DimensionHandle unused_dim;
+@@ -163,7 +163,7 @@ REGISTER_OP("LookupTableInsertV2")
+     .Input("values: Tout")
+     .Attr("Tin: type")
+     .Attr("Tout: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 0, &handle));
+ 
+@@ -209,7 +209,7 @@ REGISTER_OP("LookupTableExport")
+     .Output("values: Tvalues")
+     .Attr("Tkeys: type")
+     .Attr("Tvalues: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+       DimensionHandle unused_dim;
+@@ -236,7 +236,7 @@ REGISTER_OP("LookupTableExportV2")
+     .Output("values: Tvalues")
+     .Attr("Tkeys: type")
+     .Attr("Tvalues: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 0, &handle));
+ 
+@@ -261,7 +261,7 @@ REGISTER_OP("LookupTableImport")
+     .Input("values: Tout")
+     .Attr("Tin: type")
+     .Attr("Tout: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+       DimensionHandle unused_dim;
+@@ -287,7 +287,7 @@ REGISTER_OP("LookupTableImportV2")
+     .Input("values: Tout")
+     .Attr("Tin: type")
+     .Attr("Tout: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 0, &handle));
+ 
+@@ -549,7 +549,7 @@ REGISTER_OP("InitializeTable")
+     .Input("values: Tval")
+     .Attr("Tkey: type")
+     .Attr("Tval: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+       DimensionHandle unused_dim;
+@@ -574,7 +574,7 @@ REGISTER_OP("InitializeTableV2")
+     .Input("values: Tval")
+     .Attr("Tkey: type")
+     .Attr("Tval: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 0, &handle));
+ 
+@@ -598,7 +598,7 @@ REGISTER_OP("InitializeTableFromTextFile")
+     .Attr("value_index: int >= -2")
+     .Attr("vocab_size: int >= -1 = -1")
+     .Attr("delimiter: string = '\t'")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+       DimensionHandle unused_dim;
+@@ -637,7 +637,7 @@ REGISTER_OP("InitializeTableFromTextFileV2")
+     .Attr("value_index: int >= -2")
+     .Attr("vocab_size: int >= -1 = -1")
+     .Attr("delimiter: string = '\t'")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 0, &handle));
+ 
+diff --git a/tensorflow/core/ops/math_ops.cc b/tensorflow/core/ops/math_ops.cc
+index 28c4ec6..0d4dfbf 100644
+--- a/tensorflow/core/ops/math_ops.cc
++++ b/tensorflow/core/ops/math_ops.cc
+@@ -31,7 +31,7 @@ REGISTER_OP("AddN")
+     .Attr("T: numbertype")
+     .SetIsCommutative()
+     .SetIsAggregate()
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle cur = c->input(c->num_inputs() - 1);
+       for (int i = c->num_inputs() - 2; i >= 0; --i) {
+         TF_RETURN_WITH_CONTEXT_IF_ERROR(c->Merge(c->input(i), cur, &cur),
+@@ -56,7 +56,7 @@ REGISTER_OP("BatchMatMul")
+     .Attr("T: {half, float, double, int32, complex64, complex128}")
+     .Attr("adj_x: bool = false")
+     .Attr("adj_y: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle a_shape;
+       ShapeHandle b_shape;
+       TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(0), 2, &a_shape));
+@@ -753,7 +753,7 @@ REGISTER_OP("Betainc")
+     .Input("x: T")
+     .Output("z: T")
+     .Attr("T: {float, double}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       const int num_inputs = 3;
+       ShapeHandle output = c->UnknownShape();
+       int num_scalars = 0;
+@@ -926,7 +926,7 @@ REGISTER_OP("Select")
+     .Input("e: T")
+     .Output("output: T")
+     .Attr("T: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       // Merge handle shape and dtype if applicable.
+       if (c->input_handle_dtype(1) != c->input_handle_dtype(2)) {
+         // TODO(apassos) resolve this in the manner of b/32476923
+@@ -1848,7 +1848,7 @@ REGISTER_OP("Range")
+     .Input("delta: Tidx")
+     .Output("output: Tidx")
+     .Attr("Tidx: {float, double, int32, int64} = DT_INT32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_WITH_CONTEXT_IF_ERROR(c->WithRank(c->input(0), 0, &unused),
+                                       " for 'start'");
+@@ -1904,7 +1904,7 @@ REGISTER_OP("LinSpace")
+     .Output("output: T")
+     .Attr("T: {float, double}")
+     .Attr("Tidx: {int32, int64} = DT_INT32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_WITH_CONTEXT_IF_ERROR(c->WithRank(c->input(0), 0, &unused),
+                                       " for 'start'");
+@@ -2072,7 +2072,7 @@ REGISTER_OP("Bincount")
+     .Input("weights: T")
+     .Attr("T: {int32, int64, float32, float64}")
+     .Output("bins: T")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->UnknownShapeOfRank(1));
+       c->set_output_handle_dtype(0, c->input_handle_dtype(2));
+       return Status::OK();
+@@ -2188,7 +2188,7 @@ REGISTER_OP("QuantizedMatMul")
+     .Attr("transpose_a: bool = false")
+     .Attr("transpose_b: bool = false")
+     .Attr("Tactivation: quantizedtype = DT_QUINT8")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TF_RETURN_IF_ERROR(shape_inference::MatMulShape(c));
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(2), 0, &unused));
+@@ -2261,7 +2261,7 @@ REGISTER_OP("QuantizeDownAndShrinkRange")
+     .Output("output_max: float")
+     .Attr("Tinput: quantizedtype")
+     .Attr("out_type: quantizedtype")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TF_RETURN_IF_ERROR(shape_inference::UnchangedShape(c));
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+@@ -2315,7 +2315,7 @@ REGISTER_OP("Requantize")
+     .Output("output_max: float")
+     .Attr("Tinput: quantizedtype")
+     .Attr("out_type: quantizedtype")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TF_RETURN_IF_ERROR(shape_inference::UnchangedShape(c));
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+@@ -2353,7 +2353,7 @@ REGISTER_OP("RequantizationRange")
+     .Output("output_min: float")
+     .Output("output_max: float")
+     .Attr("Tinput: quantizedtype")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(2), 0, &unused));
+diff --git a/tensorflow/core/ops/nn_ops.cc b/tensorflow/core/ops/nn_ops.cc
+index 3e58669..7ca0ace 100644
+--- a/tensorflow/core/ops/nn_ops.cc
++++ b/tensorflow/core/ops/nn_ops.cc
+@@ -118,7 +118,7 @@ REGISTER_OP("AvgPoolGrad")
+     .Attr(GetPaddingAttrString())
+     .Attr(GetConvnetDataFormatAttrString())
+     .Attr("T: {half, float, double}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       // NOTE(mrry): We could in principle work out the shape from the
+       // gradients and the attrs, but if we do not know orig_input_shape
+       // statically, then we are unlikely to know the shape of the
+@@ -155,7 +155,7 @@ REGISTER_OP("BatchNormWithGlobalNormalization")
+     .Attr("variance_epsilon: float")
+     .Attr("scale_after_normalization: bool")
+     .Deprecated(9, "Use tf.nn.batch_normalization()")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 4, &input));
+ 
+@@ -208,7 +208,7 @@ REGISTER_OP("BatchNormWithGlobalNormalizationGrad")
+     .Attr("variance_epsilon: float")
+     .Attr("scale_after_normalization: bool")
+     .Deprecated(9, "Use tf.nn.batch_normalization()")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 4, &input));
+       TF_RETURN_IF_ERROR(
+@@ -276,7 +276,7 @@ REGISTER_OP("FusedBatchNorm")
+     .Attr("epsilon: float = 0.0001")
+     .Attr("data_format: string = 'NHWC'")
+     .Attr("is_training: bool = true")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle x;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 4, &x));
+ 
+@@ -352,7 +352,7 @@ REGISTER_OP("FusedBatchNormGrad")
+     .Attr("epsilon: float = 0.0001")
+     .Attr("data_format: string = 'NHWC'")
+     .Attr("is_training: bool = true")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle y_backprop;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 4, &y_backprop));
+       ShapeHandle x;
+@@ -562,7 +562,7 @@ REGISTER_OP("Conv2DBackpropInput")
+     .Attr("use_cudnn_on_gpu: bool = true")
+     .Attr(GetPaddingAttrString())
+     .Attr(GetConvnetDataFormatAttrString())
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       // NOTE(mrry): We could in principle work out the shape from the
+       // gradients and the attrs, but if we do not know orig_input_shape
+       // statically, then we are unlikely to know the shape of the
+@@ -604,7 +604,7 @@ REGISTER_OP("Conv2DBackpropFilter")
+     .Attr("use_cudnn_on_gpu: bool = true")
+     .Attr(GetPaddingAttrString())
+     .Attr(GetConvnetDataFormatAttrString())
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       // NOTE(mrry): We could in principle work out the shape from the
+       // gradients and the attrs, but if we do not know orig_input_shape
+       // statically, then we are unlikely to know the shape of the
+@@ -740,7 +740,7 @@ REGISTER_OP("FusedResizeAndPadConv2D")
+     .Attr(GetMirrorPadModeAttrString())
+     .Attr("strides: list(int)")
+     .Attr(GetPaddingAttrString())
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return CommonFusedConvCalculations(c, true /* has_resize */);
+     })
+     .Doc(R"doc(
+@@ -781,7 +781,7 @@ REGISTER_OP("FusedPadConv2D")
+     .Attr(GetMirrorPadModeAttrString())
+     .Attr("strides: list(int)")
+     .Attr(GetPaddingAttrString())
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return CommonFusedConvCalculations(c, false /* has_resize */);
+     })
+     .Doc(R"doc(
+@@ -859,7 +859,7 @@ REGISTER_OP("DepthwiseConv2dNativeBackpropInput")
+     .Attr("strides: list(int)")
+     .Attr(GetPaddingAttrString())
+     .Attr(GetConvnetDataFormatAttrString())
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       // NOTE(mrry): We could in principle work out the shape from the
+       // gradients and the attrs, but if we do not know orig_input_shape
+       // statically, then we are unlikely to know the shape of the
+@@ -901,7 +901,7 @@ REGISTER_OP("DepthwiseConv2dNativeBackpropFilter")
+     .Attr("strides: list(int)")
+     .Attr(GetPaddingAttrString())
+     .Attr(GetConvnetDataFormatAttrString())
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       // NOTE(mrry): We could in principle work out the shape from the
+       // gradients and the attrs, but if we do not know orig_input_shape
+       // statically, then we are unlikely to know the shape of the
+@@ -975,7 +975,7 @@ REGISTER_OP("Conv3DBackpropInput")
+     .Attr("strides: list(int) >= 5")
+     .Attr(GetPaddingAttrString())
+     .Deprecated(10, "Use Conv3DBackpropInputV2")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return UnchangedShapeWithRank(c, 5);
+     })
+     .Doc(R"doc(
+@@ -1001,7 +1001,7 @@ REGISTER_OP("Conv3DBackpropFilter")
+     .Attr("strides: list(int) >= 5")
+     .Attr(GetPaddingAttrString())
+     .Deprecated(10, "Use Conv3DBackpropFilterV2")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle out;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 5, &out));
+       c->set_output(0, out);
+@@ -1030,7 +1030,7 @@ REGISTER_OP("Conv3DBackpropInputV2")
+     .Attr("strides: list(int) >= 5")
+     .Attr(GetPaddingAttrString())
+     .Attr(GetConvnet3dDataFormatAttrString())
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle s;
+       TF_RETURN_IF_ERROR(c->MakeShapeFromShapeTensor(0, &s));
+       TF_RETURN_IF_ERROR(c->WithRank(s, 5, &s));
+@@ -1067,7 +1067,7 @@ REGISTER_OP("Conv3DBackpropFilterV2")
+     .Attr("strides: list(int) >= 5")
+     .Attr(GetPaddingAttrString())
+     .Attr(GetConvnet3dDataFormatAttrString())
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle s;
+       TF_RETURN_IF_ERROR(c->MakeShapeFromShapeTensor(1, &s));
+       TF_RETURN_IF_ERROR(c->WithRank(s, 5, &s));
+@@ -1132,7 +1132,7 @@ REGISTER_OP("AvgPool3DGrad")
+     .Attr(GetPaddingAttrString())
+     .Attr(GetConvnet3dDataFormatAttrString())
+     .Attr("T: {float, double}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle s;
+       TF_RETURN_IF_ERROR(c->MakeShapeFromShapeTensor(0, &s));
+       TF_RETURN_IF_ERROR(c->WithRank(s, 5, &s));
+@@ -1196,7 +1196,7 @@ REGISTER_OP("MaxPool3DGrad")
+     .Attr(GetConvnet3dDataFormatAttrString())
+     .Attr("T: {float} = DT_FLOAT")
+     .Attr("TInput: {float} = DT_FLOAT")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return UnchangedShapeWithRank(c, 5);
+     })
+     .Doc(R"doc(
+@@ -1227,7 +1227,7 @@ REGISTER_OP("MaxPool3DGradGrad")
+     .Attr(GetPaddingAttrString())
+     .Attr(GetConvnet3dDataFormatAttrString())
+     .Attr("T: {float}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TF_RETURN_IF_ERROR(shape_inference::Pool3DShape(c));
+       ShapeHandle unused;
+       // Validate 'orig_input' is the same shape as 'grad'
+@@ -1283,7 +1283,7 @@ REGISTER_OP("LRN")
+     .Attr("alpha: float = 1.0")
+     .Attr("beta: float = 0.5")
+     .Attr("T: {float, half} = DT_FLOAT")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return UnchangedShapeWithRank(c, 4);
+     })
+     .Doc(R"doc(
+@@ -1318,7 +1318,7 @@ REGISTER_OP("LRNGrad")
+     .Attr("alpha: float = 1.0")
+     .Attr("beta: float = 0.5")
+     .Attr("T: {float, half} = DT_FLOAT")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle s;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 4, &s));  // input_grads
+       TF_RETURN_IF_ERROR(c->Merge(s, c->input(1), &s));     // input_image
+@@ -1376,7 +1376,7 @@ REGISTER_OP("MaxPoolGrad")
+     .Input("grad: T")
+     .Output("output: T")
+     .Attr("T: realnumbertype = DT_FLOAT")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return UnchangedShapeWithRank(c, 4);
+     })
+     .Doc(R"doc(
+@@ -1407,7 +1407,7 @@ REGISTER_OP("MaxPoolGradGrad")
+     .Input("grad: T")
+     .Output("output: T")
+     .Attr("T: realnumbertype")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TF_RETURN_IF_ERROR(shape_inference::MaxPoolShape(c));
+       ShapeHandle unused;
+       // Validate 'orig_input' is the same shape as 'grad'
+@@ -1443,7 +1443,7 @@ REGISTER_OP("MaxPoolWithArgmax")
+     .Output("output: T")
+     .Output("argmax: Targmax")
+     .Attr("T: realnumbertype")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TF_RETURN_IF_ERROR(shape_inference::MaxPoolShape(c));
+       c->set_output(1, c->output(0));
+       return Status::OK();
+@@ -1474,7 +1474,7 @@ REGISTER_OP("MaxPoolGradWithArgmax")
+     .Input("argmax: Targmax")
+     .Output("output: T")
+     .Attr("T: realnumbertype")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return UnchangedShapeWithRank(c, 4);
+     })
+     .Doc(R"doc(
+@@ -1501,7 +1501,7 @@ REGISTER_OP("MaxPoolGradGradWithArgmax")
+     .Input("argmax: Targmax")
+     .Output("output: T")
+     .Attr("T: realnumbertype")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TF_RETURN_IF_ERROR(shape_inference::MaxPoolShape(c));
+       ShapeHandle unused;
+       // Validate 'orig_input' is the same shape as 'grad'
+@@ -1534,7 +1534,7 @@ REGISTER_OP("Dilation2D")
+     .Attr("strides: list(int) >= 4")
+     .Attr("rates: list(int) >= 4")
+     .Attr(GetPaddingAttrString())
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input_shape;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 4, &input_shape));
+       ShapeHandle filter_shape;
+@@ -1677,7 +1677,7 @@ REGISTER_OP("Dilation2DBackpropFilter")
+     .Attr("strides: list(int) >= 4")
+     .Attr("rates: list(int) >= 4")
+     .Attr(GetPaddingAttrString())
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->input(1));
+       return Status::OK();
+     })
+@@ -1824,7 +1824,7 @@ REGISTER_OP("Softmax")
+     .Input("logits: T")
+     .Output("softmax: T")
+     .Attr("T: {half, float, double}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return shape_inference::UnchangedShapeWithRankAtLeast(c, 1);
+     })
+     .Doc(R"doc(
+@@ -1844,7 +1844,7 @@ REGISTER_OP("LogSoftmax")
+     .Input("logits: T")
+     .Output("logsoftmax: T")
+     .Attr("T: {half, float, double}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return shape_inference::UnchangedShapeWithRankAtLeast(c, 1);
+     })
+     .Doc(R"doc(
+@@ -1866,7 +1866,7 @@ REGISTER_OP("SoftmaxCrossEntropyWithLogits")
+     .Output("loss: T")
+     .Output("backprop: T")
+     .Attr("T: {half, float, double}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 2, &input));
+       TF_RETURN_IF_ERROR(c->Merge(input, c->input(1), &input));
+@@ -1896,7 +1896,7 @@ REGISTER_OP("SparseSoftmaxCrossEntropyWithLogits")
+     .Output("backprop: T")
+     .Attr("T: {half, float, double}")
+     .Attr("Tlabels: {int32, int64} = DT_INT64")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle features;
+       ShapeHandle labels;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 2, &features));
+@@ -1936,7 +1936,7 @@ REGISTER_OP("InTopK")
+     .Output("precision: bool")
+     .Attr("k: int")
+     .Attr("T: {int32, int64} = DT_INT32")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle predictions;
+       ShapeHandle targets;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 2, &predictions));
+@@ -2164,7 +2164,7 @@ REGISTER_OP("FractionalMaxPoolGrad")
+     .Output("output: T")
+     .Attr("overlapping: bool = false")
+     .Attr("T: {float, double, int32, int64}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return shape_inference::UnchangedShapeWithRank(c, 4);
+     })
+     .Doc(R"doc(
+@@ -2253,7 +2253,7 @@ REGISTER_OP("FractionalAvgPoolGrad")
+     .Output("output: T")
+     .Attr("overlapping: bool = false")
+     .Attr("T: {float, double, int32, int64}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       if (c->input_tensor(0) != nullptr) {
+         ShapeHandle out;
+         TF_RETURN_IF_ERROR(c->MakeShapeFromShapeTensor(0, &out));
+@@ -2302,7 +2302,7 @@ REGISTER_OP("QuantizedAvgPool")
+     .Attr("ksize: list(int)")
+     .Attr("strides: list(int)")
+     .Attr(GetPaddingAttrString())
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TF_RETURN_IF_ERROR(shape_inference::AvgPoolShape(c));
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+@@ -2340,7 +2340,7 @@ REGISTER_OP("QuantizedBiasAdd")
+     .Attr("T1: quantizedtype")
+     .Attr("T2: quantizedtype")
+     .Attr("out_type: quantizedtype")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TF_RETURN_IF_ERROR(shape_inference::BiasAddShape(c));
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(2), 0, &unused));
+@@ -2381,7 +2381,7 @@ REGISTER_OP("QuantizedConv2D")
+     .Attr("out_type: quantizedtype = DT_QINT32")
+     .Attr("strides: list(int)")
+     .Attr(GetPaddingAttrString())
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TF_RETURN_IF_ERROR(shape_inference::Conv2DShape(c));
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(2), 0, &unused));
+@@ -2423,7 +2423,7 @@ REGISTER_OP("QuantizedMaxPool")
+     .Attr("ksize: list(int)")
+     .Attr("strides: list(int)")
+     .Attr(GetPaddingAttrString())
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TF_RETURN_IF_ERROR(shape_inference::MaxPoolShape(c));
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+@@ -2457,7 +2457,7 @@ REGISTER_OP("QuantizedRelu")
+     .Output("max_activations: float")
+     .Attr("Tinput: quantizedtype")
+     .Attr("out_type: quantizedtype = DT_QUINT8")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TF_RETURN_IF_ERROR(shape_inference::UnchangedShape(c));
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+@@ -2486,7 +2486,7 @@ REGISTER_OP("QuantizedRelu6")
+     .Output("max_activations: float")
+     .Attr("Tinput: quantizedtype")
+     .Attr("out_type: quantizedtype = DT_QUINT8")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TF_RETURN_IF_ERROR(shape_inference::UnchangedShape(c));
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+@@ -2516,7 +2516,7 @@ REGISTER_OP("QuantizedReluX")
+     .Output("max_activations: float")
+     .Attr("Tinput: quantizedtype")
+     .Attr("out_type: quantizedtype = DT_QUINT8")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TF_RETURN_IF_ERROR(shape_inference::UnchangedShape(c));
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+@@ -2559,7 +2559,7 @@ REGISTER_OP("QuantizedBatchNormWithGlobalNormalization")
+     .Attr("out_type: quantizedtype")
+     .Attr("variance_epsilon: float")
+     .Attr("scale_after_normalization: bool")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 4, &input));
+ 
+@@ -2668,7 +2668,7 @@ REGISTER_OP("_MklConv2DBackpropFilter")
+     .Attr("use_cudnn_on_gpu: bool = true")
+     .Attr(GetPaddingAttrString())
+     .Attr(GetConvnetDataFormatAttrString())
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return InputTensorShapeOrUnknown(c, 1 /* input_idx */, 4 /* ndims */);
+     })
+     .Doc(R"doc(
+@@ -2709,7 +2709,7 @@ REGISTER_OP("_MklConv2DBackpropInput")
+     .Attr("use_cudnn_on_gpu: bool = true")
+     .Attr(GetPaddingAttrString())
+     .Attr(GetConvnetDataFormatAttrString())
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return InputTensorShapeOrUnknown(c, 0 /* input_idx */, 4 /* ndims */);
+     })
+     .Doc(R"doc(
+@@ -2790,7 +2790,7 @@ REGISTER_OP("_MklMaxPoolGrad")
+     .Input("mkl_workspace: uint8")
+     .Output("output: T")
+     .Output("mkl_output: uint8")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return UnchangedShapeWithRank(c, 4);
+     })
+     .Doc(R"doc(
+@@ -2832,7 +2832,7 @@ REGISTER_OP("_MklAvgPoolGrad")
+     .Attr(GetPaddingAttrString())
+     .Attr(GetConvnetDataFormatAttrString())
+     .Attr("T: {float, half, double}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return InputTensorShapeOrUnknown(c, 0 /* input_idx */, 4 /* ndims */);
+     })
+     .Doc(R"doc(
+@@ -2856,7 +2856,7 @@ REGISTER_OP("_MklLRN")
+     .Attr("beta: float = 0.5")
+     .Attr("workspace_enabled: bool = false")
+     .Attr("T: {float, half} = DT_FLOAT")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return UnchangedShapeWithRank(c, 4);
+     })
+     .Doc(R"doc(
+@@ -2884,7 +2884,7 @@ REGISTER_OP("_MklLRNGrad")
+     .Attr("beta: float = 0.5")
+     .Attr("workspace_enabled: bool = false")
+     .Attr("T: {float, half} = DT_FLOAT")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle s;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 4, &s));  // input_grads
+       TF_RETURN_IF_ERROR(c->Merge(s, c->input(1), &s));     // input_image
+@@ -2925,7 +2925,7 @@ REGISTER_OP("_MklFusedBatchNorm")
+     .Attr("epsilon: float = 0.0001")
+     .Attr("data_format: string = 'NHWC'")
+     .Attr("is_training: bool = true")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle x;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 4, &x));
+ 
+@@ -2991,7 +2991,7 @@ REGISTER_OP("_MklFusedBatchNormGrad")
+     .Attr("epsilon: float = 0.0001")
+     .Attr("data_format: string = 'NHWC'")
+     .Attr("is_training: bool = true")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle y_backprop;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 4, &y_backprop));
+       ShapeHandle x;
+diff --git a/tensorflow/core/ops/parsing_ops.cc b/tensorflow/core/ops/parsing_ops.cc
+index 2af2955..f42447b 100644
+--- a/tensorflow/core/ops/parsing_ops.cc
++++ b/tensorflow/core/ops/parsing_ops.cc
+@@ -29,7 +29,7 @@ REGISTER_OP("DecodeRaw")
+     .Output("output: out_type")
+     .Attr("out_type: {half,float,double,int32,uint8,int16,int8,int64}")
+     .Attr("little_endian: bool = true")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       // Note: last dimension is data dependent.
+       ShapeHandle out;
+       TF_RETURN_IF_ERROR(c->Concatenate(
+@@ -64,7 +64,7 @@ REGISTER_OP("ParseExample")
+     .Attr("sparse_types: list({float,int64,string}) >= 0")
+     .Attr("Tdense: list({float,int64,string}) >= 0")
+     .Attr("dense_shapes: list(shape) >= 0")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ParseSingleExampleAttrs attrs;
+       TF_RETURN_IF_ERROR(attrs.Init(c));
+ 
+@@ -171,7 +171,7 @@ REGISTER_OP("ParseSingleSequenceExample")
+     .Attr("context_dense_shapes: list(shape) >= 0 = []")
+     .Attr("feature_list_sparse_types: list({float,int64,string}) >= 0 = []")
+     .Attr("feature_list_dense_shapes: list(shape) >= 0 = []")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       ParseSingleSequenceExampleAttrs attrs;
+       TF_RETURN_IF_ERROR(attrs.Init(c));
+@@ -321,7 +321,7 @@ REGISTER_OP("DecodeCSV")
+     .Output("output: OUT_TYPE")
+     .Attr("OUT_TYPE: list({float,int32,int64,string})")
+     .Attr("field_delim: string = ','")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       // Validate the record_defaults inputs.
+       for (int i = 1; i < c->num_inputs(); ++i) {
+         ShapeHandle v;
+diff --git a/tensorflow/core/ops/random_ops.cc b/tensorflow/core/ops/random_ops.cc
+index 392ac32..4f4d810 100644
+--- a/tensorflow/core/ops/random_ops.cc
++++ b/tensorflow/core/ops/random_ops.cc
+@@ -205,7 +205,7 @@ REGISTER_OP("Multinomial")
+     .Attr("seed: int = 0")
+     .Attr("seed2: int = 0")
+     .Attr("T: realnumbertype")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle logits_shape;
+       ShapeHandle unused;
+       DimensionHandle num_samples;
+@@ -237,7 +237,7 @@ REGISTER_OP("RandomGamma")
+     .Attr("seed2: int = 0")
+     .Attr("S: {int32, int64}")
+     .Attr("T: {half, float, double}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle out;
+       TF_RETURN_IF_ERROR(c->MakeShapeFromShapeTensor(0, &out));
+       TF_RETURN_IF_ERROR(c->Concatenate(out, c->input(1), &out));
+@@ -274,7 +274,7 @@ REGISTER_OP("RandomPoisson")
+     .Attr("seed2: int = 0")
+     .Attr("S: {int32, int64}")
+     .Attr("dtype: {half, float, double}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle out;
+       TF_RETURN_IF_ERROR(c->MakeShapeFromShapeTensor(0, &out));
+       TF_RETURN_IF_ERROR(c->Concatenate(out, c->input(1), &out));
+diff --git a/tensorflow/core/ops/resource_variable_ops.cc b/tensorflow/core/ops/resource_variable_ops.cc
+index c060aa6..df7508f 100644
+--- a/tensorflow/core/ops/resource_variable_ops.cc
++++ b/tensorflow/core/ops/resource_variable_ops.cc
+@@ -31,7 +31,7 @@ REGISTER_OP("VarHandleOp")
+     .Attr("shape: shape")
+     .Output("resource: resource")
+     .SetIsStateful()
+-    .SetShapeFn([](shape_inference::InferenceContext* c) {
++    .SetShapeFn([](shape_inference::InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->Scalar());
+       DataType t;
+       TF_RETURN_IF_ERROR(c->GetAttr("dtype", &t));
+@@ -57,7 +57,7 @@ REGISTER_OP("ReadVariableOp")
+     .Input("resource: resource")
+     .Output("value: dtype")
+     .Attr("dtype: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       DataType handle_dtype = c->input_handle_dtype(0);
+       DataType value_dtype;
+       TF_RETURN_IF_ERROR(c->GetAttr("dtype", &value_dtype));
+@@ -88,7 +88,7 @@ REGISTER_OP("_UnsafeReadVariable")
+     .Input("resource: resource")
+     .Output("value: dtype")
+     .Attr("dtype: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       DataType handle_dtype = c->input_handle_dtype(0);
+       DataType value_dtype;
+       TF_RETURN_IF_ERROR(c->GetAttr("dtype", &value_dtype));
+@@ -219,7 +219,7 @@ REGISTER_OP("ResourceGather")
+     .Output("output: dtype")
+     .Attr("dtype: type")
+     .Attr("Tindices: {int32,int64}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       DataType dtype;
+       TF_RETURN_IF_ERROR(c->GetAttr("dtype", &dtype));
+       if (c->input_handle_dtype(0) != dtype) {
+@@ -263,7 +263,7 @@ REGISTER_OP("ResourceScatterAdd")
+     .Input("updates: dtype")
+     .Attr("dtype: numbertype")
+     .Attr("Tindices: {int32, int64}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle var_shape = c->input_handle_shape(0);
+       ShapeHandle indices_shape = c->input(1);
+ 
+diff --git a/tensorflow/core/ops/sdca_ops.cc b/tensorflow/core/ops/sdca_ops.cc
+index dea75a1..6d7c643 100644
+--- a/tensorflow/core/ops/sdca_ops.cc
++++ b/tensorflow/core/ops/sdca_ops.cc
+@@ -139,7 +139,7 @@ weights: a list of vectors where each value is the weight associated with a
+ REGISTER_OP("SdcaFprint")
+     .Input("input: string")
+     .Output("output: int64")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle handle;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &handle));
+       ShapeHandle output_shape;
+diff --git a/tensorflow/core/ops/set_ops.cc b/tensorflow/core/ops/set_ops.cc
+index 85d1335..55d7c46 100644
+--- a/tensorflow/core/ops/set_ops.cc
++++ b/tensorflow/core/ops/set_ops.cc
+@@ -58,7 +58,7 @@ REGISTER_OP("DenseToDenseSetOperation")
+     .Output("result_indices: int64")
+     .Output("result_values: T")
+     .Output("result_shape: int64")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       if (c->num_inputs() != 2) {
+         return errors::InvalidArgument("len(inputs) != 2.");
+       }
+@@ -137,7 +137,7 @@ REGISTER_OP("DenseToSparseSetOperation")
+     .Output("result_indices: int64")
+     .Output("result_values: T")
+     .Output("result_shape: int64")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       if (c->num_inputs() != 4) {
+         return errors::InvalidArgument("len(inputs) != 4.");
+       }
+@@ -217,7 +217,7 @@ REGISTER_OP("SparseToSparseSetOperation")
+     .Output("result_indices: int64")
+     .Output("result_values: T")
+     .Output("result_shape: int64")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       if (c->num_inputs() != 6) {
+         return errors::InvalidArgument("len(inputs) != 6.");
+       }
+diff --git a/tensorflow/core/ops/sparse_ops.cc b/tensorflow/core/ops/sparse_ops.cc
+index 9bbf37c..b6fa6a0 100644
+--- a/tensorflow/core/ops/sparse_ops.cc
++++ b/tensorflow/core/ops/sparse_ops.cc
+@@ -49,7 +49,7 @@ REGISTER_OP("SparseAddGrad")
+     .Output("a_val_grad: T")
+     .Output("b_val_grad: T")
+     .Attr("T: numbertype")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle a_indices;
+       ShapeHandle b_indices;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 2, &a_indices));
+@@ -91,7 +91,7 @@ REGISTER_OP("SparseAdd")
+     .Output("sum_shape: int64")
+     .Attr("T: numbertype")
+     .Attr("Treal: realnumbertype")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle a_shape;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(2), 1, &a_shape));
+       c->set_output(
+@@ -137,7 +137,7 @@ REGISTER_OP("SparseTensorDenseMatMul")
+     .Attr("Tindices: {int32,int64} = DT_INT64")
+     .Attr("adjoint_a: bool = false")
+     .Attr("adjoint_b: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       DimensionHandle unused_dim;
+       ShapeHandle unused;
+       ShapeHandle b;
+@@ -191,7 +191,7 @@ REGISTER_OP("SerializeSparse")
+     .Input("sparse_shape: int64")
+     .Attr("T: type")
+     .Output("serialized_sparse: string")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 2, &unused));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 1, &unused));
+@@ -213,7 +213,7 @@ REGISTER_OP("SerializeManySparse")
+     .Input("sparse_shape: int64")
+     .Attr("T: type")
+     .Output("serialized_sparse: string")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 2, &unused));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 1, &unused));
+@@ -243,7 +243,7 @@ REGISTER_OP("DeserializeManySparse")
+     .Output("sparse_indices: int64")
+     .Output("sparse_values: dtype")
+     .Output("sparse_shape: int64")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       // serialized sparse is [?,3] matrix.
+       ShapeHandle serialized_sparse;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 2, &serialized_sparse));
+@@ -316,7 +316,7 @@ REGISTER_OP("SparseToDense")
+     .Attr("T: type")
+     .Output("dense: T")
+     .Attr("Tindices: {int32, int64}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle out;
+       TF_RETURN_IF_ERROR(c->MakeShapeFromShapeTensor(1, &out));
+       c->set_output(0, out);
+@@ -367,7 +367,7 @@ REGISTER_OP("SparseConcat")
+     .Attr("concat_dim: int")
+     .Attr("N: int >= 2")
+     .Attr("T: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       // These accumulates the sum.
+       DimensionHandle output_row_count = c->MakeDim(0ll);
+ 
+@@ -544,7 +544,7 @@ REGISTER_OP("SparseSplit")
+     .Output("output_shape:   num_split * int64")
+     .Attr("num_split: int >= 1")
+     .Attr("T: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle input_shape = c->input(3);
+       ShapeHandle output_indices =
+           c->Matrix(InferenceContext::kUnknownDim, c->NumElements(input_shape));
+@@ -604,7 +604,7 @@ REGISTER_OP("SparseReorder")
+     .Output("output_indices: int64")
+     .Output("output_values: T")
+     .Attr("T: type")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle indices;
+       ShapeHandle values;
+       ShapeHandle unused;
+@@ -644,7 +644,7 @@ REGISTER_OP("SparseReshape")
+     .Input("new_shape: int64")
+     .Output("output_indices: int64")
+     .Output("output_shape: int64")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle indices;
+       ShapeHandle unused;
+       ShapeHandle new_shape;
+@@ -695,7 +695,7 @@ REGISTER_OP("SparseTensorDenseAdd")
+     .Output("output: T")
+     .Attr("T: numbertype")
+     .Attr("Tindices: {int32, int64}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       c->set_output(0, c->input(3));
+       return Status::OK();
+     })
+@@ -786,7 +786,7 @@ keep_dims: If true, retain reduced dimensions with length 1.
+       .Input("dense: T")                                         \
+       .Output("output: T")                                       \
+       .Attr("T: numbertype")                                     \
+-      .SetShapeFn([](InferenceContext* c) {                      \
++      .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {                      \
+         ShapeHandle input;                                       \
+         TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 2, &input)); \
+         c->set_output(0, c->Vector(c->Dim(input, 0)));           \
+@@ -853,7 +853,7 @@ REGISTER_OP("SparseSoftmax")
+     .Input("sp_shape: int64")
+     .Output("output: T")
+     .Attr("T: {float, double}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       ShapeHandle values;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 2, &unused));  // sp_indices
+@@ -953,7 +953,7 @@ REGISTER_OP("AddSparseToTensorsMap")
+     .Attr("container: string = ''")
+     .Attr("shared_name: string = ''")
+     .SetIsStateful()
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 2, &unused));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 1, &unused));
+@@ -998,7 +998,7 @@ REGISTER_OP("AddManySparseToTensorsMap")
+     .Attr("container: string = ''")
+     .Attr("shared_name: string = ''")
+     .SetIsStateful()
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 2, &unused));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 1, &unused));
+@@ -1053,7 +1053,7 @@ REGISTER_OP("TakeManySparseFromTensorsMap")
+     .Attr("container: string = ''")
+     .Attr("shared_name: string = ''")
+     .SetIsStateful()
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       // serialized sparse is [?,1] matrix.
+       ShapeHandle sparse_handles;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &sparse_handles));
+diff --git a/tensorflow/core/ops/spectral_ops.cc b/tensorflow/core/ops/spectral_ops.cc
+index 09b460f..2147331 100644
+--- a/tensorflow/core/ops/spectral_ops.cc
++++ b/tensorflow/core/ops/spectral_ops.cc
+@@ -27,7 +27,7 @@ using shape_inference::ShapeHandle;
+ REGISTER_OP("FFT")
+     .Input("input: complex64")
+     .Output("output: complex64")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return shape_inference::UnchangedShapeWithRankAtLeast(c, 1);
+     })
+     .Doc(R"doc(
+@@ -48,7 +48,7 @@ Equivalent to np.fft.fft
+ REGISTER_OP("IFFT")
+     .Input("input: complex64")
+     .Output("output: complex64")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return shape_inference::UnchangedShapeWithRankAtLeast(c, 1);
+     })
+     .Doc(R"doc(
+@@ -69,7 +69,7 @@ Equivalent to np.fft.ifft
+ REGISTER_OP("FFT2D")
+     .Input("input: complex64")
+     .Output("output: complex64")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return shape_inference::UnchangedShapeWithRankAtLeast(c, 2);
+     })
+     .Doc(R"doc(
+@@ -90,7 +90,7 @@ Equivalent to np.fft.fft2
+ REGISTER_OP("IFFT2D")
+     .Input("input: complex64")
+     .Output("output: complex64")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return shape_inference::UnchangedShapeWithRankAtLeast(c, 2);
+     })
+     .Doc(R"doc(
+@@ -111,7 +111,7 @@ Equivalent to np.fft.ifft2
+ REGISTER_OP("FFT3D")
+     .Input("input: complex64")
+     .Output("output: complex64")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return shape_inference::UnchangedShapeWithRankAtLeast(c, 3);
+     })
+     .Doc(R"doc(
+@@ -132,7 +132,7 @@ Equivalent to np.fft.fftn with 3 dimensions.
+ REGISTER_OP("IFFT3D")
+     .Input("input: complex64")
+     .Output("output: complex64")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return shape_inference::UnchangedShapeWithRankAtLeast(c, 3);
+     })
+     .Doc(R"doc(
+@@ -190,7 +190,7 @@ REGISTER_OP("RFFT")
+     .Input("input: float")
+     .Input("fft_length: int32")
+     .Output("output: complex64")
+-    .SetShapeFn([](InferenceContext* c) { return RFFTShape(c, true, 1); })
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status { return RFFTShape(c, true, 1); })
+     .Doc(R"doc(
+ Real-valued fast Fourier transform.
+ 
+@@ -216,7 +216,7 @@ REGISTER_OP("IRFFT")
+     .Input("input: complex64")
+     .Input("fft_length: int32")
+     .Output("output: float")
+-    .SetShapeFn([](InferenceContext* c) { return RFFTShape(c, false, 1); })
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status { return RFFTShape(c, false, 1); })
+     .Doc(R"doc(
+ Inverse real-valued fast Fourier transform.
+ 
+@@ -245,7 +245,7 @@ REGISTER_OP("RFFT2D")
+     .Input("input: float")
+     .Input("fft_length: int32")
+     .Output("output: complex64")
+-    .SetShapeFn([](InferenceContext* c) { return RFFTShape(c, true, 2); })
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status { return RFFTShape(c, true, 2); })
+     .Doc(R"doc(
+ 2D real-valued fast Fourier transform.
+ 
+@@ -273,7 +273,7 @@ REGISTER_OP("IRFFT2D")
+     .Input("input: complex64")
+     .Input("fft_length: int32")
+     .Output("output: float")
+-    .SetShapeFn([](InferenceContext* c) { return RFFTShape(c, false, 2); })
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status { return RFFTShape(c, false, 2); })
+     .Doc(R"doc(
+ Inverse 2D real-valued fast Fourier transform.
+ 
+@@ -302,7 +302,7 @@ REGISTER_OP("RFFT3D")
+     .Input("input: float")
+     .Input("fft_length: int32")
+     .Output("output: complex64")
+-    .SetShapeFn([](InferenceContext* c) { return RFFTShape(c, true, 3); })
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status { return RFFTShape(c, true, 3); })
+     .Doc(R"doc(
+ 3D real-valued fast Fourier transform.
+ 
+@@ -330,7 +330,7 @@ REGISTER_OP("IRFFT3D")
+     .Input("input: complex64")
+     .Input("fft_length: int32")
+     .Output("output: float")
+-    .SetShapeFn([](InferenceContext* c) { return RFFTShape(c, false, 3); })
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status { return RFFTShape(c, false, 3); })
+     .Doc(R"doc(
+ Inverse 3D real-valued fast Fourier transform.
+ 
+diff --git a/tensorflow/core/ops/state_ops.cc b/tensorflow/core/ops/state_ops.cc
+index 0890d5f..14536a1 100644
+--- a/tensorflow/core/ops/state_ops.cc
++++ b/tensorflow/core/ops/state_ops.cc
+@@ -29,7 +29,7 @@ REGISTER_OP("VariableV2")
+     .Attr("container: string = ''")
+     .Attr("shared_name: string = ''")
+     .SetIsStateful()
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TensorShapeProto shape_proto;
+       TF_RETURN_IF_ERROR(c->GetAttr("shape", &shape_proto));
+       ShapeHandle output_shape;
+@@ -61,7 +61,7 @@ REGISTER_OP("Variable")
+     .Attr("container: string = ''")
+     .Attr("shared_name: string = ''")
+     .SetIsStateful()
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       PartialTensorShape shape;
+       TF_RETURN_IF_ERROR(c->GetAttr("shape", &shape));
+ 
+@@ -102,7 +102,7 @@ REGISTER_OP("TemporaryVariable")
+     .Attr("dtype: type")
+     .Attr("var_name: string = ''")
+     .SetIsStateful()
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       TensorShapeProto shape_proto;
+       TF_RETURN_IF_ERROR(c->GetAttr("shape", &shape_proto));
+       ShapeHandle output;
+@@ -165,7 +165,7 @@ REGISTER_OP("Assign")
+     .Attr("validate_shape: bool = true")
+     .Attr("use_locking: bool = true")
+     .SetAllowsUninitializedInput()
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       bool validate_shape;
+       TF_RETURN_IF_ERROR(c->GetAttr("validate_shape", &validate_shape));
+       if (validate_shape) {
+@@ -822,7 +822,7 @@ REGISTER_OP("CountUpTo")
+     .Output("output: T")
+     .Attr("limit: int")
+     .Attr("T: {int32, int64}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle output;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 0, &output));
+       c->set_output(0, output);
+diff --git a/tensorflow/core/ops/string_ops.cc b/tensorflow/core/ops/string_ops.cc
+index d6fe8ec..714f9ef 100644
+--- a/tensorflow/core/ops/string_ops.cc
++++ b/tensorflow/core/ops/string_ops.cc
+@@ -162,7 +162,7 @@ REGISTER_OP("StringJoin")
+     .Attr("N: int")
+     .Attr("separator: string = ''")
+     .Output("output: string")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       // If all inputs are scalars, then return a scalar.
+       bool all_scalar = true;
+       for (int i = 0; i < c->num_inputs(); ++i) {
+@@ -202,7 +202,7 @@ REGISTER_OP("StringSplit")
+     .Output("indices: int64")
+     .Output("values: string")
+     .Output("shape: int64")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle unused;
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 1, &unused));
+       TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, &unused));
+@@ -285,7 +285,7 @@ REGISTER_OP("Substr")
+     .Input("len: T")
+     .Output("output: string")
+     .Attr("T: {int32, int64}")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       ShapeHandle pos_shape = c->input(1);
+       ShapeHandle len_shape = c->input(2);
+       ShapeHandle unused;
+diff --git a/tensorflow/core/ops/training_ops.cc b/tensorflow/core/ops/training_ops.cc
+index 6f7a007..b96ad9b 100644
+--- a/tensorflow/core/ops/training_ops.cc
++++ b/tensorflow/core/ops/training_ops.cc
+@@ -126,7 +126,7 @@ REGISTER_OP("ApplyProximalGradientDescent")
+     .Output("out: Ref(T)")
+     .Attr("T: numbertype")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyProximalGradientDescentShapeFn(c, false /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -155,7 +155,7 @@ REGISTER_OP("SparseApplyProximalGradientDescent")
+     .Attr("T: numbertype")
+     .Attr("Tindices: {int32, int64}")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyProximalGradientDescentShapeFn(c, true /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -184,7 +184,7 @@ REGISTER_OP("ResourceApplyProximalGradientDescent")
+     .Input("delta: T")
+     .Attr("T: numbertype")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyProximalGradientDescentShapeFn(c, false /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -211,7 +211,7 @@ REGISTER_OP("ResourceSparseApplyProximalGradientDescent")
+     .Attr("T: numbertype")
+     .Attr("Tindices: {int32, int64}")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyProximalGradientDescentShapeFn(c, true /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -259,7 +259,7 @@ REGISTER_OP("ApplyAdadelta")
+     .Output("out: Ref(T)")
+     .Attr("T: numbertype")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyAdadeltaShapeFn(c, false /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -295,7 +295,7 @@ REGISTER_OP("SparseApplyAdadelta")
+     .Attr("T: numbertype")
+     .Attr("Tindices: {int32, int64}")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyAdadeltaShapeFn(c, true /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -322,7 +322,7 @@ REGISTER_OP("ResourceApplyAdadelta")
+     .Input("grad: T")
+     .Attr("T: numbertype")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyAdadeltaShapeFn(c, false /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -356,7 +356,7 @@ REGISTER_OP("ResourceSparseApplyAdadelta")
+     .Attr("T: numbertype")
+     .Attr("Tindices: {int32, int64}")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyAdadeltaShapeFn(c, true /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -393,7 +393,7 @@ REGISTER_OP("ApplyAdagrad")
+     .Output("out: Ref(T)")
+     .Attr("T: numbertype")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyAdagradShapeFn(c, false /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -419,7 +419,7 @@ REGISTER_OP("ResourceApplyAdagrad")
+     .Input("grad: T")
+     .Attr("T: numbertype")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyAdagradShapeFn(c, false /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -462,7 +462,7 @@ REGISTER_OP("ApplyProximalAdagrad")
+     .Output("out: Ref(T)")
+     .Attr("T: numbertype")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyProximalAdagradShapeFn(c, false /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -491,7 +491,7 @@ REGISTER_OP("ResourceApplyProximalAdagrad")
+     .Input("grad: T")
+     .Attr("T: numbertype")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyProximalAdagradShapeFn(c, false /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -520,7 +520,7 @@ REGISTER_OP("SparseApplyAdagrad")
+     .Attr("T: numbertype")
+     .Attr("Tindices: {int32, int64}")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyAdagradShapeFn(c, true /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -550,7 +550,7 @@ REGISTER_OP("ResourceSparseApplyAdagrad")
+     .Attr("T: numbertype")
+     .Attr("Tindices: {int32, int64}")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyAdagradShapeFn(c, true /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -602,7 +602,7 @@ REGISTER_OP("ApplyAdagradDA")
+     .Output("out: Ref(T)")
+     .Attr("T: numbertype")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyAdagradDAShapeFn(c, false /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -635,7 +635,7 @@ REGISTER_OP("SparseApplyAdagradDA")
+     .Attr("T: numbertype")
+     .Attr("Tindices: {int32, int64}")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyAdagradDAShapeFn(c, true /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -667,7 +667,7 @@ REGISTER_OP("SparseApplyProximalAdagrad")
+     .Attr("T: numbertype")
+     .Attr("Tindices: {int32, int64}")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyProximalAdagradShapeFn(c, true /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -702,7 +702,7 @@ REGISTER_OP("ResourceApplyAdagradDA")
+     .Input("global_step: int64")
+     .Attr("T: numbertype")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyAdagradDAShapeFn(c, false /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -733,7 +733,7 @@ REGISTER_OP("ResourceSparseApplyAdagradDA")
+     .Attr("T: numbertype")
+     .Attr("Tindices: {int32, int64}")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyAdagradDAShapeFn(c, true /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -763,7 +763,7 @@ REGISTER_OP("ResourceSparseApplyProximalAdagrad")
+     .Attr("T: numbertype")
+     .Attr("Tindices: {int32, int64}")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyProximalAdagradShapeFn(c, true /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -816,7 +816,7 @@ REGISTER_OP("ApplyFtrl")
+     .Output("out: Ref(T)")
+     .Attr("T: numbertype")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyFtrlShapeFn(c, false /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -856,7 +856,7 @@ REGISTER_OP("SparseApplyFtrl")
+     .Attr("T: numbertype")
+     .Attr("Tindices: {int32, int64}")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyFtrlShapeFn(c, true /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -895,7 +895,7 @@ REGISTER_OP("ResourceApplyFtrl")
+     .Input("lr_power: T")
+     .Attr("T: numbertype")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyFtrlShapeFn(c, false /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -933,7 +933,7 @@ REGISTER_OP("ResourceSparseApplyFtrl")
+     .Attr("T: numbertype")
+     .Attr("Tindices: {int32, int64}")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyFtrlShapeFn(c, true /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -985,7 +985,7 @@ REGISTER_OP("ApplyMomentum")
+     .Attr("T: numbertype")
+     .Attr("use_locking: bool = false")
+     .Attr("use_nesterov: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyMomentumShapeFn(c, false /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -1021,7 +1021,7 @@ REGISTER_OP("SparseApplyMomentum")
+     .Attr("Tindices: {int32, int64}")
+     .Attr("use_locking: bool = false")
+     .Attr("use_nesterov: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyMomentumShapeFn(c, true /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -1057,7 +1057,7 @@ REGISTER_OP("ResourceApplyMomentum")
+     .Attr("T: numbertype")
+     .Attr("use_locking: bool = false")
+     .Attr("use_nesterov: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyMomentumShapeFn(c, false /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -1091,7 +1091,7 @@ REGISTER_OP("ResourceSparseApplyMomentum")
+     .Attr("Tindices: {int32, int64}")
+     .Attr("use_locking: bool = false")
+     .Attr("use_nesterov: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyMomentumShapeFn(c, true /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -1151,7 +1151,7 @@ REGISTER_OP("ApplyAdam")
+     .Attr("T: numbertype")
+     .Attr("use_locking: bool = false")
+     .Attr("use_nesterov: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyAdamShapeFn(c, false /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -1193,7 +1193,7 @@ REGISTER_OP("ResourceApplyAdam")
+     .Attr("T: numbertype")
+     .Attr("use_locking: bool = false")
+     .Attr("use_nesterov: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyAdamShapeFn(c, false /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -1267,7 +1267,7 @@ REGISTER_OP("ApplyRMSProp")
+     .Output("out: Ref(T)")
+     .Attr("T: numbertype")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyRMSPropShapeFn(c, false /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -1309,7 +1309,7 @@ REGISTER_OP("ApplyCenteredRMSProp")
+     .Output("out: Ref(T)")
+     .Attr("T: numbertype")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyCenteredRMSPropShapeFn(c, false /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -1361,7 +1361,7 @@ REGISTER_OP("SparseApplyRMSProp")
+     .Attr("T: numbertype")
+     .Attr("Tindices: {int32, int64}")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyRMSPropShapeFn(c, true /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -1406,7 +1406,7 @@ REGISTER_OP("SparseApplyCenteredRMSProp")
+     .Attr("T: numbertype")
+     .Attr("Tindices: {int32, int64}")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyCenteredRMSPropShapeFn(c, true /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -1454,7 +1454,7 @@ REGISTER_OP("ResourceApplyRMSProp")
+     .Input("grad: T")
+     .Attr("T: numbertype")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyRMSPropShapeFn(c, false /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -1494,7 +1494,7 @@ REGISTER_OP("ResourceApplyCenteredRMSProp")
+     .Input("grad: T")
+     .Attr("T: numbertype")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyCenteredRMSPropShapeFn(c, false /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -1544,7 +1544,7 @@ REGISTER_OP("ResourceSparseApplyRMSProp")
+     .Attr("T: numbertype")
+     .Attr("Tindices: {int32, int64}")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyRMSPropShapeFn(c, true /* sparse */);
+     })
+     .Doc(R"doc(
+@@ -1587,7 +1587,7 @@ REGISTER_OP("ResourceSparseApplyCenteredRMSProp")
+     .Attr("T: numbertype")
+     .Attr("Tindices: {int32, int64}")
+     .Attr("use_locking: bool = false")
+-    .SetShapeFn([](InferenceContext* c) {
++    .SetShapeFn([](InferenceContext* c) -> ::tensorflow::Status {
+       return ApplyCenteredRMSPropShapeFn(c, true /* sparse */);
+     })
+     .Doc(R"doc(
+diff --git a/tensorflow/core/platform/default/thread_annotations.h b/tensorflow/core/platform/default/thread_annotations.h
+index c52c229..38f8909 100644
+--- a/tensorflow/core/platform/default/thread_annotations.h
++++ b/tensorflow/core/platform/default/thread_annotations.h
+@@ -38,11 +38,11 @@ limitations under the License.
+ // IWYU pragma: private, include "third_party/tensorflow/core/platform/thread_annotations.h"
+ // IWYU pragma: friend third_party/tensorflow/core/platform/thread_annotations.h
+ 
+-#if defined(__clang__) && (!defined(SWIG))
+-#define THREAD_ANNOTATION_ATTRIBUTE__(x) __attribute__((x))
+-#else
++//#if defined(__clang__) && (!defined(SWIG))
++//#define THREAD_ANNOTATION_ATTRIBUTE__(x) __attribute__((x))
++//#else
+ #define THREAD_ANNOTATION_ATTRIBUTE__(x)  // no-op
+-#endif
++//#endif
+ 
+ // Document if a shared variable/field needs to be protected by a mutex.
+ // GUARDED_BY allows the user to specify a particular mutex that should be
+diff --git a/tensorflow/tools/graph_transforms/fold_old_batch_norms.cc b/tensorflow/tools/graph_transforms/fold_old_batch_norms.cc
+index 0667276..47fd8c8 100644
+--- a/tensorflow/tools/graph_transforms/fold_old_batch_norms.cc
++++ b/tensorflow/tools/graph_transforms/fold_old_batch_norms.cc
+@@ -71,7 +71,7 @@ Status FoldOldBatchNorms(const GraphDef& input_graph_def,
+         [&did_graph_change](const NodeMatch& match,
+                             const std::set<string>& input_nodes,
+                             const std::set<string>& output_nodes,
+-                            std::vector<NodeDef>* new_nodes) {
++                            std::vector<NodeDef>* new_nodes) -> ::tensorflow::Status {
+           // Find all the nodes we expect in the subgraph.
+           const NodeDef& batch_norm_node = match.node;
+           CHECK_EQ("BatchNormWithGlobalNormalization", batch_norm_node.op());
+diff --git a/tensorflow/tools/graph_transforms/quantize_nodes.cc b/tensorflow/tools/graph_transforms/quantize_nodes.cc
+index 78078ab..d041e4e 100644
+--- a/tensorflow/tools/graph_transforms/quantize_nodes.cc
++++ b/tensorflow/tools/graph_transforms/quantize_nodes.cc
+@@ -56,76 +56,74 @@ struct QuantizedOpInfo {
+ // conversion process can transform them.
+ const std::vector<QuantizedOpInfo>& GetQuantizedOpList() {
+   static const std::vector<QuantizedOpInfo> op_list = {
+-      {"AvgPool",
+-       {"ksize", "strides", "padding"},
+-       {{"T", DT_QUINT8}},
+-       DT_QUINT8,
+-       DT_QUINT8,
+-       {},
+-       QuantizedOpInfo::CONTIGUOUS_MIN_MAX},
+-      {"BiasAdd",
+-       {},
+-       {{"T1", DT_QUINT8}, {"T2", DT_QUINT8}, {"out_type", DT_QINT32}},
+-       DT_QUINT8,
+-       DT_QINT32,
+-       {},
+-       QuantizedOpInfo::CONTIGUOUS_MIN_MAX},
+-      {"Concat",
+-       {"N"},
+-       {{"T", DT_QUINT8}},
+-       DT_QUINT8,
+-       DT_QUINT8,
+-       {0},
+-       QuantizedOpInfo::SEPARATE_MIN_MAX},
+-      {"Conv2D",
+-       {"strides", "padding"},
+-       {{"Tinput", DT_QUINT8}, {"Tfilter", DT_QUINT8}, {"out_type", DT_QINT32}},
+-       DT_QUINT8,
+-       DT_QINT32,
+-       {},
+-       QuantizedOpInfo::CONTIGUOUS_MIN_MAX},
+-      {"MatMul",
+-       {"transpose_a", "transpose_b"},
+-       {{"T1", DT_QUINT8}, {"T2", DT_QUINT8}, {"Toutput", DT_QINT32}},
+-       DT_QUINT8,
+-       DT_QINT32,
+-       {},
+-       QuantizedOpInfo::CONTIGUOUS_MIN_MAX},
+-      {"MaxPool",
+-       {"ksize", "strides", "padding"},
+-       {{"T", DT_QUINT8}},
+-       DT_QUINT8,
+-       DT_QUINT8,
+-       {},
+-       QuantizedOpInfo::CONTIGUOUS_MIN_MAX},
+-      {"Mul",
+-       {},
+-       {{"T1", DT_QUINT8}, {"T2", DT_QUINT8}, {"Toutput", DT_QINT32}},
+-       DT_QUINT8,
+-       DT_QINT32,
+-       {},
+-       QuantizedOpInfo::CONTIGUOUS_MIN_MAX},
+-      {"Relu",
+-       {},
+-       {{"Tinput", DT_QUINT8}},
+-       DT_QUINT8,
+-       DT_QUINT8,
+-       {},
+-       QuantizedOpInfo::CONTIGUOUS_MIN_MAX},
+-      {"Relu6",
+-       {},
+-       {{"Tinput", DT_QUINT8}},
+-       DT_QUINT8,
+-       DT_QUINT8,
+-       {},
+-       QuantizedOpInfo::CONTIGUOUS_MIN_MAX},
+-      {"Reshape",
+-       {},
+-       {{"T", DT_QUINT8}},
+-       DT_QUINT8,
+-       DT_QUINT8,
+-       {1},
+-       QuantizedOpInfo::CONTIGUOUS_MIN_MAX},
++    {.float_name = "AvgPool",
++      .attrs_to_copy = {"ksize", "strides", "padding"},
++      .dtypes_to_set = {{"T", DT_QUINT8}},
++      .input_bit_depth = DT_QUINT8,
++      .output_bit_depth = DT_QUINT8,
++      .min_max_order = QuantizedOpInfo::CONTIGUOUS_MIN_MAX},
++    {.float_name = "BiasAdd",
++      .dtypes_to_set = {{"T1", DT_QUINT8}, {"T2", DT_QUINT8}, {"out_type", DT_QINT32}},
++      .input_bit_depth = DT_QUINT8,
++      .output_bit_depth = DT_QINT32,
++      .min_max_order = QuantizedOpInfo::CONTIGUOUS_MIN_MAX},
++    {.float_name = "Concat",
++      .attrs_to_copy = {"N"},
++      .dtypes_to_set = {{"T", DT_QUINT8}},
++      .input_bit_depth = DT_QUINT8,
++      .output_bit_depth = DT_QUINT8,
++      .unquantized_inputs = {0},
++      .min_max_order = QuantizedOpInfo::SEPARATE_MIN_MAX},
++    {.float_name = "Concat",
++      .attrs_to_copy = {"N"},
++      .dtypes_to_set = {{"T", DT_QUINT8}},
++      .input_bit_depth = DT_QUINT8,
++      .output_bit_depth = DT_QUINT8,
++      .unquantized_inputs = {0},
++      .min_max_order = QuantizedOpInfo::SEPARATE_MIN_MAX},
++    {.float_name = "Conv2D",
++      .attrs_to_copy = {"strides", "padding"},
++      .dtypes_to_set = {{"Tinput", DT_QUINT8}, {"Tfilter", DT_QUINT8}, {"out_type", DT_QINT32}},
++      .input_bit_depth = DT_QUINT8,
++      .output_bit_depth = DT_QINT32,
++      .min_max_order = QuantizedOpInfo::CONTIGUOUS_MIN_MAX},
++    {.float_name = "MatMul",
++      .attrs_to_copy = {"transpose_a", "transpose_b"},
++      .dtypes_to_set = {{"T1", DT_QUINT8}, {"T2", DT_QUINT8}, {"Toutput", DT_QINT32}},
++      .input_bit_depth = DT_QUINT8,
++      .output_bit_depth = DT_QINT32,
++      .min_max_order = QuantizedOpInfo::CONTIGUOUS_MIN_MAX},
++    {.float_name = "MaxPool",
++      .attrs_to_copy = {"ksize", "strides", "padding"},
++      .dtypes_to_set = {{"T", DT_QUINT8}},
++      .input_bit_depth = DT_QUINT8,
++      .output_bit_depth = DT_QUINT8,
++      .min_max_order = QuantizedOpInfo::CONTIGUOUS_MIN_MAX},
++    {.float_name = "Mul",
++      .attrs_to_copy = {},
++      .dtypes_to_set = {{"T1", DT_QUINT8}, {"T2", DT_QUINT8}, {"Toutput", DT_QINT32}},
++      .input_bit_depth = DT_QUINT8,
++      .output_bit_depth = DT_QINT32,
++      .min_max_order = QuantizedOpInfo::CONTIGUOUS_MIN_MAX},
++    {.float_name = "Relu",
++      .attrs_to_copy = {},
++      .dtypes_to_set = {{"Tinput", DT_QUINT8}},
++      .input_bit_depth = DT_QUINT8,
++      .output_bit_depth = DT_QUINT8,
++      .min_max_order = QuantizedOpInfo::CONTIGUOUS_MIN_MAX},
++    {.float_name = "Relu6",
++      .attrs_to_copy = {},
++      .dtypes_to_set = {{"Tinput", DT_QUINT8}},
++      .input_bit_depth = DT_QUINT8,
++      .output_bit_depth = DT_QUINT8,
++      .min_max_order = QuantizedOpInfo::CONTIGUOUS_MIN_MAX},
++    {.float_name = "Reshape",
++      .attrs_to_copy = {},
++      .dtypes_to_set = {{"T", DT_QUINT8}},
++      .input_bit_depth = DT_QUINT8,
++      .output_bit_depth = DT_QUINT8,
++      .unquantized_inputs = {1},
++      .min_max_order = QuantizedOpInfo::CONTIGUOUS_MIN_MAX},
+   };
+   return op_list;
+ }
+@@ -699,7 +697,7 @@ Status QuantizeNodes(const GraphDef& input_graph_def,
+       [&op_map, fallback_min, fallback_max, has_fallback_range](
+           const NodeMatch& match, const std::set<string>& input_nodes,
+           const std::set<string>& output_nodes,
+-          std::vector<NodeDef>* new_nodes) {
++          std::vector<NodeDef>* new_nodes) -> ::tensorflow::Status {
+         const NodeDef& float_node = match.node;
+         const QuantizedOpInfo& op_info = op_map[float_node.op()];
+ 
+diff --git a/tensorflow/tools/graph_transforms/sparsify_gather.cc b/tensorflow/tools/graph_transforms/sparsify_gather.cc
+index c441a08..a585caa 100644
+--- a/tensorflow/tools/graph_transforms/sparsify_gather.cc
++++ b/tensorflow/tools/graph_transforms/sparsify_gather.cc
+@@ -108,7 +108,7 @@ Status SparsifyGather(const GraphDef& input_graph_def,
+         [&any_match_found, &init_table_node_names](
+             const NodeMatch& match, const std::set<string>& input_nodes,
+             const std::set<string>& output_nodes,
+-            std::vector<NodeDef>* new_nodes) {
++            std::vector<NodeDef>* new_nodes) -> ::tensorflow::Status {
+           any_match_found = true;
+ 
+           // The captured subgraph should be of the following pattern:
+diff --git a/tensorflow/tools/tfprof/internal/tfprof_options.h b/tensorflow/tools/tfprof/internal/tfprof_options.h
+index cf48b4d..6cc1b46 100644
+--- a/tensorflow/tools/tfprof/internal/tfprof_options.h
++++ b/tensorflow/tools/tfprof/internal/tfprof_options.h
+@@ -81,7 +81,7 @@ struct Options {
+ 
+   virtual ~Options() {}
+   Options()
+-      : Options(0, 0, 0, 0, 0, {}, "", {}, {}, {}, {}, {}, false, {}, "", {}) {}
++      : Options(0, 0, 0, 0, 0, {}, "", {}, {}, {}, {}, {}, false, {}, "", std::map<string, string>{}) {}
+   Options(int max_depth, tensorflow::int64 min_bytes,
+           tensorflow::int64 min_micros, tensorflow::int64 min_params,
+           tensorflow::int64 min_float_ops,
+-- 
+1.9.5 (Apple Git-50.3)
+
