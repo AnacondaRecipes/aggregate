@@ -1,0 +1,31 @@
+From c64d5dbc2d9912cc708a388af3b21b6a3e016ddb Mon Sep 17 00:00:00 2001
+From: Jonathan Helmus <jjhelmus@gmail.com>
+Date: Tue, 13 Jun 2017 13:02:47 -0400
+Subject: [PATCH] skip read only debugger_cli_common test
+
+If tensorflow is built as root the
+debugger_cli_common::testCommandHistoryHandlesWritingIOErrorGracoiusly test
+will fail as the log never become read only.  Skip the portion of the test
+that depends on the read-only behavior of the log.
+---
+ tensorflow/python/debug/cli/debugger_cli_common_test.py | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/tensorflow/python/debug/cli/debugger_cli_common_test.py b/tensorflow/python/debug/cli/debugger_cli_common_test.py
+index 1b7a596..a46ad48 100644
+--- a/tensorflow/python/debug/cli/debugger_cli_common_test.py
++++ b/tensorflow/python/debug/cli/debugger_cli_common_test.py
+@@ -1049,7 +1049,9 @@ class CommandHistoryTest(test_util.TensorFlowTestCase):
+ 
+     cmd_hist_3 = debugger_cli_common.CommandHistory(
+         limit=3, history_file_path=self._history_file_path)
+-    self.assertEqual(["help"], cmd_hist_3.most_recent_n(1))
++    # when the tests are run as root the log files is still writable and this
++    # test fails.
++    #self.assertEqual(["help"], cmd_hist_3.most_recent_n(1))
+ 
+     self._restoreFileReadWritePermissions(self._history_file_path)
+ 
+-- 
+2.7.4
+
