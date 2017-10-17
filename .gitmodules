@@ -1581,3 +1581,7 @@
 	path = automat-feedstock
 	url = ../automat-feedstock
 	branch = master
+[submodule "pytest-timeout-feedstock"]
+	path = pytest-timeout-feedstock
+	url = ../pytest-timeout-feedstock
+	branch = master
