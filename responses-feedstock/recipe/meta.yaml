@@ -1,0 +1,45 @@
+{% set name = "responses" %}
+{% set version = "0.8.1" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "a64029dbc6bed7133e2c971ee52153f30e779434ad55a5abf40322bcff91d029" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ file_ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  {{ hash_type }}: {{ hash_value }}
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+    - requests >=2.0
+    - cookies
+    - six
+test:
+  imports:
+    - responses
+
+
+about:
+  home: https://github.com/getsentry/responses
+  license: Apache 2.0
+  license_family: Apache
+  license_file: LICENSE
+  summary: utility library for mocking out the 'requests' Python library
+  doc_url: https://pypi.python.org/pypi/responses
+  doc_source_url: https://github.com/getsentry/responses/blob/master/README.rst
+  dev_url: https://github.com/getsentry/responses
+
+extra:
+  recipe-maintainers: ''
