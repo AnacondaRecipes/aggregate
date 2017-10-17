@@ -15,8 +15,8 @@ export TF_DOWNLOAD_MKL=1
 
 # disable jemmloc (needs MADV_HUGEPAGE macro which is not in glib <= 2.12)
 export TF_NEED_JEMALLOC=0
-export TF_NEED_GCP=0
-export TF_NEED_HDFS=0
+export TF_NEED_GCP=1
+export TF_NEED_HDFS=1
 export TF_ENABLE_XLA=0
 export TF_NEED_OPENCL=0
 # CUDA details, these should be customized depending on the system details
