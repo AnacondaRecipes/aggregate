@@ -1,0 +1,53 @@
+{% set name = "portpicker" %}
+{% set version = "1.2.0" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "3e4c85b5c2b8dbcc3818d162314bd4a249be53f0168245190ef1594fe2a83430" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ file_ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  {{ hash_type }}: {{ hash_value }}
+
+build:
+  number: 0
+  script: python setup.py install
+  skip: True  # [win]
+
+requirements:
+  build:
+    - python
+
+  run:
+    - python
+
+test:
+  requires:
+    - mock  [py27]
+  imports:
+    - portpicker
+  source_files:
+    - src/tests
+  commands:
+    - python src/tests/portpicker_test.py
+
+about:
+  home: https://pypi.python.org/pypi/portpicker
+  license: Apache License 2.0
+  license_family: Apache
+  license_file: LICENSE
+  summary: A library to choose unique available network ports.
+  description: |
+    Portpicker provides an API to find and return an available
+    network port for an application to bind to. Ideally suited
+    for use from unittests or for test harnesses that launch
+    local servers.
+  dev_url: https://github.com/google/python_portpicker
+
+extra:
+  recipe-maintainers:
+    - nehaljwani
