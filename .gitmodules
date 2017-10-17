@@ -1589,3 +1589,7 @@
 	path = kiwisolver-feedstock
 	url = ../kiwisolver-feedstock
 	branch = master
+[submodule "ndg-httpsclient-feedstock"]
+	path = ndg-httpsclient-feedstock
+	url = ../ndg-httpsclient-feedstock
+	branch = master
