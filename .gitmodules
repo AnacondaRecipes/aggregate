@@ -1593,3 +1593,7 @@
 	path = ndg-httpsclient-feedstock
 	url = ../ndg-httpsclient-feedstock
 	branch = master
+[submodule "iminuit-feedstock"]
+	path = iminuit-feedstock
+	url = ../iminuit-feedstock
+	branch = master
