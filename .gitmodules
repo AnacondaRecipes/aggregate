@@ -1442,3 +1442,7 @@
 	path = ws4py-feedstock
 	url = ../ws4py-feedstock
 	branch = master
+[submodule "bazel-feedstock"]
+	path = bazel-feedstock
+	url = ../bazel-feedstock
+	branch = master
