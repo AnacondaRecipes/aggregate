@@ -17,6 +17,8 @@ source:
     #- 10366.patch
     # do not use locate during configuration
     - do-not-use-locate.patch  [linux]
+    # change curl config
+    - undef_have_stropts_h.patch  [linux]
     # Patches need to get two test to pass on CentOS 6
     #- stable-image-rotate-test.patch  [linux]
     #- relax-tolerence-in-special_math_test.patch  [linux]
@@ -27,9 +29,9 @@ source:
     - update-highwayhash.patch  [ppc64le]
 
 build:
-  number: 0
+  number: 1
   msvc_compiler: 14.0    [win]
-  string: py{{py}}cuda{{ CUDA_VERSION }}cudnn{{ CUDNN_VERSION }}_0
+  string: py{{py}}cuda{{ CUDA_VERSION }}cudnn{{ CUDNN_VERSION }}_1
   script_env:
     - CUDA_VERSION
     - CUDNN_VERSION
@@ -37,7 +39,7 @@ build:
 requirements:
   build:
     # conda build requirements
-    - bazel >=0.4.5      [not win]
+    - bazel >=0.4.5,<0.6  [not win]
     - cmake >=3.5        [win]
     - pip
     - python
