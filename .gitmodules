@@ -1585,3 +1585,7 @@
 	path = pytest-timeout-feedstock
 	url = ../pytest-timeout-feedstock
 	branch = master
+[submodule "kiwisolver-feedstock"]
+	path = kiwisolver-feedstock
+	url = ../kiwisolver-feedstock
+	branch = master
