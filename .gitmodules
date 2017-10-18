@@ -1605,3 +1605,11 @@
 	path = libntlm-feedstock
 	url = ../libntlm-feedstock
 	branch = master
+[submodule "traceback2-feedstock"]
+	path = traceback2-feedstock
+	url = ../traceback2-feedstock
+	branch = master
+[submodule "linecache2-feedstock"]
+	path = linecache2-feedstock
+	url = ../linecache2-feedstock
+	branch = master
