@@ -1,6 +1,6 @@
 {% set version='2018.0.0' %}
-{% set buildnum='4' %}
-{% set dstbuildnum='5' %}
+{% set buildnum='5' %}
+{% set dstbuildnum='6' %}
 {% set mkl_include_buildnum='2' %}
 {% set openmp_buildnum='7' %}
 
