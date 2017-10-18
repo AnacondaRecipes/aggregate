@@ -1,0 +1,54 @@
+{% set name = "unittest2" %}
+{% set version = "1.1.0" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "22882a0e418c284e1f718a822b3b022944d53d2d908e1690b319a9d3eb2c0579" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ file_ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  {{ hash_type }}: {{ hash_value }}
+  patches:
+    - 0001-argparse-is-part-of-core-python-now.patch
+
+build:
+  number: 0
+  entry_points:
+    - unit2 = unittest2.__main__:main_
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - six >=1.4
+    - traceback2
+  run:
+    - python
+    - six >=1.4
+    - traceback2
+
+test:
+  imports:
+    - unittest2
+    - unittest2.test
+  commands:
+    - unit2 --help
+
+about:
+  home: http://pypi.python.org/pypi/unittest2
+  license: BSD
+  summary: The new features in unittest backported to Python 2.4+
+  description: |
+    unittest2 is a backport of the new features added to the unittest testing
+    framework in Python 2.7 and onwards. 
+  doc_url: https://docs.python.org/dev/library/unittest.html
+  dev_url: https://hg.python.org/unittest2
+
+extra:
+  recipe-maintainers:
+    - nehaljwani
