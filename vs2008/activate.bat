@@ -14,7 +14,7 @@ set "VSREGKEY=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0"
 )
 for /f "skip=2 tokens=2,*" %%A in ('reg query "%VSREGKEY%" /v InstallDir') do SET "VSINSTALLDIR=%%B"
 
-if not "%VSINSTALLDIR%" == "" (
+if "%VSINSTALLDIR%" == "" (
    :: Look in VS90COMNTOOLS
    set "VSINSTALLDIR=%VS90COMNTOOLS%"
 )
