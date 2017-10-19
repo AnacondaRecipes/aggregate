@@ -1621,3 +1621,7 @@
 	path = memory_profiler-feedstock
 	url = ../memory_profiler-feedstock
 	branch = master
+[submodule "regex-feedstock"]
+	path = regex-feedstock
+	url = ../regex-feedstock
+	branch = master
