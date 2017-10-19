@@ -1625,3 +1625,7 @@
 	path = regex-feedstock
 	url = ../regex-feedstock
 	branch = master
+[submodule "sh-feedstock"]
+	path = sh-feedstock
+	url = ../sh-feedstock
+	branch = master
