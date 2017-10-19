@@ -1,0 +1,50 @@
+{% set name = "stripe" %}
+{% set version = "1.68.0" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "e383f2945288b4c9fdc01ef52ce5ba20b06c007909edafddb6ebdbd21ea5607a" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ file_ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  {{ hash_type }}: {{ hash_value }}
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+    - requests >=0.8.8
+
+test:
+  imports:
+    - stripe
+    - stripe.test
+    - stripe.test.resources
+  requires:
+    - mock
+    - unittest2
+
+about:
+  home: https://github.com/stripe/stripe-python
+  license: MIT
+  license_file: LICENSE
+  summary: Stripe python bindings
+  description: |
+    Stripe is the best software platform for running an internet business.
+  doc_url: https://stripe.com/docs/api/python#intro
+  doc_source_url: https://github.com/stripe/stripe-python
+  dev_url: https://github.com/stripe/stripe-python
+
+extra:
+  recipe-maintainers:
+    - nehaljwani
