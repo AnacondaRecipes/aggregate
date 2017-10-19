@@ -1613,3 +1613,7 @@
 	path = linecache2-feedstock
 	url = ../linecache2-feedstock
 	branch = master
+[submodule "pymc3-feedstock"]
+	path = pymc3-feedstock
+	url = ../pymc3-feedstock
+	branch = master
