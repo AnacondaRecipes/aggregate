@@ -1617,3 +1617,7 @@
 	path = pymc3-feedstock
 	url = ../pymc3-feedstock
 	branch = master
+[submodule "memory_profiler-feedstock"]
+	path = memory_profiler-feedstock
+	url = ../memory_profiler-feedstock
+	branch = master
