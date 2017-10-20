@@ -1629,3 +1629,7 @@
 	path = sh-feedstock
 	url = ../sh-feedstock
 	branch = master
+[submodule "mercurial-feedstock"]
+	path = mercurial-feedstock
+	url = ../mercurial-feedstock
+	branch = master
