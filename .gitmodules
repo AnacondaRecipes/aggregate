@@ -1665,3 +1665,7 @@
 	path = agate-sql-feedstock
 	url = ../agate-sql-feedstock
 	branch = master
+[submodule "agate-excel-feedstock"]
+	path = agate-excel-feedstock
+	url = ../agate-excel-feedstock
+	branch = master
