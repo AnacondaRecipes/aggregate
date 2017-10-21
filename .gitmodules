@@ -1681,3 +1681,7 @@
 	path = csvkit-feedstock
 	url = ../csvkit-feedstock
 	branch = master
+[submodule "dropbox-feedstock"]
+	path = dropbox-feedstock
+	url = ../dropbox-feedstock
+	branch = master
