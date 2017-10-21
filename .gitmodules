@@ -1649,3 +1649,7 @@
 	path = isodate-feedstock
 	url = ../isodate-feedstock
 	branch = master
+[submodule "pytimeparse-feedstock"]
+	path = pytimeparse-feedstock
+	url = ../pytimeparse-feedstock
+	branch = master
