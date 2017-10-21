@@ -1661,3 +1661,7 @@
 	path = agate-feedstock
 	url = ../agate-feedstock
 	branch = master
+[submodule "agate-sql-feedstock"]
+	path = agate-sql-feedstock
+	url = ../agate-sql-feedstock
+	branch = master
