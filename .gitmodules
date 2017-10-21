@@ -1645,3 +1645,7 @@
 	path = leather-feedstock
 	url = ../leather-feedstock
 	branch = master
+[submodule "isodate-feedstock"]
+	path = isodate-feedstock
+	url = ../isodate-feedstock
+	branch = master
