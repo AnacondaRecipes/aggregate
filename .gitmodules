@@ -1641,3 +1641,7 @@
 	path = scons-feedstock
 	url = ../scons-feedstock
 	branch = master
+[submodule "leather-feedstock"]
+	path = leather-feedstock
+	url = ../leather-feedstock
+	branch = master
