@@ -1677,3 +1677,7 @@
 	path = agate-dbf-feedstock
 	url = ../agate-dbf-feedstock
 	branch = master
+[submodule "csvkit-feedstock"]
+	path = csvkit-feedstock
+	url = ../csvkit-feedstock
+	branch = master
