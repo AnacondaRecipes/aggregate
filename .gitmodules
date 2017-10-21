@@ -1669,3 +1669,7 @@
 	path = agate-excel-feedstock
 	url = ../agate-excel-feedstock
 	branch = master
+[submodule "dbfread-feedstock"]
+	path = dbfread-feedstock
+	url = ../dbfread-feedstock
+	branch = master
