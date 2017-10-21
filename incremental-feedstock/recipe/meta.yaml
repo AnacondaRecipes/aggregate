@@ -1,0 +1,44 @@
+{% set name = "incremental" %}
+{% set version = "17.5.0" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "7b751696aaf36eebfab537e458929e194460051ccad279c72b755a167eebd4b3" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ file_ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  {{ hash_type }}: {{ hash_value }}
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+
+test:
+  imports:
+    - incremental
+    - incremental.tests
+
+about:
+  home: https://twistedmatrix.com
+  license: MIT License
+  license_family: MIT
+  license_file: LICENSE
+  summary: A library that versions your Python projects
+  doc_url: https://pypi.python.org/pypi/incremental
+  dev_url: https://github.com/twisted/incremental
+  doc_source_url: https://github.com/twisted/incremental/blob/master/README.rst
+
+extra:
+  recipe-maintainers:
+    - nehaljwani
