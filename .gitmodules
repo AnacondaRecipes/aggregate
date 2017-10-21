@@ -1673,3 +1673,7 @@
 	path = dbfread-feedstock
 	url = ../dbfread-feedstock
 	branch = master
+[submodule "agate-dbf-feedstock"]
+	path = agate-dbf-feedstock
+	url = ../agate-dbf-feedstock
+	branch = master
