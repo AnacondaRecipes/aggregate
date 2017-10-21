@@ -1633,3 +1633,7 @@
 	path = mercurial-feedstock
 	url = ../mercurial-feedstock
 	branch = master
+[submodule "ftfy-feedstock"]
+	path = ftfy-feedstock
+	url = ../ftfy-feedstock
+	branch = master
