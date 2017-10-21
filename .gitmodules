@@ -1657,3 +1657,7 @@
 	path = python-slugify-feedstock
 	url = ../python-slugify-feedstock
 	branch = master
+[submodule "agate-feedstock"]
+	path = agate-feedstock
+	url = ../agate-feedstock
+	branch = master
