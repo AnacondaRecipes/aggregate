@@ -1685,3 +1685,7 @@
 	path = dropbox-feedstock
 	url = ../dropbox-feedstock
 	branch = master
+[submodule "keyring-feedstock"]
+	path = keyring-feedstock
+	url = ../keyring-feedstock
+	branch = master
