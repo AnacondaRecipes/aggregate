@@ -1,0 +1,56 @@
+{% set name = "cornice" %}
+{% set version = "2.4.0" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "2760018b0419175e79317783082bd356d01f943e7dcd31cb8fe78e72d168c308" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ file_ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  {{ hash_type }}: {{ hash_value }}
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - pyramid
+    - simplejson
+  run:
+    - python
+    - colander
+    - pyramid
+    - webob
+    - venusian
+    - simplejson
+
+test:
+  imports:
+    - cornice
+    - cornice.validators
+
+about:
+  home: http://cornice.readthedocs.org/
+  license: MPL 2.0
+  license_family: Other
+  license_file: LICENSE
+  summary: build and document Web Services with Pyramid
+  description: |
+    Cornice provides helpers to build & document REST-ish Web Services with
+    Pyramid, with decent default behaviors. It takes care of following the
+    HTTP specification in an automated way where possible.
+  doc_url: http://cornice.readthedocs.org
+  doc_source_url: https://github.com/Cornices/cornice/blob/master/docs/source/index.rst
+  dev_url: https://github.com/mozilla-services/cornice
+
+
+extra:
+  recipe-maintainers:
+    - nehaljwani
