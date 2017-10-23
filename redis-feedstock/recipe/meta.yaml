@@ -1,0 +1,34 @@
+package:
+  name: redis
+  version: 4.0.2
+
+source:
+  fn: redis-4.0.2.tar.gz
+  url: http://download.redis.io/releases/redis-4.0.2.tar.gz
+  sha256: b1a0915dbc91b979d06df1977fe594c3fa9b189f1f3d38743a2948c9f7634813
+
+build:
+  skip: True  # [win]
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+
+test:
+  commands:
+    - redis-cli --version
+    - redis-server --version
+
+about:
+  home: http://redis.io/download/
+  license: 3-clause BSD
+  license_family: BSD
+  license_file: COPYING
+  summary: Advanced key-value cache and store
+  description: |
+    Redis is an in-memory data structure store,used as database, cache and message broker.
+    It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries,
+    bitmaps, hyperloglogs and geospatial indexes with radius queries.
+  doc_url: http://redis.io/documentation
+  doc_source_url: https://github.com/antirez/redis/graphs/contributors
+  dev_url: https://github.com/antirez/redis
