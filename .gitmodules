@@ -1697,3 +1697,19 @@
 	path = unzip-feedstock
 	url = ../unzip-feedstock
 	branch = master
+[submodule "gensim-feedstock"]
+	path = gensim-feedstock
+	url = ../gensim-feedstock
+	branch = master
+[submodule "pyemd-feedstock"]
+	path = pyemd-feedstock
+	url = ../pyemd-feedstock
+	branch = master
+[submodule "testfixtures-feedstock"]
+	path = testfixtures-feedstock
+	url = ../testfixtures-feedstock
+	branch = master
+[submodule "morfessor-feedstock"]
+	path = morfessor-feedstock
+	url = ../morfessor-feedstock
+	branch = master
