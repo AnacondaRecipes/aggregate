@@ -1713,3 +1713,7 @@
 	path = morfessor-feedstock
 	url = ../morfessor-feedstock
 	branch = master
+[submodule "murmurhash-feedstock"]
+	path = murmurhash-feedstock
+	url = ../murmurhash-feedstock
+	branch = master
