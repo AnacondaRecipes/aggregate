@@ -1717,3 +1717,7 @@
 	path = murmurhash-feedstock
 	url = ../murmurhash-feedstock
 	branch = master
+[submodule "cymem-feedstock"]
+	path = cymem-feedstock
+	url = ../cymem-feedstock
+	branch = master
