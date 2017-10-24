@@ -1689,3 +1689,11 @@
 	path = keyring-feedstock
 	url = ../keyring-feedstock
 	branch = master
+[submodule "zip-feedstock"]
+	path = zip-feedstock
+	url = ../zip-feedstock
+	branch = master
+[submodule "unzip-feedstock"]
+	path = unzip-feedstock
+	url = ../unzip-feedstock
+	branch = master
