@@ -1732,4 +1732,7 @@
 [submodule "redis-py-feedstock"]
 	path = redis-py-feedstock
 	url = ../redis-py-feedstock
+[submodule "keras-feedstock"]
+	path = keras-feedstock
+	url = ../keras-feedstock
 	branch = master
