@@ -1729,3 +1729,7 @@
 	path = openjdk-feedstock
 	url = ../openjdk-feedstock
 	branch = master
+[submodule "redis-py-feedstock"]
+	path = redis-py-feedstock
+	url = ../redis-py-feedstock
+	branch = master
