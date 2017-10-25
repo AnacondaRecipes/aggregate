@@ -1736,3 +1736,7 @@
 	path = keras-feedstock
 	url = ../keras-feedstock
 	branch = master
+[submodule "faker-feedstock"]
+	path = faker-feedstock
+	url = ../faker-feedstock
+	branch = master
