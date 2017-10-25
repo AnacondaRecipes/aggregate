@@ -1740,3 +1740,7 @@
 	path = faker-feedstock
 	url = ../faker-feedstock
 	branch = master
+[submodule "factory_boy-feedstock"]
+	path = factory_boy-feedstock
+	url = ../factory_boy-feedstock
+	branch = master
