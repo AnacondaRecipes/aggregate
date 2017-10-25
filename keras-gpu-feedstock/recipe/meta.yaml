@@ -32,17 +32,18 @@ requirements:
     - numpy >=1.9.1
     - tensorflow-gpu
 
-test:
-  imports:
-    - keras
-    - keras.backend
-    - keras.datasets
-    - keras.engine
-    - keras.layers
-    - keras.legacy
-    - keras.preprocessing
-    - keras.utils
-    - keras.wrappers
+# keras-gpu cannot be tested on non-GPU systems
+#test:
+#  imports:
+#    - keras
+#    - keras.backend
+#    - keras.datasets
+#    - keras.engine
+#    - keras.layers
+#    - keras.legacy
+#    - keras.preprocessing
+#    - keras.utils
+#    - keras.wrappers
 
 
 about:
