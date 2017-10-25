@@ -1,0 +1,65 @@
+{% set name = "Keras" %}
+{% set version = "2.0.8" %}
+
+package:
+  name: keras-gpu
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 899dc6aaed366f20100b9f80cf1093ea5b43eecc74afd1dc63a4e48dfa776ab9
+
+build:
+  number: 0
+  # Tensorflow is not available on all platforms, skip those where it is not
+  skip: True  # [win32 or linux32]
+  skip: True  # [win64 and py27]
+  script: python setup.py install --single-version-externally-managed --record record.txt
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+    - h5py
+    - six >=1.9.0
+    - scipy >=0.14
+    - pyyaml
+    - numpy >=1.9.1
+    - tensorflow-gpu
+
+test:
+  imports:
+    - keras
+    - keras.backend
+    - keras.datasets
+    - keras.engine
+    - keras.layers
+    - keras.legacy
+    - keras.preprocessing
+    - keras.utils
+    - keras.wrappers
+
+
+about:
+  home: https://github.com/fchollet/keras
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Deep Learning Library for Theano and TensorFlow
+  description: |
+    Keras is a minimalist, highly modular neural networks library
+    written in Python and capable on running on top of either
+    TensorFlow or Theano. It was developed with a focus on enabling
+    fast experimentation. Being able to go from idea to result with
+    the least possible delay is key to doing good research.
+  doc_url: http://keras.io
+  dev_url: https://github.com/fchollet/keras
+
+extra:
+  recipe-maintainers:
+    - ericdill
+    - mariusvniekerk
+    - croth1
