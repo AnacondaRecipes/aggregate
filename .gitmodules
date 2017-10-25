@@ -1721,3 +1721,7 @@
 	path = cymem-feedstock
 	url = ../cymem-feedstock
 	branch = master
+[submodule "preshed-feedstock"]
+	path = preshed-feedstock
+	url = ../preshed-feedstock
+	branch = master
