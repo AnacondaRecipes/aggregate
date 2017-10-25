@@ -1744,3 +1744,7 @@
 	path = factory_boy-feedstock
 	url = ../factory_boy-feedstock
 	branch = master
+[submodule "jsoncpp-feedstock"]
+	path = jsoncpp-feedstock
+	url = ../jsoncpp-feedstock
+	branch = master
