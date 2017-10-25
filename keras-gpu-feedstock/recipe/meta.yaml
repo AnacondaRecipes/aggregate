@@ -12,8 +12,10 @@ source:
 
 build:
   number: 0
-  # Tensorflow is not available on all platforms, skip those where it is not
-  skip: True  # [win32 or linux32]
+  # tensorflow-gpu is not available on all platforms, skip those where it is not
+  skip: True  # [win32]
+  skip: True  # [linux32]
+  skip: True  # [osx]
   skip: True  # [win64 and py27]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
