@@ -1852,3 +1852,7 @@
 	path = openblas-feedstock
 	url = ../openblas-feedstock
 	branch = master
+[submodule "intel_repack-feedstock"]
+	path = intel_repack-feedstock
+	url = ../intel_repack-feedstock
+	branch = master
