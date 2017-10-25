@@ -1725,3 +1725,7 @@
 	path = preshed-feedstock
 	url = ../preshed-feedstock
 	branch = master
+[submodule "openjdk-feedstock"]
+	path = openjdk-feedstock
+	url = ../openjdk-feedstock
+	branch = master
