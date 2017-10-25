@@ -1752,3 +1752,7 @@
 	path = pyreadline-feedstock
 	url = ../pyreadline-feedstock/
 	branch = master
+[submodule "pytest-mock-feedstock"]
+	path = pytest-mock-feedstock
+	url = ../pytest-mock-feedstock/
+	branch = master
