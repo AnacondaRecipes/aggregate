@@ -1,0 +1,47 @@
+{% set name = "snakeviz" %}
+{% set version = "0.4.2" %}
+{% set file_ext = "zip" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "adc95ec5eb0a04bc2aa8325e8a713b9aa82ccb30425f9efe0e4d7479e2fa3bcb" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ file_ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  {{ hash_type }}: {{ hash_value }}
+
+build:
+  number: 0
+  entry_points:
+    - snakeviz = snakeviz.cli:main
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - tornado >=2.0
+  run:
+    - python
+    - tornado >=2.0
+
+test:
+  imports:
+    - snakeviz
+  commands:
+    - snakeviz --help
+
+about:
+  home: https://jiffyclub.github.io/snakeviz/
+  license: BSD
+  license_file: LICENSE.txt
+  summary: Web-based viewer for Python profiler output
+  description: |
+    SnakeViz is a browser based graphical viewer for the output of Python's
+    cProfile module.
+  doc_url: http://jiffyclub.github.io/snakeviz/
+  doc_source_url: https://github.com/jiffyclub/snakeviz/tree/master/docs/docs
+  dev_url: https://github.com/jiffyclub/snakeviz
