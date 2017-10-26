@@ -1760,3 +1760,7 @@
 	path = cssselect-feedstock
 	url = ../cssselect-feedstock
 	branch = master
+[submodule "supervisor-feedstock"]
+	path = supervisor-feedstock
+	url = ../supervisor-feedstock
+	branch = master
