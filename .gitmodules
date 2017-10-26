@@ -1764,3 +1764,7 @@
 	path = supervisor-feedstock
 	url = ../supervisor-feedstock
 	branch = master
+[submodule "dbf-feedstock"]
+	path = dbf-feedstock
+	url = ../dbf-feedstock
+	branch = master
