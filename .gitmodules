@@ -1756,3 +1756,7 @@
 	path = pytest-mock-feedstock
 	url = ../pytest-mock-feedstock/
 	branch = master
+[submodule "cssselect-feedstock"]
+	path = cssselect-feedstock
+	url = ../cssselect-feedstock/
+	branch = master
