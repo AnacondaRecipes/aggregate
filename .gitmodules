@@ -1768,3 +1768,7 @@
 	path = dbf-feedstock
 	url = ../dbf-feedstock
 	branch = master
+[submodule "scikit-rf-feedstock"]
+	path = scikit-rf-feedstock
+	url = ../scikit-rf-feedstock
+	branch = master
