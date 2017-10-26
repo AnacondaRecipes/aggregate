@@ -1750,13 +1750,13 @@
 	branch = master
 [submodule "pyreadline-feedstock"]
 	path = pyreadline-feedstock
-	url = ../pyreadline-feedstock/
+	url = ../pyreadline-feedstock
 	branch = master
 [submodule "pytest-mock-feedstock"]
 	path = pytest-mock-feedstock
-	url = ../pytest-mock-feedstock/
+	url = ../pytest-mock-feedstock
 	branch = master
 [submodule "cssselect-feedstock"]
 	path = cssselect-feedstock
-	url = ../cssselect-feedstock/
+	url = ../cssselect-feedstock
 	branch = master
