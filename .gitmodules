@@ -1788,3 +1788,7 @@
 	path = backports.weakref-feedstock
 	url = ../backports.weakref-feedstock
 	branch = master
+[submodule "jsondate-feedstock"]
+	path = jsondate-feedstock
+	url = ../jsondate-feedstock
+	branch = master
