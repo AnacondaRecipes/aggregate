@@ -1776,3 +1776,7 @@
 	path = atom-feedstock
 	url = ../atom-feedstock
 	branch = master
+[submodule "pyamg-feedstock"]
+	path = pyamg-feedstock
+	url = ../pyamg-feedstock
+	branch = master
