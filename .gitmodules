@@ -1784,3 +1784,7 @@
 	path = virtualenv-feedstock
 	url = ../virtualenv-feedstock
 	branch = master
+[submodule "backports.weakref-feedstock"]
+	path = backports.weakref-feedstock
+	url = ../backports.weakref-feedstock
+	branch = master
