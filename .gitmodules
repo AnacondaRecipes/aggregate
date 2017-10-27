@@ -1780,3 +1780,7 @@
 	path = pyamg-feedstock
 	url = ../pyamg-feedstock
 	branch = master
+[submodule "virtualenv-feedstock"]
+	path = virtualenv-feedstock
+	url = ../virtualenv-feedstock
+	branch = master
