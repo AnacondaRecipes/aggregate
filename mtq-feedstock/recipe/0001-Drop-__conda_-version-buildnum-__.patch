@@ -1,0 +1,36 @@
+From bfb019542590e7abdeea9d7c91210e398275d1ad Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Fri, 27 Oct 2017 01:19:43 -0500
+Subject: [PATCH] Drop __conda_{version, buildnum}__
+
+---
+ make_version.py | 13 -------------
+ 1 file changed, 13 deletions(-)
+
+diff --git a/make_version.py b/make_version.py
+index 1ecae81..bd28494 100644
+--- a/make_version.py
++++ b/make_version.py
+@@ -13,19 +13,6 @@ def main():
+         else:
+             fd.write('__version__ = "%s.post%s"\n' % (version, build))
+         fd.write('__commit__ = "%s"\n' % (commit))
+-    SRC_DIR = os.environ.get('SRC_DIR', '.')
+-
+-    conda_version_path = os.path.join(SRC_DIR, '__conda_version__.txt')
+-    print("Writing %s" % conda_version_path)
+-    with open(conda_version_path, 'w') as conda_version:
+-        conda_version.write(version)
+-
+-    conda_buildnum_path = os.path.join(SRC_DIR, '__conda_buildnum__.txt')
+-    print("Writing %s" % conda_buildnum_path)
+-
+-    with open(conda_buildnum_path, 'w') as conda_buildnum:
+-        conda_buildnum.write(build)
+-
+ 
+ if __name__ == '__main__':
+     main()
+-- 
+2.14.1
+
