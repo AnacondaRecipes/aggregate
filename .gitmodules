@@ -1772,3 +1772,7 @@
 	path = scikit-rf-feedstock
 	url = ../scikit-rf-feedstock
 	branch = master
+[submodule "atom-feedstock"]
+	path = atom-feedstock
+	url = ../atom-feedstock
+	branch = master
