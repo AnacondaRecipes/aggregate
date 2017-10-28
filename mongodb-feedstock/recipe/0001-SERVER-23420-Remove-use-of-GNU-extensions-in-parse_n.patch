@@ -1,0 +1,30 @@
+From 7d1993edfd6ef4c8c7f7b05f574b9f6994bf4899 Mon Sep 17 00:00:00 2001
+From: Mark Benvenuto <mark.benvenuto@mongodb.com>
+Date: Tue, 27 Dec 2016 13:03:52 -0500
+Subject: [PATCH 1/4] SERVER-23420 Remove use of GNU extensions in
+ parse_number_test.cpp
+
+---
+ src/mongo/base/parse_number_test.cpp | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/mongo/base/parse_number_test.cpp b/src/mongo/base/parse_number_test.cpp
+index 0ed768a7dd..76b1018af2 100644
+--- a/src/mongo/base/parse_number_test.cpp
++++ b/src/mongo/base/parse_number_test.cpp
+@@ -290,9 +290,9 @@ TEST(Double, TestParsingNormal) {
+     // not parseable by the Windows SDK libc or the Solaris libc in the mode we build.
+     // See SERVER-14131.
+ 
+-    ASSERT_PARSES(double, "0xff", 0xff);
+-    ASSERT_PARSES(double, "-0xff", -0xff);
+-    ASSERT_PARSES(double, "0xabcab.defdefP-10", 0xabcab.defdefP-10);
++    ASSERT_PARSES(double, "0xff", 255);
++    ASSERT_PARSES(double, "-0xff", -255);
++    ASSERT_PARSES(double, "0xabcab.defdefP-10", 687.16784283419838);
+ #endif
+ }
+ 
+-- 
+2.14.1
+

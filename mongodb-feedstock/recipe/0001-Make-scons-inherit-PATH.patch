@@ -1,0 +1,25 @@
+From 7113f6b1754d7f4514495ae48fc6e6ac83638805 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sat, 28 Oct 2017 13:48:35 -0500
+Subject: [PATCH 1/2] Make scons inherit PATH
+
+This is required so that the toolchain is picked up correctly
+---
+ SConstruct | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/SConstruct b/SConstruct
+index 13149ab..98ac1f4 100644
+--- a/SConstruct
++++ b/SConstruct
+@@ -895,6 +895,7 @@ envDict = dict(BUILD_ROOT=buildDir,
+                )
+ 
+ env = Environment(variables=env_vars, **envDict)
++env.Append( ENV = {'PATH': os.environ['PATH'] } )
+ del envDict
+ 
+ env.AddMethod(env_os_is_wrapper, 'TargetOSIs')
+-- 
+1.9.5 (Apple Git-50.3)
+

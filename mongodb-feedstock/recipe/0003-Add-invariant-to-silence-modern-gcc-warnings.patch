@@ -1,0 +1,32 @@
+From ba28d57a9a663dba7f8b5265a13aa0b3688c857d Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sat, 28 Oct 2017 09:23:13 -0500
+Subject: [PATCH 3/4] Add invariant to silence modern gcc warnings
+
+https://jira.mongodb.org/browse/SERVER-29335?jql=text%20~%20%22GCC%207%22
+
+Compiling build/opt/mongo/util/time_support.o
+src/mongo/util/time_support.cpp: In function 'void mongo::{anonymous}::_dateToCtimeString(mongo::Date_t, mongo::{anonymous}::DateStringBuffer*)':
+src/mongo/util/time_support.cpp:196:6: error: '__builtin___snprintf_chk' output may be truncated before the last format character [-Werror=format-truncation=]
+ void _dateToCtimeString(Date_t date, DateStringBuffer* result) {
+            ^~~~~~~~~~~~~~~~~
+---
+ src/mongo/util/time_support.cpp | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/src/mongo/util/time_support.cpp b/src/mongo/util/time_support.cpp
+index 22c943b081..782ee65576 100644
+--- a/src/mongo/util/time_support.cpp
++++ b/src/mongo/util/time_support.cpp
+@@ -194,6 +194,8 @@ void _dateToISOString(Date_t date, bool local, DateStringBuffer* result) {
+ }
+ 
+ void _dateToCtimeString(Date_t date, DateStringBuffer* result) {
++    // https://jira.mongodb.org/browse/SERVER-29335
++    invariant(date.isFormattable());
+     static const size_t ctimeSubstrLen = 19;
+     static const size_t millisSubstrLen = 4;
+     time_t t = date.toTimeT();
+-- 
+2.14.1
+
