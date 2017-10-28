@@ -1808,3 +1808,7 @@
 	path = serverfiles-feedstock
 	url = ../serverfiles-feedstock
 	branch = master
+[submodule "keyrings.alt-feedstock"]
+	path = keyrings.alt-feedstock
+	url = ../keyrings.alt-feedstock
+	branch = master
