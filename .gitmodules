@@ -1804,3 +1804,7 @@
 	path = bcolz-feedstock
 	url = ../bcolz-feedstock
 	branch = master
+[submodule "serverfiles-feedstock"]
+	path = serverfiles-feedstock
+	url = ../serverfiles-feedstock
+	branch = master
