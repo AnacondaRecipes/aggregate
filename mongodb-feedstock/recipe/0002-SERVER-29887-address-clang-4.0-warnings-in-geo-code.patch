@@ -1,0 +1,66 @@
+From f461c6ae18b6d873741b2687a400615ecd76e364 Mon Sep 17 00:00:00 2001
+From: Mathias Stearn <mathias@10gen.com>
+Date: Tue, 25 Jul 2017 09:05:13 -0400
+Subject: [PATCH 2/2] SERVER-29887 address clang-4.0 warnings in geo code
+
+---
+ SConstruct                             | 6 ++++++
+ src/mongo/db/exec/geo_near.cpp         | 2 +-
+ src/mongo/db/geo/r2_region_coverer.cpp | 6 ++----
+ 3 files changed, 9 insertions(+), 5 deletions(-)
+
+diff --git a/SConstruct b/SConstruct
+index 98ac1f4..39c02b8 100644
+--- a/SConstruct
++++ b/SConstruct
+@@ -1917,6 +1917,12 @@ def doConfigure(myenv):
+         # is a problem at least for the S2 headers.
+         AddToCXXFLAGSIfSupported(myenv, "-Wno-undefined-var-template")
+ 
++        # This warning was added in clang-4.0, but it warns about code that is required on some
++        # platforms. Since the warning just states that 'explicit instantiation of [a template] that
++        # occurs after an explicit specialization has no effect', it is harmless on platforms where
++        # it isn't required
++        AddToCXXFLAGSIfSupported(myenv, "-Wno-instantiation-after-specialization")
++
+         # Check if we can set "-Wnon-virtual-dtor" when "-Werror" is set. The only time we can't set it is on
+         # clang 3.4, where a class with virtual function(s) and a non-virtual destructor throws a warning when
+         # it shouldn't.
+diff --git a/src/mongo/db/exec/geo_near.cpp b/src/mongo/db/exec/geo_near.cpp
+index 2acb29c..c24c245 100644
+--- a/src/mongo/db/exec/geo_near.cpp
++++ b/src/mongo/db/exec/geo_near.cpp
+@@ -285,7 +285,7 @@ public:
+         // Since appendVertexNeighbors(level, output) requires level < hash.getBits(),
+         // we have to start to find documents at most GeoHash::kMaxBits - 1. Thus the finest
+         // search area is 16 * finest cell area at GeoHash::kMaxBits.
+-        _currentLevel = std::max(0u, hashParams.bits - 1u);
++        _currentLevel = std::max(0, hashParams.bits - 1);
+     }
+ 
+     PlanStage::StageState work(OperationContext* txn,
+diff --git a/src/mongo/db/geo/r2_region_coverer.cpp b/src/mongo/db/geo/r2_region_coverer.cpp
+index 47ba252..4d7791d 100644
+--- a/src/mongo/db/geo/r2_region_coverer.cpp
++++ b/src/mongo/db/geo/r2_region_coverer.cpp
+@@ -68,15 +68,13 @@ R2RegionCoverer::R2RegionCoverer(GeoHashConverter* hashConverter)
+ R2RegionCoverer::~R2RegionCoverer() {}
+ 
+ void R2RegionCoverer::setMinLevel(unsigned int minLevel) {
+-    dassert(minLevel >= 0);
+     dassert(minLevel <= GeoHash::kMaxBits);
+-    _minLevel = max(0u, min(GeoHash::kMaxBits, minLevel));
++    _minLevel = min(GeoHash::kMaxBits, minLevel);
+ }
+ 
+ void R2RegionCoverer::setMaxLevel(unsigned int maxLevel) {
+-    dassert(maxLevel >= 0);
+     dassert(maxLevel <= GeoHash::kMaxBits);
+-    _maxLevel = max(0u, min(GeoHash::kMaxBits, maxLevel));
++    _maxLevel = min(GeoHash::kMaxBits, maxLevel);
+ }
+ 
+ void R2RegionCoverer::setMaxCells(int maxCells) {
+-- 
+1.9.5 (Apple Git-50.3)
+

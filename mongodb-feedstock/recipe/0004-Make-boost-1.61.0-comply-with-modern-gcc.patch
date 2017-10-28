@@ -1,0 +1,32 @@
+From afa729a6ed0c89c02dc6ee299d48de7bab287815 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sat, 28 Oct 2017 09:27:37 -0500
+Subject: [PATCH 4/4] Make boost 1.61.0 comply with modern gcc
+
+https://github.com/cpp-netlib/uri/issues/85#issuecomment-248758140
+
+src/boost/function/function_template.hpp:572:11: error: placement new constructing an object of type 'network_boost::algorithm::detail::token_finderF<network::detail::normalize_path_segments(network::string_view)::<lambda(char)> >' and size '8' in a region of type 'char' and size '1' [-Werror=placement-new=]
+src/boost/function/function_base.hpp:308:13: error: placement new constructing an object of type 'network_boost::detail::function::functor_manager_common<network_boost::algorithm::detail::token_finderF<network::detail::normalize_path_segments(network::string_view)::<lambda(char)> > >::functor_type {aka network_boost::algorithm::detail::token_finderF<network::detail::normalize_path_segments(network::string_view)::<lambda(char)> >}' and size '8' in a region of type 'char' and size '1' [-Werror=placement-new=]
+---
+ src/third_party/boost-1.60.0/boost/function/function_base.hpp | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/src/third_party/boost-1.60.0/boost/function/function_base.hpp b/src/third_party/boost-1.60.0/boost/function/function_base.hpp
+index 35c1995ece..0dcabc19e4 100644
+--- a/src/third_party/boost-1.60.0/boost/function/function_base.hpp
++++ b/src/third_party/boost-1.60.0/boost/function/function_base.hpp
+@@ -121,7 +121,10 @@ namespace boost {
+         } obj_ref;
+ 
+         // To relax aliasing constraints
+-        mutable char data;
++        // mutable char data;
++        // https://github.com/cpp-netlib/uri/pull/100/files
++        mutable char data[sizeof(bound_memfunc_ptr_t)];
++
+       };
+ 
+       /**
+-- 
+2.14.1
+

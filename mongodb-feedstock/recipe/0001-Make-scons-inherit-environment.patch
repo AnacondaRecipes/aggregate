@@ -1,0 +1,26 @@
+From 91d6583d623821a355a6b8a8a228aef0a6a33aa3 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sat, 28 Oct 2017 14:47:33 -0500
+Subject: [PATCH] Make scons inherit environment
+
+---
+ SConstruct | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/SConstruct b/SConstruct
+index aa4a0b5..23c3fca 100644
+--- a/SConstruct
++++ b/SConstruct
+@@ -889,8 +889,8 @@ envDict = dict(BUILD_ROOT=buildDir,
+                CONFIG_HEADER_DEFINES={},
+                LIBDEPS_TAG_EXPANSIONS=[],
+                )
+-
+ env = Environment(variables=env_vars, **envDict)
++env.Append ( ENV =  os.environ )
+ del envDict
+ 
+ env.AddMethod(env_os_is_wrapper, 'TargetOSIs')
+-- 
+2.7.0.windows.2
+
