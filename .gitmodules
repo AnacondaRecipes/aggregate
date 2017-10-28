@@ -1800,3 +1800,7 @@
 	path = streamz-feedstock
 	url = ../streamz-feedstock
 	branch = master
+[submodule "bcolz-feedstock"]
+	path = bcolz-feedstock
+	url = ../bcolz-feedstock
+	branch = master
