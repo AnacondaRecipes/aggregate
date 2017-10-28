@@ -1796,3 +1796,7 @@
 	path = pysmi-feedstock
 	url = ../pysmi-feedstock
 	branch = master
+[submodule "streamz-feedstock"]
+	path = streamz-feedstock
+	url = ../streamz-feedstock
+	branch = master
