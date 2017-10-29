@@ -1812,3 +1812,7 @@
 	path = keyrings.alt-feedstock
 	url = ../keyrings.alt-feedstock
 	branch = master
+[submodule "msgpack-numpy-feedstock"]
+	path = msgpack-numpy-feedstock
+	url = ../msgpack-numpy-feedstock
+	branch = master
