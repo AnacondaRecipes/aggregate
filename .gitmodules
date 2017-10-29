@@ -1816,3 +1816,7 @@
 	path = msgpack-numpy-feedstock
 	url = ../msgpack-numpy-feedstock
 	branch = master
+[submodule "commonmark-feedstock"]
+	path = commonmark-feedstock
+	url = ../commonmark-feedstock
+	branch = master
