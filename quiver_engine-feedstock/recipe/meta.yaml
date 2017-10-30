@@ -1,0 +1,49 @@
+{% set name = "quiver_engine" %}
+{% set version = "0.1.4.1.4" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/q/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: bd10db78ac528f8a3f19f6af35474f3edc6ce00e286ceac7d8c280ecd1591349
+
+build:
+  number: 0
+  # Tensorflow is not available on all platforms, skip those where it is not
+  skip: True  # [win32 or linux32]
+  skip: True  # [win64 and py27]
+  # Does not currently support Windows but likely could with a minimal patch
+  # https://github.com/keplr-io/quiver/issues/32
+  skip: True  # [win]
+  script: python setup.py install --single-version-externally-managed --record record.txt
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+    - keras
+    - tensorflow
+    - flask
+    - flask-cors
+    - gevent
+    - numpy
+    - pillow
+
+test:
+  imports:
+    - quiver_engine
+
+about:
+  home: https://keplr-io.github.io/quiver/
+  license: MIT
+  license_family: MIT
+  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
+  summary: Interactive per-layer visualization for convents in keras
+  description: Interactive convnet features visualization for Keras
+  doc_url: https://keplr-io.github.io/quiver/
+  dev_url: https://github.com/keplr-io/quiver
