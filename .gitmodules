@@ -1824,3 +1824,7 @@
 	path = thinc-feedstock
 	url = ../thinc-feedstock
 	branch = master
+[submodule "wsgiproxy2-feedstock"]
+	path = wsgiproxy2-feedstock
+	url = ../wsgiproxy2-feedstock
+	branch = master
