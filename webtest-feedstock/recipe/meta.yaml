@@ -1,0 +1,55 @@
+{% set name = "WebTest" %}
+{% set version = "2.0.29" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "dbbccc15ac2465066c95dc3a7de0d30cde3791e886ccbd7e91d5d2a2580c922d" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ file_ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  {{ hash_type }}: {{ hash_value }}
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+    - beautifulsoup4
+    - waitress >=0.8.5
+    - webob >=1.2
+    - six
+
+test:
+  source_files:
+    - tests
+  imports:
+    - webtest
+  requires:
+    - coverage
+    - mock
+    - nose
+    - pastedeploy
+    - pyquery
+    - wsgiproxy2
+  commands:
+    - nosetests
+
+about:
+  home: http://webtest.pythonpaste.org/
+  license: MIT
+  summary: helper to test WSGI applications
+  description: |
+    Webtest tests any application that has a WSGI interface, including an application written
+    in a framework that supports WSGI.
+  doc_url: http://webtest.pythonpaste.org/
+  doc_source_url: https://github.com/Pylons/webtest/blob/master/docs/index.rst
+  dev_url: https://github.com/Pylons/webtest
