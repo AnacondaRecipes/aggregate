@@ -1828,3 +1828,7 @@
 	path = wsgiproxy2-feedstock
 	url = ../wsgiproxy2-feedstock
 	branch = master
+[submodule "spacy-feedstock"]
+	path = spacy-feedstock
+	url = ../spacy-feedstock
+	branch = master
