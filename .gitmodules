@@ -1820,3 +1820,7 @@
 	path = commonmark-feedstock
 	url = ../commonmark-feedstock
 	branch = master
+[submodule "thinc-feedstock"]
+	path = thinc-feedstock
+	url = ../thinc-feedstock
+	branch = master
