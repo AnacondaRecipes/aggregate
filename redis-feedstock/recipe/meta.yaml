@@ -1,18 +1,21 @@
 package:
   name: redis
-  version: 4.0.2
+  version: 4.0.2    # [unix]
+  version: 3.2.100  # [win]
 
 source:
   fn: redis-4.0.2.tar.gz
-  url: http://download.redis.io/releases/redis-4.0.2.tar.gz
-  sha256: b1a0915dbc91b979d06df1977fe594c3fa9b189f1f3d38743a2948c9f7634813
+  url: http://download.redis.io/releases/redis-4.0.2.tar.gz                  # [unix]
+  sha256: b1a0915dbc91b979d06df1977fe594c3fa9b189f1f3d38743a2948c9f7634813   # [unix]
+  url: https://github.com/MicrosoftArchive/redis/archive/win-3.2.100.tar.gz  # [win]
+  sha256: 979ea1da9a1537ecf0f748e64e7b0829e659cbd07a6b2cb34da0cc3e63103c6e   # [win]
 
 build:
-  skip: True  # [win]
+  msvc_compiler: 14.0  # [win]
 
 requirements:
   build:
-    - {{ compiler('c') }}
+    - {{ compiler('c') }}  # [unix]
 
 test:
   commands:
