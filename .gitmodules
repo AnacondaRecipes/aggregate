@@ -1832,3 +1832,7 @@
 	path = spacy-feedstock
 	url = ../spacy-feedstock
 	branch = master
+[submodule "httpretty-feedstock"]
+	path = httpretty-feedstock
+	url = ../httpretty-feedstock
+	branch = master
