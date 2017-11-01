@@ -1,7 +1,7 @@
 ctng_nature:
   - shared
 ctng_sample:
-  - powerpc64le-centos7-linux-gnu
+  - powerpc64le-unknown-linux-gnu
 ctng_cpu_arch:
   - powerpc
 ctng_libc:
