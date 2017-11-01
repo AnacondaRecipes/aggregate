@@ -1,0 +1,24 @@
+package:
+  name: gettext-libs-cos6-x86_64
+  version: 0.17
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/gettext-libs-0.17-18.el6.x86_64.rpm
+    sha256: 0a9bff445060a0d71cb4009a5071b7d9f84f65bb930f0cba34f16b739b2a3a61
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/gettext-0.17-18.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: gettext-libs-cos6-x86_64
+    noarch: generic
+
+    about:
+      home: http://www.gnu.org/software/gettext/
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) Libraries for gettext"
+      description: |
+        This package contains libraries used internationalization support.

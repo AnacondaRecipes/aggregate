@@ -1,0 +1,35 @@
+package:
+  name: gettext-devel-cos6-x86_64
+  version: 0.17
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/gettext-devel-0.17-18.el6.x86_64.rpm
+    sha256: a337862b20183915724182820304f69cace05f68300e878ca821b433af4eb66b
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/gettext-0.17-18.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - gettext-cos6-x86_64 ==0.17
+    - gettext-libs-cos6-x86_64 ==0.17
+
+
+outputs:
+  - name: gettext-devel-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - gettext-cos6-x86_64 ==0.17
+        - gettext-libs-cos6-x86_64 ==0.17
+
+    about:
+      home: http://www.gnu.org/software/gettext/
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) Development files for gettext"
+      description: |
+        This package contains all development related files necessary for developing
+        or compiling applications/libraries that needs internationalization
+        capability. You also need this package if you want to add gettext support for
+        your project.
