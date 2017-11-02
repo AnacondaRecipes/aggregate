@@ -95,11 +95,11 @@ _tc_activation \
   "LDFLAGS,${LDFLAGS:-@LDFLAGS@}" \
   "LDFLAGS_CC,${LDFLAGS_CC:-@LDFLAGS_CC@}" \
   "DEBUG_CFLAGS,${DEBUG_CFLAGS:-@DEBUG_CFLAGS@}" \
-  "_PYTHON_SYSCONFIGDATA_NAME,${_PYTHON_SYSCONFIGDATA_NAME:-@_PYTHON_SYSCONFIGDATA_NAME@}"
+  "_PYTHON_SYSCONFIGDATA_NAME,${_PYTHON_SYSCONFIGDATA_NAME:-@_PYTHON_SYSCONFIGDATA_NAME@}" \
+  "CONDA_BUILD_SYSROOT,${CONDA_BUILD_SYSROOT:-$(xcrun --show-sdk-path)}
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"
-#exit 1
 else
   env > /tmp/new-env-$$.txt
   echo "INFO: $(_get_sourced_filename) made the following environmental changes:"
