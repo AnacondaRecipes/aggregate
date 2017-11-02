@@ -96,7 +96,7 @@ _tc_activation \
   "LDFLAGS_CC,${LDFLAGS_CC:-@LDFLAGS_CC@}" \
   "DEBUG_CFLAGS,${DEBUG_CFLAGS:-@DEBUG_CFLAGS@}" \
   "_PYTHON_SYSCONFIGDATA_NAME,${_PYTHON_SYSCONFIGDATA_NAME:-@_PYTHON_SYSCONFIGDATA_NAME@}" \
-  "CONDA_BUILD_SYSROOT,${CONDA_BUILD_SYSROOT:-$(xcrun --show-sdk-path)}
+  "CONDA_BUILD_SYSROOT,${CONDA_BUILD_SYSROOT:-$(xcrun --show-sdk-path)}"
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"
