@@ -1836,3 +1836,7 @@
 	path = httpretty-feedstock
 	url = ../httpretty-feedstock
 	branch = master
+[submodule "libarchive-feedstock"]
+	path = libarchive-feedstock
+	url = ../libarchive-feedstock
+	branch = master
