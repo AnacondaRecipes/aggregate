@@ -6,7 +6,7 @@ source:
   path: .
 
 build:
-  number: 7
+  number: 8
 
 source:
   path: .
@@ -61,6 +61,8 @@ outputs:
     run_exports:
       strong:
         - libgfortran-ng {{ ctng_gcc }}
+        # Because transitive run_exports do not work:
+        - libgcc-ng {{ ctng_gcc }}
     about:
       summary: GNU Fortran Compiler (activation scripts)
       home: https://gcc.gnu.org/
