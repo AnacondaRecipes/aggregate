@@ -1840,3 +1840,7 @@
 	path = libarchive-feedstock
 	url = ../libarchive-feedstock
 	branch = master
+[submodule "python-libarchive-c-feedstock"]
+	path = python-libarchive-c-feedstock
+	url = ../python-libarchive-c-feedstock
+	branch = master
