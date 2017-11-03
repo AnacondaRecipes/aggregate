@@ -1848,3 +1848,7 @@
 	path = lz4-c-feedstock
 	url = ../lz4-c-feedstock
 	branch = master
+[submodule "openblas-feedstock"]
+	path = openblas-feedstock
+	url = ../openblas-feedstock
+	branch = master

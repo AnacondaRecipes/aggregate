@@ -4,7 +4,7 @@ pin_run_as_build:
 
 blas_impl:
   - mkl                        # [x86 or x86_64]
-  # - openblas
+  - openblas
 boost:
   - 1.65
 bzip2:
@@ -95,7 +95,7 @@ numpy:
   - 1.9   # [unix]
   - 1.11   # [win]
 openblas:
-  - 0.2.19
+  - 0.2.20
 openjpeg:
   - 2.2
 openssl:
