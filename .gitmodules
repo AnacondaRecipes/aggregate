@@ -1844,3 +1844,7 @@
 	path = python-libarchive-c-feedstock
 	url = ../python-libarchive-c-feedstock
 	branch = master
+[submodule "lz4-c-feedstock"]
+	path = lz4-c-feedstock
+	url = ../lz4-c-feedstock
+	branch = master
