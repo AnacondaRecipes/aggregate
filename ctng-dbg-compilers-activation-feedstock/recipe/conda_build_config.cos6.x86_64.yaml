@@ -45,7 +45,7 @@ FINAL_CXXFLAGS:
 FINAL_FFLAGS:
   - -fopenmp -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -pipe
 FINAL_LDFLAGS:
-  - -Wl,-O2,--sort-common,--as-needed,-z,relro,-z,now
+  - -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now
 FINAL_DEBUG_CPPFLAGS:
   - -D_DEBUG -D_FORTIFY_SOURCE=2 -Og
 FINAL_DEBUG_CFLAGS:
