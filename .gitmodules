@@ -1884,11 +1884,11 @@
 	path = munch-feedstock
 	url = ../munch-feedstock
 	branch = master
-[submodule "shapely-feedstock"]
-	path = shapely-feedstock
-	url = ../shapely-feedstock
-	branch = master
 [submodule "datashader-feedstock"]
 	path = datashader-feedstock
 	url = ../datashader-feedstock
+	branch = master
+[submodule "mysql-feedstock"]
+	path = mysql-feedstock
+	url = ../mysql-feedstock
 	branch = master
