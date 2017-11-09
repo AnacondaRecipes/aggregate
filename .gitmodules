@@ -1856,3 +1856,39 @@
 	path = intel_repack-feedstock
 	url = ../intel_repack-feedstock
 	branch = master
+[submodule "rasterio-feedstock"]
+	path = rasterio-feedstock
+	url = ../rasterio-feedstock
+	branch = master
+[submodule "fiona-feedstock"]
+	path = fiona-feedstock
+	url = ../fiona-feedstock
+	branch = master
+[submodule "cligj-feedstock"]
+	path = cligj-feedstock
+	url = ../cligj-feedstock
+	branch = master
+[submodule "numpy-1.12-feedstock"]
+	path = numpy-1.12-feedstock
+	url = ../numpy-feedstock
+	branch = numpy112
+[submodule "click-plugins-feedstock"]
+	path = click-plugins-feedstock
+	url = ../click-plugins-feedstock
+	branch = master
+[submodule "affine-feedstock"]
+	path = affine-feedstock
+	url = ../affine-feedstock
+	branch = master
+[submodule "munch-feedstock"]
+	path = munch-feedstock
+	url = ../munch-feedstock
+	branch = master
+[submodule "shapely-feedstock"]
+	path = shapely-feedstock
+	url = ../shapely-feedstock
+	branch = master
+[submodule "datashader-feedstock"]
+	path = datashader-feedstock
+	url = ../datashader-feedstock
+	branch = master
