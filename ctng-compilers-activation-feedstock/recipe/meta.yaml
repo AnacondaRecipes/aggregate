@@ -6,7 +6,7 @@ source:
   path: .
 
 build:
-  number: 9
+  number: 10
 
 source:
   path: .
@@ -21,12 +21,12 @@ outputs:
     script: install-gcc.sh
     requirements:
       run:
-        - gcc_impl_{{ ctng_target_platform }} {{ ctng_gcc }}
+        - gcc_impl_{{ ctng_target_platform }} {{ ctng_gcc }}.*
         # for activation of binutils env vars
         - {{ pin_subpackage('binutils_' ~ ctng_target_platform, exact=True) }}
     run_exports:
       strong:
-        - libgcc-ng {{ ctng_gcc }}
+        - libgcc-ng {{ ctng_gcc }}.*
     about:
       summary: GNU C Compiler (activation scripts)
       home: https://gcc.gnu.org/
@@ -36,14 +36,14 @@ outputs:
     script: install-g++.sh
     requirements:
       run:
-        - gxx_impl_{{ ctng_target_platform }} {{ ctng_gcc }}
+        - gxx_impl_{{ ctng_target_platform }} {{ ctng_gcc }}.*
         # for activation of gcc env vars
         - {{ pin_subpackage('gcc_' ~ ctng_target_platform, exact=True) }}
         # for activation of binutils env vars
         - {{ pin_subpackage('binutils_' ~ ctng_target_platform, exact=True) }}
     run_exports:
       strong:
-        - libstdcxx-ng {{ ctng_gcc }}
+        - libstdcxx-ng {{ ctng_gcc }}.*
     about:
       summary: GNU C++ Compiler (activation scripts)
       home: https://gcc.gnu.org/
@@ -53,14 +53,14 @@ outputs:
     script: install-gfortran.sh
     requirements:
       run:
-        - gfortran_impl_{{ ctng_target_platform }} {{ ctng_gcc }}
+        - gfortran_impl_{{ ctng_target_platform }} {{ ctng_gcc }}.*
         # for activation of gcc env vars
         - {{ pin_subpackage('gcc_' ~ ctng_target_platform, exact=True) }}
         # for activation of binutils env vars
         - {{ pin_subpackage('binutils_' ~ ctng_target_platform, exact=True) }}
     run_exports:
       strong:
-        - libgfortran-ng {{ ctng_gcc }}
+        - libgfortran-ng {{ ctng_gcc }}.*
         # Because transitive run_exports do not work:
         - libgcc-ng {{ ctng_gcc }}
     about:
@@ -72,7 +72,7 @@ outputs:
     script: install-binutils.sh
     requirements:
       run:
-        - binutils_impl_{{ ctng_target_platform }} {{ ctng_binutils }}
+        - binutils_impl_{{ ctng_target_platform }} {{ ctng_binutils }}.*
     about:
       summary: The GNU Binutils are a collection of binary tools (activation scripts)
       home: https://www.gnu.org/software/binutils/
