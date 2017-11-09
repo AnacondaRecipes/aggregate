@@ -20,3 +20,9 @@ else
     [[ -d bzip2-bin ]]   && cp -rf bzip2-bin/*   ${PREFIX}/cmake-bin/
   fi
 fi
+
+
+mkdir -p $PREFIX/etc/conda/activate.d
+echo export PATH=\$PATH:${PREFIX}/cmake-bin/bin > $PREFIX/etc/conda/activate.d/cmake-bin.sh
+mkdir -p $PREFIX/etc/conda/deactivate.d
+echo export PATH=\${PATH%:${PREFIX}/cmake-bin/bin} > $PREFIX/etc/conda/deactivate.d/cmake-bin.sh
