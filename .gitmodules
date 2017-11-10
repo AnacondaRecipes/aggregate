@@ -1900,3 +1900,11 @@
 	path = libedit-feedstock
 	url = ../libedit-feedstock
 	branch = master
+[submodule "llvmdev-feedstock"]
+	path = llvmdev-feedstock
+	url = ../llvmdev-feedstock
+	branch = master
+[submodule "clangdev-feedstock"]
+	path = clangdev-feedstock
+	url = ../clangdev-feedstock
+	branch = master
