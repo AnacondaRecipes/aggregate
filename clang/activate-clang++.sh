@@ -82,12 +82,20 @@ function _tc_activation() {
   return 0
 }
 
+# When people are using conda-build, assume that adding rpath during build, and pointing at
+#    the host env's includes and libs is helpful default behavior
+if [ $CONDA_BUILD -eq 1 ]; then
+    CXXFLAGS_USED="@CXXFLAGS@ -I$PREFIX/include"
+else
+    CXXFLAGS_USED="@CXXFLAGS@"
+fi
+
 env > /tmp/old-env-$$.txt
 _tc_activation \
   activate host @CHOST@ @CHOST@- \
   clang++ \
   "CXX,${CXX:-@CHOST@-clang++}" \
-  "CXXFLAGS,${CXXFLAGS:-@CXXFLAGS@}" \
+  "CXXFLAGS,${CXXFLAGS:-${CXXFLAGS_USED}}" \
   "DEBUG_CXXFLAGS,${DEBUG_CXXFLAGS:-@DEBUG_CXXFLAGS@}"
 
 if [ $? -ne 0 ]; then
