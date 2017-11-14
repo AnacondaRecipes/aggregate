@@ -49,6 +49,8 @@ giflib:
   - 5.1
 glib:
   - 2.53
+gmp:
+  - 6.1
 harfbuzz:
   - 1.5
 hdf4:
