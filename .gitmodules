@@ -1908,3 +1908,11 @@
 	path = clangdev-feedstock
 	url = ../clangdev-feedstock
 	branch = master
+[submodule "mpich-feedstock"]
+	path = mpich-feedstock
+	url = ../mpich-feedstock
+	branch = master
+[submodule "openmpi-feedstock"]
+	path = openmpi-feedstock
+	url = ../openmpi-feedstock
+	branch = master
