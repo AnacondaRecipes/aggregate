@@ -1920,3 +1920,7 @@
 	path = opentracing_instrumentation-feedstock
 	url = ../opentracing_instrumentation-feedstock
 	branch = master
+[submodule "mypy-feedstock"]
+	path = mypy-feedstock
+	url = ../mypy-feedstock
+	branch = master
