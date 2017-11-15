@@ -1,0 +1,23 @@
+From 37e112f45616a88d7904552fd2a7d9142d9f9a0b Mon Sep 17 00:00:00 2001
+From: Tobias Jungel <tobias.jungel@gmail.com>
+Date: Sun, 15 Oct 2017 01:23:07 +0200
+Subject: [PATCH] fix implicit fallthrough in gcc 7
+
+fixes #3700
+---
+ src/google/protobuf/stubs/port.h | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/src/google/protobuf/stubs/port.h b/src/google/protobuf/stubs/port.h
+index 19ac6f1c00..cecefdcb3b 100644
+--- a/src/google/protobuf/stubs/port.h
++++ b/src/google/protobuf/stubs/port.h
+@@ -243,6 +243,8 @@ static const uint64 kuint64max = GOOGLE_ULONGLONG(0xFFFFFFFFFFFFFFFF);
+      __has_cpp_attribute(clang::fallthrough)
+ #  define GOOGLE_FALLTHROUGH_INTENDED [[clang::fallthrough]]
+ # endif
++#elif defined(__GNUC__) && __GNUC__ > 6
++# define GOOGLE_FALLTHROUGH_INTENDED [[gnu::fallthrough]]
+ #endif
+ 
+ #ifndef GOOGLE_FALLTHROUGH_INTENDED
