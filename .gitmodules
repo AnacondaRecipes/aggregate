@@ -1916,3 +1916,7 @@
 	path = openmpi-feedstock
 	url = ../openmpi-feedstock
 	branch = master
+[submodule "opentracing_instrumentation-feedstock"]
+	path = opentracing_instrumentation-feedstock
+	url = ../opentracing_instrumentation-feedstock
+	branch = master
