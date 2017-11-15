@@ -1924,3 +1924,7 @@
 	path = mypy-feedstock
 	url = ../mypy-feedstock
 	branch = master
+[submodule "protobuf-feedstock"]
+	path = protobuf-feedstock
+	url = ../protobuf-feedstock
+	branch = master
