@@ -1,0 +1,40 @@
+{% set version = "4.5.0" %}
+{% set ver_maj_min = "4.5" %}
+
+package:
+  name: qtcreator
+  version: {{ version }}
+
+# source:
+#   url: http://download.qt.io/official_releases/qtcreator/{{ ver_maj_min }}/{{ version }}/qt-creator-opensource-src-{{ version }}.tar.gz
+source:
+  git_url: https://code.qt.io/qt-creator/qt-creator.git
+#  git_tag: v{{ version }}
+  git_tag: origin/4.5
+  patches:
+    - 4.5/0001-macOS-Disable-app-bundle.patch
+    # - 4.2/0001-macOS-Disable-app-bundle.patch
+    # - 4.2/0002-Use-systemEnvironment-for-Start-and-Debug-External-A.patch
+    # - 4.0/0001-Disable-app-build.patch                                               # [osx]
+    # - 4.0/0002-Use-systemEnvironment-For-Start-and-Debug-External-Application.patch
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - python
+    - jom            # [win]
+  host:
+    - qt
+  run:
+    - vs2015_runtime # [win]
+
+  # These are only necessary for the qtcreator executable itself.
+  # It would be better if were possible to filter the application
+  # of these using wildcards or regular expressions.
+  rpaths:
+    - lib
+    - lib/qtcreator
+  # This is necessary for calls to xcrun to make `.icns` files.
+  script_env:        # [osx]
+    - TMPDIR         # [osx]
