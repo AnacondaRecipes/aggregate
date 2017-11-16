@@ -84,34 +84,39 @@ function _tc_activation() {
 
 # When people are using conda-build, assume that adding rpath during build, and pointing at
 #    the host env's includes and libs is helpful default behavior
-if [ $CONDA_BUILD -eq 1 ]; then
-    CFLAGS_USED="@CFLAGS@ -I$PREFIX/include"
-    LDFLAGS_USED="@LDFLAGS@ -Wl,-rpath,$PREFIX/lib -L$PREFIX/lib"
+if [ ${CONDA_BUILD} -eq 1 ]; then
+  CFLAGS_USED="@CFLAGS@ -I${PREFIX}/include"
+  DEBUG_CFLAGS_USED="@DEBUG_CFLAGS@ -I${PREFIX}/include"
+  LDFLAGS_USED="@LDFLAGS@ -Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib"
 else
-    CFLAGS_USED="@CFLAGS@"
-    LDFLAGS_USED="@LDFLAGS@"
+  CFLAGS_USED="@CFLAGS@"
+  DEBUG_CFLAGS_USED="@DEBUG_CFLAGS@"
+  LDFLAGS_USED="@LDFLAGS@"
 fi
 
-# remove any previous existing backups
 if [ -f /tmp/old-env-$$.txt ]; then
-    rm -f /tmp/old-env-$$.txt || true
+  rm -f /tmp/old-env-$$.txt || true
 fi
-
 env > /tmp/old-env-$$.txt
+
 _tc_activation \
   activate host @CHOST@ @CHOST@- \
   cc cpp gcc gcc-ar gcc-nm gcc-ranlib \
   "CPPFLAGS,${CPPFLAGS:-@CPPFLAGS@}" \
   "CFLAGS,${CFLAGS:-${CFLAGS_USED}}" \
   "LDFLAGS,${LDFLAGS:-${LDFLAGS_USED}}" \
-  "DEBUG_CFLAGS,${DEBUG_CFLAGS:-@DEBUG_CFLAGS@}" \
+  "DEBUG_CFLAGS,${DEBUG_CFLAGS:-${DEBUG_CFLAGS_USED}}" \
   "_PYTHON_SYSCONFIGDATA_NAME,${_PYTHON_SYSCONFIGDATA_NAME:-@_PYTHON_SYSCONFIGDATA_NAME@}"
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"
 #exit 1
 else
+  if [ -f /tmp/new-env-$$.txt ]; then
+    rm -f /tmp/new-env-$$.txt || true
+  fi
   env > /tmp/new-env-$$.txt
+
   echo "INFO: $(_get_sourced_filename) made the following environmental changes:"
   diff -U 0 -rN /tmp/old-env-$$.txt /tmp/new-env-$$.txt | tail -n +4 | grep "^-.*\|^+.*" | grep -v "CONDA_BACKUP_" | sort
 fi
