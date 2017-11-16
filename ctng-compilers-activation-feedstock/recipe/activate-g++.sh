@@ -90,6 +90,11 @@ else
     CXXFLAGS_USED="@CXXFLAGS@"
 fi
 
+# remove any previous existing backups
+if [ -f /tmp/old-env-$$.txt ]; then
+    rm -f /tmp/old-env-$$.txt || true
+fi
+
 env > /tmp/old-env-$$.txt
 _tc_activation \
   activate host @CHOST@ @CHOST@- \
