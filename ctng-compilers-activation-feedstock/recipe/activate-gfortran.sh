@@ -82,6 +82,16 @@ function _tc_activation() {
   return 0
 }
 
+# When people are using conda-build, assume that adding rpath during build, and pointing at
+#    the host env's includes and libs is helpful default behavior
+if [ "${CONDA_BUILD} = "1" ]; then
+  FFLAGS_USED="@FFLAGS@ -I${PREFIX}/include"
+  FORTRANFLAGS_USED="@FORTRANFLAGS@ -I${PREFIX}/include"
+else
+  FFLAGS_USED="@FFLAGS@"
+  FORTRANFLAGS_USED="@FORTRANFLAGS@"
+fi
+
 if [ -f /tmp/old-env-$$.txt ]; then
   rm -f /tmp/old-env-$$.txt || true
 fi
@@ -90,9 +100,9 @@ env > /tmp/old-env-$$.txt
 _tc_activation \
   activate host @CHOST@ @CHOST@- \
   gfortran f95 \
-  "FFLAGS,${FFLAGS:-@FFLAGS@}" \
-  "FORTRANFLAGS,${FORTRANFLAGS:-@FFLAGS@}" \
-  "DEBUG_FFLAGS,${DEBUG_FFLAGS:-@FFLAGS@ @DEBUG_FFLAGS@}"
+  "FFLAGS,${FFLAGS:-${FFLAGS_USED}}" \
+  "FORTRANFLAGS,${FORTRANFLAGS:-${FORTRANFLAGS_USED}}" \
+  "DEBUG_FFLAGS,${DEBUG_FFLAGS:-${FFLAGS_USED} @DEBUG_FFLAGS@}"
 
 # extra one - doesn't quite match the naming scheme that works for everything else.
 export FC="$GFORTRAN"

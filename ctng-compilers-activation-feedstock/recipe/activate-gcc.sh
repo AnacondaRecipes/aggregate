@@ -84,7 +84,7 @@ function _tc_activation() {
 
 # When people are using conda-build, assume that adding rpath during build, and pointing at
 #    the host env's includes and libs is helpful default behavior
-if [ ${CONDA_BUILD} -eq 1 ]; then
+if [ "${CONDA_BUILD}" = "1" ]; then
   CFLAGS_USED="@CFLAGS@ -I${PREFIX}/include"
   DEBUG_CFLAGS_USED="@DEBUG_CFLAGS@ -I${PREFIX}/include"
   LDFLAGS_USED="@LDFLAGS@ -Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib"
