@@ -52,6 +52,7 @@ requirements:
     - qbs >=1.9.1
   run:
     - qt
+    - clangdev
     - cmake
     - vs2015_runtime                     # [win]
     - qbs >=1.9.1
