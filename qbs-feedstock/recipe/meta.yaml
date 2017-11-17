@@ -7,6 +7,11 @@ package:
 source:
   git_url: git://code.qt.io/qt-labs/qbs.git
   git_tag: v{{ version }}
+  patches:
+    - 0001-add-generator-header-installs.patch
+    - 0002-Use-.dll.a-instead-of-.a-for-mingw-import-libraries.patch
+    - 0003-setup-toolchains-Pretend-msys-is-mingw.patch
+    - 0004-add-many-files-to-installed-headers.patch
 
 requirements:
   build:
