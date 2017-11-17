@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# We will have cloned the qbs submodule. Remove it.
+rm -rf qbs || true
+
 if [[ ! -f ${PREFIX}/bin/llvm-config ]]; then
   echo "You need to add a host dep of llvmdev for the Clang Code Model"
   exit 1
