@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [[ ! -f ${PREFIX}/bin/llvm-config ]]; then
+  echo "You need to add a host dep of llvmdev for the Clang Code Model"
+  exit 1
+fi
+
 # Avoid Xcode
 if [[ ${HOST} =~ .*darwin.* ]]; then
   mkdir xcode
@@ -16,6 +21,7 @@ echo DEFINES += IDE_VERSION_DESCRIPTION=\\\"Anaconda Build ${PKG_BUILDNUM}\\\" >
 qmake -r qtcreator.pro                   \
       QTC_PREFIX=/                       \
       QBS_INSTALL_PREFIX=/               \
+      LLVM_INSTALL_DIR=${PREFIX}         \
       QMAKE_CC=${CC}                     \
       QMAKE_CXX=${CXX}                   \
       QMAKE_LINK=${CXX}                  \
@@ -23,4 +29,3 @@ qmake -r qtcreator.pro                   \
       QMAKE_CXXFLAGS="${CXXFLAGS}"       \
       QMAKE_LFLAGS_RELEASE="${LDFLAGS}"
 make -j${CPU_COUNT}
-make install INSTALL_ROOT=${PREFIX}

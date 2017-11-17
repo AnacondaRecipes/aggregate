@@ -5,11 +5,8 @@ package:
   name: qtcreator
   version: {{ version }}
 
-# source:
-#   url: http://download.qt.io/official_releases/qtcreator/{{ ver_maj_min }}/{{ version }}/qt-creator-opensource-src-{{ version }}.tar.gz
 source:
   git_url: https://code.qt.io/qt-creator/qt-creator.git
-#  git_tag: v{{ version }}
   git_tag: origin/4.5
   patches:
     - 4.5/0001-macOS-Disable-app-bundle.patch
@@ -46,7 +43,10 @@ requirements:
     - {{ cdt('libxfixes') }}             # [linux]
     - {{ cdt('libxxf86vm') }}            # [linux]
     - jom                                # [win]
+    - make                               # [not win]
   host:
+    - llvmdev
+    - clangdev
     - qt
     - libxcb                             # [linux]
   run:
@@ -62,3 +62,24 @@ requirements:
   # This is necessary for calls to xcrun to make `.icns` files.
   script_env:        # [osx]
     - TMPDIR         # [osx]
+
+outputs:
+
+  - name: qbs
+    script: install-qbs.sh
+    requirements:
+      build:
+       - make                               # [not win]
+      host:
+       - qt
+
+  - name: qtcreator
+    script: install-qtcreator.sh
+    requirements:
+      build:
+        - make                               # [not win]
+      host:
+        - {{ pin_subpackage('qbs', exact=True) }}
+        - qt
+      run:
+        - {{ pin_subpackage('qbs', exact=True) }}
