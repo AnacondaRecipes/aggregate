@@ -1928,3 +1928,7 @@
 	path = protobuf-feedstock
 	url = ../protobuf-feedstock
 	branch = master
+[submodule "ibis-framework-feedstock"]
+	path = ibis-framework-feedstock
+	url = ../ibis-framework-feedstock
+	branch = master
