@@ -19,8 +19,8 @@ fi
 # find any way to prevent it getting mangled (-DAnaconda -DBuild ...)
 echo DEFINES += IDE_VERSION_DESCRIPTION=\\\"Anaconda Build ${PKG_BUILDNUM}\\\" >> qtcreator.pro
 qmake -r qtcreator.pro                   \
-      QTC_PREFIX=/                       \
-      QBS_INSTALL_PREFIX=/               \
+      QTC_PREFIX=${PREFIX}               \
+      QBS_INSTALL_PREFIX=${PREFIX}       \
       LLVM_INSTALL_DIR=${PREFIX}         \
       QMAKE_CC=${CC}                     \
       QMAKE_CXX=${CXX}                   \
@@ -29,3 +29,4 @@ qmake -r qtcreator.pro                   \
       QMAKE_CXXFLAGS="${CXXFLAGS}"       \
       QMAKE_LFLAGS_RELEASE="${LDFLAGS}"
 make -j${CPU_COUNT}
+make install
