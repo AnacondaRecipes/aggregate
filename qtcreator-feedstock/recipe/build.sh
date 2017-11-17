@@ -1,12 +1,17 @@
 #!/bin/bash
 
 # We will have cloned the qbs submodule. Remove it.
-rm -rf qbs || true
+rm -rf src/shared/qbs || true
 
 if [[ ! -f ${PREFIX}/bin/llvm-config ]]; then
   echo "You need to add a host dep of llvmdev for the Clang Code Model"
   exit 1
 fi
+
+# Avoid:
+# ${PREFIX}/include/sqlite3.h:654:8: error: redefinition of 'struct sqlite3_file'
+#  struct sqlite3_file
+rm -f ${PREFIX}/include/sqlite3.h
 
 # Avoid Xcode
 if [[ ${HOST} =~ .*darwin.* ]]; then
