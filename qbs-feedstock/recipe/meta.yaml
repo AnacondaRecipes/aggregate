@@ -46,4 +46,5 @@ requirements:
   host:
     - qt
   run:
+    - qt
     - vs2015_runtime                     # [win]

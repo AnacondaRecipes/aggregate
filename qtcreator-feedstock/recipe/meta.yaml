@@ -51,6 +51,7 @@ requirements:
     - libxcb                             # [linux]
     - qbs >=1.9.1
   run:
+    - qt
     - cmake
     - vs2015_runtime                     # [win]
     - qbs >=1.9.1
