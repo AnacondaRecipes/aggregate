@@ -45,13 +45,15 @@ requirements:
     - jom                                # [win]
     - make                               # [not win]
   host:
+    - qt
     - llvmdev
     - clangdev
-    - qt
     - libxcb                             # [linux]
+    - qbs >=1.9.1
   run:
     - cmake
     - vs2015_runtime                     # [win]
+    - qbs >=1.9.1
 
   # These are only necessary for the qtcreator executable itself.
   # It would be better if were possible to filter the application
@@ -62,24 +64,3 @@ requirements:
   # This is necessary for calls to xcrun to make `.icns` files.
   script_env:        # [osx]
     - TMPDIR         # [osx]
-
-outputs:
-
-  - name: qbs
-    script: install-qbs.sh
-    requirements:
-      build:
-       - make                               # [not win]
-      host:
-       - qt
-
-  - name: qtcreator
-    script: install-qtcreator.sh
-    requirements:
-      build:
-        - make                               # [not win]
-      host:
-        - {{ pin_subpackage('qbs', exact=True) }}
-        - qt
-      run:
-        - {{ pin_subpackage('qbs', exact=True) }}
