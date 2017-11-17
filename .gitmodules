@@ -1932,3 +1932,7 @@
 	path = ibis-framework-feedstock
 	url = ../ibis-framework-feedstock
 	branch = master
+[submodule "pystan-feedstock"]
+	path = pystan-feedstock
+	url = ../pystan-feedstock
+	branch = master
