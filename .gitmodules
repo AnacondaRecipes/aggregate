@@ -1936,10 +1936,6 @@
 	path = pystan-feedstock
 	url = ../pystan-feedstock
 	branch = master
-[submodule "--force"]
-	path = --force
-	url = ../pynacl-feedstock
-	branch = master
 [submodule "pynacl-feedstock"]
 	path = pynacl-feedstock
 	url = ../pynacl-feedstock
