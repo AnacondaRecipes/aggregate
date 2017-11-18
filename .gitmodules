@@ -1936,3 +1936,27 @@
 	path = pystan-feedstock
 	url = ../pystan-feedstock
 	branch = master
+[submodule "--force"]
+	path = --force
+	url = ../pynacl-feedstock
+	branch = master
+[submodule "pynacl-feedstock"]
+	path = pynacl-feedstock
+	url = ../pynacl-feedstock
+	branch = master
+[submodule "paramiko-feedstock"]
+	path = paramiko-feedstock
+	url = ../paramiko-feedstock
+	branch = master
+[submodule "flaky-feedstock"]
+	path = flaky-feedstock
+	url = ../flaky-feedstock
+	branch = master
+[submodule "execnet-feedstock"]
+	path = execnet-feedstock
+	url = ../execnet-feedstock
+	branch = master
+[submodule "apipkg-feedstock"]
+	path = apipkg-feedstock
+	url = ../apipkg-feedstock
+	branch = master
