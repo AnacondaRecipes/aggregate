@@ -1956,3 +1956,7 @@
 	path = apipkg-feedstock
 	url = ../apipkg-feedstock
 	branch = master
+[submodule "fabric3-feedstock"]
+	path = fabric3-feedstock
+	url = ../fabric3-feedstock
+	branch = master
