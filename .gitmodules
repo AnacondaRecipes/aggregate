@@ -1972,3 +1972,7 @@
 	path = dask-glm-feedstock
 	url = ../dask-glm-feedstock
 	branch = master
+[submodule "dask-ml-feedstock"]
+	path = dask-ml-feedstock
+	url = ../dask-ml-feedstock
+	branch = master
