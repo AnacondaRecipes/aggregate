@@ -1964,3 +1964,7 @@
 	path = mypy_extensions-feedstock
 	url = ../mypy_extensions-feedstock
 	branch = master
+[submodule "dask-searchcv-feedstock"]
+	path = dask-searchcv-feedstock
+	url = ../dask-searchcv-feedstock
+	branch = master
