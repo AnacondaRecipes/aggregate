@@ -1968,3 +1968,7 @@
 	path = dask-searchcv-feedstock
 	url = ../dask-searchcv-feedstock
 	branch = master
+[submodule "dask-glm-feedstock"]
+	path = dask-glm-feedstock
+	url = ../dask-glm-feedstock
+	branch = master
