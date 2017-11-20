@@ -1960,3 +1960,7 @@
 	path = fabric3-feedstock
 	url = ../fabric3-feedstock
 	branch = master
+[submodule "mypy_extensions-feedstock"]
+	path = mypy_extensions-feedstock
+	url = ../mypy_extensions-feedstock
+	branch = master
