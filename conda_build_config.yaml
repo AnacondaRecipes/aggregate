@@ -44,7 +44,7 @@ gstreamer:
 gst_plugins_base:
   - 1.12
 geos:
-  - 3.6.0
+  - 3.6.2
 giflib:
   - 5.1
 glib:
@@ -93,6 +93,8 @@ MACOSX_DEPLOYMENT_TARGET:
   - 10.9
 mkl:
   - 2018
+mpfr:
+  - 3
 # we build for an old version of numpy for forward compatibility
 #    1.11 seems to be the oldest on win that works with scipy 0.19.  Compiler errors otherwise.
 numpy:
