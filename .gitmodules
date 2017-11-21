@@ -1980,3 +1980,7 @@
 	path = xarray-feedstock
 	url = ../xarray-feedstock
 	branch = master
+[submodule "mpir-feedstock"]
+	path = mpir-feedstock
+	url = ../mpir-feedstock
+	branch = master
