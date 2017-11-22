@@ -1988,3 +1988,7 @@
 	path = xorg-util-macros-feedstock
 	url = ../xorg-util-macros-feedstock
 	branch = master
+[submodule "the_silver_searcher-feedstock"]
+	path = the_silver_searcher-feedstock
+	url = ../the_silver_searcher-feedstock
+	branch = master
