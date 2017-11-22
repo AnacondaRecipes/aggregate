@@ -45,13 +45,13 @@ requirements:
     - jom                                # [win]
     - make                               # [not win]
   host:
-    - qt
+    - qt 5.6.*
     - llvmdev
     - clangdev
     - libxcb                             # [linux]
     - qbs >=1.9.1
   run:
-    - qt
+    - qt 5.6.*
     - clangdev
     - cmake
     - vs2015_runtime                     # [win]
