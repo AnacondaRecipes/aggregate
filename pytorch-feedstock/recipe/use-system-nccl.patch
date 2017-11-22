@@ -1,0 +1,25 @@
+From 7054b312e91c478303b1f177b17676e5e17d45a7 Mon Sep 17 00:00:00 2001
+From: Jonathan Helmus <jjhelmus@gmail.com>
+Date: Fri, 28 Apr 2017 10:04:29 -0500
+Subject: [PATCH 2/2] use system nccl
+
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index affb2fb..f24b659 100644
+--- a/setup.py
++++ b/setup.py
+@@ -19,7 +19,7 @@ DEBUG = check_env_flag('DEBUG')
+ WITH_DISTRIBUTED = check_env_flag('WITH_DISTRIBUTED')
+ WITH_DISTRIBUTED_MW = WITH_DISTRIBUTED and check_env_flag('WITH_DISTRIBUTED_MW')
+ WITH_NCCL = WITH_CUDA and platform.system() != 'Darwin'
+-SYSTEM_NCCL = False
++SYSTEM_NCCL = True
+ 
+ ################################################################################
+ # Monkey-patch setuptools to compile in parallel
+-- 
+2.7.4
+

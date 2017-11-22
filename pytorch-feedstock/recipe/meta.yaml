@@ -1,0 +1,59 @@
+{% set version = "0.2.0" %}
+
+package:
+  name: pytorch
+  version: {{ version }}
+
+source:
+  fn: pytorch-{{ version }}.tar.gz
+  url: https://github.com/pytorch/pytorch/archive/v{{ version }}.tar.gz
+  sha256: b76d61aaa8fc18b928ca3c910c398687be08f5661d6615884c4faba3e8742a26
+  patches:
+    - use-system-nccl.patch
+
+build:
+  number: 0
+  string: py{{py}}cuda{{ environ['CUDA_VERSION'] }}cudnn{{ environ['CUDNN_VERSION'] }}_0
+  features:
+    - nomkl  [nomkl]
+  detect_binary_files_with_prefix: False
+
+requirements:
+  build:
+    - python
+    - numpy 1.11*
+    - setuptools
+    - pyyaml
+    - mkl
+    - cffi
+    - magma
+    - cmake
+    - cudatoolkit {{ environ['CUDA_VERSION'] }}*
+    - cudnn {{ environ['CUDNN_VERSION'] }}*
+    - nccl
+
+  run:
+    - python
+    - numpy >=1.11
+    - mkl 2018*
+    - cffi
+    - libgcc
+    - cudatoolkit {{ environ['CUDA_VERSION'] }}*
+    - cudnn {{ environ['CUDNN_VERSION'] }}*
+    - nccl
+
+test:
+  imports:
+    - torch
+  source_files:
+    - test
+  commands:
+    #    - ./test/run_test.sh
+    - conda inspect linkages -p $PREFIX pytorch
+
+about:
+  home: http://pytorch.org/
+  license: BSD 3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: PyTorch is an optimized tensor library for deep learning using GPUs and CPUs.

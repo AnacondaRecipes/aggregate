@@ -1,0 +1,7 @@
+This recipe uses environmental variables to set the CUDA and CuDNN versions
+that the package is built against. To build this recipe call conda-build
+with the appropiate variables set:
+
+  CUDA_VERSION=7.5 CUDNN_VERSION=6.0 conda build --python 2.7 .  
+
+This will create a package named: pytorch-0.1.12-py27cuda7.5cudnn6.0_1.tar.bz2
