@@ -1984,3 +1984,7 @@
 	path = mpir-feedstock
 	url = ../mpir-feedstock
 	branch = master
+[submodule "xorg-util-macros-feedstock"]
+	path = xorg-util-macros-feedstock
+	url = ../xorg-util-macros-feedstock
+	branch = master
