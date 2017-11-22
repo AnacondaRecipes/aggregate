@@ -47,15 +47,16 @@ requirements:
   host:
     - qt 5.6.*
     - llvmdev
-    - clangdev
+    - clangdev 5.0.*
     - libxcb                             # [linux]
     - qbs >=1.9.1
   run:
-    - qt 5.6.*
-    - clangdev
-    - cmake
     - vs2015_runtime                     # [win]
-    - qbs >=1.9.1
+    - qt 5.6.*
+    - clangdev 5.0.*
+    - cmake >=3.9.4
+    - the_silver_searcher >=2.1.0
+    - qbs >=1.10
 
   # These are only necessary for the qtcreator executable itself.
   # It would be better if were possible to filter the application
@@ -66,3 +67,22 @@ requirements:
   # This is necessary for calls to xcrun to make `.icns` files.
   script_env:        # [osx]
     - TMPDIR         # [osx]
+
+about:
+  home: http://blog.qt.io/blog/category/qtcreator/
+  license: LGPL-3.0 with Qt Company GPL Exception 1.0
+  license_file: LICENSE.GPL3-EXCEPT
+  summary: Qt Creator integrated development environment
+  description: |
+    Qt Creator is a cross platform integrated development environment (IDE) to
+    create C++ and QML applications for multiple desktop, embedded and mobile
+    platforms. It comes with a code editor, and is integrated with tools for
+    designing, coding, testing, deploying and maintaining your software
+    throughout its product lifecycle.
+  doc_url: http://doc.qt.io/qtcreator/
+  doc_source_url: https://code.qt.io/cgit/qt-creator/qt-creator.git/tree/doc/src
+  dev_url: https://code.qt.io/cgit/qt-creator/qt-creator.git
+
+extra:
+  recipe-maintainers:
+    - mingwandroid
