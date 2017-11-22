@@ -48,3 +48,23 @@ requirements:
   run:
     - qt
     - vs2015_runtime                     # [win]
+
+about:
+  home: https://wiki.qt.io/Qbs
+  license: LGPL-3.0
+  license_file: LICENSE.LGPLv3
+  summary: Qbs (pronounced Cubes) is a cross-platform build tool
+  description: |
+    Qbs is a tool that helps simplify the build process for developing projects
+    across multiple platforms. Qbs can be used for any software project,
+    regardless of programming language, toolkit, or libraries used.
+    Qbs is an all-in-one tool that generates a build graph from a high-level
+    project description (like qmake or CMake) and additionally undertakes the
+    task of executing the commands in the low-level build graph (like make).
+  doc_url: http://doc.qt.io/qbs/
+  doc_source_url: https://code.qt.io/cgit/qt-labs/qbs.git/tree/doc/qbs.qdoc
+  dev_url: https://code.qt.io/cgit/qt-labs/qbs.git
+
+extra:
+  recipe-maintainers:
+    - mingwandroid
