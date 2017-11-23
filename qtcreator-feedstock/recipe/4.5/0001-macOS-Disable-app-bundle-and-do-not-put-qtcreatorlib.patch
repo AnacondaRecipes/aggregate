@@ -1,7 +1,8 @@
-From ea0acd3b46c894f9c6e7573500b44df64574c052 Mon Sep 17 00:00:00 2001
+From fa5a47101cec95cb613c8eaf77be1cf222ac2a79 Mon Sep 17 00:00:00 2001
 From: Ray Donnelly <mingw.android@gmail.com>
 Date: Thu, 8 Dec 2016 23:25:26 +0000
-Subject: [PATCH] macOS: Disable app bundle
+Subject: [PATCH] macOS: Disable app bundle and do not put 'qtcreatorlibraries'
+ in Frameworks
 
 If ever hope to upstream, this needs to less of a hack
 ---
@@ -12,10 +13,11 @@ If ever hope to upstream, this needs to less of a hack
  src/plugins/qbsprojectmanager/qbsprojectparser.cpp |  2 +-
  src/plugins/qmldesigner/qmldesignerplugin.cpp      |  2 +-
  src/plugins/qtsupport/baseqtversion.cpp            |  6 +++---
- 7 files changed, 18 insertions(+), 14 deletions(-)
+ src/qtcreatorlibrary.pri                           |  6 +++++-
+ 8 files changed, 23 insertions(+), 15 deletions(-)
 
 diff --git a/qtcreator.pri b/qtcreator.pri
-index 03fd4bc..25aaf80 100644
+index 03fd4bc16b..25aaf80d80 100644
 --- a/qtcreator.pri
 +++ b/qtcreator.pri
 @@ -95,8 +95,8 @@ isEmpty(IDE_BUILD_TREE) {
@@ -30,7 +32,7 @@ index 03fd4bc..25aaf80 100644
      # check if IDE_BUILD_TREE is actually an existing Qt Creator.app,
      # for building against a binary package
 diff --git a/qtcreator.pro b/qtcreator.pro
-index f3ba4d7..319e88c 100644
+index f3ba4d7af8..319e88c1da 100644
 --- a/qtcreator.pro
 +++ b/qtcreator.pro
 @@ -45,7 +45,7 @@ exists(src/shared/qbs/qbs.pro) {
@@ -64,7 +66,7 @@ index f3ba4d7..319e88c 100644
      BINDIST_SOURCE = "$(INSTALL_ROOT)$$QTC_PREFIX"
      BINDIST_INSTALLER_SOURCE = "$$BINDIST_SOURCE/*"
 diff --git a/src/app/app.pro b/src/app/app.pro
-index 37a999f..ea2f5c5 100644
+index 37a999fd8d..ea2f5c5954 100644
 --- a/src/app/app.pro
 +++ b/src/app/app.pro
 @@ -26,7 +26,7 @@ win32 {
@@ -82,7 +84,7 @@ index 37a999f..ea2f5c5 100644
  CONFIG += no_batch
 +CONFIG -= app_bundle
 diff --git a/src/app/main.cpp b/src/app/main.cpp
-index fa6e93e..0815b07 100644
+index fa6e93ef8e..0815b07955 100644
 --- a/src/app/main.cpp
 +++ b/src/app/main.cpp
 @@ -205,12 +205,12 @@ static inline QStringList getPluginPaths()
@@ -101,7 +103,7 @@ index fa6e93e..0815b07 100644
                                      Core::Constants::IDE_ID);
      pluginPath += QLatin1String("/plugins/");
 diff --git a/src/plugins/qbsprojectmanager/qbsprojectparser.cpp b/src/plugins/qbsprojectmanager/qbsprojectparser.cpp
-index b742eb0..77de83b 100644
+index b742eb060e..77de83b9a0 100644
 --- a/src/plugins/qbsprojectmanager/qbsprojectparser.cpp
 +++ b/src/plugins/qbsprojectmanager/qbsprojectparser.cpp
 @@ -217,7 +217,7 @@ QString QbsProjectParser::pluginsBaseDirectory() const
@@ -114,7 +116,7 @@ index b742eb0..77de83b 100644
                                 + QLatin1String("/../PlugIns"));
      else
 diff --git a/src/plugins/qmldesigner/qmldesignerplugin.cpp b/src/plugins/qmldesigner/qmldesignerplugin.cpp
-index d8ea45f..f4bccf8 100644
+index d8ea45f124..f4bccf872c 100644
 --- a/src/plugins/qmldesigner/qmldesignerplugin.cpp
 +++ b/src/plugins/qmldesigner/qmldesignerplugin.cpp
 @@ -184,7 +184,7 @@ bool QmlDesignerPlugin::initialize(const QStringList & /*arguments*/, QString *e
@@ -127,7 +129,7 @@ index d8ea45f..f4bccf8 100644
              : QString(QCoreApplication::applicationDirPath() + "/../"
                        + QLatin1String(IDE_LIBRARY_BASENAME) + "/qtcreator/plugins/qmldesigner");
 diff --git a/src/plugins/qtsupport/baseqtversion.cpp b/src/plugins/qtsupport/baseqtversion.cpp
-index beb07aa..79472b7 100644
+index beb07aa1c5..79472b77f9 100644
 --- a/src/plugins/qtsupport/baseqtversion.cpp
 +++ b/src/plugins/qtsupport/baseqtversion.cpp
 @@ -965,20 +965,20 @@ QString BaseQtVersion::findQtBinary(Binaries binary) const
@@ -154,6 +156,26 @@ index beb07aa..79472b7 100644
              possibleCommands << QLatin1String("Linguist.app/Contents/MacOS/Linguist");
          else
              possibleCommands << HostOsInfo::withExecutableSuffix(QLatin1String("linguist"));
+diff --git a/src/qtcreatorlibrary.pri b/src/qtcreatorlibrary.pri
+index a4165a794f..1b13816092 100644
+--- a/src/qtcreatorlibrary.pri
++++ b/src/qtcreatorlibrary.pri
+@@ -12,10 +12,14 @@ win32 {
+ 
+ DESTDIR = $$IDE_LIBRARY_PATH
+ 
+-osx {
++osx_no_thanks {
+     QMAKE_LFLAGS_SONAME = -Wl,-install_name,@rpath/Frameworks/
+     QMAKE_LFLAGS += -compatibility_version $$QTCREATOR_COMPAT_VERSION
+ }
++osx {
++    QMAKE_LFLAGS_SONAME = -Wl,-install_name,@rpath/lib/qtcreator/
++    QMAKE_LFLAGS += -compatibility_version $$QTCREATOR_COMPAT_VERSION
++}
+ include(rpath.pri)
+ 
+ TARGET = $$qtLibraryTargetName($$TARGET)
 -- 
-2.10.1
+2.15.0
 
