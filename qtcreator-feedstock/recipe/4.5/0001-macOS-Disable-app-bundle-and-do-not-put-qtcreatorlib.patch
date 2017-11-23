@@ -170,7 +170,7 @@ index a4165a794f..1b13816092 100644
      QMAKE_LFLAGS += -compatibility_version $$QTCREATOR_COMPAT_VERSION
  }
 +osx {
-+    QMAKE_LFLAGS_SONAME = -Wl,-install_name,@rpath/lib/qtcreator/
++    QMAKE_LFLAGS_SONAME = -Wl,-install_name,@rpath/qtcreator/
 +    QMAKE_LFLAGS += -compatibility_version $$QTCREATOR_COMPAT_VERSION
 +}
  include(rpath.pri)
