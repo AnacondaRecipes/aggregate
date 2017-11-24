@@ -69,6 +69,14 @@ requirements:
   script_env:        # [osx]
     - TMPDIR         # [osx]
 
+app:
+  entry: ${PREFIX}/Library/bin/qtcreator.exe           # [win]
+  entry: ${PREFIX}/bin/qtcreator                       # [linux]
+  entry: open "${PREFIX}/Applications/Qt Creator.app"  # [osx]
+  icon: QtProject-qtcreator.png
+  summary: A cross platform integrated development environment (IDE)
+  type: desk
+
 about:
   home: http://blog.qt.io/blog/category/qtcreator/
   license: LGPL-3.0 with Qt Company GPL Exception 1.0
