@@ -55,6 +55,7 @@ requirements:
     - qt 5.6.*
     - clangdev 5.0.*
     - cmake >=3.9.4
+    - fonts-anaconda                     # [linux]
     - the_silver_searcher >=2.1.0
     - qbs >=1.10
 
