@@ -1,0 +1,14 @@
+{% set version = '181' %}
+
+package:
+  name: intellij-idea
+  version: {{ version }}
+
+source:
+  git_url: git://git.jetbrains.org/idea/community.git
+
+requirements:
+  build:
+    - ant
+  run:
+    - openjdk >=8.0.152
