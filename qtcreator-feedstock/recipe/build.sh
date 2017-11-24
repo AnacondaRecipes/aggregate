@@ -15,7 +15,7 @@ rm -f "${PREFIX}"/include/sqlite3.h
 
 # Avoid Xcode
 if [[ ${HOST} =~ .*darwin.* ]]; then
-  mkdir xcode
+  mkdir -p xcode
   pushd xcode
     cp "${RECIPE_DIR}"/xcrun .
     cp "${RECIPE_DIR}"/xcodebuild .
