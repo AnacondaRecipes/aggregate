@@ -10,5 +10,6 @@ source:
 requirements:
   build:
     - ant
+    - openjdk >=8.0.152
   run:
     - openjdk >=8.0.152
