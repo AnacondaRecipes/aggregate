@@ -6,7 +6,7 @@ source:
   path: .
 
 build:
-  number: 14
+  number: 15
 
 source:
   path: .
@@ -44,6 +44,8 @@ outputs:
     run_exports:
       strong:
         - libstdcxx-ng {{ ctng_gcc }}.*
+        # Because transitive run_exports do not work:
+        - libgcc-ng {{ ctng_gcc }}.*
     about:
       summary: GNU C++ Compiler (activation scripts)
       home: https://gcc.gnu.org/
@@ -62,7 +64,7 @@ outputs:
       strong:
         - libgfortran-ng {{ ctng_gcc }}.*
         # Because transitive run_exports do not work:
-        - libgcc-ng {{ ctng_gcc }}
+        - libgcc-ng {{ ctng_gcc }}.*
     about:
       summary: GNU Fortran Compiler (activation scripts)
       home: https://gcc.gnu.org/
