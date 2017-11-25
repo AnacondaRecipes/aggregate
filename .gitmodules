@@ -1996,3 +1996,7 @@
 	path = swig-feedstock
 	url = ../swig-feedstock
 	branch = master
+[submodule "maven-feedstock"]
+	path = maven-feedstock
+	url = ../maven-feedstock
+	branch = master
