@@ -2000,3 +2000,7 @@
 	path = maven-feedstock
 	url = ../maven-feedstock
 	branch = master
+[submodule "libevent-feedstock"]
+	path = libevent-feedstock
+	url = ../libevent-feedstock
+	branch = master
