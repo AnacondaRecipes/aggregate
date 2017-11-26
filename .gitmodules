@@ -2012,3 +2012,7 @@
 	path = jaraco.classes-feedstock
 	url = ../jaraco.classes-feedstock
 	branch = master
+[submodule "python-engineio-feedstock"]
+	path = python-engineio-feedstock
+	url = ../python-engineio-feedstock
+	branch = master
