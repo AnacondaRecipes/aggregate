@@ -1,8 +1,8 @@
 {% set name = "chainer" %}
-{% set version = "2.1.0" %}
+{% set version = "3.1.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "f122ad04a44872422b9f222990dd13d574cfe3397e9cf4b6e92f832ae3b360cd" %}
+{% set hash_value = "a7007ea14c03bf77f15e891cd0b26ef5494c1d8461c121e49d3e16b1f9db8394" %}
 
 package:
   name: {{ name|lower }}
@@ -23,11 +23,10 @@ requirements:
     - setuptools
   run:
     - python
+    - setuptools
     - filelock
-    - mock
-    - nose
     - numpy >=1.9.0
-    - protobuf >=2.6.0
+    - protobuf >=3.0.0
     - six >=1.9.0
 
 test:
@@ -53,7 +52,6 @@ test:
     - chainer.links
     - chainer.links.activation
     - chainer.links.caffe
-    - chainer.links.caffe.protobuf2
     - chainer.links.caffe.protobuf3
     - chainer.links.connection
     - chainer.links.loss
@@ -74,7 +72,8 @@ about:
   home: https://chainer.org/
   license: MIT License
   license_family: MIT
-  license_file: ''
+  # https://github.com/chainer/chainer/issues/3966
+  # license_file: ''
   summary: A flexible framework of neural networks
   description: |
     Chainer is a Python-based deep learning framework aiming at flexibility.
