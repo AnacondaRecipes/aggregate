@@ -2004,3 +2004,7 @@
 	path = libevent-feedstock
 	url = ../libevent-feedstock
 	branch = master
+[submodule "holoviews-feedstock"]
+	path = holoviews-feedstock
+	url = ../holoviews-feedstock
+	branch = master
