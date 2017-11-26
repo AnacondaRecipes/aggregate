@@ -1,8 +1,8 @@
 {% set name = "cornice" %}
-{% set version = "2.4.0" %}
+{% set version = "3.0.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "2760018b0419175e79317783082bd356d01f943e7dcd31cb8fe78e72d168c308" %}
+{% set hash_value = "7a7e9e91f277eb635599ef72f4887206be983ad5e6c79ac8b1181c8ba8ddf79a" %}
 
 package:
   name: {{ name|lower }}
