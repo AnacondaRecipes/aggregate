@@ -2008,3 +2008,7 @@
 	path = holoviews-feedstock
 	url = ../holoviews-feedstock
 	branch = master
+[submodule "jaraco.classes-feedstock"]
+	path = jaraco.classes-feedstock
+	url = ../jaraco.classes-feedstock
+	branch = master
