@@ -2020,3 +2020,7 @@
 	path = petl-feedstock
 	url = ../petl-feedstock
 	branch = master
+[submodule "glue-core-feedstock"]
+	path = glue-core-feedstock
+	url = ../glue-core-feedstock
+	branch = master
