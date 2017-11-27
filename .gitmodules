@@ -2032,3 +2032,7 @@
 	path = glueviz-feedstock
 	url = ../glueviz-feedstock
 	branch = master
+[submodule "python-blosc-feedstock"]
+	path = python-blosc-feedstock
+	url = ../python-blosc-feedstock
+	branch = master
