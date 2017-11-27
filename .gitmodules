@@ -2016,3 +2016,7 @@
 	path = python-engineio-feedstock
 	url = ../python-engineio-feedstock
 	branch = master
+[submodule "petl-feedstock"]
+	path = petl-feedstock
+	url = ../petl-feedstock
+	branch = master
