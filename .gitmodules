@@ -2024,3 +2024,7 @@
 	path = glue-core-feedstock
 	url = ../glue-core-feedstock
 	branch = master
+[submodule "glue-vispy-viewers-feedstock"]
+	path = glue-vispy-viewers-feedstock
+	url = ../glue-vispy-viewers-feedstock
+	branch = master
