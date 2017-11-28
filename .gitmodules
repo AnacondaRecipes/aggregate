@@ -2036,3 +2036,7 @@
 	path = python-blosc-feedstock
 	url = ../python-blosc-feedstock
 	branch = master
+[submodule "netcdf4-feedstock"]
+	path = netcdf4-feedstock
+	url = ../netcdf4-feedstock
+	branch = master
