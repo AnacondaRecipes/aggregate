@@ -1,8 +1,8 @@
 {% set name = "stripe" %}
-{% set version = "1.68.0" %}
+{% set version = "1.75.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "e383f2945288b4c9fdc01ef52ce5ba20b06c007909edafddb6ebdbd21ea5607a" %}
+{% set hash_value = "3a369c70d59cb1224f00e05e329fdad35683aba819ec8f778dee4dd1f51c660e" %}
 
 package:
   name: {{ name|lower }}
@@ -28,11 +28,8 @@ requirements:
 test:
   imports:
     - stripe
-    - stripe.test
-    - stripe.test.resources
-  requires:
-    - mock
-    - unittest2
+    - stripe.api_resources
+    - stripe.api_resources.abstract
 
 about:
   home: https://github.com/stripe/stripe-python
