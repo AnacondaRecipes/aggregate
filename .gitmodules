@@ -2048,3 +2048,7 @@
 	path = pytest-asyncio-feedstock
 	url = ../pytest-asyncio-feedstock
 	branch = master
+[submodule "progressbar2-feedstock"]
+	path = progressbar2-feedstock
+	url = ../progressbar2-feedstock
+	branch = master
