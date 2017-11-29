@@ -2044,3 +2044,7 @@
 	path = pluggy-feedstock
 	url = ../pluggy-feedstock
 	branch = master
+[submodule "pytest-asyncio-feedstock"]
+	path = pytest-asyncio-feedstock
+	url = ../pytest-asyncio-feedstock
+	branch = master
