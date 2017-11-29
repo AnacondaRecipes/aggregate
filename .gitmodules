@@ -2040,3 +2040,7 @@
 	path = netcdf4-feedstock
 	url = ../netcdf4-feedstock
 	branch = master
+[submodule "pluggy-feedstock"]
+	path = pluggy-feedstock
+	url = ../pluggy-feedstock
+	branch = master
