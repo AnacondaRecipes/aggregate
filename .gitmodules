@@ -2060,3 +2060,7 @@
 	path = pytest-forked-feedstock
 	url = ../pytest-forked-feedstock
 	branch = master
+[submodule "pyasn1-modules-feedstock"]
+	path = pyasn1-modules-feedstock
+	url = ../pyasn1-modules-feedstock
+	branch = master
