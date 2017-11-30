@@ -2064,3 +2064,7 @@
 	path = pyasn1-modules-feedstock
 	url = ../pyasn1-modules-feedstock
 	branch = master
+[submodule "python-socketio-feedstock"]
+	path = python-socketio-feedstock
+	url = ../python-socketio-feedstock
+	branch = master
