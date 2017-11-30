@@ -2052,3 +2052,11 @@
 	path = progressbar2-feedstock
 	url = ../progressbar2-feedstock
 	branch = master
+[submodule "pytest-xdist-feedstock"]
+	path = pytest-xdist-feedstock
+	url = ../pytest-xdist-feedstock
+	branch = master
+[submodule "pytest-forked-feedstock"]
+	path = pytest-forked-feedstock
+	url = ../pytest-forked-feedstock
+	branch = master
