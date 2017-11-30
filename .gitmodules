@@ -2068,3 +2068,7 @@
 	path = python-socketio-feedstock
 	url = ../python-socketio-feedstock
 	branch = master
+[submodule "flask-socketio-feedstock"]
+	path = flask-socketio-feedstock
+	url = ../flask-socketio-feedstock
+	branch = master
