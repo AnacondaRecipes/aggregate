@@ -37,7 +37,6 @@ function _tc_activation() {
   local newval
   local from
   local to
-  local which
   local pass
 
   if [ "${act_nature}" = "activate" ]; then
@@ -56,9 +55,9 @@ function _tc_activation() {
           thing=$(echo "${thing}" | sed "s,^\([^\,]*\)\,.*,\1,")
           ;;
         *)
-          newval=$(which ${CONDA_PREFIX}/bin/${tc_prefix}${thing} 2>/dev/null)
-          if [ -z "${newval}" -a "${pass}" = "check" ]; then
-            echo "ERROR: This cross-compiler package contains no program ${CONDA_PREFIX}/bin/${tc_prefix}${thing}"
+          newval="${CONDA_PREFIX}/bin/${tc_prefix}${thing}"
+          if [ ! -x "${newval}" -a "${pass}" = "check" ]; then
+            echo "ERROR: This cross-compiler package contains no program ${newval}"
             return 1
           fi
           ;;
