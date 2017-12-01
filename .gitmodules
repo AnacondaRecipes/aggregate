@@ -2076,3 +2076,15 @@
 	path = pydot-feedstock
 	url = ../pydot-feedstock
 	branch = master
+[submodule "sasl-feedstock"]
+	path = sasl-feedstock
+	url = ../sasl-feedstock
+	branch = master
+[submodule "pure-sasl-feedstock"]
+	path = pure-sasl-feedstock
+	url = ../pure-sasl-feedstock
+	branch = master
+[submodule "thrift_sasl-feedstock"]
+	path = thrift_sasl-feedstock
+	url = ../thrift_sasl-feedstock
+	branch = master
