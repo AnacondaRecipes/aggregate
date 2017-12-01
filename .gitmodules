@@ -2072,3 +2072,7 @@
 	path = flask-socketio-feedstock
 	url = ../flask-socketio-feedstock
 	branch = master
+[submodule "pydot-feedstock"]
+	path = pydot-feedstock
+	url = ../pydot-feedstock
+	branch = master
