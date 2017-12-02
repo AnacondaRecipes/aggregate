@@ -1,0 +1,25 @@
+package:
+  name: copy-jdk-configs-cos7-ppc64le
+  version: 2.2
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/copy-jdk-configs-2.2-3.el7.noarch.rpm
+    sha256: 25c8a3c888dd968368553b1f2577d09a325f42707105bff549858bc0d535491c
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/copy-jdk-configs-2.2-3.el7.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: copy-jdk-configs-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: https://pagure.io/copy_jdk_configs
+      license: BSD
+      license_family: BSD
+      summary: "(CDT) JDKs configuration files copier"
+      description: |
+        Utility script to transfer JDKs configuration files between updates or for
+        archiving. With script to fix incorrectly created rpmnew files

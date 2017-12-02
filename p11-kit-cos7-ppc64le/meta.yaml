@@ -1,0 +1,26 @@
+package:
+  name: p11-kit-cos7-ppc64le
+  version: 0.23.5
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/p11-kit-0.23.5-3.el7.ppc64le.rpm
+    sha256: 4aa25e0e63b3ba905ee8314170a6ea2c5a2c09f9f30957cf84ce12ecc5193c4c
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/p11-kit-0.23.5-3.el7.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: p11-kit-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://p11-glue.freedesktop.org/p11-kit.html
+      license: BSD
+      license_family: BSD
+      summary: "(CDT) Library for loading and sharing PKCS#11 modules"
+      description: |
+        p11-kit provides a way to load and enumerate PKCS#11 modules, as well as a
+        standard configuration setup for installing PKCS#11 modules in such a way that
+        they're discoverable.

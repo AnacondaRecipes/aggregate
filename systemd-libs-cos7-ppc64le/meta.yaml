@@ -1,0 +1,24 @@
+package:
+  name: systemd-libs-cos7-ppc64le
+  version: 219
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/systemd-libs-219-42.el7.ppc64le.rpm
+    sha256: 203747e32eaee12076e690e6ab6617151395768b9700d790b79fb66d55477698
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/systemd-219-42.el7.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: systemd-libs-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://www.freedesktop.org/wiki/Software/systemd
+      license: LGPLv2+ and MIT
+      license_family: LGPL
+      summary: "(CDT) systemd libraries"
+      description: |
+        Libraries for systemd and udev, as well as the systemd PAM module.

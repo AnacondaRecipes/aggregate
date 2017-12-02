@@ -1,0 +1,30 @@
+package:
+  name: libxrandr-devel-cos7-ppc64le
+  version: 1.5.1
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libXrandr-devel-1.5.1-2.el7.ppc64le.rpm
+    sha256: 800abf63266e5fce6056aaa50e6f10b7fd8700350c75ee540aaec474d1975811
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/libXrandr-1.5.1-2.el7.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libxrandr-cos7-ppc64le ==1.5.1
+
+
+outputs:
+  - name: libxrandr-devel-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - libxrandr-cos7-ppc64le ==1.5.1
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X.Org X11 libXrandr development package"
+      description: |
+        X.Org X11 libXrandr development package

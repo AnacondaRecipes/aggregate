@@ -1,0 +1,30 @@
+package:
+  name: libx11-devel-cos7-ppc64le
+  version: 1.6.5
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libX11-devel-1.6.5-1.el7.ppc64le.rpm
+    sha256: 701f3b84c7ce793f349ccd9c7f48a78ecfc99d24be1bad27e6e627b8213587a0
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/libX11-1.6.5-1.el7.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libx11-cos7-ppc64le ==1.6.5
+
+
+outputs:
+  - name: libx11-devel-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - libx11-cos7-ppc64le ==1.6.5
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Development files for libX11"
+      description: |
+        X.Org X11 libX11 development package

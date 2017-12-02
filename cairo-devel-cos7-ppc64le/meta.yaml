@@ -1,0 +1,27 @@
+package:
+  name: cairo-devel-cos7-ppc64le
+  version: 1.14.8
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/cairo-devel-1.14.8-2.el7.ppc64le.rpm
+    sha256: 557b346d3ef3c67785dff9ae0f5d53a8b9293a23a8a30439fe8cf06ebda79deb
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/cairo-1.14.8-2.el7.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: cairo-devel-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://cairographics.org
+      license: LGPLv2 or MPLv1.1
+      license_family: LGPL
+      summary: "(CDT) Development files for cairo"
+      description: |
+        Cairo is a 2D graphics library designed to provide high-quality display and
+        print output.  This package contains libraries, header files and developer
+        documentation needed for developing software which uses the cairo graphics
+        library.

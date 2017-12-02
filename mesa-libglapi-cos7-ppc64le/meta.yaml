@@ -1,0 +1,24 @@
+package:
+  name: mesa-libglapi-cos7-ppc64le
+  version: 17.0.1
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/mesa-libglapi-17.0.1-6.20170307.el7.ppc64le.rpm
+    sha256: 21306660738fd80a327094116828de65732a8bb74043d901c7e99eb99f1aaed1
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/mesa-17.0.1-6.20170307.el7.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: mesa-libglapi-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://www.mesa3d.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Mesa shared glapi"
+      description: |
+        Mesa shared glapi

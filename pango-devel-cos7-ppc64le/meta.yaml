@@ -1,0 +1,25 @@
+package:
+  name: pango-devel-cos7-ppc64le
+  version: 1.40.4
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/pango-devel-1.40.4-1.el7.ppc64le.rpm
+    sha256: db10ca69458c927f7d254e433f4849dedf8bcb8cb88b23f2ec3492e52ab92ac1
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/pango-1.40.4-1.el7.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: pango-devel-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://www.pango.org
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) Development files for pango"
+      description: |
+        The pango-devel package includes the header files and developer documentation
+        for the pango package.

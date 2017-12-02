@@ -1,0 +1,28 @@
+package:
+  name: libtiff-cos7-ppc64le
+  version: 4.0.3
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libtiff-4.0.3-27.el7_3.ppc64le.rpm
+    sha256: 6c0df9de08565f282fc420eae4d9e5659dd6120878edb221ae6ee75fae4e8a93
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/libtiff-4.0.3-27.el7_3.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: libtiff-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://www.remotesensing.org/libtiff/
+      license: libtiff
+      license_family: Other
+      summary: "(CDT) Library of functions for manipulating TIFF format image files"
+      description: |
+        The libtiff package contains a library of functions for manipulating TIFF
+        (Tagged Image File Format) image format files.  TIFF is a widely used file
+        format for bitmapped images.  TIFF files usually end in the .tif extension and
+        they are often quite large.  The libtiff package should be installed if you
+        need to manipulate TIFF format image files.

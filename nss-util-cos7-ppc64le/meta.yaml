@@ -1,0 +1,30 @@
+package:
+  name: nss-util-cos7-ppc64le
+  version: 3.28.4
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/nss-util-3.28.4-3.el7.ppc64le.rpm
+    sha256: 927f89a9d473e343d7017a87e26697d94475fcf489a72353493102d55ea0e9a6
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/nss-util-3.28.4-3.el7.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - nspr-cos7-ppc64le >=4.13.1
+
+
+outputs:
+  - name: nss-util-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - nspr-cos7-ppc64le >=4.13.1
+
+    about:
+      home: http://www.mozilla.org/projects/security/pki/nss/
+      license: MPLv2.0
+      license_family: Other
+      summary: "(CDT) Network Security Services Utilities Library"
+      description: |
+        Utilities for Network Security Services and the Softoken module

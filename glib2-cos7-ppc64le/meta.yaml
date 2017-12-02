@@ -1,0 +1,27 @@
+package:
+  name: glib2-cos7-ppc64le
+  version: 2.50.3
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/glib2-2.50.3-3.el7.ppc64le.rpm
+    sha256: 40e215e91eff6bf42e8fb8a75176f586fc2b8084fb4154ba88aa51c58ec23002
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/glib2-2.50.3-3.el7.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: glib2-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://www.gtk.org
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) A library of handy utility functions"
+      description: |
+        GLib is the low-level core library that forms the basis for projects such as
+        GTK+ and GNOME. It provides data structure handling for C, portability
+        wrappers, and interfaces for such runtime functionality as an event loop,
+        threads, dynamic loading, and an object system.

@@ -1,0 +1,30 @@
+package:
+  name: mesa-libgl-devel-cos7-ppc64le
+  version: 17.0.1
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/mesa-libGL-devel-17.0.1-6.20170307.el7.ppc64le.rpm
+    sha256: 30cb55c8257ee5f4c3dafdcd88da56cc5da40859ea2bab7346f0375ed93f0b94
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/mesa-17.0.1-6.20170307.el7.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - mesa-libgl-cos7-ppc64le ==17.0.1
+
+
+outputs:
+  - name: mesa-libgl-devel-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - mesa-libgl-cos7-ppc64le ==17.0.1
+
+    about:
+      home: http://www.mesa3d.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Mesa libGL development package"
+      description: |
+        Mesa libGL development package

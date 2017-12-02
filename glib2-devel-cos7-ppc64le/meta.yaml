@@ -1,0 +1,24 @@
+package:
+  name: glib2-devel-cos7-ppc64le
+  version: 2.50.3
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/glib2-devel-2.50.3-3.el7.ppc64le.rpm
+    sha256: f6ed32762f50975542cfaac0fa853e485a0c439d58ed36e77b678340d5f51235
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/glib2-2.50.3-3.el7.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: glib2-devel-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://www.gtk.org
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) A library of handy utility functions"
+      description: |
+        The glib2-devel package includes the header files for the GLib library.

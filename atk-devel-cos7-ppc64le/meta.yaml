@@ -1,0 +1,25 @@
+package:
+  name: atk-devel-cos7-ppc64le
+  version: 2.22.0
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/atk-devel-2.22.0-3.el7.ppc64le.rpm
+    sha256: b0b297ac64ca55685473978e767ab020ca3e08c976266c2f292b8f03d6ba0d23
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/atk-2.22.0-3.el7.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: atk-devel-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://developer.gnome.org/platform-overview/stable/atk
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) Development files for the ATK accessibility toolkit"
+      description: |
+        This package includes libraries, header files, and developer documentation
+        needed for development of applications or toolkits which use ATK.

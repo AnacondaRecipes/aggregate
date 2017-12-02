@@ -1,0 +1,25 @@
+package:
+  name: libselinux-devel-cos7-ppc64le
+  version: 2.5
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libselinux-devel-2.5-11.el7.ppc64le.rpm
+    sha256: 982d0f65574a7742004ad9e3efe419dd15ff439e15d6fdf76fa5cce2d30aeca7
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/libselinux-2.5-11.el7.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: libselinux-devel-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: https://github.com/SELinuxProject/selinux/wiki
+      license: Public-Domain
+      license_family: Public-Domain
+      summary: "(CDT) Header files and libraries used to build SELinux"
+      description: |
+        The libselinux-devel package contains the libraries and header files needed
+        for developing SELinux applications.

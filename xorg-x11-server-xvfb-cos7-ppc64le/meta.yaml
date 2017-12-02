@@ -1,0 +1,33 @@
+package:
+  name: xorg-x11-server-xvfb-cos7-ppc64le
+  version: 1.19.3
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/xorg-x11-server-Xvfb-1.19.3-11.el7.ppc64le.rpm
+    sha256: 6e1ba3ab6056e1f9e3c6fa9aadba4ce2fdf5367886792effaf81bd74c6e1c434
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/xorg-x11-server-1.19.3-11.el7.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - xorg-x11-server-common-cos7-ppc64le >=1.19.3
+
+
+outputs:
+  - name: xorg-x11-server-xvfb-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - xorg-x11-server-common-cos7-ppc64le >=1.19.3
+
+    about:
+      home: http://www.x.org
+      license: MIT and GPLv2
+      license_family: GPL2
+      summary: "(CDT) A X Windows System virtual framebuffer X server."
+      description: |
+        Xvfb (X Virtual Frame Buffer) is an X server that is able to run on machines
+        with no display hardware and no physical input devices. Xvfb simulates a dumb
+        framebuffer using virtual memory.  Xvfb does not open any devices, but behaves
+        otherwise as an X display.  Xvfb is normally used for testing servers.

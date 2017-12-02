@@ -1,0 +1,28 @@
+package:
+  name: libxau-cos7-ppc64le
+  version: 1.0.8
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libXau-1.0.8-2.1.el7.ppc64le.rpm
+    sha256: 09923b7d3744e3d775fb31f0e0b86c9838aa050bd4b7045d0fb78f70471ba99e
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/libXau-1.0.8-2.1.el7.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: libxau-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Sample Authorization Protocol for X"
+      description: |
+        This is a very simple mechanism for providing individual access to an X Window
+        System display.It uses existing core protocol and library hooks for specifying
+        authorization data in the connection setup block to restrict use of the
+        display to only those clients that show that they know a server-specific key
+        called a "magic cookie".

@@ -1,0 +1,34 @@
+package:
+  name: java-1.7.0-openjdk-devel-cos7-ppc64le
+  version: 1.7.0.141
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/java-1.7.0-openjdk-devel-1.7.0.141-2.6.10.5.el7.ppc64le.rpm
+    sha256: abbc78bf29d4c72cbac5c2bbc21b40fceb93b8c893d10c870c7edd0026fd5d2d
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/java-1.7.0-openjdk-1.7.0.141-2.6.10.5.el7.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - chkconfig-cos7-ppc64le >=1.7
+    - chkconfig-cos7-ppc64le >=1.7
+    - java-1.7.0-openjdk-cos7-ppc64le ==1.7.0.141
+
+
+outputs:
+  - name: java-1.7.0-openjdk-devel-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - chkconfig-cos7-ppc64le >=1.7
+        - chkconfig-cos7-ppc64le >=1.7
+        - java-1.7.0-openjdk-cos7-ppc64le ==1.7.0.141
+
+    about:
+      home: http://openjdk.java.net/
+      license: ASL 1.1 and ASL 2.0 and GPL+ and GPLv2 and GPLv2 with exceptions and LGPL+ and LGPLv2 and MPLv1.0 and MPLv1.1 and Public Domain and W3C
+      license_family: GPL2
+      summary: "(CDT) OpenJDK Development Environment"
+      description: |
+        The OpenJDK development tools.

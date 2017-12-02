@@ -1,0 +1,30 @@
+package:
+  name: javapackages-tools-cos7-ppc64le
+  version: 3.4.1
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/javapackages-tools-3.4.1-11.el7.noarch.rpm
+    sha256: cb9d2fd9d743bf4cb28b4afec7e8d1891fcca6f63f00ba7a60aadfe337527e1c
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/javapackages-tools-3.4.1-11.el7.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - python-javapackages-cos7-ppc64le ==3.4.1
+
+
+outputs:
+  - name: javapackages-tools-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - python-javapackages-cos7-ppc64le ==3.4.1
+
+    about:
+      home: https://fedorahosted.org/javapackages/
+      license: BSD
+      license_family: BSD
+      summary: "(CDT) Macros and scripts for Java packaging support"
+      description: |
+        This package provides macros and scripts to support Java packaging.

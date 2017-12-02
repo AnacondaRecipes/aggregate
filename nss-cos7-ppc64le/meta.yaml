@@ -1,0 +1,36 @@
+package:
+  name: nss-cos7-ppc64le
+  version: 3.28.4
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/nss-3.28.4-8.el7.ppc64le.rpm
+    sha256: 4eb8b2f303eb83928b3a152ddeda63f1c50d2007a93178f0104255312c2f4fbb
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/nss-3.28.4-8.el7.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - nspr-cos7-ppc64le >=4.13.1
+    - nss-util-cos7-ppc64le >=3.28.4
+
+
+outputs:
+  - name: nss-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - nspr-cos7-ppc64le >=4.13.1
+        - nss-util-cos7-ppc64le >=3.28.4
+
+    about:
+      home: http://www.mozilla.org/projects/security/pki/nss/
+      license: MPLv2.0
+      license_family: Other
+      summary: "(CDT) Network Security Services"
+      description: |
+        Network Security Services (NSS) is a set of libraries designed to support
+        cross-platform development of security-enabled client and server applications.
+        Applications built with NSS can support SSL v2 and v3, TLS, PKCS #5, PKCS #7,
+        PKCS #11, PKCS #12, S/MIME, X.509 v3 certificates, and other security
+        standards.

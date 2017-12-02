@@ -1,0 +1,33 @@
+package:
+  name: ca-certificates-cos7-ppc64le
+  version: 2017.2.14
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/ca-certificates-2017.2.14-71.el7.noarch.rpm
+    sha256: 2d9c542e453320226ec40117413d2e6e1614da34f1a2aee9b20593ac728d40ad
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/ca-certificates-2017.2.14-71.el7.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - p11-kit-cos7-ppc64le >=0.23.5
+    - p11-kit-trust-cos7-ppc64le >=0.23.5
+
+
+outputs:
+  - name: ca-certificates-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - p11-kit-cos7-ppc64le >=0.23.5
+        - p11-kit-trust-cos7-ppc64le >=0.23.5
+
+    about:
+      home: http://www.mozilla.org/
+      license: Public-Domain
+      license_family: Public-Domain
+      summary: "(CDT) The Mozilla CA root certificate bundle"
+      description: |
+        This package contains the set of CA certificates chosen by the Mozilla
+        Foundation for use with the Internet PKI.

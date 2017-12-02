@@ -1,0 +1,24 @@
+package:
+  name: xorg-x11-proto-devel-cos7-ppc64le
+  version: 7.7
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/xorg-x11-proto-devel-7.7-20.el7.noarch.rpm
+    sha256: 8a22328cbf7de405d3112c454a78e4c76516b29ae08f29950846d3ca2dc3d853
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/xorg-x11-proto-devel-7.7-20.el7.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: xorg-x11-proto-devel-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X.Org X11 Protocol headers"
+      description: |
+        X.Org X11 Protocol headers
