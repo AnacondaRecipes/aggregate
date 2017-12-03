@@ -95,7 +95,7 @@ fi
 
 _tc_activation \
   activate host @CHOST@ @CHOST@- \
-  addr2line ar as c++filt elfedit gprof ld $GOLD_USED} nm objcopy objdump ranlib readelf size strings strip
+  addr2line ar as c++filt elfedit gprof ld ${GOLD_USED} nm objcopy objdump ranlib readelf size strings strip
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"
