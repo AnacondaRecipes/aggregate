@@ -96,6 +96,38 @@ fi
 if [ -f /tmp/old-env-$$.txt ]; then
   rm -f /tmp/old-env-$$.txt || true
 fi
+
+_PYTHON_SYSCONFIGDATA_NAME_USED=${_PYTHON_SYSCONFIGDATA_NAME:-@_PYTHON_SYSCONFIGDATA_NAME@}
+if [ -n "${_PYTHON_SYSCONFIGDATA_NAME_USED}" ]; then
+  if find "$(dirname $(dirname ${SYS_PYTHON}))/lib/"python* -type f -name "${_PYTHON_SYSCONFIGDATA_NAME_USED}.py" -exec false {} +; then
+    echo ""
+    echo "WARNING: The Python interpreter at the following prefix:"
+    echo "         $(dirname $(dirname ${SYS_PYTHON}))"
+    echo "         .. is not able to handle sysconfigdata-based compilation for the host:"
+    echo "         ${_PYTHON_SYSCONFIGDATA_NAME_USED//_sysconfigdata_/}"
+    echo ""
+    echo "         We are not preventing things from continuing here, but *this* Python will not"
+    echo "         be able to compile software for this host, and, depending on whether it has"
+    echo "         been patched to ignore missing _PYTHON_SYSCONFIGDATA_NAME or not, may cause"
+    echo "         an exception."
+    echo ""
+    echo "         This can happen for one of three reasons:"
+    echo ""
+    echo "         1. It is out of date: Please run 'conda update python' in that environment"
+    echo ""
+    echo "         2. You are bootstrapping a sysconfigdata-based cross-capable Python and can ignore this"
+    echo "            (but please remember to copy the generated sysconfigdata back to the Python recipe's"
+    echo "             sysconfigdate folder and then rebuild it for all the systems you want to be able"
+    echo "             to use as a build machine for this host)."
+    echo ""
+    echo "         3. You are attempting your own bespoke cross-compilation host that is not supported. Have"
+    echo "            you provided your own value in the _PYTHON_SYSCONFIGDATA_NAME environment variable but"
+    echo "            misspelt it and/or failed to add the neccessary ${_PYTHON_SYSCONFIGDATA_NAME_USED}.py"
+    echo "            file to the Python interpreter's standard library?"
+    echo ""
+  fi
+fi
+
 env > /tmp/old-env-$$.txt
 
 _tc_activation \
@@ -105,7 +137,7 @@ _tc_activation \
   "CFLAGS,${CFLAGS:-${CFLAGS_USED}}" \
   "LDFLAGS,${LDFLAGS:-${LDFLAGS_USED}}" \
   "DEBUG_CFLAGS,${DEBUG_CFLAGS:-${DEBUG_CFLAGS_USED}}" \
-  "_PYTHON_SYSCONFIGDATA_NAME,${_PYTHON_SYSCONFIGDATA_NAME:-@_PYTHON_SYSCONFIGDATA_NAME@}"
+  "_PYTHON_SYSCONFIGDATA_NAME,${_PYTHON_SYSCONFIGDATA_NAME_USED}"
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"

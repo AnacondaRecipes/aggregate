@@ -86,9 +86,16 @@ if [ -f /tmp/old-env-$$.txt ]; then
 fi
 env > /tmp/old-env-$$.txt
 
+# gold has not been (cannot be?) built for powerpc
+if echo @CHOST@ | grep powerpc > /dev/null; then
+  GOLD_USED=
+else
+  GOLD_USED=ld.gold
+fi
+
 _tc_activation \
   activate host @CHOST@ @CHOST@- \
-  addr2line ar as c++filt elfedit gprof ld ld.gold nm objcopy objdump ranlib readelf size strings strip
+  addr2line ar as c++filt elfedit gprof ld $GOLD_USED} nm objcopy objdump ranlib readelf size strings strip
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"
