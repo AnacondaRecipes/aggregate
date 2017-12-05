@@ -1,0 +1,27 @@
+package:
+  name: ruamel
+  version: 0.1.0
+
+source:
+  path: .
+
+build:
+  number: 0
+  script: python setup.py install
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+
+test:
+  imports:
+    - ruamel
+
+about:
+  home: https://bitbucket.org/ruamel
+  license: MIT
+  license_file: LICENSE
+  summary: Namespace conda package for the ruamel python namespace.
+  dev_url: https://github.com/AnacondaRecipes/ruamel-feedstock
