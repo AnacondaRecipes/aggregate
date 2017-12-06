@@ -2092,3 +2092,7 @@
 	path = eigen-feedstock
 	url = ../eigen-feedstock
 	branch = master
+[submodule "ffmpeg-feedstock"]
+	path = ffmpeg-feedstock
+	url = ../ffmpeg-feedstock
+	branch = master
