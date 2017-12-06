@@ -2088,3 +2088,7 @@
 	path = thrift_sasl-feedstock
 	url = ../thrift_sasl-feedstock
 	branch = master
+[submodule "eigen-feedstock"]
+	path = eigen-feedstock
+	url = ../eigen-feedstock
+	branch = master
