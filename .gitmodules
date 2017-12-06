@@ -2096,3 +2096,7 @@
 	path = ffmpeg-feedstock
 	url = ../ffmpeg-feedstock
 	branch = master
+[submodule "opencv-feedstock"]
+	path = opencv-feedstock
+	url = ../opencv-feedstock
+	branch = master
