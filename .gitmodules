@@ -2112,3 +2112,7 @@
 	path = lmdb-feedstock
 	url = ../lmdb-feedstock
 	branch = master
+[submodule "leveldb-feedstock"]
+	path = leveldb-feedstock
+	url = ../leveldb-feedstock
+	branch = master
