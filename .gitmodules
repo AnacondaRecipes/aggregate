@@ -2116,3 +2116,7 @@
 	path = leveldb-feedstock
 	url = ../leveldb-feedstock
 	branch = master
+[submodule "glog-feedstock"]
+	path = glog-feedstock
+	url = ../glog-feedstock
+	branch = master
