@@ -2120,3 +2120,7 @@
 	path = glog-feedstock
 	url = ../glog-feedstock
 	branch = master
+[submodule "python-leveldb-feedstock"]
+	path = python-leveldb-feedstock
+	url = ../python-leveldb-feedstock
+	branch = master
