@@ -2108,3 +2108,7 @@
 	path = gflags-feedstock
 	url = ../gflags-feedstock
 	branch = master
+[submodule "lmdb-feedstock"]
+	path = lmdb-feedstock
+	url = ../lmdb-feedstock
+	branch = master
