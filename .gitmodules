@@ -2104,3 +2104,7 @@
 	path = python-gflags-feedstock
 	url = ../python-gflags-feedstock
 	branch = master
+[submodule "gflags-feedstock"]
+	path = gflags-feedstock
+	url = ../gflags-feedstock
+	branch = master
