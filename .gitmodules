@@ -2124,3 +2124,7 @@
 	path = python-leveldb-feedstock
 	url = ../python-leveldb-feedstock
 	branch = master
+[submodule "pycryptodomex-feedstock"]
+	path = pycryptodomex-feedstock
+	url = ../pycryptodomex-feedstock
+	branch = master
