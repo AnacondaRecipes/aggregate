@@ -1,43 +1,44 @@
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
+{% set commit = "af3964a8725236c78ce969b827fdeee1c5c54110" %}
 
 package:
   name: pytorch
   version: {{ version }}
 
 source:
-  fn: pytorch-{{ version }}.tar.gz
-  url: https://github.com/pytorch/pytorch/archive/v{{ version }}.tar.gz
-  sha256: b76d61aaa8fc18b928ca3c910c398687be08f5661d6615884c4faba3e8742a26
+  git_url: https://github.com/pytorch/pytorch.git
+  git_tag: {{ commit }}
   patches:
-    - use-system-nccl.patch
+    - 0001-force-system-nccl.patch
 
 build:
   number: 0
   string: py{{py}}cuda{{ environ['CUDA_VERSION'] }}cudnn{{ environ['CUDNN_VERSION'] }}_0
-  features:
-    - nomkl  [nomkl]
   detect_binary_files_with_prefix: False
 
 requirements:
   build:
     - python
-    - numpy 1.11*
+    - numpy 1.9*
     - setuptools
     - pyyaml
-    - mkl
     - cffi
+    - mkl 2018*
     - magma
     - cmake
     - cudatoolkit {{ environ['CUDA_VERSION'] }}*
     - cudnn {{ environ['CUDNN_VERSION'] }}*
     - nccl
+    - libgcc-ng
+    - libstdcxx-ng
 
   run:
     - python
-    - numpy >=1.11
+    - numpy >=1.9
     - mkl 2018*
     - cffi
-    - libgcc
+    - libgcc-ng
+    - libstdcxx-ng
     - cudatoolkit {{ environ['CUDA_VERSION'] }}*
     - cudnn {{ environ['CUDNN_VERSION'] }}*
     - nccl
@@ -48,7 +49,7 @@ test:
   source_files:
     - test
   commands:
-    #    - ./test/run_test.sh
+    - ./test/run_test.sh
     - conda inspect linkages -p $PREFIX pytorch
 
 about:

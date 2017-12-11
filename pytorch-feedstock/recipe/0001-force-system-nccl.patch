@@ -1,0 +1,26 @@
+From 422594e5e701ed33d8fef004f113f2aca2074dcd Mon Sep 17 00:00:00 2001
+From: Jonathan Helmus <jjhelmus@gmail.com>
+Date: Thu, 7 Dec 2017 14:10:04 -0600
+Subject: [PATCH] force system nccl
+
+For the system nccl to be used for the build.
+---
+ tools/setup_helpers/nccl.py | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/tools/setup_helpers/nccl.py b/tools/setup_helpers/nccl.py
+index e3deb26..86dae36 100644
+--- a/tools/setup_helpers/nccl.py
++++ b/tools/setup_helpers/nccl.py
+@@ -74,3 +74,8 @@ if WITH_CUDA and not check_env_flag('NO_SYSTEM_NCCL'):
+     if NCCL_LIB_DIR is not None and NCCL_INCLUDE_DIR is not None:
+         WITH_SYSTEM_NCCL = True
+         NCCL_ROOT_DIR = os.path.commonprefix((NCCL_LIB_DIR, NCCL_INCLUDE_DIR))
++    print("NCCL_LIB_DIR", NCCL_LIB_DIR)
++    print("NCCL_INCLUDE_DIR", NCCL_INCLUDE_DIR)
++    print("WITH_SYSTEM_NCCL", WITH_SYSTEM_NCCL)
++    print("NCCL_ROOT_DIR", NCCL_ROOT_DIR)
++    assert WITH_SYSTEM_NCCL
+-- 
+2.7.4
+
