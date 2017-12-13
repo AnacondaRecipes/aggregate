@@ -1,0 +1,51 @@
+{% set version = "1.9.7" %}
+
+package:
+  name: svn
+  version: {{ version }}
+
+source:
+  fn: subversion-{{ version }}.tar.bz2
+  url: https://archive.apache.org/dist/subversion/subversion-{{ version }}.tar.bz2
+  sha256: c3b118333ce12e501d509e66bb0a47bcc34d053990acab45559431ac3e491623
+  patches:
+    - py3_compat.patch        [py>30]
+
+requirements:
+  host:
+    - python  # [win]
+    - openssl
+    - apr
+    - sqlite
+    - serf
+    - swig
+    - zlib
+
+  build:
+    - {{ compiler('c') }}
+
+  # run_exports will take care of these
+  # run:
+    # - apr
+    # - serf
+    # - sqlite
+    # - zlib
+
+test:
+  commands:
+    - svn --version
+
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+
+about:
+  home: https://subversion.apache.org/
+  license: Apache Software License V.2
+  license_family: Apache
+  license_file: LICENSE
+  summary: Intuitive Subversion wrapper
+  description: |
+    svn is a simple Subversion library for Python.The library wraps the svn
+    commandline client, which should consequently be installed on the local system.
+  doc_url: https://pypi.python.org/pypi/svn
+  doc_source_url: https://github.com/dsoprea/PySvn
