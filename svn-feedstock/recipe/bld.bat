@@ -13,8 +13,10 @@ python gen-make.py -t vcproj --vsnet-version=%VS_YEAR% ^
              --with-sqlite=%LIBRARY_PREFIX% ^
              --with-serf=%LIBRARY_INC% ^
              --release
+if errorlevel 1 exit 1
 
 msbuild subversion_vcnet.sln /t:__ALL_TESTS__ /p:Configuration=Release /p:Platform=%PLATFORM%
+if errorlevel 1 exit 1
 
 pushd Release\subversion
 

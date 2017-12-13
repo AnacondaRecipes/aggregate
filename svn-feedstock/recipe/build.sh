@@ -4,7 +4,6 @@
     --prefix=$PREFIX \
     --with-sqlite=$PREFIX \
     --with-zlib=$PREFIX \
-    --with-openssl=$PREFIX \
     --with-serf=$PREFIX
 
 make -j${CPU_COUNT} ${VERBOSE_AT}

@@ -9,12 +9,14 @@ source:
   url: https://archive.apache.org/dist/subversion/subversion-{{ version }}.tar.bz2
   sha256: c3b118333ce12e501d509e66bb0a47bcc34d053990acab45559431ac3e491623
   patches:
-    - py3_compat.patch        [py>30]
+    - py3_compat.patch  # [py>30]
+    - expat.patch       # [win]
 
 requirements:
   host:
     - python  # [win]
-    - openssl
+    - openssl # [win]
+    - expat   # [win]
     - apr
     - sqlite
     - serf
