@@ -2132,3 +2132,7 @@
 	path = pysnmp-feedstock
 	url = ../pysnmp-feedstock
 	branch = master
+[submodule "torchvision-feedstock"]
+	path = torchvision-feedstock
+	url = ../torchvision-feedstock
+	branch = master
