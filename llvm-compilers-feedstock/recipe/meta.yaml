@@ -13,7 +13,9 @@
 {% set libcxxabi_sha256 = '8f08178989a06c66cd19e771ff9d8ca526dd4a23d1382d63e416c04ea9fa1b33' %}
 {% set libunwind_sha256 = '3b072e33b764b4f9b5172698e080886d1f4d606531ab227772a7fc08d6a92555' %}
 {% set openmp_sha256 = 'ec693b170e0600daa7b372240a06e66341ace790d89eaf4a843e8d56d5f4ada4' %}
-{% set clang_llvm_bin_sha256 = '5ef4f1f72d0fe4cf03d8eaefb972b4d24219da67124a869ae75e3a6aeb1578f6' %}
+# It looks like this got changed at some point.
+# {% set clang_llvm_bin_sha256 = '5ef4f1f72d0fe4cf03d8eaefb972b4d24219da67124a869ae75e3a6aeb1578f6' %}
+{% set clang_llvm_bin_sha256 = '5f697801a46239c04251730b7ccccd3ebbacb9043ad381a061ae6812409e9eae' %}
 
 # {% set releases_url="prereleases" %}
 # {% set version="5.0.0rc5" %}
