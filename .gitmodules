@@ -2140,3 +2140,55 @@
 	path = pygraphviz-feedstock
 	url = ../pygraphviz-feedstock
 	branch = master
+[submodule "cartopy-feedstock"]
+	path = cartopy-feedstock
+	url = ../cartopy-feedstock
+	branch = master
+[submodule "owslib-feedstock"]
+	path = owslib-feedstock
+	url = ../owslib-feedstock
+	branch = master
+[submodule "pyshp-feedstock"]
+	path = pyshp-feedstock
+	url = ../pyshp-feedstock
+	branch = master
+[submodule "pyepsg-feedstock"]
+	path = pyepsg-feedstock
+	url = ../pyepsg-feedstock
+	branch = master
+[submodule "pynio-feedstock"]
+	path = pynio-feedstock
+	url = ../pynio-feedstock
+	branch = master
+[submodule "g2clib-feedstock"]
+	path = g2clib-feedstock
+	url = ../g2clib-feedstock
+	branch = master
+[submodule "hdfeos2-feedstock"]
+	path = hdfeos2-feedstock
+	url = ../hdfeos2-feedstock
+	branch = master
+[submodule "jasper-feedstock"]
+	path = jasper-feedstock
+	url = ../jasper-feedstock
+	branch = master
+[submodule "hdfeos5-feedstock"]
+	path = hdfeos5-feedstock
+	url = ../hdfeos5-feedstock
+	branch = master
+[submodule "libspatialindex-feedstock"]
+	path = libspatialindex-feedstock
+	url = ../libspatialindex-feedstock
+	branch = master
+[submodule "rtree-feedstock"]
+	path = rtree-feedstock
+	url = ../rtree-feedstock
+	branch = master
+[submodule "geopandas-feedstock"]
+	path = geopandas-feedstock
+	url = ../geopandas-feedstock
+	branch = master
+[submodule "descartes-feedstock"]
+	path = descartes-feedstock
+	url = ../descartes-feedstock
+	branch = master
