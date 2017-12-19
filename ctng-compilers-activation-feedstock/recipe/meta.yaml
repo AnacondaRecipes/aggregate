@@ -26,7 +26,7 @@ outputs:
         - {{ pin_subpackage('binutils_' ~ ctng_target_platform, exact=True) }}
     run_exports:
       strong:
-        - libgcc-ng {{ ctng_gcc }}.*
+        - libgcc-ng >={{ ctng_gcc }}
     about:
       summary: GNU C Compiler (activation scripts)
       home: https://gcc.gnu.org/
@@ -43,9 +43,9 @@ outputs:
         - {{ pin_subpackage('binutils_' ~ ctng_target_platform, exact=True) }}
     run_exports:
       strong:
-        - libstdcxx-ng {{ ctng_gcc }}.*
+        - libstdcxx-ng >={{ ctng_gcc }}
         # Because transitive run_exports do not work:
-        - libgcc-ng {{ ctng_gcc }}.*
+        - libgcc-ng >={{ ctng_gcc }}
     about:
       summary: GNU C++ Compiler (activation scripts)
       home: https://gcc.gnu.org/
@@ -62,9 +62,9 @@ outputs:
         - {{ pin_subpackage('binutils_' ~ ctng_target_platform, exact=True) }}
     run_exports:
       strong:
-        - libgfortran-ng {{ ctng_gcc }}.*
+        - libgfortran-ng >={{ ctng_gcc }}
         # Because transitive run_exports do not work:
-        - libgcc-ng {{ ctng_gcc }}.*
+        - libgcc-ng >={{ ctng_gcc }}
     about:
       summary: GNU Fortran Compiler (activation scripts)
       home: https://gcc.gnu.org/
