@@ -2136,3 +2136,7 @@
 	path = torchvision-feedstock
 	url = ../torchvision-feedstock
 	branch = master
+[submodule "pygraphviz-feedstock"]
+	path = pygraphviz-feedstock
+	url = ../pygraphviz-feedstock
+	branch = master
