@@ -41,6 +41,8 @@ fontconfig:
   - 2.12
 freetype:
   - 2.8                # [not ppc64le]
+g2clib:
+  - 1.6
 gstreamer:
   - 1.12
 gst_plugins_base:
@@ -60,6 +62,10 @@ hdf4:
 hdf5:
   - 1.8                # [not ppc64le]
   - 1.10               # [not ppc64le]
+hdfeos2:
+  - 2.19
+hdfeos5:
+  - 5.1
 icu:
   - 58                 # [not ppc64le]
 ipython:
