@@ -6,7 +6,7 @@ source:
   path: .
 
 build:
-  number: 9
+  number: 18
 
 source:
   path: .
@@ -15,18 +15,20 @@ requirements:
   build:
     # this dep is for us to be able to use gcc -dumpmachine to get the CHOST value
     - gcc_impl_{{ ctng_target_platform }}
+    # So that pin_compatible has something to work with:
+    - libgfortran-ng {{ ctng_gcc }}.*
 
 outputs:
   - name: gcc-dbg_{{ ctng_target_platform }}
     script: install-gcc.sh
     requirements:
       run:
-        - gcc_impl_{{ ctng_target_platform }} {{ ctng_gcc }}
+        - gcc_impl_{{ ctng_target_platform }} {{ ctng_gcc }}.*
         # for activation of binutils env vars
         - {{ pin_subpackage('binutils_' ~ ctng_target_platform, exact=True) }}
     run_exports:
       strong:
-        - libgcc-ng {{ ctng_gcc }}
+        - libgcc-ng >={{ ctng_gcc }}
     about:
       summary: GNU C Compiler (activation scripts)
       home: https://gcc.gnu.org/
@@ -36,14 +38,16 @@ outputs:
     script: install-g++.sh
     requirements:
       run:
-        - gxx_impl_{{ ctng_target_platform }} {{ ctng_gcc }}
+        - gxx_impl_{{ ctng_target_platform }} {{ ctng_gcc }}.*
         # for activation of gcc env vars
         - {{ pin_subpackage('gcc-dbg_' ~ ctng_target_platform, exact=True) }}
         # for activation of binutils env vars
         - {{ pin_subpackage('binutils_' ~ ctng_target_platform, exact=True) }}
     run_exports:
       strong:
-        - libstdcxx-ng {{ ctng_gcc }}
+        - libstdcxx-ng >={{ ctng_gcc }}
+        # Because transitive run_exports do not work:
+        - libgcc-ng >={{ ctng_gcc }}
     about:
       summary: GNU C++ Compiler (activation scripts)
       home: https://gcc.gnu.org/
@@ -53,16 +57,17 @@ outputs:
     script: install-gfortran.sh
     requirements:
       run:
-        - gfortran_impl_{{ ctng_target_platform }} {{ ctng_gcc }}
-        # for activation of gcc env vars
+        - gfortran_impl_{{ ctng_target_platform }} {{ ctng_gcc }}.*
+        # for activation of gcc env vars:
         - {{ pin_subpackage('gcc-dbg_' ~ ctng_target_platform, exact=True) }}
-        # for activation of binutils env vars
+        # for activation of binutils env vars:
         - {{ pin_subpackage('binutils_' ~ ctng_target_platform, exact=True) }}
     run_exports:
       strong:
-        - libgfortran-ng {{ ctng_gcc }}
+        # The SONAME changes at major releases.
+        - {{ pin_compatible('libgfortran-ng', min_pin='x') }}
         # Because transitive run_exports do not work:
-        - libgcc-ng {{ ctng_gcc }}
+        - libgcc-ng >={{ ctng_gcc }}
     about:
       summary: GNU Fortran Compiler (activation scripts)
       home: https://gcc.gnu.org/
@@ -72,7 +77,7 @@ outputs:
     script: install-binutils.sh
     requirements:
       run:
-        - binutils_impl_{{ ctng_target_platform }} {{ ctng_binutils }}
+        - binutils_impl_{{ ctng_target_platform }} {{ ctng_binutils }}.*
     about:
       summary: The GNU Binutils are a collection of binary tools (activation scripts)
       home: https://www.gnu.org/software/binutils/

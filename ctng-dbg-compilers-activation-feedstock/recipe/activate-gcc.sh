@@ -37,7 +37,6 @@ function _tc_activation() {
   local newval
   local from
   local to
-  local which
   local pass
 
   if [ "${act_nature}" = "activate" ]; then
@@ -56,9 +55,9 @@ function _tc_activation() {
           thing=$(echo "${thing}" | sed "s,^\([^\,]*\)\,.*,\1,")
           ;;
         *)
-          newval=$(which ${CONDA_PREFIX}/bin/${tc_prefix}${thing} 2>/dev/null)
-          if [ -z "${newval}" -a "${pass}" = "check" ]; then
-            echo "ERROR: This cross-compiler package contains no program ${CONDA_PREFIX}/bin/${tc_prefix}${thing}"
+          newval="${CONDA_PREFIX}/bin/${tc_prefix}${thing}"
+          if [ ! -x "${newval}" -a "${pass}" = "check" ]; then
+            echo "ERROR: This cross-compiler package contains no program ${newval}"
             return 1
           fi
           ;;
@@ -82,22 +81,73 @@ function _tc_activation() {
   return 0
 }
 
+# When people are using conda-build, assume that adding rpath during build, and pointing at
+#    the host env's includes and libs is helpful default behavior
+if [ "${CONDA_BUILD}" = "1" ]; then
+  CFLAGS_USED="@CFLAGS@ -I${PREFIX}/include"
+  DEBUG_CFLAGS_USED="@DEBUG_CFLAGS@ -I${PREFIX}/include"
+  LDFLAGS_USED="@LDFLAGS@ -Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib"
+else
+  CFLAGS_USED="@CFLAGS@"
+  DEBUG_CFLAGS_USED="@DEBUG_CFLAGS@"
+  LDFLAGS_USED="@LDFLAGS@"
+fi
+
+if [ -f /tmp/old-env-$$.txt ]; then
+  rm -f /tmp/old-env-$$.txt || true
+fi
+
+_PYTHON_SYSCONFIGDATA_NAME_USED=${_PYTHON_SYSCONFIGDATA_NAME:-@_PYTHON_SYSCONFIGDATA_NAME@}
+if [ -n "${_PYTHON_SYSCONFIGDATA_NAME_USED}" ]; then
+  if find "$(dirname $(dirname ${SYS_PYTHON}))/lib/"python* -type f -name "${_PYTHON_SYSCONFIGDATA_NAME_USED}.py" -exec false {} +; then
+    echo ""
+    echo "WARNING: The Python interpreter at the following prefix:"
+    echo "         $(dirname $(dirname ${SYS_PYTHON}))"
+    echo "         .. is not able to handle sysconfigdata-based compilation for the host:"
+    echo "         ${_PYTHON_SYSCONFIGDATA_NAME_USED//_sysconfigdata_/}"
+    echo ""
+    echo "         We are not preventing things from continuing here, but *this* Python will not"
+    echo "         be able to compile software for this host, and, depending on whether it has"
+    echo "         been patched to ignore missing _PYTHON_SYSCONFIGDATA_NAME or not, may cause"
+    echo "         an exception."
+    echo ""
+    echo "         This can happen for one of three reasons:"
+    echo ""
+    echo "         1. It is out of date: Please run 'conda update python' in that environment"
+    echo ""
+    echo "         2. You are bootstrapping a sysconfigdata-based cross-capable Python and can ignore this"
+    echo "            (but please remember to copy the generated sysconfigdata back to the Python recipe's"
+    echo "             sysconfigdate folder and then rebuild it for all the systems you want to be able"
+    echo "             to use as a build machine for this host)."
+    echo ""
+    echo "         3. You are attempting your own bespoke cross-compilation host that is not supported. Have"
+    echo "            you provided your own value in the _PYTHON_SYSCONFIGDATA_NAME environment variable but"
+    echo "            misspelt it and/or failed to add the neccessary ${_PYTHON_SYSCONFIGDATA_NAME_USED}.py"
+    echo "            file to the Python interpreter's standard library?"
+    echo ""
+  fi
+fi
+
 env > /tmp/old-env-$$.txt
 _tc_activation \
   activate host @CHOST@ @CHOST@- \
   cc cpp gcc gcc-ar gcc-nm gcc-ranlib \
   "CPPFLAGS,${CPPFLAGS:-@DEBUG_CPPFLAGS@}" \
-  "CFLAGS,${CFLAGS:-@DEBUG_CFLAGS@}" \
-  "LDFLAGS,${LDFLAGS:-@LDFLAGS@}" \
-  "OPT_CPPFLAGS,${CPPFLAGS:-@CPPFLAGS@}" \
-  "OPT_CFLAGS,${CFLAGS:-@CFLAGS@}" \
-  "_PYTHON_SYSCONFIGDATA_NAME,${_PYTHON_SYSCONFIGDATA_NAME:-@_PYTHON_SYSCONFIGDATA_NAME@}"
+  "CFLAGS,${CFLAGS:-${DEBUG_CFLAGS_USED}}" \
+  "LDFLAGS,${LDFLAGS:-${DEBUG_LDFLAGS_USED}}" \
+  "OPT_CPPFLAGS,${CPPFLAGS:-${CPPFLAGS_USED}}" \
+  "OPT_CFLAGS,${CFLAGS:-${CFLAGS_USED}}" \
+  "_PYTHON_SYSCONFIGDATA_NAME,${_PYTHON_SYSCONFIGDATA_NAME_USED}"
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"
 #exit 1
 else
+  if [ -f /tmp/new-env-$$.txt ]; then
+    rm -f /tmp/new-env-$$.txt || true
+  fi
   env > /tmp/new-env-$$.txt
+
   echo "INFO: $(_get_sourced_filename) made the following environmental changes:"
   diff -U 0 -rN /tmp/old-env-$$.txt /tmp/new-env-$$.txt | tail -n +4 | grep "^-.*\|^+.*" | grep -v "CONDA_BACKUP_" | sort
 fi
