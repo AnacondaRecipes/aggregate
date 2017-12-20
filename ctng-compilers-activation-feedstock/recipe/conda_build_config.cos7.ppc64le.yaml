@@ -37,7 +37,7 @@ ctng_vendor:
 ctng_target_platform:
   - linux-ppc64le
 FINAL_CPPFLAGS:
-  - -D_FORTIFY_SOURCE=2 -O3
+  - -DNDEBUG -D_FORTIFY_SOURCE=2 -O3
 FINAL_CFLAGS:
   - -mcpu=power8 -mtune=power8 -mpower8-fusion -mpower8-vector -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O3 -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix -pipe
 FINAL_CXXFLAGS:
@@ -46,6 +46,8 @@ FINAL_FFLAGS:
   - -fopenmp -mcpu=power8 -mtune=power8 -mpower8-fusion -mpower8-vector -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O3 -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix -pipe
 FINAL_LDFLAGS:
   - -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now
+FINAL_DEBUG_CPPFLAGS:
+- -D_DEBUG -D_FORTIFY_SOURCE=2 -Og
 FINAL_DEBUG_CFLAGS:
   - -mcpu=power8 -mtune=power8 -mpower8-fusion -mpower8-vector -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -Og -g -Wall -Wextra -fcheck=all -fbacktrace -fimplicit-none -fvar-tracking-assignments -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix -pipe
 FINAL_DEBUG_CXXFLAGS:

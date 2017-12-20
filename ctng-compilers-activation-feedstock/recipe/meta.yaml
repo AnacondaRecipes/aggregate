@@ -6,7 +6,7 @@ source:
   path: .
 
 build:
-  number: 17
+  number: 18
 
 source:
   path: .
@@ -62,7 +62,8 @@ outputs:
         - {{ pin_subpackage('binutils_' ~ ctng_target_platform, exact=True) }}
     run_exports:
       strong:
-        - libgfortran-ng >={{ ctng_gcc }}
+        # The SONAME changes at major releases.
+        - {{ pin_compatible('libgfortran-ng', min_pin='x') }}
         # Because transitive run_exports do not work:
         - libgcc-ng >={{ ctng_gcc }}
     about:
