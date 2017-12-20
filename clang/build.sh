@@ -9,9 +9,9 @@ FINAL_CXXFLAGS="-march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE
 FINAL_LDFLAGS="-pie -headerpad_max_install_names"
 # These are the LDFLAGS for when the linker is being driven by a compiler, i.e. with -Wl,
 FINAL_LDFLAGS_CC="-Wl,-pie -Wl,-headerpad_max_install_names"
-FINAL_DEBUG_CFLAGS="-Og -g -Wall -Wextra -fcheck=all -fbacktrace -fimplicit-none"
-FINAL_DEBUG_CXXFLAGS="-Og -g -Wall -Wextra -fcheck=all -fbacktrace -fimplicit-none"
-FINAL_DEBUG_FFLAGS="-Og -g -Wall -Wextra -fcheck=all -fbacktrace -fimplicit-none"
+FINAL_DEBUG_CFLAGS="-Og -g -Wall -Wextra -fcheck=all -fbacktrace -fimplicit-none -fdebug-prefix-map=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION}=\${SRC_DIR}"
+FINAL_DEBUG_CXXFLAGS="-Og -g -Wall -Wextra -fcheck=all -fbacktrace -fimplicit-none -fdebug-prefix-map=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION}=\${SRC_DIR}"
+FINAL_DEBUG_FFLAGS="-Og -g -Wall -Wextra -fcheck=all -fbacktrace -fimplicit-none -fdebug-prefix-map=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION}=\${SRC_DIR}"
 FINAL_PYTHON_SYSCONFIGDATA_NAME="_sysconfigdata_x86_64_apple_darwin13_4_0"
 
 find "${RECIPE_DIR}" -name "*activate*.sh" -exec cp {} . \;

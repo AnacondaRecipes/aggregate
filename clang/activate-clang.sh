@@ -87,16 +87,19 @@ function _tc_activation() {
 if [ "${CONDA_BUILD}" = "1" ]; then
   CFLAGS_USED="@CFLAGS@ -I${PREFIX}/include"
   DEBUG_CFLAGS_USED="@DEBUG_CFLAGS@ -I${PREFIX}/include"
-  LDFLAGS_USED="@LDFLAGS@ -Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib"
+  LDFLAGS_USED="@LDFLAGS@ -rpath ${PREFIX}/lib -L${PREFIX}/lib"
+  LDFLAGS_CC_USED="@LDFLAGS_CC@ -Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib"
 else
   CFLAGS_USED="@CFLAGS@"
   DEBUG_CFLAGS_USED="@DEBUG_CFLAGS@"
   LDFLAGS_USED="@LDFLAGS@"
+  LDFLAGS_CC_USED="@LDFLAGS_CC@"
 fi
 
 if [ -f /tmp/old-env-$$.txt ]; then
   rm -f /tmp/old-env-$$.txt || true
 fi
+
 env > /tmp/old-env-$$.txt
 
 _tc_activation \
@@ -109,7 +112,7 @@ _tc_activation \
   "CPPFLAGS,${CPPFLAGS:-@CPPFLAGS@}" \
   "CFLAGS,${CFLAGS:-${CFLAGS_USED}}" \
   "LDFLAGS,${LDFLAGS:-${LDFLAGS_USED}}" \
-  "LDFLAGS_CC,${LDFLAGS_CC:-@LDFLAGS_CC@}" \
+  "LDFLAGS_CC,${LDFLAGS_CC:-{LDFLAGS_CC_USED}}" \
   "DEBUG_CFLAGS,${DEBUG_CFLAGS:-${DEBUG_CFLAGS_USED}}" \
   "_PYTHON_SYSCONFIGDATA_NAME,${_PYTHON_SYSCONFIGDATA_NAME:-@_PYTHON_SYSCONFIGDATA_NAME@}" \
   "CONDA_BUILD_SYSROOT,${CONDA_BUILD_SYSROOT:-$(xcrun --show-sdk-path)}"
