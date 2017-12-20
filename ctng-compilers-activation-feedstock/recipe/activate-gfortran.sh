@@ -85,10 +85,8 @@ function _tc_activation() {
 #    the host env's includes and libs is helpful default behavior
 if [ "${CONDA_BUILD}" = "1" ]; then
   FFLAGS_USED="@FFLAGS@ -I${PREFIX}/include"
-  FORTRANFLAGS_USED="@FORTRANFLAGS@ -I${PREFIX}/include"
 else
   FFLAGS_USED="@FFLAGS@"
-  FORTRANFLAGS_USED="@FORTRANFLAGS@"
 fi
 
 if [ -f /tmp/old-env-$$.txt ]; then
@@ -100,8 +98,9 @@ _tc_activation \
   activate host @CHOST@ @CHOST@- \
   gfortran f95 \
   "FFLAGS,${FFLAGS:-${FFLAGS_USED}}" \
-  "FORTRANFLAGS,${FORTRANFLAGS:-${FORTRANFLAGS_USED}}" \
-  "DEBUG_FFLAGS,${DEBUG_FFLAGS:-${FFLAGS_USED} @DEBUG_FFLAGS@}"
+  "FORTRANFLAGS,${FFLAGS:-${FFLAGS_USED}}" \
+  "DEBUG_FFLAGS,${FFLAGS:-${FFLAGS_USED} @DEBUG_FFLAGS@}" \
+  "DEBUG_FORTRANFLAGS,${FFLAGS:-${FFLAGS_USED} @DEBUG_FFLAGS@}" \
 
 # extra one - doesn't quite match the naming scheme that works for everything else.
 export FC="$GFORTRAN"
