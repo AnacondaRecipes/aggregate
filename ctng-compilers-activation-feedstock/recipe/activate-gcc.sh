@@ -96,6 +96,7 @@ fi
 if [ -f /tmp/old-env-$$.txt ]; then
   rm -f /tmp/old-env-$$.txt || true
 fi
+env > /tmp/old-env-$$.txt
 
 _PYTHON_SYSCONFIGDATA_NAME_USED=${_PYTHON_SYSCONFIGDATA_NAME:-@_PYTHON_SYSCONFIGDATA_NAME@}
 if [ -n "${_PYTHON_SYSCONFIGDATA_NAME_USED}" ] && [ -n "${SYS_SYSROOT}" ]; then
@@ -127,8 +128,6 @@ if [ -n "${_PYTHON_SYSCONFIGDATA_NAME_USED}" ] && [ -n "${SYS_SYSROOT}" ]; then
     echo ""
   fi
 fi
-
-env > /tmp/old-env-$$.txt
 
 _tc_activation \
   activate host @CHOST@ @CHOST@- \
