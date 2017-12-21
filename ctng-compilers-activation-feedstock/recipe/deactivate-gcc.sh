@@ -81,6 +81,18 @@ function _tc_activation() {
   return 0
 }
 
+# When people are using conda-build, assume that adding rpath during build, and pointing at
+#    the host env's includes and libs is helpful default behavior
+if [ "${CONDA_BUILD}" = "1" ]; then
+  CFLAGS_USED="@CFLAGS@ -I${PREFIX}/include -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix"
+  DEBUG_CFLAGS_USED="@DEBUG_CFLAGS@ -I${PREFIX}/include -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix"
+  LDFLAGS_USED="@LDFLAGS@ -Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib"
+else
+  CFLAGS_USED="@CFLAGS@"
+  DEBUG_CFLAGS_USED="@DEBUG_CFLAGS@"
+  LDFLAGS_USED="@LDFLAGS@"
+fi
+
 if [ -f /tmp/old-env-$$.txt ]; then
   rm -f /tmp/old-env-$$.txt || true
 fi
@@ -90,9 +102,10 @@ _tc_activation \
   deactivate host @CHOST@ @CHOST@- \
   cc cpp gcc gcc-ar gcc-nm gcc-ranlib \
   "CPPFLAGS,${CPPFLAGS:-@CPPFLAGS@}" \
-  "CFLAGS,${CFLAGS:-@CFLAGS@}" \
-  "LDFLAGS,${LDFLAGS:-@LDFLAGS@}" \
-  "DEBUG_CFLAGS,${DEBUG_CFLAGS:-@DEBUG_CFLAGS@}"
+  "CFLAGS,${CFLAGS:-${CFLAGS_USED}}" \
+  "LDFLAGS,${LDFLAGS:-${LDFLAGS_USED}}" \
+  "DEBUG_CFLAGS,${DEBUG_CFLAGS:-${DEBUG_CFLAGS_USED}}" \
+  "_PYTHON_SYSCONFIGDATA_NAME,${_PYTHON_SYSCONFIGDATA_NAME_USED}"
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"

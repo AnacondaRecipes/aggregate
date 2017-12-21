@@ -81,6 +81,14 @@ function _tc_activation() {
   return 0
 }
 
+# When people are using conda-build, assume that adding rpath during build, and pointing at
+#    the host env's includes and libs is helpful default behavior
+if [ "${CONDA_BUILD}" = "1" ]; then
+  FFLAGS_USED="@FFLAGS@ -I${PREFIX}/include -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix"
+else
+  FFLAGS_USED="@FFLAGS@"
+fi
+
 if [ -f /tmp/old-env-$$.txt ]; then
   rm -f /tmp/old-env-$$.txt || true
 fi
@@ -89,9 +97,16 @@ env > /tmp/old-env-$$.txt
 _tc_activation \
   deactivate host @CHOST@ @CHOST@- \
   gfortran f95 \
-  "FFLAGS,${FFLAGS:-@FFLAGS@}" \
-  "FORTRANFLAGS,${FORTRANFLAGS:-@FFLAGS@}" \
-  "DEBUG_FFLAGS,${DEBUG_FFLAGS:-@DEBUG_FFLAGS@}"
+  "FFLAGS,${FFLAGS:-${FFLAGS_USED}}" \
+  "FORTRANFLAGS,${FORTRANFLAGS:-${FFLAGS_USED}}" \
+  "DEBUG_FFLAGS,${FFLAGS:-${FFLAGS_USED} @DEBUG_FFLAGS@}" \
+  "DEBUG_FORTRANFLAGS,${FORTRANFLAGS:-${FFLAGS_USED} @DEBUG_FFLAGS@}" \
+
+# extra ones - have a dependency on the previous ones, so done after.
+_tc_activation \
+  deactivate host @CHOST@ @CHOST@- \
+  "FC,${FC:-${GFORTRAN}}" \
+  "F77,${F77:-${GFORTRAN}}"
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"

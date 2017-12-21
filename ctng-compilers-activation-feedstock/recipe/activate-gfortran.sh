@@ -84,7 +84,7 @@ function _tc_activation() {
 # When people are using conda-build, assume that adding rpath during build, and pointing at
 #    the host env's includes and libs is helpful default behavior
 if [ "${CONDA_BUILD}" = "1" ]; then
-  FFLAGS_USED="@FFLAGS@ -I${PREFIX}/include"
+  FFLAGS_USED="@FFLAGS@ -I${PREFIX}/include -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix"
 else
   FFLAGS_USED="@FFLAGS@"
 fi
@@ -98,12 +98,15 @@ _tc_activation \
   activate host @CHOST@ @CHOST@- \
   gfortran f95 \
   "FFLAGS,${FFLAGS:-${FFLAGS_USED}}" \
-  "FORTRANFLAGS,${FFLAGS:-${FFLAGS_USED}}" \
+  "FORTRANFLAGS,${FORTRANFLAGS:-${FFLAGS_USED}}" \
   "DEBUG_FFLAGS,${FFLAGS:-${FFLAGS_USED} @DEBUG_FFLAGS@}" \
-  "DEBUG_FORTRANFLAGS,${FFLAGS:-${FFLAGS_USED} @DEBUG_FFLAGS@}" \
+  "DEBUG_FORTRANFLAGS,${FORTRANFLAGS:-${FFLAGS_USED} @DEBUG_FFLAGS@}" \
 
-# extra one - doesn't quite match the naming scheme that works for everything else.
-export FC="$GFORTRAN"
+# extra ones - have a dependency on the previous ones, so done after.
+_tc_activation \
+  activate host @CHOST@ @CHOST@- \
+  "FC,${FC:-${GFORTRAN}}" \
+  "F77,${F77:-${GFORTRAN}}"
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"

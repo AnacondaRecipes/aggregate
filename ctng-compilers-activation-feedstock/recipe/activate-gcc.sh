@@ -84,8 +84,8 @@ function _tc_activation() {
 # When people are using conda-build, assume that adding rpath during build, and pointing at
 #    the host env's includes and libs is helpful default behavior
 if [ "${CONDA_BUILD}" = "1" ]; then
-  CFLAGS_USED="@CFLAGS@ -I${PREFIX}/include"
-  DEBUG_CFLAGS_USED="@DEBUG_CFLAGS@ -I${PREFIX}/include"
+  CFLAGS_USED="@CFLAGS@ -I${PREFIX}/include -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix"
+  DEBUG_CFLAGS_USED="@DEBUG_CFLAGS@ -I${PREFIX}/include -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix"
   LDFLAGS_USED="@LDFLAGS@ -Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib"
 else
   CFLAGS_USED="@CFLAGS@"
@@ -98,7 +98,7 @@ if [ -f /tmp/old-env-$$.txt ]; then
 fi
 
 _PYTHON_SYSCONFIGDATA_NAME_USED=${_PYTHON_SYSCONFIGDATA_NAME:-@_PYTHON_SYSCONFIGDATA_NAME@}
-if [ -n "${_PYTHON_SYSCONFIGDATA_NAME_USED}" ]; then
+if [ -n "${_PYTHON_SYSCONFIGDATA_NAME_USED}" ] && [ -n "${SYS_SYSROOT}" ]; then
   if find "$(dirname $(dirname ${SYS_PYTHON}))/lib/"python* -type f -name "${_PYTHON_SYSCONFIGDATA_NAME_USED}.py" -exec false {} +; then
     echo ""
     echo "WARNING: The Python interpreter at the following prefix:"
