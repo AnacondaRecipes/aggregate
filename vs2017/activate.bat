@@ -13,6 +13,15 @@ set "MSYS2_ENV_CONV_EXCL=CL"
 :: http://stevedower.id.au/blog/building-for-python-3-5-part-two/ for more info
 set "PY_VCRUNTIME_REDIST=%PREFIX%\\bin\\vcruntime140.dll"
 
-set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools"
+set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\"
+if not exist "%VSINSTALLDIR%" (
+set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\"
+)
+if not exist "%VSINSTALLDIR%" (
+set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\"
+)
+if not exist "%VSINSTALLDIR%" (
+set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\"
+)
 
 :: other things added by install_activate.bat at package build time
