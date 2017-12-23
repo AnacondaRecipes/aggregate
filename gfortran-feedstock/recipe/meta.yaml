@@ -13,7 +13,7 @@ package:
   version: {{ gfortran_ver }}
 
 build:
-  number: 1
+  number: 2
   skip: True                                                  # [not osx]
   binary_has_prefix_files:
     - lib/libgcc_ext.10.*.dylib
@@ -36,6 +36,7 @@ build:
     - lib/libgomp.a
 
     - lib/gcc/{{ chost }}/{{ gfortran_ver }}/libgcc.a
+    - lib/gcc/{{ chost }}/{{ gfortran_ver }}/libgcc_eh.a
 
     - lib/gcc/{{ chost }}/{{ gfortran_ver }}/finclude/**
 
