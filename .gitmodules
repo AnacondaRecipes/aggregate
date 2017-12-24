@@ -2192,3 +2192,7 @@
 	path = descartes-feedstock
 	url = ../descartes-feedstock
 	branch = master
+[submodule "backports.lzma-feedstock"]
+	path = backports.lzma-feedstock
+	url = ../backports.lzma-feedstock/
+	branch = master
