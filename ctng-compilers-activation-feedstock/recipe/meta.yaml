@@ -6,7 +6,7 @@ source:
   path: .
 
 build:
-  number: 19
+  number: 24
 
 source:
   path: .
@@ -58,9 +58,9 @@ outputs:
     requirements:
       run:
         - gfortran_impl_{{ ctng_target_platform }} {{ ctng_gcc }}.*
-        # for activation of gcc env vars
+        # for activation of gcc env vars:
         - {{ pin_subpackage('gcc_' ~ ctng_target_platform, exact=True) }}
-        # for activation of binutils env vars
+        # for activation of binutils env vars:
         - {{ pin_subpackage('binutils_' ~ ctng_target_platform, exact=True) }}
     run_exports:
       strong:
