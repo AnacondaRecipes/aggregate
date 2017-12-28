@@ -37,7 +37,7 @@ ctng_vendor:
 ctng_target_platform:
   - linux-32
 FINAL_CPPFLAGS:
-  - -D_FORTIFY_SOURCE=2 -O2
+  - -DNDEBUG -D_FORTIFY_SOURCE=2 -O2
 FINAL_CFLAGS:
   - -march=prescott -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -pipe
 FINAL_CXXFLAGS:
@@ -49,11 +49,11 @@ FINAL_LDFLAGS:
 FINAL_DEBUG_CPPFLAGS:
   - -D_DEBUG -D_FORTIFY_SOURCE=2 -Og
 FINAL_DEBUG_CFLAGS:
-  - -march=prescott -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -pipe -Og -g -Wall -Wextra -fvar-tracking-assignments -fdebug-prefix-map=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION}=\${SRC_DIR}
+  - -march=prescott -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-all -fno-plt -Og -g -Wall -Wextra -fvar-tracking-assignments -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix -pipe
 FINAL_DEBUG_CXXFLAGS:
-  - -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=prescott -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -pipe -Og -g -Wall -Wextra -fvar-tracking-assignments -fdebug-prefix-map=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION}=\${SRC_DIR}
+  - -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=prescott -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-all -fno-plt -Og -g -Wall -Wextra -fvar-tracking-assignments -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix -pipe
 FINAL_DEBUG_FFLAGS:
-  - -fopenmp -march=prescott -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -pipe -Og -g -Wall -Wextra -fcheck=all -fbacktrace -fimplicit-none -fvar-tracking-assignments -fdebug-prefix-map=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION}=\${SRC_DIR}
+  - -fopenmp -march=prescott -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-all -fno-plt -Og -g -Wall -Wextra -fcheck=all -fbacktrace -fimplicit-none -fvar-tracking-assignments -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix -pipe
 FINAL_PYTHON_SYSCONFIGDATA_NAME:
   - _sysconfigdata_i686_conda_cos6_linux_gnu
 zip_keys:
@@ -65,6 +65,7 @@ zip_keys:
     - FINAL_CXXFLAGS
     - FINAL_FFLAGS
     - FINAL_LDFLAGS
+    - FINAL_DEBUG_CPPFLAGS
     - FINAL_DEBUG_CFLAGS
     - FINAL_DEBUG_CXXFLAGS
     - FINAL_DEBUG_FFLAGS
