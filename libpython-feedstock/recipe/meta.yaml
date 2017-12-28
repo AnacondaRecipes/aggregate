@@ -1,0 +1,21 @@
+package:
+  name: libpython
+  version: 2.1
+
+requirements:
+  build:
+    - python
+    - m2w64-toolchain
+  run:
+    - python
+
+test:
+  requires:
+    - m2w64-toolchain
+  files:
+    - spam.c
+
+about:
+  license: Other
+  license_family: Other
+  summary: A mingw-w64 import library for python??.dll (on Windows)
