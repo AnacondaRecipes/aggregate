@@ -1,0 +1,26 @@
+From 9ea05a5debb6694e2aba8f07a536106b0b104f0d Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sat, 30 Dec 2017 10:31:40 -0800
+Subject: [PATCH 3/7] OpenCV Libs: Specify explicitly
+
+This will help avoid over linking libraries
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index ceed645..d5f4e39 100644
+--- a/Makefile
++++ b/Makefile
+@@ -95,7 +95,7 @@ endif
+ # setup opencv
+ ifeq ($(USE_OPENCV), 1)
+ 	CFLAGS += -DMXNET_USE_OPENCV=1 $(shell pkg-config --cflags opencv)
+-	LDFLAGS += $(filter-out -lopencv_ts, $(shell pkg-config --libs opencv))
++	LDFLAGS += -lopencv_core -lopencv_imgproc -lopencv_imgcodecs
+ 	BIN += bin/im2rec
+ else
+ 	CFLAGS+= -DMXNET_USE_OPENCV=0
+-- 
+1.9.5 (Apple Git-50.3)
+

@@ -1,0 +1,36 @@
+From de58d6e8dfd9ab07e19f7f99945a8cfdd672f717 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sat, 30 Dec 2017 10:31:40 -0800
+Subject: [PATCH 4/7] Also attempt pkg-config for jemalloc
+
+---
+ Makefile | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index d5f4e39..a87c25d 100644
+--- a/Makefile
++++ b/Makefile
+@@ -208,10 +208,18 @@ ifneq ($(USE_GPERFTOOLS), 1)
+ 				endif
+ 			endif
+ 		endif
++		JEMALLOC_CUSTOM=$(shell pkg-config --exists jemalloc; echo $$?)
++		ifeq ($(JEMALLOC_CUSTOM), 0)
++			CFLAGS += $(shell pkg-config --cflags jemalloc)
++			LDFLAGS += $(shell pkg-config --libs jemalloc)
++			USE_JEMALLOC=1
++		endif
+ 		ifeq ($(USE_JEMALLOC), 1)
+ 			CFLAGS += -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc \
+ 			-fno-builtin-free -DUSE_JEMALLOC
+-			LDFLAGS += $(FIND_LIBFILE)
++			ifneq ($(JEMALLOC_CUSTOM), 0)
++				LDFLAGS += $(FIND_LIBFILE)
++			endif
+ 		endif
+ 	endif
+ endif
+-- 
+1.9.5 (Apple Git-50.3)
+

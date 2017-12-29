@@ -1,0 +1,110 @@
+package:
+  name: mxnet-mkl
+  version: 1.0.0
+
+build:
+  skip: True  # [win]
+  # conda > 4.4 might be able to use this
+  requires_features:
+    blas: {{ blas_impl }}
+  # this is for conda 4.4 and below
+  features:
+    - nomkl    # [x86 and blas_impl != 'mkl']
+
+source:
+  git_rev: 1.0.0
+  git_url: https://github.com/apache/incubator-mxnet.git
+  patches:
+    - 0001-Make-versions-of-python-dependencies-like-numpy-dete.patch
+    - 0002-Relax-constraints-on-requests-make-graphviz-optional.patch
+    - 0003-OpenCV-Libs-Specify-explicitly.patch
+    - 0004-Also-attempt-pkg-config-for-jemalloc.patch
+    - 0005-Check-if-HOME_MKL-is-empty-before-using-it.patch
+    - 0006-Use-MKL-ML-options-only-if-USE_MKLML-1.patch
+    - 0007-Prepend-additional-C-LD-FLAGS-instead-of-appending.patch
+
+outputs:
+  - name: libmxnet
+    script: install-libmxnet.sh  # [unix]
+    requirements:
+      host:
+        - jemalloc  # [linux]
+        - mkl-devel  {{ mkl }}  # [blas_impl == 'mkl']
+        - openblas-devel {{ openblas }}  # [blas_impl == 'openblas']
+        - opencv
+      build:
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - pkg-config
+        - make
+      # Run exports will take care of opencv, mkl, jemalloc
+    test:
+      commands:
+        - im2rec -h
+        - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+        - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+      requires: # [x86 and blas_impl != 'mkl']
+        - nomkl # [x86 and blas_impl != 'mkl']
+
+  - name: py-mxnet
+    script: install-py-mxnet.sh  # [unix]
+    requirements:
+      host:
+        - libmxnet
+        - cython
+        - python
+        # Numpy's C API is not used
+        - numpy >=1.8.2,<=1.13.3
+        - requests >=2.18.4,<3
+        - {{ pin_subpackage('libmxnet', exact=True) }}
+      build:
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+      run:
+        - python
+        - {{ pin_subpackage('libmxnet', exact=True) }}
+        # https://github.com/apache/incubator-mxnet/pull/9169
+        - numpy >=1.8.2,<=1.13.3
+        - requests >=2.18.4,<3
+        # This is only required for visualization and hence optional.
+        # We need a new build of graphviz otherwise it downgrades opencv
+        #- python-graphviz
+    test:
+      imports:
+        - mxnet
+      requires: # [x86 and blas_impl != 'mkl']
+        - nomkl # [x86 and blas_impl != 'mkl']
+      script: test-py-mxnet.py
+
+  - name: mxnet
+    requirements:
+      host:
+        - python
+      run:
+        - {{ pin_subpackage('libmxnet', exact=True) }}
+        - {{ pin_subpackage('py-mxnet', exact=True) }}
+        - python
+
+about:
+  home: http://mxnet.io
+  license: Apache-2
+  license_file: LICENSE
+  license_family: Apache
+  summary: MXNet is a deep learning framework designed for both efficiency and flexibility
+  description: |
+    Apache MXNet (incubating) is a deep learning framework designed for both
+    efficiency and flexibility. It allows you to mix symbolic and imperative
+    programming to maximize efficiency and productivity. At its core, MXNet
+    contains a dynamic dependency scheduler that automatically parallelizes both
+    symbolic and imperative operations on the fly. A graph optimization layer on
+    top of that makes symbolic execution fast and memory efficient. MXNet is
+    portable and lightweight, scaling effectively to multiple GPUs and multiple
+    machines. MXNet is also more than a deep learning project. It is also a
+    collection of blue prints and guidelines for building deep learning systems,
+    and interesting insights of DL systems for hackers.
+  dev_url: https://github.com/apache/incubator-mxnet
+  doc_url: https://mxnet.incubator.apache.org/
+
+extra:
+  recipe-maintainers:
+    - nehaljwani

@@ -1,0 +1,29 @@
+From 71be9def8ecf57f484ecaeeb3c544c57174b9432 Mon Sep 17 00:00:00 2001
+From: Sandeep Krishnamurthy <sandeep.krishna98@gmail.com>
+Date: Mon, 25 Dec 2017 15:39:43 -0800
+Subject: [PATCH 1/7] Make versions of python dependencies like numpy,
+ deterministic. (#9169)
+
+* Make versions of python dependencies like numpy, deterministic.
+
+* Make numpy version dependency fixed between 1.8.2 and 1.13.3. Update install guide with fortran for numpy
+---
+ python/setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/python/setup.py b/python/setup.py
+index 029b3af..b7a8449 100644
+--- a/python/setup.py
++++ b/python/setup.py
+@@ -28,7 +28,7 @@ if "--inplace" in sys.argv:
+ else:
+     from setuptools import setup
+     from setuptools.extension import Extension
+-    kwargs = {'install_requires': ['numpy', 'requests', 'graphviz'], 'zip_safe': False}
++    kwargs = {'install_requires': ['numpy<=1.13.3,>=1.8.2', 'requests==2.18.4', 'graphviz==0.8.1'], 'zip_safe': False}
+ from setuptools import find_packages
+ 
+ with_cython = False
+-- 
+1.9.5 (Apple Git-50.3)
+
