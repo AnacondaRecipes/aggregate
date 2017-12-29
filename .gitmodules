@@ -2196,3 +2196,7 @@
 	path = backports.lzma-feedstock
 	url = ../backports.lzma-feedstock/
 	branch = master
+[submodule "jemalloc-feedstock"]
+	path = jemalloc-feedstock
+	url = ../jemalloc-feedstock/
+	branch = master
