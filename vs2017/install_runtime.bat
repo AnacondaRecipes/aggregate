@@ -11,7 +11,7 @@ robocopy "C:\Program Files (x86)\Windows Kits\10\Redist\ucrt\DLLs\%VC_PATH%"  "%
 if %ERRORLEVEL% GEQ 8 exit 1
 
 REM ========== This one comes from visual studio 2017
-set "UPDATE_VER=14.11.25325"
+set "UPDATE_VER=14.12.25810"
 set "VC_VER=141"
 set "BT_ROOT=C:\Program Files (x86)\Microsoft Visual Studio\%MSC_VER%\Enterprise"
 if not exist "%BT_ROOT%" (
@@ -26,10 +26,10 @@ set "BT_ROOT=C:\Program Files (x86)\Microsoft Visual Studio\%MSC_VER%\Profession
 
 set "REDIST_ROOT=%BT_ROOT%\VC\Redist\MSVC\%UPDATE_VER%\onecore\%VC_PATH%"
 robocopy "%REDIST_ROOT%\Microsoft.VC%VC_VER%.CRT" "%LIBRARY_BIN%" *.dll /E
-if %ERRORLEVEL% LSS 8 exit 0
+if %ERRORLEVEL% GTR 8 exit 1
 robocopy "%REDIST_ROOT%\Microsoft.VC%VC_VER%.CRT" "%PREFIX%" *.dll /E
-if %ERRORLEVEL% LSS 8 exit 0
+if %ERRORLEVEL% GTR 8 exit 1
 robocopy "%REDIST_ROOT%\Microsoft.VC%VC_VER%.OpenMP" "%LIBRARY_BIN%" *.dll /E
-if %ERRORLEVEL% LSS 8 exit 0
+if %ERRORLEVEL% GTR 8 exit 1
 robocopy "%REDIST_ROOT%\Microsoft.VC%VC_VER%.OpenMP" "%PREFIX%" *.dll /E
-if %ERRORLEVEL% LSS 8 exit 0
+if %ERRORLEVEL% GTR 8 exit 1

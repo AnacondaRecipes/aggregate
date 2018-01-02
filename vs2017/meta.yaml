@@ -4,21 +4,19 @@
 {% set fullver="15.5.2" %}
 
 package:
-  name: vs{{ vsyear }}
+  name: vs_activation_and_runtime
   version: {{ fullver }}
 
 build:
   skip: True  [not win]
+  number: 1
 
 outputs:
   - name: vs{{ vsyear }}_{{ cross_compiler_target_platform }}
     script: install_activate.bat
-    track_features:
-      # VS 2017 is binary-compatible with VS 2015/vc14.  Tools are "v141".
-      strong:
-        - vc{{ vcfeature }}
     run_exports:
-      - vc {{ vcver }}
+      strong:
+        - vc {{ vcver }}
     about:
       summary: Activation and version verification of MSVC {{ vcver }} (VS {{ vsyear }}) compiler
       license: BSD 3-clause
@@ -26,8 +24,6 @@ outputs:
     script: install_runtime.bat
   - name: vc
     version: {{ vcver }}
-    track_features:
-      - vc{{ vcfeature }}
     requirements:
       run:
         - {{ pin_subpackage('vs' ~ vsyear ~ '_runtime') }}
@@ -37,7 +33,7 @@ outputs:
       license_family: BSD
       summary: A meta-package to track VC features.
       description: |
-          This metapackage is used to activate vc features without
-          depending on Python.
+          This metapackage is used to enforce consistency of runtime
+          dependencies within an environment
       doc_url: https://github.com/conda/conda/wiki/VC-features
       dev_url: https://github.com/conda/conda/wiki/VC-features
