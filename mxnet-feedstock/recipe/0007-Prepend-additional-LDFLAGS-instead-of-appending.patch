@@ -1,0 +1,26 @@
+From 2089b98d24bcd3affd3a78364e57a6844b109a18 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sat, 30 Dec 2017 10:31:59 -0800
+Subject: [PATCH 07/12] Prepend additional LDFLAGS instead of appending
+
+Because order matters!
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index cf09c2fb..d849fc55 100644
+--- a/Makefile
++++ b/Makefile
+@@ -245,7 +245,7 @@ ifneq ($(ADD_CFLAGS), NONE)
+ endif
+ 
+ ifneq ($(ADD_LDFLAGS), NONE)
+-	LDFLAGS += $(ADD_LDFLAGS)
++	LDFLAGS := $(ADD_LDFLAGS) $(LDFLAGS)
+ endif
+ 
+ ifneq ($(USE_CUDA_PATH), NONE)
+-- 
+2.14.1
+

@@ -1,0 +1,42 @@
+From b344c1bd17d65fd54d354756ccf46768785ef303 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Tue, 2 Jan 2018 06:03:18 -0600
+Subject: [PATCH 11/12] Also build libmxnet_static
+
+---
+ CMakeLists.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 11e63f52..c1d182db 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -494,8 +494,8 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "Darwin" AND USE_MXNET_LIB_NAMING)
+   add_library(mxnet MODULE ${SOURCE})
+   add_library(mxnet_static STATIC ${SOURCE})
+ else()
++  list(APPEND MXNET_INSTALL_TARGETS mxnet_static)
+   if(UNIX)
+-    list(APPEND MXNET_INSTALL_TARGETS mxnet_static)
+     add_library(mxnet_static STATIC ${SOURCE})
+     # Need an arbitrary source file to trigger CMake to build the library
+     add_library(mxnet SHARED)
+@@ -504,6 +504,7 @@ else()
+     target_link_libraries(mxnet PRIVATE mxnet_static) # Let cmake understand the dependency
+   else()
+     add_library(mxnet SHARED ${SOURCE})
++    add_library(mxnet_static STATIC ${SOURCE})
+   endif()
+ endif()
+ 
+@@ -546,6 +547,7 @@ target_link_libraries(mxnet PUBLIC dmlc)
+ 
+ if(MSVC AND USE_MXNET_LIB_NAMING)
+   set_target_properties(mxnet PROPERTIES OUTPUT_NAME "libmxnet")
++  set_target_properties(mxnet_static PROPERTIES OUTPUT_NAME "libmxnet_static")
+ endif()
+ 
+ if(USE_PROFILER)
+-- 
+2.14.1
+
