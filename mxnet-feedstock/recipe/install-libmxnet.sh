@@ -21,7 +21,6 @@ if [[ ${HOST} =~ .*darwin.* ]]; then
   # On macOS, jemalloc defaults to JEMALLOC_PREFIX: 'je_'
   # for which mxnet source code isn't ready yet.
   export JEMALLOC_OPT=0
-  export LDFLAGS="${LDFLAGS_CC}"
 fi
 
 export BLAS_OPTS="USE_BLAS=$blas_impl"
