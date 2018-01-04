@@ -2204,3 +2204,7 @@
 	path = nlopt-feedstock
 	url = ../nlopt-feedstock
 	branch = master
+[submodule "libgpuarray-feedstock"]
+	path = libgpuarray-feedstock
+	url = ../libgpuarray-feedstock
+	branch = master
