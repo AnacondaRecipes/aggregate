@@ -5,10 +5,10 @@ CHOST=${macos_machine}
 FINAL_CPPFLAGS="-D_FORTIFY_SOURCE=2 -mmacosx-version-min=${macos_min_version}"
 FINAL_CFLAGS="-march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe"
 FINAL_CXXFLAGS="-march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -std=c++14 -fmessage-length=0"
-# These are the LDFLAGS for when the linker is being called directly, i.e. without -Wl,
-FINAL_LDFLAGS="-pie -headerpad_max_install_names"
 # These are the LDFLAGS for when the linker is being driven by a compiler, i.e. with -Wl,
-FINAL_LDFLAGS_CC="-Wl,-pie -Wl,-headerpad_max_install_names"
+FINAL_LDFLAGS="-Wl,-pie -Wl,-headerpad_max_install_names"
+# These are the LDFLAGS for when the linker is being called directly, i.e. without -Wl,
+FINAL_LDFLAGS_LD="-pie -headerpad_max_install_names"
 FINAL_DEBUG_CFLAGS="-Og -g -Wall -Wextra -fcheck=all -fbacktrace -fimplicit-none -fdebug-prefix-map=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION}=\${SRC_DIR}"
 FINAL_DEBUG_CXXFLAGS="-Og -g -Wall -Wextra -fcheck=all -fbacktrace -fimplicit-none -fdebug-prefix-map=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION}=\${SRC_DIR}"
 FINAL_DEBUG_FFLAGS="-Og -g -Wall -Wextra -fcheck=all -fbacktrace -fimplicit-none -fdebug-prefix-map=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION}=\${SRC_DIR}"
@@ -26,6 +26,6 @@ find . -name "*activate*.sh" -exec sed -i.bak "s|@DEBUG_CXXFLAGS@|${FINAL_DEBUG_
 # find . -name "*activate*.sh" -exec sed -i.bak "s|@FFLAGS@|${FINAL_FFLAGS}|g"                 "{}" \;
 # find . -name "*activate*.sh" -exec sed -i.bak "s|@DEBUG_FFLAGS@|${FINAL_DEBUG_FFLAGS}|g"     "{}" \;
 find . -name "*activate*.sh" -exec sed -i.bak "s|@LDFLAGS@|${FINAL_LDFLAGS}|g"               "{}" \;
-find . -name "*activate*.sh" -exec sed -i.bak "s|@LDFLAGS_CC@|${FINAL_LDFLAGS_CC}|g"         "{}" \;
+find . -name "*activate*.sh" -exec sed -i.bak "s|@LDFLAGS_LD@|${FINAL_LDFLAGS_LD}|g"         "{}" \;
 find . -name "*activate*.sh" -exec sed -i.bak "s|@_PYTHON_SYSCONFIGDATA_NAME@|${FINAL_PYTHON_SYSCONFIGDATA_NAME}|g"  "{}" \;
 find . -name "*activate*.sh.bak" -exec rm "{}" \;

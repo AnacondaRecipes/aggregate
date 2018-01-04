@@ -2200,3 +2200,7 @@
 	path = jemalloc-feedstock
 	url = ../jemalloc-feedstock/
 	branch = master
+[submodule "nlopt-feedstock"]
+	path = nlopt-feedstock
+	url = ../nlopt-feedstock
+	branch = master

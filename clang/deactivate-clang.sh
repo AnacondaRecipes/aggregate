@@ -82,9 +82,24 @@ function _tc_activation() {
   return 0
 }
 
+# When people are using conda-build, assume that adding rpath during build, and pointing at
+#    the host env's includes and libs is helpful default behavior
+if [ "${CONDA_BUILD}" = "1" ]; then
+  CFLAGS_USED="@CFLAGS@ -I${PREFIX}/include"
+  DEBUG_CFLAGS_USED="@DEBUG_CFLAGS@ -I${PREFIX}/include"
+  LDFLAGS_USED="@LDFLAGS@ -Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib"
+  LDFLAGS_LD_USED="@LDFLAGS_LD@ -rpath ${PREFIX}/lib -L${PREFIX}/lib"
+else
+  CFLAGS_USED="@CFLAGS@"
+  DEBUG_CFLAGS_USED="@DEBUG_CFLAGS@"
+  LDFLAGS_USED="@LDFLAGS@"
+  LDFLAGS_LD_USED="@LDFLAGS_LD@"
+fi
+
 if [ -f /tmp/old-env-$$.txt ]; then
   rm -f /tmp/old-env-$$.txt || true
 fi
+
 env > /tmp/old-env-$$.txt
 
 _tc_activation \
@@ -95,14 +110,15 @@ _tc_activation \
   clang \
   "CC,${CC:-@CHOST@-clang}" \
   "CPPFLAGS,${CPPFLAGS:-@CPPFLAGS@}" \
-  "CFLAGS,${CFLAGS:-@CFLAGS@}" \
-  "LDFLAGS,${LDFLAGS:-@LDFLAGS@}" \
-  "LDFLAGS_CC,${LDFLAGS_CC:-@LDFLAGS_CC@}" \
-  "DEBUG_CFLAGS,${DEBUG_CFLAGS:-@DEBUG_CFLAGS@}"
+  "CFLAGS,${CFLAGS:-${CFLAGS_USED}}" \
+  "LDFLAGS,${LDFLAGS:-${LDFLAGS_USED}}" \
+  "LDFLAGS_LD,${LDFLAGS_LD:-${LDFLAGS_LD_USED}}" \
+  "DEBUG_CFLAGS,${DEBUG_CFLAGS:-${DEBUG_CFLAGS_USED}}" \
+  "_PYTHON_SYSCONFIGDATA_NAME,${_PYTHON_SYSCONFIGDATA_NAME:-@_PYTHON_SYSCONFIGDATA_NAME@}" \
+  "CONDA_BUILD_SYSROOT,${CONDA_BUILD_SYSROOT:-$(xcrun --show-sdk-path)}"
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"
-#exit 1
 else
   if [ -f /tmp/new-env-$$.txt ]; then
     rm -f /tmp/new-env-$$.txt || true
