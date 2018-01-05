@@ -4,7 +4,7 @@ package:
 
 build:
   skip: True  [not osx]
-  number: 6
+  number: 7
 
 requirements:
   build:

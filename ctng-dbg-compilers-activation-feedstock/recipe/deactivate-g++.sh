@@ -114,3 +114,4 @@ else
   echo "INFO: $(_get_sourced_filename) made the following environmental changes:"
   diff -U 0 -rN /tmp/old-env-$$.txt /tmp/new-env-$$.txt | tail -n +4 | grep "^-.*\|^+.*" | grep -v "CONDA_BACKUP_" | sort
 fi
+rm -f /tmp/old-env-$$.txt /tmp/new-env-$$.txt || true

@@ -37,7 +37,6 @@ function _tc_activation() {
   local newval
   local from
   local to
-  local which
   local pass
 
   if [ "${act_nature}" = "activate" ]; then
@@ -56,9 +55,9 @@ function _tc_activation() {
           thing=$(echo "${thing}" | sed "s,^\([^\,]*\)\,.*,\1,")
           ;;
         *)
-          newval=$(which ${CONDA_PREFIX}/bin/${tc_prefix}${thing} 2>/dev/null)
-          if [ -z "${newval}" -a "${pass}" = "check" ]; then
-            echo "ERROR: This cross-compiler package contains no program ${CONDA_PREFIX}/bin/${tc_prefix}${thing}"
+          newval="${CONDA_PREFIX}/bin/${tc_prefix}${thing}"
+          if [ ! -x "${newval}" -a "${pass}" = "check" ]; then
+            echo "ERROR: This cross-compiler package contains no program ${newval}"
             return 1
           fi
           ;;
@@ -82,6 +81,16 @@ function _tc_activation() {
   return 0
 }
 
+# When people are using conda-build, assume that adding rpath during build, and pointing at
+#    the host env's includes and libs is helpful default behavior
+if [ "${CONDA_BUILD}" = "1" ]; then
+  CXXFLAGS_USED="@CXXFLAGS@ -I${PREFIX}/include -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix"
+  DEBUG_CXXFLAGS_USED="@CXXFLAGS@ @DEBUG_CXXFLAGS@ -I${PREFIX}/include -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix"
+else
+  CXXFLAGS_USED="@CXXFLAGS@"
+  DEBUG_CXXFLAGS_USED="@CXXFLAGS@ @DEBUG_CXXFLAGS@"
+fi
+
 if [ -f /tmp/old-env-$$.txt ]; then
   rm -f /tmp/old-env-$$.txt || true
 fi
@@ -91,12 +100,11 @@ _tc_activation \
   deactivate host @CHOST@ @CHOST@- \
   clang++ \
   "CXX,${CXX:-@CHOST@-clang++}" \
-  "CXXFLAGS,${CXXFLAGS:-@CXXFLAGS@}" \
-  "DEBUG_CXXFLAGS,${DEBUG_CXXFLAGS:-@DEBUG_CXXFLAGS@}"
+  "CXXFLAGS,${CXXFLAGS:-${DEBUG_CXXFLAGS_USED}}" \
+  "OPT_CXXFLAGS,${CXXFLAGS:-${CXXFLAGS_USED}}"
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"
-#exit 1
 else
   if [ -f /tmp/new-env-$$.txt ]; then
     rm -f /tmp/new-env-$$.txt || true
@@ -106,3 +114,4 @@ else
   echo "INFO: $(_get_sourced_filename) made the following environmental changes:"
   diff -U 0 -rN /tmp/old-env-$$.txt /tmp/new-env-$$.txt | tail -n +4 | grep "^-.*\|^+.*" | grep -v "CONDA_BACKUP_" | sort
 fi
+rm -f /tmp/old-env-$$.txt /tmp/new-env-$$.txt || true
