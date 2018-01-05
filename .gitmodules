@@ -2216,3 +2216,7 @@
 	path = parameterized-feedstock
 	url = ../parameterized-feedstock
 	branch = master
+[submodule "caffe-feedstock"]
+	path = caffe-feedstock
+	url = ../caffe-feedstock
+	branch = master
