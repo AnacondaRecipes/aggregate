@@ -2212,3 +2212,7 @@
 	path = pygpu-feedstock
 	url = ../pygpu-feedstock
 	branch = master
+[submodule "parameterized-feedstock"]
+	path = parameterized-feedstock
+	url = ../parameterized-feedstock
+	branch = master
