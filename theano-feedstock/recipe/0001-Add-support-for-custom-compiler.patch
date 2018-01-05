@@ -1,7 +1,7 @@
-From 71b0fe302841fff91d366aabb3f3abe81b381e12 Mon Sep 17 00:00:00 2001
+From 4f847cc5706611a841ac0ebfcdf9f65779150bd8 Mon Sep 17 00:00:00 2001
 From: Nehal J Wani <nehaljw.kkd1@gmail.com>
 Date: Sun, 3 Dec 2017 10:38:03 -0600
-Subject: [PATCH] Add support for custom compiler
+Subject: [PATCH 1/2] Add support for custom compiler
 
 ---
  theano/configdefaults.py | 4 ++--
@@ -9,11 +9,11 @@ Subject: [PATCH] Add support for custom compiler
  2 files changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/theano/configdefaults.py b/theano/configdefaults.py
-index 882114e69..90172e820 100644
+index 2e644e2d8..ec8a378df 100644
 --- a/theano/configdefaults.py
 +++ b/theano/configdefaults.py
-@@ -441,11 +441,11 @@ AddConfigVar(
-             'FAST_COMPILE', 'DEBUG_MODE'),
+@@ -493,11 +493,11 @@ AddConfigVar(
+     ConfigParam('Mode', filter_mode),
      in_c_key=False)
  
 -param = "g++"
@@ -27,10 +27,10 @@ index 882114e69..90172e820 100644
      rc = 1
  
 diff --git a/theano/gof/cmodule.py b/theano/gof/cmodule.py
-index aef42b3d5..73c670d56 100644
+index 6f6007734..b2fc66f1c 100644
 --- a/theano/gof/cmodule.py
 +++ b/theano/gof/cmodule.py
-@@ -1901,7 +1901,7 @@ class GCC_compiler(Compiler):
+@@ -1921,7 +1921,7 @@ class GCC_compiler(Compiler):
                      GCC_compiler.march_flags = []
                      break
  
