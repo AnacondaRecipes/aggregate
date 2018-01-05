@@ -1,0 +1,25 @@
+From bc629c06b21e775d8af109cac55cb7c00bd738dc Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Fri, 5 Jan 2018 06:48:52 -0600
+Subject: [PATCH] Use gcc as a fallback
+
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 4bd9408..b4a4d9a 100644
+--- a/setup.py
++++ b/setup.py
+@@ -58,7 +58,7 @@ class install(_install):
+         _install.run(self)
+ 
+     def compile_c(self, source, target):
+-        CC = 'gcc'
++        CC = os.environ.get('CC', 'gcc')
+ 
+         DEFAULT_CFLAGS = '-lm -pthread -O3 -Wall -march=native -funroll-loops'
+         DEFAULT_CFLAGS += ' -Wno-unused-result'
+-- 
+2.14.1
+

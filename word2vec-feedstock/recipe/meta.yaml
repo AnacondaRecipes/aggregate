@@ -1,0 +1,56 @@
+{% set name = "word2vec" %}
+{% set version = "0.9.2" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/danielfrg/word2vec
+  # Using commit SHA, since all files are not in PyPI tarball
+  # Also, none of the commits are tagged. The SHA is based on
+  # release date of the tarball on PyPI
+  # https://github.com/danielfrg/word2vec/issues/50
+  git_rev: 113a3ea9f23519d85cb0b62057c40655105b4933
+  patches:
+    - 0001-Use-gcc-as-a-fallback.patch
+    - 0002-Append-CFLAGS-instead-of-replacing-DEFAULT_CFLAGS.patch
+
+build:
+  detect_binary_files_with_prefix: False
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - numpy
+    - cython
+    - m2w64-toolchain  # [win]
+  build:
+    - {{ compiler('c') }}  # [unix]
+  run:
+    - {{ pin_compatible('numpy') }}
+    - python
+
+test:
+  imports:
+    - word2vec
+    - word2vec.tests
+    - word2vec.word2vec_noop
+
+  commands:
+    - word2vec
+    - word2phrase
+    - word2vec-distance
+    - word2vec-word-analogy
+    - word2vec-compute-accuracy
+
+about:
+  home: https://github.com/danielfrg/word2vec
+  license: Apache-2.0
+  license_family: Apache
+  summary: Python interface to Google word2vec
+  description: Python interface to Google word2vec.
+  doc_url: https://github.com/danielfrg/word2vec
+  dev_url: https://github.com/danielfrg/word2vec

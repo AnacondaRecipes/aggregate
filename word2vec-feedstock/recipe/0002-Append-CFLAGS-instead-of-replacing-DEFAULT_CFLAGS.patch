@@ -1,0 +1,25 @@
+From d2989e47d77ae6e29364577b1f4691218ee650fe Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Fri, 5 Jan 2018 06:53:20 -0600
+Subject: [PATCH 2/2] Append CFLAGS instead of replacing DEFAULT_CFLAGS
+
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index b4a4d9a..1e6d593 100644
+--- a/setup.py
++++ b/setup.py
+@@ -66,7 +66,7 @@ class install(_install):
+             DEFAULT_CFLAGS += ' -I/usr/include/malloc'
+         if sys.platform == 'win32':
+             DEFAULT_CFLAGS = '-O2 -Wall -funroll-loops'
+-        CFLAGS = os.environ.get('CFLAGS', DEFAULT_CFLAGS)
++        CFLAGS = DEFAULT_CFLAGS + os.environ.get('CFLAGS', '')
+ 
+         source_path = os.path.join(self.C_SOURCE, source)
+         target_path = os.path.join(self.TARGET_DIR, target)
+-- 
+2.14.1
+
