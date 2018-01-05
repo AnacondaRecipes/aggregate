@@ -38,6 +38,9 @@
 {% set ld64_sha256 = '175d89c419e99d49a7a5f7e4196d3cef4c9e19cc17a425c332e86df6b516f7d7' %}
 {% set dyld_version = '433.5' %}
 {% set dyld_sha256 = '13e370ed12c137f0153a96bab12e1d46896db07f8a40bac6b0529585ceac9260' %}
+# Apple would like to upstream this, and the repo on github should be clang 5 compatible, see:
+# http://lists.llvm.org/pipermail/llvm-dev/2017-September/117264.html
+# https://github.com/ributzka/tapi
 {% set tapi_version = '1.30' %}
 {% set tapi_sha256 = 'be2f3732c4ba7e9d78696fe43f0b31fa4963925ee6e4e5e11cc45603a83ff9a1' %}
 
