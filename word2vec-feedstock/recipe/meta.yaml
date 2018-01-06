@@ -27,11 +27,14 @@ requirements:
     - numpy
     - cython
     - m2w64-toolchain  # [win]
+
   build:
     - {{ compiler('c') }}  # [unix]
+
   run:
-    - {{ pin_compatible('numpy') }}
     - python
+    - m2w64-gcc-libs   # [win]
+    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
