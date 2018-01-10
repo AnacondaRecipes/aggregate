@@ -15,8 +15,6 @@ requirements:
   build:
     # this dep is for us to be able to use gcc -dumpmachine to get the CHOST value
     - gcc_impl_{{ ctng_target_platform }}
-    # So that pin_compatible has something to work with:
-    - libgfortran-ng {{ ctng_gcc }}.*
 
 outputs:
   - name: gcc-dbg_{{ ctng_target_platform }}
@@ -56,6 +54,9 @@ outputs:
   - name: gfortran-dbg_{{ ctng_target_platform }}
     script: install-gfortran.sh
     requirements:
+      host:
+        # So that pin_compatible has something to work with:
+        - libgfortran-ng {{ ctng_gcc }}.*
       run:
         - gfortran_impl_{{ ctng_target_platform }} {{ ctng_gcc }}.*
         # for activation of gcc env vars:
