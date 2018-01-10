@@ -24,7 +24,7 @@ requirements:
 
 test:
   commands:
-    - echo "if {[catch {package require -exact BWidget {{ version }}; exit 0}]} {exit 1}" | tclsh
+    - echo "if {[catch {package require -exact BWidget {{ version }}; exit 0}]} {exit 1}" | xvfb-run tclsh
 
 about:
   home: http://www.tcl.tk/
