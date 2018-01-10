@@ -2240,3 +2240,7 @@
 	path = libgcrypt-feedstock
 	url = ../libgcrypt-feedstock
 	branch = master
+[submodule "libgpg-error-feedstock"]
+	path = libgpg-error-feedstock
+	url = ../libgpg-error-feedstock
+	branch = master
