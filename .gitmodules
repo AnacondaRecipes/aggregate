@@ -2224,3 +2224,19 @@
 	path = numpy-1.13-feedstock
 	url = ../numpy-feedstock
 	branch = numpy113
+[submodule "libgsasl-feedstock"]
+	path = libgsasl-feedstock
+	url = ../libgsasl-feedstock
+	branch = master
+[submodule "libhdfs3-feedstock"]
+	path = libhdfs3-feedstock
+	url = ../libhdfs3-feedstock
+	branch = master
+[submodule "hdfs3-feedstock"]
+	path = hdfs3-feedstock
+	url = ../hdfs3-feedstock
+	branch = master
+[submodule "libgcrypt-feedstock"]
+	path = libgcrypt-feedstock
+	url = ../libgcrypt-feedstock
+	branch = master
