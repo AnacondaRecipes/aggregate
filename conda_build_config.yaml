@@ -122,8 +122,8 @@ pixman:
   - 0.34
 proj4:
   - 4
-protobuf:
-  - 3.3
+libprotobuf:
+  - 3.4.1
 python:
   - 2.7
   - 3.5
