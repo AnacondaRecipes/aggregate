@@ -11,6 +11,9 @@ pushd ${SRC_DIR}/.build/${CHOST}/build/build-cc-gcc-final/
   make -C ${CHOST}/libgcc prefix=${PREFIX} install-shared
 
   mkdir -p ${PREFIX}/${CHOST}/sysroot/lib || true
+  # TODO :: Also do this for libgfortran (and libstdc++ too probably?)
+  sed -i.bak 's/.*cannot install.*/func_warning "Ignoring libtool error about cannot install to a directory not ending in"/' \
+             ${CHOST}/libsanitizer/libtool
   for lib in libatomic libgomp libquadmath libitm libvtv libsanitizer/{a,l,ub,t}san; do
     # TODO :: Also do this for libgfortran (and libstdc++ too probably?)
     if [[ -f ${CHOST}/${lib}/libtool ]]; then
