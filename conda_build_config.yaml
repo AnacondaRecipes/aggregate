@@ -36,11 +36,11 @@ VERBOSE_CM:
 dbus:
   - 1
 expat:
-  - 2.2                # [not ppc64le]
+  - 2.2 
 fontconfig:
   - 2.12
 freetype:
-  - 2.8                # [not ppc64le]
+  - 2.8 
 g2clib:
   - 1.6
 gstreamer:
@@ -60,17 +60,16 @@ harfbuzz:
 hdf4:
   - 4.2
 hdf5:
-  - 1.8                # [not ppc64le]
-  - 1.10               # [not ppc64le]
+  - 1.8 
+  - 1.10
 hdfeos2:
   - 2.19
 hdfeos5:
   - 5.1
 icu:
-  - 58                 # [not ppc64le]
+  - 58 
 ipython:
-  - 5.4                # [not ppc64le]
-  - 5.3                    # [ppc64le]
+  - 5.4 
   - 6.1
   - 6.1
 jpeg:
@@ -145,7 +144,7 @@ target_platform:
   - win-64                     # [win]
   - win-32                     # [win]
 tk:
-  - 8.6                # [not ppc64le]
+  - 8.6
 vc:
   - 9
   - 14
