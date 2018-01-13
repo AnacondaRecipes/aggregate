@@ -8,7 +8,7 @@ if [[ $(uname) == Darwin ]]; then
   popd
 else
   cp -rf cmake-bin ${PREFIX}/
-  if [[ $(uname) == Linux ]] && [[ $(uname -m) == i686 ]]; then
+  if [[ $(uname) == Linux ]] && ( [[ $(uname -m) == i686 ]] || [[ $(uname -m) == ppc64le ]] ); then
     [[ -d curl-bin ]]    && cp -rf curl-bin/*    ${PREFIX}/cmake-bin/
     [[ -d expat-bin ]]   && cp -rf expat-bin/*   ${PREFIX}/cmake-bin/
     [[ -d krb5-bin ]]    && cp -rf krb5-bin/*    ${PREFIX}/cmake-bin/
