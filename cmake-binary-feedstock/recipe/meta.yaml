@@ -1,7 +1,7 @@
 package:
   name: cmake-binary
   version: 3.9.1  # [linux64 or win or osx]
-  version: 3.6.3  # [linux32]
+  version: 3.6.3  # [linux32 or ppc64le]
 
 source:
   - url: https://repo.continuum.io/pkgs/free/linux-32/cmake-3.6.3-0.tar.bz2      # [linux32]
@@ -37,6 +37,27 @@ source:
   - url: https://cmake.org/files/v3.9/cmake-3.9.1-Linux-x86_64.tar.gz            # [linux64]
     folder: cmake-bin                                                            # [linux64]
     sha256: ecbaf72981ccd09d9dade6d580cf1213eef15ef95a675dd9d4f0d693f134644f     # [linux64]
+  - url: https://repo.continuum.io/pkgs/free/linux-ppc64le/bzip2-1.0.6-3.tar.bz2     # [ppc64le]
+    folder: bzip2-bin                                                                # [ppc64le]
+    sha256: 9f247e2ec023f3962d171cc7fe165aa5841f2a52e30c79c60d38b8fc2d988f37         # [ppc64le]
+  - url: https://repo.continuum.io/pkgs/free/linux-ppc64le/cmake-3.6.3-0.tar.bz2     # [ppc64le]
+    folder: cmake-bin                                                                # [ppc64le]
+    sha256: 5b1a5d67f40db5370ef34390804f3a6db324c4e654efd06b29a201864285d969         # [ppc64le]
+  - url: https://repo.continuum.io/pkgs/free/linux-ppc64le/curl-7.52.1-0.tar.bz2     # [ppc64le]
+    folder: curl-bin                                                                 # [ppc64le]
+    sha256: 1f4d71aa9195f3e083bf33a69105a16dad8573e1e473ef7710125a4267adfe1b         # [ppc64le]
+  - url: https://repo.continuum.io/pkgs/free/linux-ppc64le/expat-2.1.0-0.tar.bz2     # [ppc64le]
+    folder: expat-bin                                                                # [ppc64le]
+    sha256: 853ec724256da2a72a6f3c6e99c689163d6af5070a0c0079208348ab33e4c673         # [ppc64le]
+  - url: https://repo.continuum.io/pkgs/free/linux-ppc64le/openssl-1.0.2l-0.tar.bz2  # [ppc64le]
+    folder: openssl-bin                                                              # [ppc64le]
+    sha256: 37975342dc390345e994ba7a48cc08c3f5ec10bc9da050d4dbe8ca771f4b8fcc         # [ppc64le]
+  - url: https://repo.continuum.io/pkgs/free/linux-ppc64le/xz-5.2.3-1.tar.bz2        # [ppc64le]
+    folder: xz-bin                                                                   # [ppc64le]
+    sha256: 072a97235fa9d391c6ed423caee1a5beaaf53d9ae1a18ef50dc3ea6ea1a77b94         # [ppc64le]
+  - url: https://repo.continuum.io/pkgs/free/linux-ppc64le/zlib-1.2.11-1.tar.bz2     # [ppc64le]
+    folder: zlib-bin                                                                 # [ppc64le]
+    sha256: ad16e4dce7b0a7217b0c95319eabb0999a02c4706b8e5bbc7fbfa9d9eb25979c         # [ppc64le]
   - url: https://cmake.org/files/v3.9/cmake-3.9.1-Darwin-x86_64.tar.gz           # [osx]
     folder: cmake-bin                                                            # [osx]
     sha256: b99918b38ba37aaa81314f8a96ced123317d6101b67512bbfa25814a256dcd91     # [osx]
@@ -48,7 +69,7 @@ source:
     sha256: e0d9501bd34e3100e925dcb2e07f5f0ce8980bdbe5fce0ae950b21368d54c1a1     # [win64]
 
 build:
-  detect_binary_files_with_prefix: False  # [linux32]
+  detect_binary_files_with_prefix: False  # [linux32 or ppc64le]
 
 about:
   home: http://www.cmake.org/
