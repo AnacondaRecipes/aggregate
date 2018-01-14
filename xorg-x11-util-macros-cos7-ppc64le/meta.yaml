@@ -1,0 +1,25 @@
+package:
+  name: xorg-x11-util-macros-cos7-ppc64le
+  version: 1.19.0
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/xorg-x11-util-macros-1.19.0-3.el7.noarch.rpm
+    sha256: 30b28d47366534ca958fce31e99de59d5a0ed52fc479049c5cd7bf9ad7d1373f
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/xorg-x11-util-macros-1.19.0-3.el7.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: xorg-x11-util-macros-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X.Org X11 Autotools macros"
+      description: |
+        X.Org X11 autotools macros required for building the various packages that
+        comprise the X Window System.
