@@ -36,8 +36,8 @@ _cctools_config+=(--with-llvm=${PREFIX})
 _cctools_config+=(CC="${CC} -isysroot ${CONDA_BUILD_SYSROOT}")
 _cctools_config+=(CXX="${CXX} -isysroot ${CONDA_BUILD_SYSROOT}")
 
-mkdir -p cctools/build
-pushd cctools/build
+mkdir cctools_build_final
+pushd cctools_build_final
   ${SRC_DIR}/cctools/configure "${_cctools_config[@]}"
   make -j${CPU_COUNT} ${VERBOSE_AT}
   make install
