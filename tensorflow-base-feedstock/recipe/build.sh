@@ -20,10 +20,12 @@ export TF_DOWNLOAD_MKL=1
 export TF_NEED_JEMALLOC=0
 export TF_NEED_GCP=1
 export TF_NEED_HDFS=1
+export TF_NEED_S3=1
 export TF_ENABLE_XLA=0
+export TF_NEED_GDR=0
+export TF_NEED_VERBS=0
 export TF_NEED_OPENCL=0
 export TF_NEED_CUDA=0
-export TF_NEED_VERBS=0
 export TF_NEED_MPI=0
 ./configure
 
@@ -52,8 +54,12 @@ ln -s $(pwd)/tensorflow ${PIP_TEST_ROOT}/tensorflow
 # remove the tensorboard tests as they cannot be built
 rm -rf ${PIP_TEST_ROOT}/tensorflow/contrib/tensorboard
 
-# Test which are known to fail on a given platform
-KNOWN_FAIL=""
+# Test which are known to fail and have been confirm to not effect the package
+#   debug:session_debug_grpc_test requires grpcio to be installed
+#   debug:dist_session_debug_grpc_test requires specific build env setup
+KNOWN_FAIL="
+   -${PIP_TEST_PREFIX}/tensorflow/python/debug:dist_session_debug_grpc_test
+   -${PIP_TEST_PREFIX}/tensorflow/python/debug:session_debug_grpc_test"
 if [ `uname -m`  == ppc64le ]; then
     # Python on ppc64le is built without the curses/readline module
     # Some tests are known fails on ppc64le but do not effect normal uses cases
