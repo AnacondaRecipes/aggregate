@@ -2244,3 +2244,7 @@
 	path = libgpg-error-feedstock
 	url = ../libgpg-error-feedstock
 	branch = master
+[submodule "argcomplete-feedstock"]
+	path = argcomplete-feedstock
+	url = ../argcomplete-feedstock
+	branch = master
