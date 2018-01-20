@@ -1,0 +1,120 @@
+{% set version = "1.0" %}
+
+package:
+  name: caffe-gpu
+  version: {{ version }}
+
+source:
+  fn: caffe_{{ version }}.tar.gz
+  url: https://github.com/BVLC/caffe/archive/{{ version }}.tar.gz
+  sha1: 00a04c30a6dd6d2cdc91be72b3131a997c5d5202
+
+build:
+  number: 2
+  skip: True  # [not linux64]
+  detect_binary_files_with_prefix: False
+
+requirements:
+  build:
+    # use the GCC 5.5.0 toolchain
+    - gxx_impl_linux-64 ==5.5.0
+    - gcc_impl_linux-64 ==5.5.0
+  host:
+    - cudatoolkit {{ cudatoolkit }}*
+    - cudnn {{ cudnn }}*
+    - boost
+    - cmake
+    - cython
+    - hdf5
+    - gflags
+    - glog
+    - h5py
+    - ipython
+    - leveldb
+    - libboost
+    - libprotobuf
+    - lmdb
+    - matplotlib
+    - mkl-devel {{ mkl }}
+    - networkx
+    - nose
+    - numpy
+    - opencv
+    - pandas
+    - pillow
+    - protobuf
+    - py-boost
+    - python
+    - python-dateutil
+    - python-gflags
+    - python-leveldb
+    - pyyaml
+    - scikit-image
+    - scipy
+    - six
+    - snappy
+  run:
+    - cudatoolkit {{ cudatoolkit }}*
+    - cudnn {{ cudnn }}*
+    - boost
+    - h5py
+    - ipython
+    - libboost
+    - matplotlib
+    - networkx
+    - {{ pin_compatible('numpy') }}
+    - pandas
+    - protobuf
+    - py-boost
+    - python
+    - python-dateutil
+    - python-gflags
+    - python-leveldb
+    - pyyaml
+    - scikit-image
+    - scipy
+    - six
+
+test:
+  commands:
+    # Test commands.
+    - command -v "${PREFIX}/bin/caffe"
+    - command -v "${PREFIX}/bin/classification"
+    - command -v "${PREFIX}/bin/classify"
+    - command -v "${PREFIX}/bin/compute_image_mean"
+    - command -v "${PREFIX}/bin/convert_cifar_data"
+    - command -v "${PREFIX}/bin/convert_imageset"
+    - command -v "${PREFIX}/bin/convert_mnist_data"
+    - command -v "${PREFIX}/bin/convert_mnist_siamese_data"
+    - command -v "${PREFIX}/bin/detect"
+    - command -v "${PREFIX}/bin/device_query"
+    - command -v "${PREFIX}/bin/draw_net"
+    - command -v "${PREFIX}/bin/extract_features"
+    - command -v "${PREFIX}/bin/finetune_net"
+    - command -v "${PREFIX}/bin/net_speed_benchmark"
+    - command -v "${PREFIX}/bin/test_net"
+    - command -v "${PREFIX}/bin/train_net"
+    - command -v "${PREFIX}/bin/upgrade_net_proto_binary"
+    - command -v "${PREFIX}/bin/upgrade_net_proto_text"
+    - command -v "${PREFIX}/bin/upgrade_solver_proto_text"
+
+    # Test includes.
+    - test -d "${PREFIX}/include/caffe"
+
+    # Test libraries.
+    - test -f "${PREFIX}/lib/libcaffe.so"
+
+    - conda inspect linkages -p $PREFIX caffe-gpu
+
+  imports:
+    - caffe
+
+about:
+  home: http://caffe.berkeleyvision.org/
+  license: BSD 2-Clause
+  license_family: BSD
+  summary: A deep learning framework made with expression, speed, and modularity in mind.
+  description: |
+    Caffe is a deep learning framework brewed for expression, speed,modularity, openness and community.
+  doc_url: http://caffe.berkeleyvision.org/tutorial/
+  doc_source_url: https://github.com/BVLC/caffe
