@@ -26,6 +26,7 @@ requirements:
     # not osx because on that system, this is a compiler bootstrapping package
     - {{ compiler('c') }}  # [not osx]
     - autoconf
+  host:
     - libxml2
     - bzip2
     - zlib

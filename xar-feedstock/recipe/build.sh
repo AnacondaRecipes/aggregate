@@ -18,6 +18,7 @@ pushd xar
   rm -f "${PREFIX}"/lib/lib{xml2,bz2,z,lzma,iconv}*.dylib
   ./configure --prefix=${PREFIX}     \
               ${HOST_CFG}            \
+              --build=${BUILD}       \
               --with-lzma=${PREFIX}  \
               --disable-shared       \
               --enable-static
