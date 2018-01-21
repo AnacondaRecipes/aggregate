@@ -62,6 +62,7 @@ source:
       - 510-ld64-fix-incorrect-fname-case.patch
       - 520-ld64-fix-usr-local-and-usr-ordering.patch
       - 530-ld64-add-conda-specific-env-vars-to-modify-lib-search-paths.patch
+      - 540-ld64-add-LD64_LOG_HASH_TABLE.patch
   # We copy headers necessary for building cctools/ld64 from dyld and MacOSX10.9.sdk (on all OSes).
   # older versions of these files are added by 100-add_sdkroot_headers.patch, we overwrite those...
   - url: https://opensource.apple.com/tarballs/dyld/dyld-{{ dyld_version }}.tar.gz
