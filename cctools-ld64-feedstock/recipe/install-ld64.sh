@@ -1,13 +1,8 @@
 #!/bin/bash
 
-. activate "${PREFIX}"
+. activate "${BUILD_PREFIX}"
 cd "${SRC_DIR}"
 
-DEST="${PWD}"/install-ld64
-[[ -d "${DEST}" ]] && rm -rf "${DEST}"
-pushd cctools/build/ld64
-  PATH=${SRC_DIR}/prefix/bin:${PATH} make install DESTDIR="${DEST}"
-popd
-pushd "${DEST}"/"${PWD}"/prefix
-  cp -Rf * "${PREFIX}"
+pushd cctools_build_final/ld64
+  make install
 popd

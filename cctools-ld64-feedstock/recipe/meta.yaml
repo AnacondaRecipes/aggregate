@@ -93,6 +93,7 @@ outputs:
       run:
         - llvm-lto-tapi
     build:
+      number: 1
       ignore_run_exports:
         - zlib
     about:
@@ -106,9 +107,14 @@ outputs:
     version: {{ ld64_version }}
     script: install-ld64.sh
     requirements:
+      host:
+        - llvm-lto-tapi
+        - libcxx
       run:
         - llvm-lto-tapi
+        - libcxx
     build:
+      number: 1
       ignore_run_exports:
         - zlib
     about:
