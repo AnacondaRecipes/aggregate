@@ -68,10 +68,6 @@ hdfeos5:
   - 5.1
 icu:
   - 58 
-ipython:
-  - 5.4 
-  - 6.1
-  - 6.1
 jpeg:
   - 9
 libdap4:
