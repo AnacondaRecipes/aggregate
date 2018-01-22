@@ -1,0 +1,30 @@
+From de8329a50a3a513de66d0ba49035c95e76824e30 Mon Sep 17 00:00:00 2001
+From: Jonathan Helmus <jjhelmus@gmail.com>
+Date: Thu, 11 Jan 2018 13:05:31 -0600
+Subject: [PATCH] fix lookup_ops test
+
+The order of the exported data is undefined, perform a valid sort before
+comparing.
+---
+ tensorflow/contrib/lookup/lookup_ops_test.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/tensorflow/contrib/lookup/lookup_ops_test.py b/tensorflow/contrib/lookup/lookup_ops_test.py
+index f0499010d4..d87cbdb35f 100644
+--- a/tensorflow/contrib/lookup/lookup_ops_test.py
++++ b/tensorflow/contrib/lookup/lookup_ops_test.py
+@@ -411,9 +411,9 @@ class MutableHashTableOpTest(test.TestCase):
+       self.assertAllEqual([None, 2], exported_values.get_shape().as_list())
+       # exported data is in the order of the internal map, i.e. undefined
+       sorted_keys = np.sort(exported_keys.eval())
+-      sorted_values = np.sort(exported_values.eval())
++      sorted_values = np.sort(exported_values.eval(), axis=0)
+       self.assertAllEqual([b"brain", b"salad", b"surgery"], sorted_keys)
+-      self.assertAllEqual([[4, 5], [2, 3], [0, 1]], sorted_values)
++      self.assertAllEqual([[0, 1], [2, 3], [4, 5]], sorted_values)
+ 
+   def testMutableHashTableExportInsert(self):
+     with self.test_session():
+-- 
+2.11.1
+

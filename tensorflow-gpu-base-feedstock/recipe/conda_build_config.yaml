@@ -1,0 +1,6 @@
+cudatoolkit:
+  - 8.0
+cudnn:
+  - 7
+python:
+  - 3.6

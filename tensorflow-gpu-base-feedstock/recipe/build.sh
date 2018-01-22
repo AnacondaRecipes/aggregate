@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -ex
+set -vex
 
 mkdir -p ./bazel_output_base
 export BAZEL_OPTS="--batch --output_base=./bazel_output_base"
@@ -17,45 +17,59 @@ export TF_DOWNLOAD_MKL=1
 export TF_NEED_JEMALLOC=0
 export TF_NEED_GCP=1
 export TF_NEED_HDFS=1
+export TF_NEED_S3=1
 export TF_ENABLE_XLA=0
+export TF_NEED_GDR=0
+export TF_NEED_VERBS=0
 export TF_NEED_OPENCL=0
-# CUDA details, these should be customized depending on the system details
+export TF_NEED_MPI=0
+
+# CUDA details
 export TF_NEED_CUDA=1
-export TF_CUDA_VERSION="${CUDA_VERSION}"
-export TF_CUDNN_VERSION="${CUDNN_VERSION}"
-if [ ${CUDNN_VERSION} == "5.1" ]; then
+export TF_CUDA_VERSION="${cudatoolkit}"
+export TF_CUDNN_VERSION="${cudnn}"
+if [ ${cudnn} == "6.0" ]; then
+    export TF_CUDNN_VERSION="6"
+fi
+if [ ${cudnn} == "5.1" ]; then
     export TF_CUDNN_VERSION="5"
 fi
 export TF_CUDA_CLANG=0
-export TF_NEED_MPI=0
 # Additional compute capabilities can be added if desired but these increase
 # the build time and size of the package. The ones here are the ones supported
 # by CUDA 7.5 and used in the devel-gpu tensorflow docker image:
 # https://github.com/tensorflow/tensorflow/blob/master/tensorflow/tools/docker/Dockerfile.devel-gpu
 # 6.0 and 6.1 should be added with CUDA version 8.0
 export TF_CUDA_COMPUTE_CAPABILITIES="3.0,3.5,5.2"
-if [ ${CUDA_VERSION} == "8.0" ]; then
+if [ ${cudatoolkit} == "8.0" ]; then
     export TF_CUDA_COMPUTE_CAPABILITIES="3.0,3.5,5.2,6.0,6.1"
 fi
 export GCC_HOST_COMPILER_PATH="/opt/rh/devtoolset-2/root/usr/bin/gcc"
+# Use system paths here rather than $PREFIX to allow Bazel to find the correct
+# libraries.  RPATH is adjusted post build to link to the DSOs in $PREFIX
 export CUDA_TOOLKIT_PATH="/usr/local/cuda"
-export CUDNN_INSTALL_PATH="${PREFIX}"
-mkdir -p ${PREFIX}/lib64
-cp ${PREFIX}/lib/libcudnn* ${PREFIX}/lib64/
+export CUDNN_INSTALL_PATH="/usr/local/cuda/"
+
 # on ppc64le override some of these parameters
 if [ `uname -m`  == ppc64le ]; then
     export CC_OPT_FLAGS=" -mtune=powerpc64le"
     export GCC_HOST_COMPILER_PATH="/usr/bin/gcc"
 fi
-export TF_NEED_VERBS=0
+
+# libcuda.so.1 needs to be symlinked to libcuda.so
+# ln -s /usr/local/cuda/lib64/stubs/libcuda.so /usr/local/cuda/lib64/stubs/libcuda.so.1
+# on a "real" system the so.1 library is typically in /usr/local/nvidia/lib64
+# add the stubs directory to LD_LIBRARY_PATH so libcuda.so.1 can be found
+export LD_LIBRARY_PATH="/usr/local/cuda/lib64/stubs/:${LD_LIBRARY_PATH}"
+
 ./configure
 
 # build using bazel
 # for debugging the following lines may be helpful
 #    --logging=6 \
 #    --subcommands \
-#    --verbose_failures \
 bazel ${BAZEL_OPTS} build \
+    --verbose_failures \
     --config=opt \
     --config=cuda \
     --color=yes \
@@ -97,4 +111,3 @@ BAZEL_PARALLEL_TEST_FLAGS="--local_test_jobs=1"
 # These should be run at least once for each new release
 #LD_LIBRARY_PATH="/usr/local/nvidia/lib64:/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH" bazel ${BAZEL_OPTS} test ${BAZEL_FLAGS} \
 #    ${BAZEL_PARALLEL_TEST_FLAGS} -- ${BAZEL_TEST_TARGETS} ${KNOWN_FAIL}
-rm ${PREFIX}/lib64/libcudnn*
