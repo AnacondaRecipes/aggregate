@@ -15,6 +15,8 @@ pushd cctools
     cp ld64/src/other/PruneTrie.cpp libprunetrie/PruneTrie.cpp
   fi
 popd
+export CXXFLAGS="$CXXFLAGS -O0 -gdwarf-4"
+export CFLAGS="$XFLAGS -O0 -gdwarf-4"
 
 if [[ ${MACOSX_DEPLOYMENT_TARGET} == 10.9 ]]; then
   DARWIN_TARGET=x86_64-apple-darwin13.4.0
