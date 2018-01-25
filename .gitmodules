@@ -2256,3 +2256,7 @@
 	path = anaconda-client-feedstock
 	url = ../anaconda-client-feedstock
 	branch = master
+[submodule "fastavro-feedstock"]
+	path = fastavro-feedstock
+	url = ../fastavro-feedstock
+	branch = master
