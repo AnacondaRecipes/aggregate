@@ -2260,3 +2260,7 @@
 	path = fastavro-feedstock
 	url = ../fastavro-feedstock
 	branch = master
+[submodule "python-hdfs-feedstock"]
+	path = python-hdfs-feedstock
+	url = ../python-hdfs-feedstock
+	branch = master
