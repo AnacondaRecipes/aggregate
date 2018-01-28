@@ -2264,3 +2264,7 @@
 	path = python-hdfs-feedstock
 	url = ../python-hdfs-feedstock
 	branch = master
+[submodule "send2trash-feedstock"]
+	path = send2trash-feedstock
+	url = ../send2trash-feedstock
+	branch = master
