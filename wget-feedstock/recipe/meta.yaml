@@ -10,6 +10,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - pkg-config
+  host:
     - openssl 1.0.*
     - zlib
   run:
