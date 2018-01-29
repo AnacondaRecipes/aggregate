@@ -1,0 +1,30 @@
+package:
+  name: libxrender-cos7-ppc64le
+  version: 0.9.10
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libXrender-0.9.10-1.el7.ppc64le.rpm
+    sha256: ca11a544d84de32226f9b534bcd7b7d3ea442ade23743ded22dee5db4d6b5875
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/libXrender-0.9.10-1.el7.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libx11-cos7-ppc64le >=1.5.99.902
+
+
+outputs:
+  - name: libxrender-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - libx11-cos7-ppc64le >=1.5.99.902
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X.Org X11 libXrender runtime library"
+      description: |
+        X.Org X11 libXrender runtime library

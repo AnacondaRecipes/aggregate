@@ -1,0 +1,25 @@
+package:
+  name: gettext-common-devel-cos7-ppc64le
+  version: 0.19.8.1
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/gettext-common-devel-0.19.8.1-2.el7.noarch.rpm
+    sha256: 37dec5a09ecdf467056b2ba57ee07b2f948b4b415966bdcbb350792ec14f6f0c
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/gettext-0.19.8.1-2.el7.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: gettext-common-devel-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://www.gnu.org/software/gettext/
+      license: GPLv3+
+      license_family: GPL3
+      summary: "(CDT) Common development files for gettext"
+      description: |
+        This package contains common architecture independent gettext development
+        files.
