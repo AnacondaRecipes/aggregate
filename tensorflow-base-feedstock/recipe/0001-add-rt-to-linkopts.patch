@@ -1,0 +1,34 @@
+From 2999972554d288bd67a7b10dd98c3720799cbe3b Mon Sep 17 00:00:00 2001
+From: Jonathan Helmus <jjhelmus@gmail.com>
+Date: Mon, 12 Feb 2018 16:24:10 -0600
+Subject: [PATCH] add rt to linkopts
+
+---
+ tensorflow/tensorflow.bzl | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/tensorflow/tensorflow.bzl b/tensorflow/tensorflow.bzl
+index bafb5620bc..9f15926322 100644
+--- a/tensorflow/tensorflow.bzl
++++ b/tensorflow/tensorflow.bzl
+@@ -264,7 +264,7 @@ def tf_cc_shared_object(
+     name,
+     srcs=[],
+     deps=[],
+-    linkopts=[],
++    linkopts=['-lrt'],
+     framework_so=tf_binary_additional_srcs(),
+     **kwargs):
+   native.cc_binary(
+@@ -1264,7 +1264,7 @@ register_extension_info(
+ )
+ 
+ def tf_extension_linkopts():
+-  return []  # No extension link opts
++  return ["-lrt"]  # No extension link opts
+ 
+ def tf_extension_copts():
+   return []  # No extension c opts
+-- 
+2.11.1
+
