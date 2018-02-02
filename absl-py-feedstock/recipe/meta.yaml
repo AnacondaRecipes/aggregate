@@ -36,7 +36,7 @@ test:
 about:
   home: https://abseil.io/
   license: Apache 2.0
-  license_family: APACHE
+  license_family: Apache
   license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
   summary: Abseil Python Common Libraries, see https://github.com/abseil/abseil-py.
   doc_url: https://abseil.io/docs/
