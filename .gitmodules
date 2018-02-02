@@ -2268,3 +2268,15 @@
 	path = send2trash-feedstock
 	url = ../send2trash-feedstock
 	branch = master
+[submodule "winpty-feedstock"]
+	path = winpty-feedstock
+	url = ../winpty-feedstock
+	branch = master
+[submodule "pywinpty-feedstock"]
+	path = pywinpty-feedstock
+	url = ../pywinpty-feedstock
+	branch = master
+[submodule "backports.shutil_which-feedstock"]
+	path = backports.shutil_which-feedstock
+	url = ../backports.shutil_which-feedstock
+	branch = master
