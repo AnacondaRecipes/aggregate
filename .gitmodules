@@ -2280,3 +2280,7 @@
 	path = backports.shutil_which-feedstock
 	url = ../backports.shutil_which-feedstock
 	branch = master
+[submodule "selenium-feedstock"]
+	path = selenium-feedstock
+	url = ../selenium-feedstock
+	branch = master
