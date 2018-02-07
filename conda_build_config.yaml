@@ -61,7 +61,7 @@ hdf4:
   - 4.2
 hdf5:
   - 1.8 
-  - 1.10  # [not ppc64le]
+  - 1.10 
 hdfeos2:
   - 2.19
 hdfeos5:
