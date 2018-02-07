@@ -15,9 +15,10 @@ source:
     - relax-tolerence-in-fft_ops_test.patch           # [linux]
     - skip-read-only-debugger_cli_common-test.patch   # [linux]
     - fix-lookup_ops-test.patch                       # [linux]
+    - 0001-include-glibc-2.11-fix-in-add_boringssl_s390x.patch
 
 build:
-  number: 2
+  number: 3
   skip: True  # [not linux64]
 
 requirements:

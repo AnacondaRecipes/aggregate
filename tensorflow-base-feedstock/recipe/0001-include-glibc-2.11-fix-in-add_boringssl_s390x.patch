@@ -1,0 +1,116 @@
+From 90408267122451634a20b20e0342204e969a4d4c Mon Sep 17 00:00:00 2001
+From: Jonathan Helmus <jjhelmus@gmail.com>
+Date: Wed, 7 Feb 2018 13:32:53 -0600
+Subject: [PATCH] include glibc 2.11 fix in add_boringssl_s390x
+
+Include a patch to support glibc 2.11 in the add_boringssl_s390x.patch file
+which is applied to the BoringSSL source.
+---
+ third_party/boringssl/add_boringssl_s390x.patch | 73 +++++++++++++++++++------
+ 1 file changed, 56 insertions(+), 17 deletions(-)
+
+diff --git a/third_party/boringssl/add_boringssl_s390x.patch b/third_party/boringssl/add_boringssl_s390x.patch
+index 8b42d10e68..75c26c4cb0 100644
+--- a/third_party/boringssl/add_boringssl_s390x.patch
++++ b/third_party/boringssl/add_boringssl_s390x.patch
+@@ -1,21 +1,19 @@
+-diff --git a/src/include/openssl/base.h b/src/include/openssl/base.h
+-index 7a3adfb..88012ad 100644
+---- a/src/include/openssl/base.h
+-+++ b/src/include/openssl/base.h
+-@@ -94,6 +94,8 @@ extern "C" {
+- #define OPENSSL_PNACL
+- #elif defined(__myriad2__)
+- #define OPENSSL_32_BIT
+-+#elif defined(__s390x__)
+-+#define OPENSSL_64_BIT
+- #else
+- #error "Unknown target CPU"
+- #endif
++From d6912c40111d7b2b36d01f0fa542c34e711e61a0 Mon Sep 17 00:00:00 2001
++From: Jonathan Helmus <jjhelmus@gmail.com>
++Date: Wed, 7 Feb 2018 13:26:59 -0600
++Subject: [PATCH 1/2] add support for s390x
++
++apply add_boringssl_s390x.patch from tensorflow 1.4.1 release
++---
++ BUILD                      | 93 ++++++++++++++++++++++++++++++----------------
++ src/include/openssl/base.h |  2 +
++ 2 files changed, 62 insertions(+), 33 deletions(-)
++
+ diff --git a/BUILD b/BUILD
+-index 6b645e61..c90b7beb 100644
++index 68a17a6..4b24f83 100644
+ --- a/BUILD
+ +++ b/BUILD
+-@@ -40,29 +40,46 @@ config_setting(
++@@ -42,29 +42,46 @@ config_setting(
+      values = {"cpu": "darwin"},
+  )
+  
+@@ -85,7 +83,7 @@ index 6b645e61..c90b7beb 100644
+      ":linux_x86_64": [],
+      ":mac_x86_64": [],
+      "//conditions:default": ["-DOPENSSL_NO_ASM"],
+-@@ -75,18 +92,26 @@ crypto_sources_asm = select({
++@@ -77,18 +94,26 @@ crypto_sources_asm = select({
+  })
+  
+  # For C targets only (not C++), compile with C11 support.
+@@ -122,7 +120,7 @@ index 6b645e61..c90b7beb 100644
+  
+  cc_library(
+      name = "crypto",
+-@@ -96,6 +121,8 @@ cc_library(
++@@ -98,6 +123,8 @@ cc_library(
+      includes = ["src/include"],
+      linkopts = select({
+          ":mac_x86_64": [],
+@@ -131,3 +129,44 @@ index 6b645e61..c90b7beb 100644
+          "//conditions:default": ["-lpthread"],
+      }),
+      visibility = ["//visibility:public"],
++diff --git a/src/include/openssl/base.h b/src/include/openssl/base.h
++index 460c1e0..3c5b495 100644
++--- a/src/include/openssl/base.h
+++++ b/src/include/openssl/base.h
++@@ -106,6 +106,8 @@ extern "C" {
++ #define OPENSSL_PNACL
++ #elif defined(__myriad2__)
++ #define OPENSSL_32_BIT
+++#elif defined(__s390x__)
+++#define OPENSSL_64_BIT
++ #else
++ #error "Unknown target CPU"
++ #endif
++-- 
++2.11.1
++
++
++From e02d27692529f369e8a5c511ba245e00cafecb86 Mon Sep 17 00:00:00 2001
++From: Jonathan Helmus <jjhelmus@gmail.com>
++Date: Wed, 7 Feb 2018 13:28:28 -0600
++Subject: [PATCH 2/2] fix issue when compiling against glibc 2.11
++
++---
++ src/crypto/bio/socket_helper.c | 1 +
++ 1 file changed, 1 insertion(+)
++
++diff --git a/src/crypto/bio/socket_helper.c b/src/crypto/bio/socket_helper.c
++index 268405a..7dbb5d3 100644
++--- a/src/crypto/bio/socket_helper.c
+++++ b/src/crypto/bio/socket_helper.c
++@@ -18,6 +18,7 @@
++ #include <openssl/bio.h>
++ #include <openssl/err.h>
++ 
+++#include <time.h>
++ #include <fcntl.h>
++ #include <string.h>
++ #include <sys/types.h>
++-- 
++2.11.1
++
+-- 
+2.11.1
+
