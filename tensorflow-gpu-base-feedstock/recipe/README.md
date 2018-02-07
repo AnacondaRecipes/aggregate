@@ -21,11 +21,11 @@ To build a conda tensorflow package with GPU support
 
 * Update conda and conda-build, and navigate to the recipe root folder.
 
-    Modify conda_build_config.yaml in the tensorflow-gpu-base directory to
-    specifiy the CUDA, CuDNN, and python versions.
+    Modify conda_build_config.yaml in this directory to specifiy the 
+    CUDA, CuDNN, and python versions.
 
     To start a build use:
 
     ```
-    conda build tensorflow-gpu-base
+    conda build --no-test -c jjhelmus/label/sles11_cuda_toolchain .
     ```

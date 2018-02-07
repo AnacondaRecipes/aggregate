@@ -2,6 +2,9 @@
 
 set -vex
 
+# activate the GCC 5.4.0 toolchain
+source ${RECIPE_DIR}/activate_toolchain_gcc5.4.sh
+
 mkdir -p ./bazel_output_base
 export BAZEL_OPTS="--batch --output_base=./bazel_output_base"
 
@@ -44,7 +47,7 @@ export TF_CUDA_COMPUTE_CAPABILITIES="3.0,3.5,5.2"
 if [ ${cudatoolkit} == "8.0" ]; then
     export TF_CUDA_COMPUTE_CAPABILITIES="3.0,3.5,5.2,6.0,6.1"
 fi
-export GCC_HOST_COMPILER_PATH="/opt/rh/devtoolset-2/root/usr/bin/gcc"
+export GCC_HOST_COMPILER_PATH="${CC}"
 # Use system paths here rather than $PREFIX to allow Bazel to find the correct
 # libraries.  RPATH is adjusted post build to link to the DSOs in $PREFIX
 export CUDA_TOOLKIT_PATH="/usr/local/cuda"
@@ -69,6 +72,7 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64/stubs/:${LD_LIBRARY_PATH}"
 #    --logging=6 \
 #    --subcommands \
 bazel ${BAZEL_OPTS} build \
+    --linkopt="-L${PREFIX}/lib" \
     --verbose_failures \
     --config=opt \
     --config=cuda \

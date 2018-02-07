@@ -16,13 +16,20 @@ source:
     - skip-read-only-debugger_cli_common-test.patch   # [linux]
     - fix-lookup_ops-test.patch                       # [linux]
     - undef_have_stropts_h.patch
+    - 0001-include-glibc-2.11-fix-in-add_boringssl_s390x.patch
+    - 0001-do-not-include-B-usr-bin-flag.patch
+    - 0002-add-additional-cuda-rpaths.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [not linux64]
 
 requirements:
   build:
+    # use a GCC 5.4.0 toolchain
+    - gxx_impl_linux-64 ==5.4.0
+    - gcc_impl_linux-64 ==5.4.0
+  host:
     # conda build requirements
     - bazel >=0.5.4
     - pip
