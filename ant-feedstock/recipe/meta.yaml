@@ -14,10 +14,10 @@ source:
 
 requirements:
   build:
-    - openjdk   [osx or linux-64 or win-64]
+    - openjdk
     - patch     [win]
   run:
-    - openjdk   [osx or linux-64 or win-64]
+    - openjdk
 
 test:
   commands:
