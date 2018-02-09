@@ -15,7 +15,7 @@ source:
 requirements:
   build:
     - openjdk
-    - patch     [win]
+  #   - patch     [win]
   run:
     - openjdk
 
