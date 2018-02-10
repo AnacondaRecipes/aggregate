@@ -1,10 +1,10 @@
 package:
   name: menuinst
-  version: 1.4.10
+  version: 1.4.11
 
 source:
   git_url: https://github.com/ContinuumIO/menuinst.git
-  git_tag: 1.4.10
+  git_tag: 1.4.11
 
 build:
   skip: True   # [unix]
