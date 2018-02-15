@@ -2284,3 +2284,27 @@
 	path = selenium-feedstock
 	url = ../selenium-feedstock
 	branch = master
+[submodule "ipyparallel-feedstock"]
+	path = ipyparallel-feedstock
+	url = ../ipyparallel-feedstock
+	branch = master
+[submodule "pytest-base-url-feedstock"]
+	path = pytest-base-url-feedstock
+	url = ../pytest-base-url-feedstock
+	branch = master
+[submodule "pytest-html-feedstock"]
+	path = pytest-html-feedstock
+	url = ../pytest-html-feedstock
+	branch = master
+[submodule "pytest-metadata-feedstock"]
+	path = pytest-metadata-feedstock
+	url = ../pytest-metadata-feedstock
+	branch = master
+[submodule "pytest-variables-feedstock"]
+	path = pytest-variables-feedstock
+	url = ../pytest-variables-feedstock
+	branch = master
+[submodule "pytest-selenium-feedstock"]
+	path = pytest-selenium-feedstock
+	url = ../pytest-selenium-feedstock
+	branch = master
