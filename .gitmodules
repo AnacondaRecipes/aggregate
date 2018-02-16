@@ -2308,3 +2308,18 @@
 	path = pytest-selenium-feedstock
 	url = ../pytest-selenium-feedstock
 	branch = master
+[submodule "pytest-arraydiff-feedstock"]
+	path = pytest-arraydiff-feedstock
+	url = ../pytest-arraydiff-feedstock
+[submodule "pytest-doctestplus-feedstock"]
+	path = pytest-doctestplus-feedstock
+	url = ../pytest-doctestplus-feedstock
+[submodule "pytest-remotedata-feedstock"]
+	path = pytest-remotedata-feedstock
+	url = ../pytest-remotedata-feedstock
+[submodule "pytest-openfiles-feedstock"]
+	path = pytest-openfiles-feedstock
+	url = ../pytest-openfiles-feedstock
+[submodule "pytest-astropy-feedstock"]
+	path = pytest-astropy-feedstock
+	url = ../pytest-astropy-feedstock
