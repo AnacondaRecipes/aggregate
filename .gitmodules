@@ -2323,3 +2323,7 @@
 [submodule "pytest-astropy-feedstock"]
 	path = pytest-astropy-feedstock
 	url = ../pytest-astropy-feedstock
+[submodule "setuptools_scm_git_archive-feedstock"]
+	path = setuptools_scm_git_archive-feedstock
+	url = ../setuptools_scm_git_archive-feedstock
+	branch = master
