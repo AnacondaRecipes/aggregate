@@ -2343,3 +2343,7 @@
 	path = more-itertools-feedstock
 	url = ../more-itertools-feedstock
 	branch = master
+[submodule "qgrid-feedstock"]
+	path = qgrid-feedstock
+	url = ../qgrid-feedstock
+	branch = master
