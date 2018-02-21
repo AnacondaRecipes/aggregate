@@ -1,7 +1,7 @@
 {% set name = "CacheControl" %}
-{% set version = "0.12.3" %}
+{% set version = "0.12.4" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "a9fc50e216c7c101f4ec4312f012dea501c2859cb256c7a68186a172ab71f632" %}
+{% set hash_value = "a7d21ba4e3633d95ac9fed5be205ee6d1da36bdc4b8914eb7a57ff50b7e5628c" %}
 
 package:
   name: {{ name.lower() }}
