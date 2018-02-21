@@ -1,0 +1,23 @@
+package:
+  name: pivottablejs-airgap
+  version: 2.1.0
+
+source:
+  git_url: https://github.com/ContinuumIO/pivottablejs-airgap.git
+  git_tag: 2.1.0
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+    - notebook
+
+test:
+  imports:
+    - pivottablejs
+
+about:
+  home: https://github.com/ContinuumIO/pivottablejs-airgap
+  license: MIT
+  summary: PivotTable.js integration for Jupyter/IPython Notebook
