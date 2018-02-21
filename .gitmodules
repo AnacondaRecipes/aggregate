@@ -2335,3 +2335,7 @@
 	path = colorcet-feedstock
 	url = ../colorcet-feedstock
 	branch = master
+[submodule "genson-feedstock"]
+	path = genson-feedstock
+	url = ../genson-feedstock
+	branch = master
