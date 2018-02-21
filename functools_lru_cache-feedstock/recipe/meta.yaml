@@ -1,5 +1,5 @@
 {% set name = "functools_lru_cache" %}
-{% set version = "1.4" %}
+{% set version = "1.5" %}
 
 package:
   name: {{ name }}
