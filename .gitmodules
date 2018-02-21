@@ -2347,3 +2347,7 @@
 	path = qgrid-feedstock
 	url = ../qgrid-feedstock
 	branch = master
+[submodule "unidecode-feedstock"]
+	path = unidecode-feedstock
+	url = ../unidecode-feedstock
+	branch = master
