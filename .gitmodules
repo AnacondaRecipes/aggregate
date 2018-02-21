@@ -2350,4 +2350,11 @@
 [submodule "unidecode-feedstock"]
 	path = unidecode-feedstock
 	url = ../unidecode-feedstock
+[submodule "biopython-feedstock"]
+	path = biopython-feedstock
+	url = ../biopython-feedstock
+	branch = master
+[submodule "configargparse-feedstock"]
+	path = configargparse-feedstock
+	url = ../configargparse-feedstock
 	branch = master
