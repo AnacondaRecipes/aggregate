@@ -2339,3 +2339,7 @@
 	path = genson-feedstock
 	url = ../genson-feedstock
 	branch = master
+[submodule "more-itertools-feedstock"]
+	path = more-itertools-feedstock
+	url = ../more-itertools-feedstock
+	branch = master
