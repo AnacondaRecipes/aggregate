@@ -1,8 +1,8 @@
 {% set name = "cornice" %}
-{% set version = "3.0.0" %}
+{% set version = "3.1.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "7a7e9e91f277eb635599ef72f4887206be983ad5e6c79ac8b1181c8ba8ddf79a" %}
+{% set hash_value = "fe1e9c233054e1459dd9cc49e2ac3fe7e6066378c422a19f7c29a1698ae97b1a" %}
 
 package:
   name: {{ name|lower }}
@@ -30,6 +30,7 @@ requirements:
     - webob
     - venusian
     - simplejson
+    - six
 
 test:
   imports:
