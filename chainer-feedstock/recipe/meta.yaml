@@ -1,8 +1,8 @@
 {% set name = "chainer" %}
-{% set version = "3.1.0" %}
+{% set version = "3.4.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "a7007ea14c03bf77f15e891cd0b26ef5494c1d8461c121e49d3e16b1f9db8394" %}
+{% set hash_value = "b7bcd8fc1a39b3602b4a78a0be6012721ba6c8792c4d14773496a4c6d038f886" %}
 
 package:
   name: {{ name|lower }}
