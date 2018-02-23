@@ -2358,3 +2358,7 @@
 	path = configargparse-feedstock
 	url = ../configargparse-feedstock
 	branch = master
+[submodule "pandas-datareader-feedstock"]
+	path = pandas-datareader-feedstock
+	url = ../pandas-datareader-feedstock
+	branch = master
