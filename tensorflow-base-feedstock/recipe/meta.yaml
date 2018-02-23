@@ -16,9 +16,11 @@ source:
     - skip-read-only-debugger_cli_common-test.patch   # [linux]
     - fix-lookup_ops-test.patch                       # [linux]
     - 0001-add-rt-to-linkopts.patch                   # [linux]
+    # use the full MKL install from conda
+    - use_installed_mkl.patch                         # [linux]
 
 build:
-  number: 0
+  number: 1
   skip: True  # [not linux64]
 
 requirements:
@@ -45,6 +47,7 @@ requirements:
     - portpicker
     - scipy
     - scikit-learn
+    - mkl-devel
   run:
     - python
     - six >=1.10.0
