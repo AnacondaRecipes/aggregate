@@ -2374,3 +2374,7 @@
 	path = pyutilib-feedstock
 	url = ../pyutilib-feedstock
 	branch = master
+[submodule "python-memcached-feedstock"]
+	path = python-memcached-feedstock
+	url = ../python-memcached-feedstock
+	branch = master
