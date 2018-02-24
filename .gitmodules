@@ -2362,3 +2362,11 @@
 	path = pandas-datareader-feedstock
 	url = ../pandas-datareader-feedstock
 	branch = master
+[submodule "python-rapidjson-feedstock"]
+	path = python-rapidjson-feedstock
+	url = ../python-rapidjson-feedstock
+	branch = master
+[submodule "rapidjson-feedstock"]
+	path = rapidjson-feedstock
+	url = ../rapidjson-feedstock
+	branch = master
