@@ -2370,3 +2370,7 @@
 	path = rapidjson-feedstock
 	url = ../rapidjson-feedstock
 	branch = master
+[submodule "pyutilib-feedstock"]
+	path = pyutilib-feedstock
+	url = ../pyutilib-feedstock
+	branch = master
