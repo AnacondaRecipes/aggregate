@@ -1,8 +1,8 @@
 {% set name = "whisper" %}
-{% set version = "1.0.2" %}
+{% set version = "1.1.2" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "43dbfb47dc141c174a00d8d561db01c9f099a75f229938c927d7c440dd882bec" %}
+{% set hash_value = "435dd6416b0336d3a2aa570b7edafbdab717e2c689cc05fd6c2b94daf12daa8e" %}
 
 package:
   name: {{ name|lower }}
@@ -22,8 +22,10 @@ build:
 requirements:
   host:
     - python
+    - six
   run:
     - python
+    - six
 
 test:
   imports:
