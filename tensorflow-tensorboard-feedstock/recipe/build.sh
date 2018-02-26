@@ -2,10 +2,14 @@
 
 set -ex
 
+# remove files in setuptools that have spaces, these cause issues with bazel
+rm -rf "${SP_DIR}/setuptools/command/launcher manifest.xml"
+rm -rf "${SP_DIR}/setuptools/script (dev).tmpl"
+
 # Adapted from: https://github.com/tensorflow/tensorboard/blob/0.1.5/tensorboard/pip_package/build_pip_package.sh
 # build using bazel
 mkdir -p ./bazel_output_base
-export BAZEL_OPTS="--batch --output_base=./bazel_output_base"
+export BAZEL_OPTS="--batch"
 bazel ${BAZEL_OPTS} build //tensorboard/pip_package:build_pip_package
 
 # collect files for the python package
