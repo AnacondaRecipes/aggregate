@@ -2378,3 +2378,7 @@
 	path = python-memcached-feedstock
 	url = ../python-memcached-feedstock
 	branch = master
+[submodule "hyperlink-feedstock"]
+	path = hyperlink-feedstock
+	url = ../hyperlink-feedstock
+	branch = master
