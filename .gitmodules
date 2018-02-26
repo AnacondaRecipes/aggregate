@@ -2382,3 +2382,7 @@
 	path = hyperlink-feedstock
 	url = ../hyperlink-feedstock
 	branch = master
+[submodule "natsort-feedstock"]
+	path = natsort-feedstock
+	url = ../natsort-feedstock
+	branch = master
