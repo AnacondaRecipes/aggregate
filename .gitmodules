@@ -2386,3 +2386,7 @@
 	path = natsort-feedstock
 	url = ../natsort-feedstock
 	branch = master
+[submodule "pymysql-feedstock"]
+	path = pymysql-feedstock
+	url = ../pymysql-feedstock
+	branch = master
