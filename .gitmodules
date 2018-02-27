@@ -2398,3 +2398,7 @@
 	path = s3fs-feedstock
 	url = ../s3fs-feedstock
 	branch = master
+[submodule "sqlparse-feedstock"]
+	path = sqlparse-feedstock
+	url = ../sqlparse-feedstock
+	branch = master
