@@ -2410,3 +2410,7 @@
 	path = logilab-common-feedstock
 	url = ../logilab-common-feedstock
 	branch = master
+[submodule "python-utils-feedstock"]
+	path = python-utils-feedstock
+	url = ../python-utils-feedstock
+	branch = master
