@@ -2390,3 +2390,7 @@
 	path = pymysql-feedstock
 	url = ../pymysql-feedstock
 	branch = master
+[submodule "markdown-feedstock"]
+	path = markdown-feedstock
+	url = ../markdown-feedstock
+	branch = master
