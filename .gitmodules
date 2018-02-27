@@ -2394,3 +2394,7 @@
 	path = markdown-feedstock
 	url = ../markdown-feedstock
 	branch = master
+[submodule "s3fs-feedstock"]
+	path = s3fs-feedstock
+	url = ../s3fs-feedstock
+	branch = master
