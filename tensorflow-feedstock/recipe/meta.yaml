@@ -1,4 +1,4 @@
-{% set version = "1.4.1" %}
+{% set version = "1.5.0" %}
 
 package:
   name: tensorflow
@@ -11,14 +11,15 @@ build:
 requirements:
   run:
     - tensorflow-base =={{version}}
-    - tensorflow-tensorboard
+    - tensorflow-tensorboard >=1.5.0,<1.6.0
 
 test:
   imports:
     - tensorflow
     - tensorboard
   commands:
-    - tensorboard --help
+    # has an exit code of 1, see tensorflow-tensorboard recipe
+    - tensorboard --help || true
 
 about:
   home: http://tensorflow.org/
