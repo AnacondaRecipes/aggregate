@@ -2406,3 +2406,7 @@
 	path = enaml-feedstock
 	url = ../enaml-feedstock
 	branch = master
+[submodule "logilab-common-feedstock"]
+	path = logilab-common-feedstock
+	url = ../logilab-common-feedstock
+	branch = master
