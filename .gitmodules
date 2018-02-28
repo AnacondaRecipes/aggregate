@@ -2418,3 +2418,7 @@
 	path = ninja-feedstock
 	url = ../ninja-feedstock
 	branch = master
+[submodule "smart_open-feedstock"]
+	path = smart_open-feedstock
+	url = ../smart_open-feedstock
+	branch = master
