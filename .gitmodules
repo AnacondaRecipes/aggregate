@@ -2414,3 +2414,7 @@
 	path = python-utils-feedstock
 	url = ../python-utils-feedstock
 	branch = master
+[submodule "ninja-feedstock"]
+	path = ninja-feedstock
+	url = ../ninja-feedstock
+	branch = master
