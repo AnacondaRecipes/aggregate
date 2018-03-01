@@ -2430,3 +2430,6 @@
 	path = basemap-feedstock
 	url = ../basemap-feedstock
 	branch = master
+[submodule "qt-5.6-feedstock"]
+	path = qt-5.6-feedstock
+	url = ../qt-feedstock
