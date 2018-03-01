@@ -147,6 +147,8 @@ zlib:
   - 1.2
 xz:
   - 5
+qtwebkit:
+  - true
 zip_keys:
   -                             # [win]
     - vc                        # [win]
