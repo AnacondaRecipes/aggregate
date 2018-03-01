@@ -2422,3 +2422,11 @@
 	path = smart_open-feedstock
 	url = ../smart_open-feedstock
 	branch = master
+[submodule "azure-feedstock"]
+	path = azure-feedstock
+	url = ../azure-feedstock
+	branch = master
+[submodule "basemap-feedstock"]
+	path = basemap-feedstock
+	url = ../basemap-feedstock
+	branch = master
