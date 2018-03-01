@@ -2437,3 +2437,7 @@
 	path = astor-feedstock
 	url = ../astor-feedstock
 	branch = master
+[submodule "termcolor-feedstock"]
+	path = termcolor-feedstock
+	url = ../termcolor-feedstock
+	branch = master
