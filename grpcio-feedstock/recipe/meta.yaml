@@ -1,0 +1,61 @@
+{% set name = "grpcio" %}
+{% set version = "1.10.0" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "03265472d39bf26f124c3ef68446f7873c8260893e6ae65b323a5b51ed52e580" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ file_ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  {{ hash_type }}: {{ hash_value }}
+
+build:
+  number: 0
+  # protobuf does not support Visual C++ 2008, skip windows py27
+  skip: True  # [win and vc<10]
+  # TODO: macOS support
+  skip: True  # [osx]
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - python
+    - setuptools
+    - six >=1.5.2
+    - protobuf >=3.5.0
+    - futures >=2.2.0   # [py27]
+    - enum34 >=1.0.4    # [py27]
+  run:
+    - python
+    - setuptools
+    - six >=1.5.2
+    - protobuf >=3.5.0
+    - futures >=2.2.0   # [py27]
+    - enum34 >=1.0.4    # [py27]
+
+test:
+  imports:
+    - grpc
+    - grpc._cython
+    - grpc._cython._cygrpc
+    - grpc.beta
+    - grpc.framework
+    - grpc.framework.common
+    - grpc.framework.foundation
+    - grpc.framework.interfaces
+    - grpc.framework.interfaces.base
+    - grpc.framework.interfaces.face
+  commands:
+    - conda inspect linkages -p $PREFIX grpcio  # [linux]
+
+about:
+  home: https://grpc.io
+  license: Apache Software License
+  license_family: APACHE
+  summary: HTTP/2-based RPC framework
