@@ -8,7 +8,7 @@ source:
 build:
   detect_binary_files_with_prefix: False
   binary_relocation: False
-  number: 2
+  number: 3
   # The CentOS6 system libraries should be used for everything here.
   # We do not have CDT packages yet, nor compilers that would use them!
   build:
