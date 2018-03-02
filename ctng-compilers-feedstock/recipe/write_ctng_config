@@ -132,8 +132,9 @@ function write_ctng_config_before() {
 
   echo "CT_OBSOLETE=y"                                                  >> "${_dst}"
   echo "CT_EXPERIMENTAL=y"                                              >> "${_dst}"
-  echo "CT_STRIP_HOST_TOOLCHAIN_EXECUTABLES=y"                          >> "${_dst}"
-  echo "CT_STRIP_TARGET_TOOLCHAIN_EXECUTABLES=y"                        >> "${_dst}"
+  # echo "CT_DEBUGGABLE_TOOLCHAIN=y"                                      >> "${_dst}"
+  # echo "CT_STRIP_HOST_TOOLCHAIN_EXECUTABLES=n"                          >> "${_dst}"
+  # echo "CT_STRIP_TARGET_TOOLCHAIN_EXECUTABLES=n"                        >> "${_dst}"
   echo "CT_LOCAL_TARBALLS_DIR=\"${SYS_PREFIX}/conda-bld/src_cache\""    >> "${_dst}"
   echo "CT_SAVE_TARBALLS=y"                                             >> "${_dst}"
   echo "CT_PREFIX_DIR=\"\${CT_TOP_DIR}/gcc_built\""                     >> "${_dst}"

@@ -39,11 +39,11 @@ fi
 
 # Necessary because CentOS5.11 is having some certificate issues.
 if [[ ! -e "${SYS_PREFIX}/conda-bld/src_cache/duma_${ctng_duma//./_}.tar.gz" ]]; then
-  ${DOWNLOADER_INSECURE} https://sourceforge.net/projects/duma/files/duma/${ctng_duma}/duma_${ctng_duma//./_}.tar.gz/download ${DOWNLOADER_OUT} ${SYS_PREFIX}/conda-bld/src_cache/duma_${ctng_duma//./_}.tar.gz
+  ${DOWNLOADER_INSECURE} http://mirror.opencompute.org/onie/crosstool-NG/duma_${ctng_duma//./_}.tar.gz ${DOWNLOADER_OUT} ${SYS_PREFIX}/conda-bld/src_cache/duma_${ctng_duma//./_}.tar.gz
 fi
 
 if [[ ! -e "${SYS_PREFIX}/conda-bld/src_cache/expat-2.2.0.tar.bz2" ]]; then
-  ${DOWNLOADER_INSECURE} https://sourceforge.net/projects/expat/files/expat/2.2.0/expat-2.2.0.tar.bz2/download ${DOWNLOADER_OUT} ${SYS_PREFIX}/conda-bld/src_cache/expat-2.2.0.tar.bz2
+  ${DOWNLOADER_INSECURE} http://mirror.opencompute.org/onie/crosstool-NG/expat-2.2.0.tar.bz2/download ${DOWNLOADER_OUT} ${SYS_PREFIX}/conda-bld/src_cache/expat-2.2.0.tar.bz2
 fi
 
 
