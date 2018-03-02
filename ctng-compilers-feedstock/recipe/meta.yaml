@@ -9,6 +9,11 @@ build:
   detect_binary_files_with_prefix: False
   binary_relocation: False
   number: 2
+  # The CentOS6 system libraries should be used for everything here.
+  # We do not have CDT packages yet, nor compilers that would use them!
+  build:
+    missing_dso_whitelist:
+      - '*'
 
 requirements:
   build:
@@ -21,6 +26,9 @@ requirements:
 outputs:
   - name: gcc_impl_{{ ctng_target_platform }}
     script: install-gcc.sh
+    build:
+      missing_dso_whitelist:
+        - '*'
     requirements:
       run:
         - {{ pin_subpackage('binutils_impl_' ~ ctng_target_platform, exact=True) }}
@@ -37,6 +45,9 @@ outputs:
 
   - name: gxx_impl_{{ ctng_target_platform }}
     script: install-g++.sh
+    build:
+      missing_dso_whitelist:
+        - '*'
     requirements:
       build:
         # For cpp and crt{i,n}.o
@@ -55,6 +66,9 @@ outputs:
 
   - name: gfortran_impl_{{ ctng_target_platform }}
     script: install-gfortran.sh
+    build:
+      missing_dso_whitelist:
+        - '*'
     requirements:
       build:
         # For cpp and crt{i,n}.o
@@ -73,8 +87,11 @@ outputs:
       license: GPL
 
   - name: binutils_impl_{{ ctng_target_platform }}
-    script: install-binutils.sh
     version: {{ ctng_binutils }}
+    script: install-binutils.sh
+    build:
+      missing_dso_whitelist:
+        - '*'
     about:
       summary: The GNU Binutils are a collection of binary tools.
       home: https://www.gnu.org/software/binutils/
@@ -83,6 +100,9 @@ outputs:
   - name: libstdcxx-ng
     target: {{ ctng_target_platform }}
     script: install-libstdc++.sh
+    build:
+      missing_dso_whitelist:
+        - '*'
     about:
       summary: The GNU C++ Runtime Library
       home: https://gcc.gnu.org/
@@ -91,6 +111,9 @@ outputs:
   - name: libgcc-ng
     target: {{ ctng_target_platform }}
     script: install-libgcc.sh
+    build:
+      missing_dso_whitelist:
+        - '*'
     about:
       summary: The GCC low-level runtime library
       home: https://gcc.gnu.org/onlinedocs/gccint/Libgcc.html
@@ -99,6 +122,9 @@ outputs:
   - name: libgfortran-ng
     target: {{ ctng_target_platform }}
     script: install-libgfortran.sh
+    build:
+      missing_dso_whitelist:
+        - '*'
     about:
       summary: The GNU Fortran Runtime Library
       home: https://gcc.gnu.org/
@@ -108,6 +134,9 @@ outputs:
     target: {{ ctng_target_platform }}
     version: {{ ctng_gdb }}
     script: install-gdb.sh
+    build:
+      missing_dso_whitelist:
+        - '*'
     about:
       summary: The GNU Project Debugger
       home: https://www.gnu.org/software/gdb/
@@ -117,6 +146,9 @@ outputs:
     target: {{ ctng_target_platform }}
     version: {{ ctng_duma }}
     script: install-duma.sh
+    build:
+      missing_dso_whitelist:
+        - '*'
     about:
       summary: DUMA is an open-source library to detect buffer overruns and under-runs in C and C++ programs.
       home: http://duma.sourceforge.net/
