@@ -10,7 +10,7 @@ export PATH=${SRC_DIR}/gcc_built/bin:${SRC_DIR}/.build/${CHOST}/buildtools/bin:$
 pushd ${SRC_DIR}/.build/${CHOST}/build/build-cc-gcc-final/
   # We may not have built with plugin support so failure here is not fatal:
   make prefix=${PREFIX} install-lto-plugin || true
-  make -C gcc prefix=${PREFIX} install-driver install-cpp install-gcc-ar install-headers install-plugin install-lto-wrapper
+  make -C gcc prefix=${PREFIX} install-driver install-cpp install-gcc-ar install-headers install-plugin install-lto-wrapper install-collect2
   # not sure if this is the same as the line above.  Run both, just in case
   make -C lto-plugin prefix=${PREFIX} install
   install -dm755 ${PREFIX}/lib/bfd-plugins/
