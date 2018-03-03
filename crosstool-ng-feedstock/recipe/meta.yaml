@@ -9,12 +9,12 @@ source:
   git_tag: {{ commit }}
 
 build:
-  number: 3
+  number: 4
 
 requirements:
   build:
     # TODO :: We need some [not bootstrapping] selector or something?
-    # - {{ compiler('c') }}
+    - {{ compiler('c') }}
     - autoconf
     - automake
     - bison
