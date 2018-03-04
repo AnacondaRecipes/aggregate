@@ -10,6 +10,8 @@ source:
 
 build:
   number: 4
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
