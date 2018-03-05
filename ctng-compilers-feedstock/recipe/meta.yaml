@@ -1,3 +1,5 @@
+{% set build_num = 3 %}
+
 package:
   name: compilers_{{ ctng_target_platform }}
   version: {{ ctng_gcc }}
@@ -8,7 +10,7 @@ source:
 build:
   detect_binary_files_with_prefix: False
   binary_relocation: False
-  number: 3
+  number: {{ build_num }}
   # The CentOS6 system libraries should be used for everything here.
   # We do not have CDT packages yet, nor compilers that would use them!
   missing_dso_whitelist:
@@ -26,6 +28,7 @@ outputs:
   - name: gcc_impl_{{ ctng_target_platform }}
     script: install-gcc.sh
     build:
+      number: {{ build_num }}
       missing_dso_whitelist:
         - '*'
     requirements:
@@ -45,6 +48,7 @@ outputs:
   - name: gxx_impl_{{ ctng_target_platform }}
     script: install-g++.sh
     build:
+      number: {{ build_num }}
       missing_dso_whitelist:
         - '*'
     requirements:
@@ -66,6 +70,7 @@ outputs:
   - name: gfortran_impl_{{ ctng_target_platform }}
     script: install-gfortran.sh
     build:
+      number: {{ build_num }}
       missing_dso_whitelist:
         - '*'
     requirements:
@@ -89,6 +94,7 @@ outputs:
     version: {{ ctng_binutils }}
     script: install-binutils.sh
     build:
+      number: {{ build_num }}
       missing_dso_whitelist:
         - '*'
     about:
@@ -100,6 +106,7 @@ outputs:
     target: {{ ctng_target_platform }}
     script: install-libstdc++.sh
     build:
+      number: {{ build_num }}
       missing_dso_whitelist:
         - '*'
     about:
@@ -111,6 +118,7 @@ outputs:
     target: {{ ctng_target_platform }}
     script: install-libgcc.sh
     build:
+      number: {{ build_num }}
       missing_dso_whitelist:
         - '*'
     about:
@@ -122,6 +130,7 @@ outputs:
     target: {{ ctng_target_platform }}
     script: install-libgfortran.sh
     build:
+      number: {{ build_num }}
       missing_dso_whitelist:
         - '*'
     about:
@@ -134,6 +143,7 @@ outputs:
     version: {{ ctng_gdb }}
     script: install-gdb.sh
     build:
+      number: {{ build_num }}
       missing_dso_whitelist:
         - '*'
     about:
@@ -146,6 +156,7 @@ outputs:
     version: {{ ctng_duma }}
     script: install-duma.sh
     build:
+      number: {{ build_num }}
       missing_dso_whitelist:
         - '*'
     about:
