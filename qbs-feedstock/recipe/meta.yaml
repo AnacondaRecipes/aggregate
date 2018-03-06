@@ -1,12 +1,12 @@
-{% set version = "1.10" %}
+{% set version = "1.10.1" %}
 
 package:
   name: qbs
   version: {{ version }}
 
 source:
-  git_url: git://code.qt.io/qt-labs/qbs.git
-  git_tag: origin/{{ version }}
+  git_url: git://code.qt.io/qbs/qbs.git
+  git_tag: v{{ version }}
   patches:
     - 0001-add-generator-header-installs.patch
     - 0002-Use-.dll.a-instead-of-.a-for-mingw-import-libraries.patch
@@ -44,9 +44,9 @@ requirements:
     - jom                                # [win]
     - make                               # [not win]
   host:
-    - qt
+    - qt 5.9.*
   run:
-    - qt
+    - qt 5.9.*
     - vs2015_runtime                     # [win]
 
 about:
