@@ -1,4 +1,4 @@
-{% set version = "4.5.0" %}
+{% set version = "4.5.1" %}
 {% set ver_maj_min = "4.5" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://code.qt.io/qt-creator/qt-creator.git
-  git_tag: origin/4.5
+  git_tag: v{{ version }}
   patches:
     - 4.5/0001-macOS-Disable-app-bundle-and-do-not-put-qtcreatorlib.patch
     # - 4.2/0001-macOS-Disable-app-bundle.patch
@@ -45,19 +45,19 @@ requirements:
     - jom                                # [win]
     - make                               # [not win]
   host:
-    - qt 5.6.*
+    - qt 5.9.*
     - llvmdev
     - clangdev 5.0.*
     - libxcb                             # [linux]
-    - qbs >=1.9.1
+    - qbs >=1.10.1
   run:
     - vs2015_runtime                     # [win]
-    - qt 5.6.*
+    - qt 5.9.*
     - clangdev 5.0.*
     - cmake >=3.9.4
     - fonts-anaconda                     # [linux]
     - the_silver_searcher >=2.1.0
-    - qbs >=1.10
+    - qbs >=1.10.1
 
   # These are only necessary for the qtcreator executable itself.
   # It would be better if were possible to filter the application
