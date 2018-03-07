@@ -11,9 +11,8 @@ build:
   number: 3
   # The CentOS6 system libraries should be used for everything here.
   # We do not have CDT packages yet, nor compilers that would use them!
-  build:
-    missing_dso_whitelist:
-      - '*'
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
