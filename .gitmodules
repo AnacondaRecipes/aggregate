@@ -2441,3 +2441,11 @@
 	path = termcolor-feedstock
 	url = ../termcolor-feedstock
 	branch = master
+[submodule "pytest-benchmark-feedstock"]
+	path = pytest-benchmark-feedstock
+	url = ../pytest-benchmark-feedstock
+	branch = master
+[submodule "statistics-feedstock"]
+	path = statistics-feedstock
+	url = ../statistics-feedstock
+	branch = master
