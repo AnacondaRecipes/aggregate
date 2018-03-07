@@ -139,10 +139,10 @@ target_platform:
   - win-32                     # [win]
 tk:
   - 8.6
-vc:
-  - 9
-  - 14
-  - 14
+vc:     # [win]
+  - 9   # [win]
+  - 14  # [win]
+  - 14  # [win]
 zlib:
   - 1.2
 xz:
