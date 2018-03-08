@@ -28,7 +28,6 @@ pushd ${SRC_DIR}/.build/${CHOST}/build/build-cc-gcc-final/
   done
 
   make -C ${CHOST}/libgcc prefix=${PREFIX} install
-  # rm ${PREFIX}/lib/libgcc_s.so*
 
   # mkdir -p $PREFIX/$CHOST/sysroot/lib
 
@@ -158,6 +157,11 @@ $PREFIX/bin/${CHOST}-gcc -dumpspecs > $specdir/specs
 #   and recorded in the specs file.  It will undergo a prefix replacement when our compiler
 #   package is installed.
 sed -i -e "/\*link_libgcc:/,+1 s+%.*+& -rpath ${PREFIX}/lib+" $specdir/specs
+
+# Ensure that libgcc_s.so is found in the sysroot. I have done this to mask the fact that
+# strong run_export packages do not get installed into the host prefix (AFAICT) and we
+# should really fix that too. (ping @msarahan)
+cp -f ${PREFIX}/${CHOST}/lib/libgcc_s.so* ${PREFIX}/${CHOST}/sysroot/lib
 
 # Install Runtime Library Exception
 install -Dm644 $SRC_DIR/.build/src/gcc-${PKG_VERSION}/COPYING.RUNTIME \
