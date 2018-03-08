@@ -277,4 +277,8 @@ function write_ctng_config_before() {
 function write_ctng_config_after() {
   local _dst="${1}"
   write_ctng_package_versions "${_dst}"
+  # These 3 are necessary on linux-32 for some reason.
+  echo "CT_CONFIGURE_has_static_link=n"                                 >> "${_dst}"
+  echo "CT_WANTS_STATIC_LINK=n"                                         >> "${_dst}"
+  echo "CT_WANTS_STATIC_LINK_CXX=n"                                     >> "${_dst}"
 }
