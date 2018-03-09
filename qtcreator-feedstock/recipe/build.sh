@@ -15,12 +15,7 @@ rm -f "${PREFIX}"/include/sqlite3.h
 
 # Avoid Xcode
 if [[ ${HOST} =~ .*darwin.* ]]; then
-  mkdir -p xcode
-  pushd xcode
-    cp "${RECIPE_DIR}"/xcrun .
-    cp "${RECIPE_DIR}"/xcodebuild .
-    PATH=${PWD}:${PATH}
-  popd
+  PATH=${PREFIX}/bin/xc-avoidance:${PATH}
 fi
 
 # This appears in the "About" dialog, but qmake is not good and I cannot
