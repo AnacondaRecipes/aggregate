@@ -9,21 +9,23 @@ source:
   git_tag: {{ commit }}
 
 build:
-  number: 3
+  number: 4
+  missing_dso_whitelist:
+    - '*'
 
 # This package is used during bootstrapping so you need to
 # install system packages for all these things instead of
 # conda packages. Once you get to the stage of having built
 # all these and released them somewhere you can use the non
 # bootstrapping version of this package.
-# requirements:
-#   build:
+requirements:
+   build:
 #     - {{ compiler('c') }}
-#     - autoconf
-#     - automake
-#     - bison
-#     - flex
-#     - git
+     - autoconf
+     - automake
+     - bison
+     - flex
+     - git
 #   host:
 #     - ncurses
 #     - libtool
