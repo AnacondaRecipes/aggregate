@@ -2449,3 +2449,7 @@
 	path = statistics-feedstock
 	url = ../statistics-feedstock
 	branch = master
+[submodule "wxpython-feedstock"]
+	path = wxpython-feedstock
+	url = ../wxpython-feedstock
+	branch = master
