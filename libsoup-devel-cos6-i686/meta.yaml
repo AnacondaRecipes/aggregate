@@ -1,0 +1,33 @@
+package:
+  name: libsoup-devel-cos6-i686
+  version: 2.34.3
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libsoup-devel-2.34.3-5.el6.i686.rpm
+    sha256: 7d39b55f04294b1e8755be8f7b8c5ae5810d9d06675d627b4da2f1faa4443af4
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libsoup-2.34.3-5.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - glib2-devel-cos6-i686 >=2.27.90
+    - libsoup-cos6-i686 ==2.34.3
+
+
+outputs:
+  - name: libsoup-devel-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - glib2-devel-cos6-i686 >=2.27.90
+        - libsoup-cos6-i686 ==2.34.3
+
+    about:
+      home: http://live.gnome.org/LibSoup
+      license: LGPLv2
+      license_family: LGPL
+      summary: "(CDT) Header files for the Soup library"
+      description: |
+        Libsoup is an HTTP library implementation in C. This package allows you to
+        develop applications that use the libsoup library.

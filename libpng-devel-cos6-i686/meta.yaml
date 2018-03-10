@@ -1,0 +1,33 @@
+package:
+  name: libpng-devel-cos6-i686
+  version: 1.2.49
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libpng-devel-1.2.49-2.el6_7.i686.rpm
+    sha256: c3b0f3d20047a8cef357a96171787aaffcf74ae93bb0b0faff1bca3001315586
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libpng-1.2.49-2.el6_7.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libpng-cos6-i686 ==1.2.49
+
+
+outputs:
+  - name: libpng-devel-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - libpng-cos6-i686 ==1.2.49
+
+    about:
+      home: http://www.libpng.org/pub/png/
+      license: zlib
+      license_family: Other
+      summary: "(CDT) Development tools for programs to manipulate PNG image format files"
+      description: |
+        The libpng-devel package contains header files and documentation necessary for
+        developing programs using the PNG (Portable Network Graphics) library.  If you
+        want to develop programs which will manipulate PNG image format files, you
+        should install libpng-devel.  You'll also need to install the libpng package.

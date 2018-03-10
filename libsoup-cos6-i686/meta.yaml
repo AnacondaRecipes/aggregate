@@ -1,0 +1,36 @@
+package:
+  name: libsoup-cos6-i686
+  version: 2.34.3
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libsoup-2.34.3-5.el6.i686.rpm
+    sha256: e552af55a0842d3d854ebbfa551b88dae1d08513cdbca06493d87cac8b715f02
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/libsoup-2.34.3-5.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - glib-networking-cos6-i686 >=2.27.90
+
+
+outputs:
+  - name: libsoup-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - glib-networking-cos6-i686 >=2.27.90
+
+    about:
+      home: http://live.gnome.org/LibSoup
+      license: LGPLv2
+      license_family: LGPL
+      summary: "(CDT) Soup, an HTTP library implementation"
+      description: |
+        Libsoup is an HTTP library implementation in C. It was originally part of a
+        SOAP (Simple Object Access Protocol) implementation called Soup, but the SOAP
+        and non-SOAP parts have now been split into separate packages.  libsoup uses
+        the Glib main loop and is designed to work well with GTK applications. This
+        enables GNOME applications to access HTTP servers on the network in a
+        completely asynchronous fashion, very similar to the Gtk+ programming model (a
+        synchronous operation mode is also supported for those who want it).
