@@ -2461,3 +2461,7 @@
 	path = nginx-feedstock
 	url = ../nginx-feedstock
 	branch = master
+[submodule "pyqt-5.6-feedstock"]
+	path = pyqt-5.6-feedstock
+	url = ../pyqt-feedstock
+	branch = master-5.6
