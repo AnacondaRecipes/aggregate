@@ -2453,3 +2453,7 @@
 	path = wxpython-feedstock
 	url = ../wxpython-feedstock
 	branch = master
+[submodule "freeglut-feedstock"]
+	path = freeglut-feedstock
+	url = ../freeglut-feedstock
+	branch = master
