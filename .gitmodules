@@ -2457,3 +2457,7 @@
 	path = freeglut-feedstock
 	url = ../freeglut-feedstock
 	branch = master
+[submodule "nginx-feedstock"]
+	path = nginx-feedstock
+	url = ../nginx-feedstock
+	branch = master
