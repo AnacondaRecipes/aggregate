@@ -18,6 +18,16 @@ if [[ ${HOST} =~ .*darwin.* ]]; then
   PATH=${PREFIX}/bin/xc-avoidance:${PATH}
 fi
 
+# Avoid the build prefixes libclang.dylib getting linked instead of the host prefixes.
+# This is because we add this path to the front of the linker search path so that
+# libc++.dylib and libc++-abi.dylib get found there. This matters at present because
+# the compilers are clang 4.0.1 while QtCreator needs clang >= 5
+if [[ ${HOST} =~ .*darwin.* ]]; then
+  if [[ $(uname) == Darwin ]]; then
+    mv ${BUILD_PREFIX}/lib/libclang.dylib ${BUILD_PREFIX}/lib/libclang.dylib.nothanks
+  fi
+fi
+
 # This appears in the "About" dialog, but qmake is not good and I cannot
 # find any way to prevent it getting mangled (-DAnaconda -DBuild ...)
 echo DEFINES += IDE_VERSION_DESCRIPTION=\\\"Anaconda Build ${PKG_BUILDNUM}\\\" >> qtcreator.pro
