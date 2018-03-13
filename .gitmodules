@@ -2469,3 +2469,7 @@
 	path = sip-4.18-feedstock
 	url = ../sip-feedstock
 	branch = master-4.18
+[submodule "idna_ssl-feedstock"]
+	path = idna_ssl-feedstock
+	url = ../idna_ssl-feedstock
+	branch = master
