@@ -2473,3 +2473,7 @@
 	path = idna_ssl-feedstock
 	url = ../idna_ssl-feedstock
 	branch = master
+[submodule "vispy-feedstock"]
+	path = vispy-feedstock
+	url = ../vispy-feedstock
+	branch = master
