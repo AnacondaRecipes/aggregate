@@ -2481,3 +2481,7 @@
 	path = xgboost-feedstock
 	url = ../xgboost-feedstock
 	branch = master
+[submodule "tbb-feedstock"]
+	path = tbb-feedstock
+	url = ../tbb-feedstock
+	branch = master
