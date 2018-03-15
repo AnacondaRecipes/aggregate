@@ -1,4 +1,4 @@
-{% set version = "1.5.0" %}
+{% set version = "1.6.0" %}
 
 package:
   name: tensorflow-base
@@ -7,7 +7,7 @@ package:
 source:
   fn: tensorflow-{{ version }}.tar.gz
   url: https://github.com/tensorflow/tensorflow/archive/v{{ version }}.tar.gz
-  sha256: 0642781c3a3a8c2c4834b91b86aec385f0b2ada7d721571458079478cc5b29c8
+  sha256: 03cf1423446abbead6bd8c3cf6e6affa7d99746cd119691b012aac9a1795f4fb
   patches:
     # Patches need to get certain tests to pass on CentOS 6
     - stable-image-rotate-test.patch                  # [linux]
@@ -20,7 +20,7 @@ source:
     - use_installed_mkl.patch                         # [linux]
 
 build:
-  number: 1
+  number: 0
   skip: True  # [not linux64]
 
 requirements:
@@ -36,12 +36,16 @@ requirements:
     - zlib
     # requirements specified by the package itself
     - wheel
+    - termcolor >=1.1.0
     - six >=1.10.0
     - protobuf >=3.4.0
-    - numpy 1.12*
-    - enum34 >=1.1.6      # [py2k]
+    - numpy 1.13.3
     - mock >=2.0.0        # [py2k]
+    - grpcio >=1.8.6
+    - gast >=0.2.0
+    - enum34 >=1.1.6      # [py2k]
     - backports.weakref >=1.0rc1  # [py2k]
+    - astor >=0.6.0
     - absl-py >=0.1.6
     # the following packages are required for testing
     - portpicker
@@ -50,12 +54,16 @@ requirements:
     - mkl-devel
   run:
     - python
+    - termcolor >=1.1.0
     - six >=1.10.0
     - protobuf >=3.4.0
     - {{ pin_compatible('numpy') }}
-    - enum34 >=1.1.6      # [py2k]
     - mock >=2.0.0        # [py2k]
+    - grpcio >=1.8.6
+    - gast >=0.2.0
+    - enum34 >=1.1.6      # [py2k]
     - backports.weakref >=1.0rc1  # [py2k]
+    - astor >=0.6.0
     - absl-py >=0.1.6
 
 test:

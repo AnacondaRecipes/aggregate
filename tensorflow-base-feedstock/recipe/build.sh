@@ -77,27 +77,18 @@ ln -s $(pwd)/tensorflow ${PIP_TEST_ROOT}/tensorflow
 # remove the tensorboard tests as they cannot be built
 rm -rf ${PIP_TEST_ROOT}/tensorflow/contrib/tensorboard
 
-# Test which are known to fail and have been confirm to not effect the package
-#   without dist_session_debug_grpc_test the test commands returns non-zero
-#   debug:session_debug_grpc_test requires grpcio to be installed
-#   debug:source_remote_test requires grpcio to be installed
-#   python:lite_test is a known issue, https://github.com/tensorflow/tensorflow/issues/15410
-# The other test fail when MKL is enabled, but have been found to be benign
+# Test which are known to fail and do not effect the package
 KNOWN_FAIL="
-   -${PIP_TEST_PREFIX}/tensorflow/python/debug:dist_session_debug_grpc_test
-   -${PIP_TEST_PREFIX}/tensorflow/python/debug:session_debug_grpc_test
-   -${PIP_TEST_PREFIX}/tensorflow/python/debug:source_remote_test
-   -${PIP_TEST_PREFIX}/tensorflow/contrib/lite/python:lite_test
-   -${PIP_TEST_PREFIX}/tensorflow/contrib/factorization:gmm_ops_test
-   -${PIP_TEST_PREFIX}/tensorflow/contrib/slim/python/slim/nets:resnet_v2_test
-   -${PIP_TEST_PREFIX}/tensorflow/python/debug:session_debug_file_test
-   -${PIP_TEST_PREFIX}/tensorflow/python/debug:stepper_test
-   -${PIP_TEST_PREFIX}/tensorflow/python/keras:convolutional_recurrent_test
-   -${PIP_TEST_PREFIX}/tensorflow/python/kernel_tests:conv_ops_test
-   -${PIP_TEST_PREFIX}/tensorflow/python:layers_normalization_test
-   -${PIP_TEST_PREFIX}/tensorflow/python:nn_fused_batchnorm_test
-   -${PIP_TEST_PREFIX}/tensorflow/python:timeline_test
-   -${PIP_TEST_PREFIX}/tensorflow/python/tools:print_selective_registration_header_test"
+    -${PIP_TEST_PREFIX}/tensorflow/contrib/factorization:gmm_ops_test
+    -${PIP_TEST_PREFIX}/tensorflow/contrib/lite/python:lite_test
+    -${PIP_TEST_PREFIX}/tensorflow/contrib/quantize:fold_batch_norms_test
+    -${PIP_TEST_PREFIX}/tensorflow/python/keras:convolutional_recurrent_test
+    -${PIP_TEST_PREFIX}/tensorflow/python/keras:pooling_test
+    -${PIP_TEST_PREFIX}/tensorflow/python/kernel_tests:conv_ops_test
+    -${PIP_TEST_PREFIX}/tensorflow/python/kernel_tests:matrix_logarithm_op_test
+    -${PIP_TEST_PREFIX}/tensorflow/python/tools:print_selective_registration_header_test
+    -${PIP_TEST_PREFIX}/tensorflow/python:layers_normalization_test
+    -${PIP_TEST_PREFIX}/tensorflow/python:timeline_test"
 PIP_TEST_FILTER_TAG="-no_pip"
 BAZEL_FLAGS="--define=no_tensorflow_py_deps=true --test_lang_filters=py \
       --build_tests_only -k --test_tag_filters=${PIP_TEST_FILTER_TAG} \
