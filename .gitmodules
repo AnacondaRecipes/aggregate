@@ -2485,3 +2485,7 @@
 	path = tbb-feedstock
 	url = ../tbb-feedstock
 	branch = master
+[submodule "orange3-feedstock"]
+	path = orange3-feedstock
+	url = ../orange3-feedstock
+	branch = master
