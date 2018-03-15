@@ -2477,3 +2477,7 @@
 	path = vispy-feedstock
 	url = ../vispy-feedstock
 	branch = master
+[submodule "xgboost-feedstock"]
+	path = xgboost-feedstock
+	url = ../xgboost-feedstock
+	branch = master
