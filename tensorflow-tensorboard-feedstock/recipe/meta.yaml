@@ -1,13 +1,13 @@
-{% set version = "1.5.1" %}
+{% set version = "1.6.0" %}
 
 package:
-  name: tensorflow-tensorboard
+  name: tensorboard
   version: {{ version }}
 
 source:
   fn: tensorflow-{{ version }}.tar.gz
   url: https://github.com/tensorflow/tensorboard/archive/{{ version }}.tar.gz
-  sha256: 1b7e1a4f8ebfcc7037be0fe8da83e351e348fbe9f046b764e2c85a7e524fd252
+  sha256: 087242325ef3b91f1909e3fd3a873ad15e3c7703990ad8caab64736d9009bf62
 
 build:
   number: 0
@@ -20,7 +20,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - bazel >=0.4.5
+    - bazel >=0.9.0
     - python
     - setuptools
   run:
@@ -36,7 +36,7 @@ requirements:
 
 test:
   requires:
-    - tensorflow-base >=1.5.0,<1.6.0
+    - tensorflow-base >=1.6.0,<1.7.0
   imports:
     - tensorboard
   commands:
