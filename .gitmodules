@@ -2489,3 +2489,7 @@
 	path = orange3-feedstock
 	url = ../orange3-feedstock
 	branch = master
+[submodule "vtk-feedstock"]
+	path = vtk-feedstock
+	url = ../vtk-feedstock
+	branch = master
