@@ -1,5 +1,5 @@
 {% set name = "Keras" %}
-{% set version = "2.1.4" %}
+{% set version = "2.1.5" %}
 
 package:
   name: keras-gpu
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7ee1fcc79072ac904a4f008d715bcb78c60250ae3cd41d99e268c60ade8d0d3a
+  sha256: 907ad29add1fff27342a9f4fe3e60003d450d3af41a38f22f629c7736fc8399d
 
 build:
   number: 0
