@@ -98,18 +98,18 @@ if [ -f /tmp/old-env-$$.txt ]; then
 fi
 env > /tmp/old-env-$$.txt
 
-_PYTHON_SYSCONFIGDATA_NAME_USED=${_PYTHON_SYSCONFIGDATA_NAME:-@_PYTHON_SYSCONFIGDATA_NAME@}
-if [ -n "${_PYTHON_SYSCONFIGDATA_NAME_USED}" ] && [ -n "${SYS_SYSROOT}" ]; then
-  if find "$(dirname $(dirname ${SYS_PYTHON}))/lib/"python* -type f -name "${_PYTHON_SYSCONFIGDATA_NAME_USED}.py" -exec false {} +; then
+_CONDA_PYTHON_SYSCONFIGDATA_NAME_USED=${_CONDA_PYTHON_SYSCONFIGDATA_NAME:-@_CONDA_PYTHON_SYSCONFIGDATA_NAME@}
+if [ -n "${_CONDA_PYTHON_SYSCONFIGDATA_NAME_USED}" ] && [ -n "${SYS_SYSROOT}" ]; then
+  if find "$(dirname $(dirname ${SYS_PYTHON}))/lib/"python* -type f -name "${_CONDA_PYTHON_SYSCONFIGDATA_NAME_USED}.py" -exec false {} +; then
     echo ""
     echo "WARNING: The Python interpreter at the following prefix:"
     echo "         $(dirname $(dirname ${SYS_PYTHON}))"
     echo "         .. is not able to handle sysconfigdata-based compilation for the host:"
-    echo "         ${_PYTHON_SYSCONFIGDATA_NAME_USED//_sysconfigdata_/}"
+    echo "         ${_CONDA_PYTHON_SYSCONFIGDATA_NAME_USED//_sysconfigdata_/}"
     echo ""
     echo "         We are not preventing things from continuing here, but *this* Python will not"
     echo "         be able to compile software for this host, and, depending on whether it has"
-    echo "         been patched to ignore missing _PYTHON_SYSCONFIGDATA_NAME or not, may cause"
+    echo "         been patched to ignore missing _CONDA_PYTHON_SYSCONFIGDATA_NAME or not, may cause"
     echo "         an exception."
     echo ""
     echo "         This can happen for one of three reasons:"
@@ -122,8 +122,8 @@ if [ -n "${_PYTHON_SYSCONFIGDATA_NAME_USED}" ] && [ -n "${SYS_SYSROOT}" ]; then
     echo "             to use as a build machine for this host)."
     echo ""
     echo "         3. You are attempting your own bespoke cross-compilation host that is not supported. Have"
-    echo "            you provided your own value in the _PYTHON_SYSCONFIGDATA_NAME environment variable but"
-    echo "            misspelt it and/or failed to add the neccessary ${_PYTHON_SYSCONFIGDATA_NAME_USED}.py"
+    echo "            you provided your own value in the _CONDA_PYTHON_SYSCONFIGDATA_NAME environment variable but"
+    echo "            misspelt it and/or failed to add the neccessary ${_CONDA_PYTHON_SYSCONFIGDATA_NAME_USED}.py"
     echo "            file to the Python interpreter's standard library?"
     echo ""
   fi
@@ -137,7 +137,7 @@ _tc_activation \
   "LDFLAGS,${LDFLAGS:-${LDFLAGS_USED}}" \
   "DEBUG_CPPFLAGS,${CPPFLAGS:-@DEBUG_CPPFLAGS@}" \
   "DEBUG_CFLAGS,${DEBUG_CFLAGS:-${DEBUG_CFLAGS_USED}}" \
-  "_PYTHON_SYSCONFIGDATA_NAME,${_PYTHON_SYSCONFIGDATA_NAME_USED}"
+  "_CONDA_PYTHON_SYSCONFIGDATA_NAME,${_CONDA_PYTHON_SYSCONFIGDATA_NAME_USED}"
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"

@@ -54,7 +54,7 @@ FINAL_DEBUG_CXXFLAGS:
   - -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -mcpu=power8 -mtune=power8 -mpower8-fusion -mpower8-vector -ftree-vectorize -fPIC -fstack-protector-all -fno-plt -Og -g -Wall -Wextra -fvar-tracking-assignments -pipe
 FINAL_DEBUG_FFLAGS:
   - -fopenmp -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -pipe -Og -g -Wall -Wextra -fcheck=all -fbacktrace -fimplicit-none -fvar-tracking-assignments -pipe
-FINAL_PYTHON_SYSCONFIGDATA_NAME:
+FINAL_CONDA_PYTHON_SYSCONFIGDATA_NAME:
   - _sysconfigdata_powerpc64le_conda_cos7_linux_gnu
 zip_keys:
   -
@@ -68,4 +68,4 @@ zip_keys:
     - FINAL_DEBUG_CFLAGS
     - FINAL_DEBUG_CXXFLAGS
     - FINAL_DEBUG_FFLAGS
-    - FINAL_PYTHON_SYSCONFIGDATA_NAME
+    - FINAL_CONDA_PYTHON_SYSCONFIGDATA_NAME
