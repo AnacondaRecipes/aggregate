@@ -2493,3 +2493,7 @@
 	path = vtk-feedstock
 	url = ../vtk-feedstock
 	branch = master
+[submodule "aenum-feedstock"]
+	path = aenum-feedstock
+	url = ../aenum-feedstock
+	branch = master
