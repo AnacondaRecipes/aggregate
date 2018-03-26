@@ -2497,3 +2497,7 @@
 	path = aenum-feedstock
 	url = ../aenum-feedstock
 	branch = master
+[submodule "freetds-feedstock"]
+	path = freetds-feedstock
+	url = ../freetds-feedstock
+	branch = master
