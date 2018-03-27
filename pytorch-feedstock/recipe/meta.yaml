@@ -1,5 +1,5 @@
-{% set version = "0.3.0" %}
-{% set commit = "af3964a8725236c78ce969b827fdeee1c5c54110" %}
+{% set version = "0.3.1" %}
+{% set commit = "2b4748011b5881583567bb166801ca6625f2fdda"%}
 
 package:
   name: pytorch
@@ -10,38 +10,41 @@ source:
   git_tag: {{ commit }}
   patches:
     - 0001-force-system-nccl.patch
+    # https://github.com/pytorch/pytorch/issues/4499
+    - define_speed_unknown.patch
 
 build:
   number: 0
-  string: py{{py}}cuda{{ environ['CUDA_VERSION'] }}cudnn{{ environ['CUDNN_VERSION'] }}_0
   detect_binary_files_with_prefix: False
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - cmake
+  host:
+    # GPU requirements
+    - cudatoolkit {{ cudatoolkit }}*
+    - cudnn {{ cudnn }}*
+    - nccl
+    # other requirements
     - python
-    - numpy 1.9*
+    - numpy 1.11*
     - setuptools
     - pyyaml
     - cffi
-    - mkl 2018*
+    - mkl-devel
     - magma
-    - cmake
-    - cudatoolkit {{ environ['CUDA_VERSION'] }}*
-    - cudnn {{ environ['CUDNN_VERSION'] }}*
-    - nccl
-    - libgcc-ng
-    - libstdcxx-ng
 
   run:
-    - python
-    - numpy >=1.9
-    - mkl 2018*
-    - cffi
-    - libgcc-ng
-    - libstdcxx-ng
-    - cudatoolkit {{ environ['CUDA_VERSION'] }}*
-    - cudnn {{ environ['CUDNN_VERSION'] }}*
+    # GPU requirements
+    - cudatoolkit {{ cudatoolkit }}*
+    - cudnn {{ cudnn }}*
     - nccl
+    # other requirements
+    - python
+    - {{ pin_compatible('numpy') }}
+    - cffi
 
 test:
   imports:

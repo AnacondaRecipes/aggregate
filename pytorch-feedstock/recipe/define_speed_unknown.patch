@@ -1,0 +1,11 @@
+--- torch/lib/gloo/gloo/common/linux.cc.orig	2018-03-19 15:55:23.580485784 -0500
++++ torch/lib/gloo/gloo/common/linux.cc	2018-03-19 15:55:37.999098596 -0500
+@@ -30,6 +30,8 @@
+ 
+ #include "gloo/common/logging.h"
+ 
++#define SPEED_UNKNOWN -1
++
+ namespace gloo {
+ 
+ const std::set<std::string>& kernelModules() {

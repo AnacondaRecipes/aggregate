@@ -1,7 +1,24 @@
-This recipe uses environmental variables to set the CUDA and CuDNN versions
-that the package is built against. To build this recipe call conda-build
-with the appropiate variables set:
+To build a conda pytorch package with GPU support
 
-  CUDA_VERSION=8.0 CUDNN_VERSION=6.0 conda build --python 2.7 .
+* Build the required Docker containers:
 
-This will create a package named: pytorch-0.1.12-py27cuda7.5cudnn6.0_1.tar.bz2
+    Dockerfiles can be found at: https://github.com/jjhelmus/docker-images
+
+    CUDA 8.0, CuDNN 7: pkg_build_cuda80_cudnn7_centos6_dt2
+
+* Start the docker container using:
+
+    ```
+    docker run -v `pwd`:/io -it pkg_build_cuda80_cudnn7_centos6_dt2 /bin/bash
+    ```
+
+* Update conda and conda-build, and navigate to the recipe root folder.
+
+    Modify conda_build_config.yaml in this directory to specifiy the
+    CUDA, CuDNN, and python versions.
+
+    To start a build use:
+
+    ```
+    conda build --no-test .
+    ```
