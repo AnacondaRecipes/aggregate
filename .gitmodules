@@ -2505,3 +2505,7 @@
 	path = twine-feedstock
 	url = ../twine-feedstock
 	branch = master
+[submodule "requests-toolbelt-feedstock"]
+	path = requests-toolbelt-feedstock
+	url = ../requests-toolbelt-feedstock/
+	branch = master
