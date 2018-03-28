@@ -2501,3 +2501,7 @@
 	path = freetds-feedstock
 	url = ../freetds-feedstock
 	branch = master
+[submodule "twine-feedstock"]
+	path = twine-feedstock
+	url = ../twine-feedstock
+	branch = master
