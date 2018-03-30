@@ -14,7 +14,7 @@ fi
 rm -f "${PREFIX}"/include/sqlite3.h
 
 # Avoid Xcode
-if [[ ${HOST} =~ .*darwin.* ]]; then
+if [[ ${target_platform} == osx-64 ]]; then
   PATH=${PREFIX}/bin/xc-avoidance:${PATH}
 fi
 
@@ -22,9 +22,14 @@ fi
 # This is because we add this path to the front of the linker search path so that
 # libc++.dylib and libc++-abi.dylib get found there. This matters at present because
 # the compilers are clang 4.0.1 while QtCreator needs clang >= 5
-if [[ ${HOST} =~ .*darwin.* ]]; then
+# Also remove the old libclang and libLLVM static libraries from the build prefix as they will
+# be found instead of the newer ones in the host prefix. We may want to prevent these from
+# existing in the first place. They are part of the macOS compilers.
+if [[ ${target_platform} == osx-64 ]]; then
   if [[ $(uname) == Darwin ]]; then
-    mv ${BUILD_PREFIX}/lib/libclang.dylib ${BUILD_PREFIX}/lib/libclang.dylib.nothanks
+    mv ${BUILD_PREFIX}/lib/libclang.dylib ${BUILD_PREFIX}/lib/libclang.dylib.nothanks || true
+    rm -rf ${BUILD_PREFIX}/lib/libclang*.a || true
+    rm -rf ${BUILD_PREFIX}/lib/libLLVM*.a || true
   fi
 fi
 
