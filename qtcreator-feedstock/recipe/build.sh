@@ -35,17 +35,19 @@ fi
 
 # This appears in the "About" dialog, but qmake is not good and I cannot
 # find any way to prevent it getting mangled (-DAnaconda -DBuild ...)
-echo DEFINES += IDE_VERSION_DESCRIPTION=\\\"Anaconda Build ${PKG_BUILDNUM}\\\" >> qtcreator.pro
-qmake -r qtcreator.pro                   \
-      QTC_PREFIX="${PREFIX}"             \
-      QBS_INSTALL_PREFIX="${PREFIX}"     \
-      LLVM_INSTALL_DIR="${PREFIX}"       \
-      QMAKE_CC=${CC}                     \
-      QMAKE_CXX=${CXX}                   \
-      QMAKE_LINK=${CXX}                  \
-      QMAKE_LINK_C=${CC}                 \
-      QMAKE_CXXFLAGS="${CXXFLAGS}"       \
-      QMAKE_LFLAGS_RELEASE="${LDFLAGS}"
+if [[ ! -f Makefile ]]; then
+  echo DEFINES += IDE_VERSION_DESCRIPTION=\\\"Anaconda Build ${PKG_BUILDNUM}\\\" >> qtcreator.pro
+  qmake -r qtcreator.pro                   \
+        QTC_PREFIX="${PREFIX}"             \
+        QBS_INSTALL_PREFIX="${PREFIX}"     \
+        LLVM_INSTALL_DIR="${PREFIX}"       \
+        QMAKE_CC=${CC}                     \
+        QMAKE_CXX=${CXX}                   \
+        QMAKE_LINK=${CXX}                  \
+        QMAKE_LINK_C=${CC}                 \
+        QMAKE_CXXFLAGS="${CXXFLAGS}"       \
+        QMAKE_LFLAGS_RELEASE="${LDFLAGS}"
+fi
 make -j${CPU_COUNT}
 make install
 
@@ -66,4 +68,9 @@ if [[ ${HOST} =~ .*darwin.* ]]; then
 elif [[ ${HOST} =~ .*linux.* ]]; then
   echo "It would be nice to add a .desktop file here, but it would"
   echo "be even nicer if menuinst handled both that and App bundles."
+fi
+
+if [[ ${HOST} =~ .*linux.* ]]; then
+  existing=$(patchelf --print-rpath ${PREFIX}/lib/qtcreator/plugins/qmldesigner/libcomponentsplugin.so)
+  patchelf --force-rpath --set-rpath $existing:\$ORIGIN/../..:\$ORIGIN/.. ${PREFIX}/lib/qtcreator/plugins/qmldesigner/libcomponentsplugin.so
 fi
