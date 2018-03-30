@@ -1,4 +1,4 @@
-From 6bc9cf9f3114b25b9caade89f64e91f08cd5254e Mon Sep 17 00:00:00 2001
+From 04af88f5320de80ef6e0826f0e1f87f0e7d27c79 Mon Sep 17 00:00:00 2001
 From: Ray Donnelly <mingw.android@gmail.com>
 Date: Sat, 29 Nov 2014 18:20:12 +0000
 Subject: [PATCH 2/4] Use .dll.a instead of .a for mingw* import libraries
@@ -8,10 +8,10 @@ Subject: [PATCH 2/4] Use .dll.a instead of .a for mingw* import libraries
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/src/lib/qtprofilesetup/qtmoduleinfo.cpp b/src/lib/qtprofilesetup/qtmoduleinfo.cpp
-index d0a4f47..59ec901 100644
+index 50a2f592..a014af45 100644
 --- a/src/lib/qtprofilesetup/qtmoduleinfo.cpp
 +++ b/src/lib/qtprofilesetup/qtmoduleinfo.cpp
-@@ -271,7 +271,7 @@ void QtModuleInfo::setupLibraries(const QtEnvironment &qtEnv, bool debugBuild,
+@@ -273,7 +273,7 @@ void QtModuleInfo::setupLibraries(const QtEnvironment &qtEnv, bool debugBuild,
                  if (qtEnv.mkspecName.contains(QLatin1String("msvc")))
                      libFilePath += QLatin1String(".lib");
                  else if (isMingw)
@@ -21,5 +21,5 @@ index d0a4f47..59ec901 100644
              continue;
          }
 -- 
-2.10.1
+2.15.1 (Apple Git-101)
 

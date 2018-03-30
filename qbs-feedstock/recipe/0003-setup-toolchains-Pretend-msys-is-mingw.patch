@@ -1,4 +1,4 @@
-From da83cc675bf22fed67d649906f58b73c0ea01a1c Mon Sep 17 00:00:00 2001
+From 6bc2286d01f21156fbe32fc061fb11f238b1168a Mon Sep 17 00:00:00 2001
 From: Ray Donnelly <mingw.android@gmail.com>
 Date: Sat, 29 Nov 2014 18:29:20 +0000
 Subject: [PATCH 3/4] setup-toolchains: Pretend msys is mingw
@@ -9,10 +9,10 @@ It's close enough and the best we've got.
  1 file changed, 3 insertions(+), 2 deletions(-)
 
 diff --git a/src/app/qbs-setup-toolchains/probe.cpp b/src/app/qbs-setup-toolchains/probe.cpp
-index 7352857..8f6e093 100644
+index 11dee9ad..5a3ed20f 100644
 --- a/src/app/qbs-setup-toolchains/probe.cpp
 +++ b/src/app/qbs-setup-toolchains/probe.cpp
-@@ -102,7 +102,8 @@ static QStringList validMinGWMachines()
+@@ -105,7 +105,8 @@ static QStringList validMinGWMachines()
              << QLatin1String("i686-w64-mingw32") << QLatin1String("x86_64-w64-mingw32")
              << QLatin1String("i686-w64-mingw32.shared") << QLatin1String("x86_64-w64-mingw32.shared")
              << QLatin1String("i686-w64-mingw32.static") << QLatin1String("x86_64-w64-mingw32.static")
@@ -22,7 +22,7 @@ index 7352857..8f6e093 100644
  }
  
  static QStringList toolchainTypeFromCompilerName(const QString &compilerName)
-@@ -191,7 +192,7 @@ static Profile createGccProfile(const QString &compilerFilePath, Settings *setti
+@@ -206,7 +207,7 @@ static Profile createGccProfile(const QString &compilerFilePath, Settings *setti
  {
      const QString machineName = gccMachineName(compilerFilePath);
  
@@ -32,5 +32,5 @@ index 7352857..8f6e093 100644
              throw ErrorInfo(Tr::tr("Detected gcc platform '%1' is not supported.")
                      .arg(machineName));
 -- 
-2.10.1
+2.15.1 (Apple Git-101)
 

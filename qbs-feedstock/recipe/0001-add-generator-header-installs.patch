@@ -1,4 +1,4 @@
-From 244291582a3d6584a9b632ce6925551256059e4e Mon Sep 17 00:00:00 2001
+From 25433f36dc5de4bd672e0e1fa796f99d117c6674 Mon Sep 17 00:00:00 2001
 From: Ray Donnelly <mingw.android@gmail.com>
 Date: Mon, 18 Aug 2014 00:12:36 +0100
 Subject: [PATCH 1/4] add generator header installs
@@ -8,7 +8,7 @@ Subject: [PATCH 1/4] add generator header installs
  1 file changed, 1 insertion(+)
 
 diff --git a/src/lib/corelib/api/api.pri b/src/lib/corelib/api/api.pri
-index e2f68f8..556939b 100644
+index e2f68f80..556939b5 100644
 --- a/src/lib/corelib/api/api.pri
 +++ b/src/lib/corelib/api/api.pri
 @@ -28,6 +28,7 @@ SOURCES += \
@@ -20,5 +20,5 @@ index e2f68f8..556939b 100644
          $$PWD/runenvironment.h
      api_headers.path = $${QBS_INSTALL_PREFIX}/include/qbs/api
 -- 
-2.10.1
+2.15.1 (Apple Git-101)
 

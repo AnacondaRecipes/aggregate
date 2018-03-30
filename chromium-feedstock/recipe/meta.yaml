@@ -1,0 +1,8 @@
+name: chromium
+# Update this from the file:
+# https://chromium.woolyss.com/download/
+# https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2FLAST_CHANGE?generation=1519904483346073&alt=media
+version: 540119  # [win]
+version: 540120  # [osx]
+
+https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F540124%2Fchrome-mac.zip?generation=1519904463732592&alt=media
