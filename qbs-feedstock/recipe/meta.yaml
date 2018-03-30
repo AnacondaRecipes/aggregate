@@ -1,4 +1,4 @@
-{% set version = "1.10.1" %}
+{% set version = "1.11.0" %}
 
 package:
   name: qbs
@@ -12,6 +12,7 @@ source:
     - 0002-Use-.dll.a-instead-of-.a-for-mingw-import-libraries.patch
     - 0003-setup-toolchains-Pretend-msys-is-mingw.patch
     - 0004-add-many-files-to-installed-headers.patch
+    - 0005-macOS-Add-missing-CPU-defines.patch
 
 requirements:
   build:
