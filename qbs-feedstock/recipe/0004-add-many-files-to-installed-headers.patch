@@ -1,33 +1,18 @@
-From 81a0f129291ab36cc3adccc6c93a5b2cff628e31 Mon Sep 17 00:00:00 2001
+From e78eb5f203a7b6a0c9366ce57cd0d6034cbe62e3 Mon Sep 17 00:00:00 2001
 From: Ray Donnelly <mingw.android@gmail.com>
 Date: Tue, 28 Apr 2015 21:43:17 +0100
 Subject: [PATCH 4/4] add many files to installed headers
 
 ---
- src/lib/corelib/generators/generators.pri | 6 ++++++
- src/lib/corelib/language/language.pri     | 3 ++-
- src/lib/corelib/logging/logging.pri       | 3 ++-
- 3 files changed, 10 insertions(+), 2 deletions(-)
+ src/lib/corelib/language/language.pri | 3 ++-
+ src/lib/corelib/logging/logging.pri   | 3 ++-
+ 2 files changed, 4 insertions(+), 2 deletions(-)
 
-diff --git a/src/lib/corelib/generators/generators.pri b/src/lib/corelib/generators/generators.pri
-index d90ad42..e6941d5 100644
---- a/src/lib/corelib/generators/generators.pri
-+++ b/src/lib/corelib/generators/generators.pri
-@@ -8,3 +8,9 @@ HEADERS += \
-     $$PWD/generator.h \
-     $$PWD/generatordata.h \
-     $$PWD/igeneratableprojectvisitor.h
-+
-+!qbs_no_dev_install {
-+    generators_headers.files = $$PWD/generator.h
-+    generators_headers.path = $${QBS_INSTALL_PREFIX}/include/qbs/generators
-+    INSTALLS += generators_headers
-+}
 diff --git a/src/lib/corelib/language/language.pri b/src/lib/corelib/language/language.pri
-index d1961df..70bca44 100644
+index 6d68f96..34e507c 100644
 --- a/src/lib/corelib/language/language.pri
 +++ b/src/lib/corelib/language/language.pri
-@@ -74,7 +74,8 @@ SOURCES += \
+@@ -75,7 +75,8 @@ SOURCES += \
      $$PWD/value.cpp
  
  !qbs_no_dev_install {
@@ -38,10 +23,10 @@ index d1961df..70bca44 100644
      INSTALLS += language_headers
  }
 diff --git a/src/lib/corelib/logging/logging.pri b/src/lib/corelib/logging/logging.pri
-index 029a4fb..4944ea6 100644
+index 3a4379a..f6a7188 100644
 --- a/src/lib/corelib/logging/logging.pri
 +++ b/src/lib/corelib/logging/logging.pri
-@@ -10,7 +10,8 @@ SOURCES += \
+@@ -12,7 +12,8 @@ SOURCES += \
      $$PWD/ilogsink.cpp
  
  !qbs_no_dev_install {
@@ -52,5 +37,5 @@ index 029a4fb..4944ea6 100644
      INSTALLS += logging_headers
  }
 -- 
-2.10.1
+1.9.5 (Apple Git-50.3)
 
