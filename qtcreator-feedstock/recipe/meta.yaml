@@ -57,7 +57,7 @@ requirements:
     - llvmdev
     - clangdev 5.0.*
     - libxcb                             # [linux]
-    - qbs >=1.10.1
+    - qbs >=1.11.0
   run:
     - vs2015_runtime                     # [win]
     - qt 5.9.*
@@ -65,7 +65,7 @@ requirements:
     - cmake >=3.9.4
     - fonts-anaconda                     # [linux]
     - the_silver_searcher >=2.1.0
-    - qbs >=1.10.1
+    - qbs >=1.11.0
 
   # These are only necessary for the qtcreator executable itself.
   # It would be better if were possible to filter the application
