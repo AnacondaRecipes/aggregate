@@ -1,5 +1,5 @@
-{% set version = "4.5.1" %}
-{% set ver_maj_min = "4.5" %}
+{% set version = "4.6.0" %}
+{% set ver_maj_min = "4.6" %}
 
 package:
   name: qtcreator
@@ -9,7 +9,8 @@ source:
   git_url: https://code.qt.io/qt-creator/qt-creator.git
   git_tag: v{{ version }}
   patches:
-    - 4.5/0001-macOS-Disable-app-bundle-and-do-not-put-qtcreatorlib.patch
+    - 4.6/0001-macOS-Disable-app-bundle-and-do-not-put-qtcreatorlib.patch
+    # - 4.5/0001-macOS-Disable-app-bundle-and-do-not-put-qtcreatorlib.patch
     # - 4.2/0001-macOS-Disable-app-bundle.patch
     # - 4.2/0002-Use-systemEnvironment-for-Start-and-Debug-External-A.patch
     # - 4.0/0001-Disable-app-build.patch                                               # [osx]
