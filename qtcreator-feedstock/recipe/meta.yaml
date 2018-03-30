@@ -58,6 +58,7 @@ requirements:
     - clangdev 5.0.*
     - libxcb                             # [linux]
     - qbs >=1.11.0
+    - zlib                               # [unix]
   run:
     - vs2015_runtime                     # [win]
     - qt 5.9.*
