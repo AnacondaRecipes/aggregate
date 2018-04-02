@@ -106,7 +106,7 @@ _tc_activation \
   "LDFLAGS,${LDFLAGS:-${LDFLAGS_USED}}" \
   "OPT_CPPFLAGS,${CPPFLAGS:-${CPPFLAGS_USED}}" \
   "OPT_CFLAGS,${CFLAGS:-${CFLAGS_USED}}" \
-  "_PYTHON_SYSCONFIGDATA_NAME,${_PYTHON_SYSCONFIGDATA_NAME_USED}"
+  "_CONDA_PYTHON_SYSCONFIGDATA_NAME,${_CONDA_PYTHON_SYSCONFIGDATA_NAME_USED}"
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"

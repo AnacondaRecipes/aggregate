@@ -6,7 +6,7 @@ source:
   path: .
 
 build:
-  number: 25
+  number: 26
 
 source:
   path: .
