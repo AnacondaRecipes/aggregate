@@ -2513,3 +2513,7 @@
 	path = backcall-feedstock
 	url = ../backcall-feedstock
 	branch = master
+[submodule "nbserverproxy-feedstock"]
+	path = nbserverproxy-feedstock
+	url = ../nbserverproxy-feedstock
+	branch = master
