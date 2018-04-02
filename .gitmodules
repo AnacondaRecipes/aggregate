@@ -2509,3 +2509,7 @@
 	path = requests-toolbelt-feedstock
 	url = ../requests-toolbelt-feedstock/
 	branch = master
+[submodule "backcall-feedstock"]
+	path = backcall-feedstock
+	url = ../backcall-feedstock
+	branch = master
