@@ -2517,3 +2517,75 @@
 	path = nbserverproxy-feedstock
 	url = ../nbserverproxy-feedstock
 	branch = master
+[submodule "mysql-connector-python-feedstock"]
+	path = mysql-connector-python-feedstock
+	url = ../mysql-connector-python-feedstock
+	branch = master
+[submodule "line_profiler-feedstock"]
+	path = line_profiler-feedstock
+	url = ../line_profiler-feedstock
+	branch = master
+[submodule "flask-login-feedstock"]
+	path = flask-login-feedstock
+	url = ../flask-login-feedstock
+	branch = master
+[submodule "markdown2-feedstock"]
+	path = markdown2-feedstock
+	url = ../markdown2-feedstock
+	branch = master
+[submodule "snakebite-feedstock"]
+	path = snakebite-feedstock
+	url = ../snakebite-feedstock
+	branch = master
+[submodule "smmap2-feedstock"]
+	path = smmap2-feedstock
+	url = ../smmap2-feedstock
+	branch = master
+[submodule "pandas-profiling-feedstock"]
+	path = pandas-profiling-feedstock
+	url = ../pandas-profiling-feedstock
+	branch = master
+[submodule "ephem-feedstock"]
+	path = ephem-feedstock
+	url = ../ephem-feedstock
+	branch = master
+[submodule "trollius-feedstock"]
+	path = trollius-feedstock
+	url = ../trollius-feedstock
+	branch = master
+[submodule "mpld3-feedstock"]
+	path = mpld3-feedstock
+	url = ../mpld3-feedstock
+	branch = master
+[submodule "gitpython-feedstock"]
+	path = gitpython-feedstock
+	url = ../gitpython-feedstock
+	branch = master
+[submodule "thriftpy-feedstock"]
+	path = thriftpy-feedstock
+	url = ../thriftpy-feedstock
+	branch = master
+[submodule "aiofiles-feedstock"]
+	path = aiofiles-feedstock
+	url = ../aiofiles-feedstock
+	branch = master
+[submodule "knit-feedstock"]
+	path = knit-feedstock
+	url = ../knit-feedstock
+	branch = master
+[submodule "visvis-feedstock"]
+	path = visvis-feedstock
+	url = ../visvis-feedstock
+	branch = master
+[submodule "impyla-feedstock"]
+	path = impyla-feedstock
+	url = ../impyla-feedstock
+	branch = master
+[submodule "mayavi-feedstock"]
+	path = mayavi-feedstock
+	url = ../mayavi-feedstock
+	branch = master
+[submodule "neo4j-python-driver-feedstock"]
+	path = neo4j-python-driver-feedstock
+	url = ../neo4j-python-driver-feedstock
+	branch = master
