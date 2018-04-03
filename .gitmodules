@@ -2589,3 +2589,7 @@
 	path = neo4j-python-driver-feedstock
 	url = ../neo4j-python-driver-feedstock
 	branch = master
+[submodule "py-cpuinfo-feedstock"]
+	path = py-cpuinfo-feedstock
+	url = ../py-cpuinfo-feedstock
+	branch = master
