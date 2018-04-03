@@ -1,0 +1,37 @@
+package:
+  name: pam-devel-cos6-i686
+  version: 1.1.1
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/pam-devel-1.1.1-24.el6.i686.rpm
+    sha256: 3abedba9870f835248ee0e702f5528e5efb4af9075551ec13a5ebd6ef6dcb501
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/pam-1.1.1-24.el6.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - pam-cos6-i686 ==1.1.1
+
+outputs:
+  - name: pam-devel-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - pam-cos6-i686 ==1.1.1
+
+    about:
+      home: http://www.linux-pam.org/
+      license: BSD and GPLv2+
+      license_family: GPL2
+      summary: "(CDT) Files needed for developing PAM-aware applications and modules for PAM"
+      description: |
+        PAM (Pluggable Authentication Modules) is a system security tool that allows
+        system administrators to set authentication policy without having to recompile
+        programs that handle authentication. This package contains header files and
+        static libraries used for building both PAM-aware applications and modules for
+        use with PAM.
