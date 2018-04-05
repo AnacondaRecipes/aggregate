@@ -2593,3 +2593,31 @@
 	path = py-cpuinfo-feedstock
 	url = ../py-cpuinfo-feedstock
 	branch = master
+[submodule "drmaa-feedstock"]
+	path = drmaa-feedstock
+	url = ../drmaa-feedstock
+	branch = master
+[submodule "semver-feedstock"]
+	path = semver-feedstock
+	url = ../semver-feedstock
+	branch = master
+[submodule "python-snappy-feedstock"]
+	path = python-snappy-feedstock
+	url = ../python-snappy-feedstock
+	branch = master
+[submodule "gitdb2-feedstock"]
+	path = gitdb2-feedstock
+	url = ../gitdb2-feedstock
+	branch = master
+[submodule "python-lmdb-feedstock"]
+	path = python-lmdb-feedstock
+	url = ../python-lmdb-feedstock
+	branch = master
+[submodule "pygmo-feedstock"]
+	path = pygmo-feedstock
+	url = ../pygmo-feedstock
+	branch = master
+[submodule "param-feedstock"]
+	path = param-feedstock
+	url = ../param-feedstock
+	branch = master
