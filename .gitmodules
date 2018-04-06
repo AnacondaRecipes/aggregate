@@ -2625,3 +2625,15 @@
 	path = libprotobuf-feedstock
 	url = ../libprotobuf-feedstock
 	branch = master
+[submodule "doit-feedstock"]
+	path = doit-feedstock
+	url = ../doit-feedstock
+	branch = master
+[submodule "macfsevents-feedstock"]
+	path = macfsevents-feedstock
+	url = ../macfsevents-feedstock
+	branch = master
+[submodule "pyinotify-feedstock"]
+	path = pyinotify-feedstock
+	url = ../pyinotify-feedstock
+	branch = master
