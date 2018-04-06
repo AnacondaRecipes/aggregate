@@ -2621,3 +2621,7 @@
 	path = param-feedstock
 	url = ../param-feedstock
 	branch = master
+[submodule "libprotobuf-feedstock"]
+	path = libprotobuf-feedstock
+	url = ../libprotobuf-feedstock
+	branch = master
