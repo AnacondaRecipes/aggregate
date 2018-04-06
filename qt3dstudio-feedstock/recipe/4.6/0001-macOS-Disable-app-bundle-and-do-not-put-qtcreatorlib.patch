@@ -1,0 +1,292 @@
+From 059feaf81ad2be551cd0d24a732a0210bdece313 Mon Sep 17 00:00:00 2001
+From: Ray Donnelly <mingw.android@gmail.com>
+Date: Thu, 8 Dec 2016 23:25:26 +0000
+Subject: [PATCH] macOS: Disable app bundle and do not put 'qtcreatorlibraries'
+ in Frameworks
+
+We still create an Info.plist (which for our purposes will need some
+tweaking later). If ever hope to upstream, this needs to less of a hack.
+
+Also, the plugins folder is spelt PlugIns on macOS still, this is because
+it was less invasive to keep it that way than to change PlugIns to plugins
+in a load more places.
+
+The QmlDesigner componentsplugin is nested one directory more deeply than
+the others and so it needs an extra rpath @loader_path/../../
+---
+ qtcreator.pri                                        | 20 +++++++++++---------
+ qtcreator.pro                                        |  5 ++++-
+ src/app/app.pro                                      |  5 ++++-
+ src/app/main.cpp                                     |  4 ++--
+ src/plugins/qbsprojectmanager/qbsprojectparser.cpp   |  6 +++---
+ .../componentsplugin/componentsplugin.pri            |  5 +++++
+ src/plugins/qmldesigner/qmldesignerplugin.cpp        |  6 +++---
+ src/qtcreatorlibrary.pri                             |  6 +++++-
+ src/qtcreatorplugin.pri                              |  4 ++--
+ src/tools/qtcreatorwidgets/qtcreatorwidgets.pro      |  2 +-
+ 10 files changed, 40 insertions(+), 23 deletions(-)
+
+diff --git a/qtcreator.pri b/qtcreator.pri
+index c09825f966..3ddb9c778c 100644
+--- a/qtcreator.pri
++++ b/qtcreator.pri
+@@ -101,7 +101,7 @@ isEmpty(IDE_BUILD_TREE) {
+ }
+ 
+ IDE_APP_PATH = $$IDE_BUILD_TREE/bin
+-osx {
++osx_no_thanks {
+     IDE_APP_TARGET   = "$$IDE_DISPLAY_NAME"
+ 
+     # check if IDE_BUILD_TREE is actually an existing Qt Creator.app,
+@@ -112,8 +112,9 @@ osx {
+     # set output path if not set manually
+     isEmpty(IDE_OUTPUT_PATH): IDE_OUTPUT_PATH = $$IDE_APP_BUNDLE/Contents
+ 
++    IDE_PLUGIN_CASED = PlugIns
+     IDE_LIBRARY_PATH = $$IDE_OUTPUT_PATH/Frameworks
+-    IDE_PLUGIN_PATH  = $$IDE_OUTPUT_PATH/PlugIns
++    IDE_PLUGIN_PATH  = $$IDE_OUTPUT_PATH/$$IDE_PLUGIN_CASED
+     IDE_LIBEXEC_PATH = $$IDE_OUTPUT_PATH/Resources
+     IDE_DATA_PATH    = $$IDE_OUTPUT_PATH/Resources
+     IDE_DOC_PATH     = $$IDE_DATA_PATH/doc
+@@ -121,10 +122,10 @@ osx {
+     copydata = 1
+ 
+     LINK_LIBRARY_PATH = $$IDE_APP_BUNDLE/Contents/Frameworks
+-    LINK_PLUGIN_PATH  = $$IDE_APP_BUNDLE/Contents/PlugIns
++    LINK_PLUGIN_PATH  = $$IDE_APP_BUNDLE/Contents/$$IDE_PLUGIN_CASED
+ 
+     INSTALL_LIBRARY_PATH = $$QTC_PREFIX/$${IDE_APP_TARGET}.app/Contents/Frameworks
+-    INSTALL_PLUGIN_PATH  = $$QTC_PREFIX/$${IDE_APP_TARGET}.app/Contents/PlugIns
++    INSTALL_PLUGIN_PATH  = $$QTC_PREFIX/$${IDE_APP_TARGET}.app/Contents/$$IDE_PLUGIN_CASED
+     INSTALL_LIBEXEC_PATH = $$QTC_PREFIX/$${IDE_APP_TARGET}.app/Contents/Resources
+     INSTALL_DATA_PATH    = $$QTC_PREFIX/$${IDE_APP_TARGET}.app/Contents/Resources
+     INSTALL_DOC_PATH     = $$INSTALL_DATA_PATH/doc
+@@ -133,12 +134,12 @@ osx {
+ } else {
+     contains(TEMPLATE, vc.*):vcproj = 1
+     IDE_APP_TARGET   = $$IDE_ID
+-
+     # target output path if not set manually
+     isEmpty(IDE_OUTPUT_PATH): IDE_OUTPUT_PATH = $$IDE_BUILD_TREE
+ 
++    IDE_PLUGIN_CASED = plugins
+     IDE_LIBRARY_PATH = $$IDE_OUTPUT_PATH/$$IDE_LIBRARY_BASENAME/qtcreator
+-    IDE_PLUGIN_PATH  = $$IDE_LIBRARY_PATH/plugins
++    IDE_PLUGIN_PATH  = $$IDE_LIBRARY_PATH/$$IDE_PLUGIN_CASED
+     IDE_DATA_PATH    = $$IDE_OUTPUT_PATH/share/qtcreator
+     IDE_DOC_PATH     = $$IDE_OUTPUT_PATH/share/doc/qtcreator
+     IDE_BIN_PATH     = $$IDE_OUTPUT_PATH/bin
+@@ -149,10 +150,10 @@ osx {
+     !isEqual(IDE_SOURCE_TREE, $$IDE_OUTPUT_PATH):copydata = 1
+ 
+     LINK_LIBRARY_PATH = $$IDE_BUILD_TREE/$$IDE_LIBRARY_BASENAME/qtcreator
+-    LINK_PLUGIN_PATH  = $$LINK_LIBRARY_PATH/plugins
++    LINK_PLUGIN_PATH  = $$LINK_LIBRARY_PATH/$$IDE_PLUGIN_CASED
+ 
+     INSTALL_LIBRARY_PATH = $$QTC_PREFIX/$$IDE_LIBRARY_BASENAME/qtcreator
+-    INSTALL_PLUGIN_PATH  = $$INSTALL_LIBRARY_PATH/plugins
++    INSTALL_PLUGIN_PATH  = $$INSTALL_LIBRARY_PATH/$$IDE_PLUGIN_CASED
+     win32: \
+         INSTALL_LIBEXEC_PATH = $$QTC_PREFIX/bin
+     else: \
+@@ -173,6 +174,7 @@ DEFINES += $$shell_quote(RELATIVE_PLUGIN_PATH=\"$$RELATIVE_PLUGIN_PATH\")
+ DEFINES += $$shell_quote(RELATIVE_LIBEXEC_PATH=\"$$RELATIVE_LIBEXEC_PATH\")
+ DEFINES += $$shell_quote(RELATIVE_DATA_PATH=\"$$RELATIVE_DATA_PATH\")
+ DEFINES += $$shell_quote(RELATIVE_DOC_PATH=\"$$RELATIVE_DOC_PATH\")
++DEFINES += $$shell_quote(IDE_PLUGIN_CASED=\"$$IDE_PLUGIN_CASED\")
+ 
+ INCLUDEPATH += \
+     $$IDE_BUILD_TREE/src \ # for <app/app_version.h> in case of actual build directory
+@@ -183,7 +185,7 @@ INCLUDEPATH += \
+ win32:exists($$IDE_SOURCE_TREE/lib/qtcreator) {
+     # for .lib in case of binary package with dev package
+     LIBS *= -L$$IDE_SOURCE_TREE/lib/qtcreator
+-    LIBS *= -L$$IDE_SOURCE_TREE/lib/qtcreator/plugins
++    LIBS *= -L$$IDE_SOURCE_TREE/lib/qtcreator/$$IDE_PLUGIN_CASED
+ }
+ 
+ QTC_PLUGIN_DIRS_FROM_ENVIRONMENT = $$(QTC_PLUGIN_DIRS)
+diff --git a/qtcreator.pro b/qtcreator.pro
+index f52b6c242c..298a30f68c 100644
+--- a/qtcreator.pro
++++ b/qtcreator.pro
+@@ -107,7 +107,7 @@ linux {
+     INSTALLS += appstream desktop
+ }
+ 
+-macx {
++macx_no_thanks {
+     APPBUNDLE = "$$OUT_PWD/bin/$${IDE_APP_TARGET}.app"
+     BINDIST_SOURCE = "$$OUT_PWD/bin/$${IDE_APP_TARGET}.app"
+     deployqt.commands = $$PWD/scripts/deployqtHelper_mac.sh \"$${APPBUNDLE}\" \"$$[QT_INSTALL_BINS]\" \"$$[QT_INSTALL_TRANSLATIONS]\" \"$$[QT_INSTALL_PLUGINS]\" \"$$[QT_INSTALL_IMPORTS]\" \"$$[QT_INSTALL_QML]\"
+@@ -128,6 +128,9 @@ macx {
+             && rmdir /s /q binary-artifacts
+         QMAKE_EXTRA_TARGETS += deployartifacts
+     }
++    macx {
++        CONFIG -= app_bundle
++    }
+ }
+ 
+ INSTALLER_ARCHIVE_FROM_ENV = $$(INSTALLER_ARCHIVE)
+diff --git a/src/app/app.pro b/src/app/app.pro
+index a64c357020..11f8a04930 100644
+--- a/src/app/app.pro
++++ b/src/app/app.pro
+@@ -26,7 +26,7 @@ win32 {
+         RC_VERSION_STRING=\"$${QTCREATOR_DISPLAY_VERSION}\" \
+         RC_COPYRIGHT=\"$$replace(COPYRIGHT, " ", "\\x20")\"
+     RC_FILE = qtcreator.rc
+-} else:macx {
++} else:macx_no_thanks {
+     LIBS += -framework CoreFoundation
+     minQtVersion(5, 7, 1) {
+         QMAKE_ASSET_CATALOGS = $$PWD/qtcreator.xcassets
+@@ -58,7 +58,9 @@ win32 {
+             INSTALLS += icns
+         }
+     }
++}
+ 
++macx: {
+     infoplist = $$cat($$PWD/app-Info.plist, blob)
+     infoplist = $$replace(infoplist, @MACOSX_DEPLOYMENT_TARGET@, $$QMAKE_MACOSX_DEPLOYMENT_TARGET)
+     infoplist = $$replace(infoplist, @QTCREATOR_COPYRIGHT_YEAR@, $$QTCREATOR_COPYRIGHT_YEAR)
+@@ -78,3 +80,4 @@ DISTFILES += qtcreator.rc \
+ QMAKE_SUBSTITUTES += $$PWD/app_version.h.in
+ 
+ CONFIG += no_batch
++CONFIG -= app_bundle
+diff --git a/src/app/main.cpp b/src/app/main.cpp
+index cf33b46675..57da546e5a 100644
+--- a/src/app/main.cpp
++++ b/src/app/main.cpp
+@@ -214,12 +214,12 @@ static inline QStringList getPluginPaths()
+     //    "$XDG_DATA_HOME/data/QtProject/qtcreator" or "~/.local/share/data/QtProject/qtcreator" on Linux
+     //    "~/Library/Application Support/QtProject/Qt Creator" on Mac
+     QString pluginPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
+-    if (Utils::HostOsInfo::isAnyUnixHost() && !Utils::HostOsInfo::isMacHost())
++    if (Utils::HostOsInfo::isAnyUnixHost()) // && !Utils::HostOsInfo::isMacHost())
+         pluginPath += QLatin1String("/data");
+     pluginPath += QLatin1Char('/')
+             + QLatin1String(Core::Constants::IDE_SETTINGSVARIANT_STR)
+             + QLatin1Char('/');
+-    pluginPath += QLatin1String(Utils::HostOsInfo::isMacHost() ?
++    pluginPath += QLatin1String(false && Utils::HostOsInfo::isMacHost() ?
+                                     Core::Constants::IDE_DISPLAY_NAME :
+                                     Core::Constants::IDE_ID);
+     pluginPath += QLatin1String("/plugins/");
+diff --git a/src/plugins/qbsprojectmanager/qbsprojectparser.cpp b/src/plugins/qbsprojectmanager/qbsprojectparser.cpp
+index d1481947ad..36bab45db3 100644
+--- a/src/plugins/qbsprojectmanager/qbsprojectparser.cpp
++++ b/src/plugins/qbsprojectmanager/qbsprojectparser.cpp
+@@ -217,12 +217,12 @@ QString QbsProjectParser::pluginsBaseDirectory() const
+ 
+     if (!qbsInstallDir.isEmpty())
+         return qbsInstallDir + QLatin1Char('/') + qbsLibDirName;
+-    if (HostOsInfo::isMacHost())
++    if (false && HostOsInfo::isMacHost())
+         return QDir::cleanPath(QCoreApplication::applicationDirPath()
+-                               + QLatin1String("/../PlugIns"));
++                               + QLatin1String("/../" IDE_PLUGIN_CASED));
+     else
+         return QDir::cleanPath(QCoreApplication::applicationDirPath()
+-                               + QLatin1String("/../" IDE_LIBRARY_BASENAME "/qtcreator/plugins"));
++                               + QLatin1String("/../" IDE_LIBRARY_BASENAME "/qtcreator/" IDE_PLUGIN_CASED));
+ }
+ 
+ } // namespace Internal
+diff --git a/src/plugins/qmldesigner/componentsplugin/componentsplugin.pri b/src/plugins/qmldesigner/componentsplugin/componentsplugin.pri
+index d89d6e96c4..83946e57ec 100644
+--- a/src/plugins/qmldesigner/componentsplugin/componentsplugin.pri
++++ b/src/plugins/qmldesigner/componentsplugin/componentsplugin.pri
+@@ -7,6 +7,11 @@ QT += qml
+ include (../designercore/iwidgetplugin.pri)
+ include (../qmldesigner_dependencies.pri)
+ 
++# We are nested one directory more deeply than other plugins
++macx {
++    QMAKE_LFLAGS += -Wl,-rpath,@loader_path/../../
++}
++
+ LIBS += -L$$IDE_PLUGIN_PATH
+ LIBS += -l$$qtLibraryName(QmlDesigner)
+ LIBS += -l$$qtLibraryName(Core)
+diff --git a/src/plugins/qmldesigner/qmldesignerplugin.cpp b/src/plugins/qmldesigner/qmldesignerplugin.cpp
+index 30b7a2b199..18c609f2e0 100644
+--- a/src/plugins/qmldesigner/qmldesignerplugin.cpp
++++ b/src/plugins/qmldesigner/qmldesignerplugin.cpp
+@@ -184,10 +184,10 @@ bool QmlDesignerPlugin::initialize(const QStringList & /*arguments*/, QString *e
+ bool QmlDesignerPlugin::delayedInitialize()
+ {
+     // adding default path to item library plugins
+-    const QString pluginPath = Utils::HostOsInfo::isMacHost()
+-            ? QString(QCoreApplication::applicationDirPath() + "/../PlugIns/QmlDesigner")
++    const QString pluginPath = (false && Utils::HostOsInfo::isMacHost())
++            ? QString(QCoreApplication::applicationDirPath() + "/../" IDE_PLUGIN_CASED "/QmlDesigner")
+             : QString(QCoreApplication::applicationDirPath() + "/../"
+-                      + QLatin1String(IDE_LIBRARY_BASENAME) + "/qtcreator/plugins/qmldesigner");
++                      + QLatin1String(IDE_LIBRARY_BASENAME) + "/qtcreator/" IDE_PLUGIN_CASED "/qmldesigner");
+     MetaInfo::setPluginPaths(QStringList(pluginPath));
+ 
+     addAutoReleasedObject(new Internal::SettingsPage);
+diff --git a/src/qtcreatorlibrary.pri b/src/qtcreatorlibrary.pri
+index a4165a794f..485eadb7cd 100644
+--- a/src/qtcreatorlibrary.pri
++++ b/src/qtcreatorlibrary.pri
+@@ -12,10 +12,14 @@ win32 {
+ 
+ DESTDIR = $$IDE_LIBRARY_PATH
+ 
+-osx {
++osx_no_thanks {
+     QMAKE_LFLAGS_SONAME = -Wl,-install_name,@rpath/Frameworks/
+     QMAKE_LFLAGS += -compatibility_version $$QTCREATOR_COMPAT_VERSION
+ }
++osx {
++    QMAKE_LFLAGS_SONAME = -Wl,-install_name,@rpath/qtcreator/
++    QMAKE_LFLAGS += -compatibility_version $$QTCREATOR_COMPAT_VERSION
++}
+ include(rpath.pri)
+ 
+ TARGET = $$qtLibraryTargetName($$TARGET)
+diff --git a/src/qtcreatorplugin.pri b/src/qtcreatorplugin.pri
+index a409ec19a5..d9f2f1ae33 100644
+--- a/src/qtcreatorplugin.pri
++++ b/src/qtcreatorplugin.pri
+@@ -63,7 +63,7 @@ isEmpty(USE_USER_DESTDIR) {
+         isEmpty(DESTDIRBASE):DESTDIRBASE = "$$(HOME)/.local/share/data"
+         else:DESTDIRBASE = "$$DESTDIRBASE/data"
+     }
+-    DESTDIR = "$$DESTDIRBASE/QtProject/$$DESTDIRAPPNAME/plugins/$$QTCREATOR_VERSION"
++    DESTDIR = "$$DESTDIRBASE/QtProject/$$DESTDIRAPPNAME/$$IDE_PLUGIN_CASED/$$QTCREATOR_VERSION"
+ }
+ LIBS += -L$$DESTDIR
+ INCLUDEPATH += $$OUT_PWD
+@@ -85,7 +85,7 @@ exists($$PLUGINJSON_IN) {
+ }
+ 
+ osx {
+-    QMAKE_LFLAGS_SONAME = -Wl,-install_name,@rpath/PlugIns/
++    QMAKE_LFLAGS_SONAME = -Wl,-install_name,@rpath/$$IDE_PLUGIN_CASED/
+     QMAKE_LFLAGS += -compatibility_version $$QTCREATOR_COMPAT_VERSION
+ }
+ include(rpath.pri)
+diff --git a/src/tools/qtcreatorwidgets/qtcreatorwidgets.pro b/src/tools/qtcreatorwidgets/qtcreatorwidgets.pro
+index 89a70260ca..34db439734 100644
+--- a/src/tools/qtcreatorwidgets/qtcreatorwidgets.pro
++++ b/src/tools/qtcreatorwidgets/qtcreatorwidgets.pro
+@@ -27,7 +27,7 @@ linux-*{
+ 
+ INCLUDEPATH += ../../../src/libs
+ macx {
+-    LIBS += -L"../../../bin/Qt Creator.app/Contents/PlugIns"
++    LIBS += -L"../../../bin/Qt Creator.app/Contents/$$IDE_PLUGIN_CASED"
+     CONFIG(debug, debug|release):LIBS += -lUtils_debug
+     else:LIBS += -lUtils
+ } else:win32 {
+-- 
+2.14.3 (Apple Git-98)
+
