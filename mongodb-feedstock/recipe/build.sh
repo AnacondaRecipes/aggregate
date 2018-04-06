@@ -3,6 +3,8 @@
 if [[ ${HOST} =~ .*linux.* ]]; then
     # https://jira.mongodb.org/browse/SERVER-30711
     CXXFLAGS="$CXXFLAGS -Wno-noexcept-type"
+elif [[ ${HOST} =~ .*darwin.* ]]; then
+    CXXFLAGS="$CXXFLAGS -fvisibility=hidden -Og"
 fi
 
 # link to our openssl
