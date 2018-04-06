@@ -1,0 +1,60 @@
+From d9bf10d464f20f2deda3612338cfc4ee8dd81459 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Tue, 2 Jan 2018 06:02:21 -0600
+Subject: [PATCH 10/12] conda: unbundle libmxnet.dll
+
+---
+ python/mxnet/libinfo.py | 2 ++
+ python/setup.py         | 9 ++++++++-
+ 2 files changed, 10 insertions(+), 1 deletion(-)
+
+diff --git a/python/mxnet/libinfo.py b/python/mxnet/libinfo.py
+index ce606062..07818d30 100644
+--- a/python/mxnet/libinfo.py
++++ b/python/mxnet/libinfo.py
+@@ -19,6 +19,7 @@
+ """Information about mxnet."""
+ from __future__ import absolute_import
+ import os
++import sys
+ import platform
+ 
+ def find_lib_path():
+@@ -35,6 +36,7 @@ def find_lib_path():
+     dll_path = [curr_path, api_path, cmake_build_path]
+     if os.name == 'nt':
+         dll_path.append(os.path.join(curr_path, '../../build'))
++        dll_path.append(os.path.join(sys.prefix, 'Library', 'bin'))
+         vs_configuration = 'Release'
+         if platform.architecture()[0] == '64bit':
+             dll_path.append(os.path.join(curr_path, '../../build', vs_configuration))
+diff --git a/python/setup.py b/python/setup.py
+index 1dd455e5..47301e79 100644
+--- a/python/setup.py
++++ b/python/setup.py
+@@ -47,6 +47,13 @@ exec(compile(open(libinfo_py, "rb").read(), libinfo_py, 'exec'), libinfo, libinf
+ LIB_PATH = libinfo['find_lib_path']()
+ __version__ = libinfo['__version__']
+ 
++if os.getenv('CONDA_BUILD'):
++   print("Conda-build detected, not installing libmxnet from: %s" % LIB_PATH)
++   data_files=('mxnet', [])
++else:
++   print("Install libmxnet from: %s" % LIB_PATH)
++   data_files=('mxnet', LIB_PATH)
++
+ sys.path.insert(0, CURRENT_DIR)
+ 
+ # Try to generate auto-complete code
+@@ -104,7 +111,7 @@ setup(name='mxnet',
+       version=__version__,
+       description=open(os.path.join(CURRENT_DIR, 'README.md')).read(),
+       packages=find_packages(),
+-      data_files=[('mxnet', [LIB_PATH[0]])],
++      data_files=[data_files],
+       url='https://github.com/dmlc/mxnet',
+       ext_modules=config_cython(),
+       **kwargs)
+-- 
+2.14.1
+

@@ -1,0 +1,35 @@
+From 3df197a218c7848bb050f887189cddc7dcbdee23 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Tue, 2 Jan 2018 05:51:48 -0600
+Subject: [PATCH 09/12] Avoid atexit on Windows 7
+
+---
+ python/mxnet/base.py | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/python/mxnet/base.py b/python/mxnet/base.py
+index 80fc9011..c4e92ddb 100644
+--- a/python/mxnet/base.py
++++ b/python/mxnet/base.py
+@@ -26,6 +26,7 @@ import ctypes
+ import atexit
+ import warnings
+ import inspect
++import platform
+ import numpy as np
+ from . import libinfo
+ warnings.filterwarnings('default', category=DeprecationWarning)
+@@ -391,7 +392,9 @@ def _notify_shutdown():
+     """Notify MXNet about a shutdown."""
+     check_call(_LIB.MXNotifyShutdown())
+ 
+-atexit.register(_notify_shutdown)
++# https://github.com/apache/incubator-mxnet/issues/9271
++if not platform.platform().startswith('Windows-7'):
++    atexit.register(_notify_shutdown)
+ 
+ 
+ def add_fileline_to_docstring(module, incursive=True):
+-- 
+2.14.1
+
