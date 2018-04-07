@@ -1,0 +1,40 @@
+From 71c16a6d562053b424ef5876676e86c0e51eb9f2 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Tue, 2 Jan 2018 06:03:59 -0600
+Subject: [PATCH 9/9] Add workaround for broken opencv cmake files
+
+---
+ CMakeLists.txt | 16 ++++++++++++----
+ 1 file changed, 12 insertions(+), 4 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 126872bd..01878438 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -251,11 +251,19 @@ endif()
+ 
+ # ---[ OpenCV
+ if(USE_OPENCV)
+-  find_package(OpenCV QUIET COMPONENTS core highgui imgproc imgcodecs)
+-  if(NOT OpenCV_FOUND) # if not OpenCV 3.x, then imgcodecs are not found
+-    find_package(OpenCV REQUIRED COMPONENTS core highgui imgproc)
++  if(MSVC)
++    include_directories("$ENV{LIBRARY_INC}")
++    link_directories("$ENV{LIBRARY_LIB}")
++    set(OpenCV_LIBS "opencv_core331.lib" "opencv_imgcodecs331.lib"
++	            "opencv_imgproc331.lib" "opencv_highgui331.lib"
++		    "opencv_videoio331.lib")
++  else()
++    find_package(OpenCV QUIET COMPONENTS core highgui imgproc imgcodecs)
++    if(NOT OpenCV_FOUND) # if not OpenCV 3.x, then imgcodecs are not found
++      find_package(OpenCV REQUIRED COMPONENTS core highgui imgproc)
++    endif()
++    include_directories(SYSTEM ${OpenCV_INCLUDE_DIRS})
+   endif()
+-  include_directories(SYSTEM ${OpenCV_INCLUDE_DIRS})
+   list(APPEND mxnet_LINKER_LIBS ${OpenCV_LIBS})
+   message(STATUS " OpenCV_LIBS=${OpenCV_LIBS}")
+   message(STATUS "OpenCV found (${OpenCV_CONFIG_PATH})")
+-- 
+2.16.1
+

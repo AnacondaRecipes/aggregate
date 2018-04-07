@@ -1,9 +1,9 @@
 package:
-  name: mxnet-mkl
-  version: 1.0.0
+  name: mxnet
+  version: 1.1.0
 
 build:
-  skip: True  # [win]
+  skip: True  # [win and ((blas_impl == 'openblas') or (vc <14))]
   # conda > 4.4 might be able to use this
   requires_features:
     blas: {{ blas_impl }}
@@ -12,20 +12,23 @@ build:
     - nomkl    # [x86 and blas_impl != 'mkl']
 
 source:
-  git_rev: 1.0.0
+  git_rev: 1.1.0
   git_url: https://github.com/apache/incubator-mxnet.git
   patches:
-    - 0001-Make-versions-of-python-dependencies-like-numpy-dete.patch
-    - 0002-Relax-constraints-on-requests-make-graphviz-optional.patch
-    - 0003-OpenCV-Libs-Specify-explicitly.patch
-    - 0004-Also-attempt-pkg-config-for-jemalloc.patch
-    - 0005-Check-if-HOME_MKL-is-empty-before-using-it.patch
-    - 0006-Use-MKL-ML-options-only-if-USE_MKLML-1.patch
-    - 0007-Prepend-additional-C-LD-FLAGS-instead-of-appending.patch
+    - 0001-Relax-constraints-on-requests-make-graphviz-optional.patch
+    - 0002-OpenCV-Libs-Specify-explicitly.patch
+    - 0003-Also-attempt-pkg-config-for-jemalloc.patch
+    - 0004-Check-if-HOME_MKL-is-empty-before-using-it.patch
+    - 0005-Use-MKL-ML-options-only-if-USE_MKLML-1.patch
+    - 0006-conda-unbundle-libmxnet-DSO.patch
+    - 0007-Fix-library-name-of-Intel-OMP-library.patch
+    - 0008-Also-build-libmxnet_static-on-Windows.patch
+    - 0009-Add-workaround-for-broken-opencv-cmake-files.patch
 
 outputs:
   - name: libmxnet
-    script: install-libmxnet.sh  # [unix]
+    script: install-libmxnet.sh   # [unix]
+    script: install-libmxnet.bat  # [win]
     requirements:
       host:
         - jemalloc  # [linux]
@@ -35,27 +38,31 @@ outputs:
       build:
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
-        - pkg-config
-        - make
+        - pkg-config  # [not win]
+        - make        # [not win]
+        - cmake       # [win]
       # Run exports will take care of opencv, mkl, jemalloc
     test:
       commands:
-        - im2rec -h
+        - im2rec -h   # [not win]
         - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
         - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
       requires: # [x86 and blas_impl != 'mkl']
         - nomkl # [x86 and blas_impl != 'mkl']
 
   - name: py-mxnet
-    script: install-py-mxnet.sh  # [unix]
+    script: install-py-mxnet.sh   # [unix]
+    script: install-py-mxnet.bat  # [win]
     requirements:
       host:
         - libmxnet
-        - cython
+        # https://github.com/apache/incubator-mxnet/issues/10295
+        - cython <0.28  # [not win]
         - python
         # Numpy's C API is not used
         - numpy >=1.8.2,<=1.13.3
         - requests >=2.18.4,<3
+        - setuptools
         - {{ pin_subpackage('libmxnet', exact=True) }}
       build:
         - {{ compiler('c') }}

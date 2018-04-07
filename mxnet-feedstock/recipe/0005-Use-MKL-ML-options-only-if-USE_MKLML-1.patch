@@ -1,17 +1,17 @@
-From 3cb7595ed1bd96aad9fb74d1f434ab57f7e97197 Mon Sep 17 00:00:00 2001
+From a5c234c27093589c8a1abde99549d6b1bb097fdf Mon Sep 17 00:00:00 2001
 From: Nehal J Wani <nehaljw.kkd1@gmail.com>
 Date: Sat, 30 Dec 2017 10:31:59 -0800
-Subject: [PATCH 6/7] Use MKL-ML options only if USE_MKLML=1
+Subject: [PATCH 5/9] Use MKL-ML options only if USE_MKLML=1
 
 ---
  Makefile | 16 ++++++++++------
  1 file changed, 10 insertions(+), 6 deletions(-)
 
 diff --git a/Makefile b/Makefile
-index a87c25d..cf09c2f 100644
+index 255b0b0d..f9f5d9df 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -116,17 +116,21 @@ ifeq ($(USE_MKL2017), 1)
+@@ -135,17 +135,21 @@ ifeq ($(USE_MKL2017), 1)
  	CFLAGS += -DMXNET_USE_MKL2017=1
  	CFLAGS += -DUSE_MKL=1
  	CFLAGS += -I$(ROOTDIR)/src/operator/mkl/
@@ -40,5 +40,5 @@ index a87c25d..cf09c2f 100644
  	LDFLAGS +=  -liomp5
  endif
 -- 
-1.9.5 (Apple Git-50.3)
+2.16.1
 

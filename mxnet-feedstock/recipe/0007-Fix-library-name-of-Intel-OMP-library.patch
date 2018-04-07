@@ -1,0 +1,25 @@
+From 30771161aebb83a6c2dd165e7383a791db3704d7 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Tue, 2 Jan 2018 05:50:42 -0600
+Subject: [PATCH 7/9] Fix library name of Intel OMP library
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 14b40e4f..9a1c12f2 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -153,7 +153,7 @@ if(USE_MKL_IF_AVAILABLE)
+       list(APPEND mxnet_LINKER_LIBS dl)
+     endif()
+     # If using MKL, use the Intel OMP libraries
+-    list(APPEND mxnet_LINKER_LIBS iomp5)
++    list(APPEND mxnet_LINKER_LIBS libiomp5md)
+     if(USE_MKL_EXPERIMENTAL)
+       add_definitions(-DMKL_EXPERIMENTAL=1)
+     else()
+-- 
+2.16.1
+

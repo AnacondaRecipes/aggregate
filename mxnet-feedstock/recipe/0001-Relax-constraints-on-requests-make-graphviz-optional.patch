@@ -1,14 +1,14 @@
-From d90098ad087764d3099c5b6ebfcd0c6c63c475da Mon Sep 17 00:00:00 2001
+From c0a58063d0633d09f630572397fe45aa986b3618 Mon Sep 17 00:00:00 2001
 From: Nehal J Wani <nehaljw.kkd1@gmail.com>
 Date: Wed, 27 Dec 2017 07:04:30 -0600
-Subject: [PATCH 2/7] Relax constraints on requests, make graphviz optional
+Subject: [PATCH 1/9] Relax constraints on requests, make graphviz optional
 
 ---
  python/setup.py | 3 ++-
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/python/setup.py b/python/setup.py
-index b7a8449..1dd455e 100644
+index cf94adf9..b3d08f82 100644
 --- a/python/setup.py
 +++ b/python/setup.py
 @@ -28,7 +28,8 @@ if "--inplace" in sys.argv:
@@ -22,5 +22,5 @@ index b7a8449..1dd455e 100644
  
  with_cython = False
 -- 
-1.9.5 (Apple Git-50.3)
+2.16.1
 

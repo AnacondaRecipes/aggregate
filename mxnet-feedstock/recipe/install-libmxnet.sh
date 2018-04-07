@@ -6,11 +6,14 @@ set -ex
 
 cp make/config.mk config.mk
 
-for file in Makefile dmlc-core/Makefile nnvm/Makefile
+for file in Makefile nnvm/Makefile
 do
   # We wish to use the ar from our packages
   sed -i.bak -e 's/ar cr/$(AR) crv/' $file
 done
+
+# Link against single dynamic library
+sed -i.bak 's/-lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core/-lmkl_rt/' mshadow/make/mshadow.mk
 
 export OPENMP_OPT=1
 export JEMALLOC_OPT=1
