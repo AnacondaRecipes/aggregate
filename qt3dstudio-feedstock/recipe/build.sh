@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Apply submodule patch
+pushd src/Runtime/Qt3DSRuntime
+  git am ${RECIPE_DIR}/0001-linux-Need-lrt-for-clock_gettime.patch
+popd
+
 # Avoid Xcode
 if [[ ${target_platform} == osx-64 ]]; then
   PATH=${PREFIX}/bin/xc-avoidance:${PATH}

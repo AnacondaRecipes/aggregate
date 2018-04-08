@@ -8,6 +8,13 @@ package:
 source:
   git_url: http://code.qt.io/cgit/qt3dstudio/qt3dstudio.git
   git_tag: {{ version }}
+  patches:
+    - 0001-linux-Fix-link-to-lib-rt-fix.patch
+    - 0002-Ensure-L-LIBDIR-appears-before-STATICRUNTIME-in-QMAK.patch
+  # TODO :: Git submodule patch handling in conda-build, try all? Identify the submodule here?
+  # src/Runtime/qt3d-runtime submodule
+  # patches:
+  #   - 0001-linux-Need-lrt-for-clock_gettime.patch
 
 build:
   number: 0
@@ -42,6 +49,7 @@ requirements:
     - jom                                # [win]
     - make                               # [not win]
     - patchelf                           # [linux]
+    - git
   host:
     - qt 5.9.*
     - libxcb                             # [linux]
@@ -51,12 +59,6 @@ requirements:
     - qt 5.9.*
     - fonts-anaconda                     # [linux]
 
-  # These are only necessary for the qtcreator executable itself.
-  # It would be better if were possible to filter the application
-  # of these using wildcards or regular expressions.
-  rpaths:
-    - lib
-    - lib/qtcreator
   # This is necessary for calls to xcrun to make `.icns` files.
   script_env:        # [osx]
     - TMPDIR         # [osx]

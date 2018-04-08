@@ -1,0 +1,26 @@
+From 4f90d18e078065e0493e53408fd5af3d3c8bc617 Mon Sep 17 00:00:00 2001
+From: Ray Donnelly <mingw.android@gmail.com>
+Date: Sat, 7 Apr 2018 10:25:16 +0100
+Subject: [PATCH 1/2] linux: Need -lrt for clock_gettime()
+
+---
+ src/Runtime/Qt3DSRuntime/Qt3DSRuntime.pro | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/Runtime/Qt3DSRuntime/Qt3DSRuntime.pro b/src/Runtime/Qt3DSRuntime/Qt3DSRuntime.pro
+index 01d632e..481bcf7 100644
+--- a/src/Runtime/Qt3DSRuntime/Qt3DSRuntime.pro
++++ b/src/Runtime/Qt3DSRuntime/Qt3DSRuntime.pro
+@@ -60,7 +60,8 @@ win32 {
+ linux {
+     LIBS += \
+         -ldl \
+-        -lEGL
++        -lEGL \
++        -lrt
+ }
+ 
+ macos {
+-- 
+2.14.1
+
