@@ -6,18 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  git_url: http://code.qt.io/cgit/qt3dstudio/qt3dstudio.git
-  git_tag: {{ version }}
-  patches:
-    - 0001-linux-Fix-link-to-lib-rt-fix.patch
-    - 0002-Ensure-L-LIBDIR-appears-before-STATICRUNTIME-in-QMAK.patch
-  # TODO :: Git submodule patch handling in conda-build, try all? Identify the submodule here?
-  # src/Runtime/qt3d-runtime submodule
-  # patches:
-  #   - 0001-linux-Need-lrt-for-clock_gettime.patch
+  - git_url: http://code.qt.io/cgit/qt3dstudio/qt3dstudio.git
+    git_tag: {{ version }}
+    patches:
+      - 0001-linux-Fix-link-to-lib-rt-fix.patch
+      - 0002-Ensure-L-LIBDIR-appears-before-STATICRUNTIME-in-QMAK.patch
+      # TODO :: Git submodule patch handling in conda-build, try all? Identify the submodule here?
+      # src/Runtime/qt3d-runtime submodule
+      # patches:
+      #   - 0001-linux-Need-lrt-for-clock_gettime.patch
+  - git_url: https://git.qt.io/public-demos/qt3dstudio.git
+    folder: public-demos
+    git_tag: master
 
 build:
   number: 0
+  skip: True           # [win and vc!=14]
+
 
 requirements:
   build:
