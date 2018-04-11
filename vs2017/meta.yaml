@@ -1,7 +1,12 @@
+# version numbering is explained at https://stackoverflow.com/questions/42730478/version-numbers-for-visual-studio-2017-boost-and-cmake
+#     This version number follows the "platform toolset"
 {% set vcver="14.1" %}
-{% set vcfeature="14" %}
 {% set vsyear="2017" %}
 {% set fullver="15.5.2" %}
+# VS2017 is fundamentally compatible with VS2015.  We name our package vs2015_runtime so that it can't be
+#    mixed up with the runtime from VS2015 - you do actually need VS2017 runtime for things compiled with
+#    VS2017, and the runtime we have here is backwards-compatible with things compiled with VS2015.
+{% set runtime_year="2015" %}
 
 package:
   name: vs_activation_and_runtime
@@ -9,24 +14,37 @@ package:
 
 build:
   skip: True  [not win]
-  number: 1
+  number: 3
 
 outputs:
   - name: vs{{ vsyear }}_{{ cross_compiler_target_platform }}
     script: install_activate.bat
     run_exports:
       strong:
-        - vc {{ vcver }}
+        # compatible within major version.  This is MSFT's incrementing of the UCRT version.  It was
+        #    14.0 with VS2015, and 14.1 with VS2017 - if the major version changes, we're assuming
+        #    that binary compatibility breaks.  This has a minimum bound equal to vcver, so building with
+        #    vs2017 here will require the vs2017-era runtime (the package is named vs2015_runtime, but the
+        #    version differs)
+        - {{ pin_subpackage('vc') }}
     about:
       summary: Activation and version verification of MSVC {{ vcver }} (VS {{ vsyear }}) compiler
       license: BSD 3-clause
-  - name: vs{{ vsyear }}_runtime
+  - name: vs{{ runtime_year }}_runtime
     script: install_runtime.bat
+    build:
+      no_link:
+        - |
+          *.dll
+        - Library/bin/*.dll
   - name: vc
     version: {{ vcver }}
     requirements:
       run:
-        - {{ pin_subpackage('vs' ~ vsyear ~ '_runtime') }}
+        # Set lower bound for runtime (no upper bound).  Upper bound is still present, but
+        #    it's part of the run_exports for the compiler: assume that when vcver's major version changes,
+        #    MSFT has broken our binary compatibility.
+        - {{ pin_subpackage('vs' ~ runtime_year ~ '_runtime', max_pin=None) }}
     about:
       home: https://github.com/conda/conda/wiki/VC-features
       license: Modified BSD License (3-clause)
