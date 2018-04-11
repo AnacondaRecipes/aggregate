@@ -2637,3 +2637,43 @@
 	path = pyinotify-feedstock
 	url = ../pyinotify-feedstock
 	branch = master
+[submodule "yt-feedstock"]
+	path = yt-feedstock
+	url = ../yt-feedstock
+	branch = master
+[submodule "mkl_random-feedstock"]
+	path = mkl_random-feedstock
+	url = ../mkl_random-feedstock
+	branch = master
+[submodule "mkl_fft-feedstock"]
+	path = mkl_fft-feedstock
+	url = ../mkl_fft-feedstock
+	branch = master
+[submodule "tabulate-feedstock"]
+	path = tabulate-feedstock
+	url = ../tabulate-feedstock
+	branch = master
+[submodule "palettable-feedstock"]
+	path = palettable-feedstock
+	url = ../palettable-feedstock
+	branch = master
+[submodule "scp-feedstock"]
+	path = scp-feedstock
+	url = ../scp-feedstock
+	branch = master
+[submodule "meson-feedstock"]
+	path = meson-feedstock
+	url = ../meson-feedstock
+	branch = master
+[submodule "zstd-feedstock"]
+	path = zstd-feedstock
+	url = ../zstd-feedstock
+	branch = master
+[submodule "brotli-feedstock"]
+	path = brotli-feedstock
+	url = ../brotli-feedstock
+	branch = master
+[submodule "flatbuffers-feedstock"]
+	path = flatbuffers-feedstock
+	url = ../flatbuffers-feedstock
+	branch = master
