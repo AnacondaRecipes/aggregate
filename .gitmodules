@@ -2677,3 +2677,11 @@
 	path = flatbuffers-feedstock
 	url = ../flatbuffers-feedstock
 	branch = master
+[submodule "arrow-cpp-feedstock"]
+	path = arrow-cpp-feedstock
+	url = ../arrow-cpp-feedstock
+	branch = master
+[submodule "pyarrow-feedstock"]
+	path = pyarrow-feedstock
+	url = ../pyarrow-feedstock
+	branch = master
