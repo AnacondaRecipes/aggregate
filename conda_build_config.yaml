@@ -88,6 +88,8 @@ libtiff:
   - 4.0
 libxml2:
   - 2.9
+libxslt:
+  - 1.1
 lzo:
   - 2
 macos_min_version:
