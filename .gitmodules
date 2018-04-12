@@ -438,10 +438,6 @@
 	url = ../freetype-feedstock.git
 	path = freetype-feedstock
         branch = master
-[submodule "gst-plugins-base-feedstock"]
-	url = ../gst-plugins-base-feedstock.git
-	path = gst-plugins-base-feedstock
-        branch = master
 [submodule "h5py-feedstock"]
 	url = ../h5py-feedstock.git
 	path = h5py-feedstock
@@ -1469,6 +1465,7 @@
 [submodule "libglu-feedstock"]
 	path = libglu-feedstock
 	url = ../libglu-feedstock
+	branch = master
 [submodule "libpq-feedstock"]
 	path = libpq-feedstock
 	url = ../libpq-feedstock
