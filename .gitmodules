@@ -1729,6 +1729,7 @@
 [submodule "redis-py-feedstock"]
 	path = redis-py-feedstock
 	url = ../redis-py-feedstock
+	branch = master
 [submodule "keras-feedstock"]
 	path = keras-feedstock
 	url = ../keras-feedstock
@@ -2308,18 +2309,23 @@
 [submodule "pytest-arraydiff-feedstock"]
 	path = pytest-arraydiff-feedstock
 	url = ../pytest-arraydiff-feedstock
+	branch = master
 [submodule "pytest-doctestplus-feedstock"]
 	path = pytest-doctestplus-feedstock
 	url = ../pytest-doctestplus-feedstock
+	branch = master
 [submodule "pytest-remotedata-feedstock"]
 	path = pytest-remotedata-feedstock
 	url = ../pytest-remotedata-feedstock
+	branch = master
 [submodule "pytest-openfiles-feedstock"]
 	path = pytest-openfiles-feedstock
 	url = ../pytest-openfiles-feedstock
+	branch = master
 [submodule "pytest-astropy-feedstock"]
 	path = pytest-astropy-feedstock
 	url = ../pytest-astropy-feedstock
+	branch = master
 [submodule "setuptools_scm_git_archive-feedstock"]
 	path = setuptools_scm_git_archive-feedstock
 	url = ../setuptools_scm_git_archive-feedstock
@@ -2347,6 +2353,7 @@
 [submodule "unidecode-feedstock"]
 	path = unidecode-feedstock
 	url = ../unidecode-feedstock
+	branch = master
 [submodule "biopython-feedstock"]
 	path = biopython-feedstock
 	url = ../biopython-feedstock
@@ -2430,6 +2437,7 @@
 [submodule "qt-5.6-feedstock"]
 	path = qt-5.6-feedstock
 	url = ../qt-feedstock
+	branch = master-5.6
 [submodule "astor-feedstock"]
 	path = astor-feedstock
 	url = ../astor-feedstock
