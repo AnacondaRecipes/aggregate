@@ -52,7 +52,7 @@ geos:
 giflib:
   - 5.1
 glib:
-  - 2.53
+  - 2.56
 gmp:
   - 6.1
 harfbuzz:
