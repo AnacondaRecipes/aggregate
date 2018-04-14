@@ -44,9 +44,9 @@ freetype:
 g2clib:
   - 1.6
 gstreamer:
-  - 1.12
+  - 1.14
 gst_plugins_base:
-  - 1.12
+  - 1.14
 geos:
   - 3.6.2
 giflib:
