@@ -2694,3 +2694,7 @@
 	path = c99-to-c89
 	url = ../c99-to-c89
 	branch = master
+[submodule "absl-py-feedstock"]
+	path = absl-py-feedstock
+	url = ../absl-py-feedstock
+	branch = master
