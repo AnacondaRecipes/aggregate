@@ -2698,3 +2698,7 @@
 	path = absl-py-feedstock
 	url = ../absl-py-feedstock
 	branch = master
+[submodule "parso-feedstock"]
+	path = parso-feedstock
+	url = ../parso-feedstock
+	branch = master
