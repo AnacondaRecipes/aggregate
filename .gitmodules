@@ -2706,3 +2706,7 @@
 	path = sphinx_rtd_theme-feedstock
 	url = ../sphinx_rtd_theme-feedstock
 	branch = master
+[submodule "traitsui-feedstock"]
+	path = traitsui-feedstock
+	url = ../traitsui-feedstock
+	branch = master
