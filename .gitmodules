@@ -2702,3 +2702,7 @@
 	path = parso-feedstock
 	url = ../parso-feedstock
 	branch = master
+[submodule "sphinx_rtd_theme-feedstock"]
+	path = sphinx_rtd_theme-feedstock
+	url = ../sphinx_rtd_theme-feedstock
+	branch = master
