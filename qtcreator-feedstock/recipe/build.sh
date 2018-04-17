@@ -61,6 +61,7 @@ if [[ ${HOST} =~ .*darwin.* ]]; then
     -e "s|<string>10.8</string>|<string>${MACOSX_DEPLOYMENT_TARGET}</string>|g"  \
     -e "s|@FULL_VERSION@|${PKG_VERSION}|g"                                       \
     -e "s|@SHORT_VERSION@|${PKG_VERSION}|g"                                      \
+    -e "s|@EXECUTABLE@|qtcreator|g"                                              \
     -e "s|<string>Qt Creator</string>|<string>qtcreator</string>|g"              \
     > "${PREFIX}"/qtcreatorapp/Contents/Info.plist
   cp "${RECIPE_DIR}"/osx-post.sh "${PREFIX}"/bin/.qtcreator-post-link.sh
