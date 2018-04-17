@@ -1,12 +1,22 @@
 #!/usr/bin/env bash
 
 # Run this as:
-# git submodule foreach '$toplevel/git_s_fe_list_not_on_master.sh $name $path $sha1 $toplevel'
+# git submodule foreach '$toplevel/git_s_fe_list_not_on_master.sh $name $path $sha1 $toplevel <--dry-run>'
 
 name=$1; shift
 path=$1; shift
 sha1_super=$1; shift
 toplevel=$1; shift
+dryrun=$1; shift
+if [[ ${dryrun} == --dry-run ]]; then
+  dryrun=yes
+elif [[ -z ${dryrun} ]]; then
+  dryrun=no
+else
+  echo "ERROR :: Unknown command: ${dryrun}, did you mean to pass: --dry-run"
+  exit 1
+fi
+
 sha1_h=$(git rev-parse HEAD)
 
 function anc_print() {
@@ -14,6 +24,14 @@ function anc_print() {
     echo "1"
   else
     echo "0"
+  fi
+}
+
+function maybe_do() {
+  if [[ ${dry_run} == yes ]]; then
+    echo "DRYRUN: $*"
+  else
+    $*
   fi
 }
 
@@ -46,13 +64,17 @@ if [[ ${DEBUG} == 1 ]]; then
   echo toplevel = ${toplevel}
 fi
 
-on_wanted=0
+on_wanted=no
 if current_branch=$(git symbolic-ref --short -q HEAD); then
   if [[ ${current_branch} != ${wanted_branch} ]]; then
     echo "${name} not on wanted branch: ${wanted_branch}"
-    # git branch -u origin/${wanted_branch} && git pull --rebase
+    maybe_do git checkout ${wanted_branch}
+    [[ ${dryrun} == no ]] && current_branch=wanted_branch
+    [[ ${dryrun} == no ]] && on_wanted=yes
+    maybe_do git branch -u origin/${wanted_branch}
+    maybe_do git pull --rebase
   else
-    on_wanted=1
+    on_wanted=yes
   fi
 fi
 
@@ -62,8 +84,8 @@ fi
 
 if [[ ${sha1_h} == ${sha1_m} ]] && [[ ${sha1_h} == ${sha1_o} ]]; then
   # Simple case, myabe checkout ${wanted_branch} and move on
-  if [[ ${on_wanted} == 0 ]]; then
-    git checkout ${wanted_branch}
+  if [[ ${on_wanted} == no ]]; then
+    maybe_do git checkout ${wanted_branch}
   fi
   exit ${SUCCESS}
 fi
@@ -100,24 +122,28 @@ if [[ ${sha1_h} == ${sha1_o} ]]; then
   # HEAD is equal to origin ..
   if [[ ${m_anc_o} ]]; then
     # .. and master is an ancestor of these
-    if [[ ${on_wanted} == 0 ]]; then
-      git checkout ${wanted_branch}
+    if [[ ${on_wanted} == no ]]; then
+      maybe_do git checkout ${wanted_branch}
     fi
-    git branch -u origin/${wanted_branch}
-    git pull --rebase
+    maybe_do git branch -u origin/${wanted_branch}
+    maybe_do git pull --rebase
     exit ${SUCCESS}
   fi
 fi
 
+# Danger, we do not even maybe_do these.
 if [[ ${o_anc_m} == 1 ]]; then
-  echo "${name} Your local ${wanted_branch} has new commits, I suggest you: git checkout ${wanted_branch} && git push origin/${wanted_branch}"
+  echo "${name} :: Your local ${wanted_branch} has new commits, I suggest you:"
+  echo "pushd ${name} && git checkout ${wanted_branch} && git push origin/${wanted_branch} && popd"
   exit ${SUCCESS}
 elif [[ ${m_anc_o} == 1 ]]; then
-  echo "${name} Your local ${wanted_branch} is behind origin/${wanted_branch}, I suggest you: git checkout ${wanted_branch} && git pull --rebase origin/${wanted_branch}"
+  echo "${name} :: Your local ${wanted_branch} is behind origin/${wanted_branch}, I suggest you:"
+  echo "pushd ${name} && git checkout ${wanted_branch} && git pull --rebase origin/${wanted_branch} && popd"
   exit ${SUCCESS}
 else
-  echo "${name} Your local ${wanted_branch} is *not* an ancestor of origin/${wanted_branch}, has origin/${wanted_branch} been rebased? I suggest you: git reset ${wanted_branch} origin/${wanted_branch}"
+  echo "${name} :: Your local ${wanted_branch} is *not* an ancestor of origin/${wanted_branch}, has origin/${wanted_branch} been rebased? I suggest you:"
+  echo "pushd ${name} && git reset ${wanted_branch} origin/${wanted_branch} && popd"
   exit ${SUCCESS}
 fi
-echo "${name} We should not get to here"
+echo "${name} :: We should not get to here"
 exit 1
