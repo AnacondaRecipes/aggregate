@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Run this as:
-# git submodule foreach '$toplevel/git_s_fe_list_not_on_master.sh $name $path $sha1 $toplevel <--dry-run>'
+# git submodule foreach '$toplevel/git_s_fe_check_fix_status.sh $name $path $sha1 $toplevel <--dry-run>'
 
 name=$1; shift
 path=$1; shift
@@ -35,11 +35,29 @@ function maybe_do() {
   fi
 }
 
+function git_dirty {
+  [[ $(git diff --shortstat 2> /dev/null | tail -n1) != "" ]] && echo "1"
+  echo 0
+}
+
+function git_num_untracked_files {
+  expr echo $(git status --porcelain 2>/dev/null| grep "^??" | wc -l)
+}
+
+function git_num_added_to_index {
+  expr $(git status --porcelain 2>/dev/null| grep "^M" | wc -l))
+}
+
+# expr $(git status --porcelain 2>/dev/null| grep "^ M" | wc -l)
+
 SUCCESS=0
-DEBUG=0
+DEBUG=yes
 if [[ $name == dbus-feedstock-no ]]; then
+  DEBUG=yes
+fi
+
+if [[ ${DEBUG} == yes ]]; then
   SUCCESS=1
-  DEBUG=1
 #  set -x
 fi
 
@@ -54,7 +72,7 @@ fi
 sha1_m=$(git rev-parse ${wanted_branch})
 sha1_o=$(git rev-parse origin/${wanted_branch})
 
-if [[ ${DEBUG} == 1 ]]; then
+if [[ ${DEBUG} == yes ]]; then
   echo name = ${name}
   echo path = ${path}
   echo sha1_super = ${sha1_super}
@@ -97,7 +115,7 @@ m_anc_o=$(anc_print ${sha1_m} ${sha1_o})
 o_anc_m=$(anc_print ${sha1_o} ${sha1_m})
 o_anc_h=$(anc_print ${sha1_o} ${sha1_h})
 
-if [[ ${DEBUG} == 1 ]]; then
+if [[ ${DEBUG} == yes ]]; then
   spaces="                          "
   echo "          sha1_h: ${sha1_h}     sha1_m: ${sha1_m}    sha1_o: ${sha1_o}"
   echo "is_anc of:"
@@ -105,6 +123,12 @@ if [[ ${DEBUG} == 1 ]]; then
   echo "sha1_m: ${spaces}${h_anc_m}${spaces}${spaces}1${spaces}${spaces}${o_anc_m}"
   echo "sha1_o: ${spaces}${h_anc_o}${spaces}${spaces}${m_anc_o}${spaces}${spaces}1"
 fi
+
+# There are 4 stages to worry about and they need to be progressed in that order
+# 1. Local uncommitted changes   => commit them to HEAD
+# 2. Committed changes to HEAD   => get master to agree
+# 3. Agreement b/ HEAD, master   => get origin to agree
+# 4. Agreement b/ master, origin => all done
 
 # Agreement between the branches, but HEAD differs.
 if [[ ${sha1_m} == ${sha_o} ]]; then
@@ -124,6 +148,7 @@ if [[ ${sha1_h} == ${sha1_o} ]]; then
     # .. and master is an ancestor of these
     if [[ ${on_wanted} == no ]]; then
       maybe_do git checkout ${wanted_branch}
+      [[ ${dryrun} == no ]] && on_wanted=yes
     fi
     maybe_do git branch -u origin/${wanted_branch}
     maybe_do git pull --rebase
@@ -131,19 +156,23 @@ if [[ ${sha1_h} == ${sha1_o} ]]; then
   fi
 fi
 
-# Danger, we do not even maybe_do these.
-if [[ ${o_anc_m} == 1 ]]; then
-  echo "${name} :: Your local ${wanted_branch} has new commits, I suggest you:"
+# Suggestions only after this point.
+if [[ ${on_wanted} == no ]]; then
+  echo "# ${name} :: You are not on the wanted branch, I suggest you:"
+  echo "pushd ${name} && git checkout ${wanted_branch} && popd"
+fi
+if [[ ${o_anc_m} == 1 ]] && [[ ${sha1_o} != ${sha1_m} ]]; then
+  echo "# ${name} :: Your local ${wanted_branch} has new commits, I suggest you:"
   echo "pushd ${name} && git checkout ${wanted_branch} && git push origin/${wanted_branch} && popd"
   exit ${SUCCESS}
-elif [[ ${m_anc_o} == 1 ]]; then
-  echo "${name} :: Your local ${wanted_branch} is behind origin/${wanted_branch}, I suggest you:"
+elif [[ ${m_anc_o} == 1 ]] && [[ ${sha1_m} != ${sha1_o} ]]; then
+  echo "# ${name} :: Your local ${wanted_branch} is behind origin/${wanted_branch}, I suggest you:"
   echo "pushd ${name} && git checkout ${wanted_branch} && git pull --rebase origin/${wanted_branch} && popd"
   exit ${SUCCESS}
-else
-  echo "${name} :: Your local ${wanted_branch} is *not* an ancestor of origin/${wanted_branch}, has origin/${wanted_branch} been rebased? I suggest you:"
+elif [[ ${m_anc_o} == 0 ]]; then
+  echo "# ${name} :: Your local ${wanted_branch} is *not* an ancestor of origin/${wanted_branch}, has origin/${wanted_branch} been rebased? I suggest you:"
   echo "pushd ${name} && git reset ${wanted_branch} origin/${wanted_branch} && popd"
   exit ${SUCCESS}
 fi
 echo "${name} :: We should not get to here"
-exit 1
+exit 0
