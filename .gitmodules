@@ -2721,4 +2721,7 @@
 [submodule "mysql-connector-c-feedstock"]
 	path = mysql-connector-c-feedstock
 	url = ../mysql-connector-c-feedstock/
+[submodule "gnutls-feedstock"]
+	path = gnutls-feedstock
+	url = ../gnutls-feedstock
 	branch = master
