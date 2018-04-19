@@ -2718,3 +2718,7 @@
 	path = geotiff-feedstock
 	url = ../geotiff-feedstock
 	branch = master
+[submodule "mysql-connector-c-feedstock"]
+	path = mysql-connector-c-feedstock
+	url = ../mysql-connector-c-feedstock/
+	branch = master
