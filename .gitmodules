@@ -2714,3 +2714,7 @@
 	path = flake8-polyfill-feedstock
 	url = ../flake8-polyfill-feedstock
 	branch = master
+[submodule "geotiff-feedstock"]
+	path = geotiff-feedstock
+	url = ../geotiff-feedstock
+	branch = master
