@@ -18,6 +18,8 @@ source:
     - 0001-add-rt-to-linkopts.patch                   # [linux]
     # use the full MKL install from conda
     - use_installed_mkl.patch                         # [linux]
+    # add support for glibc 2.11
+    - support_glibc_2_11.patch
 
 build:
   number: 0
