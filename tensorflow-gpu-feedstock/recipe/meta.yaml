@@ -1,4 +1,4 @@
-{% set version = "1.4.1" %}
+{% set version = "1.5.0" %}
 
 package:
   name: tensorflow-gpu
@@ -11,7 +11,7 @@ build:
 requirements:
   run:
     - tensorflow-gpu-base =={{version}}
-    - tensorflow-tensorboard
+    - tensorflow-tensorboard >=1.5.0,<1.6.0
 
 test:
   files:
@@ -20,6 +20,7 @@ test:
     - tensorflow
     - tensorboard
   commands:
+    # has an exit code of 1, see tensorflow-tensorboard recipe
     - tensorboard --help
 
 about:
