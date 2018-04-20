@@ -1,4 +1,4 @@
-{% set version = "1.6.0" %}
+{% set version = "1.7.0" %}
 
 package:
   name: tensorflow-base
@@ -7,7 +7,7 @@ package:
 source:
   fn: tensorflow-{{ version }}.tar.gz
   url: https://github.com/tensorflow/tensorflow/archive/v{{ version }}.tar.gz
-  sha256: 03cf1423446abbead6bd8c3cf6e6affa7d99746cd119691b012aac9a1795f4fb
+  sha256: c676a96fc8700722816b2b98c85578b2f99fac7a7b2484c9c7f0641484f8d50d
   patches:
     # Patches need to get certain tests to pass on CentOS 6
     - stable-image-rotate-test.patch                  # [linux]
