@@ -35,6 +35,7 @@ requirements:
     - python
     - swig
     - zlib
+    - mkl-devel
     # GPU requirements
     - cudatoolkit {{ cudatoolkit }}*
     - cudnn {{ cudnn }}*
