@@ -30,7 +30,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     # conda build requirements
-    - bazel >=0.5.4
+    - bazel >=0.5.4,<0.10.0
     - pip
     - python
     - swig
@@ -38,13 +38,16 @@ requirements:
     # GPU requirements
     - cudatoolkit {{ cudatoolkit }}*
     - cudnn {{ cudnn }}*
+    - cupti
     # requirements specified by the package itself
-    - wheel >=0.26
+    - wheel
     - six >=1.10.0
-    - protobuf >=3.3.0
+    - protobuf >=3.4.0
     - numpy 1.12*
     - enum34 >=1.1.6      # [py2k]
     - mock >=2.0.0        # [py2k]
+    - backports.weakref >=1.0rc1  # [py2k]
+    - absl-py >=0.1.6
     # the following packages are required for testing
     - portpicker
     - scipy
@@ -52,12 +55,15 @@ requirements:
   run:
     - python
     - six >=1.10.0
-    - protobuf >=3.3.0
+    - protobuf >=3.4.0
     - {{ pin_compatible('numpy') }}
     - enum34 >=1.1.6      # [py2k]
     - mock >=2.0.0        # [py2k]
+    - backports.weakref >=1.0rc1  # [py2k]
+    - absl-py >=0.1.6
     - cudatoolkit {{ cudatoolkit }}*
     - cudnn {{ cudnn }}*
+    - cupti
 
 test:
   # the tensorflow import is tested by the run_test.sh script.
