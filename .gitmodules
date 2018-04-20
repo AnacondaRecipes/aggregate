@@ -1298,10 +1298,6 @@
 	path = texlive-core-feedstock
 	url = ../texlive-core-feedstock
 	branch = master
-[submodule "boost-cpp-feedstock"]
-	path = boost-cpp-feedstock
-	url = ../boost-cpp-feedstock
-	branch = master
 [submodule "xlwings-feedstock"]
 	path = xlwings-feedstock
 	url = ../xlwings-feedstock
@@ -1357,10 +1353,6 @@
 [submodule "gdal-feedstock"]
 	path = gdal-feedstock
 	url = ../gdal-feedstock
-	branch = master
-[submodule "libgdal-feedstock"]
-	path = libgdal-feedstock
-	url = ../libgdal-feedstock
 	branch = master
 [submodule "giflib-feedstock"]
 	path = giflib-feedstock
