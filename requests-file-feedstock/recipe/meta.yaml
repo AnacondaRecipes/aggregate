@@ -1,0 +1,37 @@
+{% set name = "requests-file" %}
+{% set version = "1.4.3" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 8f04aa6201bacda0567e7ac7f677f1499b0fc76b22140c54bc06edf1ba92e2fa
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - requests >=1.0.0
+    - six
+  run:
+    - python
+    - requests >=1.0.0
+    - six
+
+about:
+  home: http://github.com/dashea/requests-file
+  license: Apache
+  license_file: LICENSE
+  summary: file transport adapter for Requests
+  description: |
+    Requests-File is a transport adapter for use with the Requests Python
+    library to allow local filesystem access via file:// URLs.
+  doc_url: https://pypi.python.org/pypi/requests-file
+  doc_source_url: https://github.com/dashea/requests-file/blob/master/README.rst
