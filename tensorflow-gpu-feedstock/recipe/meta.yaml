@@ -21,7 +21,7 @@ test:
     - tensorboard
   commands:
     # has an exit code of 1, see tensorflow-tensorboard recipe
-    - tensorboard --help
+    - tensorboard --help || true
 
 about:
   home: http://tensorflow.org/
