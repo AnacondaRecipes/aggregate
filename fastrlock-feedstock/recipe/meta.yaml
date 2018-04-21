@@ -1,0 +1,45 @@
+{% set name = "fastrlock" %}
+{% set version = "0.3" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "adccdc23d51ca87a0e55b2a4ce3b4813fa2c7442ce966713fa699456c24ab902" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  '{{ hash_type }}': '{{ hash_value }}'
+
+build:
+  number: 0
+  script: 'python setup.py install '
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - python
+    - cython
+  run:
+    - python
+
+test:
+  imports:
+    - fastrlock
+
+about:
+  home: https://github.com/scoder/fastrlock
+  license: MIT License
+  license_family: MIT
+  license_file: ''
+  summary: Fast, re-entrant optimistic lock implemented in Cython
+  description: "This is a C-level implementation of a fast, re-entrant, optimistic lock for CPython."
+  doc_url: ''
+  dev_url: ''
+
+extra:
+  recipe-maintainers: ''
