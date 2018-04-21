@@ -1,4 +1,4 @@
-{% set version = "1.6.0" %}
+{% set version = "1.7.0" %}
 
 package:
   name: tensorboard
@@ -7,7 +7,7 @@ package:
 source:
   fn: tensorflow-{{ version }}.tar.gz
   url: https://github.com/tensorflow/tensorboard/archive/{{ version }}.tar.gz
-  sha256: 087242325ef3b91f1909e3fd3a873ad15e3c7703990ad8caab64736d9009bf62
+  sha256: b56a61433d58eea51d1d08194521126d78b1d6a92a03a243f89108d3890758fa
 
 build:
   number: 0
@@ -36,7 +36,7 @@ requirements:
 
 test:
   requires:
-    - tensorflow-base >=1.6.0,<1.7.0
+    - tensorflow-base >=1.7.0,<1.8.0
   imports:
     - tensorboard
   commands:
