@@ -2717,3 +2717,7 @@
 	path = gnutls-feedstock
 	url = ../gnutls-feedstock
 	branch = master
+[submodule "pyface-feedstock"]
+	path = pyface-feedstock
+	url = ../pyface-feedstock
+	branch = master
