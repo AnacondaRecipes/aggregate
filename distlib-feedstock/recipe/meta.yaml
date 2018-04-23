@@ -1,7 +1,7 @@
 {% set name = "distlib" %}
-{% set version = "0.2.6" %}
+{% set version = "0.2.7" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "bbd05ffb648fcf87061145458be92a6bddf88e80c691aebdceb180fa0e003a2e" %}
+{% set hash_value = "cd502c66fc27c535bab62dc4f482e403e2369c2c05281a79cc2d4e2f42a87f20" %}
 
 package:
   name: '{{ name|lower }}'
