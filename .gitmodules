@@ -2721,3 +2721,7 @@
 	path = pyface-feedstock
 	url = ../pyface-feedstock
 	branch = master
+[submodule "scikit-bio-feedstock"]
+	path = scikit-bio-feedstock
+	url = ../scikit-bio-feedstock
+	branch = master
