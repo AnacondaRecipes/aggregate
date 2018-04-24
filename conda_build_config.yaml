@@ -33,6 +33,9 @@ VERBOSE_AT:
   - V=1
 VERBOSE_CM:
   - VERBOSE=1
+# We use MRAN here because they take snapshots which improves reproducibility.
+cran_mirror:
+  - https://mran.microsoft.com/snapshot/2018-01-01
 dbus:
   - 1
 expat:
