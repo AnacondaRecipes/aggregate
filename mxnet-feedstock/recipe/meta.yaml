@@ -1,5 +1,5 @@
 package:
-  name: mxnet
+  name: mxnet-suite
   version: 1.1.0
 
 build:
