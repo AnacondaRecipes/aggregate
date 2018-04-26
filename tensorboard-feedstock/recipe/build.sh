@@ -29,3 +29,8 @@ rm -f MANIFEST
 
 # install the package
 python setup.py install --single-version-externally-managed --record record.txt
+
+# Remove bin/tensorboard from as it is include in the
+# tensorflow-base/tensorflow-gpu-base packages.
+# TODO for next release: keep this file and remove the file in the -base packages.
+rm $PREFIX/bin/tensorboard

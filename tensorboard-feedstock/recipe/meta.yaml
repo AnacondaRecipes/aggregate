@@ -10,10 +10,14 @@ source:
   sha256: b56a61433d58eea51d1d08194521126d78b1d6a92a03a243f89108d3890758fa
 
 build:
-  number: 0
+  number: 1
   skip: True  # [not linux64]
-  entry_points:
-    - tensorboard = tensorboard.main:run_main
+  # Do not include the tensorboard entry point as it conflicts with a file in
+  # the tensorflow-base/tensorflow-gpu-base packages.
+  # In the next release restore this entry point and remove the file in the
+  # -base packages.
+  #entry_points:
+  #  - tensorboard = tensorboard.main:run_main
 
 requirements:
   build:
