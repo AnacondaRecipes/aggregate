@@ -2725,3 +2725,7 @@
 	path = scikit-bio-feedstock
 	url = ../scikit-bio-feedstock
 	branch = master
+[submodule "pyopengl-feedstock"]
+	path = pyopengl-feedstock
+	url = ../pyopengl-feedstock
+	branch = master
