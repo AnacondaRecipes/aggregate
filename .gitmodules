@@ -2729,3 +2729,7 @@
 	path = pyopengl-feedstock
 	url = ../pyopengl-feedstock
 	branch = master
+[submodule "python-3.6-feedstock"]
+	path = python-3.6-feedstock
+	url = ../python-feedstock
+	branch = master-3.6
