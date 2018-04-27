@@ -12,6 +12,8 @@ source:
     - 0001-force-system-nccl.patch
     # https://github.com/pytorch/pytorch/issues/4499
     - define_speed_unknown.patch
+    - 0002-torch-test.patch
+    - 0003-test-nn.patch
 
 build:
   number: 0
@@ -19,13 +21,13 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}  # [not ppc64le]
+    - {{ compiler('cxx') }}  # [not ppc64le]
     - cmake
   host:
     # GPU requirements
-    - cudatoolkit {{ cudatoolkit }}*
-    - cudnn {{ cudnn }}*
+    - cudatoolkit {{ cudatoolkit }}*  # [not ppc64le]
+    - cudnn {{ cudnn }}*  # [not ppc64le]
     - nccl
     # other requirements
     - python
@@ -33,13 +35,13 @@ requirements:
     - setuptools
     - pyyaml
     - cffi
-    - mkl-devel
-    - magma
+    - mkl-devel # [not ppc64le]
+    - magma # [not ppc64le]
 
   run:
     # GPU requirements
-    - cudatoolkit {{ cudatoolkit }}*
-    - cudnn {{ cudnn }}*
+    - cudatoolkit {{ cudatoolkit }}*  # [not ppc64le]
+    - cudnn {{ cudnn }}*  # [not ppc64le]
     - nccl
     # other requirements
     - python
