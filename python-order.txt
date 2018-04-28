@@ -40,7 +40,9 @@ markupsafe-feedstock
 jinja2-feedstock
 pygments-feedstock
 idna-feedstock
+cython-feedstock
 asn1crypto-feedstock
+nose-feedstock
 numpy-feedstock
 flaky-feedstock
 text-unidecode-feedstock
@@ -52,12 +54,14 @@ pytest-xdist-feedstock
 pbr-feedstock
 mock-feedstock
 cython-feedstock
+numpy-1.9-feedstock
 pandas-feedstock
 hypothesis-feedstock
 pretend-feedstock
 cryptography-vectors-feedstock
 pycparser-feedstock
 cffi-feedstock
+iso8601-feedstock
 cryptography-feedstock
 pyopenssl-feedstock
 pysocks-feedstock
@@ -72,6 +76,7 @@ backcall-feedstock
 wcwidth-feedstock
 prompt_toolkit-feedstock
 pickleshare-feedstock
+appnope-feedstock
 ipython-feedstock
 ipykernel-feedstock
 webencodings-feedstock
@@ -79,7 +84,6 @@ html5lib-feedstock
 bleach-feedstock
 testpath-feedstock
 entrypoints-feedstock
-nose-feedstock
 mistune-feedstock
 pandocfilters-feedstock
 nbformat-feedstock
@@ -305,6 +309,7 @@ async-timeout-feedstock
 yarl-feedstock
 aiohttp-feedstock
 wrapt-feedstock
+botocore-1.8.21-feedstock
 aiobotocore-feedstock
 idna_ssl-feedstock
 psutil-feedstock
