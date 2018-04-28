@@ -2733,3 +2733,7 @@
 	path = python-3.6-feedstock
 	url = ../python-feedstock
 	branch = master-3.6
+[submodule "botocore-1.8.21-feedstock"]
+	path = botocore-1.8.21-feedstock
+	url = ../botocore-feedstock
+	branch = master-1.8.21
