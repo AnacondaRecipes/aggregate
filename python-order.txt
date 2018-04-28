@@ -309,6 +309,7 @@ async-timeout-feedstock
 yarl-feedstock
 aiohttp-feedstock
 wrapt-feedstock
+jmespath-feedstock
 botocore-1.8.21-feedstock
 aiobotocore-feedstock
 idna_ssl-feedstock
@@ -518,7 +519,6 @@ networkx-feedstock
 odo-feedstock
 blaze-feedstock
 boto-feedstock
-jmespath-feedstock
 botocore-feedstock
 s3transfer-feedstock
 boto3-feedstock
