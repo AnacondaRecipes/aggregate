@@ -395,6 +395,7 @@ pytest-doctestplus-feedstock
 pytest-arraydiff-feedstock
 pytest-openfiles-feedstock
 pytest-astropy-feedstock
+numpy-1.11-feedstock
 astropy-feedstock
 pytest-remotedata-feedstock
 pytest-doctestplus-feedstock
