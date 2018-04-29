@@ -496,6 +496,7 @@ multipledispatch-feedstock
 datashape-feedstock
 networkx-feedstock
 odo-feedstock
+llvmlite-feedstock
 numba-feedstock
 blaze-feedstock
 pkgconfig-feedstock

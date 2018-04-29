@@ -2741,3 +2741,7 @@
 	path = numba-feedstock
 	url = ../numba-feedstock
 	branch = master
+[submodule "llvmlite-feedstock"]
+	path = llvmlite-feedstock
+	url = ../llvmlite-feedstock
+	branch = master
