@@ -2737,3 +2737,7 @@
 	path = botocore-1.8.21-feedstock
 	url = ../botocore-feedstock
 	branch = master-1.8.21
+[submodule "numba-feedstock"]
+	path = numba-feedstock
+	url = ../numba-feedstock
+	branch = master
