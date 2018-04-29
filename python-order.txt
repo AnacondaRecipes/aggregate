@@ -405,6 +405,7 @@ pytest-astropy-feedstock
 astropy-feedstock
 asyncpg-feedstock
 asyncpgsa-feedstock
+future-feedstock
 atom-feedstock
 automat-feedstock
 plotly-feedstock
