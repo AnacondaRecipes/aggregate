@@ -496,6 +496,7 @@ multipledispatch-feedstock
 datashape-feedstock
 networkx-feedstock
 odo-feedstock
+numba-feedstock
 blaze-feedstock
 pkgconfig-feedstock
 h5py-feedstock
