@@ -20,10 +20,15 @@ source:
     - use_installed_mkl.patch                         # [linux]
     # add support for glibc 2.11
     - support_glibc_2_11.patch
+    - 0001-jpeg.BUILD-Using-cpu-instead-of-android_cpu-17508.patch
+    - 0002-Remove-TF_NEED_KAFKA-from-configure.py-as-it-is-not-.patch
+    - 0003-Update-is_windows-to-allow-mingw-shells.patch
+    - 0004-Escape-regex-pattern-properly-before-using-it.patch
 
 build:
   number: 0
-  skip: True  # [not linux64]
+  skip: True  # [not x86_64]
+  skip: True  # [win and vc<14]
 
 requirements:
   build:
@@ -32,6 +37,8 @@ requirements:
   host:
     # conda build requirements
     - bazel >=0.5.4
+    - posix  # [win]
+    - m2-patch  # [win]
     - pip
     - python
     - swig
@@ -50,10 +57,12 @@ requirements:
     - astor >=0.6.0
     - absl-py >=0.1.6
     # the following packages are required for testing
+    - m2-perl             # [win]
     - portpicker
+    - pyreadline          # [win]
     - scipy
     - scikit-learn
-    - mkl-devel
+    - mkl-devel           # [linux]
   run:
     - python
     - termcolor >=1.1.0
