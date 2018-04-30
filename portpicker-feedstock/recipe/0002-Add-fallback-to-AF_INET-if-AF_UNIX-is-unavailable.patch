@@ -1,0 +1,30 @@
+From 80c316b27a1ae7784c9f0911a8706e29fba41ec6 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Mon, 30 Apr 2018 16:00:24 -0500
+Subject: [PATCH 2/2] Add fallback to AF_INET if AF_UNIX is unavailable
+
+xref: https://github.com/google/python_portpicker/issues/4
+---
+ src/portpicker.py | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/src/portpicker.py b/src/portpicker.py
+index 15b6d59..dabe763 100644
+--- a/src/portpicker.py
++++ b/src/portpicker.py
+@@ -224,7 +224,11 @@ def get_port_from_port_server(portserver_address, pid=None):
+ 
+     try:
+         # Create socket.
+-        sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
++        if getattr(socket, 'AF_UNIX', False):
++            sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
++        else:
++            # fallback to AF_INET if this is not unix
++            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+         try:
+             # Connect to portserver.
+             sock.connect(portserver_address)
+-- 
+2.17.0
+
