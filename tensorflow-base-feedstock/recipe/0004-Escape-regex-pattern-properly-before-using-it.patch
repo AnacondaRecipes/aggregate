@@ -1,0 +1,44 @@
+From 74a7f5de47cd5866c07b593b908eef4e3e2a65ef Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sat, 28 Apr 2018 19:00:36 -0500
+Subject: [PATCH 4/4] Escape regex pattern properly before using it
+
+Without this patch, the function _ignore_file_path throws a traceback:
+
+  File "C:\xxx\lib\site-packages\tensorflow\contrib\tensorboard\plugins\trace\trace.py", line 156, in _ignore_file_path
+    if re.search(regex_pattern, fname):
+  File "C:\xxx\lib\re.py", line 182, in search
+    return _compile(pattern, flags).search(string)
+  File "C:\xxx\lib\re.py", line 301, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "C:\xxx\lib\sre_compile.py", line 562, in compile
+    p = sre_parse.parse(p, flags)
+  File "C:\xxx\lib\sre_parse.py", line 855, in parse
+    p = _parse_sub(source, pattern, flags & SRE_FLAG_VERBOSE, 0)
+  File "C:\xxx\lib\sre_parse.py", line 416, in _parse_sub
+    not nested and not items))
+  File "C:\xxx\lib\sre_parse.py", line 502, in _parse
+    code = _escape(source, this, state)
+  File "C:\xxx\lib\sre_parse.py", line 401, in _escape
+    raise source.error("bad escape %s" % escape, len(escape))
+sre_constants.error: bad escape \p at position 11
+---
+ tensorflow/contrib/tensorboard/plugins/trace/trace.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tensorflow/contrib/tensorboard/plugins/trace/trace.py b/tensorflow/contrib/tensorboard/plugins/trace/trace.py
+index 07e5316b8b..53c3cb5973 100644
+--- a/tensorflow/contrib/tensorboard/plugins/trace/trace.py
++++ b/tensorflow/contrib/tensorboard/plugins/trace/trace.py
+@@ -150,7 +150,7 @@ def _add_data_from_tensors(tensors, info):
+ 
+ def _ignore_file_path(fname, ignore_regex_fpaths):
+   for regex_pattern in ignore_regex_fpaths:
+-    if re.search(regex_pattern, fname):
++    if re.search(re.escape(regex_pattern), fname):
+       return True
+   return False
+ 
+-- 
+2.17.0
+
