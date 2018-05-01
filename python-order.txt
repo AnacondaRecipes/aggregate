@@ -1,5 +1,3 @@
-pycparser-feedstock
-cffi-feedstock
 certifi-feedstock
 setuptools-feedstock
 py-feedstock
@@ -15,6 +13,8 @@ vcversioner-feedstock
 jsonschema-feedstock
 wheel-feedstock
 pip-feedstock
+pycparser-feedstock
+cffi-feedstock
 tornado-feedstock
 ipython_genutils-feedstock
 decorator-feedstock
