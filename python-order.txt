@@ -1,3 +1,5 @@
+pycparser-feedstock
+cffi-feedstock
 certifi-feedstock
 setuptools-feedstock
 py-feedstock
@@ -59,8 +61,6 @@ pandas-feedstock
 hypothesis-feedstock
 pretend-feedstock
 cryptography-vectors-feedstock
-pycparser-feedstock
-cffi-feedstock
 iso8601-feedstock
 cryptography-feedstock
 pyopenssl-feedstock
