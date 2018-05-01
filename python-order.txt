@@ -1,4 +1,5 @@
 certifi-feedstock
+wincertstore-feedstock
 setuptools-feedstock
 py-feedstock
 attrs-feedstock
@@ -6,6 +7,7 @@ pluggy-feedstock
 six-feedstock
 more-itertools-feedstock
 setuptools_scm-feedstock
+colorama-feedstock
 pytest-feedstock
 coverage-feedstock
 pytest-cov-feedstock
