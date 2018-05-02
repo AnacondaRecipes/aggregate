@@ -5,13 +5,19 @@ package:
   version: {{ version }}
 
 source:
-  fn: tensorflow-{{ version }}.tar.gz
-  url: https://github.com/tensorflow/tensorboard/archive/{{ version }}.tar.gz
-  sha256: b56a61433d58eea51d1d08194521126d78b1d6a92a03a243f89108d3890758fa
+  fn: tensorflow-{{ version }}.tar.gz                                          # [unix]
+  url: https://github.com/tensorflow/tensorboard/archive/{{ version }}.tar.gz  # [unix]
+  sha256: b56a61433d58eea51d1d08194521126d78b1d6a92a03a243f89108d3890758fa     # [unix]
+
+  # Rename this to dummy since we don't want CB to extract it
+  fn: tensorboard-{{ version }}-py3-none-any.whl.dummy                                        # [win]
+  url: https://pypi.io/packages/py3/t/tensorboard/tensorboard-{{ version }}-py3-none-any.whl  # [win]
+  sha256: 4c4793f904d2e8f5b83fc05ae3330e48c8305f08a3250019a6f44e37681644a9                    # [win]
 
 build:
   number: 1
-  skip: True  # [not linux64]
+  skip: True  # [not x86_64]
+  skip: True  # [win and vc<14]
   # Do not include the tensorboard entry point as it conflicts with a file in
   # the tensorflow-base/tensorflow-gpu-base packages.
   # In the next release restore this entry point and remove the file in the
@@ -24,9 +30,12 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - bazel >=0.9.0
+    # Not using bazel on Windows due to issue with long paths
+    # The package contents are not OS specific anyway
+    - bazel >=0.9.0  # [unix]
     - python
     - setuptools
+    - pip            # [win]
   run:
     - python
     - werkzeug >=0.11.10
@@ -46,7 +55,7 @@ test:
   commands:
     # sets an exit value of 1
     # https://github.com/tensorflow/tensorboard/issues/1007
-    - tensorboard --help || true
+    - tensorboard --help || true  # [unix]
 
 about:
   home: http://tensorflow.org/
