@@ -2753,3 +2753,7 @@
 	path = coveralls-feedstock
 	url = ../coveralls-feedstock
 	branch = master
+[submodule "docopt-feedstock"]
+	path = docopt-feedstock
+	url = ../docopt-feedstock/
+	branch = master
