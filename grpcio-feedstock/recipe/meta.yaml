@@ -12,6 +12,8 @@ source:
   fn: {{ name }}-{{ version }}.{{ file_ext }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
   {{ hash_type }}: {{ hash_value }}
+  patches:
+    - set_109_deployment_target.patch  # [osx and py35]
 
 build:
   number: 0

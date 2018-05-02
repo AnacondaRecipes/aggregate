@@ -2749,3 +2749,7 @@
 	path = future-feedstock
 	url = ../future-feedstock
 	branch = master
+[submodule "coveralls-feedstock"]
+	path = coveralls-feedstock
+	url = ../coveralls-feedstock
+	branch = master
