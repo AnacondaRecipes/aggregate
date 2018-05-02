@@ -19,7 +19,7 @@ source:
     # use the full MKL install from conda
     - use_installed_mkl.patch                         # [linux]
     # add support for glibc 2.11
-    - support_glibc_2_11.patch
+    - support_glibc_2_11.patch                        # [linux]
     - 0001-jpeg.BUILD-Using-cpu-instead-of-android_cpu-17508.patch
     - 0002-Remove-TF_NEED_KAFKA-from-configure.py-as-it-is-not-.patch
     - 0003-Update-is_windows-to-allow-mingw-shells.patch
