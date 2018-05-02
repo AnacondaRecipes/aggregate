@@ -1,0 +1,34 @@
+{% set version = '0.3.110' %}
+
+package:
+  name: libaio
+  version: {{ version }}
+
+source:
+  url: http://ftp.de.debian.org/debian/pool/main/liba/libaio/libaio_{{ version }}.orig.tar.gz
+  sha256: e019028e631725729376250e32b473012f7cb68e1f7275bfc1bbcdd0f8745f7e
+  run_exports:
+    # No clue, update when abi-laboratory has the info
+    - {{ pin_subpackage('libaio', max_pin='x.x') }}
+
+build:
+  number: 0
+  skip: True  # [not linux]
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - make
+
+test:
+  commands:
+    - test -f "${PREFIX}"/include/libaio.h
+    - test -f "${PREFIX}"/lib/libaio.a
+    - test -f "${PREFIX}"/lib/libaio.so
+
+about:
+  license: LGPLv2.1
+  license_family: LGPL
+  license_file: COPYING
+  summary: "The Linux-native asynchronous I/O facility (aio) library"
+  home: http://lse.sourceforge.net/io/aio.html
