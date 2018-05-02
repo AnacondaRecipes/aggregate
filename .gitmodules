@@ -2745,3 +2745,7 @@
 	path = llvmlite-feedstock
 	url = ../llvmlite-feedstock
 	branch = master
+[submodule "future-feedstock"]
+	path = future-feedstock
+	url = ../future-feedstock
+	branch = master
