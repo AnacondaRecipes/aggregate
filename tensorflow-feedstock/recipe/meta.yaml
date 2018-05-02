@@ -6,7 +6,7 @@ package:
 
 build:
   number: 0
-  skip: True  # [not linux64]
+  skip: True  # [not x86_64]
 
 requirements:
   run:
@@ -19,7 +19,7 @@ test:
     - tensorboard
   commands:
     # has an exit code of 1, see tensorboard recipe
-    - tensorboard --help || true
+    - tensorboard --help || true  # [unix]
 
 about:
   home: http://tensorflow.org/
