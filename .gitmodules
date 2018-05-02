@@ -2757,3 +2757,7 @@
 	path = docopt-feedstock
 	url = ../docopt-feedstock/
 	branch = master
+[submodule "mpl-scatter-density-feedstock"]
+	path = mpl-scatter-density-feedstock
+	url = ../mpl-scatter-density-feedstock/
+	branch = master
