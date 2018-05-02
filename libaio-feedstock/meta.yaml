@@ -10,6 +10,8 @@ source:
   run_exports:
     # No clue, update when abi-laboratory has the info
     - {{ pin_subpackage('libaio', max_pin='x.x') }}
+  patches:
+    - 0001-Don-t-remove-the-system-libraries-and-startup-files-.patch
 
 build:
   number: 0
