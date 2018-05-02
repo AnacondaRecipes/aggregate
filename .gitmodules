@@ -2761,3 +2761,7 @@
 	path = mpl-scatter-density-feedstock
 	url = ../mpl-scatter-density-feedstock/
 	branch = master
+[submodule "fast-histogram-feedstock"]
+	path = fast-histogram-feedstock
+	url = ../fast-histogram-feedstock/
+	branch = master
