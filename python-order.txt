@@ -1,6 +1,7 @@
 certifi-feedstock
 wincertstore-feedstock
 setuptools-feedstock
+future-feedstock
 py-feedstock
 attrs-feedstock
 pluggy-feedstock
@@ -59,6 +60,7 @@ pbr-feedstock
 mock-feedstock
 cython-feedstock
 numpy-1.9-feedstock
+numpy-1.11-feedstock
 pandas-feedstock
 hypothesis-feedstock
 pretend-feedstock
@@ -66,6 +68,7 @@ cryptography-vectors-feedstock
 iso8601-feedstock
 cryptography-feedstock
 pyopenssl-feedstock
+win_inet_pton-feedstock
 pysocks-feedstock
 urllib3-feedstock
 pytest-runner-feedstock
@@ -91,6 +94,8 @@ pandocfilters-feedstock
 nbformat-feedstock
 nbconvert-feedstock
 send2trash-feedstock
+libpython-feedstock
+pywinpty-feedstock
 terminado-feedstock
 notebook-feedstock
 widgetsnbextension-feedstock
@@ -397,7 +402,6 @@ pytest-doctestplus-feedstock
 pytest-arraydiff-feedstock
 pytest-openfiles-feedstock
 pytest-astropy-feedstock
-numpy-1.11-feedstock
 astropy-feedstock
 pytest-remotedata-feedstock
 pytest-doctestplus-feedstock
@@ -497,7 +501,10 @@ flask-cors-feedstock
 multipledispatch-feedstock
 datashape-feedstock
 networkx-feedstock
+scipy-feedstock
 odo-feedstock
+ninja-feedstock
+llvmdev-feedstock
 llvmlite-feedstock
 numba-feedstock
 blaze-feedstock
@@ -543,7 +550,6 @@ cached-property-feedstock
 boost-feedstock
 protobuf-feedstock
 mpmath-feedstock
-scipy-feedstock
 opencv-feedstock
 python-leveldb-feedstock
 python-gflags-feedstock
