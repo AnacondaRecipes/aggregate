@@ -505,6 +505,7 @@ flask-cors-feedstock
 multipledispatch-feedstock
 datashape-feedstock
 networkx-feedstock
+mpmath-feedstock
 scipy-feedstock
 odo-feedstock
 ninja-feedstock
@@ -553,7 +554,6 @@ cachecontrol-feedstock
 cached-property-feedstock
 boost-feedstock
 protobuf-feedstock
-mpmath-feedstock
 opencv-feedstock
 python-leveldb-feedstock
 python-gflags-feedstock
