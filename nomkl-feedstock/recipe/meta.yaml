@@ -1,0 +1,11 @@
+package:
+  name: nomkl
+  version: 2.0
+
+build:
+  allow_no_files: True
+  track_features:
+    - nomkl
+
+about:
+  license: BSD
