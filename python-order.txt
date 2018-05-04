@@ -50,6 +50,8 @@ cython-feedstock
 asn1crypto-feedstock
 nose-feedstock
 mkl-service-feedstock
+numpy-1.9-feedstock
+numpy-1.11-feedstock
 mkl_fft-feedstock
 mkl_random-feedstock
 numpy-feedstock
@@ -63,8 +65,6 @@ pytest-xdist-feedstock
 pbr-feedstock
 mock-feedstock
 cython-feedstock
-numpy-1.9-feedstock
-numpy-1.11-feedstock
 pandas-feedstock
 hypothesis-feedstock
 pretend-feedstock
