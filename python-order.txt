@@ -1,3 +1,5 @@
+python-feedstock
+python.app-feedstock
 nomkl-feedstock
 certifi-feedstock
 wincertstore-feedstock
