@@ -13,6 +13,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+  host:
     - python
     - mkl-devel 2018.0.0
   run:
