@@ -564,6 +564,8 @@ pillow-feedstock
 imageio-feedstock
 kiwisolver-feedstock
 cycler-feedstock
+sip-feedstock
+pyqt-feedstock
 matplotlib-feedstock
 pywavelets-feedstock
 scikit-image-feedstock
@@ -772,8 +774,6 @@ dropbox-feedstock
 elasticsearch-feedstock
 elasticsearch-async-feedstock
 elasticsearch-dsl-feedstock
-sip-feedstock
-pyqt-feedstock
 qtpy-feedstock
 ply-feedstock
 enaml-feedstock
