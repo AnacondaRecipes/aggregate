@@ -620,6 +620,7 @@ capturer-feedstock
 humanfriendly-feedstock
 capturer-feedstock
 lxml-feedstock
+pyproj-feedstock
 owslib-feedstock
 pyepsg-feedstock
 shapely-feedstock
@@ -662,7 +663,6 @@ portend-feedstock
 cherrypy-feedstock
 click-plugins-feedstock
 cligj-feedstock
-colander-feedstock
 colorama-feedstock
 colorcet-feedstock
 coloredlogs-feedstock
@@ -670,6 +670,7 @@ d2to1-feedstock
 colour-feedstock
 mccabe-feedstock
 pyflakes-feedstock
+pycodestyle-feedstock
 flake8-feedstock
 commonmark-feedstock
 mccabe-feedstock
@@ -682,6 +683,8 @@ flake8-feedstock
 commonmark-feedstock
 comtypes-feedstock
 pycosat-feedstock
+cookies-feedstock
+responses-feedstock
 conda-feedstock
 pycosat-feedstock
 conda-feedstock
