@@ -292,11 +292,9 @@ console_shortcut-feedstock
 constructor-feedstock
 webob-feedstock
 venusian-feedstock
-cornice-feedstock
 cssselect-feedstock
 csvkit-feedstock
 fastrlock-feedstock
-cupy-feedstock
 cvxcanon-feedstock
 cx_oracle-feedstock
 cymem-feedstock
