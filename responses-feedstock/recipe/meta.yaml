@@ -1,14 +1,21 @@
-{% set name = 'responses' %}
-{% set version = '0.6.0' %}
+{% set name = "responses" %}
+{% set version = "0.9.0" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "c6082710f4abfb60793899ca5f21e7ceb25aabf321560cc0726f8b59006811c9" %}
 
 package:
-  name: {{ name }}
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/getsentry/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: c515143ff64d8ccf35a0a1bd9e4fc962f64b8d1e6be0e61d0fb51934dafdd863
+  fn: {{ name }}-{{ version }}.{{ file_ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  {{ hash_type }}: {{ hash_value }}
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
   host:
@@ -19,10 +26,12 @@ requirements:
     - requests >=2.0
     - cookies
     - six
+    - mock  # [py<33]
 
 test:
   imports:
     - responses
+
 
 about:
   home: https://github.com/getsentry/responses
@@ -32,3 +41,9 @@ about:
   summary: utility library for mocking out the 'requests' Python library
   doc_url: https://pypi.python.org/pypi/responses
   doc_source_url: https://github.com/getsentry/responses/blob/master/README.rst
+  dev_url: https://github.com/getsentry/responses
+
+extra:
+  recipe-maintainers:
+    - nehaljwani
+    - mingwandroid
