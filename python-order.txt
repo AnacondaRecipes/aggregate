@@ -613,7 +613,6 @@ scikit-image-feedstock
 caffe-feedstock
 opencv-feedstock
 caffe-feedstock
-caffe-gpu-feedstock
 humanfriendly-feedstock
 capturer-feedstock
 humanfriendly-feedstock
