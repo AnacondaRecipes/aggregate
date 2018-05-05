@@ -8,7 +8,7 @@ blas_impl:
   - mkl                        # [x86 or x86_64]
   - openblas
 boost:
-  - 1.65
+  - 1.67
 bzip2:
   - 1.0
 cairo:
