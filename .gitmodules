@@ -2765,3 +2765,7 @@
 	path = fast-histogram-feedstock
 	url = ../fast-histogram-feedstock/
 	branch = master
+[submodule "pyproj-feedstock"]
+	path = pyproj-feedstock
+	url = ../pyproj-feedstock
+	branch = master
