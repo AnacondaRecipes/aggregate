@@ -335,6 +335,7 @@ cornice-feedstock
 ephem-feedstock
 pyasn1-feedstock
 pynacl-feedstock
+ecdsa-feedstock
 paramiko-feedstock
 fabric-feedstock
 fabric3-feedstock
