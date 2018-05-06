@@ -2772,3 +2772,12 @@
 [submodule "gdal-2.3.0-feedstock"]
 	path = gdal-2.3.0-feedstock
 	url = ../gdal-feedstock
+	branch = master-2.3.0
+[submodule "traits-feedstock"]
+	path = traits-feedstock
+	url = ../traits-feedstock
+	branch = master
+[submodule "apptools-feedstock"]
+	path = apptools-feedstock
+	url = ../apptools-feedstock
+	branch = master

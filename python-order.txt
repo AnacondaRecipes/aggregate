@@ -324,6 +324,11 @@ elasticsearch-dsl-feedstock
 qtpy-feedstock
 ply-feedstock
 enaml-feedstock
+configobj-feedstock
+traitsui-feedstock
+pyface-feedstock
+traits-feedstock
+apptools-feedstock
 envisage-feedstock
 ephem-feedstock
 pyasn1-feedstock
