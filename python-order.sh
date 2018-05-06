@@ -2,6 +2,13 @@
 
 # Find every recipe that depends upon python .. let us try linux repodata.json with jq for this:
 
+function contains() {
+  local e match="$1"
+  shift
+  for e; do [[ "$e" == "$match" ]] && return 0; done
+  return 1
+}
+
 function get_order() {
   [[ -f repodata.linux.json ]] || curl -o repodata.linux.json -SLO https://repo.continuum.io/pkgs/main/linux-64/repodata.json
   [[ -f repodata.macos.json ]] || curl -o repodata.macos.json -SLO https://repo.continuum.io/pkgs/main/osx-64/repodata.json
@@ -30,8 +37,6 @@ function get_order() {
       FOUND_AT=${PKG}
     fi
 
-    # Skip some (NYI)
-
     if [[ -n ${FOUND_AT} ]]; then
       RECIPE_DIRS+=(${FOUND_AT})
     else
@@ -45,7 +50,23 @@ function get_order() {
   fi
 
   c3i examine --matrix-base-dir ~/conda/private_conda_recipes/rays-scratch-scripts/c3i-build-orderer-config ~/conda/aggregate --output /tmp/build-order --folders ${RECIPE_DIRS[@]}
-  cp /tmp/build-order/output_order_recipes_* python-order.txt
+
+  # Skip already-seen duplicates (c3i examine bug?)
+  cp /tmp/build-order/output_order_recipes_* python-order.txt.tmp
+  IFS=$'\n' read -d '' -r -a PYTHON_ORDER_TMP < python-order.txt.tmp
+  local -a PYTHON_ORDER
+  for ENTRY in "${PYTHON_ORDER_TMP[@]}"; do
+    if ! contains "${ENTRY}" "${PYTHON_ORDER[@]}"; then
+      PYTHON_ORDER+=(${ENTRY})
+    else
+     echo "Skipped duplicate entry ${ENTRY}"
+    fi
+  done
+  rm -f python-order.txt
+  for ENTRY in "${PYTHON_ORDER[@]}"; do
+    echo ${ENTRY} >> python-order.txt
+  done
+
   echo "Done, please see python-order.txt"
 }
 
