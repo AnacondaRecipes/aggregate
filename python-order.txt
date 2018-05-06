@@ -338,7 +338,16 @@ hupper-feedstock
 pastedeploy-feedstock
 plaster-feedstock
 plaster_pastedeploy-feedstock
+persistent-feedstock
+zope.component-feedstock
+zope.event-feedstock
+repoze.lru-feedstock
+wsgiproxy2-feedstock
+pyquery-feedstock
+waitress-feedstock
+webtest-feedstock
 pyramid-feedstock
+colander-feedstock
 cornice-feedstock
 ephem-feedstock
 pyasn1-feedstock
