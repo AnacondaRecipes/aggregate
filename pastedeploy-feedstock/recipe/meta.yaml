@@ -1,4 +1,4 @@
-{% set name = "pastedeploy" %}
+{% set name = "PasteDeploy" %}
 {% set version = "1.5.2" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}

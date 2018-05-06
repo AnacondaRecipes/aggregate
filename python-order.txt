@@ -330,6 +330,14 @@ pyface-feedstock
 traits-feedstock
 apptools-feedstock
 envisage-feedstock
+zope-feedstock
+zope.deprecation-feedstock
+zope.interface-feedstock
+translationstring-feedstock
+hupper-feedstock
+pastedeploy-feedstock
+plaster-feedstock
+plaster_pastedeploy-feedstock
 pyramid-feedstock
 cornice-feedstock
 ephem-feedstock
