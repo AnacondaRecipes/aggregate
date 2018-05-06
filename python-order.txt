@@ -308,7 +308,6 @@ rasterio-feedstock
 param-feedstock
 xarray-feedstock
 pytest-benchmark-feedstock
-datashader-feedstock
 statistics-feedstock
 dbf-feedstock
 descartes-feedstock
