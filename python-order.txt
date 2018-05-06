@@ -319,9 +319,7 @@ dnspython-feedstock
 pyinotify-feedstock
 doit-feedstock
 drmaa-feedstock
-dropbox-feedstock
 elasticsearch-feedstock
-elasticsearch-async-feedstock
 elasticsearch-dsl-feedstock
 qtpy-feedstock
 ply-feedstock
