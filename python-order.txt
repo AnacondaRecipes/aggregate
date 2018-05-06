@@ -330,6 +330,8 @@ pyface-feedstock
 traits-feedstock
 apptools-feedstock
 envisage-feedstock
+pyramid-feedstock
+cornice-feedstock
 ephem-feedstock
 pyasn1-feedstock
 pynacl-feedstock
