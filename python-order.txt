@@ -302,7 +302,7 @@ scikit-learn-feedstock
 dask-glm-feedstock
 dask-searchcv-feedstock
 dask-ml-feedstock
-gdal-feedstock
+gdal-2.3.0-feedstock
 snuggs-feedstock
 rasterio-feedstock
 param-feedstock

@@ -2769,3 +2769,6 @@
 	path = pyproj-feedstock
 	url = ../pyproj-feedstock
 	branch = master
+[submodule "gdal-2.3.0-feedstock"]
+	path = gdal-2.3.0-feedstock
+	url = ../gdal-feedstock
