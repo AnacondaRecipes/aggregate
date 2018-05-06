@@ -1,0 +1,49 @@
+{% set name = "plaster" %}
+{% set version = "1.0" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "8351c7c7efdf33084c1de88dd0f422cbe7342534537b553c49b857b12d98c8c3" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  '{{ hash_type }}': '{{ hash_value }}'
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+
+test:
+  imports:
+    - plaster
+
+about:
+  home: https://docs.pylonsproject.org/projects/plaster/en/latest/
+  license: MIT License
+  license_family: MIT
+  license_file: ''
+  summary: A loader interface around multiple config file formats.
+  description: |
+    plaster is a loader interface around arbitrary config file formats. It exists
+    to define a common API for applications to use when they wish to load
+    configuration settings. The library itself does not aim to handle anything
+    except a basic API that applications may use to find and load configuration
+    settings. Any specific constraints should be implemented in a pluggable
+    loader which can be registered via an entrypoint.
+  doc_url: https://docs.pylonsproject.org/projects/plaster/en/latest/
+  dev_url: https://github.com/Pylons/plaster
+
+extra:
+  recipe-maintainers:
+    - mingwandroid
