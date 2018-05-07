@@ -1,4 +1,4 @@
-{% set version = "1.7.0" %}
+{% set version = "1.7.1" %}
 
 package:
   name: tensorflow-base
@@ -7,7 +7,7 @@ package:
 source:
   fn: tensorflow-{{ version }}.tar.gz
   url: https://github.com/tensorflow/tensorflow/archive/v{{ version }}.tar.gz
-  sha256: c676a96fc8700722816b2b98c85578b2f99fac7a7b2484c9c7f0641484f8d50d
+  sha256: 3147f8c60d1f30da23a831bcf732e74b935dcee7c62e4b8b85f0f093030b52c8
   patches:
     # Patches need to get certain tests to pass on CentOS 6
     - stable-image-rotate-test.patch                  # [linux]
@@ -20,13 +20,12 @@ source:
     - use_installed_mkl.patch                         # [linux]
     # add support for glibc 2.11
     - support_glibc_2_11.patch                        # [linux]
-    - 0001-jpeg.BUILD-Using-cpu-instead-of-android_cpu-17508.patch
     - 0002-Remove-TF_NEED_KAFKA-from-configure.py-as-it-is-not-.patch
     - 0003-Update-is_windows-to-allow-mingw-shells.patch
     - 0004-Escape-regex-pattern-properly-before-using-it.patch
 
 build:
-  number: 1
+  number: 0
   skip: True  # [not x86_64]
   skip: True  # [win and vc<14]
   entry_points:
