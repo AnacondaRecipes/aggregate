@@ -10,15 +10,14 @@ source:
   sha1: 00a04c30a6dd6d2cdc91be72b3131a997c5d5202
 
 build:
-  number: 2
+  number: 3
   skip: True  # [not linux64]
   detect_binary_files_with_prefix: False
 
 requirements:
   build:
-    # use the GCC 5.5.0 toolchain
-    - gxx_impl_linux-64 ==5.5.0
-    - gcc_impl_linux-64 ==5.5.0
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   host:
     - cudatoolkit {{ cudatoolkit }}*
     - cudnn {{ cudnn }}*
@@ -103,8 +102,6 @@ test:
 
     # Test libraries.
     - test -f "${PREFIX}/lib/libcaffe.so"
-
-    - conda inspect linkages -p $PREFIX caffe-gpu
 
   imports:
     - caffe

@@ -2,9 +2,6 @@
 
 set -ex
 
-# activate the GCC 5.5.0 toolchain
-source ${RECIPE_DIR}/activate_toolchain_gcc5.5.sh
-
 # Setup CMake build location
 mkdir build
 cd build
