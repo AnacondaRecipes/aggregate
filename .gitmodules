@@ -2797,3 +2797,7 @@
 	path = twython-feedstock
 	url = ../twython-feedstock/
 	branch = master
+[submodule "python-crfsuite-feedstock"]
+	path = python-crfsuite-feedstock
+	url = ../python-crfsuite-feedstock/
+	branch = master
