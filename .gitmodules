@@ -2781,3 +2781,7 @@
 	path = apptools-feedstock
 	url = ../apptools-feedstock
 	branch = master
+[submodule "blinker-feedstock"]
+	path = blinker-feedstock
+	url = ../blinker-feedstock/
+	branch = master
