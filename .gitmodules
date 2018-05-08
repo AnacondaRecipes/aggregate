@@ -2793,3 +2793,7 @@
 	path = requests-oauthlib-feedstock
 	url = ../requests-oauthlib-feedstock/
 	branch = master
+[submodule "twython-feedstock"]
+	path = twython-feedstock
+	url = ../twython-feedstock/
+	branch = master
