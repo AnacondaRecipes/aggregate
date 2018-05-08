@@ -10,11 +10,15 @@ source:
   git_tag: {{ commit }}
   patches:
     - 0001-force-system-nccl.patch
+    # When run on a system without a GPU, PyTorch does not require the CUDA
+    # libraries. Therefore symbols should not be resolved at load time rather
+    # resolution should be defered until the function is called (lazy binding).
+    - lazy_bind_C_extension.patch
     # https://github.com/pytorch/pytorch/issues/4499
     - define_speed_unknown.patch
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: False
 
 requirements:
@@ -53,7 +57,6 @@ test:
     - test
   commands:
     - ./test/run_test.sh
-    - conda inspect linkages -p $PREFIX pytorch
 
 about:
   home: http://pytorch.org/
