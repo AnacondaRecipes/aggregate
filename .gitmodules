@@ -2785,3 +2785,7 @@
 	path = blinker-feedstock
 	url = ../blinker-feedstock/
 	branch = master
+[submodule "oauthlib-feedstock"]
+	path = oauthlib-feedstock
+	url = ../oauthlib-feedstock/
+	branch = master
