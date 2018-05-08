@@ -2789,3 +2789,7 @@
 	path = oauthlib-feedstock
 	url = ../oauthlib-feedstock/
 	branch = master
+[submodule "requests-oauthlib-feedstock"]
+	path = requests-oauthlib-feedstock
+	url = ../requests-oauthlib-feedstock/
+	branch = master
