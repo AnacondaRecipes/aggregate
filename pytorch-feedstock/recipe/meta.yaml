@@ -1,5 +1,5 @@
-{% set version = "0.3.1" %}
-{% set commit = "2b4748011b5881583567bb166801ca6625f2fdda"%}
+{% set version = "0.4.0" %}
+{% set commit = "200fb22b22c5f1c5345d99743ef43764b9a8323c"%}
 
 package:
   name: pytorch
@@ -18,7 +18,7 @@ source:
     - define_speed_unknown.patch
 
 build:
-  number: 1
+  number: 0
   detect_binary_files_with_prefix: False
 
 requirements:
@@ -33,11 +33,13 @@ requirements:
     - nccl
     # other requirements
     - python
-    - numpy 1.11*
+    - numpy
     - setuptools
     - pyyaml
     - cffi
-    - mkl-devel
+    - mkl-devel {{ mkl }}
+    - typing
+    - ninja
     - magma
 
   run:
@@ -49,14 +51,19 @@ requirements:
     - python
     - {{ pin_compatible('numpy') }}
     - cffi
+    - ninja
 
 test:
+  requires:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - setuptools
   imports:
     - torch
   source_files:
     - test
   commands:
-    - ./test/run_test.sh
+    - python ./test/run_test.py || true
 
 about:
   home: http://pytorch.org/
