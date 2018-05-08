@@ -602,3 +602,5 @@ xlsxwriter-feedstock
 xlwt-feedstock
 yt-feedstock
 mxnet-feedstock
+perf-feedstock
+performance-feedstock
