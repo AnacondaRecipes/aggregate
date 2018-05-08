@@ -1,0 +1,18 @@
+diff --git a/performance/venv.py b/performance/venv.py
+index 0744e7b..c0980b5 100644
+--- a/performance/venv.py
++++ b/performance/venv.py
+@@ -495,9 +495,10 @@ def _install_req(self):
+         self.run_cmd(cmd)
+ 
+         # install indirect requirements
+-        cmd = pip_program + ['install']
+-        cmd.extend(requirements.indirect_req)
+-        self.run_cmd(cmd)
++        if requirements.indirect_req:
++            cmd = pip_program + ['install']
++            cmd.extend(requirements.indirect_req)
++            self.run_cmd(cmd)
+ 
+         # install requirements
+         cmd = pip_program + ['install']
