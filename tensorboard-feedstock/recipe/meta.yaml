@@ -1,4 +1,4 @@
-{% set version = "1.7.0" %}
+{% set version = "1.8.0" %}
 
 package:
   name: tensorboard
@@ -7,15 +7,15 @@ package:
 source:
   fn: tensorflow-{{ version }}.tar.gz                                          # [unix]
   url: https://github.com/tensorflow/tensorboard/archive/{{ version }}.tar.gz  # [unix]
-  sha256: b56a61433d58eea51d1d08194521126d78b1d6a92a03a243f89108d3890758fa     # [unix]
+  sha256: 9483087bafa68420c846c6fc0be8688c4922f1fc2fa4c1add9c278cf014c9846     # [unix]
 
   # Rename this to dummy since we don't want CB to extract it
   fn: tensorboard-{{ version }}-py3-none-any.whl.dummy                                        # [win]
   url: https://pypi.io/packages/py3/t/tensorboard/tensorboard-{{ version }}-py3-none-any.whl  # [win]
-  sha256: 4c4793f904d2e8f5b83fc05ae3330e48c8305f08a3250019a6f44e37681644a9                    # [win]
+  sha256: 7776cc8bcfd0d07cd106e9e86c011ab8eca38c97b57f5433b9f0fd6bbf31a36e                    # [win]
 
 build:
-  number: 1
+  number: 0
   skip: True  # [not x86_64]
   skip: True  # [win and vc<14]
   # Do not include the tensorboard entry point as it conflicts with a file in
@@ -49,7 +49,7 @@ requirements:
 
 test:
   requires:
-    - tensorflow-base >=1.7.0,<1.8.0
+    - tensorflow-base >=1.8.0,<1.9.0
   imports:
     - tensorboard
   commands:
