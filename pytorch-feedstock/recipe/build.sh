@@ -9,6 +9,10 @@ if [ ${CUDA_VERSION} == "8.0" ]; then
     # compile for Kepler, Kepler+Tesla, Maxwell, Volta
     export TORCH_CUDA_ARCH_LIST="3.0;3.5;5.0;5.2+PTX;6.0;6.1"
 fi
+if [ ${CUDA_VERSION} == "9.0" ]; then
+    # compile for Kepler, Kepler+Tesla, Maxwell, Volta
+    export TORCH_CUDA_ARCH_LIST="3.0;3.5;5.0;5.2+PTX;6.0;6.1;7.0"
+fi
 export TORCH_NVCC_FLAGS="-Xfatbin -compress-all"
 export PYTORCH_BINARY_BUILD=1
 export TH_BINARY_BUILD=1
