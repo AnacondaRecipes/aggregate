@@ -24,6 +24,9 @@ if [[ ${ARCH} == 'ppc64le' ]]; then
 fi
 
 CUDA_ARCH_BIN="30 35 50 52 60 61"
+if [ ${cudatoolkit} == "9.0" ]; then
+    CUDA_ARCH_BIN="30 35 50 52 60 61 70"
+fi
 
 cmake \
       -DUSE_CUDNN=1                                         \
