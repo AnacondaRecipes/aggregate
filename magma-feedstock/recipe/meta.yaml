@@ -1,0 +1,38 @@
+# adapted from recipe in https://github.com/pytorch/builder
+# TODO: examine if it is possible to link DSO dynamically
+package:
+  name: magma
+  version: 2.3.0
+
+source:
+   url: http://icl.cs.utk.edu/projectsfiles/magma/downloads/magma-2.3.0.tar.gz
+   patches:
+    # the cmakelists patch is specific to CUDA 9, modify if CUDA 8 is needed
+    - cmakelists.patch
+    - thread_queue.patch
+    - magma_cparict_tools.patch
+    - magma_dparict_tools.patch
+    - magma_sparict_tools.patch
+    - magma_zparict_tools.patch
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - cmake
+  host:
+    # cudatoolkit is not used in the build but is included to pin the
+    # CUDA version and avoid mixing of CUDA runtimes.
+    - cudatoolkit {{ cudatoolkit }}*
+  run:
+    - cudatoolkit {{ cudatoolkit }}*
+
+about:
+  home: http://icl.cs.utk.edu/magma/software/index.html
+  license: BSD 3-Clause
+  license_family: BSD
+  license_file: COPYRIGHT
+  summary: Matrix Algebra on GPU and Multicore Architectures
