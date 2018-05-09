@@ -1,4 +1,4 @@
-{% set version = "1.7.1" %}
+{% set version = "1.8.0" %}
 
 package:
   name: tensorflow-base
@@ -7,7 +7,7 @@ package:
 source:
   fn: tensorflow-{{ version }}.tar.gz
   url: https://github.com/tensorflow/tensorflow/archive/v{{ version }}.tar.gz
-  sha256: 3147f8c60d1f30da23a831bcf732e74b935dcee7c62e4b8b85f0f093030b52c8
+  sha256: 47646952590fd213b747247e6870d89bb4a368a95ae3561513d6c76e44f92a75
   patches:
     # Patches need to get certain tests to pass on CentOS 6
     - stable-image-rotate-test.patch                  # [linux]
@@ -20,7 +20,6 @@ source:
     - use_installed_mkl.patch                         # [linux]
     # add support for glibc 2.11
     - support_glibc_2_11.patch                        # [linux]
-    - 0002-Remove-TF_NEED_KAFKA-from-configure.py-as-it-is-not-.patch
     - 0003-Update-is_windows-to-allow-mingw-shells.patch
     - 0004-Escape-regex-pattern-properly-before-using-it.patch
 
@@ -41,7 +40,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     # conda build requirements
-    - bazel >=0.5.4
+    - bazel >=0.10.0
     - posix  # [win]
     - m2-patch  # [win]
     - pip
@@ -49,7 +48,7 @@ requirements:
     - swig
     - zlib
     # requirements specified by the package itself
-    - wheel
+    - wheel >=0.26
     - termcolor >=1.1.0
     - six >=1.10.0
     - protobuf >=3.4.0
