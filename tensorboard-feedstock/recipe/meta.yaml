@@ -18,12 +18,10 @@ build:
   number: 0
   skip: True  # [not x86_64]
   skip: True  # [win and vc<14]
-  # Do not include the tensorboard entry point as it conflicts with a file in
-  # the tensorflow-base/tensorflow-gpu-base packages.
-  # In the next release restore this entry point and remove the file in the
-  # -base packages.
-  #entry_points:
-  #  - tensorboard = tensorboard.main:run_main
+  # Make sure there is no tensorboard entry point in the tensorflow-{gpu-,}base
+  # packages as it conflicts with a file in this package.
+  entry_points:
+    - tensorboard = tensorboard.main:run_main
 
 requirements:
   build:
