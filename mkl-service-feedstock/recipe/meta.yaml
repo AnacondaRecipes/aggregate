@@ -13,6 +13,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - git
   host:
     - python
     - mkl-devel 2018.0.0
