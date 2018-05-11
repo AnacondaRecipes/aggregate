@@ -10,14 +10,13 @@ function contains() {
 }
 
 function get_order() {
-  [[ -f repodata.linux.json ]] || curl -o repodata.linux.json -SLO https://repo.continuum.io/pkgs/main/linux-64/repodata.json
-  [[ -f repodata.macos.json ]] || curl -o repodata.macos.json -SLO https://repo.continuum.io/pkgs/main/osx-64/repodata.json
-  [[ -f repodata.win.json ]]   || curl -o repodata.win.json -SLO https://repo.continuum.io/pkgs/main/win-64/repodata.json
-  local -a PKGS=$(cat repodata.linux.json repodata.macos.json repodata.win.json | jq --raw-output '.packages[] | select(.depends[] | contains("python")) .name' | sort | uniq)
 
   # Use this block to iterate on fixing recipe cycles.
   # c3i examine will give a list of things involved in a cycle, but often it will include more entries than are
   # necessary. If you feed that list back in here it will usually be able to give a smaller list next time.
+  local OUTPUT=$1; shift
+  local -a PKGS=$*
+
   if [[ no == yes ]]; then
     PKGS=()
     PKGS+=(pip)
@@ -49,11 +48,11 @@ function get_order() {
     echo "WARNING :: ${PKGS_MISSING[@]}"
   fi
 
-  c3i examine --matrix-base-dir ~/conda/private_conda_recipes/rays-scratch-scripts/c3i-build-orderer-config ~/conda/aggregate --output /tmp/build-order --folders ${RECIPE_DIRS[@]}
+  c3i examine --matrix-base-dir ~/conda/private_conda_recipes/rays-scratch-scripts/c3i-build-orderer-config ${PWD} --output /tmp/build-order --folders ${RECIPE_DIRS[@]}
 
   # Skip already-seen duplicates (c3i examine bug?)
-  cp /tmp/build-order/output_order_recipes_* python-order.txt.tmp
-  IFS=$'\n' read -d '' -r -a PYTHON_ORDER_TMP < python-order.txt.tmp
+  cp /tmp/build-order/output_order_recipes_* ${OUTPUT}.tmp
+  IFS=$'\n' read -d '' -r -a PYTHON_ORDER_TMP < ${OUTPUT}.tmp
   local -a PYTHON_ORDER
   for ENTRY in "${PYTHON_ORDER_TMP[@]}"; do
     if ! contains "${ENTRY}" "${PYTHON_ORDER[@]}"; then
@@ -62,12 +61,23 @@ function get_order() {
      echo "Skipped duplicate entry ${ENTRY}"
     fi
   done
-  rm -f python-order.txt
+  rm -f ${OUTPUT}
   for ENTRY in "${PYTHON_ORDER[@]}"; do
-    echo ${ENTRY} >> python-order.txt
+    echo ${ENTRY} >> ${OUTPUT}
   done
 
-  echo "Done, please see python-order.txt"
+  echo "Done, please see ${OUTPUT}"
 }
 
-get_order
+function get_order_python() {
+  [[ -f repodata.linux.json ]] || curl -o repodata.linux.json -SLO https://repo.continuum.io/pkgs/main/linux-64/repodata.json
+  [[ -f repodata.macos.json ]] || curl -o repodata.macos.json -SLO https://repo.continuum.io/pkgs/main/osx-64/repodata.json
+  [[ -f repodata.win.json ]]   || curl -o repodata.win.json -SLO https://repo.continuum.io/pkgs/main/win-64/repodata.json
+  local -a PKGS=$(cat repodata.linux.json repodata.macos.json repodata.win.json | jq --raw-output '.packages[] | select(.depends[] | contains("python")) .name' | sort | uniq)
+  get_order $1 ${PKGS}
+}
+
+# get_order_python python-order.txt
+TEMPF=$(mktemp ${TMPDIR}/$(uuidgen).txt)
+get_order ${TEMPF} $*
+cat ${TEMPF}
