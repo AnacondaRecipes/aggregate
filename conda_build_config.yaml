@@ -84,7 +84,7 @@ libgsasl:
 libkml:
   - 1.3
 libnetcdf:
-  - 4.5
+  - 4.6
 libpng:
   - 1.6
 libtiff:
