@@ -2801,3 +2801,7 @@
 	path = python-crfsuite-feedstock
 	url = ../python-crfsuite-feedstock/
 	branch = master
+[submodule "cftime-feedstock"]
+	path = cftime-feedstock
+	url = ../cftime-feedstock
+	branch = master
