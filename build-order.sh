@@ -48,6 +48,7 @@ function get_order() {
     echo "WARNING :: ${PKGS_MISSING[@]}"
   fi
 
+  [[ -d /tmp/build-order ]] && rm -rf /tmp/build-order
   c3i examine --matrix-base-dir ~/conda/private_conda_recipes/rays-scratch-scripts/c3i-build-orderer-config ${PWD} --output /tmp/build-order --folders ${RECIPE_DIRS[@]}
 
   # Skip already-seen duplicates (c3i examine bug?)
@@ -69,15 +70,67 @@ function get_order() {
   echo "Done, please see ${OUTPUT}"
 }
 
-function get_order_python() {
+function get_downstreams_of() {
+  local OF=$1; shift
+  if ! type -P jq; then
+    echo "Please install jq via"
+    echo "conda install conda-forge::jq"
+    exit 1
+  fi
   [[ -f repodata.linux.json ]] || curl -o repodata.linux.json -SLO https://repo.continuum.io/pkgs/main/linux-64/repodata.json
   [[ -f repodata.macos.json ]] || curl -o repodata.macos.json -SLO https://repo.continuum.io/pkgs/main/osx-64/repodata.json
   [[ -f repodata.win.json ]]   || curl -o repodata.win.json -SLO https://repo.continuum.io/pkgs/main/win-64/repodata.json
-  local -a PKGS=$(cat repodata.linux.json repodata.macos.json repodata.win.json | jq --raw-output '.packages[] | select(.depends[] | contains("python")) .name' | sort | uniq)
-  get_order $1 ${PKGS}
+  local -a PKGS=$(cat repodata.linux.json repodata.macos.json repodata.win.json | jq --raw-output ".packages[] | select(.depends[] | contains(\"$OF\")) .name" | sort | uniq)
+  echo ${PKGS[@]}
 }
 
-# get_order_python python-order.txt
+declare -a PKG_ARGS
+DOWNSTREAMS_OF=
+while [ "$#" -gt 0 ]; do
+    OPT="$1"
+    case "$1" in
+        --enable-*)
+            VAR=$(echo $1 | sed "s,^--enable-\(.*\),\1,")
+            VAL=yes
+            ;;
+        --disable-*)
+            VAR=$(echo $1 | sed "s,^--disable-\(.*\),\1,")
+            VAL=no
+            ;;
+        --*=*)
+            VAR=$(echo $1 | sed "s,^--\(.*\)=.*,\1,")
+            VAL=$(echo $1 | sed "s,^--.*=\(.*\),\1,")
+            ;;
+        *)
+            PKG_ARGS+=($1)
+            ;;
+    esac
+    VAR=$(echo "$VAR" | tr '[a-z]-' '[A-Z]_')
+    case "$VAR" in
+        sources)
+            if [ "$VAL" = "local" -o "$VAL" = "remote" ]; then
+                eval "$VAR=\$VAL"
+            else
+                echo "$VAL can only be 'local' or 'remote'"
+                exit 1
+            fi
+            ;;
+        *)
+            eval "$VAR=\$VAL"
+            ;;
+    esac
+    shift
+    OPTIONS_DEBUG=$OPTIONS_DEBUG" $VAR=$VAL"
+done
+
+declare -a PKGS
+if [[ -n ${DOWNSTREAMS_OF} ]]; then
+  PKGS=$(get_downstreams_of ${DOWNSTREAMS_OF})
+else
+  PKGS=${PKG_ARGS[@]}
+fi
+
 TEMPF=$(mktemp ${TMPDIR}/$(uuidgen).txt)
-get_order ${TEMPF} $*
+rm ${TEMPF} || true
+get_order ${TEMPF} ${PKGS[@]}
 cat ${TEMPF}
