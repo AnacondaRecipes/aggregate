@@ -2805,3 +2805,7 @@
 	path = cftime-feedstock
 	url = ../cftime-feedstock
 	branch = master
+[submodule "libidn11-feedstock"]
+	path = libidn11-feedstock
+	url = ../libidn11-feedstock
+	branch = master
