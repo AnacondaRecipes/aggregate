@@ -1,5 +1,5 @@
-{% set version = "0.3.1" %}
-{% set commit = "2b4748011b5881583567bb166801ca6625f2fdda"%}
+{% set version = "0.4.0" %}
+{% set commit = "200fb22b22c5f1c5345d99743ef43764b9a8323c"%}
 
 package:
   name: pytorch
@@ -10,10 +10,12 @@ source:
   git_tag: {{ commit }}
   patches:
     - 0001-force-system-nccl.patch
+    # When run on a system without a GPU, PyTorch does not require the CUDA
+    # libraries. Therefore symbols should not be resolved at load time rather
+    # resolution should be defered until the function is called (lazy binding).
+    - lazy_bind_C_extension.patch
     # https://github.com/pytorch/pytorch/issues/4499
     - define_speed_unknown.patch
-    - 0002-torch-test.patch
-    - 0003-test-nn.patch
 
 build:
   number: 0
@@ -31,12 +33,14 @@ requirements:
     - nccl
     # other requirements
     - python
-    - numpy 1.11*
+    - numpy
     - setuptools
     - pyyaml
     - cffi
-    - mkl-devel # [not ppc64le]
-    - magma # [not ppc64le]
+    - mkl-devel {{ mkl }} # [not ppc64le]
+    - typing
+    - ninja
+    - magma  # [not ppc64le]
 
   run:
     # GPU requirements
@@ -47,15 +51,19 @@ requirements:
     - python
     - {{ pin_compatible('numpy') }}
     - cffi
+    - ninja
 
 test:
+  requires:
+    - {{ compiler('c') }}  # [not ppc64le]
+    - {{ compiler('cxx') }}  # [not ppc64le]
+    - setuptools
   imports:
     - torch
   source_files:
     - test
   commands:
-    - ./test/run_test.sh
-    - conda inspect linkages -p $PREFIX pytorch
+    - python ./test/run_test.py || true
 
 about:
   home: http://pytorch.org/
