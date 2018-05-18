@@ -12,13 +12,13 @@ source:
   fn: {{ name }}-{{ version }}.{{ file_ext }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
   {{ hash_type }}: {{ hash_value }}
+  patches:
+    - set_109_deployment_target.patch  # [osx and py35]
 
 build:
   number: 0
   # protobuf does not support Visual C++ 2008, skip windows py27
   skip: True  # [win and vc<10]
-  # TODO: macOS support
-  skip: True  # [osx]
 
 requirements:
   build:
@@ -31,6 +31,8 @@ requirements:
     - protobuf >=3.5.0
     - futures >=2.2.0   # [py27]
     - enum34 >=1.0.4    # [py27]
+    - pkg-config        # [osx]
+    - zlib              # [osx]
   run:
     - python
     - setuptools

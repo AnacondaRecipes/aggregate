@@ -2733,3 +2733,79 @@
 	path = python-3.6-feedstock
 	url = ../python-feedstock
 	branch = master-3.6
+[submodule "botocore-1.8.21-feedstock"]
+	path = botocore-1.8.21-feedstock
+	url = ../botocore-feedstock
+	branch = master-1.8.21
+[submodule "numba-feedstock"]
+	path = numba-feedstock
+	url = ../numba-feedstock
+	branch = master
+[submodule "llvmlite-feedstock"]
+	path = llvmlite-feedstock
+	url = ../llvmlite-feedstock
+	branch = master
+[submodule "future-feedstock"]
+	path = future-feedstock
+	url = ../future-feedstock
+	branch = master
+[submodule "coveralls-feedstock"]
+	path = coveralls-feedstock
+	url = ../coveralls-feedstock
+	branch = master
+[submodule "docopt-feedstock"]
+	path = docopt-feedstock
+	url = ../docopt-feedstock/
+	branch = master
+[submodule "mpl-scatter-density-feedstock"]
+	path = mpl-scatter-density-feedstock
+	url = ../mpl-scatter-density-feedstock/
+	branch = master
+[submodule "fast-histogram-feedstock"]
+	path = fast-histogram-feedstock
+	url = ../fast-histogram-feedstock/
+	branch = master
+[submodule "pyproj-feedstock"]
+	path = pyproj-feedstock
+	url = ../pyproj-feedstock
+	branch = master
+[submodule "gdal-2.3.0-feedstock"]
+	path = gdal-2.3.0-feedstock
+	url = ../gdal-feedstock
+	branch = master-2.3.0
+[submodule "traits-feedstock"]
+	path = traits-feedstock
+	url = ../traits-feedstock
+	branch = master
+[submodule "apptools-feedstock"]
+	path = apptools-feedstock
+	url = ../apptools-feedstock
+	branch = master
+[submodule "blinker-feedstock"]
+	path = blinker-feedstock
+	url = ../blinker-feedstock/
+	branch = master
+[submodule "oauthlib-feedstock"]
+	path = oauthlib-feedstock
+	url = ../oauthlib-feedstock/
+	branch = master
+[submodule "requests-oauthlib-feedstock"]
+	path = requests-oauthlib-feedstock
+	url = ../requests-oauthlib-feedstock/
+	branch = master
+[submodule "twython-feedstock"]
+	path = twython-feedstock
+	url = ../twython-feedstock/
+	branch = master
+[submodule "python-crfsuite-feedstock"]
+	path = python-crfsuite-feedstock
+	url = ../python-crfsuite-feedstock/
+	branch = master
+[submodule "cftime-feedstock"]
+	path = cftime-feedstock
+	url = ../cftime-feedstock
+	branch = master
+[submodule "libidn11-feedstock"]
+	path = libidn11-feedstock
+	url = ../libidn11-feedstock
+	branch = master

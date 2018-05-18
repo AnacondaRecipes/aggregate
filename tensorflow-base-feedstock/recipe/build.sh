@@ -5,21 +5,42 @@ set -ex
 mkdir -p ./bazel_output_base
 export BAZEL_OPTS="--batch "
 
+# set up bazel config file for conda provided clang toolchain
+if [[ ${HOST} =~ .*darwin.* ]]; then
+    cp -r ${RECIPE_DIR}/custom_clang_toolchain .
+    cd custom_clang_toolchain
+    sed -e "s:\${CLANG}:${CLANG}:" \
+        -e "s:\${INSTALL_NAME_TOOL}:${INSTALL_NAME_TOOL}:" \
+        -e "s:\${CONDA_BUILD_SYSROOT}:${CONDA_BUILD_SYSROOT}:" \
+        cc_wrapper.sh.template > cc_wrapper.sh
+    chmod +x cc_wrapper.sh
+    sed -e "s:\${PREFIX}:${BUILD_PREFIX}:" \
+        -e "s:\${LD}:${LD}:" \
+        -e "s:\${NM}:${NM}:" \
+        -e "s:\${STRIP}:${STRIP}:" \
+        -e "s:\${LIBTOOL}:${LIBTOOL}:" \
+        -e "s:\${CONDA_BUILD_SYSROOT}:${CONDA_BUILD_SYSROOT}:" \
+        CROSSTOOL.template > CROSSTOOL
+    cd ..
+fi
+
 # Python settings
 export PYTHON_BIN_PATH=${PYTHON}
 export PYTHON_LIB_PATH=${SP_DIR}
 export USE_DEFAULT_PYTHON_LIB_PATH=1
 
-# MKL settings, use the full version of MKL from the mkl conda package
-export TF_NEED_MKL=1
-export TF_MKL_ROOT=${PREFIX}
+if [[ ${HOST} =~ .*linux.* ]]; then
+    # MKL settings, use the full version of MKL from the mkl conda package
+    export TF_NEED_MKL=1
+    export TF_MKL_ROOT=${PREFIX}
 
-# MKL needs a license.txt file, create an empty one which will be removed later
-touch ${PREFIX}/license.txt
+    # MKL needs a license.txt file, create an empty one which will be removed later
+    touch ${PREFIX}/license.txt
 
-# fortran files in the include directory confuse bazel, remove them
-rm -f ${PREFIX}/include/*.fi
-rm -f ${PREFIX}/include/*.f90
+    # fortran files in the include directory confuse bazel, remove them
+    rm -f ${PREFIX}/include/*.fi
+    rm -f ${PREFIX}/include/*.f90
+fi
 
 # This is just a placeholder to satisfy the configure prompt.
 # It gets overwritten by --config=mkl below.
@@ -44,10 +65,19 @@ yes "" | ./configure
 # add the following when debugging
 #    --logging=6 \
 #    --subcommands \
-bazel ${BAZEL_OPTS} build \
-    --verbose_failures \
-    --config=mkl \
-    //tensorflow/tools/pip_package:build_pip_package
+if [[ ${HOST} =~ .*darwin.* ]]; then
+    export  BAZEL_USE_CPP_ONLY_TOOLCHAIN=1
+    bazel ${BAZEL_OPTS} build \
+        --crosstool_top=//custom_clang_toolchain:toolchain \
+        --verbose_failures \
+        --config=opt \
+        //tensorflow/tools/pip_package:build_pip_package
+else
+    bazel ${BAZEL_OPTS} build \
+        --verbose_failures \
+        --config=mkl \
+        //tensorflow/tools/pip_package:build_pip_package
+fi
 
 # build a whl file
 mkdir -p $SRC_DIR/tensorflow_pkg

@@ -1,0 +1,60 @@
+{% set name = "performance" %}
+{% set version = "0.6.1" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "88e9abb3ffd98a4f9b4aa5effc574c1e06ccc30445cda7ea40b7053c64e0c6bc" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  '{{ hash_type }}': '{{ hash_value }}'
+  patches:
+    - pip-10.patch
+
+build:
+  number: 0
+  entry_points:
+    - pyperformance=performance.cli:main
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - perf
+    - six
+  run:
+    - python
+    - perf
+    - six
+
+test:
+  imports:
+    - performance
+    - performance.benchmarks
+    - performance.benchmarks.data
+    - performance.tests
+    - performance.tests.data
+  commands:
+    - pyperformance --help
+
+about:
+  home: https://github.com/python/benchmarks
+  license: MIT License
+  license_family: MIT
+  license_file: ''
+  summary: Python benchmark suite
+  description: "##########################\nThe Python Benchmark Suite\n##########################\n\n.. image:: https://img.shields.io/pypi/v/performance.svg\n   :alt: Latest release on the Python Cheeseshop\
+    \ (PyPI)\n   :target: https://pypi.python.org/pypi/performance\n\n.. image:: https://travis-ci.org/python/performance.svg?branch=master\n   :alt: Build status of perf on Travis CI\n   :target: https://travis-ci.org/python/performance\n\
+    \nThe ``performance`` project is intended to be an authoritative source of\nbenchmarks for all Python implementations. The focus is on real-world\nbenchmarks, rather than synthetic benchmarks, using\
+    \ whole applications when\npossible.\n\n* `performance documentation <http://pyperformance.readthedocs.io/>`_\n* `performance GitHub project <https://github.com/python/performance>`_\n  (source code,\
+    \ issues)\n* `Download performance on PyPI <https://pypi.python.org/pypi/performance>`_\n\nperformance is distributed under the MIT license.\n\n"
+  doc_url: ''
+  dev_url: ''
+
+extra:
+  recipe-maintainers: ''

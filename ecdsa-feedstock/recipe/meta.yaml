@@ -1,0 +1,47 @@
+{% set name = "ecdsa" %}
+{% set version = "0.13" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "64cf1ee26d1cde3c73c6d7d107f835fed7c6a2904aef9eac223d57ad800c43fa" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  '{{ hash_type }}': '{{ hash_value }}'
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+
+test:
+  imports:
+    - ecdsa
+
+about:
+  home: http://github.com/warner/python-ecdsa
+  license: MIT
+  license_file: LICENSE
+  summary: ECDSA cryptographic signature library (pure Python)
+  description: |
+    With ECDSA cryptographic signature library, you can quickly create keypairs
+    (signing key and verifying key), sign messages, and verify the signatures.
+    The keys and signatures are very short, making them easy to handle and
+    incorporate into other protocols.
+  doc_url: https://pypi.python.org/pypi/ecdsa
+  doc_source_url: https://github.com/warner/python-ecdsa/blob/master/README.md
+  dev_url: https://github.com/warner/python-ecdsa
+
+extra:
+  recipe-maintainers:
+    - mingwandroid

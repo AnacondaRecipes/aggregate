@@ -10,19 +10,6 @@ export PYTHON_BIN_PATH=${PYTHON}
 export PYTHON_LIB_PATH=${SP_DIR}
 export USE_DEFAULT_PYTHON_LIB_PATH=1
 
-# MKL settings, use the full version of MKL from the mkl conda package
-export TF_NEED_MKL=1
-export TF_MKL_ROOT=${PREFIX}
-
-# MKL needs a license.txt file, create an empty one which will be removed later
-touch ${PREFIX}/license.txt
-
-# fortran files in the include directory confuse bazel, remove them
-rm -f ${PREFIX}/include/*.fi
-rm -f ${PREFIX}/include/*.f90
-
-# This is just a placeholder to satisfy the configure prompt.
-# It gets overwritten by --config=mkl below.
 export CC_OPT_FLAGS="-march=nocona"
 
 # additional settings
@@ -81,7 +68,6 @@ bazel ${BAZEL_OPTS} build \
     --verbose_failures \
     --config=opt \
     --config=cuda \
-    --config=mkl --copt="-DEIGEN_USE_VML" \
     --color=yes \
     --curses=no \
     //tensorflow/tools/pip_package:build_pip_package

@@ -83,7 +83,7 @@ function _tc_activation() {
 
 # When people are using conda-build, assume that adding rpath during build, and pointing at
 #    the host env's includes and libs is helpful default behavior
-if [ "${CONDA_BUILD}" = "1" ]; then
+if [ "${CONDA_BUILD:-0}" = "1" ]; then
   CXXFLAGS_USED="@CXXFLAGS@ -I${PREFIX}/include -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix"
   DEBUG_CXXFLAGS_USED="@CXXFLAGS@ @DEBUG_CXXFLAGS@ -I${PREFIX}/include -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix"
 else
@@ -91,10 +91,12 @@ else
   DEBUG_CXXFLAGS_USED="@CXXFLAGS@ @DEBUG_CXXFLAGS@"
 fi
 
-if [ -f /tmp/old-env-$$.txt ]; then
-  rm -f /tmp/old-env-$$.txt || true
+if [ "${CONDA_BUILD:-0}" = "1" ]; then
+  if [ -f /tmp/old-env-$$.txt ]; then
+    rm -f /tmp/old-env-$$.txt || true
+  fi
+  env > /tmp/old-env-$$.txt
 fi
-env > /tmp/old-env-$$.txt
 
 _tc_activation \
   activate host @CHOST@ @CHOST@- \
@@ -106,12 +108,14 @@ _tc_activation \
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"
 else
-  if [ -f /tmp/new-env-$$.txt ]; then
-    rm -f /tmp/new-env-$$.txt || true
-  fi
-  env > /tmp/new-env-$$.txt
+  if [ "${CONDA_BUILD:-0}" = "1" ]; then
+    if [ -f /tmp/new-env-$$.txt ]; then
+      rm -f /tmp/new-env-$$.txt || true
+    fi
+    env > /tmp/new-env-$$.txt
 
-  echo "INFO: $(_get_sourced_filename) made the following environmental changes:"
-  diff -U 0 -rN /tmp/old-env-$$.txt /tmp/new-env-$$.txt | tail -n +4 | grep "^-.*\|^+.*" | grep -v "CONDA_BACKUP_" | sort
+    echo "INFO: $(_get_sourced_filename) made the following environmental changes:"
+    diff -U 0 -rN /tmp/old-env-$$.txt /tmp/new-env-$$.txt | tail -n +4 | grep "^-.*\|^+.*" | grep -v "CONDA_BACKUP_" | sort
+    rm -f /tmp/old-env-$$.txt /tmp/new-env-$$.txt || true
+  fi
 fi
-rm -f /tmp/old-env-$$.txt /tmp/new-env-$$.txt || true

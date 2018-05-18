@@ -20,6 +20,14 @@ To build a conda tensorflow package with GPU support
     ln -s /usr/local/cuda/lib64/stubs/libcuda.so /usr/local/cuda/lib64/stubs/libcuda.so.1
     ```
 
+* For CUDA 8 support one file needs to be copied:
+
+    ```
+    cp /usr/local/cuda-8.0/nvvm/libdevice/libdevice.compute_50.10.bc /usr/local/cuda-8.0/nvvm/libdevice/libdevice.10.bc
+    ```
+
+    see: https://github.com/tensorflow/tensorflow/issues/17801
+
 * Update conda and conda-build, and navigate to the recipe root folder.
 
     Modify conda_build_config.yaml in this directory to specifiy the

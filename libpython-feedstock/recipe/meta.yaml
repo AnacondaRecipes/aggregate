@@ -2,6 +2,9 @@ package:
   name: libpython
   version: 2.1
 
+build:
+  skip: True  # [not win]
+
 requirements:
   build:
     - python

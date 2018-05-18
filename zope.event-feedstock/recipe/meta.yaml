@@ -1,0 +1,50 @@
+{% set name = "zope.event" %}
+{% set version = "4.3.0" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "e0ecea24247a837c71c106b0341a7a997e3653da820d21ef6c08b32548f733e7" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  '{{ hash_type }}': '{{ hash_value }}'
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+    - setuptools
+
+test:
+  imports:
+    - zope
+    - zope.event
+
+about:
+  home: http://www.zope.org/en/latest/
+  license: Zope Public License
+  license_family: OTHER
+  summary: Very basic event publishing system
+  description: |
+    This package provides a simple event system on which application-specific
+    event systems can be built. For example, a type-based event dispatching
+    system that builds on zope.interface can be found in zope.component. A
+    simpler system is distributed with this package and is described in
+    Class-based event handlers.
+  doc_url: http://zopeevent.readthedocs.io/en/latest/
+  dev_url: http://github.com/zopefoundation/zope.event
+
+
+extra:
+  recipe-maintainers:
+    - mingwandroid

@@ -44,4 +44,6 @@ about:
   dev_url: https://github.com/getsentry/responses
 
 extra:
-  recipe-maintainers: ''
+  recipe-maintainers:
+    - nehaljwani
+    - mingwandroid
