@@ -2809,3 +2809,7 @@
 	path = libidn11-feedstock
 	url = ../libidn11-feedstock
 	branch = master
+[submodule "gtest-feedstock"]
+	path = gtest-feedstock
+	url = ../gtest-feedstock
+	branch = master
