@@ -41,9 +41,9 @@ dbus:
 expat:
   - 2.2 
 fontconfig:
-  - 2.12
+  - 2.13
 freetype:
-  - 2.8 
+  - 2.9
 g2clib:
   - 1.6
 gstreamer:
@@ -59,7 +59,7 @@ glib:
 gmp:
   - 6.1
 harfbuzz:
-  - 1.5
+  - 1.7
 hdf4:
   - 4.2
 hdf5:
