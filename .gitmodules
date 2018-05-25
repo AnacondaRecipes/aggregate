@@ -2813,3 +2813,11 @@
 	path = gtest-feedstock
 	url = ../gtest-feedstock
 	branch = master
+[submodule "texinfo-feedstock"]
+	path = texinfo-feedstock
+	url = ../texinfo-feedstock
+	branch = master
+[submodule "help2man-feedstock"]
+	path = help2man-feedstock
+	url = ../help2man-feedstock
+	branch = master
