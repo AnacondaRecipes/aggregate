@@ -2821,3 +2821,7 @@
 	path = help2man-feedstock
 	url = ../help2man-feedstock
 	branch = master
+[submodule "gawk-feedstock"]
+	path = gawk-feedstock
+	url = ../gawk-feedstock
+	branch = master
