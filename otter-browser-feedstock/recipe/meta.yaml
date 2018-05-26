@@ -1,0 +1,22 @@
+{% set version = '0.9.98' %}
+
+package:
+  name: otter-browser
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/OtterBrowser/otter-browser.git
+  git_tag: v{{ version }}
+  # git_sha1: 7692e3a23f51bb947d47b2063afb65edf305b1bb
+  patches:
+    - 0001-Fix-macOS-10.12-support.patch
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}
+    - cmake
+    - make  # [not win]
+    - jom   # [win]
+  host:
+    - qt >=5.9
