@@ -2825,3 +2825,7 @@
 	path = gawk-feedstock
 	url = ../gawk-feedstock
 	branch = master
+[submodule "python-chromedriver-binary-feedstock"]
+	path = python-chromedriver-binary-feedstock
+	url = ../python-chromedriver-binary-feedstock
+	branch = master
