@@ -104,7 +104,7 @@ MACOSX_DEPLOYMENT_TARGET:
 mkl:
   - 2018
 mpfr:
-  - 3
+  - 4
 # we build for an old version of numpy for forward compatibility
 #    1.11 seems to be the oldest on win that works with scipy 0.19.  Compiler errors otherwise.
 numpy:
@@ -113,7 +113,7 @@ numpy:
 openblas:
   - 0.2.20
 openjpeg:
-  - 2.2
+  - 2.3
 openssl:
   - 1.0.2
 perl:
