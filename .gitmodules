@@ -2829,3 +2829,7 @@
 	path = python-chromedriver-binary-feedstock
 	url = ../python-chromedriver-binary-feedstock
 	branch = master
+[submodule "pyviz_comms-feedstock"]
+	path = pyviz_comms-feedstock
+	url = ../pyviz_comms-feedstock
+	branch = master
