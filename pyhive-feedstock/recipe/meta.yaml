@@ -1,8 +1,8 @@
 {% set name = "PyHive" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "4b75e4dcca7c869daa3d461c567f236f3b7db4ece7731fa51ff297354282f15c" %}
+{% set hash_value = "420ab64dd3305d99f2f8615be6c8ad05864f68b3f926efb2376d190f46341e8f" %}
 
 package:
   name: {{ name|lower }}
