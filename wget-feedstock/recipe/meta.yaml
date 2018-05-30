@@ -1,14 +1,14 @@
 package:
   name: wget
-  version: 1.19.4
+  version: 1.19.5
 
 build:
   number: 0
   skip: True  # [win]
 
 source:
-  url: http://ftp.gnu.org/gnu/wget/wget-1.19.4.tar.gz
-  sha256: 93fb96b0f48a20ff5be0d9d9d3c4a986b469cb853131f9d5fe4cc9cecbc8b5b5
+  url: http://ftp.gnu.org/gnu/wget/wget-1.19.5.tar.gz
+  sha256: b39212abe1a73f2b28f4c6cb223c738559caac91d6e416a6d91d4b9d55c9faee
 
 requirements:
   build:
