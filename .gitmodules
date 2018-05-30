@@ -2833,3 +2833,7 @@
 	path = pyviz_comms-feedstock
 	url = ../pyviz_comms-feedstock
 	branch = master
+[submodule "python-graphviz-feedstock"]
+	path = python-graphviz-feedstock
+	url = ../python-graphviz-feedstock
+	branch = master
