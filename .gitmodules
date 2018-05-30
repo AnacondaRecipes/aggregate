@@ -2837,3 +2837,7 @@
 	path = python-graphviz-feedstock
 	url = ../python-graphviz-feedstock
 	branch = master
+[submodule "invoke-feedstock"]
+	path = invoke-feedstock
+	url = ../invoke-feedstock
+	branch = master
