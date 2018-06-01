@@ -77,10 +77,11 @@ function get_downstreams_of() {
     echo "conda install conda-forge::jq"
     exit 1
   fi
+  [[ -f repodata.r.linux.json ]] || curl -o repodata.linux.json -SLO https://repo.continuum.io/pkgs/r/linux-64/repodata.json
   [[ -f repodata.linux.json ]] || curl -o repodata.linux.json -SLO https://repo.continuum.io/pkgs/main/linux-64/repodata.json
   [[ -f repodata.macos.json ]] || curl -o repodata.macos.json -SLO https://repo.continuum.io/pkgs/main/osx-64/repodata.json
   [[ -f repodata.win.json ]]   || curl -o repodata.win.json -SLO https://repo.continuum.io/pkgs/main/win-64/repodata.json
-  local -a PKGS=$(cat repodata.linux.json repodata.macos.json repodata.win.json | jq --raw-output ".packages[] | select(.depends[] | contains(\"$OF\")) .name" | sort | uniq)
+  local -a PKGS=$(cat repodata.r.linux.json repodata.linux.json repodata.macos.json repodata.win.json | jq --raw-output ".packages[] | select(.depends[] | contains(\"$OF\")) .name" | sort | uniq)
   echo ${PKGS[@]}
 }
 

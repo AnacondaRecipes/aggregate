@@ -9,6 +9,10 @@ source:
   - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/libXext-1.3.3-3.el7.src.rpm
     folder: source
 
+build:
+  missing_dso_whitelist:
+    - '*'
+
 requirements:
   build:
     - libx11-cos7-ppc64le >=1.5.99.902
