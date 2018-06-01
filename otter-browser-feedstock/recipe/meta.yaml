@@ -1,4 +1,5 @@
-{% set version = '0.9.98' %}
+#{% set version = '0.9.98' %}
+{% set version = '0.9.99' %}
 
 package:
   name: otter-browser
@@ -6,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/OtterBrowser/otter-browser.git
-  git_tag: v{{ version }}
+  # git_tag: v{{ version }}
   # git_sha1: 7692e3a23f51bb947d47b2063afb65edf305b1bb
   patches:
     - 0001-Fix-macOS-10.12-support.patch
