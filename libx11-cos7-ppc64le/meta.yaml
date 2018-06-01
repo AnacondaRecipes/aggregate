@@ -9,6 +9,10 @@ source:
   - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/libX11-1.6.5-1.el7.src.rpm
     folder: source
 
+build:
+  missing_dso_whitelist:
+    - '*'
+
 requirements:
   build:
     - libx11-common-cos7-ppc64le >=1.6.5
