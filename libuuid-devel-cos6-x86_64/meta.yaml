@@ -9,6 +9,10 @@ source:
   - url: http://vault.centos.org/6.9/os/Source/SPackages/util-linux-ng-2.17.2-12.28.el6.src.rpm
     folder: source
 
+build:
+  missing_dso_whitelist:
+    - '*'
+
 requirements:
   build:
     - libuuid-cos6-x86_64 ==2.17.2
