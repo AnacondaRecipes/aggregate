@@ -11,7 +11,7 @@ source:
 
 build:
   missing_dso_whitelist:
-    - /lib64/libc.so.6
+    - '*'
 
 outputs:
   - name: libxau-cos7-ppc64le
