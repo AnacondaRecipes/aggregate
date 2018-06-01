@@ -2841,3 +2841,7 @@
 	path = invoke-feedstock
 	url = ../invoke-feedstock
 	branch = master
+[submodule "atomicwrites-feedstock"]
+	path = atomicwrites-feedstock
+	url = ../atomicwrites-feedstock
+	branch = master
