@@ -1,0 +1,31 @@
+From c940c7f3e33d3c2741762ff037615c05ad868e12 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Thu, 31 May 2018 12:06:22 -0500
+Subject: [PATCH 1/3] Try more choices for expat library name
+
+---
+ build/generator/gen_win_dependencies.py | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+diff --git a/build/generator/gen_win_dependencies.py b/build/generator/gen_win_dependencies.py
+index a9ee652..11fc470 100644
+--- a/build/generator/gen_win_dependencies.py
++++ b/build/generator/gen_win_dependencies.py
+@@ -574,9 +574,11 @@ class GenDependenciesBase(gen_base.GeneratorBase):
+ 
+     # apr-Util 0.9-1.4 compiled expat to 'xml.lib', but apr-util 1.5 switched
+     # to the more common 'libexpat.lib'
+-    libname = 'libexpat.lib'
+-    if not os.path.exists(os.path.join(lib_dir, 'libexpat.lib')):
+-      libname = 'xml.lib'
++    libname = 'xml.lib'
++    if os.path.exists(os.path.join(lib_dir, 'libexpat.lib')):
++      libname = 'libexpat.lib'
++    elif os.path.exists(os.path.join(lib_dir, 'expat.lib')):
++      libname = 'expat.lib'
+ 
+     version = (major, minor, patch)
+     xml_version = '%d.%d.%d' % version
+-- 
+2.17.0
+

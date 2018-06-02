@@ -1,0 +1,99 @@
+From a6631e78b9c0d151c575897af05defee5a7bc831 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Thu, 31 May 2018 14:58:19 -0500
+Subject: [PATCH 2/3] Add py3 compatibility
+
+---
+ build/generator/gen_base.py             | 4 ++--
+ build/generator/gen_win.py              | 2 +-
+ build/generator/gen_win_dependencies.py | 4 ++--
+ build/generator/swig/__init__.py        | 2 +-
+ build/generator/swig/header_wrappers.py | 2 +-
+ 5 files changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/build/generator/gen_base.py b/build/generator/gen_base.py
+index f7a75da..285578d 100644
+--- a/build/generator/gen_base.py
++++ b/build/generator/gen_base.py
+@@ -1035,7 +1035,7 @@ class TargetSQLHeader(Target):
+ 
+     self.gen_obj.graph.add(DT_SQLHDR, output, source)
+ 
+-    for line in fileinput.input(source):
++    for line in fileinput.input(source,False,'',0,'r',fileinput.hook_encoded('utf-8')):
+       match = self._re_sql_include.match(line)
+       if not match:
+         continue
+@@ -1322,7 +1322,7 @@ class IncludeDependencyInfo:
+     Return a dictionary with included full file names as keys and None as
+     values."""
+     hdrs = { }
+-    for line in fileinput.input(fname):
++    for line in fileinput.input(fname,False,'',0,'r',fileinput.hook_encoded('utf-8')):
+       match = self._re_include.match(line)
+       if not match:
+         continue
+diff --git a/build/generator/gen_win.py b/build/generator/gen_win.py
+index d2a900c..744ccde 100644
+--- a/build/generator/gen_win.py
++++ b/build/generator/gen_win.py
+@@ -158,7 +158,7 @@ class WinGeneratorBase(gen_win_dependencies.GenDependenciesBase):
+     ### implement this from scratch using the algorithms described in
+     ### http://www.webdav.org/specs/draft-leach-uuids-guids-01.txt
+ 
+-    myhash = hashlib_md5(data).hexdigest()
++    myhash = hashlib_md5(data.encode("UTF-8")).hexdigest()
+ 
+     guid = ("{%s-%s-%s-%s-%s}" % (myhash[0:8], myhash[8:12],
+                                   myhash[12:16], myhash[16:20],
+diff --git a/build/generator/gen_win_dependencies.py b/build/generator/gen_win_dependencies.py
+index 11fc470..1540b7b 100644
+--- a/build/generator/gen_win_dependencies.py
++++ b/build/generator/gen_win_dependencies.py
+@@ -1129,7 +1129,7 @@ class GenDependenciesBase(gen_base.GeneratorBase):
+     try:
+       fp = subprocess.Popen([self.swig_exe, '-version'],
+                             stdout=subprocess.PIPE).stdout
+-      txt = fp.read()
++      txt = fp.read().decode()
+       if txt:
+         vermatch = re.search(r'^SWIG\ Version\ (\d+)\.(\d+)\.(\d+)', txt, re.M)
+       else:
+@@ -1157,7 +1157,7 @@ class GenDependenciesBase(gen_base.GeneratorBase):
+     try:
+       fp = subprocess.Popen([self.swig_exe, '-swiglib'],
+                             stdout=subprocess.PIPE).stdout
+-      lib_dir = fp.readline().strip()
++      lib_dir = fp.readline().strip().decode()
+       fp.close()
+     except OSError:
+       lib_dir = None
+diff --git a/build/generator/swig/__init__.py b/build/generator/swig/__init__.py
+index 2ecfe4b..6185eea 100644
+--- a/build/generator/swig/__init__.py
++++ b/build/generator/swig/__init__.py
+@@ -71,7 +71,7 @@ class Generator:
+     """Get the version number of SWIG"""
+ 
+     if not self._swigVersion:
+-      swig_version = subprocess.check_output([self.swig_path, "-version"])
++      swig_version = subprocess.check_output([self.swig_path, "-version"]).decode()
+       m = re.search("Version (\d+).(\d+).(\d+)", swig_version)
+       if m:
+         self._swigVersion = tuple(map(int, m.groups()))
+diff --git a/build/generator/swig/header_wrappers.py b/build/generator/swig/header_wrappers.py
+index 6c3533d..1a6f79a 100755
+--- a/build/generator/swig/header_wrappers.py
++++ b/build/generator/swig/header_wrappers.py
+@@ -265,7 +265,7 @@ class Generator(generator.swig.Generator):
+       self.proxy_filename(base_fname))
+ 
+     # Open a temporary output file
+-    self.ofile = tempfile.TemporaryFile(dir=self.proxy_dir)
++    self.ofile = tempfile.TemporaryFile(dir=self.proxy_dir, mode='w+')
+     self.ofile.write('/* Proxy classes for %s\n' % base_fname)
+     self.ofile.write(' * DO NOT EDIT -- AUTOMATICALLY GENERATED\n')
+     self.ofile.write(' * BY build/generator/swig/header_wrappers.py */\n')
+-- 
+2.17.0
+
