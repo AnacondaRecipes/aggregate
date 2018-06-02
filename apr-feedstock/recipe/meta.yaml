@@ -38,6 +38,7 @@ requirements:
     - expat
   build:
     - {{ compiler('c') }}
+    - make  # [unix]
 
 test:
   commands:
