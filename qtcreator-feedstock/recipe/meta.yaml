@@ -1,4 +1,4 @@
-{% set version = "4.6.0" %}
+{% set version = "4.6.1" %}
 {% set ver_maj_min = "4.6" %}
 
 package:
@@ -10,6 +10,7 @@ source:
   git_tag: v{{ version }}
   patches:
     - 4.6/0001-macOS-Disable-app-bundle-and-do-not-put-qtcreatorlib.patch
+    - 4.6/0002-Use-systemEnvironment-when-Start-and-Debug-External-.patch
     # - 4.5/0001-macOS-Disable-app-bundle-and-do-not-put-qtcreatorlib.patch
     # - 4.2/0001-macOS-Disable-app-bundle.patch
     # - 4.2/0002-Use-systemEnvironment-for-Start-and-Debug-External-A.patch
@@ -17,7 +18,7 @@ source:
     # - 4.0/0002-Use-systemEnvironment-For-Start-and-Debug-External-Application.patch
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:

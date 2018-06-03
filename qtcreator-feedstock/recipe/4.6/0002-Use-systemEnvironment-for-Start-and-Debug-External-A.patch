@@ -1,0 +1,64 @@
+From deb83df672af37c0dd047fb4d9dcdd59b4035da7 Mon Sep 17 00:00:00 2001
+From: Ray Donnelly <mingw.android@gmail.com>
+Date: Sun, 3 Jun 2018 23:06:08 +0100
+Subject: [PATCH 2/2] Use systemEnvironment for Start and Debug External
+ Application
+
+---
+ src/plugins/debugger/debuggerdialogs.cpp | 8 +++++---
+ src/plugins/debugger/debuggerdialogs.h   | 2 +-
+ 2 files changed, 6 insertions(+), 4 deletions(-)
+
+diff --git a/src/plugins/debugger/debuggerdialogs.cpp b/src/plugins/debugger/debuggerdialogs.cpp
+index 59e2309d1f..0132add85a 100644
+--- a/src/plugins/debugger/debuggerdialogs.cpp
++++ b/src/plugins/debugger/debuggerdialogs.cpp
+@@ -368,7 +368,7 @@ void StartApplicationDialog::updateState()
+     d->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(okEnabled);
+ }
+ 
+-void StartApplicationDialog::run(bool attachRemote)
++void StartApplicationDialog::run(bool attachRemote, bool setSystemEnv)
+ {
+     const QString settingsGroup = QLatin1String("DebugMode");
+     const QString arrayName = QLatin1String("StartApplication");
+@@ -430,6 +430,8 @@ void StartApplicationDialog::run(bool attachRemote)
+         debugger->setRemoteChannel(inputAddress);
+     else
+         debugger->setRemoteChannel(dev->sshParameters().host(), newParameters.serverPort);
++    if (setSystemEnv)
++        debugger->setInferiorEnvironment(Environment::systemEnvironment());
+     debugger->setRunControlName(newParameters.displayName());
+     debugger->setBreakOnMain(newParameters.breakAtMain);
+     debugger->setDebugInfoLocation(newParameters.debugInfoLocation);
+@@ -450,12 +452,12 @@ void StartApplicationDialog::run(bool attachRemote)
+ 
+ void StartApplicationDialog::attachToRemoteServer()
+ {
+-    run(true);
++    run(true, false);
+ }
+ 
+ void StartApplicationDialog::startAndDebugApplication()
+ {
+-    run(false);
++    run(false, true);
+ }
+ 
+ StartApplicationParameters StartApplicationDialog::parameters() const
+diff --git a/src/plugins/debugger/debuggerdialogs.h b/src/plugins/debugger/debuggerdialogs.h
+index d9f3790a14..66be38696d 100644
+--- a/src/plugins/debugger/debuggerdialogs.h
++++ b/src/plugins/debugger/debuggerdialogs.h
+@@ -82,7 +82,7 @@ private:
+     void setParameters(const StartApplicationParameters &p);
+     void setHistory(const QList<StartApplicationParameters> &l);
+     void onChannelOverrideChanged(const QString &channel);
+-    static void run(bool);
++    static void run(bool, bool);
+ 
+     StartApplicationDialogPrivate *d;
+ };
+-- 
+2.17.0
+
