@@ -2849,3 +2849,7 @@
 	path = lancet-feedstock
 	url = ../lancet-feedstock
 	branch = master
+[submodule "geoviews-feedstock"]
+	path = geoviews-feedstock
+	url = ../geoviews-feedstock
+	branch = master
