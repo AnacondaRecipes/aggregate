@@ -10,7 +10,7 @@ source:
   git_tag: v{{ version }}
   patches:
     - 4.6/0001-macOS-Disable-app-bundle-and-do-not-put-qtcreatorlib.patch
-    - 4.6/0002-Use-systemEnvironment-when-Start-and-Debug-External-.patch
+    - 4.6/0002-Use-systemEnvironment-for-Start-and-Debug-External-A.patch
     # - 4.5/0001-macOS-Disable-app-bundle-and-do-not-put-qtcreatorlib.patch
     # - 4.2/0001-macOS-Disable-app-bundle.patch
     # - 4.2/0002-Use-systemEnvironment-for-Start-and-Debug-External-A.patch
