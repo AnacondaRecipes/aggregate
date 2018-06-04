@@ -1,4 +1,4 @@
-From deb83df672af37c0dd047fb4d9dcdd59b4035da7 Mon Sep 17 00:00:00 2001
+From 26ffcadad4b617558ceb1a1aaf86bcf2eb521300 Mon Sep 17 00:00:00 2001
 From: Ray Donnelly <mingw.android@gmail.com>
 Date: Sun, 3 Jun 2018 23:06:08 +0100
 Subject: [PATCH 2/2] Use systemEnvironment for Start and Debug External
@@ -10,7 +10,7 @@ Subject: [PATCH 2/2] Use systemEnvironment for Start and Debug External
  2 files changed, 6 insertions(+), 4 deletions(-)
 
 diff --git a/src/plugins/debugger/debuggerdialogs.cpp b/src/plugins/debugger/debuggerdialogs.cpp
-index 59e2309d1f..0132add85a 100644
+index 59e2309d1f..6aa8cf9a09 100644
 --- a/src/plugins/debugger/debuggerdialogs.cpp
 +++ b/src/plugins/debugger/debuggerdialogs.cpp
 @@ -368,7 +368,7 @@ void StartApplicationDialog::updateState()
@@ -22,15 +22,15 @@ index 59e2309d1f..0132add85a 100644
  {
      const QString settingsGroup = QLatin1String("DebugMode");
      const QString arrayName = QLatin1String("StartApplication");
-@@ -430,6 +430,8 @@ void StartApplicationDialog::run(bool attachRemote)
-         debugger->setRemoteChannel(inputAddress);
-     else
-         debugger->setRemoteChannel(dev->sshParameters().host(), newParameters.serverPort);
-+    if (setSystemEnv)
-+        debugger->setInferiorEnvironment(Environment::systemEnvironment());
-     debugger->setRunControlName(newParameters.displayName());
+@@ -434,6 +434,8 @@ void StartApplicationDialog::run(bool attachRemote)
      debugger->setBreakOnMain(newParameters.breakAtMain);
      debugger->setDebugInfoLocation(newParameters.debugInfoLocation);
+     debugger->setInferior(inferior);
++    if (setSystemEnv)
++        debugger->setInferiorEnvironment(Environment::systemEnvironment());
+     debugger->setServerStartScript(newParameters.serverStartScript); // Note: This requires inferior.
+ 
+     bool isLocal = !dev || (dev->type() == ProjectExplorer::Constants::DESKTOP_DEVICE_TYPE);
 @@ -450,12 +452,12 @@ void StartApplicationDialog::run(bool attachRemote)
  
  void StartApplicationDialog::attachToRemoteServer()
