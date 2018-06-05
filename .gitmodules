@@ -2853,3 +2853,7 @@
 	path = geoviews-feedstock
 	url = ../geoviews-feedstock
 	branch = master
+[submodule "wtforms-feedstock"]
+	path = wtforms-feedstock
+	url = ../wtforms-feedstock
+	branch = master
