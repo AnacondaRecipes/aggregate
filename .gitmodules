@@ -2857,3 +2857,7 @@
 	path = wtforms-feedstock
 	url = ../wtforms-feedstock
 	branch = master
+[submodule "tensorflow_recipes"]
+	path = tensorflow_recipes
+	url = ../tensorflow_recipes
+	branch = master
