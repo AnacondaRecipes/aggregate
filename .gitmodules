@@ -2861,3 +2861,7 @@
 	path = tensorflow_recipes
 	url = ../tensorflow_recipes
 	branch = master
+[submodule "nbsmoke-feedstock"]
+	path = nbsmoke-feedstock
+	url = ../nbsmoke-feedstock
+	branch = master
