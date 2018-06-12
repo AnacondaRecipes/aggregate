@@ -40,6 +40,7 @@ requirements:
     - nccl   # [linux]
     # other requirements
     - python
+    - setuptools
     - {{ pin_compatible('numpy') }}
     - six >=1.9
     - fastrlock >=0.3
