@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: True # [not linux64]
+  skip: True # [not linux64 and not win64]
 
 requirements:
   build:
@@ -22,9 +22,10 @@ requirements:
 
   host:
     # GPU requirements
-    - cudatoolkit {{ cudatoolkit }}*
-    - cudnn {{ cudnn }}*
-    - nccl
+    # On Windows the system CUDA tools and libs are used, these need to match the cudatoolkit version
+    - cudatoolkit {{ cudatoolkit }}*  # [linux]
+    - cudnn {{ cudnn }}*              # [linux]
+    - nccl   # [linux]
     # other requirements
     - python
     - numpy
@@ -36,7 +37,7 @@ requirements:
     # GPU requirements
     - cudatoolkit {{ cudatoolkit }}*
     - cudnn {{ cudnn }}*
-    - nccl
+    - nccl   # [linux]
     # other requirements
     - python
     - {{ pin_compatible('numpy') }}
