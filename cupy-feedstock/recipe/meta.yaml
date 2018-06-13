@@ -14,6 +14,7 @@ source:
 build:
   number: 0
   skip: True # [not linux64 and not win64]
+  skip: True # [win64 and py27]
 
 requirements:
   build:
