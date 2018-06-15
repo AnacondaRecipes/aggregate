@@ -2865,3 +2865,11 @@
 	path = nbsmoke-feedstock
 	url = ../nbsmoke-feedstock
 	branch = master
+[submodule "keras-applications-feedstock"]
+	path = keras-applications-feedstock
+	url = ../keras-applications-feedstock
+	branch = master
+[submodule "keras-preprocessing-feedstock"]
+	path = keras-preprocessing-feedstock
+	url = ../keras-preprocessing-feedstock
+	branch = master
