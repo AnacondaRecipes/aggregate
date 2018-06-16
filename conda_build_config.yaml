@@ -107,9 +107,9 @@ mpfr:
   - 4
 # we build for an old version of numpy for forward compatibility
 #    1.11 seems to be the oldest on win that works with scipy 0.19.  Compiler errors otherwise.
+#    also 1.9 fails tests on Python 3.7
 numpy:
-  - 1.9   # [unix]
-  - 1.11   # [win]
+  - 1.11
 openblas:
   - 0.2.20
 openjpeg:
