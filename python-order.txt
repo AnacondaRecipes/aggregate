@@ -86,6 +86,7 @@ jedi-feedstock
 backcall-feedstock
 wcwidth-feedstock
 prompt_toolkit-feedstock
+prompt_toolkit-1.0.15-feedstock
 pickleshare-feedstock
 appnope-feedstock
 ipython-feedstock

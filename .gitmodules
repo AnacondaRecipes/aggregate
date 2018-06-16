@@ -2873,3 +2873,7 @@
 	path = keras-preprocessing-feedstock
 	url = ../keras-preprocessing-feedstock
 	branch = master
+[submodule "prompt_toolkit-1.0.15-feedstock"]
+	path = prompt_toolkit-1.0.15-feedstock
+	url = ../prompt_toolkit-feedstock
+	branch = master-1.0.15
