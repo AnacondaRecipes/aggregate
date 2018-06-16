@@ -12,13 +12,14 @@ six-feedstock
 more-itertools-feedstock
 setuptools_scm-feedstock
 colorama-feedstock
-pytest-feedstock
-coverage-feedstock
-pytest-cov-feedstock
 vcversioner-feedstock
 jsonschema-feedstock
 wheel-feedstock
 pip-feedstock
+atomicwrites-feedstock
+pytest-feedstock
+coverage-feedstock
+pytest-cov-feedstock
 pycparser-feedstock
 cffi-feedstock
 tornado-feedstock
