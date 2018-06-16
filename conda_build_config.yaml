@@ -126,10 +126,10 @@ libprotobuf:
   - 3.5.2
 python:
   - 2.7
-  - 3.5
   - 3.6
+  - 3.7
 r_version:
-  - 3.4.3
+  - 3.5.0
 r_implementation:
   - 'r-base'
   - 'mro-base'  # [not osx]
@@ -143,16 +143,14 @@ sqlite:
 #    code on win-64 miniconda.
 cross_compiler_target_platform:
   - win-32                     # [win]
-  - win-64                     # [win]
 target_platform:
-  - win-64                     # [win]
   - win-32                     # [win]
 tk:
-  - 8.6
-vc:     # [win]
-  - 9   # [win]
-  - 14  # [win]
-  - 14  # [win]
+  - 8.6                # [not ppc64le]
+vc:
+  - 9                          # [win]
+  - 14                         # [win]
+  - 14                         # [win]
 zlib:
   - 1.2
 xz:
