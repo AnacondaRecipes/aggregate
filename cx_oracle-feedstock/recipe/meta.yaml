@@ -1,6 +1,6 @@
 {% set name = "cx_Oracle" %}
-{% set version = "6.2.1" %}
-{% set hash = "01970bc843b3c699a7fd98af19e0401fe69abfbd2acdf464e0bf2ae06ea372b9" %}
+{% set version = "6.3.1" %}
+{% set hash = "879233f07103474eed49513c3170539f4805f5ac9dbd5dfb7f370304a5910008" %}
 
 package:
   name: {{ name|lower }}
