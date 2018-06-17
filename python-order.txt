@@ -278,6 +278,7 @@ coloredlogs-feedstock
 d2to1-feedstock
 colour-feedstock
 mccabe-feedstock
+pyflakes-1.6.0-feedstock
 pyflakes-feedstock
 pycodestyle-feedstock
 flake8-feedstock

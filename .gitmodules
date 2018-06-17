@@ -2877,3 +2877,6 @@
 	path = prompt_toolkit-1.0.15-feedstock
 	url = ../prompt_toolkit-feedstock
 	branch = master-1.0.15
+[submodule "pyflakes-1.6.0-feedstock"]
+	path = pyflakes-1.6.0-feedstock
+	url = ../pyflakes-feedstock
