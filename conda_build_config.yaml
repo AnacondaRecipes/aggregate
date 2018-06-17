@@ -126,8 +126,9 @@ libprotobuf:
   - 3.5.2
 python:
   - 2.7
+  - 3.5
   - 3.6
-  - 3.7
+#  - 3.7
 r_version:
   - 3.5.0
 r_implementation:
