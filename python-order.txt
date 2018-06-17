@@ -307,12 +307,13 @@ scikit-learn-feedstock
 dask-glm-feedstock
 dask-searchcv-feedstock
 dask-ml-feedstock
-gdal-feedstock
 gdal-2.3.0-feedstock
+gdal-feedstock
 snuggs-feedstock
 rasterio-feedstock
 param-feedstock
 xarray-feedstock
+py-cpuinfo-feedstock
 pytest-benchmark-feedstock
 statistics-feedstock
 dbf-feedstock
@@ -360,6 +361,7 @@ pyasn1-feedstock
 pynacl-feedstock
 ecdsa-feedstock
 paramiko-feedstock
+invoke-feedstock
 fabric-feedstock
 fabric3-feedstock
 factory_boy-feedstock
@@ -421,7 +423,6 @@ isort-feedstock
 jaraco.classes-feedstock
 jsondate-feedstock
 keras-feedstock
-keras-gpu-feedstock
 keyring-feedstock
 keyrings.alt-feedstock
 py4j-feedstock
