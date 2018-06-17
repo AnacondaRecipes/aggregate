@@ -27,6 +27,15 @@ pushd ${SRC_DIR}/.build/${CHOST}/build/build-cc-gcc-final/
     fi
   done
 
+  # https://github.com/gcc-mirror/gcc/blob/gcc-7_3_0-release/gcc/Makefile.in#L3481-L3526
+  # Could have used install-common, but it also installs cxx binaries, which we
+  # don't want in this package. We could patch it, or use the loop below:
+  for file in gcov{,-tool,-dump}; do
+    if [[ -f gcc/${file} ]]; then
+      install -c gcc/${file} ${PREFIX}/bin/${CHOST}-${file}
+    fi
+  done
+
   make -C ${CHOST}/libgcc prefix=${PREFIX} install
 
   # mkdir -p $PREFIX/$CHOST/sysroot/lib
