@@ -13,6 +13,7 @@ else
   DOWNLOADER_OUT="-O"
 fi
 
+mkdir -p ${SYS_PREFIX}/conda-bld/src_cache/
 # Some kernels are not on kernel.org, such as the CentOS 5.11 one used (and heavily patched) by RedHat.
 if [[ ! -e "${SYS_PREFIX}/conda-bld/src_cache/linux-${ctng_kernel}.tar.bz2" ]] && \
    [[ ! -e "${SYS_PREFIX}/conda-bld/src_cache/linux-${ctng_kernel}.tar.xz" ]]; then
