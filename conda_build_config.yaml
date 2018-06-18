@@ -144,7 +144,9 @@ sqlite:
 #    code on win-64 miniconda.
 cross_compiler_target_platform:
   - win-32                     # [win]
+  - win-64                     # [win]
 target_platform:
+  - win-64                     # [win]
   - win-32                     # [win]
 tk:
   - 8.6                # [not ppc64le]
