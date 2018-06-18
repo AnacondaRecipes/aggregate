@@ -401,6 +401,7 @@ qtconsole-feedstock
 fast-histogram-feedstock
 mpl-scatter-density-feedstock
 glue-core-feedstock
+pyopengl-feedstock
 glue-vispy-viewers-feedstock
 gmpy2-feedstock
 gobject-introspection-feedstock
