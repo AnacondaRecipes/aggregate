@@ -2897,3 +2897,6 @@
 [submodule "pyqtgraph-feedstock"]
 	path = pyqtgraph-feedstock
 	url = ../pyqtgraph-feedstock
+[submodule "requests-ftp-feedstock"]
+	path = requests-ftp-feedstock
+	url = ../requests-ftp-feedstock
