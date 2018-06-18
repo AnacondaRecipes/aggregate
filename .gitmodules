@@ -2888,15 +2888,24 @@
 [submodule "testtools-feedstock"]
 	path = testtools-feedstock
 	url = ../testtools-feedstock
+	branch = master
 [submodule "joblib-feedstock"]
 	path = joblib-feedstock
 	url = ../joblib-feedstock
+	branch = master
 [submodule "anyqt-feedstock"]
 	path = anyqt-feedstock
 	url = ../anyqt-feedstock
+	branch = master
 [submodule "pyqtgraph-feedstock"]
 	path = pyqtgraph-feedstock
 	url = ../pyqtgraph-feedstock
+	branch = master
 [submodule "requests-ftp-feedstock"]
 	path = requests-ftp-feedstock
 	url = ../requests-ftp-feedstock
+	branch = master
+[submodule "networkx-1.11-feedstock"]
+	path = networkx-1.11-feedstock
+	url = ../networkx-feedstock
+	branch = master-1.11
