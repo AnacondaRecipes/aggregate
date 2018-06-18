@@ -438,6 +438,9 @@ line_profiler-feedstock
 linecache2-feedstock
 lockfile-feedstock
 logilab-common-feedstock
+testscenarios-feedstock
+testtools-feedstock
+unittest2-feedstock
 luigi-feedstock
 markdown-feedstock
 markdown2-feedstock
@@ -543,7 +546,6 @@ pywget-feedstock
 qgrid-feedstock
 qtawesome-feedstock
 traceback2-feedstock
-unittest2-feedstock
 quandl-feedstock
 queuelib-feedstock
 quiver_engine-feedstock
