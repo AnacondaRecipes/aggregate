@@ -477,6 +477,7 @@ pyqtgraph-feedstock
 joblib-feedstock
 orange3-feedstock
 requests-file-feedstock
+requests-ftp-feedstock
 pandas-datareader-feedstock
 pandas-profiling-feedstock
 parameterized-feedstock
