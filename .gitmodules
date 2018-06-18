@@ -2888,3 +2888,12 @@
 [submodule "testtools-feedstock"]
 	path = testtools-feedstock
 	url = ../testtools-feedstock
+[submodule "joblib-feedstock"]
+	path = joblib-feedstock
+	url = ../joblib-feedstock
+[submodule "anyqt-feedstock"]
+	path = anyqt-feedstock
+	url = ../anyqt-feedstock
+[submodule "pyqtgraph-feedstock"]
+	path = pyqtgraph-feedstock
+	url = ../pyqtgraph-feedstock
