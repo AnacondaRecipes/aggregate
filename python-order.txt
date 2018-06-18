@@ -334,9 +334,9 @@ qtpy-feedstock
 ply-feedstock
 enaml-feedstock
 configobj-feedstock
-traitsui-feedstock
-pyface-feedstock
 traits-feedstock
+pyface-feedstock
+traitsui-feedstock
 apptools-feedstock
 envisage-feedstock
 zope-feedstock
