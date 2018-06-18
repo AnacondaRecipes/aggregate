@@ -220,6 +220,7 @@ flask-feedstock
 flask-cors-feedstock
 multipledispatch-feedstock
 datashape-feedstock
+networkx-1.11-feedstock
 networkx-feedstock
 mpmath-feedstock
 scipy-feedstock
