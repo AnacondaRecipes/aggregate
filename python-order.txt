@@ -430,7 +430,6 @@ ipyparallel-feedstock
 isort-feedstock
 jaraco.classes-feedstock
 jsondate-feedstock
-keras-feedstock
 keyring-feedstock
 keyrings.alt-feedstock
 py4j-feedstock
