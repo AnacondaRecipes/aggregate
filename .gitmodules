@@ -2885,3 +2885,6 @@
 	path = botocore-1.10.12-feedstock
 	url = ../botocore-feedstock
 	branch = master-1.10.12
+[submodule "testtools-feedstock"]
+	path = testtools-feedstock
+	url = ../testtools-feedstock
