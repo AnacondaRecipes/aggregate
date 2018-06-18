@@ -466,6 +466,7 @@ nbserverproxy-feedstock
 ndg-httpsclient-feedstock
 neotime-feedstock
 neo4j-python-driver-feedstock
+cftime-feedstock
 netcdf4-feedstock
 nltk-feedstock
 opentracing-feedstock
