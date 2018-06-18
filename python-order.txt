@@ -412,6 +412,7 @@ gunicorn-feedstock
 hdfs3-feedstock
 jupyter_console-feedstock
 jupyter-feedstock
+pyviz_comms-feedstock
 holoviews-feedstock
 httpretty-feedstock
 hyperlink-feedstock
