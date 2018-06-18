@@ -147,6 +147,8 @@ yarl-feedstock
 aiohttp-feedstock
 wrapt-feedstock
 jmespath-feedstock
+botocore-feedstock
+botocore-1.10.12-feedstock
 botocore-1.8.21-feedstock
 aiobotocore-feedstock
 aiofiles-feedstock
