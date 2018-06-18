@@ -442,6 +442,7 @@ logilab-common-feedstock
 testscenarios-feedstock
 testtools-feedstock
 unittest2-feedstock
+python-daemon-feedstock
 luigi-feedstock
 markdown-feedstock
 markdown2-feedstock
