@@ -398,6 +398,8 @@ smmap2-feedstock
 gitdb2-feedstock
 gitpython-feedstock
 qtconsole-feedstock
+fast-histogram-feedstock
+mpl-scatter-density-feedstock
 glue-core-feedstock
 glue-vispy-viewers-feedstock
 gmpy2-feedstock
