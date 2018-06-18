@@ -464,6 +464,7 @@ nb_conda-feedstock
 nbpresent-feedstock
 nbserverproxy-feedstock
 ndg-httpsclient-feedstock
+neotime-feedstock
 neo4j-python-driver-feedstock
 netcdf4-feedstock
 nltk-feedstock
