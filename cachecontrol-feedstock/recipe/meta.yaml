@@ -1,7 +1,6 @@
 {% set name = "CacheControl" %}
-{% set version = "0.12.4" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "a7d21ba4e3633d95ac9fed5be205ee6d1da36bdc4b8914eb7a57ff50b7e5628c" %}
+{% set version = "0.12.5" %}
+{% set sha256 = "sha256" %}
 
 package:
   name: {{ name.lower() }}
@@ -9,16 +8,18 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  '{{ hash_type }}': '{{ hash_value }}'
+  sha256: cef77effdf51b43178f6a2d3b787e3734f98ade253fa3187f3bb7315aaa42ff7
 
 build:
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
+  entry_points:
+      - doesitcache = cachecontrol._cmd:main
 
 requirements:
   host:
     - python
     - setuptools
-    - requests
   run:
     - python
     - requests
@@ -27,10 +28,12 @@ requirements:
 test:
   imports:
     - cachecontrol
+  commands:
+    - doesitcache --help
 
 about:
   home: https://github.com/ionrock/cachecontrol
-  license: Apache Software License
+  license: Apache-2.0
   license_family: Apache
   license_file: LICENSE.txt
   summary: httplib2 caching algorithms for use with requests
