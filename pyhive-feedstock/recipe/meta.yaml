@@ -1,8 +1,8 @@
 {% set name = "PyHive" %}
-{% set version = "0.5.2" %}
+{% set version = "0.6.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "420ab64dd3305d99f2f8615be6c8ad05864f68b3f926efb2376d190f46341e8f" %}
+{% set hash_value = "f754edd5089d742d2080978e773b18c67dc75f9e25cd416b6564516bf20c4385" %}
 
 package:
   name: {{ name|lower }}
@@ -16,7 +16,7 @@ source:
     - 0001-Python-3.7-async-is-a-keyword.patch
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
