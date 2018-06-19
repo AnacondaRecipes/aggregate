@@ -2928,3 +2928,15 @@
 	path = hyperframe-feedstock
 	url = ../hyperframe-feedstock
 	branch = master
+[submodule "service_identity-feedstock"]
+	path = service_identity-feedstock
+	url = ../service_identity-feedstock
+	branch = master
+[submodule "appdirs-feedstock"]
+	path = appdirs-feedstock
+	url = ../appdirs-feedstock
+	branch = master
+[submodule "constantly-feedstock"]
+	path = constantly-feedstock
+	url = ../constantly-feedstock
+	branch = master
