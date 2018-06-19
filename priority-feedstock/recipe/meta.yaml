@@ -1,0 +1,75 @@
+{% set name = "priority" %}
+{% set version = "1.3.0" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "6bc1961a6d7fcacbfc337769f1a382c8e746566aaa365e78047abe9f66b2ffbe" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  '{{ hash_type }}': '{{ hash_value }}'
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+
+test:
+  imports:
+    - priority
+
+about:
+  home: http://python-hyper.org/priority/
+  license: MIT License
+  license_family: MIT
+  license_file: ''
+  summary: A pure-Python implementation of the HTTP/2 priority tree
+  description: "Priority: A HTTP/2 Priority Implementation\n==========================================\n\nPriority is a pure-Python implementation of the priority logic for HTTP/2, set\nout in `RFC 7540\
+    \ Section 5.3 (Stream Priority)`_. This logic allows for clients\nto express a preference for how the server allocates its (limited) resources to\nthe many outstanding HTTP requests that may be running\
+    \ over a single HTTP/2\nconnection.\n\nSpecifically, this Python implementation uses a variant of the implementation\nused in the excellent `H2O`_ project. This original implementation is also the\n\
+    inspiration for `nghttp2's`_ priority implementation, and generally produces a\nvery clean and even priority stream. The only notable changes from H2O's\nimplementation are small modifications to allow\
+    \ the priority implementation to\nwork cleanly as a separate implementation, rather than being embedded in a\nHTTP/2 stack directly.\n\nWhile priority information in HTTP/2 is only a suggestion, rather\
+    \ than an\nenforceable constraint, where possible servers should respect the priority\nrequests of their clients.\n\nUsing Priority\n--------------\n\nPriority has a simple API. Streams are inserted\
+    \ into the tree: when they are\ninserted, they may optionally have a weight, depend on another stream, or\nbecome an exclusive dependent of another stream.\n\n.. code-block:: python\n\n    >>> p = priority.PriorityTree()\n\
+    \    >>> p.insert_stream(stream_id=1)\n    >>> p.insert_stream(stream_id=3)\n    >>> p.insert_stream(stream_id=5, depends_on=1)\n    >>> p.insert_stream(stream_id=7, weight=32)\n    >>> p.insert_stream(stream_id=9,\
+    \ depends_on=7, weight=8)\n    >>> p.insert_stream(stream_id=11, depends_on=7, exclusive=True)\n\nOnce streams are inserted, the stream priorities can be requested. This allows\nthe server to make decisions\
+    \ about how to allocate resources.\n\nIterating The Tree\n~~~~~~~~~~~~~~~~~~\n\nThe tree in this algorithm acts as a gate. Its goal is to allow one stream\n\"through\" at a time, in such a manner that\
+    \ all the active streams are served as\nevenly as possible in proportion to their weights.\n\nThis is handled in Priority by iterating over the tree. The tree itself is an\niterator, and each time it\
+    \ is advanced it will yield a stream ID. This is the\nID of the stream that should next send data.\n\nThis looks like this:\n\n.. code-block:: python\n\n    >>> for stream_id in p:\n    ...     send_data(stream_id)\n\
+    \nIf each stream only sends when it is 'ungated' by this mechanism, the server\nwill automatically be emitting stream data in conformance to RFC 7540.\n\nUpdating The Tree\n~~~~~~~~~~~~~~~~~\n\nIf for\
+    \ any reason a stream is unable to proceed (for example, it is blocked on\nHTTP/2 flow control, or it is waiting for more data from another service), that\nstream is *blocked*. The ``PriorityTree``\
+    \ should be informed that the stream is\nblocked so that other dependent streams get a chance to proceed. This can be\ndone by calling the ``block`` method of the tree with the stream ID that is\ncurrently\
+    \ unable to proceed. This will automatically update the tree, and it\nwill adjust on the fly to correctly allow any streams that were dependent on\nthe blocked one to progress.\n\nFor example:\n\n..\
+    \ code-block:: python\n\n    >>> for stream_id in p:\n    ...     send_data(stream_id)\n    ...     if blocked(stream_id):\n    ...         p.block(stream_id)\n\nWhen a stream goes from being blocked\
+    \ to being unblocked, call the ``unblock``\nmethod to place it back into the sequence. Both the ``block`` and ``unblock``\nmethods are idempotent and safe to call repeatedly.\n\nAdditionally, the priority\
+    \ of a stream may change. When it does, the\n``reprioritize`` method can be used to update the tree in the wake of that\nchange. ``reprioritize`` has the same signature as ``insert_stream``, but\napplies\
+    \ only to streams already in the tree.\n\nRemoving Streams\n~~~~~~~~~~~~~~~~\n\nA stream can be entirely removed from the tree by calling ``remove_stream``.\nNote that this is not idempotent. Further,\
+    \ calling ``remove_stream`` and then\nre-adding it *may* cause a substantial change in the shape of the priority\ntree, and *will* cause the iteration order to change.\n\nLicense\n-------\n\nPriority\
+    \ is made available under the MIT License. For more details, see the\nLICENSE file in the repository.\n\nAuthors\n-------\n\nPriority is maintained by Cory Benfield, with contributions from others.\
+    \ For\nmore details about the contributors, please see CONTRIBUTORS.rst in the\nrepository.\n\n\n.. _RFC 7540 Section 5.3 (Stream Priority): https://tools.ietf.org/html/rfc7540#section-5.3\n.. _nghttp2's:\
+    \ https://nghttp2.org/blog/2015/11/11/stream-scheduling-utilizing-http2-priority/\n.. _H2O: https://h2o.examp1e.net/\n\n\nChangelog\n=========\n\n1.3.0 (2017-01-27)\n------------------\n\n**API Changes**\n\
+    \n- Throw ``PriorityLoop`` when inserting or reprioritising a stream that\n  depends on itself.\n- Throw ``BadWeightError`` when creating or reprioritising a stream with a\n  weight that is not an integer\
+    \ between 1 and 256, inclusive.\n- Throw ``PseudoStreamError`` when trying to reprioritise, remove, block or\n  unblock stream 0.\n- Add a new ``PriorityError`` parent class for the exceptions that\
+    \ can be\n  thrown by priority.\n\n1.2.2 (2016-11-11)\n------------------\n\n**Bugfixes**\n\n- Allow ``insert_stream`` to be called with ``exclusive=True`` but no explicit\n  ``depends_on`` value.\n\
+    \n1.2.1 (2016-10-26)\n------------------\n\n**Bugfixes**\n\n- Allow insertion of streams that have parents in the idle or closed states.\n  This would previously raise a KeyError.\n\n1.2.0 (2016-08-04)\n\
+    ------------------\n\n**Security Fixes**\n\n- CVE-2016-6580: All versions of this library prior to 1.2.0 are vulnerable to\n  a denial of service attack whereby a remote peer can cause a user to insert\n\
+    \  an unbounded number of streams into the priority tree, eventually consuming\n  all available memory.\n\n  This version adds a ``TooManyStreamsError`` exception that is raised when\n  too many streams\
+    \ are inserted into the priority tree. It also adds a keyword\n  argument to the priority tree, ``maximum_streams``, which limits how many\n  streams may be inserted. By default, this number is set\
+    \ to 1000.\n  Implementations should strongly consider whether they can set this value\n  lower.\n\n1.1.1 (2016-05-28)\n------------------\n\n**Bugfixes**\n\n- 2.5x performance improvement by swapping\
+    \ from ``queue.PriorityQueue`` to\n  ``heapq``.\n\n1.1.0 (2016-01-08)\n------------------\n\n**API Changes**\n\n- Throw ``DuplicateStreamError`` when inserting a stream that is already in the\n  tree.\n\
+      - Throw ``MissingStreamError`` when reprioritising a stream that is not in the\n  tree.\n\n1.0.0 (2015-12-07)\n------------------\n\n- Initial release.\n\n\n"
+  doc_url: ''
+  dev_url: ''
+
+extra:
+  recipe-maintainers: mingwandroid
