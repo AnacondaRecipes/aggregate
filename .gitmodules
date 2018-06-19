@@ -2912,3 +2912,11 @@
 [submodule "nose_parameterized-feedstock"]
 	path = nose_parameterized-feedstock
 	url = ../nose_parameterized-feedstock
+[submodule "h2-feedstock"]
+	path = h2-feedstock
+	url = ../h2-feedstock
+	branch = master
+[submodule "soappy-feedstock"]
+	path = soappy-feedstock
+	url = ../soappy-feedstock
+	branch = master
