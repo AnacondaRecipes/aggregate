@@ -529,6 +529,8 @@ pyquery-feedstock
 pyserial-feedstock
 pysmi-feedstock
 trollius-feedstock
+h2-feedstock
+soappy-feedstock
 twisted-feedstock
 pysnmp-feedstock
 pyspark-feedstock
