@@ -2920,3 +2920,11 @@
 	path = soappy-feedstock
 	url = ../soappy-feedstock
 	branch = master
+[submodule "hpack-feedstock"]
+	path = hpack-feedstock
+	url = ../hpack-feedstock
+	branch = master
+[submodule "hyperframe-feedstock"]
+	path = hyperframe-feedstock
+	url = ../hyperframe-feedstock
+	branch = master
