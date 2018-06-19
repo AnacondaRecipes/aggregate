@@ -51,7 +51,7 @@ requirements:
   # Conda 4.4, where are you?
   run_constrained:
     # Moved all the crypto and tls stuff under 'run'
-    - soappy
+    - soappy  # [py2k and win]
     - pyserial >=3.0
     - pyobjc-core  # [osx]
     - pyobjc-framework-CFNetwork  # [osx]
