@@ -329,6 +329,7 @@ psycopg2-feedstock
 django-feedstock
 dnspython-feedstock
 pyinotify-feedstock
+macfsevents-feedstock
 doit-feedstock
 drmaa-feedstock
 elasticsearch-feedstock
