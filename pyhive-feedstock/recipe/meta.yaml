@@ -12,9 +12,11 @@ source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash_value }}
+  patches:
+    - 0001-Python-3.7-async-is-a-keyword.patch
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:

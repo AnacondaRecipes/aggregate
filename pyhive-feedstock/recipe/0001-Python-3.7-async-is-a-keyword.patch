@@ -1,0 +1,21 @@
+diff -urN work.orig/pyhive/hive.py work/pyhive/hive.py
+--- work.orig/pyhive/hive.py	2018-06-19 10:52:03.411676953 +0000
++++ work/pyhive/hive.py	2018-06-19 10:52:33.737819920 +0000
+@@ -277,7 +277,7 @@
+         """Close the operation handle"""
+         self._reset_state()
+ 
+-    def execute(self, operation, parameters=None, async=False):
++    def execute(self, operation, parameters=None, _async=False):
+         """Prepare and execute a database operation (query or command).
+ 
+         Return values are not defined.
+@@ -294,7 +294,7 @@
+         _logger.info('%s', sql)
+ 
+         req = ttypes.TExecuteStatementReq(self._connection.sessionHandle,
+-                                          sql, runAsync=async)
++                                          sql, runAsync=_async)
+         _logger.debug(req)
+         response = self._connection.client.ExecuteStatement(req)
+         _check_status(response)
