@@ -53,9 +53,9 @@ requirements:
     # Moved all the crypto and tls stuff under 'run'
     - soappy
     - pyserial >=3.0
-    - pyobjc-core  # [osx-64]
-    - pyobjc-framework-CFNetwork  # [osx-64]
-    - pyobjc-framework-Cocoa      # [osx-64]
+    - pyobjc-core  # [osx]
+    - pyobjc-framework-CFNetwork  # [osx]
+    - pyobjc-framework-Cocoa      # [osx]
     - h2 >=3.0,<4.0
     - priority >=1.1.0,<2.0
 
