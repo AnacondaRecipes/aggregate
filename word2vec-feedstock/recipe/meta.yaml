@@ -1,5 +1,5 @@
 {% set name = "word2vec" %}
-{% set version = "0.9.2" %}
+{% set version = "0.9.4" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   # Also, none of the commits are tagged. The SHA is based on
   # release date of the tarball on PyPI
   # https://github.com/danielfrg/word2vec/issues/50
-  git_rev: 113a3ea9f23519d85cb0b62057c40655105b4933
+  git_rev: e2fdee3fc68f273a63f12ba565dacaea6078f083
   patches:
     - 0001-Use-gcc-as-a-fallback.patch
     - 0002-Append-CFLAGS-instead-of-replacing-DEFAULT_CFLAGS.patch
