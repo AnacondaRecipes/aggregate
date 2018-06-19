@@ -28,7 +28,6 @@ requirements:
     - python
     - setuptools
     - six >=1.5.2
-    - protobuf >=3.5.0
     - futures >=2.2.0   # [py27]
     - enum34 >=1.0.4    # [py27]
     - pkg-config        # [osx]
@@ -37,7 +36,6 @@ requirements:
     - python
     - setuptools
     - six >=1.5.2
-    - protobuf >=3.5.0
     - futures >=2.2.0   # [py27]
     - enum34 >=1.0.4    # [py27]
 
