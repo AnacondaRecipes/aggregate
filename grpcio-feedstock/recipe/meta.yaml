@@ -1,8 +1,8 @@
 {% set name = "grpcio" %}
-{% set version = "1.12.0" %}
+{% set version = "1.12.1" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "e1fd1f0782751d281e7d4e67b8d3143f0326cf3a7ab7c7ccf21ee51a152a5c37" %}
+{% set hash_value = "f14faadfd09aa8526536cd2149e274563f45b767fca1736ccc53803a6af3f90e" %}
 
 package:
   name: {{ name|lower }}
