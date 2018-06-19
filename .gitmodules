@@ -2940,3 +2940,7 @@
 	path = constantly-feedstock
 	url = ../constantly-feedstock
 	branch = master
+[submodule "pyct-feedstock"]
+	path = pyct-feedstock
+	url = ../pyct-feedstock
+	branch = master
