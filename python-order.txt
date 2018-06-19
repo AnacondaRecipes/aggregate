@@ -534,6 +534,9 @@ hyperframe-feedstock
 h2-feedstock
 soappy-feedstock
 priority-feedstock
+appdirs-feedstock
+constantly-feedstock
+service_identity-feedstock
 twisted-feedstock
 pysnmp-feedstock
 pyspark-feedstock
