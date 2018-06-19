@@ -1,0 +1,27 @@
+From d30ad6366db0ed224ab016be4f71bcbf8f5b255c Mon Sep 17 00:00:00 2001
+From: Jonathan Helmus <jjhelmus@gmail.com>
+Date: Tue, 19 Jun 2018 14:34:00 -0500
+Subject: [PATCH 3/3] remove march argument from DEFAULT_CFLAGS
+
+Remove -march=native argument from DEFAULT_CFLAGS.  This argument is not
+available on all architectures, noably powerpc does not support this flag.
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 2a34d7b..496173d 100644
+--- a/setup.py
++++ b/setup.py
+@@ -69,7 +69,7 @@ class install(_install):
+     def compile_c(self, source, target):
+         CC = os.environ.get('CC', 'gcc')
+ 
+-        DEFAULT_CFLAGS = '-lm -pthread -O3 -Wall -march=native -funroll-loops'
++        DEFAULT_CFLAGS = '-lm -pthread -O3 -Wall -funroll-loops'
+         DEFAULT_CFLAGS += ' -Wno-unused-result'
+         if sys.platform == 'darwin':
+             DEFAULT_CFLAGS += ' -I/usr/include/malloc'
+-- 
+2.7.4
+

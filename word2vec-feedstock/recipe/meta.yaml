@@ -15,6 +15,7 @@ source:
   patches:
     - 0001-Use-gcc-as-a-fallback.patch
     - 0002-Append-CFLAGS-instead-of-replacing-DEFAULT_CFLAGS.patch
+    - 0003-remove-march-argument-from-DEFAULT_CFLAGS.patch  # [ppc64le]
 
 build:
   detect_binary_files_with_prefix: False
