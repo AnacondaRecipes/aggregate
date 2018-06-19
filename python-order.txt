@@ -518,6 +518,7 @@ pyjwt-feedstock
 pykerberos-feedstock
 pylint-feedstock
 tqdm-feedstock
+nose_parameterized-feedstock
 theano-feedstock
 pymc3-feedstock
 pympler-feedstock
