@@ -2952,3 +2952,7 @@
 	path = inflection-feedstock
 	url = ../inflection-feedstock
 	branch = master
+[submodule "pydispatcher-feedstock"]
+	path = pydispatcher-feedstock
+	url = ../pydispatcher-feedstock
+	branch = master
