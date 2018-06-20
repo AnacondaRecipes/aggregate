@@ -596,6 +596,7 @@ sortedcollections-feedstock
 termcolor-feedstock
 plac-feedstock
 thinc-feedstock
+ujson-feedstock
 spacy-feedstock
 sparkmagic-feedstock
 sphinx_rtd_theme-feedstock
