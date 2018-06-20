@@ -2960,3 +2960,7 @@
 	path = plac-feedstock
 	url = ../plac-feedstock
 	branch = master
+[submodule "ujson-feedstock"]
+	path = ujson-feedstock
+	url = ../ujson-feedstock
+	branch = master
