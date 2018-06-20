@@ -569,7 +569,6 @@ traceback2-feedstock
 inflection-feedstock
 quandl-feedstock
 queuelib-feedstock
-quiver_engine-feedstock
 redis-py-feedstock
 regex-feedstock
 repoze.lru-feedstock
@@ -606,9 +605,6 @@ stripe-feedstock
 supervisor-feedstock
 sympy-feedstock
 tabulate-feedstock
-tensorflow-base-feedstock
-tensorboard-feedstock
-tensorflow-gpu-base-feedstock
 teradata-feedstock
 torchvision-feedstock
 traitsui-feedstock
