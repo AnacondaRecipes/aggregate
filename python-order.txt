@@ -592,6 +592,7 @@ snakebite-feedstock
 snakeviz-feedstock
 sortedcollections-feedstock
 termcolor-feedstock
+plac-feedstock
 thinc-feedstock
 spacy-feedstock
 sparkmagic-feedstock
