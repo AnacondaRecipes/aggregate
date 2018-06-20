@@ -2956,3 +2956,7 @@
 	path = pydispatcher-feedstock
 	url = ../pydispatcher-feedstock
 	branch = master
+[submodule "plac-feedstock"]
+	path = plac-feedstock
+	url = ../plac-feedstock
+	branch = master
