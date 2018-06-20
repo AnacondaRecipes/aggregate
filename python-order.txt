@@ -539,6 +539,7 @@ constantly-feedstock
 service_identity-feedstock
 twisted-feedstock
 pysnmp-feedstock
+pypandoc-feedstock
 pyspark-feedstock
 pystan-feedstock
 pytest-asyncio-feedstock
@@ -552,6 +553,7 @@ pytest-selenium-feedstock
 pytest-timeout-feedstock
 python-blosc-feedstock
 requests-kerberos-feedstock
+docopt-feedstock
 python-hdfs-feedstock
 python-libarchive-c-feedstock
 python-lmdb-feedstock
@@ -564,6 +566,7 @@ pywget-feedstock
 qgrid-feedstock
 qtawesome-feedstock
 traceback2-feedstock
+inflection-feedstock
 quandl-feedstock
 queuelib-feedstock
 quiver_engine-feedstock
