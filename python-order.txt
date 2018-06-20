@@ -137,6 +137,7 @@ jdcal-feedstock
 et_xmlfile-feedstock
 openpyxl-feedstock
 agate-excel-feedstock
+passlib-feedstock
 sqlalchemy-feedstock
 agate-sql-feedstock
 idna_ssl-feedstock

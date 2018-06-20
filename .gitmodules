@@ -2964,3 +2964,6 @@
 	path = ujson-feedstock
 	url = ../ujson-feedstock
 	branch = master
+[submodule "passlib-feedstock"]
+	path = passlib-feedstock
+	url = ../passlib-feedstock
