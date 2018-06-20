@@ -7,7 +7,7 @@ source:
   git_tag: v3.2.0
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -18,7 +18,7 @@ requirements:
     - python
     - numpy >=1.8
     - pandas >=0.14
-    - requests >=2.7.0,<2.18
+    - requests >=2.7.0
     - inflection >=0.3.1
     - python-dateutil
     - six
