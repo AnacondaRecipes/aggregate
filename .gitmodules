@@ -2967,3 +2967,8 @@
 [submodule "passlib-feedstock"]
 	path = passlib-feedstock
 	url = ../passlib-feedstock
+	branch = master
+[submodule "argon2_cffi-feedstock"]
+	path = argon2_cffi-feedstock
+	url = ../argon2_cffi-feedstock
+	branch = master
