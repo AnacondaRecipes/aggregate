@@ -42,7 +42,7 @@ test:
     - pip
     - jsondate
     - nose
-    - unittest2
+    - unittest2  # [py<37]
     - httpretty
     - mock
     - factory_boy
