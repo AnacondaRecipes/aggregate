@@ -477,6 +477,7 @@ opentracing_instrumentation-feedstock
 serverfiles-feedstock
 anyqt-feedstock
 pyqtgraph-feedstock
+networkx-1.11-feedstock
 joblib-feedstock
 orange3-feedstock
 requests-file-feedstock
