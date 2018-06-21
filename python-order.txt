@@ -621,7 +621,6 @@ virtualenv-feedstock
 vispy-feedstock
 visvis-feedstock
 vtk-feedstock
-waitress-feedstock
 wsgiproxy2-feedstock
 webtest-feedstock
 whisper-feedstock
@@ -632,6 +631,5 @@ xcb-proto-feedstock
 xlsxwriter-feedstock
 xlwt-feedstock
 yt-feedstock
-mxnet-feedstock
 perf-feedstock
 performance-feedstock
