@@ -2976,3 +2976,7 @@
 	path = graphviz-feedstock
 	url = ../graphviz-feedstock
 	branch = master
+[submodule "tzlocal-feedstock"]
+	path = tzlocal-feedstock
+	url = ../tzlocal-feedstock
+	branch = master
