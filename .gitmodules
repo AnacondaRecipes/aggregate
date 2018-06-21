@@ -2972,3 +2972,7 @@
 	path = argon2_cffi-feedstock
 	url = ../argon2_cffi-feedstock
 	branch = master
+[submodule "graphviz-feedstock"]
+	path = graphviz-feedstock
+	url = ../graphviz-feedstock
+	branch = master
