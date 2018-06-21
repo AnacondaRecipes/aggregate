@@ -444,6 +444,7 @@ lockfile-feedstock
 logilab-common-feedstock
 testscenarios-feedstock
 testtools-feedstock
+traceback2-feedstock
 unittest2-feedstock
 python-daemon-feedstock
 luigi-feedstock
@@ -564,12 +565,10 @@ python-lmdb-feedstock
 python-memcached-feedstock
 python-rapidjson-feedstock
 python-snappy-feedstock
-pytorch-feedstock
 pyutilib-feedstock
 pywget-feedstock
 qgrid-feedstock
 qtawesome-feedstock
-traceback2-feedstock
 inflection-feedstock
 quandl-feedstock
 queuelib-feedstock
