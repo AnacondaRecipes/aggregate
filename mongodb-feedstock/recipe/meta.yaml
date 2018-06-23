@@ -1,38 +1,38 @@
 package:
   name: mongodb
-  version: 3.6.3
+  version: 3.6.5
 
 source:
   git_url: https://github.com/mongodb/mongo.git
-  git_tag: r3.6.3
+  git_tag: r3.6.5
   patches:
-    - 0001-SERVER-23420-Remove-use-of-GNU-extensions-in-parse_n.patch  # [linux]
-    - 0002-SERVER-28425-fix-QueryPlannerAccess-invariant.patch         # [linux]
-    - 0003-Add-invariant-to-silence-modern-gcc-warnings.patch          # [linux]
-    - 0004-Make-boost-1.61.0-comply-with-modern-gcc.patch              # [linux]
-#    - 0001-Make-scons-inherit-PATH.patch                               # [osx]
-#    - 0002-SERVER-29887-address-clang-4.0-warnings-in-geo-code.patch   # [osx]
-    - 0001-Make-scons-inherit-environment.patch                        # [osx]
+     - 0002-Pick-python-using-usr-bin-env-instead-of-relying-on-.patch  # [linux]
+     - 0003-Add-invariant-to-silence-modern-gcc-warnings.patch          # [linux]
+     - 0001-Make-scons-inherit-environment.patch                        # [osx]
+     - 0002-Skip-some-bad-length-checks-for-CIDR-SERVER-35761.patch     # [osx]
 
 build:
   skip: True  # [not x86_64]
   detect_binary_files_with_prefix: False
+  missing_dso_whitelist:          # [osx]
+    - /usr/lib/libresolv.9.dylib  # [osx]
 
 requirements:
+  build:                    # [unix]
+    - {{ compiler('c') }}   # [unix]
+    - {{ compiler('cxx') }} # [unix]
+  # TODO: Unvendor all dependencies. Use the --use-system-* flags
   host:
-    - scons
-    - python 2.7.*
+    - scons * *py27*
     - openssl
     # These are required for tests, which are run just after the build
+    - setuptools
     - pyyaml
     - cheetah
     - typing
     - requests
     - pymongo
     - pywin32  # [win]
-  build:
-    - {{ compiler('c') }}   # [unix]
-    - {{ compiler('cxx') }} # [unix]
   run:
     # This will be taken care of by run_exports
     # - openssl

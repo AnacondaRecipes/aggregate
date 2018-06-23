@@ -3,6 +3,7 @@
 if [[ ${HOST} =~ .*linux.* ]]; then
     # https://jira.mongodb.org/browse/SERVER-30711
     CXXFLAGS="$CXXFLAGS -Wno-noexcept-type"
+    LDFLAGS="$LDFLAGS -Wl,--disable-new-dtags"
 elif [[ ${HOST} =~ .*darwin.* ]]; then
     CXXFLAGS="$CXXFLAGS -fvisibility=hidden -Og"
 fi
@@ -27,8 +28,8 @@ scons install \
     all
 
 # comment these out if you are not patient
-python buildscripts/resmoke.py --suites=dbtest --jobs=${CPU_COUNT}
-python buildscripts/resmoke.py --suites=unittests --jobs=${CPU_COUNT}
+$PYTHON buildscripts/resmoke.py --suites=dbtest --jobs=${CPU_COUNT}
+$PYTHON buildscripts/resmoke.py --suites=unittests --jobs=${CPU_COUNT}
 
 # scons install doesn't strip'em
 strip $PREFIX/bin/mongo*

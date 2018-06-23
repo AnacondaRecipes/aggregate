@@ -28,10 +28,12 @@ It seems impossible to:
 
 call "%VS140COMNTOOLS%..\..\VC\vcvarsall.bat" x%ARCH%
 
-call scons install --ssl --prefix=%LIBRARY_PREFIX% all VERBOSE=on -j%CPU_COUNT%
+scons install --prefix=%LIBRARY_PREFIX% all VERBOSE=on -j%CPU_COUNT%
 
-python buildscripts\resmoke.py --suites=unittests
+:: TODO: Figure out why the tests below don't run (scons is a .bat file ?)
+
+%PYTHON% buildscripts\resmoke.py --suites=unittests
 if errorlevel 1 exit 1
 
-python buildscripts\resmoke.py --suites=dbtest
+%PYTHON% buildscripts\resmoke.py --suites=dbtest
 if errorlevel 1 exit 1
