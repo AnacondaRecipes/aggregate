@@ -3004,3 +3004,7 @@
 	path = jeepney-feedstock
 	url = ../jeepney-feedstock
 	branch = master
+[submodule "pigz-feedstock"]
+	path = pigz-feedstock
+	url = ../pigz-feedstock
+	branch = master
