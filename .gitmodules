@@ -2980,3 +2980,27 @@
 	path = tzlocal-feedstock
 	url = ../tzlocal-feedstock
 	branch = master
+[submodule "zipfile36-feedstock"]
+	path = zipfile36-feedstock
+	url = ../zipfile36-feedstock
+	branch = master
+[submodule "secretstorage-feedstock"]
+	path = secretstorage-feedstock
+	url = ../secretstorage-feedstock
+	branch = master
+[submodule "requests_download-feedstock"]
+	path = requests_download-feedstock
+	url = ../requests_download-feedstock
+	branch = master
+[submodule "flit-feedstock"]
+	path = flit-feedstock
+	url = ../flit-feedstock
+	branch = master
+[submodule "pytoml-feedstock"]
+	path = pytoml-feedstock
+	url = ../pytoml-feedstock
+	branch = master
+[submodule "jeepney-feedstock"]
+	path = jeepney-feedstock
+	url = ../jeepney-feedstock
+	branch = master
