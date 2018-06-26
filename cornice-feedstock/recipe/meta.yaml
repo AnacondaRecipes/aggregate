@@ -1,17 +1,13 @@
 {% set name = "cornice" %}
-{% set version = "3.1.0" %}
-{% set file_ext = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "fe1e9c233054e1459dd9cc49e2ac3fe7e6066378c422a19f7c29a1698ae97b1a" %}
+{% set version = "3.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ file_ext }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
-  {{ hash_type }}: {{ hash_value }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 5833582e7ff74ad6fe059bd22792cfeaff85aa0e2c37402b4adb0ae673d78ef7
 
 build:
   number: 0
@@ -21,13 +17,9 @@ requirements:
   host:
     - python
     - setuptools
-    - pyramid
-    - simplejson
   run:
     - python
-    - colander
-    - pyramid
-    - webob
+    - pyramid >=1.7
     - venusian
     - simplejson
     - six
@@ -50,7 +42,6 @@ about:
   doc_url: http://cornice.readthedocs.org
   doc_source_url: https://github.com/Cornices/cornice/blob/master/docs/source/index.rst
   dev_url: https://github.com/mozilla-services/cornice
-
 
 extra:
   recipe-maintainers:
