@@ -3008,3 +3008,7 @@
 	path = pigz-feedstock
 	url = ../pigz-feedstock
 	branch = master
+[submodule "pymongo-feedstock"]
+	path = pymongo-feedstock
+	url = ../pymongo-feedstock
+	branch = master
