@@ -1,0 +1,43 @@
+{% set name = "pyramid_jinja2" %}
+{% set version = "2.7" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 5c21081f65a5bec0b76957990c2b89ed41f4fd11257121387110cb722fd0e5eb
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+    - pyramid >=1.3.0
+    - zope.deprecation
+    - jinja2 >=2.5.0
+    - markupsafe
+
+test:
+  imports:
+    - pyramid_jinja2
+    - pyramid_jinja2.demo
+    - pyramid_jinja2.scaffolds
+    - pyramid_jinja2.tests
+
+about:
+  home: https://github.com/Pylons/pyramid_jinja2
+  license: BSD
+  license_file: LICENSE.txt
+  summary: Jinja2 template bindings for the Pyramid web framework
+  description: |
+    pyramid_jinja2 is a set of bindings that make templates written for the
+    Jinja2 templating system work under the Pyramid web framework.
+  doc_url: http://docs.pylonsproject.org/projects/pyramid-jinja2/en/latest/
+  dev_url: https://github.com/Pylons/pyramid_jinja2
