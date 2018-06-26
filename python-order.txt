@@ -622,8 +622,6 @@ virtualenv-feedstock
 vispy-feedstock
 visvis-feedstock
 vtk-feedstock
-wsgiproxy2-feedstock
-webtest-feedstock
 whisper-feedstock
 word2vec-feedstock
 ws4py-feedstock
