@@ -1,0 +1,67 @@
+{% set name = "pyramid" %}
+{% set version = "1.9.2" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: cf89a48cb899291639686bf3d4a883b39e496151fa4871fb83cc1a3200d5b925
+
+build:
+  number: 0
+  entry_points:
+    - pcreate=pyramid.scripts.pcreate:main
+    - pserve=pyramid.scripts.pserve:main
+    - pshell=pyramid.scripts.pshell:main
+    - proutes=pyramid.scripts.proutes:main
+    - pviews=pyramid.scripts.pviews:main
+    - ptweens=pyramid.scripts.ptweens:main
+    - prequest=pyramid.scripts.prequest:main
+    - pdistreport=pyramid.scripts.pdistreport:main
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+    - webob >=1.7.0
+    - repoze.lru >=0.4
+    - zope.interface >=3.8.0
+    - zope.deprecation >=3.5.0
+    - venusian >=1.0a3
+    - translationstring >=0.4
+    - pastedeploy >=1.5.0
+    - plaster
+    - plaster_pastedeploy
+    - hupper
+
+test:
+  imports:
+    - pyramid
+  commands:
+    - pcreate --help
+    - pserve --help
+    - pshell --help
+    - proutes --help
+    - pviews --help
+    - ptweens --help
+    - prequest --help
+    - pdistreport --help
+
+about:
+  home: https://trypyramid.com//
+  license: BSD
+  license_file: LICENSE.txt
+  summary: The Pyramid Web Framework, a Pylons project
+  description: |
+    As a framework,its primary job is to make it easier for a developer to create an arbitrary
+    web application. The type of application being created isn't really
+    important; it could be a spreadsheet, a corporate intranet, or a social
+    networking platform.
+  doc_url: http://docs.pylonsproject.org/projects/pyramid/en/1.9-branch/
+  doc_source_url: https://github.com/Pylons/pyramid/blob/master/README.rst
+  dev_url: https://github.com/Pylons/pyramid
