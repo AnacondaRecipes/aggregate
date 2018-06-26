@@ -1,0 +1,58 @@
+{% set name = "BTrees" %}
+{% set version = "4.5.0" %}
+{% set sha256 = "46b02cb69b26a5238db771ea1955b503df73ecf254bb8063af4c61999fc75b5c" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+  detect_binary_files_with_prefix: False
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - python
+    - setuptools
+    - persistent >=4.1.0
+  run:
+    - python
+    - persistent >=4.1.0
+    - zope.interface
+
+test:
+  imports:
+    - BTrees
+    - BTrees._IFBTree
+    - BTrees._IIBTree
+    - BTrees._IOBTree
+    - BTrees._LFBTree
+    - BTrees._LLBTree
+    - BTrees._LOBTree
+    - BTrees._OIBTree
+    - BTrees._OLBTree
+    - BTrees._OOBTree
+    - BTrees._fsBTree
+
+about:
+  home: http://packages.python.org/BTrees
+  license: ZPL 2.1
+  license_family: Other
+  license_file: LICENSE.txt
+  summary: scalable persistent object containers
+  description: |
+    BTrees contains a set of persistent object containers built around a
+    modified BTree data structure. The trees are optimized for use inside
+    ZODB's "optimistic currency" paradigm, and include explicit resolution of
+    conflicts detected by that mechanism.
+  doc_url: http://pythonhosted.org/BTrees
+  doc_source_url: https://github.com/zopefoundation/BTrees/blob/master/docs/index.rst
+  dev_url: https://github.com/zopefoundation/BTrees
