@@ -45,13 +45,12 @@ function git_num_untracked_files {
 }
 
 function git_num_added_to_index {
-  expr $(git status --porcelain 2>/dev/null| grep "^M" | wc -l))
+  expr $(git status --porcelain 2>/dev/null| grep "^M" | wc -l)
 }
 
-# expr $(git status --porcelain 2>/dev/null| grep "^ M" | wc -l)
-
+set -x
 SUCCESS=0
-DEBUG=yes
+# DEBUG=yes
 if [[ $name == dbus-feedstock-no ]]; then
   DEBUG=yes
 fi
@@ -101,10 +100,11 @@ if [[ ! ${current_branch} ]]; then
 fi
 
 if [[ ${sha1_h} == ${sha1_m} ]] && [[ ${sha1_h} == ${sha1_o} ]]; then
-  # Simple case, myabe checkout ${wanted_branch} and move on
+  # Simple case, maybe checkout ${wanted_branch} and move on
   if [[ ${on_wanted} == no ]]; then
     maybe_do git checkout ${wanted_branch}
   fi
+  echo SUCCESS=$SUCCESS
   exit ${SUCCESS}
 fi
 
