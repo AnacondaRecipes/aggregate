@@ -1,37 +1,29 @@
-::References:
-::https://github.com/tensorflow/tensorflow/tree/v1.1.0/tensorflow/contrib/cmake
-::https://github.com/tensorflow/tensorflow/blob/v1.1.0/tensorflow/tools/ci_build/windows/cpu/cmake/run_py.bat
+@echo on
+:: Delegate to the Unixy script. We need to translate the key path variables
+:: to be Unix-y rather than Windows-y, though.
+set "saved_recipe_dir=%RECIPE_DIR%"
+set "saved_source_dir=%SRC_DIR%"
 
-cd tensorflow\contrib\cmake
+FOR /F "delims=" %%i IN ('cygpath.exe -u "%PYTHON%"') DO set "BAZEL_PYTHON=%%i"
+FOR /F "delims=" %%i IN ('cygpath.exe -u "%LIBRARY_PREFIX%\usr\bin\bash.exe"') DO set "BAZEL_SH=%%i"
 
-mkdir build
-cd build
+FOR /F "delims=" %%i IN ('cygpath.exe -u -p "%PATH%"') DO set "PATH_OVERRIDE=%%i"
+FOR /F "delims=" %%i IN ('cygpath.exe -u "%PREFIX%"') DO set "PREFIX=%%i"
+FOR /F "delims=" %%i IN ('cygpath.exe -u "%PYTHON%"') DO set "PYTHON=%%i"
+FOR /F "delims=" %%i IN ('cygpath.exe -u "%RECIPE_DIR%"') DO set "RECIPE_DIR=%%i"
+FOR /F "delims=" %%i IN ('cygpath.exe -u "%SP_DIR%"') DO set "SP_DIR=%%i"
+FOR /F "delims=" %%i IN ('cygpath.exe -u "%SRC_DIR%"') DO set "SRC_DIR=%%i"
+FOR /F "delims=" %%i IN ('cygpath.exe -u "%STDLIB_DIR%"') DO set "STDLIB_DIR=%%i"
 
-cmake .. -A x%ARCH% ^
- -DCMAKE_BUILD_TYPE=Release ^
- -DSWIG_EXECUTABLE=%LIBRARY_BIN%\swig.exe ^
- -DPYTHON_EXECUTABLE=%PREFIX%\python.exe ^
- -DPYTHON_LIBRARIES=%PREFIX%\python35.lib ^
- -Dtensorflow_BUILD_PYTHON_TESTS=ON ^
- -Dtensorflow_ENABLE_GPU=ON ^
- -DCUDNN_HOME=%LIBRARY_PREFIX%
-IF %ERRORLEVEL% NEQ 0 exit 1
+:: LIBRARY_PREFIX gets translated to '/' instead of the absolute path
+FOR /F "delims=" %%i IN ('cygpath.exe -u "%PREFIX%"') DO set "JAVA_HOME=%%i/Library"
+FOR /F "delims=" %%i IN ('cygpath.exe -u "%PREFIX%"') DO set "LIBRARY_BIN=%%i/Library/bin"
 
-MSBuild.exe /p:Configuration=Release tf_python_build_pip_package.vcxproj
-IF %ERRORLEVEL% NEQ 0 exit 1
+:: Need a very short TMPDIR otherwise we hit the max path limit while compiling bazel
+FOR /F "delims=" %%i IN ('cygpath.exe -u "%SYSTEMDRIVE%\t"') DO set "TMPDIR=%%i"
 
-FOR /F "delims=" %%i IN ('dir /s /b tf_python\dist\*.whl') DO set tflow_wheel=%%i
-
-pip install --no-deps %tflow_wheel%
-IF %ERRORLEVEL% NEQ 0 exit 1
-
-:: tensorflow/python/kernel_tests/control_flow_ops_py_test.py depends on
-:: the library cupti64_80.dll (see: https://goo.gl/upwvWk ), which is available
-:: at C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\extras\CUPTI\libx64
-:: tensorflow/python/kernel_tests/bias_op_test.py fails even with the official
-:: version with a 22.91666666666667% mismatch . Rest of the tests pass.
-set PATH=%PREFIX%\DLLs;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\extras\CUPTI\libx64;%PATH%
-ctest -C Release --output-on-failure
-echo tests returned %ErrorLevel%
-:: Known failures, continue anyway
-exit /b 0
+set MSYSTEM=MINGW%ARCH%
+set MSYS2_PATH_TYPE=inherit
+set CHERE_INVOKING=1
+bash -lc "%RECIPE_DIR%"/build_win.sh
+if errorlevel 1 exit 1
