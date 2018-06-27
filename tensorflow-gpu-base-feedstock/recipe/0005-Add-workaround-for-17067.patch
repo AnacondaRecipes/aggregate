@@ -1,0 +1,463 @@
+From 2b52f05090973fc666f9ac1deb21a24a18f1ca28 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Mon, 25 Jun 2018 22:53:08 -0500
+Subject: [PATCH 5/8] Add workaround for #17067
+
+xref: https://github.com/tensorflow/tensorflow/issues/17067
+xref: https://github.com/dtrebbien/protobuf/commit/50f552646ba1de79e07562b41f3999fe036b4fd0
+---
+ tensorflow/workspace.bzl                           |   3 +
+ .../50f552646ba1de79e07562b41f3999fe036b4fd0.patch | 413 +++++++++++++++++++++
+ 2 files changed, 416 insertions(+)
+ create mode 100644 third_party/protobuf/50f552646ba1de79e07562b41f3999fe036b4fd0.patch
+
+diff --git a/tensorflow/workspace.bzl b/tensorflow/workspace.bzl
+index 48728ac..4e7d14b 100644
+--- a/tensorflow/workspace.bzl
++++ b/tensorflow/workspace.bzl
+@@ -335,6 +335,7 @@ def tf_workspace(path_prefix="", tf_repo_name=""):
+       ],
+       sha256 = "846d907acf472ae233ec0882ef3a2d24edbbe834b80c305e867ac65a1f2c59e3",
+       strip_prefix = "protobuf-396336eb961b75f03b25824fe86cf6490fb75e3a",
++      patch_file = clean_dep("//third_party/protobuf:50f552646ba1de79e07562b41f3999fe036b4fd0.patch"),
+   )
+ 
+   # We need to import the protobuf library under the names com_google_protobuf
+@@ -348,6 +349,7 @@ def tf_workspace(path_prefix="", tf_repo_name=""):
+       ],
+       sha256 = "846d907acf472ae233ec0882ef3a2d24edbbe834b80c305e867ac65a1f2c59e3",
+       strip_prefix = "protobuf-396336eb961b75f03b25824fe86cf6490fb75e3a",
++      patch_file = clean_dep("//third_party/protobuf:50f552646ba1de79e07562b41f3999fe036b4fd0.patch"),
+   )
+ 
+   tf_http_archive(
+@@ -358,6 +360,7 @@ def tf_workspace(path_prefix="", tf_repo_name=""):
+       ],
+       sha256 = "846d907acf472ae233ec0882ef3a2d24edbbe834b80c305e867ac65a1f2c59e3",
+       strip_prefix = "protobuf-396336eb961b75f03b25824fe86cf6490fb75e3a",
++      patch_file = clean_dep("//third_party/protobuf:50f552646ba1de79e07562b41f3999fe036b4fd0.patch"),
+   )
+ 
+   tf_http_archive(
+diff --git a/third_party/protobuf/50f552646ba1de79e07562b41f3999fe036b4fd0.patch b/third_party/protobuf/50f552646ba1de79e07562b41f3999fe036b4fd0.patch
+new file mode 100644
+index 0000000..66193c3
+--- /dev/null
++++ b/third_party/protobuf/50f552646ba1de79e07562b41f3999fe036b4fd0.patch
+@@ -0,0 +1,413 @@
++From 50f552646ba1de79e07562b41f3999fe036b4fd0 Mon Sep 17 00:00:00 2001
++From: Daniel Trebbien <dtrebbien@gmail.com>
++Date: Sun, 18 Feb 2018 11:52:39 -0800
++Subject: [PATCH] Work around the "CreateMessageInternal" compilation error
++ reported at tensorflow/tensorflow#17067
++
++---
++ src/google/protobuf/any.pb.cc                   |  2 +-
++ src/google/protobuf/api.pb.cc                   |  6 +--
++ src/google/protobuf/arena.h                     |  8 ++--
++ src/google/protobuf/compiler/cpp/cpp_message.cc |  2 +-
++ src/google/protobuf/compiler/plugin.pb.cc       |  8 ++--
++ src/google/protobuf/descriptor.pb.cc            | 54 ++++++++++++-------------
++ src/google/protobuf/duration.pb.cc              |  2 +-
++ src/google/protobuf/empty.pb.cc                 |  2 +-
++ src/google/protobuf/field_mask.pb.cc            |  2 +-
++ src/google/protobuf/source_context.pb.cc        |  2 +-
++ src/google/protobuf/struct.pb.cc                |  8 ++--
++ src/google/protobuf/timestamp.pb.cc             |  2 +-
++ src/google/protobuf/type.pb.cc                  | 10 ++---
++ src/google/protobuf/wrappers.pb.cc              | 18 ++++-----
++ 14 files changed, 63 insertions(+), 63 deletions(-)
++
++diff --git a/src/google/protobuf/any.pb.cc b/src/google/protobuf/any.pb.cc
++index 4335e467a0..ef774a789c 100644
++--- a/src/google/protobuf/any.pb.cc
+++++ b/src/google/protobuf/any.pb.cc
++@@ -432,7 +432,7 @@ ::google::protobuf::Metadata Any::GetMetadata() const {
++ namespace google {
++ namespace protobuf {
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::Any* Arena::Create< ::google::protobuf::Any >(Arena* arena) {
++-  return Arena::CreateInternal< ::google::protobuf::Any >(arena);
+++  return Arena::CreateInternal_< ::google::protobuf::Any >(arena);
++ }
++ }  // namespace protobuf
++ }  // namespace google
++diff --git a/src/google/protobuf/api.pb.cc b/src/google/protobuf/api.pb.cc
++index b03545512f..97de828530 100644
++--- a/src/google/protobuf/api.pb.cc
+++++ b/src/google/protobuf/api.pb.cc
++@@ -1598,13 +1598,13 @@ ::google::protobuf::Metadata Mixin::GetMetadata() const {
++ namespace google {
++ namespace protobuf {
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::Api* Arena::Create< ::google::protobuf::Api >(Arena* arena) {
++-  return Arena::CreateInternal< ::google::protobuf::Api >(arena);
+++  return Arena::CreateInternal_< ::google::protobuf::Api >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::Method* Arena::Create< ::google::protobuf::Method >(Arena* arena) {
++-  return Arena::CreateInternal< ::google::protobuf::Method >(arena);
+++  return Arena::CreateInternal_< ::google::protobuf::Method >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::Mixin* Arena::Create< ::google::protobuf::Mixin >(Arena* arena) {
++-  return Arena::CreateInternal< ::google::protobuf::Mixin >(arena);
+++  return Arena::CreateInternal_< ::google::protobuf::Mixin >(arena);
++ }
++ }  // namespace protobuf
++ }  // namespace google
++diff --git a/src/google/protobuf/arena.h b/src/google/protobuf/arena.h
++index f3cdedac3f..c8d6b6add8 100644
++--- a/src/google/protobuf/arena.h
+++++ b/src/google/protobuf/arena.h
++@@ -663,7 +663,7 @@ class LIBPROTOBUF_EXPORT Arena {
++ 
++  private:
++   template <typename T> GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE
++-  static T* CreateMessageInternal(::google::protobuf::Arena* arena) {
+++  static T* CreateMessageInternal_(::google::protobuf::Arena* arena) {
++ #if LANG_CXX11
++     static_assert(
++         InternalHelper<T>::is_arena_constructable::value,
++@@ -677,7 +677,7 @@ class LIBPROTOBUF_EXPORT Arena {
++   }
++ 
++   template <typename T> GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE
++-  static T* CreateInternal(::google::protobuf::Arena* arena) {
+++  static T* CreateInternal_(::google::protobuf::Arena* arena) {
++     if (arena == NULL) {
++       return new T();
++     } else {
++@@ -716,12 +716,12 @@ class LIBPROTOBUF_EXPORT Arena {
++   // fields, since they are designed to work in all mode combinations.
++   template <typename Msg> GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE
++   static Msg* CreateMaybeMessage(Arena* arena, google::protobuf::internal::true_type) {
++-    return CreateMessageInternal<Msg>(arena);
+++    return CreateMessageInternal_<Msg>(arena);
++   }
++ 
++   template <typename T> GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE
++   static T* CreateMaybeMessage(Arena* arena, google::protobuf::internal::false_type) {
++-    return CreateInternal<T>(arena);
+++    return CreateInternal_<T>(arena);
++   }
++ 
++   template <typename T> GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE
++diff --git a/src/google/protobuf/compiler/cpp/cpp_message.cc b/src/google/protobuf/compiler/cpp/cpp_message.cc
++index 8636f089e2..27052c941a 100644
++--- a/src/google/protobuf/compiler/cpp/cpp_message.cc
+++++ b/src/google/protobuf/compiler/cpp/cpp_message.cc
++@@ -2738,7 +2738,7 @@ void MessageGenerator::GenerateSourceInProto2Namespace(io::Printer* printer) {
++       "template<> "
++       "GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE "
++       "$classname$* Arena::$create_func$< $classname$ >(Arena* arena) {\n"
++-      "  return Arena::$create_func$Internal< $classname$ >(arena);\n"
+++      "  return Arena::$create_func$Internal_< $classname$ >(arena);\n"
++       "}\n",
++       "classname", QualifiedClassName(descriptor_),
++       "create_func", MessageCreateFunction(descriptor_));
++diff --git a/src/google/protobuf/compiler/plugin.pb.cc b/src/google/protobuf/compiler/plugin.pb.cc
++index d13ad2b34b..a1cf729c76 100644
++--- a/src/google/protobuf/compiler/plugin.pb.cc
+++++ b/src/google/protobuf/compiler/plugin.pb.cc
++@@ -1750,16 +1750,16 @@ ::google::protobuf::Metadata CodeGeneratorResponse::GetMetadata() const {
++ namespace google {
++ namespace protobuf {
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::compiler::Version* Arena::Create< ::google::protobuf::compiler::Version >(Arena* arena) {
++-  return Arena::CreateInternal< ::google::protobuf::compiler::Version >(arena);
+++  return Arena::CreateInternal_< ::google::protobuf::compiler::Version >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::compiler::CodeGeneratorRequest* Arena::Create< ::google::protobuf::compiler::CodeGeneratorRequest >(Arena* arena) {
++-  return Arena::CreateInternal< ::google::protobuf::compiler::CodeGeneratorRequest >(arena);
+++  return Arena::CreateInternal_< ::google::protobuf::compiler::CodeGeneratorRequest >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::compiler::CodeGeneratorResponse_File* Arena::Create< ::google::protobuf::compiler::CodeGeneratorResponse_File >(Arena* arena) {
++-  return Arena::CreateInternal< ::google::protobuf::compiler::CodeGeneratorResponse_File >(arena);
+++  return Arena::CreateInternal_< ::google::protobuf::compiler::CodeGeneratorResponse_File >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::compiler::CodeGeneratorResponse* Arena::Create< ::google::protobuf::compiler::CodeGeneratorResponse >(Arena* arena) {
++-  return Arena::CreateInternal< ::google::protobuf::compiler::CodeGeneratorResponse >(arena);
+++  return Arena::CreateInternal_< ::google::protobuf::compiler::CodeGeneratorResponse >(arena);
++ }
++ }  // namespace protobuf
++ }  // namespace google
++diff --git a/src/google/protobuf/descriptor.pb.cc b/src/google/protobuf/descriptor.pb.cc
++index c8362376f8..313a8edfcd 100644
++--- a/src/google/protobuf/descriptor.pb.cc
+++++ b/src/google/protobuf/descriptor.pb.cc
++@@ -14116,85 +14116,85 @@ ::google::protobuf::Metadata GeneratedCodeInfo::GetMetadata() const {
++ namespace google {
++ namespace protobuf {
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::FileDescriptorSet* Arena::CreateMessage< ::google::protobuf::FileDescriptorSet >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::FileDescriptorSet >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::FileDescriptorSet >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::FileDescriptorProto* Arena::CreateMessage< ::google::protobuf::FileDescriptorProto >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::FileDescriptorProto >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::FileDescriptorProto >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::DescriptorProto_ExtensionRange* Arena::CreateMessage< ::google::protobuf::DescriptorProto_ExtensionRange >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::DescriptorProto_ExtensionRange >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::DescriptorProto_ExtensionRange >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::DescriptorProto_ReservedRange* Arena::CreateMessage< ::google::protobuf::DescriptorProto_ReservedRange >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::DescriptorProto_ReservedRange >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::DescriptorProto_ReservedRange >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::DescriptorProto* Arena::CreateMessage< ::google::protobuf::DescriptorProto >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::DescriptorProto >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::DescriptorProto >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::ExtensionRangeOptions* Arena::CreateMessage< ::google::protobuf::ExtensionRangeOptions >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::ExtensionRangeOptions >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::ExtensionRangeOptions >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::FieldDescriptorProto* Arena::CreateMessage< ::google::protobuf::FieldDescriptorProto >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::FieldDescriptorProto >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::FieldDescriptorProto >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::OneofDescriptorProto* Arena::CreateMessage< ::google::protobuf::OneofDescriptorProto >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::OneofDescriptorProto >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::OneofDescriptorProto >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::EnumDescriptorProto_EnumReservedRange* Arena::CreateMessage< ::google::protobuf::EnumDescriptorProto_EnumReservedRange >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::EnumDescriptorProto_EnumReservedRange >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::EnumDescriptorProto_EnumReservedRange >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::EnumDescriptorProto* Arena::CreateMessage< ::google::protobuf::EnumDescriptorProto >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::EnumDescriptorProto >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::EnumDescriptorProto >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::EnumValueDescriptorProto* Arena::CreateMessage< ::google::protobuf::EnumValueDescriptorProto >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::EnumValueDescriptorProto >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::EnumValueDescriptorProto >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::ServiceDescriptorProto* Arena::CreateMessage< ::google::protobuf::ServiceDescriptorProto >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::ServiceDescriptorProto >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::ServiceDescriptorProto >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::MethodDescriptorProto* Arena::CreateMessage< ::google::protobuf::MethodDescriptorProto >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::MethodDescriptorProto >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::MethodDescriptorProto >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::FileOptions* Arena::CreateMessage< ::google::protobuf::FileOptions >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::FileOptions >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::FileOptions >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::MessageOptions* Arena::CreateMessage< ::google::protobuf::MessageOptions >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::MessageOptions >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::MessageOptions >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::FieldOptions* Arena::CreateMessage< ::google::protobuf::FieldOptions >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::FieldOptions >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::FieldOptions >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::OneofOptions* Arena::CreateMessage< ::google::protobuf::OneofOptions >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::OneofOptions >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::OneofOptions >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::EnumOptions* Arena::CreateMessage< ::google::protobuf::EnumOptions >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::EnumOptions >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::EnumOptions >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::EnumValueOptions* Arena::CreateMessage< ::google::protobuf::EnumValueOptions >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::EnumValueOptions >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::EnumValueOptions >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::ServiceOptions* Arena::CreateMessage< ::google::protobuf::ServiceOptions >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::ServiceOptions >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::ServiceOptions >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::MethodOptions* Arena::CreateMessage< ::google::protobuf::MethodOptions >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::MethodOptions >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::MethodOptions >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::UninterpretedOption_NamePart* Arena::CreateMessage< ::google::protobuf::UninterpretedOption_NamePart >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::UninterpretedOption_NamePart >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::UninterpretedOption_NamePart >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::UninterpretedOption* Arena::CreateMessage< ::google::protobuf::UninterpretedOption >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::UninterpretedOption >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::UninterpretedOption >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::SourceCodeInfo_Location* Arena::CreateMessage< ::google::protobuf::SourceCodeInfo_Location >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::SourceCodeInfo_Location >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::SourceCodeInfo_Location >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::SourceCodeInfo* Arena::CreateMessage< ::google::protobuf::SourceCodeInfo >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::SourceCodeInfo >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::SourceCodeInfo >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::GeneratedCodeInfo_Annotation* Arena::CreateMessage< ::google::protobuf::GeneratedCodeInfo_Annotation >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::GeneratedCodeInfo_Annotation >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::GeneratedCodeInfo_Annotation >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::GeneratedCodeInfo* Arena::CreateMessage< ::google::protobuf::GeneratedCodeInfo >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::GeneratedCodeInfo >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::GeneratedCodeInfo >(arena);
++ }
++ }  // namespace protobuf
++ }  // namespace google
++diff --git a/src/google/protobuf/duration.pb.cc b/src/google/protobuf/duration.pb.cc
++index b4d5eb5fcc..00a010ff24 100644
++--- a/src/google/protobuf/duration.pb.cc
+++++ b/src/google/protobuf/duration.pb.cc
++@@ -427,7 +427,7 @@ ::google::protobuf::Metadata Duration::GetMetadata() const {
++ namespace google {
++ namespace protobuf {
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::Duration* Arena::CreateMessage< ::google::protobuf::Duration >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::Duration >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::Duration >(arena);
++ }
++ }  // namespace protobuf
++ }  // namespace google
++diff --git a/src/google/protobuf/empty.pb.cc b/src/google/protobuf/empty.pb.cc
++index ffff80b923..d68184db4c 100644
++--- a/src/google/protobuf/empty.pb.cc
+++++ b/src/google/protobuf/empty.pb.cc
++@@ -338,7 +338,7 @@ ::google::protobuf::Metadata Empty::GetMetadata() const {
++ namespace google {
++ namespace protobuf {
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::Empty* Arena::CreateMessage< ::google::protobuf::Empty >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::Empty >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::Empty >(arena);
++ }
++ }  // namespace protobuf
++ }  // namespace google
++diff --git a/src/google/protobuf/field_mask.pb.cc b/src/google/protobuf/field_mask.pb.cc
++index abee4fe7fb..a17c3831e4 100644
++--- a/src/google/protobuf/field_mask.pb.cc
+++++ b/src/google/protobuf/field_mask.pb.cc
++@@ -365,7 +365,7 @@ ::google::protobuf::Metadata FieldMask::GetMetadata() const {
++ namespace google {
++ namespace protobuf {
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::FieldMask* Arena::Create< ::google::protobuf::FieldMask >(Arena* arena) {
++-  return Arena::CreateInternal< ::google::protobuf::FieldMask >(arena);
+++  return Arena::CreateInternal_< ::google::protobuf::FieldMask >(arena);
++ }
++ }  // namespace protobuf
++ }  // namespace google
++diff --git a/src/google/protobuf/source_context.pb.cc b/src/google/protobuf/source_context.pb.cc
++index b9d8f3cbc5..c77481eb7d 100644
++--- a/src/google/protobuf/source_context.pb.cc
+++++ b/src/google/protobuf/source_context.pb.cc
++@@ -373,7 +373,7 @@ ::google::protobuf::Metadata SourceContext::GetMetadata() const {
++ namespace google {
++ namespace protobuf {
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::SourceContext* Arena::Create< ::google::protobuf::SourceContext >(Arena* arena) {
++-  return Arena::CreateInternal< ::google::protobuf::SourceContext >(arena);
+++  return Arena::CreateInternal_< ::google::protobuf::SourceContext >(arena);
++ }
++ }  // namespace protobuf
++ }  // namespace google
++diff --git a/src/google/protobuf/struct.pb.cc b/src/google/protobuf/struct.pb.cc
++index 309a4d2df1..e0367a98be 100644
++--- a/src/google/protobuf/struct.pb.cc
+++++ b/src/google/protobuf/struct.pb.cc
++@@ -1468,16 +1468,16 @@ ::google::protobuf::Metadata ListValue::GetMetadata() const {
++ namespace google {
++ namespace protobuf {
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::Struct_FieldsEntry_DoNotUse* Arena::CreateMessage< ::google::protobuf::Struct_FieldsEntry_DoNotUse >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::Struct_FieldsEntry_DoNotUse >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::Struct_FieldsEntry_DoNotUse >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::Struct* Arena::CreateMessage< ::google::protobuf::Struct >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::Struct >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::Struct >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::Value* Arena::CreateMessage< ::google::protobuf::Value >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::Value >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::Value >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::ListValue* Arena::CreateMessage< ::google::protobuf::ListValue >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::ListValue >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::ListValue >(arena);
++ }
++ }  // namespace protobuf
++ }  // namespace google
++diff --git a/src/google/protobuf/timestamp.pb.cc b/src/google/protobuf/timestamp.pb.cc
++index f57d4d6699..2259877ddc 100644
++--- a/src/google/protobuf/timestamp.pb.cc
+++++ b/src/google/protobuf/timestamp.pb.cc
++@@ -427,7 +427,7 @@ ::google::protobuf::Metadata Timestamp::GetMetadata() const {
++ namespace google {
++ namespace protobuf {
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::Timestamp* Arena::CreateMessage< ::google::protobuf::Timestamp >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::Timestamp >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::Timestamp >(arena);
++ }
++ }  // namespace protobuf
++ }  // namespace google
++diff --git a/src/google/protobuf/type.pb.cc b/src/google/protobuf/type.pb.cc
++index a2edabb69d..076c8e19ee 100644
++--- a/src/google/protobuf/type.pb.cc
+++++ b/src/google/protobuf/type.pb.cc
++@@ -2834,19 +2834,19 @@ ::google::protobuf::Metadata Option::GetMetadata() const {
++ namespace google {
++ namespace protobuf {
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::Type* Arena::CreateMessage< ::google::protobuf::Type >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::Type >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::Type >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::Field* Arena::CreateMessage< ::google::protobuf::Field >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::Field >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::Field >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::Enum* Arena::CreateMessage< ::google::protobuf::Enum >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::Enum >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::Enum >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::EnumValue* Arena::CreateMessage< ::google::protobuf::EnumValue >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::EnumValue >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::EnumValue >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::Option* Arena::CreateMessage< ::google::protobuf::Option >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::Option >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::Option >(arena);
++ }
++ }  // namespace protobuf
++ }  // namespace google
++diff --git a/src/google/protobuf/wrappers.pb.cc b/src/google/protobuf/wrappers.pb.cc
++index 34c6fed197..d27c58cea3 100644
++--- a/src/google/protobuf/wrappers.pb.cc
+++++ b/src/google/protobuf/wrappers.pb.cc
++@@ -2768,31 +2768,31 @@ ::google::protobuf::Metadata BytesValue::GetMetadata() const {
++ namespace google {
++ namespace protobuf {
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::DoubleValue* Arena::CreateMessage< ::google::protobuf::DoubleValue >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::DoubleValue >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::DoubleValue >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::FloatValue* Arena::CreateMessage< ::google::protobuf::FloatValue >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::FloatValue >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::FloatValue >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::Int64Value* Arena::CreateMessage< ::google::protobuf::Int64Value >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::Int64Value >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::Int64Value >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::UInt64Value* Arena::CreateMessage< ::google::protobuf::UInt64Value >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::UInt64Value >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::UInt64Value >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::Int32Value* Arena::CreateMessage< ::google::protobuf::Int32Value >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::Int32Value >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::Int32Value >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::UInt32Value* Arena::CreateMessage< ::google::protobuf::UInt32Value >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::UInt32Value >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::UInt32Value >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::BoolValue* Arena::CreateMessage< ::google::protobuf::BoolValue >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::BoolValue >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::BoolValue >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::StringValue* Arena::CreateMessage< ::google::protobuf::StringValue >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::StringValue >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::StringValue >(arena);
++ }
++ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::google::protobuf::BytesValue* Arena::CreateMessage< ::google::protobuf::BytesValue >(Arena* arena) {
++-  return Arena::CreateMessageInternal< ::google::protobuf::BytesValue >(arena);
+++  return Arena::CreateMessageInternal_< ::google::protobuf::BytesValue >(arena);
++ }
++ }  // namespace protobuf
++ }  // namespace google
+-- 
+1.8.3.1
+

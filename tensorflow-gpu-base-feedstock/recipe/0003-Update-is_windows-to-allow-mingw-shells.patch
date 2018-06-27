@@ -1,0 +1,25 @@
+From ba8908b13c5446ff0815ead44e509a26b167302b Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Fri, 27 Apr 2018 15:12:59 -0500
+Subject: [PATCH 3/4] Update is_windows() to allow mingw shells
+
+---
+ tensorflow/tools/pip_package/build_pip_package.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tensorflow/tools/pip_package/build_pip_package.sh b/tensorflow/tools/pip_package/build_pip_package.sh
+index dc31e4c5f7..ddef1a02a7 100755
+--- a/tensorflow/tools/pip_package/build_pip_package.sh
++++ b/tensorflow/tools/pip_package/build_pip_package.sh
+@@ -34,7 +34,7 @@ function cp_external() {
+ PLATFORM="$(uname -s | tr 'A-Z' 'a-z')"
+ function is_windows() {
+   # On windows, the shell script is actually running in msys
+-  if [[ "${PLATFORM}" =~ msys_nt* ]]; then
++  if [[ "${PLATFORM}" =~ (mingw64|msys)_nt* ]]; then
+     true
+   else
+     false
+-- 
+2.17.0
+

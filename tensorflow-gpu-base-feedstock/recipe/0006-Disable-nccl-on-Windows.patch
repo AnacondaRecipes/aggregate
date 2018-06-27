@@ -1,0 +1,71 @@
+From 9c9c2e3c7dd9db1560727d54cc32dfbee90f4b2a Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Mon, 25 Jun 2018 22:54:55 -0500
+Subject: [PATCH 6/8] Disable nccl on Windows
+
+---
+ tensorflow/contrib/BUILD                   | 6 +++---
+ tensorflow/contrib/all_reduce/BUILD        | 2 +-
+ tensorflow/contrib/distribute/python/BUILD | 2 +-
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/tensorflow/contrib/BUILD b/tensorflow/contrib/BUILD
+index 7e47516..af867da 100644
+--- a/tensorflow/contrib/BUILD
++++ b/tensorflow/contrib/BUILD
+@@ -70,7 +70,7 @@ py_library(
+         "//tensorflow/contrib/meta_graph_transform",
+         "//tensorflow/contrib/metrics:metrics_py",
+         "//tensorflow/contrib/model_pruning",
+-        "//tensorflow/contrib/nccl:nccl_py",
++#        "//tensorflow/contrib/nccl:nccl_py",
+         "//tensorflow/contrib/nearest_neighbor:nearest_neighbor_py",
+         "//tensorflow/contrib/nn:nn_py",
+         "//tensorflow/contrib/opt:opt_py",
+@@ -143,7 +143,7 @@ cc_library(
+         "//tensorflow/contrib/tensor_forest:tensor_forest_kernels",
+         "//tensorflow/contrib/text:all_kernels",
+     ] + if_mpi(["//tensorflow/contrib/mpi_collectives:mpi_collectives_py"]) + if_cuda([
+-        "//tensorflow/contrib/nccl:nccl_kernels",
++#        "//tensorflow/contrib/nccl:nccl_kernels",
+     ]) + select({
+         "//tensorflow:with_kafka_support_windows_override": [],
+         "//tensorflow:with_kafka_support": [
+@@ -164,7 +164,7 @@ cc_library(
+         "//tensorflow/contrib/framework:all_ops",
+         "//tensorflow/contrib/input_pipeline:input_pipeline_ops_op_lib",
+         "//tensorflow/contrib/layers:sparse_feature_cross_op_op_lib",
+-        "//tensorflow/contrib/nccl:nccl_ops_op_lib",
++#        "//tensorflow/contrib/nccl:nccl_ops_op_lib",
+         "//tensorflow/contrib/nearest_neighbor:nearest_neighbor_ops_op_lib",
+         "//tensorflow/contrib/rnn:all_ops",
+         "//tensorflow/contrib/seq2seq:beam_search_ops_op_lib",
+diff --git a/tensorflow/contrib/all_reduce/BUILD b/tensorflow/contrib/all_reduce/BUILD
+index 62d1b1c..8f2942e 100644
+--- a/tensorflow/contrib/all_reduce/BUILD
++++ b/tensorflow/contrib/all_reduce/BUILD
+@@ -19,7 +19,7 @@ py_library(
+     srcs_version = "PY2AND3",
+     visibility = ["//visibility:public"],
+     deps = [
+-        "//tensorflow/contrib/nccl:nccl_py",
++#        "//tensorflow/contrib/nccl:nccl_py",
+         "//tensorflow/python:array_ops",
+         "//tensorflow/python:framework_ops",
+         "//tensorflow/python:math_ops",
+diff --git a/tensorflow/contrib/distribute/python/BUILD b/tensorflow/contrib/distribute/python/BUILD
+index 78b2b00..b018814 100644
+--- a/tensorflow/contrib/distribute/python/BUILD
++++ b/tensorflow/contrib/distribute/python/BUILD
+@@ -371,7 +371,7 @@ py_library(
+     srcs = ["cross_tower_utils.py"],
+     srcs_version = "PY2AND3",
+     deps = [
+-        "//tensorflow/contrib/nccl:nccl_py",
++#        "//tensorflow/contrib/nccl:nccl_py",
+         "//tensorflow/python:array_ops",
+         "//tensorflow/python:framework_ops",
+         "//tensorflow/python:math_ops",
+-- 
+1.8.3.1
+
