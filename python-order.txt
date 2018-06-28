@@ -256,7 +256,6 @@ sip-4.18-feedstock
 pyqt-5.6-feedstock
 matplotlib-feedstock
 pywavelets-feedstock
-scikit-image-feedstock
 caffe-feedstock
 humanfriendly-feedstock
 capturer-feedstock
@@ -308,7 +307,6 @@ fastrlock-feedstock
 cvxcanon-feedstock
 cx_oracle-feedstock
 cymem-feedstock
-scikit-learn-feedstock
 dask-glm-feedstock
 dask-searchcv-feedstock
 dask-ml-feedstock
@@ -581,8 +579,6 @@ routes-feedstock
 s3fs-feedstock
 saspy-feedstock
 sas_kernel-feedstock
-scikit-bio-feedstock
-scikit-rf-feedstock
 scons-feedstock
 scp-feedstock
 pydispatcher-feedstock
@@ -621,7 +617,8 @@ verboselogs-feedstock
 virtualenv-feedstock
 vispy-feedstock
 visvis-feedstock
-vtk-feedstock
+wsgiproxy2-feedstock
+webtest-feedstock
 whisper-feedstock
 word2vec-feedstock
 ws4py-feedstock
