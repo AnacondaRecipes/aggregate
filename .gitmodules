@@ -3014,3 +3014,11 @@
 	path = pymongo-feedstock
 	url = ../pymongo-feedstock
 	branch = master
+[submodule "r-xgboost-gpu-feedstock"]
+	path = r-xgboost-gpu-feedstock
+	url = ../xgboost-feedstock
+	branch = r-xgboost-gpu
+[submodule "py-xgboost-gpu-feedstock"]
+	path = py-xgboost-gpu-feedstock
+	url = ../xgboost-feedstock
+	branch = py-xgboost-gpu
