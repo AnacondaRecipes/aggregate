@@ -53,6 +53,7 @@ cython-feedstock
 asn1crypto-feedstock
 nose-feedstock
 mkl-service-feedstock
+intel_repack-feedstock
 numpy-1.9-feedstock
 numpy-1.11-feedstock
 mkl_random-feedstock
