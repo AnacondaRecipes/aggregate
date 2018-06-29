@@ -1,7 +1,7 @@
-From 4aa982d3e37096d537f6848b2c10da0fc46b83a1 Mon Sep 17 00:00:00 2001
+From d65f7de097627f0a527247f1ff96cc0bbf742917 Mon Sep 17 00:00:00 2001
 From: Nehal J Wani <nehaljw.kkd1@gmail.com>
 Date: Sat, 30 Dec 2017 10:31:40 -0800
-Subject: [PATCH 2/8] OpenCV Libs: Specify explicitly
+Subject: [PATCH 2/9] OpenCV Libs: Specify explicitly
 
 This will help avoid over linking libraries
 ---
@@ -9,10 +9,10 @@ This will help avoid over linking libraries
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/Makefile b/Makefile
-index 951b29b..2d146ee 100644
+index 976035b1..6e5f4dc2 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -129,7 +129,7 @@ endif
+@@ -114,7 +114,7 @@ endif
  # setup opencv
  ifeq ($(USE_OPENCV), 1)
  	CFLAGS += -DMXNET_USE_OPENCV=1 $(shell pkg-config --cflags opencv)
@@ -22,5 +22,5 @@ index 951b29b..2d146ee 100644
  else
  	CFLAGS+= -DMXNET_USE_OPENCV=0
 -- 
-2.17.0
+2.16.1
 

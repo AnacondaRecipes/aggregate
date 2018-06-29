@@ -1,17 +1,17 @@
-From ebe601c3bdf704c2d2ad1e36878abedcfd3efa4b Mon Sep 17 00:00:00 2001
+From b28518e440d8a75a9a7ab5e0446b421d154a82d2 Mon Sep 17 00:00:00 2001
 From: Nehal J Wani <nehaljw.kkd1@gmail.com>
 Date: Sat, 30 Dec 2017 10:31:40 -0800
-Subject: [PATCH 3/8] Also attempt pkg-config for jemalloc
+Subject: [PATCH 3/9] Also attempt pkg-config for jemalloc
 
 ---
  Makefile | 10 +++++++++-
  1 file changed, 9 insertions(+), 1 deletion(-)
 
 diff --git a/Makefile b/Makefile
-index 2d146ee..8fba3ea 100644
+index 6e5f4dc2..255b0b0d 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -250,10 +250,18 @@ ifneq ($(USE_GPERFTOOLS), 1)
+@@ -229,10 +229,18 @@ ifneq ($(USE_GPERFTOOLS), 1)
  				endif
  			endif
  		endif
@@ -32,5 +32,5 @@ index 2d146ee..8fba3ea 100644
  	endif
  endif
 -- 
-2.17.0
+2.16.1
 

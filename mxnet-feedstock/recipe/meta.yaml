@@ -1,6 +1,6 @@
 package:
   name: mxnet-suite
-  version: 1.1.0
+  version: 1.2.0
 
 build:
   skip: True  # [win and ((blas_impl == 'openblas') or (vc <14))]
@@ -12,18 +12,18 @@ build:
     - nomkl    # [x86 and blas_impl != 'mkl']
 
 source:
-  git_rev: 1.1.0
+  git_rev: 1.2.0
   git_url: https://github.com/apache/incubator-mxnet.git
   patches:
     - 0001-Relax-constraints-on-requests-make-graphviz-optional.patch
     - 0002-OpenCV-Libs-Specify-explicitly.patch
     - 0003-Also-attempt-pkg-config-for-jemalloc.patch
     - 0004-Check-if-HOME_MKL-is-empty-before-using-it.patch
-    - 0005-Use-MKL-ML-options-only-if-USE_MKLML-1.patch
-    - 0006-conda-unbundle-libmxnet-DSO.patch
-    - 0007-Fix-library-name-of-Intel-OMP-library.patch
-    - 0008-Also-build-libmxnet_static-on-Windows.patch
-    - 0009-Add-workaround-for-broken-opencv-cmake-files.patch
+    - 0005-conda-unbundle-libmxnet-DSO.patch
+    - 0006-Fix-library-name-of-Intel-OMP-library.patch
+    - 0007-Also-build-libmxnet_static-on-Windows.patch
+    - 0008-Add-workaround-for-broken-opencv-cmake-files.patch
+    - 0009-Add-MKLDNNROOT-lib-to-RPATH.patch
 
 outputs:
   - name: libmxnet
@@ -32,9 +32,11 @@ outputs:
     requirements:
       host:
         - jemalloc  # [linux]
-        - mkl-devel  {{ mkl }}  # [blas_impl == 'mkl']
+        - mkl-include  # [blas_impl == 'mkl']
+        - mkl-dnn  # [blas_impl == 'mkl']
+        - intel-openmp  # [blas_impl == 'mkl']
         - openblas-devel {{ openblas }}  # [blas_impl == 'openblas']
-        - opencv
+        - libopencv
       build:
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
@@ -42,6 +44,9 @@ outputs:
         - make        # [not win]
         - cmake       # [win]
       # Run exports will take care of opencv, mkl, jemalloc
+      run:
+        - {{ pin_compatible('mkl-dnn') }}  # [blas_impl == 'mkl']
+        - {{ pin_compatible('intel-openmp') }}  # [blas_impl == 'mkl']
     test:
       commands:
         - im2rec -h   # [not win]
@@ -60,8 +65,8 @@ outputs:
         - cython <0.28  # [not win]
         - python
         # Numpy's C API is not used
-        - numpy >=1.8.2,<=1.13.3
-        - requests >=2.18.4,<3
+        - numpy >=1.8.2,<=1.15.0
+        - requests >=2.18.4,<2.19.0
         - setuptools
         - {{ pin_subpackage('libmxnet', exact=True) }}
       build:
@@ -71,8 +76,8 @@ outputs:
         - python
         - {{ pin_subpackage('libmxnet', exact=True) }}
         # https://github.com/apache/incubator-mxnet/pull/9169
-        - numpy >=1.8.2,<=1.13.3
-        - requests >=2.18.4,<3
+        - numpy >=1.8.2,<=1.15.0
+        - requests >=2.18.4,<2.19.0
         # This is only required for visualization and hence optional.
         # We need a new build of graphviz otherwise it downgrades opencv
         #- python-graphviz

@@ -1,14 +1,14 @@
-From fb044c34528f75d589c69283df8b3fcc0192e221 Mon Sep 17 00:00:00 2001
+From 36bd5b05ed30b9c4053bd01fa0605fedfa06af16 Mon Sep 17 00:00:00 2001
 From: Nehal J Wani <nehaljw.kkd1@gmail.com>
 Date: Sat, 30 Dec 2017 10:31:58 -0800
-Subject: [PATCH 4/8] Check if $HOME_MKL is empty before using it
+Subject: [PATCH 4/9] Check if $HOME_MKL is empty before using it
 
 ---
  prepare_mkl.sh | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/prepare_mkl.sh b/prepare_mkl.sh
-index 12e5df7..ef5744d 100755
+index 12e5df7f..ef5744dd 100755
 --- a/prepare_mkl.sh
 +++ b/prepare_mkl.sh
 @@ -51,7 +51,7 @@ echo $VERSION_LINE  # Return Version Line
@@ -21,5 +21,5 @@ index 12e5df7..ef5744d 100755
  fi
  MXNET_ROOT=`dirname $0`
 -- 
-2.17.0
+2.16.1
 
