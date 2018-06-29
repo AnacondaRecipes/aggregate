@@ -1,0 +1,50 @@
+{% set long_version="2018.0.3.20180406" %}
+{% set mkldnn_version="0.14" %} # Only for generating url
+{% set version='.'.join(long_version.split('.')[0:3]) %}
+
+package:
+  name: mklml-suite
+  version: {{ version }}
+
+source:
+  url: https://github.com/intel/mkl-dnn/releases/download/v{{ mkldnn_version }}/mklml_lnx_{{ long_version }}.tgz  # [linux]
+  sha256: d2305244fdc9b87db7426ed4496e87a4b3977ad3374d73b8000e8b7a5b7aa725                                   # [linux]
+  url: https://github.com/intel/mkl-dnn/releases/download/v{{ mkldnn_version }}/mklml_mac_{{ long_version }}.tgz  # [osx]
+  sha256: 094e3dfd61c816136dc8d12a45cc611ce26c5f4828176a3644cd0b0efa15a25b                                   # [osx]
+  url: https://github.com/intel/mkl-dnn/releases/download/v{{ mkldnn_version }}/mklml_win_{{ long_version }}.zip  # [win]
+  sha256: a584a5bf1c8d2ad70b90d12b52652030e9a338217719064fdb84b7ad0d693694                                   # [win]
+  folder: mklml
+
+outputs:
+  - name: libmklml
+    script: install-libmklml.sh   # [unix]
+    script: install-libmklml.bat  # [win]
+    build:
+      detect_binary_files_with_prefix: False
+      missing_dso_whitelist:
+        - /lib64/ld-linux-x86-64.so.2
+        - /lib/libm.so.6
+        - /lib/libc.so.6
+        - /lib/libpthread.so.0
+    requirements:
+      host:
+        - intel-openmp {{ version }}
+      run:
+        - intel-openmp {{ version }}
+  - name: mklml
+    build:
+      run_exports:
+        - libmklml >={{ version }}
+    requirements:
+      run:
+        - mkl-include {{ version }}
+        - libmklml {{ version }}
+
+about:
+  home: https://github.com/intel/mkl-dnn/releases
+  license_file: {{ SRC_DIR }}/mklml/license.txt
+  descrition: |
+    MKLML is a subset of MKL and it's built by the MKL release team using
+    standard MKL custom dynamic library builder. It contains smaller number of
+    functions to reduce the size of the download and reduce the number of
+    dynamic libraries user needs.
