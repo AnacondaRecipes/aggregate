@@ -308,6 +308,7 @@ fastrlock-feedstock
 cvxcanon-feedstock
 cx_oracle-feedstock
 cymem-feedstock
+scikit-learn-feedstock
 dask-glm-feedstock
 dask-searchcv-feedstock
 dask-ml-feedstock
