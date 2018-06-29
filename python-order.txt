@@ -56,9 +56,9 @@ mkl-service-feedstock
 intel_repack-feedstock
 numpy-1.9-feedstock
 numpy-1.11-feedstock
+mkl_fft-feedstock
 numpy-feedstock
 mkl_random-feedstock
-mkl_fft-feedstock
 numpy-feedstock
 flaky-feedstock
 text-unidecode-feedstock
