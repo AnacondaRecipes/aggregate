@@ -139,6 +139,7 @@ jdcal-feedstock
 et_xmlfile-feedstock
 openpyxl-feedstock
 agate-excel-feedstock
+bcrypt-feedstock
 argon2_cffi-feedstock
 passlib-feedstock
 sqlalchemy-feedstock
@@ -211,7 +212,6 @@ partd-feedstock
 bokeh-feedstock
 dask-feedstock
 bcolz-feedstock
-bcrypt-feedstock
 beautifulsoup4-feedstock
 biopython-feedstock
 bitarray-feedstock
