@@ -426,7 +426,6 @@ impyla-feedstock
 python-graphviz-feedstock
 ibis-framework-feedstock
 iminuit-feedstock
-incremental-feedstock
 infinity-feedstock
 intervals-feedstock
 ipaddr-feedstock
@@ -527,6 +526,7 @@ thrift_sasl-feedstock
 pyhive-feedstock
 pyjwt-feedstock
 pykerberos-feedstock
+isort-feedstock
 pylint-feedstock
 tqdm-feedstock
 nose_parameterized-feedstock
@@ -548,6 +548,7 @@ priority-feedstock
 appdirs-feedstock
 constantly-feedstock
 service_identity-feedstock
+incremental-feedstock
 twisted-feedstock
 pysnmp-feedstock
 pypandoc-feedstock
