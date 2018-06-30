@@ -16,7 +16,8 @@ build:
   number: 0
   # linux32: https://github.com/01org/mkl-dnn/issues/171
   # vc<14: pre-c99 era :'(
-  skip: True  # [linux32 or (win and vc<14)]
+  skip: True  # [not x86_64]
+  skip: True  # [win and vc<14]
 
 requirements:
   build:

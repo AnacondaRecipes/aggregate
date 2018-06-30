@@ -15,6 +15,10 @@ source:
   sha256: a584a5bf1c8d2ad70b90d12b52652030e9a338217719064fdb84b7ad0d693694                                   # [win]
   folder: mklml
 
+build:
+  skip: True  # [not x86_64]
+  skip: True  # [win and vc<14]
+
 outputs:
   - name: libmklml
     script: install-libmklml.sh   # [unix]
