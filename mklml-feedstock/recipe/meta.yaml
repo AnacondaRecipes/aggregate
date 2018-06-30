@@ -32,8 +32,11 @@ outputs:
         - /lib/libpthread.so.0
     requirements:
       host:
+        # libmklml_gnu.so: Needed DSO lib/libgomp.so.1
+        - libgcc-ng  # [linux]
         - intel-openmp {{ version }}
       run:
+        - libgcc-ng  # [linux]
         - intel-openmp {{ version }}
   - name: mklml
     build:
