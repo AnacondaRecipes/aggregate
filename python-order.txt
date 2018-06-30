@@ -404,6 +404,7 @@ gitpython-feedstock
 qtconsole-feedstock
 fast-histogram-feedstock
 mpl-scatter-density-feedstock
+scikit-image-feedstock
 glue-core-feedstock
 pyopengl-feedstock
 glue-vispy-viewers-feedstock
