@@ -434,6 +434,7 @@ ipyparallel-feedstock
 isort-feedstock
 jaraco.classes-feedstock
 jsondate-feedstock
+jeepney-feedstock
 secretstorage-feedstock
 keyring-feedstock
 keyrings.alt-feedstock
