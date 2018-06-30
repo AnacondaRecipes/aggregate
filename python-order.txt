@@ -434,6 +434,8 @@ ipyparallel-feedstock
 isort-feedstock
 jaraco.classes-feedstock
 jsondate-feedstock
+pytoml-feedstock
+requests_download-feedstock
 flit-feedstock
 jeepney-feedstock
 secretstorage-feedstock
