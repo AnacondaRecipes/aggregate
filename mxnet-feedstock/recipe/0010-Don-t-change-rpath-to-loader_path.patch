@@ -1,0 +1,37 @@
+From e397c3a6ec1aae0fe40bbf69a8969e98e218ed83 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sat, 30 Jun 2018 15:44:35 -0500
+Subject: [PATCH 10/10] Don't change @rpath to @loader_path
+
+---
+ Makefile | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 13eec3e..5150185 100644
+--- a/Makefile
++++ b/Makefile
+@@ -474,13 +474,13 @@ lib/libmxnet.so: $(ALLX_DEP)
+ 	@mkdir -p $(@D)
+ 	$(CXX) $(CFLAGS) -shared -o $@ $(filter-out %libnnvm.a, $(filter %.o %.a, $^)) $(LDFLAGS) \
+ 	-Wl,${WHOLE_ARCH} $(filter %libnnvm.a, $^) -Wl,${NO_WHOLE_ARCH}
+-ifeq ($(USE_MKLDNN), 1)
+-ifeq ($(UNAME_S), Darwin)
+-	install_name_tool -change '@rpath/libmklml.dylib' '@loader_path/libmklml.dylib' $@
+-	install_name_tool -change '@rpath/libiomp5.dylib' '@loader_path/libiomp5.dylib' $@
+-	install_name_tool -change '@rpath/libmkldnn.0.dylib' '@loader_path/libmkldnn.0.dylib' $@
+-endif
+-endif
++#ifeq ($(USE_MKLDNN), 1)
++#ifeq ($(UNAME_S), Darwin)
++#	install_name_tool -change '@rpath/libmklml.dylib' '@loader_path/libmklml.dylib' $@
++#	install_name_tool -change '@rpath/libiomp5.dylib' '@loader_path/libiomp5.dylib' $@
++#	install_name_tool -change '@rpath/libmkldnn.0.dylib' '@loader_path/libmkldnn.0.dylib' $@
++#endif
++#endif
+ 
+ $(PS_PATH)/build/libps.a: PSLITE
+ 
+-- 
+1.9.5 (Apple Git-50.3)
+
