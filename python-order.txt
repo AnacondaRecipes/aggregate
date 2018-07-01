@@ -616,7 +616,6 @@ supervisor-feedstock
 sympy-feedstock
 tabulate-feedstock
 teradata-feedstock
-torchvision-feedstock
 traitsui-feedstock
 transaction-feedstock
 twine-feedstock
