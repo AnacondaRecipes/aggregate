@@ -3,13 +3,9 @@ package:
   version: 1.2.0
 
 build:
-  skip: True  # [win and ((blas_impl == 'openblas') or (vc <14))]
-  # conda > 4.4 might be able to use this
-  requires_features:
-    blas: {{ blas_impl }}
-  # this is for conda 4.4 and below
-  features:
-    - nomkl    # [x86 and blas_impl != 'mkl']
+  skip: True  # [win and (blas_impl == 'openblas')]
+  skip: True  # [win and vc<14]
+  skip: True  # [not x86_64]
 
 source:
   git_rev: 1.2.0
@@ -33,11 +29,13 @@ outputs:
     requirements:
       host:
         - jemalloc  # [linux]
-        - mkl-dnn                        # [blas_impl == 'mkl']
-        - mklml                          # [blas_impl == 'mkl']
+        - mkl-dnn                        # [unix and (blas_impl == 'mkl')]
+        - mklml                          # [unix and (blas_impl == 'mkl')]
+        - mkl-devel                      # [win and (blas_impl == 'mkl')]
         - intel-openmp                   # [blas_impl == 'mkl']
         - openblas-devel {{ openblas }}  # [blas_impl == 'openblas']
-        - libopencv
+        - libopencv  # [unix]
+        - opencv  # [win]
       build:
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
@@ -46,7 +44,7 @@ outputs:
         - cmake       # [win]
       # Run exports will take care of opencv, mkl, jemalloc
       run:
-        - {{ pin_compatible('mkl-dnn') }}       # [blas_impl == 'mkl']
+        - {{ pin_compatible('mkl-dnn') }}       # [unix and (blas_impl == 'mkl')]
         - {{ pin_compatible('intel-openmp') }}  # [blas_impl == 'mkl']
     test:
       commands:

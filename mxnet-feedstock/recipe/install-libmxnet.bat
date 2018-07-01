@@ -1,3 +1,5 @@
+@echo ON
+
 REM Fire all the activation scripts
 call %BUILD_PREFIX%\Scripts\activate.bat %BUILD_PREFIX%
 
@@ -5,6 +7,9 @@ set MKL_ROOT=%LIBRARY_PREFIX%
 
 mkdir build
 cd build
+
+REM TODO: Add mkldnn and mklml when
+REM https://github.com/apache/incubator-mxnet/pull/10629 is released
 
 cmake -G"%CMAKE_GENERATOR%" ^
   -Wno-dev ^
@@ -16,9 +21,6 @@ cmake -G"%CMAKE_GENERATOR%" ^
   -DBLAS=%blas_impl% ^
   -DUSE_CPP_PACKAGE=ON ^
   -DCMAKE_BUILD_TYPE=Release ^
-  -DOpenCV_DIR=%LIBRARY_PREFIX% ^
-  -DOpenCV_LIB_PATH=%LIBRARY_LIB% ^
-  -DOpenCV_INCLUDE_DIRS=%LIBRARY_INC% ^
   -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
   -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
   ..
