@@ -1,18 +1,22 @@
 package:
   name: nss-cos7-ppc64le
-  version: 3.28.4
+  version: 3.34.0
 
 source:
-  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/nss-3.28.4-8.el7.ppc64le.rpm
-    sha256: 4eb8b2f303eb83928b3a152ddeda63f1c50d2007a93178f0104255312c2f4fbb
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/nss-3.34.0-4.el7.ppc64le.rpm
+    sha256: 5ac983d009d6c534c6a19125ae37e8c96f3aa07e1f3e7b3759507b35ffe6906a
     folder: binary
-  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/nss-3.28.4-8.el7.src.rpm
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/nss-3.34.0-4.el7.src.rpm
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
-    - nspr-cos7-ppc64le >=4.13.1
-    - nss-util-cos7-ppc64le >=3.28.4
+    - nspr-cos7-ppc64le >=4.17.0
+    - nss-util-cos7-ppc64le >=3.34.0
 
 
 outputs:
@@ -20,8 +24,8 @@ outputs:
     noarch: generic
     requirements:
       run:
-        - nspr-cos7-ppc64le >=4.13.1
-        - nss-util-cos7-ppc64le >=3.28.4
+        - nspr-cos7-ppc64le >=4.17.0
+        - nss-util-cos7-ppc64le >=3.34.0
 
     about:
       home: http://www.mozilla.org/projects/security/pki/nss/

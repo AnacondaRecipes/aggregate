@@ -1,17 +1,21 @@
 package:
   name: mesa-libgl-devel-cos7-ppc64le
-  version: 17.0.1
+  version: 17.2.3
 
 source:
-  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/mesa-libGL-devel-17.0.1-6.20170307.el7.ppc64le.rpm
-    sha256: 30cb55c8257ee5f4c3dafdcd88da56cc5da40859ea2bab7346f0375ed93f0b94
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/mesa-libGL-devel-17.2.3-8.20171019.el7.ppc64le.rpm
+    sha256: 880aa2902fe5f82ef1ac7e5acb78b397cf45969e4fa8ba3873e3bf3f89a03be0
     folder: binary
-  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/mesa-17.0.1-6.20170307.el7.src.rpm
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/mesa-17.2.3-8.20171019.el7.src.rpm
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
-    - mesa-libgl-cos7-ppc64le ==17.0.1
+    - mesa-libgl-cos7-ppc64le ==17.2.3
 
 
 outputs:
@@ -19,7 +23,7 @@ outputs:
     noarch: generic
     requirements:
       run:
-        - mesa-libgl-cos7-ppc64le ==17.0.1
+        - mesa-libgl-cos7-ppc64le ==17.2.3
 
     about:
       home: http://www.mesa3d.org

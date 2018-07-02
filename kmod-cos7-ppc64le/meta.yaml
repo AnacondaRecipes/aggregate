@@ -3,11 +3,15 @@ package:
   version: 20
 
 source:
-  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/kmod-20-15.el7.ppc64le.rpm
-    sha256: 7b9baca368ec0583ac5ae0d8e19291a87a8901d657d96e3956df0183aef690aa
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/kmod-20-21.el7.ppc64le.rpm
+    sha256: ee5b893bb125d9b95962aad12617bd646a0046352012ad5b50fcc4ab8024f4ff
     folder: binary
-  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/kmod-20-15.el7.src.rpm
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/kmod-20-21.el7.src.rpm
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

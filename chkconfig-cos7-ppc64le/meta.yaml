@@ -6,8 +6,12 @@ source:
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/chkconfig-1.7.4-1.el7.ppc64le.rpm
     sha256: d84e283db853e093a31efc8329405ebc01376c93e662fcb7e31d70d0762279ff
     folder: binary
-  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/chkconfig-1.7.4-1.el7.src.rpm
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/chkconfig-1.7.4-1.el7.src.rpm
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

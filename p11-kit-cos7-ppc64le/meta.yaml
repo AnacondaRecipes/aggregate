@@ -6,8 +6,12 @@ source:
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/p11-kit-0.23.5-3.el7.ppc64le.rpm
     sha256: 4aa25e0e63b3ba905ee8314170a6ea2c5a2c09f9f30957cf84ce12ecc5193c4c
     folder: binary
-  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/p11-kit-0.23.5-3.el7.src.rpm
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/p11-kit-0.23.5-3.el7.src.rpm
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

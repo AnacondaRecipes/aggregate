@@ -1,13 +1,17 @@
 package:
   name: mesa-libglapi-cos7-ppc64le
-  version: 17.0.1
+  version: 17.2.3
 
 source:
-  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/mesa-libglapi-17.0.1-6.20170307.el7.ppc64le.rpm
-    sha256: 21306660738fd80a327094116828de65732a8bb74043d901c7e99eb99f1aaed1
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/mesa-libglapi-17.2.3-8.20171019.el7.ppc64le.rpm
+    sha256: 259328b9966b0e56a782079ae67d01d682d38c5b4665536e05dc05efbba7d42c
     folder: binary
-  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/mesa-17.0.1-6.20170307.el7.src.rpm
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/mesa-17.2.3-8.20171019.el7.src.rpm
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

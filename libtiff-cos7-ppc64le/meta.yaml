@@ -6,8 +6,12 @@ source:
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libtiff-4.0.3-27.el7_3.ppc64le.rpm
     sha256: 6c0df9de08565f282fc420eae4d9e5659dd6120878edb221ae6ee75fae4e8a93
     folder: binary
-  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/libtiff-4.0.3-27.el7_3.src.rpm
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/libtiff-4.0.3-27.el7_3.src.rpm
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

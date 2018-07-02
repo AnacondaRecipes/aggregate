@@ -3,11 +3,15 @@ package:
   version: 2.0.0.648
 
 source:
-  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/ruby-2.0.0.648-30.el7.ppc64le.rpm
-    sha256: cce49413675b18304a9aade5b3029f7b81d530bf38efcb08922b515e7889da2a
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/ruby-2.0.0.648-33.el7_4.ppc64le.rpm
+    sha256: e8bf8678f9f11e6312ecf88d262587144085a1354ea22f60ba0885669bddc937
     folder: binary
-  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/ruby-2.0.0.648-30.el7.src.rpm
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/ruby-2.0.0.648-33.el7_4.src.rpm
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

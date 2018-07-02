@@ -6,8 +6,12 @@ source:
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libXrandr-1.5.1-2.el7.ppc64le.rpm
     sha256: ec45fc8ae470c0a025b7c38621ce529e41d188379f3985a6eacab356fb9e5122
     folder: binary
-  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/libXrandr-1.5.1-2.el7.src.rpm
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/libXrandr-1.5.1-2.el7.src.rpm
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:

@@ -6,8 +6,12 @@ source:
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libxcb-1.12-1.el7.ppc64le.rpm
     sha256: 5d61ee77d41d47789ba9b284efb9aa3d63ab0e8a7b38a79156693a546f52c342
     folder: binary
-  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/libxcb-1.12-1.el7.src.rpm
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/libxcb-1.12-1.el7.src.rpm
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

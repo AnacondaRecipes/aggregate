@@ -6,8 +6,12 @@ source:
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/ORBit2-2.14.19-13.el7.ppc64le.rpm
     sha256: f7c5df0eba268db12f528d0363bc0b61ff9637c2e92e178d3a0bf193a44a0485
     folder: binary
-  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/ORBit2-2.14.19-13.el7.src.rpm
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/ORBit2-2.14.19-13.el7.src.rpm
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

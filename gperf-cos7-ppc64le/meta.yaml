@@ -6,8 +6,12 @@ source:
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/gperf-3.0.4-8.el7.ppc64le.rpm
     sha256: 8089882b3edf0d8dce1452649669255c7b92dba6b5bcc9550a227ef1a59d4b7d
     folder: binary
-  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/gperf-3.0.4-8.el7.src.rpm
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/gperf-3.0.4-8.el7.src.rpm
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

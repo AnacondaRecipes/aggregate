@@ -3,11 +3,15 @@ package:
   version: 219
 
 source:
-  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/systemd-219-42.el7.ppc64le.rpm
-    sha256: 8591198858a02bc69952499f5c5a58ecee3ce678899f64bfa8fee1d83adc745e
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/systemd-219-57.el7.ppc64le.rpm
+    sha256: 0c3760ec642100fee0461d701222700dee7e2de0752d8f69d40ecd315a1e367a
     folder: binary
-  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/systemd-219-42.el7.src.rpm
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/systemd-219-57.el7.src.rpm
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
