@@ -1,0 +1,30 @@
+package:
+  name: rubygem-json-cos7-ppc64le
+  version: 1.7.7
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/rubygem-json-1.7.7-33.el7_4.ppc64le.rpm
+    sha256: 16883f67bea0d4cbea616ba9f52da86c7c1bd270248ee48762065aa42a9902e7
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/ruby-2.0.0.648-33.el7_4.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+
+
+outputs:
+  - name: rubygem-json-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://ruby-lang.org/
+      license: Ruby or GPLv2
+      license_family: GPL2
+      summary: "(CDT) This is a JSON implementation as a Ruby extension in C"
+      description: |
+        This is a implementation of the JSON specification according to RFC 4627. You
+        can think of it as a low fat alternative to XML, if you want to store data to
+        disk or transmit it over a network rather than use a verbose markup language.

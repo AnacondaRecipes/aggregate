@@ -13,7 +13,11 @@ build:
   missing_dso_whitelist:
     - '*'
 
-
+requirements:
+  build:
+    - rubygem-json-cos7-ppc64le ==1.7.7
+  run:
+    - rubygem-json-cos7-ppc64le ==1.7.7
 
 outputs:
   - name: ruby-libs-cos7-ppc64le
