@@ -1,0 +1,34 @@
+package:
+  name: libxi-cos7-ppc64le
+  version: 1.7.9
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libXi-1.7.9-1.el7.ppc64le.rpm
+    sha256: afbfd61620739d3b4eece1a4bb0ff018912f485a4d9f2588c92ff4bdcc5d1639
+    folder: binary
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/libXi-1.7.9-1.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libx11-cos7-ppc64le >=1.5.99.902
+
+
+outputs:
+  - name: libxi-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - libx11-cos7-ppc64le >=1.5.99.902
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X.Org X11 libXi runtime library"
+      description: |
+        X.Org X11 libXi runtime library
