@@ -13,3 +13,12 @@ pushd ${PREFIX}/powerpc64le-conda_cos7-linux-gnu/sysroot > /dev/null 2>&1
     cp -Rf "${SRC_DIR}"/binary/* .
   fi
 popd > /dev/null 2>&1
+
+pushd ${PREFIX}/powerpc64le-conda_cos7-linux-gnu/sysroot/etc/fonts/conf.d
+  for FILE in $(find . -name "*.conf"); do
+    rm -f ${FILE}
+    if [[ -f ${PREFIX}/powerpc64le-conda_cos7-linux-gnu/sysroot/usr/share/fontconfig/conf.avail/${FILE} ]]; then
+      ln -s ${PREFIX}/powerpc64le-conda_cos7-linux-gnu/sysroot/usr/share/fontconfig/conf.avail/${FILE} ${FILE}
+    fi
+  done
+popd
