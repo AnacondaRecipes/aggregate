@@ -1,0 +1,38 @@
+package:
+  name: fontconfig-devel-cos7-ppc64le
+  version: 2.10.95
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/fontconfig-devel-2.10.95-11.el7.ppc64le.rpm
+    sha256: 280d632789f9fa17473a4980d0cd956d0ebd2e0595d8904349e763fceab7e211
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/fontconfig-2.10.95-11.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - fontconfig-cos7-ppc64le ==2.10.95
+    - freetype-devel-cos7-ppc64le >=2.1.4
+
+
+outputs:
+  - name: fontconfig-devel-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - fontconfig-cos7-ppc64le ==2.10.95
+        - freetype-devel-cos7-ppc64le >=2.1.4
+
+    about:
+      home: http://fontconfig.org
+      license: MIT and Public Domain and UCD
+      license_family: MIT
+      summary: "(CDT) Font configuration and customization library"
+      description: |
+        The fontconfig-devel package includes the header files, and developer docs for
+        the fontconfig package.  Install fontconfig-devel if you want to develop
+        programs which will use fontconfig.

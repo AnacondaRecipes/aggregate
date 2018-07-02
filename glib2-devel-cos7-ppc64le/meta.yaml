@@ -13,11 +13,17 @@ build:
   missing_dso_whitelist:
     - '*'
 
+requirements:
+  build:
+    - glib2-cos7-ppc64le ==2.54.2
 
 
 outputs:
   - name: glib2-devel-cos7-ppc64le
     noarch: generic
+    requirements:
+      run:
+        - glib2-cos7-ppc64le ==2.54.2
 
     about:
       home: http://www.gtk.org

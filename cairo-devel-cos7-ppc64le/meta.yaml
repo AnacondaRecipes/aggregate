@@ -13,11 +13,17 @@ build:
   missing_dso_whitelist:
     - '*'
 
+requirements:
+  build:
+    - cairo-cos7-ppc64le ==1.14.8
 
 
 outputs:
   - name: cairo-devel-cos7-ppc64le
     noarch: generic
+    requirements:
+      run:
+        - cairo-cos7-ppc64le ==1.14.8
 
     about:
       home: http://cairographics.org

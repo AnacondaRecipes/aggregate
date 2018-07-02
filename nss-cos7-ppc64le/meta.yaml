@@ -16,6 +16,7 @@ build:
 requirements:
   build:
     - nspr-cos7-ppc64le >=4.17.0
+    - nss-softokn-cos7-ppc64le >=3.34.0
     - nss-util-cos7-ppc64le >=3.34.0
 
 
@@ -25,6 +26,7 @@ outputs:
     requirements:
       run:
         - nspr-cos7-ppc64le >=4.17.0
+        - nss-softokn-cos7-ppc64le >=3.34.0
         - nss-util-cos7-ppc64le >=3.34.0
 
     about:

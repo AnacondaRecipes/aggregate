@@ -15,6 +15,7 @@ build:
 
 requirements:
   build:
+    - alsa-lib-cos7-ppc64le >=1.1.4.1
     - systemd-cos7-ppc64le >=219
 
 
@@ -23,6 +24,7 @@ outputs:
     noarch: generic
     requirements:
       run:
+        - alsa-lib-cos7-ppc64le >=1.1.4.1
         - systemd-cos7-ppc64le >=219
 
     about:

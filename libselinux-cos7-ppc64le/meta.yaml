@@ -1,0 +1,44 @@
+package:
+  name: libselinux-cos7-ppc64le
+  version: 2.5
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libselinux-2.5-12.el7.ppc64le.rpm
+    sha256: 404ab02119222988d32cabd665a69d5692d160b91cefe868d3a84dcaea50d39f
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/libselinux-2.5-12.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libsepol-cos7-ppc64le >=2.5
+
+
+outputs:
+  - name: libselinux-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - libsepol-cos7-ppc64le >=2.5
+
+    about:
+      home: https://github.com/SELinuxProject/selinux/wiki
+      license: Public-Domain
+      license_family: Public-Domain
+      summary: "(CDT) SELinux library and simple utilities"
+      description: |
+        Security-enhanced Linux is a feature of the Linux® kernel and a number of
+        utilities with enhanced security functionality designed to add mandatory
+        access controls to Linux.  The Security-enhanced Linux kernel contains new
+        architectural components originally developed to improve the security of the
+        Flask operating system. These architectural components provide general support
+        for the enforcement of many kinds of mandatory access control policies,
+        including those based on the concepts of Type Enforcement®, Role-based Access
+        Control, and Multi-level Security.  libselinux provides an API for SELinux
+        applications to get and set process and file security contexts and to obtain
+        security policy decisions.  Required for any applications that use the SELinux
+        API.

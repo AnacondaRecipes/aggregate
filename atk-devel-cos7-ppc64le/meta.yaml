@@ -13,11 +13,17 @@ build:
   missing_dso_whitelist:
     - '*'
 
+requirements:
+  build:
+    - atk-cos7-ppc64le ==2.22.0
 
 
 outputs:
   - name: atk-devel-cos7-ppc64le
     noarch: generic
+    requirements:
+      run:
+        - atk-cos7-ppc64le ==2.22.0
 
     about:
       home: http://developer.gnome.org/platform-overview/stable/atk

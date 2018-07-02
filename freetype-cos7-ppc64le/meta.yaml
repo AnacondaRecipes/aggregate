@@ -1,0 +1,32 @@
+package:
+  name: freetype-cos7-ppc64le
+  version: 2.4.11
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/freetype-2.4.11-15.el7.ppc64le.rpm
+    sha256: e0574fddd34f9bc602f5007e53f2cd948b8574226962f6822eab458b4cd7de7f
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/freetype-2.4.11-15.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+
+
+outputs:
+  - name: freetype-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://www.freetype.org
+      license: (FTL or GPLv2+) and BSD and MIT and Public Domain and zlib with acknowledgement
+      license_family: GPL2
+      summary: "(CDT) A free and portable font rendering engine"
+      description: |
+        The FreeType engine is a free and portable font rendering engine, developed to
+        provide advanced font support for a variety of platforms and environments.
+        FreeType is a library which can open and manages font files as well as
+        efficiently load, hint and render individual glyphs. FreeType is not a font
+        server or a complete text-rendering library.

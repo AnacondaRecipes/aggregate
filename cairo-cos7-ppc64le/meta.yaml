@@ -1,0 +1,33 @@
+package:
+  name: cairo-cos7-ppc64le
+  version: 1.14.8
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/cairo-1.14.8-2.el7.ppc64le.rpm
+    sha256: d42e4d976eef388fe04c52eb1e414df2cf7cde15ab836c5235aeb65778bfbf52
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/cairo-1.14.8-2.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+
+
+outputs:
+  - name: cairo-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://cairographics.org
+      license: LGPLv2 or MPLv1.1
+      license_family: LGPL
+      summary: "(CDT) A 2D graphics library"
+      description: |
+        Cairo is a 2D graphics library designed to provide high-quality display and
+        print output. Currently supported output targets include the X Window System,
+        OpenGL (via glitz), in-memory image buffers, and image files (PDF, PostScript,
+        and SVG).  Cairo is designed to produce consistent output on all output media
+        while taking advantage of display hardware acceleration when available (e.g.
+        through the X Render Extension or OpenGL).

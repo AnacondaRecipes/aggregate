@@ -13,11 +13,17 @@ build:
   missing_dso_whitelist:
     - '*'
 
+requirements:
+  build:
+    - ruby-libs-cos7-ppc64le ==2.0.0.648
 
 
 outputs:
   - name: ruby-cos7-ppc64le
     noarch: generic
+    requirements:
+      run:
+        - ruby-libs-cos7-ppc64le ==2.0.0.648
 
     about:
       home: http://ruby-lang.org/

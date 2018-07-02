@@ -13,11 +13,25 @@ build:
   missing_dso_whitelist:
     - '*'
 
+requirements:
+  build:
+    - cairo-devel-cos7-ppc64le >=1.14.8
+    - fontconfig-devel-cos7-ppc64le >=2.10.95
+    - freetype-devel-cos7-ppc64le >=2.4.11
+    - glib2-devel-cos7-ppc64le >=2.54.2
+    - pango-cos7-ppc64le ==1.40.4
 
 
 outputs:
   - name: pango-devel-cos7-ppc64le
     noarch: generic
+    requirements:
+      run:
+        - cairo-devel-cos7-ppc64le >=1.14.8
+        - fontconfig-devel-cos7-ppc64le >=2.10.95
+        - freetype-devel-cos7-ppc64le >=2.4.11
+        - glib2-devel-cos7-ppc64le >=2.54.2
+        - pango-cos7-ppc64le ==1.40.4
 
     about:
       home: http://www.pango.org

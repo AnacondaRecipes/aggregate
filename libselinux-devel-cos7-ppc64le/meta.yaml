@@ -13,11 +13,19 @@ build:
   missing_dso_whitelist:
     - '*'
 
+requirements:
+  build:
+    - libselinux-cos7-ppc64le ==2.5
+    - libsepol-devel-cos7-ppc64le >=2.5
 
 
 outputs:
   - name: libselinux-devel-cos7-ppc64le
     noarch: generic
+    requirements:
+      run:
+        - libselinux-cos7-ppc64le ==2.5
+        - libsepol-devel-cos7-ppc64le >=2.5
 
     about:
       home: https://github.com/SELinuxProject/selinux/wiki

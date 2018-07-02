@@ -1,0 +1,28 @@
+package:
+  name: harfbuzz-cos7-ppc64le
+  version: 1.3.2
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/harfbuzz-1.3.2-1.el7.ppc64le.rpm
+    sha256: 8065ad9498aeb1485da1ea1e47361ee58dbb626608d8c3e144c84526bce6c24e
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/harfbuzz-1.3.2-1.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+
+
+outputs:
+  - name: harfbuzz-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://freedesktop.org/wiki/Software/HarfBuzz
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Text shaping library"
+      description: |
+        HarfBuzz is an implementation of the OpenType Layout engine.

@@ -13,11 +13,29 @@ build:
   missing_dso_whitelist:
     - '*'
 
+requirements:
+  build:
+    - cairo-cos7-ppc64le >=1.14.8
+    - fontconfig-cos7-ppc64le >=2.10.95
+    - freetype-cos7-ppc64le >=2.4.11
+    - glib2-cos7-ppc64le >=2.54.2
+    - harfbuzz-cos7-ppc64le >=1.3.2
+    - libxft-cos7-ppc64le >=2.3.2
+    - libthai-cos7-ppc64le >=0.1.14
 
 
 outputs:
   - name: pango-cos7-ppc64le
     noarch: generic
+    requirements:
+      run:
+        - cairo-cos7-ppc64le >=1.14.8
+        - fontconfig-cos7-ppc64le >=2.10.95
+        - freetype-cos7-ppc64le >=2.4.11
+        - glib2-cos7-ppc64le >=2.54.2
+        - harfbuzz-cos7-ppc64le >=1.3.2
+        - libxft-cos7-ppc64le >=2.3.2
+        - libthai-cos7-ppc64le >=0.1.14
 
     about:
       home: http://www.pango.org
