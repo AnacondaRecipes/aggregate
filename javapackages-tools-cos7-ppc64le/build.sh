@@ -13,3 +13,8 @@ pushd ${PREFIX}/powerpc64le-conda_cos7-linux-gnu/sysroot > /dev/null 2>&1
     cp -Rf "${SRC_DIR}"/binary/* .
   fi
 popd > /dev/null 2>&1
+
+pushd ${PREFIX}/powerpc64le-conda_cos7-linux-gnu/sysroot/usr/share/java-utils/
+  rm -f abs2rel.sh
+  ln -s ${PREFIX}/powerpc64le-conda_cos7-linux-gnu/sysroot/usr/bin/abs2rel abs2rel.sh
+popd
