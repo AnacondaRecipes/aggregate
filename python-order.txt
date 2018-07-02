@@ -38,8 +38,8 @@ sphinxcontrib-feedstock
 sphinxcontrib-websupport-feedstock
 pyparsing-feedstock
 packaging-feedstock
-snowballstemmer-feedstock
 typing-feedstock
+snowballstemmer-feedstock
 docutils-feedstock
 imagesize-feedstock
 pytz-feedstock
@@ -52,13 +52,13 @@ idna-feedstock
 cython-feedstock
 asn1crypto-feedstock
 nose-feedstock
-mkl-service-feedstock
-intel_repack-feedstock
+mkl-service-feedstock  # [not ppc]
+intel_repack-feedstock  # [not ppc]
 numpy-1.9-feedstock
 numpy-1.11-feedstock
-mkl_fft-feedstock
+mkl_fft-feedstock  # [not ppc]
 numpy-feedstock
-mkl_random-feedstock
+mkl_random-feedstock  # [not ppc]
 numpy-feedstock
 flaky-feedstock
 text-unidecode-feedstock
