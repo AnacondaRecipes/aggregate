@@ -13,3 +13,12 @@ pushd ${PREFIX}/powerpc64le-conda_cos7-linux-gnu/sysroot > /dev/null 2>&1
     cp -Rf "${SRC_DIR}"/binary/* .
   fi
 popd > /dev/null 2>&1
+
+pushd ${PREFIX}/powerpc64le-conda_cos7-linux-gnu/sysroot/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.171-2.6.13.2.el7.ppc64le/jre-abrt
+  rm -rf lib
+  ln -s ${PREFIX}/powerpc64le-conda_cos7-linux-gnu/sysroot/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.171-2.6.13.2.el7.ppc64le/jre/lib lib
+popd
+
+pushd ${PREFIX}/powerpc64le-conda_cos7-linux-gnu/sysroot/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.171-2.6.13.2.el7.ppc64le/jre/lib/security
+  mkdir -p ../../../../../../../etc/pki/java/cacerts
+popd
