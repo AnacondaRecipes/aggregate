@@ -5,7 +5,7 @@ package:
 source:
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/java-1.7.0-openjdk-1.7.0.171-2.6.13.2.el7.ppc64le.rpm
     sha256: 5e651621d7f586120ed073bfb8afd517d0ecf105055bc9a2a2a504e41daab284
-    folder: binary
+    folder: binary/usr
   - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/java-1.7.0-openjdk-1.7.0.171-2.6.13.2.el7.src.rpm
     folder: source
 

@@ -5,7 +5,7 @@ package:
 source:
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/mesa-libGL-devel-17.2.3-8.20171019.el7.ppc64le.rpm
     sha256: 880aa2902fe5f82ef1ac7e5acb78b397cf45969e4fa8ba3873e3bf3f89a03be0
-    folder: binary
+    folder: binary/usr
   - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/mesa-17.2.3-8.20171019.el7.src.rpm
     folder: source
 

@@ -5,7 +5,7 @@ package:
 source:
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/pango-devel-1.40.4-1.el7.ppc64le.rpm
     sha256: db10ca69458c927f7d254e433f4849dedf8bcb8cb88b23f2ec3492e52ab92ac1
-    folder: binary
+    folder: binary/usr
   - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/pango-1.40.4-1.el7.src.rpm
     folder: source
 

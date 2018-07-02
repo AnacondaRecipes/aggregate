@@ -5,7 +5,7 @@ package:
 source:
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libjpeg-turbo-1.2.90-5.el7.ppc64le.rpm
     sha256: 505b1d3ee64366131c20df057d7a940343ca96c3ffcbf2717913c078aebcefb9
-    folder: binary
+    folder: binary/usr
   - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/libjpeg-turbo-1.2.90-5.el7.src.rpm
     folder: source
 

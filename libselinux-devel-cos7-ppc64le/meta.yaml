@@ -5,7 +5,7 @@ package:
 source:
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libselinux-devel-2.5-12.el7.ppc64le.rpm
     sha256: cd01a7f28802c618acec4ea6ac99c3e59cb101027eab5d1f2df5a3603dc315f6
-    folder: binary
+    folder: binary/usr
   - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/libselinux-2.5-12.el7.src.rpm
     folder: source
 

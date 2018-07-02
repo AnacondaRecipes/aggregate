@@ -5,7 +5,7 @@ package:
 source:
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libuuid-2.23.2-52.el7.ppc64le.rpm
     sha256: f5ba02160b89c13cce90e7f54e62504bc145d590001a55f954e2f593b3f28427
-    folder: binary
+    folder: binary/usr
   - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/util-linux-2.23.2-52.el7.src.rpm
     folder: source
 

@@ -5,7 +5,7 @@ package:
 source:
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libXfixes-devel-5.0.3-1.el7.ppc64le.rpm
     sha256: b6af1f30e2cf9bafc9f1776c2f4750f76c8ea42ea1972b9e56df168f0e3f7763
-    folder: binary
+    folder: binary/usr
   - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/libXfixes-5.0.3-1.el7.src.rpm
     folder: source
 

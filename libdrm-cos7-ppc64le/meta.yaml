@@ -5,7 +5,7 @@ package:
 source:
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libdrm-2.4.83-2.el7.ppc64le.rpm
     sha256: 8e1bba5e7922bc02160235aaf5aa47d60961501f6d8f654c2d21dfa90b1c79c5
-    folder: binary
+    folder: binary/usr
   - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/libdrm-2.4.83-2.el7.src.rpm
     folder: source
 

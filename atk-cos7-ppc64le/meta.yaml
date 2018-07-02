@@ -5,7 +5,7 @@ package:
 source:
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/atk-2.22.0-3.el7.ppc64le.rpm
     sha256: 4715f49f31b8a5d3d7152aa7baceb4a43fa53f54afeac50ae49242bc0b1b7e89
-    folder: binary
+    folder: binary/usr
   - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/atk-2.22.0-3.el7.src.rpm
     folder: source
 

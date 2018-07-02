@@ -5,7 +5,7 @@ package:
 source:
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/gtk2-2.24.31-1.el7.ppc64le.rpm
     sha256: c70ebbe6de18c38fab96e155586554a9141d2d602baad0f8dc5e2629ae22be6f
-    folder: binary
+    folder: binary/usr
   - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/gtk2-2.24.31-1.el7.src.rpm
     folder: source
 
