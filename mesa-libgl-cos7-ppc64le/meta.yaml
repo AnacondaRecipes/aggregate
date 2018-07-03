@@ -17,6 +17,7 @@ requirements:
   build:
     - libdrm-cos7-ppc64le >=2.4.83
     - mesa-libglapi-cos7-ppc64le ==17.2.3
+    - libxshmfence-devel-cos7-ppc64le >=1.2
 
 
 outputs:
@@ -26,6 +27,7 @@ outputs:
       run:
         - libdrm-cos7-ppc64le >=2.4.83
         - mesa-libglapi-cos7-ppc64le ==17.2.3
+        - libxshmfence-devel-cos7-ppc64le >=1.2
 
     about:
       home: http://www.mesa3d.org

@@ -1,0 +1,33 @@
+package:
+  name: pcre-cos7-ppc64le
+  version: 8.32
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/pcre-8.32-17.el7.ppc64le.rpm
+    sha256: 0955ba280e76a9f59fa7d47764c8c2645fd7caa89c48b7d292e706ef7a35b545
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/pcre-8.32-17.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+
+
+outputs:
+  - name: pcre-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://www.pcre.org/
+      license: BSD
+      license_family: BSD
+      summary: "(CDT) Perl-compatible regular expression library"
+      description: |
+        Perl-compatible regular expression library. PCRE has its own native API, but a
+        set of "wrapper" functions that are based on the POSIX API are also supplied
+        in the library libpcreposix. Note that this just provides a POSIX calling
+        interface to PCRE: the regular expressions themselves still follow Perl syntax
+        and semantics. The header file for the POSIX-style functions is called
+        pcreposix.h.

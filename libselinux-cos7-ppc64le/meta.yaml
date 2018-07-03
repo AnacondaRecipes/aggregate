@@ -16,6 +16,7 @@ build:
 requirements:
   build:
     - libsepol-cos7-ppc64le >=2.5
+    - pcre-cos7-ppc64le >=8.32
 
 
 outputs:
@@ -24,6 +25,7 @@ outputs:
     requirements:
       run:
         - libsepol-cos7-ppc64le >=2.5
+        - pcre-cos7-ppc64le >=8.32
 
     about:
       home: https://github.com/SELinuxProject/selinux/wiki

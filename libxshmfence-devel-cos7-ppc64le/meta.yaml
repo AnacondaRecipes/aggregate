@@ -1,0 +1,35 @@
+package:
+  name: libxshmfence-devel-cos7-ppc64le
+  version: 1.2
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libxshmfence-devel-1.2-1.el7.ppc64le.rpm
+    sha256: b2a606c1d82db4a3b369a29b0ecd0bf7c55b9a15b6dda7df65fad8bc5f158c09
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/libxshmfence-1.2-1.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libxshmfence-cos7-ppc64le ==1.2
+
+
+outputs:
+  - name: libxshmfence-devel-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - libxshmfence-cos7-ppc64le ==1.2
+
+    about:
+      home: http://www.x.org/
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Development files for libxshmfence"
+      description: |
+        The libxshmfence-devel package contains libraries and header files for
+        developing applications that use libxshmfence.
