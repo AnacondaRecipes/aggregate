@@ -334,7 +334,7 @@ doit-feedstock
 drmaa-feedstock
 elasticsearch-feedstock
 elasticsearch-dsl-feedstock
-qtpy-feedstock
+qtpy-feedstock  # [not ppc]
 ply-feedstock
 enaml-feedstock
 configobj-feedstock
