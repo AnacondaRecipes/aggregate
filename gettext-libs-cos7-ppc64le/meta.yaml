@@ -5,7 +5,7 @@ package:
 source:
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/gettext-libs-0.19.8.1-2.el7.ppc64le.rpm
     sha256: c4fb76243965d92c157a725c5f30c429a18fca92bee546bc74635a793aa3cae6
-    folder: binary
+    folder: binary/usr
   - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/gettext-0.19.8.1-2.el7.src.rpm
     folder: source
 

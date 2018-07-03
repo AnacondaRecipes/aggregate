@@ -5,7 +5,7 @@ package:
 source:
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/systemd-libs-219-57.el7.ppc64le.rpm
     sha256: b63ffda1b0b5a171e1fc57244a407598b8cd80a8255494d1061b5a30167d9e68
-    folder: binary/usr/lib64
+    folder: binary/usr
   - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/systemd-219-57.el7.src.rpm
     folder: source
 
