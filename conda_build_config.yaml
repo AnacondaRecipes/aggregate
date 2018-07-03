@@ -123,7 +123,7 @@ perl:
 pixman:
   - 0.34
 proj4:
-  - 4
+  - 5
 libprotobuf:
   - 3.5.2
 python:
