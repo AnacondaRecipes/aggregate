@@ -28,6 +28,7 @@ decorator-feedstock
 traitlets-feedstock
 jupyter_core-feedstock
 python-dateutil-feedstock
+zeromq-feedstock
 pyzmq-feedstock
 jupyter_client-feedstock
 ptyprocess-feedstock
@@ -244,7 +245,12 @@ cachecontrol-feedstock
 cached-property-feedstock
 boost-feedstock
 protobuf-feedstock
+libglu-feedstock
+freeglut-feedstock
+ffmpeg-feedstock
+jasper-feedstock
 opencv-feedstock
+leveldb-feedstock
 python-leveldb-feedstock
 python-gflags-feedstock
 olefile-feedstock
@@ -292,10 +298,12 @@ comtypes-feedstock
 pycosat-feedstock
 cookies-feedstock
 responses-feedstock
+conda-env-feedstock
 conda-feedstock
 conda-verify-feedstock
 pkginfo-feedstock
 glob2-feedstock
+patchelf-feedstock
 conda-build-feedstock
 configargparse-feedstock
 console_shortcut-feedstock
@@ -312,6 +320,12 @@ scikit-learn-feedstock
 dask-glm-feedstock
 dask-searchcv-feedstock
 dask-ml-feedstock
+hdf5-feedstock
+hdf5-1.8-feedstock
+giflib-feedstock
+libspatialite-feedstock
+libkml-feedstock
+libdap4-feedstock
 gdal-2.3.0-feedstock
 gdal-feedstock
 snuggs-feedstock
@@ -336,7 +350,7 @@ elasticsearch-feedstock
 elasticsearch-dsl-feedstock
 qtpy-feedstock  # [not ppc]
 ply-feedstock
-enaml-feedstock
+enaml-feedstock  # [not ppc]
 configobj-feedstock
 traits-feedstock
 pyface-feedstock
@@ -401,13 +415,13 @@ gevent-feedstock
 smmap2-feedstock
 gitdb2-feedstock
 gitpython-feedstock
-qtconsole-feedstock
+qtconsole-feedstock  # [not ppc]
 fast-histogram-feedstock
 mpl-scatter-density-feedstock
 scikit-image-feedstock
-glue-core-feedstock
+glue-core-feedstock  # [not ppc]
 pyopengl-feedstock
-glue-vispy-viewers-feedstock
+glue-vispy-viewers-feedstock  # [not ppc]
 gmpy2-feedstock
 gobject-introspection-feedstock
 grin-feedstock
