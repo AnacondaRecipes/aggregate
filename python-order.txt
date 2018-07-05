@@ -262,6 +262,7 @@ sip-feedstock  # [not ppc]
 pyqt-feedstock  # [not ppc]
 sip-4.18-feedstock  # [not ppc]
 pyqt-5.6-feedstock  # [not ppc]
+freetype-feedstock
 matplotlib-feedstock
 pywavelets-feedstock
 humanfriendly-feedstock
