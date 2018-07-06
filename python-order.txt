@@ -324,6 +324,7 @@ dask-ml-feedstock
 hdf5-feedstock
 hdf5-1.8-feedstock
 giflib-feedstock
+proj4-feedstock
 libspatialite-feedstock
 libkml-feedstock
 libdap4-feedstock
