@@ -14,8 +14,7 @@ source:
   '{{ hash_type }}': '{{ hash_value }}'
 
 build:
-  number: 0
-  skip: True  # [py!=27]
+  number: 1
   script: {{PYTHON}} setup.py install
 
 requirements:
