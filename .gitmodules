@@ -3022,3 +3022,11 @@
 	path = py-xgboost-gpu-feedstock
 	url = ../xgboost-feedstock
 	branch = py-xgboost-gpu
+[submodule "wstools-feedstock"]
+	path = wstools-feedstock
+	url = ../wstools-feedstock
+	branch = master
+[submodule "defusedxml-feedstock"]
+	path = defusedxml-feedstock
+	url = ../defusedxml-feedstock
+	branch = master
