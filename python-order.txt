@@ -328,6 +328,7 @@ proj4-feedstock
 libspatialite-feedstock
 libkml-feedstock
 libdap4-feedstock
+xerces-c-feedstock
 gdal-2.3.0-feedstock
 gdal-feedstock
 snuggs-feedstock
@@ -430,6 +431,7 @@ grin-feedstock
 grpcio-feedstock
 paste-feedstock
 gunicorn-feedstock
+libhdfs3-feedstock
 hdfs3-feedstock
 jupyter_console-feedstock
 jupyter-feedstock
