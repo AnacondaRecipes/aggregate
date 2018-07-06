@@ -1,0 +1,42 @@
+{% set name = "bz2file" %}
+{% set version = "0.98" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "64c1f811e31556ba9931953c8ec7b397488726c63e09a4c67004f43bdd28da88" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  '{{ hash_type }}': '{{ hash_value }}'
+
+build:
+  number: 0
+  skip: True  # [py!=27]
+  script: {{PYTHON}} setup.py install
+
+requirements:
+  host:
+    - python
+  run:
+    - python
+
+about:
+  home: https://github.com/nvawda/bz2file
+  license: Apache Software
+  license_family: APACHE
+  license_file: ''
+  summary: Read and write bzip2-compressed files.
+  description: |
+    Bz2file is a Python library for reading and writing bzip2-compressed files.
+    It contains a drop-in replacement for the file interface in the standard
+    library's ``bz2`` module, including features from the latest development
+  doc_url: https://github.com/nvawda/bz2file
+  dev_url: https://github.com/nvawda/bz2file
+
+extra:
+  recipe-maintainers:
+    - mingwandroid
