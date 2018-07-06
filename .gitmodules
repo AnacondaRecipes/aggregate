@@ -3030,3 +3030,7 @@
 	path = defusedxml-feedstock
 	url = ../defusedxml-feedstock
 	branch = master
+[submodule "wsgiref-feedstock"]
+	path = wsgiref-feedstock
+	url = ../wsgiref-feedstock
+	branch = master
