@@ -489,8 +489,8 @@ mysqlclient-feedstock
 natsort-feedstock
 nb_conda_kernels-feedstock
 nb_conda-feedstock
-nbpresent-feedstock
-nbserverproxy-feedstock
+nbpresent-feedstock  # [not ppc]
+nbserverproxy-feedstock  # [not ppc]
 ndg-httpsclient-feedstock
 neotime-feedstock
 neo4j-python-driver-feedstock
@@ -500,11 +500,11 @@ nltk-feedstock
 opentracing-feedstock
 opentracing_instrumentation-feedstock
 serverfiles-feedstock
-anyqt-feedstock
-pyqtgraph-feedstock
+anyqt-feedstock  # [not ppc]
+pyqtgraph-feedstock  # [not ppc]
 networkx-1.11-feedstock
 joblib-feedstock
-orange3-feedstock
+orange3-feedstock  # [not ppc]
 requests-file-feedstock
 requests-ftp-feedstock
 pandas-datareader-feedstock
