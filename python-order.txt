@@ -585,6 +585,7 @@ pytest-variables-feedstock
 selenium-feedstock
 pytest-selenium-feedstock
 pytest-timeout-feedstock
+blosc-feedstock
 python-blosc-feedstock
 requests-kerberos-feedstock
 docopt-feedstock
@@ -597,7 +598,7 @@ python-snappy-feedstock
 pyutilib-feedstock
 pywget-feedstock
 qgrid-feedstock
-qtawesome-feedstock
+qtawesome-feedstock  # [not ppc]
 inflection-feedstock
 quandl-feedstock
 queuelib-feedstock
@@ -628,7 +629,7 @@ ujson-feedstock
 spacy-feedstock
 sparkmagic-feedstock
 sphinx_rtd_theme-feedstock
-spyder-feedstock
+spyder-feedstock  # [not ppc]
 sqlalchemy-utils-feedstock
 sqlparse-feedstock
 ssl_match_hostname-feedstock
@@ -652,7 +653,7 @@ webtest-feedstock
 whisper-feedstock
 word2vec-feedstock
 ws4py-feedstock
-wxpython-feedstock
+wxpython-feedstock  # [not ppc]
 xcb-proto-feedstock
 xlsxwriter-feedstock
 xlwt-feedstock
