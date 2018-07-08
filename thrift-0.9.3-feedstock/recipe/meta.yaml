@@ -1,0 +1,46 @@
+{% set name = "thrift" %}
+{% set version = "0.9.3" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "dfbc3d3bd19d396718dab05abaf46d93ae8005e2df798ef02e32793cd963877e" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  '{{ hash_type }}': '{{ hash_value }}'
+
+build:
+  number: 1
+  script: {{PYTHON}} setup.py install --single-version-externally-managed --record=record.txt
+  skip: True  # [py!=27]
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+
+test:
+  imports:
+    - thrift
+    - thrift.protocol
+    - thrift.server
+    - thrift.transport
+
+about:
+  home: http://thrift.apache.org
+  license: Apache 2.0
+  license_family: APACHE
+  license_file: ''
+  summary: Python bindings for the Apache Thrift RPC system
+  description: ''
+  doc_url: ''
+  dev_url: ''
+
+extra:
+  recipe-maintainers: ''
