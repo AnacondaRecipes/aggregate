@@ -443,6 +443,7 @@ hyperlink-feedstock
 thriftpy-feedstock
 impyla-feedstock
 graphviz-feedstock
+thrift-0.9.3-feedstock
 python-graphviz-feedstock
 ibis-framework-feedstock
 iminuit-feedstock
