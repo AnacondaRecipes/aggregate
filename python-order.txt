@@ -120,6 +120,7 @@ futures-feedstock
 backports_abc-feedstock
 enum34-feedstock
 scandir-feedstock
+pathlib-feedstock
 pathlib2-feedstock
 configparser-feedstock
 subprocess32-feedstock
