@@ -25,10 +25,14 @@ requirements:
     - setuptools
     - six
   run:
+    - statistics  # [py==27]
     - python
     - six
 
 test:
+  requires:
+    - mock
+    - contextlib2
   imports:
     - perf
     - perf.tests
@@ -65,4 +69,5 @@ about:
   dev_url: ''
 
 extra:
-  recipe-maintainers: ''
+  recipe-maintainers:
+    - mingwandroid
