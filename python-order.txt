@@ -554,6 +554,8 @@ theano-feedstock
 pymc3-feedstock
 pympler-feedstock
 pymysql-feedstock
+g2clib-feedstock
+hdfeos2-feedstock
 pynio-feedstock
 pyodbc-feedstock
 pyquery-feedstock
