@@ -482,7 +482,7 @@ meson-feedstock
 metakernel-feedstock
 mpld3-feedstock
 msgpack-numpy-feedstock
-pymongo-feedstock  # [not ppc]
+pymongo-feedstock
 mtq-feedstock
 murmurhash-feedstock
 typed-ast-feedstock
