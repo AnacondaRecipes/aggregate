@@ -19,6 +19,8 @@ build:
   skip: True  # [py!=27]
 
 requirements:
+  build:
+    - {{ compiler('c') }}
   host:
     - python
     - setuptools
