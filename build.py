@@ -31,6 +31,8 @@ def main():
     parser.add_argument('--start-at', '-s', default=None)
     parser.add_argument('--package-list-file', '-f', default=None)
     parser.add_argument('--packages', '-p', nargs='*', default=None)
+    parser.add_argument('--channel', '-c', action="append", default=None)
+    parser.add_argument('--matrix', '-m', default=None)
     parser.add_argument('--log-file', '-l', default='/tmp/conda-build.log')
     # Passed directly to conda-build.
     parser.add_argument('cb-args', nargs=argparse.REMAINDER)
@@ -79,6 +81,11 @@ exception:
     cb_full_args = ['conda-build']
     cb_full_args.extend(order)
     cb_full_args.extend(unknown)
+    if args.matrix:
+        cb_full_args.extend(['-m', args.matrix])
+    if args.channel:
+        for chan in args.channel:
+            cb_full_args.extend(['-c', chan])
     environ["PYTHONUNBUFFERED"] = "1"
     print("Running:\n{}".format(cb_full_args))
     with open(args.log_file, "w") as log_file:
