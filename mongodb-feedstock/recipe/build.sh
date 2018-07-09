@@ -8,6 +8,11 @@ elif [[ ${HOST} =~ .*darwin.* ]]; then
     CXXFLAGS="$CXXFLAGS -fvisibility=hidden -Og"
 fi
 
+# link to our openssl
+# someday, a braveheart will unvendor all deps
+CCFLAGS="$CCFLAGS -I$PREFIX/include"
+LDFLAGS="$LDFLAGS -L$PREFIX/lib -Wl,-rpath,${PREFIX}/lib"
+
 # time to go for a walk
 scons install \
     --prefix=$PREFIX \
