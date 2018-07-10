@@ -3038,3 +3038,7 @@
 	path = spyder-kernels-feedstock
 	url = ../spyder-kernels-feedstock
 	branch = master
+[submodule "spyder-kernels-0.2.4-feedstock"]
+	path = spyder-kernels-0.2.4-feedstock
+	url = ../spyder-kernels-feedstock
+	branch = master
