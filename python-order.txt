@@ -631,6 +631,7 @@ ujson-feedstock
 spacy-feedstock
 sparkmagic-feedstock
 sphinx_rtd_theme-feedstock
+spyder-kernels-feedstock  # [not ppc]
 spyder-feedstock  # [not ppc]
 sqlalchemy-utils-feedstock
 sqlparse-feedstock

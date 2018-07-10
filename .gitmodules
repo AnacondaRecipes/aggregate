@@ -3034,3 +3034,7 @@
 	path = wsgiref-feedstock
 	url = ../wsgiref-feedstock
 	branch = master
+[submodule "spyder-kernels-feedstock"]
+	path = spyder-kernels-feedstock
+	url = ../spyder-kernels-feedstock
+	branch = master
