@@ -3054,3 +3054,15 @@
 	path = qtwebkit-feedstock
 	url = ../qtwebkit-feedstock
 	branch = master
+[submodule "h2o-feedstock"]
+	path = h2o-feedstock
+	url = ../h2o-feedstock
+	branch = master
+[submodule "grpcio-feedstock"]
+	path = grpcio-feedstock
+	url = ../grpcio-feedstock
+	branch = master
+[submodule "fribidi-feedstock"]
+	path = fribidi-feedstock
+	url = ../fribidi-feedstock
+	branch = master
