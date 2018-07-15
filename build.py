@@ -89,7 +89,7 @@ exception:
     environ["PYTHONUNBUFFERED"] = "1"
     print("Running:\n{}".format(cb_full_args))
     with open(args.log_file, "w") as log_file:
-        proc = Popen(cb_full_args, stdin=None, stdout=PIPE, stderr=PIPE)
+        proc = Popen(cb_full_args, stdout=PIPE, stderr=PIPE, bufsize=1)
         cont = True
         while cont:
             cont = False
