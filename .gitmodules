@@ -3042,3 +3042,7 @@
 	path = spyder-kernels-0.2.4-feedstock
 	url = ../spyder-kernels-feedstock
 	branch = master
+[submodule "mxnet_recipes"]
+	path = mxnet_recipes
+	url = ../mxnet_recipes
+	branch = master
