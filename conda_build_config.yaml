@@ -19,14 +19,17 @@ c_compiler:
   - vs2008                     # [win]
   - vs2015                     # [win]
   - vs2015                     # [win]
+  - vs2015                     # [win]
 cxx_compiler:
   - vs2008                     # [win]
+  - vs2015                     # [win]
   - vs2015                     # [win]
   - vs2015                     # [win]
 fortran_compiler:
   - intel-fortran              # [win]
 fortran_compiler_version:
   - 13.1.6                     # [win]
+  - 16.0.4                     # [win]
   - 16.0.4                     # [win]
   - 16.0.4                     # [win]
 CONDA_BUILD_SYSROOT:
@@ -128,7 +131,7 @@ libprotobuf:
   - 3.5.2
 python:
   - 2.7
-#  - 3.5
+  - 3.5
   - 3.6
   - 3.7
 r_version:
@@ -145,15 +148,16 @@ sqlite:
 #    For example, we need a win-64 vs2008_win-32 package, so that we compile win-32
 #    code on win-64 miniconda.
 cross_compiler_target_platform:
-#  - win-32                     # [win]
+  - win-32                     # [win]
   - win-64                     # [win]
 target_platform:
   - win-64                     # [win]
-#  - win-32                     # [win]
+  - win-32                     # [win]
 tk:
   - 8.6                # [not ppc64le]
 vc:
   - 9                          # [win]
+  - 14                         # [win]
   - 14                         # [win]
   - 14                         # [win]
 zlib:
