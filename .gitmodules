@@ -3046,3 +3046,7 @@
 	path = mxnet_recipes
 	url = ../mxnet_recipes
 	branch = master
+[submodule "prometheus_client-feedstock"]
+	path = prometheus_client-feedstock
+	url = ../prometheus_client-feedstock
+	branch = master
