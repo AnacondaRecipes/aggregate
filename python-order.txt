@@ -307,6 +307,7 @@ conda-verify-feedstock
 pkginfo-feedstock
 glob2-feedstock
 patchelf-feedstock
+lief-feedstock
 conda-build-feedstock
 configargparse-feedstock
 console_shortcut-feedstock
