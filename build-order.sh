@@ -25,7 +25,7 @@ function get_order() {
     PKGS+=(pytest-cov)
     PKGS+=(more-itertools)
   fi
-
+set -x
   local -a RECIPE_DIRS
   local -a PKGS_MISSING
   for PKG in ${PKGS[@]}; do
@@ -72,16 +72,17 @@ function get_order() {
 
 function get_downstreams_of() {
   local OF=$1; shift
-  if ! type -P jq; then
+  if ! type -P jq > /dev/null 2>&1; then
     echo "Please install jq via"
     echo "conda install conda-forge::jq"
     exit 1
   fi
-  [[ -f repodata.r.linux.json ]] || curl -o repodata.linux.json -SLO https://repo.continuum.io/pkgs/r/linux-64/repodata.json
-  [[ -f repodata.linux.json ]] || curl -o repodata.linux.json -SLO https://repo.continuum.io/pkgs/main/linux-64/repodata.json
-  [[ -f repodata.macos.json ]] || curl -o repodata.macos.json -SLO https://repo.continuum.io/pkgs/main/osx-64/repodata.json
-  [[ -f repodata.win.json ]]   || curl -o repodata.win.json -SLO https://repo.continuum.io/pkgs/main/win-64/repodata.json
-  local -a PKGS=$(cat repodata.r.linux.json repodata.linux.json repodata.macos.json repodata.win.json | jq --raw-output ".packages[] | select(.depends[] | contains(\"$OF\")) .name" | sort | uniq)
+#  [[ -f repodata.r.linux.json ]] || curl -o repodata.r.linux.json -SLO https://repo.anaconda.com/pkgs/r/linux-64/repodata.json
+  [[ -f repodata.linux.json ]] || curl -o repodata.linux.json -SLO https://repo.anaconda.com/pkgs/main/linux-64/repodata.json
+  [[ -f repodata.macos.json ]] || curl -o repodata.macos.json -SLO https://repo.anaconda.com/pkgs/main/osx-64/repodata.json
+  [[ -f repodata.win.json ]]   || curl -o repodata.win.json -SLO https://repo.anaconda.com/pkgs/main/win-64/repodata.json
+#  local -a PKGS=$(cat repodata.r.linux.json repodata.linux.json repodata.macos.json repodata.win.json | jq --raw-output ".packages[] | select(.depends[] | contains(\"$OF\")) .name" | sort | uniq)
+  local -a PKGS=$(cat repodata.linux.json repodata.macos.json repodata.win.json | jq --raw-output ".packages[] | select(.depends[] | contains(\"$OF\")) .name" | sort | uniq)
   echo ${PKGS[@]}
 }
 
@@ -133,5 +134,6 @@ fi
 
 TEMPF=$(mktemp ${TMPDIR}/$(uuidgen).txt)
 rm ${TEMPF} || true
+echo PKGS=${PKGS[@]}
 get_order ${TEMPF} ${PKGS[@]}
 cat ${TEMPF}
