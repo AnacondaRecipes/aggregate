@@ -3050,3 +3050,7 @@
 	path = prometheus_client-feedstock
 	url = ../prometheus_client-feedstock
 	branch = master
+[submodule "qtwebkit-feedstock"]
+	path = qtwebkit-feedstock
+	url = ../qtwebkit-feedstock
+	branch = master
