@@ -3066,3 +3066,11 @@
 	path = fribidi-feedstock
 	url = ../fribidi-feedstock
 	branch = master
+[submodule "icalendar-feedstock"]
+	path = icalendar-feedstock
+	url = ../icalendar-feedstock
+	branch = master
+[submodule "pscript-feedstock"]
+	path = pscript-feedstock
+	url = ../pscript-feedstock
+	branch = master
