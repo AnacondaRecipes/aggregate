@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: True # [not linux64 and not win64]
+  skip: True # [not linux64 and not win64 and not ppc64le]
   skip: True # [win64 and py27]
 
 requirements:
