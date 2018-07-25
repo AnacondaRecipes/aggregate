@@ -3074,3 +3074,7 @@
 	path = pscript-feedstock
 	url = ../pscript-feedstock
 	branch = master
+[submodule "retrying-feedstock"]
+	path = retrying-feedstock
+	url = ../retrying-feedstock
+	branch = master
