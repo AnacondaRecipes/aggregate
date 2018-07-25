@@ -1,20 +1,23 @@
+{% set name = "boto" %}
+{% set version = "2.49.0" %}
+
 package:
-  name: boto
-  version: 2.48.0
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  fn: boto-2.48.0.tar.gz
-  url: https://pypi.python.org/packages/66/e7/fe1db6a5ed53831b53b8a6695a8f134a58833cadb5f2740802bc3730ac15/boto-2.48.0.tar.gz
-  md5: ce4589dd9c1d7f5d347363223ae1b970
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: ea0d3b40a2d852767be77ca343b58a9e3a4b00d9db440efb8da74b4e58025e5a
 
 requirements:
-  build:
+  host:
     - python
   run:
     - python
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install
 
 test:
