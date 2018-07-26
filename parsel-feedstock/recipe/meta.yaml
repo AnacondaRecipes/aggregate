@@ -1,8 +1,8 @@
 {% set name = "parsel" %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "2f3a6813a0ff39b6ca2530b9c1ad25d83e3a33808d93dd21fbf114c6232a16a8" %}
+{% set hash_value = "b24618fe81dce29d717aa8c4a9534c46e807dd6a5c8d5e1bb3b1fdb3fbd22b56" %}
 
 package:
   name: {{ name|lower }}
@@ -29,6 +29,7 @@ requirements:
     - six >=1.5.2
     - cssselect >=0.9
     - pytest-runner
+    - functools32  # [py27]
 
 test:
   source_files:
