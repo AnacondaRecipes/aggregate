@@ -1,8 +1,8 @@
 {% set name = "stripe" %}
-{% set version = "1.82.2" %}
+{% set version = "2.2.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "9d0443d772d176faba8c8e8a2ddc3a507861dd7d882b4a88cf6062b20fa5f224" %}
+{% set hash_value = "6f88f74aee9f02fbc89aedc4b10fa264c2058f21c64da6cf8bfa573af4f6cd15" %}
 
 package:
   name: {{ name|lower }}
@@ -23,7 +23,7 @@ requirements:
     - setuptools
   run:
     - python
-    - requests >=0.8.8
+    - requests >=2
 
 test:
   imports:
