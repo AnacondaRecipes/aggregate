@@ -3078,3 +3078,7 @@
 	path = retrying-feedstock
 	url = ../retrying-feedstock
 	branch = master
+[submodule "reportlab-feedstock"]
+	path = reportlab-feedstock
+	url = ../reportlab-feedstock
+	branch = master
