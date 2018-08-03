@@ -1,8 +1,8 @@
 {% set name = "Twisted" %}
-{% set version = "18.4.0" %}
+{% set version = "18.7.0" %}
 {% set file_ext = "tar.bz2" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "a4cc164a781859c74de47f17f0e85f4bce8a3321a9d0892c015c8f80c4158ad9" %}
+{% set hash_value = "95ae985716e8107816d8d0df249d558dbaabb677987cc2ace45272c166b267e4" %}
 
 package:
   name: {{ name|lower }}
@@ -25,13 +25,19 @@ build:
     - twist = twisted.application.twist._twist:Twist.main
     - twistd = twisted.scripts.twistd:run
     - mailmail = twisted.mail.scripts.mailmail:run  # [py2k]
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script:
+    - del src\twisted\internet\iocpreactor\iocpsupport\iocpsupport.c  # [win]
+    - pushd src\twisted\internet\iocpreactor\iocpsupport              # [win]
+    - cythonize -a -i iocpsupport.pyx                                 # [win]
+    - popd                                                            # [win]
+    - python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
   host:
     - python
     - setuptools
     - incremental >=16.10.1
+    - cython
   build:
     - {{ compiler('c') }}
   run:

@@ -1,0 +1,54 @@
+--- work/setup.py.orig	2018-08-03 08:46:53.505233500 -0500
++++ work/setup.py	2018-08-03 08:43:50.293586700 -0500
+@@ -54,6 +54,7 @@
+ 
+ portaudio_path = os.environ.get("PORTAUDIO_PATH")
+ mac_sysroot_path = os.environ.get("SYSROOT_PATH", None)
++pyaudio_msvc = os.environ.get("PYAUDIO_MSVC", False)
+ 
+ pyaudio_module_sources = ['src/_portaudiomodule.c']
+ include_dirs = []
+@@ -78,9 +79,14 @@
+     extra_link_args = []
+ else:
+     include_dirs = [os.path.join(portaudio_path, 'include/')]
+-    extra_link_args = [
+-        os.path.join(portaudio_path, 'lib/.libs/libportaudio.a')
+-        ]
++    if pyaudio_msvc:
++        extra_link_args = [
++            os.path.join(portaudio_path, 'lib', 'portaudio.lib')
++            ]
++    else:
++        extra_link_args = [
++            os.path.join(portaudio_path, 'lib', 'libportaudio.a')
++            ]
+ 
+     # platform specific configuration
+     if sys.platform == 'darwin':
+@@ -92,16 +98,20 @@
+         external_libraries += ['winmm']
+         extra_link_args += ['-lwinmm']
+     elif sys.platform == 'win32':
+-        # i.e., Win32 Python with mingw32
+-        # run: python setup.py build -cmingw32
+-        external_libraries += ['winmm']
+-        extra_link_args += ['-lwinmm']
++        if pyaudio_msvc:
++            external_libraries += ['winmm.lib']
++            extra_link_args += ['winmm.lib']
++        else:
++            # i.e., Win32 Python with mingw32
++            # run: python setup.py build -cmingw32
++            external_libraries += ['winmm']
++            extra_link_args += ['-lwinmm']
+     elif sys.platform == 'linux2':
+         extra_link_args += ['-lrt', '-lm', '-lpthread']
+         # GNU/Linux has several audio systems (backends) available; be
+         # sure to specify the desired ones here.  Start with ALSA and
+         # JACK, since that's common today.
+-        extra_link_args += ['-lasound', '-ljack']
++        extra_link_args += ['-lasound']
+ 
+ setup(name='PyAudio',
+       version=__version__,

@@ -9,6 +9,7 @@ source:
     - setup.patch
     - 0001-Do-not-use-jack.patch
     - 0002-Do-not-redefine-min.patch
+    - 0003-Add-MSVC-support.patch
 
 build:
   number: 1
