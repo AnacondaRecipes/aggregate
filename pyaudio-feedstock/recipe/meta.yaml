@@ -8,9 +8,10 @@ source:
   patches:
     - setup.patch
     - 0001-Do-not-use-jack.patch
+    - 0002-Do-not-redefine-min.patch
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
