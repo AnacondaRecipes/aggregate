@@ -1,0 +1,758 @@
+From dcaf946217b4ea1684e98a9ebc4f9925d76f3108 Mon Sep 17 00:00:00 2001
+From: Konstantin Lopuhin <kostia.lopuhin@gmail.com>
+Date: Mon, 26 Feb 2018 20:00:34 +0300
+Subject: [PATCH 01/10] Fix syntax error under Python 3.7 for async param
+
+Accept async_ param instead of async, but also support passing async for
+backwards compatibility.
+---
+ src/twisted/conch/manhole.py    | 15 ++++++++-------
+ src/twisted/mail/imap4.py       | 19 +++++++++++--------
+ src/twisted/test/test_compat.py | 19 ++++++++++++++++++-
+ 4 files changed, 62 insertions(+), 17 deletions(-)
+
+diff --git a/src/twisted/conch/manhole.py b/src/twisted/conch/manhole.py
+index 0e60e99d5a..01203d28f8 100644
+--- a/src/twisted/conch/manhole.py
++++ b/src/twisted/conch/manhole.py
+@@ -19,7 +19,7 @@
+ from twisted.conch import recvline
+ 
+ from twisted.internet import defer
+-from twisted.python.compat import _tokenize
++from twisted.python.compat import _tokenize, get_async_param
+ from twisted.python.htmlizer import TokenPrinter
+ 
+ class FileWrapper:
+@@ -151,9 +151,9 @@ def _ebDisplayDeferred(self, failure, k, obj):
+         return failure
+ 
+ 
+-    def write(self, data, async=False):
+-        self.handler.addOutput(data, async)
+-
++    def write(self, data, async_=None, **kwargs):
++        async_ = get_async_param(async_, **kwargs)
++        self.handler.addOutput(data, async_)
+ 
+ 
+ CTRL_C = b'\x03'
+@@ -237,14 +237,15 @@ def _needsNewline(self):
+         return not w.endswith(b'\n') and not w.endswith(b'\x1bE')
+ 
+ 
+-    def addOutput(self, data, async=False):
+-        if async:
++    def addOutput(self, data, async_=None, **kwargs):
++        async_ = get_async_param(async_, **kwargs)
++        if async_:
+             self.terminal.eraseLine()
+             self.terminal.cursorBackward(len(self.lineBuffer) + len(self.ps[self.pn]))
+ 
+         self.terminal.write(data)
+ 
+-        if async:
++        if async_:
+             if self._needsNewline():
+                 self.terminal.nextLine()
+ 
+diff --git a/src/twisted/mail/imap4.py b/src/twisted/mail/imap4.py
+index 0ca1f1c5e9..295053a6cd 100644
+--- a/src/twisted/mail/imap4.py
++++ b/src/twisted/mail/imap4.py
+@@ -42,7 +42,7 @@
+     _bytesChr, unichr as chr, _b64decodebytes as decodebytes,
+     _b64encodebytes as encodebytes,
+     intToBytes, iterbytes, long, nativeString, networkString, unicode,
+-    _matchingString, _PY3
++    _matchingString, _PY3, get_async_param,
+ )
+ from twisted.internet import interfaces
+ 
+@@ -1090,8 +1090,9 @@ def sendNegativeResponse(self, tag = None, message = b''):
+         self._respond(b'NO', tag, message)
+ 
+ 
+-    def sendUntaggedResponse(self, message, async=False):
+-        if not async or (self.blocked is None):
++    def sendUntaggedResponse(self, message, async_=None, **kwargs):
++        async_ = get_async_param(async_, **kwargs)
++        if not async_ or (self.blocked is None):
+             self._respond(message, None, None)
+         else:
+             self._queuedAsync.append(message)
+@@ -2497,9 +2498,9 @@ def do_UID(self, tag, command, line):
+     #
+     def modeChanged(self, writeable):
+         if writeable:
+-            self.sendUntaggedResponse(message=b'[READ-WRITE]', async=True)
++            self.sendUntaggedResponse(message=b'[READ-WRITE]', async_=True)
+         else:
+-            self.sendUntaggedResponse(message=b'[READ-ONLY]', async=True)
++            self.sendUntaggedResponse(message=b'[READ-ONLY]', async_=True)
+ 
+ 
+     def flagsChanged(self, newFlags):
+@@ -2508,14 +2509,16 @@ def flagsChanged(self, newFlags):
+             msg = intToBytes(mId) + (
+                 b' FETCH (FLAGS (' +b' '.join(encodedFlags) + b'))'
+             )
+-            self.sendUntaggedResponse(msg, async=True)
++            self.sendUntaggedResponse(msg, async_=True)
+ 
+ 
+     def newMessages(self, exists, recent):
+         if exists is not None:
+-            self.sendUntaggedResponse(intToBytes(exists) + b' EXISTS', async=True)
++            self.sendUntaggedResponse(
++                intToBytes(exists) + b' EXISTS', async_=True)
+         if recent is not None:
+-            self.sendUntaggedResponse(intToBytes(recent) + b' RECENT', async=True)
++            self.sendUntaggedResponse(
++                intToBytes(recent) + b' RECENT', async_=True)
+ 
+ 
+ TIMEOUT_ERROR = error.TimeoutError()
+diff --git a/src/twisted/test/test_compat.py b/src/twisted/test/test_compat.py
+index dcff339188..777cbb7ee2 100644
+--- a/src/twisted/test/test_compat.py
++++ b/src/twisted/test/test_compat.py
+@@ -16,7 +16,7 @@
+     reduce, execfile, _PY3, _PYPY, comparable, cmp, nativeString,
+     networkString, unicode as unicodeCompat, lazyByteSlice, reraise,
+     NativeStringIO, iterbytes, intToBytes, ioType, bytesEnviron, iteritems,
+-    _coercedUnicode, unichr, raw_input, _bytesRepr
++    _coercedUnicode, unichr, raw_input, _bytesRepr, get_async_param,
+ )
+ from twisted.python.filepath import FilePath
+ from twisted.python.runtime import platform
+@@ -921,3 +921,20 @@ def test_bytesReprPrefix(self):
+         ``b`` to the returned repr on both Python 2 and 3.
+         """
+         self.assertEqual(_bytesRepr(b'\x00'), "b'\\x00'")
++
++
++
++class GetAsyncParamTests(unittest.SynchronousTestCase):
++    """
++    Tests for L{get_async_param}
++    """
++    def test_get_async_param(self):
++        """
++        L{twisted.python.compat.get_async_param}
++        """
++        self.assertEqual(get_async_param(async_=False), False)
++        self.assertEqual(get_async_param(async_=True), True)
++        self.assertEqual(
++            get_async_param(async_=None, **{'async': False}), False)
++        self.assertEqual(get_async_param(async_=None, **{'async': True}), True)
++        self.assertRaises(TypeError, get_async_param, False, {'async': False})
+
+From e669c721aa143f4a0cd92fd144fbc4e17572a79d Mon Sep 17 00:00:00 2001
+From: Konstantin Lopuhin <kostia.lopuhin@gmail.com>
+Date: Mon, 26 Feb 2018 20:07:30 +0300
+Subject: [PATCH 02/10] Add newsfragment
+
+---
+ src/twisted/newsfragments/9384.bugfix | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 src/twisted/newsfragments/9384.bugfix
+
+diff --git a/src/twisted/newsfragments/9384.bugfix b/src/twisted/newsfragments/9384.bugfix
+new file mode 100644
+index 0000000000..311ed6040c
+--- /dev/null
++++ b/src/twisted/newsfragments/9384.bugfix
+@@ -0,0 +1,3 @@
++Syntax error under Python 3.7 fixed for twisted.conch.manhole and
++twisted.main.imap4. async_ keyword argument is used by default instead of async,
++but async is also supported for backwards compatibility.
+
+From 30a298ab4e00db645d8552043cc4d0c6c187a927 Mon Sep 17 00:00:00 2001
+From: Konstantin Lopuhin <kostia.lopuhin@gmail.com>
+Date: Tue, 27 Feb 2018 09:49:55 +0300
+Subject: [PATCH 03/10] Use _async instead of async_ to fix quality build
+
+Thanks @rodrigc for advice.
+---
+ src/twisted/conch/manhole.py          | 14 +++++++-------
+ src/twisted/mail/imap4.py             | 16 ++++++++--------
+ src/twisted/newsfragments/9384.bugfix |  2 +-
+ src/twisted/test/test_compat.py       |  9 +++++----
+ 5 files changed, 30 insertions(+), 29 deletions(-)
+
+diff --git a/src/twisted/conch/manhole.py b/src/twisted/conch/manhole.py
+index 01203d28f8..0ea7bce587 100644
+--- a/src/twisted/conch/manhole.py
++++ b/src/twisted/conch/manhole.py
+@@ -151,9 +151,9 @@ def _ebDisplayDeferred(self, failure, k, obj):
+         return failure
+ 
+ 
+-    def write(self, data, async_=None, **kwargs):
+-        async_ = get_async_param(async_, **kwargs)
+-        self.handler.addOutput(data, async_)
++    def write(self, data, _async=None, **kwargs):
++        _async = get_async_param(_async, **kwargs)
++        self.handler.addOutput(data, _async)
+ 
+ 
+ CTRL_C = b'\x03'
+@@ -237,15 +237,15 @@ def _needsNewline(self):
+         return not w.endswith(b'\n') and not w.endswith(b'\x1bE')
+ 
+ 
+-    def addOutput(self, data, async_=None, **kwargs):
+-        async_ = get_async_param(async_, **kwargs)
+-        if async_:
++    def addOutput(self, data, _async=None, **kwargs):
++        _async = get_async_param(_async, **kwargs)
++        if _async:
+             self.terminal.eraseLine()
+             self.terminal.cursorBackward(len(self.lineBuffer) + len(self.ps[self.pn]))
+ 
+         self.terminal.write(data)
+ 
+-        if async_:
++        if _async:
+             if self._needsNewline():
+                 self.terminal.nextLine()
+ 
+diff --git a/src/twisted/mail/imap4.py b/src/twisted/mail/imap4.py
+index 295053a6cd..075243f244 100644
+--- a/src/twisted/mail/imap4.py
++++ b/src/twisted/mail/imap4.py
+@@ -1090,9 +1090,9 @@ def sendNegativeResponse(self, tag = None, message = b''):
+         self._respond(b'NO', tag, message)
+ 
+ 
+-    def sendUntaggedResponse(self, message, async_=None, **kwargs):
+-        async_ = get_async_param(async_, **kwargs)
+-        if not async_ or (self.blocked is None):
++    def sendUntaggedResponse(self, message, _async=None, **kwargs):
++        _async = get_async_param(_async, **kwargs)
++        if not _async or (self.blocked is None):
+             self._respond(message, None, None)
+         else:
+             self._queuedAsync.append(message)
+@@ -2498,9 +2498,9 @@ def do_UID(self, tag, command, line):
+     #
+     def modeChanged(self, writeable):
+         if writeable:
+-            self.sendUntaggedResponse(message=b'[READ-WRITE]', async_=True)
++            self.sendUntaggedResponse(message=b'[READ-WRITE]', _async=True)
+         else:
+-            self.sendUntaggedResponse(message=b'[READ-ONLY]', async_=True)
++            self.sendUntaggedResponse(message=b'[READ-ONLY]', _async=True)
+ 
+ 
+     def flagsChanged(self, newFlags):
+@@ -2509,16 +2509,16 @@ def flagsChanged(self, newFlags):
+             msg = intToBytes(mId) + (
+                 b' FETCH (FLAGS (' +b' '.join(encodedFlags) + b'))'
+             )
+-            self.sendUntaggedResponse(msg, async_=True)
++            self.sendUntaggedResponse(msg, _async=True)
+ 
+ 
+     def newMessages(self, exists, recent):
+         if exists is not None:
+             self.sendUntaggedResponse(
+-                intToBytes(exists) + b' EXISTS', async_=True)
++                intToBytes(exists) + b' EXISTS', _async=True)
+         if recent is not None:
+             self.sendUntaggedResponse(
+-                intToBytes(recent) + b' RECENT', async_=True)
++                intToBytes(recent) + b' RECENT', _async=True)
+ 
+ 
+ TIMEOUT_ERROR = error.TimeoutError()
+diff --git a/src/twisted/newsfragments/9384.bugfix b/src/twisted/newsfragments/9384.bugfix
+index 311ed6040c..9ffa1cac86 100644
+--- a/src/twisted/newsfragments/9384.bugfix
++++ b/src/twisted/newsfragments/9384.bugfix
+@@ -1,3 +1,3 @@
+ Syntax error under Python 3.7 fixed for twisted.conch.manhole and
+-twisted.main.imap4. async_ keyword argument is used by default instead of async,
++twisted.main.imap4. _async keyword argument is used by default instead of async,
+ but async is also supported for backwards compatibility.
+--- a/src/twisted/test/test_compat.py
++++ b/src/twisted/test/test_compat.py
+@@ -928,13 +928,14 @@ class GetAsyncParamTests(unittest.SynchronousTestCase):
+     """
+     Tests for L{get_async_param}
+     """
++
+     def test_get_async_param(self):
+         """
+         L{twisted.python.compat.get_async_param}
+         """
+-        self.assertEqual(get_async_param(async_=False), False)
+-        self.assertEqual(get_async_param(async_=True), True)
++        self.assertEqual(get_async_param(_async=False), False)
++        self.assertEqual(get_async_param(_async=True), True)
+         self.assertEqual(
+-            get_async_param(async_=None, **{'async': False}), False)
+-        self.assertEqual(get_async_param(async_=None, **{'async': True}), True)
++            get_async_param(_async=None, **{'async': False}), False)
++        self.assertEqual(get_async_param(_async=None, **{'async': True}), True)
+         self.assertRaises(TypeError, get_async_param, False, {'async': False})
+
+From ef0f83b41702d156d0b320c8f0cdb2797b763d9d Mon Sep 17 00:00:00 2001
+From: Craig Rodrigues <rodrigc@FreeBSD.org>
+Date: Fri, 23 Mar 2018 02:04:06 -0700
+Subject: [PATCH 04/10] Fix pycodestyle errors
+
+---
+ src/twisted/conch/manhole.py | 6 +++++-
+ src/twisted/mail/imap4.py    | 3 ++-
+ 3 files changed, 8 insertions(+), 2 deletions(-)
+
+diff --git a/src/twisted/conch/manhole.py b/src/twisted/conch/manhole.py
+index 0ea7bce587..e79ca6719c 100644
+--- a/src/twisted/conch/manhole.py
++++ b/src/twisted/conch/manhole.py
+@@ -22,6 +22,8 @@
+ from twisted.python.compat import _tokenize, get_async_param
+ from twisted.python.htmlizer import TokenPrinter
+ 
++
++
+ class FileWrapper:
+     """
+     Minimal write-file-like object.
+@@ -156,6 +158,7 @@ def write(self, data, _async=None, **kwargs):
+         self.handler.addOutput(data, _async)
+ 
+ 
++
+ CTRL_C = b'\x03'
+ CTRL_D = b'\x04'
+ CTRL_BACKSLASH = b'\x1c'
+@@ -241,7 +244,8 @@ def addOutput(self, data, _async=None, **kwargs):
+         _async = get_async_param(_async, **kwargs)
+         if _async:
+             self.terminal.eraseLine()
+-            self.terminal.cursorBackward(len(self.lineBuffer) + len(self.ps[self.pn]))
++            self.terminal.cursorBackward(len(self.lineBuffer) +
++                                         len(self.ps[self.pn]))
+ 
+         self.terminal.write(data)
+ 
+diff --git a/src/twisted/mail/imap4.py b/src/twisted/mail/imap4.py
+index 075243f244..5eb912cc6e 100644
+--- a/src/twisted/mail/imap4.py
++++ b/src/twisted/mail/imap4.py
+@@ -2507,7 +2507,7 @@ def flagsChanged(self, newFlags):
+         for (mId, flags) in newFlags.items():
+             encodedFlags = [networkString(flag) for flag in flags]
+             msg = intToBytes(mId) + (
+-                b' FETCH (FLAGS (' +b' '.join(encodedFlags) + b'))'
++                b' FETCH (FLAGS (' + b' '.join(encodedFlags) + b'))'
+             )
+             self.sendUntaggedResponse(msg, _async=True)
+ 
+@@ -2521,6 +2521,7 @@ def newMessages(self, exists, recent):
+                 intToBytes(recent) + b' RECENT', _async=True)
+ 
+ 
++
+ TIMEOUT_ERROR = error.TimeoutError()
+ 
+ @implementer(IMailboxListener)
+From ed675f2c7e07c5853fdef21640d006894174728e Mon Sep 17 00:00:00 2001
+From: Konstantin Lopuhin <kostia.lopuhin@gmail.com>
+Date: Fri, 23 Mar 2018 13:13:13 +0300
+Subject: [PATCH 05/10] Use isAsync name instead of _async
+
+As discussed with @adiroiban, this looks like a better choice
+because the API is public and it's a binary option
+---
+ src/twisted/conch/manhole.py          | 14 +++++++-------
+ src/twisted/mail/imap4.py             | 16 ++++++++--------
+ src/twisted/newsfragments/9384.bugfix |  4 ++--
+ src/twisted/test/test_compat.py       |  8 ++++----
+ 5 files changed, 29 insertions(+), 29 deletions(-)
+
+diff --git a/src/twisted/conch/manhole.py b/src/twisted/conch/manhole.py
+index e79ca6719c..5f2ff5bade 100644
+--- a/src/twisted/conch/manhole.py
++++ b/src/twisted/conch/manhole.py
+@@ -153,9 +153,9 @@ def _ebDisplayDeferred(self, failure, k, obj):
+         return failure
+ 
+ 
+-    def write(self, data, _async=None, **kwargs):
+-        _async = get_async_param(_async, **kwargs)
+-        self.handler.addOutput(data, _async)
++    def write(self, data, isAsync=None, **kwargs):
++        isAsync = get_async_param(isAsync, **kwargs)
++        self.handler.addOutput(data, isAsync)
+ 
+ 
+ 
+@@ -240,16 +240,16 @@ def _needsNewline(self):
+         return not w.endswith(b'\n') and not w.endswith(b'\x1bE')
+ 
+ 
+-    def addOutput(self, data, _async=None, **kwargs):
+-        _async = get_async_param(_async, **kwargs)
+-        if _async:
++    def addOutput(self, data, isAsync=None, **kwargs):
++        isAsync = get_async_param(isAsync, **kwargs)
++        if isAsync:
+             self.terminal.eraseLine()
+             self.terminal.cursorBackward(len(self.lineBuffer) +
+                                          len(self.ps[self.pn]))
+ 
+         self.terminal.write(data)
+ 
+-        if _async:
++        if isAsync:
+             if self._needsNewline():
+                 self.terminal.nextLine()
+ 
+diff --git a/src/twisted/mail/imap4.py b/src/twisted/mail/imap4.py
+index 5eb912cc6e..1e6495328d 100644
+--- a/src/twisted/mail/imap4.py
++++ b/src/twisted/mail/imap4.py
+@@ -1090,9 +1090,9 @@ def sendNegativeResponse(self, tag = None, message = b''):
+         self._respond(b'NO', tag, message)
+ 
+ 
+-    def sendUntaggedResponse(self, message, _async=None, **kwargs):
+-        _async = get_async_param(_async, **kwargs)
+-        if not _async or (self.blocked is None):
++    def sendUntaggedResponse(self, message, isAsync=None, **kwargs):
++        isAsync = get_async_param(isAsync, **kwargs)
++        if not isAsync or (self.blocked is None):
+             self._respond(message, None, None)
+         else:
+             self._queuedAsync.append(message)
+@@ -2498,9 +2498,9 @@ def do_UID(self, tag, command, line):
+     #
+     def modeChanged(self, writeable):
+         if writeable:
+-            self.sendUntaggedResponse(message=b'[READ-WRITE]', _async=True)
++            self.sendUntaggedResponse(message=b'[READ-WRITE]', isAsync=True)
+         else:
+-            self.sendUntaggedResponse(message=b'[READ-ONLY]', _async=True)
++            self.sendUntaggedResponse(message=b'[READ-ONLY]', isAsync=True)
+ 
+ 
+     def flagsChanged(self, newFlags):
+@@ -2509,16 +2509,16 @@ def flagsChanged(self, newFlags):
+             msg = intToBytes(mId) + (
+                 b' FETCH (FLAGS (' + b' '.join(encodedFlags) + b'))'
+             )
+-            self.sendUntaggedResponse(msg, _async=True)
++            self.sendUntaggedResponse(msg, isAsync=True)
+ 
+ 
+     def newMessages(self, exists, recent):
+         if exists is not None:
+             self.sendUntaggedResponse(
+-                intToBytes(exists) + b' EXISTS', _async=True)
++                intToBytes(exists) + b' EXISTS', isAsync=True)
+         if recent is not None:
+             self.sendUntaggedResponse(
+-                intToBytes(recent) + b' RECENT', _async=True)
++                intToBytes(recent) + b' RECENT', isAsync=True)
+ 
+ 
+ 
+diff --git a/src/twisted/newsfragments/9384.bugfix b/src/twisted/newsfragments/9384.bugfix
+index 9ffa1cac86..c55cd7018f 100644
+--- a/src/twisted/newsfragments/9384.bugfix
++++ b/src/twisted/newsfragments/9384.bugfix
+@@ -1,3 +1,3 @@
+ Syntax error under Python 3.7 fixed for twisted.conch.manhole and
+-twisted.main.imap4. _async keyword argument is used by default instead of async,
+-but async is also supported for backwards compatibility.
++twisted.main.imap4. isAsync keyword argument is used by default instead of
++async, but async is also supported for backwards compatibility.
+diff --git a/src/twisted/test/test_compat.py b/src/twisted/test/test_compat.py
+index 67465cc282..ceeb49fa58 100644
+--- a/src/twisted/test/test_compat.py
++++ b/src/twisted/test/test_compat.py
+@@ -933,9 +933,9 @@ def test_get_async_param(self):
+         """
+         L{twisted.python.compat.get_async_param}
+         """
+-        self.assertEqual(get_async_param(_async=False), False)
+-        self.assertEqual(get_async_param(_async=True), True)
++        self.assertEqual(get_async_param(isAsync=False), False)
++        self.assertEqual(get_async_param(isAsync=True), True)
+         self.assertEqual(
+-            get_async_param(_async=None, **{'async': False}), False)
+-        self.assertEqual(get_async_param(_async=None, **{'async': True}), True)
++            get_async_param(isAsync=None, **{'async': False}), False)
++        self.assertEqual(get_async_param(isAsync=None, **{'async': True}), True)
+         self.assertRaises(TypeError, get_async_param, False, {'async': False})
+
+From 163458751d555f6e445e950dba1b0d6fc9dd2b8f Mon Sep 17 00:00:00 2001
+From: Konstantin Lopuhin <kostia.lopuhin@gmail.com>
+Date: Fri, 23 Mar 2018 13:56:54 +0300
+Subject: [PATCH 06/10] Raise deprecation warning if async keyword is used
+
+Recommend using isAsync instead
+---
+ src/twisted/newsfragments/9384.bugfix |  2 +-
+ src/twisted/test/test_compat.py       | 10 ++++++++++
+ 3 files changed, 16 insertions(+), 1 deletion(-)
+
+diff --git a/src/twisted/newsfragments/9384.bugfix b/src/twisted/newsfragments/9384.bugfix
+index c55cd7018f..b5180c9055 100644
+--- a/src/twisted/newsfragments/9384.bugfix
++++ b/src/twisted/newsfragments/9384.bugfix
+@@ -1,3 +1,3 @@
+ Syntax error under Python 3.7 fixed for twisted.conch.manhole and
+ twisted.main.imap4. isAsync keyword argument is used by default instead of
+-async, but async is also supported for backwards compatibility.
++async, async keywoard argument is deprecated.
+diff --git a/src/twisted/test/test_compat.py b/src/twisted/test/test_compat.py
+index ceeb49fa58..5a67efca5f 100644
+--- a/src/twisted/test/test_compat.py
++++ b/src/twisted/test/test_compat.py
+@@ -939,3 +939,13 @@ def test_get_async_param(self):
+             get_async_param(isAsync=None, **{'async': False}), False)
+         self.assertEqual(get_async_param(isAsync=None, **{'async': True}), True)
+         self.assertRaises(TypeError, get_async_param, False, {'async': False})
++
++
++    def test_get_async_param_deprecation(self):
++        self.assertEqual(
++            get_async_param(isAsync=None, **{'async': False}), False)
++        currentWarnings = self.flushWarnings(
++            offendingFunctions=[self.test_get_async_param_deprecation])
++        self.assertEqual(
++            currentWarnings[0]['message'],
++            "'async' keyword argument is deprecated, please use isAsync")
+
+From b8b680d3b81c41407c9e7b89d2ca42253c83622c Mon Sep 17 00:00:00 2001
+From: Konstantin Lopuhin <kostia.lopuhin@gmail.com>
+Date: Fri, 23 Mar 2018 15:15:48 +0300
+Subject: [PATCH 07/10] Fix line too long error
+
+---
+ src/twisted/test/test_compat.py | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/twisted/test/test_compat.py b/src/twisted/test/test_compat.py
+index 5a67efca5f..598a125a06 100644
+--- a/src/twisted/test/test_compat.py
++++ b/src/twisted/test/test_compat.py
+@@ -937,7 +937,8 @@ def test_get_async_param(self):
+         self.assertEqual(get_async_param(isAsync=True), True)
+         self.assertEqual(
+             get_async_param(isAsync=None, **{'async': False}), False)
+-        self.assertEqual(get_async_param(isAsync=None, **{'async': True}), True)
++        self.assertEqual(
++            get_async_param(isAsync=None, **{'async': True}), True)
+         self.assertRaises(TypeError, get_async_param, False, {'async': False})
+ 
+ 
+
+From 8784deeedf7a6149ae247e680262abbb44c57817 Mon Sep 17 00:00:00 2001
+From: Konstantin Lopuhin <kostia.lopuhin@gmail.com>
+Date: Fri, 23 Mar 2018 16:23:31 +0300
+Subject: [PATCH 08/10] Make get_async_param private, add test docstrings
+
+---
+ src/twisted/conch/manhole.py    |  6 +++---
+ src/twisted/mail/imap4.py       |  4 ++--
+ src/twisted/test/test_compat.py | 23 ++++++++++++++---------
+ 4 files changed, 21 insertions(+), 16 deletions(-)
+
+diff --git a/src/twisted/conch/manhole.py b/src/twisted/conch/manhole.py
+index 5f2ff5bade..292e58b1dd 100644
+--- a/src/twisted/conch/manhole.py
++++ b/src/twisted/conch/manhole.py
+@@ -19,7 +19,7 @@
+ from twisted.conch import recvline
+ 
+ from twisted.internet import defer
+-from twisted.python.compat import _tokenize, get_async_param
++from twisted.python.compat import _tokenize, _get_async_param
+ from twisted.python.htmlizer import TokenPrinter
+ 
+ 
+@@ -154,7 +154,7 @@ def _ebDisplayDeferred(self, failure, k, obj):
+ 
+ 
+     def write(self, data, isAsync=None, **kwargs):
+-        isAsync = get_async_param(isAsync, **kwargs)
++        isAsync = _get_async_param(isAsync, **kwargs)
+         self.handler.addOutput(data, isAsync)
+ 
+ 
+@@ -241,7 +241,7 @@ def _needsNewline(self):
+ 
+ 
+     def addOutput(self, data, isAsync=None, **kwargs):
+-        isAsync = get_async_param(isAsync, **kwargs)
++        isAsync = _get_async_param(isAsync, **kwargs)
+         if isAsync:
+             self.terminal.eraseLine()
+             self.terminal.cursorBackward(len(self.lineBuffer) +
+diff --git a/src/twisted/mail/imap4.py b/src/twisted/mail/imap4.py
+index 1e6495328d..7949ef51ac 100644
+--- a/src/twisted/mail/imap4.py
++++ b/src/twisted/mail/imap4.py
+@@ -42,7 +42,7 @@
+     _bytesChr, unichr as chr, _b64decodebytes as decodebytes,
+     _b64encodebytes as encodebytes,
+     intToBytes, iterbytes, long, nativeString, networkString, unicode,
+-    _matchingString, _PY3, get_async_param,
++    _matchingString, _PY3, _get_async_param,
+ )
+ from twisted.internet import interfaces
+ 
+@@ -1091,7 +1091,7 @@ def sendNegativeResponse(self, tag = None, message = b''):
+ 
+ 
+     def sendUntaggedResponse(self, message, isAsync=None, **kwargs):
+-        isAsync = get_async_param(isAsync, **kwargs)
++        isAsync = _get_async_param(isAsync, **kwargs)
+         if not isAsync or (self.blocked is None):
+             self._respond(message, None, None)
+         else:
+diff --git a/src/twisted/python/compat.py b/src/twisted/python/compat.py
+index 60d16ec16f..22dfe388b5 100644
+diff --git a/src/twisted/test/test_compat.py b/src/twisted/test/test_compat.py
+index 598a125a06..35ba7b45f5 100644
+--- a/src/twisted/test/test_compat.py
++++ b/src/twisted/test/test_compat.py
+@@ -16,7 +16,7 @@
+     reduce, execfile, _PY3, _PYPY, comparable, cmp, nativeString,
+     networkString, unicode as unicodeCompat, lazyByteSlice, reraise,
+     NativeStringIO, iterbytes, intToBytes, ioType, bytesEnviron, iteritems,
+-    _coercedUnicode, unichr, raw_input, _bytesRepr, get_async_param,
++    _coercedUnicode, unichr, raw_input, _bytesRepr, _get_async_param,
+ )
+ from twisted.python.filepath import FilePath
+ from twisted.python.runtime import platform
+@@ -926,25 +926,30 @@ def test_bytesReprPrefix(self):
+ 
+ class GetAsyncParamTests(unittest.SynchronousTestCase):
+     """
+-    Tests for L{get_async_param}
++    Tests for L{twisted.python.compat._get_async_param}
+     """
+ 
+     def test_get_async_param(self):
+         """
+-        L{twisted.python.compat.get_async_param}
++        L{twisted.python.compat._get_async_param} uses isAsync by default,
++        or deprecated async keyword argument if isAsync is None.
+         """
+-        self.assertEqual(get_async_param(isAsync=False), False)
+-        self.assertEqual(get_async_param(isAsync=True), True)
++        self.assertEqual(_get_async_param(isAsync=False), False)
++        self.assertEqual(_get_async_param(isAsync=True), True)
+         self.assertEqual(
+-            get_async_param(isAsync=None, **{'async': False}), False)
++            _get_async_param(isAsync=None, **{'async': False}), False)
+         self.assertEqual(
+-            get_async_param(isAsync=None, **{'async': True}), True)
+-        self.assertRaises(TypeError, get_async_param, False, {'async': False})
++            _get_async_param(isAsync=None, **{'async': True}), True)
++        self.assertRaises(TypeError, _get_async_param, False, {'async': False})
+ 
+ 
+     def test_get_async_param_deprecation(self):
++        """
++        L{twisted.python.compat._get_async_param} raises a deprecation
++        warning if async keyword argument is passed.
++        """
+         self.assertEqual(
+-            get_async_param(isAsync=None, **{'async': False}), False)
++            _get_async_param(isAsync=None, **{'async': False}), False)
+         currentWarnings = self.flushWarnings(
+             offendingFunctions=[self.test_get_async_param_deprecation])
+         self.assertEqual(
+
+From 93864a6674733b48e3264c1fe993858da0cd5c5f Mon Sep 17 00:00:00 2001
+From: Konstantin Lopuhin <kostia.lopuhin@gmail.com>
+Date: Fri, 23 Mar 2018 16:32:04 +0300
+Subject: [PATCH 09/10] Add a separate deprecation newsfragment
+
+---
+ src/twisted/newsfragments/9384.bugfix  | 3 +--
+ src/twisted/newsfragments/9384.removal | 4 ++++
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+ create mode 100644 src/twisted/newsfragments/9384.removal
+
+diff --git a/src/twisted/newsfragments/9384.bugfix b/src/twisted/newsfragments/9384.bugfix
+index b5180c9055..c3d2e4b4a4 100644
+--- a/src/twisted/newsfragments/9384.bugfix
++++ b/src/twisted/newsfragments/9384.bugfix
+@@ -1,3 +1,2 @@
+ Syntax error under Python 3.7 fixed for twisted.conch.manhole and
+-twisted.main.imap4. isAsync keyword argument is used by default instead of
+-async, async keywoard argument is deprecated.
++twisted.main.imap4.
+diff --git a/src/twisted/newsfragments/9384.removal b/src/twisted/newsfragments/9384.removal
+new file mode 100644
+index 0000000000..376fd2c7aa
+--- /dev/null
++++ b/src/twisted/newsfragments/9384.removal
+@@ -0,0 +1,4 @@
++async keyword argument is deprecated in twisted.conch.manhole
++(ManholeInterpreter.write and Manhole.add) and in
++twisted.main.imap4.IMAP4Server.sendUntaggedResponse,
++isAsync keyword argument is introduced instead.
+
+--- a/src/twisted/python/compat.py.orig	2018-08-04 12:27:18.922204000 -0500
++++ b/src/twisted/python/compat.py	2018-08-04 12:23:56.569475800 -0500
+@@ -31,6 +31,7 @@
+ import sys
+ import tokenize
+ from types import MethodType as _MethodType
++import warnings
+ 
+ from io import TextIOBase, IOBase
+ 
+@@ -833,6 +834,35 @@
+     from collections import Sequence
+ 
+ 
++
++def _get_async_param(isAsync=None, **kwargs):
++    """
++    Provide a backwards-compatible way to get async param value that does not
++    cause a syntax error under Python 3.7.
++
++    @param isAsync: isAsync param value (should default to None)
++    @type isAsync: L{bool}
++
++    @param kwargs: keyword arguments of the caller (only async is allowed)
++    @type kwargs: L{dict}
++
++    @raise TypeError: Both isAsync and async specified.
++
++    @return: Final isAsync param value
++    @rtype: L{bool}
++    """
++    if 'async' in kwargs:
++        warnings.warn(
++            "'async' keyword argument is deprecated, please use isAsync",
++            DeprecationWarning, stacklevel=2)
++    if isAsync is None and 'async' in kwargs:
++        isAsync = kwargs.pop('async')
++    if kwargs:
++        raise TypeError
++    return bool(isAsync)
++
++
++
+ __all__ = [
+     "reraise",
+     "execfile",
+@@ -873,5 +903,6 @@
+     "unichr",
+     "raw_input",
+     "_tokenize",
++    "_get_async_param",
+     "Sequence",
+ ]

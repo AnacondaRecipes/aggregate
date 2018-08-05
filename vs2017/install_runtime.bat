@@ -14,7 +14,7 @@ COPY "C:\Program Files (x86)\Windows Kits\10\Redist\ucrt\DLLs\%VC_PATH%\ucrtbase
 COPY "C:\Program Files (x86)\Windows Kits\10\Redist\ucrt\DLLs\%VC_PATH%\ucrtbase.dll" "%PREFIX%"
 
 REM ========== This one comes from visual studio 2017
-set "UPDATE_VER=14.12.25810"
+set "UPDATE_VER=14.14.26405"
 set "VC_VER=141"
 set "BT_ROOT=C:\Program Files (x86)\Microsoft Visual Studio\%MSC_VER%\Enterprise"
 if not exist "%BT_ROOT%" (

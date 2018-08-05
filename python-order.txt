@@ -284,6 +284,7 @@ setuptools_scm_git_archive-feedstock
 cheroot-feedstock
 tempora-feedstock
 portend-feedstock
+pywin32-feedstock
 cherrypy-feedstock
 click-plugins-feedstock
 cligj-feedstock
@@ -302,12 +303,13 @@ pycosat-feedstock
 cookies-feedstock
 responses-feedstock
 conda-env-feedstock
+menuinst-feedstock
 conda-feedstock
 conda-verify-feedstock
 pkginfo-feedstock
 glob2-feedstock
 patchelf-feedstock
-lief-feedstock
+lief-feedstock  # [not win]
 conda-build-feedstock
 configargparse-feedstock
 console_shortcut-feedstock
@@ -343,6 +345,7 @@ pytest-benchmark-feedstock
 statistics-feedstock
 dbf-feedstock
 descartes-feedstock
+pyreadline-feedstock  # [win]
 dill-feedstock
 distlib-feedstock
 psycopg2-feedstock
@@ -536,6 +539,7 @@ progressbar2-feedstock
 pure-sasl-feedstock
 pyamg-feedstock
 pyasn1-modules-feedstock
+portaudio-feedstock
 pyaudio-feedstock
 pycairo-feedstock
 pycrypto-feedstock
@@ -543,12 +547,15 @@ pycryptodomex-feedstock
 pycurl-feedstock
 pydot-feedstock
 pyface-feedstock
+libgpuarray-feedstock
 pygpu-feedstock
 pygraphviz-feedstock
 sasl-feedstock
+pure-sasl-feedstock  # [win]
 thrift_sasl-feedstock
 pyhive-feedstock
 pyjwt-feedstock
+winkerberos-feedstock  # [win]
 pykerberos-feedstock
 isort-feedstock
 pylint-feedstock
@@ -659,9 +666,10 @@ whisper-feedstock
 word2vec-feedstock
 ws4py-feedstock
 wxpython-feedstock  # [not ppc]
-xcb-proto-feedstock
+xcb-proto-feedstock  # [not win]
 xlsxwriter-feedstock
 xlwt-feedstock
+xlwings-feedstock
 yt-feedstock
 perf-feedstock
 performance-feedstock
