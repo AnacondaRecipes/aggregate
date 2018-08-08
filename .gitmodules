@@ -3082,3 +3082,7 @@
 	path = reportlab-feedstock
 	url = ../reportlab-feedstock
 	branch = master
+[submodule "lbzip2-feedstock"]
+	path = lbzip2-feedstock
+	url = ../lbzip2-feedstock
+	branch = master
