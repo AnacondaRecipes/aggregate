@@ -1,4 +1,4 @@
-{% set build_num = 3 %}
+{% set build_num = 4 %}
 
 package:
   name: compilers_{{ ctng_target_platform }}
@@ -36,6 +36,7 @@ outputs:
         - {{ pin_subpackage('binutils_impl_' ~ ctng_target_platform, exact=True) }}
         # libstdcxx-ng is a runtime dep of gcc because LTO requires it.
         - {{ pin_subpackage('libstdcxx-ng', max_pin=None) }}
+        - {{ pin_subpackage('libgcc-ng', max_pin=None) }}
     run_exports:
       # impose this requirement across the build/host boundary
       strong:
