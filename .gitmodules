@@ -3086,3 +3086,7 @@
 	path = lbzip2-feedstock
 	url = ../lbzip2-feedstock
 	branch = master
+[submodule "comtypes-feedstock"]
+	path = comtypes-feedstock
+	url = ../comtypes-feedstock
+	branch = master
