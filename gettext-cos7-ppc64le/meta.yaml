@@ -1,0 +1,42 @@
+package:
+  name: gettext-cos7-ppc64le
+  version: 0.19.8.1
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/gettext-0.19.8.1-2.el7.ppc64le.rpm
+    sha256: 8ea78f3a10751e92782d225f13569c16bde9ff99447a1ae064a687853a03feee
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/gettext-0.19.8.1-2.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - gettext-libs-cos7-ppc64le ==0.19.8.1
+
+
+outputs:
+  - name: gettext-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - gettext-libs-cos7-ppc64le ==0.19.8.1
+
+    about:
+      home: http://www.gnu.org/software/gettext/
+      license: GPLv3+ and LGPLv2+
+      license_family: GPL3
+      summary: "(CDT) GNU libraries and utilities for producing multi-lingual messages"
+      description: |
+        The GNU gettext package provides a set of tools and documentation for
+        producing multi-lingual messages in programs. Tools include a set of
+        conventions about how programs should be written to support message catalogs,
+        a directory and file naming organization for the message catalogs, a runtime
+        library which supports the retrieval of translated messages, and stand-alone
+        programs for handling the translatable and the already translated strings.
+        Gettext provides an easy to use library and tools for creating, using, and
+        modifying natural language catalogs and is a powerful and simple method for
+        internationalizing programs.

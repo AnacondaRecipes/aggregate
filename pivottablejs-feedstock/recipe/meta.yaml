@@ -1,0 +1,38 @@
+{% set name = "pivottablejs" %}
+{% set version = "0.9.0" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "9f0f9f692330f2f635dc37f05ad99da84646e4f3dbf9fe849cf6889de4b3210b" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ file_ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  {{ hash_type }}: {{ hash_value }}
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+    - ipython
+
+test:
+  imports:
+    - pivottablejs
+
+about:
+  home: https://pivottable.js.org
+  license: MIT License
+  license_family: MIT
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE.md
+  summary: PivotTable.js integration for Jupyter/IPython Notebook
+  dev_url: https://github.com/nicolaskruchten/jupyter_pivottablejs

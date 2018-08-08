@@ -1,0 +1,31 @@
+package:
+  name: kmod-cos7-ppc64le
+  version: 20
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/kmod-20-21.el7.ppc64le.rpm
+    sha256: ee5b893bb125d9b95962aad12617bd646a0046352012ad5b50fcc4ab8024f4ff
+    folder: binary
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/kmod-20-21.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+
+
+outputs:
+  - name: kmod-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://git.kernel.org/?p=utils/kernel/kmod/kmod.git;a=summary
+      license: GPL (>= 2)
+      license_family: GPL3
+      summary: "(CDT) Linux kernel module management utilities"
+      description: |
+        The kmod package provides various programs needed for automatic loading and
+        unloading of modules under 2.6, 3.x, and later kernels, as well as other
+        module management programs. Device drivers and filesystems are two examples of
+        loaded and unloaded modules.

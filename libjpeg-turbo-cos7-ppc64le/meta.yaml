@@ -1,0 +1,29 @@
+package:
+  name: libjpeg-turbo-cos7-ppc64le
+  version: 1.2.90
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libjpeg-turbo-1.2.90-5.el7.ppc64le.rpm
+    sha256: 505b1d3ee64366131c20df057d7a940343ca96c3ffcbf2717913c078aebcefb9
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/libjpeg-turbo-1.2.90-5.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+
+
+outputs:
+  - name: libjpeg-turbo-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://sourceforge.net/projects/libjpeg-turbo
+      license: IJG
+      license_family: Other
+      summary: "(CDT) A MMX/SSE2 accelerated library for manipulating JPEG image files"
+      description: |
+        The libjpeg-turbo package contains a library of functions for manipulating
+        JPEG images.

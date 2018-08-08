@@ -1,0 +1,45 @@
+From d3b598d67b0e8f605f52a67beba1594630c243d9 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Wed, 4 Apr 2018 18:58:07 +0000
+Subject: [PATCH 7/8] Also build libmxnet_static on Windows
+
+---
+ CMakeLists.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 229e683..f35ba78 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -611,11 +611,11 @@ else()
+ endif()
+ 
+ set(MXNET_INSTALL_TARGETS mxnet)
++list(APPEND MXNET_INSTALL_TARGETS mxnet_static)
+ if(UNIX)
+   # Create dummy file since we want an empty shared library before linking
+   set(DUMMY_SOURCE ${CMAKE_BINARY_DIR}/dummy.c)
+   file(WRITE ${DUMMY_SOURCE} "")
+-  list(APPEND MXNET_INSTALL_TARGETS mxnet_static)
+   add_library(mxnet_static STATIC ${SOURCE})
+   add_library(mxnet SHARED ${DUMMY_SOURCE})
+   target_link_libraries(mxnet PRIVATE ${BEGIN_WHOLE_ARCHIVE} $<TARGET_FILE:mxnet_static> ${END_WHOLE_ARCHIVE})
+@@ -623,6 +623,7 @@ if(UNIX)
+   set_target_properties(mxnet_static PROPERTIES OUTPUT_NAME mxnet)
+ else()
+   add_library(mxnet SHARED ${SOURCE})
++  add_library(mxnet_static STATIC ${SOURCE})
+ endif()
+ 
+ if(USE_CUDA)
+@@ -681,6 +682,7 @@ target_link_libraries(mxnet PUBLIC dmlc)
+ 
+ if(MSVC AND USE_MXNET_LIB_NAMING)
+   set_target_properties(mxnet PROPERTIES OUTPUT_NAME "libmxnet")
++  set_target_properties(mxnet_static PROPERTIES OUTPUT_NAME "libmxnet_static")
+ endif()
+ 
+ add_subdirectory(tests)
+-- 
+2.17.0
+

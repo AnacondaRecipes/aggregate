@@ -1,0 +1,20 @@
+--- PyAudio-0.2.11/setup.py.orig	2017-03-18 18:29:01.000000000 -0500
++++ PyAudio-0.2.11/setup.py	2018-08-03 08:58:34.110961900 -0500
+@@ -52,7 +52,7 @@
+     STATIC_LINKING = True
+     sys.argv.remove("--static-link")
+ 
+-portaudio_path = os.environ.get("PORTAUDIO_PATH", "./portaudio-v19")
++portaudio_path = os.environ.get("PORTAUDIO_PATH")
+ mac_sysroot_path = os.environ.get("SYSROOT_PATH", None)
+ 
+ pyaudio_module_sources = ['src/_portaudiomodule.c']
+@@ -79,7 +79,7 @@
+ else:
+     include_dirs = [os.path.join(portaudio_path, 'include/')]
+     extra_link_args = [
+-        os.path.join(portaudio_path, 'lib/.libs/libportaudio.a')
++        os.path.join(portaudio_path, 'lib/libportaudio.a')
+         ]
+ 
+     # platform specific configuration

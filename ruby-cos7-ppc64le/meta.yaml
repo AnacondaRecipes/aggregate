@@ -1,0 +1,37 @@
+package:
+  name: ruby-cos7-ppc64le
+  version: 2.0.0.648
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/ruby-2.0.0.648-33.el7_4.ppc64le.rpm
+    sha256: e8bf8678f9f11e6312ecf88d262587144085a1354ea22f60ba0885669bddc937
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/ruby-2.0.0.648-33.el7_4.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - ruby-libs-cos7-ppc64le ==2.0.0.648
+
+
+outputs:
+  - name: ruby-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - ruby-libs-cos7-ppc64le ==2.0.0.648
+
+    about:
+      home: http://ruby-lang.org/
+      license: (Ruby or BSD) and Public Domain
+      license_family: BSD
+      summary: "(CDT) An interpreter of object-oriented scripting language"
+      description: |
+        Ruby is the interpreted scripting language for quick and easy object-oriented
+        programming.  It has many features to process text files and to do system
+        management tasks (as in Perl).  It is simple, straight-forward, and
+        extensible.

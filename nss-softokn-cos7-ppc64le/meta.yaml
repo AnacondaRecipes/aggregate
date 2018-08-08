@@ -1,0 +1,38 @@
+package:
+  name: nss-softokn-cos7-ppc64le
+  version: 3.34.0
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/nss-softokn-3.34.0-2.el7.ppc64le.rpm
+    sha256: f8ad2526f89daed2a4227930f9f3b2d94af8493856b2ea7dae68d856d6df1cb1
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/nss-softokn-3.34.0-2.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - nspr-cos7-ppc64le >=4.17.0
+    - nss-softokn-freebl-cos7-ppc64le >=3.34.0
+    - nss-util-cos7-ppc64le >=3.34.0
+
+
+outputs:
+  - name: nss-softokn-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - nspr-cos7-ppc64le >=4.17.0
+        - nss-softokn-freebl-cos7-ppc64le >=3.34.0
+        - nss-util-cos7-ppc64le >=3.34.0
+
+    about:
+      home: http://www.mozilla.org/projects/security/pki/nss/
+      license: MPLv2.0
+      license_family: Other
+      summary: "(CDT) Network Security Services Softoken Module"
+      description: |
+        Network Security Services Softoken Cryptographic Module

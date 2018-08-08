@@ -1,0 +1,44 @@
+package:
+  name: gtk2-devel-cos7-ppc64le
+  version: 2.24.31
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/gtk2-devel-2.24.31-1.el7.ppc64le.rpm
+    sha256: 0f1b9e137832c570a476959cb0979747799e5e98865fc395059cf56267b122be
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/gtk2-2.24.31-1.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - atk-devel-cos7-ppc64le >=1.29.4
+    - cairo-devel-cos7-ppc64le >=1.6.0
+    - glib2-devel-cos7-ppc64le >=2.28.0
+    - gtk2-cos7-ppc64le ==2.24.31
+    - pango-devel-cos7-ppc64le >=1.20.0
+
+
+outputs:
+  - name: gtk2-devel-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - atk-devel-cos7-ppc64le >=1.29.4
+        - cairo-devel-cos7-ppc64le >=1.6.0
+        - glib2-devel-cos7-ppc64le >=2.28.0
+        - gtk2-cos7-ppc64le ==2.24.31
+        - pango-devel-cos7-ppc64le >=1.20.0
+
+    about:
+      home: http://www.gtk.org
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) Development files for GTK+"
+      description: |
+        This package contains the libraries and header files that are needed for
+        writing applications with the GTK+ widget toolkit. If you plan to develop
+        applications with GTK+, consider installing the gtk2-devel-docs package.

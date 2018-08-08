@@ -1,12 +1,15 @@
 package:
   name: pyaudio
-  version: 0.2.7
+  version: 0.2.11
 
 source:
-  url: http://people.csail.mit.edu/hubert/pyaudio/packages/pyaudio-0.2.7.tar.gz
-  md5: 41eaa5a027e2a68ac29237018985dfbb
+  url: https://files.pythonhosted.org/packages/ab/42/b4f04721c5c5bfc196ce156b3c768998ef8c0ae3654ed29ea5020c749a6b/PyAudio-0.2.11.tar.gz
+  sha256: 93bfde30e0b64e63a46f2fd77e85c41fd51182a4a3413d9edfaf9ffaa26efb74
   patches:
-    - setup.patch
+    - 0000-Use-a-normal-layout-for-portaudio.patch
+    - 0001-Do-not-use-jack.patch
+    - 0002-Do-not-redefine-min.patch
+    - 0003-Add-MSVC-support.patch
 
 build:
   number: 1
@@ -14,10 +17,13 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ cdt('alsa-lib-devel') }}  # [linux]
+  host:
     - python
     - portaudio
   run:
     - python
+    - portaudio
 
 about:
   home: http://people.csail.mit.edu/hubert/pyaudio/

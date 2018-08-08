@@ -1,18 +1,19 @@
 package:
   name: winkerberos
-  version: "0.6.0"
+  version: "0.7.0"
 
 source:
   fn: winkerberos-0.6.0.zip
   url: https://pypi.org/packages/source/w/winkerberos/winkerberos-0.6.0.zip
-  md5: 44a76df51f9a80543ab26b255ff8578b
+  sha256: a8f81b895092f3e860cb8b8067ab357cf07bb026cb58fad2b32c159ad34dd5f1
 
 build:
   number: 0
   script: python setup.py install --old-and-unmanageable
+  skip: True  # [not win]
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
 

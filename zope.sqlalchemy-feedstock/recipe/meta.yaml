@@ -1,0 +1,42 @@
+{% set name = "zope.sqlalchemy" %}
+{% set version = "1.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 9316a1a8bb9e4f9f59332acf1ad2cc8b664f19a4bde5f68be7f61f3e11f80514
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+    - sqlalchemy >=0.5.1
+    - transaction >=1.6.0
+    - zope.interface >=3.6.0
+
+test:
+  imports:
+    - zope
+    - zope.sqlalchemy
+
+about:
+  home: http://pypi.python.org/pypi/zope.sqlalchemy
+  license: ZPL 2.1
+  license_family: Other
+  license_file: LICENSE.txt
+  summary: Minimal Zope/SQLAlchemy transaction integration
+  description: |
+    Unify the plethora of existing packages integrating SQLAlchemy with Zope's
+    transaction management.
+  doc_url: https://pypi.python.org/pypi/zope.sqlalchemy
+  doc_source_url: https://github.com/zopefoundation/zope.sqlalchemy/blob/master/src/zope/sqlalchemy/README.txt
+  dev_url: https://github.com/zopefoundation/zope.sqlalchemy

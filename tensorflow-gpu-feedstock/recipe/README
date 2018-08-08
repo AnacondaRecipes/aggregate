@@ -1,0 +1,5 @@
+Recipes for Tensorflow related conda packages can be found at:
+https://github.com/AnacondaRecipes/tensorflow_recipes
+
+This folder is no longer used, it is retained to facilitate the examination of
+recipes used to build previous versions of Tensorflow.

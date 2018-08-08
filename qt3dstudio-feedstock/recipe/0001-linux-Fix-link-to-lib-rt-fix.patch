@@ -1,0 +1,25 @@
+From 4cbac8d351984bfbb80311b79ae29ee2e2152f85 Mon Sep 17 00:00:00 2001
+From: Ray Donnelly <mingw.android@gmail.com>
+Date: Sun, 8 Apr 2018 02:21:22 +0100
+Subject: [PATCH] linux: Fix link-to-lib rt fix
+
+---
+ src/Runtime/Qt3DSRuntimeStatic/Qt3DSRuntimeStatic.pro | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/Runtime/Qt3DSRuntimeStatic/Qt3DSRuntimeStatic.pro b/src/Runtime/Qt3DSRuntimeStatic/Qt3DSRuntimeStatic.pro
+index 032c569..7e1f5e2 100644
+--- a/src/Runtime/Qt3DSRuntimeStatic/Qt3DSRuntimeStatic.pro
++++ b/src/Runtime/Qt3DSRuntimeStatic/Qt3DSRuntimeStatic.pro
+@@ -9,7 +9,7 @@ include(../commoninclude.pri)
+ 
+ linux {
+     DEFINES += _POSIX_C_SOURCE=199309L
+-    QMAKE_LFLAGS += -lrt
++    LIBS += -lrt
+ }
+ 
+ DEFINES += QT3DS_BUILDING_LIBRARY
+-- 
+2.14.1
+

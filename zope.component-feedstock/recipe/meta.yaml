@@ -1,0 +1,63 @@
+{% set name = "zope.component" %}
+{% set version = "4.4.1" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "1b29aa65413f6dda29e64e2352a6aa13d9ba70078f6b91f328573488788d531c" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  '{{ hash_type }}': '{{ hash_value }}'
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - zope.interface >=4.1.0
+    - zope.event
+  run:
+    - python
+    - setuptools
+    - zope.interface >=4.1.0
+    - zope.event
+
+test:
+  imports:
+    - zope
+    - zope.component
+    - zope.component.testfiles
+    - zope.component.tests
+  requires:
+    - persistent
+#    - zope.configuration
+#    - zope.hookable
+#    - zope.i18nmessageid
+#    - zope.location
+#    - zope.proxy
+#    - zope.security
+#    - zope.testing
+#    - zope.testrunner
+
+about:
+  home: http://www.zope.org/en/latest/
+  license: Zope Public License
+  license_family: OTHER
+  summary: Zope Component Architecture
+  description: |
+    This package, together with zope.interface, provides facilities
+    for defining, registering and looking up components. There are
+    two basic kinds of components: adapters and utilities.
+  doc_url: https://zopecomponent.readthedocs.io/en/latest/
+  dev_url: https://github.com/zopefoundation/zope.component
+
+extra:
+  recipe-maintainers:
+    - mingwandroid

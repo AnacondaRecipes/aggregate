@@ -12,11 +12,13 @@ source:
   fn: {{ name }}-{{ version }}.{{ file_ext }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
   {{ hash_type }}: {{ hash_value }}
+  patches:
+    - 0001-Proceed-with-defaults-if-socket.IPPROTO_IPV6-is-not-.patch
+    - 0002-Add-fallback-to-AF_INET-if-AF_UNIX-is-unavailable.patch
 
 build:
   number: 0
   script: python setup.py install
-  skip: True  # [win]
 
 requirements:
   build:

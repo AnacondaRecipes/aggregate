@@ -1,0 +1,71 @@
+{% set version = "1.11.0" %}
+
+package:
+  name: qbs
+  version: {{ version }}
+
+source:
+  git_url: git://code.qt.io/qbs/qbs.git
+  git_tag: v{{ version }}
+  patches:
+    - 0001-add-generator-header-installs.patch
+    - 0002-Use-.dll.a-instead-of-.a-for-mingw-import-libraries.patch
+    - 0003-setup-toolchains-Pretend-msys-is-mingw.patch
+    - 0004-add-many-files-to-installed-headers.patch
+    - 0005-macOS-Add-missing-CPU-defines.patch
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    # GUI system libs needed for qbs-config-ui
+    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
+    - {{ cdt('libx11-devel') }}          # [linux]
+    - {{ cdt('libxext-devel') }}         # [linux]
+    - {{ cdt('libxrender-devel') }}	 # [linux]
+    - {{ cdt('mesa-libgl-devel') }}	 # [linux]
+    - {{ cdt('mesa-libegl-devel') }}     # [linux]
+    - {{ cdt('mesa-dri-drivers') }}	 # [linux]
+    - {{ cdt('libxau-devel') }}          # [linux]
+    - {{ cdt('alsa-lib-devel') }}        # [linux]
+    - {{ cdt('gtk2-devel') }}            # [linux]
+    - {{ cdt('gtkmm24-devel') }}         # [linux]
+    - {{ cdt('libdrm-devel') }}          # [linux]
+    - {{ cdt('libxcomposite-devel') }}   # [linux]
+    - {{ cdt('libxcursor-devel') }}	 # [linux]
+    - {{ cdt('libxi-devel') }}           # [linux]
+    - {{ cdt('libxrandr-devel') }}	 # [linux]
+    - {{ cdt('pciutils-devel') }}        # [linux]
+    - {{ cdt('libxscrnsaver-devel') }}   # [linux]
+    - {{ cdt('libxtst-devel') }}         # [linux]
+    - {{ cdt('libselinux-devel') }}	 # [linux]
+    - {{ cdt('libxdamage') }}            # [linux]
+    - {{ cdt('libxfixes') }}             # [linux]
+    - {{ cdt('libxxf86vm') }}            # [linux]
+    - jom                                # [win]
+    - make                               # [not win]
+  host:
+    - qt 5.9.*
+  run:
+    - qt 5.9.*
+    - vs2015_runtime                     # [win]
+
+about:
+  home: https://wiki.qt.io/Qbs
+  license: LGPL-3.0
+  license_file: LICENSE.LGPLv3
+  summary: Qbs (pronounced Cubes) is a cross-platform build tool
+  description: |
+    Qbs is a tool that helps simplify the build process for developing projects
+    across multiple platforms. Qbs can be used for any software project,
+    regardless of programming language, toolkit, or libraries used.
+    Qbs is an all-in-one tool that generates a build graph from a high-level
+    project description (like qmake or CMake) and additionally undertakes the
+    task of executing the commands in the low-level build graph (like make).
+  doc_url: http://doc.qt.io/qbs/
+  doc_source_url: https://code.qt.io/cgit/qt-labs/qbs.git/tree/doc/qbs.qdoc
+  dev_url: https://code.qt.io/cgit/qt-labs/qbs.git
+
+extra:
+  recipe-maintainers:
+    - mingwandroid

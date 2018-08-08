@@ -1,0 +1,33 @@
+{% set name = "plaster_pastedeploy" %}
+{% set version = "0.5" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 70a3185b2a3336996a26e9987968cf35e84cf13390b7e8a0a9a91eb8f6f85ba9
+
+build:
+  number: 1
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+    - pastedeploy >=1.5.0
+    - plaster >=0.5
+
+test:
+  imports:
+    - plaster_pastedeploy
+
+about:
+  home: https://github.com/Pylons/plaster_pastedeploy
+  license: MIT
+  license_family: MIT
+  summary: A loader implementing the PasteDeploy syntax to be used by plaster.

@@ -1,0 +1,32 @@
+From 240fcde05b93e39593881d73c732102cf16a0ae5 Mon Sep 17 00:00:00 2001
+From: Ray Donnelly <mingw.android@gmail.com>
+Date: Fri, 30 Mar 2018 13:24:00 -0700
+Subject: [PATCH 5/5] macOS: Add missing CPU defines
+
+---
+ src/lib/qtprofilesetup/qtprofilesetup.cpp | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+diff --git a/src/lib/qtprofilesetup/qtprofilesetup.cpp b/src/lib/qtprofilesetup/qtprofilesetup.cpp
+index 9d77a45..efe0e32 100644
+--- a/src/lib/qtprofilesetup/qtprofilesetup.cpp
++++ b/src/lib/qtprofilesetup/qtprofilesetup.cpp
+@@ -78,6 +78,15 @@ struct fat_arch_64 {
+     uint32_t align;
+     uint32_t reserved;
+ };
++#if !defined(CPU_TYPE_ARM64)
++#define CPU_TYPE_ARM64          (CPU_TYPE_ARM | CPU_ARCH_ABI64)
++#endif
++#if !defined(CPU_SUBTYPE_X86_64_H)
++#define CPU_SUBTYPE_X86_64_H            ((cpu_subtype_t)8)
++#endif
++#if !defined(CPU_SUBTYPE_ARM64_ALL)
++#define CPU_SUBTYPE_ARM64_ALL           ((cpu_subtype_t) 0)
++#endif
+ #endif
+ #endif
+ 
+-- 
+1.9.5 (Apple Git-50.3)
+

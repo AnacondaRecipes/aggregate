@@ -8,11 +8,14 @@ source:
 
 build:
   detect_binary_files_with_prefix: False
+  skip: True  # [ppc64le]
   number: 4
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - git
+  host:
     - python
     - mkl-devel 2018.0.0
   run:

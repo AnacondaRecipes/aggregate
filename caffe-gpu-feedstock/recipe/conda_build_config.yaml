@@ -1,0 +1,15 @@
+c_compiler_version:
+  - 5.4
+cxx_compiler_version:
+  - 5.4
+cudatoolkit:
+  - 9.0
+cudnn:
+  - 7
+python:
+  - 2.7
+  - 3.5
+  - 3.6
+hdf5:
+  - 1.8
+  - 1.10

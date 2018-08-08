@@ -15,7 +15,7 @@ set "VSREGKEY=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0"
 )
 for /f "skip=2 tokens=2,*" %%A in ('reg query "%VSREGKEY%" /v InstallDir') do SET "VSINSTALLDIR=%%B"
 
-if not "%VSINSTALLDIR%" == "" (
+if "%VSINSTALLDIR%" == "" (
    set "VSINSTALLDIR=%VS140COMNTOOLS%"
 )
 
@@ -41,5 +41,26 @@ set "PY_VCRUNTIME_REDIST=%PREFIX%\vcruntime140.dll"
 set "CFLAGS=%CFLAGS% -MD -GL"
 set "CXXFLAGS=%CXXFLAGS% -MD -GL"
 set "LDFLAGS_SHARED=%LDFLAGS_SHARED% -LTCG ucrt.lib"
+
+:: translate target platform
+IF /I [%target_platform%]==[win-64] (
+   set "folder=x64"
+) else (
+   set "folder=x86"
+)
+
+:: find the most recent Win SDK path and add it to PATH (so that rc.exe gets found)
+for /f "tokens=*" %%I in ('dir "C:\Program Files (x86)\Windows Kits\*1*" /B /O:N') do for %%A in (%%~I) do if "%%A" == "8.1" set win=%%A
+
+for /f "tokens=*" %%I in ('dir "C:\Program Files (x86)\Windows Kits\*1*" /B /O:N') do for %%A in (%%~I) do if "%%A" == "10" set win=%%A
+
+setlocal enabledelayedexpansion
+if "%win%" == "10" (
+   for /f "tokens=*" %%I in ('dir "C:\Program Files (x86)\Windows Kits\10\bin\10*" /B /O:N') do for %%A in (%%~I) do set last=%%A
+   set "sdk_bin_path=C:\Program Files (x86)\Windows Kits\10\bin\!last!\%folder%"
+) else (
+   set "sdk_bin_path=C:\Program Files (x86)\Windows Kits\8.1\bin\%folder%"
+)
+endlocal & set "PATH=%PATH%;%sdk_bin_path%"
 
 :: other things added by install_activate.bat at package build time

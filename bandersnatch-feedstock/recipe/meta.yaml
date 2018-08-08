@@ -1,0 +1,48 @@
+{% set name = "bandersnatch" %}
+{% set version = "2.2.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 1b86d9979f284ca66ceaf37a56e68cc1be0ba9db5066d0ea85ce3b61a21f0c76
+
+build:
+  number: 0
+  entry_points:
+    - bandersnatch=bandersnatch.main:main
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+  skip: True  # [py27]
+  # Windows is not fully supported until version 3.0.0
+  # https://github.com/pypa/bandersnatch/issues/19
+  skip: True  # [win]
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+    - setuptools
+    - packaging
+    - requests
+    - xmlrpc2
+
+test:
+  imports:
+    - bandersnatch
+  commands:
+    - bandersnatch --help
+
+about:
+  home: http://bitbucket.org/pypa/bandersnatch/
+  license: Academic Free License
+  license_family: Other
+  summary: PyPI mirror client according to PEP 381
+  description: |
+    Bandersnatch is a mirroring tool that implements the client (mirror)
+    side of PEP 381
+  doc_url: https://pypi.python.org/pypi/bandersnatch
+  dev_url: https://bitbucket.org/pypa/bandersnatch

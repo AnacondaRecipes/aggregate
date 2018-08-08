@@ -1,0 +1,44 @@
+From 4f847cc5706611a841ac0ebfcdf9f65779150bd8 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sun, 3 Dec 2017 10:38:03 -0600
+Subject: [PATCH 1/2] Add support for custom compiler
+
+---
+ theano/configdefaults.py | 4 ++--
+ theano/gof/cmodule.py    | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/theano/configdefaults.py b/theano/configdefaults.py
+index 2e644e2d8..ec8a378df 100644
+--- a/theano/configdefaults.py
++++ b/theano/configdefaults.py
+@@ -493,11 +493,11 @@ AddConfigVar(
+     ConfigParam('Mode', filter_mode),
+     in_c_key=False)
+ 
+-param = "g++"
++param = os.environ.get("CXX", "g++")
+ 
+ # Test whether or not g++ is present: disable C code if it is not.
+ try:
+-    rc = call_subprocess_Popen(['g++', '-v'])
++    rc = call_subprocess_Popen([param, '-v'])
+ except OSError:
+     rc = 1
+ 
+diff --git a/theano/gof/cmodule.py b/theano/gof/cmodule.py
+index 6f6007734..b2fc66f1c 100644
+--- a/theano/gof/cmodule.py
++++ b/theano/gof/cmodule.py
+@@ -1921,7 +1921,7 @@ class GCC_compiler(Compiler):
+                     GCC_compiler.march_flags = []
+                     break
+ 
+-        if ('g++' not in theano.config.cxx and
++        if (os.environ.get('CXX', 'g++') not in theano.config.cxx and
+                 'clang++' not in theano.config.cxx and
+                 'clang-omp++' not in theano.config.cxx and
+                 'icpc' not in theano.config.cxx):
+-- 
+2.14.1
+

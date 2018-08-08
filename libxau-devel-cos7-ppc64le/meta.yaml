@@ -1,0 +1,30 @@
+package:
+  name: libxau-devel-cos7-ppc64le
+  version: 1.0.8
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libXau-devel-1.0.8-2.1.el7.ppc64le.rpm
+    sha256: 9a6d3a9a801c238a13f5fd4f9ad31d5f3c82824b8d6949523e85b7e915b6588e
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/libXau-1.0.8-2.1.el7.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - libxau-cos7-ppc64le ==1.0.8
+
+
+outputs:
+  - name: libxau-devel-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - libxau-cos7-ppc64le ==1.0.8
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Development files for libXau"
+      description: |
+        X.Org X11 libXau development package

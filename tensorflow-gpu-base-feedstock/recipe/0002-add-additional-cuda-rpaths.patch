@@ -1,0 +1,26 @@
+From 637b4a03df98870dc3eca0894e50769a21a8bff7 Mon Sep 17 00:00:00 2001
+From: Jonathan Helmus <jjhelmus@gmail.com>
+Date: Fri, 20 Apr 2018 14:09:21 -0500
+Subject: [PATCH 2/2] add additional cuda rpaths
+
+Add additional rpaths so that the CUDA libraries can be found by the linker.
+---
+ tensorflow/core/platform/default/build_config/BUILD | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/tensorflow/core/platform/default/build_config/BUILD b/tensorflow/core/platform/default/build_config/BUILD
+index 2cd607edbe..676293d257 100644
+--- a/tensorflow/core/platform/default/build_config/BUILD
++++ b/tensorflow/core/platform/default/build_config/BUILD
+@@ -186,6 +186,8 @@ cc_library(
+         "//conditions:default": [
+             "-Wl,-rpath,../local_config_cuda/cuda/lib64",
+             "-Wl,-rpath,../local_config_cuda/cuda/extras/CUPTI/lib64",
++            "-Wl,-rpath,/usr/local/cuda/lib64",
++            "-Wl,-rpath,/usr/local/cuda/lib64/stubs",
+         ],
+     }),
+     deps = [
+-- 
+2.11.1
+

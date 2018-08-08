@@ -1,0 +1,24 @@
+From 71e418ad2a63ea8a630f511b8faf3163a08be5da Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Thu, 5 Apr 2018 21:06:19 -0500
+Subject: [PATCH] Make scons inherit environment
+
+---
+ SConstruct | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/SConstruct b/SConstruct
+index f949f65..bd593b1 100644
+--- a/SConstruct
++++ b/SConstruct
+@@ -889,6 +889,7 @@ envDict = dict(BUILD_ROOT=buildDir,
+                )
+ 
+ env = Environment(variables=env_vars, **envDict)
++env.Append( ENV =  os.environ )
+ del envDict
+ 
+ env.AddMethod(mongo_platform.env_os_is_wrapper, 'TargetOSIs')
+-- 
+1.9.5 (Apple Git-50.3)
+

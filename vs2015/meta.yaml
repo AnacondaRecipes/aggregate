@@ -1,3 +1,5 @@
+# version numbering is explained at https://stackoverflow.com/questions/42730478/version-numbers-for-visual-studio-2017-boost-and-cmake
+#     This version number follows the "platform toolset"
 {% set vcver="14" %}
 {% set vsyear="2015" %}
 {% set fullver="14.0.25123" %}
@@ -7,7 +9,7 @@ package:
   version: {{ fullver }}
 
 build:
-  number: 1
+  number: 5
   skip: True  [not win]
 
 outputs:
@@ -17,19 +19,30 @@ outputs:
       - vc{{vcver}}
     run_exports:
       strong:
-        - vc {{ vcver }}
+        # compatible within major version.  This is MSFT's incrementing of the UCRT version.  It was
+        #    14.0 with VS2015, and 14.1 with VS2017 - if the major version changes, we're assuming
+        #    that binary compatibility breaks.
+        - {{ pin_subpackage('vc') }}
     about:
       summary: Activation and version verification of MSVC {{ vcver }} (VS {{ vsyear }}) compiler
       license: BSD 3-clause
   - name: vs{{ vsyear }}_runtime
     script: install_runtime.bat
+    build:
+      no_link:
+        - |
+          *.dll
+        - Library/bin/*.dll
   - name: vc
     version: {{ vcver }}
     track_features:
       - vc{{vcver}}
     requirements:
       run:
-        - {{ pin_subpackage('vs' ~ vsyear ~ '_runtime') }}
+        # Set lower bound for runtime (no upper bound).  Upper bound is still present, but
+        #    it's part of the run_exports for the compiler: assume that when vcver's major version changes,
+        #    MSFT has broken our binary compatibility.
+        - {{ pin_subpackage('vs' ~ vsyear ~ '_runtime', max_pin=None) }}
     about:
       home: https://github.com/conda/conda/wiki/VC-features
       license: Modified BSD License (3-clause)

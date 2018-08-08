@@ -1,0 +1,42 @@
+{% set name = "pyramid_debugtoolbar" %}
+{% set version = "4.4" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 5f779aa242009c4aace848f67807da44af2970b303aa1c9682c2efab76b7e79e
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+    - pyramid >=1.4
+    - pyramid_mako >=0.3.1
+    - repoze.lru
+    - pygments
+    - ipaddress  # [py27]
+
+test:
+  imports:
+    - pyramid_debugtoolbar
+    - pyramid_debugtoolbar.panels
+
+about:
+  home: http://docs.pylonsproject.org/projects/pyramid-debugtoolbar/en/latest/
+  license: BSD
+  license_file: LICENSE.txt
+  summary: interactive HTML debugger for Pyramid application development
+  description: |
+    pyramid_debugtoolbar provides a useful debug toolbar while you're
+    developing a Pyramid application.
+  doc_url: http://docs.pylonsproject.org/projects/pyramid-debugtoolbar/en/latest/
+  dev_url: https://github.com/Pylons/pyramid_debugtoolbar

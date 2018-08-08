@@ -1,0 +1,38 @@
+package:
+  name: java-1.7.0-openjdk-cos7-ppc64le
+  version: 1.7.0.171
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/java-1.7.0-openjdk-1.7.0.171-2.6.13.2.el7.ppc64le.rpm
+    sha256: 5e651621d7f586120ed073bfb8afd517d0ecf105055bc9a2a2a504e41daab284
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/java-1.7.0-openjdk-1.7.0.171-2.6.13.2.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - java-1.7.0-openjdk-headless-cos7-ppc64le ==1.7.0.171
+    - ca-certificates-cos7-ppc64le ==2017.2.20
+    - gconf2-cos7-ppc64le ==3.2.6
+
+
+outputs:
+  - name: java-1.7.0-openjdk-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - java-1.7.0-openjdk-headless-cos7-ppc64le ==1.7.0.171
+        - ca-certificates-cos7-ppc64le ==2017.2.20
+        - gconf2-cos7-ppc64le ==3.2.6
+
+    about:
+      home: http://openjdk.java.net/
+      license: ASL 1.1 and ASL 2.0 and GPL+ and GPLv2 and GPLv2 with exceptions and LGPL+ and LGPLv2 and MPLv1.0 and MPLv1.1 and Public Domain and W3C
+      license_family: GPL2
+      summary: "(CDT) OpenJDK Runtime Environment"
+      description: |
+        The OpenJDK runtime environment.

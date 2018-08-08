@@ -1,2 +1,3 @@
 #!/bin/bash
-rm -rf $PREFIX/python.app
+
+rm -Rf $PREFIX/python.app

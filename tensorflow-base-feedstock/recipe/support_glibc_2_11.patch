@@ -1,0 +1,108 @@
+diff --git a/tensorflow/workspace.bzl b/tensorflow/workspace.bzl
+index 70cb65f3e7..6164ab68db 100644
+--- a/tensorflow/workspace.bzl
++++ b/tensorflow/workspace.bzl
+@@ -115,6 +115,9 @@ def tf_workspace(path_prefix="", tf_repo_name=""):
+      sha256 = "5996380e3e8b981f55d1c8d58e709c00dbb4806ba367be75d0925a68cc2f6478",
+      strip_prefix = "abseil-cpp-720c017e30339fd1786ce4aac68bc8559736e53f",
+      build_file = str(Label("//third_party:com_google_absl.BUILD")),
++     # Patch abseil to remove minimum glibc requirement
++     # put patch in protobuf dir as com_google_absl directory does not exist
++     patch_file = str(Label("//third_party/protobuf:remove_glibc_check.patch")),
+   )
+ 
+   tf_http_archive(
+@@ -455,6 +458,8 @@ def tf_workspace(path_prefix="", tf_repo_name=""):
+       ],
+       sha256 = "8c91a8d12e1e868cf51f7340b75507a8aa017a7e1b56f46ed6816aeb803dc9bd",
+       strip_prefix = "grpc-730b778632e79cc3c96ad237f282d687ee325ce7",
++     # remove use of pthread_setname_np
++     patch_file = str(Label("//third_party/grpc:do_not_use_pthread_name.patch")),
+   )
+ 
+   tf_http_archive(
+@@ -511,6 +516,7 @@ def tf_workspace(path_prefix="", tf_repo_name=""):
+       ],
+       sha256 = "524ba98a56300149696481b4cb9ddebd0c7b7ac9b9f6edee81da2d2d7e5d2bb3",
+       strip_prefix = "boringssl-a0fb951d2a26a8ee746b52f3ba81ab011a0af778",
++     patch_file = str(Label("//third_party/boringssl:add_time_h.patch")),
+   )
+ 
+   tf_http_archive(
+diff --git a/third_party/boringssl/add_time_h.patch b/third_party/boringssl/add_time_h.patch
+new file mode 100644
+index 0000000000..1bd2a90fcb
+--- /dev/null
++++ b/third_party/boringssl/add_time_h.patch
+@@ -0,0 +1,12 @@
++diff --git a/src/crypto/bio/socket_helper.c b/src/crypto/bio/socket_helper.c
++index 268405a..7dbb5d3 100644
++--- a/src/crypto/bio/socket_helper.c
+++++ b/src/crypto/bio/socket_helper.c
++@@ -18,6 +18,7 @@
++ #include <openssl/bio.h>
++ #include <openssl/err.h>
++ 
+++#include <time.h>
++ #include <fcntl.h>
++ #include <string.h>
++ #include <sys/types.h>
+diff --git a/third_party/grpc/do_not_use_pthread_name.patch b/third_party/grpc/do_not_use_pthread_name.patch
+new file mode 100644
+index 0000000000..fe055928e8
+--- /dev/null
++++ b/third_party/grpc/do_not_use_pthread_name.patch
+@@ -0,0 +1,27 @@
++diff --git a/src/core/lib/support/thd_posix.cc b/src/core/lib/support/thd_posix.cc
++index f0ed48dbfc..6bf674b1c6 100644
++--- a/src/core/lib/support/thd_posix.cc
+++++ b/src/core/lib/support/thd_posix.cc
++@@ -33,6 +33,11 @@
++ 
++ #include "src/core/lib/support/fork.h"
++ 
+++// addition for glib 2.11 support which lacks pthread_setname_np
+++#ifdef __linux__
+++#include <sys/prctl.h>
+++#endif
+++
++ static gpr_mu g_mu;
++ static gpr_cv g_cv;
++ static int g_thread_count;
++@@ -61,7 +66,9 @@ static void* thread_body(void* v) {
++     size_t buf_len = GPR_ARRAY_SIZE(buf) - 1;
++     strncpy(buf, a.name, buf_len);
++     buf[buf_len] = '\0';
++-    pthread_setname_np(pthread_self(), buf);
+++    // use prctl which is available in glibc 2.11, pthread_setname_np is not
+++    prctl (PR_SET_NAME, buf, 0, 0, 0, 0);
+++    //pthread_setname_np(pthread_self(), buf);
++ #endif  // GPR_APPLE_PTHREAD_NAME
++   }
++   (*a.body)(a.arg);
+diff --git a/third_party/protobuf/remove_glibc_check.patch b/third_party/protobuf/remove_glibc_check.patch
+new file mode 100644
+index 0000000000..49f36bfa44
+--- /dev/null
++++ b/third_party/protobuf/remove_glibc_check.patch
+@@ -0,0 +1,20 @@
++diff --git a/absl/base/policy_checks.h b/absl/base/policy_checks.h
++index 17c05c1..082ed26 100644
++--- a/absl/base/policy_checks.h
+++++ b/absl/base/policy_checks.h
++@@ -82,15 +82,6 @@
++ // Standard Library Check
++ // -----------------------------------------------------------------------------
++ 
++-// We have chosen glibc 2.12 as the minimum as it was tagged for release
++-// in May, 2010 and includes some functionality used in Google software
++-// (for instance pthread_setname_np):
++-// https://sourceware.org/ml/libc-alpha/2010-05/msg00000.html
++-#ifdef __GLIBC_PREREQ
++-#if !__GLIBC_PREREQ(2, 12)
++-#error "Minimum required version of glibc is 2.12."
++-#endif
++-#endif
++ 
++ #if defined(_STLPORT_VERSION)
++ #error "STLPort is not supported."

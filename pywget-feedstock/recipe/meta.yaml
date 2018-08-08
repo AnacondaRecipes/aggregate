@@ -1,0 +1,29 @@
+{% set version = "3.2" %}
+
+package:
+  name: pywget
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/w/wget/wget-{{ version }}.zip
+  sha256: 35e630eca2aa50ce998b9b1a127bb26b30dfee573702782aa982f875e3f16061
+
+build:
+  number: 0
+  script: python setup.py install
+
+requirements:
+  host:
+    - python
+  run:
+    - python
+
+about:
+  home: http://bitbucket.org/techtonik/python-wget/
+  license: Public-Domain
+  summary: Pure Python download utility
+  description: |
+    Wget package contains a utility useful for non-interactive downloading of files from the Web.
+  doc_url: https://pypi.python.org/pypi/wget
+  doc_source_url: https://bitbucket.org/techtonik/python-wget/overview
+  dev_url: https://bitbucket.org/techtonik/python-wget/src

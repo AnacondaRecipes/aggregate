@@ -9,6 +9,10 @@ source:
   - url: http://vault.centos.org/6.9/os/Source/SPackages/libXfixes-5.0.3-1.el6.src.rpm
     folder: source
 
+build:
+  missing_dso_whitelist:
+    - /lib64/libc.so.6
+
 requirements:
   build:
     - libx11-cos6-x86_64 >=1.6

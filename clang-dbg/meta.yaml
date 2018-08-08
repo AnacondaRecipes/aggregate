@@ -1,0 +1,28 @@
+package:
+  name: clang-dbg_{{ target_platform }}
+  version: 4.0.1
+
+build:
+  skip: True  [not osx]
+  number: 8
+
+requirements:
+  build:
+    - libcxx
+
+outputs:
+  - name: clang-dbg_{{ target_platform }}
+    script: install-clang.sh
+    requirements:
+      - clang
+  - name: clangxx-dbg_{{ target_platform }}
+    script: install-clangxx.sh
+    requirements:
+      - clangxx
+      - libcxx
+      - {{ pin_subpackage('clang-dbg_' ~ target_platform, exact=True) }}
+    # Since transitive run_exports are not currently possible:
+    # (here I would like the run dependency on clangxx to pull in the run_exports from it).
+    run_exports:
+      strong:
+        - {{ pin_compatible('libcxx', max_pin=None) }}

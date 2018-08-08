@@ -1,0 +1,49 @@
+{% set name = "cx_Oracle" %}
+{% set version = "6.4.1" %}
+{% set hash = "3519bf3263c9892aaadc844735aca02d3773ed9b92f97e069cd1726882a7d1b6" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ hash }}
+  patches:
+    - 0001-Add-macro-for-isnan-msvc-2008.patch  # [win and vc<14]
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+
+  build:
+    - {{ compiler('c') }}
+
+  run:
+    - python
+
+test:
+  imports:
+    - cx_Oracle
+
+about:
+  home: https://oracle.github.io/python-cx_Oracle
+  license: BSD License
+  license_family: BSD
+  license_file: LICENSE.txt
+  summary: Python interface to Oracle
+  description: |
+      cx_Oracle is a module that enables access to Oracle Database and conforms
+      to the Python database API specification.
+  doc_url: http://cx-oracle.readthedocs.io
+  dev_url: https://github.com/oracle/python-cx_Oracle/issues
+
+extra:
+  recipe-maintainers:
+    - nehaljwani

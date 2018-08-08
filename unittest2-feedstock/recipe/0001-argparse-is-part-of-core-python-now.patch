@@ -1,0 +1,25 @@
+From 749e69cd3f27f2f72a4bdc6d2d5c40d50d24b464 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Wed, 18 Oct 2017 01:35:30 -0500
+Subject: [PATCH] argparse is part of core python now
+
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 416afbe..00e51ca 100755
+--- a/setup.py
++++ b/setup.py
+@@ -57,7 +57,7 @@ KEYWORDS = "unittest testing tests".split(' ')
+ # Both install and setup requires - because we read VERSION from within the
+ # package, and the package also exports all the APIs.
+ # six for compat helpers
+-REQUIRES = ['argparse', 'six>=1.4', 'traceback2'],
++REQUIRES = ['six>=1.4', 'traceback2'],
+ 
+ params = dict(
+     name=NAME,
+-- 
+2.14.1
+

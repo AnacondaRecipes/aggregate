@@ -1,0 +1,37 @@
+package:
+  name: alsa-utils-cos7-ppc64le
+  version: 1.1.3
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/alsa-utils-1.1.3-2.el7.ppc64le.rpm
+    sha256: a86aa161d319f46d6e4790bac29be102492ebcb932ef5b3bfc9ee5dcb9dd1191
+    folder: binary
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/alsa-utils-1.1.3-2.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - alsa-lib-cos7-ppc64le >=1.1.4.1
+    - systemd-cos7-ppc64le >=219
+
+
+outputs:
+  - name: alsa-utils-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - alsa-lib-cos7-ppc64le >=1.1.4.1
+        - systemd-cos7-ppc64le >=219
+
+    about:
+      home: http://www.alsa-project.org/
+      license: GPL (>= 2)
+      license_family: GPL3
+      summary: "(CDT) Advanced Linux Sound Architecture (ALSA) utilities"
+      description: |
+        This package contains command line utilities for the Advanced Linux Sound
+        Architecture (ALSA).

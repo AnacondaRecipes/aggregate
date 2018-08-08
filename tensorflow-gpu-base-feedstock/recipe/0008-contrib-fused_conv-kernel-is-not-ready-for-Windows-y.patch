@@ -1,0 +1,30 @@
+From 6006f497f0ce56c642da7925423ef75b9548248a Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sun, 17 Jun 2018 22:28:07 -0500
+Subject: [PATCH 8/8] contrib/fused_conv kernel is not ready for Windows yet
+
+xref: https://github.com/tensorflow/tensorflow/issues/20088
+
+Also, requires the symbol for GetCudnnWorkspaceLimit() which is in conv_ops.cc,
+which is part of a huge library and when linked, exceeds the number of symbols
+for pywrap_tensorflow_internal to > 64k
+---
+ tensorflow/contrib/BUILD | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tensorflow/contrib/BUILD b/tensorflow/contrib/BUILD
+index af867da..6991bd8 100644
+--- a/tensorflow/contrib/BUILD
++++ b/tensorflow/contrib/BUILD
+@@ -42,7 +42,7 @@ py_library(
+         "//tensorflow/contrib/factorization:factorization_py",
+         "//tensorflow/contrib/feature_column:feature_column_py",
+         "//tensorflow/contrib/framework:framework_py",
+-        "//tensorflow/contrib/fused_conv:fused_conv_py",
++#        "//tensorflow/contrib/fused_conv:fused_conv_py",
+         "//tensorflow/contrib/gan",
+         "//tensorflow/contrib/graph_editor:graph_editor_py",
+         "//tensorflow/contrib/grid_rnn:grid_rnn_py",
+-- 
+1.8.3.1
+

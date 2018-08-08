@@ -1,0 +1,37 @@
+{% set version = "1.8.0" %}
+
+package:
+  name: tensorflow-gpu
+  version: {{ version }}
+
+build:
+  number: 0
+  skip: True  # [not x86_64]
+  skip: True  # [win and vc<14]
+
+requirements:
+  run:
+    - tensorflow-gpu-base =={{version}}
+    - tensorboard >=1.8.0,<1.9.0
+
+test:
+  files:
+    - gpu_test.py
+  imports:
+    - tensorflow
+    - tensorboard
+  commands:
+    # has an exit code of 1, see tensorboard recipe
+    - tensorboard --help || true
+
+about:
+  home: http://tensorflow.org/
+  license: Apache 2.0
+  license_family: Apache
+  summary: TensorFlow is a machine learning library.
+  description: |
+    TensorFlow provides multiple APIs.The lowest level API, TensorFlow Core
+    provides you with complete programming control.
+  dev_url: https://github.com/tensorflow/tensorflow
+  doc_url: https://www.tensorflow.org/get_started/get_started
+  doc_source_url: https://github.com/tensorflow/tensorflow/tree/master/tensorflow/docs_src

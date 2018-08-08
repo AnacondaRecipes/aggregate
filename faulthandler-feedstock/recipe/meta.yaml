@@ -1,0 +1,36 @@
+{% set name = "faulthandler" %}
+{% set version = "3.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 83301ffab03c86b291677b64b5cec7026f412cbda5ebd27e4cb3338452c40021
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+  skip: True  # [not py27]
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+
+about:
+  home: https://faulthandler.readthedocs.io/
+  license: BSD
+  license_family: BSD
+  license_file: COPYING
+  summary: Display the Python traceback on a crash
+  description: |
+    Fault handler for SIGSEGV, SIGFPE, SIGABRT, SIGBUS and SIGILL signals:
+    display the Python traceback and restor the previous handler on a crash.
+  doc_url: http://faulthandler.readthedocs.org/en/latest/
+  dev_url: https://github.com/haypo/faulthandler

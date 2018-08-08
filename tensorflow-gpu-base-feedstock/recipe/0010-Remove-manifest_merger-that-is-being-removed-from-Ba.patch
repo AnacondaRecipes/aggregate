@@ -1,0 +1,26 @@
+From 87b21c5cc9f1ecd4102a1b3c449dfa5b56d9ecef Mon Sep 17 00:00:00 2001
+From: "A. Unique TensorFlower" <gardener@tensorflow.org>
+Date: Mon, 30 Apr 2018 09:46:59 -0700
+Subject: [PATCH 10/10] Remove manifest_merger that is being removed from Bazel
+ 0.13.0.
+
+PiperOrigin-RevId: 194798790
+---
+ tensorflow/contrib/lite/examples/android/BUILD | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/tensorflow/contrib/lite/examples/android/BUILD b/tensorflow/contrib/lite/examples/android/BUILD
+index 4928012..5700007 100644
+--- a/tensorflow/contrib/lite/examples/android/BUILD
++++ b/tensorflow/contrib/lite/examples/android/BUILD
+@@ -42,7 +42,6 @@ android_binary(
+     custom_package = "org.tensorflow.lite.demo",
+     inline_constants = 1,
+     manifest = "AndroidManifest.xml",
+-    manifest_merger = "android",
+     nocompress_extensions = [
+         ".tflite",
+     ],
+-- 
+1.8.3.1
+

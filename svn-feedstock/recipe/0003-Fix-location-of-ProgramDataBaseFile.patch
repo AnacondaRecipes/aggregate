@@ -1,0 +1,29 @@
+From 4714c436e308e3d5cd9d312a2e8c2d6fa2309ae2 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sat, 2 Jun 2018 08:36:08 -0500
+Subject: [PATCH 3/3] Fix location of ProgramDataBaseFile
+
+This patch is required to avoid:
+
+..\..\..\subversion\tests\libsvn_wc\utils.c : fatal error C1033: cannot open program database
+'c:\ci\svn_1527943698790\work\release\subversion\tests\libsvn_client\libsvn_wc\test_conflicts-..\libsvn_wc.pdb'
+---
+ build/generator/templates/vcnet_vcproj.ezt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/build/generator/templates/vcnet_vcproj.ezt b/build/generator/templates/vcnet_vcproj.ezt
+index b12ed1a..0b7df22 100644
+--- a/build/generator/templates/vcnet_vcproj.ezt
++++ b/build/generator/templates/vcnet_vcproj.ezt
+@@ -147,7 +147,7 @@
+ 				<Tool
+ 					Name="VCCLCompilerTool"
+ 					ObjectFile="$(IntDir)/[sources.reldir]/"
+-					ProgramDataBaseFileName="$(IntDir)/[sources.reldir]/[target.proj_name]-[sources.reldir].pdb"/>
++					ProgramDataBaseFileName="$(IntDir)/[sources.reldir]/[target.proj_name]-[os.path.basename(sources.reldir)].pdb"/>
+ 			</FileConfiguration>
+ [end][end][end][end]
+ 		</File>
+-- 
+2.17.0
+

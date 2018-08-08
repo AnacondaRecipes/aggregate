@@ -1,0 +1,41 @@
+package:
+  name: gettext-devel-cos7-ppc64le
+  version: 0.19.8.1
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/gettext-devel-0.19.8.1-2.el7.ppc64le.rpm
+    sha256: b9ec99a53a072d9c91bcdac3cbe29eb69ca45ea793f85bdb4323a67be67fc762
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/gettext-0.19.8.1-2.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - gettext-cos7-ppc64le ==0.19.8.1
+    - gettext-common-devel-cos7-ppc64le ==0.19.8.1
+    - gettext-libs-cos7-ppc64le ==0.19.8.1
+
+
+outputs:
+  - name: gettext-devel-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - gettext-cos7-ppc64le ==0.19.8.1
+        - gettext-common-devel-cos7-ppc64le ==0.19.8.1
+        - gettext-libs-cos7-ppc64le ==0.19.8.1
+
+    about:
+      home: http://www.gnu.org/software/gettext/
+      license: LGPLv2+ and GPLv3+
+      license_family: GPL3
+      summary: "(CDT) Development files for gettext"
+      description: |
+        This package contains all development related files necessary for developing
+        or compiling applications/libraries that needs internationalization
+        capability. You also need this package if you want to add gettext support for
+        your project.

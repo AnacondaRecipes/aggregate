@@ -1,0 +1,33 @@
+From bfe50e1b5522fe0e02f21b9716dd886d35b043b0 Mon Sep 17 00:00:00 2001
+From: Ray Donnelly <mingw.android@gmail.com>
+Date: Sun, 8 Apr 2018 10:13:58 +0100
+Subject: [PATCH 2/2] Ensure -L$$LIBDIR appears before $$STATICRUNTIME in
+ QMAKE_LFLAGS
+
+.. so that this project's local static libs get used an not those from
+Anaconda Distribution, In particular Anaconda Distributions libprce.a
+does not contain the C++ bindings (they're in libprcecpp.a).
+---
+ src/Authoring/Studio/Qt3DStudio.pro | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/src/Authoring/Studio/Qt3DStudio.pro b/src/Authoring/Studio/Qt3DStudio.pro
+index be0aedb..06b817e 100644
+--- a/src/Authoring/Studio/Qt3DStudio.pro
++++ b/src/Authoring/Studio/Qt3DStudio.pro
+@@ -97,6 +97,12 @@ STATICRUNTIME = \
+ # in the prl file to prevent them being linked again by targets that depend
+ # upon this shared library
+ !win32 {
++    # This needs to appear early as otherwise Anaconda Distribution's libpcre.a gets
++    # used and we have the C++ bindings in libpcrecpp.a instead (on Linux at least):
++    # nm -C ${PREFIX}/lib/libpcre.a | grep 'pcrecpp::RE::Init'
++    # .. comes up empty. Either way we want to use the static in-tree pcre library on
++    # all systems for best compatibility.
++    QMAKE_LFLAGS += -L$$LIBDIR
+     QMAKE_LFLAGS += $$STATICRUNTIME
+ } else {
+     DEFINES +=  WIN32_LEAN_AND_MEAN
+-- 
+2.14.1
+

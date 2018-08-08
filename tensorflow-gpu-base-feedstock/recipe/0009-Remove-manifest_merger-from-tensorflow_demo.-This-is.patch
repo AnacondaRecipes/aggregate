@@ -1,0 +1,26 @@
+From 044f2209d272e3bfaa0300e2dfd20519ba071935 Mon Sep 17 00:00:00 2001
+From: "A. Unique TensorFlower" <gardener@tensorflow.org>
+Date: Tue, 10 Apr 2018 09:41:45 -0700
+Subject: [PATCH 9/9] Remove manifest_merger from tensorflow_demo. This is an
+ internal-only attribute that is being removed from bazel.
+
+PiperOrigin-RevId: 192298746
+---
+ tensorflow/examples/android/BUILD | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/tensorflow/examples/android/BUILD b/tensorflow/examples/android/BUILD
+index a088d7c..aa594a6 100644
+--- a/tensorflow/examples/android/BUILD
++++ b/tensorflow/examples/android/BUILD
+@@ -76,7 +76,6 @@ android_binary(
+     custom_package = "org.tensorflow.demo",
+     inline_constants = 1,
+     manifest = "AndroidManifest.xml",
+-    manifest_merger = "legacy",
+     resource_files = glob(["res/**"]),
+     tags = [
+         "manual",
+-- 
+1.8.3.1
+

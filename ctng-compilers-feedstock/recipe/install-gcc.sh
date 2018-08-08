@@ -10,7 +10,7 @@ export PATH=${SRC_DIR}/gcc_built/bin:${SRC_DIR}/.build/${CHOST}/buildtools/bin:$
 pushd ${SRC_DIR}/.build/${CHOST}/build/build-cc-gcc-final/
   # We may not have built with plugin support so failure here is not fatal:
   make prefix=${PREFIX} install-lto-plugin || true
-  make -C gcc prefix=${PREFIX} install-driver install-cpp install-gcc-ar install-headers install-plugin install-lto-wrapper
+  make -C gcc prefix=${PREFIX} install-driver install-cpp install-gcc-ar install-headers install-plugin install-lto-wrapper install-collect2
   # not sure if this is the same as the line above.  Run both, just in case
   make -C lto-plugin prefix=${PREFIX} install
   install -dm755 ${PREFIX}/lib/bfd-plugins/
@@ -27,8 +27,16 @@ pushd ${SRC_DIR}/.build/${CHOST}/build/build-cc-gcc-final/
     fi
   done
 
+  # https://github.com/gcc-mirror/gcc/blob/gcc-7_3_0-release/gcc/Makefile.in#L3481-L3526
+  # Could have used install-common, but it also installs cxx binaries, which we
+  # don't want in this package. We could patch it, or use the loop below:
+  for file in gcov{,-tool,-dump}; do
+    if [[ -f gcc/${file} ]]; then
+      install -c gcc/${file} ${PREFIX}/bin/${CHOST}-${file}
+    fi
+  done
+
   make -C ${CHOST}/libgcc prefix=${PREFIX} install
-  # rm ${PREFIX}/lib/libgcc_s.so*
 
   # mkdir -p $PREFIX/$CHOST/sysroot/lib
 
@@ -158,6 +166,11 @@ $PREFIX/bin/${CHOST}-gcc -dumpspecs > $specdir/specs
 #   and recorded in the specs file.  It will undergo a prefix replacement when our compiler
 #   package is installed.
 sed -i -e "/\*link_libgcc:/,+1 s+%.*+& -rpath ${PREFIX}/lib+" $specdir/specs
+
+# Ensure that libgcc_s.so is found in the sysroot. I have done this to mask the fact that
+# strong run_export packages do not get installed into the host prefix (AFAICT) and we
+# should really fix that too. (ping @msarahan)
+cp -f ${PREFIX}/${CHOST}/lib/libgcc_s.so* ${PREFIX}/${CHOST}/sysroot/lib
 
 # Install Runtime Library Exception
 install -Dm644 $SRC_DIR/.build/src/gcc-${PKG_VERSION}/COPYING.RUNTIME \

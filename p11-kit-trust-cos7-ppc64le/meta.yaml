@@ -1,0 +1,35 @@
+package:
+  name: p11-kit-trust-cos7-ppc64le
+  version: 0.23.5
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/p11-kit-trust-0.23.5-3.el7.ppc64le.rpm
+    sha256: adb8946ce2ea998ff24a67f73435461e58417789a8054e1a7e7ec7b635b35e87
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/p11-kit-0.23.5-3.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - p11-kit-cos7-ppc64le ==0.23.5
+
+
+outputs:
+  - name: p11-kit-trust-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - p11-kit-cos7-ppc64le ==0.23.5
+
+    about:
+      home: http://p11-glue.freedesktop.org/p11-kit.html
+      license: BSD
+      license_family: BSD
+      summary: "(CDT) System trust module from p11-kit"
+      description: |
+        The p11-kit-trust package contains a system trust PKCS#11 module which
+        contains certificate anchors and black lists.

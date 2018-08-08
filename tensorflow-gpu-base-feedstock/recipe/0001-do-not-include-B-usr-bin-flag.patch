@@ -1,0 +1,78 @@
+From 829ffab8f5a5c2be452f52828c2069771d35c9ee Mon Sep 17 00:00:00 2001
+From: Jonathan Helmus <jjhelmus@gmail.com>
+Date: Fri, 20 Apr 2018 14:07:51 -0500
+Subject: [PATCH 1/2] do not include -B/usr/bin flag
+
+---
+ third_party/gpus/crosstool/CROSSTOOL_clang.tpl  | 1 -
+ third_party/gpus/crosstool/CROSSTOOL_nvcc.tpl   | 1 -
+ third_party/sycl/crosstool/CROSSTOOL.tpl        | 4 +---
+ third_party/toolchains/gpus/crosstool/CROSSTOOL | 1 -
+ 4 files changed, 1 insertion(+), 6 deletions(-)
+
+diff --git a/third_party/gpus/crosstool/CROSSTOOL_clang.tpl b/third_party/gpus/crosstool/CROSSTOOL_clang.tpl
+index e4363d6045..3734d33942 100644
+--- a/third_party/gpus/crosstool/CROSSTOOL_clang.tpl
++++ b/third_party/gpus/crosstool/CROSSTOOL_clang.tpl
+@@ -200,7 +200,6 @@ toolchain {
+       action: "c++-link-executable"
+       action: "c++-link-dynamic-library"
+       flag_group {
+-        flag: "-B/usr/bin/"
+       }
+     }
+   }
+diff --git a/third_party/gpus/crosstool/CROSSTOOL_nvcc.tpl b/third_party/gpus/crosstool/CROSSTOOL_nvcc.tpl
+index 05290d647e..64a7a9a5b8 100644
+--- a/third_party/gpus/crosstool/CROSSTOOL_nvcc.tpl
++++ b/third_party/gpus/crosstool/CROSSTOOL_nvcc.tpl
+@@ -56,7 +56,6 @@ toolchain {
+   cxx_flag: "-std=c++11"
+   linker_flag: "-Wl,-no-as-needed"
+   linker_flag: "-lstdc++"
+-  linker_flag: "-B/usr/bin/"
+ 
+ %{host_compiler_includes}
+   tool_path { name: "gcov" path: "/usr/bin/gcov" }
+diff --git a/third_party/sycl/crosstool/CROSSTOOL.tpl b/third_party/sycl/crosstool/CROSSTOOL.tpl
+index f8e50efcc6..304b98aa58 100755
+--- a/third_party/sycl/crosstool/CROSSTOOL.tpl
++++ b/third_party/sycl/crosstool/CROSSTOOL.tpl
+@@ -41,7 +41,6 @@ toolchain {
+   cxx_flag: "%{c++_std}"
+   linker_flag: "-Wl,-no-as-needed"
+   linker_flag: "-lstdc++"
+-  linker_flag: "-B/usr/bin/"
+ 
+   # TODO(bazel-team): In theory, the path here ought to exactly match the path
+   # used by gcc. That works because bazel currently doesn't track files at
+@@ -152,7 +151,6 @@ toolchain {
+   cxx_flag: "-std=c++11"
+   linker_flag: "-Wl,-no-as-needed"
+   linker_flag: "-lstdc++"
+-  linker_flag: "-B/usr/bin/"
+ 
+   # TODO(bazel-team): In theory, the path here ought to exactly match the path
+   # used by gcc. That works because bazel currently doesn't track files at
+@@ -214,4 +212,4 @@ toolchain {
+     compiler_flag: "-O2"
+     compiler_flag: "-DNDEBUG"
+   }
+-}
+\ No newline at end of file
++}
+diff --git a/third_party/toolchains/gpus/crosstool/CROSSTOOL b/third_party/toolchains/gpus/crosstool/CROSSTOOL
+index a47e0c7cd7..07691bfa88 100644
+--- a/third_party/toolchains/gpus/crosstool/CROSSTOOL
++++ b/third_party/toolchains/gpus/crosstool/CROSSTOOL
+@@ -204,7 +204,6 @@ toolchain {
+       action: "c++-link-executable"
+       action: "c++-link-dynamic-library"
+       flag_group {
+-        flag: "-B/usr/bin/"
+       }
+     }
+   }
+-- 
+2.11.1
+

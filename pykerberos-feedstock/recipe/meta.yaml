@@ -1,20 +1,26 @@
 package:
   name: pykerberos
-  version: 1.1.14
+  version: 1.2.1
 
 source:
-  fn: pykerberos-1.1.14.tar.gz
-  url: https://pypi.org/packages/source/p/pykerberos/pykerberos-1.1.14.tar.gz
-  md5: 81dcebd0135a1cf7c9d1b3def616535f
+  fn: pykerberos-1.2.1.tar.gz
+  url: https://pypi.org/packages/source/p/pykerberos/pykerberos-1.2.1.tar.gz
+  sha256: 4f2dca8df5f84a3be039c026893850d731a8bb38395292e1610ffb0a08ba876c
+  patches:
+    - 0001-Implement-mempcpy-via-memcpy.patch
 
 build:
-  number: 2
+  number: 0
   detect_binary_files_with_prefix: False
   script: python setup.py install --single-version-externally-managed --root=/
+  # Use winkerberos on Windows
+  # https://github.com/02strich/pykerberos/issues/18
+  skip: True  # [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
+  host:
     - python
     - setuptools
     - krb5

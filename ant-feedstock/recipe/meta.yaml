@@ -1,0 +1,38 @@
+{% set version = '1.9.9' %}
+{% set sha256 = '69aa251ffb9f31312c21d67db197843e0b03b3c8cc3e0af6e6e92d98eb0f2ead' %}
+
+package:
+  name: ant
+  version: {{ version }}
+
+source:
+  url: https://archive.apache.org/dist/ant/source/apache-ant-{{ version }}-src.tar.bz2
+  sha256: {{ sha256 }}
+  # This patch is needed for 1.10.1
+  # patches:
+  #   - make-bootstrap-work-on-Windows.patch
+
+requirements:
+  build:
+    - openjdk
+  #   - patch     [win]
+  run:
+    - openjdk
+
+test:
+  commands:
+    - ant -h
+
+about:
+  home: http://ant.apache.org/
+  license: Apache 2.0
+  license_family: Apache
+  license_file: LICENSE
+  summary: 'Java build tool'
+  description: |
+    Apache Ant is a Java library and command-line tool whose mission is to
+    drive processes described in build files as targets and extension points
+    dependent upon each other. The main known usage of Ant is the build of
+    Java applications.
+  dev_url: https://git-wip-us.apache.org/repos/asf?p=ant.git;a=summary
+  doc_url: http://ant.apache.org/manual/index.html

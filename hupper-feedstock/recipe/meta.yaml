@@ -1,0 +1,47 @@
+{% set name = "hupper" %}
+{% set version = "1.3" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 20387760e4d32bd4813c2cabc8e51d92b2c22c546102a0af182c33c152cd7ede
+
+build:
+  number: 0
+  entry_points:
+    - hupper = hupper.cli:main
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+
+test:
+  imports:
+    - hupper
+  commands:
+    - hupper --help
+
+about:
+  home: https://docs.pylonsproject.org/projects/hupper/en/latest/
+  license: MIT
+  license_family: MIT
+  summary: Integrated process monitor for developing and reloading daemons.
+  description: |
+    hupper is monitor for your Python process. When files change, the process
+    will be restarted. It can be extended to watch arbitrary files. Reloads
+    can also be triggered manually from code. File monitoring can be done using
+    basic polling or using inotify-style filesystem events if watchdog is
+    installed
+  doc_url: https://docs.pylonsproject.org/projects/hupper/en/latest/
+  dev_url: https://github.com/Pylons/hupper
+
+extra:
+  recipe-maintainers:
+    - mingwandroid

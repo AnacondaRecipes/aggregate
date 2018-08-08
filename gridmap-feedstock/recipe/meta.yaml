@@ -1,0 +1,46 @@
+{% set name = "gridmap" %}
+{% set version = "0.14.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 675fb66755b20cf290156f1b2561851883a804df350c4b12081417011a1dd3bb
+
+build:
+  number: 0
+  entry_points:
+    - gridmap_web = gridmap.web:main
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+    - drmaa
+    - psutil >=2.0.0
+    - pyzmq
+
+test:
+  imports:
+    - gridmap
+  commands:
+    - gridmap_web --help
+  requires:
+    - cherrypy
+
+about:
+  home: http://github.com/EducationalTestingService/gridmap
+  license: GPL3
+  license_file: LICENSE.txt
+  summary: Map Python functions onto a cluster using a grid engine
+  description: |
+    GridMap allows you to easily create jobs on the cluster directly from
+    Python. You can directly map Python functions onto the cluster without
+    needing to write any wrapper code yourself.
+  doc_url: http://gridmap.readthedocs.org/en/latest/
+  dev_url: https://github.com/pygridtools/gridmap

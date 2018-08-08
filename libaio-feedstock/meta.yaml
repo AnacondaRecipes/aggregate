@@ -1,0 +1,36 @@
+{% set version = '0.3.111' %}
+
+package:
+  name: libaio
+  version: {{ version }}
+
+source:
+  url: http://ftp.de.debian.org/debian/pool/main/liba/libaio/libaio_{{ version }}.orig.tar.gz
+  sha256: 62cf871ad8fd09eb3418f00aca7a7d449299b8e1de31c65f28bf6a2ef1fa502a
+  run_exports:
+    # No clue, update when abi-laboratory has the info
+    - {{ pin_subpackage('libaio', max_pin='x.x') }}
+  patches:
+    - 0001-Don-t-remove-the-system-libraries-and-startup-files-.patch
+
+build:
+  number: 0
+  skip: True  # [not linux]
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - make
+
+test:
+  commands:
+    - test -f "${PREFIX}"/include/libaio.h
+    - test -f "${PREFIX}"/lib/libaio.a
+    - test -f "${PREFIX}"/lib/libaio.so
+
+about:
+  license: LGPLv2.1
+  license_family: LGPL
+  license_file: COPYING
+  summary: "The Linux-native asynchronous I/O facility (aio) library"
+  home: http://lse.sourceforge.net/io/aio.html

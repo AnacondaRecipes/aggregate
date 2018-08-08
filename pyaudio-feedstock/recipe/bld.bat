@@ -1,0 +1,3 @@
+set PORTAUDIO_PATH=%LIBRARY_PREFIX%
+set PYAUDIO_MSVC=1
+%PYTHON% setup.py install

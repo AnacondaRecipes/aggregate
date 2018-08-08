@@ -1,0 +1,11 @@
+--- work/setup.py.orig	2018-07-06 20:17:09.348637976 +0000
++++ work/setup.py	2018-07-06 20:17:55.538784544 +0000
+@@ -101,7 +101,7 @@
+         # GNU/Linux has several audio systems (backends) available; be
+         # sure to specify the desired ones here.  Start with ALSA and
+         # JACK, since that's common today.
+-        extra_link_args += ['-lasound', '-ljack']
++        extra_link_args += ['-lasound']
+ 
+ setup(name='PyAudio',
+       version=__version__,

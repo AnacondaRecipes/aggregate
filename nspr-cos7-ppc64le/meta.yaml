@@ -1,0 +1,31 @@
+package:
+  name: nspr-cos7-ppc64le
+  version: 4.17.0
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/nspr-4.17.0-1.el7.ppc64le.rpm
+    sha256: 1cf08ecca95dae1cac729e790c96b24d7a80482da10a0fc5c54a94169a00b00e
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/nspr-4.17.0-1.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+
+
+outputs:
+  - name: nspr-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://www.mozilla.org/projects/nspr/
+      license: MPLv2.0
+      license_family: Other
+      summary: "(CDT) Netscape Portable Runtime"
+      description: |
+        NSPR provides platform independence for non-GUI operating system facilities.
+        These facilities include threads, thread synchronization, normal file and
+        network I/O, interval timing and calendar time, basic memory management
+        (malloc and free) and shared library linking.

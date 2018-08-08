@@ -1,0 +1,47 @@
+{% set name = "configobj" %}
+{% set version = "5.0.6" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "a2f5650770e1c87fb335af19a9b7eb73fc05ccf22144eb68db7d00cd2bcb0902" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  '{{ hash_type }}': '{{ hash_value }}'
+
+build:
+  number: 0
+  script: 'python setup.py install '
+
+requirements:
+  host:
+    - python
+    - six
+  run:
+    - python
+    - six
+
+about:
+  home: https://github.com/DiffSK/configobj
+  license: BSD License
+  license_family: BSD
+  license_file: ''
+  summary: Config file reading, writing and validation.
+  description: "**ConfigObj** is a simple but powerful config file reader and writer: an *ini\nfile round tripper*. Its main feature is that it is very easy to use, with a\nstraightforward programmer's\
+    \ interface and a simple syntax for config files.\nIt has lots of other features though :\n\n* Nested sections (subsections), to any level\n* List values\n* Multiple line values\n* Full Unicode support\n\
+    * String interpolation (substitution)\n* Integrated with a powerful validation system\n\n    - including automatic type checking/conversion\n    - and allowing default values\n    - repeated sections\n\
+    \n* All comments in the file are preserved\n* The order of keys/sections is preserved\n* Powerful ``unrepr`` mode for storing/retrieving Python data-types\n\n| Release 5.0.6 improves error messages\
+    \ in certain edge cases\n| Release 5.0.5 corrects a unicode-bug that still existed in writing files\n| Release 5.0.4 corrects a unicode-bug that still existed in reading files after\n| fixing lists\
+    \ of string in 5.0.3\n| Release 5.0.3 corrects errors related to the incorrectly handling unicode\n| encoding and writing out files\n| Release 5.0.2 adds a specific error message when trying to install\
+    \ on\n| Python versions older than 2.5\n| Release 5.0.1 fixes a regression with unicode conversion not happening\n| in certain cases PY2\n| Release 5.0.0 updates the supported Python versions to 2.6,\
+    \ 2.7, 3.2, 3.3\n| and is otherwise unchanged\n| Release 4.7.2 fixes several bugs in 4.7.1\n| Release 4.7.1 fixes a bug with the deprecated options keyword in\n| 4.7.0.\n| Release 4.7.0 improves performance\
+    \ adds features for validation and\n| fixes some bugs."
+  doc_url: ''
+  dev_url: ''
+
+extra:
+  recipe-maintainers: ''

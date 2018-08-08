@@ -1,0 +1,31 @@
+import os
+os.environ['MKL_THREADING_LAYER']='GNU'
+
+import theano
+import theano.compile
+import theano.compile.sandbox
+import theano.compile.tests
+import theano.gof
+import theano.gof.tests
+import theano.misc
+import theano.misc.tests
+import theano.sandbox
+import theano.sandbox.linalg
+import theano.sandbox.linalg.tests
+import theano.sandbox.tests
+import theano.scalar
+import theano.scalar.tests
+import theano.scan_module
+import theano.scan_module.tests
+import theano.sparse
+import theano.sparse.sandbox
+import theano.sparse.tests
+import theano.tensor
+import theano.tensor.nnet
+import theano.tensor.nnet.tests
+import theano.tensor.signal
+import theano.tensor.signal.tests
+import theano.tensor.tests
+import theano.tests
+import theano.typed_list
+import theano.typed_list.tests

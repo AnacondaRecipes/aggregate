@@ -1,0 +1,59 @@
+package:
+  name: quandl
+  version: 3.4.0
+
+source:
+  git_url: https://github.com/quandl/quandl-python.git
+  git_tag: v3.4.0
+
+build:
+  number: 0
+  script: {{ PYTHON }} setup.py install --single-version-externally-managed --record record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+    - numpy >=1.8
+    - pandas >=0.14
+    - requests >=2.7.0
+    - inflection >=0.3.1
+    - python-dateutil
+    - six
+    - more-itertools
+    - pyopenssl              [py2k]
+    - ndg-httpsclient        [py2k]
+    - pyasn1                 [py2k]
+
+test:
+  source_files:
+    - test
+  imports:
+    - quandl
+    - quandl.errors
+    - quandl.model
+    - quandl.operations
+    - quandl.utils
+  commands:
+    - nosetests
+  requires:
+    - pip
+    - jsondate
+    - nose
+    - unittest2
+    - httpretty
+    - mock
+    - factory_boy
+
+about:
+  home: http://www.quandl.com/
+  license: MIT
+  summary: High quality financial and economic data
+  description: |
+    Quandl helps data analysts save time, effort and money by delivering
+    high-quality financial and economic data in the precise format they need.
+  doc_url: https://www.quandl.com/docs/api
+  doc_source_url: https://github.com/quandl/quandl-python
+  dev_url: https://github.com/quandl

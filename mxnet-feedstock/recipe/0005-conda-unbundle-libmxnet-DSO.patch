@@ -1,0 +1,64 @@
+From b98b1348268a451d159a7d76d2a8c0c81006a54d Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Wed, 4 Apr 2018 12:57:03 +0000
+Subject: [PATCH 5/8] conda: unbundle libmxnet DSO
+
+---
+ python/mxnet/libinfo.py |  2 ++
+ python/setup.py         | 11 +++++++++--
+ 2 files changed, 11 insertions(+), 2 deletions(-)
+
+diff --git a/python/mxnet/libinfo.py b/python/mxnet/libinfo.py
+index 3220b5a..6e6bc9d 100644
+--- a/python/mxnet/libinfo.py
++++ b/python/mxnet/libinfo.py
+@@ -19,6 +19,7 @@
+ """Information about mxnet."""
+ from __future__ import absolute_import
+ import os
++import sys
+ import platform
+ import logging
+ 
+@@ -47,6 +48,7 @@ def find_lib_path():
+     dll_path = [curr_path, api_path, cmake_build_path]
+     if os.name == 'nt':
+         dll_path.append(os.path.join(curr_path, '../../build'))
++        dll_path.append(os.path.join(sys.prefix, 'Library', 'bin'))
+         vs_configuration = 'Release'
+         if platform.architecture()[0] == '64bit':
+             dll_path.append(os.path.join(curr_path, '../../build', vs_configuration))
+diff --git a/python/setup.py b/python/setup.py
+index 8e65875..a261abc 100644
+--- a/python/setup.py
++++ b/python/setup.py
+@@ -44,9 +44,16 @@ libinfo_py = os.path.join(CURRENT_DIR, 'mxnet/libinfo.py')
+ libinfo = {'__file__': libinfo_py}
+ exec(compile(open(libinfo_py, "rb").read(), libinfo_py, 'exec'), libinfo, libinfo)
+ 
+-LIB_PATH = libinfo['find_lib_path']()
+ __version__ = libinfo['__version__']
+ 
++if os.getenv('CONDA_BUILD'):
++   print("Conda-build detected, not installing libmxnet DSO")
++   data_files=('mxnet', [])
++else:
++   LIB_PATH = libinfo['find_lib_path']()
++   print("Install libmxnet from: %s" % LIB_PATH)
++   data_files=('mxnet', LIB_PATH)
++
+ sys.path.insert(0, CURRENT_DIR)
+ 
+ # Try to generate auto-complete code
+@@ -104,7 +111,7 @@ setup(name='mxnet',
+       version=__version__,
+       description=open(os.path.join(CURRENT_DIR, 'README.md')).read(),
+       packages=find_packages(),
+-      data_files=[('mxnet', [LIB_PATH[0]])],
++      data_files=[data_files],
+       url='https://github.com/apache/incubator-mxnet',
+       ext_modules=config_cython(),
+       **kwargs)
+-- 
+2.17.0
+

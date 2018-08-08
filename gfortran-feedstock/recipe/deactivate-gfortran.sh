@@ -96,10 +96,9 @@ unset F95
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"
-#exit 1
 else
   env > /tmp/new-env-$$.txt
   echo "INFO: $(_get_sourced_filename) made the following environmental changes:"
   diff -U 0 -rN /tmp/old-env-$$.txt /tmp/new-env-$$.txt | tail -n +4 | grep "^-.*\|^+.*" | grep -v "CONDA_BACKUP_" | sort
 fi
-
+rm -f /tmp/old-env-$$.txt /tmp/new-env-$$.txt || true

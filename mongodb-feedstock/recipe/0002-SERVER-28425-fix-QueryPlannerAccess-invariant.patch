@@ -1,0 +1,25 @@
+From fbf942c5eaaa563ca9277ecae4178c14a43d953c Mon Sep 17 00:00:00 2001
+From: David Storch <david.storch@10gen.com>
+Date: Wed, 22 Mar 2017 09:09:56 -0400
+Subject: [PATCH 2/4] SERVER-28425 fix QueryPlannerAccess invariant
+
+---
+ src/mongo/db/query/planner_access.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/mongo/db/query/planner_access.cpp b/src/mongo/db/query/planner_access.cpp
+index 9a6f52e18d..05c60f4324 100644
+--- a/src/mongo/db/query/planner_access.cpp
++++ b/src/mongo/db/query/planner_access.cpp
+@@ -1215,7 +1215,7 @@ QuerySolutionNode* QueryPlannerAccess::buildIndexedDataAccess(const CanonicalQue
+         } else if (Indexability::arrayUsesIndexOnChildren(root)) {
+             QuerySolutionNode* solution = NULL;
+ 
+-            invariant(MatchExpression::ELEM_MATCH_OBJECT);
++            invariant(root->matchType() == MatchExpression::ELEM_MATCH_OBJECT);
+             // The child is an AND.
+             invariant(1 == root->numChildren());
+             solution = buildIndexedDataAccess(query, root->getChild(0), true, indices, params);
+-- 
+2.14.1
+

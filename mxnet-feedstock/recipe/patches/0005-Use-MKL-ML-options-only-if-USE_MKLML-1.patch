@@ -1,0 +1,44 @@
+From a5c234c27093589c8a1abde99549d6b1bb097fdf Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sat, 30 Dec 2017 10:31:59 -0800
+Subject: [PATCH 5/9] Use MKL-ML options only if USE_MKLML=1
+
+---
+ Makefile | 16 ++++++++++------
+ 1 file changed, 10 insertions(+), 6 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 255b0b0d..f9f5d9df 100644
+--- a/Makefile
++++ b/Makefile
+@@ -135,17 +135,21 @@ ifeq ($(USE_MKL2017), 1)
+ 	CFLAGS += -DMXNET_USE_MKL2017=1
+ 	CFLAGS += -DUSE_MKL=1
+ 	CFLAGS += -I$(ROOTDIR)/src/operator/mkl/
+-	CFLAGS += -I$(MKLML_ROOT)/include
+-	LDFLAGS += -L$(MKLML_ROOT)/lib
++	ifeq ($(USE_MKLML), 1)
++		CFLAGS += -I$(MKLML_ROOT)/include
++		LDFLAGS += -L$(MKLML_ROOT)/lib
++	endif
+ 	ifeq ($(USE_MKL2017_EXPERIMENTAL), 1)
+ 		CFLAGS += -DMKL_EXPERIMENTAL=1
+ 	else
+ 		CFLAGS += -DMKL_EXPERIMENTAL=0
+ 	endif
+-	ifeq ($(UNAME_S), Darwin)
+-		LDFLAGS += -lmklml
+-	else
+-		LDFLAGS += -Wl,--as-needed -lmklml_intel -lmklml_gnu
++	ifeq ($(USE_MKLML), 1)
++		ifeq ($(UNAME_S), Darwin)
++			LDFLAGS += -lmklml
++		else
++			LDFLAGS += -Wl,--as-needed -lmklml_intel -lmklml_gnu
++		endif
+ 	endif
+ 	LDFLAGS +=  -liomp5
+ endif
+-- 
+2.16.1
+

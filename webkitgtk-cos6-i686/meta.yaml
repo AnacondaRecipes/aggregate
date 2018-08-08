@@ -1,0 +1,25 @@
+package:
+  name: webkitgtk-cos6-i686
+  version: 1.4.3
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/webkitgtk-1.4.3-9.el6_6.i686.rpm
+    sha256: 7880d7b9017d479b8baed0339c43b2bcc1356d30a69a8aa01b5abee6851fa8ed
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/webkitgtk-1.4.3-9.el6_6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: webkitgtk-cos6-i686
+    noarch: generic
+
+    about:
+      home: http://www.webkitgtk.org/
+      license: LGPLv2+ and BSD
+      license_family: LGPL
+      summary: "(CDT) GTK+ Web content engine library"
+      description: |
+        WebKitGTK+ is the port of the portable web rendering engine WebKit to the GTK+
+        platform.

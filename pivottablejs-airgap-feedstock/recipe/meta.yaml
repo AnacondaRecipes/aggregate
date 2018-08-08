@@ -1,0 +1,27 @@
+package:
+  name: pivottablejs-airgap
+  version: 2.7.0
+
+source:
+  git_url: https://github.com/ContinuumIO/pivottablejs-airgap.git
+  git_tag: 2.7.0
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+    - notebook
+
+test:
+  imports:
+    - pivottablejs
+
+about:
+  home: https://github.com/ContinuumIO/pivottablejs-airgap
+  license: MIT
+  summary: PivotTable.js integration for Jupyter/IPython Notebook
+  description: |
+    PivotTablejs is a Javascript Pivot Table library with drag'n'drop functionality built on top of jQuery/jQueryUI.
+  doc_url: https://www.npmjs.com/package/pivottable
+  doc_source_url: https://github.com/nicolaskruchten/pivottable/blob/master/ReadMe.md

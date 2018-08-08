@@ -1,0 +1,35 @@
+{% set name = "xmlrpc2" %}
+{% set version = "0.3.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 25a6b911e6f5e3ecbfbda5a93d2d5329b83020d643a067179305def60d751421
+
+build:
+  number: 2
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+    - python-dateutil >=2.1
+    - requests
+    - six
+
+test:
+  imports:
+    - xmlrpc2
+
+about:
+  home: https://github.com/dstufft/xmlrpc2
+  license: BSD
+  license_file: LICENSE
+  summary: Revamped xmlrpc library for Python
+  dev_url: https://github.com/dstufft/xmlrpc2

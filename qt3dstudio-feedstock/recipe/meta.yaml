@@ -1,0 +1,94 @@
+{% set version = "1.1" %}
+{% set ver_maj_min = "1.1" %}
+
+package:
+  name: qt3dstudio
+  version: {{ version }}
+
+source:
+  - git_url: http://code.qt.io/cgit/qt3dstudio/qt3dstudio.git
+    git_tag: {{ version }}
+    patches:
+      - 0001-linux-Fix-link-to-lib-rt-fix.patch
+      - 0002-Ensure-L-LIBDIR-appears-before-STATICRUNTIME-in-QMAK.patch
+      # TODO :: Git submodule patch handling in conda-build, try all? Identify the submodule here?
+      # src/Runtime/qt3d-runtime submodule
+      # patches:
+      #   - 0001-linux-Need-lrt-for-clock_gettime.patch
+  - git_url: https://git.qt.io/public-demos/qt3dstudio.git
+    folder: public-demos
+    git_tag: master
+
+build:
+  number: 0
+  skip: True           # [win and vc!=14]
+
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
+    - {{ cdt('libx11-devel') }}          # [linux]
+    - {{ cdt('libxext-devel') }}         # [linux]
+    - {{ cdt('libxrender-devel') }}      # [linux]
+    - {{ cdt('mesa-libgl-devel') }}      # [linux]
+    - {{ cdt('mesa-libegl-devel') }}     # [linux]
+    - {{ cdt('mesa-dri-drivers') }}      # [linux]
+    - {{ cdt('libxau-devel') }}          # [linux]
+    - {{ cdt('alsa-lib-devel') }}        # [linux]
+    - {{ cdt('gtk2-devel') }}            # [linux]
+    - {{ cdt('gtkmm24-devel') }}         # [linux]
+    - {{ cdt('libdrm-devel') }}          # [linux]
+    - {{ cdt('libxcomposite-devel') }}   # [linux]
+    - {{ cdt('libxcursor-devel') }}      # [linux]
+    - {{ cdt('libxi-devel') }}           # [linux]
+    - {{ cdt('libxrandr-devel') }}       # [linux]
+    - {{ cdt('pciutils-devel') }}        # [linux]
+    - {{ cdt('libxscrnsaver-devel') }}   # [linux]
+    - {{ cdt('libxtst-devel') }}         # [linux]
+    - {{ cdt('libselinux-devel') }}      # [linux]
+    - {{ cdt('libxdamage') }}            # [linux]
+    - {{ cdt('libxfixes') }}             # [linux]
+    - {{ cdt('libxxf86vm') }}            # [linux]
+    - jom                                # [win]
+    - make                               # [not win]
+    - patchelf                           # [linux]
+    - git
+  host:
+    - qt 5.9.*
+    - libxcb                             # [linux]
+    - zlib                               # [unix]
+  run:
+    - vs2015_runtime                     # [win]
+    - qt 5.9.*
+    - fonts-anaconda                     # [linux]
+
+  # This is necessary for calls to xcrun to make `.icns` files.
+  script_env:        # [osx]
+    - TMPDIR         # [osx]
+
+app:
+  entry: ${PREFIX}/Library/bin/qt3dstudio.exe             # [win]
+  entry: ${PREFIX}/bin/qt3dstudio                         # [linux]
+  entry: open "${PREFIX}/Applications/Qt 3D Studio..app"  # [osx]
+  icon: QtProject-qtcreator.png
+  summary: Create 3D UIs - Quickly and Easily
+  type: desk
+
+about:
+  home: https://www.qt.io/3d-studio
+  license: LGPL-3.0 with Qt Company GPL Exception 1.0
+  summary: Create 3D UIs - Quickly and Easily
+  description: |
+    With Qt 3D Studio, you can rapidly build and prototype high quality 2D and
+    3D user interfaces. Use the built-in material and effects library or import
+    your own design assets from popular design tools, such as Maya, Photoshop,
+    MODO, Blender and COLLADA exchange formats.
+  doc_url: http://doc.qt.io/qt3dstudio/index.html
+  doc_source_url: http://code.qt.io/cgit/qt3dstudio/qt3dstudio.git/tree/doc
+  dev_url: http://code.qt.io/cgit/qt3dstudio/qt3dstudio.git
+
+extra:
+  recipe-maintainers:
+    - mingwandroid

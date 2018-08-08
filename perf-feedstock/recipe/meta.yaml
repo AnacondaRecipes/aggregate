@@ -1,0 +1,73 @@
+{% set name = "perf" %}
+{% set version = "1.5.1" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "5aae76e58bd3edd0c50adcc7c16926ebb9ed8c0e5058b435a30d58c6bb0394a8" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  '{{ hash_type }}': '{{ hash_value }}'
+
+build:
+  number: 0
+  entry_points:
+    - pyperf=perf.__main__:main
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - six
+  run:
+    - statistics  # [py==27]
+    - python
+    - six
+
+test:
+  requires:
+    - mock
+    - contextlib2
+  imports:
+    - perf
+    - perf.tests
+  commands:
+    - pyperf --help
+
+about:
+  home: https://github.com/vstinner/perf
+  license: MIT License
+  license_family: MIT
+  license_file: ''
+  summary: Python module to generate and modify perf
+  description: "****\nperf\n****\n\n.. image:: https://img.shields.io/pypi/v/perf.svg\n   :alt: Latest release on the Python Cheeseshop (PyPI)\n   :target: https://pypi.python.org/pypi/perf\n\n.. image::\
+    \ https://travis-ci.org/vstinner/perf.svg?branch=master\n   :alt: Build status of perf on Travis CI\n   :target: https://travis-ci.org/vstinner/perf\n\nThe Python ``perf`` module is a toolkit to write,\
+    \ run and analyze benchmarks.\n\nFeatures\n========\n\n* Simple API to run reliable benchmarks\n* Automatically calibrate a benchmark for a time budget.\n* Spawn multiple worker processes.\n* Compute\
+    \ the mean and standard deviation.\n* Detect if a benchmark result seems unstable.\n* JSON format to store benchmark results.\n* Support multiple units: seconds, bytes and integer.\n\n\nUsage\n=====\n\
+    \nTo `run a benchmark`_ use the ``perf timeit`` command (result written into\n``bench.json``)::\n\n    $ python3 -m perf timeit '[1,2]*1000' -o bench.json\n    .....................\n    Mean +- std\
+    \ dev: 4.22 us +- 0.08 us\n\nOr write a benchmark script ``bench.py``:\n\n.. code:: python\n\n    #!/usr/bin/env python3\n    import perf\n\n    runner = perf.Runner()\n    runner.timeit(\"sorted(list(range(1000)),\
+    \ key=lambda x: x)\",\n                  stmt=\"sorted(s, key=f)\",\n                  setup=\"f = lambda x: x; s = list(range(1000))\")\n\nRun the script using (result written into ``bench.json``)::\n\
+    \n    $ python3 bench.py -o bench.json\n\nTo `analyze benchmark results`_ use the ``perf stats`` command::\n\n    $ python3 -m perf stats bench.json\n    Total duration: 29.2 sec\n    Start date: 2016-10-21\
+    \ 03:14:19\n    End date: 2016-10-21 03:14:53\n    Raw value minimum: 177 ms\n    Raw value maximum: 183 ms\n\n    Number of calibration run: 1\n    Number of run with values: 40\n    Total number of\
+    \ run: 41\n\n    Number of warmup per run: 1\n    Number of value per run: 3\n    Loop iterations per value: 8\n    Total number of values: 120\n\n    Minimum:         22.1 ms\n    Median +- MAD:  \
+    \ 22.5 ms +- 0.1 ms\n    Mean +- std dev: 22.5 ms +- 0.2 ms\n    Maximum:         22.9 ms\n\n      0th percentile: 22.1 ms (-2% of the mean) -- minimum\n      5th percentile: 22.3 ms (-1% of the mean)\n\
+    \     25th percentile: 22.4 ms (-1% of the mean) -- Q1\n     50th percentile: 22.5 ms (-0% of the mean) -- median\n     75th percentile: 22.7 ms (+1% of the mean) -- Q3\n     95th percentile: 22.9 ms\
+    \ (+2% of the mean)\n    100th percentile: 22.9 ms (+2% of the mean) -- maximum\n\n    Number of outlier (out of 22.0 ms..23.0 ms): 0\n\nThere's also:\n\n* ``perf compare_to`` command tests if a difference\
+    \ is\n  significant. It supports comparison between multiple benchmark suites (made\n  of multiple benchmarks)\n  ::\n\n    $ python3 -m perf compare_to py2.json py3.json --table\n    +-----------+---------+------------------------------+\n\
+    \    | Benchmark | py2     | py3                          |\n    +===========+=========+==============================+\n    | timeit    | 4.70 us | 4.22 us: 1.11x faster (-10%) |\n    +-----------+---------+------------------------------+\n\
+    \n* ``perf system tune`` command to tune your system to run stable benchmarks.\n* Automatically collect metadata on the computer and the benchmark:\n  use the ``perf metadata`` command to display them,\
+    \ or the\n  ``perf collect_metadata`` command to manually collect them.\n* ``--track-memory`` and ``--tracemalloc`` options to track\n  the memory usage of a benchmark.\n\n\nQuick Links\n===========\n\
+    \n* `perf documentation\n  <https://perf.readthedocs.io/>`_\n* `perf project homepage at GitHub\n  <https://github.com/vstinner/perf>`_ (code, bugs)\n* `Download latest perf release at the Python Cheeseshop\
+    \ (PyPI)\n  <https://pypi.python.org/pypi/perf>`_\n\nCommand to install perf on Python 3::\n\n    python3 -m pip install perf\n\nperf supports Python 2.7 and Python 3. It is distributed under the MIT\
+    \ license.\n\n.. _run a benchmark: https://perf.readthedocs.io/en/latest/run_benchmark.html\n.. _analyze benchmark results: https://perf.readthedocs.io/en/latest/analyze.html\n\n"
+  doc_url: ''
+  dev_url: ''
+
+extra:
+  recipe-maintainers:
+    - mingwandroid

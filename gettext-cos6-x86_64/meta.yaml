@@ -1,0 +1,32 @@
+package:
+  name: gettext-cos6-x86_64
+  version: 0.17
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/gettext-0.17-18.el6.x86_64.rpm
+    sha256: 9a7a4f7101ec58412fb07e94c37eb15cefd7ed9ceb9c58e501fb41b691d29179
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/gettext-0.17-18.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: gettext-cos6-x86_64
+    noarch: generic
+
+    about:
+      home: http://www.gnu.org/software/gettext/
+      license: GPLv3 and LGPLv2+
+      license_family: GPL3
+      summary: "(CDT) GNU libraries and utilities for producing multi-lingual messages"
+      description: |
+        The GNU gettext package provides a set of tools and documentation for
+        producing multi-lingual messages in programs. Tools include a set of
+        conventions about how programs should be written to support message catalogs,
+        a directory and file naming organization for the message catalogs, a runtime
+        library which supports the retrieval of translated messages, and stand-alone
+        programs for handling the translatable and the already translated strings.
+        Gettext provides an easy to use library and tools for creating, using, and
+        modifying natural language catalogs and is a powerful and simple method for
+        internationalizing programs.

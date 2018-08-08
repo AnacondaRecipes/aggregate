@@ -1,0 +1,28 @@
+package:
+  name: centos-release-cos7-ppc64le
+  version: 7
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/centos-release-7-5.1804.el7.centos.p.ppc64le.rpm
+    sha256: 18e3586d8d1f97aa8251c8e7bf2cfe1d143a9ca627614692a5254e015a9eac7d
+    folder: binary
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/centos-release-7-5.1804.el7.centos.p.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+
+
+outputs:
+  - name: centos-release-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: 
+      license: GPLv2
+      license_family: GPL2
+      summary: "(CDT) CentOS Linux release file"
+      description: |
+        CentOS Linux release files

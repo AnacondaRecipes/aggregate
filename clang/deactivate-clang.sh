@@ -37,7 +37,6 @@ function _tc_activation() {
   local newval
   local from
   local to
-  local which
   local pass
 
   if [ "${act_nature}" = "activate" ]; then
@@ -56,9 +55,9 @@ function _tc_activation() {
           thing=$(echo "${thing}" | sed "s,^\([^\,]*\)\,.*,\1,")
           ;;
         *)
-          newval=$(which ${CONDA_PREFIX}/bin/${tc_prefix}${thing} 2>/dev/null)
-          if [ -z "${newval}" -a "${pass}" = "check" ]; then
-            echo "ERROR: This cross-compiler package contains no program ${CONDA_PREFIX}/bin/${tc_prefix}${thing}"
+          newval="${CONDA_PREFIX}/bin/${tc_prefix}${thing}"
+          if [ ! -x "${newval}" -a "${pass}" = "check" ]; then
+            echo "ERROR: This cross-compiler package contains no program ${newval}"
             return 1
           fi
           ;;
@@ -82,7 +81,27 @@ function _tc_activation() {
   return 0
 }
 
-env > /tmp/old-env-$$.txt
+# When people are using conda-build, assume that adding rpath during build, and pointing at
+#    the host env's includes and libs is helpful default behavior
+if [ "${CONDA_BUILD:-0}" = "1" ]; then
+  CFLAGS_USED="@CFLAGS@ -I${PREFIX}/include -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix"
+  DEBUG_CFLAGS_USED="@CFLAGS@ @DEBUG_CFLAGS@ -I${PREFIX}/include -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix"
+  LDFLAGS_USED="@LDFLAGS@ -Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib"
+  LDFLAGS_LD_USED="@LDFLAGS_LD@ -rpath ${PREFIX}/lib -L${PREFIX}/lib"
+else
+  CFLAGS_USED="@CFLAGS@"
+  DEBUG_CFLAGS_USED="@CFLAGS@ @DEBUG_CFLAGS@"
+  LDFLAGS_USED="@LDFLAGS@"
+  LDFLAGS_LD_USED="@LDFLAGS_LD@"
+fi
+
+if [ "${CONDA_BUILD:-0}" = "1" ]; then
+  if [ -f /tmp/old-env-$$.txt ]; then
+    rm -f /tmp/old-env-$$.txt || true
+  fi
+  env > /tmp/old-env-$$.txt
+fi
+
 _tc_activation \
   deactivate host @CHOST@ @CHOST@- \
   ar as checksyms codesign_allocate indr install_name_tool libtool lipo nm nmedit otool \
@@ -91,16 +110,24 @@ _tc_activation \
   clang \
   "CC,${CC:-@CHOST@-clang}" \
   "CPPFLAGS,${CPPFLAGS:-@CPPFLAGS@}" \
-  "CFLAGS,${CFLAGS:-@CFLAGS@}" \
-  "LDFLAGS,${LDFLAGS:-@LDFLAGS@}" \
-  "LDFLAGS_CC,${LDFLAGS_CC:-@LDFLAGS_CC@}" \
-  "DEBUG_CFLAGS,${DEBUG_CFLAGS:-@DEBUG_CFLAGS@}"
+  "CFLAGS,${CFLAGS:-${CFLAGS_USED}}" \
+  "LDFLAGS,${LDFLAGS:-${LDFLAGS_USED}}" \
+  "LDFLAGS_LD,${LDFLAGS_LD:-${LDFLAGS_LD_USED}}" \
+  "DEBUG_CFLAGS,${DEBUG_CFLAGS:-${DEBUG_CFLAGS_USED}}" \
+  "_CONDA_PYTHON_SYSCONFIGDATA_NAME,${_CONDA_PYTHON_SYSCONFIGDATA_NAME:-@_PYTHON_SYSCONFIGDATA_NAME@}" \
+  "CONDA_BUILD_SYSROOT,${CONDA_BUILD_SYSROOT:-$(xcrun --show-sdk-path)}"
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"
-#exit 1
 else
-  env > /tmp/new-env-$$.txt
-  echo "INFO: $(_get_sourced_filename) made the following environmental changes:"
-  diff -U 0 -rN /tmp/old-env-$$.txt /tmp/new-env-$$.txt | tail -n +4 | grep "^-.*\|^+.*" | grep -v "CONDA_BACKUP_" | sort
+  if [ "${CONDA_BUILD:-0}" = "1" ]; then
+    if [ -f /tmp/new-env-$$.txt ]; then
+      rm -f /tmp/new-env-$$.txt || true
+    fi
+    env > /tmp/new-env-$$.txt
+
+    echo "INFO: $(_get_sourced_filename) made the following environmental changes:"
+    diff -U 0 -rN /tmp/old-env-$$.txt /tmp/new-env-$$.txt | tail -n +4 | grep "^-.*\|^+.*" | grep -v "CONDA_BACKUP_" | sort
+    rm -f /tmp/old-env-$$.txt /tmp/new-env-$$.txt || true
+  fi
 fi

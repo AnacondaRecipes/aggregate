@@ -1,0 +1,36 @@
+From ebe601c3bdf704c2d2ad1e36878abedcfd3efa4b Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sat, 30 Dec 2017 10:31:40 -0800
+Subject: [PATCH 3/8] Also attempt pkg-config for jemalloc
+
+---
+ Makefile | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 2d146ee..8fba3ea 100644
+--- a/Makefile
++++ b/Makefile
+@@ -250,10 +250,18 @@ ifneq ($(USE_GPERFTOOLS), 1)
+ 				endif
+ 			endif
+ 		endif
++		JEMALLOC_CUSTOM=$(shell pkg-config --exists jemalloc; echo $$?)
++		ifeq ($(JEMALLOC_CUSTOM), 0)
++			CFLAGS += $(shell pkg-config --cflags jemalloc)
++			LDFLAGS += $(shell pkg-config --libs jemalloc)
++			USE_JEMALLOC=1
++		endif
+ 		ifeq ($(USE_JEMALLOC), 1)
+ 			CFLAGS += -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc \
+ 			-fno-builtin-free -DUSE_JEMALLOC
+-			LDFLAGS += $(FIND_LIBFILE)
++			ifneq ($(JEMALLOC_CUSTOM), 0)
++				LDFLAGS += $(FIND_LIBFILE)
++			endif
+ 		endif
+ 	endif
+ endif
+-- 
+2.17.0
+

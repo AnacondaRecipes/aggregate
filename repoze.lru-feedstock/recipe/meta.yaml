@@ -1,0 +1,46 @@
+{% set name = "repoze.lru" %}
+{% set version = "0.7" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "0429a75e19380e4ed50c0694e26ac8819b4ea7851ee1fc7583c8572db80aff77" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ file_ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  {{ hash_type }}: {{ hash_value }}
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+
+test:
+  imports:
+    - repoze
+    - repoze.lru
+
+about:
+  home: http://www.repoze.org/
+  license: BSD
+  license_file: LICENSE.txt
+  summary: A tiny LRU cache implementation and decorator
+  description: |
+    The Repoze project is a collection of technologies which bridges the WSGI
+    and Zope worlds.
+  doc_url: http://repoze.readthedocs.io/en/latest/
+  doc_source_url: https://github.com/repoze/repoze_docs/blob/master/index.rst
+  dev_url: https://github.com/repoze/
+
+extra:
+  recipe-maintainers:
+    - nehaljwani

@@ -1,0 +1,29 @@
+From faef3fffb0be6127a64e48043e78dd7992764e36 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Mon, 30 Apr 2018 15:57:47 -0500
+Subject: [PATCH 1/2] Proceed with defaults if socket.IPPROTO_IPV6 is not
+ exported
+
+This patch adds a way around: https://bugs.python.org/issue29515
+---
+ src/tests/portpicker_test.py | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/src/tests/portpicker_test.py b/src/tests/portpicker_test.py
+index b3924cd..f25f89c 100644
+--- a/src/tests/portpicker_test.py
++++ b/src/tests/portpicker_test.py
+@@ -209,6 +209,10 @@ class PickUnusedPortTest(unittest.TestCase):
+                       file=sys.stderr)
+                 # Skip this case, since we cannot occupy a port.
+                 continue
++
++            if not getattr(socket, 'IPPROTO_IPV6', False):
++                v6only = None
++
+             if v6only is not None:
+                 try:
+                     sock.setsockopt(socket.IPPROTO_IPV6, socket.IPV6_V6ONLY,
+-- 
+2.17.0
+

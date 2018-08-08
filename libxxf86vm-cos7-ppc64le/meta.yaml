@@ -1,0 +1,34 @@
+package:
+  name: libxxf86vm-cos7-ppc64le
+  version: 1.1.4
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libXxf86vm-1.1.4-1.el7.ppc64le.rpm
+    sha256: 39a2ca6b68766e837892dcf536764b542ec219f56ebc2754408dcae46b8553b6
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/libXxf86vm-1.1.4-1.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libx11-cos7-ppc64le >=1.5.99.902
+
+
+outputs:
+  - name: libxxf86vm-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - libx11-cos7-ppc64le >=1.5.99.902
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X.Org X11 libXxf86vm runtime library"
+      description: |
+        X.Org X11 libXxf86vm runtime library

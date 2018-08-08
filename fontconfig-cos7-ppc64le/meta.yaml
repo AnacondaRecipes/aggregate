@@ -1,0 +1,29 @@
+package:
+  name: fontconfig-cos7-ppc64le
+  version: 2.10.95
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/fontconfig-2.10.95-11.el7.ppc64le.rpm
+    sha256: 34e69f9d1903e6244c2d637e3370256236550b56cb77eff335fadca6abfbc6eb
+    folder: binary
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/fontconfig-2.10.95-11.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+
+
+outputs:
+  - name: fontconfig-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://fontconfig.org
+      license: MIT and Public Domain and UCD
+      license_family: MIT
+      summary: "(CDT) Font configuration and customization library"
+      description: |
+        Fontconfig is designed to locate fonts within the system and select them
+        according to requirements specified by applications.

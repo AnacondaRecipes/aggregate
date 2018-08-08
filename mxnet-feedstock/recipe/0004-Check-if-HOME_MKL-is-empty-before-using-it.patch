@@ -1,0 +1,25 @@
+From fb044c34528f75d589c69283df8b3fcc0192e221 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sat, 30 Dec 2017 10:31:58 -0800
+Subject: [PATCH 4/8] Check if $HOME_MKL is empty before using it
+
+---
+ prepare_mkl.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/prepare_mkl.sh b/prepare_mkl.sh
+index 12e5df7..ef5744d 100755
+--- a/prepare_mkl.sh
++++ b/prepare_mkl.sh
+@@ -51,7 +51,7 @@ echo $VERSION_LINE  # Return Version Line
+ 
+ # MKL
+ HOME_MKL=$1
+-if [ ! -d "$HOME_MKL" ]; then
++if [ ! -z "$HOME_MKL" -a ! -d "$HOME_MKL" ]; then
+    mkdir $HOME_MKL
+ fi
+ MXNET_ROOT=`dirname $0`
+-- 
+2.17.0
+

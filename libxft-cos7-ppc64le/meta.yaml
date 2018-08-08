@@ -1,0 +1,34 @@
+package:
+  name: libxft-cos7-ppc64le
+  version: 2.3.2
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libXft-2.3.2-2.el7.ppc64le.rpm
+    sha256: 42f4076ae5fbb2ed7a962f23c7a595e0083fe9a3ee337f7a1741e05276b5c69a
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/libXft-2.3.2-2.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - fontconfig-cos7-ppc64le >=2.2
+
+
+outputs:
+  - name: libxft-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - fontconfig-cos7-ppc64le >=2.2
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X.Org X11 libXft runtime library"
+      description: |
+        X.Org X11 libXft runtime library

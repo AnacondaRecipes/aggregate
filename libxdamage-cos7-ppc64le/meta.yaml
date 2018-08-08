@@ -1,0 +1,28 @@
+package:
+  name: libxdamage-cos7-ppc64le
+  version: 1.1.4
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libXdamage-1.1.4-4.1.el7.ppc64le.rpm
+    sha256: 3a42192bdae42a83d7afdc6734932099f4d459482c0da6d57dce3ec4d8b74dab
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/libXdamage-1.1.4-4.1.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+
+
+outputs:
+  - name: libxdamage-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X Damage extension library"
+      description: |
+        X.Org X11 libXdamage runtime library.

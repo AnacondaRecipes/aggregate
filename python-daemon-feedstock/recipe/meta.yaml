@@ -1,0 +1,57 @@
+{% set name = "python-daemon" %}
+{% set version = "2.1.2" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "261c859be5c12ae7d4286dc6951e87e9e1a70a882a8b41fd926efc1ec4214f73" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  '{{ hash_type }}': '{{ hash_value }}'
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+  skip: True  # [win]
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - docutils
+    - lockfile >=0.10
+  run:
+    - python
+    - setuptools
+    - docutils
+    - lockfile >=0.10
+
+test:
+  imports:
+    - daemon
+  requires:
+    - docutils
+    - mock >=1.3
+    - testscenarios >=0.4
+    - testtools
+    - unittest2 >=0.5.1  # [py<37]
+
+about:
+  home: https://pagure.io/python-daemon/
+  license: Apache Software License
+  license_family: APACHE
+  license_file: ''
+  summary: Library to implement a well-behaved Unix daemon process.
+  description: "This library implements the well-behaved daemon specification of\n:pep:`3143`, \u201CStandard daemon process library\u201D.\n\nA well-behaved Unix daemon process is tricky to get right,\
+    \ but the\nrequired steps are much the same for every daemon program. A\n`DaemonContext` instance holds the behaviour and configured\nprocess environment for the program; use the instance as a context\n\
+    manager to enter a daemon state.\n\nSimple example of usage::\n\n    import daemon\n\n    from spam import do_main_program\n\n    with daemon.DaemonContext():\n        do_main_program()\n\nCustomisation\
+    \ of the steps to become a daemon is available by\nsetting options on the `DaemonContext` instance; see the\ndocumentation for that class for each option."
+  doc_url: ''
+  dev_url: ''
+
+extra:
+  recipe-maintainers: ''

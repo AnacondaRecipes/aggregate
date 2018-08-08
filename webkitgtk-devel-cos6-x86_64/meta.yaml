@@ -1,0 +1,31 @@
+package:
+  name: webkitgtk-devel-cos6-x86_64
+  version: 1.4.3
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/webkitgtk-devel-1.4.3-9.el6_6.x86_64.rpm
+    sha256: 92d76a0c5b5c4fcd92db16f285c36a45c8c44d956676ec4126bb50d1df848532
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/webkitgtk-1.4.3-9.el6_6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - webkitgtk-cos6-x86_64 ==1.4.3
+
+
+outputs:
+  - name: webkitgtk-devel-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - webkitgtk-cos6-x86_64 ==1.4.3
+
+    about:
+      home: http://www.webkitgtk.org/
+      license: LGPLv2+ and BSD
+      license_family: LGPL
+      summary: "(CDT) Development files for webkitgtk"
+      description: |
+        The webkitgtk-devel package contains libraries, build data, and header files
+        for developing applications that use webkitgtk.

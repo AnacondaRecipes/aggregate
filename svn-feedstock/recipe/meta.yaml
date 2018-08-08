@@ -1,0 +1,54 @@
+{% set version = "1.10.0" %}
+
+package:
+  name: svn
+  version: {{ version }}
+
+source:
+  fn: subversion-{{ version }}.tar.bz2
+  url: https://archive.apache.org/dist/subversion/subversion-{{ version }}.tar.bz2
+  sha256: 2cf23f3abb837dea0585a6b0ebd70e80e01f95bddef7c1aa097c18e3eaa6b584
+  patches:
+    - 0001-Try-more-choices-for-expat-library-name.patch
+    - 0002-Add-py3-compatibility.patch
+    - 0003-Fix-location-of-ProgramDataBaseFile.patch
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - pkg-config   # [unix]
+    - make         # [unix]
+    - python
+
+  host:
+    - openssl      # [win]
+    - expat
+    - apr
+    - sqlite
+    - serf
+    - swig
+    - zlib
+    - lz4-c        # [unix]
+    - cyrus-sasl   # [unix]
+    - libutf8proc  # [unix]
+
+  run:
+    # https://github.com/lvc/upstream-tracker/issues/48
+    # No run_exports, assume compat only till next minor.
+    - {{ pin_compatible('libutf8proc', max_pin='x.x') }}  # [unix]
+
+test:
+  commands:
+    - svn --version
+
+about:
+  home: https://subversion.apache.org/
+  license: Apache Software License V.2
+  license_family: Apache
+  license_file: LICENSE
+  summary: Intuitive Subversion wrapper
+  description: |
+    svn is a simple Subversion library for Python.The library wraps the svn
+    commandline client, which should consequently be installed on the local system.
+  doc_url: https://pypi.python.org/pypi/svn
+  doc_source_url: https://github.com/dsoprea/PySvn

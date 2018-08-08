@@ -1,0 +1,35 @@
+package:
+  name: libsepol-devel-cos7-ppc64le
+  version: 2.5
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libsepol-devel-2.5-8.1.el7.ppc64le.rpm
+    sha256: cc35c037d87f9e53c6fd0aebb85890eb4c8e045570bbf225892ffd6b375ce543
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/libsepol-2.5-8.1.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libsepol-cos7-ppc64le ==2.5
+
+
+outputs:
+  - name: libsepol-devel-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - libsepol-cos7-ppc64le ==2.5
+
+    about:
+      home: https://github.com/SELinuxProject/selinux/wiki
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) Header files and libraries used to build policy manipulation tools"
+      description: |
+        The libsepol-devel package contains the libraries and header files needed for
+        developing applications that manipulate binary policies.

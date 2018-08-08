@@ -1,0 +1,38 @@
+{% set name = "pyramid_mako" %}
+{% set version = "1.0.2" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 6da0987b9874cf53e72139624665a73965bbd7fbde504d1753e4231ce916f3a1
+
+build:
+  number: 1
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+    - pyramid
+    - mako >=0.8
+
+test:
+  imports:
+    - pyramid_mako
+
+about:
+  home: https://github.com/Pylons/pyramid_mako
+  license: BSD
+  license_file: LICENSE.txt
+  summary: Mako template bindings for the Pyramid web framework
+  description: |
+    pyramid_mako is a set of bindings that makes templates written for the
+    Mako templating system work under the Pyramid web framework.
+  doc_url: http://docs.pylonsproject.org/projects/pyramid-mako/en/latest/
+  dev_url: https://github.com/Pylons/pyramid_mako

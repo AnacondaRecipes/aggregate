@@ -1,0 +1,38 @@
+package:
+  name: redis
+  version: 4.0.10   # [unix]
+  version: 3.2.100  # [win]
+
+source:
+  fn: redis-4.0.10.tar.gz
+  url: http://download.redis.io/releases/redis-4.0.10.tar.gz                 # [unix]
+  sha256: 1db67435a704f8d18aec9b9637b373c34aa233d65b6e174bdac4c1b161f38ca4   # [unix]
+  url: https://github.com/MicrosoftArchive/redis/archive/win-3.2.100.tar.gz  # [win]
+  sha256: 979ea1da9a1537ecf0f748e64e7b0829e659cbd07a6b2cb34da0cc3e63103c6e   # [win]
+
+build:
+  msvc_compiler: 14.0  # [win]
+
+requirements:
+  build:
+    - {{ compiler('c') }}  # [unix]
+    - make                 # [unix]
+
+test:
+  commands:
+    - redis-cli --version
+    - redis-server --version
+
+about:
+  home: http://redis.io/download/
+  license: 3-clause BSD
+  license_family: BSD
+  license_file: COPYING
+  summary: Advanced key-value cache and store
+  description: |
+    Redis is an in-memory data structure store,used as database, cache and message broker.
+    It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries,
+    bitmaps, hyperloglogs and geospatial indexes with radius queries.
+  doc_url: http://redis.io/documentation
+  doc_source_url: https://github.com/antirez/redis/graphs/contributors
+  dev_url: https://github.com/antirez/redis

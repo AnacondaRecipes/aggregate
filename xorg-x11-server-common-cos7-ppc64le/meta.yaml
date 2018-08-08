@@ -1,0 +1,34 @@
+package:
+  name: xorg-x11-server-common-cos7-ppc64le
+  version: 1.19.5
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/xorg-x11-server-common-1.19.5-5.el7.ppc64le.rpm
+    sha256: db2524f1549b0971e2a1c01a01e4ee670fd8ff6790ac9ca831b3eeb1487af7b3
+    folder: binary
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/xorg-x11-server-1.19.5-5.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - pixman-cos7-ppc64le >=0.30.0
+
+
+outputs:
+  - name: xorg-x11-server-common-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - pixman-cos7-ppc64le >=0.30.0
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Xorg server common files"
+      description: |
+        Common files shared among all X servers.

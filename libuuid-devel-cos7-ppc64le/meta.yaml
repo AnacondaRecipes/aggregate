@@ -1,0 +1,40 @@
+package:
+  name: libuuid-devel-cos7-ppc64le
+  version: 2.23.2
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libuuid-devel-2.23.2-52.el7.ppc64le.rpm
+    sha256: cbd7fc312d7238a37b8222313e8d3e60b056c6590c86d6e78229dac0c3defbc4
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/util-linux-2.23.2-52.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libuuid-cos7-ppc64le ==2.23.2
+
+
+outputs:
+  - name: libuuid-devel-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - libuuid-cos7-ppc64le ==2.23.2
+
+    about:
+      home: http://en.wikipedia.org/wiki/Util-linux
+      license: BSD
+      license_family: BSD
+      summary: "(CDT) Universally unique ID library"
+      description: |
+        This is the universally unique ID development library and headers, part of
+        util-linux.  The libuuid library generates and parses 128-bit universally
+        unique id's (UUID's).  A UUID is an identifier that is unique across both
+        space and time, with respect to the space of all UUIDs.  A UUID can be used
+        for multiple purposes, from tagging objects with an extremely short lifetime,
+        to reliably identifying very persistent objects across a network.  See also
+        the "uuid-devel" package, which is a separate implementation.

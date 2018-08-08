@@ -1,0 +1,29 @@
+package:
+  name: python-javapackages-cos7-ppc64le
+  version: 3.4.1
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/python-javapackages-3.4.1-11.el7.noarch.rpm
+    sha256: 8d867ffbfaf2bc76f13c1fc624e12d75f84e0ff22636a52171e20af579c63801
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/javapackages-tools-3.4.1-11.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+
+
+outputs:
+  - name: python-javapackages-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: https://fedorahosted.org/javapackages/
+      license: BSD
+      license_family: BSD
+      summary: "(CDT) Module for handling various files for Java packaging"
+      description: |
+        Module for handling, querying and manipulating of various files for Java
+        packaging in Linux distributions

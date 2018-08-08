@@ -1,0 +1,25 @@
+From cc0d992be7d663cc92d6744260fd32b18d2fd83d Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Mon, 25 Jun 2018 23:01:34 -0500
+Subject: [PATCH 7/8] Add stream_executor as dep for
+ tf_custom_op_library_additional_deps_impl
+
+---
+ tensorflow/tensorflow.bzl | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/tensorflow/tensorflow.bzl b/tensorflow/tensorflow.bzl
+index b286834..492b934 100644
+--- a/tensorflow/tensorflow.bzl
++++ b/tensorflow/tensorflow.bzl
+@@ -1234,6 +1234,7 @@ def tf_custom_op_library_additional_deps_impl():
+       # for //tensorflow/core:framework_headers_lib
+       clean_dep("//tensorflow/core:framework"),
+       clean_dep("//tensorflow/core:reader_base"),
++      clean_dep("//tensorflow/stream_executor:stream_executor_impl"),
+   ]
+ 
+ # Traverse the dependency graph along the "deps" attribute of the
+-- 
+1.8.3.1
+

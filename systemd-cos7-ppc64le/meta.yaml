@@ -1,0 +1,44 @@
+package:
+  name: systemd-cos7-ppc64le
+  version: 219
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/systemd-219-57.el7.ppc64le.rpm
+    sha256: 0c3760ec642100fee0461d701222700dee7e2de0752d8f69d40ecd315a1e367a
+    folder: binary
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/systemd-219-57.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - kmod-cos7-ppc64le >=18
+    - centos-release-cos7-ppc64le >=7
+    - systemd-libs-cos7-ppc64le ==219
+
+
+outputs:
+  - name: systemd-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - kmod-cos7-ppc64le >=18
+        - centos-release-cos7-ppc64le >=7
+        - systemd-libs-cos7-ppc64le ==219
+
+    about:
+      home: http://www.freedesktop.org/wiki/Software/systemd
+      license: LGPLv2+ and MIT and GPLv2+
+      license_family: GPL2
+      summary: "(CDT) A System and Service Manager"
+      description: |
+        systemd is a system and service manager for Linux, compatible with SysV and
+        LSB init scripts. systemd provides aggressive parallelization capabilities,
+        uses socket and D-Bus activation for starting services, offers on-demand
+        starting of daemons, keeps track of processes using Linux cgroups, supports
+        snapshotting and restoring of the system state, maintains mount and automount
+        points and implements an elaborate transactional dependency-based service
+        control logic. It can work as a drop-in replacement for sysvinit.

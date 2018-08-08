@@ -1,0 +1,28 @@
+From 137f45b61f94738fff95501a850b3517b2a69c82 Mon Sep 17 00:00:00 2001
+From: Ray Donnelly <mingw.android@gmail.com>
+Date: Sat, 26 May 2018 18:07:48 +0100
+Subject: [PATCH] Fix macOS < 10.12 support
+
+---
+ src/modules/platforms/mac/MacPlatformIntegration.mm | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/src/modules/platforms/mac/MacPlatformIntegration.mm b/src/modules/platforms/mac/MacPlatformIntegration.mm
+index edb10076..a60f3dc4 100644
+--- a/src/modules/platforms/mac/MacPlatformIntegration.mm
++++ b/src/modules/platforms/mac/MacPlatformIntegration.mm
+@@ -39,6 +39,11 @@
+ #import <AppKit/AppKit.h>
+ #import <Cocoa/Cocoa.h>
+ 
++// Use deprecated names.
++#if MAC_OS_X_VERSION_MAX_ALLOWED < 101200
++#define NSCompositingOperationCopy NSCompositeCopy
++#endif
++
+ @interface MacPlatformIntegrationDockIconView : NSView
+ {
+ 	double m_value;
+-- 
+2.17.0
+

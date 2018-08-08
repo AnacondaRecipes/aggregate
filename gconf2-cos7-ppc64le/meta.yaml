@@ -1,0 +1,36 @@
+package:
+  name: gconf2-cos7-ppc64le
+  version: 3.2.6
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/GConf2-3.2.6-8.el7.ppc64le.rpm
+    sha256: f1635560f4e0dc31a04cee8d745287cdfbef90d79881d89f262ef843b7961630
+    folder: binary
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/GConf2-3.2.6-8.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - orbit2-cos7-ppc64le ==2.14.19
+
+
+outputs:
+  - name: gconf2-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - orbit2-cos7-ppc64le ==2.14.19
+
+    about:
+      home: http://projects.gnome.org/gconf/
+      license: LGPLv2+ and GPLv2+
+      license_family: GPL2
+      summary: "(CDT) A process-transparent configuration system"
+      description: |
+        GConf is a process-transparent configuration database API used to store user
+        preferences. It has pluggable backends and features to support workgroup
+        administration.

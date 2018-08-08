@@ -1,19 +1,23 @@
 package:
   name: wget
-  version: 1.19.1
+  version: 1.19.5
+
+build:
+  number: 0
+  skip: True  # [win]
 
 source:
-  url: http://ftp.gnu.org/gnu/wget/wget-1.19.1.tar.xz
-  md5: d30d82186b93fcabb4116ff513bfa9bd
+  url: http://ftp.gnu.org/gnu/wget/wget-1.19.5.tar.gz
+  sha256: b39212abe1a73f2b28f4c6cb223c738559caac91d6e416a6d91d4b9d55c9faee
 
 requirements:
   build:
     - {{ compiler('c') }}
     - pkg-config
-    - openssl 1.0.*
+    - make
+  host:
+    - openssl
     - zlib
-  run:
-    - openssl 1.0.*
 
 test:
   commands:

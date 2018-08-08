@@ -1,0 +1,26 @@
+package:
+  name: glib-networking-cos6-i686
+  version: 2.28.6.1
+
+source:
+  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/glib-networking-2.28.6.1-2.4.el6.i686.rpm
+    sha256: 9026ad4f6a2bb3fa40fcd8bf897c552eaab4b714701144ddd600e7e44866c192
+    folder: binary
+  - url: http://vault.centos.org/6.9/os/Source/SPackages/glib-networking-2.28.6.1-2.4.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: glib-networking-cos6-i686
+    noarch: generic
+
+    about:
+      home: http://www.gnome.org
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) Networking support for GLib"
+      description: |
+        This package contains modules that extend the networking support in GIO. In
+        particular, it contains a libproxy-based GProxyResolver implementations and a
+        gnutls-based GTlsConnection implementation.

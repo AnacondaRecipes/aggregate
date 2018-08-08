@@ -1,0 +1,28 @@
+package:
+  name: libx11-common-cos7-ppc64le
+  version: 1.6.5
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libX11-common-1.6.5-1.el7.noarch.rpm
+    sha256: 33aeab9c16b6e54cb39a427ebe145e1724e52f82f4b4d9387877e2c627605ffc
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/libX11-1.6.5-1.el7.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+
+
+outputs:
+  - name: libx11-common-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Common data for libX11"
+      description: |
+        libX11 common data

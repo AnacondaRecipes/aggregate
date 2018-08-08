@@ -1,0 +1,104 @@
+{% set version = "4.6.1" %}
+{% set ver_maj_min = "4.6" %}
+
+package:
+  name: qtcreator
+  version: {{ version }}
+
+source:
+  git_url: https://code.qt.io/qt-creator/qt-creator.git
+  git_tag: v{{ version }}
+  patches:
+    - 4.6/0001-macOS-Disable-app-bundle-and-do-not-put-qtcreatorlib.patch
+    - 4.6/0002-Use-systemEnvironment-for-Start-and-Debug-External-A.patch
+    # - 4.5/0001-macOS-Disable-app-bundle-and-do-not-put-qtcreatorlib.patch
+    # - 4.2/0001-macOS-Disable-app-bundle.patch
+    # - 4.2/0002-Use-systemEnvironment-for-Start-and-Debug-External-A.patch
+    # - 4.0/0001-Disable-app-build.patch                                               # [osx]
+    # - 4.0/0002-Use-systemEnvironment-For-Start-and-Debug-External-Application.patch
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
+    - {{ cdt('libx11-devel') }}          # [linux]
+    - {{ cdt('libxext-devel') }}         # [linux]
+    - {{ cdt('libxrender-devel') }}      # [linux]
+    - {{ cdt('mesa-libgl-devel') }}      # [linux]
+    - {{ cdt('mesa-libegl-devel') }}     # [linux]
+    - {{ cdt('mesa-dri-drivers') }}      # [linux]
+    - {{ cdt('libxau-devel') }}          # [linux]
+    - {{ cdt('alsa-lib-devel') }}        # [linux]
+    - {{ cdt('gtk2-devel') }}            # [linux]
+    - {{ cdt('gtkmm24-devel') }}         # [linux]
+    - {{ cdt('libdrm-devel') }}          # [linux]
+    - {{ cdt('libxcomposite-devel') }}   # [linux]
+    - {{ cdt('libxcursor-devel') }}      # [linux]
+    - {{ cdt('libxi-devel') }}           # [linux]
+    - {{ cdt('libxrandr-devel') }}       # [linux]
+    - {{ cdt('pciutils-devel') }}        # [linux]
+    - {{ cdt('libxscrnsaver-devel') }}   # [linux]
+    - {{ cdt('libxtst-devel') }}         # [linux]
+    - {{ cdt('libselinux-devel') }}      # [linux]
+    - {{ cdt('libxdamage') }}            # [linux]
+    - {{ cdt('libxfixes') }}             # [linux]
+    - {{ cdt('libxxf86vm') }}            # [linux]
+    - jom                                # [win]
+    - make                               # [not win]
+    - patchelf                           # [linux]
+  host:
+    - qt 5.9.*
+    - llvmdev
+    - clangdev 5.0.*
+    - libxcb                             # [linux]
+    - qbs >=1.11.0
+    - zlib                               # [unix]
+  run:
+    - vs2015_runtime                     # [win]
+    - qt 5.9.*
+    - clangdev 5.0.*
+    - cmake >=3.9.4
+    - fonts-anaconda                     # [linux]
+    - the_silver_searcher >=2.1.0
+    - qbs >=1.11.0
+
+  # These are only necessary for the qtcreator executable itself.
+  # It would be better if were possible to filter the application
+  # of these using wildcards or regular expressions.
+  rpaths:
+    - lib
+    - lib/qtcreator
+  # This is necessary for calls to xcrun to make `.icns` files.
+  script_env:        # [osx]
+    - TMPDIR         # [osx]
+
+app:
+  entry: ${PREFIX}/Library/bin/qtcreator.exe           # [win]
+  entry: ${PREFIX}/bin/qtcreator                       # [linux]
+  entry: open "${PREFIX}/Applications/Qt Creator.app"  # [osx]
+  icon: QtProject-qtcreator.png
+  summary: A cross platform integrated development environment (IDE)
+  type: desk
+
+about:
+  home: http://blog.qt.io/blog/category/qtcreator/
+  license: LGPL-3.0 with Qt Company GPL Exception 1.0
+  license_file: LICENSE.GPL3-EXCEPT
+  summary: Qt Creator integrated development environment
+  description: |
+    Qt Creator is a cross platform integrated development environment (IDE) to
+    create C++ and QML applications for multiple desktop, embedded and mobile
+    platforms. It comes with a code editor, and is integrated with tools for
+    designing, coding, testing, deploying and maintaining your software
+    throughout its product lifecycle.
+  doc_url: http://doc.qt.io/qtcreator/
+  doc_source_url: https://code.qt.io/cgit/qt-creator/qt-creator.git/tree/doc/src
+  dev_url: https://code.qt.io/cgit/qt-creator/qt-creator.git
+
+extra:
+  recipe-maintainers:
+    - mingwandroid
