@@ -23,13 +23,13 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}  # [not ppc64le]
+    - {{ compiler('cxx') }}  # [not ppc64le]
     - cmake
   host:
     # GPU requirements
-    - cudatoolkit {{ cudatoolkit }}*
-    - cudnn {{ cudnn }}*
+    - cudatoolkit {{ cudatoolkit }}*  # [not ppc64le]
+    - cudnn {{ cudnn }}*  # [not ppc64le]
     - nccl
     # other requirements
     - python
@@ -37,15 +37,16 @@ requirements:
     - setuptools
     - pyyaml
     - cffi
-    - mkl-devel {{ mkl }}
+    - mkl-devel {{ mkl }} # [not ppc64le]
     - typing
     - ninja
-    - magma
+    - magma  # [not ppc64le]
+
 
   run:
     # GPU requirements
-    - cudatoolkit {{ cudatoolkit }}*
-    - cudnn {{ cudnn }}*
+    - cudatoolkit {{ cudatoolkit }}*  # [not ppc64le]
+    - cudnn {{ cudnn }}*  # [not ppc64le]
     - nccl
     # other requirements
     - python
@@ -55,8 +56,8 @@ requirements:
 
 test:
   requires:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}  # [not ppc64le]
+    - {{ compiler('cxx') }}  # [not ppc64le]
     - setuptools
   imports:
     - torch
