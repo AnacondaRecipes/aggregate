@@ -24,7 +24,6 @@ pytest-cov-feedstock
 pycparser-feedstock
 cffi-feedstock
 tornado-feedstock
-ipython_genutils-feedstock
 decorator-feedstock
 traitlets-feedstock
 jupyter_core-feedstock
@@ -108,6 +107,21 @@ send2trash-feedstock
 libpython-feedstock
 pywinpty-feedstock
 terminado-feedstock
+pywin32-feedstock
+incremental-feedstock
+pyasn1-feedstock
+pyasn1-modules-feedstock
+service_identity-feedstock
+zope-feedstock
+zope.interface-feedstock
+appdirs-feedstock
+constantly-feedstock
+automat-feedstock
+hyperlink-feedstock
+twisted-feedstock
+prometheus_client-feedstock
+ipython_genutils-feedstock
+ipaddress-feedstock
 notebook-feedstock
 widgetsnbextension-feedstock
 ipywidgets-feedstock
@@ -166,8 +180,6 @@ alembic-feedstock
 pyyaml-feedstock
 clyent-feedstock
 anaconda-client-feedstock
-ipaddress-feedstock
-ruamel_yaml-feedstock
 anaconda-project-feedstock
 ansi2html-feedstock
 anyjson-feedstock
@@ -189,7 +201,6 @@ astropy-feedstock
 asyncpg-feedstock
 asyncpgsa-feedstock
 atom-feedstock
-automat-feedstock
 plotly-feedstock
 hdijupyterutils-feedstock
 autovizwidget-feedstock
@@ -284,7 +295,6 @@ setuptools_scm_git_archive-feedstock
 cheroot-feedstock
 tempora-feedstock
 portend-feedstock
-pywin32-feedstock
 cherrypy-feedstock
 click-plugins-feedstock
 cligj-feedstock
@@ -313,6 +323,7 @@ lief-feedstock  # [not win]
 conda-build-feedstock
 configargparse-feedstock
 console_shortcut-feedstock
+ruamel_yaml-feedstock
 constructor-feedstock
 webob-feedstock
 venusian-feedstock
@@ -366,7 +377,6 @@ pyface-feedstock
 traitsui-feedstock
 apptools-feedstock
 envisage-feedstock
-zope-feedstock
 zope.deprecation-feedstock
 zope.interface-feedstock
 translationstring-feedstock
@@ -386,7 +396,6 @@ pyramid-feedstock
 colander-feedstock
 cornice-feedstock
 ephem-feedstock
-pyasn1-feedstock
 pynacl-feedstock
 ecdsa-feedstock
 paramiko-feedstock
@@ -444,7 +453,6 @@ jupyter-feedstock
 pyviz_comms-feedstock
 holoviews-feedstock
 httpretty-feedstock
-hyperlink-feedstock
 thriftpy-feedstock
 impyla-feedstock
 graphviz-feedstock
@@ -538,7 +546,6 @@ python-utils-feedstock
 progressbar2-feedstock
 pure-sasl-feedstock
 pyamg-feedstock
-pyasn1-modules-feedstock
 portaudio-feedstock
 pyaudio-feedstock
 pycairo-feedstock
@@ -578,11 +585,6 @@ hyperframe-feedstock
 h2-feedstock
 soappy-feedstock
 priority-feedstock
-appdirs-feedstock
-constantly-feedstock
-service_identity-feedstock
-incremental-feedstock
-twisted-feedstock
 pysnmp-feedstock
 pypandoc-feedstock
 pyspark-feedstock
