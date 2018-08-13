@@ -1,5 +1,5 @@
-{% set version = "0.4.0" %}
-{% set commit = "3749c581b79cba49f511b19fa02c0f50fa05b250" %}
+{% set version = "0.4.1" %}
+{% set commit = "a24163a95edb193ff7b06e98cd69bf7cfd4c0d2f" %}
 
 package:
   name: pytorch
@@ -9,12 +9,12 @@ source:
   git_url: https://github.com/pytorch/pytorch.git
   git_tag: {{ commit }}
   patches:
-    - 0001-force-system-nccl.patch
-    # When run on a system without a GPU, PyTorch does not require the CUDA
-    # libraries. Therefore symbols should not be resolved at load time rather
-    # resolution should be defered until the function is called (lazy binding).
-    - lazy_bind_C_extension.patch
+    - 0001-Add-DCUDA_rt_LIBRARY-to-cmake-command.patch
+    - 0002-lazy-bind-C-extension.patch
+    - 0003-insure-system-nccl-is-used.patch
+    - 0004-always-add-librt-to-requirements.patch
     # https://github.com/pytorch/pytorch/issues/4499
+    # merged upstream in https://github.com/facebookincubator/gloo/pull/127
     - define_speed_unknown.patch
 
 build:
@@ -25,8 +25,8 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - cmake
   host:
+    - cmake
     # GPU requirements
     - cudatoolkit {{ cudatoolkit }}*
     - cudnn {{ cudnn }}*
@@ -63,7 +63,7 @@ test:
   source_files:
     - test
   commands:
-    - python ./test/run_test.py || true
+    - python ./test/run_test.py -x cpp_extensions || true
 
 about:
   home: http://pytorch.org/

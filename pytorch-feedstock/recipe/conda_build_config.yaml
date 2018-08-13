@@ -5,7 +5,9 @@ cxx_compiler_version:
 cudatoolkit:
   - 9.0
 cudnn:
-  - 7
+  - 7.1
+mkl:
+  - 2018
 python:
   - 2.7
   - 3.5

@@ -1,0 +1,26 @@
+From aefc5ed1087dab12af99a564372d3d7834030a91 Mon Sep 17 00:00:00 2001
+From: Jonathan Helmus <jjhelmus@gmail.com>
+Date: Wed, 1 Aug 2018 15:51:16 -0500
+Subject: [PATCH 3/4] insure system nccl is used
+
+Fail if the system (conda provided) nccl libraries is not used for the build.
+---
+ tools/setup_helpers/nccl.py | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/tools/setup_helpers/nccl.py b/tools/setup_helpers/nccl.py
+index 7034465..0f69aa5 100644
+--- a/tools/setup_helpers/nccl.py
++++ b/tools/setup_helpers/nccl.py
+@@ -73,3 +73,8 @@ if USE_CUDA and not check_negative_env_flag('USE_SYSTEM_NCCL'):
+     if NCCL_LIB_DIR is not None and NCCL_INCLUDE_DIR is not None:
+         USE_SYSTEM_NCCL = True
+         NCCL_ROOT_DIR = os.path.commonprefix((NCCL_LIB_DIR, NCCL_INCLUDE_DIR))
++print("NCCL_LIB_DIR", NCCL_LIB_DIR)
++print("NCCL_INCLUDE_DIR", NCCL_INCLUDE_DIR)
++print("USE_SYSTEM_NCCL", USE_SYSTEM_NCCL)
++print("NCCL_ROOT_DIR", NCCL_ROOT_DIR)
++assert USE_SYSTEM_NCCL
+-- 
+2.7.4
+

@@ -1,0 +1,38 @@
+From 8ac2e28f2c6ac07afcaf94e8e184d0af4171d265 Mon Sep 17 00:00:00 2001
+From: Jonathan Helmus <jjhelmus@gmail.com>
+Date: Tue, 7 Aug 2018 14:10:03 -0500
+Subject: [PATCH 4/4] always add librt to requirements
+
+Always add librt to the list of required libraries.
+---
+ aten/src/ATen/CMakeLists.txt | 1 +
+ cmake/Dependencies.cmake     | 1 +
+ 2 files changed, 2 insertions(+)
+
+diff --git a/aten/src/ATen/CMakeLists.txt b/aten/src/ATen/CMakeLists.txt
+index 9e19223..5e3ed2a 100644
+--- a/aten/src/ATen/CMakeLists.txt
++++ b/aten/src/ATen/CMakeLists.txt
+@@ -137,6 +137,7 @@ IF(UNIX)
+   ENDIF(HAVE_MMAP)
+   # done for lseek: https://www.gnu.org/software/libc/manual/html_node/File-Position-Primitive.html
+   ADD_DEFINITIONS(-D_FILE_OFFSET_BITS=64)
++  SET(CMAKE_REQUIRED_LIBRARIES ${CMAKE_REQUIRED_LIBRARIES} rt)
+   CHECK_FUNCTION_EXISTS(shm_open HAVE_SHM_OPEN)
+   IF(HAVE_SHM_OPEN)
+     ADD_DEFINITIONS(-DHAVE_SHM_OPEN=1)
+diff --git a/cmake/Dependencies.cmake b/cmake/Dependencies.cmake
+index 1cbcf64..21d938d 100644
+--- a/cmake/Dependencies.cmake
++++ b/cmake/Dependencies.cmake
+@@ -1248,6 +1248,7 @@ if (BUILD_ATEN)
+     ENDIF(HAVE_MMAP)
+     # done for lseek: https://www.gnu.org/software/libc/manual/html_node/File-Position-Primitive.html
+     ADD_DEFINITIONS(-D_FILE_OFFSET_BITS=64)
++    SET(CMAKE_REQUIRED_LIBRARIES ${CMAKE_REQUIRED_LIBRARIES} rt)
+     CHECK_FUNCTION_EXISTS(shm_open HAVE_SHM_OPEN)
+     IF(HAVE_SHM_OPEN)
+       ADD_DEFINITIONS(-DHAVE_SHM_OPEN=1)
+-- 
+2.7.4
+

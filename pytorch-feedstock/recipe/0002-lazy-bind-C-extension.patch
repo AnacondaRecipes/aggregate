@@ -1,0 +1,28 @@
+From 88512cdff6991d52de09286abdf3b5a075191b36 Mon Sep 17 00:00:00 2001
+From: Jonathan Helmus <jjhelmus@gmail.com>
+Date: Wed, 1 Aug 2018 15:13:37 -0500
+Subject: [PATCH 2/4] lazy bind C extension
+
+When run on a system without a GPU, PyTorch does not require the CUDA
+libraries. Therefore symbols should not be resolved at load time rather
+resolution should be defered until the function is called (lazy binding).
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 381ced7..23f0838 100644
+--- a/setup.py
++++ b/setup.py
+@@ -988,7 +988,7 @@ C = Extension("torch._C",
+               extra_compile_args=main_compile_args + extra_compile_args,
+               include_dirs=include_dirs,
+               library_dirs=library_dirs,
+-              extra_link_args=extra_link_args + main_link_args + [make_relative_rpath('lib')],
++              extra_link_args=extra_link_args + main_link_args + ['-Wl,-z,lazy'] + [make_relative_rpath('lib')],
+               )
+ extensions.append(C)
+ 
+-- 
+2.7.4
+

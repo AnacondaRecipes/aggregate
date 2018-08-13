@@ -1,0 +1,38 @@
+From e5248622d96e2a1a2bbc93a5ace6818436d843b4 Mon Sep 17 00:00:00 2001
+From: Jonathan Helmus <jjhelmus@gmail.com>
+Date: Wed, 1 Aug 2018 14:47:22 -0500
+Subject: [PATCH 1/4] Add -DCUDA_rt_LIBRARY to cmake command
+
+-DCUDA_rt_LIBRARY is set so that the librt library in the sysroot is
+used rather than the system librt.  Without this change the build fails with
+error similar to:
+
+ /usr/lib64/librt.so: undefined reference to
+  `__pthread_get_minstack@GLIBC_PRIVATE'
+---
+ tools/build_pytorch_libs.sh | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/tools/build_pytorch_libs.sh b/tools/build_pytorch_libs.sh
+index 8f0a36f..197d7cd 100755
+--- a/tools/build_pytorch_libs.sh
++++ b/tools/build_pytorch_libs.sh
+@@ -187,6 +187,7 @@ function build() {
+               -Dnanopb_BUILD_GENERATOR=0 \
+               -DCMAKE_DEBUG_POSTFIX="" \
+               -DCMAKE_BUILD_TYPE=$BUILD_TYPE \
++              -DCUDA_rt_LIBRARY=${LIBRT}  \
+               ${@:2} \
+               -DCMAKE_EXPORT_COMPILE_COMMANDS=1
+   ${CMAKE_INSTALL} -j"$NUM_JOBS"
+@@ -279,6 +280,7 @@ function build_caffe2() {
+       -DCMAKE_C_FLAGS="$USER_CFLAGS" \
+       -DCMAKE_CXX_FLAGS="$USER_CFLAGS" \
+       -DCMAKE_EXE_LINKER_FLAGS="$LDFLAGS $USER_LDFLAGS" \
++      -DCUDA_rt_LIBRARY=${LIBRT}  \
+       -DCMAKE_SHARED_LINKER_FLAGS="$LDFLAGS $USER_LDFLAGS" ${EXTRA_CAFFE2_CMAKE_FLAGS[@]}
+       # STOP!!! Are you trying to add a C or CXX flag?  Add it
+       # to CMakeLists.txt and aten/CMakeLists.txt, not here.
+-- 
+2.7.4
+
