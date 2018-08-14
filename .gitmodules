@@ -3041,7 +3041,7 @@
 [submodule "spyder-kernels-0.2.4-feedstock"]
 	path = spyder-kernels-0.2.4-feedstock
 	url = ../spyder-kernels-feedstock
-	branch = master
+	branch = master-0.2.4
 [submodule "mxnet_recipes"]
 	path = mxnet_recipes
 	url = ../mxnet_recipes
@@ -3089,4 +3089,8 @@
 [submodule "comtypes-feedstock"]
 	path = comtypes-feedstock
 	url = ../comtypes-feedstock
+	branch = master
+[submodule "libjpeg-turbo-feedstock"]
+	path = libjpeg-turbo-feedstock
+	url = ../libjpeg-turbo-feedstock
 	branch = master

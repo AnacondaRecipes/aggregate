@@ -7,7 +7,7 @@ source:
   git_tag: 2.7.0
 
 requirements:
-  build:
+  host:
     - python
   run:
     - python
