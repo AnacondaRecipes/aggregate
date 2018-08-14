@@ -345,6 +345,7 @@ libspatialite-feedstock
 libkml-feedstock
 libdap4-feedstock
 xerces-c-feedstock
+libjpeg-turbo-feedstock
 gdal-2.3.0-feedstock
 gdal-feedstock
 snuggs-feedstock
@@ -385,8 +386,8 @@ pastedeploy-feedstock
 plaster-feedstock
 plaster_pastedeploy-feedstock
 persistent-feedstock
-zope.component-feedstock
 zope.event-feedstock
+zope.component-feedstock
 repoze.lru-feedstock
 wsgiproxy2-feedstock
 pyquery-feedstock
