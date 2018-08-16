@@ -41,6 +41,32 @@ VERBOSE_CM:
 # We use MRAN here because they take snapshots which improves reproducibility.
 cran_mirror:
   - https://mran.microsoft.com/snapshot/2018-01-01
+
+# this is global, but can be overridden by other stuff in recipes
+ctng_binutils:
+  - 2.31.1
+ctng_duma:
+  - 2.5.15
+ctng_gcc:
+  - 8.2.0
+ctng_gmp:
+  - 6.1.2
+ctng_isl:
+  - 0.19
+ctng_libc:
+  - gnu
+ctng_kernel:
+  - 2.6.32
+ctng_libiconv:
+  - 1.15
+ctng_mpc:
+  - 1
+ctng_nature:
+  - shared
+ctng_ncurses:
+  - 6.1
+ctng_vendor:
+  - conda_cos6
 dbus:
   - 1
 expat:
@@ -63,6 +89,9 @@ glib:
   - 2.56
 gmp:
   - 6.1
+# glibc used in ctng compiler builds
+gnu:
+  - 2.12.2
 harfbuzz:
   - 1.7
 hdf4:
@@ -120,7 +149,7 @@ mpfr:
 numpy:
   - 1.11
 openblas:
-  - 0.2.20
+  - 0.3.2
 openjpeg:
   - 2.3
 openssl:

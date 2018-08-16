@@ -32,6 +32,9 @@ popd
 
 popd
 
+mkdir -p $PREFIX/lib/gcc/${CHOST}/${ctng_gcc}/finclude
+rsync -av ${SRC_DIR}/gcc_built/lib/gcc/${CHOST}/${ctng_gcc}/finclude/ $PREFIX/lib/gcc/${CHOST}/${ctng_gcc}/finclude
+
 # Install Runtime Library Exception
 install -Dm644 $SRC_DIR/.build/src/gcc-${PKG_VERSION}/COPYING.RUNTIME \
         ${PREFIX}/share/licenses/gcc-fortran/RUNTIME.LIBRARY.EXCEPTION
