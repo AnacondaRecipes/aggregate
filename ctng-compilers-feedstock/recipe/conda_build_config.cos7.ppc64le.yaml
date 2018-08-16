@@ -1,42 +1,15 @@
-ctng_nature:
-  - shared
 ctng_sample:
   - powerpc64le-unknown-linux-gnu
 ctng_cpu_arch:
   - powerpc
-ctng_libc:
-  - gnu
 gnu:
   - 2.17
 ctng_kernel:
   - 3.10
-ctng_binutils:
-  - 2.28.1
-ctng_gcc:
-  - 7.2.0
-ctng_gmp:
-  - 6.1.2
-ctng_mpfr:
-  - 3.1.5
-ctng_gettext:
-  - 0.19.7
-ctng_libiconv:
-  - 1.14
-ctng_isl:
-  - 0.18
-ctng_mpc:
-  - 1.0.3
-ctng_ncurses:
-  - 6.0
-ctng_gdb:
-  - 7.12.1
-ctng_duma:
-  - 2.5.15
+# gdb is optional - commenting this will disable gdb from being built.  For gcc 8.2, that's what we need to do.
+# ctng_gdb:
+#   - 7.12.1
 ctng_vendor:
   - conda_cos7
 ctng_target_platform:
   - linux-ppc64le
-zip_keys:
-  -
-    - ctng_target_platform
-    - ctng_cpu_arch
