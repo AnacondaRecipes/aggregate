@@ -94,6 +94,8 @@ libpng:
   - 1.6
 libtiff:
   - 4.0
+libwebp:
+  - 1.0.0
 libxml2:
   - 2.9
 libxslt:
