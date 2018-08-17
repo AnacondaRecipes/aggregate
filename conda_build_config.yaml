@@ -159,7 +159,7 @@ pixman:
 proj4:
   - 5
 libprotobuf:
-  - 3.5.2
+  - 3.6.0
 python:
   - 2.7
   - 3.5
