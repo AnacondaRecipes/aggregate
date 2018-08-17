@@ -3094,3 +3094,11 @@
 	path = libjpeg-turbo-feedstock
 	url = ../libjpeg-turbo-feedstock
 	branch = master
+[submodule "libwebp-feedstock"]
+	path = libwebp-feedstock
+	url = ../libwebp-feedstock
+	branch = master
+[submodule "libgd-feedstock"]
+	path = libgd-feedstock
+	url = ../libgd-feedstock
+	branch = master
