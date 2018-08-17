@@ -1,4 +1,4 @@
-{% set build_num = 1 %}
+{% set build_num = 2 %}
 
 package:
   name: compilers_{{ ctng_target_platform }}
