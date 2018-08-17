@@ -65,8 +65,6 @@ ctng_nature:
   - shared
 ctng_ncurses:
   - 6.1
-ctng_vendor:
-  - conda_cos6
 dbus:
   - 1
 expat:

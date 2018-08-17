@@ -7,3 +7,5 @@ ctng_cpu_arch:
 #   - 7.12.1
 ctng_target_platform:
   - linux-64
+ctng_vendor:
+  - conda_cos6
