@@ -109,6 +109,8 @@ libdap4:
   - 3.19
 libffi:
   - 3.2
+libgd:
+  - 2.2.5
 libgdal:
   - 2.2
 libgsasl:
