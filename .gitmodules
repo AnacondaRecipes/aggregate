@@ -3106,3 +3106,7 @@
 	path = numpy-1.14-feedstock
 	url = ../numpy-feedstock
 	branch = numpy114
+[submodule "hdmedians-feedstock"]
+	path = hdmedians-feedstock
+	url = ../hdmedians-feedstock
+	branch = master
