@@ -110,9 +110,15 @@ outputs:
         - {{ pin_subpackage("libgfortran-ng") }}
         - {{ pin_subpackage("libgcc-ng", max_pin=None) }}
     test:
+      requires:
+        - cmake >=3.11
       commands:
         - find $PREFIX/lib -iname omp_lib.mod | grep '.'
         - find $PREFIX/lib -iname omp_lib.h | grep '.'
+        - pushd tests/fortomp
+        - sh test_fort.sh
+      files:
+        - tests/fortomp/*
     about:
       summary: GNU Fortran Compiler
       home: https://gcc.gnu.org/
