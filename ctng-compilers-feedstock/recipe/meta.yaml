@@ -1,4 +1,4 @@
-{% set build_num = 2 %}
+{% set build_num = 0 %}
 
 package:
   name: compilers_{{ ctng_target_platform }}
@@ -17,6 +17,10 @@ build:
 
 requirements:
   build:
+    - crosstool-ng >=1.23.0.442_g622d059
+  # Need something here so that build does not get installed to a long prefix
+  # as that breaks on some systems.
+  host:
     - crosstool-ng >=1.23.0.442_g622d059
 
 outputs:
@@ -40,6 +44,13 @@ outputs:
       # impose this requirement across the build/host boundary
       strong:
         - {{ pin_subpackage("libgcc-ng", max_pin=None) }}
+    test:
+      files:
+        - tests
+      commands:
+        - CC=$(${PREFIX}/bin/*-gcc -dumpmachine)-gcc
+        - ${CC} -Wall tests/aligned_alloc.c -o c_aligned
+        - ./c_aligned
     about:
       summary: GNU C Compiler
       home: https://gcc.gnu.org/
@@ -64,6 +75,13 @@ outputs:
       # impose this requirement across the build/host boundary
       strong:
         - {{ pin_subpackage("libstdcxx-ng", max_pin=None) }}
+    test:
+      files:
+        - tests
+      commands:
+        - CXX=$(${PREFIX}/bin/*-gcc -dumpmachine)-g++
+        - ${CXX} -Wall tests/aligned_alloc.cpp -o cpp_aligned --std=c++17
+        - ./cpp_aligned
     about:
       summary: GNU C++ Compiler
       home: https://gcc.gnu.org/
