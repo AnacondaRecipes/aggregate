@@ -3114,3 +3114,7 @@
 	path = lighttpd-feedstock
 	url = ../lighttpd-feedstock
 	branch = master
+[submodule "python-louvain-feedstock"]
+	path = python-louvain-feedstock
+	url = ../python-louvain-feedstock
+	branch = master
