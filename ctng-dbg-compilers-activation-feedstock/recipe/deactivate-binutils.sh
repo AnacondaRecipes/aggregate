@@ -81,10 +81,12 @@ function _tc_activation() {
   return 0
 }
 
-if [ -f /tmp/old-env-$$.txt ]; then
-  rm -f /tmp/old-env-$$.txt || true
+if [ "${CONDA_BUILD:-0}" = "1" ]; then
+  if [ -f /tmp/old-env-$$.txt ]; then
+    rm -f /tmp/old-env-$$.txt || true
+  fi
+  env > /tmp/old-env-$$.txt
 fi
-env > /tmp/old-env-$$.txt
 
 # gold has not been (cannot be?) built for powerpc
 if echo @CHOST@ | grep powerpc > /dev/null; then
@@ -101,11 +103,14 @@ if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"
 #exit 1
 else
-  if [ -f /tmp/new-env-$$.txt ]; then
-    rm -f /tmp/new-env-$$.txt || true
-  fi
-  env > /tmp/new-env-$$.txt
+  if [ "${CONDA_BUILD:-0}" = "1" ]; then
+    if [ -f /tmp/new-env-$$.txt ]; then
+      rm -f /tmp/new-env-$$.txt || true
+    fi
+    env > /tmp/new-env-$$.txt
 
-  echo "INFO: $(_get_sourced_filename) made the following environmental changes:"
-  diff -U 0 -rN /tmp/old-env-$$.txt /tmp/new-env-$$.txt | tail -n +4 | grep "^-.*\|^+.*" | grep -v "CONDA_BACKUP_" | sort
+    echo "INFO: $(_get_sourced_filename) made the following environmental changes:"
+    diff -U 0 -rN /tmp/old-env-$$.txt /tmp/new-env-$$.txt | tail -n +4 | grep "^-.*\|^+.*" | grep -v "CONDA_BACKUP_" | sort
+    rm -f /tmp/old-env-$$.txt /tmp/new-env-$$.txt || true
+  fi
 fi

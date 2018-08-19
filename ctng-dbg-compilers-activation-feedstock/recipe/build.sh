@@ -1,5 +1,10 @@
 CHOST=$(${PREFIX}/bin/*-gcc -dumpmachine)
 
+if [ -z "${FINAL_CFLAGS}" ]; then
+    echo "FINAL_CFLAGS not set.  Did you pass in a flags variant config file?"
+    exit 1
+fi
+
 find . -name "*activate*.sh" -exec sed -i.bak "s|@CHOST@|${CHOST}|g"                                                "{}" \;
 find . -name "*activate*.sh" -exec sed -i.bak "s|@CPPFLAGS@|${FINAL_CPPFLAGS}|g"                                    "{}" \;
 find . -name "*activate*.sh" -exec sed -i.bak "s|@DEBUG_CPPFLAGS@|${FINAL_DEBUG_CPPFLAGS}|g"                        "{}" \;
