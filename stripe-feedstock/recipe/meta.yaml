@@ -1,8 +1,8 @@
 {% set name = "stripe" %}
-{% set version = "2.2.0" %}
+{% set version = "2.5.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "6f88f74aee9f02fbc89aedc4b10fa264c2058f21c64da6cf8bfa573af4f6cd15" %}
+{% set hash_value = "61d6be45d25849336745e480d0033931348cc72c94e343bf04590b9a44d2c13a" %}
 
 package:
   name: {{ name|lower }}
@@ -30,6 +30,8 @@ test:
     - stripe
     - stripe.api_resources
     - stripe.api_resources.abstract
+    - stripe.api_resources.issuing
+    - stripe.api_resources.sigma
 
 about:
   home: https://github.com/stripe/stripe-python
