@@ -1,3 +1,6 @@
+GFORTRAN=$(${PREFIX}/bin/*-gcc -dumpmachine)-gfortran
+FFLAGS="-fopenmp -march=prescott -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -pipe"
+
 cmake \
     -H${SRC_DIR} \
     -Bbuild \
