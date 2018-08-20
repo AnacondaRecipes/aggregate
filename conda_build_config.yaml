@@ -32,6 +32,9 @@ fortran_compiler_version:
   - 16.0.4                     # [win]
   - 16.0.4                     # [win]
   - 16.0.4                     # [win]
+# matrix on linux, because the ABI breaks at GCC 8
+  - 7.3.0                      # [linux]
+  # - 8.2.0                      # [linux]
 CONDA_BUILD_SYSROOT:
   - /opt/MacOSX10.9.sdk        # [osx]
 VERBOSE_AT:
@@ -41,7 +44,6 @@ VERBOSE_CM:
 # We use MRAN here because they take snapshots which improves reproducibility.
 cran_mirror:
   - https://mran.microsoft.com/snapshot/2018-01-01
-
 # this is global, but can be overridden by other stuff in recipes
 ctng_binutils:
   - 2.31.1
