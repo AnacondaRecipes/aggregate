@@ -48,7 +48,7 @@ ctng_binutils:
 ctng_duma:
   - 2.5.15
 ctng_gcc:
-  - 8.2.0
+  - 7.3.0
 ctng_gmp:
   - 6.1.2
 ctng_isl:
@@ -65,6 +65,12 @@ ctng_nature:
   - shared
 ctng_ncurses:
   - 6.1
+c_compiler_version:
+  - 7.3.0
+cxx_compiler_version:
+  - 7.3.0
+fortran_compiler_version:
+  - 7.3.0
 dbus:
   - 1
 expat:
