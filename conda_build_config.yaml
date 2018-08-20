@@ -65,11 +65,11 @@ ctng_nature:
   - shared
 ctng_ncurses:
   - 6.1
-c_compiler_version:
-  - 7.3.0
-cxx_compiler_version:
-  - 7.3.0
-fortran_compiler_version:
+c_compiler_version:        # [linux]
+  - 7.3.0                  # [linux]
+cxx_compiler_version:      # [linux]
+  - 7.3.0                  # [linux]
+fortran_compiler_version:  # [linux]
   - 7.3.0
 dbus:
   - 1
