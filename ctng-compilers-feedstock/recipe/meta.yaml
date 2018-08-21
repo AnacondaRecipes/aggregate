@@ -1,4 +1,4 @@
-{% set build_num = 0 %}
+{% set build_num = 1 %}
 
 package:
   name: compilers_{{ ctng_target_platform }}
@@ -33,6 +33,11 @@ outputs:
         - 'bin/*'
         - 'lib/*.so*'
         - 'libexec/**/*.so*'
+        - 'libexec/**/cc1*'
+        - 'libexec/**/collect2'
+        - 'libexec/**/gcc'
+        - 'libexec/**/lto*'
+        - 'libexec/**/plugin/gengtype'
       missing_dso_whitelist:
         - '*'
       runpath_whitelist:
@@ -68,6 +73,7 @@ outputs:
         - 'bin/*'
         - 'lib/*.so'
         - 'libexec/**/*.so*'
+        - 'libexec/**/cc1*'
       missing_dso_whitelist:
         - "*"
     requirements:
@@ -102,6 +108,7 @@ outputs:
         - 'bin/*'
         - 'lib/*.so'
         - 'libexec/**/*.so*'
+        - 'libexec/**/f951'
       missing_dso_whitelist:
         - "*"
     requirements:
