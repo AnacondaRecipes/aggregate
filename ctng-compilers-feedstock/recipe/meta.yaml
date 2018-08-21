@@ -29,7 +29,10 @@ outputs:
     build:
       number: {{ build_num }}
       detect_binary_files_with_prefix: False
-      binary_relocation: False
+      binary_relocation:
+        - 'bin/*'
+        - 'lib/*.so*'
+        - 'libexec/**/*.so*'
       missing_dso_whitelist:
         - '*'
       runpath_whitelist:
@@ -61,7 +64,10 @@ outputs:
     build:
       number: {{ build_num }}
       detect_binary_files_with_prefix: False
-      binary_relocation: False
+      binary_relocation:
+        - 'bin/*'
+        - 'lib/*.so'
+        - 'libexec/**/*.so*'
       missing_dso_whitelist:
         - "*"
     requirements:
@@ -92,7 +98,10 @@ outputs:
     build:
       number: {{ build_num }}
       detect_binary_files_with_prefix: False
-      binary_relocation: False
+      binary_relocation:
+        - 'bin/*'
+        - 'lib/*.so'
+        - 'libexec/**/*.so*'
       missing_dso_whitelist:
         - "*"
     requirements:
@@ -130,7 +139,10 @@ outputs:
     build:
       number: {{ build_num }}
       detect_binary_files_with_prefix: False
-      binary_relocation: False
+      binary_relocation:
+        - 'bin/*'
+        - 'lib/*.so'
+        - 'libexec/**/*.so*'
       missing_dso_whitelist:
         - "*"
     about:
@@ -202,7 +214,10 @@ outputs:
     build:
       number: {{ build_num }}
       detect_binary_files_with_prefix: False
-      binary_relocation: False
+      binary_relocation:
+        - 'bin/*'
+        - 'lib/*.so*'
+        - 'libexec/**/*.so*'
       missing_dso_whitelist:
         - "*"
     about:
