@@ -108,7 +108,9 @@ _tc_activation \
 _tc_activation \
   activate host @CHOST@ @CHOST@- \
   "FC,${FC:-${GFORTRAN}}" \
-  "F77,${F77:-${GFORTRAN}}"
+  "F77,${F77:-${GFORTRAN}}" \
+  "F90,${F90:-${GFORTRAN}}" \
+  "F95,${F95:-${GFORTRAN}}"
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"
