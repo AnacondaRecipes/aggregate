@@ -13,7 +13,7 @@ package:
   version: {{ gfortran_ver }}
 
 build:
-  number: 3
+  number: 4
   skip: True                                                  # [not osx]
   binary_has_prefix_files:
     - lib/libgcc_ext.10.*.dylib
