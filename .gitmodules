@@ -3122,3 +3122,7 @@
 	path = cryptominisat-feedstock
 	url = ../cryptominisat-feedstock
 	branch = master
+[submodule "m4ri-feedstock"]
+	path = m4ri-feedstock
+	url = ../m4ri-feedstock
+	branch = master
