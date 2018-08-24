@@ -3118,3 +3118,7 @@
 	path = python-louvain-feedstock
 	url = ../python-louvain-feedstock
 	branch = master
+[submodule "cryptominisat-feedstock"]
+	path = cryptominisat-feedstock
+	url = ../cryptominisat-feedstock
+	branch = master
