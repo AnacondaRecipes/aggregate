@@ -3126,3 +3126,7 @@
 	path = m4ri-feedstock
 	url = ../m4ri-feedstock
 	branch = master
+[submodule "qt-5.11-feedstock"]
+	path = qt-5.11-feedstock
+	url = ../qt-feedstock
+	branch = master
