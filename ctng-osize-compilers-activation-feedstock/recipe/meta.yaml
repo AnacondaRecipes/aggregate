@@ -1,7 +1,5 @@
-{% set type = '-osize' %}
-
 package:
-  name: lizzy-{{ type }}
+  name: lizzy-osize
   version: {{ ctng_gcc }}
 
 source:
@@ -16,7 +14,7 @@ requirements:
     - gcc_impl_{{ ctng_target_platform }}
 
 outputs:
-  - name: gcc{{ type }}_{{ ctng_target_platform }}
+  - name: gcc-osize_{{ ctng_target_platform }}
     script: install-gcc.sh
     requirements:
       run:
@@ -37,15 +35,15 @@ outputs:
       home: https://gcc.gnu.org/
       license: GPL
 
-  - name: gxx{{ type }}_{{ ctng_target_platform }}
+  - name: gxx-osize_{{ ctng_target_platform }}
     script: install-g++.sh
     requirements:
       run:
         - gxx_impl_{{ ctng_target_platform }} {{ ctng_gcc }}.*
         # for activation of gcc env vars
-        - {{ pin_subpackage("gcc_"~ type ~ ctng_target_platform, exact=True) }}
+        - {{ pin_subpackage("gcc-osize_" ~ ctng_target_platform, exact=True) }}
         # for activation of binutils env vars
-        - {{ pin_subpackage("binutils_" ~ type ~ ctng_target_platform, exact=True) }}
+        - {{ pin_subpackage("binutils_" ~ ctng_target_platform, exact=True) }}
     test:
       files:
         - tests
@@ -62,7 +60,7 @@ outputs:
       home: https://gcc.gnu.org/
       license: GPL
 
-  - name: gfortran{{ type }}_{{ ctng_target_platform }}
+  - name: gfortran-osize_{{ ctng_target_platform }}
     script: install-gfortran.sh
     requirements:
       host:
@@ -71,7 +69,7 @@ outputs:
       run:
         - gfortran_impl_{{ ctng_target_platform }} {{ ctng_gcc }}.*
         # for activation of gcc env vars:
-        - {{ pin_subpackage("gcc_" ~ osize ~ ctng_target_platform, exact=True) }}
+        - {{ pin_subpackage("gcc-osize_" ~ ctng_target_platform, exact=True) }}
         # for activation of binutils env vars:
         - {{ pin_subpackage("binutils_" ~ ctng_target_platform, exact=True) }}
     run_exports:
