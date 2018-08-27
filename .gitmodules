@@ -3130,3 +3130,7 @@
 	path = qt-5.11-feedstock
 	url = ../qt-feedstock
 	branch = master
+[submodule "zc.lockfile-feedstock"]
+	path = zc.lockfile-feedstock
+	url = ../zc.lockfile-feedstock
+	branch = master
