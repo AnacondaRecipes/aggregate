@@ -3134,3 +3134,7 @@
 	path = zc.lockfile-feedstock
 	url = ../zc.lockfile-feedstock
 	branch = master
+[submodule "setuptools-git-feedstock"]
+	path = setuptools-git-feedstock
+	url = ../setuptools-git-feedstock
+	branch = master
