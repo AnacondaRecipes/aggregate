@@ -2,7 +2,10 @@
 #     This version number follows the "platform toolset"
 {% set vcver="14.1" %}
 {% set vsyear="2017" %}
-{% set fullver="15.5.2" %}
+# this version follows the version number reported for the vcruntim140.dll file.
+#     This will be in a folder like C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Redist\MSVC\14.15.26706\x64\Microsoft.VC141.CRT
+#     Note the 14.15.26706 in there - that's what we want, but in case their folder scheme changes, it's better to base it on the version of the file itself.
+{% set fullver="14.15.26706" %}
 # VS2017 is fundamentally compatible with VS2015.  We name our package vs2015_runtime so that it can't be
 #    mixed up with the runtime from VS2015 - you do actually need VS2017 runtime for things compiled with
 #    VS2017, and the runtime we have here is backwards-compatible with things compiled with VS2015.
@@ -14,11 +17,14 @@ package:
 
 build:
   skip: True  [not win]
-  number: 3
+  number: 4
 
 outputs:
   - name: vs{{ vsyear }}_{{ cross_compiler_target_platform }}
     script: install_activate.bat
+    build:
+      track_features:
+        - vc{{ vcver.split(".")[0] }}
     run_exports:
       strong:
         # compatible within major version.  This is MSFT's incrementing of the UCRT version.  It was
@@ -39,6 +45,9 @@ outputs:
         - Library/bin/*.dll
   - name: vc
     version: {{ vcver }}
+    build:
+      track_features:
+        - vc{{ vcver.split(".")[0] }}
     requirements:
       run:
         # Set lower bound for runtime (no upper bound).  Upper bound is still present, but
