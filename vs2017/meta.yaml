@@ -49,7 +49,7 @@ outputs:
       home: https://github.com/conda/conda/wiki/VC-features
       license: Modified BSD License (3-clause)
       license_family: BSD
-      summary: A meta-package to track VC features.
+      summary: A meta-package to impose mutual exclusivity among software built with different VS versions
       description: |
           This metapackage is used to enforce consistency of runtime
           dependencies within an environment

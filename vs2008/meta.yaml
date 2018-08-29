@@ -8,13 +8,11 @@ package:
 
 build:
   skip: True  [not win]
-  number: 1
+  number: 2
 
 outputs:
   - name: vs{{ vsyear }}_{{ cross_compiler_target_platform }}
     script: install_activate.bat
-    track_features:
-      - vc{{ vcver }}
     run_exports:
       strong:
         - vc {{ vcver }}
@@ -25,8 +23,6 @@ outputs:
     script: install_runtime.bat
   - name: vc
     version: {{ vcver }}
-    track_features:
-      - vc{{ vcver }}
     requirements:
       run:
         - {{ pin_subpackage('vs' ~ vsyear ~ '_runtime') }}
