@@ -3138,3 +3138,7 @@
 	path = setuptools-git-feedstock
 	url = ../setuptools-git-feedstock
 	branch = master
+[submodule "pymssql-feedstock"]
+	path = pymssql-feedstock
+	url = ../pymssql-feedstock
+	branch = master
