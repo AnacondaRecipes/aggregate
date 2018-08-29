@@ -13,7 +13,7 @@ package:
 
 build:
   skip: True  [not win]
-  number: 4
+  number: 0
 
 outputs:
   - name: vs{{ vsyear }}_{{ cross_compiler_target_platform }}
@@ -46,6 +46,7 @@ outputs:
   - name: vc
     version: {{ vcver }}
     build:
+      number: 4
       track_features:
         - vc{{ vcver.split(".")[0] }}
     requirements:
