@@ -1,8 +1,8 @@
 {% set name = "python-daemon" %}
-{% set version = "2.1.2" %}
+{% set version = "2.2.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "261c859be5c12ae7d4286dc6951e87e9e1a70a882a8b41fd926efc1ec4214f73" %}
+{% set hash_value = "aca149ebf7e73f10cd554b2df5c95295d49add8666348eff6195053ec307728c" %}
 
 package:
   name: '{{ name|lower }}'
