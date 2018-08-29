@@ -2,7 +2,7 @@
 update_version:
   - 8
 # this is the version number reported by cl.exe
-cl_versrion:
+cl_version:
   - 19.15.26726
 # this version follows the version number reported for the vcruntim140.dll file.
 #     This will be in a folder like C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Redist\MSVC\14.15.26706\x64\Microsoft.VC141.CRT
