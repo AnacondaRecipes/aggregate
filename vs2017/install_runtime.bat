@@ -26,7 +26,7 @@ if not exist "%BT_ROOT%" (
 set "BT_ROOT=C:\Program Files (x86)\Microsoft Visual Studio\%MSC_VER%\Professional"
 )
 
-set "REDIST_ROOT=%BT_ROOT%\VC\Redist\MSVC\%fullver%\%VC_PATH%"
+set "REDIST_ROOT=%BT_ROOT%\VC\Redist\MSVC\%runtime_version%\%VC_PATH%"
 robocopy "%REDIST_ROOT%\Microsoft.VC%VC_VER%.CRT" "%LIBRARY_BIN%" *.dll /E
 if %ERRORLEVEL% GTR 8 exit 1
 robocopy "%REDIST_ROOT%\Microsoft.VC%VC_VER%.CRT" "%PREFIX%" *.dll /E
