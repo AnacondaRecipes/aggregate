@@ -9,7 +9,7 @@
 
 package:
   name: vs_activation_and_runtime
-  version: {{ fullver }}
+  version: 1.0.0
 
 build:
   skip: True  [not win]
@@ -17,6 +17,7 @@ build:
 
 outputs:
   - name: vs{{ vsyear }}_{{ cross_compiler_target_platform }}
+    version: {{ cl_version }}
     script: install_activate.bat
     build:
       track_features:
@@ -30,15 +31,18 @@ outputs:
         #    version differs)
         - {{ pin_subpackage('vc') }}
     about:
-      summary: Activation and version verification of MSVC {{ vcver }} (VS {{ vsyear }}) compiler
+      summary: Activation and version verification of MSVC {{ vcver }} (VS {{ vsyear }}) compiler, update {{ update_version }})
       license: BSD 3-clause
   - name: vs{{ runtime_year }}_runtime
+    version: {{ runtime_version }}
     script: install_runtime.bat
     build:
       no_link:
         - |
           *.dll
         - Library/bin/*.dll
+    about:
+      summary: MSVC runtimes associated with cl.exe version {{ cl_version  }} (VS {{ vsyear }} update {{ update_version }})
   - name: vc
     version: {{ vcver }}
     build:
