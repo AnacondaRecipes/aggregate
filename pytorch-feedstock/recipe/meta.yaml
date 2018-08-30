@@ -46,7 +46,7 @@ requirements:
     # GPU requirements
     - cudatoolkit {{ cudatoolkit }}*
     - cudnn {{ cudnn }}*
-    - nccl
+    - {{ pin_compatible('nccl') }}
     # other requirements
     - python
     - {{ pin_compatible('numpy') }}
