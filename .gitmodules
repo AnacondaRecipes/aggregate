@@ -3142,3 +3142,7 @@
 	path = pymssql-feedstock
 	url = ../pymssql-feedstock
 	branch = master
+[submodule "sed-feedstock"]
+	path = sed-feedstock
+	url = ../sed-feedstock
+	branch = master

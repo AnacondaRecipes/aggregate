@@ -10,8 +10,8 @@ source:
 
 build:
   number: 0
-  missing_dso_whitelist:
-    - '*'
+  missing_dso_whitelist:  # [linux]
+    - '*'                 # [linux]
 
 # This package is used during bootstrapping so you need to
 # install system packages for all these things instead of
@@ -19,23 +19,28 @@ build:
 # all these and released them somewhere you can use the non
 # bootstrapping version of this package.
 requirements:
-   build:
-#     - {{ compiler('c') }}
-     - autoconf
-     - automake
-     - bison
-     - flex
-     - git
-     - libtool
-     - gettext
-     - unzip
-#   host:
-#     - ncurses
-#     - libtool
-#     - wget
-#   run:
-#     - ncurses
-#     - libtool
+  build:
+    - {{ compiler('c') }}  # [osx]
+    - autoconf
+    - automake
+    - bash  # [osx]
+    - bison
+    - flex
+    - gawk  # [osx]
+    - gettext
+    - git
+    - libtool
+    - sed   # [osx]
+    - unzip
+  host:
+    - ncurses  # [osx]
+    - gettext  # [osx]
+  run:
+   - bash  # [osx]
+   # Arguably these should be deps for linux too:
+   - sed   # [osx]
+   - gawk  # [osx]
+   - make  # [osx]
 
 test:
   commands:
