@@ -28,7 +28,14 @@ It seems impossible to:
 
 call "%VS140COMNTOOLS%..\..\VC\vcvarsall.bat" x%ARCH%
 
-scons install --prefix=%LIBRARY_PREFIX% all VERBOSE=on -j%CPU_COUNT%
+scons install ^
+    --prefix=%LIBRARY_PREFIX% ^
+    --disable-minimum-compiler-version-enforcement ^
+    --link-model=object ^
+    all ^
+    VERBOSE=on ^
+    -j%CPU_COUNT%
+
 
 :: TODO: Figure out why the tests below don't run (scons is a .bat file ?)
 

@@ -1,10 +1,10 @@
 package:
   name: mongodb
-  version: 3.6.5
+  version: 4.0.2
 
 source:
   git_url: https://github.com/mongodb/mongo.git
-  git_tag: r3.6.5
+  git_tag: r4.0.2
   patches:
      - 0002-Pick-python-using-usr-bin-env-instead-of-relying-on-.patch  # [linux]
      - 0003-Add-invariant-to-silence-modern-gcc-warnings.patch          # [linux]
@@ -28,9 +28,11 @@ requirements:
     - setuptools
     - pyyaml
     - cheetah
+    - libcurl
     - typing
     - requests
     - pymongo
+    - regex
     - pywin32  # [win]
   run:
     # This will be taken care of by run_exports
