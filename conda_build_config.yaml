@@ -155,7 +155,7 @@ mpfr:
 numpy:
   - 1.11
 openblas:
-  - 0.3.2
+  - 0.3.3
 openjpeg:
   - 2.3
 openssl:
