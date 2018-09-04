@@ -3146,3 +3146,7 @@
 	path = sed-feedstock
 	url = ../sed-feedstock
 	branch = master
+[submodule "pybind11-feedstock"]
+	path = pybind11-feedstock
+	url = ../pybind11-feedstock
+	branch = master
