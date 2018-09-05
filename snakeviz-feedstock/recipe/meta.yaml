@@ -1,17 +1,13 @@
 {% set name = "snakeviz" %}
-{% set version = "0.4.2" %}
-{% set file_ext = "zip" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "adc95ec5eb0a04bc2aa8325e8a713b9aa82ccb30425f9efe0e4d7479e2fa3bcb" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ file_ext }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
-  {{ hash_type }}: {{ hash_value }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 5fe23667708a4ed04047abfbf209675a8488ea6ea8c038d7de06d8a083fb3531
 
 build:
   number: 0
