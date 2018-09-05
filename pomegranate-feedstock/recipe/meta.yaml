@@ -1,11 +1,12 @@
 {% set name = "pomegranate" %}
-{% set version = "0.9.0" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
+# use git as the sdist do not provide pyx files
   git_url: https://github.com/jmschrei/{{ name }}
   git_tag: v{{ version }}
 
@@ -14,21 +15,22 @@ build:
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
+  build:
+    - {{ compiler('c') }}
   host:
     - python
     - setuptools
     - cython
     - numpy
     - scipy >=0.17.0
-  build:
-    - {{ compiler('c') }}
   run:
     - python
+    - setuptools
     - {{ pin_compatible('numpy') }}
     - joblib >=0.9.0b4
     - networkx >=1.8.1,<2.0
     - scipy >=0.17.0
-    - setuptools
+    - pyyaml
 
 test:
   imports:
