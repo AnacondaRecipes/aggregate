@@ -76,7 +76,7 @@ fortran_compiler_version:  # [linux]
 dbus:
   - 1
 expat:
-  - 2.2 
+  - 2.2
 fontconfig:
   - 2.13
 freetype:
@@ -103,14 +103,14 @@ harfbuzz:
 hdf4:
   - 4.2
 hdf5:
-  - 1.8 
-  - 1.10 
+  - 1.8
+  - 1.10
 hdfeos2:
   - 2.20
 hdfeos5:
   - 5.1
 icu:
-  - 58 
+  - 58
 jpeg:
   - 9
 libdap4:

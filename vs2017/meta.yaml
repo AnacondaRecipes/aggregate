@@ -31,7 +31,7 @@ outputs:
         #    version differs)
         - {{ pin_subpackage('vc') }}
     about:
-      summary: Activation and version verification of MSVC {{ vcver }} (VS {{ vsyear }}) compiler, update {{ update_version }})
+      summary: Activation and version verification of MSVC {{ vcver }} (VS {{ vsyear }} compiler, update {{ update_version }})
       license: BSD 3-clause
   - name: vs{{ runtime_year }}_runtime
     version: {{ runtime_version }}
