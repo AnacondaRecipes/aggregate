@@ -1,3 +1,5 @@
+DEBUG_C:
+  - yes
 pin_run_as_build:
   libboost:
     max_pin: x.x.x
