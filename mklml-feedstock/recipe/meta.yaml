@@ -1,5 +1,5 @@
 {% set long_version="2018.0.3.20180406" %}
-{% set mkldnn_version="0.14" %} # Only for generating url
+{% set mkldnn_version="0.15" %} # Only for generating url
 {% set version='.'.join(long_version.split('.')[0:3]) %}
 
 package:
@@ -24,6 +24,7 @@ outputs:
     script: install-libmklml.sh   # [unix]
     script: install-libmklml.bat  # [win]
     build:
+      version: 1
       detect_binary_files_with_prefix: False
       missing_dso_whitelist:
         - /lib64/ld-linux-x86-64.so.2
@@ -38,6 +39,7 @@ outputs:
       run:
         - libgcc-ng  # [linux]
         - intel-openmp {{ version }}
+        - vs2013_runtime  # [win]
   - name: mklml
     build:
       run_exports:
