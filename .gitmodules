@@ -3150,3 +3150,51 @@
 	path = pybind11-feedstock
 	url = ../pybind11-feedstock
 	branch = master
+[submodule "autopep8-feedstock"]
+	path = autopep8-feedstock
+	url = ../autopep8-feedstock
+	branch = master
+[submodule "pydocstyle-feedstock"]
+	path = pydocstyle-feedstock
+	url = ../pydocstyle-feedstock
+	branch = master
+[submodule "pytest-json-feedstock"]
+	path = pytest-json-feedstock
+	url = ../pytest-json-feedstock
+	branch = master
+[submodule "yapf-feedstock"]
+	path = yapf-feedstock
+	url = ../yapf-feedstock
+	branch = master
+[submodule "ciocheck-feedstock"]
+	path = ciocheck-feedstock
+	url = ../ciocheck-feedstock
+	branch = master
+[submodule "jupyter_kernel_gateway-feedstock"]
+	path = jupyter_kernel_gateway-feedstock
+	url = ../jupyter_kernel_gateway-feedstock
+	branch = master
+[submodule "vcrpy-feedstock"]
+	path = vcrpy-feedstock
+	url = ../vcrpy-feedstock
+	branch = master
+[submodule "pytest-tornado-feedstock"]
+	path = pytest-tornado-feedstock
+	url = ../pytest-tornado-feedstock
+	branch = master
+[submodule "xmltodict-feedstock"]
+	path = xmltodict-feedstock
+	url = ../xmltodict-feedstock
+	branch = master
+[submodule "marshmallow-feedstock"]
+	path = marshmallow-feedstock
+	url = ../marshmallow-feedstock
+	branch = master
+[submodule "flask-sqlalchemy-feedstock"]
+	path = flask-sqlalchemy-feedstock
+	url = ../flask-sqlalchemy-feedstock
+	branch = master
+[submodule "git-lfs-feedstock"]
+	path = git-lfs-feedstock
+	url = ../git-lfs-feedstock
+	branch = master
