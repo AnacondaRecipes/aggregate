@@ -3198,3 +3198,23 @@
 	path = git-lfs-feedstock
 	url = ../git-lfs-feedstock
 	branch = master
+[submodule "chest-feedstock"]
+	path = chest-feedstock
+	url = ../chest-feedstock
+	branch = master
+[submodule "flask-wtf-feedstock"]
+	path = flask-wtf-feedstock
+	url = ../flask-wtf-feedstock
+	branch = master
+[submodule "humanize-feedstock"]
+	path = humanize-feedstock
+	url = ../humanize-feedstock
+	branch = master
+[submodule "lz4-feedstock"]
+	path = lz4-feedstock
+	url = ../lz4-feedstock
+	branch = master
+[submodule "nosexcover-feedstock"]
+	path = nosexcover-feedstock
+	url = ../nosexcover-feedstock
+	branch = master
