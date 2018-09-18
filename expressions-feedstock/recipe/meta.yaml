@@ -1,0 +1,38 @@
+{% set name = "expressions" %}
+{% set version = "0.2.3" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 5d0138e916ca1e73e0ffca583e5405790ba5f7b9a3d68150bde111533fc7890e
+
+build:
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - grako >=3.9.3
+    - python
+
+test:
+  imports:
+    - expressions
+
+about:
+  home: http://databrewery.org
+  license: MIT
+  license_family: MIT
+  summary: extensible arithmetic expression parser and compiler
+  doc_url: https://pypi.python.org/pypi/expressions
+  doc_source_url: https://github.com/DataBrewery/expressions
+
+extra:
+  recipe-maintainers:
+    - jjhelmus

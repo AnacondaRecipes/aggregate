@@ -1,0 +1,53 @@
+{% set name = "Bottlechest" %}
+{% set version = "0.7.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 7e9a4fd8ad0f28e599463e76805054cc41c79c19faae92c528227b88e97a012c
+
+build:
+  number: 1
+  script: 
+    # regenerate .pyx and .c files to support Python 3.7
+    - {{ PYTHON }} -c "from bottlechest.src.makepyx import makepyx; makepyx()"
+    - cython bottlechest/src/func/64bit/*.pyx
+    - cython bottlechest/src/func/32bit/*.pyx
+    - "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+  host:
+    - python
+    - pip
+    - cython
+    - numpy
+    - scipy
+  run:
+    - python
+    - {{ pin_compatible('numpy') }}
+    - scipy
+
+test:
+  imports:
+    - bottlechest
+
+about:
+  home: https://github.com/biolab/bottlechest
+  license: BSD
+  license_file: bottlechest/LICENSE
+  license_family: BSD
+  summary: fast NumPy array functions specialized for use in Orange
+  description: |
+    Bottlechest is a fork of Bottleneck, a collection of fast NumPy array
+    functions written in Cython. It is specialized for use in Orange.
+  doc_url: https://pypi.python.org/pypi/Bottlechest
+  dev_url: https://github.com/biolab/bottlechest
+
+extra:
+  recipe-maintainers:
+    - jjhelmus

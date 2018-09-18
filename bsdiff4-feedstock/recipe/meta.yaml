@@ -1,0 +1,46 @@
+{% set name = "bsdiff4" %}
+{% set version = "1.1.5" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: bbe4758ecde4e9fe7d46c2cf1b6052a8fccb7b6b4dd9eb6ab0133c02e9505526
+
+build:
+  number: 1
+  entry_points:
+    - bsdiff4 = bsdiff4.cli:main_bsdiff4
+    - bspatch4 = bsdiff4.cli:main_bspatch4
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+  host:
+    - pip
+    - python
+  run:
+    - python
+
+test:
+  imports:
+    - bsdiff4
+  commands:
+    - bsdiff4 --help
+    - bspatch4 --help
+
+about:
+  home: https://github.com/ilanschnell/bsdiff4
+  license: BSD
+  summary: binary diff and patch using the BSDIFF4-format
+  dev_url: https://github.com/ilanschnell/bsdiff4
+  description: |
+    bsdiff4 is derived from bsdiff, a very simple Python extension module that
+    allows Python to perform the same tasks as the bsdiff utility
+
+extra:
+  recipe-maintainers:
+    - jjhelmus

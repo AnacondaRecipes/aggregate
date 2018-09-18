@@ -1,0 +1,43 @@
+{% set name = "anaconda-clean" %}
+{% set version = "1.1.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/ContinuumIO/anaconda-clean
+  git_tag: {{ version }}
+
+build:
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+  entry_points:
+    - anaconda-clean = anaconda_clean:main
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+
+test:
+  commands:
+    - anaconda-clean --help
+  imports:
+    - anaconda_clean
+
+about:
+  home: https://github.com/ContinuumIO/anaconda-clean
+  license: BSD
+  summary: Delete Anaconda configuration files
+  description: |
+    anaconda-clean remove configuration files and directories from Anaconda and its programs.
+  doc_url: https://docs.continuum.io/anaconda/install
+  doc_source_url: https://github.com/ContinuumIO/anaconda-clean/blob/master/README.md
+  dev_url: https://github.com/ContinuumIO/anaconda-clean
+
+extra:
+  recipe-maintainers:
+    - jjhelmus

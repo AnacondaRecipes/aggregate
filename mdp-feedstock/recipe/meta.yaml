@@ -1,0 +1,44 @@
+{% set name = "MDP" %}
+{% set version = "3.5" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 33f13804d32a2430caeef04f5cf3a11209a854ab78f5686b75cff4ed6bff812b
+
+build:
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - future
+    - numpy
+
+test:
+  imports:
+    - mdp
+
+about:
+  home: http://mdp-toolkit.sourceforge.net/
+  license: BSD
+  license_family: BSD
+  summary: A Python data processing framework.
+  description: |
+    MDP is a collection of supervised and unsupervised learning algorithms and
+    other data processing units that can be combined into data processing
+    sequences and more complex feed-forward network architectures.
+  doc_url: http://mdp-toolkit.sourceforge.net/documentation.html
+  doc_source_url: https://github.com/mdp-toolkit/mdp-docs/tree/master/source
+  dev_url: https://github.com/mdp-toolkit
+
+extra:
+  recipe-maintainers:
+    - jjhelmus

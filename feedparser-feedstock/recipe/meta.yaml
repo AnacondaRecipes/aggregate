@@ -1,0 +1,42 @@
+{% set name = "feedparser" %}
+{% set version = "5.2.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: bd030652c2d08532c034c27fcd7c85868e7fa3cb2b17f230a44a6bbc92519bf9
+
+build:
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - python
+
+test:
+  imports:
+    - feedparser
+
+about:
+  home: https://github.com/kurtmckee/feedparser
+  license: OSI Approved
+  license_family: Other
+  license_file: LICENSE
+  summary: parse feeds in Python
+  description: |
+    Feedparser is a Universal Feed Parser for Python. It is used to download
+    and parse syndicated feeds.
+  doc_url: https://pythonhosted.org/feedparser/
+  doc_source_url: https://github.com/kurtmckee/feedparser/blob/develop/docs/index.rst
+  dev_url: https://github.com/kurtmckee/feedparser
+
+extra:
+  recipe-maintainers:
+    - jjhelmus

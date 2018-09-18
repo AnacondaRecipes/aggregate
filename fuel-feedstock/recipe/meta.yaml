@@ -1,0 +1,62 @@
+{% set name = "fuel" %}
+{% set version = "0.2.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 2a4121b614219288c80e1688e0a35c11060fb999dde4218f65412c621a8a5f65
+
+build:
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+  entry_points:
+    - fuel-convert = fuel.bin.fuel_convert:main
+    - fuel-download = fuel.bin.fuel_download:main
+    - fuel-info = fuel.bin.fuel_info:main
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+  host:
+    - pip
+    - python
+  run:
+    - python
+    - h5py
+    - numpy
+    - picklable-itertools
+    - pillow
+    - progressbar2
+    - pyyaml
+    - pyzmq
+    - requests
+    - scipy
+    - six
+    - pytables
+
+test:
+  imports:
+    - fuel
+    - fuel.bin
+    - fuel.converters
+    - fuel.datasets
+    - fuel.downloaders
+    - fuel.transformers
+    - fuel.utils
+  commands:
+    - fuel-convert --help
+    - fuel-download --help
+    - fuel-info --help
+
+about:
+  home: https://github.com/mila-udem/fuel.git
+  license: MIT License
+  license_family: MIT
+  summary: data pipeline framework for machine learning
+
+extra:
+  recipe-maintainers:
+    - jjhelmus

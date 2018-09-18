@@ -1,0 +1,38 @@
+{% set name = "picklable-itertools" %}
+{% set version = "0.1.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: faecb7709d2684f3d2d06032e06ed0670cacc59cc074adccd666291c848fe638
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+
+requirements:
+  host:
+    - python
+    - pip
+    - six
+  run:
+    - python
+    - setuptools
+    - six
+
+test:
+  imports:
+    - picklable_itertools
+
+about:
+  home: https://github.com/mila-udem/picklable-itertools
+  license: MIT License
+  license_family: MIT
+  summary: itertools, but picklable
+
+extra:
+  recipe-maintainers:
+    - jjhelmus

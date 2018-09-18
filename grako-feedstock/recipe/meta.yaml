@@ -1,0 +1,51 @@
+{% set name = "grako" %}
+{% set version = "3.99.9" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
+  sha256: fcc37309eab7cd0cbbb26cfd6a54303fbb80a00a58ab295d1e665bc69189c364
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+  entry_points:
+    - grako = grako:main
+
+requirements:
+  host:
+    - python
+    - pip
+    - pytest
+    - pytest-runner
+  run:
+    - python
+
+test:
+  imports:
+    - grako
+    - grako.codegen
+    - grako.test
+  commands:
+    - grako --help
+  requires:
+    - pytest
+
+about:
+  home: http://bitbucket.org/apalala/grako
+  license: BSD
+  license_file: LICENSE.txt
+  license_family: BSD
+  summary: Grako takes a grammar in a variation of EBNF as input, and outputs a memoizing PEG/Packrat parser in Python.
+  description: |
+    Grako is different from other PEG parser generators in that the generated
+    parsers use Python's very efficient exception-handling system to backtrack.
+  doc_url: https://pypi.python.org/pypi/grako/3.10.1
+  doc_source_url: https://github.com/swayf/grako/blob/master/README.rst
+
+extra:
+  recipe-maintainers:
+    - jjhelmus
