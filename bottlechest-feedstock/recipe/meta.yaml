@@ -14,8 +14,10 @@ build:
   script: 
     # regenerate .pyx and .c files to support Python 3.7
     - {{ PYTHON }} -c "from bottlechest.src.makepyx import makepyx; makepyx()"
-    - cython bottlechest/src/func/64bit/*.pyx
-    - cython bottlechest/src/func/32bit/*.pyx
+    - "for %%f in (bottlechest\\src\\func\\64bit\\*.pyx) do cython %%f"   # [win]
+    - "for %%f in (bottlechest\\src\\func\\32bit\\*.pyx) do cython %%f"   # [win]
+    - cython bottlechest/src/func/64bit/*.pyx                             # [not win]
+    - cython bottlechest/src/func/32bit/*.pyx                             # [not win]
     - "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
 
 requirements:
@@ -27,6 +29,7 @@ requirements:
     - cython
     - numpy
     - scipy
+    - msinttypes  # [win and py<35]
   run:
     - python
     - {{ pin_compatible('numpy') }}
