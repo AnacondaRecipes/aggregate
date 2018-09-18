@@ -6,12 +6,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2a4121b614219288c80e1688e0a35c11060fb999dde4218f65412c621a8a5f65
+  # use GitHub source so that .pyx files are available
+  url: https://github.com/mila-udem/fuel/archive/{{ version }}.tar.gz
+  sha256: 5720428d1e527cb7f482a84935442a023cb64201d06079741257980154d65c07
+  #url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  #sha256: 2a4121b614219288c80e1688e0a35c11060fb999dde4218f65412c621a8a5f65
 
 build:
   number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+  script:
+    # regenerate .c file for Python 3.7 support
+    - cython fuel/transformers/_image.pyx
+    - "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
   entry_points:
     - fuel-convert = fuel.bin.fuel_convert:main
     - fuel-download = fuel.bin.fuel_download:main
@@ -23,6 +29,7 @@ requirements:
   host:
     - pip
     - python
+    - cython
   run:
     - python
     - h5py
