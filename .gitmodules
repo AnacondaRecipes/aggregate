@@ -3218,3 +3218,7 @@
 	path = nosexcover-feedstock
 	url = ../nosexcover-feedstock
 	branch = master
+[submodule "go-feedstock"]
+	path = go-feedstock
+	url = ../go-feedstock
+	branch = master
