@@ -38,8 +38,6 @@ set "MSYS2_ENV_CONV_EXCL=CL"
 set "PY_VCRUNTIME_REDIST=%PREFIX%\vcruntime140.dll"
 
 :: ensure that we use the DLL part of the ucrt
-set "CFLAGS=%CFLAGS% -MD -GL"
-set "CXXFLAGS=%CXXFLAGS% -MD -GL"
 set "LDFLAGS_SHARED=%LDFLAGS_SHARED% -LTCG ucrt.lib"
 
 :: translate target platform
