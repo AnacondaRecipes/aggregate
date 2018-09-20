@@ -22,14 +22,14 @@ outputs:
     build:
       track_features:
         - vc{{ vcver.split(".")[0] }}
-    run_exports:
-      strong:
-        # compatible within major version.  This is MSFT's incrementing of the UCRT version.  It was
-        #    14.0 with VS2015, and 14.1 with VS2017 - if the major version changes, we're assuming
-        #    that binary compatibility breaks.  This has a minimum bound equal to vcver, so building with
-        #    vs2017 here will require the vs2017-era runtime (the package is named vs2015_runtime, but the
-        #    version differs)
-        - {{ pin_subpackage('vc') }}
+      run_exports:
+        strong:
+          # compatible within major version.  This is MSFT's incrementing of the UCRT version.  It was
+          #    14.0 with VS2015, and 14.1 with VS2017 - if the major version changes, we're assuming
+          #    that binary compatibility breaks.  This has a minimum bound equal to vcver, so building with
+          #    vs2017 here will require the vs2017-era runtime (the package is named vs2015_runtime, but the
+          #    version differs)
+          - {{ pin_subpackage('vc') }}
     about:
       summary: Activation and version verification of MSVC {{ vcver }} (VS {{ vsyear }} compiler, update {{ update_version }})
       license: BSD 3-clause
