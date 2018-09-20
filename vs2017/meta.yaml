@@ -2,7 +2,6 @@
 #     This version number follows the "platform toolset"
 {% set vcver="14.1" %}
 {% set vsyear="2017" %}
-{% set fullver="15.5.2" %}
 # VS2017 is fundamentally compatible with VS2015.  We name our package vs2015_runtime so that it can't be
 #    mixed up with the runtime from VS2015 - you do actually need VS2017 runtime for things compiled with
 #    VS2017, and the runtime we have here is backwards-compatible with things compiled with VS2015.
@@ -10,15 +9,19 @@
 
 package:
   name: vs_activation_and_runtime
-  version: {{ fullver }}
+  version: 1.0.0
 
 build:
   skip: True  [not win]
-  number: 3
+  number: 0
 
 outputs:
   - name: vs{{ vsyear }}_{{ cross_compiler_target_platform }}
+    version: {{ cl_version }}
     script: install_activate.bat
+    build:
+      track_features:
+        - vc{{ vcver.split(".")[0] }}
     run_exports:
       strong:
         # compatible within major version.  This is MSFT's incrementing of the UCRT version.  It was
@@ -28,17 +31,24 @@ outputs:
         #    version differs)
         - {{ pin_subpackage('vc') }}
     about:
-      summary: Activation and version verification of MSVC {{ vcver }} (VS {{ vsyear }}) compiler
+      summary: Activation and version verification of MSVC {{ vcver }} (VS {{ vsyear }} compiler, update {{ update_version }})
       license: BSD 3-clause
   - name: vs{{ runtime_year }}_runtime
+    version: {{ runtime_version }}
     script: install_runtime.bat
     build:
       no_link:
         - |
           *.dll
         - Library/bin/*.dll
+    about:
+      summary: MSVC runtimes associated with cl.exe version {{ cl_version  }} (VS {{ vsyear }} update {{ update_version }})
   - name: vc
     version: {{ vcver }}
+    build:
+      number: 4
+      track_features:
+        - vc{{ vcver.split(".")[0] }}
     requirements:
       run:
         # Set lower bound for runtime (no upper bound).  Upper bound is still present, but
@@ -49,7 +59,7 @@ outputs:
       home: https://github.com/conda/conda/wiki/VC-features
       license: Modified BSD License (3-clause)
       license_family: BSD
-      summary: A meta-package to track VC features.
+      summary: A meta-package to impose mutual exclusivity among software built with different VS versions
       description: |
           This metapackage is used to enforce consistency of runtime
           dependencies within an environment

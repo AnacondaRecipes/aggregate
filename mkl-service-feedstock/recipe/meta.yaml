@@ -9,7 +9,7 @@ source:
 build:
   detect_binary_files_with_prefix: False
   skip: True  # [ppc64le]
-  number: 4
+  number: 5
 
 requirements:
   build:
@@ -17,10 +17,9 @@ requirements:
     - git
   host:
     - python
-    - mkl-devel 2018.0.0
+    - mkl-devel  {{ mkl }}
   run:
     - python
-    - mkl >=2018.0.0
 
 test:
   imports:
