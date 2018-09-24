@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 mkdir -p .build/src
 mkdir -p .build/tarballs
 

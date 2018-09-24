@@ -41,3 +41,17 @@ fi
 ./configure --prefix=${PREFIX}
 make -j${CPU_COUNT} ${VERBOSE_AT}
 make install
+
+set -x
+
+# Fix relocation of build tools hardcoded into ct-ng
+for SEDFILE in ${PREFIX}/share/crosstool-ng/paths.sh ${PREFIX}/bin/ct-ng; do
+  mv ${SEDFILE} ${SEDFILE}.orig
+  cat ${SEDFILE}.orig | \
+  sed -e "s|${BUILD_PREFIX}|${PREFIX}|g" \
+      -e "s|.*make -rf|#!${PREFIX}/bin/make -rf|g" > ${SEDFILE}
+  rm ${SEDFILE}.orig
+  chmod 775 ${SEDFILE}
+  echo SEDFILE: ${SEDFILE}
+  cat ${SEDFILE}
+done
