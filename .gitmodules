@@ -3222,3 +3222,27 @@
 	path = go-feedstock
 	url = ../go-feedstock
 	branch = master
+[submodule "pytest-cache-feedstock"]
+	path = pytest-cache-feedstock
+	url = ../pytest-cache-feedstock
+	branch = master
+[submodule "pytest-pep8-feedstock"]
+	path = pytest-pep8-feedstock
+	url = ../pytest-pep8-feedstock
+	branch = master
+[submodule "runipy-feedstock"]
+	path = runipy-feedstock
+	url = ../runipy-feedstock
+	branch = master
+[submodule "suds-jurko-feedstock"]
+	path = suds-jurko-feedstock
+	url = ../suds-jurko-feedstock
+	branch = master
+[submodule "tempita-feedstock"]
+	path = tempita-feedstock
+	url = ../tempita-feedstock
+	branch = master
+[submodule "whoosh-feedstock"]
+	path = whoosh-feedstock
+	url = ../whoosh-feedstock
+	branch = master
