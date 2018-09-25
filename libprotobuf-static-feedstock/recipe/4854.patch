@@ -1,0 +1,59 @@
+From 1141bd954271f81cd4eecf17f6d7671fca19de11 Mon Sep 17 00:00:00 2001
+From: Adam Cozzette <acozzette@google.com>
+Date: Fri, 20 Jan 2017 15:39:34 -0800
+Subject: [PATCH 1/2] Set LIBPROTOBUF_EXPORT on GzipOutputStream::Options
+
+This fixes issue #2610.
+
+This was originally fixed in a101fa52895fc2ad83d8b5d610243531b1608a08 , but got
+reverted by d36c0c538a545fac5d9db6ba65c525246d4efa95
+---
+ src/google/protobuf/io/gzip_stream.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/google/protobuf/io/gzip_stream.h b/src/google/protobuf/io/gzip_stream.h
+index 15b02fe3d7..df1a446ebc 100644
+--- a/src/google/protobuf/io/gzip_stream.h
++++ b/src/google/protobuf/io/gzip_stream.h
+@@ -118,7 +118,7 @@ class LIBPROTOBUF_EXPORT GzipOutputStream : public ZeroCopyOutputStream {
+     ZLIB = 2,
+   };
+ 
+-  struct Options {
++  struct LIBPROTOBUF_EXPORT Options {
+     // Defaults to GZIP.
+     Format format;
+ 
+
+From f2bcc7aca8797ed95d285f596c5f26b72a318a39 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sun, 1 Jul 2018 14:52:25 -0500
+Subject: [PATCH 2/2] Set LIBPROTOBUF_EXPORT on GenericTypeHandler<class
+ google::protobuf::Message>
+
+This should fix https://github.com/google/protobuf/issues/4717
+---
+ src/google/protobuf/repeated_field.h | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/google/protobuf/repeated_field.h b/src/google/protobuf/repeated_field.h
+index b47ea99484..fbfbf94282 100644
+--- a/src/google/protobuf/repeated_field.h
++++ b/src/google/protobuf/repeated_field.h
+@@ -705,13 +705,13 @@ void GenericTypeHandler<string>::Merge(const string& from,
+ // Declarations of the specialization as we cannot define them here, as the
+ // header that defines ProtocolMessage depends on types defined in this header.
+ #define DECLARE_SPECIALIZATIONS_FOR_BASE_PROTO_TYPES(TypeName)                 \
+-    template<>                                                                 \
++    template<> LIBPROTOBUF_EXPORT                                              \
+     TypeName* GenericTypeHandler<TypeName>::NewFromPrototype(                  \
+         const TypeName* prototype, google::protobuf::Arena* arena);                      \
+-    template<>                                                                 \
++    template<> LIBPROTOBUF_EXPORT                                              \
+     google::protobuf::Arena* GenericTypeHandler<TypeName>::GetArena(                     \
+         TypeName* value);                                                      \
+-    template<>                                                                 \
++    template<> LIBPROTOBUF_EXPORT                                              \
+     void* GenericTypeHandler<TypeName>::GetMaybeArenaPointer(                  \
+         TypeName* value);
+ 
