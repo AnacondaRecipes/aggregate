@@ -84,6 +84,8 @@ cxx_compiler_version:      # [linux]
   - 7.3.0                  # [linux]
 fortran_compiler_version:  # [linux]
   - 7.3.0
+cyrus_sasl:
+  - 2.1.26
 dbus:
   - 1
 expat:

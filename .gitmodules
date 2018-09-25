@@ -3254,3 +3254,11 @@
 	path = jags-feedstock
 	url = ../jags-feedstock
 	branch = master
+[submodule "libdb-feedstock"]
+	path = libdb-feedstock
+	url = ../libdb-feedstock
+	branch = master
+[submodule "orc-feedstock"]
+	path = orc-feedstock
+	url = ../orc-feedstock
+	branch = master
