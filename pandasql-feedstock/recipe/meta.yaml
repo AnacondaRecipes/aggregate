@@ -1,0 +1,47 @@
+{% set name = "pandasql" %}
+{% set version = "0.7.3" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 1eb248869086435a7d85281ebd9fe525d69d9d954a0dceb854f71a8d0fd8de69
+
+build:
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - numpy
+    - pandas
+    - sqlalchemy
+
+test:
+  requires:
+    - pytest
+  imports:
+    - pandasql
+
+about:
+  home: https://github.com/yhat/pandasql
+  license: BSD
+  license_file: LICENSE.txt
+  summary: Sqldf for pandas
+  description: |
+    pandasql allows you to query pandas DataFrames using SQL syntax. It works
+    similarly to sqldf in R. pandasql seeks to provide a more familiar way
+    of manipulating and cleaning data for people new to Python or pandas.
+  doc_url: https://pypi.python.org/pypi/pandasql
+  doc_source_url: https://github.com/yhat/pandasql/blob/master/README.rst
+  dev_url: https://github.com/yhat/pandasql
+
+extra:
+  recipe-maintainers:
+    - jjhelmus

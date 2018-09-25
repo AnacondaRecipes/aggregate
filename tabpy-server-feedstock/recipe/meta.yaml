@@ -1,0 +1,55 @@
+{% set name = "tabpy-server" %}
+{% set version = "0.2" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 684361f15128e05f0751e74f92bae0d8ed7d5e693301070b9e2b2fd9c13bf019
+
+build:
+  number: 1
+  script:
+    - "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+    - "touch ${SP_DIR}/tabpy_server/__init__.py"  # [not win]
+    - "touch %SP_DIR%\\tabpy_server\\__init__.py"   # [win]
+
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - cloudpickle
+    - decorator
+    - future
+    - futures   # [py2k]
+    - genson
+    - jsonschema
+    - numpy
+    - python-dateutil
+    - requests
+    - simplejson
+    - tabpy-client
+    - tornado
+    - tornado-json
+
+test:
+  imports:
+    - tabpy_server
+    - tabpy_server.common
+    - tabpy_server.management
+    - tabpy_server.psws
+
+about:
+  home: https://github.com/tableau/TabPy
+  license: MIT
+  license_family: MIT
+  summary: Web server Tableau uses to run Python scripts.
+
+extra:
+  recipe-maintainers:
+    - jjhelmus

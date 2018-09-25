@@ -1,0 +1,41 @@
+{% set name = "workerpool" %}
+{% set version = "0.9.4" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: ab455db0de007723cee44c86d37c2575747f158768289bf02e2791f3b1e006fd
+
+build:
+  number: 2
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - six
+
+test:
+  imports:
+    - workerpool
+
+about:
+  home: http://github.com/shazow/workerpool
+  license: MIT
+  summary: Module for distributing jobs to a pool of worker threads
+  description: |
+    workerpool module facilitates distributing simple operations into jobs
+    that are sent to worker threads, maintained by a pool object.
+  doc_url: https://pypi.python.org/pypi/workerpool
+  doc_source_url: https://github.com/shazow/workerpool/blob/master/README.md
+  dev_url: https://github.com/shazow/workerpool
+
+extra:
+  recipe-maintainers:
+    - jjhelmus

@@ -1,0 +1,42 @@
+{% set name = "tabpy-client" %}
+{% set version = "0.2" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 0834ebf53c0a90a67a2ef8d13c74ebace47c8ba8d49a593aa792cadc8bef35d3
+
+build:
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - cloudpickle
+    - decorator
+    - python-dateutil
+    - requests
+    - genson
+    - jsonschema
+    - future
+
+test:
+  imports:
+    - tabpy_client
+
+about:
+  home: https://github.com/tableau/TabPy
+  license: MIT
+  license_family: MIT
+  summary: Python client library to manage Tableau Python Server.
+
+extra:
+  recipe-maintainers:
+    - jjhelmus
