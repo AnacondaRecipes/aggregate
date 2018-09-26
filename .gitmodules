@@ -3246,3 +3246,11 @@
 	path = whoosh-feedstock
 	url = ../whoosh-feedstock
 	branch = master
+[submodule "rust-feedstock"]
+	path = rust-feedstock
+	url = ../rust-feedstock
+	branch = master
+[submodule "jags-feedstock"]
+	path = jags-feedstock
+	url = ../jags-feedstock
+	branch = master
