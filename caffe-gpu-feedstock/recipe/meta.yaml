@@ -10,9 +10,15 @@ source:
   sha1: 00a04c30a6dd6d2cdc91be72b3131a997c5d5202
 
 build:
-  number: 3
-  skip: True  # [not linux64]
+  number: 4
   detect_binary_files_with_prefix: False
+  # conda 4.4+ can use this
+  skip: True  # [blas_impl == 'openblas' and win]
+  requires_features:
+    blas: {{ blas_impl }}
+  # this is for conda 4.3 and below
+  features:
+    - nomkl    # [x86 and blas_impl != 'mkl']
 
 requirements:
   build:
@@ -31,17 +37,19 @@ requirements:
     - ipython
     - leveldb
     - libboost
-    - libprotobuf
+    # to avoid rebuilding every time libprotobuf breaks ABI
+    # use the static libprotobuf libraries
+    - libprotobuf-static
     - lmdb
+    - mkl-devel  {{ mkl }}  # [blas_impl == 'mkl']
+    - openblas-devel {{ openblas }}  # [blas_impl == 'openblas']
     - matplotlib
-    - mkl-devel {{ mkl }}
     - networkx
     - nose
-    - numpy
-    - opencv
+    - py-opencv
+    - libopencv
     - pandas
     - pillow
-    - protobuf
     - py-boost
     - python
     - python-dateutil
@@ -49,7 +57,6 @@ requirements:
     - python-leveldb
     - pyyaml
     - scikit-image
-    - scipy
     - six
     - snappy
   run:

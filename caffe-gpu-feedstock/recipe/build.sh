@@ -13,18 +13,17 @@ then
     export CXXFLAGS="${CXXFLAGS} -DBOOST_MATH_DISABLE_FLOAT128"
 fi
 
-if [[ ${NOMKL} == 1 ]]; then
+if [[ ${blas_impl} == openblas ]]; then
     BLAS=open
 else
     BLAS=mkl
 fi
 
-if [[ ${ARCH} == 'ppc64le' ]]; then
-    BLAS=open
-fi
-
 CUDA_ARCH_BIN="30 35 50 52 60 61"
 if [ ${cudatoolkit} == "9.0" ]; then
+    CUDA_ARCH_BIN="30 35 50 52 60 61 70"
+fi
+if [ ${cudatoolkit} == "9.2" ]; then
     CUDA_ARCH_BIN="30 35 50 52 60 61 70"
 fi
 
