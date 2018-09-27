@@ -1,7 +1,7 @@
 {% set version = "1.29.0" %}
 
 package:
-  name: conda-rust
+  name: rust_{{ target_platform }}
   version: {{ version }}
 
 build:
