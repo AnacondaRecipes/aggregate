@@ -3262,3 +3262,7 @@
 	path = orc-feedstock
 	url = ../orc-feedstock
 	branch = master
+[submodule "parquet-cpp-feedstock"]
+	path = parquet-cpp-feedstock
+	url = ../parquet-cpp-feedstock
+	branch = master
