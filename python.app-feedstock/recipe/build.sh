@@ -4,7 +4,7 @@
 # pythonw this should really be the compiled program Mac/Tools/pythonw.c
 # note that PYTHONEXECUTABLE is used to fix argv[0] (see Modules/main.c)
 
-APP_DIR=$PREFIX/pythonapp
+APP_DIR=$PREFIX/python.app
 mkdir $APP_DIR
 cp -r $RECIPE_DIR/Contents $APP_DIR
 MACOS_DIR=$APP_DIR/Contents/MacOS
@@ -24,9 +24,3 @@ chmod +x $PYAPP
 BIN=$PREFIX/bin
 cd $BIN
 cp python.app pythonw
-
-POST_LINK=$BIN/.python.app-post-link.sh
-PRE_UNLINK=$BIN/.python.app-pre-unlink.sh
-cp $RECIPE_DIR/post-link.sh $POST_LINK
-cp $RECIPE_DIR/pre-unlink.sh $PRE_UNLINK
-chmod +x $POST_LINK $PRE_UNLINK
