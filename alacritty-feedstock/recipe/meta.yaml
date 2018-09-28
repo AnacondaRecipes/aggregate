@@ -11,10 +11,16 @@ build:
   script:
     - cargo build --release -v
     - $STRIP target/release/alacritty
-    - cp target/release/alacritty $CONDA_PREFIX/bin
+    - cp target/release/alacritty $PREFIX/bin
   missing_dso_whitelist:
     - /usr/lib/libresolv.9.dylib
 
 requirements:
   build:
     - {{ compiler('rust') }}
+    - cmake
+    - pkg-config
+
+  host:
+    - freetype
+    - expat
