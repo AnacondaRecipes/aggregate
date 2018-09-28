@@ -1,5 +1,5 @@
-{% set version = "4.6.1" %}
-{% set ver_maj_min = "4.6" %}
+{% set version = "4.7.1" %}
+{% set ver_maj_min = "4.7" %}
 
 package:
   name: qtcreator
@@ -9,8 +9,10 @@ source:
   git_url: https://code.qt.io/qt-creator/qt-creator.git
   git_tag: v{{ version }}
   patches:
-    - 4.6/0001-macOS-Disable-app-bundle-and-do-not-put-qtcreatorlib.patch
-    - 4.6/0002-Use-systemEnvironment-for-Start-and-Debug-External-A.patch
+    - 4.7/0001-macOS-Disable-app-bundle-and-do-not-put-qtcreatorlib.patch
+    - 4.7/0002-Use-systemEnvironment-for-Start-and-Debug-External-A.patch
+    # - 4.6/0001-macOS-Disable-app-bundle-and-do-not-put-qtcreatorlib.patch
+    # - 4.6/0002-Use-systemEnvironment-for-Start-and-Debug-External-A.patch
     # - 4.5/0001-macOS-Disable-app-bundle-and-do-not-put-qtcreatorlib.patch
     # - 4.2/0001-macOS-Disable-app-bundle.patch
     # - 4.2/0002-Use-systemEnvironment-for-Start-and-Debug-External-A.patch
@@ -18,7 +20,7 @@ source:
     # - 4.0/0002-Use-systemEnvironment-For-Start-and-Debug-External-Application.patch
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -55,7 +57,7 @@ requirements:
     - llvmdev
     - clangdev 5.0.*
     - libxcb                             # [linux]
-    - qbs >=1.11.0
+    - qbs >=1.12.1
     - zlib                               # [unix]
   run:
     - vs2015_runtime                     # [win]
@@ -64,7 +66,7 @@ requirements:
     - cmake >=3.9.4
     - fonts-anaconda                     # [linux]
     - the_silver_searcher >=2.1.0
-    - qbs >=1.11.0
+    - qbs >=1.12.1
 
   # These are only necessary for the qtcreator executable itself.
   # It would be better if were possible to filter the application

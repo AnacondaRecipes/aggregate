@@ -63,9 +63,7 @@ if [[ ${HOST} =~ .*darwin.* ]]; then
     -e "s|@SHORT_VERSION@|${PKG_VERSION}|g"                                      \
     -e "s|@EXECUTABLE@|qtcreator|g"                                              \
     -e "s|<string>Qt Creator</string>|<string>qtcreator</string>|g"              \
-    > "${PREFIX}"/qtcreatorapp/Contents/Info.plist
-  cp "${RECIPE_DIR}"/osx-post.sh "${PREFIX}"/bin/.qtcreator-post-link.sh
-  cp "${RECIPE_DIR}"/osx-pre.sh "${PREFIX}"/bin/.qtcreator-pre-unlink.sh
+    > "${PREFIX}"/qtcreator.app/Contents/Info.plist
 elif [[ ${HOST} =~ .*linux.* ]]; then
   echo "It would be nice to add a .desktop file here, but it would"
   echo "be even nicer if menuinst handled both that and App bundles."
