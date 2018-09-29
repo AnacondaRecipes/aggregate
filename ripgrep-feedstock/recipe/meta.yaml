@@ -11,7 +11,8 @@ build:
   script:
     - cargo build --release -v
     - $STRIP target/release/rg
-    - cp target/release/rg $CONDA_PREFIX/bin
+    - '[[ -d $PREFIX/bin ]] || mkdir $PREFIX/bin'
+    - cp target/release/rg $PREFIX/bin/
   missing_dso_whitelist:
     - /usr/lib/libresolv.9.dylib
 
