@@ -18,9 +18,9 @@ build:
 requirements:
   build:
     - {{ compiler('rust') }}
-    - cmake
-    - pkg-config
+    - cmake       # [linux]
+    - pkg-config  # [linux]
 
   host:
-    - freetype
-    - expat
+    - freetype    # [linux]
+    - expat       # [linux]
