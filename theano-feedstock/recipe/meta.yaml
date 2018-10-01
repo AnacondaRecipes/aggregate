@@ -1,10 +1,10 @@
 package:
   name: theano
-  version: 1.0.2
+  version: 1.0.3
 
 source:
   git_url: https://github.com/Theano/Theano.git
-  git_tag: rel-1.0.2
+  git_tag: rel-1.0.3
   patches:
     - 0001-Add-support-for-custom-compiler.patch
     - 0002-Extend-default-flags-for-win-32.patch
