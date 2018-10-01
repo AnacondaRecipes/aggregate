@@ -1,0 +1,25 @@
+{% set version = '0.3.6' %}
+
+package:
+  name: pyo3-pack
+  version: {{ version }}
+
+source:
+  fn: pyo3-pack-v{{ version }}.tar.gz
+  url: https://github.com/PyO3/pyo3-pack/archive/v{{ version }}.tar.gz
+
+build:
+  script:
+    - rm -rf $BUILD_PREFIX/lib/*ssl*.so*
+    - rm -rf $BUILD_PREFIX/lib/*crypto*.so*
+    - OPENSSL_DIR=$BUILD_PREFIX cargo build --release -v
+    - $STRIP target/release/pyo3-pack
+    - '[[ -d $PREFIX/bin ]] || mkdir $PREFIX/bin'
+    - cp target/release/pyo3-pack $PREFIX/bin/
+  missing_dso_whitelist:
+    - /usr/lib/libresolv.9.dylib
+
+requirements:
+  build:
+    - {{ compiler('rust') }}
+    - openssl  # [linux]
