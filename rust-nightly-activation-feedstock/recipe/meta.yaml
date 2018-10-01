@@ -1,0 +1,36 @@
+{% set date = "2018-09-30" %}
+{% set version = "1.30.0_" ~ date.replace('-', '_') %}
+
+package:
+  name: rust-nightly_{{ target_platform }}
+  version: {{ version }}
+
+build:
+  number: 0
+
+requirements:
+  run:
+    - rust-nightly {{ version }}
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+
+test:
+  commands:
+    - rustc --help
+    - cargo --help
+
+about:
+  home: https://www.rust-lang.org
+  summary: A safe systems programming language
+  license: MIT
+  license_family: MIT
+  description: |
+    Rust is a systems programming language that runs blazingly fast,
+    prevents segfaults, and guarantees thread safety.
+  doc_url: https://doc.rust-lang.org/
+  doc_source_url: https://github.com/rust-lang/rust/tree/master/src/doc
+  dev_url: https://github.com/rust-lang
+
+extra:
+  recipe-maintainers:
+    - mingwandroid

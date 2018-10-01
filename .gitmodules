@@ -3266,3 +3266,7 @@
 	path = parquet-cpp-feedstock
 	url = ../parquet-cpp-feedstock
 	branch = master
+[submodule "rust-nightly-feedstock"]
+	path = rust-nightly-feedstock
+	url = ../rust-feedstock
+	branch = nightly
