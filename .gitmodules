@@ -3274,3 +3274,7 @@
 	path = setuptools-rust-feedstock
 	url = ../setuptools-rust-feedstock
 	branch = master
+[submodule "toml-feedstock"]
+	path = toml-feedstock
+	url = ../toml-feedstock
+	branch = master
