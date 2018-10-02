@@ -1,14 +1,16 @@
+{% set version = "0.7.0" %}
+
 package:
   name: winkerberos
-  version: "0.7.0"
+  version: {{ version }}
 
 source:
-  fn: winkerberos-0.6.0.zip
-  url: https://pypi.org/packages/source/w/winkerberos/winkerberos-0.6.0.zip
-  sha256: a8f81b895092f3e860cb8b8067ab357cf07bb026cb58fad2b32c159ad34dd5f1
+  fn: winkerberos-{{ version }}.zip
+  url: https://pypi.org/packages/source/w/winkerberos/winkerberos-{{ version }}.zip
+  sha256: e304c28de838a48206edfe58b8deb5209a3fd8c6a755bd521c1ee6e656b06e27
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --old-and-unmanageable
   skip: True  # [not win]
 
