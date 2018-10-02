@@ -3270,3 +3270,7 @@
 	path = rust-nightly-feedstock
 	url = ../rust-feedstock
 	branch = nightly
+[submodule "setuptools-rust-feedstock"]
+	path = setuptools-rust-feedstock
+	url = ../setuptools-rust-feedstock
+	branch = master
