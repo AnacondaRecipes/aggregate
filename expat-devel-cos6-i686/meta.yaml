@@ -1,0 +1,31 @@
+package:
+  name: expat-devel-cos6-i686
+  version: 2.0.1
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/expat-devel-2.0.1-13.el6_8.i686.rpm
+    sha256: 0134a37522bc833ca427003ae54bd250ff2cdc017e2e8e5e5e263943b27ede53
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/expat-2.0.1-13.el6_8.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - expat-cos6-i686 ==2.0.1
+
+
+outputs:
+  - name: expat-devel-cos6-i686
+    noarch: generic
+    requirements:
+      run:
+        - expat-cos6-i686 ==2.0.1
+
+    about:
+      home: http://www.libexpat.org/
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Libraries and header files to develop applications using expat"
+      description: |
+        The expat-devel package contains the libraries, include files and
+        documentation to develop XML applications with expat.

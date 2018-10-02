@@ -1,0 +1,28 @@
+package:
+  name: expat-cos7-ppc64le
+  version: 2.1.0
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/expat-2.1.0-10.el7_3.ppc64le.rpm
+    sha256: ff24e1c845572b65d2cb66cf630a6023949a43bf51a3634940757b5c8c5ba8cf
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/expat-2.1.0-10.el7_3.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: expat-cos7-ppc64le
+    noarch: generic
+
+    about:
+      home: http://www.libexpat.org/
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) An XML parser library"
+      description: |
+        This is expat, the C library for parsing XML, written by James Clark. Expat is
+        a stream oriented XML parser. This means that you register handlers with the
+        parser prior to starting the parse. These handlers are called when the parser
+        discovers the associated structures in the document being parsed. A start tag
+        is an example of the kind of structures for which you may register handlers.

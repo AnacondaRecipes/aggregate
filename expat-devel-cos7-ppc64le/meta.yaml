@@ -1,0 +1,31 @@
+package:
+  name: expat-devel-cos7-ppc64le
+  version: 2.1.0
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/expat-devel-2.1.0-10.el7_3.ppc64le.rpm
+    sha256: f0c68d63549ee8ed3297e26a7905090cc10cd761a517282a19c2b410347584ba
+    folder: binary
+  - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/expat-2.1.0-10.el7_3.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - expat-cos7-ppc64le ==2.1.0
+
+
+outputs:
+  - name: expat-devel-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - expat-cos7-ppc64le ==2.1.0
+
+    about:
+      home: http://www.libexpat.org/
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Libraries and header files to develop applications using expat"
+      description: |
+        The expat-devel package contains the libraries, include files and
+        documentation to develop XML applications with expat.
