@@ -1,0 +1,17 @@
+{% set version = '0.4-1' %}
+
+package:
+  name: binsort
+  version: {{ version|replace("-", "_") }}
+
+source:
+  url: http://neoscientists.org/~tmueller/binsort/download/binsort-{{ version }}.tar.gz
+
+build:
+  script:
+    make
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - make

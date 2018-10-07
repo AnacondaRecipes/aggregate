@@ -3,11 +3,16 @@ package:
   version: 0.1.12
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libthai-0.1.12-3.el6.x86_64.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libthai-0.1.12-3.el6.x86_64.rpm
     sha256: 3217a2b6885dd35ff4213498dd054cd1e4322f44832a9deab85f26ec10f493c5
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libthai-0.1.12-3.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libthai-0.1.12-3.el6.src.rpm
+    sha256: 82d495eca1aa80b74f65808cfdebcc6836ac99c774826cf97c033a2a62b92fd2
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

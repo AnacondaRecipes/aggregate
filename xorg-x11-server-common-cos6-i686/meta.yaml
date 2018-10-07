@@ -3,11 +3,16 @@ package:
   version: 1.17.4
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/xorg-x11-server-common-1.17.4-16.el6.centos.i686.rpm
-    sha256: 40bc37787ab4f19ea3d8c9849a9fb06cb8af5da731266f6d580d5b375dff7d7d
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/xorg-x11-server-common-1.17.4-17.el6.centos.i686.rpm
+    sha256: 3526c42bd14800ee264896d6f55d384411958b99d35e424d3d2b18f97de4c6af
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/xorg-x11-server-1.17.4-16.el6.centos.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/xorg-x11-server-1.17.4-17.el6.centos.src.rpm
+    sha256: 5d40f6de36c37d9a5adb876f84a2559a1d189ff860a2cc8c658d7cc2dfe8749d
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:

@@ -3,11 +3,16 @@ package:
   version: 4.4.7
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libgcj-4.4.7-18.el6.x86_64.rpm
-    sha256: a44b24b9522408021a3d84f5cce6ac2fe25b684aaf6cd5bebed72ed6287c94a2
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libgcj-4.4.7-23.el6.x86_64.rpm
+    sha256: b6dbd68c71cc8b626064bb1c7384cf43c8bbded577594a9ccc22237b74d17574
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/gcc-4.4.7-18.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/gcc-4.4.7-23.el6.src.rpm
+    sha256: 7492c85cc0f146f6d81653f51a9fda02cf164747cbfa7527166205108d6a6ae0
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:

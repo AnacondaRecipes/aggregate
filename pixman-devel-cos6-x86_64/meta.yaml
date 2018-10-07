@@ -3,11 +3,16 @@ package:
   version: 0.32.8
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/pixman-devel-0.32.8-1.el6.x86_64.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/pixman-devel-0.32.8-1.el6.x86_64.rpm
     sha256: e2b0d664ebc9b1d37f9260e0eb2b8adf336f1347898412a41bd74a9bc022cbe8
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/pixman-0.32.8-1.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/pixman-0.32.8-1.el6.src.rpm
+    sha256: d129fb1fd8a2bfe7d7337daf46b76a48b1c68ee97e362e1224839c871e70f66f
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:

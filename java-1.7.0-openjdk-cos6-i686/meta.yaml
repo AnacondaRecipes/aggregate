@@ -1,19 +1,25 @@
 package:
   name: java-1.7.0-openjdk-cos6-i686
-  version: 1.7.0.131
+  version: 1.7.0.181
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/java-1.7.0-openjdk-1.7.0.131-2.6.9.0.el6_8.i686.rpm
-    sha256: 5e812e4583b71107b72779cfc77f78c7fdc1a147a56126136f87d14cc3b4efb8
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/java-1.7.0-openjdk-1.7.0.181-2.6.14.10.el6.i686.rpm
+    sha256: 3dc4ca773283f3fd4c9798430ecbe3116daef191d66fb433dc78b16968ae6c77
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/java-1.7.0-openjdk-1.7.0.131-2.6.9.0.el6_8.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/java-1.7.0-openjdk-1.7.0.181-2.6.14.10.el6.src.rpm
+    sha256: e14fb1caaed3dccb602faf71369db344de4e5bca4417057650c163cd544ec1be
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
+    - copy-jdk-configs-cos6-i686 >=3.3
     - jpackage-utils-cos6-i686 >=1.7.3
     - libjpeg-turbo-cos6-i686 ==1.2.1
-    - ca-certificates-cos6-i686 ==2016.2.10
+    - ca-certificates-cos6-i686 ==2018.2.22
     - gconf2-cos6-i686 ==2.28.0
 
 
@@ -22,14 +28,15 @@ outputs:
     noarch: generic
     requirements:
       run:
+        - copy-jdk-configs-cos6-i686 >=3.3
         - jpackage-utils-cos6-i686 >=1.7.3
         - libjpeg-turbo-cos6-i686 ==1.2.1
-        - ca-certificates-cos6-i686 ==2016.2.10
+        - ca-certificates-cos6-i686 ==2018.2.22
         - gconf2-cos6-i686 ==2.28.0
 
     about:
       home: http://openjdk.java.net/
-      license: ASL 1.1 and ASL 2.0 and GPL+ and GPLv2 and GPLv2 with exceptions and LGPL+ and LGPLv2 and MPLv1.0 and MPLv1.1 and Public Domain and W3C
+      license: ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv1.1 and MPLv2.0 and Public Domain and W3C and zlib
       license_family: GPL2
       summary: "(CDT) OpenJDK Runtime Environment"
       description: |

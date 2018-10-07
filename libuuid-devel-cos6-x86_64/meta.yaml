@@ -3,10 +3,11 @@ package:
   version: 2.17.2
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libuuid-devel-2.17.2-12.28.el6.x86_64.rpm
-    sha256: 0f34c48a686f7cf4a09406cb7d6080530d8209ddca53cab7d3e2143b7957a1ed
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libuuid-devel-2.17.2-12.28.el6_9.2.x86_64.rpm
+    sha256: 551cb94ec7403c90a0f6f6adf73674d08d122b3beb2c74c857b546c5efd86db0
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/util-linux-ng-2.17.2-12.28.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/util-linux-ng-2.17.2-12.28.el6_9.2.src.rpm
+    sha256: e1814d68c3770b5766141fb6cc5c53b53d8d4f929bee57d96e6bd61b0edc72ee
     folder: source
 
 build:

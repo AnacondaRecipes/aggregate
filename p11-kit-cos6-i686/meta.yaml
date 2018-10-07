@@ -3,11 +3,16 @@ package:
   version: 0.18.5
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/p11-kit-0.18.5-2.el6_5.2.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/p11-kit-0.18.5-2.el6_5.2.i686.rpm
     sha256: 8a59b170119544ddc81c548e78b56fb77d610eb2156a72954fa356b027fd8ecf
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/p11-kit-0.18.5-2.el6_5.2.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/p11-kit-0.18.5-2.el6_5.2.src.rpm
+    sha256: 9c7066369fc43b94e1ca95a1cef3f603476e98e56296a1c7c08cb71f46203532
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

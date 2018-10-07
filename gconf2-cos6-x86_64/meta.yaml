@@ -3,11 +3,16 @@ package:
   version: 2.28.0
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/GConf2-2.28.0-7.el6.x86_64.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/GConf2-2.28.0-7.el6.x86_64.rpm
     sha256: 11e90578ddc04eea96ec8a6d465e5893cfa44e32e47b684119a3be8c94a3018b
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/GConf2-2.28.0-7.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/GConf2-2.28.0-7.el6.src.rpm
+    sha256: 05a3bbc6e6d84c0e7c7f6dee57a95c7013fb4d38a2b354ab7a2469819d468686
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:

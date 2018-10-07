@@ -3,11 +3,16 @@ package:
   version: 0.23
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/pkgconfig-0.23-9.1.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/pkgconfig-0.23-9.1.el6.i686.rpm
     sha256: 1428c92c2143cc2980352e543387f2ee0ba4fcbb2d17b848199effea27915265
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/pkgconfig-0.23-9.1.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/pkgconfig-0.23-9.1.el6.src.rpm
+    sha256: c845341c0747fe2ddac8dd143236f1e9eaf6ce3f3436d2fdb052f689e6b49576
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

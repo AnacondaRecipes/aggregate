@@ -3,11 +3,16 @@ package:
   version: 2.3.11
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/freetype-devel-2.3.11-17.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/freetype-devel-2.3.11-17.el6.i686.rpm
     sha256: b4a5da2feb2634ca375c9bb628d9e6317814a090f1c932cc10f164d2655be63d
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/freetype-2.3.11-17.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/freetype-2.3.11-17.el6.src.rpm
+    sha256: 3833a6605f7a53e7a4740831870285cd9bc5bf1330f54d063d4230cf145e780e
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:

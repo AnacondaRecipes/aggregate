@@ -7,7 +7,12 @@ source:
     sha256: 0134a37522bc833ca427003ae54bd250ff2cdc017e2e8e5e5e263943b27ede53
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/expat-2.0.1-13.el6_8.src.rpm
+    sha256: 1c09bb9d3eb76d17de44a027bb97381053fb94000567865ecc4569429afb4c57
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:

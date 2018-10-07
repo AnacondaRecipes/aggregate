@@ -3,11 +3,16 @@ package:
   version: 1.7.5
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/jpackage-utils-1.7.5-3.16.el6.noarch.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/jpackage-utils-1.7.5-3.16.el6.noarch.rpm
     sha256: 6e11b3db12e4fcbf850b6d67d0a3f8328b7e9968085275b0a5f43ff8715e87e3
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/jpackage-utils-1.7.5-3.16.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/jpackage-utils-1.7.5-3.16.el6.src.rpm
+    sha256: cde9c2f76a0d4bce81977086b5c8c4e798f927712cc5fd7b58d1705eb8614737
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

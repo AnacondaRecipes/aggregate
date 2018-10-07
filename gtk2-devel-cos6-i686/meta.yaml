@@ -3,11 +3,16 @@ package:
   version: 2.24.23
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/gtk2-devel-2.24.23-9.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/gtk2-devel-2.24.23-9.el6.i686.rpm
     sha256: 354fe896a22dc8828244ab3c6f56425836909ce333899c9359cb14e1f5728b29
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/gtk2-2.24.23-9.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/gtk2-2.24.23-9.el6.src.rpm
+    sha256: 15a79591fb1d0c440fa8df41fd7e9e64940b8563e290650698e6dcd8a79bf3cf
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:

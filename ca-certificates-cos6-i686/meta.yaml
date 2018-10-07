@@ -1,13 +1,18 @@
 package:
   name: ca-certificates-cos6-i686
-  version: 2016.2.10
+  version: 2018.2.22
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/ca-certificates-2016.2.10-65.4.el6.noarch.rpm
-    sha256: 617d0a9720633c965135c7bdd0a5bd1254c99765ca0c9d22a42770c13ed14bcb
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/ca-certificates-2018.2.22-65.1.el6.noarch.rpm
+    sha256: ce273390bdd5b7d7e0f561979fac693832b043f92cc0e60d777b00ae21ca87e2
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/ca-certificates-2016.2.10-65.4.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/ca-certificates-2018.2.22-65.1.el6.src.rpm
+    sha256: 21822028b55af01efd075c949e6e07e180743077029334b44e0c9ec1cf57f4af
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:

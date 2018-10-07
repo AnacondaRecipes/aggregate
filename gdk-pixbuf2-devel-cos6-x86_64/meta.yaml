@@ -3,11 +3,16 @@ package:
   version: 2.24.1
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/gdk-pixbuf2-devel-2.24.1-6.el6_7.x86_64.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/gdk-pixbuf2-devel-2.24.1-6.el6_7.x86_64.rpm
     sha256: f6dcd9fee4829caf414074fd45e577a9f4334747b6b429462ab4d64e7ab51b5c
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/gdk-pixbuf2-2.24.1-6.el6_7.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/gdk-pixbuf2-2.24.1-6.el6_7.src.rpm
+    sha256: 56cb617816f942b83c1693e0dce4572fb432b9f8d1433fda187e39e7b764bce9
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:

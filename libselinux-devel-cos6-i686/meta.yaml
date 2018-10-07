@@ -3,11 +3,16 @@ package:
   version: 2.0.94
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libselinux-devel-2.0.94-7.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libselinux-devel-2.0.94-7.el6.i686.rpm
     sha256: acbe59a30cb43dbc01deabc3a11815f3b5652802758826e87d89eb638097ea1d
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libselinux-2.0.94-7.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libselinux-2.0.94-7.el6.src.rpm
+    sha256: b1ce631cfc5f1bdd032b29349b47ba52ede7b07294041e3c2d12d380095a073a
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:

@@ -3,15 +3,18 @@ package:
   version: 1.0.6
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libXau-1.0.6-4.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libXau-1.0.6-4.el6.i686.rpm
     sha256: 0d979b1519ea4bef76efb5dd21e53cf9f12ab910eff0f67462e1d905b1e6109b
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXau-1.0.6-4.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libXau-1.0.6-4.el6.src.rpm
+    sha256: 67a39ebc411b3b603be404fe6672a812a0f611e4a1305b1d9112804ab37b886c
     folder: source
 
 build:
   missing_dso_whitelist:
     - '*'
+
+
 
 outputs:
   - name: libxau-cos6-i686

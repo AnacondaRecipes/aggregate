@@ -3,11 +3,16 @@ package:
   version: 2.4.65
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libdrm-2.4.65-2.el6.x86_64.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libdrm-2.4.65-2.el6.x86_64.rpm
     sha256: b7a8d49c31f1cdb9f2a5a3e2b89416b0411c75332ce49422961435e205db8291
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libdrm-2.4.65-2.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libdrm-2.4.65-2.el6.src.rpm
+    sha256: 6ddaefc6000fb04ee906d157053509b15a7783251e2be8532bbd7b389c4de793
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

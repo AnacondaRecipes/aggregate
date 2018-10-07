@@ -3,15 +3,16 @@ package:
   version: 5.0.3
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libXfixes-5.0.3-1.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libXfixes-5.0.3-1.el6.i686.rpm
     sha256: 5da33bafc8cad666725f82b7262a140d90f74e4666ca412599b5005a78935f8a
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXfixes-5.0.3-1.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libXfixes-5.0.3-1.el6.src.rpm
+    sha256: 2bcfa8211f19db876457f2a7cce7dd50d702d274229e400bceada5c414558219
     folder: source
 
 build:
   missing_dso_whitelist:
-    - /lib64/libc.so.6
+    - '*'
 
 requirements:
   build:

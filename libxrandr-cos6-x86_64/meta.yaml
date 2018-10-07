@@ -3,11 +3,16 @@ package:
   version: 1.5.1
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libXrandr-1.5.1-1.el6.x86_64.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libXrandr-1.5.1-1.el6.x86_64.rpm
     sha256: bea36342e705588ae2274cb88c7268d6855859d4208050afb877ab7e55c5a9f2
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXrandr-1.5.1-1.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libXrandr-1.5.1-1.el6.src.rpm
+    sha256: 732991b6f23eb6da8fb9a4bf4c79f6d176075d641933095d78aafcfc21117e22
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:

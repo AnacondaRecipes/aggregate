@@ -3,11 +3,16 @@ package:
   version: 1.1.0
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/alsa-lib-1.1.0-4.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/alsa-lib-1.1.0-4.el6.i686.rpm
     sha256: 3f18536968313c6fe6d4be3b7d89c38d125ade6478b2cf16390dc201cad6fe1d
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/alsa-lib-1.1.0-4.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/alsa-lib-1.1.0-4.el6.src.rpm
+    sha256: c9da74019a70c7d5dc9841702220d8a8aec7426f95276c28edd489a8ab6124f5
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

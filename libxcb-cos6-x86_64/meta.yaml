@@ -3,11 +3,16 @@ package:
   version: 1.12
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libxcb-1.12-4.el6.x86_64.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libxcb-1.12-4.el6.x86_64.rpm
     sha256: 43cef893717cea498ba6cba03a4960f9a02acb92570c67feede28a6addbbc8de
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libxcb-1.12-4.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libxcb-1.12-4.el6.src.rpm
+    sha256: e80dc4c4fe3748a90d7cc172702c969b63d2ec73f6302b2f8bcd6b5ad8ea923e
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

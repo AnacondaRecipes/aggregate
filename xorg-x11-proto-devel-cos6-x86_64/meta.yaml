@@ -3,11 +3,16 @@ package:
   version: 7.7
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/xorg-x11-proto-devel-7.7-14.el6.noarch.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/xorg-x11-proto-devel-7.7-14.el6.noarch.rpm
     sha256: 34147662e82b9729652f013cb3578b02ca72786263bc7ab167d713da7ed28790
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/xorg-x11-proto-devel-7.7-14.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/xorg-x11-proto-devel-7.7-14.el6.src.rpm
+    sha256: 32835f6989bbb529404676f61d09dc9fcffa069cb215144c13ceed98029ea107
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

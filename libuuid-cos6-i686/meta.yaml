@@ -3,11 +3,16 @@ package:
   version: 2.17.2
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libuuid-2.17.2-12.28.el6.i686.rpm
-    sha256: 0e9deedd3047dc88dbfe8954f4ab22accc63866d4410b53d5a5308c99d43541e
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libuuid-2.17.2-12.28.el6_9.2.i686.rpm
+    sha256: 437e0faf436d7831351fc225dfde87744ecea4f70d893e3de5c18c85724e00b0
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/util-linux-ng-2.17.2-12.28.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/util-linux-ng-2.17.2-12.28.el6_9.2.src.rpm
+    sha256: e1814d68c3770b5766141fb6cc5c53b53d8d4f929bee57d96e6bd61b0edc72ee
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

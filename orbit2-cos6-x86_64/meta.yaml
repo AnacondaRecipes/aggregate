@@ -3,11 +3,16 @@ package:
   version: 2.14.17
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/ORBit2-2.14.17-6.el6_8.x86_64.rpm
-    sha256: 08c017cdfa0eb0ffbe99b64b73c02949b7e4e4e208469fb42b06cde0af461484
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/ORBit2-2.14.17-7.el6.x86_64.rpm
+    sha256: 292e8159497d55ae398fa2659bbea11d5ece3d135856654a75a3aaeae8ad00b6
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/ORBit2-2.14.17-6.el6_8.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/ORBit2-2.14.17-7.el6.src.rpm
+    sha256: f5436b7f5401d6bca583d2156c7c89be5b719d8f3d81c0092f21f6d662868e9d
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

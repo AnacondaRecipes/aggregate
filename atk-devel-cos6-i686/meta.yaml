@@ -3,11 +3,16 @@ package:
   version: 1.30.0
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/atk-devel-1.30.0-1.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/atk-devel-1.30.0-1.el6.i686.rpm
     sha256: 9094153a885090942989fb8977939869bf102c17a81c2c4e693f7ba9765270b0
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/atk-1.30.0-1.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/atk-1.30.0-1.el6.src.rpm
+    sha256: fc87523ecb6cb944f9452a9da4385c73346acc3714ea494d3110245c4fbce12a
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:

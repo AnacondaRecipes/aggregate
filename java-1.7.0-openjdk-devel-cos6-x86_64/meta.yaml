@@ -1,17 +1,22 @@
 package:
   name: java-1.7.0-openjdk-devel-cos6-x86_64
-  version: 1.7.0.131
+  version: 1.7.0.181
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/java-1.7.0-openjdk-devel-1.7.0.131-2.6.9.0.el6_8.x86_64.rpm
-    sha256: 7872f4fef9d877d2e9de8d9e1c11cd64e6afaf3620266997706fcdad9d9b196d
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/java-1.7.0-openjdk-devel-1.7.0.181-2.6.14.10.el6.x86_64.rpm
+    sha256: e15d8d284390950e2248922e7763bd14199dd48d95d5aee6485b96f02ee6ce0f
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/java-1.7.0-openjdk-1.7.0.131-2.6.9.0.el6_8.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/java-1.7.0-openjdk-1.7.0.181-2.6.14.10.el6.src.rpm
+    sha256: e14fb1caaed3dccb602faf71369db344de4e5bca4417057650c163cd544ec1be
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
-    - java-1.7.0-openjdk-cos6-x86_64 ==1.7.0.131
+    - java-1.7.0-openjdk-cos6-x86_64 ==1.7.0.181
 
 
 outputs:
@@ -19,11 +24,11 @@ outputs:
     noarch: generic
     requirements:
       run:
-        - java-1.7.0-openjdk-cos6-x86_64 ==1.7.0.131
+        - java-1.7.0-openjdk-cos6-x86_64 ==1.7.0.181
 
     about:
       home: http://openjdk.java.net/
-      license: ASL 1.1 and ASL 2.0 and GPL+ and GPLv2 and GPLv2 with exceptions and LGPL+ and LGPLv2 and MPLv1.0 and MPLv1.1 and Public Domain and W3C
+      license: ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv1.1 and MPLv2.0 and Public Domain and W3C and zlib
       license_family: GPL2
       summary: "(CDT) OpenJDK Development Environment"
       description: |

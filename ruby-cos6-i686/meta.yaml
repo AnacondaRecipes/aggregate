@@ -3,11 +3,16 @@ package:
   version: 1.8.7.374
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/ruby-1.8.7.374-5.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/ruby-1.8.7.374-5.el6.i686.rpm
     sha256: 81ca470126fe6ccb92f3de8d095ab0bd7b35424c865ce8ef4cea2333fce3a5a8
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/ruby-1.8.7.374-5.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/ruby-1.8.7.374-5.el6.src.rpm
+    sha256: 0deb7f26eb923c2235c9dc44dd39ec2ce398c7b65a0fd7282594df23514abeb3
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:

@@ -3,10 +3,11 @@ package:
   version: 1.6.4
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libX11-1.6.4-3.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libX11-1.6.4-3.el6.i686.rpm
     sha256: 102dbbb0c303cf02f0cdb3ff20f361f6a4fe00cb22040285681059555292473c
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libX11-1.6.4-3.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libX11-1.6.4-3.el6.src.rpm
+    sha256: 791ee7e17e6dadf3f5c45edb41c6abcbc9bb0eb382092e2556334c9dd673ca91
     folder: source
 
 build:

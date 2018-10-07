@@ -3,11 +3,16 @@ package:
   version: 2.0.41
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libsepol-2.0.41-4.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libsepol-2.0.41-4.el6.i686.rpm
     sha256: 0f7b3c09a89b4f943faefc73bc5664f075146f6b96c8d1d38da06ed02cc2f21b
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libsepol-2.0.41-4.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libsepol-2.0.41-4.el6.src.rpm
+    sha256: ac1799bd0a70a93f771942ebb489eab4eb6a67422a624f925ba4080f98f73b13
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

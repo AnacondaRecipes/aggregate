@@ -3,11 +3,16 @@ package:
   version: 4.7.25
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/db4-4.7.25-22.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/db4-4.7.25-22.el6.i686.rpm
     sha256: f31ac30c01cea731c61bf0b96046118b6b255f1aa61b90b9c2f4b53245df7a61
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/db4-4.7.25-22.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/db4-4.7.25-22.el6.src.rpm
+    sha256: 32bc5fd819fedc7859c908a8602d246357bf7feff787b4a693a25c9301526f91
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

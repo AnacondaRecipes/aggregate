@@ -1,0 +1,15 @@
+--- work/Makefile.orig	2018-10-06 23:55:20.000000000 +0100
++++ work/Makefile	2018-10-06 23:55:51.000000000 +0100
+@@ -6,9 +6,9 @@
+ # POSIX:
+ # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+-CC = $(CROSS_COMPILE)gcc
+-PLATFORM_DEFS = -DXPT_PTHREADS
+-PLATFORM_LIBS = -lpthread -lm
++CC ?= $(CROSS_COMPILE)gcc
++PLATFORM_DEFS ?= -DXPT_PTHREADS
++PLATFORM_LIBS ?= -lpthread -lm
+ 
+ # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ # For Windows using MingW:

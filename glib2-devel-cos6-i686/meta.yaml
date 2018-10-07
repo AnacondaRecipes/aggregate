@@ -3,11 +3,16 @@ package:
   version: 2.28.8
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/glib2-devel-2.28.8-9.el6.i686.rpm
-    sha256: 0152bdaf5fb81320cd7dcb5244abf0fcdb9a2552a09962fbdfec70839c2954c3
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/glib2-devel-2.28.8-10.el6.i686.rpm
+    sha256: e109b4f18b0f8ebf3274a2ee75f0c34bf671a41a2d57f844dbe4bc82f4a4d94a
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/glib2-2.28.8-9.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/glib2-2.28.8-10.el6.src.rpm
+    sha256: 138f11f112f8e35840249c73d06e7dcd13c58ba671124a5130fd6559c7b3cf15
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:

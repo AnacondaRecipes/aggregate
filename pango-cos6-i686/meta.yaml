@@ -3,11 +3,16 @@ package:
   version: 1.28.1
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/pango-1.28.1-11.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/pango-1.28.1-11.el6.i686.rpm
     sha256: 1ae8ed9e7dfc0a5d162f1fb129bfdd2c7fb7d849ca0595da225a73796e770cb6
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/pango-1.28.1-11.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/pango-1.28.1-11.el6.src.rpm
+    sha256: b7769f4cfbec69171ef48b8e2bb686555a578515eec225ebebfae286a343e384
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:

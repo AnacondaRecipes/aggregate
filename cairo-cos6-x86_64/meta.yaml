@@ -3,11 +3,16 @@ package:
   version: 1.8.8
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/cairo-1.8.8-6.el6_6.x86_64.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/cairo-1.8.8-6.el6_6.x86_64.rpm
     sha256: dcdfc02d7980ed7c97f04223e98919281e1a5bd21eb31dc6e60e36102bbec4ab
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/cairo-1.8.8-6.el6_6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/cairo-1.8.8-6.el6_6.src.rpm
+    sha256: 16844fe17f9da7685100214742f27d7ff47932c78f03be2c0981cfb29ce0d00c
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 

@@ -3,11 +3,16 @@ package:
   version: 11.0.7
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/mesa-libGL-devel-11.0.7-4.el6.x86_64.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/mesa-libGL-devel-11.0.7-4.el6.x86_64.rpm
     sha256: 3d29cf8ed50b36a268294640c4afad9a7a005ccfbc9d2e9e8528d1160ce95e30
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/mesa-11.0.7-4.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/mesa-11.0.7-4.el6.src.rpm
+    sha256: 9db7bd5036fcc8fa25585cd5625e56d95118092b816ba09867073e310db44b5d
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:

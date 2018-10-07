@@ -3,11 +3,16 @@ package:
   version: 2.8.0
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/fontconfig-2.8.0-5.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/fontconfig-2.8.0-5.el6.i686.rpm
     sha256: 09cee79c086775d03e0219dc92d82f2803d6936bfe44f0c71f4ff7c33918d4f8
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/fontconfig-2.8.0-5.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/fontconfig-2.8.0-5.el6.src.rpm
+    sha256: 8a737297dbb39f12c67f88db1b21b37ef97bed2ca00fa0975b16e264d6953a33
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:

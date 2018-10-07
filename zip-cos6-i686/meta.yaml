@@ -3,11 +3,16 @@ package:
   version: 3.0
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/zip-3.0-1.el6_7.1.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/zip-3.0-1.el6_7.1.i686.rpm
     sha256: 1e1b5cdde408190c8ee330a4f257f4af0e949ab3ccd3353a3a03127450817862
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/zip-3.0-1.el6_7.1.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/zip-3.0-1.el6_7.1.src.rpm
+    sha256: 2ef66a54619a78ae9d91c49c1967bc8a94b3650e61813a18aa2177728633d5fa
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 
