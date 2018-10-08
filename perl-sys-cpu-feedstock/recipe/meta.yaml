@@ -19,6 +19,8 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+
+  host:
     - perl
     - perl-extutils-makemaker
 
@@ -35,7 +37,7 @@ test:
 
 about:
   home: http://metacpan.org/pod/Sys::CPU
-  license: unknown
+  license: other
   summary: "Perl extension for getting CPU information. Currently only number of CPU's supported."
 
 # See
