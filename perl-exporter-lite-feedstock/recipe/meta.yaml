@@ -1,0 +1,49 @@
+{% set name = "perl-exporter-lite" %}
+{% set version = "0.08" %}
+{% set sha256 = "c05b3909af4cb86f36495e94a599d23ebab42be7a18efd0d141fc1586309dac2" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: Exporter-Lite-0.08.tar.gz
+  url: https://cpan.metacpan.org/authors/id/N/NE/NEILB/Exporter-Lite-0.08.tar.gz
+  sha256: {{ sha256 }}
+
+# If this is a new build for the same version, increment the build
+# number. If you do not include this key, it defaults to 0.
+build:
+  number: 0
+
+requirements:
+  build:
+    - perl
+    - perl-carp
+    - perl-extutils-makemaker
+    #- perl-strict
+    #- perl-warnings
+    #- perl-test-more
+
+  run:
+    - perl
+    - perl-carp
+    #- perl-strict
+    #- perl-warnings
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Exporter::Lite
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+about:
+  home: http://metacpan.org/pod/Exporter::Lite
+  license: perl_5
+  summary: 'lightweight exporting of functions and variables'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

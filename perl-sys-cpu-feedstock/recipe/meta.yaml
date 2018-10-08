@@ -1,0 +1,43 @@
+{% set name = "perl-sys-cpu" %}
+{% set version = "0.61" %}
+{% set sha256 = "250a86b79c231001c4ae71d2f66428092a4fbb2070971acafd471aa49739c9e4" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: Sys-CPU-0.61.tar.gz
+  url: https://cpan.metacpan.org/authors/id/M/MZ/MZSANFORD/Sys-CPU-0.61.tar.gz
+  sha256: {{ sha256 }}
+
+# If this is a new build for the same version, increment the build
+# number. If you do not include this key, it defaults to 0.
+build:
+  number: 0
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - perl
+    - perl-extutils-makemaker
+
+  run:
+    - perl
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Sys::CPU
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+about:
+  home: http://metacpan.org/pod/Sys::CPU
+  license: unknown
+  summary: "Perl extension for getting CPU information. Currently only number of CPU's supported."
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

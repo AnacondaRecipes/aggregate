@@ -1,0 +1,43 @@
+{% set name = "perl-file-which" %}
+{% set version = "1.22" %}
+{% set sha256 = "e8a8ffcf96868c6879e82645db4ff9ef00c2d8a286fed21971e7280f52cf0dd4" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: File-Which-1.22.tar.gz
+  url: https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/File-Which-1.22.tar.gz
+  sha256: {{ sha256 }}
+
+# If this is a new build for the same version, increment the build
+# number. If you do not include this key, it defaults to 0.
+build:
+  number: 0
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    #- perl-test-more
+
+  run:
+    - perl
+
+test:
+  # Perl 'use' tests
+  imports:
+    - File::Which
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+about:
+  home: https://metacpan.org/pod/File::Which
+  license: perl_5
+  summary: 'Perl implementation of the which utility as an API'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

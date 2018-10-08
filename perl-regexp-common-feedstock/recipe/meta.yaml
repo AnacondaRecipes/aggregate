@@ -1,0 +1,83 @@
+{% set name = "perl-regexp-common" %}
+{% set version = "2017060201" %}
+{% set sha256 = "ee07853aee06f310e040b6bf1a0199a18d81896d3219b9b35c9630d0eb69089b" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: Regexp-Common-2017060201.tar.gz
+  url: https://cpan.metacpan.org/authors/id/A/AB/ABIGAIL/Regexp-Common-2017060201.tar.gz
+  sha256: {{ sha256 }}
+
+# If this is a new build for the same version, increment the build
+# number. If you do not include this key, it defaults to 0.
+build:
+  number: 0
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    #- perl-vars
+    #- perl-warnings
+    #- perl-test-more
+    #- perl-config
+    #- perl-strict
+
+  run:
+    - perl
+    #- perl-vars
+    #- perl-config
+    #- perl-strict
+    #- perl-warnings
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Regexp::Common
+    - Regexp::Common::CC
+    #- Regexp::Common::Entry
+    - Regexp::Common::SEN
+    - Regexp::Common::URI
+    - Regexp::Common::URI::RFC1035
+    - Regexp::Common::URI::RFC1738
+    - Regexp::Common::URI::RFC1808
+    - Regexp::Common::URI::RFC2384
+    - Regexp::Common::URI::RFC2396
+    - Regexp::Common::URI::RFC2806
+    - Regexp::Common::URI::fax
+    - Regexp::Common::URI::file
+    - Regexp::Common::URI::ftp
+    - Regexp::Common::URI::gopher
+    - Regexp::Common::URI::http
+    - Regexp::Common::URI::news
+    - Regexp::Common::URI::pop
+    - Regexp::Common::URI::prospero
+    - Regexp::Common::URI::tel
+    - Regexp::Common::URI::telnet
+    - Regexp::Common::URI::tv
+    - Regexp::Common::URI::wais
+    - Regexp::Common::balanced
+    - Regexp::Common::comment
+    - Regexp::Common::delimited
+    - Regexp::Common::lingua
+    - Regexp::Common::list
+    - Regexp::Common::net
+    - Regexp::Common::number
+    - Regexp::Common::profanity
+    - Regexp::Common::whitespace
+    - Regexp::Common::zip
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+about:
+  home: http://metacpan.org/pod/Regexp::Common
+  license: mit
+  summary: 'Provide commonly requested regular expressions'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
