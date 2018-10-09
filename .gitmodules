@@ -3282,3 +3282,7 @@
 	path = jupyterlab_server-feedstock
 	url = ../jupyterlab_server-feedstock
 	branch = master
+[submodule "basemap-data-hires-feedstock"]
+	path = basemap-data-hires-feedstock
+	url = ../basemap-data-hires-feedstock
+	branch = master
