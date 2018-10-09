@@ -1,0 +1,61 @@
+{% set name = "creduce" %}
+{% set version = "2.7.0" %}
+{% set sha256 = "36dca859c97a988e71b1a08e0cbd5849e4da051d248c5e483494194c4a231a41" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: http://embed.cs.utah.edu/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}
+    - clangdev
+    - flex
+  host:
+    - perl
+    - zlib
+  run:
+    - clangdev
+    - perl
+    - perl-exporter-lite
+    - perl-file-which
+    - perl-getopt-tabular
+    - perl-regexp-common
+    - perl-sys-cpu
+
+test:
+  files:
+    - test/interestingness_input
+    - test/interestingness_test.sh
+    - test/test_creduce.sh
+  commands:
+    # Unfortunately creduce returns 1 when called with --help
+    - creduce --help || true
+    - cd test && ./test_creduce.sh
+
+about:
+  home: http://embed.cs.utah.edu/creduce/
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: COPYING
+  summary: 'C-Reduce, a C program reducer'
+  description: |
+    C-Reduce is a tool that takes a large C, C++, or OpenCL file that has
+    a property of interest (such as triggering a compiler bug) and
+    automatically produces a much smaller C/C++ file that has the same
+    property. It is intended for use by people who discover and report
+    bugs in compilers and other tools that process source code.
+  doc_url: http://embed.cs.utah.edu/creduce/using/
+  dev_url: https://github.com/csmith-project/creduce
+
+extra:
+  recipe-maintainers:
+    - mingwandroid
