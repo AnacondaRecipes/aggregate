@@ -3278,3 +3278,7 @@
 	path = toml-feedstock
 	url = ../toml-feedstock
 	branch = master
+[submodule "jupyterlab_server-feedstock"]
+	path = jupyterlab_server-feedstock
+	url = ../jupyterlab_server-feedstock
+	branch = master
