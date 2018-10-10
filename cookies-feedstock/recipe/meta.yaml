@@ -10,6 +10,9 @@ source:
   url: https://files.pythonhosted.org/packages/f3/95/b66a0ca09c5ec9509d8729e0510e4b078d2451c5e33f47bd6fc33c01517c/{{ name }}-{{ version }}.tar.gz
   sha256: d6b698788cae4cfa4e62ef8643a9ca332b79bd96cb314294b864ae8d7eb3ee8e
 
+build:
+  number: 1
+
 requirements:
   host:
     - python
