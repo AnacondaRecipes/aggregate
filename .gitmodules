@@ -3286,3 +3286,23 @@
 	path = basemap-data-hires-feedstock
 	url = ../basemap-data-hires-feedstock
 	branch = master
+[submodule "cram-feedstock"]
+	path = cram-feedstock
+	url = ../cram-feedstock
+	branch = master
+[submodule "mpi4py-feedstock"]
+	path = mpi4py-feedstock
+	url = ../mpi4py-feedstock
+	branch = master
+[submodule "pydotplus-feedstock"]
+	path = pydotplus-feedstock
+	url = ../pydotplus-feedstock
+	branch = master
+[submodule "toro-feedstock"]
+	path = toro-feedstock
+	url = ../toro-feedstock
+	branch = master
+[submodule "sputnik-feedstock"]
+	path = sputnik-feedstock
+	url = ../sputnik-feedstock
+	branch = master
