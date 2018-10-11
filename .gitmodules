@@ -3314,3 +3314,19 @@
 	path = libogg-feedstock
 	url = ../libogg-feedstock
 	branch = master
+[submodule "dask-image-feedstock"]
+	path = dask-image-feedstock
+	url = ../dask-image-feedstock
+	branch = master
+[submodule "pims-feedstock"]
+	path = pims-feedstock
+	url = ../pims-feedstock
+	branch = master
+[submodule "tifffile-feedstock"]
+	path = tifffile-feedstock
+	url = ../tifffile-feedstock
+	branch = master
+[submodule "slicerator-feedstock"]
+	path = slicerator-feedstock
+	url = ../slicerator-feedstock
+	branch = master

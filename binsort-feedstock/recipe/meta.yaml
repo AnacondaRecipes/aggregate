@@ -5,18 +5,16 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-#  url: http://neoscientists.org/~tmueller/binsort/download/binsort-{{ version }}.tar.gz
-#  patches:
-#    - 0001-Do-not-hardcode-CC-PLATFORM_DEFS-or-PLATFORM_LIBS.patch
-#    - 0002-Add-filelist-support.patch
-   path: ~/conda/binsort
+  url: http://neoscientists.org/~tmueller/binsort/download/binsort-{{ version }}.tar.gz
+  patches:
+    - 0001-Do-not-hardcode-CC-PLATFORM_DEFS-or-PLATFORM_LIBS.patch
+    - 0002-Add-filelist-support.patch
 
 build:
   script:
-    - make CFLAGS="${CFLAGS} -DXPT_PTHREADS -Wall"
+    - make CFLAGS="${CFLAGS} -DXPT_PTHREADS -Wall" CPPFLAGS="${CPPFLAGS} -fno-strict-aliasing"
     - '[[ -d ${PREFIX}/bin ]] || mkdir ${PREFIX}/bin'
     - cp binsort ${PREFIX}/bin/
-    # - exit 1
 
 requirements:
   build:
