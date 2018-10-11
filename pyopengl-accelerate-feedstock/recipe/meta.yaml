@@ -1,0 +1,47 @@
+{% set version = "3.1.3b1" %}
+
+package:
+  name: pyopengl-accelerate
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/P/PyOpenGL-accelerate/PyOpenGL-accelerate-{{ version }}.tar.gz
+  sha256: e687eea7e006d65f531933b49b3b3d2feaaf51279147a904247f9d189762a36f
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+  host:
+    - python
+    - pip
+    - cython
+    - numpy
+  run:
+    - python
+    - {{ pin_compatible('numpy') }}
+    - pyopengl
+    - freeglut        # [linux]
+
+test:
+  imports:
+    - OpenGL_accelerate
+
+about:
+  home: http://pyopengl.sourceforge.net
+  license: BSD
+  license_file: license.txt
+  license_family: BSD
+  summary: Acceleration code for PyOpenGL
+  description: |
+    This set of C (Cython) extensions provides acceleration of common operations for slow points in PyOpenGL .
+  doc_url: http://pyopengl.sourceforge.net/documentation/index.html
+  doc_source_url: https://sourceforge.net/projects/pyopengl/
+  dev_url: https://github.com/mcfletch/pyopengl
+
+extra:
+  recipe-maintainers:
+    - jjhelmus
