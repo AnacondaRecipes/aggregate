@@ -1,0 +1,39 @@
+{% set version = "0.9.1" %}
+
+package:
+  name: jupyter_dashboards_bundlers
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/j/jupyter_dashboards_bundlers/jupyter_dashboards_bundlers-{{ version }}.tar.gz
+  sha256: 75283526991bf6152e5c4b7e3e42624a45c49ad93c14fa3cef4228b919aa8774
+
+build:
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - requests >=2.7
+    - notebook >=5.0
+
+test:
+  imports:
+    - dashboards_bundlers
+
+about:
+  home: http://jupyter.org
+  license: BSD
+  license_file: LICENSE.md
+  license_family: BSD
+  summary: An add-on for Jupyter Notebook
+  description: |
+    The dashbaords bundler extension takes a notebook with layout information
+    from the dashboard layout extention and lets you download it or directly
+    publish it to the experimental dashboard server.
+  doc_url: http://jupyter-notebook.readthedocs.io
+  dev_url: https://github.com/jupyter-incubator/dashboards_bundlers
