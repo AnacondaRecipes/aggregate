@@ -5,13 +5,51 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  url: http://neoscientists.org/~tmueller/binsort/download/binsort-{{ version }}.tar.gz
+#  url: http://neoscientists.org/~tmueller/binsort/download/binsort-{{ version }}.tar.gz
+#  patches:
+#    - 0001-Do-not-hardcode-CC-PLATFORM_DEFS-or-PLATFORM_LIBS.patch
+#    - 0002-Add-filelist-support.patch
+   path: ~/conda/binsort
 
 build:
   script:
-    make
+    - make CFLAGS="${CFLAGS} -DXPT_PTHREADS -Wall"
+    - '[[ -d ${PREFIX}/bin ]] || mkdir ${PREFIX}/bin'
+    - cp binsort ${PREFIX}/bin/
+    # - exit 1
 
 requirements:
   build:
     - {{ compiler('c') }}
     - make
+
+test:
+  requires:
+    - m2-base  # [win]
+  files:
+    - random_binaries/
+  commands:
+    # Test that the stable output mode gives what we expect.
+    - 'OUTPUT=$(binsort -t 1 random_binaries | tr "\n" " ")'
+    - 'echo Output is: ${OUTPUT}'
+    - 'if [[ ${OUTPUT} != "random_binaries/0171.bin random_binaries/0000.bin random_binaries/1024.bin random_binaries/0005.bin.symlink random_binaries/0000.bin.symlink random_binaries/0053.bin random_binaries/0005.bin " ]]; then'
+    - '  echo "Expected: \"random_binaries/0171.bin random_binaries/0000.bin random_binaries/1024.bin random_binaries/0005.bin.symlink random_binaries/0000.bin.symlink random_binaries/0053.bin random_binaries/0005.bin \" [FAIL]"'
+    - '  echo "     Got: \"${OUTPUT}\" [FAIL]"'
+    - '  exit 1'
+    - 'fi'
+
+about:
+  home: http://neoscientists.org/~tmueller/binsort/
+  license_file: COPYRIGHT
+  license_family: BSD
+  summary: Binsort - sort files by binary similarity
+  description: |
+    Scans the contents of a directory, groups the files by binary
+    similarity, generates a filelist and prints the list to stdout.
+  dev_url: http://hg.neoscientists.org/binsort/
+  doc_url: http://invisible-island.net/ncurses/NCURSES-Programming-HOWTO.html
+  doc_source_url: http://hg.neoscientists.org/binsort/file/tip/README
+
+extra:
+  recipe-maintainers:
+    - mingwandroid

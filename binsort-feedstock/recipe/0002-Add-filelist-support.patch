@@ -1,0 +1,210 @@
+diff -r eee4d0d1ebed binsort.c
+--- a/binsort.c	Sat Nov 12 13:19:12 2011 +0100
++++ b/binsort.c	Mon Oct 08 12:30:07 2018 +0100
+@@ -122,6 +122,7 @@
+ 	binsort_error_t den_Error;
+ 	bool_t den_IsFile;
+ 	bool_t den_IsDir;
++	bool_t den_IsSymlink;
+ };
+ 
+ struct RangeNode 
+@@ -264,6 +265,47 @@
+ 
+ 
+ /*
++**	num_t add_direntry(struct DirList *list, struct DirEntry *direntry, size_t pathlen, const char *dirname, const char *name)
++**	Convenience function used by dirlist_scan and filelist_scan to reduce code duplication.
++*/
++
++static num_t add_direntry(struct DirList *list, struct DirEntry *direntry, size_t pathlen, const char *dirname, const char *name)
++{
++	size_t nlen;
++	nlen = strlen(name);
++	if (direntry)
++	{
++		struct stat statbuf;
++		char *p = (char *) (direntry + 1);
++		memset(direntry, 0, sizeof *direntry);
++		direntry->den_Message.msg_Data = direntry; /* backptr */
++		direntry->den_Index = -1;
++		if (dirname)
++		{
++			strcpy(p, dirname);
++		}
++		p[pathlen] = '/';
++		strcpy(p + pathlen + (name[0] == '/' ? 0 : 1), name);
++		if (stat(p, &statbuf) == 0)
++		{
++			direntry->den_Name = p;
++			direntry->den_IsFile = S_ISREG(statbuf.st_mode);
++			direntry->den_IsDir = S_ISDIR(statbuf.st_mode);
++			direntry->den_IsSymlink = S_ISLNK(statbuf.st_mode);
++			AddTail(&list->dls_Head, &direntry->den_Node);
++			list->dls_NumTotal++;
++			if (direntry->den_IsFile && !direntry->den_IsSymlink)
++				list->dls_NumFiles++;
++			return 1;
++		}
++		else
++			fprintf(stderr, "%s : %s\n", p, strerror(errno));
++	}
++	return 0;
++}
++
++
++/*
+ **	err = dirlist_scan(dirlist, dirname)
+ **	Scan directory recursively. Note that this function would not be
+ **	thread-safe in a library, due to its use of readdir() and strerror()
+@@ -296,27 +338,7 @@
+ 		direntry = malloc(sizeof *direntry + pathlen + nlen + 2);
+ 		if (direntry)
+ 		{
+-			struct stat statbuf;
+-			char *p = (char *) (direntry + 1);
+-			memset(direntry, 0, sizeof *direntry);
+-			direntry->den_Message.msg_Data = direntry; /* backptr */
+-			direntry->den_Index = -1;
+-			strcpy(p, dirname);
+-			p[pathlen] = '/';
+-			strcpy(p + pathlen + 1, name);
+-			if (stat(p, &statbuf) == 0)
+-			{
+-				direntry->den_Name = p;
+-				direntry->den_IsFile = S_ISREG(statbuf.st_mode);
+-				direntry->den_IsDir = S_ISDIR(statbuf.st_mode);
+-				AddTail(&list->dls_Head, &direntry->den_Node);
+-				list->dls_NumTotal++;
+-				if (direntry->den_IsFile)
+-					list->dls_NumFiles++;
+-				num++;
+-			}
+-			else
+-				fprintf(stderr, "%s : %s\n", p, strerror(errno));
++			num += add_direntry(list, direntry, pathlen, dirname, name);
+ 		}
+ 	}
+ 	res = errno;
+@@ -340,6 +362,65 @@
+ 	return err;
+ }
+ 
++
++static binsort_error_t filelist_scan(struct DirList *list, const char *filename)
++{
++	struct Node *next, *node = list->dls_Head.lh_TailPred;
++	binsort_error_t err = BINSORT_ERROR_SUCCESS;
++	int res = 0;
++	num_t num = 0;
++	struct dirent *dp;
++	size_t pathlen = strlen(filename);
++	FILE *f = fopen(filename, "r");
++	size_t readsize, size, nlen;
++	char *buf, *namestart, *nameend;
++
++	if (f == NULL)
++	{
++		fprintf(stderr, "%s : %s\n", filename, strerror(errno));
++		return BINSORT_ERROR_DIR_OPEN;
++	}
++	fseek(f, 0, SEEK_END);
++	size = ftell(f);
++	fseek(f, 0, SEEK_SET);
++	buf = malloc(size+1);
++	readsize = fread(buf, 1, size, f);
++	if (size != readsize)
++	{
++		fclose(f);
++		fprintf(stderr, "size mismatch %s : (expected = %d, got =%d)\n", filename, size, readsize);
++		return BINSORT_ERROR_DIR_OPEN;
++	}
++	buf[size] = '\0';
++	namestart = strtok(buf, "\n");
++	while (namestart)
++	{
++		struct DirEntry *direntry;
++		nameend = strtok(NULL, "\n");
++		nlen = nameend - namestart;
++		direntry = malloc(sizeof *direntry + pathlen + nlen + 2);
++		num += add_direntry(list, direntry, 0, NULL, namestart);
++		fprintf(stderr, "Name In: %s\n", namestart);
++		if (nameend)
++			namestart = nameend;
++		else
++			namestart = NULL;
++	}
++	if (!err)
++	{
++		num_t i = 0;
++		node = node->ln_Succ;
++		for (; i < num && (next = node->ln_Succ); node = next, ++i)
++		{
++			struct DirEntry *dn = (struct DirEntry *) node;
++			fprintf(stderr, "Name: %s\n", dn->den_Name);
++			if (dn->den_IsDir)
++				dirlist_scan(list, dn->den_Name);
++		}
++	}
++	return err;
++}
++
+ /*
+ **	err = binsort_genhashes(binsort)
+ **	Generate hashes for all files
+@@ -570,7 +651,7 @@
+ 	for (num = 0; (next = node->ln_Succ); node = next)
+ 	{
+ 		struct DirEntry *entry = (struct DirEntry *) node;
+-		if (entry->den_IsFile)
++		if (entry->den_IsFile && !entry->den_IsSymlink)
+ 		{
+ 			Remove(node);
+ 			order[num++] = entry;
+@@ -1049,11 +1130,23 @@
+ 
+ binsort_error_t binsort_run(binsort_t *B)
+ {
+-	binsort_error_t err;
++	binsort_error_t err = 0;
+ 	bool_t quiet = B->b_Quiet;
+ 	do
+ 	{
+-		err = dirlist_scan(&B->b_DirList, B->b_Directory);
++		struct stat sb;
++		if (stat(B->b_Directory, &sb) == 0)
++		{
++			if (S_ISDIR(sb.st_mode))
++				err = dirlist_scan(&B->b_DirList, B->b_Directory);
++			else
++				err = filelist_scan(&B->b_DirList, B->b_Directory);
++		}
++		else
++		{
++			fprintf(stderr, "*** File Error Message = %s\n", strerror(errno));
++			break;
++		}
+ 		if (err)
+ 		{
+ 			fprintf(stderr, "*** error scanning directory\n");
+diff -r eee4d0d1ebed main.c
+--- a/main.c	Sat Nov 12 13:19:12 2011 +0100
++++ b/main.c	Mon Oct 08 12:30:07 2018 +0100
+@@ -97,7 +97,7 @@
+ 			binsort_error_t err = BINSORT_ERROR_ARGUMENTS;
+ 			if (!args[ARG_DIR].value)
+ 			{
+-				printf(PROG_NAME ": Directory argument missing\n");
++				printf(PROG_NAME ": Directory/filelist argument missing\n");
+ 				break;
+ 			}
+ 			if (args[ARG_QUAL].value < 1 || args[ARG_QUAL].value > 1000)
+@@ -127,7 +127,7 @@
+ 	}
+ 	else
+ 	{
+-		printf("Usage: %s [options] dir\n", PROG_NAME);
++		printf("Usage: %s [options] dir/filelist\n", PROG_NAME);
+ 		printf("Options:\n");
+ 		printf("  -o          Optimization level [1...1000], default: %d\n",
+ 			BINSORT_DEFAULT_QUALITY);
