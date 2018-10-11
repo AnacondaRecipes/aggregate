@@ -3310,3 +3310,7 @@
 	path = pathlib-feedstock
 	url = ../pathlib-feedstock
 	branch = master
+[submodule "libogg-feedstock"]
+	path = libogg-feedstock
+	url = ../libogg-feedstock
+	branch = master
