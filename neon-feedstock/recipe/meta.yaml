@@ -1,0 +1,72 @@
+{% set version = "2.6.0" %}
+
+package:
+  name: neon
+  version: {{ version }}
+
+source:
+  url: https://github.com/NervanaSystems/neon/archive/v{{ version }}.tar.gz
+  sha256: fa80d94adbbc802aa98703d6127ec5f26946b1489c9fdb5791e8505fc005fc4a
+  patches:
+    - 442.patch
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - pip
+  run:
+    - python
+    - appdirs
+    - bokeh
+    - cffi
+    - configargparse
+    - filelock
+    - future
+    - h5py
+    - jinja2
+    - numpy
+    - pillow
+    - py-cpuinfo
+    - pyyaml
+    # these are listed as requirements in setup.py but are not used at run time
+    #- flake8
+    #- pep8
+    #- posix_ipc
+    #- pylint
+    #- pytest
+    #- pytest-cov
+    #- pytest-mock
+    #- sphinx
+    #- tqdm      # used in examples
+    #- pypandoc  # needed to convert README
+    #- pandoc    # needed to convert README
+
+test:
+  imports:
+    - neon 
+
+  commands:
+    - neon -h
+    - nvis -h
+
+about:
+  home: https://github.com/NervanaSystems/neon
+  summary: Nervana's Python-based Deep Learning framework
+  license: Apache 2.0
+  license_family: Apache
+  license_file: LICENSE
+  description: |
+    neon is committed to best performance on all hardware.
+    Designed for ease-of-use and extensibility.
+  doc_url: http://neon.nervanasys.com/docs/latest/
+  doc_source_url: https://github.com/NervanaSystems/neon/blob/master/doc/source/index.rst
+  dev_url: https://github.com/NervanaSystems/neon
+
+extra:
+  recipe-maintainers:
+    - jjhelmus

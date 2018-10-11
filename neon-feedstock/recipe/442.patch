@@ -1,0 +1,23 @@
+From 2d6d6babc828d7091387172bd46ed5a0ff81dad8 Mon Sep 17 00:00:00 2001
+From: Gabriel Briones Sayeg <gabriel.briones.sayeg@intel.com>
+Date: Wed, 21 Feb 2018 12:06:13 -0600
+Subject: [PATCH] Bugfix NeonArgparser constructor
+
+Signed-off-by: Gabriel Briones Sayeg <gabriel.briones.sayeg@intel.com>
+---
+ neon/util/argparser.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/neon/util/argparser.py b/neon/util/argparser.py
+index 57c8a029..d567f49f 100644
+--- a/neon/util/argparser.py
++++ b/neon/util/argparser.py
+@@ -78,7 +78,7 @@ def __init__(self, *args, **kwargs):
+             kwargs['add_config_file_help'] = False
+ 
+         self.defaults = kwargs.pop('default_overrides', dict())
+-        super(NeonArgparser, self).__init__(*args, **kwargs)
++        super(NeonArgparser, self).__init__(**kwargs)
+ 
+         # ensure that default values are display via --help
+         self.formatter_class = configargparse.ArgumentDefaultsHelpFormatter
