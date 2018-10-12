@@ -3330,3 +3330,7 @@
 	path = slicerator-feedstock
 	url = ../slicerator-feedstock
 	branch = master
+[submodule "libvorbis-feedstock"]
+	path = libvorbis-feedstock
+	url = ../libvorbis-feedstock
+	branch = master
