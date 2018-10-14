@@ -3334,3 +3334,7 @@
 	path = libvorbis-feedstock
 	url = ../libvorbis-feedstock
 	branch = master
+[submodule "libtheora-feedstock"]
+	path = libtheora-feedstock
+	url = ../libtheora-feedstock
+	branch = master
