@@ -1,8 +1,8 @@
 {% set name = "colander" %}
-{% set version = "1.4" %}
+{% set version = "1.5.1" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "e20e9acf190e5711cf96aa65a5405dac04b6e841028fc361d953a9923dbc4e72" %}
+{% set hash_value = "d86b9e1fb42c80c68b26040e32dad584aa168abf3175133b36f5dace392350a1" %}
 
 package:
   name: {{ name|lower }}
@@ -25,6 +25,7 @@ requirements:
     - python
     - translationstring
     - iso8601
+    - enum34  # [py27]
 
 test:
   imports:
