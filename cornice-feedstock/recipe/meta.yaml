@@ -1,5 +1,5 @@
 {% set name = "cornice" %}
-{% set version = "3.4.0" %}
+{% set version = "3.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5833582e7ff74ad6fe059bd22792cfeaff85aa0e2c37402b4adb0ae673d78ef7
+  sha256: a7f8db903ba06c2584c7db4474459de3565d90b5e4ae4b97c687840e11d5b7fd
 
 build:
   number: 0
