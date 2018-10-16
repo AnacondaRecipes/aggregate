@@ -3346,3 +3346,11 @@
 	path = backports.os-feedstock
 	url = ../backports.os-feedstock
 	branch = master
+[submodule "twisted-feedstock"]
+	path = twisted-feedstock
+	url = ../twisted-feedstock
+	branch = master
+[submodule "pyhamcrest-feedstock"]
+	path = pyhamcrest-feedstock
+	url = ../pyhamcrest-feedstock
+	branch = master
