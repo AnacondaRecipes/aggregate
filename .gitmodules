@@ -3354,3 +3354,7 @@
 	path = pyhamcrest-feedstock
 	url = ../pyhamcrest-feedstock
 	branch = master
+[submodule "jaraco.functools-feedstock"]
+	path = jaraco.functools-feedstock
+	url = ../jaraco.functools-feedstock
+	branch = master
