@@ -1,8 +1,8 @@
 {% set name = "zope.event" %}
-{% set version = "4.3.0" %}
+{% set version = "4.4" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "e0ecea24247a837c71c106b0341a7a997e3653da820d21ef6c08b32548f733e7" %}
+{% set hash_value = "69c27debad9bdacd9ce9b735dad382142281ac770c4a432b533d6d65c4614bcf" %}
 
 package:
   name: '{{ name|lower }}'
