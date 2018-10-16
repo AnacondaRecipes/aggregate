@@ -1,8 +1,8 @@
 {% set name = "WebTest" %}
-{% set version = "2.0.30" %}
+{% set version = "2.0.32" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "5c69f73cc58bef355e919ff96054b68cbaecc7d970b60b602568d3d92ca967d5" %}
+{% set hash_value = "4221020d502ff414c5fba83c1213985b83219cb1cc611fe58aa4feaf96b5e062" %}
 
 package:
   name: {{ name|lower }}
