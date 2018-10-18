@@ -4,7 +4,7 @@ About the AnacondaRecipes/aggregate repository
 The aggregate repository is roughly similar to the concept of the conda-forge feedstocks repository.  It is meant to operate as a centralization of many external repositories, with each of those external repositories following the one-recipe-per-repo concept.  We fork feedstocks from conda-forge, and the long-term goal is to keep in sync with conda-forge recipes.  Unlike the conda-forge feedstocks repository, aggregate also contains some recipes directly in the aggregate repo.  We consider this a temporary staging area for recipes that eventually need to be submitted to conda-forge, or for recipes that we think conda-forge will have no interest in.
 
 How to add new recipes to the aggregate repository
---------------------------------------------------
+-------------------------------------------------- 
 
 Unfortunately, because of the structure of this organization, where each recipe has its own repository, there is no way to submit a PR that adds a new recipe, because PRs can’t create repositories, only modify existing ones.  If you’d like to submit a recipe for us to build and make available on the default channel, you can either:
 
