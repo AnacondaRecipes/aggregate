@@ -1,0 +1,26 @@
+From 750e425afbd0614075d5dcbe724a239ec32cc423 Mon Sep 17 00:00:00 2001
+From: Ray Donnelly <mingw.android@gmail.com>
+Date: Wed, 10 Oct 2018 14:32:13 +0100
+Subject: [PATCH 5/6] Fix error: 'InclusionDirective' marked 'override' but
+ does not override any member functions
+
+---
+ clang_delta/ExpressionDetector.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/clang_delta/ExpressionDetector.cpp b/clang_delta/ExpressionDetector.cpp
+index aa87873..1d0a59f 100644
+--- a/clang_delta/ExpressionDetector.cpp
++++ b/clang_delta/ExpressionDetector.cpp
+@@ -64,7 +64,7 @@ public:
+                           StringRef FileName, bool IsAngled,
+                           CharSourceRange FilenameRange, const FileEntry *File,
+                           StringRef SearchPath, StringRef RelativePath,
+-                          const Module *Imported) override;
++                          const Module *Imported);
+ 
+ private:
+   SourceManager &SrcManager;
+-- 
+2.19.1
+

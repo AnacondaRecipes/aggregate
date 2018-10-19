@@ -1,0 +1,37 @@
+From 2a9bbc334f71d3c6aa62de0f7a313a01e4c884e9 Mon Sep 17 00:00:00 2001
+From: Ray Donnelly <mingw.android@gmail.com>
+Date: Wed, 10 Oct 2018 15:01:11 +0100
+Subject: [PATCH 2/6] clang-7.0 support: Update for
+ SrcManager::getExpansionRange() changes
+
+---
+ clang_delta/RemoveUnusedEnumMember.cpp | 10 ++++------
+ 1 file changed, 4 insertions(+), 6 deletions(-)
+
+diff --git a/clang_delta/RemoveUnusedEnumMember.cpp b/clang_delta/RemoveUnusedEnumMember.cpp
+index 8bf8673..fbce87a 100644
+--- a/clang_delta/RemoveUnusedEnumMember.cpp
++++ b/clang_delta/RemoveUnusedEnumMember.cpp
+@@ -99,15 +99,13 @@ void RemoveUnusedEnumMember::removeEnumConstantDecl()
+ {
+   SourceLocation StartLoc = (*TheEnumIterator)->getLocStart();
+   if (StartLoc.isMacroID()) {
+-    std::pair<SourceLocation, SourceLocation> Locs =
+-      SrcManager->getExpansionRange(StartLoc);
+-    StartLoc = Locs.first;
++    CharSourceRange Range = SrcManager->getExpansionRange(StartLoc);
++    StartLoc = Range.getBegin();
+   }
+   SourceLocation EndLoc = (*TheEnumIterator)->getLocEnd();
+   if (EndLoc.isMacroID()) {
+-    std::pair<SourceLocation, SourceLocation> Locs =
+-      SrcManager->getExpansionRange(EndLoc);
+-    EndLoc = Locs.second;
++    CharSourceRange Range = SrcManager->getExpansionRange(EndLoc);
++    EndLoc = Range.getEnd();
+   }
+   SourceLocation CommaLoc = Lexer::findLocationAfterToken(
+     EndLoc, tok::comma, *SrcManager, Context->getLangOpts(),
+-- 
+2.19.1
+

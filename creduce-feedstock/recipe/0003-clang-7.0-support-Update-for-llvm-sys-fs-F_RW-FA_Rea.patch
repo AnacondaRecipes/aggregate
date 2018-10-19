@@ -1,0 +1,26 @@
+From 03179d9655c3579aa9ed9dd7fe55f2b9069dfa7f Mon Sep 17 00:00:00 2001
+From: Ray Donnelly <mingw.android@gmail.com>
+Date: Wed, 10 Oct 2018 15:01:43 +0100
+Subject: [PATCH 3/6] clang-7.0 support: Update for llvm::sys::fs::F_RW =>
+ FA_Read | FA_Write
+
+---
+ clang_delta/TransformationManager.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/clang_delta/TransformationManager.cpp b/clang_delta/TransformationManager.cpp
+index 89e9d72..1e56b90 100644
+--- a/clang_delta/TransformationManager.cpp
++++ b/clang_delta/TransformationManager.cpp
+@@ -223,7 +223,7 @@ llvm::raw_ostream *TransformationManager::getOutStream()
+ 
+   std::error_code EC;
+   llvm::raw_fd_ostream *Out = new llvm::raw_fd_ostream(
+-      OutputFileName, EC, llvm::sys::fs::F_RW);
++      OutputFileName, EC, llvm::sys::fs::FA_Read | llvm::sys::fs::FA_Write);
+   assert(!EC && "Cannot open output file!");
+   return Out;
+ }
+-- 
+2.19.1
+

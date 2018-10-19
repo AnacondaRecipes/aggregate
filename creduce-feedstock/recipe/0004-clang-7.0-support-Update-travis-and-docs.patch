@@ -1,0 +1,82 @@
+From 05c70a1533636116ed73a29da5cd8ccae8ec9816 Mon Sep 17 00:00:00 2001
+From: Ray Donnelly <mingw.android@gmail.com>
+Date: Thu, 11 Oct 2018 12:47:46 +0100
+Subject: [PATCH 4/6] clang-7.0 support: Update travis and docs
+
+---
+ .travis.yml            |  6 +++---
+ INSTALL                |  4 ++--
+ scripts/travis_deps.sh | 16 ++++++++--------
+ 3 files changed, 13 insertions(+), 13 deletions(-)
+
+diff --git a/.travis.yml b/.travis.yml
+index 5a8727f..2014b23 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -17,9 +17,9 @@ before_install:
+   - sudo scripts/travis_deps.sh
+ 
+ script: >
+-  CXX=/usr/lib/llvm-6.0/bin/clang++
+-  CC=/usr/lib/llvm-6.0/bin/clang
+-  ./configure --with-llvm=/usr/lib/llvm-6.0 &&
++  CXX=/usr/lib/llvm-7/bin/clang++
++  CC=/usr/lib/llvm-7/bin/clang
++  ./configure --with-llvm=/usr/lib/llvm-7 &&
+   make -j2 &&
+   make check
+ 
+diff --git a/INSTALL b/INSTALL
+index 8bca8d2..4e0b8e4 100644
+--- a/INSTALL
++++ b/INSTALL
+@@ -46,8 +46,8 @@ manager:
+ Flex:
+   http://flex.sourceforge.net/
+ 
+-LLVM/Clang 6.0.0:
+-  http://llvm.org/releases/download.html#6.0.0
++LLVM/Clang 7.0.0:
++  http://llvm.org/releases/download.html#7.0.0
+   (No need to compile it: the appropriate "Clang binaries" package is
+   all you need.  If you use one of the binary packages, you may need to
+   install additional packages that the binary package depends on.  For
+diff --git a/scripts/travis_deps.sh b/scripts/travis_deps.sh
+index 0600bf0..9fab08d 100755
+--- a/scripts/travis_deps.sh
++++ b/scripts/travis_deps.sh
+@@ -28,23 +28,23 @@ apt-get install -y -qq \
+     software-properties-common \
+     wget
+ 
+-# Set up for installing LLVM 6.0.
++# Set up for installing LLVM 7.0
+ # See <https://wiki.ubuntu.com/ToolChain>.
+ # See <http://llvm.org/apt/>.
+ add-apt-repository -y \
+     ppa:ubuntu-toolchain-r/test
+ add-apt-repository -y \
+-    'deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-6.0 main'
++    'deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-7 main'
+ wget -O - http://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add -
+ apt-get update -qq
+ 
+-# Install LLVM 6.0.  See file "INSTALL".
++# Install LLVM 7.0.  See file "INSTALL".
+ apt-get install -y -qq \
+-    llvm-6.0 \
+-    llvm-6.0-dev \
+-    clang-6.0 \
+-    libclang-6.0-dev \
+-    clang-format-6.0 \
++    llvm-7 \
++    llvm-7-dev \
++    clang-7 \
++    libclang-7-dev \
++    clang-format-7 \
+     libedit-dev
+ 
+ # Install other C-Reduce dependencies.  See file "INSTALL".
+-- 
+2.19.1
+
