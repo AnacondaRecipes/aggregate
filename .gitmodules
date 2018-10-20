@@ -3358,3 +3358,7 @@
 	path = jaraco.functools-feedstock
 	url = ../jaraco.functools-feedstock
 	branch = master
+[submodule "pyct-core-feedstock"]
+	path = pyct-core-feedstock
+	url = ../pyct-core-feedstock
+	branch = master
