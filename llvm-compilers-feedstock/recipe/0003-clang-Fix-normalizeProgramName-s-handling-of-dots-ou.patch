@@ -1,4 +1,4 @@
-From f6435ab717124ed533968b3f657fd9024aa80e69 Mon Sep 17 00:00:00 2001
+From 810992794396fbd34349bf1dac9a9fe38a4d5020 Mon Sep 17 00:00:00 2001
 From: Ray Donnelly <mingw.android@gmail.com>
 Date: Wed, 30 Aug 2017 20:01:49 +0100
 Subject: [PATCH 3/3] Fix normalizeProgramName()'s handling of dots outside of
@@ -18,18 +18,18 @@ x86_64-apple-darwin13.4
  1 file changed, 22 insertions(+), 1 deletion(-)
 
 diff --git a/lib/Driver/ToolChain.cpp b/lib/Driver/ToolChain.cpp
-index 6adc0386ee..d2b582c7f7 100644
+index cf3db34..31b093b 100644
 --- a/lib/Driver/ToolChain.cpp
 +++ b/lib/Driver/ToolChain.cpp
-@@ -31,6 +31,7 @@ using namespace clang::driver::tools;
- using namespace clang;
+@@ -49,6 +49,7 @@ using namespace driver;
+ using namespace tools;
  using namespace llvm;
  using namespace llvm::opt;
 +using namespace llvm::sys::path;
  
  static llvm::opt::Arg *GetRTTIArgument(const ArgList &Args) {
    return Args.getLastArg(options::OPT_mkernel, options::OPT_fapple_kext,
-@@ -124,10 +125,30 @@ const DriverSuffix *FindDriverSuffix(StringRef ProgName) {
+@@ -154,10 +155,30 @@ static const DriverSuffix *FindDriverSuffix(StringRef ProgName, size_t &Pos) {
    return nullptr;
  }
  
@@ -55,12 +55,12 @@ index 6adc0386ee..d2b582c7f7 100644
 +
  /// Normalize the program name from argv[0] by stripping the file extension if
  /// present and lower-casing the string on Windows.
- std::string normalizeProgramName(llvm::StringRef Argv0) {
+ static std::string normalizeProgramName(llvm::StringRef Argv0) {
 -  std::string ProgName = llvm::sys::path::stem(Argv0);
 +  std::string ProgName = program_name_stem(Argv0);
- #ifdef LLVM_ON_WIN32
+ #ifdef _WIN32
    // Transform to lowercase for case insensitive file systems.
    std::transform(ProgName.begin(), ProgName.end(), ProgName.begin(), ::tolower);
 -- 
-2.14.1
+2.5.4 (Apple Git-61)
 

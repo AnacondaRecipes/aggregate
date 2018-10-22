@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 
 # Ensure we do not end up linking to a shared libz
 rm -f "${PREFIX}"/lib/libz*${SHLIB_EXT}
@@ -146,7 +147,6 @@ _cctools_config+=(--disable-static)
 _cctools_config+=(--enable-shared)
 
 if [[ ! -f ${PREFIX}/bin/${DARWIN_TARGET}-ld ]]; then
-
   # libtool on macOS 10.9 is too old to build LLVM statically:
   # CMakeFiles/LLVMSupport.dir/PluginLoader.cpp.o is not an object file (not allowed in a library)
   # https://trac.macports.org/ticket/54129
@@ -193,17 +193,19 @@ if [[ ! -f ${PREFIX}/bin/${DARWIN_TARGET}-ld ]]; then
       popd
     popd
     # TODO :: Tapi breaks when making cross-compilers.
-    if [[ ! -f ${PREFIX}/lib/libtapi${SHLIB_EXT} ]]; then
-      [[ -d llvm_tapi_build ]] || mkdir llvm_tapi_build
-      pushd llvm_tapi_build
-        cmake -G'Unix Makefiles'                                 \
-              -C ../projects/tapi/cmake/caches/apple-tapi.cmake  \
-              "${_cmake_config[@]}"                              \
-              -DCMAKE_LIBTOOL=${BOOTSTRAP}/bin/libtool           \
-              ..
-        make -j${CPU_COUNT} ${VERBOSE_CM} install-distribution
-      popd
-    fi
+#    if [[ ! -f ${PREFIX}/lib/libtapi${SHLIB_EXT} ]]; then
+#      [[ -d llvm_tapi_build ]] || mkdir llvm_tapi_build
+#      pushd llvm_tapi_build
+#        cmake -G'Unix Makefiles'                                 \
+#              -C ../projects/tapi/cmake/caches/apple-tapi.cmake  \
+#              "${_cmake_config[@]}"                              \
+#              -DCMAKE_LIBTOOL=${BOOTSTRAP}/bin/libtool           \
+#              -DCLANG_TABLEGEN_EXE=${PWD}/bin/clang-tblgen       \
+#              -DLLVM_TARGETS_TO_BUILD=all                        \
+#              ..
+#        make -j${CPU_COUNT} ${VERBOSE_CM} install-distribution
+#      popd
+#    fi
   fi
   [[ -d cctools_build ]] || mkdir cctools_build
   pushd cctools_build
@@ -247,8 +249,8 @@ export PATH=${PREFIX}/bin:${OLD_PATH}
 if [[ ! -f cctools_build_final/ld64/ld ]]; then
   [[ -d cctools_build_final ]] || mkdir cctools_build_final
   pushd cctools_build_final
-    CC=${PREFIX}/bin/clang" ${CFLAG_SYSROOT}"     \
-    CXX=${PREFIX}/bin/clang++" ${CFLAG_SYSROOT}"  \
+    CC=${PREFIX}/bin/clang                        \
+    CXX=${PREFIX}/bin/clang++                     \
       ../cctools/configure                        \
         "${_cctools_config[@]}"                   \
         --prefix=${PREFIX}                        \

@@ -1,0 +1,120 @@
+From 998513e7e9b0122bb8054f2ee63f70797b9f4d44 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Fri, 19 Oct 2018 07:54:06 +0530
+Subject: [PATCH] 700 ld64 drop tapi support
+
+Wait for proper resolution that comes from
+http://lists.llvm.org/pipermail/llvm-dev/2018-September/126472.html
+---
+ src/ld/InputFiles.cpp                  | 10 +++++-----
+ src/ld/Options.cpp                     | 22 +++++++++++-----------
+ src/ld/parsers/textstub_dylib_file.cpp |  3 ++-
+ 3 files changed, 18 insertions(+), 17 deletions(-)
+
+diff --git a/src/ld/InputFiles.cpp b/src/ld/InputFiles.cpp
+index 9e06514..d1881b8 100644
+--- a/src/ld/InputFiles.cpp
++++ b/src/ld/InputFiles.cpp
+@@ -58,7 +58,7 @@
+ #include "InputFiles.h"
+ #include "macho_relocatable_file.h"
+ #include "macho_dylib_file.h"
+-#include "textstub_dylib_file.hpp"
++//#include "textstub_dylib_file.hpp"
+ #include "archive_file.h"
+ #include "lto_file.h"
+ #include "opaque_section_file.h"
+@@ -331,10 +331,10 @@ ld::File* InputFiles::makeFile(const Options::FileInfo& info, bool indirectDylib
+ 			if ( dylibResult != NULL ) {
+ 				return dylibResult;
+ 			}
+-			dylibResult = textstub::dylib::parse(p, len, info.path, info.modTime, _options, info.ordinal, info.options.fBundleLoader, indirectDylib);
+-			if ( dylibResult != NULL ) {
+-				return dylibResult;
+-			}
++//			dylibResult = textstub::dylib::parse(p, len, info.path, info.modTime, _options, info.ordinal, info.options.fBundleLoader, indirectDylib);
++//			if ( dylibResult != NULL ) {
++//				return dylibResult;
++//			}
+ 			break;
+ 		case Options::kStaticExecutable:
+ 		case Options::kDyld:
+diff --git a/src/ld/Options.cpp b/src/ld/Options.cpp
+index ae20932..1b66d35 100644
+--- a/src/ld/Options.cpp
++++ b/src/ld/Options.cpp
+@@ -34,7 +34,7 @@
+ #include <spawn.h>
+ #include <cxxabi.h>
+ #include <Availability.h>
+-#include <tapi/tapi.h>
++//#include <tapi/tapi.h>
+ 
+ #include <vector>
+ #include <map>
+@@ -833,10 +833,10 @@ bool Options::findFile(const std::string &path, const std::vector<std::string> &
+ 
+ 	// If we found a text-based stub file, check if it should be used.
+ 	if ( !tbdInfo.missing() ) {
+-		if (tapi::LinkerInterfaceFile::shouldPreferTextBasedStubFile(tbdInfo.path)) {
+-			result = tbdInfo;
+-			return true;
+-		}
++//		if (tapi::LinkerInterfaceFile::shouldPreferTextBasedStubFile(tbdInfo.path)) {
++//			result = tbdInfo;
++//			return true;
++//		}
+ 	}
+ 	FileInfo dylibInfo;
+ 	{
+@@ -858,15 +858,15 @@ bool Options::findFile(const std::string &path, const std::vector<std::string> &
+ 	// There are both - a text-based stub file and a dynamic library file.
+ 	else if ( !tbdInfo.missing() && !dylibInfo.missing() ) {
+ 		// If the files are still in synv we can use and should use the text-based stub file.
+-		if (tapi::LinkerInterfaceFile::areEquivalent(tbdInfo.path, dylibInfo.path)) {
+-			result = tbdInfo;
+-		}
++//		if (tapi::LinkerInterfaceFile::areEquivalent(tbdInfo.path, dylibInfo.path)) {
++//			result = tbdInfo;
++//		}
+ 		// Otherwise issue a warning and fall-back to the dynamic library file.
+-		else {
++//		else {
+ 			warning("text-based stub file %s and library file %s are out of sync. Falling back to library file for linking.", tbdInfo.path, dylibInfo.path);
+ 			result = dylibInfo;
+ 
+-		}
++//		}
+ 		return true;
+ 	}
+ 
+@@ -3970,7 +3970,7 @@ void Options::buildSearchPaths(int argc, const char* argv[])
+ 				const char* ltoVers = lto::version();
+ 				if ( ltoVers != NULL )
+ 					fprintf(stderr, "LTO support using: %s\n", ltoVers);
+-				fprintf(stderr, "TAPI support using: %s\n", tapi::Version::getFullVersionAsString().c_str());
++//				fprintf(stderr, "TAPI support using: %s\n", tapi::Version::getFullVersionAsString().c_str());
+ 				exit(0);
+ 			}
+ 		}
+diff --git a/src/ld/parsers/textstub_dylib_file.cpp b/src/ld/parsers/textstub_dylib_file.cpp
+index 4613154..fc98eef 100644
+--- a/src/ld/parsers/textstub_dylib_file.cpp
++++ b/src/ld/parsers/textstub_dylib_file.cpp
+@@ -22,7 +22,7 @@
+  * @APPLE_LICENSE_HEADER_END@
+  */
+ 
+-
++#if 0
+ #include <sys/param.h>
+ #include <sys/mman.h>
+ #include <tapi/tapi.h>
+@@ -282,3 +282,4 @@ ld::dylib::File* parse(const uint8_t* fileContent, uint64_t fileLength, const ch
+ 	
+ } // namespace dylib
+ } // namespace textstub
++#endif
+-- 
+2.17.1 (Apple Git-112)
+

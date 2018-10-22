@@ -7,7 +7,7 @@ target_platform:
 cross_target_platform:
   - osx-64
 compiler_ver:
-  - 4.0.1
+  - 7.0.0
 library_type:
   - shared
 FINAL_CPPFLAGS:
