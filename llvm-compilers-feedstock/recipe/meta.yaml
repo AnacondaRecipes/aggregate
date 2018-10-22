@@ -2,20 +2,21 @@
 # in order to bootstrap the compilers so they do not depend on system libs (libc++)
 
 {% set releases_url="releases" %}
-{% set version="4.0.1" %}
-{% set version_dash="4.0.1" %}
-{% set version_dir="4.0.1" %}
-{% set llvm_sha256 = 'da783db1f82d516791179fe103c71706046561f7972b18f0049242dee6712b51' %}
-{% set cfe_sha256 = '61738a735852c23c3bdbe52d035488cdb2083013f384d67c1ba36fabebd8769b' %}
-{% set polly_sha256 = 'b443bb9617d776a7d05970e5818aa49aa2adfb2670047be8e9f242f58e84f01a' %}
-{% set compiler_rt_sha256 = 'a3c87794334887b93b7a766c507244a7cdcce1d48b2e9249fc9a94f2c3beb440' %}
-{% set libcxx_sha256 = '520a1171f272c9ff82f324d5d89accadcec9bc9f3c78de11f5575cdb99accc4c' %}
-{% set libcxxabi_sha256 = '8f08178989a06c66cd19e771ff9d8ca526dd4a23d1382d63e416c04ea9fa1b33' %}
-{% set libunwind_sha256 = '3b072e33b764b4f9b5172698e080886d1f4d606531ab227772a7fc08d6a92555' %}
-{% set openmp_sha256 = 'ec693b170e0600daa7b372240a06e66341ace790d89eaf4a843e8d56d5f4ada4' %}
+{% set version="7.0.0" %}
+{% set bootstrap_version_dir="7.0.0" %}
+{% set bootstrap_version_dash="7.0.0" %}
+{% set version_dir="7.0.0" %}
+{% set llvm_sha256 = '8bc1f844e6cbde1b652c19c1edebc1864456fd9c78b8c1bea038e51b363fe222' %}
+{% set cfe_sha256 = '550212711c752697d2f82c648714a7221b1207fd9441543ff4aa9e3be45bba55' %}
+{% set polly_sha256 = '919810d3249f4ae79d084746b9527367df18412f30fe039addbf941861c8534b' %}
+{% set compiler_rt_sha256 = 'bdec7fe3cf2c85f55656c07dfb0bd93ae46f2b3dd8f33ff3ad6e7586f4c670d6' %}
+{% set libcxx_sha256 = '9b342625ba2f4e65b52764ab2061e116c0337db2179c6bce7f9a0d70c52134f0'%}
+{% set libcxxabi_sha256 = '9b45c759ff397512eae4d938ff82827b1bd7ccba49920777e5b5e460baeb245f' %}
+{% set libunwind_sha256 = '50aee87717421e70450f1e093c6cd9a27f2b111025e1e08d64d5ace36e338a9c' %}
+{% set openmp_sha256 = '30662b632f5556c59ee9215c1309f61de50b3ea8e89dcc28ba9a9494bba238ff' %}
 # It looks like this got changed at some point.
 # {% set clang_llvm_bin_sha256 = '5ef4f1f72d0fe4cf03d8eaefb972b4d24219da67124a869ae75e3a6aeb1578f6' %}
-{% set clang_llvm_bin_sha256 = '5f697801a46239c04251730b7ccccd3ebbacb9043ad381a061ae6812409e9eae' %}
+{% set clang_llvm_bin_sha256 = 'b3ad93c3d69dfd528df9c5bb1a434367babb8f3baea47fbb99bf49f1b03c94ca' %}
 
 # {% set releases_url="prereleases" %}
 # {% set version="5.0.0rc5" %}
@@ -71,9 +72,8 @@ source:
     folder: projects/compiler-rt
     sha256: {{ compiler_rt_sha256 }}
     patches:
-      - 0001-cmake-Cache-results-of-find_darwin_sdk_dir.patch
-      # - 0001-5.0.0-cmake-Cache-results-of-find_darwin_sdk_dir.patch
       - 0002-compiler-rt-Determine-COMPILER_RT_SUPPORTED_ARCH-eve.patch
+      - 0003-compiler-rt-Make-7.0.0-compatible-with-10.9-SDK.patch
   - url: http://{{ releases_url }}.llvm.org/{{ version_dir }}/libunwind-{{ version }}.src.tar.xz
     sha256: {{ libunwind_sha256 }}
     folder: projects/libunwind
@@ -86,15 +86,23 @@ source:
   - url: http://{{ releases_url }}.llvm.org/{{ version_dir }}/openmp-{{ version }}.src.tar.xz
     sha256: {{ openmp_sha256 }}
     folder: projects/openmp
-  - url: https://opensource.apple.com/tarballs/tapi/tapi-{{ tapi_version }}.tar.gz
-    sha256: {{ tapi_sha256 }}
-    folder: projects/tapi
-    patches:
-      - 0001-tapi-llvm-4.0.1-compat-remove-TimeValue-header-include.patch 
-      - 0002-tapi-llvm-4.0.1-compat-add-missing-StringSwitch-include.patch
-      - 0003-tapi-llvm-4.0.1-compat-modernise-error-handling.patch        
-      - 0004-tapi-cross-compat.patch
-      # - 0005-tapi-5.0.0-Move-Support-MachO-to-BinaryFormat-MachO.patch
+#  - git_url: https://github.com/ributzka/tapi
+#    git_rev: b9205695b4edee91000383695be8de5ba8e0db41
+#    folder: projects/tapi
+#    patches:
+#       - 0001-tapi-llvm-7.0.0-Use-PRIVATE-in-target_link_libraries.patch
+#       - 0002-tapi-llvm-7.0.0-Use-add_llvm_install_targets.patch
+#  - url: https://opensource.apple.com/tarballs/tapi/tapi-{{ tapi_version }}.tar.gz
+#    sha256: {{ tapi_sha256 }}
+#    folder: projects/tapi
+#    patches:
+#      - 0001-tapi-llvm-4.0.1-compat-remove-TimeValue-header-include.patch
+#      - 0002-tapi-llvm-4.0.1-compat-add-missing-StringSwitch-include.patch
+#      - 0003-tapi-llvm-4.0.1-compat-modernise-error-handling.patch
+#      - 0004-tapi-cross-compat.patch
+#      - 0005-Use-add_llvm_install_targets-for-creating-install-ta.patch
+#      - 0005-tapi-5.0.0-Move-Support-MachO-to-BinaryFormat-MachO.patch
+#      - 0001-llvm-sys-fs-file_magic-llvm-file_magic.patch
   - url: https://opensource.apple.com/tarballs/cctools/cctools-{{ cctools_version }}.tar.gz
     sha256: {{ cctools_sha256 }}
     folder: cctools
@@ -145,8 +153,9 @@ source:
       - 510-ld64-fix-incorrect-fname-case.patch
       - 520-ld64-fix-usr-local-and-usr-ordering.patch
       - 530-ld64-add-conda-specific-env-vars-to-modify-lib-search-paths.patch
+      - 700-ld64-drop-tapi-support.patch
     # Because macOS 10.9's clang is too old (problems with atomics)
-  - url: http://{{ releases_url }}.llvm.org/{{ version_dir }}/clang+llvm-{{ version_dash }}-x86_64-apple-darwin.tar.xz       [osx]
+  - url: http://{{ releases_url }}.llvm.org/{{ bootstrap_version_dir }}/clang+llvm-{{ bootstrap_version_dash }}-x86_64-apple-darwin.tar.xz       [osx]
     sha256: {{ clang_llvm_bin_sha256 }}
     folder: bootstrap                                                                                     [osx]
   # We copy headers necessary for building cctools/ld64 from dyld and MacOSX10.9.sdk (on all OSes).
@@ -157,6 +166,9 @@ source:
   - url: https://github.com/phracker/MacOSX-SDKs/releases/download/MacOSX10.11.sdk/MacOSX10.9.sdk.tar.xz
     sha256: {{ macosx_109_sdk_sha256 }}
     folder: bootstrap/MacOSX10.9.sdk
+
+build:
+  number: 0
 
 requirements:
   build:
@@ -180,8 +192,8 @@ requirements:
     - zlib
 
 outputs:
-  - name: llvm-lto-tapi
-    script: install-llvm-lto-tapi.sh
+  - name: llvm-lto
+    script: install-llvm-lto.sh
     requirements:
       build:
         - cmake-binary
@@ -215,9 +227,9 @@ outputs:
     script: install-ld64.sh
     requirements:
       build:
-        - {{ pin_subpackage('llvm-lto-tapi', exact=True) }}
+        - {{ pin_subpackage('llvm-lto', exact=True) }}
       run:
-        - {{ pin_subpackage('llvm-lto-tapi', exact=True) }}
+        - {{ pin_subpackage('llvm-lto', exact=True) }}
         # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
         # but that is not possible when bootstrapping as it would cause a build dependency cycle.
         - {{ pin_subpackage('libcxx', exact=True) }}        # [osx]
@@ -237,7 +249,7 @@ outputs:
       build:
         - cmake-binary
       run:
-        - {{ pin_subpackage('llvm-lto-tapi', exact=True) }}
+        - {{ pin_subpackage('llvm-lto', exact=True) }}
         # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
         # but that is not possible when bootstrapping as it would cause a build dependency cycle.
         - {{ pin_subpackage('libcxx', exact=True) }}        # [osx]

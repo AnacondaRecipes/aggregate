@@ -1,4 +1,4 @@
-diff -urN ld64.orig/APPLE_LICENSE ld64/APPLE_LICENSE
+700-ld64-drop-tapi-support.patch700-ld64-drop-tapi-support.patchdiff -urN ld64.orig/APPLE_LICENSE ld64/APPLE_LICENSE
 --- ld64.orig/APPLE_LICENSE	2017-08-07 16:57:31.870787702 +0100
 +++ ld64/APPLE_LICENSE	2017-08-07 17:26:48.949898951 +0100
 @@ -364,4 +364,4 @@
@@ -70,7 +70,7 @@ diff -urN ld64.orig/Makefile.in ld64/Makefile.in
 +                  -DSUPPORT_ARCH_armv7em=1 -DSUPPORT_ARCH_armv8=1 -DSUPPORT_ARCH_arm64=1 -DSUPPORT_ARCH_arm64v8=1
 +
 +MYLDFLAGS       = -L$(top_builddir)/libstuff
-+MYLIBS          = -lstuff $(UUID_LIBS) $(DL_LIBS) $(LTO_LIBS) -ltapi -lxar $(SSL_LIBS)
++MYLIBS          = -lstuff $(UUID_LIBS) $(DL_LIBS) $(LTO_LIBS) -lxar $(SSL_LIBS)
 +
 +MYCOMPILEFLAGS  = $(WARNINGS) $(MYWARNINGS) $(DEFS) $(MYDEFS) \
 +                  $(CPPFLAGS) $(MYINCLUDES) $(CFLAGS) $(MDYNAMICNOPIC)

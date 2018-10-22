@@ -1,7 +1,18 @@
-diff -urN clang.orig/lib/Driver/Driver.cpp clang/lib/Driver/Driver.cpp
---- clang.orig/lib/Driver/Driver.cpp	2017-08-10 15:45:56.000000000 -0700
-+++ clang/lib/Driver/Driver.cpp	2017-08-10 15:58:21.000000000 -0700
-@@ -614,8 +614,13 @@
+From 7565075efc6ba701dc5a6d0ba7667658dac5d3d9 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sat, 25 Aug 2018 09:20:04 -0500
+Subject: [PATCH 2/3] clang: add conda specific env var CONDA_BUILD_SYSROOT
+
+---
+ lib/Driver/Driver.cpp             | 9 +++++++--
+ lib/Frontend/InitHeaderSearch.cpp | 6 +++++-
+ 2 files changed, 12 insertions(+), 3 deletions(-)
+
+diff --git a/lib/Driver/Driver.cpp b/lib/Driver/Driver.cpp
+index 952a716..67e4917 100644
+--- a/lib/Driver/Driver.cpp
++++ b/lib/Driver/Driver.cpp
+@@ -971,8 +971,13 @@ Compilation *Driver::BuildCompilation(ArrayRef<const char *> ArgList) {
      A->claim();
      PrefixDirs.push_back(A->getValue(0));
    }
@@ -16,11 +27,12 @@ diff -urN clang.orig/lib/Driver/Driver.cpp clang/lib/Driver/Driver.cpp
 +  }
    if (const Arg *A = Args.getLastArg(options::OPT__dyld_prefix_EQ))
      DyldPrefix = A->getValue();
-   if (Args.hasArg(options::OPT_nostdlib))
-diff -urN clang.orig/lib/Frontend/InitHeaderSearch.cpp clang/lib/Frontend/InitHeaderSearch.cpp
---- clang.orig/lib/Frontend/InitHeaderSearch.cpp	2017-08-10 14:57:35.000000000 -0700
-+++ clang/lib/Frontend/InitHeaderSearch.cpp	2017-08-10 16:19:14.000000000 -0700
-@@ -26,6 +26,7 @@
+ 
+diff --git a/lib/Frontend/InitHeaderSearch.cpp b/lib/Frontend/InitHeaderSearch.cpp
+index 8a70404..b1c5f55 100644
+--- a/lib/Frontend/InitHeaderSearch.cpp
++++ b/lib/Frontend/InitHeaderSearch.cpp
+@@ -27,6 +27,7 @@
  #include "llvm/ADT/Twine.h"
  #include "llvm/Support/ErrorHandling.h"
  #include "llvm/Support/Path.h"
@@ -28,8 +40,8 @@ diff -urN clang.orig/lib/Frontend/InitHeaderSearch.cpp clang/lib/Frontend/InitHe
  #include "llvm/Support/raw_ostream.h"
  
  using namespace clang;
-@@ -223,7 +224,10 @@
-         break;
+@@ -228,7 +229,10 @@ void InitHeaderSearch::AddDefaultCIncludePaths(const llvm::Triple &triple,
+       LLVM_FALLTHROUGH;
      default:
        // FIXME: temporary hack: hard-coded paths.
 -      AddPath("/usr/local/include", System, false);
@@ -40,3 +52,6 @@ diff -urN clang.orig/lib/Frontend/InitHeaderSearch.cpp clang/lib/Frontend/InitHe
        break;
      }
    }
+-- 
+2.5.4 (Apple Git-61)
+
