@@ -1,0 +1,46 @@
+{% set name = "python-ntlm" %}
+{% set version = "1.1.0" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  git_url: https://github.com/mullender/python-ntlm
+  git_rev: 2f796941c047b8bd2eb1e1535f006c183d245ff7
+  patches:
+    - 0001-Fix-entrypoints.patch
+
+build:
+  number: 1
+  entry_points:
+    - ntlm_example_simple=ntlm_examples.simple:main
+    - ntlm_example_extended=ntlm_examples.extended:main
+  script:
+    - cd python26
+    - "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+  skip: True  # [py3k]
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - python
+
+test:
+  imports:
+    - ntlm
+
+about:
+  home: https://github.com/mullender/python-ntlm
+  license: LGPL
+  summary: Provides NTLM support
+  description: |
+    Python-nltm provides NTLM support, including an authentication handler for
+    urllib2.  This library allows you to retrieve content from (usually
+    corporate) servers protected with windows authentication (NTLM) using the
+    Python urllib2.
+  doc_url: https://code.google.com/archive/p/python-ntlm/
+  doc_source_url: https://github.com/mullender/python-ntlm/blob/master/README.md
+  dev_url: https://github.com/mullender/python-ntlm

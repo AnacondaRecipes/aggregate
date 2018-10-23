@@ -1,0 +1,26 @@
+From b1d976bc365768d89d4861bf884418f5670f00e1 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Tue, 23 Oct 2018 12:08:28 -0500
+Subject: [PATCH] Fix entrypoints
+
+---
+ python26/ntlm_examples/__init__.py |   0
+ python26/setup.py                  | Bin 1859 -> 1875 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 python26/ntlm_examples/__init__.py
+
+diff --git a/python26/ntlm_examples/__init__.py b/python26/ntlm_examples/__init__.py
+new file mode 100644
+index 0000000..e69de29
+diff --git a/python26/setup.py b/python26/setup.py
+index 418fd685dca628f6db7980102a744960e81c8a2b..79e5f06e69a6ac91eb4d4f392dfec1919b37900d 100644
+GIT binary patch
+delta 29
+kcmX@icbRX)9TouvrM!}y-1yXr#N2|M)MBO0cUaPy0IUTIEC2ui
+
+delta 12
+Tcmcc2cbIR(9hS{+SkjpQCQSuT
+
+-- 
+2.18.0
+
