@@ -173,7 +173,7 @@ openblas:
 openjpeg:
   - 2.3
 openssl:
-  - 1.0.2
+  - 1.1.1
 perl:
   - 5.26
 pixman:
