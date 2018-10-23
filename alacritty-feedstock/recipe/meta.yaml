@@ -1,11 +1,13 @@
-{% set version = '0.2.0' %}
+{% set version = '0.2.1' %}
+{% set name = 'alacritty' %}
 
 package:
-  name: alacritty
+  name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://github.com/jwilm/alacritty/archive/v{{ version }}.tar.gz
+  fn: {{ name }}-v{{ version }}.tar.gz
+  url: https://github.com/jwilm/{{ name }}/archive/v{{ version }}.tar.gz
 
 build:
   script:
