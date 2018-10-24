@@ -9,6 +9,10 @@ source:
   - url: http://vault.centos.org/6.10/os/Source/SPackages/cups-1.4.2-79.el6.src.rpm
     folder: source
 
+build:
+  missing_dso_whitelist:
+    - '*'
+
 requirements:
   build:
     - cups-libs-cos6-i686 ==1.4.2
