@@ -1,0 +1,36 @@
+{% set name = "pbkdf2" %}
+{% set version = "1.3" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  git_url: https://github.com/dlitz/python-pbkdf2
+  git_rev: v{{ version }}
+
+build:
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - python
+
+test:
+  source_files:
+    - test/test_pbkdf2.py
+  commands:
+    - python test/test_pbkdf2.py
+
+about:
+  home: http://www.dlitz.net/software/python-pbkdf2/
+  license: MIT
+  summary: Implements the password-based key derivation function, PBKDF2
+  description: |
+    This module implements the password-based key derivation function, PBKDF2,
+    specified in `RSA PKCS#5 v2.0
+  dev_url: https://github.com/dlitz/python-pbkdf2
