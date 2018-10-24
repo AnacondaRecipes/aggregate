@@ -1,0 +1,29 @@
+package:
+  name: cups-libs-cos6-i686
+  version: 1.4.2
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/cups-libs-1.4.2-79.el6.i686.rpm
+    sha256: ceda2338ab5c8e05e55dd7ab3213a3a4c10031ca5bdb17468dc9a7af8fa38455
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/cups-1.4.2-79.el6.src.rpm
+    folder: source
+
+
+
+outputs:
+  - name: cups-libs-cos6-i686
+    noarch: generic
+
+    about:
+      home: http://www.cups.org/
+      license: LGPLv2
+      license_family: LGPL
+      summary: "(CDT) Common Unix Printing System - libraries"
+      description: |
+        The Common UNIX Printing System provides a portable printing layer for UNIX®
+        operating systems. It has been developed by Easy Software Products to promote
+        a standard printing solution for all UNIX vendors and users. CUPS provides the
+        System V and Berkeley command-line interfaces. The cups-libs package provides
+        libraries used by applications to use CUPS natively, without needing the
+        lp/lpr commands.

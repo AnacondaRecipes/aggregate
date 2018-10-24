@@ -1,0 +1,32 @@
+package:
+  name: cups-devel-cos6-x86_64
+  version: 1.4.2
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/cups-devel-1.4.2-79.el6.x86_64.rpm
+    sha256: 48e03cf7b912b7abe95adc662381163be739af5906134fd40c240373af3da8a5
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/cups-1.4.2-79.el6.src.rpm
+    folder: source
+
+requirements:
+  build:
+    - cups-libs-cos6-x86_64 ==1.4.2
+
+
+outputs:
+  - name: cups-devel-cos6-x86_64
+    noarch: generic
+    requirements:
+      run:
+        - cups-libs-cos6-x86_64 ==1.4.2
+
+    about:
+      home: http://www.cups.org/
+      license: LGPLv2
+      license_family: LGPL
+      summary: "(CDT) Common Unix Printing System - development environment"
+      description: |
+        The Common UNIX Printing System provides a portable printing layer for UNIX®
+        operating systems. This is the development package for creating additional
+        printer drivers, and other CUPS services.
