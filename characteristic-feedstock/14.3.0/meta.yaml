@@ -1,0 +1,33 @@
+{% set name = "characteristic" %}
+{% set version = "14.3.0" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: ded68d4e424115ed44e5c83c2a901a0b6157a959079d7591d92106ffd3ada380
+
+build:
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - python
+
+about:
+  home: https://characteristic.readthedocs.org/
+  license: MIT
+  license_file: LICENSE
+  summary: Python attributes without boilerplate
+  description: |
+    Characteristic is an MIT-licensed Python package with class decorators
+    that ease the chores of implementing the most common attribute-related
+    object protocols.
+  doc_url: https://characteristic.readthedocs.org
+  dev_url: https://github.com/hynek/characteristic
