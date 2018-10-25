@@ -1,0 +1,25 @@
+From 92c7126efe715857bf548eee2d90a92b4a2e55a8 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Wed, 24 Oct 2018 01:57:14 -0500
+Subject: [PATCH 3/3] Disable namespace
+
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 4f94d1c..94a68a6 100644
+--- a/setup.py
++++ b/setup.py
+@@ -34,7 +34,7 @@ setup(name='cryptacular',
+       keywords='bcrypt password security pbkdf2 crypt hash',
+       license='MIT',
+       packages=find_packages(),
+-      namespace_packages = ['cryptacular'],
++      #namespace_packages = ['cryptacular'],
+       include_package_data=True,
+       zip_safe=False,
+       install_requires = ['pbkdf2', 'setuptools'],
+-- 
+2.18.0
+

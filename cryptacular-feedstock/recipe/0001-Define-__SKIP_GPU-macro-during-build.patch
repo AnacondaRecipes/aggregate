@@ -1,0 +1,26 @@
+From 9e4f2b57aca2064262818604c05611e5724a3b56 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Wed, 24 Oct 2018 00:50:03 -0500
+Subject: [PATCH 1/2] Define __SKIP_GPU macro during build
+
+xref: https://bitbucket.org/dholth/cryptacular/issues/11/not-installing-on-ubuntu-1804#comment-45551294
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 05824f8..4f94d1c 100644
+--- a/setup.py
++++ b/setup.py
+@@ -51,7 +51,7 @@ setup(name='cryptacular',
+               # how do I compile .S with distutils?
+               # 'crypt_blowfish-1.0.3/x86.S', 
+               ],
+-              define_macros = [ ('NO_BF_ASM', None) ],
++              define_macros = [ ('NO_BF_ASM', None), ('__SKIP_GNU', 1) ],
+               include_dirs = [
+               'crypt_blowfish-1.2/',
+               ]
+-- 
+2.18.0
+

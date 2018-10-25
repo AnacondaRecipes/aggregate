@@ -1,0 +1,43 @@
+From 71fd099dcd5e3ff154d01656b2c3dd60362e3644 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Wed, 24 Oct 2018 00:52:45 -0500
+Subject: [PATCH 2/2] Drop crypt.h, new versions of python #include crypt.h
+
+---
+ crypt_blowfish-1.2/crypt.h | 24 ------------------------
+ 1 file changed, 24 deletions(-)
+ delete mode 100644 crypt_blowfish-1.2/crypt.h
+
+diff --git a/crypt_blowfish-1.2/crypt.h b/crypt_blowfish-1.2/crypt.h
+deleted file mode 100644
+index 12e6705..0000000
+--- a/crypt_blowfish-1.2/crypt.h
++++ /dev/null
+@@ -1,24 +0,0 @@
+-/*
+- * Written by Solar Designer <solar at openwall.com> in 2000-2002.
+- * No copyright is claimed, and the software is hereby placed in the public
+- * domain.  In case this attempt to disclaim copyright and place the software
+- * in the public domain is deemed null and void, then the software is
+- * Copyright (c) 2000-2002 Solar Designer and it is hereby released to the
+- * general public under the following terms:
+- *
+- * Redistribution and use in source and binary forms, with or without
+- * modification, are permitted.
+- *
+- * There's ABSOLUTELY NO WARRANTY, express or implied.
+- *
+- * See crypt_blowfish.c for more information.
+- */
+-
+-#include <gnu-crypt.h>
+-
+-#if defined(_OW_SOURCE) || defined(__USE_OW)
+-#define __SKIP_GNU
+-#undef __SKIP_OW
+-#include <ow-crypt.h>
+-#undef __SKIP_GNU
+-#endif
+-- 
+2.18.0
+

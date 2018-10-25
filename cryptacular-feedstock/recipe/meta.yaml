@@ -1,0 +1,55 @@
+{% set name = "cryptacular" %}
+{% set version = "1.4.1" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 273f03d03f9b316671ae4f1c1c6b8d3c883da19a5706873e8f3d6543e13dd4a1
+  patches:
+    - 0001-Define-__SKIP_GPU-macro-during-build.patch
+    - 0002-Drop-crypt.h-new-versions-of-python-include-crypt.h.patch
+    - 0003-Disable-namespace.patch
+
+build:
+  number: 1
+  script: "{{ PYTHON }} setup.py install --single-version-externally-managed --record record.txt"
+  skip: True  # [ppc64le]
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+  host:
+    - pbkdf2
+    - python
+    - setuptools
+  run:
+    - pbkdf2
+    - python
+    - setuptools
+
+test:
+  imports:
+    - cryptacular
+    - cryptacular.bcrypt
+    - cryptacular.core
+    - cryptacular.crypt  # [not win]
+    - cryptacular.pbkdf2
+  requires:
+    - nose
+  commands:
+    - nosetests -v cryptacular.crypt  # [not win]
+    - nosetests -v cryptacular.core
+
+about:
+  home: http://bitbucket.org/dholth/cryptacular/
+  license: MIT
+  license: MIT
+  summary: password hashing framework with bcrypt and pbkdf2
+  description: |
+    Cryptacular is a collection of strong password hashing functions that
+    share a common interface, and a nice way to use bcrypt as a password hash.
+  doc_url: https://pypi.python.org/pypi/cryptacular/
+  dev_url: https://bitbucket.org/dholth/cryptacular/
