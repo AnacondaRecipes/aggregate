@@ -3362,3 +3362,11 @@
 	path = pyct-core-feedstock
 	url = ../pyct-core-feedstock
 	branch = master
+[submodule "jupyterhub-feedstock"]
+	path = jupyterhub-feedstock
+	url = ../jupyterhub-feedstock
+	branch = master
+[submodule "tini-feedstock"]
+	path = tini-feedstock
+	url = ../tini-feedstock
+	branch = master
