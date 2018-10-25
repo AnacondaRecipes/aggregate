@@ -3,17 +3,28 @@ package:
   version: 11.0.7
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/mesa-libEGL-11.0.7-4.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/mesa-libEGL-11.0.7-4.el6.i686.rpm
     sha256: d6f9d8bba17b2fba3546e8725a92f46037b95e2834431849172f4094b63dfa7e
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/mesa-11.0.7-4.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/mesa-11.0.7-4.el6.src.rpm
     folder: source
 
+build:
+  number: 1
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - mesa-libgbm-cos6-i686 ==11.0.7
 
 
 outputs:
   - name: mesa-libegl-cos6-i686
     noarch: generic
+    requirements:
+      run:
+        - mesa-libgbm-cos6-i686 ==11.0.7
 
     about:
       home: http://www.mesa3d.org
