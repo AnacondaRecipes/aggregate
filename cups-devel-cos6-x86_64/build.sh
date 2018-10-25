@@ -7,5 +7,5 @@ if [[ -n "${RPM}" ]]; then
   "${RECIPE_DIR}"/rpm2cpio "${RPM}" | cpio -idmv
   popd > /dev/null 2>&1
 else
-  mv "${SRC_DIR}"/* .
+  mv "${SRC_DIR}"/binary/* .
 fi
