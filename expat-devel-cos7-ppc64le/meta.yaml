@@ -9,10 +9,13 @@ source:
   - url: http://vault.centos.org/7.4.1708/os/Source/SPackages/expat-2.1.0-10.el7_3.src.rpm
     folder: source
 
+build:
+  missing_dso_whitelist:
+    - '*'
+
 requirements:
   build:
     - expat-cos7-ppc64le ==2.1.0
-
 
 outputs:
   - name: expat-devel-cos7-ppc64le
