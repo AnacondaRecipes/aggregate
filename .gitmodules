@@ -3370,3 +3370,31 @@
 	path = tini-feedstock
 	url = ../tini-feedstock
 	branch = master
+[submodule "fbprophet-feedstock"]
+	path = fbprophet-feedstock
+	url = ../fbprophet-feedstock
+	branch = master
+[submodule "pycryptodome-feedstock"]
+	path = pycryptodome-feedstock
+	url = ../pycryptodome-feedstock
+	branch = master
+[submodule "nasm-feedstock"]
+	path = nasm-feedstock
+	url = ../nasm-feedstock
+	branch = master
+[submodule "thrift-cpp-feedstock"]
+	path = thrift-cpp-feedstock
+	url = ../thrift-cpp-feedstock
+	branch = master
+[submodule "fonttools-feedstock"]
+	path = fonttools-feedstock
+	url = ../fonttools-feedstock
+	branch = master
+[submodule "munkres-feedstock"]
+	path = munkres-feedstock
+	url = ../munkres-feedstock
+	branch = master
+[submodule "unicodedata2-feedstock"]
+	path = unicodedata2-feedstock
+	url = ../unicodedata2-feedstock
+	branch = master
