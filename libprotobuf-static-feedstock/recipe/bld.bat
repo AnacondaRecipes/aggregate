@@ -16,7 +16,8 @@ cmake -G "NMake Makefiles" ^
          -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
          -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
          -Dprotobuf_WITH_ZLIB=ON ^
-         -Dprotobuf_BUILD_SHARED_LIBS=ON ^
+         -Dprotobuf_BUILD_SHARED_LIBS=OFF ^
+         -Dprotobuf_BUILD_STATIC_LIBS=ON ^
          -Dprotobuf_MSVC_STATIC_RUNTIME=OFF ^
          ../..
 if errorlevel 1 exit 1
