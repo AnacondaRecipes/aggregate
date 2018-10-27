@@ -33,12 +33,6 @@
 # {% set clang_llvm_bin_sha256 = '5d70313ed1cfdf25e36aefae07bab97e8ebfbb8e5ba5bd1bc80aa992cad19b08' %}
 
 {% set native_compiler_subdir=build_platform %}
-{% set cctools_version = '895' %}
-{% set cctools_sha256 = 'ce66034fa35117f9ae76bbb7dd72d8068c405778fa42e877e8a13237a10c5cb7' %}
-{% set ld64_version = '274.2' %}
-{% set ld64_sha256 = '175d89c419e99d49a7a5f7e4196d3cef4c9e19cc17a425c332e86df6b516f7d7' %}
-{% set dyld_version = '433.5' %}
-{% set dyld_sha256 = '13e370ed12c137f0153a96bab12e1d46896db07f8a40bac6b0529585ceac9260' %}
 # Apple would like to upstream this, and the repo on github should be clang 5 compatible, see:
 # http://lists.llvm.org/pipermail/llvm-dev/2017-September/117264.html
 # https://github.com/ributzka/tapi
@@ -80,6 +74,7 @@ source:
   - url: http://{{ releases_url }}.llvm.org/{{ version_dir }}/libcxx-{{ version }}.src.tar.xz
     sha256: {{ libcxx_sha256 }}
     folder: projects/libcxx
+    patches: 0001-If-libc-abi-library-is-given-use-it-to-reexport.patch
   - url: http://{{ releases_url }}.llvm.org/{{ version_dir }}/libcxxabi-{{ version }}.src.tar.xz
     sha256: {{ libcxxabi_sha256 }}
     folder: projects/libcxxabi
@@ -103,72 +98,16 @@ source:
 #      - 0005-Use-add_llvm_install_targets-for-creating-install-ta.patch
 #      - 0005-tapi-5.0.0-Move-Support-MachO-to-BinaryFormat-MachO.patch
 #      - 0001-llvm-sys-fs-file_magic-llvm-file_magic.patch
-  - url: https://opensource.apple.com/tarballs/cctools/cctools-{{ cctools_version }}.tar.gz
-    sha256: {{ cctools_sha256 }}
-    folder: cctools
-    patches:
-      - 001-remove_static_part.patch
-      - 100-add_sdkroot_headers.patch
-      - 110-import_to_include.patch
-      - 120-fix_time_bugs.patch
-      - 130-add_compileguards.patch
-      - 140-remove_sysctl_osversion_detection.patch
-      - 160-map_64bit_arches.patch
-      - 170-fix_printf_format_bugs.patch
-      - 180-add_CROSS_SYSROOT.patch
-      - 190-default_arch.patch
-      - 210-dont_typedef_NxConstantString.patch
-      - 220-cross-prefixes-EXEEXT-and-progname_fixes.patch
-      - 240-use_strerror.patch
-      - 250-dont_assume_getattrlist.patch
-      - 260-ppc64_reenable.patch
-      - 270-dont_assume_vm_sync.patch
-      - 280-missing_includes.patch
-      - 290-error_as_weak_symbol.patch
-      - 300-undef___unused_for_sysctl.patch
-      - 340-win_O_BINARY.patch
-      - 350-win_fileio_mode.patch
-      - 360-win_TMPDIR_to_TEMP.patch
-      - 370-win_execute.patch
-      - 380-win_avoid_mmap_ofile.patch
-      - 400-cctools-_WIN64-fixes.patch
-      - 410-remove_inc_arch_sparc_reg_h_PC.patch
-      - 420-autoconfiscate.patch
-  - url: https://opensource.apple.com/tarballs/ld64/ld64-{{ ld64_version }}.tar.gz
-    sha256: {{ ld64_sha256 }}
-    folder: cctools/ld64
-    patches:
-      - 100-ld64-add_sdkroot_headers.patch
-      - 150-ld64-allow_glibc_or_bsd_qsort_r.patch
-      - 180-ld64-add_CROSS_SYSROOT.patch
-      - 200-ld64-add_typename.patch
-      - 280-ld64-missing_includes.patch
-      - 320-ld64-extern_C_log2_only_if___APPLE__.patch
-      - 330-ld64-extern_C___assert_rtn.patch
-      - 340-ld64-win_O_BINARY.patch
-      - 350-ld64-win_fileio_mode.patch
-      - 390-ld64-_WIN64-fixes.patch
-      - 420-ld64-autoconfiscate.patch
-      - 500-ld64-add-fake-CrashReporterClient.h.patch
-      - 510-ld64-fix-incorrect-fname-case.patch
-      - 520-ld64-fix-usr-local-and-usr-ordering.patch
-      - 530-ld64-add-conda-specific-env-vars-to-modify-lib-search-paths.patch
-      - 700-ld64-drop-tapi-support.patch
     # Because macOS 10.9's clang is too old (problems with atomics)
   - url: http://{{ releases_url }}.llvm.org/{{ bootstrap_version_dir }}/clang+llvm-{{ bootstrap_version_dash }}-x86_64-apple-darwin.tar.xz       [osx]
     sha256: {{ clang_llvm_bin_sha256 }}
     folder: bootstrap                                                                                     [osx]
-  # We copy headers necessary for building cctools/ld64 from dyld and MacOSX10.9.sdk (on all OSes).
-  # older versions of these files are added by 100-add_sdkroot_headers.patch, we overwrite those...
-  - url: https://opensource.apple.com/tarballs/dyld/dyld-{{ dyld_version }}.tar.gz
-    sha256: {{ dyld_sha256 }}
-    folder: bootstrap/dyld
   - url: https://github.com/phracker/MacOSX-SDKs/releases/download/MacOSX10.11.sdk/MacOSX10.9.sdk.tar.xz
     sha256: {{ macosx_109_sdk_sha256 }}
     folder: bootstrap/MacOSX10.9.sdk
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -176,11 +115,15 @@ requirements:
     #   compiler to build llvm and clang (which are natively cross-compilers.)
     # We might want to split the runtime libs below into a separate recipe,
     #    so that this recipe can use jinja2 instead.
+#    - {{ compiler('c') }}               # [osx]
+#    - {{ compiler('cxx') }}             # [osx]
+    - clang    # [osx]
+    - clangxx  # [osx]
     - gcc_{{ native_compiler_subdir }}  # [linux]
     - gxx_{{ native_compiler_subdir }}  # [linux]
     # build.sh sets HAVE_TERMINFO_*=OFF instead; could effect quality (colours etc) of console output?
     # - ncurses                           # [linux]
-    - cmake-binary
+    - cmake
     - swig
     - autoconf
     - automake
@@ -196,7 +139,7 @@ outputs:
     script: install-llvm-lto.sh
     requirements:
       build:
-        - cmake-binary
+        - cmake
       run:
         # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
         # but that is not possible when bootstrapping as it would cause a build dependency cycle.
@@ -204,57 +147,19 @@ outputs:
     build:
       ignore_run_exports:
         - zlib
-
-  - name: cctools
-    version: {{ cctools_version }}
-    script: install-cctools.sh
-    requirements:
-        # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
-        # but that is not possible when bootstrapping as it would cause a build dependency cycle.
-        - {{ pin_subpackage('libcxx', exact=True) }}        # [osx]
-    build:
-      ignore_run_exports:
-        - zlib
-    about:
-      home: https://opensource.apple.com/source
-      license: Apple Public Source License 2.0
-      license_family: Other
-      license_file: cctools/APPLE_LICENSE
-      summary: Assembler, archiver, ranlib, libtool, otool et al for Darwin Mach-O files
-
-  - name: ld64
-    version: {{ ld64_version }}
-    script: install-ld64.sh
-    requirements:
-      build:
-        - {{ pin_subpackage('llvm-lto', exact=True) }}
-      run:
-        - {{ pin_subpackage('llvm-lto', exact=True) }}
-        # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
-        # but that is not possible when bootstrapping as it would cause a build dependency cycle.
-        - {{ pin_subpackage('libcxx', exact=True) }}        # [osx]
-    build:
-      ignore_run_exports:
-        - zlib
-    about:
-      home: https://opensource.apple.com/source
-      license: Apple Public Source License 2.0
-      license_family: Other
-      license_file: cctools/ld64/APPLE_LICENSE
-      summary: Darwin Mach-O linker
 
   - name: llvm
     script: install-llvm.sh
     requirements:
       build:
-        - cmake-binary
+        - cmake
       run:
         - {{ pin_subpackage('llvm-lto', exact=True) }}
         # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
         # but that is not possible when bootstrapping as it would cause a build dependency cycle.
         - {{ pin_subpackage('libcxx', exact=True) }}        # [osx]
-        - {{ pin_subpackage('cctools', exact=True) }}
-        - {{ pin_subpackage('ld64', exact=True) }}
+        - cctools >=4.0.1
+        - ld64 >=4.0.1
     build:
       ignore_run_exports:
         - zlib
@@ -274,7 +179,7 @@ outputs:
     script: install-clang.sh
     requirements:
       build:
-        - cmake-binary
+        - cmake
       run:
         # llvm pinned using min_pin, max_pin because:
         # conda_build.exceptions.RecipeError: Mismatching hashes in recipe. Exact pins in dependencies that contribute to the hash often cause this. Can you change one or more exact pins to version bound constraints?
@@ -309,7 +214,7 @@ outputs:
 #    script: install-lldb.sh
 #    requirements:
 #      build:
-#        - cmake-binary
+#        - cmake
 #      run:
 #        # llvm pinned using min_pin, max_pin because:
 #        # conda_build.exceptions.RecipeError: Mismatching hashes in recipe. Exact pins in dependencies that contribute to the hash often cause this. Can you change one or more exact pins to version bound constraints?
@@ -360,7 +265,7 @@ outputs:
     script: install-polly.sh
     requirements:
       build:
-        - cmake-binary
+        - cmake
       run:
         - {{ pin_subpackage('llvm', exact=True) }}
         # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
@@ -386,12 +291,14 @@ outputs:
     target: {{ cross_target_platform }}
     requirements:
       build:
-        - cmake-binary
+        - cmake
       run:
         - {{ pin_subpackage('libcxxabi', exact=True) }}
     build:
       ignore_run_exports:
         - zlib
+        - libcxx
+        - libcxxabi
     about:
       home: http://libcxx.llvm.org/
       license: MIT license or UIUC License
@@ -407,10 +314,11 @@ outputs:
     target: {{ cross_target_platform }}
     requirements:
       build:
-        - cmake-binary
+        - cmake
     build:
       ignore_run_exports:
         - zlib
+        - libcxxabi  # Will be the previous version
     about:
       home: http://libcxxabi.llvm.org/
       license: MIT license or UIUC License
@@ -426,7 +334,7 @@ outputs:
     target: {{ cross_target_platform }}
     requirements:
       build:
-        - cmake-binary
+        - cmake
       run:
         # Normally, this dep would be injected via run_exports by the jinja2 compiler() function
         # but that is not possible when bootstrapping as it would cause a build dependency cycle.
@@ -449,7 +357,7 @@ outputs:
     target: {{ cross_target_platform }}
     requirements:
       build:
-        - cmake-binary
+        - cmake
     build:
       ignore_run_exports:
         - zlib
@@ -468,7 +376,7 @@ outputs:
     target: {{ cross_target_platform }}
     requirements:
       build:
-        - cmake-binary
+        - cmake
     build:
       ignore_run_exports:
         - zlib

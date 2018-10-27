@@ -279,6 +279,7 @@ if [[ ! -f llvm_build_final/bin/c-index-test ]]; then
             -DCMAKE_LIBTOOL=${PREFIX}/bin/${DARWIN_TARGET}-libtool                      \
             -DLD64_EXECUTABLE=${PREFIX}/bin/${DARWIN_TARGET}-ld                         \
             -DCMAKE_INSTALL_NAME_TOOL=${PREFIX}/bin/${DARWIN_TARGET}-install_name_tool  \
+            -DLIBCXX_CXX_ABI_LIBRARY_PATH=${PREFIX}/lib                                 \
             ..
     make -j${CPU_COUNT} ${VERBOSE_CM}
     make install
