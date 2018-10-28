@@ -3398,3 +3398,20 @@
 	path = unicodedata2-feedstock
 	url = ../unicodedata2-feedstock
 	branch = master
+[submodule "pamela-feedstock"]
+	path = pamela-feedstock
+	url = ../pamela-feedstock
+	branch = master
+[submodule "configurable-http-proxy-feedstock"]
+	path = configurable-http-proxy-feedstock
+	url = ../configurable-http-proxy-feedstock
+	branch = master
+[submodule "async_generator-feedstock"]
+	path = async_generator-feedstock
+	url = ../async_generator-feedstock
+	branch = master
+[submodule "python-oauth2-feedstock"]
+	path = python-oauth2-feedstock
+	url = ../python-oauth2-feedstock
+	branch = master
+
