@@ -7,7 +7,6 @@ source:
     sha256: 6061908e6a12b5dd427facff2380672233a3ae25205b633718ce82327172578f
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/mesa-11.0.7-4.el6.src.rpm
-    sha256: 9db7bd5036fcc8fa25585cd5625e56d95118092b816ba09867073e310db44b5d
     folder: source
 
 build:
