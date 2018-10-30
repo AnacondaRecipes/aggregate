@@ -40,7 +40,7 @@ requirements:
    # Arguably these should be deps for linux too:
    - sed   # [osx]
    - gawk  # [osx]
-   - make  # [osx]
+   - make
 
 test:
   commands:
