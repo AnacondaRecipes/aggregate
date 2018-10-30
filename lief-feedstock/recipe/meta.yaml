@@ -12,7 +12,7 @@ source:
     sha256: 8f1a12d69d9f6bd8404d4f5809549d1c7f3138cacf3bccd1192cb4f46bfb9eb7
     patches:
       - 0001-Allow-building-from-released-tarball.patch
-
+      - 0002-MSVC-Set-bigobj-flag.patch
 build:
   number: 0
   # Python 2.7 is not supported on Windows

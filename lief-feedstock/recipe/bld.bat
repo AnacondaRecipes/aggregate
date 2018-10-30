@@ -26,10 +26,13 @@ set UNIX_SP_DIR=%SP_DIR:\=/%
 set UNIX_SRC_DIR=%SRC_DIR:\=/%
 
 
-cmake .. -LAH -G "NMake Makefiles JOM"                                      ^
+:: cmake .. -LAH -G "NMake Makefiles JOM"
+
+cmake .. -LAH -G "%CMAKE_GENERATOR%"                                        ^
     -DCMAKE_BUILD_TYPE="Release"                                            ^
     -DCMAKE_INSTALL_PREFIX=%PREFIX%                                         ^
     -DCMAKE_INSTALL_LIBDIR=lib                                              ^
     -DCMAKE_SKIP_RPATH=ON                                                   ^
     -DLIEF_PYTHON_API=OFF
 if errorlevel 1 exit /b 1
+

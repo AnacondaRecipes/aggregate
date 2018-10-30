@@ -25,7 +25,7 @@ set UNIX_LIBRARY_BIN=%LIBRARY_BIN:\=/%
 set UNIX_SP_DIR=%SP_DIR:\=/%
 set UNIX_SRC_DIR=%SRC_DIR:\=/%
 
-cmake .. -LAH -G "NMake Makefiles JOM"                                      ^
+cmake .. -LAH -G "%CMAKE_GENERATOR%"                                        ^
     -DCMAKE_BUILD_TYPE="Release"                                            ^
     -DCMAKE_INSTALL_PREFIX=%PREFIX%                                         ^
     -DCMAKE_INSTALL_LIBDIR=lib                                              ^
@@ -37,12 +37,16 @@ cmake .. -LAH -G "NMake Makefiles JOM"                                      ^
     -DPYTHON_LIBRARY_DEBUG=%PREFIX%\libs\python%CONDA_PY%.lib               ^
     -DPYTHON_INCLUDE_DIR:PATH=%PREFIX%\include
 
-cmake --build . --config Release --target CLEAN -- VERBOSE=1  -- -j%CPU_COUNT%
-cmake --build . --config Release --target INSTALL -- VERBOSE=1
+:: cmake --build . --config Release --target CLEAN -- VERBOSE=1  -- -j%CPU_COUNT%
+:: cmake --build . --config Release --target INSTALL -- VERBOSE=1
 
-dir /s .
-  pushd api\python
-  dir /s .
+cmake --build . -j %CPU_COUNT% --config Release --target install -- -verbosity:detailed
+:: Racey
+type nul >> ..\src\MachO\DataCodeEntry.cpp
+cmake --build . --config Release --target LIB_LIEF_STATIC -- -verbosity:detailed
+cmake --build . -j %CPU_COUNT% --config Release --target install -- -verbosity:detailed
+
+pushd api\python
   copy _pylief.pyd %SP_DIR%\
 popd
 
@@ -50,3 +54,4 @@ if errorlevel 1 exit /b 1
 
 :: Unfortunate examples.
 del /s /q %PREFIX%\share\LIEF
+
