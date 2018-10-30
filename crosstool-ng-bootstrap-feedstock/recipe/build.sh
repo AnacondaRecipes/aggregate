@@ -58,7 +58,7 @@ done
 
 # Work around the fact that we need to call make -rf, but to do so we cannot
 # use /usr/bin/env, and if we attempt to use a full prefix then we run into
-# shebang limits on various distros.
-mv ${PREFIX}/bin/ct-ng ${PREFIX}/bin/ct-ng-mk
-echo '#!/usr/bin/env bash' > ${PREFIX}/bin/ct-ng
-echo "${PREFIX}/bin/make -rf ${PREFIX}/bin/ct-ng-mk $*" >> ${PREFIX}/bin/ct-ng
+# shebang limits on various distros .. edit, does not seem to be working.
+# mv ${PREFIX}/bin/ct-ng ${PREFIX}/bin/ct-ng-mk
+# echo '#!/usr/bin/env bash' > ${PREFIX}/bin/ct-ng
+# echo "${PREFIX}/bin/make -rf ${PREFIX}/bin/ct-ng-mk \$*" >> ${PREFIX}/bin/ct-ng
