@@ -1,8 +1,8 @@
 {% set name = "parsel" %}
-{% set version = "1.5.0" %}
+{% set version = "1.5.1" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "b24618fe81dce29d717aa8c4a9534c46e807dd6a5c8d5e1bb3b1fdb3fbd22b56" %}
+{% set hash_value = "9ccd82b8a122345601f6f9209e972c0e8c3518a188fcff2d37cb4d7bc570b4b8" %}
 
 package:
   name: {{ name|lower }}
@@ -24,7 +24,7 @@ requirements:
     - pytest-runner
   run:
     - python
-    - w3lib >=1.8.0
+    - w3lib >=1.19.0
     - lxml >=2.3
     - six >=1.5.2
     - cssselect >=0.9
