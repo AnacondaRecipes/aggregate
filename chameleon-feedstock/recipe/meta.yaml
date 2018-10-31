@@ -1,8 +1,8 @@
 {% set name = "Chameleon" %}
-{% set version = "3.4" %}
+{% set version = "3.5" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "7750865a68b469b34cbc60b9927f7e5c609808b6b966bf75bf8556e6ed48912c" %}
+{% set hash_value = "cb0f97211faf03b46bf30e517c0e589bdc4a6cf678a9d1d68312d710849303a9" %}
 
 package:
   name: {{ name|lower }}
