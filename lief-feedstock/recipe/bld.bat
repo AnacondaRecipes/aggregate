@@ -1,3 +1,4 @@
+
 @echo ON
 setlocal enabledelayedexpansion
 
@@ -32,7 +33,11 @@ cmake .. -LAH -G "%CMAKE_GENERATOR%"                                        ^
     -DCMAKE_BUILD_TYPE="Release"                                            ^
     -DCMAKE_INSTALL_PREFIX=%PREFIX%                                         ^
     -DCMAKE_INSTALL_LIBDIR=lib                                              ^
+    -DCMAKE_STATIC_LIBRARY_SUFFIX_CXX=-static.lib                           ^
+    -DCMAKE_STATIC_LIBRARY_SUFFIX_C=-static.lib                             ^
     -DCMAKE_SKIP_RPATH=ON                                                   ^
+    -DLIEF_SHARED_LIB=ON                                                    ^
     -DLIEF_PYTHON_API=OFF
+
 if errorlevel 1 exit /b 1
 

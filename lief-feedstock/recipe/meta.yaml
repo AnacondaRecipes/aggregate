@@ -12,7 +12,10 @@ source:
     sha256: 8f1a12d69d9f6bd8404d4f5809549d1c7f3138cacf3bccd1192cb4f46bfb9eb7
     patches:
       - 0001-Allow-building-from-released-tarball.patch
-      - 0002-MSVC-Set-bigobj-flag.patch
+      - 0002-MSVC-Add-bigobj-flag.patch
+      - 0003-Link-Python-extension-module-to-shared-LIEF-library.patch
+      - 0004-Export-LIEF-Object-and-LIEF-MachO-DataCodeEntry-clas.patch
+
 build:
   number: 0
   # Python 2.7 is not supported on Windows
@@ -62,22 +65,6 @@ outputs:
     script: install-liblief.sh        # [unix]
     script: install-liblief.bat       # [win]
     build:
-#      missing_dso_whitelist:
-#        - '**libgmodule-2.0.so.0'
-#        - '**libgdk-x11-2.0.so.0'
-#        - '**libgdk_pixbuf-2.0.so.0'
-#        - '**libpango-1.0.so.0'
-#        - '**libpangocairo-1.0.so.0'
-#        - '**libgio-2.0.so.0'
-#        - '**libglib-2.0.so.0'
-#        - '**libpangoft2-1.0.so.0'
-#        - '**libatk-1.0.so.0'
-#        - '**libgobject-2.0.so.0'
-#        - '**libgtk-x11-2.0.so.0'
-#        - '**libgthread-2.0.so.0'
-#        - '**libfontconfig.so.1'
-#        - '**libcairo.so.2'
-#        - '**libfreetype.so.6'
       run_exports:
         - {{ pin_subpackage('liblief', max_pin='x.x') }}
     requirements:

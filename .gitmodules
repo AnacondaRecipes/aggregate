@@ -3414,8 +3414,12 @@
 	path = python-oauth2-feedstock
 	url = ../python-oauth2-feedstock
 	branch = master
-
 [submodule "gdata-feedstock"]
 	path = gdata-feedstock
 	url = ../gdata-feedstock
 	branch = master
+[submodule "ccache-feedstock"]
+	path = ccache-feedstock
+	url = ../ccache-feedstock
+	branch = master
+

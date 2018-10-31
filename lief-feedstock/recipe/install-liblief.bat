@@ -1,5 +1,5 @@
 pushd build
-  cmake --build . -j %CPU_COUNT% --config Release --target install -- -verbosity:detailed
+  cmake --build . -j %CPU_COUNT% --config Release --target install -- -verbosity:normal
 
 :: cmake --build . --target INSTALL --config Release -- -j%CPU_COUNT%
 :: Racey:
