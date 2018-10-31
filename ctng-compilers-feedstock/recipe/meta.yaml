@@ -28,7 +28,7 @@ outputs:
   - name: gcc_impl_{{ ctng_target_platform }}
     script: install-gcc.sh
     build:
-      number: {{ build_num }}
+      number: {{ ctng_gcc_build_number }}
       detect_binary_files_with_prefix: False
       binary_relocation:
         - 'bin/*'
@@ -68,7 +68,7 @@ outputs:
   - name: gxx_impl_{{ ctng_target_platform }}
     script: install-g++.sh
     build:
-      number: {{ build_num }}
+      number: {{ ctng_gcc_build_number }}
       detect_binary_files_with_prefix: False
       binary_relocation:
         - 'bin/*'
@@ -103,7 +103,7 @@ outputs:
   - name: gfortran_impl_{{ ctng_target_platform }}
     script: install-gfortran.sh
     build:
-      number: {{ build_num }}
+      number: {{ ctng_gcc_build_number }}
       detect_binary_files_with_prefix: False
       binary_relocation:
         - 'bin/*'
@@ -145,7 +145,7 @@ outputs:
     version: "{{ ctng_binutils }}"
     script: install-binutils.sh
     build:
-      number: {{ build_num }}
+      number: {{ ctng_gcc_build_number }}
       detect_binary_files_with_prefix: False
       binary_relocation:
         - 'bin/*'
@@ -162,7 +162,7 @@ outputs:
     target: {{ ctng_target_platform }}
     script: install-libstdc++.sh
     build:
-      number: {{ build_num }}
+      number: {{ ctng_gcc_build_number }}
       detect_binary_files_with_prefix: False
       binary_relocation: False
       missing_dso_whitelist:
@@ -176,7 +176,7 @@ outputs:
     target: {{ ctng_target_platform }}
     script: install-libgcc.sh
     build:
-      number: {{ build_num }}
+      number: {{ ctng_gcc_build_number }}
       detect_binary_files_with_prefix: False
       binary_relocation: False
       missing_dso_whitelist:
@@ -190,7 +190,7 @@ outputs:
     target: {{ ctng_target_platform }}
     script: install-libgfortran.sh
     build:
-      number: {{ build_num }}
+      number: {{ ctng_gcc_build_number }}
       detect_binary_files_with_prefix: False
       binary_relocation: False
       missing_dso_whitelist:
@@ -206,7 +206,7 @@ outputs:
     version: {{ ctng_gdb }}
     script: install-gdb.sh
     build:
-      number: {{ build_num }}
+      number: {{ ctng_gcc_build_number }}
       missing_dso_whitelist:
         - "*"
     about:
@@ -220,7 +220,7 @@ outputs:
     version: {{ ctng_duma }}
     script: install-duma.sh
     build:
-      number: {{ build_num }}
+      number: {{ ctng_gcc_build_number }}
       detect_binary_files_with_prefix: False
       binary_relocation:
         - 'bin/*'
