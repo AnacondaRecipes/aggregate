@@ -1,8 +1,8 @@
 {% set name = "ansi2html" %}
-{% set version = "1.4.2" %}
+{% set version = "1.5.2" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "ece598620372bacd30b5a320ae3945816f050196837543032aab7e806cf9d0ea" %}
+{% set hash_value = "96ae85ae7b26b7da674d87de2870ba4d1964bca733ae4614587080b6358c3ba9" %}
 
 package:
   name: {{ name|lower }}
