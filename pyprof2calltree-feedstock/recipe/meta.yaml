@@ -1,5 +1,5 @@
 {% set name = "pyprof2calltree" %}
-{% set version = "1.4.3" %}
+{% set version = "1.4.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 38a0774f7716d5303d4c57ff89ec24258154942666e4404558f6ac10f8bb1e52
+  sha256: 9ec2d4d70aa1cb3e2e65a8445247eb32c1ef289bbbd64837c63e0994241f90ea
 
 build:
-  number: 1
+  number: 0
   skip: True  # [ppc64le]
   entry_points:
     - pyprof2calltree = pyprof2calltree:main
