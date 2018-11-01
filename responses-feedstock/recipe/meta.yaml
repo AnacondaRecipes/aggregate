@@ -1,8 +1,8 @@
 {% set name = "responses" %}
-{% set version = "0.9.0" %}
+{% set version = "0.10.2" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "c6082710f4abfb60793899ca5f21e7ceb25aabf321560cc0726f8b59006811c9" %}
+{% set hash_value = "682fafb124e799eeee67ec15c9678d955a88affda5613b09788ef80c03987cf0" %}
 
 package:
   name: {{ name|lower }}
@@ -24,7 +24,7 @@ requirements:
   run:
     - python
     - requests >=2.0
-    - cookies
+    - cookies  # [py<34]
     - six
     - mock  # [py<33]
 
