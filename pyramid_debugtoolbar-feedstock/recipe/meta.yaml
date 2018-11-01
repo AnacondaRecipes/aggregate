@@ -1,5 +1,5 @@
 {% set name = "pyramid_debugtoolbar" %}
-{% set version = "4.4" %}
+{% set version = "4.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5f779aa242009c4aace848f67807da44af2970b303aa1c9682c2efab76b7e79e
+  sha256: 74c5f52ce33765423810e156949b0f97852c66056c97de8c35a6db9b00195774
 
 build:
   number: 0
