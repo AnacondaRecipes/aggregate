@@ -1,6 +1,6 @@
 {% set name = "sas7bdat" %}
-{% set version = "2.1.1" %}
-{% set sha256 = "2cf6ecd40bdde1e4e9cc71813489b523b0d2e27a2c282396120a58314b4e3fae" %}
+{% set version = "2.1.2" %}
+{% set sha256 = "6f11f8a812f860d27efa418a9b981d2f825466b973f750a15cc3ada57c0c46c6" %}
 
 package:
   name: {{ name|lower }}
