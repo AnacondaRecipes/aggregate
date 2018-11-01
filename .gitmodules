@@ -3423,3 +3423,7 @@
 	url = ../ccache-feedstock
 	branch = master
 
+[submodule "c-ares-feedstock"]
+	path = c-ares-feedstock
+	url = ../c-ares-feedstock
+	branch = master
