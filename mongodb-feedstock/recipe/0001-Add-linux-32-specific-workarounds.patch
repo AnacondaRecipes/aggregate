@@ -1,0 +1,66 @@
+From bcb2c95fe6de5e315bb08b296f457d6b9d81db17 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sun, 2 Sep 2018 01:05:54 -0500
+Subject: [PATCH] Add linux-32 specific workarounds
+
+- Don't build shell_core/jstests, shell_options_test
+- Typecast outLength to unsigned long *
+---
+ src/mongo/dbtests/SConscript       | 2 --
+ src/mongo/shell/SConscript         | 9 ---------
+ src/mongo/util/net/ssl_manager.cpp | 2 +-
+ 3 files changed, 1 insertion(+), 12 deletions(-)
+
+diff --git a/src/mongo/dbtests/SConscript b/src/mongo/dbtests/SConscript
+index 09bd01571e1..9c543eb2d69 100644
+--- a/src/mongo/dbtests/SConscript
++++ b/src/mongo/dbtests/SConscript
+@@ -71,7 +71,6 @@ dbtest = env.Program(
+         'insert_test.cpp',
+         'jsobjtests.cpp',
+         'jsontests.cpp',
+-        'jstests.cpp',
+         'logical_sessions_tests.cpp',
+         'matchertests.cpp',
+         'mmaptests.cpp',
+@@ -144,7 +143,6 @@ dbtest = env.Program(
+         "$BUILD_DIR/mongo/util/net/network",
+         "$BUILD_DIR/mongo/util/progress_meter",
+         "$BUILD_DIR/mongo/util/version_impl",
+-        "$BUILD_DIR/mongo/shell_core",
+         "mocklib",
+         "testframework",
+     ],
+diff --git a/src/mongo/shell/SConscript b/src/mongo/shell/SConscript
+index 79e956ab06e..4577f00e3ca 100644
+--- a/src/mongo/shell/SConscript
++++ b/src/mongo/shell/SConscript
+@@ -77,12 +77,3 @@ env.Library(
+     ],
+ )
+ 
+-env.CppUnitTest(
+-    target='shell_options_test',
+-    source=[
+-        "shell_options_test.cpp",
+-    ],
+-    LIBDEPS=[
+-        "$BUILD_DIR/mongo/shell_core",
+-    ],
+-)
+diff --git a/src/mongo/util/net/ssl_manager.cpp b/src/mongo/util/net/ssl_manager.cpp
+index 70795912a97..07ea5277824 100644
+--- a/src/mongo/util/net/ssl_manager.cpp
++++ b/src/mongo/util/net/ssl_manager.cpp
+@@ -569,7 +569,7 @@ StatusWith<DERToken> DERToken::parse(ConstDataRange cdr, size_t* outLength) {
+     const uint64_t tagAndLengthByteCount = kTagLength + encodedLengthBytesCount;
+ 
+     // This may overflow since derLength is from user data so check our arithmetic carefully.
+-    if (mongoUnsignedAddOverflow64(tagAndLengthByteCount, derLength, outLength) ||
++    if (mongoUnsignedAddOverflow64(tagAndLengthByteCount, derLength, (unsigned long*)outLength) ||
+         *outLength > cdr.length()) {
+         return Status(ErrorCodes::InvalidSSLConfiguration, "Invalid DER length");
+     }
+-- 
+2.18.0
+
