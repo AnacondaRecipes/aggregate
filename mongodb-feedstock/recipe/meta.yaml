@@ -1,15 +1,16 @@
 package:
   name: mongodb
-  version: 4.0.2
+  version: 4.0.3
 
 source:
-  git_url: https://github.com/mongodb/mongo.git
-  git_tag: r4.0.2
+  url: https://fastdl.mongodb.org/src/mongodb-src-r4.0.3.tar.gz
+  sha256: fbbe840e62376fe850775e98eb10fdf40594a023ecf308abec6dcec44d2bce0c
   patches:
      - 0002-Pick-python-using-usr-bin-env-instead-of-relying-on-.patch  # [linux]
      - 0003-Add-invariant-to-silence-modern-gcc-warnings.patch          # [linux]
      - 0001-Make-scons-inherit-environment.patch                        # [osx]
      - 0002-Skip-some-bad-length-checks-for-CIDR-SERVER-35761.patch     # [osx]
+     - 0001-Add-linux-32-specific-workarounds.patch                     # [linux32]
 
 build:
   detect_binary_files_with_prefix: False

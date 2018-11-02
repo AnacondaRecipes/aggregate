@@ -32,7 +32,7 @@ scons install ^
     --prefix=%LIBRARY_PREFIX% ^
     --disable-minimum-compiler-version-enforcement ^
     --link-model=object ^
-    all ^
+    core tools ^
     VERBOSE=on ^
     -j%CPU_COUNT%
 
