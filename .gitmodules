@@ -3427,3 +3427,7 @@
 	path = c-ares-feedstock
 	url = ../c-ares-feedstock
 	branch = master
+[submodule "fftw-feedstock"]
+	path = fftw-feedstock
+	url = ../fftw-feedstock
+	branch = master
