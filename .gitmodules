@@ -3422,7 +3422,6 @@
 	path = ccache-feedstock
 	url = ../ccache-feedstock
 	branch = master
-
 [submodule "c-ares-feedstock"]
 	path = c-ares-feedstock
 	url = ../c-ares-feedstock
@@ -3430,4 +3429,16 @@
 [submodule "fftw-feedstock"]
 	path = fftw-feedstock
 	url = ../fftw-feedstock
+	branch = master
+[submodule "salt-feedstock"]
+	path = salt-feedstock
+	url = ../salt-feedstock
+	branch = master
+[submodule "gitea-feedstock"]
+	path = gitea-feedstock
+	url = ../gitea-feedstock
+	branch = master
+[submodule "apache-libcloud-feedstock"]
+	path = apache-libcloud-feedstock
+	url = ../apache-libcloud-feedstock
 	branch = master
