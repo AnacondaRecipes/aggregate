@@ -86,7 +86,7 @@ function _tc_activation() {
 if [ "${CONDA_BUILD:-0}" = "1" ]; then
   CFLAGS_USED="@CFLAGS@ -I${PREFIX}/include -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix"
   DEBUG_CFLAGS_USED="@DEBUG_CFLAGS@ -I${PREFIX}/include -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix"
-  LDFLAGS_USED="@LDFLAGS@ -Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib"
+  LDFLAGS_USED="@LDFLAGS@ -Wl,-rpath,${PREFIX}/lib -Wl,-rpath-link,${PREFIX}/lib -L${PREFIX}/lib"
 else
   CFLAGS_USED="@CFLAGS@"
   DEBUG_CFLAGS_USED="@DEBUG_CFLAGS@"
