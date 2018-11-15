@@ -1,8 +1,8 @@
 {% set name = "responses" %}
-{% set version = "0.10.2" %}
+{% set version = "0.10.3" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "682fafb124e799eeee67ec15c9678d955a88affda5613b09788ef80c03987cf0" %}
+{% set hash_value = "5b99beef28dd177da180604be2e849a16c3a40605bfda7c8d792a9924dd3d60e" %}
 
 package:
   name: {{ name|lower }}
