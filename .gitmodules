@@ -3442,3 +3442,7 @@
 	path = apache-libcloud-feedstock
 	url = ../apache-libcloud-feedstock
 	branch = master
+[submodule "googleapis-common-protos-feedstock"]
+	path = googleapis-common-protos-feedstock
+	url = ../googleapis-common-protos-feedstock
+	branch = master
