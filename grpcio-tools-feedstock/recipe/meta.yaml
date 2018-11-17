@@ -1,0 +1,48 @@
+{% set version = "1.16.1" %}
+{% set name = "grpcio-tools" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 6d8b23af5fbce2da18a0f34a997af5157118e9890a730e8a6016d5f7a83c1c40
+  patches:
+    - 0002-Monkey-patch-distutils.ccompiler.spawn-to-elide-std-.patch
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+
+  host:
+    - grpcio >=1.16.1
+    - pip
+    - protobuf >=3.6.0
+    - python
+  run:
+    - grpcio >=1.16.1
+    - protobuf >=3.6.0
+    - python
+
+test:
+  imports:
+    - grpc_tools
+
+about:
+  home: https://grpc.io
+  license: Apache Software
+  license_family: APACHE
+  license_file: 
+  summary: Protobuf code generator for gRPC
+  doc_source_url: https://github.com/grpc/grpc/tree/master/doc
+  doc_url: https://grpc.io/docs/
+  dev_url: https://github.com/grpc/grpc/tree/master/tools
+
+extra:
+  recipe-maintainers:
+    - mingwandroid
