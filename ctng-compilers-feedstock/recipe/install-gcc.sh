@@ -71,6 +71,10 @@ pushd ${SRC_DIR}/.build/${CHOST}/build/build-cc-gcc-final/
     make -C ${CHOST}/libsanitizer/asan prefix=${PREFIX} install-nodist_toolexeclibHEADERS
   fi
 
+  if [[ -d ${CHOST}/libsanitizer/tsan ]]; then
+    make -C ${CHOST}/libsanitizer/tsan prefix=${PREFIX} install-nodist_toolexeclibHEADERS
+  fi
+
   make -C libiberty prefix=${PREFIX} install
   # install PIC version of libiberty
   install -m644 libiberty/pic/libiberty.a ${PREFIX}/lib
