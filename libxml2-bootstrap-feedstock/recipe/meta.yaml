@@ -1,17 +1,15 @@
-{% set version = "2.9.4" %}
+{% set version = "2.9.8" %}
 
 package:
   name: libxml2-bootstrap
   version: {{ version }}
 
 source:
-  url: https://git.gnome.org/browse/libxml2/snapshot/libxml2-{{ version }}.tar.gz
-  sha256: 1d5257abac02aab323bf6ab26199ce0bb2a7b798bb7acea302e136438237268a
+  url: http://xmlsoft.org/sources/libxml2-{{ version }}.tar.gz
+  sha256: 0b74e51595654f958148759cfef0993114ddccccbb6f31aee018f3558e8e2732
   patches:
     # Bug 767063 - Fix build of libxml2 2.9.4 (git master) on pre-C99 compilers.
     - pre-c99.patch  # [win and vc < 14]
-    # https://bugzilla.gnome.org/show_bug.cgi?id=766834
-    - fix-attribute-decoding-during-xml-schema-validation.patch
 
 build:
   number: 0
