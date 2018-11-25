@@ -3450,3 +3450,7 @@
 	path = asynctest-feedstock
 	url = ../asynctest-feedstock
 	branch = master
+[submodule "apispec-feedstock"]
+	path = apispec-feedstock
+	url = ../apispec-feedstock
+	branch = master
