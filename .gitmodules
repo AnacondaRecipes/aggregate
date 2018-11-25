@@ -3446,3 +3446,7 @@
 	path = googleapis-common-protos-feedstock
 	url = ../googleapis-common-protos-feedstock
 	branch = master
+[submodule "asynctest-feedstock"]
+	path = asynctest-feedstock
+	url = ../asynctest-feedstock
+	branch = master
