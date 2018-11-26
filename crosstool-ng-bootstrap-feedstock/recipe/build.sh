@@ -3,6 +3,7 @@
 export EXTRA_CFLAGS="-I${PREFIX}/include -I${PREFIX}/include/ncurses"
 export EXTRA_LDFLAGS="-L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib -lncursesw"
 export CPPFLAGS="-I${PREFIX}/include -L${PREFIX}/lib"
+export MAKE=$(which make)
 
 if [[ $(uname) == Darwin ]]; then
   if ! which objcopy; then
@@ -49,7 +50,7 @@ for SEDFILE in ${PREFIX}/share/crosstool-ng/paths.sh ${PREFIX}/bin/ct-ng; do
   mv ${SEDFILE} ${SEDFILE}.orig
   cat ${SEDFILE}.orig | \
   sed -e "s|${BUILD_PREFIX}|${PREFIX}|g" \
-      -e "s|.*make -rf|#!${PREFIX}/bin/make -rf|g" > ${SEDFILE}
+      -e "s|.*make -rf|#!${MAKE} -rf|g" > ${SEDFILE}
   rm ${SEDFILE}.orig
   chmod 775 ${SEDFILE}
   echo SEDFILE: ${SEDFILE}
