@@ -1,0 +1,29 @@
+package:
+  name: keyutils-libs-cos6-i686
+  version: 1.4
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/keyutils-libs-1.4-5.el6.i686.rpm
+    sha256: 59ca71f1c6b4cd19b58a35afd065f745ccfda46f55b4bdad9dda93f5ca872e60
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/keyutils-1.4-5.el6.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+
+
+outputs:
+  - name: keyutils-libs-cos6-i686
+    noarch: generic
+
+    about:
+      home: http://people.redhat.com/~dhowells/keyutils/
+      license: GPLv2+ and LGPLv2+
+      license_family: GPL2
+      summary: "(CDT) Key utilities library"
+      description: |
+        This package provides a wrapper library for the key management facility system
+        calls.

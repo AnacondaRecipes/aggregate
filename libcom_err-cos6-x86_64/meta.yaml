@@ -1,0 +1,29 @@
+package:
+  name: libcom_err-cos6-x86_64
+  version: 1.41.12
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libcom_err-1.41.12-24.el6.x86_64.rpm
+    sha256: 09dd002cacc400fb490424e739e46360c009cdf756732a4e14b35b937cb52fe8
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/e2fsprogs-1.41.12-24.el6.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+
+
+outputs:
+  - name: libcom_err-cos6-x86_64
+    noarch: generic
+
+    about:
+      home: http://e2fsprogs.sourceforge.net/
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) Common error description library"
+      description: |
+        This is the common error description library, part of e2fsprogs.  libcom_err
+        is an attempt to present a common error-handling mechanism.

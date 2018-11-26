@@ -1,0 +1,29 @@
+package:
+  name: avahi-libs-cos6-x86_64
+  version: 0.6.25
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/avahi-libs-0.6.25-17.el6.x86_64.rpm
+    sha256: 97679ac8f29c7f3c396626b9c8fd79c07e7a437bbace79467efb16dc224cb890
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/avahi-0.6.25-17.el6.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+
+
+outputs:
+  - name: avahi-libs-cos6-x86_64
+    noarch: generic
+
+    about:
+      home: http://avahi.org
+      license: LGPLv2
+      license_family: LGPL
+      summary: "(CDT) Libraries for avahi run-time use"
+      description: |
+        The avahi-libs package contains the libraries needed to run programs that use
+        avahi.

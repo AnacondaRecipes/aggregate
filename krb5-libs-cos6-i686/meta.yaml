@@ -1,0 +1,30 @@
+package:
+  name: krb5-libs-cos6-i686
+  version: 1.10.3
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/krb5-libs-1.10.3-65.el6.i686.rpm
+    sha256: 67ffd672874d6091333f098402991c7900d3e5c94aa435101d04ba1222e85e69
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/krb5-1.10.3-65.el6.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+
+
+outputs:
+  - name: krb5-libs-cos6-i686
+    noarch: generic
+
+    about:
+      home: http://web.mit.edu/kerberos/www/
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) The non-admin shared libraries used by Kerberos 5"
+      description: |
+        Kerberos is a network authentication system. The krb5-libs package contains
+        the shared libraries needed by Kerberos 5. If you are using Kerberos, you need
+        to install this package.

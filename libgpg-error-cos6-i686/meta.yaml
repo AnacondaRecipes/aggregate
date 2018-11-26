@@ -1,0 +1,30 @@
+package:
+  name: libgpg-error-cos6-i686
+  version: 1.7
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libgpg-error-1.7-4.el6.i686.rpm
+    sha256: ee1e0dfaa0e6bf4e06b1d6f1f3ce7da90abe8b1d1d46fe61bc1fe79e3227c4ad
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libgpg-error-1.7-4.el6.src.rpm
+    folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
+
+
+
+outputs:
+  - name: libgpg-error-cos6-i686
+    noarch: generic
+
+    about:
+      home: ftp://ftp.gnupg.org/gcrypt/libgpg-error/
+      license: LGPL (>= 2)
+      license_family: LGPL
+      summary: "(CDT) Library for error values used by GnuPG components"
+      description: |
+        This is a library that defines common error values for all GnuPG components.
+        Among these are GPG, GPGSM, GPGME, GPG-Agent, libgcrypt, pinentry, SmartCard
+        Daemon and possibly more in the future.
