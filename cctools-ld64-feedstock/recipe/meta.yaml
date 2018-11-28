@@ -62,6 +62,7 @@ source:
       - 390-ld64-_WIN64-fixes.patch
       - 420-ld64-autoconfiscate.patch
       - 500-ld64-add-fake-CrashReporterClient.h.patch
+      - 510-ld64-fix-incorrect-fname-case.patch
       - 520-ld64-fix-usr-local-and-usr-ordering.patch
       - 530-ld64-add-conda-specific-env-vars-to-modify-lib-search-paths.patch
       - 540-ld64-add-LD64_LOG_HASH_TABLE.patch
