@@ -3454,3 +3454,7 @@
 	path = apispec-feedstock
 	url = ../apispec-feedstock
 	branch = master
+[submodule "dicttoxml-feedstock"]
+	path = dicttoxml-feedstock
+	url = ../dicttoxml-feedstock
+	branch = master
