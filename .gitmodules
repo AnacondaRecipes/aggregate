@@ -3462,3 +3462,7 @@
 	path = jsondiff-feedstock
 	url = ../jsondiff-feedstock
 	branch = master
+[submodule "python-jose-feedstock"]
+	path = python-jose-feedstock
+	url = ../python-jose-feedstock
+	branch = master
