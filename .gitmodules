@@ -3471,8 +3471,8 @@
 	url = ../pyaml-feedstock
 	branch = master
 [submodule "spyder-kernels-0.x-feedstock"]
+	url = ../spyder-kernels-feedstock
 	path = spyder-kernels-0.x-feedstock
-	url = ../spyder-kernels-0.x-feedstock
 	branch = 0.x
 [submodule "wurlitzer-feedstock"]
 	path = wurlitzer-feedstock
