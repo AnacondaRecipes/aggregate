@@ -3466,3 +3466,7 @@
 	path = python-jose-feedstock
 	url = ../python-jose-feedstock
 	branch = master
+[submodule "pyaml-feedstock"]
+	path = pyaml-feedstock
+	url = ../pyaml-feedstock
+	branch = master
