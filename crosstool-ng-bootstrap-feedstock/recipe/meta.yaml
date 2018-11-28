@@ -23,6 +23,10 @@ requirements:
     - {{ compiler('c') }}  # [osx]
     - autoconf
     - automake
+    - texinfo
+    - help2man
+    - gawk
+    - make
     - bash  # [osx]
     - bison
     - flex
@@ -33,7 +37,7 @@ requirements:
     - sed   # [osx]
     - unzip
   host:
-    - ncurses  # [osx]
+    - ncurses
     - gettext  # [osx]
   run:
    - bash  # [osx]

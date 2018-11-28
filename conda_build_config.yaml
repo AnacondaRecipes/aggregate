@@ -56,11 +56,11 @@ ctng_gcc:
   - 8.2.0
 # keep zip_keys in mind - these are coupled with a specific gcc version in the ctng_gcc above
 ctng_gcc_build_number:
-  - 1
+  - 2
   - 2
 # keep zip_keys in mind - these are coupled with a specific gcc version in the ctng_gcc above
 ctng_gcc_activation_build_number:
-  - 3
+  - 4
   - 1
 
 ctng_gmp:
@@ -84,7 +84,7 @@ c_compiler_version:        # [linux]
 cxx_compiler_version:      # [linux]
   - 7.3.0                  # [linux]
 fortran_compiler_version:  # [linux]
-  - 7.3.0
+  - 7.3.0                  # [linux]
 cyrus_sasl:
   - 2.1.26
 dbus:
@@ -163,6 +163,10 @@ mkl:
   - 2018
 mpfr:
   - 4
+nodejs:
+  - 6.10  # [win]
+  - 8.12  # [win]
+  - 8.12
 # we build for an old version of numpy for forward compatibility
 #    1.11 seems to be the oldest on win that works with scipy 0.19.  Compiler errors otherwise.
 #    also 1.9 fails tests on Python 3.7
@@ -224,6 +228,7 @@ zip_keys:
     - cxx_compiler              # [win]
     - fortran_compiler_version  # [win]
     - python                    # [win]
+    - nodejs                    # [win]
   -
     - ctng_gcc
     - ctng_gcc_build_number

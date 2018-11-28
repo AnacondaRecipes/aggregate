@@ -5,6 +5,14 @@ rm -f "${PREFIX}"/lib/libz*${SHLIB_EXT}
 # .. if this doesn't work we will need to pass LLVM_ENABLE_ZLIB
 # or add find_library() to LLVM.
 
+if [[ $target_platform == osx-64 ]]; then
+  export PATH=${PWD}/bootstrap/clang7:${PATH}
+  export CC=$(which clang)
+  export CXX=$(which clang++)
+  export MACOSX_DEPLOYMENT_TARGET=10.10
+  export CPU_COUNT=1
+fi
+
 pushd cctools
   if [[ ! -f configure ]]; then
     autoreconf -vfi
@@ -15,11 +23,15 @@ pushd cctools
     cp ld64/src/other/PruneTrie.cpp libprunetrie/PruneTrie.cpp
   fi
 popd
-export CXXFLAGS="$CXXFLAGS -O0 -gdwarf-4"
-export CFLAGS="$XFLAGS -O0 -gdwarf-4"
+export CXXFLAGS="$CXXFLAGS -O2 -gdwarf-4"
+export CFLAGS="$XFLAGS -O2 -gdwarf-4"
+
+CONDA_BUILD_SYSROOT=/opt/MacOSX10.14.sdk
 
 if [[ ${MACOSX_DEPLOYMENT_TARGET} == 10.9 ]]; then
   DARWIN_TARGET=x86_64-apple-darwin13.4.0
+elif [[ ${MACOSX_DEPLOYMENT_TARGET} == 10.10 ]]; then
+  DARWIN_TARGET=x86_64-apple-darwin14.5.0
 fi
 
 if [[ -z ${DARWIN_TARGET} ]]; then

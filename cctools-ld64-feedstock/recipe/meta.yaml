@@ -1,11 +1,14 @@
 # Extracted from 
 
-{% set cctools_version = '895' %}
-{% set cctools_sha256 = 'ce66034fa35117f9ae76bbb7dd72d8068c405778fa42e877e8a13237a10c5cb7' %}
-{% set ld64_version = '274.2' %}
-{% set ld64_sha256 = '175d89c419e99d49a7a5f7e4196d3cef4c9e19cc17a425c332e86df6b516f7d7' %}
-{% set dyld_version = '433.5' %}
-{% set dyld_sha256 = '13e370ed12c137f0153a96bab12e1d46896db07f8a40bac6b0529585ceac9260' %}
+{% set cctools_version = '921' %}
+{% set cctools_sha256 = '53449a7f2e316c7df5e6b94fd04e12b6d0356f2487d77aad3000134e4c010cc5' %}
+{% set ld64_version = '409.12' %}
+{% set ld64_sha256 = 'c34561b44210668c51e49efdb7d1e814a33056051ac7698571605ab968d31d5f' %}
+{% set dyld_version = '551.4' %}
+{% set dyld_sha256 = '15f86b62fb91c75fcdfedfee2ef8759585d4b9ef9ed1757cae8f4f13bd58e51c' %}
+{% set clang_version = '7.0.0' %}
+{% set clang_sha256 = 'b3ad93c3d69dfd528df9c5bb1a434367babb8f3baea47fbb99bf49f1b03c94ca' %}
+
 
 package:
   name: cctools-and-ld64
@@ -59,7 +62,6 @@ source:
       - 390-ld64-_WIN64-fixes.patch
       - 420-ld64-autoconfiscate.patch
       - 500-ld64-add-fake-CrashReporterClient.h.patch
-      - 510-ld64-fix-incorrect-fname-case.patch
       - 520-ld64-fix-usr-local-and-usr-ordering.patch
       - 530-ld64-add-conda-specific-env-vars-to-modify-lib-search-paths.patch
       - 540-ld64-add-LD64_LOG_HASH_TABLE.patch
@@ -68,6 +70,9 @@ source:
   - url: https://opensource.apple.com/tarballs/dyld/dyld-{{ dyld_version }}.tar.gz
     sha256: {{ dyld_sha256 }}
     folder: bootstrap/dyld
+  - url: http://releases.llvm.org/{{ clang_version }}/clang+llvm-{{ clang_version }}-x86_64-apple-darwin.tar.xz
+    sha256: {{ clang_sha256 }}
+    folder: bootstrap/clang7
 
 requirements:
   build:
@@ -77,7 +82,7 @@ requirements:
     #    so that this recipe can use jinja2 instead.
     - gcc_{{ native_compiler_subdir }}  # [linux]
     - gxx_{{ native_compiler_subdir }}  # [linux]
-    - {{ compiler('cxx') }}  # [osx]
+    # - {{ compiler('cxx') }}  # [osx]
     - autoconf
     - automake
   host:

@@ -15,11 +15,9 @@ source:
 
 build:
   # Eat static.
-  ignore_run_deps:
+  ignore_run_exports:
     - libxml2
     - bzip2
-    - zlib
-    - xz
 
 requirements:
   build:
@@ -29,8 +27,6 @@ requirements:
   host:
     - libxml2-bootstrap
     - bzip2
-    - zlib
-    - xz
     - openssl  # [not osx]
 
 about:
