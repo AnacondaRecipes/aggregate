@@ -3458,3 +3458,7 @@
 	path = dicttoxml-feedstock
 	url = ../dicttoxml-feedstock
 	branch = master
+[submodule "jsondiff-feedstock"]
+	path = jsondiff-feedstock
+	url = ../jsondiff-feedstock
+	branch = master
