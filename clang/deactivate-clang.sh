@@ -84,8 +84,8 @@ function _tc_activation() {
 # When people are using conda-build, assume that adding rpath during build, and pointing at
 #    the host env's includes and libs is helpful default behavior
 if [ "${CONDA_BUILD:-0}" = "1" ]; then
-  CFLAGS_USED="@CFLAGS@ -I${PREFIX}/include -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix"
-  DEBUG_CFLAGS_USED="@CFLAGS@ @DEBUG_CFLAGS@ -I${PREFIX}/include -fdebug-prefix-map=\${SRC_DIR}=/usr/local/src/conda/\${PKG_NAME}-\${PKG_VERSION} -fdebug-prefix-map=\${PREFIX}=/usr/local/src/conda-prefix"
+  CFLAGS_USED="@CFLAGS@ -I${PREFIX}/include -fdebug-prefix-map=${SRC_DIR}=/usr/local/src/conda/${PKG_NAME}-${PKG_VERSION} -fdebug-prefix-map=${PREFIX}=/usr/local/src/conda-prefix"
+  DEBUG_CFLAGS_USED="@CFLAGS@ @DEBUG_CFLAGS@ -I${PREFIX}/include -fdebug-prefix-map=${SRC_DIR}=/usr/local/src/conda/${PKG_NAME}-${PKG_VERSION} -fdebug-prefix-map=${PREFIX}=/usr/local/src/conda-prefix"
   LDFLAGS_USED="@LDFLAGS@ -Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib"
   LDFLAGS_LD_USED="@LDFLAGS_LD@ -rpath ${PREFIX}/lib -L${PREFIX}/lib"
 else
