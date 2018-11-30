@@ -60,8 +60,8 @@ ctng_gcc_build_number:
   - 2
 # keep zip_keys in mind - these are coupled with a specific gcc version in the ctng_gcc above
 ctng_gcc_activation_build_number:
-  - 4
-  - 1
+  - 5
+  - 2
 
 ctng_gmp:
   - 6.1.2
