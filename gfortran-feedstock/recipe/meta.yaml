@@ -31,6 +31,9 @@ build:
     # For -fopenmp:
     - lib/libgomp.spec
 
+    # For -ffast-math
+    - lib/gcc/{{ chost }}/{{ gfortran_ver }}/crtfastmath.o
+
     # For -static:
     - lib/libgfortran.a
     - lib/libgomp.a
