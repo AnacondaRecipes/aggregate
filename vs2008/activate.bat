@@ -1,3 +1,4 @@
+@echo on
 :: Set env vars that tell distutils to use the compiler that we put on path
 SET DISTUTILS_USE_SDK=1
 SET MSSdk=1
@@ -34,5 +35,9 @@ SET "VS_YEAR=2008"
 set "MSYS2_ARG_CONV_EXCL=/AI;/AL;/OUT;/out"
 set "MSYS2_ENV_CONV_EXCL=CL"
 
-:: other things added by install_activate.bat at package build time
+IF NOT "%CONDA_BUILD%" == "" (
+  set "INCLUDE=%LIBRARY_INC%;%INCLUDE%"
+  set "LIB=%LIBRARY_LIB%;%LIB%"
+)
 
+:: other things added by install_activate.bat at package build time

@@ -1,3 +1,4 @@
+@echo on
 :: Set env vars that tell distutils to use the compiler that we put on path
 SET DISTUTILS_USE_SDK=1
 :: This is probably not good. It is for the pre-UCRT msvccompiler.py *not* _msvccompiler.py
@@ -62,5 +63,10 @@ if "%win%" == "10" (
    set "sdk_bin_path=C:\Program Files (x86)\Windows Kits\8.1\bin\%folder%"
 )
 endlocal & set "PATH=%PATH%;%sdk_bin_path%"
+
+IF NOT "%CONDA_BUILD%" == "" (
+  set "INCLUDE=%LIBRARY_INC%;%INCLUDE%"
+  set "LIB=%LIBRARY_LIB%;%LIB%"
+)
 
 :: other things added by install_activate.bat at package build time

@@ -1,3 +1,4 @@
+@echo on
 :: Set env vars that tell distutils to use the compiler that we put on path
 SET DISTUTILS_USE_SDK=1
 SET MSSdk=1
@@ -22,6 +23,11 @@ set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools
 )
 if not exist "%VSINSTALLDIR%" (
 set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\"
+)
+
+IF NOT "%CONDA_BUILD%" == "" (
+  set "INCLUDE=%LIBRARY_INC%;%INCLUDE%"
+  set "LIB=%LIBRARY_LIB%;%LIB%"
 )
 
 :: other things added by install_activate.bat at package build time
