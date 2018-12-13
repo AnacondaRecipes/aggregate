@@ -3478,3 +3478,7 @@
 	path = wurlitzer-feedstock
 	url = ../wurlitzer-feedstock
 	branch = master
+[submodule "libpcap-feedstock"]
+	path = libpcap-feedstock
+	url = ../libpcap-feedstock
+	branch = master
