@@ -3482,3 +3482,7 @@
 	path = libpcap-feedstock
 	url = ../libpcap-feedstock
 	branch = master
+[submodule "mongo-tools-feedstock"]
+	path = mongo-tools-feedstock
+	url = ../mongo-tools-feedstock
+	branch = master
