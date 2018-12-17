@@ -4,6 +4,7 @@ package:
 
 build:
   skip: True  # [not win]
+  number: 1
 
 outputs:
   - name: intel-fortran_{{ cross_compiler_target_platform }}

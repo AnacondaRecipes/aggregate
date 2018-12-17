@@ -1,12 +1,12 @@
 COPY %RECIPE_DIR%\LICENSE.txt LICENSE.txt
 
-IF %PKG_VERSION:~0,4% GEQ 2016 (
+IF %compiler_version:~0,4% GEQ 2016 (
     set "INSTAlLDIR=C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_%compiler_version%\windows\"
 ) else (
     set "INSTALLDIR=C:\Program Files (x86)\Intel\Composer XE 2013 SP1\"
 )
 
-IF "%cross_compiler_target_platform%" == "win-64" (
+IF "%target_platform%" == "win-64" (
   set "intel_platform=intel64"
   ) else (
   set "intel_platform=ia32"
