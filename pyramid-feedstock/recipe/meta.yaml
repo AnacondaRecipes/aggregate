@@ -1,5 +1,5 @@
 {% set name = "pyramid" %}
-{% set version = "1.9.2" %}
+{% set version = "1.10.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cf89a48cb899291639686bf3d4a883b39e496151fa4871fb83cc1a3200d5b925
+  sha256: 37c3e1c9eae72817e0365e2a38143543aee8b75240701fa5cb3a1be86c01a1c0
 
 build:
   number: 0
@@ -28,16 +28,15 @@ requirements:
     - setuptools
   run:
     - python
-    - webob >=1.7.0
-    - repoze.lru >=0.4
-    - zope.interface >=3.8.0
-    - zope.deprecation >=3.5.0
-    - venusian >=1.0a3
-    - translationstring >=0.4
-    - pastedeploy >=1.5.0
+    - hupper
     - plaster
     - plaster_pastedeploy
-    - hupper
+    - translationstring >=0.4
+    - venusian >=1.0
+    - webob >=1.8.3
+    - zope.deprecation >=3.5.0
+    - zope.interface >=3.8.0
+    - repoze.lru >=0.4  # [py2k]
 
 test:
   imports:
