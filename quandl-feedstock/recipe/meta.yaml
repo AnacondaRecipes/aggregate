@@ -1,5 +1,5 @@
 {% set name = "quandl" %}
-{% set version = "3.4.4" %}
+{% set version = "3.4.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/Quandl-{{ version }}.tar.gz
-  sha256: 1e49175729f9f1e17d81800cc850e9cd3639a5510bf38fe2bd80b907b62768f3
+  sha256: da8f328938ea6f06d67a550826dabb939ee7d3e13ea05d187c45f1810df3d4e5
 
 build:
   number: 0
@@ -42,13 +42,13 @@ test:
   commands:
     - nosetests
   requires:
-    - pip
-    - jsondate
+    - flake8
     - nose
-    - unittest2
     - httpretty
     - mock
     - factory_boy
+    - jsondate
+    - parameterized
 
 about:
   home: http://www.quandl.com/
