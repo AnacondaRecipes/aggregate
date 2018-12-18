@@ -1,8 +1,8 @@
 {% set name = "chainer" %}
-{% set version = "4.5.0" %}
+{% set version = "5.1.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "dcff45f7d0c4b3a9cc382e3584b3e2d462aab083529f937fae65fac799aac768" %}
+{% set hash_value = "8349e6b6b0bb5380e00615e6c16b247c3063d346b257560abd5fb83038aeb9bd" %}
 
 package:
   name: {{ name|lower }}
@@ -32,9 +32,11 @@ requirements:
 test:
   imports:
     - chainer
+    - chainer.backends
     - chainer.dataset
     - chainer.datasets
-    - chainer.function_hooks
+    - chainer.distributions
+    - chainer.exporters
     - chainer.functions
     - chainer.functions.activation
     - chainer.functions.array
@@ -47,26 +49,24 @@ test:
     - chainer.functions.pooling
     - chainer.functions.theano
     - chainer.functions.util
-    - chainer.initializers
+    - chainer.function_hooks
     - chainer.iterators
-    - chainer.links
-    - chainer.links.activation
-    - chainer.links.caffe
-    - chainer.links.caffe.protobuf3
-    - chainer.links.connection
-    - chainer.links.loss
-    - chainer.links.model
-    - chainer.links.model.vision
-    - chainer.links.normalization
-    - chainer.links.theano
+    - chainer.initializers
+    - chainer.graph_optimizations
     - chainer.optimizers
+    - chainer.optimizer_hooks
     - chainer.serializers
-    - chainer.testing
     - chainer.training
     - chainer.training.extensions
     - chainer.training.triggers
     - chainer.training.updaters
     - chainer.utils
+    - chainermn
+    - chainermn.communicators
+    - chainermn.datasets
+    - chainermn.extensions
+    - chainermn.functions
+    - chainermn.iterators
 
 about:
   home: https://chainer.org/
