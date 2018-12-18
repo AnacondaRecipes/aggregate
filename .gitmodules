@@ -3486,3 +3486,7 @@
 	path = mongo-tools-feedstock
 	url = ../mongo-tools-feedstock
 	branch = master
+[submodule "pykdtree-feedstock"]
+	path = pykdtree-feedstock
+	url = ../pykdtree-feedstock
+	branch = master
