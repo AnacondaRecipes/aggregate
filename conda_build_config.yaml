@@ -134,7 +134,7 @@ libffi:
 libgd:
   - 2.2.5
 libgdal:
-  - 2.2
+  - 2.3
 libgsasl:
   - 1.8
 libkml:
@@ -183,7 +183,7 @@ perl:
 pixman:
   - 0.34
 proj4:
-  - 5
+  - 5.2.0
 libprotobuf:
   - 3.6.0
 python:
