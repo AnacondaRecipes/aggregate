@@ -3510,3 +3510,31 @@
 	path = moto-feedstock
 	url = ../moto-feedstock
 	branch = master
+[submodule "javaobj-py3-feedstock"]
+	path = javaobj-py3-feedstock
+	url = ../javaobj-py3-feedstock
+	branch = master
+[submodule "jaeger-client-feedstock"]
+	path = jaeger-client-feedstock
+	url = ../jaeger-client-feedstock
+	branch = master
+[submodule "threadloop-feedstock"]
+	path = threadloop-feedstock
+	url = ../threadloop-feedstock
+	branch = master
+[submodule "jsonpickle-feedstock"]
+	path = jsonpickle-feedstock
+	url = ../jsonpickle-feedstock
+	branch = master
+[submodule "backports.tempfile-feedstock"]
+	path = backports.tempfile-feedstock
+	url = ../backports.tempfile-feedstock
+	branch = master
+[submodule "twofish-feedstock"]
+	path = twofish-feedstock
+	url = ../twofish-feedstock
+	branch = master
+[submodule "pyjks-feedstock"]
+	path = pyjks-feedstock
+	url = ../pyjks-feedstock
+	branch = master
