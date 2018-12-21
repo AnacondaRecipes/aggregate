@@ -3490,3 +3490,23 @@
 	path = pykdtree-feedstock
 	url = ../pykdtree-feedstock
 	branch = master
+[submodule "websocket-client-feedstock"]
+	path = websocket-client-feedstock
+	url = ../websocket-client-feedstock
+	branch = master
+[submodule "docker-pycreds-feedstock"]
+	path = docker-pycreds-feedstock
+	url = ../docker-pycreds-feedstock
+	branch = master
+[submodule "docker-py-feedstock"]
+	path = docker-py-feedstock
+	url = ../docker-py-feedstock
+	branch = master
+[submodule "aws-xray-sdk-feedstock"]
+	path = aws-xray-sdk-feedstock
+	url = ../aws-xray-sdk-feedstock
+	branch = master
+[submodule "moto-feedstock"]
+	path = moto-feedstock
+	url = ../moto-feedstock
+	branch = master
