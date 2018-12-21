@@ -37,7 +37,7 @@ rust_compiler:
 rust_compiler_version:
   - 1.29.0
 CONDA_BUILD_SYSROOT:
-  - /opt/MacOSX10.9.sdk        # [osx]
+  - /opt/MacOSX10.10.sdk        # [osx]
 VERBOSE_AT:
   - V=1
 VERBOSE_CM:
@@ -178,6 +178,8 @@ openjpeg:
   - 2.3
 openssl:
   - 1.1.1
+  # vs2008 precludes us from newer qt, and we haven't been able to build newer qt with openssl 1.1.1 yet
+  - 1.0.2   # [win and py27]
 perl:
   - 5.26
 pixman:
