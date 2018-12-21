@@ -99,7 +99,9 @@ gstreamer:
 gst_plugins_base:
   - 1.14
 geos:
-  - 3.6.2
+  - 3.6.2  # [win]
+  - 3.7.1  # [win]
+  - 3.7.1
 giflib:
   - 5.1
 glib:
@@ -114,7 +116,7 @@ harfbuzz:
 hdf4:
   - 4.2
 hdf5:
-  - 1.10
+  - 1.10.4
 hdfeos2:
   - 2.20
 hdfeos5:
@@ -227,6 +229,7 @@ zip_keys:
     - fortran_compiler_version  # [win]
     - python                    # [win]
     - nodejs                    # [win]
+    - geos                      # [win]
   -
     - ctng_gcc
     - ctng_gcc_build_number
