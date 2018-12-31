@@ -19,7 +19,7 @@ Most recipes in the aggregate repository are submodules - essentially links to o
 For the few recipes that exist as folders on the aggregate repo, clone the aggregate repo, and issue PRs against it directly.
 
 
-How to build python + packages once a new version of Python arrives (on ppc)
+How to build python + packages once a new version of Python arrives 
 ----------------------------------------------------------------------------
 
 CONDA_ADD_PIP_AS_PYTHON_DEPENDENCY=0 \
@@ -31,3 +31,5 @@ CONDA_ADD_PIP_AS_PYTHON_DEPENDENCY=0 \
     -c https://repo.anaconda.com/pkgs/main \
     --skip-existing --error-overlinking 2>&1 | \
   tee -a ~/conda/python-3.7.0-all-build-out.log
+  
+  
