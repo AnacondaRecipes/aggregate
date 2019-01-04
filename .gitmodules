@@ -3127,9 +3127,13 @@
 	url = ../m4ri-feedstock
 	branch = master
 [submodule "qt-5.11-feedstock"]
+	path = qt-5.11-feedstock
+	url = ../qt-feedstock
+	branch = master-5.11
+[submodule "qt-5.12-feedstock"]
 	path = qt-5.12-feedstock
 	url = ../qt-feedstock
-	branch = master
+	branch = master-5.12
 [submodule "zc.lockfile-feedstock"]
 	path = zc.lockfile-feedstock
 	url = ../zc.lockfile-feedstock
