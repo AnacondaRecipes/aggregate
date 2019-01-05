@@ -1,3 +1,505 @@
+diff -urN a/include/Availability.h b/include/Availability.h
+--- a/include/Availability.h	1970-01-01 01:00:00.000000000 +0100
++++ b/include/Availability.h	2018-11-27 13:59:06.000000000 +0000
+@@ -0,0 +1,498 @@
++/*
++ * Copyright (c) 2007-2016 by Apple Inc.. All rights reserved.
++ *
++ * @APPLE_LICENSE_HEADER_START@
++ * 
++ * This file contains Original Code and/or Modifications of Original Code
++ * as defined in and that are subject to the Apple Public Source License
++ * Version 2.0 (the 'License'). You may not use this file except in
++ * compliance with the License. Please obtain a copy of the License at
++ * http://www.opensource.apple.com/apsl/ and read it before using this
++ * file.
++ * 
++ * The Original Code and all software distributed under the License are
++ * distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER
++ * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
++ * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
++ * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
++ * Please see the License for the specific language governing rights and
++ * limitations under the License.
++ * 
++ * @APPLE_LICENSE_HEADER_END@
++ */
++ 
++#ifndef __AVAILABILITY__
++#define __AVAILABILITY__
++ /*     
++    These macros are for use in OS header files. They enable function prototypes
++    and Objective-C methods to be tagged with the OS version in which they
++    were first available; and, if applicable, the OS version in which they 
++    became deprecated.  
++     
++    The desktop Mac OS X and iOS each have different version numbers.
++    The __OSX_AVAILABLE_STARTING() macro allows you to specify both the desktop
++    and iOS version numbers.  For instance:
++        __OSX_AVAILABLE_STARTING(__MAC_10_2,__IPHONE_2_0)
++    means the function/method was first available on Mac OS X 10.2 on the desktop
++    and first available in iOS 2.0 on the iPhone.
++    
++    If a function is available on one platform, but not the other a _NA (not
++    applicable) parameter is used.  For instance:
++            __OSX_AVAILABLE_STARTING(__MAC_10_3,__IPHONE_NA)
++    means that the function/method was first available on Mac OS X 10.3, and it
++    currently not implemented on the iPhone.
++
++    At some point, a function/method may be deprecated.  That means Apple
++    recommends applications stop using the function, either because there is a 
++    better replacement or the functionality is being phased out.  Deprecated
++    functions/methods can be tagged with a __OSX_AVAILABLE_BUT_DEPRECATED()
++    macro which specifies the OS version where the function became available
++    as well as the OS version in which it became deprecated.  For instance:
++        __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_0,__MAC_10_5,__IPHONE_NA,__IPHONE_NA)
++    means that the function/method was introduced in Mac OS X 10.0, then
++    became deprecated beginning in Mac OS X 10.5.  On iOS the function 
++    has never been available.  
++    
++    For these macros to function properly, a program must specify the OS version range 
++    it is targeting.  The min OS version is specified as an option to the compiler:
++    -mmacosx-version-min=10.x when building for Mac OS X, and -miphoneos-version-min=y.z
++    when building for the iPhone.  The upper bound for the OS version is rarely needed,
++    but it can be set on the command line via: -D__MAC_OS_X_VERSION_MAX_ALLOWED=10x0 for
++    Mac OS X and __IPHONE_OS_VERSION_MAX_ALLOWED = y0z00 for iOS.  
++    
++    Examples:
++
++        A function available in Mac OS X 10.5 and later, but not on the phone:
++        
++            extern void mymacfunc() __OSX_AVAILABLE_STARTING(__MAC_10_5,__IPHONE_NA);
++
++
++        An Objective-C method in Mac OS X 10.5 and later, but not on the phone:
++        
++            @interface MyClass : NSObject
++            -(void) mymacmethod __OSX_AVAILABLE_STARTING(__MAC_10_5,__IPHONE_NA);
++            @end
++
++        
++        An enum available on the phone, but not available on Mac OS X:
++        
++            #if __IPHONE_OS_VERSION_MIN_REQUIRED
++                enum { myEnum = 1 };
++            #endif
++           Note: this works when targeting the Mac OS X platform because 
++           __IPHONE_OS_VERSION_MIN_REQUIRED is undefined which evaluates to zero. 
++        
++
++        An enum with values added in different iPhoneOS versions:
++		
++			enum {
++			    myX  = 1,	// Usable on iPhoneOS 2.1 and later
++			    myY  = 2,	// Usable on iPhoneOS 3.0 and later
++			    myZ  = 3,	// Usable on iPhoneOS 3.0 and later
++				...
++		      Note: you do not want to use #if with enumeration values
++			  when a client needs to see all values at compile time
++			  and use runtime logic to only use the viable values.
++			  
++
++    It is also possible to use the *_VERSION_MIN_REQUIRED in source code to make one
++    source base that can be compiled to target a range of OS versions.  It is best
++    to not use the _MAC_* and __IPHONE_* macros for comparisons, but rather their values.
++    That is because you might get compiled on an old OS that does not define a later
++    OS version macro, and in the C preprocessor undefined values evaluate to zero
++    in expresssions, which could cause the #if expression to evaluate in an unexpected
++    way.
++    
++        #ifdef __MAC_OS_X_VERSION_MIN_REQUIRED
++            // code only compiled when targeting Mac OS X and not iPhone
++            // note use of 1050 instead of __MAC_10_5
++            #if __MAC_OS_X_VERSION_MIN_REQUIRED < 1050
++                // code in here might run on pre-Leopard OS
++            #else
++                // code here can assume Leopard or later
++            #endif
++        #endif
++
++
++*/
++
++/* 
++ * __API_TO_BE_DEPRECATED is used as a version number in API that will be deprecated 
++ * in an upcoming release. This soft deprecation is an intermediate step before formal 
++ * deprecation to notify developers about the API before compiler warnings are generated.
++ * You can find all places in your code that use soft deprecated API by redefining the 
++ * value of this macro to your current minimum deployment target, for example:
++ * (macOS)
++ *   clang -D__API_TO_BE_DEPRECATED=10.12 <other compiler flags>
++ * (iOS)
++ *   clang -D__API_TO_BE_DEPRECATED=11.0 <other compiler flags>
++ */
++ 
++#ifndef __API_TO_BE_DEPRECATED
++#define __API_TO_BE_DEPRECATED 100000
++#endif
++
++#define __MAC_10_0            1000
++#define __MAC_10_1            1010
++#define __MAC_10_2            1020
++#define __MAC_10_3            1030
++#define __MAC_10_4            1040
++#define __MAC_10_5            1050
++#define __MAC_10_6            1060
++#define __MAC_10_7            1070
++#define __MAC_10_8            1080
++#define __MAC_10_9            1090
++#define __MAC_10_10         101000
++#define __MAC_10_10_2       101002
++#define __MAC_10_10_3       101003
++#define __MAC_10_11         101100
++#define __MAC_10_11_2       101102
++#define __MAC_10_11_3       101103
++#define __MAC_10_11_4       101104
++#define __MAC_10_12         101200
++#define __MAC_10_12_1       101201
++#define __MAC_10_12_2       101202
++#define __MAC_10_12_4       101204
++#define __MAC_10_13         101300
++#define __MAC_10_13_1       101301
++#define __MAC_10_13_2       101302
++#define __MAC_10_13_4       101304
++#define __MAC_10_14         101400
++#define __MAC_10_14_1       101401
++/* __MAC_NA is not defined to a value but is uses as a token by macros to indicate that the API is unavailable */
++
++#define __IPHONE_2_0      20000
++#define __IPHONE_2_1      20100
++#define __IPHONE_2_2      20200
++#define __IPHONE_3_0      30000
++#define __IPHONE_3_1      30100
++#define __IPHONE_3_2      30200
++#define __IPHONE_4_0      40000
++#define __IPHONE_4_1      40100
++#define __IPHONE_4_2      40200
++#define __IPHONE_4_3      40300
++#define __IPHONE_5_0      50000
++#define __IPHONE_5_1      50100
++#define __IPHONE_6_0      60000
++#define __IPHONE_6_1      60100
++#define __IPHONE_7_0      70000
++#define __IPHONE_7_1      70100
++#define __IPHONE_8_0      80000
++#define __IPHONE_8_1      80100
++#define __IPHONE_8_2      80200
++#define __IPHONE_8_3      80300
++#define __IPHONE_8_4      80400
++#define __IPHONE_9_0      90000
++#define __IPHONE_9_1      90100
++#define __IPHONE_9_2      90200
++#define __IPHONE_9_3      90300
++#define __IPHONE_10_0    100000
++#define __IPHONE_10_1    100100
++#define __IPHONE_10_2    100200
++#define __IPHONE_10_3    100300
++#define __IPHONE_11_0    110000
++#define __IPHONE_11_1    110100
++#define __IPHONE_11_2    110200
++#define __IPHONE_11_3    110300
++#define __IPHONE_11_4    110400
++#define __IPHONE_12_0    120000
++#define __IPHONE_12_1    120100
++/* __IPHONE_NA is not defined to a value but is uses as a token by macros to indicate that the API is unavailable */
++
++#define __TVOS_9_0        90000
++#define __TVOS_9_1        90100
++#define __TVOS_9_2        90200
++#define __TVOS_10_0      100000
++#define __TVOS_10_0_1    100001
++#define __TVOS_10_1      100100
++#define __TVOS_10_2      100200
++#define __TVOS_11_0      110000
++#define __TVOS_11_1      110100
++#define __TVOS_11_2      110200
++#define __TVOS_11_3      110300
++#define __TVOS_11_4      110400
++#define __TVOS_12_0      120000
++#define __TVOS_12_1      120100
++
++#define __WATCHOS_1_0     10000
++#define __WATCHOS_2_0     20000
++#define __WATCHOS_2_1     20100
++#define __WATCHOS_2_2     20200
++#define __WATCHOS_3_0     30000
++#define __WATCHOS_3_1     30100
++#define __WATCHOS_3_1_1   30101
++#define __WATCHOS_3_2     30200
++#define __WATCHOS_4_0     40000
++#define __WATCHOS_4_1     40100
++#define __WATCHOS_4_2     40200
++#define __WATCHOS_4_3     40300
++#define __WATCHOS_5_0     50000
++#define __WATCHOS_5_1     50100
++
++#include <AvailabilityInternal.h>
++
++#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
++    #define __OSX_AVAILABLE_STARTING(_osx, _ios) __AVAILABILITY_INTERNAL##_ios
++    #define __OSX_AVAILABLE_BUT_DEPRECATED(_osxIntro, _osxDep, _iosIntro, _iosDep) \
++                                                    __AVAILABILITY_INTERNAL##_iosIntro##_DEP##_iosDep
++    #define __OSX_AVAILABLE_BUT_DEPRECATED_MSG(_osxIntro, _osxDep, _iosIntro, _iosDep, _msg) \
++                                                    __AVAILABILITY_INTERNAL##_iosIntro##_DEP##_iosDep##_MSG(_msg)
++
++#elif defined(__MAC_OS_X_VERSION_MIN_REQUIRED)
++    #define __OSX_AVAILABLE_STARTING(_osx, _ios) __AVAILABILITY_INTERNAL##_osx
++    #define __OSX_AVAILABLE_BUT_DEPRECATED(_osxIntro, _osxDep, _iosIntro, _iosDep) \
++                                                    __AVAILABILITY_INTERNAL##_osxIntro##_DEP##_osxDep
++    #define __OSX_AVAILABLE_BUT_DEPRECATED_MSG(_osxIntro, _osxDep, _iosIntro, _iosDep, _msg) \
++                                                    __AVAILABILITY_INTERNAL##_osxIntro##_DEP##_osxDep##_MSG(_msg)
++
++#else
++    #define __OSX_AVAILABLE_STARTING(_osx, _ios)
++    #define __OSX_AVAILABLE_BUT_DEPRECATED(_osxIntro, _osxDep, _iosIntro, _iosDep)
++    #define __OSX_AVAILABLE_BUT_DEPRECATED_MSG(_osxIntro, _osxDep, _iosIntro, _iosDep, _msg)
++#endif
++
++
++#if defined(__has_feature)
++  #if __has_feature(attribute_availability_with_message)
++    #define __OS_AVAILABILITY(_target, _availability)            __attribute__((availability(_target,_availability)))
++    #define __OS_AVAILABILITY_MSG(_target, _availability, _msg)  __attribute__((availability(_target,_availability,message=_msg)))
++  #elif __has_feature(attribute_availability)
++    #define __OS_AVAILABILITY(_target, _availability)            __attribute__((availability(_target,_availability)))
++    #define __OS_AVAILABILITY_MSG(_target, _availability, _msg)  __attribute__((availability(_target,_availability)))
++  #else
++    #define __OS_AVAILABILITY(_target, _availability)
++    #define __OS_AVAILABILITY_MSG(_target, _availability, _msg)
++  #endif
++#else
++    #define __OS_AVAILABILITY(_target, _availability)
++    #define __OS_AVAILABILITY_MSG(_target, _availability, _msg)
++#endif
++
++
++/* for use to document app extension usage */
++#if defined(__has_feature)
++  #if __has_feature(attribute_availability_app_extension)
++    #define __OSX_EXTENSION_UNAVAILABLE(_msg)  __OS_AVAILABILITY_MSG(macosx_app_extension,unavailable,_msg)
++    #define __IOS_EXTENSION_UNAVAILABLE(_msg)  __OS_AVAILABILITY_MSG(ios_app_extension,unavailable,_msg)
++  #else
++    #define __OSX_EXTENSION_UNAVAILABLE(_msg)
++    #define __IOS_EXTENSION_UNAVAILABLE(_msg)
++  #endif
++#else
++    #define __OSX_EXTENSION_UNAVAILABLE(_msg)
++    #define __IOS_EXTENSION_UNAVAILABLE(_msg)
++#endif
++
++#define __OS_EXTENSION_UNAVAILABLE(_msg)  __OSX_EXTENSION_UNAVAILABLE(_msg) __IOS_EXTENSION_UNAVAILABLE(_msg)
++
++
++
++/* for use marking APIs available info for Mac OSX */
++#if defined(__has_attribute)
++  #if __has_attribute(availability)
++    #define __OSX_UNAVAILABLE                    __OS_AVAILABILITY(macosx,unavailable)
++    #define __OSX_AVAILABLE(_vers)               __OS_AVAILABILITY(macosx,introduced=_vers)
++    #define __OSX_DEPRECATED(_start, _dep, _msg) __OSX_AVAILABLE(_start) __OS_AVAILABILITY_MSG(macosx,deprecated=_dep,_msg)
++  #endif
++#endif
++
++#ifndef __OSX_UNAVAILABLE
++  #define __OSX_UNAVAILABLE
++#endif
++
++#ifndef __OSX_AVAILABLE
++  #define __OSX_AVAILABLE(_vers)
++#endif
++
++#ifndef __OSX_DEPRECATED
++  #define __OSX_DEPRECATED(_start, _dep, _msg)
++#endif
++
++
++/* for use marking APIs available info for iOS */
++#if defined(__has_attribute)
++  #if __has_attribute(availability)
++    #define __IOS_UNAVAILABLE                    __OS_AVAILABILITY(ios,unavailable)
++    #define __IOS_PROHIBITED                     __OS_AVAILABILITY(ios,unavailable)
++    #define __IOS_AVAILABLE(_vers)               __OS_AVAILABILITY(ios,introduced=_vers)
++    #define __IOS_DEPRECATED(_start, _dep, _msg) __IOS_AVAILABLE(_start) __OS_AVAILABILITY_MSG(ios,deprecated=_dep,_msg)
++  #endif
++#endif
++
++#ifndef __IOS_UNAVAILABLE
++  #define __IOS_UNAVAILABLE
++#endif
++
++#ifndef __IOS_PROHIBITED
++  #define __IOS_PROHIBITED
++#endif
++
++#ifndef __IOS_AVAILABLE
++  #define __IOS_AVAILABLE(_vers)
++#endif
++
++#ifndef __IOS_DEPRECATED
++  #define __IOS_DEPRECATED(_start, _dep, _msg)
++#endif
++
++
++/* for use marking APIs available info for tvOS */
++#if defined(__has_feature)
++  #if __has_feature(attribute_availability_tvos)
++    #define __TVOS_UNAVAILABLE                    __OS_AVAILABILITY(tvos,unavailable)
++    #define __TVOS_PROHIBITED                     __OS_AVAILABILITY(tvos,unavailable)
++    #define __TVOS_AVAILABLE(_vers)               __OS_AVAILABILITY(tvos,introduced=_vers)
++    #define __TVOS_DEPRECATED(_start, _dep, _msg) __TVOS_AVAILABLE(_start) __OS_AVAILABILITY_MSG(tvos,deprecated=_dep,_msg)
++  #endif
++#endif
++
++#ifndef __TVOS_UNAVAILABLE
++  #define __TVOS_UNAVAILABLE
++#endif
++
++#ifndef __TVOS_PROHIBITED
++  #define __TVOS_PROHIBITED
++#endif
++
++#ifndef __TVOS_AVAILABLE
++  #define __TVOS_AVAILABLE(_vers)
++#endif
++
++#ifndef __TVOS_DEPRECATED
++  #define __TVOS_DEPRECATED(_start, _dep, _msg)
++#endif
++
++
++/* for use marking APIs available info for Watch OS */
++#if defined(__has_feature)
++  #if __has_feature(attribute_availability_watchos)
++    #define __WATCHOS_UNAVAILABLE                    __OS_AVAILABILITY(watchos,unavailable)
++    #define __WATCHOS_PROHIBITED                     __OS_AVAILABILITY(watchos,unavailable)
++    #define __WATCHOS_AVAILABLE(_vers)               __OS_AVAILABILITY(watchos,introduced=_vers)
++    #define __WATCHOS_DEPRECATED(_start, _dep, _msg) __WATCHOS_AVAILABLE(_start) __OS_AVAILABILITY_MSG(watchos,deprecated=_dep,_msg)
++  #endif
++#endif
++
++#ifndef __WATCHOS_UNAVAILABLE
++  #define __WATCHOS_UNAVAILABLE
++#endif
++
++#ifndef __WATCHOS_PROHIBITED
++  #define __WATCHOS_PROHIBITED
++#endif
++
++#ifndef __WATCHOS_AVAILABLE
++  #define __WATCHOS_AVAILABLE(_vers)
++#endif
++
++#ifndef __WATCHOS_DEPRECATED
++  #define __WATCHOS_DEPRECATED(_start, _dep, _msg)
++#endif
++
++
++/* for use marking APIs unavailable for swift */
++#if defined(__has_feature)
++  #if __has_feature(attribute_availability_swift)
++    #define __SWIFT_UNAVAILABLE                   __OS_AVAILABILITY(swift,unavailable)
++    #define __SWIFT_UNAVAILABLE_MSG(_msg)         __OS_AVAILABILITY_MSG(swift,unavailable,_msg)
++  #endif
++#endif
++
++#ifndef __SWIFT_UNAVAILABLE
++  #define __SWIFT_UNAVAILABLE
++#endif
++
++#ifndef __SWIFT_UNAVAILABLE_MSG
++  #define __SWIFT_UNAVAILABLE_MSG(_msg)
++#endif
++
++/*
++ Macros for defining which versions/platform a given symbol can be used.
++ 
++ @see http://clang.llvm.org/docs/AttributeReference.html#availability
++ 
++ * Note that these macros are only compatible with clang compilers that
++ * support the following target selection options:
++ *
++ * -mmacosx-version-min
++ * -miphoneos-version-min
++ * -mwatchos-version-min
++ * -mtvos-version-min
++ */
++
++#if defined(__has_feature) && defined(__has_attribute)
++ #if __has_attribute(availability)
++
++    /*
++     * API Introductions
++     *
++     * Use to specify the release that a particular API became available.
++     *
++     * Platform names:
++     *   macos, ios, tvos, watchos
++     *
++     * Examples:
++     *    __API_AVAILABLE(macos(10.10))
++     *    __API_AVAILABLE(macos(10.9), ios(10.0))
++     *    __API_AVAILABLE(macos(10.4), ios(8.0), watchos(2.0), tvos(10.0))
++     */
++    #define __API_AVAILABLE(...) __API_AVAILABLE_GET_MACRO(__VA_ARGS__,__API_AVAILABLE6, __API_AVAILABLE5, __API_AVAILABLE4, __API_AVAILABLE3, __API_AVAILABLE2, __API_AVAILABLE1, 0)(__VA_ARGS__)
++
++
++    /*
++     * API Deprecations
++     *
++     * Use to specify the release that a particular API became unavailable.
++     *
++     * Platform names:
++     *   macos, ios, tvos, watchos
++     *
++     * Examples:
++     *
++     *    __API_DEPRECATED("No longer supported", macos(10.4, 10.8))
++     *    __API_DEPRECATED("No longer supported", macos(10.4, 10.8), ios(2.0, 3.0), watchos(2.0, 3.0), tvos(9.0, 10.0))
++     *
++     *    __API_DEPRECATED_WITH_REPLACEMENT("-setName:", tvos(10.0, 10.4), ios(9.0, 10.0))
++     *    __API_DEPRECATED_WITH_REPLACEMENT("SomeClassName", macos(10.4, 10.6), watchos(2.0, 3.0))
++     */
++    #define __API_DEPRECATED(...) __API_DEPRECATED_MSG_GET_MACRO(__VA_ARGS__,__API_DEPRECATED_MSG7,__API_DEPRECATED_MSG6,__API_DEPRECATED_MSG5,__API_DEPRECATED_MSG4,__API_DEPRECATED_MSG3,__API_DEPRECATED_MSG2,__API_DEPRECATED_MSG1, 0)(__VA_ARGS__)
++    #define __API_DEPRECATED_WITH_REPLACEMENT(...) __API_DEPRECATED_REP_GET_MACRO(__VA_ARGS__,__API_DEPRECATED_REP7,__API_DEPRECATED_REP6,__API_DEPRECATED_REP5,__API_DEPRECATED_REP4,__API_DEPRECATED_REP3,__API_DEPRECATED_REP2,__API_DEPRECATED_REP1, 0)(__VA_ARGS__)
++
++    /*
++     * API Unavailability
++     * Use to specify that an API is unavailable for a particular platform.
++     *
++     * Example:
++     *    __API_UNAVAILABLE(macos)
++     *    __API_UNAVAILABLE(watchos, tvos)
++     */
++    #define __API_UNAVAILABLE(...) __API_UNAVAILABLE_GET_MACRO(__VA_ARGS__,__API_UNAVAILABLE6,__API_UNAVAILABLE5,__API_UNAVAILABLE4,__API_UNAVAILABLE3,__API_UNAVAILABLE2,__API_UNAVAILABLE1, 0)(__VA_ARGS__)
++ #else 
++
++    /* 
++     * Evaluate to nothing for compilers that don't support availability.
++     */
++    
++    #define __API_AVAILABLE(...)
++    #define __API_DEPRECATED(...)
++    #define __API_DEPRECATED_WITH_REPLACEMENT(...)
++    #define __API_UNAVAILABLE(...)
++ #endif /* __has_attribute(availability) */
++#else
++
++    /* 
++     * Evaluate to nothing for compilers that don't support clang language extensions.
++     */
++    
++    #define __API_AVAILABLE(...)
++    #define __API_DEPRECATED(...)
++    #define __API_DEPRECATED_WITH_REPLACEMENT(...)
++    #define __API_UNAVAILABLE(...)
++#endif /*  #if defined(__has_feature) && defined(__has_attribute) */
++
++#if __has_include(<AvailabilityProhibitedInternal.h>)
++  #include <AvailabilityProhibitedInternal.h>
++#endif
++
++#endif /* __AVAILABILITY__ */
++
 diff -urN a/include/AvailabilityInternal.h b/include/AvailabilityInternal.h
 --- a/include/AvailabilityInternal.h	1970-01-01 01:00:00.000000000 +0100
 +++ b/include/AvailabilityInternal.h	2017-08-08 12:17:18.000000000 +0100
@@ -4333,6 +4835,174 @@ diff -urN a/include/AvailabilityInternal.h b/include/AvailabilityInternal.h
 +#endif
 +
 +#endif /* __AVAILABILITY_INTERNAL__ */
+diff -urN a/include/i386/_mcontext.h b/include/i386/_mcontext.h
+--- a/include/i386/_mcontext.h	1970-01-01 01:00:00.000000000 +0100
++++ b/include/i386/_mcontext.h	2018-11-27 13:59:06.000000000 +0000
+@@ -0,0 +1,164 @@
++/*
++ * Copyright (c) 2003-2012 Apple Inc. All rights reserved.
++ *
++ * @APPLE_OSREFERENCE_LICENSE_HEADER_START@
++ * 
++ * This file contains Original Code and/or Modifications of Original Code
++ * as defined in and that are subject to the Apple Public Source License
++ * Version 2.0 (the 'License'). You may not use this file except in
++ * compliance with the License. The rights granted to you under the License
++ * may not be used to create, or enable the creation or redistribution of,
++ * unlawful or unlicensed copies of an Apple operating system, or to
++ * circumvent, violate, or enable the circumvention or violation of, any
++ * terms of an Apple operating system software license agreement.
++ * 
++ * Please obtain a copy of the License at
++ * http://www.opensource.apple.com/apsl/ and read it before using this file.
++ * 
++ * The Original Code and all software distributed under the License are
++ * distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER
++ * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
++ * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
++ * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
++ * Please see the License for the specific language governing rights and
++ * limitations under the License.
++ * 
++ * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
++ */
++
++#ifndef __I386_MCONTEXT_H_
++#define __I386_MCONTEXT_H_
++
++#include <sys/cdefs.h> /* __DARWIN_UNIX03 */
++#include <sys/appleapiopts.h>
++#include <mach/machine/_structs.h>
++
++#ifndef _STRUCT_MCONTEXT32
++#if __DARWIN_UNIX03
++#define	_STRUCT_MCONTEXT32	struct __darwin_mcontext32
++_STRUCT_MCONTEXT32
++{
++	_STRUCT_X86_EXCEPTION_STATE32	__es;
++	_STRUCT_X86_THREAD_STATE32	__ss;
++	_STRUCT_X86_FLOAT_STATE32	__fs;
++};
++
++#define	_STRUCT_MCONTEXT_AVX32	struct __darwin_mcontext_avx32
++_STRUCT_MCONTEXT_AVX32
++{
++	_STRUCT_X86_EXCEPTION_STATE32	__es;
++	_STRUCT_X86_THREAD_STATE32	__ss;
++	_STRUCT_X86_AVX_STATE32		__fs;
++};
++
++#if defined(_STRUCT_X86_AVX512_STATE32)
++#define	_STRUCT_MCONTEXT_AVX512_32	struct __darwin_mcontext_avx512_32
++_STRUCT_MCONTEXT_AVX512_32
++{
++	_STRUCT_X86_EXCEPTION_STATE32	__es;
++	_STRUCT_X86_THREAD_STATE32	__ss;
++	_STRUCT_X86_AVX512_STATE32	__fs;
++};
++#endif /* _STRUCT_X86_AVX512_STATE32 */
++
++#else /* !__DARWIN_UNIX03 */
++#define	_STRUCT_MCONTEXT32	struct mcontext32
++_STRUCT_MCONTEXT32
++{
++	_STRUCT_X86_EXCEPTION_STATE32	es;
++	_STRUCT_X86_THREAD_STATE32	ss;
++	_STRUCT_X86_FLOAT_STATE32	fs;
++};
++
++#define	_STRUCT_MCONTEXT_AVX32	struct mcontext_avx32
++_STRUCT_MCONTEXT_AVX32
++{
++	_STRUCT_X86_EXCEPTION_STATE32	es;
++	_STRUCT_X86_THREAD_STATE32	ss;
++	_STRUCT_X86_AVX_STATE32		fs;
++};
++
++#if defined(_STRUCT_X86_AVX512_STATE32)
++#define	_STRUCT_MCONTEXT_AVX512_32	struct mcontext_avx512_32
++_STRUCT_MCONTEXT_AVX512_32
++{
++	_STRUCT_X86_EXCEPTION_STATE32	es;
++	_STRUCT_X86_THREAD_STATE32	ss;
++	_STRUCT_X86_AVX512_STATE32	fs;
++};
++#endif /* _STRUCT_X86_AVX512_STATE32 */
++
++#endif /* __DARWIN_UNIX03 */
++#endif /* _STRUCT_MCONTEXT32 */
++
++#ifndef _STRUCT_MCONTEXT64
++#if __DARWIN_UNIX03
++#define	_STRUCT_MCONTEXT64	struct __darwin_mcontext64
++_STRUCT_MCONTEXT64
++{
++	_STRUCT_X86_EXCEPTION_STATE64	__es;
++	_STRUCT_X86_THREAD_STATE64	__ss;
++	_STRUCT_X86_FLOAT_STATE64	__fs;
++};
++
++#define	_STRUCT_MCONTEXT_AVX64	struct __darwin_mcontext_avx64
++_STRUCT_MCONTEXT_AVX64
++{
++	_STRUCT_X86_EXCEPTION_STATE64	__es;
++	_STRUCT_X86_THREAD_STATE64	__ss;
++	_STRUCT_X86_AVX_STATE64		__fs;
++};
++
++#if defined(_STRUCT_X86_AVX512_STATE64)
++#define	_STRUCT_MCONTEXT_AVX512_64	struct __darwin_mcontext_avx512_64
++_STRUCT_MCONTEXT_AVX512_64
++{
++	_STRUCT_X86_EXCEPTION_STATE64	__es;
++	_STRUCT_X86_THREAD_STATE64	__ss;
++	_STRUCT_X86_AVX512_STATE64	__fs;
++};
++#endif /* _STRUCT_X86_AVX512_STATE64 */
++
++#else /* !__DARWIN_UNIX03 */
++#define	_STRUCT_MCONTEXT64	struct mcontext64
++_STRUCT_MCONTEXT64
++{
++	_STRUCT_X86_EXCEPTION_STATE64	es;
++	_STRUCT_X86_THREAD_STATE64	ss;
++	_STRUCT_X86_FLOAT_STATE64	fs;
++};
++
++#define	_STRUCT_MCONTEXT_AVX64	struct mcontext_avx64
++_STRUCT_MCONTEXT_AVX64
++{
++	_STRUCT_X86_EXCEPTION_STATE64	es;
++	_STRUCT_X86_THREAD_STATE64	ss;
++	_STRUCT_X86_AVX_STATE64		fs;
++};
++
++#if defined(_STRUCT_X86_AVX512_STATE64)
++#define	_STRUCT_MCONTEXT_AVX512_64	struct mcontext_avx512_64
++_STRUCT_MCONTEXT_AVX512_64
++{
++	_STRUCT_X86_EXCEPTION_STATE64	es;
++	_STRUCT_X86_THREAD_STATE64	ss;
++	_STRUCT_X86_AVX512_STATE64	fs;
++};
++#endif /* _STRUCT_X86_AVX512_STATE64 */
++
++#endif /* __DARWIN_UNIX03 */
++#endif /* _STRUCT_MCONTEXT64 */
++
++
++#ifndef _MCONTEXT_T
++#define _MCONTEXT_T
++#if defined(__LP64__)
++typedef _STRUCT_MCONTEXT64	*mcontext_t;
++#define _STRUCT_MCONTEXT _STRUCT_MCONTEXT64
++#else
++typedef _STRUCT_MCONTEXT32	*mcontext_t;
++#define _STRUCT_MCONTEXT	_STRUCT_MCONTEXT32
++#endif
++#endif /* _MCONTEXT_T */
++
++#endif /* __I386_MCONTEXT_H_ */
 diff -urN a/include/AvailabilityMacros.h b/include/AvailabilityMacros.h
 --- a/include/AvailabilityMacros.h	1970-01-01 01:00:00.000000000 +0100
 +++ b/include/AvailabilityMacros.h	2017-08-08 12:17:18.000000000 +0100
@@ -37916,104 +38586,6 @@ diff -urN a/include/mach/thread_special_ports.h b/include/mach/thread_special_po
 +		(thread_set_special_port((thread), THREAD_KERNEL_PORT, (port)))
 +
 +#endif	/* _MACH_THREAD_SPECIAL_PORTS_H_ */
-diff -urN a/include/mach/thread_status.h b/include/mach/thread_status.h
---- a/include/mach/thread_status.h	1970-01-01 01:00:00.000000000 +0100
-+++ b/include/mach/thread_status.h	2017-08-08 12:16:35.000000000 +0100
-@@ -0,0 +1,94 @@
-+/*
-+ * Copyright (c) 2000-2002 Apple Computer, Inc. All rights reserved.
-+ *
-+ * @APPLE_OSREFERENCE_LICENSE_HEADER_START@
-+ * 
-+ * This file contains Original Code and/or Modifications of Original Code
-+ * as defined in and that are subject to the Apple Public Source License
-+ * Version 2.0 (the 'License'). You may not use this file except in
-+ * compliance with the License. The rights granted to you under the License
-+ * may not be used to create, or enable the creation or redistribution of,
-+ * unlawful or unlicensed copies of an Apple operating system, or to
-+ * circumvent, violate, or enable the circumvention or violation of, any
-+ * terms of an Apple operating system software license agreement.
-+ * 
-+ * Please obtain a copy of the License at
-+ * http://www.opensource.apple.com/apsl/ and read it before using this file.
-+ * 
-+ * The Original Code and all software distributed under the License are
-+ * distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER
-+ * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
-+ * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
-+ * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
-+ * Please see the License for the specific language governing rights and
-+ * limitations under the License.
-+ * 
-+ * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
-+ */
-+/*
-+ * @OSF_COPYRIGHT@
-+ */
-+/*
-+ * Mach Operating System
-+ * Copyright (c) 1991,1990,1989,1988 Carnegie Mellon University
-+ * All Rights Reserved.
-+ * 
-+ * Permission to use, copy, modify and distribute this software and its
-+ * documentation is hereby granted, provided that both the copyright
-+ * notice and this permission notice appear in all copies of the
-+ * software, derivative works or modified versions, and any portions
-+ * thereof, and that both notices appear in supporting documentation.
-+ * 
-+ * CARNEGIE MELLON ALLOWS FREE USE OF THIS SOFTWARE IN ITS "AS IS"
-+ * CONDITION.  CARNEGIE MELLON DISCLAIMS ANY LIABILITY OF ANY KIND FOR
-+ * ANY DAMAGES WHATSOEVER RESULTING FROM THE USE OF THIS SOFTWARE.
-+ * 
-+ * Carnegie Mellon requests users of this software to return to
-+ * 
-+ *  Software Distribution Coordinator  or  Software.Distribution@CS.CMU.EDU
-+ *  School of Computer Science
-+ *  Carnegie Mellon University
-+ *  Pittsburgh PA 15213-3890
-+ * 
-+ * any improvements or extensions that they make and grant Carnegie Mellon
-+ * the rights to redistribute these changes.
-+ */
-+/*
-+ */
-+/*
-+ *	File:	mach/thread_status.h
-+ *	Author:	Avadis Tevanian, Jr.
-+ *
-+ *	This file contains the structure definitions for the user-visible
-+ *	thread state.  This thread state is examined with the thread_get_state
-+ *	kernel call and may be changed with the thread_set_state kernel call.
-+ *
-+ */
-+
-+#ifndef	_MACH_THREAD_STATUS_H_
-+#define	_MACH_THREAD_STATUS_H_
-+
-+/*
-+ *	The actual structure that comprises the thread state is defined
-+ *	in the machine dependent module.
-+ */
-+#include <mach/machine/vm_types.h>
-+#include <mach/machine/thread_status.h>
-+#include <mach/machine/thread_state.h>
-+
-+/*
-+ *	Generic definition for machine-dependent thread status.
-+ */
-+
-+typedef	natural_t	*thread_state_t;	/* Variable-length array */
-+
-+/* THREAD_STATE_MAX is now defined in <mach/machine/thread_state.h> */
-+typedef	natural_t	thread_state_data_t[THREAD_STATE_MAX];
-+
-+#define	THREAD_STATE_FLAVOR_LIST	0	/* List of valid flavors */
-+#define THREAD_STATE_FLAVOR_LIST_NEW	128
-+
-+typedef	int			thread_state_flavor_t;
-+typedef thread_state_flavor_t	*thread_state_flavor_array_t;
-+
-+#endif	/* _MACH_THREAD_STATUS_H_ */
 diff -urN a/include/mach/thread_switch.h b/include/mach/thread_switch.h
 --- a/include/mach/thread_switch.h	1970-01-01 01:00:00.000000000 +0100
 +++ b/include/mach/thread_switch.h	2017-08-08 12:16:35.000000000 +0100
@@ -47938,676 +48510,6 @@ diff -urN a/include/sys/_types.h b/include/sys/_types.h
 +typedef	char	__darwin_uuid_string_t[37];
 +
 +#endif	/* _SYS__TYPES_H_ */
-diff -urN a/include/Availability.h b/include/Availability.h
---- a/include/Availability.h	1970-01-01 01:00:00.000000000 +0100
-+++ b/include/Availability.h	2018-11-27 13:59:06.000000000 +0000
-@@ -0,0 +1,498 @@
-+/*
-+ * Copyright (c) 2007-2016 by Apple Inc.. All rights reserved.
-+ *
-+ * @APPLE_LICENSE_HEADER_START@
-+ * 
-+ * This file contains Original Code and/or Modifications of Original Code
-+ * as defined in and that are subject to the Apple Public Source License
-+ * Version 2.0 (the 'License'). You may not use this file except in
-+ * compliance with the License. Please obtain a copy of the License at
-+ * http://www.opensource.apple.com/apsl/ and read it before using this
-+ * file.
-+ * 
-+ * The Original Code and all software distributed under the License are
-+ * distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER
-+ * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
-+ * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
-+ * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
-+ * Please see the License for the specific language governing rights and
-+ * limitations under the License.
-+ * 
-+ * @APPLE_LICENSE_HEADER_END@
-+ */
-+ 
-+#ifndef __AVAILABILITY__
-+#define __AVAILABILITY__
-+ /*     
-+    These macros are for use in OS header files. They enable function prototypes
-+    and Objective-C methods to be tagged with the OS version in which they
-+    were first available; and, if applicable, the OS version in which they 
-+    became deprecated.  
-+     
-+    The desktop Mac OS X and iOS each have different version numbers.
-+    The __OSX_AVAILABLE_STARTING() macro allows you to specify both the desktop
-+    and iOS version numbers.  For instance:
-+        __OSX_AVAILABLE_STARTING(__MAC_10_2,__IPHONE_2_0)
-+    means the function/method was first available on Mac OS X 10.2 on the desktop
-+    and first available in iOS 2.0 on the iPhone.
-+    
-+    If a function is available on one platform, but not the other a _NA (not
-+    applicable) parameter is used.  For instance:
-+            __OSX_AVAILABLE_STARTING(__MAC_10_3,__IPHONE_NA)
-+    means that the function/method was first available on Mac OS X 10.3, and it
-+    currently not implemented on the iPhone.
-+
-+    At some point, a function/method may be deprecated.  That means Apple
-+    recommends applications stop using the function, either because there is a 
-+    better replacement or the functionality is being phased out.  Deprecated
-+    functions/methods can be tagged with a __OSX_AVAILABLE_BUT_DEPRECATED()
-+    macro which specifies the OS version where the function became available
-+    as well as the OS version in which it became deprecated.  For instance:
-+        __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_0,__MAC_10_5,__IPHONE_NA,__IPHONE_NA)
-+    means that the function/method was introduced in Mac OS X 10.0, then
-+    became deprecated beginning in Mac OS X 10.5.  On iOS the function 
-+    has never been available.  
-+    
-+    For these macros to function properly, a program must specify the OS version range 
-+    it is targeting.  The min OS version is specified as an option to the compiler:
-+    -mmacosx-version-min=10.x when building for Mac OS X, and -miphoneos-version-min=y.z
-+    when building for the iPhone.  The upper bound for the OS version is rarely needed,
-+    but it can be set on the command line via: -D__MAC_OS_X_VERSION_MAX_ALLOWED=10x0 for
-+    Mac OS X and __IPHONE_OS_VERSION_MAX_ALLOWED = y0z00 for iOS.  
-+    
-+    Examples:
-+
-+        A function available in Mac OS X 10.5 and later, but not on the phone:
-+        
-+            extern void mymacfunc() __OSX_AVAILABLE_STARTING(__MAC_10_5,__IPHONE_NA);
-+
-+
-+        An Objective-C method in Mac OS X 10.5 and later, but not on the phone:
-+        
-+            @interface MyClass : NSObject
-+            -(void) mymacmethod __OSX_AVAILABLE_STARTING(__MAC_10_5,__IPHONE_NA);
-+            @end
-+
-+        
-+        An enum available on the phone, but not available on Mac OS X:
-+        
-+            #if __IPHONE_OS_VERSION_MIN_REQUIRED
-+                enum { myEnum = 1 };
-+            #endif
-+           Note: this works when targeting the Mac OS X platform because 
-+           __IPHONE_OS_VERSION_MIN_REQUIRED is undefined which evaluates to zero. 
-+        
-+
-+        An enum with values added in different iPhoneOS versions:
-+		
-+			enum {
-+			    myX  = 1,	// Usable on iPhoneOS 2.1 and later
-+			    myY  = 2,	// Usable on iPhoneOS 3.0 and later
-+			    myZ  = 3,	// Usable on iPhoneOS 3.0 and later
-+				...
-+		      Note: you do not want to use #if with enumeration values
-+			  when a client needs to see all values at compile time
-+			  and use runtime logic to only use the viable values.
-+			  
-+
-+    It is also possible to use the *_VERSION_MIN_REQUIRED in source code to make one
-+    source base that can be compiled to target a range of OS versions.  It is best
-+    to not use the _MAC_* and __IPHONE_* macros for comparisons, but rather their values.
-+    That is because you might get compiled on an old OS that does not define a later
-+    OS version macro, and in the C preprocessor undefined values evaluate to zero
-+    in expresssions, which could cause the #if expression to evaluate in an unexpected
-+    way.
-+    
-+        #ifdef __MAC_OS_X_VERSION_MIN_REQUIRED
-+            // code only compiled when targeting Mac OS X and not iPhone
-+            // note use of 1050 instead of __MAC_10_5
-+            #if __MAC_OS_X_VERSION_MIN_REQUIRED < 1050
-+                // code in here might run on pre-Leopard OS
-+            #else
-+                // code here can assume Leopard or later
-+            #endif
-+        #endif
-+
-+
-+*/
-+
-+/* 
-+ * __API_TO_BE_DEPRECATED is used as a version number in API that will be deprecated 
-+ * in an upcoming release. This soft deprecation is an intermediate step before formal 
-+ * deprecation to notify developers about the API before compiler warnings are generated.
-+ * You can find all places in your code that use soft deprecated API by redefining the 
-+ * value of this macro to your current minimum deployment target, for example:
-+ * (macOS)
-+ *   clang -D__API_TO_BE_DEPRECATED=10.12 <other compiler flags>
-+ * (iOS)
-+ *   clang -D__API_TO_BE_DEPRECATED=11.0 <other compiler flags>
-+ */
-+ 
-+#ifndef __API_TO_BE_DEPRECATED
-+#define __API_TO_BE_DEPRECATED 100000
-+#endif
-+
-+#define __MAC_10_0            1000
-+#define __MAC_10_1            1010
-+#define __MAC_10_2            1020
-+#define __MAC_10_3            1030
-+#define __MAC_10_4            1040
-+#define __MAC_10_5            1050
-+#define __MAC_10_6            1060
-+#define __MAC_10_7            1070
-+#define __MAC_10_8            1080
-+#define __MAC_10_9            1090
-+#define __MAC_10_10         101000
-+#define __MAC_10_10_2       101002
-+#define __MAC_10_10_3       101003
-+#define __MAC_10_11         101100
-+#define __MAC_10_11_2       101102
-+#define __MAC_10_11_3       101103
-+#define __MAC_10_11_4       101104
-+#define __MAC_10_12         101200
-+#define __MAC_10_12_1       101201
-+#define __MAC_10_12_2       101202
-+#define __MAC_10_12_4       101204
-+#define __MAC_10_13         101300
-+#define __MAC_10_13_1       101301
-+#define __MAC_10_13_2       101302
-+#define __MAC_10_13_4       101304
-+#define __MAC_10_14         101400
-+#define __MAC_10_14_1       101401
-+/* __MAC_NA is not defined to a value but is uses as a token by macros to indicate that the API is unavailable */
-+
-+#define __IPHONE_2_0      20000
-+#define __IPHONE_2_1      20100
-+#define __IPHONE_2_2      20200
-+#define __IPHONE_3_0      30000
-+#define __IPHONE_3_1      30100
-+#define __IPHONE_3_2      30200
-+#define __IPHONE_4_0      40000
-+#define __IPHONE_4_1      40100
-+#define __IPHONE_4_2      40200
-+#define __IPHONE_4_3      40300
-+#define __IPHONE_5_0      50000
-+#define __IPHONE_5_1      50100
-+#define __IPHONE_6_0      60000
-+#define __IPHONE_6_1      60100
-+#define __IPHONE_7_0      70000
-+#define __IPHONE_7_1      70100
-+#define __IPHONE_8_0      80000
-+#define __IPHONE_8_1      80100
-+#define __IPHONE_8_2      80200
-+#define __IPHONE_8_3      80300
-+#define __IPHONE_8_4      80400
-+#define __IPHONE_9_0      90000
-+#define __IPHONE_9_1      90100
-+#define __IPHONE_9_2      90200
-+#define __IPHONE_9_3      90300
-+#define __IPHONE_10_0    100000
-+#define __IPHONE_10_1    100100
-+#define __IPHONE_10_2    100200
-+#define __IPHONE_10_3    100300
-+#define __IPHONE_11_0    110000
-+#define __IPHONE_11_1    110100
-+#define __IPHONE_11_2    110200
-+#define __IPHONE_11_3    110300
-+#define __IPHONE_11_4    110400
-+#define __IPHONE_12_0    120000
-+#define __IPHONE_12_1    120100
-+/* __IPHONE_NA is not defined to a value but is uses as a token by macros to indicate that the API is unavailable */
-+
-+#define __TVOS_9_0        90000
-+#define __TVOS_9_1        90100
-+#define __TVOS_9_2        90200
-+#define __TVOS_10_0      100000
-+#define __TVOS_10_0_1    100001
-+#define __TVOS_10_1      100100
-+#define __TVOS_10_2      100200
-+#define __TVOS_11_0      110000
-+#define __TVOS_11_1      110100
-+#define __TVOS_11_2      110200
-+#define __TVOS_11_3      110300
-+#define __TVOS_11_4      110400
-+#define __TVOS_12_0      120000
-+#define __TVOS_12_1      120100
-+
-+#define __WATCHOS_1_0     10000
-+#define __WATCHOS_2_0     20000
-+#define __WATCHOS_2_1     20100
-+#define __WATCHOS_2_2     20200
-+#define __WATCHOS_3_0     30000
-+#define __WATCHOS_3_1     30100
-+#define __WATCHOS_3_1_1   30101
-+#define __WATCHOS_3_2     30200
-+#define __WATCHOS_4_0     40000
-+#define __WATCHOS_4_1     40100
-+#define __WATCHOS_4_2     40200
-+#define __WATCHOS_4_3     40300
-+#define __WATCHOS_5_0     50000
-+#define __WATCHOS_5_1     50100
-+
-+#include <AvailabilityInternal.h>
-+
-+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
-+    #define __OSX_AVAILABLE_STARTING(_osx, _ios) __AVAILABILITY_INTERNAL##_ios
-+    #define __OSX_AVAILABLE_BUT_DEPRECATED(_osxIntro, _osxDep, _iosIntro, _iosDep) \
-+                                                    __AVAILABILITY_INTERNAL##_iosIntro##_DEP##_iosDep
-+    #define __OSX_AVAILABLE_BUT_DEPRECATED_MSG(_osxIntro, _osxDep, _iosIntro, _iosDep, _msg) \
-+                                                    __AVAILABILITY_INTERNAL##_iosIntro##_DEP##_iosDep##_MSG(_msg)
-+
-+#elif defined(__MAC_OS_X_VERSION_MIN_REQUIRED)
-+    #define __OSX_AVAILABLE_STARTING(_osx, _ios) __AVAILABILITY_INTERNAL##_osx
-+    #define __OSX_AVAILABLE_BUT_DEPRECATED(_osxIntro, _osxDep, _iosIntro, _iosDep) \
-+                                                    __AVAILABILITY_INTERNAL##_osxIntro##_DEP##_osxDep
-+    #define __OSX_AVAILABLE_BUT_DEPRECATED_MSG(_osxIntro, _osxDep, _iosIntro, _iosDep, _msg) \
-+                                                    __AVAILABILITY_INTERNAL##_osxIntro##_DEP##_osxDep##_MSG(_msg)
-+
-+#else
-+    #define __OSX_AVAILABLE_STARTING(_osx, _ios)
-+    #define __OSX_AVAILABLE_BUT_DEPRECATED(_osxIntro, _osxDep, _iosIntro, _iosDep)
-+    #define __OSX_AVAILABLE_BUT_DEPRECATED_MSG(_osxIntro, _osxDep, _iosIntro, _iosDep, _msg)
-+#endif
-+
-+
-+#if defined(__has_feature)
-+  #if __has_feature(attribute_availability_with_message)
-+    #define __OS_AVAILABILITY(_target, _availability)            __attribute__((availability(_target,_availability)))
-+    #define __OS_AVAILABILITY_MSG(_target, _availability, _msg)  __attribute__((availability(_target,_availability,message=_msg)))
-+  #elif __has_feature(attribute_availability)
-+    #define __OS_AVAILABILITY(_target, _availability)            __attribute__((availability(_target,_availability)))
-+    #define __OS_AVAILABILITY_MSG(_target, _availability, _msg)  __attribute__((availability(_target,_availability)))
-+  #else
-+    #define __OS_AVAILABILITY(_target, _availability)
-+    #define __OS_AVAILABILITY_MSG(_target, _availability, _msg)
-+  #endif
-+#else
-+    #define __OS_AVAILABILITY(_target, _availability)
-+    #define __OS_AVAILABILITY_MSG(_target, _availability, _msg)
-+#endif
-+
-+
-+/* for use to document app extension usage */
-+#if defined(__has_feature)
-+  #if __has_feature(attribute_availability_app_extension)
-+    #define __OSX_EXTENSION_UNAVAILABLE(_msg)  __OS_AVAILABILITY_MSG(macosx_app_extension,unavailable,_msg)
-+    #define __IOS_EXTENSION_UNAVAILABLE(_msg)  __OS_AVAILABILITY_MSG(ios_app_extension,unavailable,_msg)
-+  #else
-+    #define __OSX_EXTENSION_UNAVAILABLE(_msg)
-+    #define __IOS_EXTENSION_UNAVAILABLE(_msg)
-+  #endif
-+#else
-+    #define __OSX_EXTENSION_UNAVAILABLE(_msg)
-+    #define __IOS_EXTENSION_UNAVAILABLE(_msg)
-+#endif
-+
-+#define __OS_EXTENSION_UNAVAILABLE(_msg)  __OSX_EXTENSION_UNAVAILABLE(_msg) __IOS_EXTENSION_UNAVAILABLE(_msg)
-+
-+
-+
-+/* for use marking APIs available info for Mac OSX */
-+#if defined(__has_attribute)
-+  #if __has_attribute(availability)
-+    #define __OSX_UNAVAILABLE                    __OS_AVAILABILITY(macosx,unavailable)
-+    #define __OSX_AVAILABLE(_vers)               __OS_AVAILABILITY(macosx,introduced=_vers)
-+    #define __OSX_DEPRECATED(_start, _dep, _msg) __OSX_AVAILABLE(_start) __OS_AVAILABILITY_MSG(macosx,deprecated=_dep,_msg)
-+  #endif
-+#endif
-+
-+#ifndef __OSX_UNAVAILABLE
-+  #define __OSX_UNAVAILABLE
-+#endif
-+
-+#ifndef __OSX_AVAILABLE
-+  #define __OSX_AVAILABLE(_vers)
-+#endif
-+
-+#ifndef __OSX_DEPRECATED
-+  #define __OSX_DEPRECATED(_start, _dep, _msg)
-+#endif
-+
-+
-+/* for use marking APIs available info for iOS */
-+#if defined(__has_attribute)
-+  #if __has_attribute(availability)
-+    #define __IOS_UNAVAILABLE                    __OS_AVAILABILITY(ios,unavailable)
-+    #define __IOS_PROHIBITED                     __OS_AVAILABILITY(ios,unavailable)
-+    #define __IOS_AVAILABLE(_vers)               __OS_AVAILABILITY(ios,introduced=_vers)
-+    #define __IOS_DEPRECATED(_start, _dep, _msg) __IOS_AVAILABLE(_start) __OS_AVAILABILITY_MSG(ios,deprecated=_dep,_msg)
-+  #endif
-+#endif
-+
-+#ifndef __IOS_UNAVAILABLE
-+  #define __IOS_UNAVAILABLE
-+#endif
-+
-+#ifndef __IOS_PROHIBITED
-+  #define __IOS_PROHIBITED
-+#endif
-+
-+#ifndef __IOS_AVAILABLE
-+  #define __IOS_AVAILABLE(_vers)
-+#endif
-+
-+#ifndef __IOS_DEPRECATED
-+  #define __IOS_DEPRECATED(_start, _dep, _msg)
-+#endif
-+
-+
-+/* for use marking APIs available info for tvOS */
-+#if defined(__has_feature)
-+  #if __has_feature(attribute_availability_tvos)
-+    #define __TVOS_UNAVAILABLE                    __OS_AVAILABILITY(tvos,unavailable)
-+    #define __TVOS_PROHIBITED                     __OS_AVAILABILITY(tvos,unavailable)
-+    #define __TVOS_AVAILABLE(_vers)               __OS_AVAILABILITY(tvos,introduced=_vers)
-+    #define __TVOS_DEPRECATED(_start, _dep, _msg) __TVOS_AVAILABLE(_start) __OS_AVAILABILITY_MSG(tvos,deprecated=_dep,_msg)
-+  #endif
-+#endif
-+
-+#ifndef __TVOS_UNAVAILABLE
-+  #define __TVOS_UNAVAILABLE
-+#endif
-+
-+#ifndef __TVOS_PROHIBITED
-+  #define __TVOS_PROHIBITED
-+#endif
-+
-+#ifndef __TVOS_AVAILABLE
-+  #define __TVOS_AVAILABLE(_vers)
-+#endif
-+
-+#ifndef __TVOS_DEPRECATED
-+  #define __TVOS_DEPRECATED(_start, _dep, _msg)
-+#endif
-+
-+
-+/* for use marking APIs available info for Watch OS */
-+#if defined(__has_feature)
-+  #if __has_feature(attribute_availability_watchos)
-+    #define __WATCHOS_UNAVAILABLE                    __OS_AVAILABILITY(watchos,unavailable)
-+    #define __WATCHOS_PROHIBITED                     __OS_AVAILABILITY(watchos,unavailable)
-+    #define __WATCHOS_AVAILABLE(_vers)               __OS_AVAILABILITY(watchos,introduced=_vers)
-+    #define __WATCHOS_DEPRECATED(_start, _dep, _msg) __WATCHOS_AVAILABLE(_start) __OS_AVAILABILITY_MSG(watchos,deprecated=_dep,_msg)
-+  #endif
-+#endif
-+
-+#ifndef __WATCHOS_UNAVAILABLE
-+  #define __WATCHOS_UNAVAILABLE
-+#endif
-+
-+#ifndef __WATCHOS_PROHIBITED
-+  #define __WATCHOS_PROHIBITED
-+#endif
-+
-+#ifndef __WATCHOS_AVAILABLE
-+  #define __WATCHOS_AVAILABLE(_vers)
-+#endif
-+
-+#ifndef __WATCHOS_DEPRECATED
-+  #define __WATCHOS_DEPRECATED(_start, _dep, _msg)
-+#endif
-+
-+
-+/* for use marking APIs unavailable for swift */
-+#if defined(__has_feature)
-+  #if __has_feature(attribute_availability_swift)
-+    #define __SWIFT_UNAVAILABLE                   __OS_AVAILABILITY(swift,unavailable)
-+    #define __SWIFT_UNAVAILABLE_MSG(_msg)         __OS_AVAILABILITY_MSG(swift,unavailable,_msg)
-+  #endif
-+#endif
-+
-+#ifndef __SWIFT_UNAVAILABLE
-+  #define __SWIFT_UNAVAILABLE
-+#endif
-+
-+#ifndef __SWIFT_UNAVAILABLE_MSG
-+  #define __SWIFT_UNAVAILABLE_MSG(_msg)
-+#endif
-+
-+/*
-+ Macros for defining which versions/platform a given symbol can be used.
-+ 
-+ @see http://clang.llvm.org/docs/AttributeReference.html#availability
-+ 
-+ * Note that these macros are only compatible with clang compilers that
-+ * support the following target selection options:
-+ *
-+ * -mmacosx-version-min
-+ * -miphoneos-version-min
-+ * -mwatchos-version-min
-+ * -mtvos-version-min
-+ */
-+
-+#if defined(__has_feature) && defined(__has_attribute)
-+ #if __has_attribute(availability)
-+
-+    /*
-+     * API Introductions
-+     *
-+     * Use to specify the release that a particular API became available.
-+     *
-+     * Platform names:
-+     *   macos, ios, tvos, watchos
-+     *
-+     * Examples:
-+     *    __API_AVAILABLE(macos(10.10))
-+     *    __API_AVAILABLE(macos(10.9), ios(10.0))
-+     *    __API_AVAILABLE(macos(10.4), ios(8.0), watchos(2.0), tvos(10.0))
-+     */
-+    #define __API_AVAILABLE(...) __API_AVAILABLE_GET_MACRO(__VA_ARGS__,__API_AVAILABLE6, __API_AVAILABLE5, __API_AVAILABLE4, __API_AVAILABLE3, __API_AVAILABLE2, __API_AVAILABLE1, 0)(__VA_ARGS__)
-+
-+
-+    /*
-+     * API Deprecations
-+     *
-+     * Use to specify the release that a particular API became unavailable.
-+     *
-+     * Platform names:
-+     *   macos, ios, tvos, watchos
-+     *
-+     * Examples:
-+     *
-+     *    __API_DEPRECATED("No longer supported", macos(10.4, 10.8))
-+     *    __API_DEPRECATED("No longer supported", macos(10.4, 10.8), ios(2.0, 3.0), watchos(2.0, 3.0), tvos(9.0, 10.0))
-+     *
-+     *    __API_DEPRECATED_WITH_REPLACEMENT("-setName:", tvos(10.0, 10.4), ios(9.0, 10.0))
-+     *    __API_DEPRECATED_WITH_REPLACEMENT("SomeClassName", macos(10.4, 10.6), watchos(2.0, 3.0))
-+     */
-+    #define __API_DEPRECATED(...) __API_DEPRECATED_MSG_GET_MACRO(__VA_ARGS__,__API_DEPRECATED_MSG7,__API_DEPRECATED_MSG6,__API_DEPRECATED_MSG5,__API_DEPRECATED_MSG4,__API_DEPRECATED_MSG3,__API_DEPRECATED_MSG2,__API_DEPRECATED_MSG1, 0)(__VA_ARGS__)
-+    #define __API_DEPRECATED_WITH_REPLACEMENT(...) __API_DEPRECATED_REP_GET_MACRO(__VA_ARGS__,__API_DEPRECATED_REP7,__API_DEPRECATED_REP6,__API_DEPRECATED_REP5,__API_DEPRECATED_REP4,__API_DEPRECATED_REP3,__API_DEPRECATED_REP2,__API_DEPRECATED_REP1, 0)(__VA_ARGS__)
-+
-+    /*
-+     * API Unavailability
-+     * Use to specify that an API is unavailable for a particular platform.
-+     *
-+     * Example:
-+     *    __API_UNAVAILABLE(macos)
-+     *    __API_UNAVAILABLE(watchos, tvos)
-+     */
-+    #define __API_UNAVAILABLE(...) __API_UNAVAILABLE_GET_MACRO(__VA_ARGS__,__API_UNAVAILABLE6,__API_UNAVAILABLE5,__API_UNAVAILABLE4,__API_UNAVAILABLE3,__API_UNAVAILABLE2,__API_UNAVAILABLE1, 0)(__VA_ARGS__)
-+ #else 
-+
-+    /* 
-+     * Evaluate to nothing for compilers that don't support availability.
-+     */
-+    
-+    #define __API_AVAILABLE(...)
-+    #define __API_DEPRECATED(...)
-+    #define __API_DEPRECATED_WITH_REPLACEMENT(...)
-+    #define __API_UNAVAILABLE(...)
-+ #endif /* __has_attribute(availability) */
-+#else
-+
-+    /* 
-+     * Evaluate to nothing for compilers that don't support clang language extensions.
-+     */
-+    
-+    #define __API_AVAILABLE(...)
-+    #define __API_DEPRECATED(...)
-+    #define __API_DEPRECATED_WITH_REPLACEMENT(...)
-+    #define __API_UNAVAILABLE(...)
-+#endif /*  #if defined(__has_feature) && defined(__has_attribute) */
-+
-+#if __has_include(<AvailabilityProhibitedInternal.h>)
-+  #include <AvailabilityProhibitedInternal.h>
-+#endif
-+
-+#endif /* __AVAILABILITY__ */
-+
-diff -urN a/include/i386/_mcontext.h b/include/i386/_mcontext.h
---- a/include/i386/_mcontext.h	1970-01-01 01:00:00.000000000 +0100
-+++ b/include/i386/_mcontext.h	2018-11-27 13:59:06.000000000 +0000
-@@ -0,0 +1,164 @@
-+/*
-+ * Copyright (c) 2003-2012 Apple Inc. All rights reserved.
-+ *
-+ * @APPLE_OSREFERENCE_LICENSE_HEADER_START@
-+ * 
-+ * This file contains Original Code and/or Modifications of Original Code
-+ * as defined in and that are subject to the Apple Public Source License
-+ * Version 2.0 (the 'License'). You may not use this file except in
-+ * compliance with the License. The rights granted to you under the License
-+ * may not be used to create, or enable the creation or redistribution of,
-+ * unlawful or unlicensed copies of an Apple operating system, or to
-+ * circumvent, violate, or enable the circumvention or violation of, any
-+ * terms of an Apple operating system software license agreement.
-+ * 
-+ * Please obtain a copy of the License at
-+ * http://www.opensource.apple.com/apsl/ and read it before using this file.
-+ * 
-+ * The Original Code and all software distributed under the License are
-+ * distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER
-+ * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
-+ * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
-+ * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
-+ * Please see the License for the specific language governing rights and
-+ * limitations under the License.
-+ * 
-+ * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
-+ */
-+
-+#ifndef __I386_MCONTEXT_H_
-+#define __I386_MCONTEXT_H_
-+
-+#include <sys/cdefs.h> /* __DARWIN_UNIX03 */
-+#include <sys/appleapiopts.h>
-+#include <mach/machine/_structs.h>
-+
-+#ifndef _STRUCT_MCONTEXT32
-+#if __DARWIN_UNIX03
-+#define	_STRUCT_MCONTEXT32	struct __darwin_mcontext32
-+_STRUCT_MCONTEXT32
-+{
-+	_STRUCT_X86_EXCEPTION_STATE32	__es;
-+	_STRUCT_X86_THREAD_STATE32	__ss;
-+	_STRUCT_X86_FLOAT_STATE32	__fs;
-+};
-+
-+#define	_STRUCT_MCONTEXT_AVX32	struct __darwin_mcontext_avx32
-+_STRUCT_MCONTEXT_AVX32
-+{
-+	_STRUCT_X86_EXCEPTION_STATE32	__es;
-+	_STRUCT_X86_THREAD_STATE32	__ss;
-+	_STRUCT_X86_AVX_STATE32		__fs;
-+};
-+
-+#if defined(_STRUCT_X86_AVX512_STATE32)
-+#define	_STRUCT_MCONTEXT_AVX512_32	struct __darwin_mcontext_avx512_32
-+_STRUCT_MCONTEXT_AVX512_32
-+{
-+	_STRUCT_X86_EXCEPTION_STATE32	__es;
-+	_STRUCT_X86_THREAD_STATE32	__ss;
-+	_STRUCT_X86_AVX512_STATE32	__fs;
-+};
-+#endif /* _STRUCT_X86_AVX512_STATE32 */
-+
-+#else /* !__DARWIN_UNIX03 */
-+#define	_STRUCT_MCONTEXT32	struct mcontext32
-+_STRUCT_MCONTEXT32
-+{
-+	_STRUCT_X86_EXCEPTION_STATE32	es;
-+	_STRUCT_X86_THREAD_STATE32	ss;
-+	_STRUCT_X86_FLOAT_STATE32	fs;
-+};
-+
-+#define	_STRUCT_MCONTEXT_AVX32	struct mcontext_avx32
-+_STRUCT_MCONTEXT_AVX32
-+{
-+	_STRUCT_X86_EXCEPTION_STATE32	es;
-+	_STRUCT_X86_THREAD_STATE32	ss;
-+	_STRUCT_X86_AVX_STATE32		fs;
-+};
-+
-+#if defined(_STRUCT_X86_AVX512_STATE32)
-+#define	_STRUCT_MCONTEXT_AVX512_32	struct mcontext_avx512_32
-+_STRUCT_MCONTEXT_AVX512_32
-+{
-+	_STRUCT_X86_EXCEPTION_STATE32	es;
-+	_STRUCT_X86_THREAD_STATE32	ss;
-+	_STRUCT_X86_AVX512_STATE32	fs;
-+};
-+#endif /* _STRUCT_X86_AVX512_STATE32 */
-+
-+#endif /* __DARWIN_UNIX03 */
-+#endif /* _STRUCT_MCONTEXT32 */
-+
-+#ifndef _STRUCT_MCONTEXT64
-+#if __DARWIN_UNIX03
-+#define	_STRUCT_MCONTEXT64	struct __darwin_mcontext64
-+_STRUCT_MCONTEXT64
-+{
-+	_STRUCT_X86_EXCEPTION_STATE64	__es;
-+	_STRUCT_X86_THREAD_STATE64	__ss;
-+	_STRUCT_X86_FLOAT_STATE64	__fs;
-+};
-+
-+#define	_STRUCT_MCONTEXT_AVX64	struct __darwin_mcontext_avx64
-+_STRUCT_MCONTEXT_AVX64
-+{
-+	_STRUCT_X86_EXCEPTION_STATE64	__es;
-+	_STRUCT_X86_THREAD_STATE64	__ss;
-+	_STRUCT_X86_AVX_STATE64		__fs;
-+};
-+
-+#if defined(_STRUCT_X86_AVX512_STATE64)
-+#define	_STRUCT_MCONTEXT_AVX512_64	struct __darwin_mcontext_avx512_64
-+_STRUCT_MCONTEXT_AVX512_64
-+{
-+	_STRUCT_X86_EXCEPTION_STATE64	__es;
-+	_STRUCT_X86_THREAD_STATE64	__ss;
-+	_STRUCT_X86_AVX512_STATE64	__fs;
-+};
-+#endif /* _STRUCT_X86_AVX512_STATE64 */
-+
-+#else /* !__DARWIN_UNIX03 */
-+#define	_STRUCT_MCONTEXT64	struct mcontext64
-+_STRUCT_MCONTEXT64
-+{
-+	_STRUCT_X86_EXCEPTION_STATE64	es;
-+	_STRUCT_X86_THREAD_STATE64	ss;
-+	_STRUCT_X86_FLOAT_STATE64	fs;
-+};
-+
-+#define	_STRUCT_MCONTEXT_AVX64	struct mcontext_avx64
-+_STRUCT_MCONTEXT_AVX64
-+{
-+	_STRUCT_X86_EXCEPTION_STATE64	es;
-+	_STRUCT_X86_THREAD_STATE64	ss;
-+	_STRUCT_X86_AVX_STATE64		fs;
-+};
-+
-+#if defined(_STRUCT_X86_AVX512_STATE64)
-+#define	_STRUCT_MCONTEXT_AVX512_64	struct mcontext_avx512_64
-+_STRUCT_MCONTEXT_AVX512_64
-+{
-+	_STRUCT_X86_EXCEPTION_STATE64	es;
-+	_STRUCT_X86_THREAD_STATE64	ss;
-+	_STRUCT_X86_AVX512_STATE64	fs;
-+};
-+#endif /* _STRUCT_X86_AVX512_STATE64 */
-+
-+#endif /* __DARWIN_UNIX03 */
-+#endif /* _STRUCT_MCONTEXT64 */
-+
-+
-+#ifndef _MCONTEXT_T
-+#define _MCONTEXT_T
-+#if defined(__LP64__)
-+typedef _STRUCT_MCONTEXT64	*mcontext_t;
-+#define _STRUCT_MCONTEXT _STRUCT_MCONTEXT64
-+#else
-+typedef _STRUCT_MCONTEXT32	*mcontext_t;
-+#define _STRUCT_MCONTEXT	_STRUCT_MCONTEXT32
-+#endif
-+#endif /* _MCONTEXT_T */
-+
-+#endif /* __I386_MCONTEXT_H_ */
 diff -urN a/include/mach/machine/_structs.h b/include/mach/machine/_structs.h
 --- a/include/mach/machine/_structs.h	1970-01-01 01:00:00.000000000 +0100
 +++ b/include/mach/machine/_structs.h	2018-11-27 13:59:06.000000000 +0000
@@ -49812,339 +49714,3 @@ diff -urN a/include/mach/machine/_structs.h b/include/mach/machine/_structs.h
 +#endif /* !__DARWIN_UNIX03 */
 +
 +#endif /* _MACH_I386__STRUCTS_H_ */
-diff -urN a/include/mach/machine/thread_status.h b/include/mach/machine/thread_status.h
---- a/include/mach/machine/thread_status.h	1970-01-01 01:00:00.000000000 +0100
-+++ b/include/mach/machine/thread_status.h	2018-11-27 13:59:06.000000000 +0000
-@@ -0,0 +1,332 @@
-+/*
-+ * Copyright (c) 2000-2006 Apple Computer, Inc. All rights reserved.
-+ *
-+ * @APPLE_OSREFERENCE_LICENSE_HEADER_START@
-+ * 
-+ * This file contains Original Code and/or Modifications of Original Code
-+ * as defined in and that are subject to the Apple Public Source License
-+ * Version 2.0 (the 'License'). You may not use this file except in
-+ * compliance with the License. The rights granted to you under the License
-+ * may not be used to create, or enable the creation or redistribution of,
-+ * unlawful or unlicensed copies of an Apple operating system, or to
-+ * circumvent, violate, or enable the circumvention or violation of, any
-+ * terms of an Apple operating system software license agreement.
-+ * 
-+ * Please obtain a copy of the License at
-+ * http://www.opensource.apple.com/apsl/ and read it before using this file.
-+ * 
-+ * The Original Code and all software distributed under the License are
-+ * distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER
-+ * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
-+ * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
-+ * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
-+ * Please see the License for the specific language governing rights and
-+ * limitations under the License.
-+ * 
-+ * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
-+ */
-+/*
-+ * @OSF_COPYRIGHT@
-+ */
-+/* 
-+ * Mach Operating System
-+ * Copyright (c) 1991,1990,1989 Carnegie Mellon University
-+ * All Rights Reserved.
-+ * 
-+ * Permission to use, copy, modify and distribute this software and its
-+ * documentation is hereby granted, provided that both the copyright
-+ * notice and this permission notice appear in all copies of the
-+ * software, derivative works or modified versions, and any portions
-+ * thereof, and that both notices appear in supporting documentation.
-+ * 
-+ * CARNEGIE MELLON ALLOWS FREE USE OF THIS SOFTWARE IN ITS "AS IS"
-+ * CONDITION.  CARNEGIE MELLON DISCLAIMS ANY LIABILITY OF ANY KIND FOR
-+ * ANY DAMAGES WHATSOEVER RESULTING FROM THE USE OF THIS SOFTWARE.
-+ * 
-+ * Carnegie Mellon requests users of this software to return to
-+ * 
-+ *  Software Distribution Coordinator  or  Software.Distribution@CS.CMU.EDU
-+ *  School of Computer Science
-+ *  Carnegie Mellon University
-+ *  Pittsburgh PA 15213-3890
-+ * 
-+ * any improvements or extensions that they make and grant Carnegie Mellon
-+ * the rights to redistribute these changes.
-+ */
-+/*
-+ */
-+/*
-+ *	File:	thread_status.h
-+ *	Author:	Avadis Tevanian, Jr.
-+ *	Date:	1985
-+ *
-+ *	This file contains the structure definitions for the thread
-+ *	state as applied to I386 processors.
-+ */
-+
-+#ifndef	_MACH_I386_THREAD_STATUS_H_
-+#define _MACH_I386_THREAD_STATUS_H_
-+
-+#include <mach/machine/_structs.h>
-+#include <mach/message.h>
-+#include <mach/i386/fp_reg.h>
-+#include <mach/i386/thread_state.h>
-+#include <i386/eflags.h>
-+
-+
-+/*
-+ * the i386_xxxx form is kept for legacy purposes since these types
-+ * are externally known... eventually they should be deprecated.
-+ * our internal implementation has moved to the following naming convention
-+ *
-+ *   x86_xxxx32 names are used to deal with 32 bit states
-+ *   x86_xxxx64 names are used to deal with 64 bit states
-+ *   x86_xxxx   names are used to deal with either 32 or 64 bit states
-+ *	via a self-describing mechanism
-+ */
-+
-+/*
-+ * these are the legacy names which should be deprecated in the future
-+ * they are externally known which is the only reason we don't just get
-+ * rid of them
-+ */
-+#define i386_THREAD_STATE		1
-+#define i386_FLOAT_STATE		2
-+#define i386_EXCEPTION_STATE		3
-+
-+/*
-+ * THREAD_STATE_FLAVOR_LIST 0
-+ * 	these are the supported flavors
-+ */
-+#define x86_THREAD_STATE32		1
-+#define x86_FLOAT_STATE32		2
-+#define x86_EXCEPTION_STATE32		3
-+#define x86_THREAD_STATE64		4
-+#define x86_FLOAT_STATE64		5
-+#define x86_EXCEPTION_STATE64		6
-+#define x86_THREAD_STATE		7
-+#define x86_FLOAT_STATE			8
-+#define x86_EXCEPTION_STATE		9
-+#define x86_DEBUG_STATE32		10
-+#define x86_DEBUG_STATE64		11
-+#define x86_DEBUG_STATE			12
-+#define THREAD_STATE_NONE		13
-+/* 14 and 15 are used for the internal x86_SAVED_STATE flavours */
-+/* Arrange for flavors to take sequential values, 32-bit, 64-bit, non-specific */
-+#define x86_AVX_STATE32			16
-+#define x86_AVX_STATE64			(x86_AVX_STATE32 + 1)
-+#define x86_AVX_STATE			(x86_AVX_STATE32 + 2)
-+#define x86_AVX512_STATE32		19
-+#define x86_AVX512_STATE64		(x86_AVX512_STATE32 + 1)
-+#define x86_AVX512_STATE		(x86_AVX512_STATE32 + 2)
-+
-+
-+/*
-+ * Largest state on this machine:
-+ * (be sure mach/machine/thread_state.h matches!)
-+ */
-+#define THREAD_MACHINE_STATE_MAX	THREAD_STATE_MAX
-+
-+/*
-+ * VALID_THREAD_STATE_FLAVOR is a platform specific macro that when passed
-+ * an exception flavor will return if that is a defined flavor for that
-+ * platform. The macro must be manually updated to include all of the valid
-+ * exception flavors as defined above.
-+ */
-+#define VALID_THREAD_STATE_FLAVOR(x)       \
-+	 ((x == x86_THREAD_STATE32)	|| \
-+	  (x == x86_FLOAT_STATE32)	|| \
-+	  (x == x86_EXCEPTION_STATE32)	|| \
-+	  (x == x86_DEBUG_STATE32)	|| \
-+	  (x == x86_THREAD_STATE64)	|| \
-+	  (x == x86_FLOAT_STATE64)	|| \
-+	  (x == x86_EXCEPTION_STATE64)	|| \
-+	  (x == x86_DEBUG_STATE64)	|| \
-+	  (x == x86_THREAD_STATE)	|| \
-+	  (x == x86_FLOAT_STATE)	|| \
-+	  (x == x86_EXCEPTION_STATE)	|| \
-+	  (x == x86_DEBUG_STATE)	|| \
-+	  (x == x86_AVX_STATE32)	|| \
-+	  (x == x86_AVX_STATE64)	|| \
-+	  (x == x86_AVX_STATE)		|| \
-+	  (x == x86_AVX512_STATE32)	|| \
-+	  (x == x86_AVX512_STATE64)	|| \
-+	  (x == x86_AVX512_STATE)	|| \
-+	  (x == THREAD_STATE_NONE))
-+
-+struct x86_state_hdr {
-+	uint32_t	flavor;
-+	uint32_t	count;
-+};
-+typedef struct x86_state_hdr x86_state_hdr_t;
-+
-+/*
-+ * Default segment register values.
-+ */
-+    
-+#define USER_CODE_SELECTOR	0x0017
-+#define USER_DATA_SELECTOR	0x001f
-+#define KERN_CODE_SELECTOR	0x0008
-+#define KERN_DATA_SELECTOR	0x0010
-+
-+/*
-+ * to be deprecated in the future
-+ */
-+typedef _STRUCT_X86_THREAD_STATE32 i386_thread_state_t;
-+#define i386_THREAD_STATE_COUNT	((mach_msg_type_number_t) \
-+    ( sizeof (i386_thread_state_t) / sizeof (int) ))
-+
-+typedef _STRUCT_X86_THREAD_STATE32 x86_thread_state32_t;
-+#define x86_THREAD_STATE32_COUNT	((mach_msg_type_number_t) \
-+    ( sizeof (x86_thread_state32_t) / sizeof (int) ))
-+
-+/*
-+ * to be deprecated in the future
-+ */
-+typedef _STRUCT_X86_FLOAT_STATE32 i386_float_state_t;
-+#define i386_FLOAT_STATE_COUNT ((mach_msg_type_number_t) \
-+		(sizeof(i386_float_state_t)/sizeof(unsigned int)))
-+
-+typedef _STRUCT_X86_FLOAT_STATE32 x86_float_state32_t;
-+#define x86_FLOAT_STATE32_COUNT ((mach_msg_type_number_t) \
-+		(sizeof(x86_float_state32_t)/sizeof(unsigned int)))
-+
-+typedef _STRUCT_X86_AVX_STATE32 x86_avx_state32_t;
-+#define x86_AVX_STATE32_COUNT ((mach_msg_type_number_t) \
-+		(sizeof(x86_avx_state32_t)/sizeof(unsigned int)))
-+
-+typedef _STRUCT_X86_AVX512_STATE32 x86_avx512_state32_t;
-+#define x86_AVX512_STATE32_COUNT ((mach_msg_type_number_t) \
-+		(sizeof(x86_avx512_state32_t)/sizeof(unsigned int)))
-+
-+/*
-+ * to be deprecated in the future
-+ */
-+typedef _STRUCT_X86_EXCEPTION_STATE32 i386_exception_state_t;
-+#define i386_EXCEPTION_STATE_COUNT	((mach_msg_type_number_t) \
-+    ( sizeof (i386_exception_state_t) / sizeof (int) ))
-+
-+typedef _STRUCT_X86_EXCEPTION_STATE32 x86_exception_state32_t;
-+#define x86_EXCEPTION_STATE32_COUNT	((mach_msg_type_number_t) \
-+    ( sizeof (x86_exception_state32_t) / sizeof (int) ))
-+
-+#define I386_EXCEPTION_STATE_COUNT i386_EXCEPTION_STATE_COUNT
-+
-+typedef _STRUCT_X86_DEBUG_STATE32 x86_debug_state32_t;
-+#define x86_DEBUG_STATE32_COUNT       ((mach_msg_type_number_t) \
-+	( sizeof (x86_debug_state32_t) / sizeof (int) ))
-+
-+#define X86_DEBUG_STATE32_COUNT x86_DEBUG_STATE32_COUNT
-+
-+typedef _STRUCT_X86_THREAD_STATE64 x86_thread_state64_t;
-+#define x86_THREAD_STATE64_COUNT	((mach_msg_type_number_t) \
-+    ( sizeof (x86_thread_state64_t) / sizeof (int) ))
-+
-+typedef _STRUCT_X86_FLOAT_STATE64 x86_float_state64_t;
-+#define x86_FLOAT_STATE64_COUNT ((mach_msg_type_number_t) \
-+		(sizeof(x86_float_state64_t)/sizeof(unsigned int)))
-+
-+typedef _STRUCT_X86_AVX_STATE64 x86_avx_state64_t;
-+#define x86_AVX_STATE64_COUNT ((mach_msg_type_number_t) \
-+		(sizeof(x86_avx_state64_t)/sizeof(unsigned int)))
-+
-+typedef _STRUCT_X86_AVX512_STATE64 x86_avx512_state64_t;
-+#define x86_AVX512_STATE64_COUNT ((mach_msg_type_number_t) \
-+		(sizeof(x86_avx512_state64_t)/sizeof(unsigned int)))
-+
-+typedef _STRUCT_X86_EXCEPTION_STATE64 x86_exception_state64_t;
-+#define x86_EXCEPTION_STATE64_COUNT	((mach_msg_type_number_t) \
-+    ( sizeof (x86_exception_state64_t) / sizeof (int) ))
-+
-+#define X86_EXCEPTION_STATE64_COUNT x86_EXCEPTION_STATE64_COUNT
-+
-+typedef _STRUCT_X86_DEBUG_STATE64 x86_debug_state64_t;
-+#define x86_DEBUG_STATE64_COUNT	((mach_msg_type_number_t) \
-+    ( sizeof (x86_debug_state64_t) / sizeof (int) ))
-+
-+#define X86_DEBUG_STATE64_COUNT x86_DEBUG_STATE64_COUNT
-+
-+/*
-+ * Combined thread, float and exception states
-+ */
-+struct x86_thread_state {
-+	x86_state_hdr_t			tsh;
-+	union {
-+	    x86_thread_state32_t	ts32;
-+	    x86_thread_state64_t	ts64;
-+	} uts;
-+};
-+
-+struct x86_float_state {
-+	x86_state_hdr_t			fsh;
-+	union {
-+		x86_float_state32_t	fs32;
-+		x86_float_state64_t	fs64;
-+	} ufs;
-+};
-+
-+struct x86_exception_state {
-+	x86_state_hdr_t			esh;
-+	union {
-+		x86_exception_state32_t	es32;
-+		x86_exception_state64_t	es64;
-+	} ues;
-+};
-+
-+struct x86_debug_state {
-+	x86_state_hdr_t			dsh;
-+	union {
-+		x86_debug_state32_t	ds32;
-+		x86_debug_state64_t	ds64;
-+	} uds;
-+};
-+
-+struct x86_avx_state {
-+	x86_state_hdr_t			ash;
-+	union {
-+		x86_avx_state32_t	as32;
-+		x86_avx_state64_t	as64;
-+	} ufs;
-+};
-+
-+struct x86_avx512_state {
-+	x86_state_hdr_t			ash;
-+	union {
-+		x86_avx512_state32_t	as32;
-+		x86_avx512_state64_t	as64;
-+	} ufs;
-+};
-+
-+typedef struct x86_thread_state x86_thread_state_t;
-+#define x86_THREAD_STATE_COUNT	((mach_msg_type_number_t) \
-+		( sizeof (x86_thread_state_t) / sizeof (int) ))
-+
-+typedef struct x86_float_state x86_float_state_t;
-+#define x86_FLOAT_STATE_COUNT ((mach_msg_type_number_t) \
-+		(sizeof(x86_float_state_t)/sizeof(unsigned int)))
-+
-+typedef struct x86_exception_state x86_exception_state_t;
-+#define x86_EXCEPTION_STATE_COUNT ((mach_msg_type_number_t) \
-+		(sizeof(x86_exception_state_t)/sizeof(unsigned int)))
-+
-+typedef struct x86_debug_state x86_debug_state_t;
-+#define x86_DEBUG_STATE_COUNT ((mach_msg_type_number_t) \
-+		(sizeof(x86_debug_state_t)/sizeof(unsigned int)))
-+
-+typedef struct x86_avx_state x86_avx_state_t;
-+#define x86_AVX_STATE_COUNT ((mach_msg_type_number_t) \
-+		(sizeof(x86_avx_state_t)/sizeof(unsigned int)))
-+
-+typedef struct x86_avx512_state x86_avx512_state_t;
-+#define x86_AVX512_STATE_COUNT ((mach_msg_type_number_t) \
-+		(sizeof(x86_avx512_state_t)/sizeof(unsigned int)))
-+
-+/*
-+ * Machine-independent way for servers and Mach's exception mechanism to
-+ * choose the most efficient state flavor for exception RPC's:
-+ */
-+#define MACHINE_THREAD_STATE		x86_THREAD_STATE
-+#define MACHINE_THREAD_STATE_COUNT	x86_THREAD_STATE_COUNT
-+
-+
-+#endif	/* _MACH_I386_THREAD_STATUS_H_ */

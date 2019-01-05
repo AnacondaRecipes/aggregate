@@ -1,5 +1,0 @@
-MACOS1014_SDK_KERNEL_HEADERS=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Kernel.framework/Versions/Current/Headers
-cp ${MACOS1014_SDK_KERNEL_HEADERS}/mach/i386/thread_status.h ./include/mach/machine/thread_status.h
-cp ${MACOS1014_SDK_KERNEL_HEADERS}/mach/i386/_structs.h ./include/mach/machine/_structs.h
-cp ${MACOS1014_SDK_KERNEL_HEADERS}/i386/_mcontext.h  ./include/i386/_mcontext.h
-cp ${MACOS1014_SDK_KERNEL_HEADERS}/Availability.h ./include/Availability.h

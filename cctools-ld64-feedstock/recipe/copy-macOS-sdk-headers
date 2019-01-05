@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+MACOS1014_SDK_KERNEL_HEADERS=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Kernel.framework/Versions/Current/Headers
+# MACOS1014_SDK_KERNEL_HEADERS=/opt/MacOSX10.14.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers
+pushd $TMPDIR
+  mkdir -p ./include/mach/i386
+  mkdir -p ./include/i386
+  cp ${MACOS1014_SDK_KERNEL_HEADERS}/mach/i386/thread_status.h ./include/mach/i386/thread_status.h
+  cp ${MACOS1014_SDK_KERNEL_HEADERS}/mach/i386/_structs.h ./include/mach/i386/_structs.h
+  cp ${MACOS1014_SDK_KERNEL_HEADERS}/i386/_mcontext.h  ./include/i386/_mcontext.h
+  cp ${MACOS1014_SDK_KERNEL_HEADERS}/Availability.h ./include/Availability.h
+  cp ${MACOS1014_SDK_KERNEL_HEADERS}/AvailabilityInternal.h ./include/AvailabilityInternal.h
+  cp ${MACOS1014_SDK_KERNEL_HEADERS}/AvailabilityMacros.h ./include/AvailabilityMacros.h
+  diff -urN ./include.orig ./include > 100-cctools-add_sdkroot_headers.patch
+  echo macOS SDK headers written to ${PWD}/100-cctools-add_sdkroot_headers.patch
+popd
