@@ -1,6 +1,6 @@
 {% set name = "cupy" %}
-{% set version = "4.1.0" %}
-{% set commit = "cab3aca68cc7ce8728f22976df51561f4e12df75" %}
+{% set version = "5.1.0" %}
+{% set commit = "f33fe02a18b59c86cde13ef09a4929616892ab2b" %}
 
 package:
   name: {{ name|lower }}
