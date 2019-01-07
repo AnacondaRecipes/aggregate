@@ -82,6 +82,7 @@ outputs:
     test:
       requires:
         - cmake >=3.11
+        - make
       commands:
         - pushd tests/fortomp
         - sh test_fort.sh
