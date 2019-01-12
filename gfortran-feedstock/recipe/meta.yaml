@@ -7,6 +7,7 @@
 {% set chost = "x86_64-apple-darwin11.4.2" %}
 {% set gfortran_ver = "4.8.5" %}
 {% set libgfortran_ver = "3.0.1" %}
+{% set max_libgfortran_ver = "4.0.1" %}
 
 package:
   name: gfortran_{{ target_platform }}
@@ -62,13 +63,13 @@ build:
 
   run_exports:
     strong:
-      - libgfortran >={{ libgfortran_ver }}
+      - libgfortran >={{ libgfortran_ver }},<{{ max_libgfortran_ver }}
 
 requirements:
   build:
     - gcc {{ gfortran_ver }}
   run:
-    - libgfortran >={{ libgfortran_ver }}
+    - libgfortran >={{ libgfortran_ver }},<{{ max_libgfortran_ver }}
 
 about:
   home: http://gcc.gnu.org/
