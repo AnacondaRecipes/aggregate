@@ -5,16 +5,15 @@ package:
   version: {{ version }}
 
 source:
-  # - git_url: https://github.com/lief-project/LIEF
-  #   git_tag: {{ version }}
   - url: https://github.com/lief-project/LIEF/archive/{{ version }}.tar.gz
     fn: lief-{{ version }}.tar.gz
     sha256: 8f1a12d69d9f6bd8404d4f5809549d1c7f3138cacf3bccd1192cb4f46bfb9eb7
     patches:
       - 0001-Allow-building-from-released-tarball.patch
       - 0002-MSVC-Add-bigobj-flag.patch
-      - 0003-Link-Python-extension-module-to-shared-LIEF-library.patch
-      - 0004-Export-LIEF-Object-and-LIEF-MachO-DataCodeEntry-clas.patch
+      - 0003-Export-LIEF-Object-and-LIEF-MachO-DataCodeEntry-clas.patch
+      - 0004-MachO-Fix-has_dynamic_symbol_command.patch
+      - 0005-Link-Python-extension-module-to-shared-LIEF-library.patch
 
 build:
   number: 1
@@ -75,6 +74,16 @@ outputs:
         - pkg-config            # [not win]
         - jom                   # [win]
         - cmake
+        - make                  # [unix]
+    test:
+      files:
+        - tests
+      script: run_test_liblief.sh
+      requires:
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - cmake
+        - jom                   # [win]
         - make                  # [unix]
 
 about:

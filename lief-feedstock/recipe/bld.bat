@@ -1,4 +1,3 @@
-
 @echo ON
 setlocal enabledelayedexpansion
 
@@ -27,17 +26,10 @@ set UNIX_SP_DIR=%SP_DIR:\=/%
 set UNIX_SRC_DIR=%SRC_DIR:\=/%
 
 
-:: cmake .. -LAH -G "NMake Makefiles JOM"
-
-cmake .. -LAH -G "%CMAKE_GENERATOR%"                                        ^
+cmake .. -LAH -G "NMake Makefiles JOM"                                      ^
     -DCMAKE_BUILD_TYPE="Release"                                            ^
     -DCMAKE_INSTALL_PREFIX=%PREFIX%                                         ^
     -DCMAKE_INSTALL_LIBDIR=lib                                              ^
-    -DCMAKE_STATIC_LIBRARY_SUFFIX_CXX=-static.lib                           ^
-    -DCMAKE_STATIC_LIBRARY_SUFFIX_C=-static.lib                             ^
     -DCMAKE_SKIP_RPATH=ON                                                   ^
-    -DLIEF_SHARED_LIB=ON                                                    ^
     -DLIEF_PYTHON_API=OFF
-
 if errorlevel 1 exit /b 1
-

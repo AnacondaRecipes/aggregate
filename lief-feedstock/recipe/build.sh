@@ -7,7 +7,7 @@ elif [[ ${target_platform} == osx-64 ]]; then
   CMAKE_EXTRA_ARGS+=(-DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT})
 fi
 
-mkdir build
+mkdir build || true
 cd build
 
 if [[ ! -f Makefile ]]; then
@@ -27,6 +27,7 @@ if [[ ! -f Makefile ]]; then
     -DCMAKE_OBJDUMP="${OBJDUMP}"        \
     -DCMAKE_RANLIB="${RANLIB}"          \
     -DCMAKE_STRIP="${STRIP}"            \
+    -DBUILD_SHARED_LIBS=ON              \
     -DLIEF_PYTHON_API=OFF               \
     -DLIEF_INSTALL_PYTHON=OFF           \
     -DPYTHON_EXECUTABLE:FILEPATH=       \
