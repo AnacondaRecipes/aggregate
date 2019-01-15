@@ -1,9 +1,9 @@
 diff -urN a/include/Availability.h b/include/Availability.h
 --- a/include/Availability.h	1970-01-01 01:00:00.000000000 +0100
-+++ b/include/Availability.h	2017-08-08 12:17:18.000000000 +0100
-@@ -0,0 +1,172 @@
++++ b/include/Availability.h	2018-11-27 13:59:06.000000000 +0000
+@@ -0,0 +1,498 @@
 +/*
-+ * Copyright (c) 2007-2011 by Apple Inc.. All rights reserved.
++ * Copyright (c) 2007-2016 by Apple Inc.. All rights reserved.
 + *
 + * @APPLE_LICENSE_HEADER_START@
 + * 
@@ -120,6 +120,22 @@ diff -urN a/include/Availability.h b/include/Availability.h
 +
 +*/
 +
++/* 
++ * __API_TO_BE_DEPRECATED is used as a version number in API that will be deprecated 
++ * in an upcoming release. This soft deprecation is an intermediate step before formal 
++ * deprecation to notify developers about the API before compiler warnings are generated.
++ * You can find all places in your code that use soft deprecated API by redefining the 
++ * value of this macro to your current minimum deployment target, for example:
++ * (macOS)
++ *   clang -D__API_TO_BE_DEPRECATED=10.12 <other compiler flags>
++ * (iOS)
++ *   clang -D__API_TO_BE_DEPRECATED=11.0 <other compiler flags>
++ */
++ 
++#ifndef __API_TO_BE_DEPRECATED
++#define __API_TO_BE_DEPRECATED 100000
++#endif
++
 +#define __MAC_10_0            1000
 +#define __MAC_10_1            1010
 +#define __MAC_10_2            1020
@@ -130,27 +146,94 @@ diff -urN a/include/Availability.h b/include/Availability.h
 +#define __MAC_10_7            1070
 +#define __MAC_10_8            1080
 +#define __MAC_10_9            1090
++#define __MAC_10_10         101000
++#define __MAC_10_10_2       101002
++#define __MAC_10_10_3       101003
++#define __MAC_10_11         101100
++#define __MAC_10_11_2       101102
++#define __MAC_10_11_3       101103
++#define __MAC_10_11_4       101104
++#define __MAC_10_12         101200
++#define __MAC_10_12_1       101201
++#define __MAC_10_12_2       101202
++#define __MAC_10_12_4       101204
++#define __MAC_10_13         101300
++#define __MAC_10_13_1       101301
++#define __MAC_10_13_2       101302
++#define __MAC_10_13_4       101304
++#define __MAC_10_14         101400
++#define __MAC_10_14_1       101401
 +/* __MAC_NA is not defined to a value but is uses as a token by macros to indicate that the API is unavailable */
 +
-+#define __IPHONE_2_0         20000
-+#define __IPHONE_2_1         20100
-+#define __IPHONE_2_2         20200
-+#define __IPHONE_3_0         30000
-+#define __IPHONE_3_1         30100
-+#define __IPHONE_3_2         30200
-+#define __IPHONE_4_0         40000
-+#define __IPHONE_4_1         40100
-+#define __IPHONE_4_2         40200
-+#define __IPHONE_4_3         40300
-+#define __IPHONE_5_0         50000
-+#define __IPHONE_5_1         50100
-+#define __IPHONE_6_0         60000
-+#define __IPHONE_6_1         60100
-+#define __IPHONE_7_0         70000
++#define __IPHONE_2_0      20000
++#define __IPHONE_2_1      20100
++#define __IPHONE_2_2      20200
++#define __IPHONE_3_0      30000
++#define __IPHONE_3_1      30100
++#define __IPHONE_3_2      30200
++#define __IPHONE_4_0      40000
++#define __IPHONE_4_1      40100
++#define __IPHONE_4_2      40200
++#define __IPHONE_4_3      40300
++#define __IPHONE_5_0      50000
++#define __IPHONE_5_1      50100
++#define __IPHONE_6_0      60000
++#define __IPHONE_6_1      60100
++#define __IPHONE_7_0      70000
++#define __IPHONE_7_1      70100
++#define __IPHONE_8_0      80000
++#define __IPHONE_8_1      80100
++#define __IPHONE_8_2      80200
++#define __IPHONE_8_3      80300
++#define __IPHONE_8_4      80400
++#define __IPHONE_9_0      90000
++#define __IPHONE_9_1      90100
++#define __IPHONE_9_2      90200
++#define __IPHONE_9_3      90300
++#define __IPHONE_10_0    100000
++#define __IPHONE_10_1    100100
++#define __IPHONE_10_2    100200
++#define __IPHONE_10_3    100300
++#define __IPHONE_11_0    110000
++#define __IPHONE_11_1    110100
++#define __IPHONE_11_2    110200
++#define __IPHONE_11_3    110300
++#define __IPHONE_11_4    110400
++#define __IPHONE_12_0    120000
++#define __IPHONE_12_1    120100
 +/* __IPHONE_NA is not defined to a value but is uses as a token by macros to indicate that the API is unavailable */
 +
-+#include <AvailabilityInternal.h>
++#define __TVOS_9_0        90000
++#define __TVOS_9_1        90100
++#define __TVOS_9_2        90200
++#define __TVOS_10_0      100000
++#define __TVOS_10_0_1    100001
++#define __TVOS_10_1      100100
++#define __TVOS_10_2      100200
++#define __TVOS_11_0      110000
++#define __TVOS_11_1      110100
++#define __TVOS_11_2      110200
++#define __TVOS_11_3      110300
++#define __TVOS_11_4      110400
++#define __TVOS_12_0      120000
++#define __TVOS_12_1      120100
 +
++#define __WATCHOS_1_0     10000
++#define __WATCHOS_2_0     20000
++#define __WATCHOS_2_1     20100
++#define __WATCHOS_2_2     20200
++#define __WATCHOS_3_0     30000
++#define __WATCHOS_3_1     30100
++#define __WATCHOS_3_1_1   30101
++#define __WATCHOS_3_2     30200
++#define __WATCHOS_4_0     40000
++#define __WATCHOS_4_1     40100
++#define __WATCHOS_4_2     40200
++#define __WATCHOS_4_3     40300
++#define __WATCHOS_5_0     50000
++#define __WATCHOS_5_1     50100
++
++#include <AvailabilityInternal.h>
 +
 +#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 +    #define __OSX_AVAILABLE_STARTING(_osx, _ios) __AVAILABILITY_INTERNAL##_ios
@@ -173,7 +256,250 @@ diff -urN a/include/Availability.h b/include/Availability.h
 +#endif
 +
 +
++#if defined(__has_feature)
++  #if __has_feature(attribute_availability_with_message)
++    #define __OS_AVAILABILITY(_target, _availability)            __attribute__((availability(_target,_availability)))
++    #define __OS_AVAILABILITY_MSG(_target, _availability, _msg)  __attribute__((availability(_target,_availability,message=_msg)))
++  #elif __has_feature(attribute_availability)
++    #define __OS_AVAILABILITY(_target, _availability)            __attribute__((availability(_target,_availability)))
++    #define __OS_AVAILABILITY_MSG(_target, _availability, _msg)  __attribute__((availability(_target,_availability)))
++  #else
++    #define __OS_AVAILABILITY(_target, _availability)
++    #define __OS_AVAILABILITY_MSG(_target, _availability, _msg)
++  #endif
++#else
++    #define __OS_AVAILABILITY(_target, _availability)
++    #define __OS_AVAILABILITY_MSG(_target, _availability, _msg)
++#endif
++
++
++/* for use to document app extension usage */
++#if defined(__has_feature)
++  #if __has_feature(attribute_availability_app_extension)
++    #define __OSX_EXTENSION_UNAVAILABLE(_msg)  __OS_AVAILABILITY_MSG(macosx_app_extension,unavailable,_msg)
++    #define __IOS_EXTENSION_UNAVAILABLE(_msg)  __OS_AVAILABILITY_MSG(ios_app_extension,unavailable,_msg)
++  #else
++    #define __OSX_EXTENSION_UNAVAILABLE(_msg)
++    #define __IOS_EXTENSION_UNAVAILABLE(_msg)
++  #endif
++#else
++    #define __OSX_EXTENSION_UNAVAILABLE(_msg)
++    #define __IOS_EXTENSION_UNAVAILABLE(_msg)
++#endif
++
++#define __OS_EXTENSION_UNAVAILABLE(_msg)  __OSX_EXTENSION_UNAVAILABLE(_msg) __IOS_EXTENSION_UNAVAILABLE(_msg)
++
++
++
++/* for use marking APIs available info for Mac OSX */
++#if defined(__has_attribute)
++  #if __has_attribute(availability)
++    #define __OSX_UNAVAILABLE                    __OS_AVAILABILITY(macosx,unavailable)
++    #define __OSX_AVAILABLE(_vers)               __OS_AVAILABILITY(macosx,introduced=_vers)
++    #define __OSX_DEPRECATED(_start, _dep, _msg) __OSX_AVAILABLE(_start) __OS_AVAILABILITY_MSG(macosx,deprecated=_dep,_msg)
++  #endif
++#endif
++
++#ifndef __OSX_UNAVAILABLE
++  #define __OSX_UNAVAILABLE
++#endif
++
++#ifndef __OSX_AVAILABLE
++  #define __OSX_AVAILABLE(_vers)
++#endif
++
++#ifndef __OSX_DEPRECATED
++  #define __OSX_DEPRECATED(_start, _dep, _msg)
++#endif
++
++
++/* for use marking APIs available info for iOS */
++#if defined(__has_attribute)
++  #if __has_attribute(availability)
++    #define __IOS_UNAVAILABLE                    __OS_AVAILABILITY(ios,unavailable)
++    #define __IOS_PROHIBITED                     __OS_AVAILABILITY(ios,unavailable)
++    #define __IOS_AVAILABLE(_vers)               __OS_AVAILABILITY(ios,introduced=_vers)
++    #define __IOS_DEPRECATED(_start, _dep, _msg) __IOS_AVAILABLE(_start) __OS_AVAILABILITY_MSG(ios,deprecated=_dep,_msg)
++  #endif
++#endif
++
++#ifndef __IOS_UNAVAILABLE
++  #define __IOS_UNAVAILABLE
++#endif
++
++#ifndef __IOS_PROHIBITED
++  #define __IOS_PROHIBITED
++#endif
++
++#ifndef __IOS_AVAILABLE
++  #define __IOS_AVAILABLE(_vers)
++#endif
++
++#ifndef __IOS_DEPRECATED
++  #define __IOS_DEPRECATED(_start, _dep, _msg)
++#endif
++
++
++/* for use marking APIs available info for tvOS */
++#if defined(__has_feature)
++  #if __has_feature(attribute_availability_tvos)
++    #define __TVOS_UNAVAILABLE                    __OS_AVAILABILITY(tvos,unavailable)
++    #define __TVOS_PROHIBITED                     __OS_AVAILABILITY(tvos,unavailable)
++    #define __TVOS_AVAILABLE(_vers)               __OS_AVAILABILITY(tvos,introduced=_vers)
++    #define __TVOS_DEPRECATED(_start, _dep, _msg) __TVOS_AVAILABLE(_start) __OS_AVAILABILITY_MSG(tvos,deprecated=_dep,_msg)
++  #endif
++#endif
++
++#ifndef __TVOS_UNAVAILABLE
++  #define __TVOS_UNAVAILABLE
++#endif
++
++#ifndef __TVOS_PROHIBITED
++  #define __TVOS_PROHIBITED
++#endif
++
++#ifndef __TVOS_AVAILABLE
++  #define __TVOS_AVAILABLE(_vers)
++#endif
++
++#ifndef __TVOS_DEPRECATED
++  #define __TVOS_DEPRECATED(_start, _dep, _msg)
++#endif
++
++
++/* for use marking APIs available info for Watch OS */
++#if defined(__has_feature)
++  #if __has_feature(attribute_availability_watchos)
++    #define __WATCHOS_UNAVAILABLE                    __OS_AVAILABILITY(watchos,unavailable)
++    #define __WATCHOS_PROHIBITED                     __OS_AVAILABILITY(watchos,unavailable)
++    #define __WATCHOS_AVAILABLE(_vers)               __OS_AVAILABILITY(watchos,introduced=_vers)
++    #define __WATCHOS_DEPRECATED(_start, _dep, _msg) __WATCHOS_AVAILABLE(_start) __OS_AVAILABILITY_MSG(watchos,deprecated=_dep,_msg)
++  #endif
++#endif
++
++#ifndef __WATCHOS_UNAVAILABLE
++  #define __WATCHOS_UNAVAILABLE
++#endif
++
++#ifndef __WATCHOS_PROHIBITED
++  #define __WATCHOS_PROHIBITED
++#endif
++
++#ifndef __WATCHOS_AVAILABLE
++  #define __WATCHOS_AVAILABLE(_vers)
++#endif
++
++#ifndef __WATCHOS_DEPRECATED
++  #define __WATCHOS_DEPRECATED(_start, _dep, _msg)
++#endif
++
++
++/* for use marking APIs unavailable for swift */
++#if defined(__has_feature)
++  #if __has_feature(attribute_availability_swift)
++    #define __SWIFT_UNAVAILABLE                   __OS_AVAILABILITY(swift,unavailable)
++    #define __SWIFT_UNAVAILABLE_MSG(_msg)         __OS_AVAILABILITY_MSG(swift,unavailable,_msg)
++  #endif
++#endif
++
++#ifndef __SWIFT_UNAVAILABLE
++  #define __SWIFT_UNAVAILABLE
++#endif
++
++#ifndef __SWIFT_UNAVAILABLE_MSG
++  #define __SWIFT_UNAVAILABLE_MSG(_msg)
++#endif
++
++/*
++ Macros for defining which versions/platform a given symbol can be used.
++ 
++ @see http://clang.llvm.org/docs/AttributeReference.html#availability
++ 
++ * Note that these macros are only compatible with clang compilers that
++ * support the following target selection options:
++ *
++ * -mmacosx-version-min
++ * -miphoneos-version-min
++ * -mwatchos-version-min
++ * -mtvos-version-min
++ */
++
++#if defined(__has_feature) && defined(__has_attribute)
++ #if __has_attribute(availability)
++
++    /*
++     * API Introductions
++     *
++     * Use to specify the release that a particular API became available.
++     *
++     * Platform names:
++     *   macos, ios, tvos, watchos
++     *
++     * Examples:
++     *    __API_AVAILABLE(macos(10.10))
++     *    __API_AVAILABLE(macos(10.9), ios(10.0))
++     *    __API_AVAILABLE(macos(10.4), ios(8.0), watchos(2.0), tvos(10.0))
++     */
++    #define __API_AVAILABLE(...) __API_AVAILABLE_GET_MACRO(__VA_ARGS__,__API_AVAILABLE6, __API_AVAILABLE5, __API_AVAILABLE4, __API_AVAILABLE3, __API_AVAILABLE2, __API_AVAILABLE1, 0)(__VA_ARGS__)
++
++
++    /*
++     * API Deprecations
++     *
++     * Use to specify the release that a particular API became unavailable.
++     *
++     * Platform names:
++     *   macos, ios, tvos, watchos
++     *
++     * Examples:
++     *
++     *    __API_DEPRECATED("No longer supported", macos(10.4, 10.8))
++     *    __API_DEPRECATED("No longer supported", macos(10.4, 10.8), ios(2.0, 3.0), watchos(2.0, 3.0), tvos(9.0, 10.0))
++     *
++     *    __API_DEPRECATED_WITH_REPLACEMENT("-setName:", tvos(10.0, 10.4), ios(9.0, 10.0))
++     *    __API_DEPRECATED_WITH_REPLACEMENT("SomeClassName", macos(10.4, 10.6), watchos(2.0, 3.0))
++     */
++    #define __API_DEPRECATED(...) __API_DEPRECATED_MSG_GET_MACRO(__VA_ARGS__,__API_DEPRECATED_MSG7,__API_DEPRECATED_MSG6,__API_DEPRECATED_MSG5,__API_DEPRECATED_MSG4,__API_DEPRECATED_MSG3,__API_DEPRECATED_MSG2,__API_DEPRECATED_MSG1, 0)(__VA_ARGS__)
++    #define __API_DEPRECATED_WITH_REPLACEMENT(...) __API_DEPRECATED_REP_GET_MACRO(__VA_ARGS__,__API_DEPRECATED_REP7,__API_DEPRECATED_REP6,__API_DEPRECATED_REP5,__API_DEPRECATED_REP4,__API_DEPRECATED_REP3,__API_DEPRECATED_REP2,__API_DEPRECATED_REP1, 0)(__VA_ARGS__)
++
++    /*
++     * API Unavailability
++     * Use to specify that an API is unavailable for a particular platform.
++     *
++     * Example:
++     *    __API_UNAVAILABLE(macos)
++     *    __API_UNAVAILABLE(watchos, tvos)
++     */
++    #define __API_UNAVAILABLE(...) __API_UNAVAILABLE_GET_MACRO(__VA_ARGS__,__API_UNAVAILABLE6,__API_UNAVAILABLE5,__API_UNAVAILABLE4,__API_UNAVAILABLE3,__API_UNAVAILABLE2,__API_UNAVAILABLE1, 0)(__VA_ARGS__)
++ #else 
++
++    /* 
++     * Evaluate to nothing for compilers that don't support availability.
++     */
++    
++    #define __API_AVAILABLE(...)
++    #define __API_DEPRECATED(...)
++    #define __API_DEPRECATED_WITH_REPLACEMENT(...)
++    #define __API_UNAVAILABLE(...)
++ #endif /* __has_attribute(availability) */
++#else
++
++    /* 
++     * Evaluate to nothing for compilers that don't support clang language extensions.
++     */
++    
++    #define __API_AVAILABLE(...)
++    #define __API_DEPRECATED(...)
++    #define __API_DEPRECATED_WITH_REPLACEMENT(...)
++    #define __API_UNAVAILABLE(...)
++#endif /*  #if defined(__has_feature) && defined(__has_attribute) */
++
++#if __has_include(<AvailabilityProhibitedInternal.h>)
++  #include <AvailabilityProhibitedInternal.h>
++#endif
++
 +#endif /* __AVAILABILITY__ */
++
 diff -urN a/include/AvailabilityInternal.h b/include/AvailabilityInternal.h
 --- a/include/AvailabilityInternal.h	1970-01-01 01:00:00.000000000 +0100
 +++ b/include/AvailabilityInternal.h	2017-08-08 12:17:18.000000000 +0100
@@ -9087,6 +9413,319 @@ diff -urN a/include/architecture/ppc/fenv.h b/include/architecture/ppc/fenv.h
 +
 +#endif /* __FENV__ */
 +
+diff -urN a/include/i386/_mcontext.h b/include/i386/_mcontext.h
+--- a/include/i386/_mcontext.h	1970-01-01 01:00:00.000000000 +0100
++++ b/include/i386/_mcontext.h	2018-11-27 13:59:06.000000000 +0000
+@@ -0,0 +1,164 @@
++/*
++ * Copyright (c) 2003-2012 Apple Inc. All rights reserved.
++ *
++ * @APPLE_OSREFERENCE_LICENSE_HEADER_START@
++ * 
++ * This file contains Original Code and/or Modifications of Original Code
++ * as defined in and that are subject to the Apple Public Source License
++ * Version 2.0 (the 'License'). You may not use this file except in
++ * compliance with the License. The rights granted to you under the License
++ * may not be used to create, or enable the creation or redistribution of,
++ * unlawful or unlicensed copies of an Apple operating system, or to
++ * circumvent, violate, or enable the circumvention or violation of, any
++ * terms of an Apple operating system software license agreement.
++ * 
++ * Please obtain a copy of the License at
++ * http://www.opensource.apple.com/apsl/ and read it before using this file.
++ * 
++ * The Original Code and all software distributed under the License are
++ * distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER
++ * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
++ * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
++ * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
++ * Please see the License for the specific language governing rights and
++ * limitations under the License.
++ * 
++ * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
++ */
++
++#ifndef __I386_MCONTEXT_H_
++#define __I386_MCONTEXT_H_
++
++#include <sys/cdefs.h> /* __DARWIN_UNIX03 */
++#include <sys/appleapiopts.h>
++#include <mach/machine/_structs.h>
++
++#ifndef _STRUCT_MCONTEXT32
++#if __DARWIN_UNIX03
++#define	_STRUCT_MCONTEXT32	struct __darwin_mcontext32
++_STRUCT_MCONTEXT32
++{
++	_STRUCT_X86_EXCEPTION_STATE32	__es;
++	_STRUCT_X86_THREAD_STATE32	__ss;
++	_STRUCT_X86_FLOAT_STATE32	__fs;
++};
++
++#define	_STRUCT_MCONTEXT_AVX32	struct __darwin_mcontext_avx32
++_STRUCT_MCONTEXT_AVX32
++{
++	_STRUCT_X86_EXCEPTION_STATE32	__es;
++	_STRUCT_X86_THREAD_STATE32	__ss;
++	_STRUCT_X86_AVX_STATE32		__fs;
++};
++
++#if defined(_STRUCT_X86_AVX512_STATE32)
++#define	_STRUCT_MCONTEXT_AVX512_32	struct __darwin_mcontext_avx512_32
++_STRUCT_MCONTEXT_AVX512_32
++{
++	_STRUCT_X86_EXCEPTION_STATE32	__es;
++	_STRUCT_X86_THREAD_STATE32	__ss;
++	_STRUCT_X86_AVX512_STATE32	__fs;
++};
++#endif /* _STRUCT_X86_AVX512_STATE32 */
++
++#else /* !__DARWIN_UNIX03 */
++#define	_STRUCT_MCONTEXT32	struct mcontext32
++_STRUCT_MCONTEXT32
++{
++	_STRUCT_X86_EXCEPTION_STATE32	es;
++	_STRUCT_X86_THREAD_STATE32	ss;
++	_STRUCT_X86_FLOAT_STATE32	fs;
++};
++
++#define	_STRUCT_MCONTEXT_AVX32	struct mcontext_avx32
++_STRUCT_MCONTEXT_AVX32
++{
++	_STRUCT_X86_EXCEPTION_STATE32	es;
++	_STRUCT_X86_THREAD_STATE32	ss;
++	_STRUCT_X86_AVX_STATE32		fs;
++};
++
++#if defined(_STRUCT_X86_AVX512_STATE32)
++#define	_STRUCT_MCONTEXT_AVX512_32	struct mcontext_avx512_32
++_STRUCT_MCONTEXT_AVX512_32
++{
++	_STRUCT_X86_EXCEPTION_STATE32	es;
++	_STRUCT_X86_THREAD_STATE32	ss;
++	_STRUCT_X86_AVX512_STATE32	fs;
++};
++#endif /* _STRUCT_X86_AVX512_STATE32 */
++
++#endif /* __DARWIN_UNIX03 */
++#endif /* _STRUCT_MCONTEXT32 */
++
++#ifndef _STRUCT_MCONTEXT64
++#if __DARWIN_UNIX03
++#define	_STRUCT_MCONTEXT64	struct __darwin_mcontext64
++_STRUCT_MCONTEXT64
++{
++	_STRUCT_X86_EXCEPTION_STATE64	__es;
++	_STRUCT_X86_THREAD_STATE64	__ss;
++	_STRUCT_X86_FLOAT_STATE64	__fs;
++};
++
++#define	_STRUCT_MCONTEXT_AVX64	struct __darwin_mcontext_avx64
++_STRUCT_MCONTEXT_AVX64
++{
++	_STRUCT_X86_EXCEPTION_STATE64	__es;
++	_STRUCT_X86_THREAD_STATE64	__ss;
++	_STRUCT_X86_AVX_STATE64		__fs;
++};
++
++#if defined(_STRUCT_X86_AVX512_STATE64)
++#define	_STRUCT_MCONTEXT_AVX512_64	struct __darwin_mcontext_avx512_64
++_STRUCT_MCONTEXT_AVX512_64
++{
++	_STRUCT_X86_EXCEPTION_STATE64	__es;
++	_STRUCT_X86_THREAD_STATE64	__ss;
++	_STRUCT_X86_AVX512_STATE64	__fs;
++};
++#endif /* _STRUCT_X86_AVX512_STATE64 */
++
++#else /* !__DARWIN_UNIX03 */
++#define	_STRUCT_MCONTEXT64	struct mcontext64
++_STRUCT_MCONTEXT64
++{
++	_STRUCT_X86_EXCEPTION_STATE64	es;
++	_STRUCT_X86_THREAD_STATE64	ss;
++	_STRUCT_X86_FLOAT_STATE64	fs;
++};
++
++#define	_STRUCT_MCONTEXT_AVX64	struct mcontext_avx64
++_STRUCT_MCONTEXT_AVX64
++{
++	_STRUCT_X86_EXCEPTION_STATE64	es;
++	_STRUCT_X86_THREAD_STATE64	ss;
++	_STRUCT_X86_AVX_STATE64		fs;
++};
++
++#if defined(_STRUCT_X86_AVX512_STATE64)
++#define	_STRUCT_MCONTEXT_AVX512_64	struct mcontext_avx512_64
++_STRUCT_MCONTEXT_AVX512_64
++{
++	_STRUCT_X86_EXCEPTION_STATE64	es;
++	_STRUCT_X86_THREAD_STATE64	ss;
++	_STRUCT_X86_AVX512_STATE64	fs;
++};
++#endif /* _STRUCT_X86_AVX512_STATE64 */
++
++#endif /* __DARWIN_UNIX03 */
++#endif /* _STRUCT_MCONTEXT64 */
++
++
++#ifndef _MCONTEXT_T
++#define _MCONTEXT_T
++#if defined(__LP64__)
++typedef _STRUCT_MCONTEXT64	*mcontext_t;
++#define _STRUCT_MCONTEXT _STRUCT_MCONTEXT64
++#else
++typedef _STRUCT_MCONTEXT32	*mcontext_t;
++#define _STRUCT_MCONTEXT	_STRUCT_MCONTEXT32
++#endif
++#endif /* _MCONTEXT_T */
++
++#endif /* __I386_MCONTEXT_H_ */
+diff -urN a/include/i386/_structs.h b/include/i386/_structs.h
+--- a/include/i386/_structs.h	1970-01-01 01:00:00.000000000 +0100
++++ b/include/i386/_structs.h	2017-08-08 12:16:35.000000000 +0100
+@@ -0,0 +1,141 @@
++/*
++ * Copyright (c) 2004 Apple Computer, Inc. All rights reserved.
++ *
++ * @APPLE_OSREFERENCE_LICENSE_HEADER_START@
++ * 
++ * This file contains Original Code and/or Modifications of Original Code
++ * as defined in and that are subject to the Apple Public Source License
++ * Version 2.0 (the 'License'). You may not use this file except in
++ * compliance with the License. The rights granted to you under the License
++ * may not be used to create, or enable the creation or redistribution of,
++ * unlawful or unlicensed copies of an Apple operating system, or to
++ * circumvent, violate, or enable the circumvention or violation of, any
++ * terms of an Apple operating system software license agreement.
++ * 
++ * Please obtain a copy of the License at
++ * http://www.opensource.apple.com/apsl/ and read it before using this file.
++ * 
++ * The Original Code and all software distributed under the License are
++ * distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER
++ * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
++ * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
++ * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
++ * Please see the License for the specific language governing rights and
++ * limitations under the License.
++ * 
++ * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
++ */
++
++#include <sys/appleapiopts.h>
++
++#ifdef __need_mcontext_t
++#ifndef __need_struct_mcontext
++#define __need_struct_mcontext
++#endif /* __need_struct_mcontext */
++#endif /* __need_mcontext_t */
++
++#if defined(__need_struct_mcontext)
++#include <mach/i386/_structs.h>
++#endif /* __need_struct_mcontext */
++
++
++#ifdef __need_struct_mcontext
++#undef __need_struct_mcontext
++
++#ifndef _STRUCT_MCONTEXT32
++#if __DARWIN_UNIX03
++#define	_STRUCT_MCONTEXT32	struct __darwin_mcontext32
++_STRUCT_MCONTEXT32
++{
++	_STRUCT_X86_EXCEPTION_STATE32	__es;
++	_STRUCT_X86_THREAD_STATE32	__ss;
++	_STRUCT_X86_FLOAT_STATE32	__fs;
++};
++
++#define	_STRUCT_MCONTEXT_AVX32	struct __darwin_mcontext_avx32
++_STRUCT_MCONTEXT_AVX32
++{
++	_STRUCT_X86_EXCEPTION_STATE32	__es;
++	_STRUCT_X86_THREAD_STATE32	__ss;
++	_STRUCT_X86_AVX_STATE32		__fs;
++};
++
++#else /* !__DARWIN_UNIX03 */
++#define	_STRUCT_MCONTEXT32	struct mcontext32
++_STRUCT_MCONTEXT32
++{
++	_STRUCT_X86_EXCEPTION_STATE32	es;
++	_STRUCT_X86_THREAD_STATE32	ss;
++	_STRUCT_X86_FLOAT_STATE32	fs;
++};
++
++#define	_STRUCT_MCONTEXT_AVX32	struct mcontext_avx32
++_STRUCT_MCONTEXT_AVX32
++{
++	_STRUCT_X86_EXCEPTION_STATE32	es;
++	_STRUCT_X86_THREAD_STATE32	ss;
++	_STRUCT_X86_AVX_STATE32		fs;
++};
++
++#endif /* __DARWIN_UNIX03 */
++#endif /* _STRUCT_MCONTEXT32 */
++
++#ifndef _STRUCT_MCONTEXT64
++#if __DARWIN_UNIX03
++#define	_STRUCT_MCONTEXT64	struct __darwin_mcontext64
++_STRUCT_MCONTEXT64
++{
++	_STRUCT_X86_EXCEPTION_STATE64	__es;
++	_STRUCT_X86_THREAD_STATE64	__ss;
++	_STRUCT_X86_FLOAT_STATE64	__fs;
++};
++
++#define	_STRUCT_MCONTEXT_AVX64	struct __darwin_mcontext_avx64
++_STRUCT_MCONTEXT_AVX64
++{
++	_STRUCT_X86_EXCEPTION_STATE64	__es;
++	_STRUCT_X86_THREAD_STATE64	__ss;
++	_STRUCT_X86_AVX_STATE64		__fs;
++};
++
++#else /* !__DARWIN_UNIX03 */
++#define	_STRUCT_MCONTEXT64	struct mcontext64
++_STRUCT_MCONTEXT64
++{
++	_STRUCT_X86_EXCEPTION_STATE64	es;
++	_STRUCT_X86_THREAD_STATE64	ss;
++	_STRUCT_X86_FLOAT_STATE64	fs;
++};
++
++#define	_STRUCT_MCONTEXT_AVX64	struct mcontext_avx64
++_STRUCT_MCONTEXT_AVX64
++{
++	_STRUCT_X86_EXCEPTION_STATE64	es;
++	_STRUCT_X86_THREAD_STATE64	ss;
++	_STRUCT_X86_AVX_STATE64		fs;
++};
++
++#endif /* __DARWIN_UNIX03 */
++#endif /* _STRUCT_MCONTEXT64 */
++#endif /* __need_struct_mcontext */
++
++#ifdef __need_mcontext_t
++#undef __need_mcontext_t
++#ifndef _MCONTEXT_T
++#define _MCONTEXT_T
++#if defined(__LP64__)
++typedef _STRUCT_MCONTEXT64	*mcontext_t;
++#define _STRUCT_MCONTEXT _STRUCT_MCONTEXT64
++#else
++typedef _STRUCT_MCONTEXT32	*mcontext_t;
++#define _STRUCT_MCONTEXT	_STRUCT_MCONTEXT32
++#endif
++#endif /* _MCONTEXT_T */
++#endif /* __need_mcontext_t */
++
++#if !defined(_POSIX_C_SOURCE) || defined(_DARWIN_C_SOURCE)
++#ifndef I386_MCONTEXT_SIZE
++#define I386_MCONTEXT_SIZE	sizeof(struct mcontext)	
++#endif /* I386_MCONTEXT_SIZE */
++#endif /* (!_POSIX_C_SOURCE || _DARWIN_C_SOURCE) */
++
 diff -urN a/include/architecture/ppc/math.h b/include/architecture/ppc/math.h
 --- a/include/architecture/ppc/math.h	1970-01-01 01:00:00.000000000 +0100
 +++ b/include/architecture/ppc/math.h	2017-08-08 12:16:35.000000000 +0100
@@ -10055,151 +10694,6 @@ diff -urN a/include/i386/_param.h b/include/i386/_param.h
 +
 +
 +#endif /* _I386__PARAM_H_ */
-diff -urN a/include/i386/_structs.h b/include/i386/_structs.h
---- a/include/i386/_structs.h	1970-01-01 01:00:00.000000000 +0100
-+++ b/include/i386/_structs.h	2017-08-08 12:16:35.000000000 +0100
-@@ -0,0 +1,141 @@
-+/*
-+ * Copyright (c) 2004 Apple Computer, Inc. All rights reserved.
-+ *
-+ * @APPLE_OSREFERENCE_LICENSE_HEADER_START@
-+ * 
-+ * This file contains Original Code and/or Modifications of Original Code
-+ * as defined in and that are subject to the Apple Public Source License
-+ * Version 2.0 (the 'License'). You may not use this file except in
-+ * compliance with the License. The rights granted to you under the License
-+ * may not be used to create, or enable the creation or redistribution of,
-+ * unlawful or unlicensed copies of an Apple operating system, or to
-+ * circumvent, violate, or enable the circumvention or violation of, any
-+ * terms of an Apple operating system software license agreement.
-+ * 
-+ * Please obtain a copy of the License at
-+ * http://www.opensource.apple.com/apsl/ and read it before using this file.
-+ * 
-+ * The Original Code and all software distributed under the License are
-+ * distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER
-+ * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
-+ * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
-+ * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
-+ * Please see the License for the specific language governing rights and
-+ * limitations under the License.
-+ * 
-+ * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
-+ */
-+
-+#include <sys/appleapiopts.h>
-+
-+#ifdef __need_mcontext_t
-+#ifndef __need_struct_mcontext
-+#define __need_struct_mcontext
-+#endif /* __need_struct_mcontext */
-+#endif /* __need_mcontext_t */
-+
-+#if defined(__need_struct_mcontext)
-+#include <mach/i386/_structs.h>
-+#endif /* __need_struct_mcontext */
-+
-+
-+#ifdef __need_struct_mcontext
-+#undef __need_struct_mcontext
-+
-+#ifndef _STRUCT_MCONTEXT32
-+#if __DARWIN_UNIX03
-+#define	_STRUCT_MCONTEXT32	struct __darwin_mcontext32
-+_STRUCT_MCONTEXT32
-+{
-+	_STRUCT_X86_EXCEPTION_STATE32	__es;
-+	_STRUCT_X86_THREAD_STATE32	__ss;
-+	_STRUCT_X86_FLOAT_STATE32	__fs;
-+};
-+
-+#define	_STRUCT_MCONTEXT_AVX32	struct __darwin_mcontext_avx32
-+_STRUCT_MCONTEXT_AVX32
-+{
-+	_STRUCT_X86_EXCEPTION_STATE32	__es;
-+	_STRUCT_X86_THREAD_STATE32	__ss;
-+	_STRUCT_X86_AVX_STATE32		__fs;
-+};
-+
-+#else /* !__DARWIN_UNIX03 */
-+#define	_STRUCT_MCONTEXT32	struct mcontext32
-+_STRUCT_MCONTEXT32
-+{
-+	_STRUCT_X86_EXCEPTION_STATE32	es;
-+	_STRUCT_X86_THREAD_STATE32	ss;
-+	_STRUCT_X86_FLOAT_STATE32	fs;
-+};
-+
-+#define	_STRUCT_MCONTEXT_AVX32	struct mcontext_avx32
-+_STRUCT_MCONTEXT_AVX32
-+{
-+	_STRUCT_X86_EXCEPTION_STATE32	es;
-+	_STRUCT_X86_THREAD_STATE32	ss;
-+	_STRUCT_X86_AVX_STATE32		fs;
-+};
-+
-+#endif /* __DARWIN_UNIX03 */
-+#endif /* _STRUCT_MCONTEXT32 */
-+
-+#ifndef _STRUCT_MCONTEXT64
-+#if __DARWIN_UNIX03
-+#define	_STRUCT_MCONTEXT64	struct __darwin_mcontext64
-+_STRUCT_MCONTEXT64
-+{
-+	_STRUCT_X86_EXCEPTION_STATE64	__es;
-+	_STRUCT_X86_THREAD_STATE64	__ss;
-+	_STRUCT_X86_FLOAT_STATE64	__fs;
-+};
-+
-+#define	_STRUCT_MCONTEXT_AVX64	struct __darwin_mcontext_avx64
-+_STRUCT_MCONTEXT_AVX64
-+{
-+	_STRUCT_X86_EXCEPTION_STATE64	__es;
-+	_STRUCT_X86_THREAD_STATE64	__ss;
-+	_STRUCT_X86_AVX_STATE64		__fs;
-+};
-+
-+#else /* !__DARWIN_UNIX03 */
-+#define	_STRUCT_MCONTEXT64	struct mcontext64
-+_STRUCT_MCONTEXT64
-+{
-+	_STRUCT_X86_EXCEPTION_STATE64	es;
-+	_STRUCT_X86_THREAD_STATE64	ss;
-+	_STRUCT_X86_FLOAT_STATE64	fs;
-+};
-+
-+#define	_STRUCT_MCONTEXT_AVX64	struct mcontext_avx64
-+_STRUCT_MCONTEXT_AVX64
-+{
-+	_STRUCT_X86_EXCEPTION_STATE64	es;
-+	_STRUCT_X86_THREAD_STATE64	ss;
-+	_STRUCT_X86_AVX_STATE64		fs;
-+};
-+
-+#endif /* __DARWIN_UNIX03 */
-+#endif /* _STRUCT_MCONTEXT64 */
-+#endif /* __need_struct_mcontext */
-+
-+#ifdef __need_mcontext_t
-+#undef __need_mcontext_t
-+#ifndef _MCONTEXT_T
-+#define _MCONTEXT_T
-+#if defined(__LP64__)
-+typedef _STRUCT_MCONTEXT64	*mcontext_t;
-+#define _STRUCT_MCONTEXT _STRUCT_MCONTEXT64
-+#else
-+typedef _STRUCT_MCONTEXT32	*mcontext_t;
-+#define _STRUCT_MCONTEXT	_STRUCT_MCONTEXT32
-+#endif
-+#endif /* _MCONTEXT_T */
-+#endif /* __need_mcontext_t */
-+
-+#if !defined(_POSIX_C_SOURCE) || defined(_DARWIN_C_SOURCE)
-+#ifndef I386_MCONTEXT_SIZE
-+#define I386_MCONTEXT_SIZE	sizeof(struct mcontext)	
-+#endif /* I386_MCONTEXT_SIZE */
-+#endif /* (!_POSIX_C_SOURCE || _DARWIN_C_SOURCE) */
-+
 diff -urN a/include/i386/_types.h b/include/i386/_types.h
 --- a/include/i386/_types.h	1970-01-01 01:00:00.000000000 +0100
 +++ b/include/i386/_types.h	2017-08-08 12:16:35.000000000 +0100
@@ -38092,104 +38586,6 @@ diff -urN a/include/mach/thread_special_ports.h b/include/mach/thread_special_po
 +		(thread_set_special_port((thread), THREAD_KERNEL_PORT, (port)))
 +
 +#endif	/* _MACH_THREAD_SPECIAL_PORTS_H_ */
-diff -urN a/include/mach/thread_status.h b/include/mach/thread_status.h
---- a/include/mach/thread_status.h	1970-01-01 01:00:00.000000000 +0100
-+++ b/include/mach/thread_status.h	2017-08-08 12:16:35.000000000 +0100
-@@ -0,0 +1,94 @@
-+/*
-+ * Copyright (c) 2000-2002 Apple Computer, Inc. All rights reserved.
-+ *
-+ * @APPLE_OSREFERENCE_LICENSE_HEADER_START@
-+ * 
-+ * This file contains Original Code and/or Modifications of Original Code
-+ * as defined in and that are subject to the Apple Public Source License
-+ * Version 2.0 (the 'License'). You may not use this file except in
-+ * compliance with the License. The rights granted to you under the License
-+ * may not be used to create, or enable the creation or redistribution of,
-+ * unlawful or unlicensed copies of an Apple operating system, or to
-+ * circumvent, violate, or enable the circumvention or violation of, any
-+ * terms of an Apple operating system software license agreement.
-+ * 
-+ * Please obtain a copy of the License at
-+ * http://www.opensource.apple.com/apsl/ and read it before using this file.
-+ * 
-+ * The Original Code and all software distributed under the License are
-+ * distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER
-+ * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
-+ * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
-+ * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
-+ * Please see the License for the specific language governing rights and
-+ * limitations under the License.
-+ * 
-+ * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
-+ */
-+/*
-+ * @OSF_COPYRIGHT@
-+ */
-+/*
-+ * Mach Operating System
-+ * Copyright (c) 1991,1990,1989,1988 Carnegie Mellon University
-+ * All Rights Reserved.
-+ * 
-+ * Permission to use, copy, modify and distribute this software and its
-+ * documentation is hereby granted, provided that both the copyright
-+ * notice and this permission notice appear in all copies of the
-+ * software, derivative works or modified versions, and any portions
-+ * thereof, and that both notices appear in supporting documentation.
-+ * 
-+ * CARNEGIE MELLON ALLOWS FREE USE OF THIS SOFTWARE IN ITS "AS IS"
-+ * CONDITION.  CARNEGIE MELLON DISCLAIMS ANY LIABILITY OF ANY KIND FOR
-+ * ANY DAMAGES WHATSOEVER RESULTING FROM THE USE OF THIS SOFTWARE.
-+ * 
-+ * Carnegie Mellon requests users of this software to return to
-+ * 
-+ *  Software Distribution Coordinator  or  Software.Distribution@CS.CMU.EDU
-+ *  School of Computer Science
-+ *  Carnegie Mellon University
-+ *  Pittsburgh PA 15213-3890
-+ * 
-+ * any improvements or extensions that they make and grant Carnegie Mellon
-+ * the rights to redistribute these changes.
-+ */
-+/*
-+ */
-+/*
-+ *	File:	mach/thread_status.h
-+ *	Author:	Avadis Tevanian, Jr.
-+ *
-+ *	This file contains the structure definitions for the user-visible
-+ *	thread state.  This thread state is examined with the thread_get_state
-+ *	kernel call and may be changed with the thread_set_state kernel call.
-+ *
-+ */
-+
-+#ifndef	_MACH_THREAD_STATUS_H_
-+#define	_MACH_THREAD_STATUS_H_
-+
-+/*
-+ *	The actual structure that comprises the thread state is defined
-+ *	in the machine dependent module.
-+ */
-+#include <mach/machine/vm_types.h>
-+#include <mach/machine/thread_status.h>
-+#include <mach/machine/thread_state.h>
-+
-+/*
-+ *	Generic definition for machine-dependent thread status.
-+ */
-+
-+typedef	natural_t	*thread_state_t;	/* Variable-length array */
-+
-+/* THREAD_STATE_MAX is now defined in <mach/machine/thread_state.h> */
-+typedef	natural_t	thread_state_data_t[THREAD_STATE_MAX];
-+
-+#define	THREAD_STATE_FLAVOR_LIST	0	/* List of valid flavors */
-+#define THREAD_STATE_FLAVOR_LIST_NEW	128
-+
-+typedef	int			thread_state_flavor_t;
-+typedef thread_state_flavor_t	*thread_state_flavor_array_t;
-+
-+#endif	/* _MACH_THREAD_STATUS_H_ */
 diff -urN a/include/mach/thread_switch.h b/include/mach/thread_switch.h
 --- a/include/mach/thread_switch.h	1970-01-01 01:00:00.000000000 +0100
 +++ b/include/mach/thread_switch.h	2017-08-08 12:16:35.000000000 +0100
@@ -48114,3 +48510,1207 @@ diff -urN a/include/sys/_types.h b/include/sys/_types.h
 +typedef	char	__darwin_uuid_string_t[37];
 +
 +#endif	/* _SYS__TYPES_H_ */
+diff -urN a/include/mach/machine/_structs.h b/include/mach/machine/_structs.h
+--- a/include/mach/machine/_structs.h	1970-01-01 01:00:00.000000000 +0100
++++ b/include/mach/machine/_structs.h	2018-11-27 13:59:06.000000000 +0000
+@@ -0,0 +1,1200 @@
++/*
++ * Copyright (c) 2004-2006 Apple Computer, Inc. All rights reserved.
++ *
++ * @APPLE_OSREFERENCE_LICENSE_HEADER_START@
++ * 
++ * This file contains Original Code and/or Modifications of Original Code
++ * as defined in and that are subject to the Apple Public Source License
++ * Version 2.0 (the 'License'). You may not use this file except in
++ * compliance with the License. The rights granted to you under the License
++ * may not be used to create, or enable the creation or redistribution of,
++ * unlawful or unlicensed copies of an Apple operating system, or to
++ * circumvent, violate, or enable the circumvention or violation of, any
++ * terms of an Apple operating system software license agreement.
++ * 
++ * Please obtain a copy of the License at
++ * http://www.opensource.apple.com/apsl/ and read it before using this file.
++ * 
++ * The Original Code and all software distributed under the License are
++ * distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER
++ * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
++ * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
++ * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
++ * Please see the License for the specific language governing rights and
++ * limitations under the License.
++ * 
++ * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
++ */
++/*
++ * @OSF_COPYRIGHT@
++ */
++
++#ifndef	_MACH_I386__STRUCTS_H_
++#define	_MACH_I386__STRUCTS_H_
++
++#include <sys/cdefs.h> /* __DARWIN_UNIX03 */
++#include <machine/types.h> /* __uint8_t */
++
++/*
++ * i386 is the structure that is exported to user threads for 
++ * use in status/mutate calls.  This structure should never change.
++ *
++ */
++
++#if __DARWIN_UNIX03
++#define	_STRUCT_X86_THREAD_STATE32	struct __darwin_i386_thread_state
++_STRUCT_X86_THREAD_STATE32
++{
++    unsigned int	__eax;
++    unsigned int	__ebx;
++    unsigned int	__ecx;
++    unsigned int	__edx;
++    unsigned int	__edi;
++    unsigned int	__esi;
++    unsigned int	__ebp;
++    unsigned int	__esp;
++    unsigned int	__ss;
++    unsigned int	__eflags;
++    unsigned int	__eip;
++    unsigned int	__cs;
++    unsigned int	__ds;
++    unsigned int	__es;
++    unsigned int	__fs;
++    unsigned int	__gs;
++};
++#else /* !__DARWIN_UNIX03 */
++#define	_STRUCT_X86_THREAD_STATE32	struct i386_thread_state
++_STRUCT_X86_THREAD_STATE32
++{
++    unsigned int	eax;
++    unsigned int	ebx;
++    unsigned int	ecx;
++    unsigned int	edx;
++    unsigned int	edi;
++    unsigned int	esi;
++    unsigned int	ebp;
++    unsigned int	esp;
++    unsigned int	ss;
++    unsigned int	eflags;
++    unsigned int	eip;
++    unsigned int	cs;
++    unsigned int	ds;
++    unsigned int	es;
++    unsigned int	fs;
++    unsigned int	gs;
++};
++#endif /* !__DARWIN_UNIX03 */
++
++/* This structure should be double-word aligned for performance */
++
++#if __DARWIN_UNIX03
++#define _STRUCT_FP_CONTROL	struct __darwin_fp_control
++_STRUCT_FP_CONTROL
++{
++    unsigned short		__invalid	:1,
++    				__denorm	:1,
++				__zdiv		:1,
++				__ovrfl		:1,
++				__undfl		:1,
++				__precis	:1,
++						:2,
++				__pc		:2,
++#if !defined(_POSIX_C_SOURCE) || defined(_DARWIN_C_SOURCE)
++#define FP_PREC_24B		0
++#define	FP_PREC_53B		2
++#define FP_PREC_64B		3
++#endif /* !_POSIX_C_SOURCE || _DARWIN_C_SOURCE */
++				__rc		:2,
++#if !defined(_POSIX_C_SOURCE) || defined(_DARWIN_C_SOURCE)
++#define FP_RND_NEAR		0
++#define FP_RND_DOWN		1
++#define FP_RND_UP		2
++#define FP_CHOP			3
++#endif /* !_POSIX_C_SOURCE || _DARWIN_C_SOURCE */
++					/*inf*/	:1,
++						:3;
++};
++typedef _STRUCT_FP_CONTROL	__darwin_fp_control_t;
++#else /* !__DARWIN_UNIX03 */
++#define _STRUCT_FP_CONTROL	struct fp_control
++_STRUCT_FP_CONTROL
++{
++    unsigned short		invalid	:1,
++    				denorm	:1,
++				zdiv	:1,
++				ovrfl	:1,
++				undfl	:1,
++				precis	:1,
++					:2,
++				pc	:2,
++#define FP_PREC_24B		0
++#define	FP_PREC_53B		2
++#define FP_PREC_64B		3
++				rc	:2,
++#define FP_RND_NEAR		0
++#define FP_RND_DOWN		1
++#define FP_RND_UP		2
++#define FP_CHOP			3
++				/*inf*/	:1,
++					:3;
++};
++typedef _STRUCT_FP_CONTROL	fp_control_t;
++#endif /* !__DARWIN_UNIX03 */
++
++/*
++ * Status word.
++ */
++
++#if __DARWIN_UNIX03
++#define _STRUCT_FP_STATUS	struct __darwin_fp_status
++_STRUCT_FP_STATUS
++{
++    unsigned short		__invalid	:1,
++    				__denorm	:1,
++				__zdiv		:1,
++				__ovrfl		:1,
++				__undfl		:1,
++				__precis	:1,
++				__stkflt	:1,
++				__errsumm	:1,
++				__c0		:1,
++				__c1		:1,
++				__c2		:1,
++				__tos		:3,
++				__c3		:1,
++				__busy		:1;
++};
++typedef _STRUCT_FP_STATUS	__darwin_fp_status_t;
++#else /* !__DARWIN_UNIX03 */
++#define _STRUCT_FP_STATUS	struct fp_status
++_STRUCT_FP_STATUS
++{
++    unsigned short		invalid	:1,
++    				denorm	:1,
++				zdiv	:1,
++				ovrfl	:1,
++				undfl	:1,
++				precis	:1,
++				stkflt	:1,
++				errsumm	:1,
++				c0	:1,
++				c1	:1,
++				c2	:1,
++				tos	:3,
++				c3	:1,
++				busy	:1;
++};
++typedef _STRUCT_FP_STATUS	fp_status_t;
++#endif /* !__DARWIN_UNIX03 */
++				
++/* defn of 80bit x87 FPU or MMX register  */
++
++#if __DARWIN_UNIX03
++#define _STRUCT_MMST_REG	struct __darwin_mmst_reg
++_STRUCT_MMST_REG
++{
++	char	__mmst_reg[10];
++	char	__mmst_rsrv[6];
++};
++#else /* !__DARWIN_UNIX03 */
++#define _STRUCT_MMST_REG	struct mmst_reg
++_STRUCT_MMST_REG
++{
++	char	mmst_reg[10];
++	char	mmst_rsrv[6];
++};
++#endif /* !__DARWIN_UNIX03 */
++
++
++/* defn of 128 bit XMM regs */
++
++#if __DARWIN_UNIX03
++#define _STRUCT_XMM_REG		struct __darwin_xmm_reg
++_STRUCT_XMM_REG
++{
++	char		__xmm_reg[16];
++};
++#else /* !__DARWIN_UNIX03 */
++#define _STRUCT_XMM_REG		struct xmm_reg
++_STRUCT_XMM_REG
++{
++	char		xmm_reg[16];
++};
++#endif /* !__DARWIN_UNIX03 */
++
++/* defn of 256 bit YMM regs */
++
++#if __DARWIN_UNIX03
++#define _STRUCT_YMM_REG		struct __darwin_ymm_reg
++_STRUCT_YMM_REG
++{
++	char		__ymm_reg[32];
++};
++#else /* !__DARWIN_UNIX03 */
++#define _STRUCT_YMM_REG		struct ymm_reg
++_STRUCT_YMM_REG
++{
++	char		ymm_reg[32];
++};
++#endif /* !__DARWIN_UNIX03 */
++
++/* defn of 512 bit ZMM regs */
++
++#if __DARWIN_UNIX03
++#define _STRUCT_ZMM_REG		struct __darwin_zmm_reg
++_STRUCT_ZMM_REG
++{
++	char		__zmm_reg[64];
++};
++#else /* !__DARWIN_UNIX03 */
++#define _STRUCT_ZMM_REG		struct zmm_reg
++_STRUCT_ZMM_REG
++{
++	char		zmm_reg[64];
++};
++#endif /* !__DARWIN_UNIX03 */
++
++#if __DARWIN_UNIX03
++#define _STRUCT_OPMASK_REG	struct __darwin_opmask_reg
++_STRUCT_OPMASK_REG
++{
++	char		__opmask_reg[8];
++};
++#else /* !__DARWIN_UNIX03 */
++#define _STRUCT_OPMASK_REG	struct opmask_reg
++_STRUCT_OPMASK_REG
++{
++	char		opmask_reg[8];
++};
++#endif /* !__DARWIN_UNIX03 */
++
++/* 
++ * Floating point state.
++ */
++
++#if !defined(_POSIX_C_SOURCE) || defined(_DARWIN_C_SOURCE)
++#define FP_STATE_BYTES		512	/* number of chars worth of data from fpu_fcw */
++#endif /* !_POSIX_C_SOURCE || _DARWIN_C_SOURCE */
++
++#if __DARWIN_UNIX03
++#define	_STRUCT_X86_FLOAT_STATE32	struct __darwin_i386_float_state
++_STRUCT_X86_FLOAT_STATE32
++{
++	int 			__fpu_reserved[2];
++	_STRUCT_FP_CONTROL	__fpu_fcw;		/* x87 FPU control word */
++	_STRUCT_FP_STATUS	__fpu_fsw;		/* x87 FPU status word */
++	__uint8_t		__fpu_ftw;		/* x87 FPU tag word */
++	__uint8_t		__fpu_rsrv1;		/* reserved */ 
++	__uint16_t		__fpu_fop;		/* x87 FPU Opcode */
++	__uint32_t		__fpu_ip;		/* x87 FPU Instruction Pointer offset */
++	__uint16_t		__fpu_cs;		/* x87 FPU Instruction Pointer Selector */
++	__uint16_t		__fpu_rsrv2;		/* reserved */
++	__uint32_t		__fpu_dp;		/* x87 FPU Instruction Operand(Data) Pointer offset */
++	__uint16_t		__fpu_ds;		/* x87 FPU Instruction Operand(Data) Pointer Selector */
++	__uint16_t		__fpu_rsrv3;		/* reserved */
++	__uint32_t		__fpu_mxcsr;		/* MXCSR Register state */
++	__uint32_t		__fpu_mxcsrmask;	/* MXCSR mask */
++	_STRUCT_MMST_REG	__fpu_stmm0;		/* ST0/MM0   */
++	_STRUCT_MMST_REG	__fpu_stmm1;		/* ST1/MM1  */
++	_STRUCT_MMST_REG	__fpu_stmm2;		/* ST2/MM2  */
++	_STRUCT_MMST_REG	__fpu_stmm3;		/* ST3/MM3  */
++	_STRUCT_MMST_REG	__fpu_stmm4;		/* ST4/MM4  */
++	_STRUCT_MMST_REG	__fpu_stmm5;		/* ST5/MM5  */
++	_STRUCT_MMST_REG	__fpu_stmm6;		/* ST6/MM6  */
++	_STRUCT_MMST_REG	__fpu_stmm7;		/* ST7/MM7  */
++	_STRUCT_XMM_REG		__fpu_xmm0;		/* XMM 0  */
++	_STRUCT_XMM_REG		__fpu_xmm1;		/* XMM 1  */
++	_STRUCT_XMM_REG		__fpu_xmm2;		/* XMM 2  */
++	_STRUCT_XMM_REG		__fpu_xmm3;		/* XMM 3  */
++	_STRUCT_XMM_REG		__fpu_xmm4;		/* XMM 4  */
++	_STRUCT_XMM_REG		__fpu_xmm5;		/* XMM 5  */
++	_STRUCT_XMM_REG		__fpu_xmm6;		/* XMM 6  */
++	_STRUCT_XMM_REG		__fpu_xmm7;		/* XMM 7  */
++	char			__fpu_rsrv4[14*16];	/* reserved */
++	int 			__fpu_reserved1;
++};
++
++#define	_STRUCT_X86_AVX_STATE32	struct __darwin_i386_avx_state
++_STRUCT_X86_AVX_STATE32
++{
++	int 			__fpu_reserved[2];
++	_STRUCT_FP_CONTROL	__fpu_fcw;		/* x87 FPU control word */
++	_STRUCT_FP_STATUS	__fpu_fsw;		/* x87 FPU status word */
++	__uint8_t		__fpu_ftw;		/* x87 FPU tag word */
++	__uint8_t		__fpu_rsrv1;		/* reserved */ 
++	__uint16_t		__fpu_fop;		/* x87 FPU Opcode */
++	__uint32_t		__fpu_ip;		/* x87 FPU Instruction Pointer offset */
++	__uint16_t		__fpu_cs;		/* x87 FPU Instruction Pointer Selector */
++	__uint16_t		__fpu_rsrv2;		/* reserved */
++	__uint32_t		__fpu_dp;		/* x87 FPU Instruction Operand(Data) Pointer offset */
++	__uint16_t		__fpu_ds;		/* x87 FPU Instruction Operand(Data) Pointer Selector */
++	__uint16_t		__fpu_rsrv3;		/* reserved */
++	__uint32_t		__fpu_mxcsr;		/* MXCSR Register state */
++	__uint32_t		__fpu_mxcsrmask;	/* MXCSR mask */
++	_STRUCT_MMST_REG	__fpu_stmm0;		/* ST0/MM0   */
++	_STRUCT_MMST_REG	__fpu_stmm1;		/* ST1/MM1  */
++	_STRUCT_MMST_REG	__fpu_stmm2;		/* ST2/MM2  */
++	_STRUCT_MMST_REG	__fpu_stmm3;		/* ST3/MM3  */
++	_STRUCT_MMST_REG	__fpu_stmm4;		/* ST4/MM4  */
++	_STRUCT_MMST_REG	__fpu_stmm5;		/* ST5/MM5  */
++	_STRUCT_MMST_REG	__fpu_stmm6;		/* ST6/MM6  */
++	_STRUCT_MMST_REG	__fpu_stmm7;		/* ST7/MM7  */
++	_STRUCT_XMM_REG		__fpu_xmm0;		/* XMM 0  */
++	_STRUCT_XMM_REG		__fpu_xmm1;		/* XMM 1  */
++	_STRUCT_XMM_REG		__fpu_xmm2;		/* XMM 2  */
++	_STRUCT_XMM_REG		__fpu_xmm3;		/* XMM 3  */
++	_STRUCT_XMM_REG		__fpu_xmm4;		/* XMM 4  */
++	_STRUCT_XMM_REG		__fpu_xmm5;		/* XMM 5  */
++	_STRUCT_XMM_REG		__fpu_xmm6;		/* XMM 6  */
++	_STRUCT_XMM_REG		__fpu_xmm7;		/* XMM 7  */
++	char			__fpu_rsrv4[14*16];	/* reserved */
++	int 			__fpu_reserved1;
++	char			__avx_reserved1[64];
++	_STRUCT_XMM_REG		__fpu_ymmh0;		/* YMMH 0  */
++	_STRUCT_XMM_REG		__fpu_ymmh1;		/* YMMH 1  */
++	_STRUCT_XMM_REG		__fpu_ymmh2;		/* YMMH 2  */
++	_STRUCT_XMM_REG		__fpu_ymmh3;		/* YMMH 3  */
++	_STRUCT_XMM_REG		__fpu_ymmh4;		/* YMMH 4  */
++	_STRUCT_XMM_REG		__fpu_ymmh5;		/* YMMH 5  */
++	_STRUCT_XMM_REG		__fpu_ymmh6;		/* YMMH 6  */
++	_STRUCT_XMM_REG		__fpu_ymmh7;		/* YMMH 7  */
++};
++
++#define	_STRUCT_X86_AVX512_STATE32	struct __darwin_i386_avx512_state
++_STRUCT_X86_AVX512_STATE32
++{
++	int 			__fpu_reserved[2];
++	_STRUCT_FP_CONTROL	__fpu_fcw;		/* x87 FPU control word */
++	_STRUCT_FP_STATUS	__fpu_fsw;		/* x87 FPU status word */
++	__uint8_t		__fpu_ftw;		/* x87 FPU tag word */
++	__uint8_t		__fpu_rsrv1;		/* reserved */ 
++	__uint16_t		__fpu_fop;		/* x87 FPU Opcode */
++	__uint32_t		__fpu_ip;		/* x87 FPU Instruction Pointer offset */
++	__uint16_t		__fpu_cs;		/* x87 FPU Instruction Pointer Selector */
++	__uint16_t		__fpu_rsrv2;		/* reserved */
++	__uint32_t		__fpu_dp;		/* x87 FPU Instruction Operand(Data) Pointer offset */
++	__uint16_t		__fpu_ds;		/* x87 FPU Instruction Operand(Data) Pointer Selector */
++	__uint16_t		__fpu_rsrv3;		/* reserved */
++	__uint32_t		__fpu_mxcsr;		/* MXCSR Register state */
++	__uint32_t		__fpu_mxcsrmask;	/* MXCSR mask */
++	_STRUCT_MMST_REG	__fpu_stmm0;		/* ST0/MM0   */
++	_STRUCT_MMST_REG	__fpu_stmm1;		/* ST1/MM1  */
++	_STRUCT_MMST_REG	__fpu_stmm2;		/* ST2/MM2  */
++	_STRUCT_MMST_REG	__fpu_stmm3;		/* ST3/MM3  */
++	_STRUCT_MMST_REG	__fpu_stmm4;		/* ST4/MM4  */
++	_STRUCT_MMST_REG	__fpu_stmm5;		/* ST5/MM5  */
++	_STRUCT_MMST_REG	__fpu_stmm6;		/* ST6/MM6  */
++	_STRUCT_MMST_REG	__fpu_stmm7;		/* ST7/MM7  */
++	_STRUCT_XMM_REG		__fpu_xmm0;		/* XMM 0  */
++	_STRUCT_XMM_REG		__fpu_xmm1;		/* XMM 1  */
++	_STRUCT_XMM_REG		__fpu_xmm2;		/* XMM 2  */
++	_STRUCT_XMM_REG		__fpu_xmm3;		/* XMM 3  */
++	_STRUCT_XMM_REG		__fpu_xmm4;		/* XMM 4  */
++	_STRUCT_XMM_REG		__fpu_xmm5;		/* XMM 5  */
++	_STRUCT_XMM_REG		__fpu_xmm6;		/* XMM 6  */
++	_STRUCT_XMM_REG		__fpu_xmm7;		/* XMM 7  */
++	char			__fpu_rsrv4[14*16];	/* reserved */
++	int 			__fpu_reserved1;
++	char			__avx_reserved1[64];
++	_STRUCT_XMM_REG		__fpu_ymmh0;		/* YMMH 0  */
++	_STRUCT_XMM_REG		__fpu_ymmh1;		/* YMMH 1  */
++	_STRUCT_XMM_REG		__fpu_ymmh2;		/* YMMH 2  */
++	_STRUCT_XMM_REG		__fpu_ymmh3;		/* YMMH 3  */
++	_STRUCT_XMM_REG		__fpu_ymmh4;		/* YMMH 4  */
++	_STRUCT_XMM_REG		__fpu_ymmh5;		/* YMMH 5  */
++	_STRUCT_XMM_REG		__fpu_ymmh6;		/* YMMH 6  */
++	_STRUCT_XMM_REG		__fpu_ymmh7;		/* YMMH 7  */
++	_STRUCT_OPMASK_REG	__fpu_k0;		/* K0 */
++	_STRUCT_OPMASK_REG	__fpu_k1;		/* K1 */
++	_STRUCT_OPMASK_REG	__fpu_k2;		/* K2 */
++	_STRUCT_OPMASK_REG	__fpu_k3;		/* K3 */
++	_STRUCT_OPMASK_REG	__fpu_k4;		/* K4 */
++	_STRUCT_OPMASK_REG	__fpu_k5;		/* K5 */
++	_STRUCT_OPMASK_REG	__fpu_k6;		/* K6 */
++	_STRUCT_OPMASK_REG	__fpu_k7;		/* K7 */
++	_STRUCT_YMM_REG		__fpu_zmmh0;		/* ZMMH 0  */
++	_STRUCT_YMM_REG		__fpu_zmmh1;		/* ZMMH 1  */
++	_STRUCT_YMM_REG		__fpu_zmmh2;		/* ZMMH 2  */
++	_STRUCT_YMM_REG		__fpu_zmmh3;		/* ZMMH 3  */
++	_STRUCT_YMM_REG		__fpu_zmmh4;		/* ZMMH 4  */
++	_STRUCT_YMM_REG		__fpu_zmmh5;		/* ZMMH 5  */
++	_STRUCT_YMM_REG		__fpu_zmmh6;		/* ZMMH 6  */
++	_STRUCT_YMM_REG		__fpu_zmmh7;		/* ZMMH 7  */
++};
++
++#else /* !__DARWIN_UNIX03 */
++#define	_STRUCT_X86_FLOAT_STATE32	struct i386_float_state
++_STRUCT_X86_FLOAT_STATE32
++{
++	int 			fpu_reserved[2];
++	_STRUCT_FP_CONTROL	fpu_fcw;		/* x87 FPU control word */
++	_STRUCT_FP_STATUS	fpu_fsw;		/* x87 FPU status word */
++	__uint8_t		fpu_ftw;		/* x87 FPU tag word */
++	__uint8_t		fpu_rsrv1;		/* reserved */ 
++	__uint16_t		fpu_fop;		/* x87 FPU Opcode */
++	__uint32_t		fpu_ip;			/* x87 FPU Instruction Pointer offset */
++	__uint16_t		fpu_cs;			/* x87 FPU Instruction Pointer Selector */
++	__uint16_t		fpu_rsrv2;		/* reserved */
++	__uint32_t		fpu_dp;			/* x87 FPU Instruction Operand(Data) Pointer offset */
++	__uint16_t		fpu_ds;			/* x87 FPU Instruction Operand(Data) Pointer Selector */
++	__uint16_t		fpu_rsrv3;		/* reserved */
++	__uint32_t		fpu_mxcsr;		/* MXCSR Register state */
++	__uint32_t		fpu_mxcsrmask;		/* MXCSR mask */
++	_STRUCT_MMST_REG	fpu_stmm0;		/* ST0/MM0   */
++	_STRUCT_MMST_REG	fpu_stmm1;		/* ST1/MM1  */
++	_STRUCT_MMST_REG	fpu_stmm2;		/* ST2/MM2  */
++	_STRUCT_MMST_REG	fpu_stmm3;		/* ST3/MM3  */
++	_STRUCT_MMST_REG	fpu_stmm4;		/* ST4/MM4  */
++	_STRUCT_MMST_REG	fpu_stmm5;		/* ST5/MM5  */
++	_STRUCT_MMST_REG	fpu_stmm6;		/* ST6/MM6  */
++	_STRUCT_MMST_REG	fpu_stmm7;		/* ST7/MM7  */
++	_STRUCT_XMM_REG		fpu_xmm0;		/* XMM 0  */
++	_STRUCT_XMM_REG		fpu_xmm1;		/* XMM 1  */
++	_STRUCT_XMM_REG		fpu_xmm2;		/* XMM 2  */
++	_STRUCT_XMM_REG		fpu_xmm3;		/* XMM 3  */
++	_STRUCT_XMM_REG		fpu_xmm4;		/* XMM 4  */
++	_STRUCT_XMM_REG		fpu_xmm5;		/* XMM 5  */
++	_STRUCT_XMM_REG		fpu_xmm6;		/* XMM 6  */
++	_STRUCT_XMM_REG		fpu_xmm7;		/* XMM 7  */
++	char			fpu_rsrv4[14*16];	/* reserved */
++	int 			fpu_reserved1;
++};
++
++#define	_STRUCT_X86_AVX_STATE32	struct i386_avx_state
++_STRUCT_X86_AVX_STATE32
++{
++	int 			fpu_reserved[2];
++	_STRUCT_FP_CONTROL	fpu_fcw;		/* x87 FPU control word */
++	_STRUCT_FP_STATUS	fpu_fsw;		/* x87 FPU status word */
++	__uint8_t		fpu_ftw;		/* x87 FPU tag word */
++	__uint8_t		fpu_rsrv1;		/* reserved */ 
++	__uint16_t		fpu_fop;		/* x87 FPU Opcode */
++	__uint32_t		fpu_ip;			/* x87 FPU Instruction Pointer offset */
++	__uint16_t		fpu_cs;			/* x87 FPU Instruction Pointer Selector */
++	__uint16_t		fpu_rsrv2;		/* reserved */
++	__uint32_t		fpu_dp;			/* x87 FPU Instruction Operand(Data) Pointer offset */
++	__uint16_t		fpu_ds;			/* x87 FPU Instruction Operand(Data) Pointer Selector */
++	__uint16_t		fpu_rsrv3;		/* reserved */
++	__uint32_t		fpu_mxcsr;		/* MXCSR Register state */
++	__uint32_t		fpu_mxcsrmask;		/* MXCSR mask */
++	_STRUCT_MMST_REG	fpu_stmm0;		/* ST0/MM0   */
++	_STRUCT_MMST_REG	fpu_stmm1;		/* ST1/MM1  */
++	_STRUCT_MMST_REG	fpu_stmm2;		/* ST2/MM2  */
++	_STRUCT_MMST_REG	fpu_stmm3;		/* ST3/MM3  */
++	_STRUCT_MMST_REG	fpu_stmm4;		/* ST4/MM4  */
++	_STRUCT_MMST_REG	fpu_stmm5;		/* ST5/MM5  */
++	_STRUCT_MMST_REG	fpu_stmm6;		/* ST6/MM6  */
++	_STRUCT_MMST_REG	fpu_stmm7;		/* ST7/MM7  */
++	_STRUCT_XMM_REG		fpu_xmm0;		/* XMM 0  */
++	_STRUCT_XMM_REG		fpu_xmm1;		/* XMM 1  */
++	_STRUCT_XMM_REG		fpu_xmm2;		/* XMM 2  */
++	_STRUCT_XMM_REG		fpu_xmm3;		/* XMM 3  */
++	_STRUCT_XMM_REG		fpu_xmm4;		/* XMM 4  */
++	_STRUCT_XMM_REG		fpu_xmm5;		/* XMM 5  */
++	_STRUCT_XMM_REG		fpu_xmm6;		/* XMM 6  */
++	_STRUCT_XMM_REG		fpu_xmm7;		/* XMM 7  */
++	char			fpu_rsrv4[14*16];	/* reserved */
++	int 			fpu_reserved1;
++	char			avx_reserved1[64];
++	_STRUCT_XMM_REG		fpu_ymmh0;		/* YMMH 0  */
++	_STRUCT_XMM_REG		fpu_ymmh1;		/* YMMH 1  */
++	_STRUCT_XMM_REG		fpu_ymmh2;		/* YMMH 2  */
++	_STRUCT_XMM_REG		fpu_ymmh3;		/* YMMH 3  */
++	_STRUCT_XMM_REG		fpu_ymmh4;		/* YMMH 4  */
++	_STRUCT_XMM_REG		fpu_ymmh5;		/* YMMH 5  */
++	_STRUCT_XMM_REG		fpu_ymmh6;		/* YMMH 6  */
++	_STRUCT_XMM_REG		fpu_ymmh7;		/* YMMH 7  */
++};
++
++#define	_STRUCT_X86_AVX512_STATE32	struct i386_avx512_state
++_STRUCT_X86_AVX512_STATE32
++{
++	int 			fpu_reserved[2];
++	_STRUCT_FP_CONTROL	fpu_fcw;		/* x87 FPU control word */
++	_STRUCT_FP_STATUS	fpu_fsw;		/* x87 FPU status word */
++	__uint8_t		fpu_ftw;		/* x87 FPU tag word */
++	__uint8_t		fpu_rsrv1;		/* reserved */ 
++	__uint16_t		fpu_fop;		/* x87 FPU Opcode */
++	__uint32_t		fpu_ip;			/* x87 FPU Instruction Pointer offset */
++	__uint16_t		fpu_cs;			/* x87 FPU Instruction Pointer Selector */
++	__uint16_t		fpu_rsrv2;		/* reserved */
++	__uint32_t		fpu_dp;			/* x87 FPU Instruction Operand(Data) Pointer offset */
++	__uint16_t		fpu_ds;			/* x87 FPU Instruction Operand(Data) Pointer Selector */
++	__uint16_t		fpu_rsrv3;		/* reserved */
++	__uint32_t		fpu_mxcsr;		/* MXCSR Register state */
++	__uint32_t		fpu_mxcsrmask;		/* MXCSR mask */
++	_STRUCT_MMST_REG	fpu_stmm0;		/* ST0/MM0   */
++	_STRUCT_MMST_REG	fpu_stmm1;		/* ST1/MM1  */
++	_STRUCT_MMST_REG	fpu_stmm2;		/* ST2/MM2  */
++	_STRUCT_MMST_REG	fpu_stmm3;		/* ST3/MM3  */
++	_STRUCT_MMST_REG	fpu_stmm4;		/* ST4/MM4  */
++	_STRUCT_MMST_REG	fpu_stmm5;		/* ST5/MM5  */
++	_STRUCT_MMST_REG	fpu_stmm6;		/* ST6/MM6  */
++	_STRUCT_MMST_REG	fpu_stmm7;		/* ST7/MM7  */
++	_STRUCT_XMM_REG		fpu_xmm0;		/* XMM 0  */
++	_STRUCT_XMM_REG		fpu_xmm1;		/* XMM 1  */
++	_STRUCT_XMM_REG		fpu_xmm2;		/* XMM 2  */
++	_STRUCT_XMM_REG		fpu_xmm3;		/* XMM 3  */
++	_STRUCT_XMM_REG		fpu_xmm4;		/* XMM 4  */
++	_STRUCT_XMM_REG		fpu_xmm5;		/* XMM 5  */
++	_STRUCT_XMM_REG		fpu_xmm6;		/* XMM 6  */
++	_STRUCT_XMM_REG		fpu_xmm7;		/* XMM 7  */
++	char			fpu_rsrv4[14*16];	/* reserved */
++	int 			fpu_reserved1;
++	char			avx_reserved1[64];
++	_STRUCT_XMM_REG		fpu_ymmh0;		/* YMMH 0  */
++	_STRUCT_XMM_REG		fpu_ymmh1;		/* YMMH 1  */
++	_STRUCT_XMM_REG		fpu_ymmh2;		/* YMMH 2  */
++	_STRUCT_XMM_REG		fpu_ymmh3;		/* YMMH 3  */
++	_STRUCT_XMM_REG		fpu_ymmh4;		/* YMMH 4  */
++	_STRUCT_XMM_REG		fpu_ymmh5;		/* YMMH 5  */
++	_STRUCT_XMM_REG		fpu_ymmh6;		/* YMMH 6  */
++	_STRUCT_XMM_REG		fpu_ymmh7;		/* YMMH 7  */
++	_STRUCT_OPMASK_REG	fpu_k0;			/* K0 */
++	_STRUCT_OPMASK_REG	fpu_k1;			/* K1 */
++	_STRUCT_OPMASK_REG	fpu_k2;			/* K2 */
++	_STRUCT_OPMASK_REG	fpu_k3;			/* K3 */
++	_STRUCT_OPMASK_REG	fpu_k4;			/* K4 */
++	_STRUCT_OPMASK_REG	fpu_k5;			/* K5 */
++	_STRUCT_OPMASK_REG	fpu_k6;			/* K6 */
++	_STRUCT_OPMASK_REG	fpu_k7;			/* K7 */
++	_STRUCT_YMM_REG		fpu_zmmh0;		/* ZMMH 0  */
++	_STRUCT_YMM_REG		fpu_zmmh1;		/* ZMMH 1  */
++	_STRUCT_YMM_REG		fpu_zmmh2;		/* ZMMH 2  */
++	_STRUCT_YMM_REG		fpu_zmmh3;		/* ZMMH 3  */
++	_STRUCT_YMM_REG		fpu_zmmh4;		/* ZMMH 4  */
++	_STRUCT_YMM_REG		fpu_zmmh5;		/* ZMMH 5  */
++	_STRUCT_YMM_REG		fpu_zmmh6;		/* ZMMH 6  */
++	_STRUCT_YMM_REG		fpu_zmmh7;		/* ZMMH 7  */
++};
++
++#endif /* !__DARWIN_UNIX03 */
++
++#if __DARWIN_UNIX03
++#define _STRUCT_X86_EXCEPTION_STATE32	struct __darwin_i386_exception_state
++_STRUCT_X86_EXCEPTION_STATE32
++{
++	__uint16_t	__trapno;
++	__uint16_t	__cpu;
++	__uint32_t	__err;
++	__uint32_t	__faultvaddr;
++};
++#else /* !__DARWIN_UNIX03 */
++#define _STRUCT_X86_EXCEPTION_STATE32	struct i386_exception_state
++_STRUCT_X86_EXCEPTION_STATE32
++{
++	__uint16_t	trapno;
++	__uint16_t	cpu;
++	__uint32_t	err;
++	__uint32_t	faultvaddr;
++};
++#endif /* !__DARWIN_UNIX03 */
++
++#if __DARWIN_UNIX03
++#define _STRUCT_X86_DEBUG_STATE32	struct __darwin_x86_debug_state32
++_STRUCT_X86_DEBUG_STATE32
++{
++	unsigned int	__dr0;
++	unsigned int	__dr1;
++	unsigned int	__dr2;
++	unsigned int	__dr3;
++	unsigned int	__dr4;
++	unsigned int	__dr5;
++	unsigned int	__dr6;
++	unsigned int	__dr7;
++};
++#else /* !__DARWIN_UNIX03 */
++#define _STRUCT_X86_DEBUG_STATE32	struct x86_debug_state32
++_STRUCT_X86_DEBUG_STATE32
++{
++	unsigned int	dr0;
++	unsigned int	dr1;
++	unsigned int	dr2;
++	unsigned int	dr3;
++	unsigned int	dr4;
++	unsigned int	dr5;
++	unsigned int	dr6;
++	unsigned int	dr7;
++};
++#endif /* !__DARWIN_UNIX03 */
++
++/*
++ * 64 bit versions of the above
++ */
++
++#if __DARWIN_UNIX03
++#define	_STRUCT_X86_THREAD_STATE64	struct __darwin_x86_thread_state64
++_STRUCT_X86_THREAD_STATE64
++{
++	__uint64_t	__rax;
++	__uint64_t	__rbx;
++	__uint64_t	__rcx;
++	__uint64_t	__rdx;
++	__uint64_t	__rdi;
++	__uint64_t	__rsi;
++	__uint64_t	__rbp;
++	__uint64_t	__rsp;
++	__uint64_t	__r8;
++	__uint64_t	__r9;
++	__uint64_t	__r10;
++	__uint64_t	__r11;
++	__uint64_t	__r12;
++	__uint64_t	__r13;
++	__uint64_t	__r14;
++	__uint64_t	__r15;
++	__uint64_t	__rip;
++	__uint64_t	__rflags;
++	__uint64_t	__cs;
++	__uint64_t	__fs;
++	__uint64_t	__gs;
++};
++#else /* !__DARWIN_UNIX03 */
++#define	_STRUCT_X86_THREAD_STATE64	struct x86_thread_state64
++_STRUCT_X86_THREAD_STATE64
++{
++	__uint64_t	rax;
++	__uint64_t	rbx;
++	__uint64_t	rcx;
++	__uint64_t	rdx;
++	__uint64_t	rdi;
++	__uint64_t	rsi;
++	__uint64_t	rbp;
++	__uint64_t	rsp;
++	__uint64_t	r8;
++	__uint64_t	r9;
++	__uint64_t	r10;
++	__uint64_t	r11;
++	__uint64_t	r12;
++	__uint64_t	r13;
++	__uint64_t	r14;
++	__uint64_t	r15;
++	__uint64_t	rip;
++	__uint64_t	rflags;
++	__uint64_t	cs;
++	__uint64_t	fs;
++	__uint64_t	gs;
++};
++#endif /* !__DARWIN_UNIX03 */
++
++
++#if __DARWIN_UNIX03
++#define	_STRUCT_X86_FLOAT_STATE64	struct __darwin_x86_float_state64
++_STRUCT_X86_FLOAT_STATE64
++{
++	int 			__fpu_reserved[2];
++	_STRUCT_FP_CONTROL	__fpu_fcw;		/* x87 FPU control word */
++	_STRUCT_FP_STATUS	__fpu_fsw;		/* x87 FPU status word */
++	__uint8_t		__fpu_ftw;		/* x87 FPU tag word */
++	__uint8_t		__fpu_rsrv1;		/* reserved */ 
++	__uint16_t		__fpu_fop;		/* x87 FPU Opcode */
++
++	/* x87 FPU Instruction Pointer */
++	__uint32_t		__fpu_ip;		/* offset */
++	__uint16_t		__fpu_cs;		/* Selector */
++
++	__uint16_t		__fpu_rsrv2;		/* reserved */
++
++	/* x87 FPU Instruction Operand(Data) Pointer */
++	__uint32_t		__fpu_dp;		/* offset */
++	__uint16_t		__fpu_ds;		/* Selector */
++
++	__uint16_t		__fpu_rsrv3;		/* reserved */
++	__uint32_t		__fpu_mxcsr;		/* MXCSR Register state */
++	__uint32_t		__fpu_mxcsrmask;	/* MXCSR mask */
++	_STRUCT_MMST_REG	__fpu_stmm0;		/* ST0/MM0   */
++	_STRUCT_MMST_REG	__fpu_stmm1;		/* ST1/MM1  */
++	_STRUCT_MMST_REG	__fpu_stmm2;		/* ST2/MM2  */
++	_STRUCT_MMST_REG	__fpu_stmm3;		/* ST3/MM3  */
++	_STRUCT_MMST_REG	__fpu_stmm4;		/* ST4/MM4  */
++	_STRUCT_MMST_REG	__fpu_stmm5;		/* ST5/MM5  */
++	_STRUCT_MMST_REG	__fpu_stmm6;		/* ST6/MM6  */
++	_STRUCT_MMST_REG	__fpu_stmm7;		/* ST7/MM7  */
++	_STRUCT_XMM_REG		__fpu_xmm0;		/* XMM 0  */
++	_STRUCT_XMM_REG		__fpu_xmm1;		/* XMM 1  */
++	_STRUCT_XMM_REG		__fpu_xmm2;		/* XMM 2  */
++	_STRUCT_XMM_REG		__fpu_xmm3;		/* XMM 3  */
++	_STRUCT_XMM_REG		__fpu_xmm4;		/* XMM 4  */
++	_STRUCT_XMM_REG		__fpu_xmm5;		/* XMM 5  */
++	_STRUCT_XMM_REG		__fpu_xmm6;		/* XMM 6  */
++	_STRUCT_XMM_REG		__fpu_xmm7;		/* XMM 7  */
++	_STRUCT_XMM_REG		__fpu_xmm8;		/* XMM 8  */
++	_STRUCT_XMM_REG		__fpu_xmm9;		/* XMM 9  */
++	_STRUCT_XMM_REG		__fpu_xmm10;		/* XMM 10  */
++	_STRUCT_XMM_REG		__fpu_xmm11;		/* XMM 11 */
++	_STRUCT_XMM_REG		__fpu_xmm12;		/* XMM 12  */
++	_STRUCT_XMM_REG		__fpu_xmm13;		/* XMM 13  */
++	_STRUCT_XMM_REG		__fpu_xmm14;		/* XMM 14  */
++	_STRUCT_XMM_REG		__fpu_xmm15;		/* XMM 15  */
++	char			__fpu_rsrv4[6*16];	/* reserved */
++	int 			__fpu_reserved1;
++};
++
++#define	_STRUCT_X86_AVX_STATE64	struct __darwin_x86_avx_state64
++_STRUCT_X86_AVX_STATE64
++{
++	int 			__fpu_reserved[2];
++	_STRUCT_FP_CONTROL	__fpu_fcw;		/* x87 FPU control word */
++	_STRUCT_FP_STATUS	__fpu_fsw;		/* x87 FPU status word */
++	__uint8_t		__fpu_ftw;		/* x87 FPU tag word */
++	__uint8_t		__fpu_rsrv1;		/* reserved */ 
++	__uint16_t		__fpu_fop;		/* x87 FPU Opcode */
++
++	/* x87 FPU Instruction Pointer */
++	__uint32_t		__fpu_ip;		/* offset */
++	__uint16_t		__fpu_cs;		/* Selector */
++
++	__uint16_t		__fpu_rsrv2;		/* reserved */
++
++	/* x87 FPU Instruction Operand(Data) Pointer */
++	__uint32_t		__fpu_dp;		/* offset */
++	__uint16_t		__fpu_ds;		/* Selector */
++
++	__uint16_t		__fpu_rsrv3;		/* reserved */
++	__uint32_t		__fpu_mxcsr;		/* MXCSR Register state */
++	__uint32_t		__fpu_mxcsrmask;	/* MXCSR mask */
++	_STRUCT_MMST_REG	__fpu_stmm0;		/* ST0/MM0   */
++	_STRUCT_MMST_REG	__fpu_stmm1;		/* ST1/MM1  */
++	_STRUCT_MMST_REG	__fpu_stmm2;		/* ST2/MM2  */
++	_STRUCT_MMST_REG	__fpu_stmm3;		/* ST3/MM3  */
++	_STRUCT_MMST_REG	__fpu_stmm4;		/* ST4/MM4  */
++	_STRUCT_MMST_REG	__fpu_stmm5;		/* ST5/MM5  */
++	_STRUCT_MMST_REG	__fpu_stmm6;		/* ST6/MM6  */
++	_STRUCT_MMST_REG	__fpu_stmm7;		/* ST7/MM7  */
++	_STRUCT_XMM_REG		__fpu_xmm0;		/* XMM 0  */
++	_STRUCT_XMM_REG		__fpu_xmm1;		/* XMM 1  */
++	_STRUCT_XMM_REG		__fpu_xmm2;		/* XMM 2  */
++	_STRUCT_XMM_REG		__fpu_xmm3;		/* XMM 3  */
++	_STRUCT_XMM_REG		__fpu_xmm4;		/* XMM 4  */
++	_STRUCT_XMM_REG		__fpu_xmm5;		/* XMM 5  */
++	_STRUCT_XMM_REG		__fpu_xmm6;		/* XMM 6  */
++	_STRUCT_XMM_REG		__fpu_xmm7;		/* XMM 7  */
++	_STRUCT_XMM_REG		__fpu_xmm8;		/* XMM 8  */
++	_STRUCT_XMM_REG		__fpu_xmm9;		/* XMM 9  */
++	_STRUCT_XMM_REG		__fpu_xmm10;		/* XMM 10  */
++	_STRUCT_XMM_REG		__fpu_xmm11;		/* XMM 11 */
++	_STRUCT_XMM_REG		__fpu_xmm12;		/* XMM 12  */
++	_STRUCT_XMM_REG		__fpu_xmm13;		/* XMM 13  */
++	_STRUCT_XMM_REG		__fpu_xmm14;		/* XMM 14  */
++	_STRUCT_XMM_REG		__fpu_xmm15;		/* XMM 15  */
++	char			__fpu_rsrv4[6*16];	/* reserved */
++	int 			__fpu_reserved1;
++	char			__avx_reserved1[64];
++	_STRUCT_XMM_REG		__fpu_ymmh0;		/* YMMH 0  */
++	_STRUCT_XMM_REG		__fpu_ymmh1;		/* YMMH 1  */
++	_STRUCT_XMM_REG		__fpu_ymmh2;		/* YMMH 2  */
++	_STRUCT_XMM_REG		__fpu_ymmh3;		/* YMMH 3  */
++	_STRUCT_XMM_REG		__fpu_ymmh4;		/* YMMH 4  */
++	_STRUCT_XMM_REG		__fpu_ymmh5;		/* YMMH 5  */
++	_STRUCT_XMM_REG		__fpu_ymmh6;		/* YMMH 6  */
++	_STRUCT_XMM_REG		__fpu_ymmh7;		/* YMMH 7  */
++	_STRUCT_XMM_REG		__fpu_ymmh8;		/* YMMH 8  */
++	_STRUCT_XMM_REG		__fpu_ymmh9;		/* YMMH 9  */
++	_STRUCT_XMM_REG		__fpu_ymmh10;		/* YMMH 10  */
++	_STRUCT_XMM_REG		__fpu_ymmh11;		/* YMMH 11  */
++	_STRUCT_XMM_REG		__fpu_ymmh12;		/* YMMH 12  */
++	_STRUCT_XMM_REG		__fpu_ymmh13;		/* YMMH 13  */
++	_STRUCT_XMM_REG		__fpu_ymmh14;		/* YMMH 14  */
++	_STRUCT_XMM_REG		__fpu_ymmh15;		/* YMMH 15  */
++};
++
++#define	_STRUCT_X86_AVX512_STATE64	struct __darwin_x86_avx512_state64
++_STRUCT_X86_AVX512_STATE64
++{
++	int 			__fpu_reserved[2];
++	_STRUCT_FP_CONTROL	__fpu_fcw;		/* x87 FPU control word */
++	_STRUCT_FP_STATUS	__fpu_fsw;		/* x87 FPU status word */
++	__uint8_t		__fpu_ftw;		/* x87 FPU tag word */
++	__uint8_t		__fpu_rsrv1;		/* reserved */ 
++	__uint16_t		__fpu_fop;		/* x87 FPU Opcode */
++
++	/* x87 FPU Instruction Pointer */
++	__uint32_t		__fpu_ip;		/* offset */
++	__uint16_t		__fpu_cs;		/* Selector */
++
++	__uint16_t		__fpu_rsrv2;		/* reserved */
++
++	/* x87 FPU Instruction Operand(Data) Pointer */
++	__uint32_t		__fpu_dp;		/* offset */
++	__uint16_t		__fpu_ds;		/* Selector */
++
++	__uint16_t		__fpu_rsrv3;		/* reserved */
++	__uint32_t		__fpu_mxcsr;		/* MXCSR Register state */
++	__uint32_t		__fpu_mxcsrmask;	/* MXCSR mask */
++	_STRUCT_MMST_REG	__fpu_stmm0;		/* ST0/MM0   */
++	_STRUCT_MMST_REG	__fpu_stmm1;		/* ST1/MM1  */
++	_STRUCT_MMST_REG	__fpu_stmm2;		/* ST2/MM2  */
++	_STRUCT_MMST_REG	__fpu_stmm3;		/* ST3/MM3  */
++	_STRUCT_MMST_REG	__fpu_stmm4;		/* ST4/MM4  */
++	_STRUCT_MMST_REG	__fpu_stmm5;		/* ST5/MM5  */
++	_STRUCT_MMST_REG	__fpu_stmm6;		/* ST6/MM6  */
++	_STRUCT_MMST_REG	__fpu_stmm7;		/* ST7/MM7  */
++	_STRUCT_XMM_REG		__fpu_xmm0;		/* XMM 0  */
++	_STRUCT_XMM_REG		__fpu_xmm1;		/* XMM 1  */
++	_STRUCT_XMM_REG		__fpu_xmm2;		/* XMM 2  */
++	_STRUCT_XMM_REG		__fpu_xmm3;		/* XMM 3  */
++	_STRUCT_XMM_REG		__fpu_xmm4;		/* XMM 4  */
++	_STRUCT_XMM_REG		__fpu_xmm5;		/* XMM 5  */
++	_STRUCT_XMM_REG		__fpu_xmm6;		/* XMM 6  */
++	_STRUCT_XMM_REG		__fpu_xmm7;		/* XMM 7  */
++	_STRUCT_XMM_REG		__fpu_xmm8;		/* XMM 8  */
++	_STRUCT_XMM_REG		__fpu_xmm9;		/* XMM 9  */
++	_STRUCT_XMM_REG		__fpu_xmm10;		/* XMM 10  */
++	_STRUCT_XMM_REG		__fpu_xmm11;		/* XMM 11 */
++	_STRUCT_XMM_REG		__fpu_xmm12;		/* XMM 12  */
++	_STRUCT_XMM_REG		__fpu_xmm13;		/* XMM 13  */
++	_STRUCT_XMM_REG		__fpu_xmm14;		/* XMM 14  */
++	_STRUCT_XMM_REG		__fpu_xmm15;		/* XMM 15  */
++	char			__fpu_rsrv4[6*16];	/* reserved */
++	int 			__fpu_reserved1;
++	char			__avx_reserved1[64];
++	_STRUCT_XMM_REG		__fpu_ymmh0;		/* YMMH 0  */
++	_STRUCT_XMM_REG		__fpu_ymmh1;		/* YMMH 1  */
++	_STRUCT_XMM_REG		__fpu_ymmh2;		/* YMMH 2  */
++	_STRUCT_XMM_REG		__fpu_ymmh3;		/* YMMH 3  */
++	_STRUCT_XMM_REG		__fpu_ymmh4;		/* YMMH 4  */
++	_STRUCT_XMM_REG		__fpu_ymmh5;		/* YMMH 5  */
++	_STRUCT_XMM_REG		__fpu_ymmh6;		/* YMMH 6  */
++	_STRUCT_XMM_REG		__fpu_ymmh7;		/* YMMH 7  */
++	_STRUCT_XMM_REG		__fpu_ymmh8;		/* YMMH 8  */
++	_STRUCT_XMM_REG		__fpu_ymmh9;		/* YMMH 9  */
++	_STRUCT_XMM_REG		__fpu_ymmh10;		/* YMMH 10  */
++	_STRUCT_XMM_REG		__fpu_ymmh11;		/* YMMH 11  */
++	_STRUCT_XMM_REG		__fpu_ymmh12;		/* YMMH 12  */
++	_STRUCT_XMM_REG		__fpu_ymmh13;		/* YMMH 13  */
++	_STRUCT_XMM_REG		__fpu_ymmh14;		/* YMMH 14  */
++	_STRUCT_XMM_REG		__fpu_ymmh15;		/* YMMH 15  */
++	_STRUCT_OPMASK_REG	__fpu_k0;		/* K0 */
++	_STRUCT_OPMASK_REG	__fpu_k1;		/* K1 */
++	_STRUCT_OPMASK_REG	__fpu_k2;		/* K2 */
++	_STRUCT_OPMASK_REG	__fpu_k3;		/* K3 */
++	_STRUCT_OPMASK_REG	__fpu_k4;		/* K4 */
++	_STRUCT_OPMASK_REG	__fpu_k5;		/* K5 */
++	_STRUCT_OPMASK_REG	__fpu_k6;		/* K6 */
++	_STRUCT_OPMASK_REG	__fpu_k7;		/* K7 */
++	_STRUCT_YMM_REG		__fpu_zmmh0;		/* ZMMH 0  */
++	_STRUCT_YMM_REG		__fpu_zmmh1;		/* ZMMH 1  */
++	_STRUCT_YMM_REG		__fpu_zmmh2;		/* ZMMH 2  */
++	_STRUCT_YMM_REG		__fpu_zmmh3;		/* ZMMH 3  */
++	_STRUCT_YMM_REG		__fpu_zmmh4;		/* ZMMH 4  */
++	_STRUCT_YMM_REG		__fpu_zmmh5;		/* ZMMH 5  */
++	_STRUCT_YMM_REG		__fpu_zmmh6;		/* ZMMH 6  */
++	_STRUCT_YMM_REG		__fpu_zmmh7;		/* ZMMH 7  */
++	_STRUCT_YMM_REG		__fpu_zmmh8;		/* ZMMH 8  */
++	_STRUCT_YMM_REG		__fpu_zmmh9;		/* ZMMH 9  */
++	_STRUCT_YMM_REG		__fpu_zmmh10;		/* ZMMH 10  */
++	_STRUCT_YMM_REG		__fpu_zmmh11;		/* ZMMH 11  */
++	_STRUCT_YMM_REG		__fpu_zmmh12;		/* ZMMH 12  */
++	_STRUCT_YMM_REG		__fpu_zmmh13;		/* ZMMH 13  */
++	_STRUCT_YMM_REG		__fpu_zmmh14;		/* ZMMH 14  */
++	_STRUCT_YMM_REG		__fpu_zmmh15;		/* ZMMH 15  */
++	_STRUCT_ZMM_REG		__fpu_zmm16;		/* ZMM 16  */
++	_STRUCT_ZMM_REG		__fpu_zmm17;		/* ZMM 17  */
++	_STRUCT_ZMM_REG		__fpu_zmm18;		/* ZMM 18  */
++	_STRUCT_ZMM_REG		__fpu_zmm19;		/* ZMM 19  */
++	_STRUCT_ZMM_REG		__fpu_zmm20;		/* ZMM 20  */
++	_STRUCT_ZMM_REG		__fpu_zmm21;		/* ZMM 21  */
++	_STRUCT_ZMM_REG		__fpu_zmm22;		/* ZMM 22  */
++	_STRUCT_ZMM_REG		__fpu_zmm23;		/* ZMM 23  */
++	_STRUCT_ZMM_REG		__fpu_zmm24;		/* ZMM 24  */
++	_STRUCT_ZMM_REG		__fpu_zmm25;		/* ZMM 25  */
++	_STRUCT_ZMM_REG		__fpu_zmm26;		/* ZMM 26  */
++	_STRUCT_ZMM_REG		__fpu_zmm27;		/* ZMM 27  */
++	_STRUCT_ZMM_REG		__fpu_zmm28;		/* ZMM 28  */
++	_STRUCT_ZMM_REG		__fpu_zmm29;		/* ZMM 29  */
++	_STRUCT_ZMM_REG		__fpu_zmm30;		/* ZMM 30  */
++	_STRUCT_ZMM_REG		__fpu_zmm31;		/* ZMM 31  */
++};
++
++#else /* !__DARWIN_UNIX03 */
++#define	_STRUCT_X86_FLOAT_STATE64	struct x86_float_state64
++_STRUCT_X86_FLOAT_STATE64
++{
++	int 			fpu_reserved[2];
++	_STRUCT_FP_CONTROL	fpu_fcw;		/* x87 FPU control word */
++	_STRUCT_FP_STATUS	fpu_fsw;		/* x87 FPU status word */
++	__uint8_t		fpu_ftw;		/* x87 FPU tag word */
++	__uint8_t		fpu_rsrv1;		/* reserved */ 
++	__uint16_t		fpu_fop;		/* x87 FPU Opcode */
++
++	/* x87 FPU Instruction Pointer */
++	__uint32_t		fpu_ip;			/* offset */
++	__uint16_t		fpu_cs;			/* Selector */
++
++	__uint16_t		fpu_rsrv2;		/* reserved */
++
++	/* x87 FPU Instruction Operand(Data) Pointer */
++	__uint32_t		fpu_dp;			/* offset */
++	__uint16_t		fpu_ds;			/* Selector */
++
++	__uint16_t		fpu_rsrv3;		/* reserved */
++	__uint32_t		fpu_mxcsr;		/* MXCSR Register state */
++	__uint32_t		fpu_mxcsrmask;		/* MXCSR mask */
++	_STRUCT_MMST_REG	fpu_stmm0;		/* ST0/MM0   */
++	_STRUCT_MMST_REG	fpu_stmm1;		/* ST1/MM1  */
++	_STRUCT_MMST_REG	fpu_stmm2;		/* ST2/MM2  */
++	_STRUCT_MMST_REG	fpu_stmm3;		/* ST3/MM3  */
++	_STRUCT_MMST_REG	fpu_stmm4;		/* ST4/MM4  */
++	_STRUCT_MMST_REG	fpu_stmm5;		/* ST5/MM5  */
++	_STRUCT_MMST_REG	fpu_stmm6;		/* ST6/MM6  */
++	_STRUCT_MMST_REG	fpu_stmm7;		/* ST7/MM7  */
++	_STRUCT_XMM_REG		fpu_xmm0;		/* XMM 0  */
++	_STRUCT_XMM_REG		fpu_xmm1;		/* XMM 1  */
++	_STRUCT_XMM_REG		fpu_xmm2;		/* XMM 2  */
++	_STRUCT_XMM_REG		fpu_xmm3;		/* XMM 3  */
++	_STRUCT_XMM_REG		fpu_xmm4;		/* XMM 4  */
++	_STRUCT_XMM_REG		fpu_xmm5;		/* XMM 5  */
++	_STRUCT_XMM_REG		fpu_xmm6;		/* XMM 6  */
++	_STRUCT_XMM_REG		fpu_xmm7;		/* XMM 7  */
++	_STRUCT_XMM_REG		fpu_xmm8;		/* XMM 8  */
++	_STRUCT_XMM_REG		fpu_xmm9;		/* XMM 9  */
++	_STRUCT_XMM_REG		fpu_xmm10;		/* XMM 10  */
++	_STRUCT_XMM_REG		fpu_xmm11;		/* XMM 11 */
++	_STRUCT_XMM_REG		fpu_xmm12;		/* XMM 12  */
++	_STRUCT_XMM_REG		fpu_xmm13;		/* XMM 13  */
++	_STRUCT_XMM_REG		fpu_xmm14;		/* XMM 14  */
++	_STRUCT_XMM_REG		fpu_xmm15;		/* XMM 15  */
++	char			fpu_rsrv4[6*16];	/* reserved */
++	int 			fpu_reserved1;
++};
++
++#define	_STRUCT_X86_AVX_STATE64	struct x86_avx_state64
++_STRUCT_X86_AVX_STATE64
++{
++	int 			fpu_reserved[2];
++	_STRUCT_FP_CONTROL	fpu_fcw;		/* x87 FPU control word */
++	_STRUCT_FP_STATUS	fpu_fsw;		/* x87 FPU status word */
++	__uint8_t		fpu_ftw;		/* x87 FPU tag word */
++	__uint8_t		fpu_rsrv1;		/* reserved */ 
++	__uint16_t		fpu_fop;		/* x87 FPU Opcode */
++
++	/* x87 FPU Instruction Pointer */
++	__uint32_t		fpu_ip;			/* offset */
++	__uint16_t		fpu_cs;			/* Selector */
++
++	__uint16_t		fpu_rsrv2;		/* reserved */
++
++	/* x87 FPU Instruction Operand(Data) Pointer */
++	__uint32_t		fpu_dp;			/* offset */
++	__uint16_t		fpu_ds;			/* Selector */
++
++	__uint16_t		fpu_rsrv3;		/* reserved */
++	__uint32_t		fpu_mxcsr;		/* MXCSR Register state */
++	__uint32_t		fpu_mxcsrmask;		/* MXCSR mask */
++	_STRUCT_MMST_REG	fpu_stmm0;		/* ST0/MM0   */
++	_STRUCT_MMST_REG	fpu_stmm1;		/* ST1/MM1  */
++	_STRUCT_MMST_REG	fpu_stmm2;		/* ST2/MM2  */
++	_STRUCT_MMST_REG	fpu_stmm3;		/* ST3/MM3  */
++	_STRUCT_MMST_REG	fpu_stmm4;		/* ST4/MM4  */
++	_STRUCT_MMST_REG	fpu_stmm5;		/* ST5/MM5  */
++	_STRUCT_MMST_REG	fpu_stmm6;		/* ST6/MM6  */
++	_STRUCT_MMST_REG	fpu_stmm7;		/* ST7/MM7  */
++	_STRUCT_XMM_REG		fpu_xmm0;		/* XMM 0  */
++	_STRUCT_XMM_REG		fpu_xmm1;		/* XMM 1  */
++	_STRUCT_XMM_REG		fpu_xmm2;		/* XMM 2  */
++	_STRUCT_XMM_REG		fpu_xmm3;		/* XMM 3  */
++	_STRUCT_XMM_REG		fpu_xmm4;		/* XMM 4  */
++	_STRUCT_XMM_REG		fpu_xmm5;		/* XMM 5  */
++	_STRUCT_XMM_REG		fpu_xmm6;		/* XMM 6  */
++	_STRUCT_XMM_REG		fpu_xmm7;		/* XMM 7  */
++	_STRUCT_XMM_REG		fpu_xmm8;		/* XMM 8  */
++	_STRUCT_XMM_REG		fpu_xmm9;		/* XMM 9  */
++	_STRUCT_XMM_REG		fpu_xmm10;		/* XMM 10  */
++	_STRUCT_XMM_REG		fpu_xmm11;		/* XMM 11 */
++	_STRUCT_XMM_REG		fpu_xmm12;		/* XMM 12  */
++	_STRUCT_XMM_REG		fpu_xmm13;		/* XMM 13  */
++	_STRUCT_XMM_REG		fpu_xmm14;		/* XMM 14  */
++	_STRUCT_XMM_REG		fpu_xmm15;		/* XMM 15  */
++	char			fpu_rsrv4[6*16];	/* reserved */
++	int 			fpu_reserved1;
++	char			avx_reserved1[64];
++	_STRUCT_XMM_REG		fpu_ymmh0;		/* YMMH 0  */
++	_STRUCT_XMM_REG		fpu_ymmh1;		/* YMMH 1  */
++	_STRUCT_XMM_REG		fpu_ymmh2;		/* YMMH 2  */
++	_STRUCT_XMM_REG		fpu_ymmh3;		/* YMMH 3  */
++	_STRUCT_XMM_REG		fpu_ymmh4;		/* YMMH 4  */
++	_STRUCT_XMM_REG		fpu_ymmh5;		/* YMMH 5  */
++	_STRUCT_XMM_REG		fpu_ymmh6;		/* YMMH 6  */
++	_STRUCT_XMM_REG		fpu_ymmh7;		/* YMMH 7  */
++	_STRUCT_XMM_REG		fpu_ymmh8;		/* YMMH 8  */
++	_STRUCT_XMM_REG		fpu_ymmh9;		/* YMMH 9  */
++	_STRUCT_XMM_REG		fpu_ymmh10;		/* YMMH 10  */
++	_STRUCT_XMM_REG		fpu_ymmh11;		/* YMMH 11  */
++	_STRUCT_XMM_REG		fpu_ymmh12;		/* YMMH 12  */
++	_STRUCT_XMM_REG		fpu_ymmh13;		/* YMMH 13  */
++	_STRUCT_XMM_REG		fpu_ymmh14;		/* YMMH 14  */
++	_STRUCT_XMM_REG		fpu_ymmh15;		/* YMMH 15  */
++};
++
++#define	_STRUCT_X86_AVX512_STATE64	struct x86_avx512_state64
++_STRUCT_X86_AVX512_STATE64
++{
++	int 			fpu_reserved[2];
++	_STRUCT_FP_CONTROL	fpu_fcw;		/* x87 FPU control word */
++	_STRUCT_FP_STATUS	fpu_fsw;		/* x87 FPU status word */
++	__uint8_t		fpu_ftw;		/* x87 FPU tag word */
++	__uint8_t		fpu_rsrv1;		/* reserved */ 
++	__uint16_t		fpu_fop;		/* x87 FPU Opcode */
++
++	/* x87 FPU Instruction Pointer */
++	__uint32_t		fpu_ip;		/* offset */
++	__uint16_t		fpu_cs;		/* Selector */
++
++	__uint16_t		fpu_rsrv2;		/* reserved */
++
++	/* x87 FPU Instruction Operand(Data) Pointer */
++	__uint32_t		fpu_dp;		/* offset */
++	__uint16_t		fpu_ds;		/* Selector */
++
++	__uint16_t		fpu_rsrv3;		/* reserved */
++	__uint32_t		fpu_mxcsr;		/* MXCSR Register state */
++	__uint32_t		fpu_mxcsrmask;	/* MXCSR mask */
++	_STRUCT_MMST_REG	fpu_stmm0;		/* ST0/MM0   */
++	_STRUCT_MMST_REG	fpu_stmm1;		/* ST1/MM1  */
++	_STRUCT_MMST_REG	fpu_stmm2;		/* ST2/MM2  */
++	_STRUCT_MMST_REG	fpu_stmm3;		/* ST3/MM3  */
++	_STRUCT_MMST_REG	fpu_stmm4;		/* ST4/MM4  */
++	_STRUCT_MMST_REG	fpu_stmm5;		/* ST5/MM5  */
++	_STRUCT_MMST_REG	fpu_stmm6;		/* ST6/MM6  */
++	_STRUCT_MMST_REG	fpu_stmm7;		/* ST7/MM7  */
++	_STRUCT_XMM_REG		fpu_xmm0;		/* XMM 0  */
++	_STRUCT_XMM_REG		fpu_xmm1;		/* XMM 1  */
++	_STRUCT_XMM_REG		fpu_xmm2;		/* XMM 2  */
++	_STRUCT_XMM_REG		fpu_xmm3;		/* XMM 3  */
++	_STRUCT_XMM_REG		fpu_xmm4;		/* XMM 4  */
++	_STRUCT_XMM_REG		fpu_xmm5;		/* XMM 5  */
++	_STRUCT_XMM_REG		fpu_xmm6;		/* XMM 6  */
++	_STRUCT_XMM_REG		fpu_xmm7;		/* XMM 7  */
++	_STRUCT_XMM_REG		fpu_xmm8;		/* XMM 8  */
++	_STRUCT_XMM_REG		fpu_xmm9;		/* XMM 9  */
++	_STRUCT_XMM_REG		fpu_xmm10;		/* XMM 10  */
++	_STRUCT_XMM_REG		fpu_xmm11;		/* XMM 11 */
++	_STRUCT_XMM_REG		fpu_xmm12;		/* XMM 12  */
++	_STRUCT_XMM_REG		fpu_xmm13;		/* XMM 13  */
++	_STRUCT_XMM_REG		fpu_xmm14;		/* XMM 14  */
++	_STRUCT_XMM_REG		fpu_xmm15;		/* XMM 15  */
++	char			fpu_rsrv4[6*16];	/* reserved */
++	int 			fpu_reserved1;
++	char			avx_reserved1[64];
++	_STRUCT_XMM_REG		fpu_ymmh0;		/* YMMH 0  */
++	_STRUCT_XMM_REG		fpu_ymmh1;		/* YMMH 1  */
++	_STRUCT_XMM_REG		fpu_ymmh2;		/* YMMH 2  */
++	_STRUCT_XMM_REG		fpu_ymmh3;		/* YMMH 3  */
++	_STRUCT_XMM_REG		fpu_ymmh4;		/* YMMH 4  */
++	_STRUCT_XMM_REG		fpu_ymmh5;		/* YMMH 5  */
++	_STRUCT_XMM_REG		fpu_ymmh6;		/* YMMH 6  */
++	_STRUCT_XMM_REG		fpu_ymmh7;		/* YMMH 7  */
++	_STRUCT_XMM_REG		fpu_ymmh8;		/* YMMH 8  */
++	_STRUCT_XMM_REG		fpu_ymmh9;		/* YMMH 9  */
++	_STRUCT_XMM_REG		fpu_ymmh10;		/* YMMH 10  */
++	_STRUCT_XMM_REG		fpu_ymmh11;		/* YMMH 11  */
++	_STRUCT_XMM_REG		fpu_ymmh12;		/* YMMH 12  */
++	_STRUCT_XMM_REG		fpu_ymmh13;		/* YMMH 13  */
++	_STRUCT_XMM_REG		fpu_ymmh14;		/* YMMH 14  */
++	_STRUCT_XMM_REG		fpu_ymmh15;		/* YMMH 15  */
++	_STRUCT_OPMASK_REG	fpu_k0;			/* K0 */
++	_STRUCT_OPMASK_REG	fpu_k1;			/* K1 */
++	_STRUCT_OPMASK_REG	fpu_k2;			/* K2 */
++	_STRUCT_OPMASK_REG	fpu_k3;			/* K3 */
++	_STRUCT_OPMASK_REG	fpu_k4;			/* K4 */
++	_STRUCT_OPMASK_REG	fpu_k5;			/* K5 */
++	_STRUCT_OPMASK_REG	fpu_k6;			/* K6 */
++	_STRUCT_OPMASK_REG	fpu_k7;			/* K7 */
++	_STRUCT_YMM_REG		fpu_zmmh0;		/* ZMMH 0  */
++	_STRUCT_YMM_REG		fpu_zmmh1;		/* ZMMH 1  */
++	_STRUCT_YMM_REG		fpu_zmmh2;		/* ZMMH 2  */
++	_STRUCT_YMM_REG		fpu_zmmh3;		/* ZMMH 3  */
++	_STRUCT_YMM_REG		fpu_zmmh4;		/* ZMMH 4  */
++	_STRUCT_YMM_REG		fpu_zmmh5;		/* ZMMH 5  */
++	_STRUCT_YMM_REG		fpu_zmmh6;		/* ZMMH 6  */
++	_STRUCT_YMM_REG		fpu_zmmh7;		/* ZMMH 7  */
++	_STRUCT_YMM_REG		fpu_zmmh8;		/* ZMMH 8  */
++	_STRUCT_YMM_REG		fpu_zmmh9;		/* ZMMH 9  */
++	_STRUCT_YMM_REG		fpu_zmmh10;		/* ZMMH 10  */
++	_STRUCT_YMM_REG		fpu_zmmh11;		/* ZMMH 11  */
++	_STRUCT_YMM_REG		fpu_zmmh12;		/* ZMMH 12  */
++	_STRUCT_YMM_REG		fpu_zmmh13;		/* ZMMH 13  */
++	_STRUCT_YMM_REG		fpu_zmmh14;		/* ZMMH 14  */
++	_STRUCT_YMM_REG		fpu_zmmh15;		/* ZMMH 15  */
++	_STRUCT_ZMM_REG		fpu_zmm16;		/* ZMM 16  */
++	_STRUCT_ZMM_REG		fpu_zmm17;		/* ZMM 17  */
++	_STRUCT_ZMM_REG		fpu_zmm18;		/* ZMM 18  */
++	_STRUCT_ZMM_REG		fpu_zmm19;		/* ZMM 19  */
++	_STRUCT_ZMM_REG		fpu_zmm20;		/* ZMM 20  */
++	_STRUCT_ZMM_REG		fpu_zmm21;		/* ZMM 21  */
++	_STRUCT_ZMM_REG		fpu_zmm22;		/* ZMM 22  */
++	_STRUCT_ZMM_REG		fpu_zmm23;		/* ZMM 23  */
++	_STRUCT_ZMM_REG		fpu_zmm24;		/* ZMM 24  */
++	_STRUCT_ZMM_REG		fpu_zmm25;		/* ZMM 25  */
++	_STRUCT_ZMM_REG		fpu_zmm26;		/* ZMM 26  */
++	_STRUCT_ZMM_REG		fpu_zmm27;		/* ZMM 27  */
++	_STRUCT_ZMM_REG		fpu_zmm28;		/* ZMM 28  */
++	_STRUCT_ZMM_REG		fpu_zmm29;		/* ZMM 29  */
++	_STRUCT_ZMM_REG		fpu_zmm30;		/* ZMM 30  */
++	_STRUCT_ZMM_REG		fpu_zmm31;		/* ZMM 31  */
++};
++
++#endif /* !__DARWIN_UNIX03 */
++
++#if __DARWIN_UNIX03
++#define _STRUCT_X86_EXCEPTION_STATE64	struct __darwin_x86_exception_state64
++_STRUCT_X86_EXCEPTION_STATE64
++{
++    __uint16_t	__trapno;
++    __uint16_t	__cpu;
++    __uint32_t	__err;
++    __uint64_t	__faultvaddr;
++};
++#else /* !__DARWIN_UNIX03 */
++#define _STRUCT_X86_EXCEPTION_STATE64	struct x86_exception_state64
++_STRUCT_X86_EXCEPTION_STATE64
++{
++    __uint16_t	trapno;
++    __uint16_t	cpu;
++    __uint32_t	err;
++    __uint64_t	faultvaddr;
++};
++#endif /* !__DARWIN_UNIX03 */
++
++#if __DARWIN_UNIX03
++#define _STRUCT_X86_DEBUG_STATE64	struct __darwin_x86_debug_state64
++_STRUCT_X86_DEBUG_STATE64
++{
++	__uint64_t	__dr0;
++	__uint64_t	__dr1;
++	__uint64_t	__dr2;
++	__uint64_t	__dr3;
++	__uint64_t	__dr4;
++	__uint64_t	__dr5;
++	__uint64_t	__dr6;
++	__uint64_t	__dr7;
++};
++#else /* !__DARWIN_UNIX03 */
++#define _STRUCT_X86_DEBUG_STATE64	struct x86_debug_state64
++_STRUCT_X86_DEBUG_STATE64
++{
++	__uint64_t	dr0;
++	__uint64_t	dr1;
++	__uint64_t	dr2;
++	__uint64_t	dr3;
++	__uint64_t	dr4;
++	__uint64_t	dr5;
++	__uint64_t	dr6;
++	__uint64_t	dr7;
++};
++#endif /* !__DARWIN_UNIX03 */
++
++#if __DARWIN_UNIX03
++#define _STRUCT_X86_CPMU_STATE64	struct __darwin_x86_cpmu_state64
++_STRUCT_X86_CPMU_STATE64
++{
++	__uint64_t __ctrs[16];
++};
++#else /* __DARWIN_UNIX03 */
++#define _STRUCT_X86_CPMU_STATE64	struct x86_cpmu_state64
++_STRUCT_X86_CPMU_STATE64
++{
++	__uint64_t ctrs[16];
++};
++#endif /* !__DARWIN_UNIX03 */
++
++#endif /* _MACH_I386__STRUCTS_H_ */

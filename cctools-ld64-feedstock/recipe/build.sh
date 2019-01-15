@@ -26,7 +26,7 @@ popd
 export CXXFLAGS="$CXXFLAGS -O2 -gdwarf-4"
 export CFLAGS="$XFLAGS -O2 -gdwarf-4"
 
-CONDA_BUILD_SYSROOT=/opt/MacOSX10.14.sdk
+CONDA_BUILD_SYSROOT=/opt/MacOSX10.10.sdk
 
 if [[ ${MACOSX_DEPLOYMENT_TARGET} == 10.9 ]]; then
   DARWIN_TARGET=x86_64-apple-darwin13.4.0

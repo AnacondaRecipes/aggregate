@@ -8,7 +8,7 @@
 {% set dyld_sha256 = '15f86b62fb91c75fcdfedfee2ef8759585d4b9ef9ed1757cae8f4f13bd58e51c' %}
 {% set clang_version = '7.0.0' %}
 {% set clang_sha256 = 'b3ad93c3d69dfd528df9c5bb1a434367babb8f3baea47fbb99bf49f1b03c94ca' %}
-
+{% set native_compiler_subdir = 'linux-64' %}  # [linux]
 
 package:
   name: cctools-and-ld64
@@ -62,7 +62,6 @@ source:
       - 390-ld64-_WIN64-fixes.patch
       - 420-ld64-autoconfiscate.patch
       - 500-ld64-add-fake-CrashReporterClient.h.patch
-      - 510-ld64-fix-incorrect-fname-case.patch
       - 520-ld64-fix-usr-local-and-usr-ordering.patch
       - 530-ld64-add-conda-specific-env-vars-to-modify-lib-search-paths.patch
       - 540-ld64-add-LD64_LOG_HASH_TABLE.patch
@@ -116,10 +115,10 @@ outputs:
     requirements:
       host:
         - llvm-lto-tapi
-        - libcxx
+        - libcxx  # [osx]
       run:
         - llvm-lto-tapi
-        - libcxx
+        - libcxx  # [osx]
     build:
       number: 1
       ignore_run_exports:

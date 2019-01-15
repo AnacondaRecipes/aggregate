@@ -84,7 +84,7 @@ diff -urN ld64.orig/Makefile.in ld64/Makefile.in
 +                  src/ld/passes/dylibs.cpp src/ld/passes/got.cpp \
 +                  src/ld/passes/huge.cpp src/ld/passes/objc.cpp src/ld/passes/order.cpp \
 +                  src/ld/passes/bitcode_bundle.cpp src/ld/passes/stubs/stubs.cpp \
-+                  src/ld/passes/tlvp.cpp \
++                  src/ld/passes/tlvp.cpp src/ld/passes/thread_starts.cpp \
 +                  src/ld/parsers/archive_file.cpp src/ld/parsers/lto_file.cpp src/ld/parsers/macho_dylib_file.cpp \
 +                  src/ld/parsers/macho_dylib_file.cpp src/ld/parsers/macho_relocatable_file.cpp \
 +                  src/ld/parsers/opaque_section_file.cpp src/ld/parsers/textstub_dylib_file.cpp
