@@ -3542,3 +3542,7 @@
 	path = pyjks-feedstock
 	url = ../pyjks-feedstock
 	branch = master
+[submodule "intake-feedstock"]
+	path = intake-feedstock
+	url = ../intake-feedstock
+	branch = master
