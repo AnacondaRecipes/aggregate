@@ -3546,3 +3546,7 @@
 	path = intake-feedstock
 	url = ../intake-feedstock
 	branch = master
+[submodule "datadog-feedstock"]
+	path = datadog-feedstock
+	url = ../datadog-feedstock
+	branch = master
