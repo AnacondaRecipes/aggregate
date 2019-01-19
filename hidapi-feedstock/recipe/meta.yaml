@@ -1,0 +1,37 @@
+package:
+  name: hidapi
+  version: 0.8.0
+
+source:
+  git_url: https://github.com/signal11/hidapi
+
+build:
+  run_exports:
+    - {{ pin_subpackage('hidapi', max_pin='x.x') }}
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - autoconf  # [unix]
+    - automake  # [unix]
+    - libtool   # [unix]
+    - make      # [unix]
+
+about:
+  home: http://www.signal11.us/oss/hidapi/
+  license: BSD
+  license_file: LICENSE-bsd.txt
+  summary: Simple lib for communicating with USB and Bluetooth HID devices
+  description: |
+    HIDAPI is a multi-platform library which allows an application to interface
+    with USB and Bluetooth HID-Class devices on Windows, Linux, FreeBSD, and Mac
+    OS X.  HIDAPI can be either built as a shared library (.so or .dll) or
+    can be embedded directly into a target application by adding a single source
+    file (per platform) and a single header.
+  dev_url: https://github.com/signal11/hidapi
+  doc_url: http://www.signal11.us/oss/hidapi/hidapi/doxygen/html/group__API.html
+  doc_src_url: https://github.com/signal11/hidapi/blob/master/doxygen/Doxyfile
+
+extra:
+  recipe-maintainers:
+    - mingwandroid

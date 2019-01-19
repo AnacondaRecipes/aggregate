@@ -1,0 +1,26 @@
+From 635b85fcb87f4a8f21a5f8a92ec759134e901fb4 Mon Sep 17 00:00:00 2001
+From: Ray Donnelly <mingw.android@gmail.com>
+Date: Sat, 19 Jan 2019 02:06:24 -0600
+Subject: [PATCH 2/2] BUILD_BOTH_STATIC_SHARED_LIBS =>
+ BUILD_BOTH_STATIC_SHARED_LIB
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 9cfc121..03de18b 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -151,7 +151,7 @@ endif (OPENHMD_EXAMPLE_SDL)
+ 
+ set(TARGETS "")
+ 
+-if (BUILD_BOTH_STATIC_SHARED_LIBS)
++if (BUILD_BOTH_STATIC_SHARED_LIB)
+ 
+ 	# Shared
+ 	add_library(openhmd-shared SHARED ${openhmd_source_files})
+-- 
+2.17.2 (Apple Git-113)
+

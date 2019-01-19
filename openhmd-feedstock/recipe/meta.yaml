@@ -1,0 +1,41 @@
+package:
+  name: openhmd
+  version: 0.3.0
+
+source:
+  git_url: https://github.com/OpenHMD/OpenHMD
+  patches:
+    - 0001-Do-not-link-to-rt-nor-pthread-unless-we-are-on-Linux.patch
+    - 0002-BUILD_BOTH_STATIC_SHARED_LIBS-BUILD_BOTH_STATIC_SHAR.patch
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - cmake
+    - ninja
+    - git
+  host:
+    - hidapi
+
+about:
+  home: http://www.openhmd.net/
+  license: Boost-1.0
+  license_file: LICENSE
+  summary: Free and Open Source API and drivers for immersive technology
+  description: |
+    OpenHMD aims to provide a Free and Open Source API and drivers for
+    immersive technology, such as head mounted displays with built in
+    head tracking. Our aim is to implement support for as many devices
+    as possible in a portable, cross-platform package.
+    OpenHMD supports a wide range of devices such as Oculus Rift,
+    HTC Vive, Sony PSVR, Deepoon E2 and others. We also support a
+    Generic Android driver and a External Sesnsor data driver to
+    allow the use of our Sensor Fusion and features, while providing
+    your own data.
+  dev_url: https://github.com/OpenHMD/OpenHMD
+  doc_url: http://openhmd.net/doxygen/0.1.0/openhmd_8h.html
+  doc_src_url: https://github.com/OpenHMD/OpenHMD/blob/master/include/openhmd.h
+
+extra:
+  recipe-maintainers:
+    - mingwandroid
