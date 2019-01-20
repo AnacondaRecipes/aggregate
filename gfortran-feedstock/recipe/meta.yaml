@@ -7,7 +7,7 @@
 {% set chost = "x86_64-apple-darwin11.4.2" %}
 {% set gfortran_ver = "4.8.5" %}
 {% set libgfortran_ver = "3.0.1" %}
-{% set max_libgfortran_ver = "4.0.1" %}
+{% set max_libgfortran_ver = "4.0.0.a0" %}
 
 package:
   name: gfortran_{{ target_platform }}
