@@ -1,11 +1,15 @@
+# cuda 8.0, gcc 5.4, cudnn 7.1
+# cuda 9.0, gcc 5.4, cudnn 7.3
+# cuda 9.2, gcc 7.3, cudnn 7.3
+# cuda 10.0, gcc 7.3, cudnn 7.3
 c_compiler_version:   # [linux]
-  - 5.4               # [linux]
+  - 7.3               # [linux]
 cxx_compiler_version: # [linux]
-  - 5.4               # [linux]
+  - 7.3               # [linux]
 cudatoolkit:
-  - 9.0
+  - 10.0
 cudnn:
-  - 7.1
+  - 7.3
 python:
   - 2.7
   - 3.6
