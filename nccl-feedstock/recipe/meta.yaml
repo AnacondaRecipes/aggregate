@@ -17,9 +17,9 @@ requirements:
     - {{ compiler('cxx') }}
     - make
   host:
-    - cudatoolkit {{ cudatoolkit }}*
+    - cudatoolkit {{ cudatoolkit }}
   run:
-    - cudatoolkit {{ cudatoolkit }}*
+    - {{ pin_compatible('cudatoolkit') }}
 
 about:
   home: https://github.com/NVIDIA/nccl
