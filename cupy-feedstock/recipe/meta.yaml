@@ -36,9 +36,9 @@ requirements:
 
   run:
     # GPU requirements
-    - cudatoolkit {{ cudatoolkit }}*
-    - cudnn {{ cudnn }}*
-    - nccl   # [linux]
+    - {{ pin_compatible('cudatoolkit') }}
+    - {{ pin_compatible('cudnn') }}
+    - {{ pin_compatible('nccl') }}  # [linux]
     # other requirements
     - python
     - setuptools
