@@ -1,8 +1,8 @@
 {% set name = "bcrypt" %}
-{% set version = "3.1.5" %}
+{% set version = "3.1.6" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "136243dc44e5bab9b61206bd46fff3018bd80980b1a1dfbab64a22ff5745957f" %}
+{% set hash_value = "44636759d222baa62806bbceb20e96f75a015a6381690d1bc2eda91c01ec02ea" %}
 
 package:
   name: {{ name|lower }}
