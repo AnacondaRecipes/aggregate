@@ -3550,3 +3550,6 @@
 	path = datadog-feedstock
 	url = ../datadog-feedstock
 	branch = master
+[submodule "soupsieve-feedstock"]
+	path = soupsieve-feedstock
+	url = ../soupsieve-feedstock
