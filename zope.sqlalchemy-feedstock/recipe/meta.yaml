@@ -1,5 +1,5 @@
 {% set name = "zope.sqlalchemy" %}
-{% set version = "1.0" %}
+{% set version = "1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9316a1a8bb9e4f9f59332acf1ad2cc8b664f19a4bde5f68be7f61f3e11f80514
+  sha256: 81554c5b03fbf924c4144ef835b7900271fbd85cfe81cb6bd95e3ab7aa85189f
 
 build:
   number: 0
