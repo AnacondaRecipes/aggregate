@@ -3553,3 +3553,6 @@
 [submodule "soupsieve-feedstock"]
 	path = soupsieve-feedstock
 	url = ../soupsieve-feedstock
+[submodule "fasttsne-feedstock"]
+	path = fasttsne-feedstock
+	url = ../fasttsne-feedstock
