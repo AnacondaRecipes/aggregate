@@ -1,8 +1,8 @@
 {% set name = "w3lib" %}
-{% set version = "1.19.0" %}
+{% set version = "1.20.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "55994787e93b411c2d659068b51b9998d9d0c05e0df188e6daf8f45836e1ea38" %}
+{% set hash_value = "e54db912ae1c79d3e246b16d3645bdf701f70ac4f8a2fc46eeb284cc02a31cd7" %}
 
 package:
   name: {{ name|lower }}
