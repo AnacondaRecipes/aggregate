@@ -3556,3 +3556,27 @@
 [submodule "fasttsne-feedstock"]
 	path = fasttsne-feedstock
 	url = ../fasttsne-feedstock
+[submodule "asciitree-feedstock"]
+	path = asciitree-feedstock
+	url = ../asciitree-feedstock
+	branch = master
+[submodule "fasteners-feedstock"]
+	path = fasteners-feedstock
+	url = ../fasteners-feedstock
+	branch = master
+[submodule "hvplot-feedstock"]
+	path = hvplot-feedstock
+	url = ../hvplot-feedstock
+	branch = master
+[submodule "monotonic-feedstock"]
+	path = monotonic-feedstock
+	url = ../monotonic-feedstock
+	branch = master
+[submodule "numcodecs-feedstock"]
+	path = numcodecs-feedstock
+	url = ../numcodecs-feedstock
+	branch = master
+[submodule "panel-feedstock"]
+	path = panel-feedstock
+	url = ../panel-feedstock
+	branch = master
