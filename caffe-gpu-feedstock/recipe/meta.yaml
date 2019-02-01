@@ -10,23 +10,16 @@ source:
   sha1: 00a04c30a6dd6d2cdc91be72b3131a997c5d5202
 
 build:
-  number: 4
+  number: 5
   detect_binary_files_with_prefix: False
-  # conda 4.4+ can use this
-  skip: True  # [blas_impl == 'openblas' and win]
-  requires_features:
-    blas: {{ blas_impl }}
-  # this is for conda 4.3 and below
-  features:
-    - nomkl    # [x86 and blas_impl != 'mkl']
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - cudatoolkit {{ cudatoolkit }}*
-    - cudnn {{ cudnn }}*
+    - cudatoolkit {{ cudatoolkit }}
+    - cudnn {{ cudnn }}
     - boost
     - cmake
     - cython
@@ -41,8 +34,7 @@ requirements:
     # use the static libprotobuf libraries
     - libprotobuf-static
     - lmdb
-    - mkl-devel  {{ mkl }}  # [blas_impl == 'mkl']
-    - openblas-devel {{ openblas }}  # [blas_impl == 'openblas']
+    - mkl-devel  {{ mkl }}
     - matplotlib
     - networkx
     - nose
@@ -60,8 +52,8 @@ requirements:
     - six
     - snappy
   run:
-    - cudatoolkit {{ cudatoolkit }}*
-    - cudnn {{ cudnn }}*
+    - {{ pin_compatible('cudatoolkit', max_pin='x.x') }}
+    - {{ pin_compatible('cudnn') }}
     - boost
     - h5py
     - ipython

@@ -13,11 +13,7 @@ then
     export CXXFLAGS="${CXXFLAGS} -DBOOST_MATH_DISABLE_FLOAT128"
 fi
 
-if [[ ${blas_impl} == openblas ]]; then
-    BLAS=open
-else
-    BLAS=mkl
-fi
+BLAS=mkl
 
 CUDA_ARCH_BIN="30 35 50 52 60 61"
 if [ ${cudatoolkit} == "9.0" ]; then
@@ -25,6 +21,9 @@ if [ ${cudatoolkit} == "9.0" ]; then
 fi
 if [ ${cudatoolkit} == "9.2" ]; then
     CUDA_ARCH_BIN="30 35 50 52 60 61 70"
+fi
+if [ ${cudatoolkit} == "10.0" ]; then
+    CUDA_ARCH_BIN="30 35 50 52 60 61 70 75"
 fi
 
 cmake \
