@@ -1,5 +1,5 @@
-{% set version = "4.7.1" %}
-{% set ver_maj_min = "4.7" %}
+{% set version = "4.8.1" %}
+{% set ver_maj_min = "4.8" %}
 
 package:
   name: qtcreator
@@ -53,20 +53,19 @@ requirements:
     - make                               # [not win]
     - patchelf                           # [linux]
   host:
-    - qt 5.9.*
+    - qt 5.12.*
     - llvmdev
     - clangdev 5.0.*
     - libxcb                             # [linux]
-    - qbs >=1.12.1
+    - qbs >=1.12.2
     - zlib                               # [unix]
   run:
     - vs2015_runtime                     # [win]
-    - qt 5.9.*
     - clangdev 5.0.*
     - cmake >=3.9.4
     - fonts-anaconda                     # [linux]
     - the_silver_searcher >=2.1.0
-    - qbs >=1.12.1
+    - qbs >=1.12.2
 
   # These are only necessary for the qtcreator executable itself.
   # It would be better if were possible to filter the application
