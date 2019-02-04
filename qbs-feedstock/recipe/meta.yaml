@@ -1,4 +1,4 @@
-{% set version = "1.12.1" %}
+{% set version = "1.12.2" %}
 
 package:
   name: qbs
@@ -46,9 +46,8 @@ requirements:
     - jom                                # [win]
     - make                               # [not win]
   host:
-    - qt 5.9.*
+    - qt 5.12.*
   run:
-    - qt 5.9.*
     - vs2015_runtime                     # [win]
 
 about:
