@@ -3580,7 +3580,12 @@
 	path = panel-feedstock
 	url = ../panel-feedstock
 	branch = master
+[submodule "pyqt-5.9-feedstock"]
+	path = pyqt-5.9-feedstock
+	url = ../pyqt-feedstock
+	branch = master-5.9
 [submodule "intake-xarray-feedstock"]
 	path = intake-xarray-feedstock
 	url = ../intake-xarray-feedstock
 	branch = master
+
