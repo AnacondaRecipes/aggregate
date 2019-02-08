@@ -1,0 +1,24 @@
+{% set name = 'libxkbcommon' %}
+{% set version = '0.8.2' %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  # git_url: http://github.com/xkbcommon/{{ name }}
+  # git_tag: master
+  url: https://github.com/xkbcommon/{{ name }}/archive/xkbcommon-{{ version }}.tar.gz
+  sha256: fd19874aefbcbc9da751292ba7abee8952405cd7d9042466e41a9c6ed3046322
+
+build:
+  run_exports:
+    - {{ pin_subpackage(name) }}
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - meson
+    - ninja
+    - bison
+    - m4
