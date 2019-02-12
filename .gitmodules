@@ -3580,3 +3580,7 @@
 	path = panel-feedstock
 	url = ../panel-feedstock
 	branch = master
+[submodule "intake-xarray-feedstock"]
+	path = intake-xarray-feedstock
+	url = ../intake-xarray-feedstock
+	branch = master
