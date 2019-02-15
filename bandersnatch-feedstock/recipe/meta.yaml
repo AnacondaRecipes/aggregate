@@ -1,5 +1,5 @@
 {% set name = "bandersnatch" %}
-{% set version = "3.1.2" %}
+{% set version = "3.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c196fca731581555e733813c3be57c8c8688142018c8473d019fa895cd21ac21
+  sha256: 81feef8e99bc3b3feb43d37b1d6b1af80f9f45fb69745212053b702a8cd6ff7d
 
 build:
   number: 0
