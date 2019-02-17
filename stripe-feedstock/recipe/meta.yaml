@@ -1,8 +1,8 @@
 {% set name = "stripe" %}
-{% set version = "2.16.0" %}
+{% set version = "2.21.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "74203c009fec30fa85a8f00f8b96c9838c7dd794ec9b356a77c329198ce252dc" %}
+{% set hash_value = "170f76f2502888debf02da580138c840497b9359876ca3838f4692f2f02c9110" %}
 
 package:
   name: {{ name|lower }}
