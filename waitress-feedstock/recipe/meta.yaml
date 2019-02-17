@@ -1,8 +1,8 @@
 {% set name = "waitress" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "e624c829656ffc99b33d661072b2814885ae92835cf835ee8ab283ddb7c915b9" %}
+{% set hash_value = "c369e238bd81ef7d61f04825f06f107c42094de60d13d8de8e71952c7c683dfe" %}
 
 package:
   name: {{ name|lower }}
