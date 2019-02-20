@@ -1,0 +1,14 @@
+--- third_party/nccl/nccl/src/include/socket.h.orig	2019-01-08 10:33:13.298498926 -0600
++++ third_party/nccl/nccl/src/include/socket.h	2019-01-08 10:34:40.846305392 -0600
+@@ -21,6 +21,11 @@
+ #define SLEEP_INT     1000  // sleep interval in usec
+ #define RETRY_TIMES   2e4   // retry times before reporting a timeout (20 sec)
+ 
++// define SO_REUSEPORT for kernel versions which do not include it
++#ifndef SO_REUSEPORT
++#define SO_REUSEPORT 15
++#endif
++
+ /* Common socket address storage structure for IPv4/IPv6 */
+ union socketAddress {
+   struct sockaddr sa;

@@ -1,6 +1,6 @@
---- third_party/gloo/gloo/common/logging.h.orig	2018-05-03 07:02:33.167986902 -0500
-+++ third_party/gloo/gloo/common/logging.h	2018-05-03 07:02:41.582337800 -0500
-@@ -17,6 +17,8 @@
+--- third_party/gloo/gloo/common/logging.h
++++ third_party/gloo/gloo/common/logging.h
+@@ -16,6 +16,8 @@
  
  #include "gloo/common/string.h"
  

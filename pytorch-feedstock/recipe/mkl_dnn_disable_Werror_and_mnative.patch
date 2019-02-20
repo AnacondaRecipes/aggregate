@@ -1,0 +1,21 @@
+--- third_party/ideep/mkl-dnn/cmake/platform.cmake.orig	2019-02-18 16:03:12.789378444 -0600
++++ third_party/ideep/mkl-dnn/cmake/platform.cmake	2019-02-18 16:03:43.105116223 -0600
+@@ -58,7 +58,7 @@
+         append(CMAKE_CCXX_FLAGS "-Wno-pass-failed")
+     endif()
+ elseif(UNIX OR MINGW)
+-    append(CMAKE_CCXX_FLAGS "-Wall -Werror -Wno-unknown-pragmas")
++    append(CMAKE_CCXX_FLAGS "-Wall -Wno-unknown-pragmas")
+     append(CMAKE_CCXX_FLAGS "-fvisibility=internal")
+     append(CMAKE_C_FLAGS "-std=c99")
+     append(CMAKE_CXX_FLAGS "-std=c++11 -fvisibility-inlines-hidden")
+@@ -107,9 +107,6 @@
+             append(CMAKE_CCXX_SANITIZER_FLAGS "-g -fno-omit-frame-pointer")
+         endif()
+     elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+-        if(NOT CMAKE_CXX_COMPILER_VERSION VERSION_LESS 5.0)
+-            set(DEF_ARCH_OPT_FLAGS "-march=native -mtune=native")
+-        endif()
+         # suppress warning on assumptions made regarding overflow (#146)
+         append(CMAKE_CCXX_NOWARN_FLAGS "-Wno-strict-overflow")
+     elseif(CMAKE_CXX_COMPILER_ID STREQUAL "Intel")

@@ -1,5 +1,5 @@
-{% set version = "0.4.1" %}
-{% set commit = "a24163a95edb193ff7b06e98cd69bf7cfd4c0d2f" %}
+{% set version = "1.0.1" %}
+{% set commit = "743fdbdb192dd0f07d51d6f94f8b47984484b54f" %}
 
 package:
   name: pytorch
@@ -11,11 +11,14 @@ source:
   patches:
     - 0001-Add-DCUDA_rt_LIBRARY-to-cmake-command.patch
     - 0002-lazy-bind-C-extension.patch
-    - 0003-insure-system-nccl-is-used.patch
-    - 0004-always-add-librt-to-requirements.patch
+    - 0003-always-add-librt-to-requirements.patch
+    - 0004-pass-module-linker-flags-to-cmake.patch
+    - 0005-always-link-rt-to-shm-and-torch_shm_manager.patch
     # https://github.com/pytorch/pytorch/issues/4499
     # merged upstream in https://github.com/facebookincubator/gloo/pull/127
+    - mkl_dnn_disable_Werror_and_mnative.patch
     - define_speed_unknown.patch
+    - nccl_socket.patch
 
 build:
   number: 0
@@ -30,7 +33,6 @@ requirements:
     # GPU requirements
     - cudatoolkit {{ cudatoolkit }}*
     - cudnn {{ cudnn }}*
-    - nccl
     # other requirements
     - python
     - numpy
@@ -44,9 +46,9 @@ requirements:
 
   run:
     # GPU requirements
-    - cudatoolkit {{ cudatoolkit }}*
-    - cudnn {{ cudnn }}*
-    - {{ pin_compatible('nccl') }}
+    - {{ pin_compatible('cudatoolkit', max_pin='x.x') }}
+    - {{ pin_compatible('cudnn') }}
+    #- {{ pin_compatible('nccl') }}
     # other requirements
     - python
     - {{ pin_compatible('numpy') }}
