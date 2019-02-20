@@ -13,6 +13,6 @@ fi
 mkdir build
 cd build
 cmake .. -DUSE_FORTRAN=OFF -DGPU_TARGET="All" -DCMAKE_INSTALL_PREFIX=$PREFIX
-make -j$(getconf _NPROCESSORS_CONF)
+make -j${CPU_COUNT} ${VERBOSE_AT}
 make install
 cd ..

@@ -1,6 +1,8 @@
+# cuda 9.0, 5.4
+# cuda 10.0, 7.3
 c_compiler_version:
-  - 5.4
+  - 7.3
 cxx_compiler_version:
-  - 5.4
+  - 7.3
 cudatoolkit:
-  - 9.0
+  - 10.0

@@ -2,18 +2,16 @@
 # TODO: examine if it is possible to link DSO dynamically
 package:
   name: magma
-  version: 2.3.0
+  version: 2.5.0
 
 source:
-   url: http://icl.cs.utk.edu/projectsfiles/magma/downloads/magma-2.3.0.tar.gz
+   url: http://icl.cs.utk.edu/projectsfiles/magma/downloads/magma-2.5.0.tar.gz
+   sha256: 4fd45c7e46bd9d9124253e7838bbfb9e6003c64c2c67ffcff02e6c36d2bcfa33
    patches:
-    # the cmakelists patch is specific to CUDA 9, modify if CUDA 8 is needed
-    - cmakelists.patch
+    - cmakelists_cuda90.patch   # [cudatoolkit=='9.0']
+    - cmakelists_cuda100.patch  # [cudatoolkit=='10.0']
+    - xhsgetrf_gpu.patch        # [cudatoolkit=='9.0']
     - thread_queue.patch
-    - magma_cparict_tools.patch
-    - magma_dparict_tools.patch
-    - magma_sparict_tools.patch
-    - magma_zparict_tools.patch
 
 build:
   number: 0
@@ -24,11 +22,9 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
   host:
-    # cudatoolkit is not used in the build but is included to pin the
-    # CUDA version and avoid mixing of CUDA runtimes.
     - cudatoolkit {{ cudatoolkit }}*
   run:
-    - cudatoolkit {{ cudatoolkit }}*
+    - {{ pin_compatible('cudatoolkit', max_pin='x.x') }}
 
 about:
   home: http://icl.cs.utk.edu/magma/software/index.html
