@@ -3597,3 +3597,7 @@
 	path = suitesparse-feedstock
 	url = ../suitesparse-feedstock
 	branch = master
+[submodule "cvxopt-feedstock"]
+	path = cvxopt-feedstock
+	url = ../cvxopt-feedstock
+	branch = master
