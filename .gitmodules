@@ -3593,3 +3593,7 @@
 	path = dsdp-feedstock
 	url = ../dsdp-feedstock
 	branch = master
+[submodule "suitesparse-feedstock"]
+	path = suitesparse-feedstock
+	url = ../suitesparse-feedstock
+	branch = master
