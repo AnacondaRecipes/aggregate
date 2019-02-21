@@ -3589,3 +3589,7 @@
 	url = ../intake-xarray-feedstock
 	branch = master
 
+[submodule "dsdp-feedstock"]
+	path = dsdp-feedstock
+	url = ../dsdp-feedstock
+	branch = master
