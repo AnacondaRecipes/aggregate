@@ -2,6 +2,10 @@
 
 set -ex
 
+# Dynamic libraries need to be lazily loaded so that torch
+# can be imported on system without GPUs
+LDFLAGS="${LDFLAGS//-Wl,-z,now/-Wl,-z,lazy}"
+
 export CMAKE_LIBRARY_PATH=$PREFIX/lib:$PREFIX/include:$CMAKE_LIBRARY_PATH
 export CMAKE_PREFIX_PATH=$PREFIX
 export TH_BINARY_BUILD=1

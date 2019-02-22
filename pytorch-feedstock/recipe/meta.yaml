@@ -10,7 +10,7 @@ source:
   git_tag: {{ commit }}
   patches:
     - 0001-Add-DCUDA_rt_LIBRARY-to-cmake-command.patch
-    - 0002-lazy-bind-C-extension.patch
+    #- 0002-lazy-bind-C-extension.patch
     - 0003-always-add-librt-to-requirements.patch
     - 0004-pass-module-linker-flags-to-cmake.patch
     - 0005-always-link-rt-to-shm-and-torch_shm_manager.patch
@@ -22,6 +22,7 @@ source:
 
 build:
   number: 0
+  string: cuda{{ cudatoolkit | replace('.', '') }}py{{ CONDA_PY }}h{{PKG_HASH}}_{{ PKG_BUILDNUM }}
   detect_binary_files_with_prefix: False
 
 requirements:
@@ -48,7 +49,6 @@ requirements:
     # GPU requirements
     - {{ pin_compatible('cudatoolkit', max_pin='x.x') }}
     - {{ pin_compatible('cudnn') }}
-    #- {{ pin_compatible('nccl') }}
     # other requirements
     - python
     - {{ pin_compatible('numpy') }}
