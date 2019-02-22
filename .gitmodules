@@ -3601,3 +3601,7 @@
 	path = cvxopt-feedstock
 	url = ../cvxopt-feedstock
 	branch = master
+[submodule "zarr-feedstock"]
+	path = zarr-feedstock
+	url = ../zarr-feedstock
+	branch = master
