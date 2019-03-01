@@ -32,7 +32,7 @@ fortran_compiler_version:
 rust_compiler:
   - rust
 rust_compiler_version:
-  - 1.29.0
+  - 1.32.0
 CONDA_BUILD_SYSROOT:
   - /opt/MacOSX10.10.sdk        # [osx]
 VERBOSE_AT:
