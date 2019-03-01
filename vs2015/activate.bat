@@ -9,23 +9,37 @@ SET platform=
 IF /I [%PROCESSOR_ARCHITECTURE%]==[amd64] set "platform=true"
 IF /I [%PROCESSOR_ARCHITEW6432%]==[amd64] set "platform=true"
 
-if defined platform (
-set "VSREGKEY=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0"
-)  ELSE (
-set "VSREGKEY=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0"
-)
-for /f "skip=2 tokens=2,*" %%A in ('reg query "%VSREGKEY%" /v InstallDir') do SET "VSINSTALLDIR=%%B"
+if "%VC140_ON_VS2017%" == "" (
+    if defined platform (
+    set "VSREGKEY=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0"
+    )  ELSE (
+    set "VSREGKEY=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0"
+    )
+    for /f "skip=2 tokens=2,*" %%A in ('reg query "%VSREGKEY%" /v InstallDir') do SET "VSINSTALLDIR=%%B"
 
-if "%VSINSTALLDIR%" == "" (
-   set "VSINSTALLDIR=%VS140COMNTOOLS%"
-)
+    if "%VSINSTALLDIR%" == "" (
+       set "VSINSTALLDIR=%VS140COMNTOOLS%"
+    )
 
-if "%VSINSTALLDIR%" == "" (
-   ECHO "Did not find VS in registry or in VS140COMNTOOLS env var - exiting"
-   exit 1
-)
+    if "%VSINSTALLDIR%" == "" (
+       ECHO "Did not find VS in registry or in VS140COMNTOOLS env var - exiting"
+       exit 1
+    )
 
-echo "Found VS2014 at %VSINSTALLDIR%"
+    echo "Found VS2015 at %VSINSTALLDIR%"
+) else (
+    set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\"
+    if not exist "%VSINSTALLDIR%" (
+        set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\"
+    )
+    if not exist "%VSINSTALLDIR%" (
+        set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\"
+    )
+    if not exist "%VSINSTALLDIR%" (
+        set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\"
+    )
+    echo "Found VS2017 at %VSINSTALLDIR%"
+)
 
 SET "VS_VERSION=14.0"
 SET "VS_MAJOR=14"
