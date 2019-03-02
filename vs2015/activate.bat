@@ -38,7 +38,9 @@ if "%VC140_ON_VS2017%" == "" (
     if not exist "%VSINSTALLDIR%" (
         set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\"
     )
-    echo "Found VS2017 at %VSINSTALLDIR%"
+    if exist "%VSINSTALLDIR%" (
+        echo "Found VS2017 at %VSINSTALLDIR%"
+    )
 )
 
 SET "VS_VERSION=14.0"
