@@ -9,6 +9,11 @@ SET platform=
 IF /I [%PROCESSOR_ARCHITECTURE%]==[amd64] set "platform=true"
 IF /I [%PROCESSOR_ARCHITEW6432%]==[amd64] set "platform=true"
 
+:: If env variable VC140_ON_VS2017 is not empty, activate VC 14.0 toolchain within Visual Studio 2017
+:: This env variable needs to be set in conda_build_config.yaml if this package is used in a conda
+:: recipe
+:: If env variable VC140_ON_VS2017 is empty, then use Visual Studio 2015.
+
 if "%VC140_ON_VS2017%" == "" (
     if defined platform (
     set "VSREGKEY=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0"
