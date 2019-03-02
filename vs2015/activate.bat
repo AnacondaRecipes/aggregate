@@ -14,6 +14,12 @@ IF /I [%PROCESSOR_ARCHITEW6432%]==[amd64] set "platform=true"
 :: recipe
 :: If env variable VC140_ON_VS2017 is empty, then use Visual Studio 2015.
 
+:: Conda-forge currently uses a VS2015 image on Appveyor, because VS2017 images
+:: don't have VS2008. They want to switch to Azure pipelines, but the VS2015 image
+:: there is somewhat broken. They want to use the VS2017 image on Azure pipelines,
+:: but configure it to use the vc140 toolchain (so that they delay any compiler
+:: discrepancies to a different day).  See https://github.com/AnacondaRecipes/aggregate/pull/121
+
 if "%VC140_ON_VS2017%" == "" (
     if defined platform (
     set "VSREGKEY=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0"
@@ -33,6 +39,8 @@ if "%VC140_ON_VS2017%" == "" (
 
     echo "Found VS2015 at %VSINSTALLDIR%"
 ) else (
+    :: This is the non-standard path, using VS2017, but with the v140 toolchain.  The actual toolchain additions
+    ::    are added to this activate script when building the package, in install_activate.bat.
     set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\"
     if not exist "%VSINSTALLDIR%" (
         set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\"
