@@ -1,5 +1,5 @@
-{% set version = "1.1" %}
-{% set ver_maj_min = "1.1" %}
+{% set version = "2.2" %}
+{% set ver_maj_min = "2.2" %}
 
 package:
   name: qt3dstudio
@@ -56,12 +56,11 @@ requirements:
     - patchelf                           # [linux]
     - git
   host:
-    - qt 5.9.*
+    - qt 5.12.*
     - libxcb                             # [linux]
     - zlib                               # [unix]
   run:
     - vs2015_runtime                     # [win]
-    - qt 5.9.*
     - fonts-anaconda                     # [linux]
 
   # This is necessary for calls to xcrun to make `.icns` files.
