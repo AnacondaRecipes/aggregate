@@ -3605,3 +3605,7 @@
 	path = zarr-feedstock
 	url = ../zarr-feedstock
 	branch = master
+[submodule "pyrsistent-feedstock"]
+	path = pyrsistent-feedstock
+	url = ../pyrsistent-feedstock
+	branch = master
