@@ -3609,3 +3609,7 @@
 	path = pyrsistent-feedstock
 	url = ../pyrsistent-feedstock
 	branch = master
+[submodule "zipp-feedstock"]
+	path = zipp-feedstock
+	url = ../zipp-feedstock
+	branch = master
