@@ -1,8 +1,8 @@
 {% set name = "colander" %}
-{% set version = "1.5.1" %}
+{% set version = "1.7.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "d86b9e1fb42c80c68b26040e32dad584aa168abf3175133b36f5dace392350a1" %}
+{% set hash_value = "d758163a22d22c39b9eaae049749a5cd503f341231a02ed95af480b1145e81f2" %}
 
 package:
   name: {{ name|lower }}
