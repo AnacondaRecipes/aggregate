@@ -3613,3 +3613,7 @@
 	path = zipp-feedstock
 	url = ../zipp-feedstock
 	branch = master
+[submodule "mapclassify-feedstock"]
+	path = mapclassify-feedstock
+	url = ../mapclassify-feedstock
+	branch = master
