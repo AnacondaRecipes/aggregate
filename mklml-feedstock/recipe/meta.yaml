@@ -1,6 +1,7 @@
-{% set long_version="2018.0.3.20180406" %}
-{% set mkldnn_version="0.15" %} # Only for generating url
+{% set long_version="2019.0.3.20190220" %}
+{% set mkldnn_version="0.18" %} # Only for generating url
 {% set version='.'.join(long_version.split('.')[0:3]) %}
+{% set maj_version=long_version.split('.')[0] %}
 
 package:
   name: mklml-suite
@@ -8,11 +9,11 @@ package:
 
 source:
   url: https://github.com/intel/mkl-dnn/releases/download/v{{ mkldnn_version }}/mklml_lnx_{{ long_version }}.tgz  # [linux]
-  sha256: d2305244fdc9b87db7426ed4496e87a4b3977ad3374d73b8000e8b7a5b7aa725                                   # [linux]
+  sha256: f4129843d5c2996419f96f10928edd02b2150998861a088dc7cfa1b6a058102a                                        # [linux]
   url: https://github.com/intel/mkl-dnn/releases/download/v{{ mkldnn_version }}/mklml_mac_{{ long_version }}.tgz  # [osx]
-  sha256: 094e3dfd61c816136dc8d12a45cc611ce26c5f4828176a3644cd0b0efa15a25b                                   # [osx]
+  sha256: 53fdcd7e31c309bb6af869d82987d9c6414c1b957d63d10a9caa9ad077643d99                                        # [osx]
   url: https://github.com/intel/mkl-dnn/releases/download/v{{ mkldnn_version }}/mklml_win_{{ long_version }}.zip  # [win]
-  sha256: a584a5bf1c8d2ad70b90d12b52652030e9a338217719064fdb84b7ad0d693694                                   # [win]
+  sha256: eae0c49a7ed738f0ed97b897e952eaa881feddfa665017a8d5d9d79fd38964b4                                        # [win]
   folder: mklml
 
 build:
@@ -24,29 +25,29 @@ outputs:
     script: install-libmklml.sh   # [unix]
     script: install-libmklml.bat  # [win]
     build:
-      number: 1
+      number: 0
       detect_binary_files_with_prefix: False
       missing_dso_whitelist:
-        - /lib64/ld-linux-x86-64.so.2
         - /lib/libm.so.6
         - /lib/libc.so.6
+        - /lib/libdl.so.2
         - /lib/libpthread.so.0
+        - /lib64/ld-linux-x86-64.so.2
     requirements:
       host:
         # libmklml_gnu.so: Needed DSO lib/libgomp.so.1
         - libgcc-ng  # [linux]
-        - intel-openmp {{ version }}
+        - intel-openmp {{ maj_version }}
       run:
         - libgcc-ng  # [linux]
-        - intel-openmp {{ version }}
-        - vs2013_runtime  # [win]
+        - intel-openmp {{ maj_version }}
   - name: mklml
     build:
       run_exports:
         - libmklml >={{ version }}
     requirements:
       run:
-        - mkl-include {{ version }}
+        - mkl-include {{ maj_version }}
         - libmklml {{ version }}
 
 about:
