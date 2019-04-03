@@ -9,7 +9,7 @@ package:
   version: {{ fullver }}
 
 build:
-  number: 8
+  number: 7
   skip: True  [not win]
 
 outputs:

@@ -1,5 +1,4 @@
 @echo on
-SETLOCAL EnableDelayedExpansion
 :: Set env vars that tell distutils to use the compiler that we put on path
 SET DISTUTILS_USE_SDK=1
 :: This is probably not good. It is for the pre-UCRT msvccompiler.py *not* _msvccompiler.py
