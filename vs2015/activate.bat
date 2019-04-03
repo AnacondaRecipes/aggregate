@@ -43,6 +43,10 @@ set "CFLAGS=%CFLAGS% -MD -GL"
 set "CXXFLAGS=%CXXFLAGS% -MD -GL"
 set "LDFLAGS_SHARED=%LDFLAGS_SHARED% -LTCG ucrt.lib"
 
+:: set CC and CXX for cmake
+set "CXX=cl.exe"
+set "CC=cl.exe"
+
 :: translate target platform
 IF /I [%target_platform%]==[win-64] (
    set "folder=x64"
