@@ -1,5 +1,4 @@
 @echo on
-SETLOCAL EnableDelayedExpansion
 :: Set env vars that tell distutils to use the compiler that we put on path
 SET DISTUTILS_USE_SDK=1
 :: This is probably not good. It is for the pre-UCRT msvccompiler.py *not* _msvccompiler.py
@@ -10,52 +9,23 @@ SET platform=
 IF /I [%PROCESSOR_ARCHITECTURE%]==[amd64] set "platform=true"
 IF /I [%PROCESSOR_ARCHITEW6432%]==[amd64] set "platform=true"
 
-:: If env variable VC140_ON_VS2017 is not empty, activate VC 14.0 toolchain within Visual Studio 2017
-:: This env variable needs to be set in conda_build_config.yaml if this package is used in a conda
-:: recipe
-:: If env variable VC140_ON_VS2017 is empty, then use Visual Studio 2015.
-
-:: Conda-forge currently uses a VS2015 image on Appveyor, because VS2017 images
-:: don't have VS2008. They want to switch to Azure pipelines, but the VS2015 image
-:: there is somewhat broken. They want to use the VS2017 image on Azure pipelines,
-:: but configure it to use the vc140 toolchain (so that they delay any compiler
-:: discrepancies to a different day).  See https://github.com/AnacondaRecipes/aggregate/pull/121
-
-if "%VC140_ON_VS2017%" == "" (
-    if defined platform (
-    set "VSREGKEY=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0"
-    )  ELSE (
-    set "VSREGKEY=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0"
-    )
-    for /f "skip=2 tokens=2,*" %%A in ('reg query "%VSREGKEY%" /v InstallDir') do SET "VSINSTALLDIR=%%B"
-
-    if "%VSINSTALLDIR%" == "" (
-       set "VSINSTALLDIR=%VS140COMNTOOLS%"
-    )
-
-    if "%VSINSTALLDIR%" == "" (
-       ECHO "Did not find VS in registry or in VS140COMNTOOLS env var - exiting"
-       exit 1
-    )
-
-    echo "Found VS2015 at %VSINSTALLDIR%"
-) else (
-    :: This is the non-standard path, using VS2017, but with the v140 toolchain.  The actual toolchain additions
-    ::    are added to this activate script when building the package, in install_activate.bat.
-    set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\"
-    if not exist "%VSINSTALLDIR%" (
-        set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\"
-    )
-    if not exist "%VSINSTALLDIR%" (
-        set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\"
-    )
-    if not exist "%VSINSTALLDIR%" (
-        set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\"
-    )
-    if exist "%VSINSTALLDIR%" (
-        echo "Found VS2017 at %VSINSTALLDIR%"
-    )
+if defined platform (
+set "VSREGKEY=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0"
+)  ELSE (
+set "VSREGKEY=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0"
 )
+for /f "skip=2 tokens=2,*" %%A in ('reg query "%VSREGKEY%" /v InstallDir') do SET "VSINSTALLDIR=%%B"
+
+if "%VSINSTALLDIR%" == "" (
+   set "VSINSTALLDIR=%VS140COMNTOOLS%"
+)
+
+if "%VSINSTALLDIR%" == "" (
+   ECHO "Did not find VS in registry or in VS140COMNTOOLS env var - exiting"
+   exit 1
+)
+
+echo "Found VS2014 at %VSINSTALLDIR%"
 
 SET "VS_VERSION=14.0"
 SET "VS_MAJOR=14"
@@ -72,6 +42,10 @@ set "PY_VCRUNTIME_REDIST=%PREFIX%\vcruntime140.dll"
 set "CFLAGS=%CFLAGS% -MD -GL"
 set "CXXFLAGS=%CXXFLAGS% -MD -GL"
 set "LDFLAGS_SHARED=%LDFLAGS_SHARED% -LTCG ucrt.lib"
+
+:: set CC and CXX for cmake
+set "CXX=cl.exe"
+set "CC=cl.exe"
 
 :: translate target platform
 IF /I [%target_platform%]==[win-64] (
