@@ -15,12 +15,15 @@ source:
 
 build:
   number: 0
+  skip: True  # [win and vc<14]
+  skip: True  # [win32]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
+    - ninja  # [win]
   host:
     - cudatoolkit {{ cudatoolkit }}*
   run:
