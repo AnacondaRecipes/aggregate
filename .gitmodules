@@ -3617,3 +3617,7 @@
 	path = mapclassify-feedstock
 	url = ../mapclassify-feedstock
 	branch = master
+[submodule "conda-package-handling-feedstock"]
+	path = conda-package-handling-feedstock
+	url = ../conda-package-handling-feedstock
+	branch = master
