@@ -3621,3 +3621,31 @@
 	path = conda-package-handling-feedstock
 	url = ../conda-package-handling-feedstock
 	branch = master
+[submodule "pytest-localserver-feedstock"]
+	path = pytest-localserver-feedstock
+	url = ../pytest-localserver-feedstock
+	branch = master
+[submodule "sphinxcontrib-serializinghtml-feedstock"]
+	path = sphinxcontrib-serializinghtml-feedstock
+	url = ../sphinxcontrib-serializinghtml-feedstock
+	branch = master
+[submodule "sphinxcontrib-applehelp-feedstock"]
+	path = sphinxcontrib-applehelp-feedstock
+	url = ../sphinxcontrib-applehelp-feedstock
+	branch = master
+[submodule "sphinxcontrib-devhelp-feedstock"]
+	path = sphinxcontrib-devhelp-feedstock
+	url = ../sphinxcontrib-devhelp-feedstock
+	branch = master
+[submodule "sphinxcontrib-jsmath-feedstock"]
+	path = sphinxcontrib-jsmath-feedstock
+	url = ../sphinxcontrib-jsmath-feedstock
+	branch = master
+[submodule "sphinxcontrib-htmlhelp-feedstock"]
+	path = sphinxcontrib-htmlhelp-feedstock
+	url = ../sphinxcontrib-htmlhelp-feedstock
+	branch = master
+[submodule "sphinxcontrib-qthelp-feedstock"]
+	path = sphinxcontrib-qthelp-feedstock
+	url = ../sphinxcontrib-qthelp-feedstock
+	branch = master
