@@ -13,3 +13,5 @@ IF "%cross_compiler_target_platform%" == "win-64" (
   )
 
 echo CALL "%%VSINSTALLDIR%%..\..\VC\vcvarsall.bat" %target_platform% >> "%PREFIX%\etc\conda\activate.d\vs%YEAR%_compiler_vars.bat"
+echo set INCLUDE=%%INCLUDE%%;%%LIBRARY_INC%% >> "%PREFIX%\etc\conda\activate.d\vs%YEAR%_compiler_vars.bat"
+echo set LIB=%%LIB%%;%%LIBRARY_LIB%% >> "%PREFIX%\etc\conda\activate.d\vs%YEAR%_compiler_vars.bat"
