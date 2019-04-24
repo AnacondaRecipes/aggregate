@@ -3649,3 +3649,7 @@
 	path = sphinxcontrib-qthelp-feedstock
 	url = ../sphinxcontrib-qthelp-feedstock
 	branch = master
+[submodule "pymc-feedstock"]
+	path = pymc-feedstock
+	url = ../pymc-feedstock
+	branch = master
