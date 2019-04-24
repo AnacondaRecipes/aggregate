@@ -38,6 +38,7 @@ set "MSYS2_ENV_CONV_EXCL=CL"
 IF NOT "%CONDA_BUILD%" == "" (
   set "INCLUDE=%LIBRARY_INC%;%INCLUDE%"
   set "LIB=%LIBRARY_LIB%;%LIB%"
+  set "CMAKE_PREFIX_PATH=%LIBRARY_PREFIX%;%CMAKE_PREFIX_PATH%"
 )
 
 :: other things added by install_activate.bat at package build time
