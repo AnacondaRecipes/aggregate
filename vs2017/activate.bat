@@ -14,15 +14,24 @@ set "MSYS2_ENV_CONV_EXCL=CL"
 :: http://stevedower.id.au/blog/building-for-python-3-5-part-two/ for more info
 set "PY_VCRUNTIME_REDIST=%PREFIX%\\bin\\vcruntime140.dll"
 
-set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\"
-if not exist "%VSINSTALLDIR%" (
-set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\"
+set "VSINSTALLDIR="
+if exist "%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe" (
+  for /f "usebackq tokens=*" %%i in (`"%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe" -nologo -products * -version ^[15.0^,16.0^) -property installationPath`) do (
+    :: There is no trailing back-slash from the vswhere, and may make vcvars64.bat fail, so force add it
+    set "VSINSTALLDIR=%%i\"
+  )
 )
 if not exist "%VSINSTALLDIR%" (
-set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\"
+set "VSINSTALLDIR=%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Professional\"
 )
 if not exist "%VSINSTALLDIR%" (
-set "VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\"
+set "VSINSTALLDIR=%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Community\"
+)
+if not exist "%VSINSTALLDIR%" (
+set "VSINSTALLDIR=%ProgramFiles(x86)%\Microsoft Visual Studio\2017\BuildTools\"
+)
+if not exist "%VSINSTALLDIR%" (
+set "VSINSTALLDIR=%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\"
 )
 
 IF NOT "%CONDA_BUILD%" == "" (
