@@ -1,0 +1,47 @@
+{% set name = "MySQL-python" %}
+{% set version = "1.2.5" %}
+{% set file_ext = "zip" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "811040b647e5d5686f84db415efd697e6250008b112b6909ba77ac059e140c74" %}
+{% set build_number = "0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ file_ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  {{ hash_type }}: {{ hash_value }}
+
+build:
+  number: {{ build_number }}
+  script: python setup.py install --single-version-externally-managed --record=record.txt  # [unix]
+  skip: True  # [py>27]
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+  host:
+    - python
+    - setuptools
+    - mysql-connector-c
+  run:
+    - python
+
+test:
+  imports:
+    - _mysql
+    - MySQLdb
+
+about:
+  home: https://github.com/farcepest/MySQLdb1
+  license: GPL
+  license_family: GPL2
+  summary: MySQL database connector for Python (legacy version)
+  description: |
+    This is the legacy (1.x) version of MySQLdb. While it is still being
+    maintained, there will not be a lot of new feature development.
+  doc_url: https://sourceforge.net/projects/mysql-python/
+  doc_source_url: https://github.com/farcepest/MySQLdb1
+  dev_url: https://github.com/farcepest/MySQLdb1
