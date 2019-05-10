@@ -5,8 +5,7 @@ package:
 source:
   git_url: https://github.com/OpenHMD/OpenHMD
   patches:
-    - 0001-Do-not-link-to-rt-nor-pthread-unless-we-are-on-Linux.patch
-    - 0002-BUILD_BOTH_STATIC_SHARED_LIBS-BUILD_BOTH_STATIC_SHAR.patch
+    - 0001-BUILD_BOTH_STATIC_SHARED_LIBS-BUILD_BOTH_STATIC_SHAR.patch
 
 requirements:
   build:
