@@ -1,0 +1,103 @@
+{% set name = 'flutter-sdk' %}
+{% set version = '1.5.4-hotfix.2' %}
+{% set version2 = version.replace('-', '.') %}
+
+package:
+  name: {{ name }}-suite
+  version: {{ version2 }}
+
+source:
+  #url: https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_v{{ version }}-stable.zip
+  #sha256: 6a2554c3754322848aa6b38e449c42d5aa9149ea82bf97f168782f68a8efa0b1
+  git_url: https://github.com/flutter/flutter.git
+  git_tag: stable
+
+outputs:
+  - name: flutter-sdk
+    version: {{ version2 }}
+    build:
+      script:
+        # Because flutter uses a .git folder, we cannot put it in PREFIX directly.
+        - 'cp -Rf .git * ${PREFIX}'
+        # - 'mkdir -p ${PREFIX}/etc/conda/activate.d/'
+        # - 'mkdir -p ${PREFIX}/etc/conda/deactivate.d/'
+        # - 'cp ${RECIPE_DIR}/${PKG_NAME}-activate.sh ${PREFIX}/etc/conda/activate.d/'
+        # - 'cp ${RECIPE_DIR}/${PKG_NAME}-deactivate.sh ${PREFIX}/etc/conda/deactivate.d/'
+        - 'pushd ${PREFIX}'
+        - 'find . | sort > /tmp/diffA'
+        - './bin/flutter precache --force --no-android --no-ios --no-web --no-linux --no-windows --no-macos --no-fuchsia    --universal'
+        - 'find . | sort > /tmp/diffB'
+        - 'diff -urN /tmp/diffA /tmp/diffB'
+        - 'exit 0'
+      missing_dso_whitelist:
+        - '**/XCTest.framework/XCTest'
+        - '/usr/lib/libc++.1.dylib'
+        - '/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices'
+        - '/System/Library/Frameworks/OpenGLES.framework/OpenGLES'
+        - '/System/Library/Frameworks/UIKit.framework/UIKit'
+        - '/System/Library/Frameworks/CoreData.framework/CoreData'
+        - '/System/Library/Frameworks/UIKit.framework/UIKit'
+      run_exports:
+        - {{ pin_subpackage('flutter-sdk', exact=True) }}
+    requirements:
+      run:
+        - git
+    test:
+      commands:
+        - flutter doctor
+  - name: flutter-sdk_web
+    version: {{ version2 }}
+    build:
+      script:
+        - 'cp -Rf .git * ${PREFIX}'
+        - 'pushd ${PREFIX}'
+        - 'find . | sort > /tmp/diffA'
+        - './bin/flutter precache --force --no-android --no-ios    --web --no-linux --no-windows --no-macos --no-fuchsia --no-universal'
+        - 'find . | sort > /tmp/diffB'
+        - 'diff -urN /tmp/diffA /tmp/diffB'
+        - 'exit 0'
+    requirements:
+      host:
+        - {{ pin_subpackage('flutter-sdk', exact=True) }}
+  - name: flutter-sdk_osx-64
+    version: {{ version2 }}
+    build:
+      script:
+        - 'cp -Rf .git * ${PREFIX}'
+        - 'pushd ${PREFIX}'
+        - 'find . | sort > /tmp/diffA'
+        - './bin/flutter precache --force --no-android --no-ios --no-web --no-linux --no-windows    --macos --no-fuchsia --no-universal'
+        - 'find . | sort > /tmp/diffB'
+        - 'diff -urN /tmp/diffA /tmp/diffB'
+        - 'exit 0'
+    requirements:
+      host:
+        - {{ pin_subpackage('flutter-sdk', exact=True) }}
+  - name: flutter-sdk_android
+    version: {{ version2 }}
+    build:
+      script:
+        - 'cp -Rf .git * ${PREFIX}'
+        - 'pushd ${PREFIX}'
+        - 'find . | sort > /tmp/diffA'
+        - './bin/flutter precache --force   --android --no-ios --no-web --no-linux --no-windows --no-macos --no-fuchsia --no-universal'
+        - 'find . | sort > /tmp/diffB'
+        - 'diff -urN /tmp/diffA /tmp/diffB'
+        - 'exit 0'
+    requirements:
+      host:
+        - {{ pin_subpackage('flutter-sdk', exact=True) }}
+  - name: flutter-sdk_ios
+    version: {{ version2 }}
+    build:
+      script:
+        - 'cp -Rf .git * ${PREFIX}'
+        - 'pushd ${PREFIX}'
+        - 'find . | sort > /tmp/diffA'
+        - './bin/flutter precache --force --no-android    --ios --no-web --no-linux --no-windows --no-macos --no-fuchsia --no-universal'
+        - 'find . | sort > /tmp/diffB'
+        - 'diff -urN /tmp/diffA /tmp/diffB'
+        - 'exit 0'
+    requirements:
+      host:
+        - {{ pin_subpackage('flutter-sdk', exact=True) }}
