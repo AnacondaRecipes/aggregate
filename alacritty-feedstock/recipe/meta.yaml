@@ -1,4 +1,4 @@
-{% set version = '0.2.1' %}
+{% set version = '0.3.2' %}
 {% set name = 'alacritty' %}
 
 package:
@@ -11,9 +11,11 @@ source:
 
 build:
   script:
+    - set RUST_BACKTRACE=1  # [win]
     - cargo build --release -v
-    - $STRIP target/release/alacritty
-    - cp target/release/alacritty $PREFIX/bin
+    - $STRIP target/release/alacritty  # [not win]
+    - cp target/release/alacritty $PREFIX/bin  # [not win]
+    - copy target\release\alacritty %PREFIX%\bin  # [not win]
   missing_dso_whitelist:
     - /usr/lib/libresolv.9.dylib
 
