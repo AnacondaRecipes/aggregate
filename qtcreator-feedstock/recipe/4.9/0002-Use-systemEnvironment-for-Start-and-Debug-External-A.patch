@@ -1,4 +1,4 @@
-From 0e5b9fe9fbd6a3a0a888be7828ee0f76ed076b1e Mon Sep 17 00:00:00 2001
+From 8e45b99b414fbf17449fcd9c0a905dc0fd253d8e Mon Sep 17 00:00:00 2001
 From: Ray Donnelly <mingw.android@gmail.com>
 Date: Sun, 3 Jun 2018 23:06:08 +0100
 Subject: [PATCH 2/2] Use systemEnvironment for Start and Debug External
@@ -10,19 +10,19 @@ Subject: [PATCH 2/2] Use systemEnvironment for Start and Debug External
  2 files changed, 6 insertions(+), 4 deletions(-)
 
 diff --git a/src/plugins/debugger/debuggerdialogs.cpp b/src/plugins/debugger/debuggerdialogs.cpp
-index f548aa0ee1..e187498ecd 100644
+index 0e274e439d..fb38ccd934 100644
 --- a/src/plugins/debugger/debuggerdialogs.cpp
 +++ b/src/plugins/debugger/debuggerdialogs.cpp
-@@ -367,7 +367,7 @@ void StartApplicationDialog::updateState()
+@@ -371,7 +371,7 @@ void StartApplicationDialog::updateState()
      d->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(okEnabled);
  }
  
 -void StartApplicationDialog::run(bool attachRemote)
 +void StartApplicationDialog::run(bool attachRemote, bool setSystemEnv)
  {
-     const QString settingsGroup = QLatin1String("DebugMode");
-     const QString arrayName = QLatin1String("StartApplication");
-@@ -433,6 +433,8 @@ void StartApplicationDialog::run(bool attachRemote)
+     const QString settingsGroup = "DebugMode";
+     const QString arrayName = "StartApplication";
+@@ -438,6 +438,8 @@ void StartApplicationDialog::run(bool attachRemote)
      debugger->setBreakOnMain(newParameters.breakAtMain);
      debugger->setDebugInfoLocation(newParameters.debugInfoLocation);
      debugger->setInferior(inferior);
@@ -31,7 +31,7 @@ index f548aa0ee1..e187498ecd 100644
      debugger->setServerStartScript(newParameters.serverStartScript); // Note: This requires inferior.
      debugger->setUseTerminal(newParameters.runInTerminal);
  
-@@ -455,12 +457,12 @@ void StartApplicationDialog::run(bool attachRemote)
+@@ -460,12 +462,12 @@ void StartApplicationDialog::run(bool attachRemote)
  
  void StartApplicationDialog::attachToRemoteServer()
  {
@@ -60,5 +60,5 @@ index 4cec4143a6..3990d204c6 100644
      StartApplicationDialogPrivate *d;
  };
 -- 
-2.17.2 (Apple Git-113)
+2.20.1
 

@@ -7,7 +7,6 @@ source:
     sha256: e7a34a5deb2a708631fec7b759f5a3c4a81046ac3a48f34080f01eee18e8b130
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libselinux-2.0.94-7.el6.src.rpm
-    sha256: b1ce631cfc5f1bdd032b29349b47ba52ede7b07294041e3c2d12d380095a073a
     folder: source
 
 build:
@@ -21,7 +20,8 @@ requirements:
 
 outputs:
   - name: libselinux-cos6-x86_64
-    noarch: generic
+    build:
+      noarch: generic
     requirements:
       run:
         - libsepol-cos6-x86_64 >=2.0.32

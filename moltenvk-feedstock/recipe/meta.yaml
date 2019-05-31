@@ -1,0 +1,47 @@
+{% set name = 'moltenvk' %}
+{% set sdk_version = '1.1.106' %}
+{% set version = '1.0.134' %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  # fn: {{ name }}-v{{ version }}.tar.gz
+  # url: https://codeload.github.com/KhronosGroup/MoltenVK/tar.gz/v{{ version }}
+  - git_url: https://github.com/KhronosGroup/MoltenVK.git
+    git_tag: d57704b
+  - git_url: https://github.com/USCiLab/cereal.git
+    git_tag: 51cbda5f30e56c801c07fe3d3aba5d7fb9e6cca4
+    folder: External/cereal
+  - git_url: https://github.com/KhronosGroup/Vulkan-Tools.git
+    git_tag: 2abb69904b9ad017d39d3da1e7fc3dec1a584cd8
+    folder: External/Vulkan-Tools
+  - git_url: https://github.com/KhronosGroup/Vulkan-Headers.git
+    git_tag: 08cbb5458f692d4778806775f65eb3dc642ddbbf
+    folder: External/Vulkan-Headers
+  - git_url: https://github.com/KhronosGroup/Vulkan-Portability.git
+    git_tag: 53be040f04ce55463d0e5b25fd132f45f003e903
+    folder: External/Vulkan-Portability
+  - git_url: https://github.com/LunarG/VulkanSamples.git
+    git_tag: 07b1ccd82ff6b7e6369a0d8d6a5e5e4f7ba0b7d6
+    folder: External/VulkanSamples
+  - git_url: https://github.com/KhronosGroup/SPIRV-Cross.git
+    git_tag: ac5a9570a744eb72725c23c34f36fbc564c0bb51
+    folder: External/SPIRV-Cross
+  - git_url: https://github.com/KhronosGroup/glslang.git
+    git_tag: e06c7e9a515b716c731bda13f507546f107775d1
+    folder: External/glslang
+
+
+build:
+  skip: True  # [not osx]
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - cmake
+    - python >3
+    - ninja
+
+

@@ -1,0 +1,36 @@
+{% set version = '0.14.1' %}
+{% set name = 'kitty' %}
+
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-v{{ version }}.tar.gz
+  url: https://github.com/kovidgoyal/{{ name }}/archive/v{{ version }}.tar.gz
+  # git_url: git@github.com:mingwandroid/kitty
+  # git_tag: master
+  # path: ~/conda/kitty
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - pkg-config                         # [linux]
+    - {{ cdt('libxcb') }}                # [linux]
+    - {{ cdt('libselinux-devel') }}      # [linux]
+    - {{ cdt('libxi-devel') }}           # [linux]
+    - {{ cdt('libx11-devel') }}          # [linux]
+    - {{ cdt('libxau-devel') }}          # [linux]
+    - {{ cdt('libxext-devel') }}         # [linux]
+    - {{ cdt('libxfixes-devel') }}       # [linux]
+    - {{ cdt('mesa-libgl-devel') }}      # [linux]
+    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
+    - {{ cdt('mesa-dri-drivers') }}      # [linux]
+    - {{ cdt('libxdamage-devel') }}      # [linux]
+    - {{ cdt('libxxf86vm') }}            # [linux]
+    - expat                              # [linux]
+    - pkg-config
+    - python >=3
+  host:
+    - harfbuzz

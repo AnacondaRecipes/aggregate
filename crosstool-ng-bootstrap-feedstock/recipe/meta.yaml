@@ -1,4 +1,4 @@
-{% set commit="master" %}
+{% set commit="master-WIP" %}
 
 package:
   name: crosstool-ng

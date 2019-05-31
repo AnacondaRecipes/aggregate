@@ -1,4 +1,4 @@
-{% set commit="master" %}
+{% set commit="master-WIP" %}
 
 package:
   name: crosstool-ng
@@ -9,7 +9,7 @@ source:
   git_tag: {{ commit }}
 
 build:
-  number: 0
+  number: 1
   missing_dso_whitelist:
     - '*'
 

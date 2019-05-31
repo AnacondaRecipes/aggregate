@@ -1,0 +1,28 @@
+{% set name = 'git-cola' %}
+{% set version = '3.3' %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: git-cola-v{{ version }}.tar.gz
+  url: https://github.com/git-cola/git-cola/archive/v{{ version }}.tar.gz
+
+build:
+  noarch: python
+  # script: python -m pip install --no-deps --ignore-installed .
+  script:
+    - make NO_VENDOR_LIBS=1 prefix=${PREFIX} install
+
+requirements:
+  build:
+    - make
+  host:
+    - qtpy
+    - pyqt
+    - sphinx
+  run:
+    - python
+    - git
+    - send2trash

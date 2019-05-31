@@ -1,8 +1,8 @@
-From 90cefe5cc0ba2377961bf58746323020fc1e1007 Mon Sep 17 00:00:00 2001
+From 37130b3eb6344d14a13345641b48fec468830d09 Mon Sep 17 00:00:00 2001
 From: Ray Donnelly <mingw.android@gmail.com>
 Date: Thu, 8 Dec 2016 23:25:26 +0000
-Subject: [PATCH] macOS: Disable app bundle and do not put 'qtcreatorlibraries'
- in Frameworks
+Subject: [PATCH 1/2] macOS: Disable app bundle and do not put
+ 'qtcreatorlibraries' in Frameworks
 
 We still create an Info.plist (which for our purposes will need some
 tweaking later). If ever hope to upstream, this needs to less of a hack.

@@ -3,17 +3,22 @@ package:
   version: 2.8.16
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/cracklib-2.8.16-4.el6.x86_64.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/cracklib-2.8.16-4.el6.x86_64.rpm
     sha256: 70ea1dca33b848f6e0ad18c52066dc96b8189ec9fa5505ca050430e25c61f2db
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/cracklib-2.8.16-4.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/cracklib-2.8.16-4.el6.src.rpm
     folder: source
+
+build:
+  missing_dso_whitelist:
+    - '*'
 
 
 
 outputs:
   - name: cracklib-cos6-x86_64
-    noarch: generic
+    build:
+      noarch: generic
 
     about:
       home: http://sourceforge.net/projects/cracklib/

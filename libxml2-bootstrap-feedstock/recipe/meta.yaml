@@ -21,6 +21,7 @@ requirements:
     - automake    # [not win]
     - libtool     # [not win]
     - pkg-config  # [not win]
+    - make        # [not win]
   host:
     - libiconv    # [not linux]
     - xz          # [not win]
