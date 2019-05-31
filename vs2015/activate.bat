@@ -21,8 +21,8 @@ if "%VSINSTALLDIR%" == "" (
 )
 
 if "%VSINSTALLDIR%" == "" (
-   ECHO "Did not find VS in registry or in VS140COMNTOOLS env var - exiting"
-   exit 1
+   ECHO "WARNING: Did not find VS in registry or in VS140COMNTOOLS env var - your compiler may not work"
+   exit 0
 )
 
 echo "Found VS2014 at %VSINSTALLDIR%"
