@@ -22,6 +22,7 @@ if "%VSINSTALLDIR%" == "" (
 
 if "%VSINSTALLDIR%" == "" (
    ECHO "WARNING: Did not find VS in registry or in VS140COMNTOOLS env var - your compiler may not work"
+   GOTO End
 )
 
 echo "Found VS2014 at %VSINSTALLDIR%"
@@ -74,3 +75,5 @@ IF NOT "%CONDA_BUILD%" == "" (
 )
 
 :: other things added by install_activate.bat at package build time
+
+:End
