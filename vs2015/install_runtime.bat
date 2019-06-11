@@ -13,8 +13,10 @@ FOR /F "usebackq tokens=3*" %%A IN (`REG QUERY "HKEY_LOCAL_MACHINE\Software\Micr
 if not "%SP%" == "%PKG_VERSION%" (
    echo "Version detected from registry: %SP%"
    echo    "does not match version of package being built (%PKG_VERSION%)"
-   echo "Do you have current updates for VS 2015 installed?"
-   exit 1
+   if "%SP%" LSS "%PGK_VERSION%" (
+     echo "Do you have current updates for VS 2015 installed?"
+     exit 1
+   )
 )
 
 
