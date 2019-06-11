@@ -21,8 +21,8 @@ if "%VSINSTALLDIR%" == "" (
 )
 
 if "%VSINSTALLDIR%" == "" (
-   ECHO "Did not find VS in registry or in VS90COMNTOOLS env var - exiting"
-   exit 1
+   ECHO "WARNING: Did not find VS in registry or in VS90COMNTOOLS env var - your compiler may not work"
+   GOTO End
 )
 
 echo "Found VS2008 at"
@@ -42,3 +42,5 @@ IF NOT "%CONDA_BUILD%" == "" (
 )
 
 :: other things added by install_activate.bat at package build time
+
+:End
