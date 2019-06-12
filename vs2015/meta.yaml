@@ -2,7 +2,7 @@
 #     This version number follows the "platform toolset"
 {% set vcver="14" %}
 {% set vsyear="2015" %}
-{% set fullver="4.0.25420" %}
+{% set fullver="14.0.25420" %}
 
 package:
   name: vs{{ vsyear }}
