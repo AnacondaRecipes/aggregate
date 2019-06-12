@@ -23,8 +23,8 @@ if "%VSINSTALLDIR%" == "" (
 )
 
 if "%VSINSTALLDIR%" == "" (
-   ECHO "Did not find VS in registry or in VS90COMNTOOLS env var - exiting"
-   exit 1
+   ECHO "WARNING: Did not find VS in registry or in VS90COMNTOOLS env var - your compiler may not work"
+   goto End
 )
 
 echo "Found VS2010 at"
@@ -48,3 +48,5 @@ if "%ARCH%" == "64" (
 
 set "MSYS2_ARG_CONV_EXCL=/AI;/AL;/OUT;/out"
 set "MSYS2_ENV_CONV_EXCL=CL"
+
+:End
