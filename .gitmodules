@@ -3653,3 +3653,7 @@
 	path = pymc-feedstock
 	url = ../pymc-feedstock
 	branch = master
+[submodule "google-pasta-feedstock"]
+	path = google-pasta-feedstock
+	url = ../google-pasta-feedstock
+	branch = master
