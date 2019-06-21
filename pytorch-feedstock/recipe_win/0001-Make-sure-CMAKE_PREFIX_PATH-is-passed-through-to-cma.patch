@@ -1,0 +1,24 @@
+From e054e879248581f44f697553d98014c5a013e6bb Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Fri, 12 Apr 2019 00:53:45 -0500
+Subject: [PATCH] Make sure $CMAKE_PREFIX_PATH is passed through to cmake
+
+---
+ tools/build_pytorch_libs.bat | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/tools/build_pytorch_libs.bat b/tools/build_pytorch_libs.bat
+index daceeba75a..816a73a52a 100755
+--- a/tools/build_pytorch_libs.bat
++++ b/tools/build_pytorch_libs.bat
+@@ -211,6 +211,7 @@ goto:eof
+   if not exist build mkdir build
+   pushd build
+   cmake .. %CMAKE_GENERATOR_COMMAND% ^
++                  -DCMAKE_PREFIX_PATH=%CMAKE_PREFIX_PATH% ^
+                   -DCMAKE_BUILD_TYPE=%BUILD_TYPE% ^
+                   -DTORCH_BUILD_VERSION="%PYTORCH_BUILD_VERSION%" ^
+                   -DPYTHON_LIBRARY="%PYTORCH_PYTHON_LIBRARY%" ^
+-- 
+2.21.0
+

@@ -1,0 +1,67 @@
+From d393dd07445a3a363c1bc0db8682fbe6878d8992 Mon Sep 17 00:00:00 2001
+From: Shuichi KITAGUCHI <kit@ysnb.net>
+Date: Wed, 5 Dec 2018 22:07:45 -0800
+Subject: [PATCH 2/2] generate ATen core files with LF. (#14667)
+
+Summary:
+on Windows environment, some ATen core files (Type.h, Tensor.h, TensorMethods.h) are created and it's new line code is CRLF. (maybe enviconment dependant)
+therefore, comparing files is failed in generate_outputs()agener917.py and compilation stopped.
+this patch generates these files with LF forcibly.
+Pull Request resolved: https://github.com/pytorch/pytorch/pull/14667
+
+Differential Revision: D13356170
+
+Pulled By: ezyang
+
+fbshipit-source-id: ef8cc3a6cc8bf3c45b78e9eb3df98cf47c0d33bb
+---
+ aten/src/ATen/gen.py | 20 ++++++++++++++++++--
+ 1 file changed, 18 insertions(+), 2 deletions(-)
+
+diff --git a/aten/src/ATen/gen.py b/aten/src/ATen/gen.py
+index 9f463f66e5..f5db8c09b8 100644
+--- a/aten/src/ATen/gen.py
++++ b/aten/src/ATen/gen.py
+@@ -1,6 +1,5 @@
+ import argparse
+ import os
+-import filecmp
+ 
+ import yaml
+ from collections import OrderedDict
+@@ -381,6 +380,23 @@ def filter_by_extension(files, *extensions):
+     return filtered_files
+ 
+ 
++# because EOL may not be LF(\n) on some environment (e.g. Windows),
++# normalize EOL from CRLF/CR to LF and compare both files.
++def cmpfiles_with_eol_normalization(a, b, names):
++    results = ([], [], [])    # match, mismatch, error
++    for x in names:
++        try:
++            ax = open(os.path.join(a, x), 'r').read().replace('\r\n', '\n').replace('\r', '\n')
++            bx = open(os.path.join(b, x), 'r').read().replace('\r\n', '\n').replace('\r', '\n')
++            if ax == bx:
++                results[0].append(x)
++            else:
++                results[1].append(x)
++        except OSError:
++            results[2].append(x)
++    return results
++
++
+ def generate_outputs():
+     cwrap_files = filter_by_extension(options.files, '.cwrap')
+     nn_files = filter_by_extension(options.files, 'nn.yaml', '.h')
+@@ -443,7 +459,7 @@ def generate_outputs():
+ 
+     # check that generated files match source files
+     core_source_path = os.path.join(options.source_path, 'core')
+-    match, mismatch, errors = filecmp.cmpfiles(core_install_dir, core_source_path, core_files.keys(), shallow=False)
++    match, mismatch, errors = cmpfiles_with_eol_normalization(core_install_dir, core_source_path, core_files.keys())
+     if errors:
+         raise RuntimeError("Error while trying to compare source and generated files for {}. "
+                            "Source directory: {}.  Generated directory: {}."
+-- 
+2.21.0
+

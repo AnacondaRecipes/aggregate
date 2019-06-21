@@ -1,0 +1,73 @@
+{% set version = "1.0.1" %}
+{% set commit = "743fdbdb192dd0f07d51d6f94f8b47984484b54f" %}
+
+package:
+  name: pytorch
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/pytorch/pytorch.git
+  git_tag: {{ commit }}
+  patches:
+    - 0001-Make-sure-CMAKE_PREFIX_PATH-is-passed-through-to-cma.patch
+    - 0002-generate-ATen-core-files-with-LF.-14667.patch
+    - 0003-Set-CMAKE_FIND_LIBRARY_SUFFIXES-for-MKL-Libraries.patch
+
+build:
+  number: 0
+  skip: True  # [win and vc<14]
+  skip: True  # [win32]
+  string: cuda{{ cudatoolkit | replace('.', '') }}py{{ CONDA_PY }}h{{PKG_HASH}}_{{ PKG_BUILDNUM }}  # [pytorch_variant_str == 'gpu']
+  string: {{ pytorch_variant_str }}_py{{ CONDA_PY }}h{{PKG_HASH}}_{{ PKG_BUILDNUM }}  # [pytorch_variant_str != 'gpu']
+  detect_binary_files_with_prefix: False
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - cmake
+    - ninja
+    # GPU requirements
+    - cudatoolkit  # [pytorch_variant_str == 'gpu']
+    - cudnn  # [pytorch_variant_str == 'gpu']
+    # other requirements
+    - python
+    - numpy
+    - setuptools
+    - pyyaml
+    - cffi
+    - mkl-devel {{ mkl }}  # [pytorch_variant_str == 'cpu']
+    - typing
+    - magma  # [pytorch_variant_str == 'gpu']
+
+  run:
+    # GPU requirements
+    - {{ pin_compatible('cudatoolkit', max_pin='x.x') }}  # [pytorch_variant_str == 'gpu']
+    - {{ pin_compatible('cudnn') }}  # [pytorch_variant_str == 'gpu']
+    # other requirements
+    - python
+    - {{ pin_compatible('numpy') }}
+    - cffi
+    - ninja
+    - _pytorch_select =={{ pytorch_variant_version }}
+
+test:
+  requires:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - setuptools
+    - hypothesis
+  imports:
+    - torch
+  source_files:
+    - test
+  commands:
+    - python ./test/run_test.py -x cpp_extensions || true
+
+about:
+  home: http://pytorch.org/
+  license: BSD 3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: PyTorch is an optimized tensor library for deep learning using GPUs and CPUs.

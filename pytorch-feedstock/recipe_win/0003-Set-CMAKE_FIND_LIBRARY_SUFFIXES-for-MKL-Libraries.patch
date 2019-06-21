@@ -1,0 +1,34 @@
+From cdff2030f7e510132d0edb77c670f59030817f8c Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Fri, 12 Apr 2019 01:39:31 -0500
+Subject: [PATCH 3/3] Set CMAKE_FIND_LIBRARY_SUFFIXES for MKL Libraries
+
+---
+ cmake/Modules/FindMKL.cmake | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/cmake/Modules/FindMKL.cmake b/cmake/Modules/FindMKL.cmake
+index 1b14239883..f96e8f842d 100644
+--- a/cmake/Modules/FindMKL.cmake
++++ b/cmake/Modules/FindMKL.cmake
+@@ -13,6 +13,9 @@
+ # Do nothing if MKL_FOUND was set before!
+ IF (NOT MKL_FOUND)
+ 
++set(_MKL_ORIG_CMAKE_FIND_LIBRARY_SUFFIXES ${CMAKE_FIND_LIBRARY_SUFFIXES})
++set(CMAKE_FIND_LIBRARY_SUFFIXES _dll.lib)
++
+ SET(MKL_VERSION)
+ SET(MKL_INCLUDE_DIR)
+ SET(MKL_LIBRARIES)
+@@ -294,5 +297,7 @@ IF(NOT MKL_FIND_QUIETLY)
+   ENDIF(MKL_FOUND)
+ ENDIF(NOT MKL_FIND_QUIETLY)
+ 
++set(CMAKE_FIND_LIBRARY_SUFFIXES ${_MKL_ORIG_CMAKE_FIND_LIBRARY_SUFFIXES})
++
+ # Do nothing if MKL_FOUND was set before!
+ ENDIF (NOT MKL_FOUND)
+-- 
+2.21.0
+
