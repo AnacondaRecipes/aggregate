@@ -3657,3 +3657,7 @@
 	path = google-pasta-feedstock
 	url = ../google-pasta-feedstock
 	branch = master
+[submodule "_libgcc_mutex-feedstock"]
+	path = _libgcc_mutex-feedstock
+	url = ../_libgcc_mutex-feedstock
+	branch = master
