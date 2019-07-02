@@ -3665,3 +3665,7 @@
 	path = pycurl-feedstock
 	url = ../pycurl-feedstock
 	branch = master
+[submodule "json5-feedstock"]
+	path = json5-feedstock
+	url = ../json5-feedstock
+	branch = master
