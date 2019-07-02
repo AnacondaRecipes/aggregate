@@ -3661,3 +3661,7 @@
 	path = _libgcc_mutex-feedstock
 	url = ../_libgcc_mutex-feedstock
 	branch = master
+[submodule "pycurl-feedstock"]
+	path = pycurl-feedstock
+	url = ../pycurl-feedstock
+	branch = master
