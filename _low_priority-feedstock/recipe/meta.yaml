@@ -1,0 +1,10 @@
+package:
+  name: _low_priority
+  version: 1.0
+
+build:
+  track_features:
+    - _low_priority
+
+about:
+  summary: 'Metapackage to lower the priority of a package using track_features'
