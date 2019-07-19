@@ -10,16 +10,15 @@ source:
     - 0001-Do-not-hardcode-CC-PLATFORM_DEFS-or-PLATFORM_LIBS.patch
     - 0002-Add-filelist-support.patch
 
-build:
-  script:
-    - make CFLAGS="${CFLAGS} -DXPT_PTHREADS -Wall" CPPFLAGS="${CPPFLAGS} -fno-strict-aliasing"
-    - '[[ -d ${PREFIX}/bin ]] || mkdir ${PREFIX}/bin'
-    - cp binsort ${PREFIX}/bin/
-
 requirements:
   build:
-    - {{ compiler('c') }}
-    - make
+    - {{ compiler('c') }}  # [not win]
+    - m2w64-toolchain  # [win]
+    - make      # [not win]
+    - m2-make   # [win]
+    - m2-patch  # [win]
+    - m2-base  # [win]
+    - m2-filesystem  # [win]
 
 test:
   requires:
@@ -45,7 +44,7 @@ about:
     Scans the contents of a directory, groups the files by binary
     similarity, generates a filelist and prints the list to stdout.
   dev_url: http://hg.neoscientists.org/binsort/
-  doc_url: http://invisible-island.net/ncurses/NCURSES-Programming-HOWTO.html
+  doc_url: http://neoscientists.org/~tmueller/binsort/
   doc_source_url: http://hg.neoscientists.org/binsort/file/tip/README
 
 extra:

@@ -3669,6 +3669,10 @@
 	path = json5-feedstock
 	url = ../json5-feedstock
 	branch = master
+[submodule "libarchive-static-feedstock"]
+	path = libarchive-static-feedstock
+	url = ../libarchive-feedstock
+        branch = master
 [submodule "filesystem-spec-feedstock"]
 	path = filesystem-spec-feedstock
 	url = ../filesystem-spec-feedstock
