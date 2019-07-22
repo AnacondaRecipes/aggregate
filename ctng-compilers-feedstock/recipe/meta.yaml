@@ -175,6 +175,9 @@ outputs:
   - name: libgcc-ng
     target: {{ ctng_target_platform }}
     script: install-libgcc.sh
+    requirements:
+      run:
+        - _libgcc_mutex * main
     build:
       number: {{ build_num }}
       detect_binary_files_with_prefix: False
