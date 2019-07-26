@@ -17,6 +17,9 @@ outputs:
     script: install-clang.sh
     requirements:
       - clang {{ version }}
+      - cctools
+      - ld64
+      - compiler-rt {{ version }}
   - name: clangxx_{{ target_platform }}
     script: install-clangxx.sh
     requirements:
