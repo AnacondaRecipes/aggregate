@@ -1,17 +1,17 @@
-From ed3c2e19c1b4ae60b423f7e0db0245db1f1bf650 Mon Sep 17 00:00:00 2001
+From 3ca0208e8b2071cef2cb952088679019e430626f Mon Sep 17 00:00:00 2001
 From: Nehal J Wani <nehaljw.kkd1@gmail.com>
 Date: Fri, 29 Jun 2018 15:50:40 -0500
-Subject: [PATCH 2/2] Add ${MKL_ROOT}/bin directory for DLLs
+Subject: [PATCH] Add ${MKL_ROOT}/bin directory for DLLs
 
 ---
  cmake/MKL.cmake | 5 ++++-
  1 file changed, 4 insertions(+), 1 deletion(-)
 
 diff --git a/cmake/MKL.cmake b/cmake/MKL.cmake
-index 57acaab..b4ef058 100644
+index c404c17..01c6134 100644
 --- a/cmake/MKL.cmake
 +++ b/cmake/MKL.cmake
-@@ -73,6 +73,7 @@ function(detect_mkl LIBNAME)
+@@ -140,6 +140,7 @@ function(detect_mkl LIBNAME)
              HINTS
                  ${MKLREDIST}/mkl
                  ${MKLREDIST}/intel64/mkl
@@ -19,7 +19,7 @@ index 57acaab..b4ef058 100644
                  ${__mklinc_root}/lib)
          if(NOT MKLDLL)
              return()
-@@ -102,7 +103,9 @@ function(detect_mkl LIBNAME)
+@@ -162,7 +163,9 @@ function(detect_mkl LIBNAME)
          if(WIN32)
              find_file(MKLIOMP5DLL
                  NAMES "libiomp5.dll" "libiomp5md.dll"
@@ -31,5 +31,5 @@ index 57acaab..b4ef058 100644
                  return()
              endif()
 -- 
-2.17.0
+2.7.4
 
