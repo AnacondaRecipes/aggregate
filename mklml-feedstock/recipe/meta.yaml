@@ -1,5 +1,5 @@
-{% set long_version="2019.0.3.20190220" %}
-{% set mkldnn_version="0.18" %} # Only for generating url
+{% set long_version="2019.0.5.20190502" %}
+{% set mkldnn_version="0.19" %} # Only for generating url
 {% set version='.'.join(long_version.split('.')[0:3]) %}
 {% set maj_version=long_version.split('.')[0] %}
 
@@ -9,11 +9,11 @@ package:
 
 source:
   url: https://github.com/intel/mkl-dnn/releases/download/v{{ mkldnn_version }}/mklml_lnx_{{ long_version }}.tgz  # [linux]
-  sha256: f4129843d5c2996419f96f10928edd02b2150998861a088dc7cfa1b6a058102a                                        # [linux]
+  sha256: a936d6b277a33d2a027a024ea8e65df62bd2e162c7ca52c48486ed9d5dc27160                                        # [linux]
   url: https://github.com/intel/mkl-dnn/releases/download/v{{ mkldnn_version }}/mklml_mac_{{ long_version }}.tgz  # [osx]
-  sha256: 53fdcd7e31c309bb6af869d82987d9c6414c1b957d63d10a9caa9ad077643d99                                        # [osx]
+  sha256: 2fbb71a0365d42a39ea7906568d69b1db3bfc9914fee75eedb06c5f32bf5fa68                                        # [osx]
   url: https://github.com/intel/mkl-dnn/releases/download/v{{ mkldnn_version }}/mklml_win_{{ long_version }}.zip  # [win]
-  sha256: eae0c49a7ed738f0ed97b897e952eaa881feddfa665017a8d5d9d79fd38964b4                                        # [win]
+  sha256: 535857b17643d7f7546b58fc621244e7cfcc4fff2aa2ebd3fc5b4e126bfc36cf                                        # [win]
   folder: mklml
 
 build:
