@@ -1,0 +1,51 @@
+diff -urN work.orig/Makefile.mac work/Makefile.mac
+--- work.orig/Makefile.mac	2019-07-29 01:01:13.000000000 +0200
++++ work/Makefile.mac	2019-07-29 01:05:24.000000000 +0200
+@@ -1,10 +1,10 @@
+-CC=gcc
+-CXX=clang++
+-FATBINFLAGS=-arch x86_64 -arch i386 -mmacosx-version-min=10.4
+-THINBINFLAGS=-arch x86_64 -mmacosx-version-min=10.4
+-CFLAGS=$(FATBINFLAGS) -O2 -D_FILE_OFFSET_BITS=64 -g
+-#CXXFLAGS=-O2 -Wall -D_FILE_OFFSET_BITS=64 -D USE_UTF16 -I/opt/local/include -I/usr/local/include -I/opt/local/include -g
+-CXXFLAGS=$(FATBINFLAGS) -O2 -Wall -D_FILE_OFFSET_BITS=64 -I/opt/local/include -I /usr/local/include -I/opt/local/include -g
++CC?=gcc
++CXX?=clang++
++FATBINFLAGS?=-arch x86_64 -arch i386 -mmacosx-version-min=10.4
++THINBINFLAGS?=-arch x86_64 -mmacosx-version-min=10.4
++CFLAGS?=$(FATBINFLAGS) -O2 -D_FILE_OFFSET_BITS=64 -g
++#CXXFLAGS?=-O2 -Wall -D_FILE_OFFSET_BITS=64 -D USE_UTF16 -I/opt/local/include -I/usr/local/include -I/opt/local/include -g
++CXXFLAGS?=$(FATBINFLAGS) -O2 -Wall -D_FILE_OFFSET_BITS=64 -I/opt/local/include -I /usr/local/include -I/opt/local/include -g
+ LIB_NAMES=crc32 support guid gptpart mbrpart basicmbr mbr gpt bsd parttypes attributes diskio diskio-unix
+ MBR_LIBS=support diskio diskio-unix basicmbr mbrpart
+ #LIB_SRCS=$(NAMES:=.cc)
+@@ -16,22 +16,22 @@
+ all:	gdisk sgdisk cgdisk fixparts
+ 
+ gdisk:	$(LIB_OBJS) gpttext.o gdisk.o
+-	$(CXX) $(LIB_OBJS) gpttext.o gdisk.o $(FATBINFLAGS) -o gdisk
+-#	$(CXX) $(LIB_OBJS) -L/usr/lib -licucore gpttext.o gdisk.o -o gdisk
++#	$(CXX) $(LIB_OBJS) gpttext.o gdisk.o $(FATBINFLAGS) -o gdisk
++	$(CXX) $(LIB_OBJS) gpttext.o gdisk.o $(LDFLAGS) -licucore -o gdisk
+ 
+ cgdisk: $(LIB_OBJS) cgdisk.o gptcurses.o
+-	$(CXX) $(LIB_OBJS) cgdisk.o gptcurses.o /usr/lib/libncurses.dylib $(LDFLAGS) $(FATBINFLAGS) -o cgdisk
+-#	$(CXX) $(LIB_OBJS) cgdisk.o gptcurses.o $(LDFLAGS) -licucore -lncurses -o cgdisk
++#	$(CXX) $(LIB_OBJS) cgdisk.o gptcurses.o /usr/lib/libncurses.dylib $(LDFLAGS) $(FATBINFLAGS) -o cgdisk
++	$(CXX) $(LIB_OBJS) cgdisk.o gptcurses.o $(LDFLAGS) -licucore -lncurses -o cgdisk
+ 
+ sgdisk: $(LIB_OBJS) gptcl.o sgdisk.o
+ #	$(CXX) $(LIB_OBJS) gptcl.o sgdisk.o /opt/local/lib/libiconv.a /opt/local/lib/libintl.a /opt/local/lib/libpopt.a $(FATBINFLAGS) -o sgdisk
+-	$(CXX) $(LIB_OBJS) gptcl.o sgdisk.o -L/usr/local/lib -lpopt $(THINBINFLAGS) -o sgdisk
+-#	$(CXX) $(LIB_OBJS) gptcl.o sgdisk.o -L/sw/lib -licucore -lpopt -o sgdisk
++#	$(CXX) $(LIB_OBJS) gptcl.o sgdisk.o -L/usr/local/lib -lpopt $(THINBINFLAGS) -o sgdisk
++	$(CXX) $(LIB_OBJS) gptcl.o sgdisk.o $(LDFLAGS) -licucore -lpopt -o sgdisk
+ 
+ fixparts: $(MBR_LIB_OBJS) fixparts.o
+ 	$(CXX) $(MBR_LIB_OBJS) fixparts.o $(LDFLAGS) $(FATBINFLAGS) -o fixparts
+ 
+-testguid:	$(LIB_OBJS) testguid.o
++testguid: $(LIB_OBJS) testguid.o
+ 	$(CXX) $(LIB_OBJS) testguid.o -o testguid
+ 
+ lint:	#no pre-reqs

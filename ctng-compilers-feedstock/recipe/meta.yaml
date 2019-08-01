@@ -19,6 +19,7 @@ build:
 requirements:
   build:
     - crosstool-ng >=1.23.0.442_g622d059
+    - bash  # [osx]
   # Need something here so that build does not get installed to a long prefix
   # as that breaks on some systems.
   host:

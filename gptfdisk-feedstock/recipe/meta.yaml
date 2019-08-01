@@ -1,0 +1,25 @@
+package:
+  name: gptfdisk
+  version: 1.0.4
+
+source:
+  url: http://www.rodsbooks.com/gdisk/gptfdisk-1.0.4.tar.gz
+  patches:
+    - 0001-Makefiles-do-not-override-env-vars.patch
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - make
+    - popt  # [osx]
+    - libiconv  # [osx]
+    # - icu
+    - ncurses
+  run:
+    # conda-build run_exports bug.
+    - ncurses >=6.1,<7.0a0
