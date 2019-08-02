@@ -27,6 +27,10 @@ requirements:
   run:
     - {{ pin_compatible('intel-openmp') }}
 
+test:
+  commands:
+    - test -f ${PREFIX}/lib/libmkldnn.so   # [unix]
+
 about:
   home: https://01.org/mkl-dnn
   license: Apache 2.0
