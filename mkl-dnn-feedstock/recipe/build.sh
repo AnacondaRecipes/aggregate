@@ -8,7 +8,7 @@ cmake -G"$CMAKE_GENERATOR" \
   -DMKLROOT="${PREFIX}" \
   ${SRC_DIR}
 
-cmake --build . --config Release
+cmake --build . --config Release -j${CPU_COUNT}
 
 ctest
 
