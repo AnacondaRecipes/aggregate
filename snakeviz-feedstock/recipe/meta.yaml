@@ -1,5 +1,5 @@
 {% set name = "snakeviz" %}
-{% set version = "1.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5fe23667708a4ed04047abfbf209675a8488ea6ea8c038d7de06d8a083fb3531
+  sha256: 80acc9c204aeb1e089f209a4c79bb5940dc40b6536a5184c1778a3f448634885
 
 build:
   number: 0
