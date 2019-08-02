@@ -11,7 +11,7 @@ source:
       - 0001-Add-MKL_ROOT-bin-directory-for-DLLs.patch
 
 build:
-  number: 0
+  number: 1
   # linux32: https://github.com/01org/mkl-dnn/issues/171
   # vc<14: pre-c99 era :'(
   skip: True  # [not x86_64]
