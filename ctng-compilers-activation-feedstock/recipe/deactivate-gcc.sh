@@ -87,8 +87,8 @@ if [ "${CONDA_BUILD:-0}" = "1" ]; then
   CFLAGS_USED="@CFLAGS@ -I${PREFIX}/include -fdebug-prefix-map=${SRC_DIR}=/usr/local/src/conda/${PKG_NAME}-${PKG_VERSION} -fdebug-prefix-map=${PREFIX}=/usr/local/src/conda-prefix"
   DEBUG_CFLAGS_USED="@DEBUG_CFLAGS@ -I${PREFIX}/include -fdebug-prefix-map=${SRC_DIR}=/usr/local/src/conda/${PKG_NAME}-${PKG_VERSION} -fdebug-prefix-map=${PREFIX}=/usr/local/src/conda-prefix"
   LDFLAGS_USED="@LDFLAGS@ -Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib"
-  CPPFLAGS_USED="@CPPFLAGS@ -I${PREFIX}"
-  DEBUG_CPPFLAGS_USED="@DEBUG_CPPFLAGS@ -I${PREFIX}"
+  CPPFLAGS_USED="@CPPFLAGS@ -I${PREFIX}/include"
+  DEBUG_CPPFLAGS_USED="@DEBUG_CPPFLAGS@ -I${PREFIX}/include"
   CMAKE_PREFIX_PATH_USED="${CMAKE_PREFIX_PATH}:${PREFIX}:${BUILD_PREFIX}/${HOST}/sysroot/usr"
 else
   CFLAGS_USED="@CFLAGS@"
