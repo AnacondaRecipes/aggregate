@@ -1,0 +1,43 @@
+From d485a54ac2b07b7349dabd833961415315a18fea Mon Sep 17 00:00:00 2001
+From: Denis Samoilov <denis.samoylov@intel.com>
+Date: Sun, 14 Apr 2019 20:11:33 -0700
+Subject: [PATCH] cpu: gemv: fix unresolved symbol
+
+Fixes #456
+---
+ src/cpu/gemm/gemm_driver.cpp                          | 6 ++----
+ src/cpu/gemm/s8x8s32/jit_avx512_core_gemv_s8u8s32.cpp | 4 ++++
+ 2 files changed, 6 insertions(+), 4 deletions(-)
+
+diff --git a/src/cpu/gemm/gemm_driver.cpp b/src/cpu/gemm/gemm_driver.cpp
+index 0773b212b..df7bc44d3 100644
+--- a/src/cpu/gemm/gemm_driver.cpp
++++ b/src/cpu/gemm/gemm_driver.cpp
+@@ -1304,10 +1304,8 @@ static mkldnn_status_t gemm_threading_driver(
+                 (float *) arg->co);
+     }
+ 
+-    if (data_traits<a_type>::data_type == data_type::s8) {
+-        if (gemm_s8u8s32_jump_to_gemv_s8u8s32(arg)) {
+-            return mkldnn_success;
+-        }
++    if (gemm_s8u8s32_jump_to_gemv_s8u8s32(arg)) {
++        return mkldnn_success;
+     }
+ 
+     int nthr = (mkldnn_in_parallel()) ? 1 : mkldnn_get_max_threads();
+diff --git a/src/cpu/gemm/s8x8s32/jit_avx512_core_gemv_s8u8s32.cpp b/src/cpu/gemm/s8x8s32/jit_avx512_core_gemv_s8u8s32.cpp
+index 73d50e40b..81646a435 100644
+--- a/src/cpu/gemm/s8x8s32/jit_avx512_core_gemv_s8u8s32.cpp
++++ b/src/cpu/gemm/s8x8s32/jit_avx512_core_gemv_s8u8s32.cpp
+@@ -29,6 +29,10 @@ namespace cpu {
+ template <typename T>
+ int gemm_s8u8s32_jump_to_gemv_s8u8s32(T *arg);
+ 
++template <>
++int gemm_s8u8s32_jump_to_gemv_s8u8s32(
++        gemm_info_t<float, float, float> *arg) { return 0; }
++
+ template <>
+ int gemm_s8u8s32_jump_to_gemv_s8u8s32(
+         gemm_info_t<int8_t, uint8_t, int32_t> *arg) {

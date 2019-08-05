@@ -9,6 +9,9 @@ source:
     sha256: ba39da6adb263df05c4ca2a120295641fc97be75b588922e4274cb628dbe1dcd
     patches:
       - 0001-Add-MKL_ROOT-bin-directory-for-DLLs.patch
+      # fix for error LNK2001: unresolved external symbol
+      # https://github.com/intel/mkl-dnn/issues/482
+      - d485a54ac2b07b7349dabd833961415315a18fea.patch  # [win]
 
 build:
   number: 1
