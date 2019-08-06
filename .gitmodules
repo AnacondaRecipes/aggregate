@@ -3673,3 +3673,6 @@
 	path = filesystem-spec-feedstock
 	url = ../filesystem-spec-feedstock
 	branch = master
+[submodule "toolchain-feedstock"]
+	path = toolchain-feedstock
+	url = ../toolchain-feedstock
