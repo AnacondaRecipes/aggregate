@@ -1,0 +1,27 @@
+package:
+  name: xorg-x11-xauth-cos6-x86_64
+  version: 1.0.9
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/xorg-x11-xauth-1.0.9-1.el6.x86_64.rpm
+    sha256: b8006b5915b5bb9d97400d03831aec3c9c18b622009d7249e8ff376d074c9a82
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/xorg-x11-xauth-1.0.9-1.el6.src.rpm
+    folder: source
+
+build:
+  number: 0
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) X.Org X11 X authority utilities"
+  description: |
+        xauth is used to edit and display the authorization information used in
+        connecting to an X server.
