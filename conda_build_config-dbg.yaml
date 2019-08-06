@@ -36,6 +36,12 @@ fortran_compiler_version:
 # matrix on linux, because the ABI breaks at GCC 8
   - 7.3.0                      # [linux]
   - 8.2.0                      # [linux]
+m2w64_c_compiler:              # [win]
+  - m2w64-toolchain            # [win]
+m2w64_cxx_compiler:            # [win]
+  - m2w64-toolchain            # [win]
+m2w64_fortran_compiler:        # [win]
+  - m2w64-toolchain            # [win]
 rust_compiler:
   - rust
 rust_compiler_version:

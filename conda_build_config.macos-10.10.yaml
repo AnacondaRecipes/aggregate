@@ -33,6 +33,12 @@ VERBOSE_AT:
   - V=1
 VERBOSE_CM:
   - VERBOSE=1
+m2w64_c_compiler:              # [win]
+  - m2w64-toolchain            # [win]
+m2w64_cxx_compiler:            # [win]
+  - m2w64-toolchain            # [win]
+m2w64_fortran_compiler:        # [win]
+  - m2w64-toolchain            # [win]
 dbus:
   - 1
 expat:
