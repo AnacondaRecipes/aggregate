@@ -1,10 +1,12 @@
+{% set version = "4.0.1" %}
+
 package:
   name: clang_{{ target_platform }}
-  version: 4.0.1
+  version: {{ version }}
 
 build:
   skip: True  [not osx]
-  number: 16
+  number: 17
 
 requirements:
   build:
@@ -14,13 +16,21 @@ outputs:
   - name: clang_{{ target_platform }}
     script: install-clang.sh
     requirements:
-      - clang
+      - clang {{ version }}
+      - cctools
+      - ld64
+      - compiler-rt {{ version }}
   - name: clangxx_{{ target_platform }}
     script: install-clangxx.sh
     requirements:
-      - clangxx
-      - libcxx
-      - {{ pin_subpackage('clang_' ~ target_platform, min_pin='x.x.x.x.x.x.x.x', max_pin='x.x.x.x.x.x.x.x') }}
+      host:
+        - clangxx {{ version }}
+        - libcxx {{ version }}
+        - {{ pin_subpackage('clang_' ~ target_platform, min_pin='x.x.x.x.x.x.x.x', max_pin='x.x.x.x.x.x.x.x') }}
+      run:
+        - clangxx {{ version }}
+        - {{ pin_compatible('libcxx', max_pin=None) }}
+        - {{ pin_subpackage('clang_' ~ target_platform, min_pin='x.x.x.x.x.x.x.x', max_pin='x.x.x.x.x.x.x.x') }}
     # Since transitive run_exports are not currently possible:
     # (here I would like the run dependency on clangxx to pull in the run_exports from it).
     run_exports:
