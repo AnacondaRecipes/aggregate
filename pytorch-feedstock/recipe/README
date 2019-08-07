@@ -4,12 +4,14 @@ To build a conda pytorch package with GPU support
 
     Dockerfiles can be found at: https://github.com/jjhelmus/docker-images
 
-    CUDA 8.0, CuDNN 7: pkg_build_cuda80_cudnn7_centos6_dt2
+    CUDA 9.0: pkg_build_cos6_cuda90
+    CUDA 9.2: pkg_build_cos6_cuda92
+    CUDA 10.0: pkg_build_cos6_cuda100
 
 * Start the docker container using:
 
     ```
-    docker run -v `pwd`:/io -it pkg_build_cuda80_cudnn7_centos6_dt2 /bin/bash
+    sudo nvidia-docker run -v `pwd`:/io -it pkg_build_cos6_cuda90
     ```
 
 * Update conda and conda-build, and navigate to the recipe root folder.
