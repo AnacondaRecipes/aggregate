@@ -3680,3 +3680,6 @@
 [submodule "toolchain-feedstock"]
 	path = toolchain-feedstock
 	url = ../toolchain-feedstock
+[submodule "python-3.7-feedstock"]
+	path = python-3.7-feedstock
+	url = ../python-feedstock
