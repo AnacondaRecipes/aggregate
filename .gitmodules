@@ -3653,3 +3653,11 @@
 	path = pymc-feedstock
 	url = ../pymc-feedstock
 	branch = master
+[submodule "scapy-feedstock"]
+	path = scapy-feedstock
+	url = ../scapy-feedstock
+	branch = master
+[submodule "black-feedstock"]
+	path = black-feedstock
+	url = ../black-feedstock
+	branch = master
