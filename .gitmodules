@@ -3690,3 +3690,7 @@
 	path = ipympl-feedstock
 	url = ../ipympl-feedstock
 	branch = master
+[submodule "codecov-feedstock"]
+	path = codecov-feedstock
+	url = ../codecov-feedstock
+	branch = master
