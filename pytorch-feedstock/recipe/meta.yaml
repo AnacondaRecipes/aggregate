@@ -1,5 +1,5 @@
-{% set version = "1.1.0" %}
-{% set commit = "0b868b19063645afed59d6d49aff1e43d1665b88" %}
+{% set version = "1.2.0" %}
+{% set commit = "8554416a199c4cec01c60c7015d8301d2bb39b64" %}
 
 package:
   name: pytorch
@@ -7,18 +7,17 @@ package:
 
 source:
   # for local testing use a tarball including submodules
-  #url: file:///io/pytorch-1.1.0.tar.gz
-  #sha256: 9e47e88d5366e03bf45c923b74512220da77b0a6a9d8a8231aa9482a58427471
+  #url: file:///io/pytorch-1.2.0.tar.gz
+  #sha256: aa05d3c108c436d297117cb4a822044e4f920a6c4b3a9a282db636a60930ad1f
   git_url: https://github.com/pytorch/pytorch.git
   git_tag: {{ commit }}
   patches:
-    - mkl_dnn_disable_Werror_and_mnative.patch
-    - googletest_disable_Werror.patch
     - nccl_socket.patch
 
 build:
   number: 0
-  string: cuda{{ cudatoolkit | replace('.', '') }}py{{ CONDA_PY }}h{{PKG_HASH}}_{{ PKG_BUILDNUM }}
+  string: cuda{{ cudatoolkit | replace('.', '') }}py{{ CONDA_PY }}h{{PKG_HASH}}_{{ PKG_BUILDNUM }}  # [pytorch_variant == "gpu"]
+  string: cpu_py{{ CONDA_PY }}h{{PKG_HASH}}_{{ PKG_BUILDNUM }}                                      # [pytorch_variant == "cpu"]
   detect_binary_files_with_prefix: False
 
 requirements:
@@ -28,8 +27,9 @@ requirements:
   host:
     - cmake
     # GPU requirements
-    - cudatoolkit {{ cudatoolkit }}*
-    - cudnn {{ cudnn }}*
+    - cudatoolkit {{ cudatoolkit }}*  # [pytorch_variant == "gpu"]
+    - cudnn {{ cudnn }}*              # [pytorch_variant == "gpu"]
+    - magma                           # [pytorch_variant == "gpu"]
     # other requirements
     - python
     - numpy
@@ -39,12 +39,13 @@ requirements:
     - mkl-devel {{ mkl }}
     - typing
     - ninja
-    - magma
 
   run:
+    - _pytorch_select ==0.1             # [pytorch_variant == "cpu"]
+    - _pytorch_select ==0.2             # [pytorch_variant == "gpu"]
     # GPU requirements
-    - {{ pin_compatible('cudatoolkit', max_pin='x.x') }}
-    - {{ pin_compatible('cudnn') }}
+    - {{ pin_compatible('cudatoolkit', max_pin='x.x') }}  # [pytorch_variant == "gpu"]
+    - {{ pin_compatible('cudnn') }}                       # [pytorch_variant == "gpu"]
     # other requirements
     - python
     - {{ pin_compatible('numpy') }}
@@ -62,7 +63,7 @@ test:
   source_files:
     - test
   commands:
-    - python ./test/run_test.py -x cpp_extensions || true
+    - python ./test/run_test.py || true
 
 about:
   home: http://pytorch.org/
