@@ -1,0 +1,16 @@
+{% set version = "1.2.0" %}
+
+package:
+  name: pytorch-gpu
+  version: {{ version }}
+
+build:
+  number: 0
+
+requirements:
+  run:
+    - pytorch {{ version }}
+    - _pytorch_select 0.2
+
+about:
+  summary: Metapackage for the GPU PyTorch variant
