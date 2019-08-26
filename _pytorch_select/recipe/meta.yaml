@@ -1,0 +1,14 @@
+package:
+  name: _pytorch_select
+  version: 0.1 # [pytorch_variant == "cpu"]
+  version: 0.2 # [pytorch_variant == "gpu"]
+
+build:
+  number: 0
+  string: cpu_{{ PKG_BUILDNUM }} # [pytorch_variant == "cpu"]
+  string: gpu_{{ PKG_BUILDNUM }} # [pytorch_variant == "gpu"]
+  track_features:
+    - pytorch_cpuonly  # [pytorch_variant == "cpu"]
+
+about:
+  summary: Metapackage for establishing variant priority in pytorch variants.
