@@ -1,0 +1,45 @@
+{% set version = "0.14.0" %}
+
+package:
+  name: tensorflow-metadata
+  version: {{ version }}
+
+source:
+  url: https://github.com/tensorflow/metadata/archive/v{{ version }}.tar.gz
+  sha256: f14b88f3b72b3419ca95c016dd4c6251179f33f375deceb5d9bf3d3bf51ba9cc
+
+build:
+  number: 0
+  # This is a noarch: python package, it contains no compiled code but a
+  # compiler is required to convert protocol buffer definitions.
+  # The build has only been tested on linux-64
+  noarch: python
+  skip: True  # [not linux]
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - bazel
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - protobuf >=3.7,<4
+    - googleapis-common-protos
+    - tensorflow
+
+test:
+  imports:
+    - tensorflow_metadata
+
+about:
+  home: https://www.tensorflow.org/metadata
+  license: Apache-2.0
+  license_file: LICENSE
+  summary: Library and standards for schema and statistics.
+
+extra:
+  recipe-maintainers:
+    - jjhelmus
