@@ -9,12 +9,15 @@ source:
   sha256: f14b88f3b72b3419ca95c016dd4c6251179f33f375deceb5d9bf3d3bf51ba9cc
 
 build:
-  number: 0
+  number: 1
   # This is a noarch: python package, it contains no compiled code but a
   # compiler is required to convert protocol buffer definitions.
   # The build has only been tested on linux-64
   noarch: python
   skip: True  # [not linux]
+  ignore_run_exports:
+    - libgcc-ng
+    - libstdcxx-ng
 
 requirements:
   build:
