@@ -3698,3 +3698,11 @@
 	path = promise-feedstock
 	url = ../promise-feedstock
 	branch = master
+[submodule "tensorflow-probability-feedstock"]
+	path = tensorflow-probability-feedstock
+	url = ../tensorflow-probability-feedstock
+	branch = master
+[submodule "tensorflow-hub-feedstock"]
+	path = tensorflow-hub-feedstock
+	url = ../tensorflow-hub-feedstock
+	branch = master
