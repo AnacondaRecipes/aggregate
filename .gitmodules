@@ -3694,3 +3694,7 @@
 	path = codecov-feedstock
 	url = ../codecov-feedstock
 	branch = master
+[submodule "promise-feedstock"]
+	path = promise-feedstock
+	url = ../promise-feedstock
+	branch = master
