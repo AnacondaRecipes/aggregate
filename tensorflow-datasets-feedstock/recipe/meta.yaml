@@ -1,0 +1,57 @@
+{% set version = "1.2.0" %}
+
+package:
+  name: tensorflow-datasets
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/t/tensorflow-datasets/tensorflow-datasets-{{ version }}.tar.gz
+  sha256: a3f2c0f9b553cf01f03bc42a84649c93c2acf668e5e82c0e4ce163692cf274d4
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv "
+  skip: True  # [ppc64le]
+  skip: True  # [win and py==27]
+  skip: True  # [win32]
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - absl-py
+    - attrs
+    - dill
+    - future
+    - numpy
+    - promise
+    - protobuf >=3.6.1
+    - psutil
+    - requests >=2.19.0
+    - six
+    - tensorflow >=1.14
+    - tensorflow-metadata
+    - termcolor
+    - tqdm
+    - wrapt
+    - bz2file       # [py27]
+    - functools32   # [py27]
+    - futures       # [py27]
+    - enum34        # [py<34]
+
+test:
+  imports:
+    - tensorflow_datasets
+
+about:
+  home: http://github.com/tensorflow/datasets
+  license: Apache Software
+  license_family: APACHE
+  license_file: LICENSE
+  summary: "tensorflow/datasets is a library of datasets ready to use with TensorFlow."
+
+extra:
+  recipe-maintainers:
+    - jjhelmus
