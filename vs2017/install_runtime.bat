@@ -11,15 +11,15 @@ set MSC_VER=2017
 
 REM ========== This one comes from visual studio 2017
 set "VC_VER=141"
-set "BT_ROOT=C:\Program Files (x86)\Microsoft Visual Studio\%MSC_VER%\Enterprise"
-if not exist "%BT_ROOT%" (
-set "BT_ROOT=C:\Program Files (x86)\Microsoft Visual Studio\%MSC_VER%\Community"
+
+set "BT_ROOT="
+for /f "usebackq tokens=*" %%i in (`vswhere.exe -nologo -products * -version ^[15.0^,16.0^) -property installationPath`) do (
+  :: There is no trailing back-slash from the vswhere, and may make vcvars64.bat fail, so force add it
+  set "BT_ROOT=%%i\"
 )
 if not exist "%BT_ROOT%" (
-set "BT_ROOT=C:\Program Files (x86)\Microsoft Visual Studio\%MSC_VER%\BuildTools"
-)
-if not exist "%BT_ROOT%" (
-set "BT_ROOT=C:\Program Files (x86)\Microsoft Visual Studio\%MSC_VER%\Professional"
+    echo No VS installation detected by vswhere.  Exiting.
+    exit 1
 )
 
 set "REDIST_ROOT=%BT_ROOT%\VC\Redist\MSVC\%runtime_version%\%VC_PATH%"

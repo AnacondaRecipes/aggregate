@@ -3706,3 +3706,7 @@
 	path = tensorflow-hub-feedstock
 	url = ../tensorflow-hub-feedstock
 	branch = master
+[submodule "vswhere-feedstock"]
+	path = vswhere-feedstock
+	url = ../vswhere-feedstock
+	branch = master
