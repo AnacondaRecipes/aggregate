@@ -1,0 +1,58 @@
+{% set name = "double-conversion" %}
+{% set version = "3.1.5" %}
+{% set sha256 = "a63ecb93182134ba4293fd5f22d6e08ca417caafa244afaa751cbfddf6415b13" %}
+
+{% set posix = 'm2-' if win else '' %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/google/{{name}}/archive/v{{version}}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 1
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - cmake
+    - {{ posix }}make
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+
+test:
+  requires:
+    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}
+  files:
+    - test.cc
+  commands:
+    - test -f $PREFIX/lib/libdouble-conversion.a      # [unix]
+    - test -f $PREFIX/lib/libdouble-conversion.so     # [linux]
+    - test -f $PREFIX/lib/libdouble-conversion.dylib  # [osx]
+
+about:
+  home: http://github.com/google/double-conversion
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: 'Efficient binary-decimal and decimal-binary conversion routines for IEEE doubles.'
+
+  description: |
+    double-conversion provides binary-decimal and decimal-binary routines for IEEE doubles.
+    The library consists of efficient conversion routines that have been extracted from
+    the V8 JavaScript engine. The code has been refactored and improved so that it can be
+    used more easily in other projects.
+  doc_url: https://github.com/google/{{ name }}
+  dev_url: https://github.com/google/{{ name }}
+
+extra:
+  recipe-maintainers:
+    - xmnlab
+    - pearu
+    - xhochy
