@@ -13,7 +13,7 @@ package:
 
 build:
   skip: True  [not win]
-  number: 4
+  number: 0
 
 outputs:
   - name: vs{{ vsyear }}_{{ cross_compiler_target_platform }}
@@ -30,6 +30,15 @@ outputs:
           #    vs2017 here will require the vs2017-era runtime (the package is named vs2015_runtime, but the
           #    version differs)
           - {{ pin_subpackage('vc') }}
+    requirements:
+      build:
+        - m2-sed
+      run:
+        - vswhere
+    test:
+      commands:
+        - if "%WindowsSDKVer%" == "" exit 1
+        - cl.exe
     about:
       summary: Activation and version verification of MSVC {{ vcver }} (VS {{ vsyear }} compiler, update {{ update_version }})
       license: BSD 3-clause
@@ -41,12 +50,15 @@ outputs:
         - |
           *.dll
         - Library/bin/*.dll
+    requirements:
+      build:
+        - vswhere
     about:
       summary: MSVC runtimes associated with cl.exe version {{ cl_version  }} (VS {{ vsyear }} update {{ update_version }})
   - name: vc
     version: {{ vcver }}
     build:
-      number: 4
+      number: 0
       track_features:
         - vc{{ vcver.split(".")[0] }}
     requirements:
