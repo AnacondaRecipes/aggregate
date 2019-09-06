@@ -30,6 +30,7 @@ outputs:
           #    vs2017 here will require the vs2017-era runtime (the package is named vs2015_runtime, but the
           #    version differs)
           - {{ pin_subpackage('vc') }}
+          - {{ pin_subpackage('vs' + runtime_year + '_runtime') }}
     requirements:
       build:
         - m2-sed
@@ -37,7 +38,6 @@ outputs:
         - vswhere
     test:
       commands:
-        - if "%WindowsSDKVer%" == "" exit 1
         - cl.exe
     about:
       summary: Activation and version verification of MSVC {{ vcver }} (VS {{ vsyear }} compiler, update {{ update_version }})
@@ -50,6 +50,9 @@ outputs:
         - |
           *.dll
         - Library/bin/*.dll
+      missing_dso_whitelist:
+        - "*.dll"
+        - "*.DLL"
     requirements:
       build:
         - vswhere
