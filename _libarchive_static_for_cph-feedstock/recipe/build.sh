@@ -1,12 +1,12 @@
 #!/bin/bash
+set -ex
 
 # Build libarchive as a static library with support for the features needed for
 # conda-package-handling (bzip2, zlib, zstd).
 # This is not a general purpose libarchive.
 autoreconf -vfi
 mkdir build-${HOST} && pushd build-${HOST}
-${SRC_DIR}/configure --prefix=${PREFIX}     \
-                     --enable-bsdtar=static \
+../configure --prefix=${PREFIX}     \
                      --enable-static        \
                      --with-bz2lib          \
                      --with-iconv           \
@@ -14,6 +14,7 @@ ${SRC_DIR}/configure --prefix=${PREFIX}     \
                      --with-zstd            \
                      --disable-bsdcat       \
                      --disable-bsdcpio      \
+                     --disable-bsdtar       \
                      --disable-shared       \
                      --without-cng          \
                      --without-expat        \
@@ -24,7 +25,7 @@ ${SRC_DIR}/configure --prefix=${PREFIX}     \
                      --without-openssl      \
                      --without-xml2
 make -j${CPU_COUNT} ${VERBOSE_AT}
-make install
+make install-strip
 popd
 
 # remove the man pages
