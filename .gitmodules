@@ -3710,3 +3710,7 @@
 	path = vswhere-feedstock
 	url = ../vswhere-feedstock
 	branch = master
+[submodule "theano-feedstock"]
+	path = theano-feedstock
+	url = ../theano-feedstock
+	branch = master
