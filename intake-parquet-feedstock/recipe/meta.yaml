@@ -1,0 +1,44 @@
+{% set version = "0.2.2" %}
+{% set name = "intake-parquet" %}
+{% set sha256 = "1d7ff4b87f9eb73caa59aa1f3304bfa762d82293541ff850b90ea281c0c670d2" %}
+
+package:
+   name: {{ name }}
+   version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
+
+requirements:
+  host:
+    - python >=3.5
+    - pip
+  run:
+    - python >=3.5
+    - intake >=0.3
+    - pandas
+    - fastparquet
+    - pyarrow
+    - dask
+    - jinja2
+
+test:
+  imports:
+    - intake_parquet
+
+about:
+  home: https://github.com/ContinuumIO/intake-parquet
+  license: BSD-2-Clause
+  license_file: LICENSE
+  summary: Parquet format plugin for Intake
+
+extra:
+  recipe-maintainers:
+    - martindurant
+

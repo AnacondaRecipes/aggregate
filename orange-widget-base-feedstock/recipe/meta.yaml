@@ -1,0 +1,51 @@
+{% set name = "orange-widget-base" %}
+{% set version = "4.0.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 756f40d0701a3c3c51c00850463a6a5d7a62ac2139a8b1ac397d70791cf718e1
+
+build:
+  noarch: python
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - python >=3.6
+    - pip
+  run:
+    - python >=3.6
+    - matplotlib
+    - pyqtgraph
+    - anyqt
+    - orange-canvas-core
+
+test:
+  imports:
+    - orangewidget.widget
+    - orangewidget.gui
+
+about:
+  home: https://github.com/biolab/orange-widget-base
+  license: GPL-3.0
+  license_family: GPL
+  license_file: LICENSE
+  summary: 'Base Widget for Orange Canvas'
+
+  description: |
+    This project implements the base OWBaseWidget class and utilities for use
+    in Orange Canvas workflows.
+  doc_url: https://orange-widget-base.readthedocs.io/
+  dev_url: https://github.com/biolab/orange-widget-base/
+
+extra:
+  recipe-maintainers:
+    - ales-erjavec
+    - lanzagar
+    - markotoplak
+    - primozgodec

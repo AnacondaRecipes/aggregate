@@ -1,0 +1,50 @@
+{% set version = "0.7.0" %}
+
+package:
+  name: vega_datasets
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/v/vega_datasets/vega_datasets-{{ version }}.tar.gz
+  sha256: 20d490b417f84607eb5079400f608f2e9c135b7092bee10f6857f6d23136e459
+
+build:
+  number: 0
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+
+requirements:
+  build:
+    - python
+    - pip
+  run:
+    - python
+    - pandas
+
+test:
+  imports:
+    - vega_datasets
+    - vega_datasets.tests
+
+about:
+  home: http://github.com/altair-viz/vega_datasets/
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: "A Python package for offline access to Vega datasets"
+  description: |
+    A Python package for offline access to Vega datasets available at
+    https://github.com/vega/vega-datasets.
+    This package has several goals:
+    - Provide straightforward access to the datasets in vega-datasets
+    - return the results in the form of a Pandas dataframe.
+    - wherever dataset size and/or license constraints make it possible,
+      bundle the dataset with the package so that datasets can be loaded in
+      the absence of a web connection.
+  doc_url: http://github.com/altair-viz/vega_datasets/
+  dev_url: http://github.com/altair-viz/vega_datasets/
+
+extra:
+  recipe-maintainers:
+    - jakevdp
+

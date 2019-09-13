@@ -1,0 +1,68 @@
+{% set version = "3.2.0" %}
+
+package:
+  name: altair
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/a/altair/altair-{{ version }}.tar.gz
+  sha256: 9abe13d88a3694857138ac61512c4f873f762f432cf82623eea4700d2a531525
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - entrypoints
+    - jinja2
+    - jsonschema
+    - numpy
+    - pandas
+    - six
+    - toolz
+    - typing >=3.6  # [py<35]
+
+test:
+  source_files:
+    - altair
+  requires:
+    - pytest
+    - sphinx
+    - docutils
+    - vega_datasets
+    - recommonmark
+    - ipython
+  commands:
+    - python -m pytest --pyargs --doctest-modules altair
+  imports:
+    - altair
+    - altair.examples
+    - altair.expr
+    - altair.sphinxext
+    - altair.utils
+    - altair.vega
+    - altair.vega.v4
+    - altair.vega.v4.schema
+    - altair.vega.v5
+    - altair.vega.v5.schema
+    - altair.vegalite
+    - altair.vegalite.v2
+    - altair.vegalite.v2.schema
+    - altair.vegalite.v3
+    - altair.vegalite.v3.schema
+
+about:
+  home: http://altair-viz.github.io
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: 'Altair: A declarative statistical visualization library for Python'
+
+extra:
+  recipe-maintainers:
+    - ellisonbg
+    - jakevdp
