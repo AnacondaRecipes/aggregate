@@ -1,5 +1,3 @@
 #!/bin/bash
 
-$PYTHON setup.py install
-
-rm $SP_DIR/*.egg-info
+MKLROOT=$PREFIX $PYTHON setup.py build --force install --old-and-unmanageable
