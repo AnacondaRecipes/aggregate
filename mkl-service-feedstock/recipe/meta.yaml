@@ -2,8 +2,8 @@
 {% set buildnumber = 0 %}
 
 package:
-    name: mkl-service
-    version: {{ version }}
+  name: mkl-service
+  version: {{ version }}
 
 source:
   url: https://github.com/IntelPython/mkl-service/archive/v{{version}}.tar.gz
