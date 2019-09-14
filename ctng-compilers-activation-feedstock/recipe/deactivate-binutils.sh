@@ -47,8 +47,17 @@ function _tc_activation() {
     to=""
   fi
 
+  work=("$@")
+
+  if [ "${CONDA_BUILD}" = "1" ]; then
+    CONDA_ACTIVATION_SET_HOST=1
+  fi
+  if [ "${CONDA_ACTIVATION_SET_HOST}" = "1" ]; then
+    work+=("${tc_nature},${tc_machine}")
+  fi
+
   for pass in check apply; do
-    for thing in $tc_nature,$tc_machine "$@"; do
+    for thing in "${work[@]}"; do
       case "${thing}" in
         *,*)
           newval=$(echo "${thing}" | sed "s,^[^\,]*\,\(.*\),\1,")
@@ -97,7 +106,8 @@ fi
 
 _tc_activation \
   deactivate host @CHOST@ @CHOST@- \
-  addr2line ar as c++filt elfedit gprof ld ${GOLD_USED} nm objcopy objdump ranlib readelf size strings strip
+  addr2line ar as c++filt elfedit gprof ld ${GOLD_USED} nm objcopy objdump ranlib readelf size strings strip \
+  "CONDA_TOOLCHAIN_HOST,@CHOST@"
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"
