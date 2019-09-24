@@ -1,27 +1,22 @@
-{% set name = "w3lib" %}
-{% set version = "1.20.0" %}
-{% set file_ext = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "e54db912ae1c79d3e246b16d3645bdf701f70ac4f8a2fc46eeb284cc02a31cd7" %}
+{% set version = "1.21.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: w3lib
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ file_ext }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
-  {{ hash_type }}: {{ hash_value }}
+  url: https://pypi.io/packages/source/w/w3lib/w3lib-{{ version }}.tar.gz
+  sha256: 8b1854fef570b5a5fc84d960e025debd110485d73fd283580376104762774315
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   host:
     - python
-    - setuptools
-    - six >=1.4.1
+    - pip
   run:
     - python
     - six >=1.4.1
