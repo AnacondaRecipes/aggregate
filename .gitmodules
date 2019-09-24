@@ -3714,3 +3714,7 @@
 	path = theano-feedstock
 	url = ../theano-feedstock
 	branch = master
+[submodule "bcrypt-feedstock"]
+	path = bcrypt-feedstock
+	url = ../bcrypt-feedstock
+	branch = master
