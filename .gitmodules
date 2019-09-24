@@ -3718,3 +3718,7 @@
 	path = bcrypt-feedstock
 	url = ../bcrypt-feedstock
 	branch = master
+[submodule "typing_extensions-feedstock"]
+	path = typing_extensions-feedstock
+	url = ../typing_extensions-feedstock
+	branch = master
