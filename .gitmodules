@@ -3710,3 +3710,27 @@
 	path = vswhere-feedstock
 	url = ../vswhere-feedstock
 	branch = master
+[submodule "pytest-azurepipelines-feedstock"]
+	path = pytest-azurepipelines-feedstock
+	url = ../pytest-azurepipelines-feedstock
+	branch = master
+[submodule "pyinstaller-feedstock"]
+	path = pyinstaller-feedstock
+	url = ../pyinstaller-feedstock
+	branch = master
+[submodule "conda-standalone-feedstock"]
+	path = conda-standalone-feedstock
+	url = ../conda-standalone-feedstock
+	branch = master
+[submodule "coreutils-feedstock"]
+	path = coreutils-feedstock
+	url = ../coreutils-feedstock
+	branch = master
+[submodule "python-levenshtein-feedstock"]
+	path = python-levenshtein-feedstock
+	url = ../python-levenshtein-feedstock
+	branch = master
+[submodule "numpy-metapackage-feedstock"]
+	path = numpy-metapackage-feedstock
+	url = ../numpy-metapackage-feedstock
+	branch = master
