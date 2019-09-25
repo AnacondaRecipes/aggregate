@@ -1,26 +1,23 @@
 {% set name = "Chameleon" %}
-{% set version = "3.6" %}
-{% set file_ext = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "e57407b39814df20e4ba45aafdaf3b10ae7aef25c250f7f9387894d2b99b8104" %}
+{% set version = "3.6.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ file_ext }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
-  {{ hash_type }}: {{ hash_value }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 9a9e5e068ee323817705a793cc03538677915c3b99c3f8a4ecba42e62d66862b
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - setuptools
@@ -37,7 +34,7 @@ about:
   license: Repoze
   license_url: http://repoze.org/license.html
   license_family: BSD
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE.txt'
+  license_file: LICENSE.txt
   summary: HTML/XML template engine for Python
   description: |
     Chameleon is an HTML/XML template engine for Python designed to generate
