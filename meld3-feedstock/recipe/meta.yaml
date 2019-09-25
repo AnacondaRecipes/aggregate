@@ -1,5 +1,5 @@
 {% set name = "meld3" %}
-{% set version = "1.0.2" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f7b754a0fde7a4429b2ebe49409db240b5699385a572501bb0d5627d299f9558
+  sha256: 1efda676264490db2e30bfb81b27a918cc6d9c2de6d609491aa43410b9537eb9
 
 build:
-  number: 1
+  number: 0
+  noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
 
 requirements:
