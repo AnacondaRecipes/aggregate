@@ -1,5 +1,5 @@
 {% set name = "bandersnatch" %}
-{% set version = "3.2.0" %}
+{% set version = "3.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,21 +7,21 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 81feef8e99bc3b3feb43d37b1d6b1af80f9f45fb69745212053b702a8cd6ff7d
+  sha256: 712fe0c302cd2942ae9b6b48f1e8c1972da7c53c979f202a78ccefce056b73c5
 
 build:
   number: 0
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - bandersnatch=bandersnatch.main:main
-  script: python setup.py install --single-version-externally-managed --record=record.txt
-  skip: True  # [py27]
 
 requirements:
   host:
-    - python
-    - setuptools
+    - python >=3.6
+    - pip
   run:
-    - python
+    - python >=3.6
     - aiohttp
     - filelock
     - packaging
