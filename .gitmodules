@@ -3722,3 +3722,59 @@
 	path = typing_extensions-feedstock
 	url = ../typing_extensions-feedstock
 	branch = master
+[submodule "waf-feedstock"]
+	path = waf-feedstock
+	url = ../waf-feedstock
+	branch = master
+[submodule "rise-feedstock"]
+	path = rise-feedstock
+	url = ../rise-feedstock
+	branch = master
+[submodule "pynndescent-feedstock"]
+	path = pynndescent-feedstock
+	url = ../pynndescent-feedstock
+	branch = master
+[submodule "text-unidecode-feedstock"]
+	path = text-unidecode-feedstock
+	url = ../text-unidecode-feedstock
+	branch = master
+[submodule "mysqlclient-feedstock"]
+	path = mysqlclient-feedstock
+	url = ../mysqlclient-feedstock
+	branch = master
+[submodule "gast-feedstock"]
+	path = gast-feedstock
+	url = ../gast-feedstock
+	branch = master
+[submodule "waitress-feedstock"]
+	path = waitress-feedstock
+	url = ../waitress-feedstock
+	branch = master
+[submodule "datrie-feedstock"]
+	path = datrie-feedstock
+	url = ../datrie-feedstock
+	branch = master
+[submodule "pomegranate-feedstock"]
+	path = pomegranate-feedstock
+	url = ../pomegranate-feedstock
+	branch = master
+[submodule "ecos-feedstock"]
+	path = ecos-feedstock
+	url = ../ecos-feedstock
+	branch = master
+[submodule "cx_oracle-feedstock"]
+	path = cx_oracle-feedstock
+	url = ../cx_oracle-feedstock
+	branch = master
+[submodule "quandl-feedstock"]
+	path = quandl-feedstock
+	url = ../quandl-feedstock
+	branch = master
+[submodule "dis3-feedstock"]
+	path = dis3-feedstock
+	url = ../dis3-feedstock
+	branch = master
+[submodule "lightgbm-feedstock"]
+	path = lightgbm-feedstock
+	url = ../lightgbm-feedstock
+	branch = master
