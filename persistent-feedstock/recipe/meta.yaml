@@ -1,5 +1,5 @@
 {% set name = "persistent" %}
-{% set version = "4.4.3" %}
+{% set version = "4.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6765eab176cde56a492666952b97eaaa79742e5e6fc17efcd1b6d0be9d471116
+  sha256: c97ceb2620eecd57730da6ee7ad3ee2295ed7516a24423a17f34e65103de8b6a
 
 build:
   number: 0
@@ -21,9 +21,11 @@ requirements:
     - python
     - setuptools
     - zope.interface
+    - cffi
   run:
     - python
     - zope.interface
+    - cffi
 
 test:
   imports:
