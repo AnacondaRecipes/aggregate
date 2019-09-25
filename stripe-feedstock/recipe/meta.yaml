@@ -1,29 +1,26 @@
 {% set name = "stripe" %}
-{% set version = "2.21.0" %}
-{% set file_ext = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "170f76f2502888debf02da580138c840497b9359876ca3838f4692f2f02c9110" %}
+{% set version = "2.36.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ file_ext }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
-  {{ hash_type }}: {{ hash_value }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: f5b27b45bb5d7fe8c7e524a2bd4372fbf32e5e2d42aafa8e84802801faff28d2
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - python
-    - setuptools
+    - pip
   run:
     - python
-    - requests >=2
+    - requests >=2.20
 
 test:
   imports:
