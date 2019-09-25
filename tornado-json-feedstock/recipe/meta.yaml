@@ -1,5 +1,5 @@
 {% set name = "tornado-json" %}
-{% set version = "1.3.3" %}
+{% set version = "1.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/hfaran/Tornado-JSON/archive/{{ version }}.tar.gz
-  sha256: b41cf553680aa4b235d93c7ea1358732a5ea9b0444d129ce7a7793057389684b
+  sha256: 295898576b83d48bd049f5457ed265d4b8a05f5ec05a9df442d54b9229b1a7e0
 
 build:
   number: 0
@@ -19,14 +19,12 @@ requirements:
     - pip
   run:
     - python
-    - jsonschema >=2.3.0
-    - tornado >=3.2.2
+    - jsonschema >=2.3.0,<3.0
+    - tornado >=3.2.2,<6.0
 
 test:
   imports:
     - tornado_json
-  requires:
-    - pytest
 
 about:
   home: https://github.com/hfaran/Tornado-JSON
