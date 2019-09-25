@@ -1,29 +1,28 @@
 {% set name = "chainer" %}
-{% set version = "5.3.0" %}
-{% set file_ext = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "4d462d7d14ef86dec485ce1481b019e5d9b124fa720db38eed947361f0dcb827" %}
+{% set version = "6.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ file_ext }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
-  {{ hash_type }}: {{ hash_value }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: aef20f87edc2074474bcee119a42075655e7ba96bb311c0873e11de286a26c8b
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - setuptools
+    - typing
+    - typing_extensions
     - filelock
     - numpy >=1.9.0
     - protobuf >=3.0.0
@@ -72,8 +71,7 @@ about:
   home: https://chainer.org/
   license: MIT License
   license_family: MIT
-  # https://github.com/chainer/chainer/issues/3966
-  # license_file: ''
+  license_file: LICENSE
   summary: A flexible framework of neural networks
   description: |
     Chainer is a Python-based deep learning framework aiming at flexibility.
