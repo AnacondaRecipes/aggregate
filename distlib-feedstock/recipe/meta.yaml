@@ -1,23 +1,22 @@
 {% set name = "distlib" %}
-{% set version = "0.2.8" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "57977cd7d9ea27986ec62f425630e4ddb42efe651ff80bc58ed8dbc3c7c21f19" %}
+{% set version = "0.2.9" %}
 
 package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  '{{ hash_type }}': '{{ hash_value }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.post0.zip
+  sha256: ecb3d0e4f71d0fa7f38db6bcc276c7c9a1c6638a516d726495934a553eb3fbe0
 
 build:
   number: 0
-  script: 'python setup.py install '
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - python
+    - pip
   run:
     - python
 
@@ -30,11 +29,9 @@ about:
   home: https://bitbucket.org/pypa/distlib
   license: Python Software Foundation License
   license_family: OTHER
-  license_file: ''
+  license_file: LICENSE.txt
   summary: Distribution utilities
   description: Low-level components of distutils2/packaging, augmented with higher-level APIs for making packaging easier.
-  doc_url: ''
-  dev_url: ''
 
 extra:
   recipe-maintainers:
