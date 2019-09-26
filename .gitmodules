@@ -3778,3 +3778,11 @@
 	path = lightgbm-feedstock
 	url = ../lightgbm-feedstock
 	branch = master
+[submodule "portalocker-feedstock"]
+	path = portalocker-feedstock
+	url = ../portalocker-feedstock
+	branch = master
+[submodule "certipy-feedstock"]
+	path = certipy-feedstock
+	url = ../certipy-feedstock
+	branch = master
