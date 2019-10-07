@@ -3786,3 +3786,8 @@
 	path = certipy-feedstock
 	url = ../certipy-feedstock
 	branch = master
+[submodule "libxkbcommon-feedstock"]
+	path = libxkbcommon-feedstock
+	url = ../libxkbcommon-feedstock
+	branch = master
+
