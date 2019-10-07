@@ -3790,4 +3790,11 @@
 	path = libxkbcommon-feedstock
 	url = ../libxkbcommon-feedstock
 	branch = master
-
+[submodule "nspr-feedstock"]
+	path = nspr-feedstock
+	url = ../nspr-feedstock
+	branch = master
+[submodule "nss-feedstock"]
+	path = nss-feedstock
+	url = ../nss-feedstock
+	branch = master
