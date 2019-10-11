@@ -3798,3 +3798,7 @@
 	path = nss-feedstock
 	url = ../nss-feedstock
 	branch = master
+[submodule "opt_einsum-feedstock"]
+	path = opt_einsum-feedstock
+	url = ../opt_einsum-feedstock
+	branch = master
