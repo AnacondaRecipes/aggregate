@@ -1,4 +1,4 @@
-{% set version = '11.0.1' %}
+{% set version = '11.0.2' %}
 {% set name = 'ripgrep' %}
 
 package:
@@ -12,9 +12,10 @@ build:
   script:
     - set RUST_BACKTRACE=1  # [win]
     - cargo build --release -v
-    - $STRIP target/release/{{ name }}  # [not win]
-    - cp target/release/rg $PREFIX/bin/rg  # [not win]
+    - $STRIP target/release/rg  # [not win]
+    - mkdir $PREFIX/bin  # [not win]
     - mkdir %PREFIX%\Library\mingw-w64\bin  # [win]
+    - cp target/release/rg $PREFIX/bin/rg  # [not win]
     - copy target\release\rg.exe %PREFIX%\Library\mingw-w64\bin\rg.exe  # [win]
   missing_dso_whitelist:
     - /usr/lib/libresolv.9.dylib

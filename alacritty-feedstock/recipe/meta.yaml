@@ -1,4 +1,4 @@
-{% set version = '0.3.2' %}
+{% set version = '0.3.3' %}
 {% set name = 'alacritty' %}
 
 package:
@@ -14,8 +14,10 @@ build:
     - set RUST_BACKTRACE=1  # [win]
     - cargo build --release -v
     - $STRIP target/release/alacritty  # [not win]
+    - mkdir $PREFIX/bin  # [not win]
+    - mkdir %PREFIX%\bin  # [win]
     - cp target/release/alacritty $PREFIX/bin  # [not win]
-    - copy target\release\alacritty %PREFIX%\bin  # [not win]
+    - copy target\release\alacritty %PREFIX%\bin  # [win]
   missing_dso_whitelist:
     - /usr/lib/libresolv.9.dylib
 
@@ -28,3 +30,18 @@ requirements:
   host:
     - freetype    # [linux]
     - expat       # [linux]
+
+about:
+  home: https://github.com/jwilm/alacritty
+  license: APACHE-2.0
+  license_family: APACHE
+  license_file: LICENSE-APACHE
+  summary: Alacritty is the fastest terminal emulator in existence
+  doc_url: https://github.com/jwilm/alacritty
+  dev_url: https://github.com/jwilm/alacritty
+
+extra:
+  recipe-maintainers:
+    - mingwandroid
+
+

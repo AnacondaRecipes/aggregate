@@ -3802,3 +3802,11 @@
 	path = opt_einsum-feedstock
 	url = ../opt_einsum-feedstock
 	branch = master
+[submodule "gn-feedstock"]
+	path = gn-feedstock
+	url = ../gn-feedstock
+	branch = master
+[submodule "bash-feedstock"]
+	path = bash-feedstock
+	url = ../bash-feedstock
+	branch = master

@@ -1,4 +1,4 @@
-{% set version = "1.35.0" %}
+{% set version = "1.38.0" %}
 
 package:
   name: rust_{{ target_platform }}-suite
@@ -19,9 +19,14 @@ outputs:
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
     test:
+      files:
+        - forge_test.sh
       commands:
         - rustc --help
         - cargo --help
+        - time bash ./forge_test.sh  # [not win]
+        - bash forge_test.sh  # [win]
+
   - name: rust-gnu_{{ target_platform }}  # [win]
     script: bld.bat  # [win]
     build:  # [win]
@@ -29,10 +34,12 @@ outputs:
       run:  # [win]
         - rust-gnu  # [win]
         - m2w64-toolchain  # [win]
-    test:
-      commands:
-        - rustc --help
-        - cargo --help
+    test:  # [win]
+        files:  # [win]
+        - forge_test.sh  # [win]
+      commands:  # [win]
+        - rustc --help  # [win]
+        - cargo --help  # [win]
 
 about:
   home: https://www.rust-lang.org
