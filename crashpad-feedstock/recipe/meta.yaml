@@ -1,0 +1,36 @@
+# As there are no releases in GN, we build the latest tag from time to time.
+# The version is the time of the latest master commit in YYYYMMDDHHMMSS
+# notation.
+
+{% set name = "crashpad" %}
+{% set version = "0.0.20191012235522" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  - git_url: https://chromium.googlesource.com/crashpad/crashpad
+    git_rev: d8f85829b07bd807336684a6b2034643af39cbb6
+  - git_url: https://github.com/ungoogled-software/ungoogled-chromium-archlinux.git
+    git_rev: master
+    folder: ungoogled-chromium-archlinux
+  # Only for (and we may as well import it directly into the recipe!)
+  # https://chromium.googlesource.com/chromium/src/+/lkgr/build/linux/unbundle/replace_gn_files.py?format=TEXT
+  # - git_url: https://chromium.googlesource.com/chromium/src
+  #   folder: chromium
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - bash  # [osx-64]
+    - depot_tools
+    - git
+    - gn
+    - ninja
+  # In host as a dependency hack until we have new compilers for macOS.
+  host:
+    - clang-tools
