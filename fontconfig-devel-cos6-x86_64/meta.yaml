@@ -11,7 +11,7 @@ source:
     folder: source
 
 build:
-  number: 0
+  number: 1
   noarch: generic
   missing_dso_whitelist:
     - '*'
@@ -22,7 +22,7 @@ requirements:
     - freetype-devel-cos6-x86_64 >=2.1.4
   host:
     - fontconfig-cos6-x86_64 ==2.8.0
-  - name: fontconfig-devel-cos6-x86_64
+    - freetype-devel-cos6-x86_64 >=2.1.4
   run:
     - fontconfig-cos6-x86_64 ==2.8.0
     - freetype-devel-cos6-x86_64 >=2.1.4
