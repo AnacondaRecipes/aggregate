@@ -1,0 +1,40 @@
+package:
+  name: libxml2-devel-cos6-x86_64
+  version: 2.7.6
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libxml2-devel-2.7.6-21.el6_8.1.x86_64.rpm
+    sha256: 0eaf1b49a15187f19b9ecf1d54877f00f72b25b73c76154225e4029f4136e64c
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libxml2-2.7.6-21.el6_8.1.src.rpm
+    folder: source
+
+build:
+  number: 0
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libxml2-cos6-x86_64 ==2.7.6
+  host:
+    - libxml2-cos6-x86_64 ==2.7.6
+  run:
+    - libxml2-cos6-x86_64 ==2.7.6
+
+about:
+  home: http://xmlsoft.org/
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Libraries, includes, etc. to develop XML and HTML applications"
+  description: |
+        Libraries, include files, etc you can use to develop XML applications. This
+        library allows to manipulate XML files. It includes support to read, modify
+        and write XML and HTML files. There is DTDs support this includes parsing and
+        validation even with complex DtDs, either at parse time or later once the
+        document has been modified. The output can be a simple SAX stream or and in-
+        memory DOM like representations. In this case one can use the built-in XPath
+        and XPointer implementation to select subnodes or ranges. A flexible
+        Input/Output mechanism is available, with existing HTTP and FTP modules and
+        combined to an URI library.

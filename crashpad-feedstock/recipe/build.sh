@@ -32,7 +32,12 @@ python ${RECIPE_DIR}/replace_gn_files.py \
   --system-libraries "${!_system_libs[@]}"
 
 git checkout -B master
+echo "LIZZY0 gsclient"
 find ${BUILD_PREFIX}/depot_tools | grep gclient
+echo "LIZZY0 gsutil"
+find ${BUILD_PREFIX}/depot_tools | grep gsutil
+# Trying suggestion from: https://groups.google.com/a/chromium.org/forum/#!topic/chromium-dev/c6FpB-fIlOk
+echo> ${BUILD_PREFIX}/depot_tools/gsutil.vpython
 git pull -r
 
 echo "LIZZY1"

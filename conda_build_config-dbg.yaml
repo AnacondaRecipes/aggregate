@@ -44,8 +44,9 @@ m2w64_fortran_compiler:        # [win]
   - m2w64-toolchain            # [win]
 rust_compiler:
   - rust
+  - rust-gnu                   # [win]
 rust_compiler_version:
-  - 1.32.0
+  - 1.38.0
 CONDA_BUILD_SYSROOT:
   - /opt/MacOSX10.10.sdk        # [osx]
 VERBOSE_AT:
@@ -60,6 +61,7 @@ ctng_binutils:
   - 2.31.1
 ctng_duma:
   - 2.5.15
+
 ctng_gcc:
   - 7.3.0
   - 8.2.0
@@ -69,8 +71,9 @@ ctng_gcc_build_number:
   - 2
 # keep zip_keys in mind - these are coupled with a specific gcc version in the ctng_gcc above
 ctng_gcc_activation_build_num:
-  - 6
-  - 3
+  - 8
+  - 4
+
 ctng_gmp:
   - 6.1.2
 ctng_isl:
@@ -93,6 +96,8 @@ cxx_compiler_version:      # [linux]
   - 7.3.0                  # [linux]
 fortran_compiler_version:  # [linux]
   - 7.3.0                  # [linux]
+clang_variant:
+  - clang
 cyrus_sasl:
   - 2.1.26
 dbus:
@@ -160,6 +165,8 @@ libxml2:
   - 2.9
 libxslt:
   - 1.1
+llvm_variant:
+  - llvm
 lzo:
   - 2
 macos_min_version:
@@ -187,7 +194,7 @@ openjpeg:
   - 2.3
 openssl:
   - 1.1.1
-  # vs2008 precludes us from newer qt, and we haven't been able to build qt 5.6 with openssl 1.1.1 yet
+  # vs2008 precludes us from newer qt, and we haven't been able to build newer qt with openssl 1.1.1 yet
   - 1.0.2   # [win and py27]
 perl:
   - 5.26

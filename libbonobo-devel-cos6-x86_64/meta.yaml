@@ -1,0 +1,35 @@
+package:
+  name: libbonobo-devel-cos6-x86_64
+  version: 2.24.2
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libbonobo-devel-2.24.2-5.el6.x86_64.rpm
+    sha256: 95a12e113b8ac8f7a502093d5f5c28de8f5a47783a05c2e128901f2d26303004
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libbonobo-2.24.2-5.el6.src.rpm
+    folder: source
+
+build:
+  number: 0
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - orbit2-devel-cos6-x86_64 >=2.7.5
+    - libbonobo-cos6-x86_64 ==2.24.2
+    - libxml2-devel-cos6-x86_64 >=2.4.21
+  run:
+    - orbit2-devel-cos6-x86_64 >=2.7.5
+    - libbonobo-cos6-x86_64 ==2.24.2
+    - libxml2-devel-cos6-x86_64 >=2.4.21
+
+about:
+  home: http://ftp.gnome.org
+  license: GPLv2+ and LGPLv2+
+  license_family: GPL2
+  summary: "(CDT) Libraries and headers for libbonobo"
+  description: |
+        Bonobo is a component system based on CORBA, used by the GNOME desktop.  This
+        package contains header files used to compile programs that use Bonobo.
