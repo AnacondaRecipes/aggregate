@@ -5,18 +5,24 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libXtst-devel-1.2.3-1.el6.x86_64.rpm
     sha256: e5506db9d01d1eacb6181e8a87b0fa10b7c18e336e2ac1eee33fae8edc4d19d1
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libXtst-1.2.3-1.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'
 
-
+requirements:
+  build:
+    - libxtst-cos6-x86_64 ==1.2.3
+  host:
+    - libxtst-cos6-x86_64 ==1.2.3
+  run:
+    - libxtst-cos6-x86_64 ==1.2.3
 
 about:
   home: http://www.x.org

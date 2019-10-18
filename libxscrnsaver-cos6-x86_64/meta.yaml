@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libXScrnSaver-1.2.2-2.el6.x86_64.rpm
     sha256: 81b34282c3bca2f38f8ee7cf64a15c8516be0df608b144fa1efbeffd28b578e4
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libXScrnSaver-1.2.2-2.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libXdamage-1.1.3-4.el6.x86_64.rpm
     sha256: 34b28487164c8b2d75638d595011948831be35197bc868f23b1cda8cca690db9
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libXdamage-1.1.3-4.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

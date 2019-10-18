@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/pam-devel-1.1.1-24.el6.x86_64.rpm
     sha256: e79d2690e197ac1ab0bfd9e59395509390316f7aa42ae5174838d293ec613ecc
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/pam-1.1.1-24.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

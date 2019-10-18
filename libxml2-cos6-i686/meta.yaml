@@ -1,0 +1,34 @@
+package:
+  name: libxml2-cos6-i686
+  version: 2.7.6
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libxml2-2.7.6-21.el6_8.1.i686.rpm
+    sha256: 56558f0128bbf150cf6d7a1c1ef3ce09564150a1e7cbc9680e4d6e3684b5888d
+    no_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libxml2-2.7.6-21.el6_8.1.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://xmlsoft.org/
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Library providing XML and HTML support"
+  description: |
+        This library allows to manipulate XML files. It includes support to read,
+        modify and write XML and HTML files. There is DTDs support this includes
+        parsing and validation even with complex DtDs, either at parse time or later
+        once the document has been modified. The output can be a simple SAX stream or
+        and in-memory DOM like representations. In this case one can use the built-in
+        XPath and XPointer implementation to select subnodes or ranges. A flexible
+        Input/Output mechanism is available, with existing HTTP and FTP modules and
+        combined to an URI library.

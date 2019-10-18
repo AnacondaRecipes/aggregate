@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libselinux-devel-2.0.94-7.el6.x86_64.rpm
     sha256: d1700bab7dff967f45f82635480572bad973cd3982cf561a57e730adefaebc13
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libselinux-2.0.94-7.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

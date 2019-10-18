@@ -5,18 +5,25 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/at-spi-1.28.1-2.el6.centos.x86_64.rpm
     sha256: fd951cd7fd7bd1533b2c1f5d16c213d0406a5edbddf49e1405650a946998a9fa
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/at-spi-1.28.1-2.el6.centos.src.rpm
     folder: source
 
 build:
-  number: 0
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'
 
 requirements:
   build:
+    - orbit2-cos6-x86_64 >=2.6.0
+    - atk-cos6-x86_64 >=1.13.0
+    - gtk2-cos6-x86_64 >=2.24.23
+    - gtk2-cos6-x86_64 >=2.10.0
+    - libbonobo-cos6-x86_64 >=2.4.0
+  host:
     - orbit2-cos6-x86_64 >=2.6.0
     - atk-cos6-x86_64 >=1.13.0
     - gtk2-cos6-x86_64 >=2.24.23

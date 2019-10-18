@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/gdk-pixbuf2-2.24.1-6.el6_7.i686.rpm
     sha256: 07b16ceca0ae64ba2f21b9fb2e87ecd4aeecec4fc603ef8294f89afc66480bcd
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/gdk-pixbuf2-2.24.1-6.el6_7.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

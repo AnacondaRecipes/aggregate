@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/expat-devel-2.0.1-13.el6_8.i686.rpm
     sha256: 0134a37522bc833ca427003ae54bd250ff2cdc017e2e8e5e5e263943b27ede53
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/expat-2.0.1-13.el6_8.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

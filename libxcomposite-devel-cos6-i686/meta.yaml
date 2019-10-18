@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libXcomposite-devel-0.4.3-4.el6.i686.rpm
     sha256: 0969df06915238788afa53da50325d6753b7095443738f7c083f4fcb2f06d851
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libXcomposite-0.4.3-4.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

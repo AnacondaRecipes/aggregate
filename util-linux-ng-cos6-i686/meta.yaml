@@ -1,0 +1,44 @@
+package:
+  name: util-linux-ng-cos6-i686
+  version: 2.17.2
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/util-linux-ng-2.17.2-12.28.el6_9.2.i686.rpm
+    sha256: 7bf41e121d136ed0033198719c36c2227350f06b88178ae66f5dac01e63cd19e
+    no_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/util-linux-ng-2.17.2-12.28.el6_9.2.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - audit-libs-cos6-i686 >=1.0.6
+    - libblkid-cos6-i686 ==2.17.2
+    - libuuid-cos6-i686 ==2.17.2
+    - pam-cos6-i686 >=1.0.90
+  host:
+    - audit-libs-cos6-i686 >=1.0.6
+    - libblkid-cos6-i686 ==2.17.2
+    - libuuid-cos6-i686 ==2.17.2
+    - pam-cos6-i686 >=1.0.90
+  run:
+    - audit-libs-cos6-i686 >=1.0.6
+    - libblkid-cos6-i686 ==2.17.2
+    - libuuid-cos6-i686 ==2.17.2
+    - pam-cos6-i686 >=1.0.90
+
+about:
+  home: ftp://ftp.kernel.org/pub/linux/utils/util-linux-ng
+  license: GPLv1+ and GPLv2 and GPLv2+ and LGPLv2+ and MIT and BSD with advertising and Public Domain
+  license_family: GPL2
+  summary: "(CDT) A collection of basic system utilities"
+  description: |
+        The util-linux-ng package contains a large variety of low-level system
+        utilities that are necessary for a Linux system to function. Among others,
+        Util-linux contains the fdisk configuration tool and the login program.

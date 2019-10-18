@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libgcj-4.4.7-23.el6.i686.rpm
     sha256: ada99cb308d19e34293702a0f9d274e9fdca559b442766568c3e148797f873cc
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/gcc-4.4.7-23.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

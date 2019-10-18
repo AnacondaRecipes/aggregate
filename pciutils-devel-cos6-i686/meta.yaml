@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/pciutils-devel-3.1.10-4.el6.i686.rpm
     sha256: e289369aed3aa5f7c5bcb4c6f2506368f70ba95e72d848923e436545529f9ff3
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/pciutils-3.1.10-4.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

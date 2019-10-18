@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/gettext-0.17-18.el6.i686.rpm
     sha256: feac49f46cc856c121380a8fb0843c6ef38deb22a2020e8bd6e2bf641b92a64a
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/gettext-0.17-18.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

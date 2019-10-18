@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libgcrypt-1.4.5-12.el6_8.i686.rpm
     sha256: 12f569a66c65aedcf6899fdc85fd4a7ece9179735863e8863c3819b03b901faf
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libgcrypt-1.4.5-12.el6_8.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

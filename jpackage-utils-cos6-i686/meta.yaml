@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/jpackage-utils-1.7.5-3.16.el6.noarch.rpm
     sha256: 6e11b3db12e4fcbf850b6d67d0a3f8328b7e9968085275b0a5f43ff8715e87e3
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/jpackage-utils-1.7.5-3.16.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

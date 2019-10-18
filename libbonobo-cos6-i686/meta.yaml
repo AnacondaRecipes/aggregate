@@ -1,0 +1,27 @@
+package:
+  name: libbonobo-cos6-i686
+  version: 2.24.2
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libbonobo-2.24.2-5.el6.i686.rpm
+    sha256: 69d80cf1a0b7ed68f23595cf8fdaa406fb9292cc8f80fbc6d8d4e5614a741b62
+    no_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libbonobo-2.24.2-5.el6.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://ftp.gnome.org
+  license: GPLv2+ and LGPLv2+
+  license_family: GPL2
+  summary: "(CDT) Bonobo component system"
+  description: |
+        Bonobo is a component system based on CORBA, used by the GNOME desktop.

@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/cracklib-2.8.16-4.el6.i686.rpm
     sha256: aa3e9ac361e4f759d54d787d9e66b9e11958674b04d6c839795c1f80f0cc1e0a
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/cracklib-2.8.16-4.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

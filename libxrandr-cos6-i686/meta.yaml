@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libXrandr-1.5.1-1.el6.i686.rpm
     sha256: d01413a208b19e47d419dc86e3e0730f5fa2a9379d2f5452ee7ad2dcae207f7a
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libXrandr-1.5.1-1.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

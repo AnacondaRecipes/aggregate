@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libXfixes-5.0.3-1.el6.i686.rpm
     sha256: 5da33bafc8cad666725f82b7262a140d90f74e4666ca412599b5005a78935f8a
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libXfixes-5.0.3-1.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

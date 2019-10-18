@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/webkitgtk-devel-1.4.3-9.el6_6.i686.rpm
     sha256: 665e029c670bc3b54b66608ba6f49de7280c29014d5c433a0e562be0abce26ff
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/webkitgtk-1.4.3-9.el6_6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

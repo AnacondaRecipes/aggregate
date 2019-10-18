@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/p11-kit-trust-0.18.5-2.el6_5.2.i686.rpm
     sha256: 14a9fcb6d4fd540640c404c45b7a53e2514c21a6552b0b1d79b53518e9444512
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/p11-kit-0.18.5-2.el6_5.2.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

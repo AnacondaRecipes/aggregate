@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/fontconfig-2.8.0-5.el6.i686.rpm
     sha256: 09cee79c086775d03e0219dc92d82f2803d6936bfe44f0c71f4ff7c33918d4f8
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/fontconfig-2.8.0-5.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

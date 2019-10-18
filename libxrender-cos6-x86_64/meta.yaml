@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libXrender-0.9.10-1.el6.x86_64.rpm
     sha256: 074491b6365454a498783a6413623f62d6f7d505b78d19ddcd57b322d2fe5e80
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libXrender-0.9.10-1.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

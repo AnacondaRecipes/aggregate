@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/mesa-dri1-drivers-7.11-8.el6.i686.rpm
     sha256: da5e429635f9f1274e4f2fe97ce0575aa8181f2a4f530b97f40241e2db227210
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/mesa-dri1-drivers-7.11-8.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

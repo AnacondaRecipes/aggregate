@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/cups-devel-1.4.2-79.el6.i686.rpm
     sha256: 816008cfe3b5c45b65db9cd12beed808b5efec8cc972dd59d36341271bf2aad6
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/cups-1.4.2-79.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libcom_err-1.41.12-24.el6.i686.rpm
     sha256: 32a5b58a643815b01ca6c00ff4e662f7090155de39d449e1756559de742d1b8a
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/e2fsprogs-1.41.12-24.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

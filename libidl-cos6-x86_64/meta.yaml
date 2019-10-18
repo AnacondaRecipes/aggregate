@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libIDL-0.8.13-2.1.el6.x86_64.rpm
     sha256: a2867caa10223cebd5091bd0bbfb8d564494f50be795848cbb282ad69e2536c8
-    folder: binary
     no_hoist: true
+    folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libIDL-0.8.13-2.1.el6.src.rpm
     folder: source
 
 build:
-  number: 0
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

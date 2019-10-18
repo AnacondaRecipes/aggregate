@@ -5,12 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libxml2-2.7.6-21.el6_8.1.x86_64.rpm
     sha256: ff0ee13d07fcec255c1787a03ba982346e7e79dd03112649707eba3154858e14
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libxml2-2.7.6-21.el6_8.1.src.rpm
     folder: source
 
 build:
-  number: 0
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

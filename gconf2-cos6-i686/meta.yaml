@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/GConf2-2.28.0-7.el6.i686.rpm
     sha256: adf30ff8d367c6535ca4b47d31390dc4990c341757d83aaa48fd25bc72889207
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/GConf2-2.28.0-7.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

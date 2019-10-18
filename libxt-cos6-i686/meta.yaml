@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libXt-1.1.4-6.1.el6.i686.rpm
     sha256: 35c4d59eb703f93ee0ca1ee0019e38dba549228856fe5ead1c12e299f5a7171e
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libXt-1.1.4-6.1.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

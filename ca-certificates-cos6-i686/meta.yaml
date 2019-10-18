@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/ca-certificates-2018.2.22-65.1.el6.noarch.rpm
     sha256: ce273390bdd5b7d7e0f561979fac693832b043f92cc0e60d777b00ae21ca87e2
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/ca-certificates-2018.2.22-65.1.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

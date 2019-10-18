@@ -1,0 +1,30 @@
+package:
+  name: kernel-headers-cos6-i686
+  version: 2.6.32
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/kernel-headers-2.6.32-754.el6.i686.rpm
+    sha256: c0534ee8d7905c4fdf7e15f0337d711f93f04a9e4bbbaf596211aebcd36f6029
+    no_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/kernel-2.6.32-754.el6.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.kernel.org/
+  license: GPLv2
+  license_family: GPL2
+  summary: "(CDT) Header files for the Linux kernel for use by glibc"
+  description: |
+        Kernel-headers includes the C header files that specify the interface between
+        the Linux kernel and userspace libraries and programs.  The header files
+        define structures and constants that are needed for building most standard
+        programs and are also needed for rebuilding the glibc package.

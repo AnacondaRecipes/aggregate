@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/gtkmm24-devel-2.18.2-1.el6.x86_64.rpm
     sha256: 198d4475254ff9e36dc901164c677c97c74526e545cadbe8e6c0609d8c0c116c
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/gtkmm24-2.18.2-1.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

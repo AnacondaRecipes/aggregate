@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/glib2-2.28.8-10.el6.x86_64.rpm
     sha256: a3945f3e6ee7c6fc8dd11a4f39641a8df6af818198e0a45a1f73f4753f6bd34c
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/glib2-2.28.8-10.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

@@ -1,0 +1,28 @@
+package:
+  name: libidl-cos6-i686
+  version: 0.8.13
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libIDL-0.8.13-2.1.el6.i686.rpm
+    sha256: f251cea7e7e1824fab236ca00211206a33a2982a79c822649511998cc314077c
+    no_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libIDL-0.8.13-2.1.el6.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: 
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) Library for parsing IDL (Interface Definition Language)"
+  description: |
+        libIDL is a library for parsing IDL (Interface Definition Language). It can be
+        used for both COM-style and CORBA-style IDL.

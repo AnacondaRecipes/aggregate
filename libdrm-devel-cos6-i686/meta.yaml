@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libdrm-devel-2.4.65-2.el6.i686.rpm
     sha256: 52c6cf3272e33d826b11d8cd3bf295d855f7ab24c6ec3d25a6663ee245d6c027
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libdrm-2.4.65-2.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

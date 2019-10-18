@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/gperf-3.0.3-9.1.el6.x86_64.rpm
     sha256: 00b53e5e4b0b00aeae5f970b50b4f3f17f645664774fcfa4410e183bbc840e4a
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/gperf-3.0.3-9.1.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

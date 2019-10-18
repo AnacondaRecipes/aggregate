@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/krb5-libs-1.10.3-65.el6.i686.rpm
     sha256: 67ffd672874d6091333f098402991c7900d3e5c94aa435101d04ba1222e85e69
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/krb5-1.10.3-65.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

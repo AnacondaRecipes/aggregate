@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/db4-cxx-4.7.25-22.el6.i686.rpm
     sha256: e96f90bf918e1dad91f28f8f6e13a294b5112e9fea0d416961020be21a67f153
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/db4-4.7.25-22.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

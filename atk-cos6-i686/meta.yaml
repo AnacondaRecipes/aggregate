@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/atk-1.30.0-1.el6.i686.rpm
     sha256: 1fb6cdc8bdeaab448dc07d6c326fe402e3170e7b4e9fff84de45c6fc9aeee216
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/atk-1.30.0-1.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/java-1.7.0-openjdk-devel-1.7.0.181-2.6.14.10.el6.x86_64.rpm
     sha256: e15d8d284390950e2248922e7763bd14199dd48d95d5aee6485b96f02ee6ce0f
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/java-1.7.0-openjdk-1.7.0.181-2.6.14.10.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

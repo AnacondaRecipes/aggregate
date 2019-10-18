@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/gnutls-2.12.23-22.el6.i686.rpm
     sha256: 98a8d4ee4f094aea78f036e9356349a79b0d0a64f7e08268717e20f2963ee454
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/gnutls-2.12.23-22.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

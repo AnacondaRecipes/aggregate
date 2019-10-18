@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/xorg-x11-server-Xvfb-1.17.4-17.el6.centos.x86_64.rpm
     sha256: a19ef575f929cea75abf984d92fd5cc77e77e9b8525904b2f979c2cc89cd2c92
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/xorg-x11-server-1.17.4-17.el6.centos.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

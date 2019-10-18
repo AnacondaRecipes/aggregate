@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/ruby-1.8.7.374-5.el6.i686.rpm
     sha256: 81ca470126fe6ccb92f3de8d095ab0bd7b35424c865ce8ef4cea2333fce3a5a8
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/ruby-1.8.7.374-5.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

@@ -1,0 +1,30 @@
+package:
+  name: kernel-headers-cos6-x86_64
+  version: 2.6.32
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/kernel-headers-2.6.32-754.el6.x86_64.rpm
+    sha256: 93b20d547637e3d25a9604b8034334afa910f61898da0f265a3969a68bf8cc6d
+    no_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/kernel-2.6.32-754.el6.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.kernel.org/
+  license: GPLv2
+  license_family: GPL2
+  summary: "(CDT) Header files for the Linux kernel for use by glibc"
+  description: |
+        Kernel-headers includes the C header files that specify the interface between
+        the Linux kernel and userspace libraries and programs.  The header files
+        define structures and constants that are needed for building most standard
+        programs and are also needed for rebuilding the glibc package.

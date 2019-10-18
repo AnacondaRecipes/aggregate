@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/ORBit2-2.14.17-7.el6.i686.rpm
     sha256: 980ab5b544be71a9b57c395bd8965aced76c8d2140bc84c754dc1d8a7c5967ae
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/ORBit2-2.14.17-7.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

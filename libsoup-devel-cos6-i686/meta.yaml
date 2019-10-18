@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libsoup-devel-2.34.3-5.el6.i686.rpm
     sha256: 7d39b55f04294b1e8755be8f7b8c5ae5810d9d06675d627b4da2f1faa4443af4
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libsoup-2.34.3-5.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

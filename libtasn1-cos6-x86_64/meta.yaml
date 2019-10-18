@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libtasn1-2.3-6.el6_5.x86_64.rpm
     sha256: ee516dac9b0d36fbee5f77e443be13a7e4ca60c3f3105bdc50e112c7ae834780
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libtasn1-2.3-6.el6_5.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

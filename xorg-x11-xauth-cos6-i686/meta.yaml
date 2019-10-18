@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/xorg-x11-xauth-1.0.9-1.el6.i686.rpm
     sha256: 31ee7ec6dcd051b0a97d80a35792e6ed7901686a5307596bb008839e37a10a1e
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/xorg-x11-xauth-1.0.9-1.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

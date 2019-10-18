@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/pkgconfig-0.23-9.1.el6.i686.rpm
     sha256: 1428c92c2143cc2980352e543387f2ee0ba4fcbb2d17b848199effea27915265
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/pkgconfig-0.23-9.1.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

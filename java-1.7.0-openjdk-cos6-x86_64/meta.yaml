@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/java-1.7.0-openjdk-1.7.0.181-2.6.14.10.el6.x86_64.rpm
     sha256: bdfe88c5d5958e0840d6271d98f91e2573705969f1cfd660a1fe2aeb3e8b2fc5
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/java-1.7.0-openjdk-1.7.0.181-2.6.14.10.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'
@@ -20,15 +20,18 @@ requirements:
   build:
     - copy-jdk-configs-cos6-x86_64 >=3.3
     - jpackage-utils-cos6-x86_64 >=1.7.3
-    - libjpeg-cos6-x86_64 ==1.2.1
+    - libjpeg-turbo-cos6-x86_64 ==1.2.1
+    - ca-certificates-cos6-x86_64 ==2018.2.22
   host:
     - copy-jdk-configs-cos6-x86_64 >=3.3
     - jpackage-utils-cos6-x86_64 >=1.7.3
-    - libjpeg-cos6-x86_64 ==1.2.1
+    - libjpeg-turbo-cos6-x86_64 ==1.2.1
+    - ca-certificates-cos6-x86_64 ==2018.2.22
   run:
     - copy-jdk-configs-cos6-x86_64 >=3.3
     - jpackage-utils-cos6-x86_64 >=1.7.3
-    - libjpeg-cos6-x86_64 ==1.2.1
+    - libjpeg-turbo-cos6-x86_64 ==1.2.1
+    - ca-certificates-cos6-x86_64 ==2018.2.22
 
 about:
   home: http://openjdk.java.net/

@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/audit-libs-2.4.5-6.el6.i686.rpm
     sha256: 39d2aecd61724e5fbbda1740ec9840466a85d654f7fbd1fa431bd3060a69f997
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/audit-2.4.5-6.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

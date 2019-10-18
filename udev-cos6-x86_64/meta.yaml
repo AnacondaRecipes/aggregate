@@ -1,0 +1,40 @@
+package:
+  name: udev-cos6-x86_64
+  version: 147
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/udev-147-2.73.el6_8.2.x86_64.rpm
+    sha256: d1013a01a800ef6caa389c154f6ebc7709e504613a22cc62310ce2cf85b09d0d
+    no_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/udev-147-2.73.el6_8.2.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - makedev-cos6-x86_64 >=3.11
+    - libselinux-cos6-x86_64 >=1.17.9
+    - util-linux-ng-cos6-x86_64 >=2.15.1
+  host:
+    - makedev-cos6-x86_64 >=3.11
+    - libselinux-cos6-x86_64 >=1.17.9
+    - util-linux-ng-cos6-x86_64 >=2.15.1
+  run:
+    - makedev-cos6-x86_64 >=3.11
+    - libselinux-cos6-x86_64 >=1.17.9
+    - util-linux-ng-cos6-x86_64 >=2.15.1
+
+about:
+  home: http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
+  license: GPLv2
+  license_family: GPL2
+  summary: "(CDT) A userspace implementation of devfs"
+  description: |
+        The udev package contains an implementation of devfs in userspace using sysfs
+        and netlink.

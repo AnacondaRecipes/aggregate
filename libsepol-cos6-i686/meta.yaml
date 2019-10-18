@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libsepol-2.0.41-4.el6.i686.rpm
     sha256: 0f7b3c09a89b4f943faefc73bc5664f075146f6b96c8d1d38da06ed02cc2f21b
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libsepol-2.0.41-4.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

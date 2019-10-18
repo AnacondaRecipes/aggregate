@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/pango-1.28.1-11.el6.i686.rpm
     sha256: 1ae8ed9e7dfc0a5d162f1fb129bfdd2c7fb7d849ca0595da225a73796e770cb6
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/pango-1.28.1-11.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/gtk2-devel-2.24.23-9.el6.i686.rpm
     sha256: 354fe896a22dc8828244ab3c6f56425836909ce333899c9359cb14e1f5728b29
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/gtk2-2.24.23-9.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

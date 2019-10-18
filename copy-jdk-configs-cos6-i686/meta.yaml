@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/copy-jdk-configs-3.3-9.el6.noarch.rpm
     sha256: 45ca5dacaf935e3f31ab4a0f437aa1e8f761bd65fdf031af8f50a0ab42e22d78
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/copy-jdk-configs-3.3-9.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

@@ -1,0 +1,43 @@
+package:
+  name: orbit2-devel-cos6-i686
+  version: 2.14.17
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/ORBit2-devel-2.14.17-7.el6.i686.rpm
+    sha256: d7e86acbf5c2344e123ade44cad9890626ef0326b770cb5bea91d7e0de926986
+    no_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/ORBit2-2.14.17-7.el6.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - orbit2-cos6-i686 ==2.14.17
+    - glib2-devel-cos6-i686 >=2.2.0
+    - libidl-devel-cos6-i686 >=0.8.2
+  host:
+    - orbit2-cos6-i686 ==2.14.17
+    - glib2-devel-cos6-i686 >=2.2.0
+    - libidl-devel-cos6-i686 >=0.8.2
+  run:
+    - orbit2-cos6-i686 ==2.14.17
+    - glib2-devel-cos6-i686 >=2.2.0
+    - libidl-devel-cos6-i686 >=0.8.2
+
+about:
+  home: http://www.gnome.org/projects/ORBit2
+  license: LGPLv2+ and GPLv2+
+  license_family: GPL2
+  summary: "(CDT) Development libraries, header files and utilities for ORBit"
+  description: |
+        ORBit is a high-performance CORBA (Common Object Request Broker Architecture)
+        ORB (object request broker) with support for the C language.  This package
+        contains the header files, libraries and utilities necessary to write programs
+        that use CORBA technology. If you want to write such programs, you'll also
+        need to install the ORBIT package.

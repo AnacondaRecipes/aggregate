@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/alsa-lib-devel-1.1.0-4.el6.i686.rpm
     sha256: f9c87fc78b745e1a60486fc19bd0dda9b9c057191d7bd42cacced60dc5e00861
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/alsa-lib-1.1.0-4.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libpng-1.2.49-2.el6_7.i686.rpm
     sha256: e4b2fabf9c232b1a84e677df640aceab8b089e72781bec4fcca347d984e581d1
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libpng-1.2.49-2.el6_7.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

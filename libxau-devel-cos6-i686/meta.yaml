@@ -5,13 +5,13 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libXau-devel-1.0.6-4.el6.i686.rpm
     sha256: 189ea346e95c6c22f470cff747165c2c8ec31dd62ee2c136942edf2c5a25f7c5
-    ho_hoist: true
+    no_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libXau-1.0.6-4.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   missing_dso_whitelist:
     - '*'

@@ -1,0 +1,48 @@
+package:
+  name: at-spi-cos6-i686
+  version: 1.28.1
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/at-spi-1.28.1-2.el6.centos.i686.rpm
+    sha256: 35a814bef6b1c2137f83a36ec199937549a57e0087d4b2246b7b2778373319c7
+    no_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/at-spi-1.28.1-2.el6.centos.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - orbit2-cos6-i686 >=2.6.0
+    - atk-cos6-i686 >=1.13.0
+    - gtk2-cos6-i686 >=2.24.23
+    - gtk2-cos6-i686 >=2.10.0
+    - libbonobo-cos6-i686 >=2.4.0
+  host:
+    - orbit2-cos6-i686 >=2.6.0
+    - atk-cos6-i686 >=1.13.0
+    - gtk2-cos6-i686 >=2.24.23
+    - gtk2-cos6-i686 >=2.10.0
+    - libbonobo-cos6-i686 >=2.4.0
+  run:
+    - orbit2-cos6-i686 >=2.6.0
+    - atk-cos6-i686 >=1.13.0
+    - gtk2-cos6-i686 >=2.24.23
+    - gtk2-cos6-i686 >=2.10.0
+    - libbonobo-cos6-i686 >=2.4.0
+
+about:
+  home: http://developer.gnome.org/projects/gap/
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) Assistive Technology Service Provider Interface"
+  description: |
+        at-spi allows assistive technologies to access GTK-based applications.
+        Essentially it exposes the internals of applications for automation, so tools
+        such as screen readers, magnifiers, or even scripting interfaces can query and
+        interact with GUI controls.
