@@ -5,31 +5,29 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/xorg-x11-server-common-1.17.4-17.el6.centos.i686.rpm
     sha256: 3526c42bd14800ee264896d6f55d384411958b99d35e424d3d2b18f97de4c6af
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/xorg-x11-server-1.17.4-17.el6.centos.src.rpm
-    sha256: 5d40f6de36c37d9a5adb876f84a2559a1d189ff860a2cc8c658d7cc2dfe8749d
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 requirements:
   build:
     - pixman-cos6-i686 >=0.30.0
+  host:
+    - pixman-cos6-i686 >=0.30.0
+  run:
+    - pixman-cos6-i686 >=0.30.0
 
-
-outputs:
-  - name: xorg-x11-server-common-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - pixman-cos6-i686 >=0.30.0
-
-    about:
-      home: http://www.x.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) Xorg server common files"
-      description: |
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Xorg server common files"
+  description: |
         Common files shared among all X servers.

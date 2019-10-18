@@ -5,27 +5,25 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libsepol-2.0.41-4.el6.i686.rpm
     sha256: 0f7b3c09a89b4f943faefc73bc5664f075146f6b96c8d1d38da06ed02cc2f21b
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libsepol-2.0.41-4.el6.src.rpm
-    sha256: ac1799bd0a70a93f771942ebb489eab4eb6a67422a624f925ba4080f98f73b13
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 
 
-outputs:
-  - name: libsepol-cos6-i686
-    noarch: generic
-
-    about:
-      home: http://www.selinuxproject.org
-      license: LGPL (>= 2)
-      license_family: LGPL
-      summary: "(CDT) SELinux binary policy manipulation library"
-      description: |
+about:
+  home: http://www.selinuxproject.org
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) SELinux binary policy manipulation library"
+  description: |
         Security-enhanced Linux is a feature of the Linux® kernel and a number of
         utilities with enhanced security functionality designed to add mandatory
         access controls to Linux.  The Security-enhanced Linux kernel contains new

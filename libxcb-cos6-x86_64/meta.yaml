@@ -5,27 +5,25 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libxcb-1.12-4.el6.x86_64.rpm
     sha256: 43cef893717cea498ba6cba03a4960f9a02acb92570c67feede28a6addbbc8de
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libxcb-1.12-4.el6.src.rpm
-    sha256: e80dc4c4fe3748a90d7cc172702c969b63d2ec73f6302b2f8bcd6b5ad8ea923e
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 
 
-outputs:
-  - name: libxcb-cos6-x86_64
-    noarch: generic
-
-    about:
-      home: http://xcb.freedesktop.org/
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) A C binding to the X11 protocol"
-      description: |
+about:
+  home: http://xcb.freedesktop.org/
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) A C binding to the X11 protocol"
+  description: |
         The X protocol C-language Binding (XCB) is a replacement for Xlib featuring a
         small footprint, latency hiding, direct access to the protocol, improved
         threading support, and extensibility.

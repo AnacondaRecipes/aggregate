@@ -5,25 +5,23 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libX11-common-1.6.4-3.el6.noarch.rpm
     sha256: d2309178d1508403a377d92e25682583be9559119e6efd90b44b970a527a3b6e
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libX11-1.6.4-3.el6.src.rpm
-    sha256: 791ee7e17e6dadf3f5c45edb41c6abcbc9bb0eb382092e2556334c9dd673ca91
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 
 
-outputs:
-  - name: libx11-common-cos6-i686
-    noarch: generic
-
-    about:
-      home: http://www.x.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) Common data for libX11"
-      description: |
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Common data for libX11"
+  description: |
         libX11 common data

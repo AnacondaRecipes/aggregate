@@ -5,33 +5,31 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libuuid-devel-2.17.2-12.28.el6_9.2.x86_64.rpm
     sha256: 551cb94ec7403c90a0f6f6adf73674d08d122b3beb2c74c857b546c5efd86db0
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/util-linux-ng-2.17.2-12.28.el6_9.2.src.rpm
-    sha256: e1814d68c3770b5766141fb6cc5c53b53d8d4f929bee57d96e6bd61b0edc72ee
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 requirements:
   build:
     - libuuid-cos6-x86_64 ==2.17.2
+  host:
+    - libuuid-cos6-x86_64 ==2.17.2
+  run:
+    - libuuid-cos6-x86_64 ==2.17.2
 
-
-outputs:
-  - name: libuuid-devel-cos6-x86_64
-    noarch: generic
-    requirements:
-      run:
-        - libuuid-cos6-x86_64 ==2.17.2
-
-    about:
-      home: ftp://ftp.kernel.org/pub/linux/utils/util-linux-ng
-      license: BSD
-      license_family: BSD
-      summary: "(CDT) Universally unique ID library"
-      description: |
+about:
+  home: ftp://ftp.kernel.org/pub/linux/utils/util-linux-ng
+  license: BSD
+  license_family: BSD
+  summary: "(CDT) Universally unique ID library"
+  description: |
         This is the universally unique ID development library and headers, part of
         util-linux-ng.  The libuuid library generates and parses 128-bit universally
         unique id's (UUID's).  A UUID is an identifier that is unique across both

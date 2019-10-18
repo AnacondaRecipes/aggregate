@@ -5,31 +5,23 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/mesa-libEGL-11.0.7-4.el6.x86_64.rpm
     sha256: 1b5638595636d26590e1a2140c9d64a452b63d985a507197206d0e85b7796753
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/mesa-11.0.7-4.el6.src.rpm
     folder: source
 
 build:
-  number: 1
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
-requirements:
-  build:
-    - mesa-libgbm-cos6-x86_64 ==11.0.7
 
 
-outputs:
-  - name: mesa-libegl-cos6-x86_64
-    noarch: generic
-    requirements:
-      run:
-        - mesa-libgbm-cos6-x86_64 ==11.0.7
-
-    about:
-      home: http://www.mesa3d.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) Mesa libEGL runtime libraries"
-      description: |
+about:
+  home: http://www.mesa3d.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Mesa libEGL runtime libraries"
+  description: |
         Mesa libEGL runtime libraries

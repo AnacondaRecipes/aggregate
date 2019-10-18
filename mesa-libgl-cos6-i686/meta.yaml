@@ -5,12 +5,14 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/mesa-libGL-11.0.7-4.el6.i686.rpm
     sha256: 83568569fee8b38f0ab8d5efa2977a937b4ab5121407210b2b4089f5c28eec13
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/mesa-11.0.7-4.el6.src.rpm
-    sha256: 9db7bd5036fcc8fa25585cd5625e56d95118092b816ba09867073e310db44b5d
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
@@ -18,20 +20,17 @@ requirements:
   build:
     - libx11-cos6-i686 >1.6
     - libdrm-cos6-i686 >=2.4.24
+  host:
+    - libx11-cos6-i686 >1.6
+    - libdrm-cos6-i686 >=2.4.24
+  run:
+    - libx11-cos6-i686 >1.6
+    - libdrm-cos6-i686 >=2.4.24
 
-
-outputs:
-  - name: mesa-libgl-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - libx11-cos6-i686 >1.6
-        - libdrm-cos6-i686 >=2.4.24
-
-    about:
-      home: http://www.mesa3d.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) Mesa libGL runtime libraries and DRI drivers"
-      description: |
+about:
+  home: http://www.mesa3d.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Mesa libGL runtime libraries and DRI drivers"
+  description: |
         Mesa libGL runtime library.

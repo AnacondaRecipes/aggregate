@@ -5,25 +5,24 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libtasn1-2.3-6.el6_5.x86_64.rpm
     sha256: ee516dac9b0d36fbee5f77e443be13a7e4ca60c3f3105bdc50e112c7ae834780
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libtasn1-2.3-6.el6_5.src.rpm
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 
 
-outputs:
-  - name: libtasn1-cos6-x86_64
-    noarch: generic
-
-    about:
-      home: http://www.gnu.org/software/libtasn1/
-      license: GPLv3+ and LGPLv2+
-      license_family: GPL3
-      summary: "(CDT) The ASN.1 library used in GNUTLS"
-      description: |
+about:
+  home: http://www.gnu.org/software/libtasn1/
+  license: GPLv3+ and LGPLv2+
+  license_family: GPL3
+  summary: "(CDT) The ASN.1 library used in GNUTLS"
+  description: |
         This is the ASN.1 library used in GNUTLS.  More up to date information can be
         found at http://www.gnu.org/software/gnutls and http://www.gnutls.org

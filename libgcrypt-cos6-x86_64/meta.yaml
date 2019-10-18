@@ -5,25 +5,24 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libgcrypt-1.4.5-12.el6_8.x86_64.rpm
     sha256: 81c29e7ec131ff3f1e867679b355228ebf9c10a57a680c40766a118a71d7ba71
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libgcrypt-1.4.5-12.el6_8.src.rpm
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 
 
-outputs:
-  - name: libgcrypt-cos6-x86_64
-    noarch: generic
-
-    about:
-      home: http://www.gnupg.org/
-      license: LGPL (>= 2)
-      license_family: LGPL
-      summary: "(CDT) A general-purpose cryptography library"
-      description: |
+about:
+  home: http://www.gnupg.org/
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) A general-purpose cryptography library"
+  description: |
         Libgcrypt is a general purpose crypto library based on the code used in GNU
         Privacy Guard.  This is a development version.

@@ -3,32 +3,36 @@ package:
   version: 0.17
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/gettext-devel-0.17-18.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/gettext-devel-0.17-18.el6.i686.rpm
     sha256: 87077bfb423877624e7951d55f8452d57f5ad9107928577c9aaa46c10f160aed
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/gettext-0.17-18.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/gettext-0.17-18.el6.src.rpm
     folder: source
+
+build:
+  number: 1
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
     - gettext-cos6-i686 ==0.17
     - gettext-libs-cos6-i686 ==0.17
+  host:
+    - gettext-cos6-i686 ==0.17
+    - gettext-libs-cos6-i686 ==0.17
+  run:
+    - gettext-cos6-i686 ==0.17
+    - gettext-libs-cos6-i686 ==0.17
 
-
-outputs:
-  - name: gettext-devel-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - gettext-cos6-i686 ==0.17
-        - gettext-libs-cos6-i686 ==0.17
-
-    about:
-      home: http://www.gnu.org/software/gettext/
-      license: LGPL (>= 2)
-      license_family: LGPL
-      summary: "(CDT) Development files for gettext"
-      description: |
+about:
+  home: http://www.gnu.org/software/gettext/
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) Development files for gettext"
+  description: |
         This package contains all development related files necessary for developing
         or compiling applications/libraries that needs internationalization
         capability. You also need this package if you want to add gettext support for

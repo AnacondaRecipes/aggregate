@@ -5,31 +5,29 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libX11-1.6.4-3.el6.x86_64.rpm
     sha256: 10a698d15cfef14bb09a2ce4e569e8f42dca5c7197dacc04978f86d7b01c2224
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libX11-1.6.4-3.el6.src.rpm
-    sha256: 791ee7e17e6dadf3f5c45edb41c6abcbc9bb0eb382092e2556334c9dd673ca91
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 requirements:
   build:
     - libx11-common-cos6-x86_64 ==1.6.4
+  host:
+    - libx11-common-cos6-x86_64 ==1.6.4
+  run:
+    - libx11-common-cos6-x86_64 ==1.6.4
 
-
-outputs:
-  - name: libx11-cos6-x86_64
-    noarch: generic
-    requirements:
-      run:
-        - libx11-common-cos6-x86_64 ==1.6.4
-
-    about:
-      home: http://www.x.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) Core X11 protocol client library"
-      description: |
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Core X11 protocol client library"
+  description: |
         Core X11 protocol client library.

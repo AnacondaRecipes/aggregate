@@ -3,28 +3,31 @@ package:
   version: 0.4.3
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libXcomposite-devel-0.4.3-4.el6.x86_64.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libXcomposite-devel-0.4.3-4.el6.x86_64.rpm
     sha256: a5571b8683fb93cbed743cf2ab34b321ee0522d4e4cd7a331ece08ca501113b5
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXcomposite-0.4.3-4.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libXcomposite-0.4.3-4.el6.src.rpm
     folder: source
+
+build:
+  number: 0
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
     - libxcomposite-cos6-x86_64 ==0.4.3
+  host:
+    - libxcomposite-cos6-x86_64 ==0.4.3
+  run:
+    - libxcomposite-cos6-x86_64 ==0.4.3
 
-
-outputs:
-  - name: libxcomposite-devel-cos6-x86_64
-    noarch: generic
-    requirements:
-      run:
-        - libxcomposite-cos6-x86_64 ==0.4.3
-
-    about:
-      home: http://www.x.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) Development files for libXcomposite"
-      description: |
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Development files for libXcomposite"
+  description: |
         X.Org X11 libXcomposite development package

@@ -5,31 +5,29 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libXrandr-devel-1.5.1-1.el6.i686.rpm
     sha256: 2f3d38c1384f55bb0dc6bf5ee465e1b2ee7bfcaa80ca54badf9cdaecfe5cc51f
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libXrandr-1.5.1-1.el6.src.rpm
-    sha256: 732991b6f23eb6da8fb9a4bf4c79f6d176075d641933095d78aafcfc21117e22
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 requirements:
   build:
     - libxrandr-cos6-i686 ==1.5.1
+  host:
+    - libxrandr-cos6-i686 ==1.5.1
+  run:
+    - libxrandr-cos6-i686 ==1.5.1
 
-
-outputs:
-  - name: libxrandr-devel-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - libxrandr-cos6-i686 ==1.5.1
-
-    about:
-      home: http://www.x.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) X.Org X11 libXrandr development package"
-      description: |
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) X.Org X11 libXrandr development package"
+  description: |
         X.Org X11 libXrandr development package

@@ -1,0 +1,38 @@
+package:
+  name: cracklib-cos6-i686
+  version: 2.8.16
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/cracklib-2.8.16-4.el6.i686.rpm
+    sha256: aa3e9ac361e4f759d54d787d9e66b9e11958674b04d6c839795c1f80f0cc1e0a
+    ho_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/cracklib-2.8.16-4.el6.src.rpm
+    folder: source
+
+build:
+  number: 1
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://sourceforge.net/projects/cracklib/
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) A password-checking library"
+  description: |
+        CrackLib tests passwords to determine whether they match certain security-
+        oriented characteristics, with the purpose of stopping users from choosing
+        passwords that are easy to guess. CrackLib performs several tests on
+        passwords: it tries to generate words from a username and gecos entry and
+        checks those words against the password; it checks for simplistic patterns in
+        passwords; and it checks for the password in a dictionary.  CrackLib is
+        actually a library containing a particular C function which is used to check
+        the password, as well as other C functions. CrackLib is not a replacement for
+        a passwd program; it must be used in conjunction with an existing passwd
+        program.  Install the cracklib package if you need a program to check users'
+        passwords to see if they are at least minimally secure. If you install
+        CrackLib, you will also want to install the cracklib-dicts package.

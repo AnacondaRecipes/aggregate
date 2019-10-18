@@ -3,31 +3,35 @@ package:
   version: 2.34.3
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libsoup-devel-2.34.3-5.el6.x86_64.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libsoup-devel-2.34.3-5.el6.x86_64.rpm
     sha256: 8d9d925f4296aeb44e8c30bd35c58b6928f4d2f5f3b5027d7acb687e0861ffa7
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libsoup-2.34.3-5.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libsoup-2.34.3-5.el6.src.rpm
     folder: source
+
+build:
+  number: 0
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
     - glib2-devel-cos6-x86_64 >=2.27.90
     - libsoup-cos6-x86_64 ==2.34.3
+  host:
+    - glib2-devel-cos6-x86_64 >=2.27.90
+    - libsoup-cos6-x86_64 ==2.34.3
+  run:
+    - glib2-devel-cos6-x86_64 >=2.27.90
+    - libsoup-cos6-x86_64 ==2.34.3
 
-
-outputs:
-  - name: libsoup-devel-cos6-x86_64
-    noarch: generic
-    requirements:
-      run:
-        - glib2-devel-cos6-x86_64 >=2.27.90
-        - libsoup-cos6-x86_64 ==2.34.3
-
-    about:
-      home: http://live.gnome.org/LibSoup
-      license: LGPLv2
-      license_family: LGPL
-      summary: "(CDT) Header files for the Soup library"
-      description: |
+about:
+  home: http://live.gnome.org/LibSoup
+  license: LGPLv2
+  license_family: LGPL
+  summary: "(CDT) Header files for the Soup library"
+  description: |
         Libsoup is an HTTP library implementation in C. This package allows you to
         develop applications that use the libsoup library.

@@ -5,27 +5,25 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libXau-1.0.6-4.el6.x86_64.rpm
     sha256: d0a58ddeae0df842fa4b43eb83a143c85a129eb9b44ea797401a4d9f27d6c460
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libXau-1.0.6-4.el6.src.rpm
-    sha256: 67a39ebc411b3b603be404fe6672a812a0f611e4a1305b1d9112804ab37b886c
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 
 
-outputs:
-  - name: libxau-cos6-x86_64
-    noarch: generic
-
-    about:
-      home: http://www.x.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) Sample Authorization Protocol for X"
-      description: |
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Sample Authorization Protocol for X"
+  description: |
         This is a very simple mechanism for providing individual access to an X Window
         System display.It uses existing core protocol and library hooks for specifying
         authorization data in the connection setup block to restrict use of the

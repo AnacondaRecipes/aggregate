@@ -3,24 +3,27 @@ package:
   version: 1.2.49
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libpng-1.2.49-2.el6_7.x86_64.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libpng-1.2.49-2.el6_7.x86_64.rpm
     sha256: 0f18ee677b60fe81a24f200cc8db1c9bde26a404cc812e77a73b2bcfd4dd40de
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libpng-1.2.49-2.el6_7.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libpng-1.2.49-2.el6_7.src.rpm
     folder: source
 
+build:
+  number: 0
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
 
-outputs:
-  - name: libpng-cos6-x86_64
-    noarch: generic
 
-    about:
-      home: http://www.libpng.org/pub/png/
-      license: zlib
-      license_family: Other
-      summary: "(CDT) A library of functions for manipulating PNG image format files"
-      description: |
+about:
+  home: http://www.libpng.org/pub/png/
+  license: zlib
+  license_family: Other
+  summary: "(CDT) A library of functions for manipulating PNG image format files"
+  description: |
         The libpng package contains a library of functions for creating and
         manipulating PNG (Portable Network Graphics) image format files.  PNG is a
         bit-mapped graphics format similar to the GIF format.  PNG was created to

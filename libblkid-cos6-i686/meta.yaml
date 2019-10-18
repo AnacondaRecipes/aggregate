@@ -1,0 +1,33 @@
+package:
+  name: libblkid-cos6-i686
+  version: 2.17.2
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libblkid-2.17.2-12.28.el6_9.2.i686.rpm
+    sha256: 02a1b72b703e58c2a83ad1fb82f0a349e13d43d95abddc434b6cbf08832c3f5e
+    ho_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/util-linux-ng-2.17.2-12.28.el6_9.2.src.rpm
+    folder: source
+
+build:
+  number: 1
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libuuid-cos6-i686 ==2.17.2
+  host:
+    - libuuid-cos6-i686 ==2.17.2
+  run:
+    - libuuid-cos6-i686 ==2.17.2
+
+about:
+  home: ftp://ftp.kernel.org/pub/linux/utils/util-linux-ng
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) Block device ID library"
+  description: |
+        This is block device identification library, part of util-linux-ng.

@@ -5,33 +5,31 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/freetype-devel-2.3.11-17.el6.i686.rpm
     sha256: b4a5da2feb2634ca375c9bb628d9e6317814a090f1c932cc10f164d2655be63d
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/freetype-2.3.11-17.el6.src.rpm
-    sha256: 3833a6605f7a53e7a4740831870285cd9bc5bf1330f54d063d4230cf145e780e
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 requirements:
   build:
     - freetype-cos6-i686 ==2.3.11
+  host:
+    - freetype-cos6-i686 ==2.3.11
+  run:
+    - freetype-cos6-i686 ==2.3.11
 
-
-outputs:
-  - name: freetype-devel-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - freetype-cos6-i686 ==2.3.11
-
-    about:
-      home: http://www.freetype.org
-      license: FTL or GPLv2+
-      license_family: GPL2
-      summary: "(CDT) FreeType development libraries and header files"
-      description: |
+about:
+  home: http://www.freetype.org
+  license: FTL or GPLv2+
+  license_family: GPL2
+  summary: "(CDT) FreeType development libraries and header files"
+  description: |
         The freetype-devel package includes the static libraries and header files for
         the FreeType font rendering engine.  Install freetype-devel if you want to
         develop programs which will use FreeType.

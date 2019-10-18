@@ -1,0 +1,37 @@
+package:
+  name: cracklib-dicts-cos6-i686
+  version: 2.8.16
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/cracklib-dicts-2.8.16-4.el6.i686.rpm
+    sha256: 42c3bb3935aee1cd7fc0b81deddfe4bcfabc810ff35c204cb74a0ffd411d52d0
+    ho_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/cracklib-2.8.16-4.el6.src.rpm
+    folder: source
+
+build:
+  number: 1
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - cracklib-cos6-i686 ==2.8.16
+  host:
+    - cracklib-cos6-i686 ==2.8.16
+  run:
+    - cracklib-cos6-i686 ==2.8.16
+
+about:
+  home: http://sourceforge.net/projects/cracklib/
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) The standard CrackLib dictionaries"
+  description: |
+        The cracklib-dicts package includes the CrackLib dictionaries. CrackLib will
+        need to use the dictionary appropriate to your system, which is normally put
+        in /usr/share/dict/words. Cracklib-dicts also contains the utilities necessary
+        for the creation of new dictionaries.  If you are installing CrackLib, you
+        should also install cracklib-dicts.

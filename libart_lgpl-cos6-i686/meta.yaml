@@ -5,26 +5,24 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libart_lgpl-2.3.20-5.1.el6.i686.rpm
     sha256: b4b277ac5b61f9a425ad4191d0c8a98d9759fd00c74487e0ad0db60b8dd97a09
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libart_lgpl-2.3.20-5.1.el6.src.rpm
-    sha256: 16a3bd74435f8372b6f9d6fab3d584c6b04139991be0880a83fa035bd13231ca
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 
 
-outputs:
-  - name: libart_lgpl-cos6-i686
-    noarch: generic
-
-    about:
-      home: http://www.gnome.org/
-      license: LGPL (>= 2)
-      license_family: LGPL
-      summary: "(CDT) Library of graphics routines used by libgnomecanvas"
-      description: |
+about:
+  home: http://www.gnome.org/
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) Library of graphics routines used by libgnomecanvas"
+  description: |
         Graphics routines used by the GnomeCanvas widget and some other applications.
         libart renders vector paths and the like.

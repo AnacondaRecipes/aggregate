@@ -3,22 +3,25 @@ package:
   version: 0.17
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/gettext-libs-0.17-18.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/gettext-libs-0.17-18.el6.i686.rpm
     sha256: b2da4c51580134bdb8326184df99954d92768ac6b884bf5bed6ce1e7892c3426
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/gettext-0.17-18.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/gettext-0.17-18.el6.src.rpm
     folder: source
 
+build:
+  number: 1
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
 
-outputs:
-  - name: gettext-libs-cos6-i686
-    noarch: generic
 
-    about:
-      home: http://www.gnu.org/software/gettext/
-      license: LGPL (>= 2)
-      license_family: LGPL
-      summary: "(CDT) Libraries for gettext"
-      description: |
+about:
+  home: http://www.gnu.org/software/gettext/
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) Libraries for gettext"
+  description: |
         This package contains libraries used internationalization support.

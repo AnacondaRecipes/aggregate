@@ -3,30 +3,33 @@ package:
   version: 2.34.3
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libsoup-2.34.3-5.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libsoup-2.34.3-5.el6.i686.rpm
     sha256: e552af55a0842d3d854ebbfa551b88dae1d08513cdbca06493d87cac8b715f02
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libsoup-2.34.3-5.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libsoup-2.34.3-5.el6.src.rpm
     folder: source
+
+build:
+  number: 1
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
     - glib-networking-cos6-i686 >=2.27.90
+  host:
+    - glib-networking-cos6-i686 >=2.27.90
+  run:
+    - glib-networking-cos6-i686 >=2.27.90
 
-
-outputs:
-  - name: libsoup-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - glib-networking-cos6-i686 >=2.27.90
-
-    about:
-      home: http://live.gnome.org/LibSoup
-      license: LGPLv2
-      license_family: LGPL
-      summary: "(CDT) Soup, an HTTP library implementation"
-      description: |
+about:
+  home: http://live.gnome.org/LibSoup
+  license: LGPLv2
+  license_family: LGPL
+  summary: "(CDT) Soup, an HTTP library implementation"
+  description: |
         Libsoup is an HTTP library implementation in C. It was originally part of a
         SOAP (Simple Object Access Protocol) implementation called Soup, but the SOAP
         and non-SOAP parts have now been split into separate packages.  libsoup uses

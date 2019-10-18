@@ -5,12 +5,14 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/cairo-devel-1.8.8-6.el6_6.x86_64.rpm
     sha256: bd1fb7db77c53922d769305d8d60bd203c14ef7f9207df74e965db23963e8b88
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/cairo-1.8.8-6.el6_6.src.rpm
-    sha256: 16844fe17f9da7685100214742f27d7ff47932c78f03be2c0981cfb29ce0d00c
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
@@ -20,24 +22,23 @@ requirements:
     - fontconfig-devel-cos6-x86_64 >=2.0
     - freetype-devel-cos6-x86_64 >=2.1.9
     - pixman-devel-cos6-x86_64 >=0.12.0
+  host:
+    - cairo-cos6-x86_64 ==1.8.8
+    - fontconfig-devel-cos6-x86_64 >=2.0
+    - freetype-devel-cos6-x86_64 >=2.1.9
+    - pixman-devel-cos6-x86_64 >=0.12.0
+  run:
+    - cairo-cos6-x86_64 ==1.8.8
+    - fontconfig-devel-cos6-x86_64 >=2.0
+    - freetype-devel-cos6-x86_64 >=2.1.9
+    - pixman-devel-cos6-x86_64 >=0.12.0
 
-
-outputs:
-  - name: cairo-devel-cos6-x86_64
-    noarch: generic
-    requirements:
-      run:
-        - cairo-cos6-x86_64 ==1.8.8
-        - fontconfig-devel-cos6-x86_64 >=2.0
-        - freetype-devel-cos6-x86_64 >=2.1.9
-        - pixman-devel-cos6-x86_64 >=0.12.0
-
-    about:
-      home: http://cairographics.org
-      license: LGPLv2 or MPLv1.1
-      license_family: LGPL
-      summary: "(CDT) Development files for cairo"
-      description: |
+about:
+  home: http://cairographics.org
+  license: LGPLv2 or MPLv1.1
+  license_family: LGPL
+  summary: "(CDT) Development files for cairo"
+  description: |
         Cairo is a 2D graphics library designed to provide high-quality display and
         print output.  This package contains libraries, header files and developer
         documentation needed for developing software which uses the cairo graphics

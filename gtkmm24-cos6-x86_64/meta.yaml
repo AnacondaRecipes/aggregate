@@ -3,24 +3,27 @@ package:
   version: 2.18.2
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/gtkmm24-2.18.2-1.el6.x86_64.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/gtkmm24-2.18.2-1.el6.x86_64.rpm
     sha256: 9cd1513a707ab9f3de5a06c5aecae3ebe2d81a27dc23819755434147e3046a33
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/gtkmm24-2.18.2-1.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/gtkmm24-2.18.2-1.el6.src.rpm
     folder: source
 
+build:
+  number: 0
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
 
-outputs:
-  - name: gtkmm24-cos6-x86_64
-    noarch: generic
 
-    about:
-      home: http://gtkmm.sourceforge.net/
-      license: LGPL (>= 2)
-      license_family: LGPL
-      summary: "(CDT) C++ interface for GTK2 (a GUI library for X)"
-      description: |
+about:
+  home: http://gtkmm.sourceforge.net/
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) C++ interface for GTK2 (a GUI library for X)"
+  description: |
         gtkmm provides a C++ interface to the GTK+ GUI library. gtkmm2 wraps GTK+ 2.
         Highlights include typesafe callbacks, widgets extensible via inheritance and
         a comprehensive set of widget classes that can be freely combined to quickly

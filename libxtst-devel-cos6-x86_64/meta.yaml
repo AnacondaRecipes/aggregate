@@ -3,26 +3,25 @@ package:
   version: 1.2.3
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libXtst-devel-1.2.3-1.el6.x86_64.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libXtst-devel-1.2.3-1.el6.x86_64.rpm
     sha256: e5506db9d01d1eacb6181e8a87b0fa10b7c18e336e2ac1eee33fae8edc4d19d1
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXtst-1.2.3-1.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libXtst-1.2.3-1.el6.src.rpm
     folder: source
 
-requirements:
-  build:
-    - libxtst-cos6-x86_64
-  run:
-    - libxtst-cos6-x86_64
+build:
+  number: 0
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
-outputs:
-  - name: libxtst-devel-cos6-x86_64
-    noarch: generic
 
-    about:
-      home: http://www.x.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) X.Org X11 libXtst development package"
-      description: |
+
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) X.Org X11 libXtst development package"
+  description: |
         X.Org X11 libXtst development package

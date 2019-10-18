@@ -5,12 +5,14 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/java-1.7.0-openjdk-1.7.0.181-2.6.14.10.el6.x86_64.rpm
     sha256: bdfe88c5d5958e0840d6271d98f91e2573705969f1cfd660a1fe2aeb3e8b2fc5
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/java-1.7.0-openjdk-1.7.0.181-2.6.14.10.el6.src.rpm
-    sha256: e14fb1caaed3dccb602faf71369db344de4e5bca4417057650c163cd544ec1be
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
@@ -18,26 +20,20 @@ requirements:
   build:
     - copy-jdk-configs-cos6-x86_64 >=3.3
     - jpackage-utils-cos6-x86_64 >=1.7.3
-    - libjpeg-turbo-cos6-x86_64 ==1.2.1
-    - ca-certificates-cos6-x86_64 ==2018.2.22
-    - gconf2-cos6-x86_64 ==2.28.0
+    - libjpeg-cos6-x86_64 ==1.2.1
+  host:
+    - copy-jdk-configs-cos6-x86_64 >=3.3
+    - jpackage-utils-cos6-x86_64 >=1.7.3
+    - libjpeg-cos6-x86_64 ==1.2.1
+  run:
+    - copy-jdk-configs-cos6-x86_64 >=3.3
+    - jpackage-utils-cos6-x86_64 >=1.7.3
+    - libjpeg-cos6-x86_64 ==1.2.1
 
-
-outputs:
-  - name: java-1.7.0-openjdk-cos6-x86_64
-    noarch: generic
-    requirements:
-      run:
-        - copy-jdk-configs-cos6-x86_64 >=3.3
-        - jpackage-utils-cos6-x86_64 >=1.7.3
-        - libjpeg-turbo-cos6-x86_64 ==1.2.1
-        - ca-certificates-cos6-x86_64 ==2018.2.22
-        - gconf2-cos6-x86_64 ==2.28.0
-
-    about:
-      home: http://openjdk.java.net/
-      license: ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv1.1 and MPLv2.0 and Public Domain and W3C and zlib
-      license_family: GPL2
-      summary: "(CDT) OpenJDK Runtime Environment"
-      description: |
+about:
+  home: http://openjdk.java.net/
+  license: ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv1.1 and MPLv2.0 and Public Domain and W3C and zlib
+  license_family: GPL2
+  summary: "(CDT) OpenJDK Runtime Environment"
+  description: |
         The OpenJDK runtime environment.

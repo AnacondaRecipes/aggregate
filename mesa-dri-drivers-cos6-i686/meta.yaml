@@ -3,28 +3,31 @@ package:
   version: 11.0.7
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/mesa-dri-drivers-11.0.7-4.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/mesa-dri-drivers-11.0.7-4.el6.i686.rpm
     sha256: 513b7f3e21fe85e3e4aa8dd1e35556417754719cc2b50b344ce476915385d759
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/mesa-11.0.7-4.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/mesa-11.0.7-4.el6.src.rpm
     folder: source
+
+build:
+  number: 1
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
     - mesa-dri1-drivers-cos6-i686 >=7.11
+  host:
+    - mesa-dri1-drivers-cos6-i686 >=7.11
+  run:
+    - mesa-dri1-drivers-cos6-i686 >=7.11
 
-
-outputs:
-  - name: mesa-dri-drivers-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - mesa-dri1-drivers-cos6-i686 >=7.11
-
-    about:
-      home: http://www.mesa3d.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) Mesa-based DRI drivers"
-      description: |
+about:
+  home: http://www.mesa3d.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Mesa-based DRI drivers"
+  description: |
         Mesa-based DRI drivers.

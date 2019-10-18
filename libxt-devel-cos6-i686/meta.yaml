@@ -3,28 +3,31 @@ package:
   version: 1.1.4
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libXt-devel-1.1.4-6.1.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libXt-devel-1.1.4-6.1.el6.i686.rpm
     sha256: 3c499d2bee54fb0784d9f7f802598c06cce8ddf62f1b7e59648e12c09a95edb8
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXt-1.1.4-6.1.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libXt-1.1.4-6.1.el6.src.rpm
     folder: source
+
+build:
+  number: 1
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
     - libxt-cos6-i686 ==1.1.4
+  host:
+    - libxt-cos6-i686 ==1.1.4
+  run:
+    - libxt-cos6-i686 ==1.1.4
 
-
-outputs:
-  - name: libxt-devel-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - libxt-cos6-i686 ==1.1.4
-
-    about:
-      home: http://www.x.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) X.Org X11 libXt development package"
-      description: |
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) X.Org X11 libXt development package"
+  description: |
         X.Org X11 libXt development package

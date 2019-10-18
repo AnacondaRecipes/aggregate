@@ -1,0 +1,37 @@
+package:
+  name: libudev-devel-cos6-i686
+  version: 147
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libudev-devel-147-2.73.el6_8.2.i686.rpm
+    sha256: 77a3f9113d51df05d69d87fb235d4472cbce1e7ffedcca9d3446c456c80ece5f
+    ho_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/udev-147-2.73.el6_8.2.src.rpm
+    folder: source
+
+build:
+  number: 1
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libudev-cos6-i686 ==147
+    - udev-cos6-i686 ==147
+  host:
+    - libudev-cos6-i686 ==147
+    - udev-cos6-i686 ==147
+  run:
+    - libudev-cos6-i686 ==147
+    - udev-cos6-i686 ==147
+
+about:
+  home: http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) Development files for libudev"
+  description: |
+        This package contains the development files for the library libudev, a dynamic
+        library, which provides access to udev device information.

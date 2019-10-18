@@ -5,32 +5,31 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/gnutls-2.12.23-22.el6.i686.rpm
     sha256: 98a8d4ee4f094aea78f036e9356349a79b0d0a64f7e08268717e20f2963ee454
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/gnutls-2.12.23-22.el6.src.rpm
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 requirements:
   build:
     - libgcrypt-cos6-i686 >=1.2.2
+  host:
+    - libgcrypt-cos6-i686 >=1.2.2
+  run:
+    - libgcrypt-cos6-i686 >=1.2.2
 
-
-outputs:
-  - name: gnutls-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - libgcrypt-cos6-i686 >=1.2.2
-
-    about:
-      home: http://www.gnutls.org/
-      license: GPLv3+ and LGPLv2+
-      license_family: GPL3
-      summary: "(CDT) A TLS protocol implementation"
-      description: |
+about:
+  home: http://www.gnutls.org/
+  license: GPLv3+ and LGPLv2+
+  license_family: GPL3
+  summary: "(CDT) A TLS protocol implementation"
+  description: |
         GnuTLS is a project that aims to develop a library which provides a secure
         layer, over a reliable transport layer. Currently the GnuTLS library
         implements the proposed standards by the IETF's TLS working group.

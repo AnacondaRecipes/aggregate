@@ -3,28 +3,31 @@ package:
   version: 1.1.3
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libXinerama-1.1.3-2.1.el6.x86_64.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libXinerama-1.1.3-2.1.el6.x86_64.rpm
     sha256: d521385486e0cb10deb0b859a56919f06e5a192e931c388af614fa2bb79d9b49
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXinerama-1.1.3-2.1.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libXinerama-1.1.3-2.1.el6.src.rpm
     folder: source
+
+build:
+  number: 0
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
     - libx11-cos6-x86_64 >=1.5.99.902
+  host:
+    - libx11-cos6-x86_64 >=1.5.99.902
+  run:
+    - libx11-cos6-x86_64 >=1.5.99.902
 
-
-outputs:
-  - name: libxinerama-cos6-x86_64
-    noarch: generic
-    requirements:
-      run:
-        - libx11-cos6-x86_64 >=1.5.99.902
-
-    about:
-      home: http://www.x.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) X.Org X11 libXinerama runtime library"
-      description: |
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) X.Org X11 libXinerama runtime library"
+  description: |
         X.Org X11 libXinerama runtime library

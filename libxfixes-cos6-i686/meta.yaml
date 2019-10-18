@@ -5,31 +5,29 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libXfixes-5.0.3-1.el6.i686.rpm
     sha256: 5da33bafc8cad666725f82b7262a140d90f74e4666ca412599b5005a78935f8a
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libXfixes-5.0.3-1.el6.src.rpm
-    sha256: 2bcfa8211f19db876457f2a7cce7dd50d702d274229e400bceada5c414558219
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 requirements:
   build:
     - libx11-cos6-i686 >=1.6
+  host:
+    - libx11-cos6-i686 >=1.6
+  run:
+    - libx11-cos6-i686 >=1.6
 
-
-outputs:
-  - name: libxfixes-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - libx11-cos6-i686 >=1.6
-
-    about:
-      home: http://www.x.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) X Fixes library"
-      description: |
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) X Fixes library"
+  description: |
         X Fixes library.

@@ -5,25 +5,23 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/pixman-0.32.8-1.el6.i686.rpm
     sha256: da1b43c3836f98229b704eda5aaf3f2b9b4e93ab0e23a905ac449e62c4d604f7
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/pixman-0.32.8-1.el6.src.rpm
-    sha256: d129fb1fd8a2bfe7d7337daf46b76a48b1c68ee97e362e1224839c871e70f66f
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 
 
-outputs:
-  - name: pixman-cos6-i686
-    noarch: generic
-
-    about:
-      home: http://cgit.freedesktop.org/pixman/
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) Pixel manipulation library"
-      description: |
+about:
+  home: http://cgit.freedesktop.org/pixman/
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Pixel manipulation library"
+  description: |
         Pixman is a pixel manipulation library for X and cairo.

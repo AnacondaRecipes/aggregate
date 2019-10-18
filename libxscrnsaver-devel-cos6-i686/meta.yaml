@@ -3,28 +3,31 @@ package:
   version: 1.2.2
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libXScrnSaver-devel-1.2.2-2.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libXScrnSaver-devel-1.2.2-2.el6.i686.rpm
     sha256: ccfb66860b8b784b0b9791c2e116eaf1b3b7c0ae3a97889613919250f9e7507b
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXScrnSaver-1.2.2-2.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libXScrnSaver-1.2.2-2.el6.src.rpm
     folder: source
+
+build:
+  number: 1
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
     - libxscrnsaver-cos6-i686 ==1.2.2
+  host:
+    - libxscrnsaver-cos6-i686 ==1.2.2
+  run:
+    - libxscrnsaver-cos6-i686 ==1.2.2
 
-
-outputs:
-  - name: libxscrnsaver-devel-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - libxscrnsaver-cos6-i686 ==1.2.2
-
-    about:
-      home: http://www.x.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) X.Org X11 libXScrnSaver development package"
-      description: |
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) X.Org X11 libXScrnSaver development package"
+  description: |
         X.Org X11 libXss development package

@@ -5,26 +5,25 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/cups-libs-1.4.2-79.el6.x86_64.rpm
     sha256: 0ff919a104a12bb82bab65e9a412b3693638707540c0f98fcc5f9595f853cbba
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/cups-1.4.2-79.el6.src.rpm
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 
 
-outputs:
-  - name: cups-libs-cos6-x86_64
-    noarch: generic
-
-    about:
-      home: http://www.cups.org/
-      license: LGPLv2
-      license_family: LGPL
-      summary: "(CDT) Common Unix Printing System - libraries"
-      description: |
+about:
+  home: http://www.cups.org/
+  license: LGPLv2
+  license_family: LGPL
+  summary: "(CDT) Common Unix Printing System - libraries"
+  description: |
         The Common UNIX Printing System provides a portable printing layer for UNIX®
         operating systems. It has been developed by Easy Software Products to promote
         a standard printing solution for all UNIX vendors and users. CUPS provides the

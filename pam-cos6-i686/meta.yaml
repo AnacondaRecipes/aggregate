@@ -3,40 +3,42 @@ package:
   version: 1.1.1
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/pam-1.1.1-24.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/pam-1.1.1-24.el6.i686.rpm
     sha256: 6e72d56fa9159c3fee0d0975c4ecf40cff9ad98a510331f5f3de5ece3f064c03
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/pam-1.1.1-24.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/pam-1.1.1-24.el6.src.rpm
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 requirements:
   build:
     - audit-libs-cos6-i686 >=1.0.8
-    # - cracklib-dicts-cos6-i686 >=2.8
+    - cracklib-dicts-cos6-i686 >=2.8
+    - glibc-cos6-i686 >=2.3.90
+    - libselinux-cos6-i686 >=1.33.2
+  host:
+    - audit-libs-cos6-i686 >=1.0.8
+    - cracklib-dicts-cos6-i686 >=2.8
+    - glibc-cos6-i686 >=2.3.90
+    - libselinux-cos6-i686 >=1.33.2
+  run:
+    - audit-libs-cos6-i686 >=1.0.8
+    - cracklib-dicts-cos6-i686 >=2.8
     - glibc-cos6-i686 >=2.3.90
     - libselinux-cos6-i686 >=1.33.2
 
-
-outputs:
-  - name: pam-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - audit-libs-cos6-i686 >=1.0.8
-        # - cracklib-dicts-cos6-i686 >=2.8
-        - glibc-cos6-i686 >=2.3.90
-        - libselinux-cos6-i686 >=1.33.2
-
-    about:
-      home: http://www.linux-pam.org/
-      license: BSD and GPLv2+
-      license_family: GPL2
-      summary: "(CDT) An extensible library which provides authentication for applications"
-      description: |
+about:
+  home: http://www.linux-pam.org/
+  license: BSD and GPLv2+
+  license_family: GPL2
+  summary: "(CDT) An extensible library which provides authentication for applications"
+  description: |
         PAM (Pluggable Authentication Modules) is a system security tool that allows
         system administrators to set authentication policy without having to recompile
         programs that handle authentication.

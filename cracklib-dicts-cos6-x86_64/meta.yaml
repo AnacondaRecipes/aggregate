@@ -5,33 +5,31 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/cracklib-dicts-2.8.16-4.el6.x86_64.rpm
     sha256: 7641e1f2e14f65d446fb10437f052e8014063570e914a1c5daaa6262f6917360
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/cracklib-2.8.16-4.el6.src.rpm
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 requirements:
   build:
     - cracklib-cos6-x86_64 ==2.8.16
+  host:
+    - cracklib-cos6-x86_64 ==2.8.16
+  run:
+    - cracklib-cos6-x86_64 ==2.8.16
 
-
-outputs:
-  - name: cracklib-dicts-cos6-x86_64
-    build:
-      noarch: generic
-    requirements:
-      run:
-        - cracklib-cos6-x86_64 ==2.8.16
-
-    about:
-      home: http://sourceforge.net/projects/cracklib/
-      license: LGPL (>= 2)
-      license_family: LGPL
-      summary: "(CDT) The standard CrackLib dictionaries"
-      description: |
+about:
+  home: http://sourceforge.net/projects/cracklib/
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) The standard CrackLib dictionaries"
+  description: |
         The cracklib-dicts package includes the CrackLib dictionaries. CrackLib will
         need to use the dictionary appropriate to your system, which is normally put
         in /usr/share/dict/words. Cracklib-dicts also contains the utilities necessary

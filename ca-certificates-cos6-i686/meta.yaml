@@ -5,12 +5,14 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/ca-certificates-2018.2.22-65.1.el6.noarch.rpm
     sha256: ce273390bdd5b7d7e0f561979fac693832b043f92cc0e60d777b00ae21ca87e2
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/ca-certificates-2018.2.22-65.1.el6.src.rpm
-    sha256: 21822028b55af01efd075c949e6e07e180743077029334b44e0c9ec1cf57f4af
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
@@ -18,21 +20,18 @@ requirements:
   build:
     - p11-kit-cos6-i686 >=0.18.4
     - p11-kit-trust-cos6-i686 >=0.18.4
+  host:
+    - p11-kit-cos6-i686 >=0.18.4
+    - p11-kit-trust-cos6-i686 >=0.18.4
+  run:
+    - p11-kit-cos6-i686 >=0.18.4
+    - p11-kit-trust-cos6-i686 >=0.18.4
 
-
-outputs:
-  - name: ca-certificates-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - p11-kit-cos6-i686 >=0.18.4
-        - p11-kit-trust-cos6-i686 >=0.18.4
-
-    about:
-      home: http://www.mozilla.org/
-      license: Public-Domain
-      license_family: Public-Domain
-      summary: "(CDT) The Mozilla CA root certificate bundle"
-      description: |
+about:
+  home: http://www.mozilla.org/
+  license: Public-Domain
+  license_family: Public-Domain
+  summary: "(CDT) The Mozilla CA root certificate bundle"
+  description: |
         This package contains the set of CA certificates chosen by the Mozilla
         Foundation for use with the Internet PKI.

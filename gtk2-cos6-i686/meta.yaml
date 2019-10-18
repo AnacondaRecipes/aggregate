@@ -5,12 +5,14 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/gtk2-2.24.23-9.el6.i686.rpm
     sha256: 12177bfb216c8d62dc681a6209677dc0d5a352945edfb6679157c1a9e07fb2dc
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/gtk2-2.24.23-9.el6.src.rpm
-    sha256: 15a79591fb1d0c440fa8df41fd7e9e64940b8563e290650698e6dcd8a79bf3cf
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
@@ -21,25 +23,25 @@ requirements:
     - libx11-cos6-i686 >=1.5.0
     - libxrandr-cos6-i686 >=1.2.99.4
     - pango-cos6-i686 >=1.20.0
+  host:
+    - atk-cos6-i686 >=1.29.4
+    - glib2-cos6-i686 >=2.28.0
+    - libx11-cos6-i686 >=1.5.0
+    - libxrandr-cos6-i686 >=1.2.99.4
+    - pango-cos6-i686 >=1.20.0
+  run:
+    - atk-cos6-i686 >=1.29.4
+    - glib2-cos6-i686 >=2.28.0
+    - libx11-cos6-i686 >=1.5.0
+    - libxrandr-cos6-i686 >=1.2.99.4
+    - pango-cos6-i686 >=1.20.0
 
-
-outputs:
-  - name: gtk2-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - atk-cos6-i686 >=1.29.4
-        - glib2-cos6-i686 >=2.28.0
-        - libx11-cos6-i686 >=1.5.0
-        - libxrandr-cos6-i686 >=1.2.99.4
-        - pango-cos6-i686 >=1.20.0
-
-    about:
-      home: http://www.gtk.org
-      license: LGPL (>= 2)
-      license_family: LGPL
-      summary: "(CDT) The GIMP ToolKit (GTK+), a library for creating GUIs for X"
-      description: |
+about:
+  home: http://www.gtk.org
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) The GIMP ToolKit (GTK+), a library for creating GUIs for X"
+  description: |
         GTK+ is a multi-platform toolkit for creating graphical user interfaces.
         Offering a complete set of widgets, GTK+ is suitable for projects ranging from
         small one-off tools to complete application suites.

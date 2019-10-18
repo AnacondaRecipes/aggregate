@@ -5,27 +5,25 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/MAKEDEV-3.24-6.el6.x86_64.rpm
     sha256: d5726b222b3ab447510c1c51461646fd457e3a21ede14098d35279e5b48ac747
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/MAKEDEV-3.24-6.el6.src.rpm
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 
 
-outputs:
-  - name: makedev-cos6-x86_64
-    build:
-      noarch: generic
-
-    about:
-      home: http://www.lanana.org/docs/device-list/
-      license: GPLv2
-      license_family: GPL2
-      summary: "(CDT) A program used for creating device files in /dev"
-      description: |
+about:
+  home: http://www.lanana.org/docs/device-list/
+  license: GPLv2
+  license_family: GPL2
+  summary: "(CDT) A program used for creating device files in /dev"
+  description: |
         This package contains the MAKEDEV program, which makes it easier to create and
         maintain the files in the /dev directory.  /dev directory files correspond to
         a particular device supported by Linux (serial or printer ports, scanners,

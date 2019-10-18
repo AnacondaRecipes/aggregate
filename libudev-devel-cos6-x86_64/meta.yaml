@@ -5,11 +5,14 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libudev-devel-147-2.73.el6_8.2.x86_64.rpm
     sha256: 318322d5e63b27bf423e011e9b3d8863e5b1aa5ac57de131add0a85c8e6bbbfe
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/udev-147-2.73.el6_8.2.src.rpm
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
@@ -17,22 +20,18 @@ requirements:
   build:
     - libudev-cos6-x86_64 ==147
     - udev-cos6-x86_64 ==147
+  host:
+    - libudev-cos6-x86_64 ==147
+    - udev-cos6-x86_64 ==147
+  run:
+    - libudev-cos6-x86_64 ==147
+    - udev-cos6-x86_64 ==147
 
-
-outputs:
-  - name: libudev-devel-cos6-x86_64
-    build:
-      noarch: generic
-    requirements:
-      run:
-        - libudev-cos6-x86_64 ==147
-        - udev-cos6-x86_64 ==147
-
-    about:
-      home: http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
-      license: LGPL (>= 2)
-      license_family: LGPL
-      summary: "(CDT) Development files for libudev"
-      description: |
+about:
+  home: http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) Development files for libudev"
+  description: |
         This package contains the development files for the library libudev, a dynamic
         library, which provides access to udev device information.

@@ -5,27 +5,25 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/cairo-1.8.8-6.el6_6.i686.rpm
     sha256: 9275eb925636fd986d77b2bbc91745d053b94cf6d8fa8791b54a7c5e5cc3abee
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/cairo-1.8.8-6.el6_6.src.rpm
-    sha256: 16844fe17f9da7685100214742f27d7ff47932c78f03be2c0981cfb29ce0d00c
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 
 
-outputs:
-  - name: cairo-cos6-i686
-    noarch: generic
-
-    about:
-      home: http://cairographics.org
-      license: LGPLv2 or MPLv1.1
-      license_family: LGPL
-      summary: "(CDT) A 2D graphics library"
-      description: |
+about:
+  home: http://cairographics.org
+  license: LGPLv2 or MPLv1.1
+  license_family: LGPL
+  summary: "(CDT) A 2D graphics library"
+  description: |
         Cairo is a 2D graphics library designed to provide high-quality display and
         print output. Currently supported output targets include the X Window System,
         OpenGL (via glitz), in-memory image buffers, and image files (PDF, PostScript,

@@ -1,0 +1,28 @@
+package:
+  name: libudev-cos6-i686
+  version: 147
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libudev-147-2.73.el6_8.2.i686.rpm
+    sha256: 9e8f1dbba54f8c9040ec04f061f731e6d7e2392f25ebb50b40487dc8fb68ef8f
+    ho_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/udev-147-2.73.el6_8.2.src.rpm
+    folder: source
+
+build:
+  number: 1
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) Dynamic library to access udev device information"
+  description: |
+        This package contains the dynamic library libudev, which provides access to
+        udev device information, and an interface to search devices in sysfs.

@@ -5,12 +5,14 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/glib2-devel-2.28.8-10.el6.i686.rpm
     sha256: e109b4f18b0f8ebf3274a2ee75f0c34bf671a41a2d57f844dbe4bc82f4a4d94a
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/glib2-2.28.8-10.el6.src.rpm
-    sha256: 138f11f112f8e35840249c73d06e7dcd13c58ba671124a5130fd6559c7b3cf15
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
@@ -18,20 +20,17 @@ requirements:
   build:
     - glib2-cos6-i686 ==2.28.8
     - pkgconfig-cos6-i686 >=0.14
+  host:
+    - glib2-cos6-i686 ==2.28.8
+    - pkgconfig-cos6-i686 >=0.14
+  run:
+    - glib2-cos6-i686 ==2.28.8
+    - pkgconfig-cos6-i686 >=0.14
 
-
-outputs:
-  - name: glib2-devel-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - glib2-cos6-i686 ==2.28.8
-        - pkgconfig-cos6-i686 >=0.14
-
-    about:
-      home: http://www.gtk.org
-      license: LGPL (>= 2)
-      license_family: LGPL
-      summary: "(CDT) A library of handy utility functions"
-      description: |
+about:
+  home: http://www.gtk.org
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) A library of handy utility functions"
+  description: |
         The glib2-devel package includes the header files for the GLib library.

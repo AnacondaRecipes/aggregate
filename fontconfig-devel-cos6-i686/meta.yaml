@@ -5,12 +5,14 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/fontconfig-devel-2.8.0-5.el6.i686.rpm
     sha256: 6019c636a5b93f9f11ff91289dadea1922eeeafc59d9ed6645f6019a3b8730e3
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/fontconfig-2.8.0-5.el6.src.rpm
-    sha256: 8a737297dbb39f12c67f88db1b21b37ef97bed2ca00fa0975b16e264d6953a33
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
@@ -18,22 +20,19 @@ requirements:
   build:
     - fontconfig-cos6-i686 ==2.8.0
     - freetype-devel-cos6-i686 >=2.1.4
+  host:
+    - fontconfig-cos6-i686 ==2.8.0
+    - freetype-devel-cos6-i686 >=2.1.4
+  run:
+    - fontconfig-cos6-i686 ==2.8.0
+    - freetype-devel-cos6-i686 >=2.1.4
 
-
-outputs:
-  - name: fontconfig-devel-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - fontconfig-cos6-i686 ==2.8.0
-        - freetype-devel-cos6-i686 >=2.1.4
-
-    about:
-      home: http://fontconfig.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) Font configuration and customization library"
-      description: |
+about:
+  home: http://fontconfig.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Font configuration and customization library"
+  description: |
         The fontconfig-devel package includes the header files, and developer docs for
         the fontconfig package.  Install fontconfig-devel if you want to develop
         programs which will use fontconfig.

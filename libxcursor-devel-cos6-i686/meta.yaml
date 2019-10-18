@@ -3,28 +3,31 @@ package:
   version: 1.1.14
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libXcursor-devel-1.1.14-2.1.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libXcursor-devel-1.1.14-2.1.el6.i686.rpm
     sha256: 400504cc48f21ebb5c5e086dd025e0dc52cf95eebecd9838d8cc91cb2ba3ee5b
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXcursor-1.1.14-2.1.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libXcursor-1.1.14-2.1.el6.src.rpm
     folder: source
+
+build:
+  number: 1
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
     - libxcursor-cos6-i686 ==1.1.14
+  host:
+    - libxcursor-cos6-i686 ==1.1.14
+  run:
+    - libxcursor-cos6-i686 ==1.1.14
 
-
-outputs:
-  - name: libxcursor-devel-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - libxcursor-cos6-i686 ==1.1.14
-
-    about:
-      home: http://www.x.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) Development files for libXcursor"
-      description: |
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Development files for libXcursor"
+  description: |
         libXcursor development package.

@@ -5,31 +5,29 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libblkid-2.17.2-12.28.el6_9.2.x86_64.rpm
     sha256: 8bf0d4450653616485eb509fa3d646f80b4606ca110a18d87ed4aa57dcb355a2
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/util-linux-ng-2.17.2-12.28.el6_9.2.src.rpm
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 requirements:
   build:
     - libuuid-cos6-x86_64 ==2.17.2
+  host:
+    - libuuid-cos6-x86_64 ==2.17.2
+  run:
+    - libuuid-cos6-x86_64 ==2.17.2
 
-
-outputs:
-  - name: libblkid-cos6-x86_64
-    build:
-      noarch: generic
-    requirements:
-      run:
-        - libuuid-cos6-x86_64 ==2.17.2
-
-    about:
-      home: ftp://ftp.kernel.org/pub/linux/utils/util-linux-ng
-      license: LGPL (>= 2)
-      license_family: LGPL
-      summary: "(CDT) Block device ID library"
-      description: |
+about:
+  home: ftp://ftp.kernel.org/pub/linux/utils/util-linux-ng
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) Block device ID library"
+  description: |
         This is block device identification library, part of util-linux-ng.

@@ -5,30 +5,23 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/mesa-libgbm-11.0.7-4.el6.x86_64.rpm
     sha256: bdeae3480e80e3a552db21a8e1eb277f00e700363120f3ec20865556f3005eaa
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/mesa-11.0.7-4.el6.src.rpm
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
-requirements:
-  build:
-    - mesa-libegl-cos6-x86_64 ==11.0.7
 
 
-outputs:
-  - name: mesa-libgbm-cos6-x86_64
-    noarch: generic
-    requirements:
-      run:
-        - mesa-libegl-cos6-x86_64 ==11.0.7
-
-    about:
-      home: http://www.mesa3d.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) Mesa gbm library"
-      description: |
+about:
+  home: http://www.mesa3d.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Mesa gbm library"
+  description: |
         Mesa gbm runtime library.

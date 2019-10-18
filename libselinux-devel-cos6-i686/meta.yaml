@@ -5,12 +5,14 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libselinux-devel-2.0.94-7.el6.i686.rpm
     sha256: acbe59a30cb43dbc01deabc3a11815f3b5652802758826e87d89eb638097ea1d
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libselinux-2.0.94-7.el6.src.rpm
-    sha256: b1ce631cfc5f1bdd032b29349b47ba52ede7b07294041e3c2d12d380095a073a
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
@@ -18,21 +20,18 @@ requirements:
   build:
     - libselinux-cos6-i686 ==2.0.94
     - libsepol-devel-cos6-i686 >=2.0.32
+  host:
+    - libselinux-cos6-i686 ==2.0.94
+    - libsepol-devel-cos6-i686 >=2.0.32
+  run:
+    - libselinux-cos6-i686 ==2.0.94
+    - libsepol-devel-cos6-i686 >=2.0.32
 
-
-outputs:
-  - name: libselinux-devel-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - libselinux-cos6-i686 ==2.0.94
-        - libsepol-devel-cos6-i686 >=2.0.32
-
-    about:
-      home: http://www.selinuxproject.org
-      license: Public-Domain
-      license_family: Public-Domain
-      summary: "(CDT) Header files and libraries used to build SELinux"
-      description: |
+about:
+  home: http://www.selinuxproject.org
+  license: Public-Domain
+  license_family: Public-Domain
+  summary: "(CDT) Header files and libraries used to build SELinux"
+  description: |
         The libselinux-devel package contains the libraries and header files needed
         for developing SELinux applications.

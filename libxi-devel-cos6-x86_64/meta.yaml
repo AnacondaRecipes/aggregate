@@ -3,28 +3,31 @@ package:
   version: 1.7.8
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libXi-devel-1.7.8-1.el6.x86_64.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libXi-devel-1.7.8-1.el6.x86_64.rpm
     sha256: 21e90483fe401d002eb794040ca21b31e84eb8fc87e706ec6dace3c8fc0d4c3b
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXi-1.7.8-1.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libXi-1.7.8-1.el6.src.rpm
     folder: source
+
+build:
+  number: 0
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
     - libxi-cos6-x86_64 ==1.7.8
+  host:
+    - libxi-cos6-x86_64 ==1.7.8
+  run:
+    - libxi-cos6-x86_64 ==1.7.8
 
-
-outputs:
-  - name: libxi-devel-cos6-x86_64
-    noarch: generic
-    requirements:
-      run:
-        - libxi-cos6-x86_64 ==1.7.8
-
-    about:
-      home: http://www.x.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) X.Org X11 libXi development package"
-      description: |
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) X.Org X11 libXi development package"
+  description: |
         X.Org X11 libXi development package

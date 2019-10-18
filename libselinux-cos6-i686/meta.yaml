@@ -5,33 +5,31 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libselinux-2.0.94-7.el6.i686.rpm
     sha256: 9c975b71629bbc43d6838241a3f21c49206ea9250d8faf07354de272b7b35803
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libselinux-2.0.94-7.el6.src.rpm
-    sha256: b1ce631cfc5f1bdd032b29349b47ba52ede7b07294041e3c2d12d380095a073a
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 requirements:
   build:
     - libsepol-cos6-i686 >=2.0.32
+  host:
+    - libsepol-cos6-i686 >=2.0.32
+  run:
+    - libsepol-cos6-i686 >=2.0.32
 
-
-outputs:
-  - name: libselinux-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - libsepol-cos6-i686 >=2.0.32
-
-    about:
-      home: http://www.selinuxproject.org
-      license: Public-Domain
-      license_family: Public-Domain
-      summary: "(CDT) SELinux library and simple utilities"
-      description: |
+about:
+  home: http://www.selinuxproject.org
+  license: Public-Domain
+  license_family: Public-Domain
+  summary: "(CDT) SELinux library and simple utilities"
+  description: |
         Security-enhanced Linux is a feature of the Linux® kernel and a number of
         utilities with enhanced security functionality designed to add mandatory
         access controls to Linux.  The Security-enhanced Linux kernel contains new

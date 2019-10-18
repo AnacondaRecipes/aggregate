@@ -5,26 +5,24 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/gdk-pixbuf2-2.24.1-6.el6_7.x86_64.rpm
     sha256: 248633f4471b62666822d4c5da72f8995d36e6cf2e9e61b6eff73993709b793f
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/gdk-pixbuf2-2.24.1-6.el6_7.src.rpm
-    sha256: 56cb617816f942b83c1693e0dce4572fb432b9f8d1433fda187e39e7b764bce9
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 
 
-outputs:
-  - name: gdk-pixbuf2-cos6-x86_64
-    noarch: generic
-
-    about:
-      home: http://www.gt.org
-      license: LGPLv2+ and (LGPLv2+ or MPLv1.1) and Public Domain
-      license_family: LGPL
-      summary: "(CDT) An image loading library"
-      description: |
+about:
+  home: http://www.gt.org
+  license: LGPLv2+ and (LGPLv2+ or MPLv1.1) and Public Domain
+  license_family: LGPL
+  summary: "(CDT) An image loading library"
+  description: |
         gdk-pixbuf is an image loading library that can be extended by loadable
         modules for new image formats. It is used by toolkits such as GTK+ or clutter.

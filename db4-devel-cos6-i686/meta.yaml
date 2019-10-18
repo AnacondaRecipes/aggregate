@@ -5,12 +5,14 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/db4-devel-4.7.25-22.el6.i686.rpm
     sha256: c30214609e294eded243ba3f38b8c43a142654ecd60e034fc98b4bf3dffcc297
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/db4-4.7.25-22.el6.src.rpm
-    sha256: 32bc5fd819fedc7859c908a8602d246357bf7feff787b4a693a25c9301526f91
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
@@ -18,22 +20,19 @@ requirements:
   build:
     - db4-cos6-i686 ==4.7.25
     - db4-cxx-cos6-i686 ==4.7.25
+  host:
+    - db4-cos6-i686 ==4.7.25
+    - db4-cxx-cos6-i686 ==4.7.25
+  run:
+    - db4-cos6-i686 ==4.7.25
+    - db4-cxx-cos6-i686 ==4.7.25
 
-
-outputs:
-  - name: db4-devel-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - db4-cos6-i686 ==4.7.25
-        - db4-cxx-cos6-i686 ==4.7.25
-
-    about:
-      home: http://www.oracle.com/database/berkeley-db/
-      license: Sleepycat and BSD
-      license_family: BSD
-      summary: "(CDT) C development files for the Berkeley DB (version 4) library"
-      description: |
+about:
+  home: http://www.oracle.com/database/berkeley-db/
+  license: Sleepycat and BSD
+  license_family: BSD
+  summary: "(CDT) C development files for the Berkeley DB (version 4) library"
+  description: |
         The Berkeley Database (Berkeley DB) is a programmatic toolkit that provides
         embedded database support for both traditional and client/server applications.
         This package contains the header files, libraries, and documentation for

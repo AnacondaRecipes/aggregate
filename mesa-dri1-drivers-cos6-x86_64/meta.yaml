@@ -3,22 +3,25 @@ package:
   version: 7.11
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/mesa-dri1-drivers-7.11-8.el6.x86_64.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/mesa-dri1-drivers-7.11-8.el6.x86_64.rpm
     sha256: 1d18996e1bad9e9d59bd28af8f99f154b240e77f24a07ed4d11961c1e5dbafc9
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/mesa-dri1-drivers-7.11-8.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/mesa-dri1-drivers-7.11-8.el6.src.rpm
     folder: source
 
+build:
+  number: 0
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
 
-outputs:
-  - name: mesa-dri1-drivers-cos6-x86_64
-    noarch: generic
 
-    about:
-      home: http://www.mesa3d.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) Mesa graphics libraries"
-      description: |
+about:
+  home: http://www.mesa3d.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Mesa graphics libraries"
+  description: |
         Mesa DRI1 drivers

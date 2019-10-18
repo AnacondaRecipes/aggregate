@@ -5,27 +5,25 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libthai-0.1.12-3.el6.i686.rpm
     sha256: 5ce4bb31dd76f4ae49eeb396226738c83b98b20f0e2d56070e14a2edd9bf0091
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/libthai-0.1.12-3.el6.src.rpm
-    sha256: 82d495eca1aa80b74f65808cfdebcc6836ac99c774826cf97c033a2a62b92fd2
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 
 
-outputs:
-  - name: libthai-cos6-i686
-    noarch: generic
-
-    about:
-      home: http://linux.thai.net
-      license: LGPL (>= 2)
-      license_family: LGPL
-      summary: "(CDT) Thai language support routines"
-      description: |
+about:
+  home: http://linux.thai.net
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) Thai language support routines"
+  description: |
         LibThai is a set of Thai language support routines aimed to ease developers'
         tasks to incorporate Thai language support in their applications. It includes
         important Thai-specific functions e.g. word breaking, input and output methods

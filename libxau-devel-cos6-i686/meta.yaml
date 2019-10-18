@@ -3,28 +3,31 @@ package:
   version: 1.0.6
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libXau-devel-1.0.6-4.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libXau-devel-1.0.6-4.el6.i686.rpm
     sha256: 189ea346e95c6c22f470cff747165c2c8ec31dd62ee2c136942edf2c5a25f7c5
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXau-1.0.6-4.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libXau-1.0.6-4.el6.src.rpm
     folder: source
+
+build:
+  number: 1
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
     - libxau-cos6-i686 ==1.0.6
+  host:
+    - libxau-cos6-i686 ==1.0.6
+  run:
+    - libxau-cos6-i686 ==1.0.6
 
-
-outputs:
-  - name: libxau-devel-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - libxau-cos6-i686 ==1.0.6
-
-    about:
-      home: http://www.x.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) Development files for libXau"
-      description: |
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Development files for libXau"
+  description: |
         X.Org X11 libXau development package

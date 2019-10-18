@@ -3,28 +3,31 @@ package:
   version: 1.2.1
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libSM-devel-1.2.1-2.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libSM-devel-1.2.1-2.el6.i686.rpm
     sha256: 298bfb45e8b8b0e67df0389c7756fc7a22ceb09d45b7158caeacb98c30d0b766
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libSM-1.2.1-2.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libSM-1.2.1-2.el6.src.rpm
     folder: source
+
+build:
+  number: 1
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
     - libsm-cos6-i686 ==1.2.1
+  host:
+    - libsm-cos6-i686 ==1.2.1
+  run:
+    - libsm-cos6-i686 ==1.2.1
 
-
-outputs:
-  - name: libsm-devel-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - libsm-cos6-i686 ==1.2.1
-
-    about:
-      home: http://www.x.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) X.Org X11 SM development package"
-      description: |
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) X.Org X11 SM development package"
+  description: |
         The X.Org X11 SM (Session Management) development package.

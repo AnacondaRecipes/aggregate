@@ -5,33 +5,31 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/xorg-x11-server-Xvfb-1.17.4-17.el6.centos.x86_64.rpm
     sha256: a19ef575f929cea75abf984d92fd5cc77e77e9b8525904b2f979c2cc89cd2c92
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/xorg-x11-server-1.17.4-17.el6.centos.src.rpm
-    sha256: 5d40f6de36c37d9a5adb876f84a2559a1d189ff860a2cc8c658d7cc2dfe8749d
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 requirements:
   build:
     - xorg-x11-server-common-cos6-x86_64 >=1.17.4
+  host:
+    - xorg-x11-server-common-cos6-x86_64 >=1.17.4
+  run:
+    - xorg-x11-server-common-cos6-x86_64 >=1.17.4
 
-
-outputs:
-  - name: xorg-x11-server-xvfb-cos6-x86_64
-    noarch: generic
-    requirements:
-      run:
-        - xorg-x11-server-common-cos6-x86_64 >=1.17.4
-
-    about:
-      home: http://www.x.org
-      license: MIT and GPLv2
-      license_family: GPL2
-      summary: "(CDT) A X Windows System virtual framebuffer X server."
-      description: |
+about:
+  home: http://www.x.org
+  license: MIT and GPLv2
+  license_family: GPL2
+  summary: "(CDT) A X Windows System virtual framebuffer X server."
+  description: |
         Xvfb (X Virtual Frame Buffer) is an X server that is able to run on machines
         with no display hardware and no physical input devices. Xvfb simulates a dumb
         framebuffer using virtual memory.  Xvfb does not open any devices, but behaves

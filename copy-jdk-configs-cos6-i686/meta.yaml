@@ -5,26 +5,24 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/copy-jdk-configs-3.3-9.el6.noarch.rpm
     sha256: 45ca5dacaf935e3f31ab4a0f437aa1e8f761bd65fdf031af8f50a0ab42e22d78
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/copy-jdk-configs-3.3-9.el6.src.rpm
-    sha256: 6a878a5501dc22c4753d25f45a6cf7e9e77799f032a21dcb3ca8efeeeefcaf5a
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 
 
-outputs:
-  - name: copy-jdk-configs-cos6-i686
-    noarch: generic
-
-    about:
-      home: https://pagure.io/copy_jdk_configs
-      license: BSD
-      license_family: BSD
-      summary: "(CDT) JDKs configuration files copier"
-      description: |
+about:
+  home: https://pagure.io/copy_jdk_configs
+  license: BSD
+  license_family: BSD
+  summary: "(CDT) JDKs configuration files copier"
+  description: |
         Utility script to transfer JDKs configuration files between updates or for
         archiving. With script to fix incorrectly created rpmnew files

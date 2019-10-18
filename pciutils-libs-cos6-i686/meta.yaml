@@ -3,23 +3,26 @@ package:
   version: 3.1.10
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/pciutils-libs-3.1.10-4.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/pciutils-libs-3.1.10-4.el6.i686.rpm
     sha256: 25afc9d5ea27afce205842d91e2044a6651ed2e4e2ab57c29c3d779b56a66e29
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/pciutils-3.1.10-4.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/pciutils-3.1.10-4.el6.src.rpm
     folder: source
 
+build:
+  number: 1
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
 
-outputs:
-  - name: pciutils-libs-cos6-i686
-    noarch: generic
 
-    about:
-      home: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
-      license: GPL (>= 2)
-      license_family: GPL3
-      summary: "(CDT) Linux PCI library"
-      description: |
+about:
+  home: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
+  license: GPL (>= 2)
+  license_family: GPL3
+  summary: "(CDT) Linux PCI library"
+  description: |
         This package contains a library for inspecting and setting devices connected
         to the PCI bus.

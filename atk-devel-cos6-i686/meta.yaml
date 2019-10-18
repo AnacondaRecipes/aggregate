@@ -5,12 +5,14 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/atk-devel-1.30.0-1.el6.i686.rpm
     sha256: 9094153a885090942989fb8977939869bf102c17a81c2c4e693f7ba9765270b0
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/atk-1.30.0-1.el6.src.rpm
-    sha256: fc87523ecb6cb944f9452a9da4385c73346acc3714ea494d3110245c4fbce12a
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
@@ -18,21 +20,18 @@ requirements:
   build:
     - atk-cos6-i686 ==1.30.0
     - glib2-devel-cos6-i686 >=2.6.0
+  host:
+    - atk-cos6-i686 ==1.30.0
+    - glib2-devel-cos6-i686 >=2.6.0
+  run:
+    - atk-cos6-i686 ==1.30.0
+    - glib2-devel-cos6-i686 >=2.6.0
 
-
-outputs:
-  - name: atk-devel-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - atk-cos6-i686 ==1.30.0
-        - glib2-devel-cos6-i686 >=2.6.0
-
-    about:
-      home: http://developer.gnome.org/projects/gap/
-      license: LGPL (>= 2)
-      license_family: LGPL
-      summary: "(CDT) Development files for the ATK accessibility toolkit"
-      description: |
+about:
+  home: http://developer.gnome.org/projects/gap/
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) Development files for the ATK accessibility toolkit"
+  description: |
         This package includes libraries, header files, and developer documentation
         needed for development of applications or toolkits which use ATK.

@@ -3,24 +3,27 @@ package:
   version: 0.17
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/gettext-0.17-18.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/gettext-0.17-18.el6.i686.rpm
     sha256: feac49f46cc856c121380a8fb0843c6ef38deb22a2020e8bd6e2bf641b92a64a
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/gettext-0.17-18.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/gettext-0.17-18.el6.src.rpm
     folder: source
 
+build:
+  number: 1
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
 
-outputs:
-  - name: gettext-cos6-i686
-    noarch: generic
 
-    about:
-      home: http://www.gnu.org/software/gettext/
-      license: GPLv3 and LGPLv2+
-      license_family: GPL3
-      summary: "(CDT) GNU libraries and utilities for producing multi-lingual messages"
-      description: |
+about:
+  home: http://www.gnu.org/software/gettext/
+  license: GPLv3 and LGPLv2+
+  license_family: GPL3
+  summary: "(CDT) GNU libraries and utilities for producing multi-lingual messages"
+  description: |
         The GNU gettext package provides a set of tools and documentation for
         producing multi-lingual messages in programs. Tools include a set of
         conventions about how programs should be written to support message catalogs,

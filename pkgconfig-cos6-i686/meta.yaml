@@ -5,27 +5,25 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/pkgconfig-0.23-9.1.el6.i686.rpm
     sha256: 1428c92c2143cc2980352e543387f2ee0ba4fcbb2d17b848199effea27915265
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/pkgconfig-0.23-9.1.el6.src.rpm
-    sha256: c845341c0747fe2ddac8dd143236f1e9eaf6ce3f3436d2fdb052f689e6b49576
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 
 
-outputs:
-  - name: pkgconfig-cos6-i686
-    noarch: generic
-
-    about:
-      home: http://pkgconfig.freedesktop.org
-      license: GPL (>= 2)
-      license_family: GPL3
-      summary: "(CDT) A tool for determining compilation options"
-      description: |
+about:
+  home: http://pkgconfig.freedesktop.org
+  license: GPL (>= 2)
+  license_family: GPL3
+  summary: "(CDT) A tool for determining compilation options"
+  description: |
         The pkgconfig tool determines compilation options. For each required library,
         it reads the configuration file and outputs the necessary compiler and linker
         flags.

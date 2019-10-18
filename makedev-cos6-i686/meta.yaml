@@ -1,0 +1,32 @@
+package:
+  name: makedev-cos6-i686
+  version: 3.24
+
+source:
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/MAKEDEV-3.24-6.el6.i686.rpm
+    sha256: f04904cf4c138e1defe9e21f68d1d8ecfca25653faf9d95c08f94d2e3c76a6ab
+    ho_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/MAKEDEV-3.24-6.el6.src.rpm
+    folder: source
+
+build:
+  number: 1
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.lanana.org/docs/device-list/
+  license: GPLv2
+  license_family: GPL2
+  summary: "(CDT) A program used for creating device files in /dev"
+  description: |
+        This package contains the MAKEDEV program, which makes it easier to create and
+        maintain the files in the /dev directory.  /dev directory files correspond to
+        a particular device supported by Linux (serial or printer ports, scanners,
+        sound cards, tape drives, CD-ROM drives, hard drives, etc.) and interface with
+        the drivers in the kernel.  You should install the MAKEDEV package because the
+        MAKEDEV utility makes it easy to manage the /dev directory device files.

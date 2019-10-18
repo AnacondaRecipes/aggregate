@@ -5,27 +5,25 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/db4-4.7.25-22.el6.x86_64.rpm
     sha256: e3de0ecf537002eaf411c90e61926dd6f9ff579981afe763b9a61ffe0a57bc61
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/db4-4.7.25-22.el6.src.rpm
-    sha256: 32bc5fd819fedc7859c908a8602d246357bf7feff787b4a693a25c9301526f91
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 
 
-outputs:
-  - name: db4-cos6-x86_64
-    noarch: generic
-
-    about:
-      home: http://www.oracle.com/database/berkeley-db/
-      license: Sleepycat and BSD
-      license_family: BSD
-      summary: "(CDT) The Berkeley DB database library (version 4) for C"
-      description: |
+about:
+  home: http://www.oracle.com/database/berkeley-db/
+  license: Sleepycat and BSD
+  license_family: BSD
+  summary: "(CDT) The Berkeley DB database library (version 4) for C"
+  description: |
         The Berkeley Database (Berkeley DB) is a programmatic toolkit that provides
         embedded database support for both traditional and client/server applications.
         The Berkeley DB includes B+tree, Extended Linear Hashing, Fixed and Variable-

@@ -5,27 +5,25 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/cracklib-2.8.16-4.el6.x86_64.rpm
     sha256: 70ea1dca33b848f6e0ad18c52066dc96b8189ec9fa5505ca050430e25c61f2db
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/cracklib-2.8.16-4.el6.src.rpm
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 
 
-outputs:
-  - name: cracklib-cos6-x86_64
-    build:
-      noarch: generic
-
-    about:
-      home: http://sourceforge.net/projects/cracklib/
-      license: LGPL (>= 2)
-      license_family: LGPL
-      summary: "(CDT) A password-checking library"
-      description: |
+about:
+  home: http://sourceforge.net/projects/cracklib/
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) A password-checking library"
+  description: |
         CrackLib tests passwords to determine whether they match certain security-
         oriented characteristics, with the purpose of stopping users from choosing
         passwords that are easy to guess. CrackLib performs several tests on

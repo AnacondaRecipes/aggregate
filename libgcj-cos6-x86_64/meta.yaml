@@ -5,12 +5,14 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libgcj-4.4.7-23.el6.x86_64.rpm
     sha256: b6dbd68c71cc8b626064bb1c7384cf43c8bbded577594a9ccc22237b74d17574
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/gcc-4.4.7-23.el6.src.rpm
-    sha256: 7492c85cc0f146f6d81653f51a9fda02cf164747cbfa7527166205108d6a6ae0
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
@@ -20,23 +22,22 @@ requirements:
     - gtk2-cos6-x86_64 >=2.4.0
     - libart_lgpl-cos6-x86_64 >=2.1.0
     - zip-cos6-x86_64 >=2.1
+  host:
+    - glib2-cos6-x86_64 >=2.4.0
+    - gtk2-cos6-x86_64 >=2.4.0
+    - libart_lgpl-cos6-x86_64 >=2.1.0
+    - zip-cos6-x86_64 >=2.1
+  run:
+    - glib2-cos6-x86_64 >=2.4.0
+    - gtk2-cos6-x86_64 >=2.4.0
+    - libart_lgpl-cos6-x86_64 >=2.1.0
+    - zip-cos6-x86_64 >=2.1
 
-
-outputs:
-  - name: libgcj-cos6-x86_64
-    noarch: generic
-    requirements:
-      run:
-        - glib2-cos6-x86_64 >=2.4.0
-        - gtk2-cos6-x86_64 >=2.4.0
-        - libart_lgpl-cos6-x86_64 >=2.1.0
-        - zip-cos6-x86_64 >=2.1
-
-    about:
-      home: http://gcc.gnu.org
-      license: GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions
-      license_family: GPL3
-      summary: "(CDT) Java runtime library for gcc"
-      description: |
+about:
+  home: http://gcc.gnu.org
+  license: GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions
+  license_family: GPL3
+  summary: "(CDT) Java runtime library for gcc"
+  description: |
         The Java(tm) runtime library. You will need this package to run your Java
         programs compiled using the Java compiler from GNU Compiler Collection (gcj).

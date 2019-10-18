@@ -3,28 +3,31 @@ package:
   version: 1.1.3
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/i386/Packages/libXdamage-devel-1.1.3-4.el6.i686.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libXdamage-devel-1.1.3-4.el6.i686.rpm
     sha256: f4c3f49ceb21bbb0049ada0fecb00ca41a4a2aa997db3f60e811aff0efdc80ae
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libXdamage-1.1.3-4.el6.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libXdamage-1.1.3-4.el6.src.rpm
     folder: source
+
+build:
+  number: 1
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
     - libxdamage-cos6-i686 ==1.1.3
+  host:
+    - libxdamage-cos6-i686 ==1.1.3
+  run:
+    - libxdamage-cos6-i686 ==1.1.3
 
-
-outputs:
-  - name: libxdamage-devel-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - libxdamage-cos6-i686 ==1.1.3
-
-    about:
-      home: http://www.x.org
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) Development files for libXdamage"
-      description: |
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Development files for libXdamage"
+  description: |
         X.Org X11 libXdamage development package.

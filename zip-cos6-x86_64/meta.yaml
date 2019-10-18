@@ -5,27 +5,25 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/zip-3.0-1.el6_7.1.x86_64.rpm
     sha256: 64624b07c11db01d0f74a578a9dd93d20cfc2be4d317190d21d8c71c00adecf5
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/zip-3.0-1.el6_7.1.src.rpm
-    sha256: 2ef66a54619a78ae9d91c49c1967bc8a94b3650e61813a18aa2177728633d5fa
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 
 
-outputs:
-  - name: zip-cos6-x86_64
-    noarch: generic
-
-    about:
-      home: http://www.info-zip.org/Zip.html
-      license: BSD
-      license_family: BSD
-      summary: "(CDT) A file compression and packaging utility compatible with PKZIP"
-      description: |
+about:
+  home: http://www.info-zip.org/Zip.html
+  license: BSD
+  license_family: BSD
+  summary: "(CDT) A file compression and packaging utility compatible with PKZIP"
+  description: |
         The zip program is a compression and file packaging utility.  Zip is analogous
         to a combination of the UNIX tar and compress commands and is compatible with
         PKZIP (a compression and file packaging utility for MS-DOS systems).  Install

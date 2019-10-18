@@ -5,32 +5,30 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/gdk-pixbuf2-devel-2.24.1-6.el6_7.i686.rpm
     sha256: 4c6e2434f5f74a7e3ea88790d33caa61dbbd2e3cfbf54936ed18d221c0e2876e
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/gdk-pixbuf2-2.24.1-6.el6_7.src.rpm
-    sha256: 56cb617816f942b83c1693e0dce4572fb432b9f8d1433fda187e39e7b764bce9
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 requirements:
   build:
     - gdk-pixbuf2-cos6-i686 ==2.24.1
+  host:
+    - gdk-pixbuf2-cos6-i686 ==2.24.1
+  run:
+    - gdk-pixbuf2-cos6-i686 ==2.24.1
 
-
-outputs:
-  - name: gdk-pixbuf2-devel-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - gdk-pixbuf2-cos6-i686 ==2.24.1
-
-    about:
-      home: http://www.gt.org
-      license: LGPLv2+ and (LGPLv2+ or MPLv1.1) and Public Domain
-      license_family: LGPL
-      summary: "(CDT) Development files for gdk-pixbuf"
-      description: |
+about:
+  home: http://www.gt.org
+  license: LGPLv2+ and (LGPLv2+ or MPLv1.1) and Public Domain
+  license_family: LGPL
+  summary: "(CDT) Development files for gdk-pixbuf"
+  description: |
         This package contains the libraries and header files that are needed for
         writing applications that are using gdk-pixbuf.

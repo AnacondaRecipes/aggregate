@@ -3,30 +3,33 @@ package:
   version: 1.2.49
 
 source:
-  - url: http://mirror.centos.org/centos/6.9/os/x86_64/Packages/libpng-devel-1.2.49-2.el6_7.x86_64.rpm
+  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libpng-devel-1.2.49-2.el6_7.x86_64.rpm
     sha256: 6e30263282f29b65af97733f7704647e615ff857902ebf87927ba276a5230e3a
+    ho_hoist: true
     folder: binary
-  - url: http://vault.centos.org/6.9/os/Source/SPackages/libpng-1.2.49-2.el6_7.src.rpm
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/libpng-1.2.49-2.el6_7.src.rpm
     folder: source
+
+build:
+  number: 0
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
     - libpng-cos6-x86_64 ==1.2.49
+  host:
+    - libpng-cos6-x86_64 ==1.2.49
+  run:
+    - libpng-cos6-x86_64 ==1.2.49
 
-
-outputs:
-  - name: libpng-devel-cos6-x86_64
-    noarch: generic
-    requirements:
-      run:
-        - libpng-cos6-x86_64 ==1.2.49
-
-    about:
-      home: http://www.libpng.org/pub/png/
-      license: zlib
-      license_family: Other
-      summary: "(CDT) Development tools for programs to manipulate PNG image format files"
-      description: |
+about:
+  home: http://www.libpng.org/pub/png/
+  license: zlib
+  license_family: Other
+  summary: "(CDT) Development tools for programs to manipulate PNG image format files"
+  description: |
         The libpng-devel package contains header files and documentation necessary for
         developing programs using the PNG (Portable Network Graphics) library.  If you
         want to develop programs which will manipulate PNG image format files, you

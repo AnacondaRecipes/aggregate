@@ -5,32 +5,30 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/expat-devel-2.0.1-13.el6_8.x86_64.rpm
     sha256: 64684a601f126ca5e307fa152b56af0bb7cd31cb231a6d9560573d50bbe94326
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/expat-2.0.1-13.el6_8.src.rpm
-    sha256: 1c09bb9d3eb76d17de44a027bb97381053fb94000567865ecc4569429afb4c57
     folder: source
 
 build:
+  number: 0
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 requirements:
   build:
     - expat-cos6-x86_64 ==2.0.1
+  host:
+    - expat-cos6-x86_64 ==2.0.1
+  run:
+    - expat-cos6-x86_64 ==2.0.1
 
-
-outputs:
-  - name: expat-devel-cos6-x86_64
-    noarch: generic
-    requirements:
-      run:
-        - expat-cos6-x86_64 ==2.0.1
-
-    about:
-      home: http://www.libexpat.org/
-      license: MIT
-      license_family: MIT
-      summary: "(CDT) Libraries and header files to develop applications using expat"
-      description: |
+about:
+  home: http://www.libexpat.org/
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Libraries and header files to develop applications using expat"
+  description: |
         The expat-devel package contains the libraries, include files and
         documentation to develop XML applications with expat.

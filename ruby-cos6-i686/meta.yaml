@@ -5,33 +5,31 @@ package:
 source:
   - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/ruby-1.8.7.374-5.el6.i686.rpm
     sha256: 81ca470126fe6ccb92f3de8d095ab0bd7b35424c865ce8ef4cea2333fce3a5a8
+    ho_hoist: true
     folder: binary
   - url: http://vault.centos.org/6.10/os/Source/SPackages/ruby-1.8.7.374-5.el6.src.rpm
-    sha256: 0deb7f26eb923c2235c9dc44dd39ec2ce398c7b65a0fd7282594df23514abeb3
     folder: source
 
 build:
+  number: 1
+  noarch: generic
   missing_dso_whitelist:
     - '*'
 
 requirements:
   build:
     - ruby-libs-cos6-i686 ==1.8.7.374
+  host:
+    - ruby-libs-cos6-i686 ==1.8.7.374
+  run:
+    - ruby-libs-cos6-i686 ==1.8.7.374
 
-
-outputs:
-  - name: ruby-cos6-i686
-    noarch: generic
-    requirements:
-      run:
-        - ruby-libs-cos6-i686 ==1.8.7.374
-
-    about:
-      home: http://www.ruby-lang.org/
-      license: Ruby or GPLv2
-      license_family: GPL2
-      summary: "(CDT) An interpreter of object-oriented scripting language"
-      description: |
+about:
+  home: http://www.ruby-lang.org/
+  license: Ruby or GPLv2
+  license_family: GPL2
+  summary: "(CDT) An interpreter of object-oriented scripting language"
+  description: |
         Ruby is the interpreted scripting language for quick and easy object-oriented
         programming.  It has many features to process text files and to do system
         management tasks (as in Perl).  It is simple, straight-forward, and
