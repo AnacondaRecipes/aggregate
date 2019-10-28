@@ -20,10 +20,12 @@ c_compiler:
   - vs2015                     # [win]
   - vs2015                     # [win]
   - vs2015                     # [win]
+  - vs2015                     # [win]
   - clang-osize                # [osx]
   - gcc-osize                  # [linux]
 cxx_compiler:
   - vs2008                     # [win]
+  - vs2015                     # [win]
   - vs2015                     # [win]
   - vs2015                     # [win]
   - vs2015                     # [win]
@@ -34,6 +36,7 @@ fortran_compiler:
   - gfortran-osize             # [linux]
 fortran_compiler_version:
   - 13.1.6                     # [win]
+  - 16.0.4                     # [win]
   - 16.0.4                     # [win]
   - 16.0.4                     # [win]
   - 16.0.4                     # [win]
@@ -176,6 +179,7 @@ python:
   - 3.5
   - 3.6
   - 3.7
+  - 3.8
 r_version:
   - 3.5.0
 r_implementation:
@@ -199,6 +203,7 @@ tk:
   - 8.6                # [not ppc64le]
 vc:
   - 9                          # [win]
+  - 14                         # [win]
   - 14                         # [win]
   - 14                         # [win]
   - 14                         # [win]
