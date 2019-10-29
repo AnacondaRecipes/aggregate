@@ -12,6 +12,8 @@ source:
 build:
   number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+  # header/preprocessor issue for VS, therefore disabled
+  skip: True  # [win and py>36]
 
 requirements:
   build:
