@@ -3,6 +3,8 @@ DEBUG_C:
 pin_run_as_build:
   libboost:
     max_pin: x.x.x
+noarch_python:
+  - python
 apr:
   - 1.6.3
 blas_impl:
