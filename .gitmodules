@@ -3816,5 +3816,5 @@
 	branch = master
 [submodule "cython-0.28.4-feedstock"]
 	path = cython-0.28.4-feedstock
-	branch = archive_0.28.4
 	url = ../cython-feedstock
+	branch = archive_0.28.4
