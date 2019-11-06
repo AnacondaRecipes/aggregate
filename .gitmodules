@@ -3821,4 +3821,4 @@
 [submodule "wheel-0.32.3-feedstock"]
 	path = wheel-0.32.3-feedstock
 	url = ../wheel-feedstock
-        branch = archive_0.32.3 
+        branch = archive_0.32.3
