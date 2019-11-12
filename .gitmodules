@@ -3822,3 +3822,7 @@
 	path = wheel-0.32.3-feedstock
 	url = ../wheel-feedstock
         branch = archive_0.32.3
+[submodule "mkl-service-feedstock"]
+	path = mkl-service-feedstock
+	url = ../mkl-service-feedstock
+	branch = master
