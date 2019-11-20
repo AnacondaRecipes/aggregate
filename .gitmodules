@@ -3826,3 +3826,7 @@
 	path = mkl-service-feedstock
 	url = ../mkl-service-feedstock
 	branch = master
+[submodule "pytest-astropy-header-feedstock"]
+	path = pytest-astropy-header-feedstock
+	url = ../pytest-astropy-header-feedstock
+	branch = master
