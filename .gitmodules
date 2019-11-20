@@ -3830,3 +3830,7 @@
 	path = pytest-astropy-header-feedstock
 	url = ../pytest-astropy-header-feedstock
 	branch = master
+[submodule "intake-parquet-feedstock"]
+	path = intake-parquet-feedstock
+	url = ../intake-parquet-feedstock
+	branch = master
