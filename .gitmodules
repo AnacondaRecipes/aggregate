@@ -3834,3 +3834,7 @@
 	path = intake-parquet-feedstock
 	url = ../intake-parquet-feedstock
 	branch = master
+[submodule "deprecated-feedstock"]
+	path = deprecated-feedstock
+	url = ../deprecated-feedstock
+	branch = master
