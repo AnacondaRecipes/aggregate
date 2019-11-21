@@ -3838,3 +3838,7 @@
 	path = deprecated-feedstock
 	url = ../deprecated-feedstock
 	branch = master
+[submodule "zope.interface-feedstock"]
+	path = zope.interface-feedstock
+	url = ../zope.interface-feedstock
+	branch = master
