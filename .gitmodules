@@ -3826,3 +3826,87 @@
 	path = mkl-service-feedstock
 	url = ../mkl-service-feedstock
 	branch = master
+[submodule "flower-feedstock"]
+	path = flower-feedstock
+	url = ../flower-feedstock
+	branch = master
+[submodule "connexion-feedstock"]
+	path = connexion-feedstock
+	url = ../connexion-feedstock
+	branch = master
+[submodule "clickclick-feedstock"]
+	path = clickclick-feedstock
+	url = ../clickclick-feedstock
+	branch = master
+[submodule "openapi-spec-validator-feedstock"]
+	path = openapi-spec-validator-feedstock
+	url = ../openapi-spec-validator-feedstock
+	branch = master
+[submodule "celery-feedstock"]
+	path = celery-feedstock
+	url = ../celery-feedstock
+	branch = master
+[submodule "billiard-feedstock"]
+	path = billiard-feedstock
+	url = ../billiard-feedstock
+	branch = master
+[submodule "vine-feedstock"]
+	path = vine-feedstock
+	url = ../vine-feedstock
+	branch = master
+[submodule "kombu-feedstock"]
+	path = kombu-feedstock
+	url = ../kombu-feedstock
+	branch = master
+[submodule "case-feedstock"]
+	path = case-feedstock
+	url = ../case-feedstock
+	branch = master
+[submodule "amqp-feedstock"]
+	path = amqp-feedstock
+	url = ../amqp-feedstock
+	branch = master
+[submodule "marshmallow-sqlalchemy-feedstock"]
+	path = marshmallow-sqlalchemy-feedstock
+	url = ../marshmallow-sqlalchemy-feedstock
+	branch = master
+[submodule "marshmallow-enum-feedstock"]
+	path = marshmallow-enum-feedstock
+	url = ../marshmallow-enum-feedstock
+	branch = master
+[submodule "python-debian-feedstock"]
+	path = python-debian-feedstock
+	url = ../python-debian-feedstock
+	branch = master
+[submodule "zstandard-feedstock"]
+	path = zstandard-feedstock
+	url = ../zstandard-feedstock
+	branch = master
+[submodule "croniter-feedstock"]
+	path = croniter-feedstock
+	url = ../croniter-feedstock
+	branch = master
+[submodule "python-fastjsonschema-feedstock"]
+	path = python-fastjsonschema-feedstock
+	url = ../python-fastjsonschema-feedstock
+	branch = master
+[submodule "pdoc3-feedstock"]
+	path = pdoc3-feedstock
+	url = ../pdoc3-feedstock
+	branch = master
+[submodule "ruamel-feedstock"]
+	path = ruamel-feedstock
+	url = ../ruamel-feedstock
+	branch = master
+[submodule "ruamel.yaml-feedstock"]
+	path = ruamel.yaml-feedstock
+	url = ../ruamel.yaml-feedstock
+	branch = master
+[submodule "ruamel.yaml.clib-feedstock"]
+	path = ruamel.yaml.clib-feedstock
+	url = ../ruamel.yaml.clib-feedstock
+	branch = master
+[submodule "swagger-ui-bundle-feedstock"]
+	path = swagger-ui-bundle-feedstock
+	url = ../swagger-ui-bundle-feedstock
+	branch = master
