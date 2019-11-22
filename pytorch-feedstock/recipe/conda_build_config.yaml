@@ -1,21 +1,22 @@
-# cuda 9.2, gcc 7.3, cudnn 7.3
-# cuda 10.0, gcc 7.3, cudnn 7.3
-c_compiler_version:
-  - 7.3
-cxx_compiler_version:
-  - 7.3
+# cuda 9.2, gcc 7.3, cudnn 7.6
+# cuda 10.0, gcc 7.3, cudnn 7.6
+# cuda 10.1, gcc 7.3, cudnn 7.6
+c_compiler_version:           # [linux]
+  - 7.3                       # [linux]
+cxx_compiler_version:         # [linux]
+  - 7.3                       # [linux]
 cudatoolkit:
-  - 10.0
+  - 10.1
 cudnn:
-  - 7.3
+  - 7.6
 mkl:
   - 2019
 numpy:
   - 1.11
 python:
-  - 2.7
-  - 3.6
+# - 2.7
+# - 3.6
   - 3.7
 pytorch_variant:
-# - cpu
-  - gpu
+  - cpu
+# - gpu
