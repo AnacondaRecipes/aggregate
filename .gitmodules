@@ -3842,3 +3842,11 @@
 	path = zope.interface-feedstock
 	url = ../zope.interface-feedstock
 	branch = master
+[submodule "cfitsio-feedstock"]
+	path = cfitsio-feedstock
+	url = ../cfitsio-feedstock.git
+	branch = master
+[submodule "tiledb-feedstock"]
+	path = tiledb-feedstock
+	url = ../tiledb-feedstock.git
+	branch = master
