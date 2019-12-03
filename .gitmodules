@@ -3850,3 +3850,7 @@
 	path = tiledb-feedstock
 	url = ../tiledb-feedstock.git
 	branch = master
+[submodule "mpi-feedstock"]
+	path = mpi-feedstock
+	url = ../mpi-feedstock
+	branch = master
