@@ -3854,3 +3854,39 @@
 	path = mpi-feedstock
 	url = ../mpi-feedstock
 	branch = master
+[submodule "diff-match-patch-feedstock"]
+	path = diff-match-patch-feedstock
+	url = ../diff-match-patch-feedstock
+	branch = master
+[submodule "intervaltree-feedstock"]
+	path = intervaltree-feedstock
+	url = ../intervaltree-feedstock
+	branch = master
+[submodule "pathtools-feedstock"]
+	path = pathtools-feedstock
+	url = ../pathtools-feedstock
+	branch = master
+[submodule "python-jsonrpc-server-feedstock"]
+	path = python-jsonrpc-server-feedstock
+	url = ../python-jsonrpc-server-feedstock
+	branch = master
+[submodule "pyxdg-feedstock"]
+	path = pyxdg-feedstock
+	url = ../pyxdg-feedstock
+	branch = master
+[submodule "qdarkstyle-feedstock"]
+	path = qdarkstyle-feedstock
+	url = ../qdarkstyle-feedstock
+	branch = master
+[submodule "argh-feedstock"]
+	path = argh-feedstock
+	url = ../argh-feedstock
+	branch = master
+[submodule "python-language-server-feedstock"]
+	path = python-language-server-feedstock
+	url = ../python-language-server-feedstock
+	branch = master
+[submodule "watchdog-feedstock"]
+	path = watchdog-feedstock
+	url = ../watchdog-feedstock
+	branch = master
