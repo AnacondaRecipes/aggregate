@@ -3890,3 +3890,7 @@
 	path = watchdog-feedstock
 	url = ../watchdog-feedstock
 	branch = master
+[submodule "applaunchservices-feedstock"]
+	path = applaunchservices-feedstock
+	url = ../applaunchservices-feedstock
+	branch = master
