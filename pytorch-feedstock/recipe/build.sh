@@ -12,10 +12,6 @@ rm -rf build
 # can be imported on system without a GPU
 LDFLAGS="${LDFLAGS//-Wl,-z,now/-Wl,-z,lazy}"
 
-# std=c++11 is required to compile some .cu files
-CPPFLAGS="${CPPFLAGS//-std=c++17/-std=c++11}"
-CXXFLAGS="${CXXFLAGS//-std=c++17/-std=c++11}"
-
 export CMAKE_LIBRARY_PATH=$PREFIX/lib:$PREFIX/include:$CMAKE_LIBRARY_PATH
 export CMAKE_PREFIX_PATH=$PREFIX
 export TH_BINARY_BUILD=1
@@ -24,6 +20,18 @@ export PYTORCH_BUILD_NUMBER=$PKG_BUILDNUM
 
 export USE_NINJA=OFF
 export INSTALL_TEST=0
+
+# MacOS build is simple, and will not be for CUDA
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    export MACOSX_DEPLOYMENT_TARGET=10.9
+    python -m pip install . --no-deps -vv
+    exit 0
+fi
+
+# std=c++11 is required to compile some .cu files
+CPPFLAGS="${CPPFLAGS//-std=c++17/-std=c++11}"
+CXXFLAGS="${CXXFLAGS//-std=c++17/-std=c++11}"
+
 
 if [[ ${pytorch_variant} = "gpu" ]]; then
     export USE_CUDA=1

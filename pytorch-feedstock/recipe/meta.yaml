@@ -14,6 +14,7 @@ source:
   patches:
     - nccl_socket.patch
     - remove_shared_linker_flag_override.patch
+    - do_not_check_clock_realtime.patch
 
 build:
   number: 0
@@ -27,6 +28,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - cmake
+    - git
     # GPU requirements
     - cudatoolkit {{ cudatoolkit }}*  # [pytorch_variant == "gpu"]
     - cudnn {{ cudnn }}*              # [pytorch_variant == "gpu"]
