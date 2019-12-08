@@ -47,8 +47,17 @@ function _tc_activation() {
     to=""
   fi
 
+  work=("$@")
+
+  if [ "${CONDA_BUILD}" = "1" ]; then
+    CONDA_ACTIVATION_SET_HOST=1
+  fi
+  if [ "${CONDA_ACTIVATION_SET_HOST}" = "1" ]; then
+    work+=("${tc_nature},${tc_machine}")
+  fi
+
   for pass in check apply; do
-    for thing in $tc_nature,$tc_machine "$@"; do
+    for thing in "${work[@]}"; do
       case "${thing}" in
         *,*)
           newval=$(echo "${thing}" | sed "s,^[^\,]*\,\(.*\),\1,")
@@ -102,7 +111,8 @@ _tc_activation \
   activate host @CHOST@ @CHOST@- \
   c++ g++ \
   "CXXFLAGS,${CXXFLAGS:-${DEBUG_CXXFLAGS_USED}}" \
-  "OPT_CXXFLAGS,${OPT_CXXFLAGS:-${CXXFLAGS_USED}}"
+  "OPT_CXXFLAGS,${OPT_CXXFLAGS:-${CXXFLAGS_USED}}" \
+  "CONDA_TOOLCHAIN_HOST,@CHOST@"
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"

@@ -47,8 +47,17 @@ function _tc_activation() {
     to=""
   fi
 
+  work=("$@")
+
+  if [ "${CONDA_BUILD}" = "1" ]; then
+    CONDA_ACTIVATION_SET_HOST=1
+  fi
+  if [ "${CONDA_ACTIVATION_SET_HOST}" = "1" ]; then
+    work+=("${tc_nature},${tc_machine}")
+  fi
+
   for pass in check apply; do
-    for thing in $tc_nature,$tc_machine "$@"; do
+    for thing in "${work[@]}"; do
       case "${thing}" in
         *,*)
           newval=$(echo "${thing}" | sed "s,^[^\,]*\,\(.*\),\1,")
@@ -139,7 +148,8 @@ _tc_activation \
   "LDFLAGS,${LDFLAGS:-${LDFLAGS_USED}}" \
   "OPT_CPPFLAGS,${CPPFLAGS:-${CPPFLAGS_USED}}" \
   "OPT_CFLAGS,${CFLAGS:-${CFLAGS_USED}}" \
-  "_CONDA_PYTHON_SYSCONFIGDATA_NAME,${_CONDA_PYTHON_SYSCONFIGDATA_NAME_USED}"
+  "_CONDA_PYTHON_SYSCONFIGDATA_NAME,${_CONDA_PYTHON_SYSCONFIGDATA_NAME_USED}" \
+  "CONDA_TOOLCHAIN_HOST,@CHOST@"
 
 if [ $? -ne 0 ]; then
   echo "ERROR: $(_get_sourced_filename) failed, see above for details"

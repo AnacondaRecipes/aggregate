@@ -47,8 +47,17 @@ function _tc_activation() {
     to=""
   fi
 
+  work=("$@")
+
+  if [ "${CONDA_BUILD}" = "1" ]; then
+    CONDA_ACTIVATION_SET_HOST=1
+  fi
+  if [ "${CONDA_ACTIVATION_SET_HOST}" = "1" ]; then
+    work+=("${tc_nature},${tc_machine}")
+  fi
+
   for pass in check apply; do
-    for thing in $tc_nature,$tc_machine "$@"; do
+    for thing in "${work[@]}"; do
       case "${thing}" in
         *,*)
           newval=$(echo "${thing}" | sed "s,^[^\,]*\,\(.*\),\1,")
@@ -103,6 +112,7 @@ _tc_activation \
   "FORTRANFLAGS,${FORTRANFLAGS:-${FFLAGS_USED}}" \
   "DEBUG_FFLAGS,${FFLAGS:-${FFLAGS_USED} @DEBUG_FFLAGS@}" \
   "DEBUG_FORTRANFLAGS,${FORTRANFLAGS:-${FFLAGS_USED} @DEBUG_FFLAGS@}" \
+  "CONDA_TOOLCHAIN_HOST,@CHOST@"
 
 # extra ones - have a dependency on the previous ones, so done after.
 _tc_activation \
