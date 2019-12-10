@@ -5,6 +5,10 @@ c_compiler_version:           # [linux]
   - 7.3                       # [linux]
 cxx_compiler_version:         # [linux]
   - 7.3                       # [linux]
+cross_compiler_target_platform:   # [win]
+  - win-64                        # [win]
+target_platform:                  # [win]
+  - win-64                        # [win]
 cudatoolkit:
   - 10.1
 cudnn:
