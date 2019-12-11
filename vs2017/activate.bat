@@ -1,6 +1,7 @@
 @echo on
 :: Set env vars that tell distutils to use the compiler that we put on path
 SET DISTUTILS_USE_SDK=1
+:: This is probably not good. It is for the pre-UCRT msvccompiler.py *not* _msvccompiler.py
 SET MSSdk=1
 
 SET "VS_VERSION=15.0"
@@ -13,6 +14,10 @@ set "MSYS2_ENV_CONV_EXCL=CL"
 :: For Python 3.5+, ensure that we link with the dynamic runtime.  See
 :: http://stevedower.id.au/blog/building-for-python-3-5-part-two/ for more info
 set "PY_VCRUNTIME_REDIST=%PREFIX%\bin\vcruntime140.dll"
+
+:: set CC and CXX for cmake
+set "CXX=cl.exe"
+set "CC=cl.exe"
 
 set "VSINSTALLDIR="
 :: Try to find actual vs2017 installations
