@@ -3977,3 +3977,7 @@
 	path = applaunchservices-feedstock
 	url = ../applaunchservices-feedstock
 	branch = master
+[submodule "tenacity-feedstock"]
+	path = tenacity-feedstock
+	url = ../tenacity-feedstock
+	branch = master
