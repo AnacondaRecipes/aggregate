@@ -3981,3 +3981,7 @@
 	path = tenacity-feedstock
 	url = ../tenacity-feedstock
 	branch = master
+[submodule "path-feedstock"]
+	path = path-feedstock
+	url = ../path-feedstock
+	branch = master
