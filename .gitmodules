@@ -3985,3 +3985,7 @@
 	path = path-feedstock
 	url = ../path-feedstock
 	branch = master
+[submodule "binutils-feedstock"]
+	path = binutils-feedstock
+	url = ../binutils-feedstock
+	branch = master
