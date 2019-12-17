@@ -1,0 +1,53 @@
+{% set name = "dash" %}
+{% set version = "1.4.1" %}
+{% set sha256 = "4fe9357878abb09114dea152de1a231265ffdbb1e42e2f8d601435f7be4e4be2" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  noarch: python
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - pip
+  run:
+    - python
+    - pyyaml >=5.1.1
+    - flask >=1.0.2
+    - flask-compress
+    - plotly
+    - dash-renderer ==1.1.2
+    - dash-core-components ==1.3.1
+    - dash-html-components ==1.0.1
+    - dash-table ==4.4.1
+    - future
+   
+test:
+  imports:
+    - dash.dash
+    - dash.dependencies
+    - dash.exceptions
+    - dash.resources
+
+about:
+  home: https://plot.ly/dash
+  dev_url: https://github.com/plotly/dash
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: 'A Python framework for building reactive web-apps.'
+
+extra:
+  recipe-maintainers:
+    - moorepants
