@@ -3989,3 +3989,7 @@
 	path = binutils-feedstock
 	url = ../binutils-feedstock
 	branch = master
+[submodule "celery-redbeat-feedstock"]
+	path = celery-redbeat-feedstock
+	url = ../celery-redbeat-feedstock
+	branch = master
