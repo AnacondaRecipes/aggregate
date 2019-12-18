@@ -4063,3 +4063,23 @@
 	path = nettle-feedstock
 	url = ../nettle-feedstock
 	branch = master
+[submodule "dash-table-feedstock"]
+	path = dash-table-feedstock
+	url = ../dash-table-feedstock
+	branch = master
+[submodule "dash-renderer-feedstock"]
+	path = dash-renderer-feedstock
+	url = ../dash-renderer-feedstock
+	branch = master
+[submodule "dash-html-components-feedstock"]
+	path = dash-html-components-feedstock
+	url = ../dash-html-components-feedstock
+	branch = master
+[submodule "dash-core-components-feedstock"]
+	path = dash-core-components-feedstock
+	url = ../dash-core-components-feedstock
+	branch = master
+[submodule "dash-feedstock"]
+	path = dash-feedstock
+	url = ../dash-feedstock
+	branch = master
