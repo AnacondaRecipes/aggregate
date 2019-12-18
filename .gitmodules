@@ -3671,7 +3671,7 @@
 [submodule "libarchive-static-feedstock"]
 	path = libarchive-static-feedstock
 	url = ../libarchive-feedstock
-        branch = master
+	branch = master
 [submodule "filesystem-spec-feedstock"]
 	path = filesystem-spec-feedstock
 	url = ../filesystem-spec-feedstock
@@ -3679,12 +3679,15 @@
 [submodule "toolchain-feedstock"]
 	path = toolchain-feedstock
 	url = ../toolchain-feedstock
+	branch = master
 [submodule "python-3.7-feedstock"]
 	path = python-3.7-feedstock
 	url = ../python-feedstock
+	branch = master-3.7
 [submodule "python-3.8-feedstock"]
 	path = python-3.8-feedstock
 	url = ../python-feedstock
+	branch = master-3.8
 [submodule "ipympl-feedstock"]
 	path = ipympl-feedstock
 	url = ../ipympl-feedstock
@@ -3865,6 +3868,18 @@
 	path = amqp-feedstock
 	url = ../amqp-feedstock
 	branch = master
+[submodule "croniter-feedstock"]
+	path = croniter-feedstock
+	url = ../croniter-feedstock
+	branch = master
+[submodule "zstandard-feedstock"]
+	path = zstandard-feedstock
+	url = ../zstandard-feedstock
+	branch = master
+[submodule "python-debian-feedstock"]
+	path = python-debian-feedstock
+	url = ../python-debian-feedstock
+	branch = master
 [submodule "marshmallow-sqlalchemy-feedstock"]
 	path = marshmallow-sqlalchemy-feedstock
 	url = ../marshmallow-sqlalchemy-feedstock
@@ -3896,6 +3911,10 @@
 [submodule "ruamel-feedstock"]
 	path = ruamel-feedstock
 	url = ../ruamel-feedstock
+	branch = master
+[submodule "connexion-feedstock"]
+	path = connexion-feedstock
+	url = ../connexion-feedstock
 	branch = master
 [submodule "ruamel.yaml-feedstock"]
 	path = ruamel.yaml-feedstock
@@ -3999,9 +4018,52 @@
 	branch = master
 [submodule "cudatoolkit-feedstock"]
 	path = cudatoolkit-feedstock
-	url = ../cudatoolkit-feedstock
 	branch = master
 [submodule "ctng-compiler-activation-feedstock"]
 	path = ctng-compiler-activation-feedstock
 	url = ../ctng-compiler-activation-feedstock
+	branch = master
+[submodule "ijson-feedstock"]
+	path = ijson-feedstock
+	url = ../ijson-feedstock
+	branch = master
+[submodule "flask-swagger-feedstock"]
+	path = flask-swagger-feedstock
+	url = ../flask-swagger-feedstock
+	branch = master
+[submodule "flask-compress-feedstock"]
+	path = flask-compress-feedstock
+	url = ../flask-compress-feedstock
+	branch = master
+[submodule "flask-apscheduler-feedstock"]
+	path = flask-apscheduler-feedstock
+	url = ../flask-apscheduler-feedstock
+	branch = master
+[submodule "apscheduler-feedstock"]
+	path = apscheduler-feedstock
+	url = ../apscheduler-feedstock
+	branch = master
+[submodule "pg8000-feedstock"]
+	path = pg8000-feedstock
+	url = ../pg8000-feedstock
+	branch = master
+[submodule "scramp-feedstock"]
+	path = scramp-feedstock
+	url = ../scramp-feedstock
+	branch = master
+[submodule "lame-feedstock"]
+	path = lame-feedstock
+	url = ../lame-feedstock
+	branch = master
+[submodule "x264-feedstock"]
+	path = x264-feedstock
+	url = ../x264-feedstock
+	branch = master
+[submodule "openh264-feedstock"]
+	path = openh264-feedstock
+	url = ../openh264-feedstock
+	branch = master
+[submodule "nettle-feedstock"]
+	path = nettle-feedstock
+	url = ../nettle-feedstock
 	branch = master
