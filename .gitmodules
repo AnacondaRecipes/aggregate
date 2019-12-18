@@ -4083,3 +4083,7 @@
 	path = dash-feedstock
 	url = ../dash-feedstock
 	branch = master
+[submodule "dash-bio-feedstock"]
+	path = dash-bio-feedstock
+	url = ../dash-bio-feedstock
+	branch = master
