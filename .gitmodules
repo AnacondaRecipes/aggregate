@@ -3997,3 +3997,7 @@
 	path = dash-bio-feedstock
 	url = ./dash-bio-feedstock
 	branch = master
+[submodule "cudatoolkit-feedstock"]
+	path = cudatoolkit-feedstock
+	url = ../cudatoolkit-feedstock
+	branch = master
