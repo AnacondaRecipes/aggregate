@@ -4012,10 +4012,6 @@
 	path = celery-redbeat-feedstock
 	url = ../celery-redbeat-feedstock
 	branch = master
-[submodule "dash-bio-feedstock"]
-	path = dash-bio-feedstock
-	url = ./dash-bio-feedstock
-	branch = master
 [submodule "cudatoolkit-feedstock"]
 	path = cudatoolkit-feedstock
 	branch = master
