@@ -4014,6 +4014,7 @@
 	branch = master
 [submodule "cudatoolkit-feedstock"]
 	path = cudatoolkit-feedstock
+	url = ../cudatoolkit-feedstock
 	branch = master
 [submodule "ctng-compiler-activation-feedstock"]
 	path = ctng-compiler-activation-feedstock
