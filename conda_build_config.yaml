@@ -54,40 +54,6 @@ VERBOSE_CM:
 # We use MRAN here because they take snapshots which improves reproducibility.
 cran_mirror:
   - https://mran.microsoft.com/snapshot/2018-01-01
-# this is global, but can be overridden by other stuff in recipes
-ctng_binutils:
-  - 2.31.1
-ctng_duma:
-  - 2.5.15
-
-ctng_gcc:
-  - 7.3.0
-  - 8.2.0
-# keep zip_keys in mind - these are coupled with a specific gcc version in the ctng_gcc above
-ctng_gcc_build_number:
-  - 2
-  - 2
-# keep zip_keys in mind - these are coupled with a specific gcc version in the ctng_gcc above
-ctng_gcc_activation_build_num:
-  - 8
-  - 4
-
-ctng_gmp:
-  - 6.1.2
-ctng_isl:
-  - 0.19
-ctng_libc:
-  - gnu
-ctng_kernel:
-  - 2.6.32
-ctng_libiconv:
-  - 1.15
-ctng_mpc:
-  - 1
-ctng_nature:
-  - shared
-ctng_ncurses:
-  - 6.1
 c_compiler_version:        # [linux]
   - 7.3.0                  # [linux]
 cxx_compiler_version:      # [linux]
@@ -257,7 +223,3 @@ zip_keys:
     - python                    # [win]
     - nodejs                    # [win]
     - geos                      # [win]
-  -
-    - ctng_gcc
-    - ctng_gcc_build_number
-    - ctng_gcc_activation_build_num
