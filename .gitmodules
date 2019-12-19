@@ -4088,3 +4088,7 @@
 	path = dash-bio-feedstock
 	url = ../dash-bio-feedstock
 	branch = master
+[submodule "cudnn-feedstock"]
+	path = cudnn-feedstock
+	url = ../cudnn-feedstock
+	branch = master
