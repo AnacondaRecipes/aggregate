@@ -214,6 +214,8 @@ xz:
   - 5
 qtwebkit:
   - true
+channel_targets:
+  - defaults
 zip_keys:
   -                             # [win]
     - vc                        # [win]
