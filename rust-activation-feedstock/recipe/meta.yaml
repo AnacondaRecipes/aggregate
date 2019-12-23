@@ -5,14 +5,14 @@ package:
   version: {{ version }}
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: rust_{{ target_platform }}
     script: build.sh  # [unix]
     script: bld.bat  # [win]
-    build:
-      skip: True  # [win and vc != 14]
+    build:  # [win and int(float(vc)) != 14]
+      skip: True  # [win and int(float(vc)) != 14]
     requirements:
       run:
         - rust >={{ version }}
@@ -25,17 +25,15 @@ outputs:
         - rustc --help
         - cargo --help
         - time bash ./forge_test.sh  # [not win]
-        - bash forge_test.sh  # [win]
-
+        - bash -l ./forge_test.sh  # [win]
   - name: rust-gnu_{{ target_platform }}  # [win]
     script: bld.bat  # [win]
-    build:  # [win]
     requirements:  # [win]
       run:  # [win]
         - rust-gnu  # [win]
         - m2w64-toolchain  # [win]
     test:  # [win]
-        files:  # [win]
+      files:  # [win]
         - forge_test.sh  # [win]
       commands:  # [win]
         - rustc --help  # [win]
