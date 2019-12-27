@@ -81,8 +81,8 @@ gst_plugins_base:
 geos:
   - 3.6.2  # [win]
   - 3.8.0  # [win]
-  - 3.8.0
   - 3.8.0  # [win]
+  - 3.8.0
 giflib:
   - 5.1
 glib:
