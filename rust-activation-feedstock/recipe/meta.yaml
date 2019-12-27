@@ -20,12 +20,11 @@ outputs:
         - {{ compiler('cxx') }}
     test:
       files:
-        - forge_test.sh
+        - forge_test.sh  # [not win]
       commands:
         - rustc --help
         - cargo --help
         - time bash ./forge_test.sh  # [not win]
-        - bash -l ./forge_test.sh  # [win]
   - name: rust-gnu_{{ target_platform }}  # [win]
     script: bld.bat  # [win]
     requirements:  # [win]
