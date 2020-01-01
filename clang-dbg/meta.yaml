@@ -26,11 +26,11 @@ outputs:
       host:
         - clangxx {{ version }}
         - libcxx {{ version }}
-        - {{ pin_subpackage('clang_' ~ target_platform, min_pin='x.x.x.x.x.x.x.x', max_pin='x.x.x.x.x.x.x.x') }}
+        - {{ pin_subpackage('clang-dbg_' ~ target_platform, min_pin='x.x.x.x.x.x.x.x', max_pin='x.x.x.x.x.x.x.x') }}
       run:
         - clangxx {{ version }}
         - {{ pin_compatible('libcxx', max_pin=None) }}
-        - {{ pin_subpackage('clang_' ~ target_platform, min_pin='x.x.x.x.x.x.x.x', max_pin='x.x.x.x.x.x.x.x') }}
+        - {{ pin_subpackage('clang-dbg_' ~ target_platform, min_pin='x.x.x.x.x.x.x.x', max_pin='x.x.x.x.x.x.x.x') }}
     # Since transitive run_exports are not currently possible:
     # (here I would like the run dependency on clangxx to pull in the run_exports from it).
     run_exports:
