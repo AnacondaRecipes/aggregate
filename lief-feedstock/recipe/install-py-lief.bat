@@ -50,7 +50,7 @@ pushd api\python
     copy __init__.py %SP_DIR%\lief\
     copy _pylief.pyd %SP_DIR%\
   pod
-  %PYTHON% -c "import lief"
+  %CONDA_EXE% run -p %PREFIX%\python.exe -c "import lief"
   if errorlevel neq 0 exit /b 1
 popd
 
