@@ -3,7 +3,18 @@ package:
   version: 0.1.1
 
 build:
-  number: 3
+  number: 4
+
+
+app:
+  entry:
+    - start
+    - cmd.exe
+    - "/K"
+    - "${CONDA_ROOT_PREFIX}\\Scripts\\activate.bat"
+    - "${CONDA_PREFIX}"
+  summary: Anaconda Powershell Prompt
+  type: desk
 
 requirements:
   run:
