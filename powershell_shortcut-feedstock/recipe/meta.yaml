@@ -7,20 +7,15 @@ build:
 
 app:
   entry:
-    - start
-    - powershell.exe
-    - -ExecutionPolicy
-    - ByPass
-    - -NoExit
-    - -Command
-    - |
-      & '{CONDA_ROOT_PREFIX}\\shell\\condabin\\conda-hook.ps1' ; conda activate '{CONDA_PREFIX}'
+    start powershell.exe -ExecutionPolicy ByPass -NoExit -Command  "& '{CONDA_ROOT_PREFIX}\\shell\\condabin\\conda-hook.ps1' ; conda activate '{CONDA_PREFIX}'"
   summary: Anaconda Powershell Prompt
   type: desk
 
 requirements:
   run:
     - python
+  run_constrained:
+    - anaconda-navigator >=1.9.8
 
 about:
   license: BSD
