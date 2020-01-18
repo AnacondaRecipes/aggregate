@@ -4,6 +4,7 @@ set VER=9
 mkdir "%PREFIX%\etc\conda\activate.d"
 COPY "%RECIPE_DIR%\activate.bat" "%PREFIX%\etc\conda\activate.d\vs%YEAR%_compiler_vars.bat"
 
+echo.>> "%PREFIX%\etc\conda\activate.d\vs%YEAR%_compiler_vars.bat"
 echo IF "%%CMAKE_GENERATOR%%" == "" ( >> "%PREFIX%\etc\conda\activate.d\vs%YEAR%_compiler_vars.bat"
 
 IF "%cross_compiler_target_platform%" == "win-64" (
