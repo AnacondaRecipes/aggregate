@@ -4092,3 +4092,19 @@
 	path = cudnn-feedstock
 	url = ../cudnn-feedstock
 	branch = master
+[submodule "pendulum-feedstock"]
+	path = pendulum-feedstock
+	url = ../pendulum-feedstock
+	branch = master
+[submodule "poetry-feedstock"]
+	path = poetry-feedstock
+	url = ../poetry-feedstock
+	branch = master
+[submodule "pyinstaller-feedstock"]
+	path = pyinstaller-feedstock
+	url = ../pyinstaller-feedstock
+	branch = master
+[submodule "python-levenshtein-feedstock"]
+	path = python-levenshtein-feedstock
+	url = ../python-levenshtein-feedstock
+	branch = master
