@@ -4108,3 +4108,7 @@
 	path = python-levenshtein-feedstock
 	url = ../python-levenshtein-feedstock
 	branch = master
+[submodule "pywin32-ctypes-feedstock"]
+	path = pywin32-ctypes-feedstock
+	url = ../pywin32-ctypes-feedstock
+	branch = master
