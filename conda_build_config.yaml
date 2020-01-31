@@ -145,10 +145,8 @@ nodejs:
   - 8.12  # [win]
   - 8.12
 # we build for an old version of numpy for forward compatibility
-#    1.11 seems to be the oldest on win that works with scipy 0.19.  Compiler errors otherwise.
-#    also 1.9 fails tests on Python 3.7
 numpy:
-  - 1.11
+  - 1.14
 # these are centralized here so that they are shared between the numpy and numpy-metapackage recipes
 numpy_version:
   - 1.18.1
