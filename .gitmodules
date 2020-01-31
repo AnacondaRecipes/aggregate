@@ -4112,3 +4112,7 @@
 	path = pywin32-ctypes-feedstock
 	url = ../pywin32-ctypes-feedstock
 	branch = master
+[submodule "numpy-1.16-feedstock"]
+	path = numpy-1.16-feedstock
+	url = ../numpy-feedstock
+	branch = numpy116
