@@ -169,7 +169,7 @@ proj4:
 proj:
   - 6.2.1
 libprotobuf:
-  - 3.6.0
+  - 3.11.2
 python:
   - 3.6
   - 3.7
