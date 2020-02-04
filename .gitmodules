@@ -4128,3 +4128,15 @@
 	path = inflect-feedstock
 	url = ../inflect-feedstock
 	branch = master
+[submodule "pyobjc-core-feedstock"]
+	path = pyobjc-core-feedstock
+	url = ../pyobjc-core-feedstock
+	branch = master
+[submodule "pyobjc-framework-fsevents-feedstock"]
+	path = pyobjc-framework-fsevents-feedstock
+	url = ../pyobjc-framework-fsevents-feedstock
+	branch = master
+[submodule "pyobjc-framework-cocoa-feedstock"]
+	path = pyobjc-framework-cocoa-feedstock
+	url = ../pyobjc-framework-cocoa-feedstock
+	branch = master
