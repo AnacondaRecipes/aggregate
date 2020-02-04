@@ -4120,3 +4120,7 @@
 	path = grpc-cpp-feedstock
 	url = ../grpc-cpp-feedstock
 	branch = master
+[submodule "jaraco.itertools-feedstock"]
+	path = jaraco.itertools-feedstock
+	url = ../jaraco.itertools-feedstock
+	branch = master
