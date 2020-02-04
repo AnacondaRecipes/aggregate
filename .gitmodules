@@ -4124,3 +4124,7 @@
 	path = jaraco.itertools-feedstock
 	url = ../jaraco.itertools-feedstock
 	branch = master
+[submodule "inflect-feedstock"]
+	path = inflect-feedstock
+	url = ../inflect-feedstock
+	branch = master
