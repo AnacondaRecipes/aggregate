@@ -4140,3 +4140,7 @@
 	path = pyobjc-framework-cocoa-feedstock
 	url = ../pyobjc-framework-cocoa-feedstock
 	branch = master
+[submodule "django-pyodbc-azure-feedstock"]
+	path = django-pyodbc-azure-feedstock
+	url = ../django-pyodbc-azure-feedstock
+	branch = master
