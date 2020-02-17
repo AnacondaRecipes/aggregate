@@ -4144,3 +4144,19 @@
 	path = django-pyodbc-azure-feedstock
 	url = ../django-pyodbc-azure-feedstock
 	branch = master
+[submodule "rsa-feedstock"]
+	path = rsa-feedstock
+	url = ../rsa-feedstock
+	branch = master
+[submodule "cachetools-feedstock"]
+	path = cachetools-feedstock
+	url = ../cachetools-feedstock
+	branch = master
+[submodule "google-auth-feedstock"]
+	path = google-auth-feedstock
+	url = ../google-auth-feedstock
+	branch = master
+[submodule "google-auth-oauthlib-feedstock"]
+	path = google-auth-oauthlib-feedstock
+	url = ../google-auth-oauthlib-feedstock
+	branch = master
