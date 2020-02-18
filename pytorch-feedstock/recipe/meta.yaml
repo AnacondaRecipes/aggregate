@@ -1,5 +1,5 @@
-{% set version = "1.3.1" %}
-{% set commit = "ee77ccbb6da4e2efd83673e798acf7081bc03564" %}
+{% set version = "1.4.0" %}
+{% set commit = "7f73f1d591afba823daa4a99a939217fb54d7688" %}
 
 package:
   name: pytorch
@@ -7,8 +7,6 @@ package:
 
 source:
   # for local testing use a tarball including submodules
-  #url: file:///io/pytorch-1.3.1.tar.gz
-  #sha256: dfa5c74564dc1a3f063f257684a5f2c5144d0edaf94d0627d694cbca137ac904
   git_url: https://github.com/pytorch/pytorch.git
   git_tag: {{ commit }}
   patches:
