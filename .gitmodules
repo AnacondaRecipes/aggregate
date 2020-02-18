@@ -4160,3 +4160,7 @@
 	path = google-auth-oauthlib-feedstock
 	url = ../google-auth-oauthlib-feedstock
 	branch = master
+[submodule "asgiref-feedstock"]
+	path = asgiref-feedstock
+	url = ../asgiref-feedstock
+	branch = master

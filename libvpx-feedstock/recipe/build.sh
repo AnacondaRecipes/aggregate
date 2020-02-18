@@ -9,6 +9,10 @@ if [[ $(uname) == MSYS* ]]; then
   PREFIX=${PREFIX}/Library/mingw-w64
 fi
 
+if [[ $(uname) == Linux ]]; then
+  LDFLAGS="$LDFLAGS -pthread"
+fi
+
 ./configure --prefix=${PREFIX}           \
             ${HOST_BUILD}                \
             --as=yasm                    \
@@ -21,8 +25,7 @@ fi
             --enable-postproc            \
             --enable-vp9                 \
             --enable-vp9-highbitdepth    \
-            --enable-experimental        \
-            --enable-spatial-svc || exit 1
+            --enable-experimental || exit 1
 
 make -j${CPU_COUNT} ${VERBOSE_AT}
 make install
