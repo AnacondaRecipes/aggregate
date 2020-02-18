@@ -4204,3 +4204,11 @@
 	path = spint-feedstock
 	url = ../spint-feedstock
 	branch = master
+[submodule "giddy-feedstock"]
+	path = giddy-feedstock
+	url = ../giddy-feedstock
+	branch = master
+[submodule "spaghetti-feedstock"]
+	path = spaghetti-feedstock
+	url = ../spaghetti-feedstock
+	branch = master
