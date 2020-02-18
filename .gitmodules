@@ -4172,3 +4172,15 @@
 	path = esda-feedstock
 	url = ../esda-feedstock
 	branch = master
+[submodule "inequality-feedstock"]
+	path = inequality-feedstock
+	url = ../inequality-feedstock
+	branch = master
+[submodule "pointpats-feedstock"]
+	path = pointpats-feedstock
+	url = ../pointpats-feedstock
+	branch = master
+[submodule "spreg-feedstock"]
+	path = spreg-feedstock
+	url = ../spreg-feedstock
+	branch = master
