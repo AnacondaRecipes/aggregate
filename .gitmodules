@@ -4184,3 +4184,11 @@
 	path = spreg-feedstock
 	url = ../spreg-feedstock
 	branch = master
+[submodule "spglm-feedstock"]
+	path = spglm-feedstock
+	url = ../spglm-feedstock
+	branch = master
+[submodule "quantecon-feedstock"]
+	path = quantecon-feedstock
+	url = ../quantecon-feedstock
+	branch = master
