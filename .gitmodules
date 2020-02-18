@@ -4164,3 +4164,7 @@
 	path = asgiref-feedstock
 	url = ../asgiref-feedstock
 	branch = master
+[submodule "libpysal-feedstock"]
+	path = libpysal-feedstock
+	url = ../libpysal-feedstock
+	branch = master
