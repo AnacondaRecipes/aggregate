@@ -4192,3 +4192,15 @@
 	path = quantecon-feedstock
 	url = ../quantecon-feedstock
 	branch = master
+[submodule "spvcm-feedstock"]
+	path = spvcm-feedstock
+	url = ../spvcm-feedstock
+	branch = master
+[submodule "mgwr-feedstock"]
+	path = mgwr-feedstock
+	url = ../mgwr-feedstock
+	branch = master
+[submodule "spint-feedstock"]
+	path = spint-feedstock
+	url = ../spint-feedstock
+	branch = master
