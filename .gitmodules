@@ -4212,3 +4212,19 @@
 	path = spaghetti-feedstock
 	url = ../spaghetti-feedstock
 	branch = master
+[submodule "flask-json-feedstock"]
+	path = flask-json-feedstock
+	url = ../flask-json-feedstock/
+	branch = master
+[submodule "jsonlines-feedstock"]
+	path = jsonlines-feedstock
+	url = ../jsonlines-feedstock
+	branch = master
+[submodule "aws-requests-auth-feedstock"]
+	path = aws-requests-auth-feedstock
+	url = ../aws-requests-auth-feedstock
+	branch = master
+[submodule "requests-futures-feedstock"]
+	path = requests-futures-feedstock
+	url = ../requests-futures-feedstock
+	branch = master
