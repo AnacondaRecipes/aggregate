@@ -1,0 +1,14 @@
+package:
+  name: spyder_parso_requirement
+  version: 1.0
+
+build:
+  number: 0
+  noarch: python
+
+requirements:
+  run:
+    - parso 0.5.2
+
+about:
+  summary: 'Ancillary package to ensure the Spyder parso requirement is in current_repodata.json'
