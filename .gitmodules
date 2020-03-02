@@ -4228,3 +4228,6 @@
 	path = requests-futures-feedstock
 	url = ../requests-futures-feedstock
 	branch = master
+[submodule "lief-feedstock"]
+	path = lief-feedstock
+	url = ../lief-feedstock
