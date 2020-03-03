@@ -10,6 +10,8 @@ blas_impl:
   - openblas                   # [not win]
 boost:
   - 1.67
+boost_cpp:
+  - 1.67
 bzip2:
   - 1.0
 cairo:
