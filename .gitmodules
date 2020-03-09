@@ -4231,3 +4231,7 @@
 [submodule "lief-feedstock"]
 	path = lief-feedstock
 	url = ../lief-feedstock
+[submodule "portaudio-feedstock"]
+	path = portaudio-feedstock
+	url = ../portaudio-feedstock
+	branch = master
