@@ -176,6 +176,8 @@ python:
   - 3.6
   - 3.7
   - 3.8
+python_implementation:
+  - cpython
 r_version:
   - 3.5.0
 r_implementation:
