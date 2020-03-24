@@ -1,0 +1,37 @@
+{% set name = "aredis" %}
+{% set version = "1.1.8" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 880bcf91c4f89b919311cc93626bbc70901c6e5c4fdb3dcba643411e3ee40bcf
+
+build:
+  number: 0
+  skip: true  # [py<35]
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+  host:
+    - python
+    - pip
+  run:
+    - contextvars  # [py<37]
+    - python
+
+test:
+  imports:
+    - aredis
+    - aredis.commands
+
+about:
+  home: https://github.com/NoneGG/aredis
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: "Python async client for Redis key-value store"
