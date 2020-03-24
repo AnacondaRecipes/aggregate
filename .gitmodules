@@ -4259,3 +4259,27 @@
 	path = gitdb-feedstock
 	url = ../gitdb-feedstock
 	branch = master
+[submodule "pydantic-feedstock"]
+	path = pydantic-feedstock
+	url = ../pydantic-feedstock
+	branch = master
+[submodule "aiohttp-jinja2-feedstock"]
+	path = aiohttp-jinja2-feedstock
+	url = ../aiohttp-jinja2-feedstock
+	branch = master
+[submodule "pytest-ordering-feedstock"]
+	path = pytest-ordering-feedstock
+	url = ../pytest-ordering-feedstock
+	branch = master
+[submodule "contextvars-feedstock"]
+	path = contextvars-feedstock
+	url = ../contextvars-feedstock
+	branch = master
+[submodule "immutables-feedstock"]
+	path = immutables-feedstock
+	url = ../immutables-feedstock
+	branch = master
+[submodule "geventhttpclient-feedstock"]
+	path = geventhttpclient-feedstock
+	url = ../geventhttpclient-feedstock
+	branch = master
