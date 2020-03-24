@@ -4,7 +4,7 @@ SET DISTUTILS_USE_SDK=1
 :: This is probably not good. It is for the pre-UCRT msvccompiler.py *not* _msvccompiler.py
 SET MSSdk=1
 
-SET "VS_VERSION=16.4"
+SET "VS_VERSION=16.5"
 SET "VS_MAJOR=16"
 SET "VS_YEAR=2019"
 
@@ -74,7 +74,7 @@ IF "@cross_compiler_target_platform@" == "win-64" (
 )
 
 pushd %VSINSTALLDIR%
-CALL "VC\Auxiliary\Build\vcvars%BITS%.bat" -vcvars_ver=14.24 %WindowsSDKVer%
+CALL "VC\Auxiliary\Build\vcvars%BITS%.bat" -vcvars_ver=14.25 %WindowsSDKVer%
 popd
 
 IF "%CMAKE_GENERATOR%" == "" SET "CMAKE_GENERATOR=%CMAKE_GEN%"
