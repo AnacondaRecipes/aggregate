@@ -4235,3 +4235,11 @@
 	path = portaudio-feedstock
 	url = ../portaudio-feedstock
 	branch = master
+[submodule "jaraco.collections-feedstock"]
+	path = jaraco.collections-feedstock
+	url = ../jaraco.collections-feedstock
+	branch = master
+[submodule "jaraco.text-feedstock"]
+	path = jaraco.text-feedstock
+	url = ../jaraco.text-feedstock
+	branch = master
