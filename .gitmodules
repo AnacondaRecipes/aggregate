@@ -4243,3 +4243,7 @@
 	path = jaraco.text-feedstock
 	url = ../jaraco.text-feedstock
 	branch = master
+[submodule "importlib_resources-feedstock"]
+	path = importlib_resources-feedstock
+	url = ../importlib_resources-feedstock
+	branch = master
