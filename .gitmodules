@@ -4251,3 +4251,11 @@
 	path = treelib-feedstock
 	url = ../treelib-feedstock
 	branch = master
+[submodule "smmap-feedstock"]
+	path = smmap-feedstock
+	url = ../smmap-feedstock
+	branch = master
+[submodule "gitdb-feedstock"]
+	path = gitdb-feedstock
+	url = ../gitdb-feedstock
+	branch = master
