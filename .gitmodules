@@ -4291,3 +4291,7 @@
 	path = numpy-1.8-feedstock
 	url = ../numpy-feedstock
 	branch = numpy18
+[submodule "python-json-logger-feedstock"]
+	path = python-json-logger-feedstock
+	url = ../python-json-logger-feedstock
+	branch = master
