@@ -4283,3 +4283,7 @@
 	path = geventhttpclient-feedstock
 	url = ../geventhttpclient-feedstock
 	branch = master
+[submodule "jupyter_telemetry-feedstock"]
+	path = jupyter_telemetry-feedstock
+	url = ../jupyter_telemetry-feedstock
+	branch = master
