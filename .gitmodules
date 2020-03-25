@@ -4287,3 +4287,7 @@
 	path = jupyter_telemetry-feedstock
 	url = ../jupyter_telemetry-feedstock
 	branch = master
+[submodule "numpy-1.8-feedstock"]
+	path = numpy-1.8-feedstock
+	url = ../numpy-feedstock
+	branch = numpy18
