@@ -4315,3 +4315,6 @@
 	path = grpcio-gcp-feedstock
 	url = https://github.com/AnacondaRecipes/grpcio-gcp-feedstock.git
 	branch = master
+[submodule "conda-standalone-feedstock"]
+	path = conda-standalone-feedstock
+	url = ../conda-standalone-feedstock.git
