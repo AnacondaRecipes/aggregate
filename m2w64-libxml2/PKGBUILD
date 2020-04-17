@@ -1,0 +1,148 @@
+# Maintainer: Alexey Pavlov <alexpux@gmail.com>
+# Contributor: Renato Silva <br.renatosilva@gmail.com>
+
+# Notation:  python3 patch is based upon: https://gist.github.com/novocaine/09d5c00e67fd0aa13cfc
+_realname=libxml2
+pkgbase=mingw-w64-${_realname}
+pkgname="${MINGW_PACKAGE_PREFIX}-${_realname}"
+pkgver=2.9.10
+pkgrel=3
+arch=('any')
+pkgdesc="XML parsing library, version 2 (mingw-w64)"
+depends=("${MINGW_PACKAGE_PREFIX}-gcc-libs"
+         "${MINGW_PACKAGE_PREFIX}-gettext"
+         "${MINGW_PACKAGE_PREFIX}-xz"
+         "${MINGW_PACKAGE_PREFIX}-zlib")
+makedepends=("${MINGW_PACKAGE_PREFIX}-gcc"
+             "${MINGW_PACKAGE_PREFIX}-pkg-config"
+             "${MINGW_PACKAGE_PREFIX}-python")
+options=('strip' 'staticlibs')
+license=(MIT)
+url="http://www.xmlsoft.org/"
+install=${_realname}-${CARCH}.install
+source=("http://xmlsoft.org/sources/${_realname}-${pkgver}.tar.gz"
+        https://www.w3.org/XML/Test/xmlts20130923.tar.gz
+        0015-fix-unused-parameters-warning.all.patch
+        0016-WARNING-to-be-fixed.all.patch
+        0019-unused-flags.all.patch
+        0020-fix-warnings.patch
+        0023-fix-sitedir-detection.mingw.patch
+        0026-mingw-relocate.patch
+        libxml2-2.9.9-python.patch)
+sha256sums=('aafee193ffb8fe0c82d4afef6ef91972cbaf5feea100edc2f262750611b4be1f'
+            '9b61db9f5dbffa545f4b8d78422167083a8568c59bd1129f94138f936cf6fc1f'
+            'a9457b1a5e7d9499270ccfdeabbf0ca75b0e4643c111a42a5da0d113bae485c5'
+            '81811dc3a497025b1f7c8fe78b7510ab080be558a646c26b89b281a9348ad195'
+            '3f025f34bf0c9b084905d24a7195315bccba45a617a02cd051cd5ee791fad098'
+            '4e8377b8bd163cc29056e45f59598e36dc6f00029166bdce4c78a88f1f9b3ed4'
+            'e93902af20bee41ca7708280f30a1d087ab8c6f86d18939bdd56789cd1a73531'
+            '185033761dbfa2ff206df2adf87abb79d4733b5c84a6c68c429872a0755818d9'
+            '7b9bc59b174da93a547429b2f751047c758657953f6e2fb398e73b5ebf0f55e3')
+
+# Helper macros to help make tasks easier #
+apply_patch_with_msg() {
+  for _fname in "$@"
+  do
+    # msg2 "Applying ${_fname}"
+    patch -Nbp1 -i "${srcdir}"/${_fname}
+  done
+}
+
+del_file_exists() {
+  for _fname in "$@"
+  do
+    if [ -f $_fname ] || [ -d $_fname ]; then
+      rm -rf $_fname
+    fi
+  done
+}
+# =========================================== #
+
+prepare() {
+  cd ${_realname}-${pkgver}
+  del_file_exists pathtools.c pathtools.h
+
+  apply_patch_with_msg \
+    0015-fix-unused-parameters-warning.all.patch \
+    0016-WARNING-to-be-fixed.all.patch \
+    0019-unused-flags.all.patch \
+    0020-fix-warnings.patch \
+    0023-fix-sitedir-detection.mingw.patch \
+    0026-mingw-relocate.patch \
+    libxml2-2.9.9-python.patch
+
+  libtoolize --copy --force
+  aclocal
+  automake --add-missing
+  autoconf
+}
+
+build() {
+  # Static build
+  # msg2 "Building static for ${CARCH}"
+  mkdir -p ${srcdir}/build-static-${CARCH} && cd ${srcdir}/build-static-${CARCH}
+  ../${_realname}-${pkgver}/configure \
+    --prefix=${MINGW_PREFIX} \
+    --host=${MINGW_CHOST} \
+    --target=${MINGW_CHOST} \
+    --build="${MINGW_CHOST}" \
+    --without-python \
+    --with-modules \
+    --enable-static \
+    --disable-shared \
+    --with-threads=win32 \
+    CFLAGS="${CFLAGS} -DLIBXML_STATIC_FOR_DLL -DNOLIBTOOL"
+  make
+
+  # Shared build
+  # msg2 "Building shared with Python ext ${CARCH}"
+  [[ -d "${srcdir}"/build-shared-${CARCH} ]] && rm -rf "${srcdir}"/build-shared-${CARCH}
+  mkdir -p ${srcdir}/build-shared-${CARCH} && cd ${srcdir}/build-shared-${CARCH}
+  ../${_realname}-${pkgver}/configure \
+    --prefix=${MINGW_PREFIX} \
+    --host=${MINGW_CHOST} \
+    --target=${MINGW_CHOST} \
+    --build="${MINGW_CHOST}" \
+    --with-python=${MINGW_PREFIX}/bin/python \
+    --with-modules \
+    --disable-static \
+    --enable-shared \
+    --with-threads=win32
+
+  # Hack for mingw python
+  local PREFIX_DEPS=$(cygpath -am ${MINGW_PREFIX})
+  find . -type f -name "Makefile" -exec sed -i "s|${PREFIX_DEPS}|${MINGW_PREFIX}|g" {} \;
+  make
+}
+
+check() {
+  cd ${srcdir}/build-shared-${CARCH}
+  cp -r ../xmlconf .
+  make check
+}
+
+package() {
+  # First install shared
+  cd ${srcdir}/build-shared-${CARCH}
+
+  make install DESTDIR="${pkgdir}"
+
+  # then manually install static
+  cd ${srcdir}/build-static-${CARCH}
+
+  install -m 0644 .libs/libxml2.a "${pkgdir}${MINGW_PREFIX}"/lib/
+
+  # License
+  install -Dm644 "${srcdir}/${_realname}-${pkgver}/COPYING" "${pkgdir}${MINGW_PREFIX}/share/licenses/${_realname}/COPYING"
+  rm "${pkgdir}${MINGW_PREFIX}/share/doc/${_realname}-${pkgver}/Copyright" # This is the same file as COPYING
+
+  # Remove hard coded library path from xlm2-config and libxml-2.0.pc files
+  local PREFIX_DEPS=$(cygpath -am ${MINGW_PREFIX})
+  pushd "${pkgdir}${MINGW_PREFIX}/bin" > /dev/null
+  sed -s "s|${PREFIX_DEPS}\/lib|\${libdir}|g" -i ./xml2-config
+  popd > /dev/null
+
+  pushd "${pkgdir}${MINGW_PREFIX}/lib/pkgconfig" > /dev/null
+  sed -s "s|${PREFIX_DEPS}\/lib|\${libdir}|g" -i ./libxml-2.0.pc
+  popd > /dev/null
+}

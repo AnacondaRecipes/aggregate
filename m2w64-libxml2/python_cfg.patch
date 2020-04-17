@@ -1,0 +1,24 @@
+Index: work/libxml2-2.9.10/configure.ac
+===================================================================
+--- work.orig/libxml2-2.9.10/configure.ac
++++ work/libxml2-2.9.10/configure.ac
+@@ -839,8 +839,8 @@ if test "$with_python" != "no" ; then
+     fi
+     if test "$PYTHON" != ""
+     then
+-        PYTHON_VERSION=`$PYTHON -c "from distutils import sysconfig; print(sysconfig.get_python_version())"`
+-	PYTHON_INCLUDES=`$PYTHON -c "from distutils import sysconfig; print(sysconfig.get_python_inc())"`
++        PYTHON_VERSION=`$PYTHON -c "from distutils import sysconfig; print(sysconfig.get_python_version().replace('\\','/'))"`
++	PYTHON_INCLUDES=`$PYTHON -c "from distutils import sysconfig; print(sysconfig.get_python_inc().replace('\\','/'))"`
+ # does not work as it produce a /usr/lib/python path instead of/usr/lib64/python
+ #
+ #	PYTHON_SITE_PACKAGES=`$PYTHON -c "from distutils import sysconfig; print(sysconfig.get_python_lib())"`
+@@ -884,7 +884,7 @@ if test "$with_python" != "no" ; then
+ 	    then
+ 		PYTHON_SITE_PACKAGES=$with_python/lib/site-packages
+ 	    else
+-		PYTHON_SITE_PACKAGES=`$PYTHON -c "from distutils import sysconfig; print(sysconfig.get_python_lib())"`
++		PYTHON_SITE_PACKAGES=`$PYTHON -c "from distutils import sysconfig; print(sysconfig.get_python_lib().replace('\\','/'))"`
+ 	    fi
+ 	fi
+     fi

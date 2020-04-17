@@ -1,0 +1,67 @@
+{% set pkgver='2.9.10' %}
+{% set pkgrel='3' %}
+{% set _realname='libxml2' %}
+{% set pkgname='m2w64-' ~ _realname %}
+
+package:
+  name: {{ pkgname }}
+  version: {{ pkgver }}
+source:
+  - url: http://xmlsoft.org/sources/{{_realname}}-{{pkgver}}.tar.gz
+    fn: {{ pkgname }}-{{ pkgver }}.tar.gz
+    sha256: aafee193ffb8fe0c82d4afef6ef91972cbaf5feea100edc2f262750611b4be1f
+    folder: {{ _realname }}-{{ pkgver }}
+    patches:
+      - 0015-fix-unused-parameters-warning.all.patch
+      - 0016-WARNING-to-be-fixed.all.patch
+      - 0020-fix-warnings.patch
+      - 0023-fix-sitedir-detection.mingw.patch
+      - 0026-mingw-relocate.patch
+      - libxml2-2.9.9-python.patch
+      - python_cfg.patch
+  - path: ./PKGBUILD
+  - path: ./msys2-build-via-PKGBUILD.sh
+
+build:
+  number: {{ pkgrel }}
+  ignore_run_exports:
+    - m2w64-gcc-libs
+
+requirements:
+  build:
+    - m2-filesystem
+    - m2-pkg-config
+    - m2-sed
+    - m2-grep
+    - m2-findutils
+    - m2-autoconf
+    - m2-automake-wrapper
+    - m2-make
+    - m2-libtool
+    - m2w64-toolchain
+    - python
+    - m2w64-gettext
+    - m2w64-xz
+    - m2w64-zlib
+    - m2w64-libiconv
+  run:
+    - msys2-conda-epoch >=20160418
+    - m2w64-gcc-libs
+    - m2w64-xz
+    - m2w64-zlib
+    - m2w64-libiconv
+about:
+  home: http://xmlsoft.org/
+  license: MIT
+  summary: The XML C parser and toolkit of Gnome
+  description: |
+     Though libxml2 is written in C a variety of language
+     bindings make it available in other environments.
+  doc_url: http://xmlsoft.org/html/index.html
+  doc_source_url: https://github.com/GNOME/libxml2/blob/master/doc/index.html
+  dev_url: https://git.gnome.org/browse/libxml2/
+
+extra:
+  recipe-maintainers:
+    - katietz
+ 
