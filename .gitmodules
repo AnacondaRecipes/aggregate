@@ -4319,7 +4319,11 @@
 	path = conda-standalone-feedstock
 	url = ../conda-standalone-feedstock.git
 	branch = master
-[submodule "fossil-feedstock"]
-	path = fossil-feedstock
-	url = ../fossil-feedstock.git
+[submodule "pytest-rerunfailures-feedstock"]
+	path = pytest-rerunfailures-feedstock
+	url = ../pytest-rerunfailures-feedstock.git
+	branch = master
+[submodule "pytest-replay-feedstock"]
+	path = pytest-replay-feedstock
+	url = ../pytest-replay-feedstock.git
 	branch = master
