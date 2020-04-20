@@ -4297,24 +4297,29 @@
 	branch = master
 [submodule "google-cloud-storage-feedstock"]
 	path = google-cloud-storage-feedstock
-	url = https://github.com/AnacondaRecipes/google-cloud-storage-feedstock.git
+	url = ../google-cloud-storage-feedstock.git
 	branch = master
 [submodule "google-resumable-media-feedstock"]
 	path = google-resumable-media-feedstock
-	url = https://github.com/AnacondaRecipes/google-resumable-media-feedstock.git
+	url = ../google-resumable-media-feedstock.git
 	branch = master
 [submodule "google-cloud-core-feedstock"]
 	path = google-cloud-core-feedstock
-	url = https://github.com/AnacondaRecipes/google-cloud-core-feedstock.git
+	url = ../google-cloud-core-feedstock.git
 	branch = master
 [submodule "google-api-core-feedstock"]
 	path = google-api-core-feedstock
-	url = https://github.com/AnacondaRecipes/google-api-core-feedstock.git
+	url = ../google-api-core-feedstock.git
 	branch = master
 [submodule "grpcio-gcp-feedstock"]
 	path = grpcio-gcp-feedstock
-	url = https://github.com/AnacondaRecipes/grpcio-gcp-feedstock.git
+	url = ../grpcio-gcp-feedstock.git
 	branch = master
 [submodule "conda-standalone-feedstock"]
 	path = conda-standalone-feedstock
 	url = ../conda-standalone-feedstock.git
+	branch = master
+[submodule "fossil-feedstock"]
+	path = fossil-feedstock
+	url = ../fossil-feedstock.git
+	branch = master
