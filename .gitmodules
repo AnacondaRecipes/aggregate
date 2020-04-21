@@ -4327,3 +4327,11 @@
 	path = pytest-replay-feedstock
 	url = ../pytest-replay-feedstock.git
 	branch = master
+[submodule "radon-feedstock"]
+	path = radon-feedstock
+	url = ../radon-feedstock.git
+	branch = master
+[submodule "mando-feedstock"]
+	path = mando-feedstock
+	url = ../mando-feedstock.git
+	branch = master
