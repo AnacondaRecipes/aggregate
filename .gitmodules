@@ -4335,3 +4335,7 @@
 	path = mando-feedstock
 	url = ../mando-feedstock.git
 	branch = master
+[submodule "fossil-feedstock"]
+	path = fossil-feedstock
+	url = ../fossil-feedstock.git
+	branch = master
