@@ -4347,3 +4347,7 @@
 	path = tapi-feedstock
 	url = ../tapi-feedstock
 	branch = master
+[submodule "clang-compiler-activation-feedstock"]
+	path = clang-compiler-activation-feedstock
+	url = ../clang-compiler-activation-feedstock
+	branch = master
