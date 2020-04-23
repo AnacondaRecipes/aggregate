@@ -4339,3 +4339,7 @@
 	path = fossil-feedstock
 	url = ../fossil-feedstock.git
 	branch = master
+[submodule "cctools-and-ld64-feedstock"]
+	path = cctools-and-ld64-feedstock
+	url = ../cctools-and-ld64-feedstock
+	branch = master
