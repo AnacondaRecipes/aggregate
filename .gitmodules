@@ -4351,3 +4351,6 @@
 	path = clang-compiler-activation-feedstock
 	url = ../clang-compiler-activation-feedstock
 	branch = master
+[submodule "compiler-rt-feedstock"]
+	path = compiler-rt-feedstock
+	url = ../compiler-rt-feedstock
