@@ -4343,3 +4343,7 @@
 	path = cctools-and-ld64-feedstock
 	url = ../cctools-and-ld64-feedstock
 	branch = master
+[submodule "tapi-feedstock"]
+	path = tapi-feedstock
+	url = ../tapi-feedstock
+	branch = master
