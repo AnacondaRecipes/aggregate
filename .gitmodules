@@ -4354,3 +4354,6 @@
 [submodule "compiler-rt-feedstock"]
 	path = compiler-rt-feedstock
 	url = ../compiler-rt-feedstock
+[submodule "libcxx-feedstock"]
+	path = libcxx-feedstock
+	url = ../libcxx-feedstock
