@@ -4357,3 +4357,6 @@
 [submodule "libcxx-feedstock"]
 	path = libcxx-feedstock
 	url = ../libcxx-feedstock
+[submodule "clang-win-activation-feedstock"]
+	path = clang-win-activation-feedstock
+	url = ../clang-win-activation-feedstock
