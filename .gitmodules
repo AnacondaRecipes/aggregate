@@ -4360,3 +4360,7 @@
 [submodule "clang-win-activation-feedstock"]
 	path = clang-win-activation-feedstock
 	url = ../clang-win-activation-feedstock
+[submodule "autoconf-archive-feedstock"]
+	path = autoconf-archive-feedstock
+	url = ../autoconf-archive-feedstock
+	branch = master
