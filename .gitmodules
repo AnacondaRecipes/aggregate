@@ -4364,3 +4364,6 @@
 	path = autoconf-archive-feedstock
 	url = ../autoconf-archive-feedstock
 	branch = master
+[submodule "openmp-feedstock"]
+	path = openmp-feedstock
+	url = ../openmp-feedstock
