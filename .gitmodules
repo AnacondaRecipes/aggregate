@@ -4367,3 +4367,7 @@
 [submodule "openmp-feedstock"]
 	path = openmp-feedstock
 	url = ../openmp-feedstock
+[submodule "coreutils-feedstock"]
+	path = coreutils-feedstock
+	url = ../coreutils-feedstock.git
+	branch = master
