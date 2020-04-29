@@ -107,7 +107,7 @@ jpeg:
 libdap4:
   - 3.19
 libffi:
-  - 3.2
+  - 3.3
 libgd:
   - 2.2.5
 libgdal:
