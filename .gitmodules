@@ -4371,3 +4371,7 @@
 	path = coreutils-feedstock
 	url = ../coreutils-feedstock.git
 	branch = master
+[submodule "covid-sim-suite-feedstock"]
+	path = covid-sim-suite-feedstock
+	url = ../covid-sim-suite-feedstock.git
+	branch = master
