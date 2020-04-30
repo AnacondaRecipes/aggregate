@@ -4375,3 +4375,6 @@
 	path = covid-sim-suite-feedstock
 	url = ../covid-sim-suite-feedstock.git
 	branch = master
+[submodule "func_timeout-feedstock"]
+	path = func_timeout-feedstock
+	url = git@github.com:AnacondaRecipes/func_timeout-feedstock.git
