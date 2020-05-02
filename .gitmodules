@@ -4378,3 +4378,6 @@
 [submodule "func_timeout-feedstock"]
 	path = func_timeout-feedstock
 	url = git@github.com:AnacondaRecipes/func_timeout-feedstock.git
+[submodule "curio-feedstock"]
+	path = curio-feedstock
+	url = git@github.com:AnacondaRecipes/curio-feedstock.git
