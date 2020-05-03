@@ -4381,3 +4381,6 @@
 [submodule "curio-feedstock"]
 	path = curio-feedstock
 	url = git@github.com:AnacondaRecipes/curio-feedstock.git
+[submodule "cppy-feedstock"]
+	path = cppy-feedstock
+	url = git@github.com:AnacondaRecipes/cppy-feedstock.git
