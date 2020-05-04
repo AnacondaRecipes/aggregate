@@ -4399,9 +4399,9 @@
 [submodule "jsonpatch-feedstock"]
 	path = jsonpatch-feedstock
 	url = https://github.com/conda-forge/jsonpatch-feedstock.git
-[submodule "aws-sam-translator-feedstock"]
-	path = aws-sam-translator-feedstock
-	url = https://github.com/conda-forge/aws-sam-translator-feedstock.git
 [submodule "jsonpointer-feedstock"]
 	path = jsonpointer-feedstock
 	url = git@github.com:AnacondaRecipes/jsonpointer-feedstock.git
+[submodule "aws-sam-translator-feedstock"]
+	path = aws-sam-translator-feedstock
+	url = git@github.com:AnacondaRecipes/aws-sam-translator-feedstock.git
