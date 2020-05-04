@@ -4384,3 +4384,15 @@
 [submodule "cppy-feedstock"]
 	path = cppy-feedstock
 	url = git@github.com:AnacondaRecipes/cppy-feedstock.git
+[submodule "nose-exclude-feedstock"]
+	path = nose-exclude-feedstock
+	url = git@github.com:AnacondaRecipes/nose-exclude-feedstock.git
+[submodule "freezegun-feedstock"]
+	path = freezegun-feedstock
+	url = git@github.com:AnacondaRecipes/freezegun-feedstock.git
+[submodule "cfn-lint-feedstock"]
+	path = cfn-lint-feedstock
+	url = https://github.com/conda-forge/cfn-lint-feedstock.git
+[submodule "sshpubkeys-feedstock"]
+	path = sshpubkeys-feedstock
+	url = git@github.com:AnacondaRecipes/sshpubkeys-feedstock.git
