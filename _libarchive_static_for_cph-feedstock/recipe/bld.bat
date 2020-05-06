@@ -73,11 +73,13 @@ cmake -G "%CMAKE_GENERATOR%" ^
       -DZLIB_LIBRARY_RELEASE=%PREFIX%/Library/lib/zlibstatic.lib ^
       -DZSTD_LIBRARY=%PREFIX%/Library/lib/libzstd_static.lib ^
       .
+if errorlevel 1 exit /b 1
 
 :build
 
 :: Build.
 cmake --build . --target install --config Release
+if errorlevel 1 exit /b 1
 
 :: Test.
 :: Failures:
@@ -90,10 +92,11 @@ cmake --build . --target install --config Release
 :: if errorlevel 1 exit 1
 
 :: Test extracting a 7z. This failed due to not using the multi-threaded DLL runtime, fixed by 0009-CMake-Force-Multi-threaded-DLL-runtime.patch
-::powershell -command "& { (New-Object Net.WebClient).DownloadFile('http://download.qt.io/development_releases/prebuilt/llvmpipe/windows/opengl32sw-64-mesa_12_0_rc2.7z', 'opengl32sw-64-mesa_12_0_rc2.7z') }"
-::if errorlevel 1 exit 1
-::%LIBRARY_BIN%\bsdtar -xf opengl32sw-64-mesa_12_0_rc2.7z
-::if errorlevel 1 exit 1
+:: %BUILD_PREFIX%\Library\bin\curl.exe -SLO http://download.qt.io/development_releases/prebuilt/llvmpipe/windows/opengl32sw-64-mesa_12_0_rc2.7z
+:: powershell -command "& { (New-Object Net.WebClient).DownloadFile('http://download.qt.io/development_releases/prebuilt/llvmpipe/windows/opengl32sw-64-mesa_12_0_rc2.7z', 'opengl32sw-64-mesa_12_0_rc2.7z') }"
+:: if errorlevel 1 exit 1
+:: %LIBRARY_BIN%\bsdtar.exe -xf opengl32sw-64-mesa_12_0_rc2.7z
+:: if errorlevel 1 exit 1
 
 :: remove man pages
 rd /s /q %PREFIX%\Library\share\man

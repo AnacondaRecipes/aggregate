@@ -1,0 +1,66 @@
+From 8a68a3337113b237e67869f924dece307c3adde0 Mon Sep 17 00:00:00 2001
+From: Ray Donnelly <mingw.android@gmail.com>
+Date: Thu, 16 Apr 2020 14:40:36 +0200
+Subject: [PATCH 3/7] VC9 compatibility: define BCRYPT_SUCCESS
+
+---
+ libarchive/archive_cryptor_private.h |  7 +------
+ libarchive/archive_hmac_private.h    |  2 +-
+ libarchive/bcrypt_with_vs2008.h      | 14 ++++++++++++++
+ 3 files changed, 16 insertions(+), 7 deletions(-)
+ create mode 100644 libarchive/bcrypt_with_vs2008.h
+
+diff --git a/libarchive/archive_cryptor_private.h b/libarchive/archive_cryptor_private.h
+index 64a20556..360e8f0c 100644
+--- a/libarchive/archive_cryptor_private.h
++++ b/libarchive/archive_cryptor_private.h
+@@ -63,12 +63,7 @@ typedef struct {
+ } archive_crypto_ctx;
+ 
+ #elif defined(_WIN32) && !defined(__CYGWIN__) && defined(HAVE_BCRYPT_H)
+-#include <bcrypt.h>
+-
+-/* Common in other bcrypt implementations, but missing from VS2008. */
+-#ifndef BCRYPT_SUCCESS
+-#define BCRYPT_SUCCESS(r) ((NTSTATUS)(r) == STATUS_SUCCESS)
+-#endif
++#include "bcrypt_with_vs2008.h"
+ 
+ #define AES_MAX_KEY_SIZE 32
+ #define AES_BLOCK_SIZE 16
+diff --git a/libarchive/archive_hmac_private.h b/libarchive/archive_hmac_private.h
+index 13a67d49..5d507d60 100644
+--- a/libarchive/archive_hmac_private.h
++++ b/libarchive/archive_hmac_private.h
+@@ -53,7 +53,7 @@ int __libarchive_hmac_build_hack(void);
+ typedef	CCHmacContext archive_hmac_sha1_ctx;
+ 
+ #elif defined(_WIN32) && !defined(__CYGWIN__) && defined(HAVE_BCRYPT_H)
+-#include <bcrypt.h>
++#include "bcrypt_with_vs2008.h"
+ 
+ typedef struct {
+ 	BCRYPT_ALG_HANDLE	hAlg;
+diff --git a/libarchive/bcrypt_with_vs2008.h b/libarchive/bcrypt_with_vs2008.h
+new file mode 100644
+index 00000000..923954c4
+--- /dev/null
++++ b/libarchive/bcrypt_with_vs2008.h
+@@ -0,0 +1,14 @@
++#if !defined(BCRYPT_WITH_VS2008)
++#define BCRYPT_WITH_VS2008
++#include <bcrypt.h>
++
++/* Common in other bcrypt implementations, but missing from VS2008. */
++#ifndef BCRYPT_SUCCESS
++#ifndef NT_SUCCESS
++#define NT_SUCCESS(x) ((x)>=0)
++#define STATUS_SUCCESS ((NTSTATUS)0)
++#endif
++#define BCRYPT_SUCCESS(r) ((NTSTATUS)(r) == STATUS_SUCCESS)
++#endif
++
++#endif /* BCRYPT_WITH_VS2008 */
+-- 
+2.23.0
+

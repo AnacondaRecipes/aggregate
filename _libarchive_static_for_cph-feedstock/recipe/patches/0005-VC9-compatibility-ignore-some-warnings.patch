@@ -1,18 +1,34 @@
---- work.orig/libarchive/archive_private.h	2018-04-22 06:33:58.393242100 -0500
-+++ work/libarchive/archive_private.h	2018-04-22 07:13:01.088919200 -0500
-@@ -46,6 +46,15 @@
- #define	__LA_DEAD
- #endif
+From 4d4b5039d49217b21a130cd1bafd163ea67a72cf Mon Sep 17 00:00:00 2001
+From: Ray Donnelly <mingw.android@gmail.com>
+Date: Thu, 16 Apr 2020 14:42:24 +0200
+Subject: [PATCH 5/7] VC9 compatibility: Ignore some warnings
+
+---
+ CMakeLists.txt | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 1c3f0608..013f98bc 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -188,6 +188,17 @@ IF (MSVC)
+   #################################################################
+   # Set compile flags for release build.
+   SET(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /Oi")
++  if(MSVC_VERSION LESS 1900)
++    SET(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /wd4127")
++    SET(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /wd4711")
++    SET(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /wd4820")
++    SET(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /wd4668")
++    SET(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /wd4710")
++    SET(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /wd4255")
++    SET(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /wd4267")
++    SET(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /wd4244")
++    SET(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /wd4996")
++  ENDIF (MSVC_VERSION LESS 1900)
+ ENDIF (MSVC)
  
-+#if defined(_WIN32) && (_MSC_VER<1900)
-+// Disable conversion from size_t to int possible loss of data
-+#pragma warning(disable:4267)
-+#pragma warning(disable:4244)
-+// Disable: "The POSIX name for this item is deprecated."
-+#pragma warning(disable:4996)
-+#endif
-+
-+
- #define	ARCHIVE_WRITE_MAGIC	(0xb0c5c0deU)
- #define	ARCHIVE_READ_MAGIC	(0xdeb0c5U)
- #define	ARCHIVE_WRITE_DISK_MAGIC (0xc001b0c5U)
+ # Enable CTest/CDash support
+-- 
+2.23.0
+

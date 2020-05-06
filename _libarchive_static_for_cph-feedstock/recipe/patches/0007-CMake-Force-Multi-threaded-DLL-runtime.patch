@@ -1,18 +1,18 @@
-From bfddc49f8119d6718a8a11b130381096ae7c0362 Mon Sep 17 00:00:00 2001
+From 7f03fe9095ea49d0b780929852501c81ce739b87 Mon Sep 17 00:00:00 2001
 From: Ray Donnelly <mingw.android@gmail.com>
-Date: Tue, 24 Apr 2018 18:37:28 -0500
-Subject: [PATCH] CMake: Force Multi-threaded DLL runtime
+Date: Thu, 16 Apr 2020 14:51:33 +0200
+Subject: [PATCH 7/7] CMake: Force Multi-threaded-DLL-runtime
 
 ---
  CMakeLists.txt | 4 ++++
  1 file changed, 4 insertions(+)
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index bd4517c..828fc80 100644
+index 013f98bc..dfeba565 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -169,6 +169,8 @@ IF (MSVC)
-   SET(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} /WX")
+@@ -185,6 +185,8 @@ IF (MSVC)
+   SET(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} /we4706")
    # /Oi option enables built-in functions.
    SET(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} /Oi")
 +  # /MD option for Multi-threaded DLL (non-debug since you cannot mix them).
@@ -20,7 +20,7 @@ index bd4517c..828fc80 100644
    #################################################################
    # Set compile flags for release build.
    SET(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /Oi")
-@@ -183,6 +185,8 @@ IF (MSVC)
+@@ -199,6 +201,8 @@ IF (MSVC)
      SET(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /wd4244")
      SET(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /wd4996")
    ENDIF (MSVC_VERSION LESS 1900)
@@ -30,5 +30,5 @@ index bd4517c..828fc80 100644
  
  # Enable CTest/CDash support
 -- 
-2.15.0
+2.23.0
 

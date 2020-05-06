@@ -1,6 +1,17 @@
---- work/CMakeLists.txt.orig	2017-12-15 16:52:54.709341000 -0600
-+++ work/CMakeLists.txt	2017-12-15 16:54:40.943948000 -0600
-@@ -454,7 +454,10 @@
+From 2966b1d0c93163964e7b3b52e8b64c4609a2d94e Mon Sep 17 00:00:00 2001
+From: Ray Donnelly <mingw.android@gmail.com>
+Date: Thu, 16 Apr 2020 14:38:32 +0200
+Subject: [PATCH 1/7] Add lib to CMAKE_FIND_LIBRARY_PREFIXES for lzma
+
+---
+ CMakeLists.txt | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5a9b3250..f2511a5d 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -478,7 +478,10 @@ MARK_AS_ADVANCED(CLEAR BZIP2_LIBRARIES)
  # Find LZMA
  #
  IF(ENABLE_LZMA)
@@ -9,5 +20,8 @@
    FIND_PACKAGE(LibLZMA)
 +  SET(CMAKE_FIND_LIBRARY_PREFIXES "${OLD_CMAKE_FIND_LIBRARY_PREFIXES}")
  ELSE()
-   SET(LIBZMA_FOUND FALSE) # Override cached value
+   SET(LIBLZMA_FOUND FALSE) # Override cached value
  ENDIF()
+-- 
+2.23.0
+

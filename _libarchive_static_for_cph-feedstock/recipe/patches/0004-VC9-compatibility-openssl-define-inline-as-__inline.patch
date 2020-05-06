@@ -1,0 +1,61 @@
+From 43ba8a0be565770af9fda61b60d2a05e3e766238 Mon Sep 17 00:00:00 2001
+From: Ray Donnelly <mingw.android@gmail.com>
+Date: Thu, 16 Apr 2020 14:41:40 +0200
+Subject: [PATCH 4/7] VC9 compatibility: openssl, define inline as __inline
+
+---
+ libarchive/archive_openssl_evp_private.h  | 5 +++++
+ libarchive/archive_openssl_hmac_private.h | 5 +++++
+ libarchive/xxhash.c                       | 4 ++++
+ 3 files changed, 14 insertions(+)
+
+diff --git a/libarchive/archive_openssl_evp_private.h b/libarchive/archive_openssl_evp_private.h
+index ebb06702..6e0b3719 100644
+--- a/libarchive/archive_openssl_evp_private.h
++++ b/libarchive/archive_openssl_evp_private.h
+@@ -36,6 +36,11 @@
+ #if OPENSSL_VERSION_NUMBER < 0x10100000L
+ #include <stdlib.h> /* malloc, free */
+ #include <string.h> /* memset */
++
++#if defined(_MSC_VER) && (_MSC_VER < 1900)
++#define inline __inline
++#endif
++
+ static inline EVP_MD_CTX *EVP_MD_CTX_new(void)
+ {
+ 	EVP_MD_CTX *ctx = (EVP_MD_CTX *)calloc(1, sizeof(EVP_MD_CTX));
+diff --git a/libarchive/archive_openssl_hmac_private.h b/libarchive/archive_openssl_hmac_private.h
+index 25c8dda6..abcd0bbd 100644
+--- a/libarchive/archive_openssl_hmac_private.h
++++ b/libarchive/archive_openssl_hmac_private.h
+@@ -37,6 +37,11 @@
+ 	(defined(LIBRESSL_VERSION_NUMBER) && LIBRESSL_VERSION_NUMBER < 0x20700000L)
+ #include <stdlib.h> /* malloc, free */
+ #include <string.h> /* memset */
++
++#if defined(_MSC_VER) && (_MSC_VER < 1900)
++#define inline __inline
++#endif
++
+ static inline HMAC_CTX *HMAC_CTX_new(void)
+ {
+ 	HMAC_CTX *ctx = (HMAC_CTX *)calloc(1, sizeof(HMAC_CTX));
+diff --git a/libarchive/xxhash.c b/libarchive/xxhash.c
+index 70750bae..18e7d58a 100644
+--- a/libarchive/xxhash.c
++++ b/libarchive/xxhash.c
+@@ -38,6 +38,10 @@ You can contact the author at :
+ 
+ #ifdef HAVE_LIBLZ4
+ 
++#if defined(_MSC_VER) && (_MSC_VER < 1900)
++#define inline __inline
++#endif
++
+ /***************************************
+ ** Tuning parameters
+ ****************************************/
+-- 
+2.23.0
+
