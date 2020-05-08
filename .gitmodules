@@ -4409,3 +4409,6 @@
 	path = conda-package-handling-feedstock-1.6
 	url = ../conda-package-handling-feedstock
 	branch = las-3.3
+[submodule "compilers-feedstock"]
+	path = compilers-feedstock
+	url = ../compilers-feedstock
