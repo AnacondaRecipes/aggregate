@@ -16,10 +16,12 @@ bzip2:
 cairo:
   - 1.14
 c_compiler:
+  - clang                      # [osx]
   - vs2008                     # [win]
   - vs2015                     # [win]
   - vs2015                     # [win]
 cxx_compiler:
+  - clangxx                    # [osx]
   - vs2008                     # [win]
   - vs2015                     # [win]
   - vs2015                     # [win]
@@ -41,6 +43,10 @@ m2w64_cxx_compiler:            # [win]
   - m2w64-toolchain            # [win]
 m2w64_fortran_compiler:        # [win]
   - m2w64-toolchain            # [win]
+c_compiler_version:            # [osx]
+  - 4                          # [osx]
+cxx_compiler_version:          # [osx]
+  - 4                          # [osx]
 dbus:
   - 1
 expat:
