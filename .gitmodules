@@ -4419,3 +4419,7 @@
 [submodule "bytecode-feedstock"]
 	path = bytecode-feedstock
 	url = git@github.com:AnacondaRecipes/bytecode-feedstock.git
+[submodule "srsly-feedstock"]
+	path = srsly-feedstock
+	url = ../srsly-feedstock
+	branch = master
