@@ -55,7 +55,9 @@ IF NOT "%CONDA_BUILD%" == "" (
 call :GetWin10SdkDir
 :: dir /ON here is sorting the list of folders, such that we use the latest one that we have
 for /F %%i in ('dir /ON /B "%WindowsSdkDir%\include"') DO (
-  SET WindowsSDKVer=%%~i
+  if NOT "%%~i" == "wdf" (
+    SET WindowsSDKVer=%%~i
+  )
 )
 if errorlevel 1 (
     echo "Didn't find any windows 10 SDK. I'm not sure if things will work, but let's try..."
