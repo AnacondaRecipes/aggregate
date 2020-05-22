@@ -4431,3 +4431,7 @@
 	path = srsly-feedstock
 	url = ../srsly-feedstock
 	branch = master
+[submodule "wasabi-feedstock"]
+	path = wasabi-feedstock
+	url = ../wasabi-feedstock
+	branch = master
