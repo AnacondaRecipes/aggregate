@@ -1,0 +1,55 @@
+{% set version = "0.4.1" %}
+
+package:
+  name: cython-blis
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/b/blis/blis-{{ version }}.tar.gz
+  sha256: d69257d317e86f34a7f230a2fd1f021fd2a1b944137f40d8cdbb23bd334cd0c4
+
+build:
+  number: 0
+  skip: true  # [win and py27]
+  # not all dependencies are built for win32 and py38 
+  skip: true  # [win-32 and py38]
+  # conda-build does not support multiple license files
+  skip: true  # [win]
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - clang  # [win]
+  host:
+    - python
+    - pip
+    - python
+    - setuptools
+    - numpy
+    - wheel >=0.32,<0.33
+  run:
+    - python
+    - numpy >=1.16
+
+test:
+  imports:
+    - blis
+    - blis.py
+    - blis.cy
+
+about:
+  home: http://github.com/explosion/cython-blis
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file:
+    - LICENSE
+    - blis/LICENSE
+  summary: 'Fast matrix-multiplication as a self-contained Python library – no system dependencies!'
+
+  doc_url: https://github.com/explosion/cython-blis
+  dev_url: https://github.com/explosion/cython-blis
+
+extra:
+  recipe-maintainers:
+    - honnibal
+    - ines
