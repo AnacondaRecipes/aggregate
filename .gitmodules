@@ -4423,15 +4423,11 @@
 	path = cython-blis-feedstock
 	url = ../cython-blis-feedstock
 	branch = master
-[submodule "srsly-feedstock"]
-	path = srsly-feedstock
-	url = ../srsly-feedstock
-	branch = master
-[submodule "wasabi-feedstock"]
-	path = wasabi-feedstock
-	url = ../wasabi-feedstock
-	branch = master
 [submodule "catalogue-feedstock"]
 	path = catalogue-feedstock
 	url = ../catalogue-feedstock
+	branch = master
+[submodule "srsly-feedstock"]
+	path = srsly-feedstock
+	url = ../srsly-feedstock
 	branch = master
