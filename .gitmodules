@@ -4435,3 +4435,6 @@
 	path = wasabi-feedstock
 	url = ../wasabi-feedstock
 	branch = master
+[submodule "brotlipy-feedstock"]
+	path = brotlipy-feedstock
+	url = ../brotlipy-feedstock
