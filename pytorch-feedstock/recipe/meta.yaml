@@ -1,5 +1,5 @@
-{% set version = "1.4.0" %}
-{% set commit = "7f73f1d591afba823daa4a99a939217fb54d7688" %}
+{% set version = "1.5.0" %}
+{% set commit = "4ff3872a2099993bf7e8c588f7182f3df777205b" %}
 
 package:
   name: pytorch
@@ -12,7 +12,8 @@ source:
   patches:
     - nccl_socket.patch
     - remove_shared_linker_flag_override.patch
-    - do_not_check_clock_realtime.patch
+    - fix_std_stdint.patch
+    # - do_not_check_clock_realtime.patch
 
 build:
   number: 0
@@ -24,6 +25,9 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - patch    # [not win]
+    - m2-patch  # [win]
+    - git
   host:
     - cmake
     - git
@@ -35,15 +39,24 @@ requirements:
     - python
     - numpy
     - pip
+    - setuptools
     - pyyaml
+    - requests
+    - future
+    - six
     - cffi
     - mkl-devel {{ mkl }}
+    - mkl {{ mkl }}
     - typing
     - ninja
     - libuv       # [unix]
     - pkg-config  # [unix]
 
   run:
+    - mkl {{ mkl }}
+    - libmklml
+    - intel-openmp   # [osx]
+    - llvm-openmp    # [osx]
     - _pytorch_select ==0.1             # [pytorch_variant == "cpu"]
     - _pytorch_select ==0.2             # [pytorch_variant == "gpu"]
     # GPU requirements

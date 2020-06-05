@@ -8,6 +8,18 @@ rm -rf build
 # uncomment to debug cmake build
 #export CMAKE_VERBOSE_MAKEFILE=1
 
+export LDFLAGS="-Wl,-pie -Wl,-headerpad_max_install_names -Wl,-rpath,$PREFIX/lib -L$PREFIX/lib"
+export LDFLAGS_LD="-Wl,-pie -Wl,-headerpad_max_install_names -Wl,-rpath,$PREFIX/lib -L$PREFIX/lib"
+
+re='^(.*)-Wl,--as-needed(.*)$'
+if [[ ${LDFLAGS} =~ $re ]]; then
+  export LDFLAGS="${BASH_REMATCH[1]}${BASH_REMATCH[2]}"
+fi
+re='^(.*)-Wl,-dead_strip_dylins(.*)$'
+if [[ ${LDFLAGS} =~ $re ]]; then
+  export LDFLAGS="${BASH_REMATCH[1]}${BASH_REMATCH[2]}"
+fi
+
 # Dynamic libraries need to be lazily loaded so that torch
 # can be imported on system without a GPU
 LDFLAGS="${LDFLAGS//-Wl,-z,now/-Wl,-z,lazy}"

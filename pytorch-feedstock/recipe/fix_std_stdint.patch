@@ -1,0 +1,21 @@
+Index: work/torch/csrc/DataLoader.cpp
+===================================================================
+--- work.orig/torch/csrc/DataLoader.cpp
++++ work/torch/csrc/DataLoader.cpp
+@@ -1,3 +1,7 @@
++#ifndef __STDC_FORMAT_MACROS
++#define __STDC_FORMAT_MACROS
++#endif
++
+ #include <torch/csrc/DataLoader.h>
+ 
+ // Together with `torch/utils/data/_utils/signal_handling.py`, the following
+@@ -18,7 +22,7 @@
+ #include <csignal>
+ #include <sstream>
+ #include <sys/wait.h>
+-
++#include <inttypes.h>
+ #include <torch/csrc/Exceptions.h>
+ #include <torch/csrc/utils/python_numbers.h>
+ 

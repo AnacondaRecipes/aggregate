@@ -2,7 +2,7 @@ diff --git a/CMakeLists.txt b/CMakeLists.txt
 index 909d6b914a..8c4b2a6c30 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -200,13 +200,6 @@ cmake_dependent_option(
+@@ -222,13 +222,6 @@ cmake_dependent_option(
  
  set(ONNX_NAMESPACE "onnx_torch" CACHE STRING "A namespace for ONNX; needed to build with other frameworks that share ONNX.")
  

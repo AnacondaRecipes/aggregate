@@ -3,8 +3,12 @@
 # cuda 10.1, gcc 7.3, cudnn 7.6
 c_compiler_version:           # [linux]
   - 7.3                       # [linux]
+c_compiler_version:           # [osx]
+  - 10                        # [osx]
 cxx_compiler_version:         # [linux]
   - 7.3                       # [linux]
+cxx_compiler_version:         # [osx]
+  - 10                        # [osx]
 cross_compiler_target_platform:   # [win]
   - win-64                        # [win]
 target_platform:                  # [win]
@@ -13,6 +17,10 @@ cudatoolkit:
   - 10.1
 cudnn:
   - 7.6
+blas_impl:
+  - mkl                        # [x86 or x86_64]
+openblas:
+  - 0.3.3
 mkl:
   - 2019
 numpy:
