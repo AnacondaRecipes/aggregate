@@ -51,7 +51,7 @@ requirements:
     - ninja
     - libuv       # [unix]
     - pkg-config  # [unix]
-
+    - intel-openmp  # [osx]
   run:
     - mkl {{ mkl }}
     - libmklml
