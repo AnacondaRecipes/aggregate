@@ -4438,3 +4438,7 @@
 [submodule "brotlipy-feedstock"]
 	path = brotlipy-feedstock
 	url = ../brotlipy-feedstock
+[submodule "conda-pack-feedstock"]
+	path = conda-pack-feedstock
+	url = ../conda-pack-feedstock
+	branch = master
