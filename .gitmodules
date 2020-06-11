@@ -4446,3 +4446,7 @@
 	path = sqlalchemy-jsonfield-feedstock
 	url = ../sqlalchemy-jsonfield-feedstock
 	branch = master
+[submodule "prison-feedstock"]
+	path = prison-feedstock
+	url = ../prison-feedstock
+	branch = master
