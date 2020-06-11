@@ -4461,3 +4461,7 @@
 [submodule "altiar-feedstock"]
 	path = altiar-feedstock
 	url = ../altair-feedstock
+[submodule "altair-feedstock"]
+	path = altair-feedstock
+	url = ../altair-feedstock
+	branch = master
