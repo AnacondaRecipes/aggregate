@@ -4458,3 +4458,6 @@
 	path = airflow-feedstock
 	url = ../airflow-feedstock
 	branch = master
+[submodule "altiar-feedstock"]
+	path = altiar-feedstock
+	url = ../altair-feedstock
