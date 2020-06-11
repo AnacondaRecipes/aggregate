@@ -4442,3 +4442,7 @@
 	path = conda-pack-feedstock
 	url = ../conda-pack-feedstock
 	branch = master
+[submodule "sqlalchemy-jsonfield-feedstock"]
+	path = sqlalchemy-jsonfield-feedstock
+	url = ../sqlalchemy-jsonfield-feedstock
+	branch = master
