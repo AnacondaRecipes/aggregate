@@ -4450,3 +4450,7 @@
 	path = prison-feedstock
 	url = ../prison-feedstock
 	branch = master
+[submodule "flask-appbuilder-feedstock"]
+	path = flask-appbuilder-feedstock
+	url = ../flask-appbuilder-feedstock
+	branch = master
