@@ -4473,3 +4473,7 @@
 	path = flask-babel-feedstock
 	url = ../flask-babel-feedstock
 	branch = master
+[submodule "dateparser-feedstock"]
+	path = dateparser-feedstock
+	url = ../dateparser-feedstock
+	branch = master
