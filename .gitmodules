@@ -4465,3 +4465,7 @@
 	path = altair-feedstock
 	url = ../altair-feedstock
 	branch = master
+[submodule "flask-admin-feedstock"]
+	path = flask-admin-feedstock
+	url = ../flask-admin-feedstock
+	branch = master
