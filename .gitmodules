@@ -4469,3 +4469,7 @@
 	path = flask-admin-feedstock
 	url = ../flask-admin-feedstock
 	branch = master
+[submodule "flask-babel-feedstock"]
+	path = flask-babel-feedstock
+	url = ../flask-babel-feedstock
+	branch = master
