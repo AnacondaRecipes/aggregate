@@ -4454,3 +4454,7 @@
 	path = flask-appbuilder-feedstock
 	url = ../flask-appbuilder-feedstock
 	branch = master
+[submodule "airflow-feedstock"]
+	path = airflow-feedstock
+	url = ../airflow-feedstock
+	branch = master
