@@ -4477,3 +4477,7 @@
 	path = dateparser-feedstock
 	url = ../dateparser-feedstock
 	branch = master
+[submodule "flask-caching-feedstock"]
+	path = flask-caching-feedstock
+	url = ../flask-caching-feedstock
+	branch = master
