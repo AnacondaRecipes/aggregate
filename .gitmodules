@@ -4485,3 +4485,7 @@
 	path = cattrs-feedstock
 	url = ../cattrs-feedstock
 	branch = master
+[submodule "colorlog-feedstock"]
+	path = colorlog-feedstock
+	url = ../colorlog-feedstock
+	branch = master
