@@ -4481,3 +4481,7 @@
 	path = flask-caching-feedstock
 	url = ../flask-caching-feedstock
 	branch = master
+[submodule "cattrs-feedstock"]
+	path = cattrs-feedstock
+	url = ../cattrs-feedstock
+	branch = master
