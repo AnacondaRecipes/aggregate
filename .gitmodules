@@ -4489,3 +4489,7 @@
 	path = colorlog-feedstock
 	url = ../colorlog-feedstock
 	branch = master
+[submodule "yajl-feedstock"]
+	path = yajl-feedstock
+	url = ../yajl-feedstock
+	branch = master
