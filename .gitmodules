@@ -4493,3 +4493,7 @@
 	path = yajl-feedstock
 	url = ../yajl-feedstock
 	branch = master
+[submodule "threadpoolctl-feedstock"]
+	path = threadpoolctl-feedstock
+	url = ../threadpoolctl-feedstock
+	branch = master
