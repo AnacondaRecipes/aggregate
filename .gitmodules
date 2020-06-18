@@ -4505,3 +4505,7 @@
 	path = eventlet-feedstock
 	url = ../eventlet-feedstock
 	branch = master
+[submodule "setproctitle-feedstock"]
+	path = setproctitle-feedstock
+	url = ../setproctitle-feedstock
+	branch = master
