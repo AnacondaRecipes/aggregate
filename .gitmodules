@@ -4541,3 +4541,7 @@
 	path = jira-feedstock
 	url = ../jira-feedstock
 	branch = master
+[submodule "python-kubernetes-feedstock"]
+	path = python-kubernetes-feedstock
+	url = ../python-kubernetes-feedstock
+	branch = master
