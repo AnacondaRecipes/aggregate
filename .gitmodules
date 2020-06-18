@@ -4537,3 +4537,7 @@
 	path = python-jenkins-feedstock
 	url = ../python-jenkins-feedstock
 	branch = master
+[submodule "jira-feedstock"]
+	path = jira-feedstock
+	url = ../jira-feedstock
+	branch = master
