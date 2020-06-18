@@ -4596,3 +4596,7 @@
 	path = aiodns-feedstock
 	url = ../aiodns-feedstock
 	branch = master
+[submodule "pycares-feedstock"]
+	path = pycares-feedstock
+	url = ../pycares-feedstock
+	branch = master
