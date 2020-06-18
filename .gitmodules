@@ -4584,3 +4584,7 @@
 	path = sendgrid-feedstock
 	url = ../sendgrid-feedstock
 	branch = master
+[submodule "pywinrm-feedstock"]
+	path = pywinrm-feedstock
+	url = ../pywinrm-feedstock
+	branch = master
