@@ -4525,3 +4525,7 @@
 	path = cloudant-feedstock
 	url = ../cloudant-feedstock
 	branch = master
+[submodule "pydruid-feedstock"]
+	path = pydruid-feedstock
+	url = ../pydruid-feedstock
+	branch = master
