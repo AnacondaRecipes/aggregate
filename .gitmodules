@@ -4573,3 +4573,7 @@
 	path = pysftp-feedstock
 	url = ../pysftp-feedstock
 	branch = master
+[submodule "sshtunnel-feedstock"]
+	path = sshtunnel-feedstock
+	url = ../sshtunnel-feedstock
+	branch = master
