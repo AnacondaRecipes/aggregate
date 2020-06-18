@@ -4501,3 +4501,7 @@
 	path = json-merge-patch-feedstock
 	url = ../json-merge-patch-feedstock
 	branch = master
+[submodule "eventlet-feedstock"]
+	path = eventlet-feedstock
+	url = ../eventlet-feedstock
+	branch = master
