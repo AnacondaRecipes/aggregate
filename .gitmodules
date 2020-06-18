@@ -4513,3 +4513,7 @@
 	path = azure-cosmos-feedstock
 	url = ../azure-cosmos-feedstock
 	branch = master
+[submodule "cassandra-driver-feedstock"]
+	path = cassandra-driver-feedstock
+	url = ../cassandra-driver-feedstock
+	branch = master
