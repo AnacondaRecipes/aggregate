@@ -4521,3 +4521,7 @@
 	path = cgroupspy-feedstock
 	url = ../cgroupspy-feedstock
 	branch = master
+[submodule "cloudant-feedstock"]
+	path = cloudant-feedstock
+	url = ../cloudant-feedstock
+	branch = master
