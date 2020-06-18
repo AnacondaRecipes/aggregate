@@ -4549,3 +4549,7 @@
 	path = flask-bcrypt-feedstock
 	url = ../flask-bcrypt-feedstock
 	branch = master
+[submodule "qds-sdk-feedstock"]
+	path = qds-sdk-feedstock
+	url = ../qds-sdk-feedstock
+	branch = master
