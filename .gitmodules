@@ -4517,3 +4517,7 @@
 	path = cassandra-driver-feedstock
 	url = ../cassandra-driver-feedstock
 	branch = master
+[submodule "cgroupspy-feedstock"]
+	path = cgroupspy-feedstock
+	url = ../cgroupspy-feedstock
+	branch = master
