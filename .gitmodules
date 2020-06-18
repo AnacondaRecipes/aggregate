@@ -4509,3 +4509,7 @@
 	path = setproctitle-feedstock
 	url = ../setproctitle-feedstock
 	branch = master
+[submodule "azure-cosmos-feedstock"]
+	path = azure-cosmos-feedstock
+	url = ../azure-cosmos-feedstock
+	branch = master
