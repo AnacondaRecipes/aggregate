@@ -4561,3 +4561,7 @@
 	path = simple-salesforce-feedstock
 	url = ../simple-salesforce-feedstock
 	branch = master
+[submodule "pysmbclient-feedstock"]
+	path = pysmbclient-feedstock
+	url = ../pysmbclient-feedstock
+	branch = master
