@@ -4580,4 +4580,7 @@
 [submodule "statsd-feedstock"]
 	path = statsd-feedstock
 	url = ../statsd-feedstock
+[submodule "sendgrid-feedstock"]
+	path = sendgrid-feedstock
+	url = ../sendgrid-feedstock
 	branch = master
