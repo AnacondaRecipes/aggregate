@@ -31,6 +31,10 @@ requirements:
 
   build:
     - {{ compiler('c') }}  # [unix]
+    - git                  # [not win]
+    - patch                # [not win]
+    - m2-git               # [win]
+    - m2-patch             # [win]
 
   run:
     - python
