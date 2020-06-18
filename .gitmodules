@@ -4553,3 +4553,7 @@
 	path = qds-sdk-feedstock
 	url = ../qds-sdk-feedstock
 	branch = master
+[submodule "librabbitmq-feedstock"]
+	path = librabbitmq-feedstock
+	url = ../librabbitmq-feedstock
+	branch = master
