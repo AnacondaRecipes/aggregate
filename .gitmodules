@@ -4588,3 +4588,7 @@
 	path = pywinrm-feedstock
 	url = ../pywinrm-feedstock
 	branch = master
+[submodule "vertica-python-feedstock"]
+	path = vertica-python-feedstock
+	url = ../vertica-python-feedstock
+	branch = master
