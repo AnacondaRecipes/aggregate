@@ -4497,3 +4497,7 @@
 	path = threadpoolctl-feedstock
 	url = ../threadpoolctl-feedstock
 	branch = master
+[submodule "json-merge-patch-feedstock"]
+	path = json-merge-patch-feedstock
+	url = ../json-merge-patch-feedstock
+	branch = master
