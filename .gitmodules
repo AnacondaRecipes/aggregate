@@ -4545,3 +4545,7 @@
 	path = python-kubernetes-feedstock
 	url = ../python-kubernetes-feedstock
 	branch = master
+[submodule "flask-bcrypt-feedstock"]
+	path = flask-bcrypt-feedstock
+	url = ../flask-bcrypt-feedstock
+	branch = master
