@@ -4565,7 +4565,3 @@
 	path = pysmbclient-feedstock
 	url = ../pysmbclient-feedstock
 	branch = master
-[submodule "sendgrid-feedstock"]
-	path = sendgrid-feedstock
-	url = ../sendgrid-feedstock
-	branch = master
