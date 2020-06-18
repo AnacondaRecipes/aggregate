@@ -4565,3 +4565,7 @@
 	path = pysmbclient-feedstock
 	url = ../pysmbclient-feedstock
 	branch = master
+[submodule "slackclient-feedstock"]
+	path = slackclient-feedstock
+	url = ../slackclient-feedstock
+	branch = master
