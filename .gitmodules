@@ -4557,3 +4557,7 @@
 	path = librabbitmq-feedstock
 	url = ../librabbitmq-feedstock
 	branch = master
+[submodule "simple-salesforce-feedstock"]
+	path = simple-salesforce-feedstock
+	url = ../simple-salesforce-feedstock
+	branch = master
