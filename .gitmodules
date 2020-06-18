@@ -4592,3 +4592,7 @@
 	path = vertica-python-feedstock
 	url = ../vertica-python-feedstock
 	branch = master
+[submodule "aiodns-feedstock"]
+	path = aiodns-feedstock
+	url = ../aiodns-feedstock
+	branch = master
