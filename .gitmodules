@@ -4533,3 +4533,7 @@
 	path = jaydebeapi-feedstock
 	url = ../jaydebeapi-feedstock
 	branch = master
+[submodule "python-jenkins-feedstock"]
+	path = python-jenkins-feedstock
+	url = ../python-jenkins-feedstock
+	branch = master
