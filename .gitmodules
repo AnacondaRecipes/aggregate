@@ -4529,3 +4529,7 @@
 	path = pydruid-feedstock
 	url = ../pydruid-feedstock
 	branch = master
+[submodule "jaydebeapi-feedstock"]
+	path = jaydebeapi-feedstock
+	url = ../jaydebeapi-feedstock
+	branch = master
