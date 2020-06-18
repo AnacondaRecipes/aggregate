@@ -4577,3 +4577,7 @@
 	path = sshtunnel-feedstock
 	url = ../sshtunnel-feedstock
 	branch = master
+[submodule "statsd-feedstock"]
+	path = statsd-feedstock
+	url = ../statsd-feedstock
+	branch = master
