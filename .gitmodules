@@ -4604,3 +4604,7 @@
 	path = adal-feedstock
 	url = ../adal-feedstock
 	branch = master
+[submodule "nuitka-feedstock"]
+	path = nuitka-feedstock
+	url = ../nuitka-feedstock
+	branch = master
