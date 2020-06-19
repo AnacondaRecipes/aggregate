@@ -4600,3 +4600,7 @@
 	path = pycares-feedstock
 	url = ../pycares-feedstock
 	branch = master
+[submodule "adal-feedstock"]
+	path = adal-feedstock
+	url = ../adal-feedstock
+	branch = master
