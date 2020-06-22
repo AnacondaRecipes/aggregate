@@ -3553,9 +3553,11 @@
 [submodule "soupsieve-feedstock"]
 	path = soupsieve-feedstock
 	url = ../soupsieve-feedstock
+	branch = master
 [submodule "fasttsne-feedstock"]
 	path = fasttsne-feedstock
 	url = ../fasttsne-feedstock
+	branch = master
 [submodule "asciitree-feedstock"]
 	path = asciitree-feedstock
 	url = ../asciitree-feedstock
@@ -4231,6 +4233,7 @@
 [submodule "lief-feedstock"]
 	path = lief-feedstock
 	url = ../lief-feedstock
+	branch = master
 [submodule "portaudio-feedstock"]
 	path = portaudio-feedstock
 	url = ../portaudio-feedstock
@@ -4354,12 +4357,15 @@
 [submodule "compiler-rt-feedstock"]
 	path = compiler-rt-feedstock
 	url = ../compiler-rt-feedstock
+	branch = master
 [submodule "libcxx-feedstock"]
 	path = libcxx-feedstock
 	url = ../libcxx-feedstock
+	branch = master
 [submodule "clang-win-activation-feedstock"]
 	path = clang-win-activation-feedstock
 	url = ../clang-win-activation-feedstock
+	branch = master
 [submodule "autoconf-archive-feedstock"]
 	path = autoconf-archive-feedstock
 	url = ../autoconf-archive-feedstock
@@ -4367,6 +4373,7 @@
 [submodule "openmp-feedstock"]
 	path = openmp-feedstock
 	url = ../openmp-feedstock
+	branch = master
 [submodule "coreutils-feedstock"]
 	path = coreutils-feedstock
 	url = ../coreutils-feedstock.git
@@ -4377,34 +4384,44 @@
 	branch = master
 [submodule "func_timeout-feedstock"]
 	path = func_timeout-feedstock
-	url = git@github.com:AnacondaRecipes/func_timeout-feedstock.git
+	url = ../func_timeout-feedstock
+	branch = master
 [submodule "curio-feedstock"]
 	path = curio-feedstock
-	url = git@github.com:AnacondaRecipes/curio-feedstock.git
+	url = ../curio-feedstock
+	branch = master
 [submodule "cppy-feedstock"]
 	path = cppy-feedstock
-	url = git@github.com:AnacondaRecipes/cppy-feedstock.git
+	url = ../cppy-feedstock
+	branch = master
 [submodule "nose-exclude-feedstock"]
 	path = nose-exclude-feedstock
-	url = git@github.com:AnacondaRecipes/nose-exclude-feedstock.git
+	url = ../nose-exclude-feedstock
+	branch = master
 [submodule "freezegun-feedstock"]
 	path = freezegun-feedstock
-	url = git@github.com:AnacondaRecipes/freezegun-feedstock.git
+	url = ../freezegun-feedstock
+	branch = master
 [submodule "cfn-lint-feedstock"]
 	path = cfn-lint-feedstock
-	url = https://github.com/conda-forge/cfn-lint-feedstock.git
+	url = ../cfn-lint-feedstock
+	branch = master
 [submodule "sshpubkeys-feedstock"]
 	path = sshpubkeys-feedstock
-	url = git@github.com:AnacondaRecipes/sshpubkeys-feedstock.git
+	url = ../sshpubkeys-feedstock
+	branch = master
 [submodule "jsonpatch-feedstock"]
 	path = jsonpatch-feedstock
-	url = https://github.com/conda-forge/jsonpatch-feedstock.git
+	url = ../jsonpatch-feedstock
+	branch = master
 [submodule "jsonpointer-feedstock"]
 	path = jsonpointer-feedstock
-	url = git@github.com:AnacondaRecipes/jsonpointer-feedstock.git
+	url = ../jsonpointer-feedstock.git
+	branch = master
 [submodule "aws-sam-translator-feedstock"]
 	path = aws-sam-translator-feedstock
-	url = git@github.com:AnacondaRecipes/aws-sam-translator-feedstock.git
+	url = ../aws-sam-translator-feedstock
+	branch = master
 [submodule "conda-package-handling-feedstock-1.6.0"]
 	path = conda-package-handling-feedstock-1.6
 	url = ../conda-package-handling-feedstock
@@ -4412,13 +4429,15 @@
 [submodule "compilers-feedstock"]
 	path = compilers-feedstock
 	url = ../compilers-feedstock
+	branch = master
 [submodule "astunparse-feedstock"]
 	path = astunparse-feedstock
 	url = ../astunparse-feedstock
 	branch = master
 [submodule "bytecode-feedstock"]
 	path = bytecode-feedstock
-	url = git@github.com:AnacondaRecipes/bytecode-feedstock.git
+	url = ../bytecode-feedstock
+	branch = master
 [submodule "cython-blis-feedstock"]
 	path = cython-blis-feedstock
 	url = ../cython-blis-feedstock
@@ -4438,6 +4457,7 @@
 [submodule "brotlipy-feedstock"]
 	path = brotlipy-feedstock
 	url = ../brotlipy-feedstock
+	branch = master
 [submodule "conda-pack-feedstock"]
 	path = conda-pack-feedstock
 	url = ../conda-pack-feedstock
@@ -4461,6 +4481,7 @@
 [submodule "altiar-feedstock"]
 	path = altiar-feedstock
 	url = ../altair-feedstock
+	branch = master
 [submodule "altair-feedstock"]
 	path = altair-feedstock
 	url = ../altair-feedstock
@@ -4580,6 +4601,7 @@
 [submodule "statsd-feedstock"]
 	path = statsd-feedstock
 	url = ../statsd-feedstock
+	branch = master
 [submodule "sendgrid-feedstock"]
 	path = sendgrid-feedstock
 	url = ../sendgrid-feedstock
