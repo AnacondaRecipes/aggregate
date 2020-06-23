@@ -4630,3 +4630,7 @@
 	path = nuitka-feedstock
 	url = ../nuitka-feedstock
 	branch = master
+[submodule "pytzdata-feedstock"]
+	path = pytzdata-feedstock
+	url = ../pytzdata-feedstock
+	branch = master
