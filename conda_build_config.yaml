@@ -155,9 +155,9 @@ numpy:
   - 1.14
 # these are centralized here so that they are shared between the numpy and numpy-metapackage recipes
 numpy_version:
-  - 1.18.1
+  - 1.18.5
 numpy_sha:
-  - b6ff59cee96b454516e47e7721098e6ceebef435e3e21ac2d6c3b8b02628eb77
+  - 34e96e9dae65c4839bd80012023aadd6ee2ccb73ce7fdf3074c62f301e63120b
 openblas:
   - 0.3.3
 openjpeg:
