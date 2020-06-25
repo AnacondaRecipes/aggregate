@@ -4634,3 +4634,7 @@
 	path = pytzdata-feedstock
 	url = ../pytzdata-feedstock
 	branch = master
+[submodule "flask-jwt-extended-feedstock"]
+	path = flask-jwt-extended-feedstock
+	url = ../flask-jwt-extended-feedstock
+	branch = master
