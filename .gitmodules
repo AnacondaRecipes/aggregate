@@ -4638,3 +4638,7 @@
 	path = flask-jwt-extended-feedstock
 	url = ../flask-jwt-extended-feedstock
 	branch = master
+[submodule "flask-openid-feedstock"]
+	path = flask-openid-feedstock
+	url = ../flask-openid-feedstock
+	branch = master
