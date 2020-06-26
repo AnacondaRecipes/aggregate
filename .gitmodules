@@ -4642,3 +4642,27 @@
 	path = flask-openid-feedstock
 	url = ../flask-openid-feedstock
 	branch = master
+[submodule "imagecodecs-feedstock"]
+	path = imagecodecs-feedstock
+	url = ../imagecodecs-feedstock
+	branch = master
+[submodule "jxrlib-feedstock"]
+	path = jxrlib-feedstock
+	url = ../jxrlib-feedstock
+	branch = master
+[submodule "libaec-feedstock"]
+	path = libaec-feedstock
+	url = ../libaec-feedstock
+	branch = master
+[submodule "libzopfli-feedstock"]
+	path = libzopfli-feedstock
+	url = ../libzopfli-feedstock
+	branch = master
+[submodule "charls-feedstock"]
+	path = charls-feedstock
+	url = ../charls-feedstock
+	branch = master
+[submodule "lcms2-feedstock"]
+	path = lcms2-feedstock
+	url = ../lcms2-feedstock
+	branch = master
