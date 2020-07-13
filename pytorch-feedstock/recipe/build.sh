@@ -24,6 +24,7 @@ fi
 # can be imported on system without a GPU
 LDFLAGS="${LDFLAGS//-Wl,-z,now/-Wl,-z,lazy}"
 
+export CMAKE_SYSROOT=$CONDA_BUILD_SYSROOT
 export CMAKE_LIBRARY_PATH=$PREFIX/lib:$PREFIX/include:$CMAKE_LIBRARY_PATH
 export CMAKE_PREFIX_PATH=$PREFIX
 export TH_BINARY_BUILD=1
@@ -41,8 +42,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 # std=c++11 is required to compile some .cu files
-CPPFLAGS="${CPPFLAGS//-std=c++17/-std=c++11}"
-CXXFLAGS="${CXXFLAGS//-std=c++17/-std=c++11}"
+CPPFLAGS="${CPPFLAGS//-std=c++17/-std=c++14}"
+CXXFLAGS="${CXXFLAGS//-std=c++17/-std=c++14}"
 
 
 if [[ ${pytorch_variant} = "gpu" ]]; then
