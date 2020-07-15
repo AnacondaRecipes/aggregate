@@ -74,7 +74,7 @@ expat:
 fontconfig:
   - 2.13
 freetype:
-  - 2.9
+  - 2.10
 g2clib:
   - 1.6
 gstreamer:
@@ -95,11 +95,11 @@ gmp:
 gnu:
   - 2.12.2
 harfbuzz:
-  - 1.7
+  - 2.4
 hdf4:
   - 4.2
 hdf5:
-  - 1.10.4
+  - 1.10.6
 hdfeos2:
   - 2.20
 hdfeos5:
