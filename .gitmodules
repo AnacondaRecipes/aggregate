@@ -4670,3 +4670,15 @@
 	path = appscript-feedstock
 	url = ../appscript-feedstock
 	branch = master
+[submodule "clikit-feedstock"]
+	path = clikit-feedstock
+	url = ../clikit-feedstock
+	branch = master
+[submodule "pastel-feedstock"]
+	path = pastel-feedstock
+	url = ../pastel-feedstock
+	branch = master
+[submodule "tomlkit-feedstock"]
+	path = tomlkit-feedstock
+	url = ../tomlkit-feedstock
+	branch = master
