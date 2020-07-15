@@ -4666,3 +4666,7 @@
 	path = lcms2-feedstock
 	url = ../lcms2-feedstock
 	branch = master
+[submodule "appscript-feedstock"]
+	path = appscript-feedstock
+	url = ../appscript-feedstock
+	branch = master
