@@ -4666,3 +4666,35 @@
 	path = lcms2-feedstock
 	url = ../lcms2-feedstock
 	branch = master
+[submodule "dictdiffer-feedstock"]
+	path = dictdiffer-feedstock
+	url = ../dictdiffer-feedstock/
+	branch = master
+[submodule "baycomp-feedstock"]
+	path = baycomp-feedstock
+	url = ../baycomp-feedstock/
+	branch = master
+[submodule "httpx-feedstock"]
+	path = httpx-feedstock
+	url = ../httpx-feedstock/
+	branch = master
+[submodule "httpcore-feedstock"]
+	path = httpcore-feedstock
+	url = ../httpcore-feedstock/
+	branch = master
+[submodule "sniffio-feedstock"]
+	path = sniffio-feedstock
+	url = ../sniffio-feedstock/
+	branch = master
+[submodule "hstspreload-feedstock"]
+	path = hstspreload-feedstock
+	url = ../hstspreload-feedstock/
+	branch = master
+[submodule "rfc3986-feedstock"]
+	path = rfc3986-feedstock
+	url = ../rfc3986-feedstock/
+	branch = master
+[submodule "h11-feedstock"]
+	path = h11-feedstock
+	url = ../h11-feedstock/
+	branch = master

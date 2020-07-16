@@ -31,4 +31,4 @@ python:
   - 3.7
 pytorch_variant:
   - cpu
-# - gpu
+  - gpu

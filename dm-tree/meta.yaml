@@ -1,0 +1,60 @@
+{% set name = "dm-tree" %}
+{% set version = "0.1.5" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: a951d2239111dfcc468071bc8ff792c7b1e3192cab5a3c94d33a8b2bda3127fa
+
+  # Rename this to dummy since we don't want CB to extract it
+  #fn: dm_tree-{{ version }}-cp{{ CONDA_PY }}-cp{{ CONDA_PY }}-win_amd64.whl.dummy  # [win]
+  #url: https://files.pythonhosted.org/packages/6b/7a/ea94f81dbafb83981c161490f56b2b4d0cca1cd003633ae3e61b4b6a6e8c/dm_tree-0.1.5-cp36-cp36m-win_amd64.whl  # [win and py==36]
+  #url: https://files.pythonhosted.org/packages/13/17/3cea41a2b66a26bfc52a1a7a5d0d3d060f0552aaaba77659674fabbf14a6/dm_tree-0.1.5-cp37-cp37m-win_amd64.whl  # [win and py==37]
+  #url: https://files.pythonhosted.org/packages/a8/cc/63ecd7ce85f998c11ae0ea2909ebc0f53751ce379099c10f887b4e6554ee/dm_tree-0.1.5-cp38-cp38-manylinux2014_x86_64.whl  # [win and py==38]
+  #sha256: a13ebfdce7b47310ba02e14005971de12d7d30e082e17f3a73f3f309a53b926e  # [win and py==36]
+  #sha256: 23707e6d4c2ee4567f341429b7b358c3108cf5130f0897bdee54b3aa890de220  # [win and py==37]
+  #sha256: 134b58263e09a6e552c05c85c630f424446b75600bd38ff1838329eb0cbe0e50  # [win and py==38]
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
+  ignore_run_exports:
+    - libcxx
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+  host:
+    - pip
+    - python
+    - bazel
+    - six >=1.12.0
+  run:
+    - python
+    - six >=1.12.0
+    - libcxx  # [osx]
+
+test:
+  imports:
+    - tree
+  requires:
+    - absl-py >=0.6.1
+    - attrs >=18.2.0
+    - numpy >=1.15.4,<1.17.0
+    - wrapt >=1.11.2
+
+about:
+  home: "https://github.com/deepmind/tree"
+  license: Apache Software
+  license_family: APACHE
+  license_file: 
+  summary: "Tree is a library for working with nested data structures."
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - angloyna
