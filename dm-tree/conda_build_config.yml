@@ -1,0 +1,4 @@
+target_platform:
+  - win-64                     # [win]
+python:
+  - 3.6                        # [win]
