@@ -10,7 +10,7 @@ source:
     - 0001-Implement-mempcpy-via-memcpy.patch
 
 build:
-  number: 0
+  number: 2
   detect_binary_files_with_prefix: False
   script: python setup.py install --single-version-externally-managed --root=/
   # Use winkerberos on Windows
