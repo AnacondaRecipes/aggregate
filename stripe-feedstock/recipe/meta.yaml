@@ -1,5 +1,5 @@
 {% set name = "stripe" %}
-{% set version = "2.36.2" %}
+{% set version = "2.49.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f5b27b45bb5d7fe8c7e524a2bd4372fbf32e5e2d42aafa8e84802801faff28d2
+  sha256: 89331e81f8849631dac7b0772092605a74d8b48b15a78a6e483681d301a5af81
 
 build:
   number: 0
