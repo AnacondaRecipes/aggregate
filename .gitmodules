@@ -4682,3 +4682,6 @@
 	path = tomlkit-feedstock
 	url = ../tomlkit-feedstock
 	branch = master
+[submodule "libwebp-base-feedstock"]
+	path = libwebp-base-feedstock
+	url = ../libwebp-base-feedstock
