@@ -4688,3 +4688,6 @@
 [submodule "gtk3-feedstock"]
 	path = gtk3-feedstock
 	url = ../gtk3-feedstock
+[submodule "atk-feedstock"]
+	path = atk-feedstock
+	url = ../atk-feedstock
