@@ -4703,3 +4703,6 @@
 [submodule "epoxy-feedstock"]
 	path = epoxy-feedstock
 	url = ../epoxy-feedstock
+[submodule "at-spi2-core-feedstock"]
+	path = at-spi2-core-feedstock
+	url = ../at-spi2-core-feedstock
