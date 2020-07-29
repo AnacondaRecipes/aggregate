@@ -4691,3 +4691,6 @@
 [submodule "atk-feedstock"]
 	path = atk-feedstock
 	url = ../atk-feedstock
+[submodule "at-spi2-atk-feedstock"]
+	path = at-spi2-atk-feedstock
+	url = ../at-spi2-atk-feedstock
