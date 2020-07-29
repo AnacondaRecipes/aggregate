@@ -4700,3 +4700,6 @@
 [submodule "libcups-feedstock"]
 	path = libcups-feedstock
 	url = ../libcups-feedstock
+[submodule "epoxy-feedstock"]
+	path = epoxy-feedstock
+	url = ../epoxy-feedstock
