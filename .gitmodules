@@ -4694,3 +4694,6 @@
 [submodule "at-spi2-atk-feedstock"]
 	path = at-spi2-atk-feedstock
 	url = ../at-spi2-atk-feedstock
+[submodule "gdk-pixbuf-feedstock"]
+	path = gdk-pixbuf-feedstock
+	url = ../gdk-pixbuf-feedstock
