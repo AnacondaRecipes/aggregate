@@ -4697,3 +4697,6 @@
 [submodule "gdk-pixbuf-feedstock"]
 	path = gdk-pixbuf-feedstock
 	url = ../gdk-pixbuf-feedstock
+[submodule "libcups-feedstock"]
+	path = libcups-feedstock
+	url = ../libcups-feedstock
