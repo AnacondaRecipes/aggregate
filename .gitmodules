@@ -4685,3 +4685,6 @@
 [submodule "libwebp-base-feedstock"]
 	path = libwebp-base-feedstock
 	url = ../libwebp-base-feedstock
+[submodule "gtk3-feedstock"]
+	path = gtk3-feedstock
+	url = ../gtk3-feedstock
