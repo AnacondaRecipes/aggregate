@@ -4706,3 +4706,6 @@
 [submodule "at-spi2-core-feedstock"]
 	path = at-spi2-core-feedstock
 	url = ../at-spi2-core-feedstock
+[submodule "httpx-feedstock"]
+	path = httpx-feedstock
+	url = ../httpx-feedstock
