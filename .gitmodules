@@ -4709,3 +4709,6 @@
 [submodule "httpx-feedstock"]
 	path = httpx-feedstock
 	url = ../httpx-feedstock
+[submodule "pytest-flakes-feedstock"]
+	path = pytest-flakes-feedstock
+	url = ../pytest-flakes-feedstock
