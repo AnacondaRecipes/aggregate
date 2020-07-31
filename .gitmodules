@@ -3814,10 +3814,6 @@
 	path = bash-feedstock
 	url = ../bash-feedstock
 	branch = master
-[submodule "numpy-metapackage-feedstock"]
-	path = numpy-metapackage-feedstock
-	url = ../numpy-metapackage-feedstock
-	branch = master
 [submodule "cython-0.28.4-feedstock"]
 	path = cython-0.28.4-feedstock
 	url = ../cython-feedstock
