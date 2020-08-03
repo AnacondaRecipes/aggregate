@@ -1,10 +1,10 @@
-diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 909d6b914a..8c4b2a6c30 100644
---- a/CMakeLists.txt
-+++ b/CMakeLists.txt
-@@ -222,13 +222,6 @@ cmake_dependent_option(
- 
- set(ONNX_NAMESPACE "onnx_torch" CACHE STRING "A namespace for ONNX; needed to build with other frameworks that share ONNX.")
+Index: work/CMakeLists.txt
+===================================================================
+--- work.orig/CMakeLists.txt
++++ work/CMakeLists.txt
+@@ -269,13 +269,6 @@ set(SELECTED_OP_LIST "" CACHE STRING
+ set(OP_DEPENDENCY "" CACHE STRING
+     "Path to the yaml file that contains the op dependency graph for custom build.")
  
 -# This is a fix for a rare build issue on Ubuntu:
 -# symbol lookup error: miniconda3/envs/pytorch-py3.7/lib/libmkl_intel_lp64.so: undefined symbol: mkl_blas_dsyrk
@@ -13,6 +13,6 @@ index 909d6b914a..8c4b2a6c30 100644
 -  set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--no-as-needed")
 -endif()
 -
- if (MSVC)
+ if(MSVC)
    foreach(flag_var
        CMAKE_C_FLAGS CMAKE_C_FLAGS_DEBUG CMAKE_C_FLAGS_RELEASE

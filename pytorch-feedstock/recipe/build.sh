@@ -36,7 +36,8 @@ export INSTALL_TEST=0
 
 # MacOS build is simple, and will not be for CUDA
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    export MACOSX_DEPLOYMENT_TARGET=10.9
+    export MACOSX_DEPLOYMENT_TARGET=10.10
+    export CMAKE_OSX_SYSROOT=/opt/MacOSX10.10.sdk
     python -m pip install . --no-deps -vv
     exit 0
 fi
@@ -66,8 +67,11 @@ if [[ ${pytorch_variant} = "gpu" ]]; then
 else
     export BLAS="MKL"
     export USE_CUDA=0
-    export USE_MKL_DNN=1
+    export USE_MKLDNN=1
     export CMAKE_TOOLCHAIN_FILE="${RECIPE_DIR}/cross-linux.cmake"
 fi
 
-python  -m pip install . --no-deps -vv
+export CMAKE_BUILD_TYPE=Release
+export CMAKE_CXX_STANDARD=14
+
+python  -m pip install . --no-deps -vvv

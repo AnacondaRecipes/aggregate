@@ -1,0 +1,14 @@
+Index: work/third_party/ideep/mkl-dnn/src/cpu/x64/xbyak/xbyak.h
+===================================================================
+--- work.orig/third_party/ideep/mkl-dnn/src/cpu/x64/xbyak/xbyak.h
++++ work/third_party/ideep/mkl-dnn/src/cpu/x64/xbyak/xbyak.h
+@@ -409,6 +409,9 @@ public:
+ 		const size_t alignedSizeM1 = inner::ALIGN_PAGE_SIZE - 1;
+ 		size = (size + alignedSizeM1) & ~alignedSizeM1;
+ #if defined(XBYAK_USE_MAP_JIT)
++#ifndef MAP_ANONYMOUS
++#define MAP_ANONYMOUS MAP_ANON
++#endif
+ 		int mode = MAP_PRIVATE | MAP_ANONYMOUS;
+ 		const int mojaveVersion = 18;
+ 		if (util::getMacOsVersion() >= mojaveVersion) mode |= MAP_JIT;
