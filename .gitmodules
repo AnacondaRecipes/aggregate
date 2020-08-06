@@ -4708,3 +4708,6 @@
 [submodule "pytest-flakes-feedstock"]
 	path = pytest-flakes-feedstock
 	url = ../pytest-flakes-feedstock
+[submodule "xlutils-feedstock"]
+	path = xlutils-feedstock
+	url = ../xlutils-feedstock
