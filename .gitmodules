@@ -4711,3 +4711,6 @@
 [submodule "xlutils-feedstock"]
 	path = xlutils-feedstock
 	url = ../xlutils-feedstock
+[submodule "iniconfig-feedstock"]
+	path = iniconfig-feedstock
+	url = ../iniconfig-feedstock
