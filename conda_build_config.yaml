@@ -74,7 +74,7 @@ expat:
 fontconfig:
   - 2.13
 freetype:
-  - 2.9
+  - 2.10
 g2clib:
   - 1.6
 gstreamer:
@@ -95,11 +95,11 @@ gmp:
 gnu:
   - 2.12.2
 harfbuzz:
-  - 1.7
+  - 2.4
 hdf4:
   - 4.2
 hdf5:
-  - 1.10.4
+  - 1.10.6
 hdfeos2:
   - 2.20
 hdfeos5:
@@ -153,11 +153,6 @@ nodejs:
 # we build for an old version of numpy for forward compatibility
 numpy:
   - 1.14
-# these are centralized here so that they are shared between the numpy and numpy-metapackage recipes
-numpy_version:
-  - 1.18.1
-numpy_sha:
-  - b6ff59cee96b454516e47e7721098e6ceebef435e3e21ac2d6c3b8b02628eb77
 openblas:
   - 0.3.3
 openjpeg:
@@ -181,6 +176,8 @@ python:
   - 3.7
   - 3.8
 python_implementation:
+  - cpython
+python_impl:
   - cpython
 r_version:
   - 3.5.0

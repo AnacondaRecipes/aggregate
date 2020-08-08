@@ -1,5 +1,5 @@
 {% set name = "requests-file" %}
-{% set version = "1.4.3" %}
+{% set version = "1.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,22 +8,25 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8f04aa6201bacda0567e7ac7f677f1499b0fc76b22140c54bc06edf1ba92e2fa
+  sha256: 07d74208d3389d01c38ab89ef403af0cfec63957d53a0081d8eca738d0247d8e
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - python
-    - setuptools
-    - requests >=1.0.0
-    - six
+    - pip
   run:
     - python
     - requests >=1.0.0
     - six
+
+test:
+  imports:
+    - requests_file
 
 about:
   home: http://github.com/dashea/requests-file

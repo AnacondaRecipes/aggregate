@@ -1,4 +1,5 @@
 @echo on
+
 :: Set env vars that tell distutils to use the compiler that we put on path
 SET DISTUTILS_USE_SDK=1
 :: This is probably not good. It is for the pre-UCRT msvccompiler.py *not* _msvccompiler.py
@@ -19,31 +20,11 @@ set "PY_VCRUNTIME_REDIST=%PREFIX%\bin\vcruntime140.dll"
 set "CXX=cl.exe"
 set "CC=cl.exe"
 
-set "VSINSTALLDIR="
-:: Try to find actual vs2017 installations
-for /f "usebackq tokens=*" %%i in (`vswhere.exe -nologo -products * -version ^[15.0^,16.0^) -property installationPath`) do (
+CALL %~dp0vs@YEAR@_get_vsinstall_dir.bat
+:: for /f "usebackq tokens=*" %%i in (`CALL %~dp0vs@YEAR@_get_vsinstall_dir.bat`) do (
   :: There is no trailing back-slash from the vswhere, and may make vcvars64.bat fail, so force add it
-  set "VSINSTALLDIR=%%i\"
-)
-if not exist "%VSINSTALLDIR%" (
-    :: VS2019 install but with vs2017 compiler stuff installed
-	for /f "usebackq tokens=*" %%i in (`vswhere.exe -nologo -products * -requires Microsoft.VisualStudio.Component.VC.v141.x86.x64 -property installationPath`) do (
-	:: There is no trailing back-slash from the vswhere, and may make vcvars64.bat fail, so force add it
-	set "VSINSTALLDIR=%%i\"
-	)
-)
-if not exist "%VSINSTALLDIR%" (
-set "VSINSTALLDIR=%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Professional\"
-)
-if not exist "%VSINSTALLDIR%" (
-set "VSINSTALLDIR=%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Community\"
-)
-if not exist "%VSINSTALLDIR%" (
-set "VSINSTALLDIR=%ProgramFiles(x86)%\Microsoft Visual Studio\2017\BuildTools\"
-)
-if not exist "%VSINSTALLDIR%" (
-set "VSINSTALLDIR=%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\"
-)
+::  set "VSINSTALLDIR=%%i"
+::)
 
 IF NOT "%CONDA_BUILD%" == "" (
   set "INCLUDE=%LIBRARY_INC%;%INCLUDE%"
@@ -76,7 +57,7 @@ IF "@cross_compiler_target_platform@" == "win-64" (
 )
 
 pushd %VSINSTALLDIR%
-CALL "VC\Auxiliary\Build\vcvars%BITS%.bat" -vcvars_ver=14.16 %WindowsSDKVer%
+  CALL "VC\Auxiliary\Build\vcvars%BITS%.bat" -vcvars_ver=14.16 %WindowsSDKVer%
 popd
 
 IF "%CMAKE_GENERATOR%" == "" SET "CMAKE_GENERATOR=%CMAKE_GEN%"
@@ -97,4 +78,5 @@ for /F "tokens=1,2*" %%i in ('reg query "%1\Microsoft\Microsoft SDKs\Windows\v10
         SET WindowsSdkDir=%%~k
     )
 )
+
 exit /B 0

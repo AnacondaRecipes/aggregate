@@ -3553,9 +3553,11 @@
 [submodule "soupsieve-feedstock"]
 	path = soupsieve-feedstock
 	url = ../soupsieve-feedstock
+	branch = master
 [submodule "fasttsne-feedstock"]
 	path = fasttsne-feedstock
 	url = ../fasttsne-feedstock
+	branch = master
 [submodule "asciitree-feedstock"]
 	path = asciitree-feedstock
 	url = ../asciitree-feedstock
@@ -3811,10 +3813,6 @@
 [submodule "bash-feedstock"]
 	path = bash-feedstock
 	url = ../bash-feedstock
-	branch = master
-[submodule "numpy-metapackage-feedstock"]
-	path = numpy-metapackage-feedstock
-	url = ../numpy-metapackage-feedstock
 	branch = master
 [submodule "cython-0.28.4-feedstock"]
 	path = cython-0.28.4-feedstock
@@ -4231,6 +4229,7 @@
 [submodule "lief-feedstock"]
 	path = lief-feedstock
 	url = ../lief-feedstock
+	branch = master
 [submodule "portaudio-feedstock"]
 	path = portaudio-feedstock
 	url = ../portaudio-feedstock
@@ -4354,12 +4353,15 @@
 [submodule "compiler-rt-feedstock"]
 	path = compiler-rt-feedstock
 	url = ../compiler-rt-feedstock
+	branch = master
 [submodule "libcxx-feedstock"]
 	path = libcxx-feedstock
 	url = ../libcxx-feedstock
+	branch = master
 [submodule "clang-win-activation-feedstock"]
 	path = clang-win-activation-feedstock
 	url = ../clang-win-activation-feedstock
+	branch = master
 [submodule "autoconf-archive-feedstock"]
 	path = autoconf-archive-feedstock
 	url = ../autoconf-archive-feedstock
@@ -4367,6 +4369,7 @@
 [submodule "openmp-feedstock"]
 	path = openmp-feedstock
 	url = ../openmp-feedstock
+	branch = master
 [submodule "coreutils-feedstock"]
 	path = coreutils-feedstock
 	url = ../coreutils-feedstock.git
@@ -4377,34 +4380,44 @@
 	branch = master
 [submodule "func_timeout-feedstock"]
 	path = func_timeout-feedstock
-	url = git@github.com:AnacondaRecipes/func_timeout-feedstock.git
+	url = ../func_timeout-feedstock
+	branch = master
 [submodule "curio-feedstock"]
 	path = curio-feedstock
-	url = git@github.com:AnacondaRecipes/curio-feedstock.git
+	url = ../curio-feedstock
+	branch = master
 [submodule "cppy-feedstock"]
 	path = cppy-feedstock
-	url = git@github.com:AnacondaRecipes/cppy-feedstock.git
+	url = ../cppy-feedstock
+	branch = master
 [submodule "nose-exclude-feedstock"]
 	path = nose-exclude-feedstock
-	url = git@github.com:AnacondaRecipes/nose-exclude-feedstock.git
+	url = ../nose-exclude-feedstock
+	branch = master
 [submodule "freezegun-feedstock"]
 	path = freezegun-feedstock
-	url = git@github.com:AnacondaRecipes/freezegun-feedstock.git
+	url = ../freezegun-feedstock
+	branch = master
 [submodule "cfn-lint-feedstock"]
 	path = cfn-lint-feedstock
-	url = https://github.com/conda-forge/cfn-lint-feedstock.git
+	url = ../cfn-lint-feedstock
+	branch = master
 [submodule "sshpubkeys-feedstock"]
 	path = sshpubkeys-feedstock
-	url = git@github.com:AnacondaRecipes/sshpubkeys-feedstock.git
+	url = ../sshpubkeys-feedstock
+	branch = master
 [submodule "jsonpatch-feedstock"]
 	path = jsonpatch-feedstock
-	url = https://github.com/conda-forge/jsonpatch-feedstock.git
+	url = ../jsonpatch-feedstock
+	branch = master
 [submodule "jsonpointer-feedstock"]
 	path = jsonpointer-feedstock
-	url = git@github.com:AnacondaRecipes/jsonpointer-feedstock.git
+	url = ../jsonpointer-feedstock.git
+	branch = master
 [submodule "aws-sam-translator-feedstock"]
 	path = aws-sam-translator-feedstock
-	url = git@github.com:AnacondaRecipes/aws-sam-translator-feedstock.git
+	url = ../aws-sam-translator-feedstock
+	branch = master
 [submodule "conda-package-handling-feedstock-1.6.0"]
 	path = conda-package-handling-feedstock-1.6
 	url = ../conda-package-handling-feedstock
@@ -4412,13 +4425,15 @@
 [submodule "compilers-feedstock"]
 	path = compilers-feedstock
 	url = ../compilers-feedstock
+	branch = master
 [submodule "astunparse-feedstock"]
 	path = astunparse-feedstock
 	url = ../astunparse-feedstock
 	branch = master
 [submodule "bytecode-feedstock"]
 	path = bytecode-feedstock
-	url = git@github.com:AnacondaRecipes/bytecode-feedstock.git
+	url = ../bytecode-feedstock
+	branch = master
 [submodule "cython-blis-feedstock"]
 	path = cython-blis-feedstock
 	url = ../cython-blis-feedstock
@@ -4438,6 +4453,7 @@
 [submodule "brotlipy-feedstock"]
 	path = brotlipy-feedstock
 	url = ../brotlipy-feedstock
+	branch = master
 [submodule "conda-pack-feedstock"]
 	path = conda-pack-feedstock
 	url = ../conda-pack-feedstock
@@ -4461,6 +4477,7 @@
 [submodule "altiar-feedstock"]
 	path = altiar-feedstock
 	url = ../altair-feedstock
+	branch = master
 [submodule "altair-feedstock"]
 	path = altair-feedstock
 	url = ../altair-feedstock
@@ -4565,6 +4582,22 @@
 	path = pysmbclient-feedstock
 	url = ../pysmbclient-feedstock
 	branch = master
+[submodule "slackclient-feedstock"]
+	path = slackclient-feedstock
+	url = ../slackclient-feedstock
+	branch = master
+[submodule "pysftp-feedstock"]
+	path = pysftp-feedstock
+	url = ../pysftp-feedstock
+	branch = master
+[submodule "sshtunnel-feedstock"]
+	path = sshtunnel-feedstock
+	url = ../sshtunnel-feedstock
+	branch = master
+[submodule "statsd-feedstock"]
+	path = statsd-feedstock
+	url = ../statsd-feedstock
+	branch = master
 [submodule "sendgrid-feedstock"]
 	path = sendgrid-feedstock
 	url = ../sendgrid-feedstock
@@ -4573,3 +4606,116 @@
 	path = poetry-core-feedstock
 	url = ../poetry-core-feedstock
 	branch = master
+[submodule "pywinrm-feedstock"]
+	path = pywinrm-feedstock
+	url = ../pywinrm-feedstock
+	branch = master
+[submodule "vertica-python-feedstock"]
+	path = vertica-python-feedstock
+	url = ../vertica-python-feedstock
+	branch = master
+[submodule "aiodns-feedstock"]
+	path = aiodns-feedstock
+	url = ../aiodns-feedstock
+	branch = master
+[submodule "pycares-feedstock"]
+	path = pycares-feedstock
+	url = ../pycares-feedstock
+	branch = master
+[submodule "adal-feedstock"]
+	path = adal-feedstock
+	url = ../adal-feedstock
+	branch = master
+[submodule "nuitka-feedstock"]
+	path = nuitka-feedstock
+	url = ../nuitka-feedstock
+	branch = master
+[submodule "pytzdata-feedstock"]
+	path = pytzdata-feedstock
+	url = ../pytzdata-feedstock
+	branch = master
+[submodule "flask-jwt-extended-feedstock"]
+	path = flask-jwt-extended-feedstock
+	url = ../flask-jwt-extended-feedstock
+	branch = master
+[submodule "flask-openid-feedstock"]
+	path = flask-openid-feedstock
+	url = ../flask-openid-feedstock
+	branch = master
+[submodule "imagecodecs-feedstock"]
+	path = imagecodecs-feedstock
+	url = ../imagecodecs-feedstock
+	branch = master
+[submodule "jxrlib-feedstock"]
+	path = jxrlib-feedstock
+	url = ../jxrlib-feedstock
+	branch = master
+[submodule "libaec-feedstock"]
+	path = libaec-feedstock
+	url = ../libaec-feedstock
+	branch = master
+[submodule "libzopfli-feedstock"]
+	path = libzopfli-feedstock
+	url = ../libzopfli-feedstock
+	branch = master
+[submodule "charls-feedstock"]
+	path = charls-feedstock
+	url = ../charls-feedstock
+	branch = master
+[submodule "lcms2-feedstock"]
+	path = lcms2-feedstock
+	url = ../lcms2-feedstock
+	branch = master
+[submodule "appscript-feedstock"]
+	path = appscript-feedstock
+	url = ../appscript-feedstock
+	branch = master
+[submodule "clikit-feedstock"]
+	path = clikit-feedstock
+	url = ../clikit-feedstock
+	branch = master
+[submodule "pastel-feedstock"]
+	path = pastel-feedstock
+	url = ../pastel-feedstock
+	branch = master
+[submodule "tomlkit-feedstock"]
+	path = tomlkit-feedstock
+	url = ../tomlkit-feedstock
+	branch = master
+[submodule "libwebp-base-feedstock"]
+	path = libwebp-base-feedstock
+	url = ../libwebp-base-feedstock
+[submodule "gtk3-feedstock"]
+	path = gtk3-feedstock
+	url = ../gtk3-feedstock
+[submodule "atk-feedstock"]
+	path = atk-feedstock
+	url = ../atk-feedstock
+[submodule "at-spi2-atk-feedstock"]
+	path = at-spi2-atk-feedstock
+	url = ../at-spi2-atk-feedstock
+[submodule "gdk-pixbuf-feedstock"]
+	path = gdk-pixbuf-feedstock
+	url = ../gdk-pixbuf-feedstock
+[submodule "libcups-feedstock"]
+	path = libcups-feedstock
+	url = ../libcups-feedstock
+[submodule "epoxy-feedstock"]
+	path = epoxy-feedstock
+	url = ../epoxy-feedstock
+[submodule "at-spi2-core-feedstock"]
+	path = at-spi2-core-feedstock
+	url = ../at-spi2-core-feedstock
+[submodule "httpx-feedstock"]
+	path = httpx-feedstock
+	url = ../httpx-feedstock
+[submodule "pytest-flakes-feedstock"]
+	path = pytest-flakes-feedstock
+	url = ../pytest-flakes-feedstock
+[submodule "xlutils-feedstock"]
+	path = xlutils-feedstock
+	url = ../xlutils-feedstock
+[submodule "iniconfig-feedstock"]
+	path = iniconfig-feedstock
+	url = ../iniconfig-feedstock
+>>>>>>> 0ac804c3075c6a61d4b494ede36ec1d40c78fa76

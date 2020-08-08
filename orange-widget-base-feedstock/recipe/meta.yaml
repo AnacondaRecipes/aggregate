@@ -1,5 +1,5 @@
 {% set name = "orange-widget-base" %}
-{% set version = "4.0.1" %}
+{% set version = "4.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 756f40d0701a3c3c51c00850463a6a5d7a62ac2139a8b1ac397d70791cf718e1
+  sha256: 3da7c6898fb65e09188c03ddfd1a4a7292ccd46cf85794239e7b23a418f6e19d
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -23,7 +23,8 @@ requirements:
     - matplotlib
     - pyqtgraph
     - anyqt
-    - orange-canvas-core
+    - orange-canvas-core >=0.1.8
+    - appnope [osx]
 
 test:
   imports:

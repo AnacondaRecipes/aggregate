@@ -1,6 +1,6 @@
 {% set name = "CacheControl" %}
-{% set version = "0.12.5" %}
-{% set sha256 = "sha256" %}
+{% set version = "0.12.6" %}
+{% set sha256 = "be9aa45477a134aee56c8fac518627e1154df063e85f67d4f83ce0ccc23688e8" %}
 
 package:
   name: {{ name.lower() }}
@@ -8,17 +8,19 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cef77effdf51b43178f6a2d3b787e3734f98ade253fa3187f3bb7315aaa42ff7
+  sha256: {{ sha256 }}
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
       - doesitcache = cachecontrol._cmd:main
 
 requirements:
   host:
     - python
+    - pip
     - setuptools
   run:
     - python
@@ -26,9 +28,12 @@ requirements:
     - msgpack-python
 
 test:
+  requires:
+    - pip
   imports:
     - cachecontrol
   commands:
+    - pip check
     - doesitcache --help
 
 about:

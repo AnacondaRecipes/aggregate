@@ -1,6 +1,6 @@
 {% set name = "orange-canvas-core" %}
-{% set version = "0.1.7" %}
-{% set sha256 = "aa656a0b2dc9537c79731f88c974a7c78d9b711e64bfc5aa23504dd9de6f2c73" %}
+{% set version = "0.1.15" %}
+{% set sha256 = "5ec36221bb5d925b352b6b9d9c58627d0ef9ef75249b8ab0080d6f64b5828c61" %}
 
 package:
   name: {{ name|lower }}
@@ -28,9 +28,10 @@ requirements:
     - docutils
     - commonmark
     - requests
-    - cachecontrol
+    - cachecontrol >=0.12.6
     # via cachecontrol[filecache]
     - lockfile >=0.9
+    - dictdiffer
 
 test:
   imports:

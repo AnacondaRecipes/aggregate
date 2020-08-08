@@ -48,7 +48,6 @@ function git_num_added_to_index {
   expr $(git status --porcelain 2>/dev/null| grep "^M" | wc -l)
 }
 
-set -x
 SUCCESS=0
 # DEBUG=yes
 if [[ $name == dbus-feedstock-no ]]; then
@@ -104,7 +103,7 @@ if [[ ${sha1_h} == ${sha1_m} ]] && [[ ${sha1_h} == ${sha1_o} ]]; then
   if [[ ${on_wanted} == no ]]; then
     maybe_do git checkout ${wanted_branch}
   fi
-  echo SUCCESS=$SUCCESS
+  # echo SUCCESS=$SUCCESS
   exit ${SUCCESS}
 fi
 
@@ -134,7 +133,7 @@ fi
 if [[ ${sha1_m} == ${sha_o} ]]; then
   # If HEAD is an ancestor of (both of) the branches ..
   if ${h_anc_m}; then
-    echo "${name} HEAD is an ancestor of origin/${wanted_branch} (which is equal to ${wanted_branch}), I suggest you: git checkout ${wanted_branch}"
+    echo "${name} HEAD is an ancestor of origin/${wanted_branch} (which is equal to ${wanted_branch}), I suggest you:\$ git checkout ${wanted_branch}"
     exit ${SUCCESS}
   else
     echo "${name} HEAD is *not* an ancestor of origin/${wanted_branch} (which is equal to ${wanted_branch}), your branches have diverged. Please manually rectify this"
