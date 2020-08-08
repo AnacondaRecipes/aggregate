@@ -4718,3 +4718,7 @@
 [submodule "iniconfig-feedstock"]
 	path = iniconfig-feedstock
 	url = ../iniconfig-feedstock
+[submodule "crashtest-feedstock"]
+	path = crashtest-feedstock
+	url = ../crashtest-feedstock
+	branch = master
