@@ -4722,3 +4722,7 @@
 	path = crashtest-feedstock
 	url = ../crashtest-feedstock
 	branch = master
+[submodule "pygithub-feedstock"]
+	path = pygithub-feedstock
+	url = ../pygithub-feedstock
+	branch = master
