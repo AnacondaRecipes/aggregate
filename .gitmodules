@@ -4726,3 +4726,9 @@
 	path = pygithub-feedstock
 	url = ../pygithub-feedstock
 	branch = master
+[submodule "segregation-feedstock"]
+	path = segregation-feedstock
+	url = ../segregation-feedstock
+[submodule "splot-feedstock"]
+	path = splot-feedstock
+	url = ../splot-feedstock
