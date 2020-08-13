@@ -4732,3 +4732,6 @@
 [submodule "splot-feedstock"]
 	path = splot-feedstock
 	url = ../splot-feedstock
+[submodule "tobler-feedstock"]
+	path = tobler-feedstock
+	url = ../tobler-feedstock
