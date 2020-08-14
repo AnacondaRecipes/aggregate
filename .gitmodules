@@ -4735,3 +4735,6 @@
 [submodule "tobler-feedstock"]
 	path = tobler-feedstock
 	url = ../tobler-feedstock
+[submodule "macholib-feedstock"]
+	path = macholib-feedstock
+	url = ../macholib-feedstock
