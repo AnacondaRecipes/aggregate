@@ -4738,3 +4738,9 @@
 [submodule "macholib-feedstock"]
 	path = macholib-feedstock
 	url = ../macholib-feedstock
+[submodule "tranquilizer-feedstock"]
+	path = tranquilizer-feedstock
+	url = ../tranquilizer-feedstock
+[submodule "flask-restx-feedstock"]
+	path = flask-restx-feedstock
+	url = ../flask-restx-feedstock
