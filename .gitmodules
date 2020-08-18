@@ -4747,3 +4747,9 @@
 [submodule "aniso8601-feedstock"]
 	path = aniso8601-feedstock
 	url = ../aniso8601-feedstock
+[submodule "yarn-feedstock"]
+	path = yarn-feedstock
+	url = ../yarn-feedstock
+[submodule "python-nvd3-feedstock"]
+	path = python-nvd3-feedstock
+	url = ../python-nvd3-feedstock
