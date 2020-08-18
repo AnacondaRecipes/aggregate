@@ -4753,3 +4753,6 @@
 [submodule "python-nvd3-feedstock"]
 	path = python-nvd3-feedstock
 	url = ../python-nvd3-feedstock
+[submodule "email-validator-feedstock"]
+	path = email-validator-feedstock
+	url = ../email-validator-feedstock
