@@ -4744,3 +4744,6 @@
 [submodule "flask-restx-feedstock"]
 	path = flask-restx-feedstock
 	url = ../flask-restx-feedstock
+[submodule "aniso8601-feedstock"]
+	path = aniso8601-feedstock
+	url = ../aniso8601-feedstock
