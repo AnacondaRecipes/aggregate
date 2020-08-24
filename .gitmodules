@@ -1,3 +1,4 @@
+
 [submodule "imagesize-feedstock"]
 	url = ../imagesize-feedstock.git
 	path = imagesize-feedstock
@@ -4756,3 +4757,7 @@
 [submodule "email-validator-feedstock"]
 	path = email-validator-feedstock
 	url = ../email-validator-feedstock
+[submodule "pcre2-feedstock"]
+	path = pcre2-feedstock
+	url = ../pcre2-feedstock
+	branch = master
