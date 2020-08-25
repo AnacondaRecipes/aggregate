@@ -4764,4 +4764,7 @@
 [submodule "shellcheck-feedstock"]
 	path = shellcheck-feedstock
 	url = ../shellcheck-feedstock
+[submodule "aioitertools-feedstock"]
+	path = aioitertools-feedstock
+	url = ../aioitertools-feedstock
 	branch = master
