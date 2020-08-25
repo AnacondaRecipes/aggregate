@@ -4761,3 +4761,7 @@
 	path = pcre2-feedstock
 	url = ../pcre2-feedstock
 	branch = master
+[submodule "shellcheck-feedstock"]
+	path = shellcheck-feedstock
+	url = ../shellcheck-feedstock
+	branch = master
