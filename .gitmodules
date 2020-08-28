@@ -4772,3 +4772,15 @@
 	path = python.app-feedstock
 	url = ../python.app-feedstock
 	branch = master
+[submodule "itemloaders-feedstock"]
+	path = itemloaders-feedstock
+	url = ../itemloaders-feedstock
+	branch = master
+[submodule "itemadapter-feedstock"]
+	path = itemadapter-feedstock
+	url = ../itemadapter-feedstock
+	branch = master
+[submodule "protego-feedstock"]
+	path = protego-feedstock
+	url = ../protego-feedstock
+	branch = master
