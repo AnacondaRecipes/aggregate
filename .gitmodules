@@ -4768,3 +4768,7 @@
 	path = aioitertools-feedstock
 	url = ../aioitertools-feedstock
 	branch = master
+[submodule "python.app-feedstock"]
+	path = python.app-feedstock
+	url = ../python.app-feedstock
+	branch = master
