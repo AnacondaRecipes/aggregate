@@ -4800,3 +4800,7 @@
 	path = pyte-feedstock
 	url = ../pyte-feedstock
 	branch = master
+[submodule "blessings-feedstock"]
+	path = blessings-feedstock
+	url = ../blessings-feedstock
+	branch = master
