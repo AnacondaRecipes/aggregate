@@ -4784,3 +4784,11 @@
 	path = protego-feedstock
 	url = ../protego-feedstock
 	branch = master
+[submodule "bpython-feedstock"]
+	path = bpython-feedstock
+	url = ../bpython-feedstock
+	branch = master
+[submodule "curtsies-feedstock"]
+	path = curtsies-feedstock
+	url = ../curtsies-feedstock
+	branch = master
