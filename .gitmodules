@@ -4792,3 +4792,11 @@
 	path = curtsies-feedstock
 	url = ../curtsies-feedstock
 	branch = master
+[submodule "urwid-feedstock"]
+	path = urwid-feedstock
+	url = ../urwid-feedstock
+	branch = master
+[submodule "pyte-feedstock"]
+	path = pyte-feedstock
+	url = ../pyte-feedstock
+	branch = master
