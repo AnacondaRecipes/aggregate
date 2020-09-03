@@ -4808,3 +4808,7 @@
 	path = openresty-feedstock
 	url = ../openresty-feedstock
 	branch = master
+[submodule "luarocks-feedstock"]
+	path = luarocks-feedstock
+	url = ../luarocks-feedstock
+	branch = master
