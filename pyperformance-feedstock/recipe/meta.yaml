@@ -1,0 +1,51 @@
+{% set name = "pyperformance" %}
+{% set version = "1.0.1" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: 6522d28a539ccd28a3da51e8ec1f5891dd05e917d16d7d1d7f1bccdc4b8922ce
+
+build:
+  number: 0
+  noarch: python
+  entry_points:
+    - pyperformance=pyperformance.cli:main
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - pip
+    - pyperf
+    - python
+  run:
+    - pyperf
+    - python
+
+test:
+  imports:
+    - pyperformance
+    - pyperformance.benchmarks
+    - pyperformance.benchmarks.data
+    # Syntax error on import statement?
+    # - pyperformance.benchmarks.data.2to3
+    - pyperformance.tests
+    - pyperformance.tests.data
+  commands:
+    - pyperformance --help
+
+about:
+  home: "https://github.com/python/benchmarks"
+  license: MIT
+  license_family: MIT
+  license_file: 
+  summary: "Python benchmark suite"
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - mingwandroid
