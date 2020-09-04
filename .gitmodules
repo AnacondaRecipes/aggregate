@@ -4812,3 +4812,7 @@
 	path = luarocks-feedstock
 	url = ../luarocks-feedstock
 	branch = master
+[submodule "pyperf-feedstock"]
+	path = pyperf-feedstock
+	url = ../pyperf-feedstock
+	branch = master
