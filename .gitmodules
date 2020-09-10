@@ -4816,3 +4816,7 @@
 	path = pyperf-feedstock
 	url = ../pyperf-feedstock
 	branch = master
+[submodule "fastrlock-feedstock"]
+	path = fastrlock-feedstock
+	url = ../fastrlock-feedstock
+	branch = master
