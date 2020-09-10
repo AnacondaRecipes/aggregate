@@ -4820,3 +4820,7 @@
 	path = fastrlock-feedstock
 	url = ../fastrlock-feedstock
 	branch = master
+[submodule "aws-sdk-cpp-feedstock"]
+	path = aws-sdk-cpp-feedstock
+	url = ../aws-sdk-cpp-feedstock
+	branch = master
