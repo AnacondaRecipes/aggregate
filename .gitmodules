@@ -4824,3 +4824,7 @@
 	path = aws-sdk-cpp-feedstock
 	url = ../aws-sdk-cpp-feedstock
 	branch = master
+[submodule "access-feedstock"]
+	path = access-feedstock
+	url = ../access-feedstock
+	branch = master
