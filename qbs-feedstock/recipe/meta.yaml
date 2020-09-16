@@ -1,4 +1,4 @@
-{% set version = "1.12.2" %}
+{% set version = "1.16.0" %}
 
 package:
   name: qbs
@@ -8,12 +8,13 @@ source:
   # git_url: git://code.qt.io/qbs/qbs.git
   # git_tag: v{{ version }}
   url: https://download.qt.io/official_releases/qbs/{{ version }}/qbs-src-{{ version }}.tar.gz
+  sha256: a77be21ec08904b86afdbe798dd3597d070ee8f9ca9cc9ed3f21b87d6fa12b25
   patches:
     - 0001-add-generator-header-installs.patch
-    - 0002-Use-.dll.a-instead-of-.a-for-mingw-import-libraries.patch
-    - 0003-setup-toolchains-Pretend-msys-is-mingw.patch
+    # - 0002-Use-.dll.a-instead-of-.a-for-mingw-import-libraries.patch
+    # - 0003-setup-toolchains-Pretend-msys-is-mingw.patch
     - 0004-add-many-files-to-installed-headers.patch
-    - 0005-macOS-Add-missing-CPU-defines.patch
+    # - 0005-macOS-Add-missing-CPU-defines.patch
 
 requirements:
   build:
@@ -46,7 +47,7 @@ requirements:
     - jom                                # [win]
     - make                               # [not win]
   host:
-    - qt 5.12.*
+    - qt 5.15.*
   run:
     - vs2015_runtime                     # [win]
 

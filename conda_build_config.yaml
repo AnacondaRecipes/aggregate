@@ -8,10 +8,14 @@ apr:
 blas_impl:
   - mkl                        # [x86 or x86_64]
   - openblas                   # [not win]
-boost:
-  - 1.67
-boost_cpp:
-  - 1.67
+boost:  # [unix]
+  - 1.73  # [unix]
+boost_cpp:  # [unix]
+  - 1.73  # [unix]
+boost:  # [win]
+  - 1.67  # [win]
+boost_cpp:  # [win]
+  - 1.67  # [win]
 bzip2:
   - 1.0
 cairo:
