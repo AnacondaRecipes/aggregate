@@ -4840,3 +4840,7 @@
 	path = lerc-feedstock
 	url = ../lerc-feedstock
 	branch = master
+[submodule "zfpy-feedstock"]
+	path = zfpy-feedstock
+	url = ../zfpy-feedstock
+	branch = master
