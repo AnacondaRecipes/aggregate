@@ -4836,3 +4836,7 @@
 	path = brunsli-feedstock
 	url = ../brunsli-feedstock
 	branch = master
+[submodule "lerc-feedstock"]
+	path = lerc-feedstock
+	url = ../lerc-feedstock
+	branch = master
