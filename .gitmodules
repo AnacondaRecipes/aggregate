@@ -4686,39 +4686,51 @@
 [submodule "libwebp-base-feedstock"]
 	path = libwebp-base-feedstock
 	url = ../libwebp-base-feedstock
+        branch = master
 [submodule "gtk3-feedstock"]
 	path = gtk3-feedstock
 	url = ../gtk3-feedstock
+        branch = master
 [submodule "atk-feedstock"]
 	path = atk-feedstock
 	url = ../atk-feedstock
+        branch = master
 [submodule "at-spi2-atk-feedstock"]
 	path = at-spi2-atk-feedstock
 	url = ../at-spi2-atk-feedstock
+        branch = master
 [submodule "gdk-pixbuf-feedstock"]
 	path = gdk-pixbuf-feedstock
 	url = ../gdk-pixbuf-feedstock
+        branch = master
 [submodule "libcups-feedstock"]
 	path = libcups-feedstock
 	url = ../libcups-feedstock
+        branch = master
 [submodule "epoxy-feedstock"]
 	path = epoxy-feedstock
 	url = ../epoxy-feedstock
+        branch = master
 [submodule "at-spi2-core-feedstock"]
 	path = at-spi2-core-feedstock
 	url = ../at-spi2-core-feedstock
+        branch = master
 [submodule "httpx-feedstock"]
 	path = httpx-feedstock
 	url = ../httpx-feedstock
+        branch = master
 [submodule "pytest-flakes-feedstock"]
 	path = pytest-flakes-feedstock
 	url = ../pytest-flakes-feedstock
+        branch = master
 [submodule "xlutils-feedstock"]
 	path = xlutils-feedstock
 	url = ../xlutils-feedstock
+        branch = master
 [submodule "iniconfig-feedstock"]
 	path = iniconfig-feedstock
 	url = ../iniconfig-feedstock
+        branch = master
 [submodule "crashtest-feedstock"]
 	path = crashtest-feedstock
 	url = ../crashtest-feedstock
@@ -4730,33 +4742,43 @@
 [submodule "segregation-feedstock"]
 	path = segregation-feedstock
 	url = ../segregation-feedstock
+        branch = master
 [submodule "splot-feedstock"]
 	path = splot-feedstock
 	url = ../splot-feedstock
+        branch = master
 [submodule "tobler-feedstock"]
 	path = tobler-feedstock
 	url = ../tobler-feedstock
+        branch = master
 [submodule "macholib-feedstock"]
 	path = macholib-feedstock
 	url = ../macholib-feedstock
+        branch = master
 [submodule "tranquilizer-feedstock"]
 	path = tranquilizer-feedstock
 	url = ../tranquilizer-feedstock
+        branch = master
 [submodule "flask-restx-feedstock"]
 	path = flask-restx-feedstock
 	url = ../flask-restx-feedstock
+        branch = master
 [submodule "aniso8601-feedstock"]
 	path = aniso8601-feedstock
 	url = ../aniso8601-feedstock
+        branch = master
 [submodule "yarn-feedstock"]
 	path = yarn-feedstock
 	url = ../yarn-feedstock
+        branch = master
 [submodule "python-nvd3-feedstock"]
 	path = python-nvd3-feedstock
 	url = ../python-nvd3-feedstock
+        branch = master
 [submodule "email-validator-feedstock"]
 	path = email-validator-feedstock
 	url = ../email-validator-feedstock
+        branch = master
 [submodule "pcre2-feedstock"]
 	path = pcre2-feedstock
 	url = ../pcre2-feedstock
@@ -4870,4 +4892,8 @@
 [submodule "click-repl-feedstock"]
 	path = click-repl-feedstock
 	url = ../click-repl-feedstock
+        branch = master
+[submodule "openrefine-feedstock"]
+	path = openrefine-feedstock
+	url = ../openrefine-feedstock
 	branch = master
