@@ -4905,3 +4905,7 @@
 	path = jom-feedstock
 	url = ../jom-feedstock
 	branch = master
+[submodule "7zip-feedstock"]
+	path = 7zip-feedstock
+	url = ../7zip-feedstock
+	branch = master
