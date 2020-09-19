@@ -4901,3 +4901,7 @@
 	path = psqlodbc-feedstock
 	url = ../psqlodbc-feedstock
 	branch = master
+[submodule "jom-feedstock"]
+	path = jom-feedstock
+	url = ../jom-feedstock
+	branch = master
