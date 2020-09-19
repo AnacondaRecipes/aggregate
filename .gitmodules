@@ -4897,3 +4897,7 @@
 	path = openrefine-feedstock
 	url = ../openrefine-feedstock
 	branch = master
+[submodule "psqlodbc-feedstock"]
+	path = psqlodbc-feedstock
+	url = ../psqlodbc-feedstock
+	branch = master
