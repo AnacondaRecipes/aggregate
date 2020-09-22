@@ -4909,3 +4909,7 @@
 	path = 7zip-feedstock
 	url = ../7zip-feedstock
 	branch = master
+[submodule "cleo-feedstock"]
+	path = cleo-feedstock
+	url = ../cleo-feedstock
+	branch = master
