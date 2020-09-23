@@ -1588,7 +1588,7 @@
 	url = ../iminuit-feedstock
 	branch = master
 [submodule "cyrus-sasl-feedstock"]
-	path = cyrus-sasl-feedstock.embedded
+	path = cyrus-sasl-feedstock
 	url = ../cyrus-sasl-feedstock
 	branch = master
 [submodule "libntlm-feedstock"]
@@ -4843,4 +4843,20 @@
 [submodule "zfpy-feedstock"]
 	path = zfpy-feedstock
 	url = ../zfpy-feedstock
+	branch = master
+[submodule "xorg-xproto-feedstock"]
+	path = xorg-xproto-feedstock
+	url = ../xorg-xproto-feedstock
+	branch = master
+[submodule "openldap-feedstock"]
+	path = openldap-feedstock
+	url = ../openldap-feedstock
+	branch = master
+[submodule "groff-feedstock"]
+	path = groff-feedstock
+	url = ../groff-feedstock
+	branch = master
+[submodule "macports-legacy-support-feedstock"]
+	path = macports-legacy-support-feedstock
+	url = ../macports-legacy-support-feedstock
 	branch = master
