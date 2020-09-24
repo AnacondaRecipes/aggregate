@@ -1,0 +1,162 @@
+From fd118580d30051366d273c51b53e0a41cfd5c51c Mon Sep 17 00:00:00 2001
+From: Jonathan Helmus <jjhelmus@gmail.com>
+Date: Tue, 30 Oct 2018 10:31:35 -0500
+Subject: [PATCH 4/6] windows fixes
+
+---
+ plugins/NTMakefile     |  2 +-
+ win32/common.mak       | 30 +++++++++++++-----------------
+ win32/include/config.h |  2 ++
+ 3 files changed, 16 insertions(+), 18 deletions(-)
+
+diff --git a/plugins/NTMakefile b/plugins/NTMakefile
+index 32dc58e..36675c6 100755
+--- a/plugins/NTMakefile
++++ b/plugins/NTMakefile
+@@ -39,7 +39,7 @@ SQLITE_LIBS = /libpath:$(SQLITE_LIBPATH) libsqlite.lib
+ !IF "$(SQL)" == "SQLITE3"
+ PLUGINS_EXT=$(PLUGINS_EXT) saslSQLITE.dll
+ SQL_FLAGS= $(SQLITE_INCLUDES3) /DHAVE_SQLITE3=1
+-SQLITE_LIBS = /libpath:$(SQLITE_LIBPATH3) libsqlite3.lib
++SQLITE_LIBS = /libpath:$(SQLITE_LIBPATH3) sqlite3.lib
+ !ENDIF
+ 
+ PLUGINS=saslANONYMOUS.dll \
+diff --git a/win32/common.mak b/win32/common.mak
+index c2a9338..2471289 100644
+--- a/win32/common.mak
++++ b/win32/common.mak
+@@ -45,7 +45,7 @@ TARGET_WIN_SYSTEM=0
+ 
+ # prefix variable is currently only being used by install target
+ !IF "$(prefix)" == ""
+-prefix=C:\CMU
++prefix=$(LIBRARY_PREFIX)
+ !IF "$(VERBOSE)" != "0"
+ !MESSAGE Default installation directory is $(prefix).
+ !ENDIF 
+@@ -66,84 +66,84 @@ DB_LIB=libdb41s.lib
+ !ENDIF
+ 
+ !IF "$(DB_INCLUDE)" == ""
+-DB_INCLUDE=c:\work\isode\db\build_win32
++DB_INCLUDE=$(LIBRARY_INC)
+ !IF "$(VERBOSE)" != "0"
+ !MESSAGE Defaulting SleepyCat include path to $(DB_INCLUDE).
+ !ENDIF
+ !ENDIF
+ 
+ !IF "$(DB_LIBPATH)" == ""
+-DB_LIBPATH=c:\work\isode\db\build_win32\Release_static
++DB_LIBPATH=$(LIBRARY_LIB)
+ !IF "$(VERBOSE)" != "0"
+ !MESSAGE Defaulting SleepyCat library path to $(DB_LIBPATH).
+ !ENDIF
+ !ENDIF
+ 
+ !IF "$(OPENSSL_INCLUDE)" == ""
+-OPENSSL_INCLUDE="D:\openssl\engine-0.9.6g-md3\include"
++OPENSSL_INCLUDE=$(LIBRARY_INC)
+ !IF "$(VERBOSE)" != "0"
+ !MESSAGE Defaulting OpenSSL Include path to $(OPENSSL_INCLUDE).
+ !ENDIF
+ !ENDIF
+ 
+ !IF "$(OPENSSL_LIBPATH)" == ""
+-OPENSSL_LIBPATH="D:\openssl\engine-0.9.6g-md3\lib"
++OPENSSL_LIBPATH=$(LIBRARY_LIB)
+ !IF "$(VERBOSE)" != "0"
+ !MESSAGE Defaulting OpenSSL library path to $(OPENSSL_LIBPATH).
+ !ENDIF
+ !ENDIF
+ 
+ !IF "$(GSSAPI_INCLUDE)" == ""
+-GSSAPI_INCLUDE="C:\Program Files\CyberSafe\Developer Pack\ApplicationSecuritySDK\include"
++GSSAPI_INCLUDE=$(LIBRARY_INC)
+ !IF "$(VERBOSE)" != "0"
+ !MESSAGE Defaulting GSSAPI Include path to $(GSSAPI_INCLUDE).
+ !ENDIF
+ !ENDIF
+ 
+ !IF "$(GSSAPI_LIBPATH)" == ""
+-GSSAPI_LIBPATH="C:\Program Files\CyberSafe\Developer Pack\ApplicationSecuritySDK\lib"
++GSSAPI_LIBPATH=$(LIBRARY_LIB)
+ !IF "$(VERBOSE)" != "0"
+ !MESSAGE Defaulting GSSAPI library path to $(GSSAPI_LIBPATH).
+ !ENDIF
+ !ENDIF
+ 
+ !IF "$(SQLITE_INCLUDE)" == ""
+-SQLITE_INCLUDES=/I"C:\work\open_source\sqllite\sqlite\src" /I"C:\work\open_source\sqllite\sqlite\win32"
++SQLITE_INCLUDES=$(LIBRARY_INC)
+ !IF "$(VERBOSE)" != "0"
+ !MESSAGE Defaulting SQLITE_INCLUDES includes to $(SQLITE_INCLUDES).
+ !ENDIF
+ !ENDIF
+ 
+ !IF "$(SQLITE_LIBPATH)" == ""
+-SQLITE_LIBPATH="C:\work\open_source\sqllite\sqlite\objs"
++SQLITE_LIBPATH=$(LIBRARY_LIB)
+ !IF "$(VERBOSE)" != "0"
+ !MESSAGE Defaulting SQLITE library path to $(SQLITE_LIBPATH).
+ !ENDIF
+ !ENDIF
+ 
+ !IF "$(SQLITE_INCLUDE3)" == ""
+-SQLITE_INCLUDES3=/I"c:\work\sqlite\generated"
++SQLITE_INCLUDES3=/I$(LIBRARY_INC)
+ !IF "$(VERBOSE)" != "0"
+ !MESSAGE Defaulting SQLITE_INCLUDES3 includes to $(SQLITE_INCLUDES3).
+ !ENDIF
+ !ENDIF
+ 
+ !IF "$(SQLITE_LIBPATH3)" == ""
+-SQLITE_LIBPATH3="c:\work\sqlite\objs.NT"
++SQLITE_LIBPATH3=$(LIBRARY_LIB)
+ !IF "$(VERBOSE)" != "0"
+ !MESSAGE Defaulting SQLITE library path to $(SQLITE_LIBPATH3).
+ !ENDIF
+ !ENDIF
+ 
+ !IF "$(LDAP_LIB_BASE)" == ""
+-LDAP_LIB_BASE = c:\work\open_source\openldap\openldap-head\ldap\Debug
++LDAP_LIB_BASE = $(LIBRARY_LIB)
+ !IF "$(VERBOSE)" != "0"
+ !MESSAGE Defaulting LDAP library path to $(LDAP_LIB_BASE).
+ !ENDIF
+ !ENDIF
+ 
+ !IF "$(LDAP_INCLUDE)" == ""
+-LDAP_INCLUDE = c:\work\open_source\openldap\openldap-head\ldap\include
++LDAP_INCLUDE = $(LIBRARY_INC)
+ !IF "$(VERBOSE)" != "0"
+ !MESSAGE Defaulting LDAP include path to $(LDAP_INCLUDE).
+ !ENDIF
+@@ -169,10 +169,6 @@ CODEGEN=/MD
+ !ENDIF 
+ !ENDIF 
+ 
+-!IF "$(VCVER)" != "6"
+-ENABLE_WIN64_WARNINGS=/Wp64
+-!ENDIF
+-
+ CPP_PROJ= $(CODEGEN) /W3 $(EXCEPTHANDLING) /O2 $(ENABLE_WIN64_WARNINGS) /Zi /D "NDEBUG" /D _CRT_SECURE_NO_DEPRECATE=1 $(CPPFLAGS) /FD /c
+ 
+ incremental=no
+diff --git a/win32/include/config.h b/win32/include/config.h
+index 0ad9628..bd2cecc 100644
+--- a/win32/include/config.h
++++ b/win32/include/config.h
+@@ -117,7 +117,9 @@ typedef int		    intptr_t;
+ /* Windows calls these functions something else
+  */
+ #define strcasecmp   stricmp
++#if defined(_MSC_VER) && _MSC_VER < 1900
+ #define snprintf    _snprintf
++#endif
+ #define strncasecmp  strnicmp
+ 
+ #define MAXHOSTNAMELEN 1024
+-- 
+2.7.4
+

@@ -1,0 +1,25 @@
+From be951ed0bec3e2680bfe8301ab2a435f9960f5b3 Mon Sep 17 00:00:00 2001
+From: Jonathan Helmus <jjhelmus@gmail.com>
+Date: Tue, 30 Oct 2018 10:22:04 -0500
+Subject: [PATCH 1/5] Include stddef in sasl.h for size_t
+
+---
+ include/sasl.h | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/include/sasl.h b/include/sasl.h
+index 4cd4efae..c13aaa8d 100755
+--- a/include/sasl.h
++++ b/include/sasl.h
+@@ -132,6 +132,8 @@
+ #define SASL_VERSION_FULL ((SASL_VERSION_MAJOR << 16) |\
+       (SASL_VERSION_MINOR << 8) | SASL_VERSION_STEP)
+ 
++/* For size_t */
++#include <stddef.h>
+ #include "prop.h"
+ 
+ /*************
+-- 
+2.27.0
+

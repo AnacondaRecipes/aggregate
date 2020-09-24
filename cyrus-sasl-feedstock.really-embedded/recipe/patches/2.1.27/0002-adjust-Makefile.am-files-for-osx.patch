@@ -1,0 +1,82 @@
+From 225a378d498a46edb28d0864c444b37801ba2380 Mon Sep 17 00:00:00 2001
+From: Jonathan Helmus <jjhelmus@gmail.com>
+Date: Tue, 30 Oct 2018 10:24:54 -0500
+Subject: [PATCH 2/5] adjust Makefile.am files for osx
+
+---
+ Makefile.am         | 14 --------------
+ include/Makefile.am |  6 ------
+ lib/Makefile.am     |  8 --------
+ 3 files changed, 28 deletions(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index 83dae6f8..ad36a2f6 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -64,11 +64,6 @@ JAV = java
+ else
+ JAV =
+ endif
+-if MACOSX
+-INSTALLOSX = install-exec-local-osx
+-else 
+-INSTALLOSX = 
+-endif
+ 
+ SUBDIRS=include sasldb common lib plugins utils $(PWC) $(SAM) $(JAV) $(SAD)
+ EXTRA_DIST=config doc docsrc win32 mac dlcompat-20010505 NTMakefile \
+@@ -148,15 +143,6 @@ dist-hook:
+ 	find $(top_distdir) -type f -name .sphinx-build.stamp -delete
+ 	rm -rf $(top_distdir)/$(SPHINX_CACHE)
+ 
+-framedir = /Library/Frameworks/SASL2.framework
+-install-exec-local-osx:
+-	$(mkinstalldirs) $(framedir)/Versions/A/Headers
+-	$(mkinstalldirs) $(framedir)/Versions/A/Resources
+-	cd $(framedir)/Versions ; ln -fs A Current
+-	cd $(framedir) ; ln -fs Versions/A/Headers .
+-	cd $(framedir) ; ln -fs Versions/A/Resources .
+-	$(INSTALL_DATA) $(srcdir)/config/Info.plist $(framedir)/Versions/A/Resources
+-
+ ## documentation generation
+ .PHONY: clean-sphinx-cache clean-docsrc
+ clean-sphinx-cache:
+diff --git a/include/Makefile.am b/include/Makefile.am
+index c942efa9..d401f4b5 100644
+--- a/include/Makefile.am
++++ b/include/Makefile.am
+@@ -64,11 +64,5 @@ BUILT_SOURCES = md5global.h
+ EXTRA_DIST = NTMakefile
+ DISTCLEANFILES = md5global.h
+ 
+-if MACOSX
+-framedir = /Library/Frameworks/SASL2.framework
+-frameheaderdir = $(framedir)/Versions/A/Headers
+-frameheader_DATA = $(saslinclude_HEADERS)
+-endif
+-
+ # TODO: automake, don't build it
+ makemd5$(EXEEXT):
+diff --git a/lib/Makefile.am b/lib/Makefile.am
+index 72ada6d4..65043888 100644
+--- a/lib/Makefile.am
++++ b/lib/Makefile.am
+@@ -86,15 +86,7 @@ if BUILD_LIBOBJ
+ libsasl2_la_LIBADD += libobj.la
+ endif
+ 
+-if MACOSX
+-framedir = /Library/Frameworks/SASL2.framework
+ install-exec-hook:
+-	$(mkinstalldirs) $(framedir)/Versions/A
+-	ln -fs $(libdir)/libsasl2.dylib $(framedir)/Versions/A/SASL2
+-	cd $(framedir) ; ln -fs Versions/A/SASL2 .
+-else
+-install-exec-hook:
+-endif
+ 
+ libsasl2.a: libsasl2.la $(SASL_STATIC_OBJS)
+ 	@echo adding static plugins and dependencies
+-- 
+2.27.0
+

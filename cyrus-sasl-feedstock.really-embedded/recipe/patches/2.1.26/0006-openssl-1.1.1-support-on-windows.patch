@@ -1,0 +1,57 @@
+From b560c47521dc3129df6fd5c85d353ec64743af55 Mon Sep 17 00:00:00 2001
+From: Jonathan Helmus <jjhelmus@gmail.com>
+Date: Tue, 30 Oct 2018 14:26:59 -0500
+Subject: [PATCH 6/6] openssl 1.1.1 support on windows
+
+---
+ plugins/NTMakefile | 13 ++++++++++---
+ 1 file changed, 10 insertions(+), 3 deletions(-)
+
+diff --git a/plugins/NTMakefile b/plugins/NTMakefile
+index 36675c6..6469725 100755
+--- a/plugins/NTMakefile
++++ b/plugins/NTMakefile
+@@ -64,6 +64,9 @@ compat_objs = getaddrinfo.obj getnameinfo.obj
+ common_sources = plugin_common.c plugin_common.h
+ common_objs = plugin_common.obj $(compat_objs)
+ 
++crypto_compat_sources = crypto-compat.c
++crypto_compat_objs = crypto-compat.obj
++
+ saslANONYMOUS_sources = anonymous.c anonymous_init.c $(common_sources)
+ saslANONYMOUS_objs = anonymous.obj anonymous_init.obj $(common_objs)
+ saslANONYMOUS_out = saslANONYMOUS.dll saslANONYMOUS.exp saslANONYMOUS.lib
+@@ -96,8 +99,8 @@ saslGSSAPI_sources = gssapi.c gssapiv2_init.c $(common_sources)
+ saslGSSAPI_objs = gssapi.obj gssapiv2_init.obj $(common_objs)
+ saslGSSAPI_out = saslGSSAPI.dll saslGSSAPI.exp saslGSSAPI.lib
+ 
+-saslSRP_sources = srp.c srp_init.c $(common_sources)
+-saslSRP_objs = srp.obj srp_init.obj $(common_objs)
++saslSRP_sources = srp.c srp_init.c $(common_sources) $(crypto_compat_sources)
++saslSRP_objs = srp.obj srp_init.obj $(common_objs) $(crypto_compat_objs)
+ saslSRP_out = saslSRP.dll saslSRP.exp saslSRP.lib
+ 
+ saslOTP_sources = otp.c otp_init.c $(common_sources)
+@@ -153,7 +156,7 @@ EXTRA_FLAGS=$(EXTRA_FLAGS) $(DB_FLAGS) $(OPENSSL_FLAGS) $(GSS_FLAGS) $(SRP_FLAGS
+ CPPFLAGS = /I "..\win32\include" /I "." /I "..\include" $(EXTRA_FLAGS) /D "WIN32" /D "_WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL"
+ 
+ DB_LIBS=/libpath:$(DB_LIBPATH) $(DB_LIB)
+-OPENSSL_LIBS=/libpath:$(OPENSSL_LIBPATH) libeay32.lib ssleay32.lib
++OPENSSL_LIBS=/libpath:$(OPENSSL_LIBPATH) libcrypto.lib libssl.lib
+ 
+ # Where to install files from this directory
+ libdir = $(prefix)\lib
+@@ -188,6 +191,10 @@ allockey.c: ..\sasldb\allockey.c
+ db_berkeley.c: ..\sasldb\db_berkeley.c
+ 	xcopy /D /Y ..\sasldb\db_berkeley.c .
+ 
++crypto-compat.c: ..\crypto-compat.c
++	xcopy /D /Y ..\crypto-compat.c .
++	xcopy /D /Y ..\crypto-compat.h .
++
+ #Add /pdb: option?
+ 
+ saslANONYMOUS.dll: $(saslANONYMOUS_objs) saslANONYMOUS.res
+-- 
+2.7.4
+
