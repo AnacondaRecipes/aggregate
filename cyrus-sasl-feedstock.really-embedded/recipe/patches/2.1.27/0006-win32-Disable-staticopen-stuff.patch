@@ -1,0 +1,43 @@
+From 7756110eadd60c5519e048c04d7641bd36144a3a Mon Sep 17 00:00:00 2001
+From: Ray Donnelly <mingw.android@gmail.com>
+Date: Thu, 24 Sep 2020 12:36:06 +0200
+Subject: [PATCH 6/6] win32: Disable staticopen stuff
+
+---
+ lib/staticopen.h | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/lib/staticopen.h b/lib/staticopen.h
+index d1983163..de9eab0d 100644
+--- a/lib/staticopen.h
++++ b/lib/staticopen.h
+@@ -76,6 +76,7 @@ sasl_canonuser_init_t x##_canonuser_plug_init
+ #define SPECIFIC_CANONUSER_PLUG_INIT( x, n )\
+ 	{ CANONUSER, n, (sasl_client_plug_init_t *)x##_canonuser_plug_init }
+ 
++#if 0
+ #ifdef STATIC_ANONYMOUS
+ extern SPECIFIC_SERVER_PLUG_INIT_PROTO( anonymous );
+ extern SPECIFIC_CLIENT_PLUG_INIT_PROTO( anonymous );
+@@ -129,8 +130,10 @@ extern SPECIFIC_AUXPROP_PLUG_INIT_PROTO( sql );
+ #ifdef STATIC_LDAPDB
+ extern SPECIFIC_AUXPROP_PLUG_INIT_PROTO( ldapdb );
+ #endif
++#endif
+ 
+ _sasl_plug_rec _sasl_static_plugins[] = {
++#if 0
+ #ifdef STATIC_ANONYMOUS
+ 	SPECIFIC_SERVER_PLUG_INIT( anonymous, "ANONYMOUS" ),
+ 	SPECIFIC_CLIENT_PLUG_INIT( anonymous, "ANONYMOUS" ),
+@@ -183,6 +186,7 @@ _sasl_plug_rec _sasl_static_plugins[] = {
+ #endif
+ #ifdef STATIC_LDAPDB
+     SPECIFIC_AUXPROP_PLUG_INIT( ldapdb, "LDAPDB" ),
++#endif
+ #endif
+ 	{ UNKNOWN, NULL, NULL }
+ };
+-- 
+2.27.0
+

@@ -12,10 +12,6 @@ boost:  # [unix]
   - 1.73  # [unix]
 boost_cpp:  # [unix]
   - 1.73  # [unix]
-boost:  # [win]
-  - 1.67  # [win]
-boost_cpp:  # [win]
-  - 1.67  # [win]
 bzip2:
   - 1.0
 cairo:
@@ -156,7 +152,7 @@ nodejs:
   - 8.12
 # we build for an old version of numpy for forward compatibility
 numpy:
-  - 1.14
+  - 1.11
 openblas:
   - 0.3.3
 openjpeg:
@@ -199,11 +195,11 @@ sqlite:
 #    For example, we need a win-64 vs2008_win-32 package, so that we compile win-32
 #    code on win-64 miniconda.
 cross_compiler_target_platform:
-  - win-32                     # [win]
+#  - win-32                     # [win]
   - win-64                     # [win]
 target_platform:
   - win-64                     # [win]
-  - win-32                     # [win]
+#  - win-32                     # [win]
 tk:
   - 8.6                # [not ppc64le]
 vc:

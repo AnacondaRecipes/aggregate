@@ -1,0 +1,27 @@
+From 89c7a95f0cd233586acb217c49239801f75c3759 Mon Sep 17 00:00:00 2001
+From: Ray Donnelly <mingw.android@gmail.com>
+Date: Thu, 27 Aug 2020 15:01:26 +0200
+Subject: [PATCH] Fix installation for macOS cp
+
+---
+ main/Makefile | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/main/Makefile b/main/Makefile
+index 1da18a8..4db45d6 100644
+--- a/main/Makefile
++++ b/main/Makefile
+@@ -152,8 +152,8 @@ install:
+ 	done
+ 	$(INSTALL) -m 755 $(BINDIR)/flite_time $(DESTDIR)$(INSTALLBINDIR)
+ #       The libraries: static and shared (if built)
+-	cp -pd $(flite_LIBS_deps) $(DESTDIR)$(INSTALLLIBDIR)
++	cp -pd $(flite_LIBS_deps) $(DESTDIR)$(INSTALLLIBDIR) || cp -pR $(flite_LIBS_deps) $(DESTDIR)$(INSTALLLIBDIR)
+ ifdef SHFLAGS
+-	cp -pd $(SHAREDLIBS) $(VERSIONSHAREDLIBS) $(DESTDIR)$(INSTALLLIBDIR)
++	cp -pd $(SHAREDLIBS) $(VERSIONSHAREDLIBS) $(DESTDIR)$(INSTALLLIBDIR) || cp -pR $(SHAREDLIBS) $(VERSIONSHAREDLIBS) $(DESTDIR)$(INSTALLLIBDIR)
+ endif
+ 
+-- 
+2.24.3 (Apple Git-128)
+

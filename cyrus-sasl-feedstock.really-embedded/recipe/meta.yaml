@@ -1,0 +1,111 @@
+{% set name = "cyrus-sasl" %}
+{% set version = "2.1.27" %}
+{% if version == "2.1.27" %}
+{%   set hash = "b564d773803dc4cff42d2bdc04c80f2b105897a724c247817d4e4a99dd6b9976" %}
+{%   set hashtype = "sha256" %}
+{%   set from_source_control = "yes" %}
+{%   set url_dir = "https://github.com/cyrusimap/cyrus-sasl/archive" %}
+{% else %}
+{%   set hash = "7c14d1b5bd1434adf2dd79f70538617e6aa2a7bde447454b90b84ac5c4d034ba" %}
+{%   set hash = "a7f4e5e559a0e37b3ffc438c9456e425" %}
+{%   set hashtype = "md5" %}
+{%   set from_source_control = "no" %}
+{%   set url_dir = "https://ftp.osuosl.org/pub/blfs/conglomeration/cyrus-sasl" %}
+{% endif %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+{% if from_source_control == 'yes' %}
+  - git_url: https://github.com/cyrusimap/cyrus-sasl.git
+    git_tag: cyrus-sasl-{{ version }}
+{% else %}
+  - url: {{ url_dir }}/cyrus-sasl-{{ version }}.tar.gz
+    {{ hashtype }}: {{ hash }}
+{% endif %}
+    patches:
+{% if version == "2.1.26" %}
+      - patches/{{ version }}/0001-Include-stddef-in-sasl.h-for-size_t.patch
+      - patches/{{ version }}/0002-adjust-Makefile.am-files-for-osx.patch
+      - patches/{{ version }}/0003-fix-CVE-2013-4122.patch
+      - patches/{{ version }}/0004-windows-fixes.patch
+      - patches/{{ version }}/0005-openssl-1.1.1-support.patch
+      - patches/{{ version }}/0006-openssl-1.1.1-support-on-windows.patch
+  # Necessary if you need to re-autoconfigure a not-from-source-control build.
+  - git_url: https://github.com/cyrusimap/cyrus-sasl.git
+    folder: git-master
+  - url: http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.guess;hb=HEAD
+    fn: config.guess
+    sha256: 3512ebcecded7cd11e6ce5594accf315ed1c582310fddd00cafcd4bb9c0218f2
+  - url: http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub;hb=HEAD
+    fn: config.sub
+    sha256: fda8e5ddb44c25e3b813d3c67e2744e9e3aedac8b3304934644d81c88a698b36
+{% else %}
+      - patches/{{ version }}/0001-Include-stddef-in-sasl.h-for-size_t.patch
+      - patches/{{ version }}/0002-adjust-Makefile.am-files-for-osx.patch
+      - patches/{{ version }}/0003-windows-fixes.patch
+      - patches/{{ version }}/0004-openssl-1.1.1-support-on-windows.patch
+      # Failed attempt, 0006 might work better.
+      # - patches/{{ version }}/0005-win32-Add-anonymous.obj-to-libsasl_objs.patch
+      - patches/{{ version }}/0006-win32-Disable-staticopen-stuff.patch
+{% endif %}
+
+build:
+  number: 2
+  missing_dso_whitelist:          # [osx]
+    - /usr/lib/libresolv.9.dylib  # [osx]
+    - /usr/lib/libpam.2.dylib     # [osx]
+  run_exports:
+    # https://abi-laboratory.pro/tracker/timeline/cyrus-sasl/
+    # SONAME was changed once in a patch release but it was 6 years ago so
+    # giving them the benefit of the doubt that it was a one-off mistake.
+    - {{ pin_subpackage('cyrus-sasl') }}
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - libtool  # [unix]
+    - pkg-config  # [unix]
+    - automake  # [unix]
+    - autoconf  # [unix]
+    - make  # [unix]
+    - groff  # [unix]
+  host:
+    - krb5  # [unix and not ppc64le]
+    - libdb
+    - openssl
+    - sqlite  # [win]
+    - ldap3  # [win]
+  run:
+    - krb5  # [unix and not ppc64le]
+    - openssl
+    
+test:
+  commands:
+    - echo "Skipped bin/cyrus-sasl-testsuite as it fails. Feel free to investigate this"
+
+about:
+  home: https://www.cyrusimap.org/sasl/
+  license: BSD-3-Clause-Attribution
+  license_family: BSD
+  license_file: COPYING
+  summary: |
+    This is the Cyrus SASL API implementation. It can be used on the client or server side to provide
+    authentication and authorization services. See RFC 4422 for more information.
+  description: |
+    Simple Authentication and Security Layer (SASL) is a specification that describes how
+    authentication mechanisms can be plugged into an application protocol on the wire. Cyrus
+    SASL is an implementation of SASL that makes it easy for application developers to integrate
+    authentication mechanisms into their application in a generic way.
+  dev_url: https://github.com/cyrusimap/cyrus-sasl
+  doc_url: https://www.cyrusimap.org/sasl/
+
+extra:
+  recipe-maintainers:
+    - mariusvniekerk
+    - martindurant
+    - mingwandroid
+    - wesm

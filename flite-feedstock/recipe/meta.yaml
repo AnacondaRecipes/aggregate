@@ -1,0 +1,28 @@
+{% set name = 'flite' %}
+{% set version = '2.2' %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  # fn: flite-v{{ version }}.tar.gz
+  # url: https://github.com/festvox/flite/archive/v{{ version }}.tar.gz
+  # sha256: 770cee2c261ab4d6f39d77e94c2e972cefc6d506c7a6342df523be545a8f361f
+  git_url: https://github.com/festvox/flite
+  git_tag: e9e2e37c329dbe98bfeb27a1828ef9a71fa84f88
+  patches:
+    - 0001-Fix-installation-for-macOS-cp.patch
+
+requirements:
+  build:
+    - {{ compiler('c') }}  # [not win]
+    - m2w64-gcc-toolchain  # [win]
+    - make  # [not win]
+    - m2-make  # [win]
+
+build:
+  script:
+    - ./configure --prefix=${PREFIX}
+    - make
+    - make install

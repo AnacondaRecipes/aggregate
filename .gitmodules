@@ -4835,4 +4835,32 @@
 [submodule "httpcore-feedstock"]
 	path = httpcore-feedstock
 	url = ../httpcore-feedstock
+[submodule "brunsli-feedstock"]
+	path = brunsli-feedstock
+	url = ../brunsli-feedstock
+	branch = master
+[submodule "lerc-feedstock"]
+	path = lerc-feedstock
+	url = ../lerc-feedstock
+	branch = master
+[submodule "zfpy-feedstock"]
+	path = zfpy-feedstock
+	url = ../zfpy-feedstock
+	branch = master
+[submodule "xorg-xproto-feedstock"]
+	path = xorg-xproto-feedstock
+	url = ../xorg-xproto-feedstock
+	branch = master
+[submodule "openldap-feedstock"]
+	path = openldap-feedstock
+	url = ../openldap-feedstock
+	branch = master
+[submodule "groff-feedstock"]
+	path = groff-feedstock
+	url = ../groff-feedstock
+	branch = master
+[submodule "macports-legacy-support-feedstock"]
+	path = macports-legacy-support-feedstock
+	url = ../macports-legacy-support-feedstock
+>>>>>>> 3d8be326c09e94cb6caa6041da50adab5419d78c
 	branch = master
