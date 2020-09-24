@@ -1588,7 +1588,7 @@
 	url = ../iminuit-feedstock
 	branch = master
 [submodule "cyrus-sasl-feedstock"]
-	path = cyrus-sasl-feedstock
+	path = cyrus-sasl-feedstock.embedded2
 	url = ../cyrus-sasl-feedstock
 	branch = master
 [submodule "libntlm-feedstock"]
