@@ -4925,3 +4925,7 @@
 	path = nbclient-feedstock
 	url = ../nbclient-feedstock
 	branch = master
+[submodule "nest-asyncio-feedstock"]
+	path = nest-asyncio-feedstock
+	url = ../nest-asyncio-feedstock
+	branch = master
