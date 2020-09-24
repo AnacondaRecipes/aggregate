@@ -4862,5 +4862,4 @@
 [submodule "macports-legacy-support-feedstock"]
 	path = macports-legacy-support-feedstock
 	url = ../macports-legacy-support-feedstock
->>>>>>> 3d8be326c09e94cb6caa6041da50adab5419d78c
 	branch = master
