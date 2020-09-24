@@ -4921,3 +4921,7 @@
 	path = jupyterlab_pygments-feedstock
 	url = ../jupyterlab_pygments-feedstock
 	branch = master
+[submodule "nbclient-feedstock"]
+	path = nbclient-feedstock
+	url = ../nbclient-feedstock
+	branch = master
