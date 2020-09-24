@@ -4913,3 +4913,11 @@
 	path = cleo-feedstock
 	url = ../cleo-feedstock
 	branch = master
+[submodule "junit-xml-feedstock"]
+	path = junit-xml-feedstock
+	url = ../junit-xml-feedstock
+	branch = master
+[submodule "jupyterlab_pygments-feedstock"]
+	path = jupyterlab_pygments-feedstock
+	url = ../jupyterlab_pygments-feedstock
+	branch = master
