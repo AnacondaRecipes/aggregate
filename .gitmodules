@@ -4863,3 +4863,7 @@
 	path = macports-legacy-support-feedstock
 	url = ../macports-legacy-support-feedstock
 	branch = master
+[submodule "click-didyoumean-feedstock"]
+	path = click-didyoumean-feedstock
+	url = ../click-didyoumean-feedstock
+	branch = master
