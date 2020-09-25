@@ -4867,3 +4867,7 @@
 	path = click-didyoumean-feedstock
 	url = ../click-didyoumean-feedstock
 	branch = master
+[submodule "click-repl-feedstock"]
+	path = click-repl-feedstock
+	url = ../click-repl-feedstock
+	branch = master
