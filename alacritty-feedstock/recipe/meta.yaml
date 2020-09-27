@@ -1,4 +1,4 @@
-{% set version = '0.3.3' %}
+{% set version = '0.5.0' %}
 {% set name = 'alacritty' %}
 
 package:
@@ -8,13 +8,13 @@ package:
 source:
   fn: {{ name }}-v{{ version }}.tar.gz
   url: https://github.com/jwilm/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: 9bc0e6ff9a0772ea522d7e34ab8371faa96e6cc4e588459966585f0dbb848dcb
 
 build:
   script:
     - set RUST_BACKTRACE=1  # [win]
     - cargo build --release -v
     - $STRIP target/release/alacritty  # [not win]
-    - mkdir $PREFIX/bin  # [not win]
     - mkdir %PREFIX%\bin  # [win]
     - cp target/release/alacritty $PREFIX/bin  # [not win]
     - copy target\release\alacritty %PREFIX%\bin  # [win]
@@ -24,12 +24,26 @@ build:
 requirements:
   build:
     - {{ compiler('rust') }}
-    - cmake       # [linux]
+    - {{ cdt('libxcb') }}
+    - {{ cdt('libselinux-devel') }}
+    - {{ cdt('libxi-devel') }}
+    - {{ cdt('libx11-devel') }}
+    - {{ cdt('libxau-devel') }}
+    - {{ cdt('libxext-devel') }}
+    - {{ cdt('libxfixes-devel') }}
+    - {{ cdt('mesa-libgl-devel') }}
+    - {{ cdt('xorg-x11-proto-devel') }}
+    - {{ cdt('mesa-dri-drivers') }}
+    - {{ cdt('libxdamage-devel') }}
+    - {{ cdt('libxxf86vm') }}
+    - cmake  # [linux]
     - pkg-config  # [linux]
 
   host:
-    - freetype    # [linux]
-    - expat       # [linux]
+    - libxcb  # [linux]
+    - fontconfig  # [linux]
+    - freetype  # [linux]
+    - expat  # [linux]
 
 about:
   home: https://github.com/jwilm/alacritty

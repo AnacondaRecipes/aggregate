@@ -4929,3 +4929,7 @@
 	path = nest-asyncio-feedstock
 	url = ../nest-asyncio-feedstock
 	branch = master
+[submodule "libgit2-feedstock"]
+	path = libgit2-feedstock
+	url = ../libgit2-feedstock
+	branch = master
