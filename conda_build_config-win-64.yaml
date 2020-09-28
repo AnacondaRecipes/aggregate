@@ -45,7 +45,7 @@ rust_compiler:
   - rust
   - rust-gnu                   # [win]
 rust_compiler_version:
-  - 1.40.0
+  - 1.46.0
 CONDA_BUILD_SYSROOT:
   - /opt/MacOSX10.10.sdk        # [osx]
 VERBOSE_AT:

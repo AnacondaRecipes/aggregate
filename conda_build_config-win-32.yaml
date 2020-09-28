@@ -8,10 +8,10 @@ apr:
 blas_impl:
   - mkl                        # [x86 or x86_64]
   - openblas                   # [not win]
-boost:
-  - 1.67
-boost_cpp:
-  - 1.67
+boost:  # [unix]
+  - 1.73  # [unix]
+boost_cpp:  # [unix]
+  - 1.73  # [unix]
 bzip2:
   - 1.0
 cairo:
@@ -45,7 +45,7 @@ rust_compiler:
   - rust
   - rust-gnu                   # [win]
 rust_compiler_version:
-  - 1.40.0
+  - 1.46.0
 CONDA_BUILD_SYSROOT:
   - /opt/MacOSX10.10.sdk        # [osx]
 VERBOSE_AT:
@@ -152,12 +152,7 @@ nodejs:
   - 8.12
 # we build for an old version of numpy for forward compatibility
 numpy:
-  - 1.14
-# these are centralized here so that they are shared between the numpy and numpy-metapackage recipes
-numpy_version:
-  - 1.18.5
-numpy_sha:
-  - 34e96e9dae65c4839bd80012023aadd6ee2ccb73ce7fdf3074c62f301e63120b
+  - 1.11
 openblas:
   - 0.3.3
 openjpeg:
