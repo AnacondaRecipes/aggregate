@@ -4937,3 +4937,31 @@
 	path = libutf8proc-feedstock
 	url = ../libutf8proc-feedstock
 	branch = master
+[submodule "aws-c-common-feedstock"]
+	path = aws-c-common-feedstock
+	url = ../aws-c-common-feedstock
+	branch = master
+[submodule "aws-c-event-stream-feedstock"]
+	path = aws-c-event-stream-feedstock
+	url = ../aws-c-event-stream-feedstock
+	branch = master
+[submodule "aws-checksums-feedstock"]
+	path = aws-checksums-feedstock
+	url = ../aws-checksums-feedstock
+	branch = master
+[submodule "google-crc32c-feedstock"]
+	path = google-crc32c-feedstock
+	url = ../google-crc32c-feedstock
+	branch = master
+[submodule "jpype1-feedstock"]
+	path = jpype1-feedstock
+	url = ../jpype1-feedstock/
+	branch = master
+[submodule "libcrc32c-feedstock"]
+	path = libcrc32c-feedstock
+	url = ../libcrc32c-feedstock
+	branch = master
+[submodule "patch-ng-feedstock"]
+	path = patch-ng-feedstock
+	url = ../patch-ng-feedstock
+	branch = master
