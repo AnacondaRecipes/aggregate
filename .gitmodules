@@ -4933,3 +4933,7 @@
 	path = libgit2-feedstock
 	url = ../libgit2-feedstock
 	branch = master
+[submodule "libutf8proc-feedstock"]
+	path = libutf8proc-feedstock
+	url = ../libutf8proc-feedstock
+	branch = master
