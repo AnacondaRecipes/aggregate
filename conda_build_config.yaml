@@ -8,10 +8,10 @@ apr:
 blas_impl:
   - mkl                        # [x86 or x86_64]
   - openblas                   # [not win]
-boost:  # [unix]
-  - 1.73  # [unix]
-boost_cpp:  # [unix]
-  - 1.73  # [unix]
+boost:
+  - 1.73
+boost_cpp:
+  - 1.73
 bzip2:
   - 1.0
 cairo:
@@ -111,7 +111,9 @@ jpeg:
 libdap4:
   - 3.19
 libffi:
-  - 3.3
+  - 3.3  # [not win]
+  # Patches need to be rebased
+  - 3.2.1  # [win]
 libgd:
   - 2.2.5
 libgdal:
