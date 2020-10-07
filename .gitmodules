@@ -4955,7 +4955,7 @@
 	branch = master
 [submodule "jpype1-feedstock"]
 	path = jpype1-feedstock
-	url = ../jpype1-feedstock/
+	url = ../jpype1-feedstock
 	branch = master
 [submodule "libcrc32c-feedstock"]
 	path = libcrc32c-feedstock
@@ -4964,4 +4964,12 @@
 [submodule "patch-ng-feedstock"]
 	path = patch-ng-feedstock
 	url = ../patch-ng-feedstock
+	branch = master
+[submodule "authlib-feedstock"]
+	path = authlib-feedstock
+	url = ../authlib-feedstock
+	branch = master
+[submodule "python_http_client-feedstock"]
+	path = python_http_client-feedstock
+	url = ../python_http_client-feedstock
 	branch = master
