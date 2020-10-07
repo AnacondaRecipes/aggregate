@@ -4969,3 +4969,7 @@
 	path = python-tzdata-feedstock
 	url = ../python-tzdata-feedstock
 	branch = master
+[submodule "tzdata-feedstock"]
+	path = tzdata-feedstock
+	url = ../tzdata-feedstock
+	branch = master
