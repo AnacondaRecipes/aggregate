@@ -4980,3 +4980,11 @@
 	path = tzdata-feedstock
 	url = ../tzdata-feedstock
 	branch = master
+[submodule "starkbank-ecdsa-feedstock"]
+	path = starkbank-ecdsa-feedstock
+	url = ../starkbank-ecdsa-feedstock
+	branch = master
+[submodule "setuptools-scm-git-archive-feedstock"]
+	path = setuptools-scm-git-archive-feedstock
+	url = ../setuptools-scm-git-archive-feedstock
+	branch = master
