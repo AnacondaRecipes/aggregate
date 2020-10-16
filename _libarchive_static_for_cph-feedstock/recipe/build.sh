@@ -5,6 +5,7 @@ set -ex
 # conda-package-handling (bzip2, zlib, zstd).
 # This is not a general purpose libarchive.
 autoreconf -vfi
+
 mkdir build-${HOST} && pushd build-${HOST}
 ../configure --prefix=${PREFIX}     \
                      --enable-static        \
@@ -45,7 +46,7 @@ if [[ ${HOST} =~ .*darwin.* ]]; then
         mv *.o ${name}_objs
     done
     ${AR} crv libarchive_and_deps.a */*.o
-    ranlib libarchive_and_deps.a
+    ${RANLIB} libarchive_and_deps.a
     cp libarchive_and_deps.a ${PREFIX}/lib/
     popd
 fi
@@ -60,6 +61,6 @@ if [[ ${HOST} =~ .*linux.* ]]; then
         SAVE
         END
 EOM
-    ranlib libarchive_and_deps.a
+    ${RANLIB} libarchive_and_deps.a
     popd
 fi

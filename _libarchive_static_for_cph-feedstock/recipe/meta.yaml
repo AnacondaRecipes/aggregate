@@ -1,4 +1,4 @@
-{% set version = "3.4.2" %}
+{% set version = "3.4.3" %}
 
 # Recipe for a static libarchive with support for the features needed for
 # conda-package-handling (bzip2, zlib, zstd).
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/libarchive/libarchive/releases/download/v{{ version }}/libarchive-{{ version }}.tar.gz
-  sha256: b60d58d12632ecf1e8fad7316dc82c6b9738a35625746b47ecdcaf4aed176176
+  sha256: ee1e749213c108cb60d53147f18c31a73d6717d7e3d2481c157e1b34c881ea39
   patches:
     - patches/0001-Add-lib-to-CMAKE_FIND_LIBRARY_PREFIXES-for-lzma.patch
     - patches/0002-VC9-compatibility-test-for-BCryptDeriveKeyPBKDF2.patch
@@ -21,12 +21,12 @@ source:
     - patches/0007-CMake-Force-Multi-threaded-DLL-runtime.patch
 
 build:
-  number: 0
+  number: 2
   ignore_run_exports:
     - bzip2
     - libiconv
     - zlib
-    - zstd
+    - zstd  # [win]
   # HACK: case-sensitive mismatch in latest conda-build
   missing_dso_whitelist:
     - Library/bin/VCRUNTIME140.dll    # [win]
@@ -48,7 +48,9 @@ requirements:
     - make        # [unix]
     # - ninja       # [win]
     - jom         # [win]
-    - m2-patch    # [win]
+    - m2-patch  # [win]
+    - m2-gcc-libs  # [win]
+    - patch  # [not win]
     # Used by bld.bat as an in-build test
     # - curl        # [win]
   host:
@@ -56,7 +58,8 @@ requirements:
     - bzip2
     - libiconv    # [osx]
     - zlib
-    - zstd
+    - zstd-static  # [not win]
+    - zstd  # [win]
 
 test:
   commands:
