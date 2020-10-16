@@ -4988,3 +4988,7 @@
 	path = setuptools-scm-git-archive-feedstock
 	url = ../setuptools-scm-git-archive-feedstock
 	branch = master
+[submodule "nghttp2-feedstock"]
+	path = nghttp2-feedstock
+	url = ../nghttp2-feedstock
+	branch = master
