@@ -76,7 +76,8 @@ IF "@cross_compiler_target_platform@" == "win-64" (
 )
 
 pushd %VSINSTALLDIR%
-CALL "VC\Auxiliary\Build\vcvars%BITS%.bat" -vcvars_ver=14.25 %WindowsSDKVer%
+set VSCMD_DEBUG=1
+CALL "VC\Auxiliary\Build\vcvars%BITS%.bat" -vcvars_ver=14.2 %WindowsSDKVer%
 popd
 
 IF "%CMAKE_GENERATOR%" == "" SET "CMAKE_GENERATOR=%CMAKE_GEN%"

@@ -24,18 +24,18 @@ build:
 requirements:
   build:
     - {{ compiler('rust') }}
-    - {{ cdt('libxcb') }}
-    - {{ cdt('libselinux-devel') }}
-    - {{ cdt('libxi-devel') }}
-    - {{ cdt('libx11-devel') }}
-    - {{ cdt('libxau-devel') }}
-    - {{ cdt('libxext-devel') }}
-    - {{ cdt('libxfixes-devel') }}
-    - {{ cdt('mesa-libgl-devel') }}
-    - {{ cdt('xorg-x11-proto-devel') }}
-    - {{ cdt('mesa-dri-drivers') }}
-    - {{ cdt('libxdamage-devel') }}
-    - {{ cdt('libxxf86vm') }}
+    - {{ cdt('libxcb') }}  # [linux]
+    - {{ cdt('libselinux-devel') }}  # [linux]
+    - {{ cdt('libxi-devel') }}  # [linux]
+    - {{ cdt('libx11-devel') }}  # [linux]
+    - {{ cdt('libxau-devel') }}  # [linux]
+    - {{ cdt('libxext-devel') }}  # [linux]
+    - {{ cdt('libxfixes-devel') }}  # [linux]
+    - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
+    - {{ cdt('mesa-dri-drivers') }}  # [linux]
+    - {{ cdt('libxdamage-devel') }}  # [linux]
+    - {{ cdt('libxxf86vm') }}  # [linux]
     - cmake  # [linux]
     - pkg-config  # [linux]
 
@@ -44,6 +44,7 @@ requirements:
     - fontconfig  # [linux]
     - freetype  # [linux]
     - expat  # [linux]
+    - libclang  # [win]
 
 about:
   home: https://github.com/jwilm/alacritty

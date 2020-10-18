@@ -1,7 +1,7 @@
 #TODO merge this into the libprotobuf recipe?
 {% set name = "libprotobuf-static" %}
-{% set version = "3.6.0" %}
-{% set sha256 = "50a5753995b3142627ac55cfd496cebc418a2e575ca0236e29033c67bd5665f4" %}
+{% set version = "3.13.0" %}
+{% set sha256 = "9b4ee22c250fe31b16f1a24d61467e40780a3fbb9b91c3b65be2a376ed913a1a" %}
 # git commit corresponding to the v3.6.0 tag
 {% set commit = "ab8edf1dbe2237b4717869eaab11a2998541ad8d" %}
 
@@ -68,7 +68,7 @@ about:
     platform-neutral, extensible mechanism for serializing structured data-
     think XML, but smaller, faster, and simpler.
   doc_url: https://developers.google.com/protocol-buffers/
-  doc_source_url: https://github.com/google/protobuf/releases
+  doc_source_url: https://github.com/protocolbuffers/protobuf/releases
 
 extra:
   recipe-maintainers:

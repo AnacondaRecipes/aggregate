@@ -1,11 +1,11 @@
-{% set version = "1.40.0" %}
+{% set version = "1.46.0" %}
 
 package:
   name: rust_{{ target_platform }}-suite
   version: {{ version }}
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - name: rust_{{ target_platform }}
@@ -29,7 +29,7 @@ outputs:
     script: bld.bat  # [win]
     requirements:  # [win]
       run:  # [win]
-        - rust-gnu  # [win]
+        - rust-gnu >={{ version }}  # [win]
         - m2w64-toolchain  # [win]
     test:  # [win]
       files:  # [win]
