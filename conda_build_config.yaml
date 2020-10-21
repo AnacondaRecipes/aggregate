@@ -86,7 +86,7 @@ geos:
   - 3.8.0  # [win]
   - 3.8.0
 giflib:
-  - 5.1
+  - 5
 glib:
   - 2
 gmp:
