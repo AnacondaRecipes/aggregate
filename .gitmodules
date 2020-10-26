@@ -4992,3 +4992,11 @@
 	path = nghttp2-feedstock
 	url = ../nghttp2-feedstock
 	branch = master
+[submodule "oniguruma-feedstock"]
+	path = oniguruma-feedstock
+	url = https://github.com/AnacondaRecipes/oniguruma-feedstock
+	branch = master
+[submodule "jq-feedstock"]
+	path = jq-feedstock
+	url = git@github.com:AnacondaRecipes/jq-feedstock.git
+	branch = master
