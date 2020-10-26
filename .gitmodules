@@ -5000,3 +5000,7 @@
 	path = jq-feedstock
 	url = ../jq-feedstock
 	branch = master
+[submodule "archspec-feedstock"]
+	path = archspec-feedstock
+	url = ../archspec-feedstock
+	branch = master
