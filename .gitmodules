@@ -4994,9 +4994,9 @@
 	branch = master
 [submodule "oniguruma-feedstock"]
 	path = oniguruma-feedstock
-	url = https://github.com/AnacondaRecipes/oniguruma-feedstock
+	url = ../oniguruma-feedstock
 	branch = master
 [submodule "jq-feedstock"]
 	path = jq-feedstock
-	url = git@github.com:AnacondaRecipes/jq-feedstock.git
+	url = ../jq-feedstock
 	branch = master
