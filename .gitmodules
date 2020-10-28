@@ -4992,3 +4992,7 @@
 	path = nghttp2-feedstock
 	url = ../nghttp2-feedstock
 	branch = master
+[submodule "extension-helpers-feedstock"]
+	path = extension-helpers-feedstock
+	url = ../extension-helpers-feedstock
+	branch = master
