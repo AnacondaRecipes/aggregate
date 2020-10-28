@@ -5007,3 +5007,11 @@
 	path = archspec-feedstock
 	url = ../archspec-feedstock
 	branch = master
+[submodule "pagmo-feedstock"]
+	path = pagmo-feedstock
+	url = ../pagmo-feedstock
+	branch = master
+[submodule "pytest-subtests-feedstock"]
+	path = pytest-subtests-feedstock
+	url = ../pytest-subtests-feedstock
+	branch = master
