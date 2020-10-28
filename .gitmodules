@@ -4995,4 +4995,15 @@
 [submodule "extension-helpers-feedstock"]
 	path = extension-helpers-feedstock
 	url = ../extension-helpers-feedstock
+[submodule "oniguruma-feedstock"]
+	path = oniguruma-feedstock
+	url = ../oniguruma-feedstock
+	branch = master
+[submodule "jq-feedstock"]
+	path = jq-feedstock
+	url = ../jq-feedstock
+	branch = master
+[submodule "archspec-feedstock"]
+	path = archspec-feedstock
+	url = ../archspec-feedstock
 	branch = master

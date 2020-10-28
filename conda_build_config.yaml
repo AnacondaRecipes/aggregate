@@ -21,14 +21,17 @@ c_compiler:
   - vs2017                     # [win]
   - vs2017                     # [win]
   - vs2017                     # [win]
+  - vs2017                     # [win]
 cxx_compiler:
   - clangxx                    # [osx]
+  - vs2017                     # [win]
   - vs2017                     # [win]
   - vs2017                     # [win]
   - vs2017                     # [win]
 fortran_compiler:
   - intel-fortran              # [win]
 fortran_compiler_version:
+  - 2019.0.0                     # [win]
   - 2019.0.0                     # [win]
   - 2019.0.0                     # [win]
   - 2019.0.0                     # [win]
@@ -82,6 +85,7 @@ gstreamer:
 gst_plugins_base:
   - 1.14
 geos:
+  - 3.8.0  # [win]
   - 3.8.0  # [win]
   - 3.8.0  # [win]
   - 3.8.0
@@ -151,6 +155,7 @@ mpfr:
 nodejs:
   - 8.12  # [win]
   - 8.12  # [win]
+  - 8.12  # [win]
   - 8.12
 # we build for an old version of numpy for forward compatibility
 numpy:
@@ -177,6 +182,7 @@ python:
   - 3.6
   - 3.7
   - 3.8
+  - 3.9
 python_implementation:
   - cpython
 python_impl:
@@ -205,6 +211,7 @@ target_platform:
 tk:
   - 8.6                # [not ppc64le]
 vc:
+  - 14                         # [win]
   - 14                         # [win]
   - 14                         # [win]
   - 14                         # [win]
