@@ -3887,18 +3887,6 @@
 	path = marshmallow-enum-feedstock
 	url = ../marshmallow-enum-feedstock
 	branch = master
-[submodule "python-debian-feedstock"]
-	path = python-debian-feedstock
-	url = ../python-debian-feedstock
-	branch = master
-[submodule "zstandard-feedstock"]
-	path = zstandard-feedstock
-	url = ../zstandard-feedstock
-	branch = master
-[submodule "croniter-feedstock"]
-	path = croniter-feedstock
-	url = ../croniter-feedstock
-	branch = master
 [submodule "python-fastjsonschema-feedstock"]
 	path = python-fastjsonschema-feedstock
 	url = ../python-fastjsonschema-feedstock
@@ -3910,10 +3898,6 @@
 [submodule "ruamel-feedstock"]
 	path = ruamel-feedstock
 	url = ../ruamel-feedstock
-	branch = master
-[submodule "connexion-feedstock"]
-	path = connexion-feedstock
-	url = ../connexion-feedstock
 	branch = master
 [submodule "ruamel.yaml-feedstock"]
 	path = ruamel.yaml-feedstock
