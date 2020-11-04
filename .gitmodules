@@ -5019,3 +5019,7 @@
 	path = spdlog-feedstock
 	url = ../spdlog-feedstock
 	branch = master
+[submodule "yq-feedstock"]
+	path = yq-feedstock
+	url = ../yq-feedstock
+	branch = master
