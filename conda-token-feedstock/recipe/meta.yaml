@@ -1,0 +1,47 @@
+{% set name = "conda-token" %}
+{% set version = "0.1.2" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  # - url: https://github.com/anaconda/{{ name }}/archive/{{ version }}.tar.gz
+  # - sha256: {{ sha256 }}
+  git_url: https://github.com/anaconda/{{ name }}.git
+  git_tag: {{ version }}
+
+build:
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install --no-deps --ignore-installed -vv .
+  entry_points:
+      - conda-token = conda_token.cli:cli
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - conda >=4.3
+    - packaging
+
+test:
+# # todo: add this back once the tests pass.
+#   source_files:
+#     - tests
+#   requires:
+#     - pytest
+#     - pytest-cov
+  commands:
+    - conda-token --help
+    - conda-token --version
+#     - pytest tests
+
+about:
+  home: https://github.com/Anaconda/conda-token
+  summary: Set repository access token
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
