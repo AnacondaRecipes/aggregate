@@ -5011,3 +5011,7 @@
 	path = validators-feedstock
 	url = ../validators-feedstock
 	branch = master
+[submodule "editdistance-feedstock"]
+	path = editdistance-feedstock
+	url = ../editdistance-feedstock
+	branch = master
