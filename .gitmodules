@@ -5007,3 +5007,7 @@
 	path = yq-feedstock
 	url = ../yq-feedstock
 	branch = master
+[submodule "validators-feedstock"]
+	path = validators-feedstock
+	url = ../validators-feedstock
+	branch = master
