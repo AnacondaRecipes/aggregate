@@ -12,6 +12,8 @@ source:
 build:
   number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  # note: this was requested for very specific platform+python versions. if this is to be
+  # maintained in the future, the entire matrix will need to be built and tested.
   skip: True  # [not linux or ppc64le]
 
 requirements:
