@@ -5019,3 +5019,7 @@
 	path = imgaug-feedstock
 	url = ../imgaug-feedstock
 	branch = master
+[submodule "pyclipper-feedstock"]
+	path = pyclipper-feedstock
+	url = ../pyclipper-feedstock
+	branch = master
