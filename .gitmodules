@@ -5023,3 +5023,7 @@
 	path = pyclipper-feedstock
 	url = ../pyclipper-feedstock
 	branch = master
+[submodule "responses-feedstock"]
+	path = responses-feedstock
+	url = ../responses-feedstock
+	branch = master
