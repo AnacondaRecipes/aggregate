@@ -1,8 +1,8 @@
 # version numbering is explained at https://stackoverflow.com/questions/42730478/version-numbers-for-visual-studio-2017-boost-and-cmake
 #     This version number follows the "platform toolset"
-{% set vcver="14.1" %}
+{% set vcver="14.2" %}
 {% set vsyear="2019" %}
-# VS2017 is fundamentally compatible with VS2015.  We name our package vs2015_runtime so that it can't be
+# VS2019 is fundamentally compatible with VS2015.  We name our package vs2015_runtime so that it can't be
 #    mixed up with the runtime from VS2015 - you do actually need VS2017 runtime for things compiled with
 #    VS2017, and the runtime we have here is backwards-compatible with things compiled with VS2015.
 {% set runtime_year="2015" %}
