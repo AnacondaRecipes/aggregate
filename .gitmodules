@@ -5027,3 +5027,7 @@
 	path = responses-feedstock
 	url = ../responses-feedstock
 	branch = master
+[submodule "cookies-feedstock"]
+	path = cookies-feedstock
+	url = ../cookies-feedstock
+	branch = master
