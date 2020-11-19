@@ -5007,3 +5007,7 @@
 	path = yq-feedstock
 	url = ../yq-feedstock
 	branch = master
+[submodule "confuse-feedstock"]
+	path = confuse-feedstock
+	url = ../confuse-feedstock
+	branch = master
