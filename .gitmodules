@@ -5035,3 +5035,7 @@
 	path = cookies-feedstock
 	url = ../cookies-feedstock
 	branch = master
+[submodule "multimethod-feedstock"]
+	path = multimethod-feedstock
+	url = ../multimethod-feedstock
+	branch = master
