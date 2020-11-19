@@ -5047,3 +5047,7 @@
 	path = visions-feedstock
 	url = ../visions-feedstock
 	branch = master
+[submodule "imagehash-feedstock"]
+	path = imagehash-feedstock
+	url = ../imagehash-feedstock
+	branch = master
