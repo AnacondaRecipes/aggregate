@@ -5051,3 +5051,7 @@
 	path = imagehash-feedstock
 	url = ../imagehash-feedstock
 	branch = master
+[submodule "missingno-feedstock"]
+	path = missingno-feedstock
+	url = ../missingno-feedstock
+	branch = master
