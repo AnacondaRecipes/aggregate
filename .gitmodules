@@ -5010,6 +5010,7 @@
 [submodule "confuse-feedstock"]
 	path = confuse-feedstock
 	url = ../confuse-feedstock
+	branch = master
 [submodule "validators-feedstock"]
 	path = validators-feedstock
 	url = ../validators-feedstock
