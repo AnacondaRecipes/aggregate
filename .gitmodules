@@ -5039,3 +5039,7 @@
 	path = multimethod-feedstock
 	url = ../multimethod-feedstock
 	branch = master
+[submodule "tangled-up-in-unicode-feedstock"]
+	path = tangled-up-in-unicode-feedstock
+	url = ../tangled-up-in-unicode-feedstock
+	branch = master
