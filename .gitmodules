@@ -5043,3 +5043,7 @@
 	path = tangled-up-in-unicode-feedstock
 	url = ../tangled-up-in-unicode-feedstock
 	branch = master
+[submodule "visions-feedstock"]
+	path = visions-feedstock
+	url = ../visions-feedstock
+	branch = master
