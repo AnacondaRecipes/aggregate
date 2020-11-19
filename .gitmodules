@@ -5010,4 +5010,27 @@
 [submodule "confuse-feedstock"]
 	path = confuse-feedstock
 	url = ../confuse-feedstock
+[submodule "validators-feedstock"]
+	path = validators-feedstock
+	url = ../validators-feedstock
+	branch = master
+[submodule "editdistance-feedstock"]
+	path = editdistance-feedstock
+	url = ../editdistance-feedstock
+	branch = master
+[submodule "imgaug-feedstock"]
+	path = imgaug-feedstock
+	url = ../imgaug-feedstock
+	branch = master
+[submodule "pyclipper-feedstock"]
+	path = pyclipper-feedstock
+	url = ../pyclipper-feedstock
+	branch = master
+[submodule "responses-feedstock"]
+	path = responses-feedstock
+	url = ../responses-feedstock
+	branch = master
+[submodule "cookies-feedstock"]
+	path = cookies-feedstock
+	url = ../cookies-feedstock
 	branch = master

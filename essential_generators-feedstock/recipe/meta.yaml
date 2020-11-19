@@ -1,0 +1,39 @@
+{% set name = "essential_generators" %}
+{% set version = "0.9.2" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: "7d2049ec78de0fa1ae6b5f114428471023c143ffbf2c7bb050c9b181f0f74960"
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  noarch: python
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - python
+
+test:
+  imports:
+    - essential_generators
+
+about:
+  home: https://github.com/shane-mason/essential-document-generator
+  license: MIT
+  license_family: MIT
+  license_file: ""
+  summary: "Generate fake data for application testing based on simple but flexible templates."
+  doc_url: ""
+  dev_url: https://github.com/shane-mason/essential-generators
+
+extra:
+  recipe-maintainers:
+    - adipietro18

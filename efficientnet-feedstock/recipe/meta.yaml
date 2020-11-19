@@ -1,0 +1,44 @@
+{% set name = "efficientnet" %}
+{% set version = "1.0.0" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: "868715f6f5467186c0fa67ee8c9d50260b22f3a1bfb5919acd9911358be54df9"
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  # note: this was requested for very specific platform+python versions. if this is to be
+  # maintained in the future, the entire matrix will need to be built and tested.
+  skip: True  # [not linux or ppc64le]
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - keras >=2.2.0
+    - keras-applications >=1.0.7
+    - python
+    - scikit-image
+
+test:
+  imports:
+    - efficientnet
+
+about:
+  home: https://github.com/qubvel/efficientnet
+  license: Apache-2.0
+  license_family: Apache
+  license_file: LICENSE
+  summary: "EfficientNet model re-implementation. Keras and TensorFlow Keras."
+  doc_url: ""
+  dev_url: https://github.com/qubvel/efficientnet
+
+extra:
+  recipe-maintainers:
+    - adipietro18
