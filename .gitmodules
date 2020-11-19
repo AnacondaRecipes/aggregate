@@ -5059,3 +5059,7 @@
 	path = htmlmin-feedstock
 	url = ../htmlmin-feedstock
 	branch = master
+[submodule "phik-feedstock"]
+	path = phik-feedstock
+	url = ../phik-feedstock
+	branch = master
