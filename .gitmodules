@@ -5055,3 +5055,7 @@
 	path = missingno-feedstock
 	url = ../missingno-feedstock
 	branch = master
+[submodule "htmlmin-feedstock"]
+	path = htmlmin-feedstock
+	url = ../htmlmin-feedstock
+	branch = master
