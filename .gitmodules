@@ -5079,3 +5079,7 @@
 	path = thriftpy2-feedstock
 	url = ../thriftpy2-feedstock
 	branch = master
+[submodule "pydata-google-auth-feedstock"]
+	path = pydata-google-auth-feedstock
+	url = ../pydata-google-auth-feedstock
+	branch = master
