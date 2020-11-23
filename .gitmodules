@@ -5075,3 +5075,7 @@
 	path = clickhouse-sqlalchemy-feedstock
 	url = ../clickhouse-sqlalchemy-feedstock
 	branch = master
+[submodule "thriftpy2-feedstock"]
+	path = thriftpy2-feedstock
+	url = ../thriftpy2-feedstock
+	branch = master
