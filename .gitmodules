@@ -5067,3 +5067,7 @@
 	path = clickhouse-cityhash-feedstock
 	url = ../clickhouse-cityhash-feedstock
 	branch = master
+[submodule "clickhouse-driver-feedstock"]
+	path = clickhouse-driver-feedstock
+	url = ../clickhouse-driver-feedstock
+	branch = master
