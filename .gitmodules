@@ -5063,3 +5063,7 @@
 	path = phik-feedstock
 	url = ../phik-feedstock
 	branch = master
+[submodule "clickhouse-cityhash-feedstock"]
+	path = clickhouse-cityhash-feedstock
+	url = ../clickhouse-cityhash-feedstock
+	branch = master
