@@ -5091,3 +5091,7 @@
 	path = proto-plus-feedstock
 	url = ../proto-plus-feedstock
 	branch = master
+[submodule "typing_inspect-feedstock"]
+	path = typing_inspect-feedstock
+	url = ../typing_inspect-feedstock
+	branch = master
