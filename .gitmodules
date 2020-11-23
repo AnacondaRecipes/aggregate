@@ -5095,3 +5095,7 @@
 	path = typing_inspect-feedstock
 	url = ../typing_inspect-feedstock
 	branch = master
+[submodule "libcst-feedstock"]
+	path = libcst-feedstock
+	url = ../libcst-feedstock
+	branch = master
