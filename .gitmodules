@@ -5083,3 +5083,7 @@
 	path = pydata-google-auth-feedstock
 	url = ../pydata-google-auth-feedstock
 	branch = master
+[submodule "geoalchemy2-feedstock"]
+	path = geoalchemy2-feedstock
+	url = ../geoalchemy2-feedstock
+	branch = master
