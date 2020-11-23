@@ -5071,3 +5071,7 @@
 	path = clickhouse-driver-feedstock
 	url = ../clickhouse-driver-feedstock
 	branch = master
+[submodule "clickhouse-sqlalchemy-feedstock"]
+	path = clickhouse-sqlalchemy-feedstock
+	url = ../clickhouse-sqlalchemy-feedstock
+	branch = master
