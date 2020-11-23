@@ -5087,3 +5087,7 @@
 	path = geoalchemy2-feedstock
 	url = ../geoalchemy2-feedstock
 	branch = master
+[submodule "proto-plus-feedstock"]
+	path = proto-plus-feedstock
+	url = ../proto-plus-feedstock
+	branch = master
