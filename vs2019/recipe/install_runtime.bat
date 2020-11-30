@@ -13,7 +13,7 @@ REM ========== This one comes from visual studio 2017
 set "VC_VER=142"
 
 set "BT_ROOT="
-for /f "usebackq tokens=*" %%i in (`vswhere.exe -nologo -products * -version ^[16.0^,17.0^) -property installationPath`) do (
+for /f "usebackq tokens=*" %%i in (`vswhere.exe -nologo -products * -version ^[16.0^,17.0^] -property installationPath`) do (
   :: There is no trailing back-slash from the vswhere, and may make vcvars64.bat fail, so force add it
   set "BT_ROOT=%%i\"
 )

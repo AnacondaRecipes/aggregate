@@ -5063,3 +5063,39 @@
 	path = phik-feedstock
 	url = ../phik-feedstock
 	branch = master
+[submodule "clickhouse-cityhash-feedstock"]
+	path = clickhouse-cityhash-feedstock
+	url = ../clickhouse-cityhash-feedstock
+	branch = master
+[submodule "clickhouse-driver-feedstock"]
+	path = clickhouse-driver-feedstock
+	url = ../clickhouse-driver-feedstock
+	branch = master
+[submodule "clickhouse-sqlalchemy-feedstock"]
+	path = clickhouse-sqlalchemy-feedstock
+	url = ../clickhouse-sqlalchemy-feedstock
+	branch = master
+[submodule "thriftpy2-feedstock"]
+	path = thriftpy2-feedstock
+	url = ../thriftpy2-feedstock
+	branch = master
+[submodule "pydata-google-auth-feedstock"]
+	path = pydata-google-auth-feedstock
+	url = ../pydata-google-auth-feedstock
+	branch = master
+[submodule "geoalchemy2-feedstock"]
+	path = geoalchemy2-feedstock
+	url = ../geoalchemy2-feedstock
+	branch = master
+[submodule "proto-plus-feedstock"]
+	path = proto-plus-feedstock
+	url = ../proto-plus-feedstock
+	branch = master
+[submodule "typing_inspect-feedstock"]
+	path = typing_inspect-feedstock
+	url = ../typing_inspect-feedstock
+	branch = master
+[submodule "libcst-feedstock"]
+	path = libcst-feedstock
+	url = ../libcst-feedstock
+	branch = master

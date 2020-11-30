@@ -21,7 +21,7 @@ set "CC=cl.exe"
 
 set "VSINSTALLDIR="
 :: Try to find actual vs2017 installations
-for /f "usebackq tokens=*" %%i in (`vswhere.exe -nologo -products * -version ^[16.0^,17.0^) -property installationPath`) do (
+for /f "usebackq tokens=*" %%i in (`vswhere.exe -nologo -products * -version ^[16.0^,17.0^] -property installationPath`) do (
   :: There is no trailing back-slash from the vswhere, and may make vcvars64.bat fail, so force add it
   set "VSINSTALLDIR=%%i\"
 )

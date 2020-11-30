@@ -15,6 +15,7 @@ source:
     - fix_std_stdint.patch
     - fix_dispatch_apply_auto.patch
     - fix_map_anonymous.patch
+    - cpp_extension.patch
     # - fix_c10_export_gcc.patch
     # - do_not_check_clock_realtime.patch
 
