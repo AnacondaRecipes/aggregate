@@ -5099,3 +5099,7 @@
 	path = libcst-feedstock
 	url = ../libcst-feedstock
 	branch = master
+[submodule "pyerfa-feedstock"]
+	path = pyerfa-feedstock
+	url = ../pyerfa-feedstock
+	branch = master
