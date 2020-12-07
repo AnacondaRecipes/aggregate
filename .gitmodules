@@ -5102,8 +5102,23 @@
 [submodule "pyerfa-feedstock"]
 	path = pyerfa-feedstock
 	url = ../pyerfa-feedstock
+[submodule "abseil-cpp-feedstock"]
+	path = abseil-cpp-feedstock
+	url = ../abseil-cpp-feedstock
+	branch = master
+[submodule "re2-feedstock"]
+	path = re2-feedstock
+	url = ../re2-feedstock
+	branch = master
+[submodule "gin-config-feedstock"]
+	path = gin-config-feedstock
+	url = ../gin-config-feedstock
 	branch = master
 [submodule "abseil-cpp-feedstock"]
 	path = abseil-cpp-feedstock
 	url = ../abseil-cpp-feedstock
+	branch = master
+[submodule "capstone-feedstock"]
+	path = capstone-feedstock
+	url = ../capstone-feedstock
 	branch = master
