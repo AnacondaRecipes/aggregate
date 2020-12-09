@@ -5126,3 +5126,7 @@
 	path = pyls-black-feedstock
 	url = ../pyls-black-feedstock
 	branch = master
+[submodule "pyls-spyder-feedstock"]
+	path = pyls-spyder-feedstock
+	url = ../pyls-spyder-feedstock
+	branch = master
