@@ -5122,3 +5122,7 @@
 	path = capstone-feedstock
 	url = ../capstone-feedstock
 	branch = master
+[submodule "pyls-black-feedstock"]
+	path = pyls-black-feedstock
+	url = ../pyls-black-feedstock
+	branch = master
