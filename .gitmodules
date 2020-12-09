@@ -5130,3 +5130,7 @@
 	path = pyls-spyder-feedstock
 	url = ../pyls-spyder-feedstock
 	branch = master
+[submodule "three-merge-feedstock"]
+	path = three-merge-feedstock
+	url = ../three-merge-feedstock
+	branch = master
