@@ -5102,6 +5102,7 @@
 [submodule "pyerfa-feedstock"]
 	path = pyerfa-feedstock
 	url = ../pyerfa-feedstock
+	branch = master
 [submodule "abseil-cpp-feedstock"]
 	path = abseil-cpp-feedstock
 	url = ../abseil-cpp-feedstock
