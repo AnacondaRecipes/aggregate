@@ -3,7 +3,7 @@ package:
   version: 11.0.7
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/mesa-libEGL-11.0.7-4.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/mesa-libEGL-11.0.7-4.el6.x86_64.rpm
     sha256: 1b5638595636d26590e1a2140c9d64a452b63d985a507197206d0e85b7796753
     no_hoist: true
     folder: binary

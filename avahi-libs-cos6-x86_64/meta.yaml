@@ -3,7 +3,7 @@ package:
   version: 0.6.25
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/avahi-libs-0.6.25-17.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/avahi-libs-0.6.25-17.el6.x86_64.rpm
     sha256: 97679ac8f29c7f3c396626b9c8fd79c07e7a437bbace79467efb16dc224cb890
     no_hoist: true
     folder: binary

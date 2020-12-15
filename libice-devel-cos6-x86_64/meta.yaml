@@ -3,7 +3,7 @@ package:
   version: 1.0.6
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libICE-devel-1.0.6-1.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/libICE-devel-1.0.6-1.el6.x86_64.rpm
     sha256: fab86a3941b48369968e73dc4fd6e10f8433bdd1bfd2458ff3921a8d1b4ede85
     no_hoist: true
     folder: binary

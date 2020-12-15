@@ -3,7 +3,7 @@ package:
   version: 1.4.5
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libgcrypt-1.4.5-12.el6_8.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/libgcrypt-1.4.5-12.el6_8.x86_64.rpm
     sha256: 81c29e7ec131ff3f1e867679b355228ebf9c10a57a680c40766a118a71d7ba71
     no_hoist: true
     folder: binary

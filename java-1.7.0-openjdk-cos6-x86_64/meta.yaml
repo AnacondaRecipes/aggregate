@@ -3,7 +3,7 @@ package:
   version: 1.7.0.181
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/java-1.7.0-openjdk-1.7.0.181-2.6.14.10.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/java-1.7.0-openjdk-1.7.0.181-2.6.14.10.el6.x86_64.rpm
     sha256: bdfe88c5d5958e0840d6271d98f91e2573705969f1cfd660a1fe2aeb3e8b2fc5
     no_hoist: true
     folder: binary

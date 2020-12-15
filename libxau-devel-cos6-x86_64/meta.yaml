@@ -3,7 +3,7 @@ package:
   version: 1.0.6
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libXau-devel-1.0.6-4.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/libXau-devel-1.0.6-4.el6.x86_64.rpm
     sha256: b527f511f3d2d3b1f8084bb4692244564b5be4d920bd2d5d33e0696ff4ac877f
     no_hoist: true
     folder: binary

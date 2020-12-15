@@ -3,7 +3,7 @@ package:
   version: 2.8.16
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/cracklib-dicts-2.8.16-4.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/cracklib-dicts-2.8.16-4.el6.x86_64.rpm
     sha256: 7641e1f2e14f65d446fb10437f052e8014063570e914a1c5daaa6262f6917360
     no_hoist: true
     folder: binary

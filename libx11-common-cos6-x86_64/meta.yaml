@@ -3,7 +3,7 @@ package:
   version: 1.6.4
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libX11-common-1.6.4-3.el6.noarch.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/libX11-common-1.6.4-3.el6.noarch.rpm
     sha256: d2309178d1508403a377d92e25682583be9559119e6efd90b44b970a527a3b6e
     no_hoist: true
     folder: binary

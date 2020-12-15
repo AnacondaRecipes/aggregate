@@ -3,7 +3,7 @@ package:
   version: 1.1.3
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libXdamage-1.1.3-4.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/libXdamage-1.1.3-4.el6.x86_64.rpm
     sha256: 34b28487164c8b2d75638d595011948831be35197bc868f23b1cda8cca690db9
     no_hoist: true
     folder: binary

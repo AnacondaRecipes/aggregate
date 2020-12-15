@@ -3,7 +3,7 @@ package:
   version: 1.7.5
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/jpackage-utils-1.7.5-3.16.el6.noarch.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/jpackage-utils-1.7.5-3.16.el6.noarch.rpm
     sha256: 6e11b3db12e4fcbf850b6d67d0a3f8328b7e9968085275b0a5f43ff8715e87e3
     no_hoist: true
     folder: binary

@@ -3,7 +3,7 @@ package:
   version: 4.4.7
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libgcj-4.4.7-23.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/libgcj-4.4.7-23.el6.x86_64.rpm
     sha256: b6dbd68c71cc8b626064bb1c7384cf43c8bbded577594a9ccc22237b74d17574
     no_hoist: true
     folder: binary

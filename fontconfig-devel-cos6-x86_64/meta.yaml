@@ -3,7 +3,7 @@ package:
   version: 2.8.0
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/fontconfig-devel-2.8.0-5.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/fontconfig-devel-2.8.0-5.el6.x86_64.rpm
     sha256: 4938701d283915837478b414dcf365592e1581052fcf5c89f9d89f2aea9e5361
     no_hoist: true
     folder: binary

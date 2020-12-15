@@ -3,7 +3,7 @@ package:
   version: 1.2.49
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libpng-devel-1.2.49-2.el6_7.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/libpng-devel-1.2.49-2.el6_7.x86_64.rpm
     sha256: 6e30263282f29b65af97733f7704647e615ff857902ebf87927ba276a5230e3a
     no_hoist: true
     folder: binary

@@ -3,7 +3,7 @@ package:
   version: 2.34.3
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libsoup-2.34.3-5.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/libsoup-2.34.3-5.el6.x86_64.rpm
     sha256: b499e68b71efdf4a9b2304b4b71a087d7d1d860e49236e58e860700a0ca690e2
     no_hoist: true
     folder: binary

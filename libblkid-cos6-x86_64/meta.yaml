@@ -3,7 +3,7 @@ package:
   version: 2.17.2
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libblkid-2.17.2-12.28.el6_9.2.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/libblkid-2.17.2-12.28.el6_9.2.x86_64.rpm
     sha256: 8bf0d4450653616485eb509fa3d646f80b4606ca110a18d87ed4aa57dcb355a2
     no_hoist: true
     folder: binary

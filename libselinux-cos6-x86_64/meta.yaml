@@ -3,7 +3,7 @@ package:
   version: 2.0.94
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libselinux-2.0.94-7.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/libselinux-2.0.94-7.el6.x86_64.rpm
     sha256: e7a34a5deb2a708631fec7b759f5a3c4a81046ac3a48f34080f01eee18e8b130
     no_hoist: true
     folder: binary

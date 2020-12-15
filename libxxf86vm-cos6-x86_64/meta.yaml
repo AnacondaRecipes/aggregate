@@ -3,7 +3,7 @@ package:
   version: 1.1.3
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libXxf86vm-1.1.3-2.1.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/libXxf86vm-1.1.3-2.1.el6.x86_64.rpm
     sha256: e1123e1d4344da63daa2e17f42867ae7be8a9e8d6f6b6bfd35983d74b0cf9827
     no_hoist: true
     folder: binary

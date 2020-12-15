@@ -3,7 +3,7 @@ package:
   version: 2.17.2
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/util-linux-ng-2.17.2-12.28.el6_9.2.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/util-linux-ng-2.17.2-12.28.el6_9.2.x86_64.rpm
     sha256: e12503881671db8a52044044509e77b59f04884499f191a2bfc332750cc65131
     no_hoist: true
     folder: binary

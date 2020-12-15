@@ -3,7 +3,7 @@ package:
   version: 3.0
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/zip-3.0-1.el6_7.1.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/zip-3.0-1.el6_7.1.x86_64.rpm
     sha256: 64624b07c11db01d0f74a578a9dd93d20cfc2be4d317190d21d8c71c00adecf5
     no_hoist: true
     folder: binary

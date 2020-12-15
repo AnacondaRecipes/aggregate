@@ -3,7 +3,7 @@ package:
   version: 1.28.1
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/at-spi-devel-1.28.1-2.el6.centos.i686.rpm
+  - url: http://vault.centos.org/centos/6.10/os/i386/Packages/at-spi-devel-1.28.1-2.el6.centos.i686.rpm
     sha256: 2f1f5d03c78931fdf169d0a92f4747b7c40e34ebeb18200b5c1f3c1bdc9075d0
     no_hoist: true
     folder: binary
@@ -21,21 +21,21 @@ requirements:
     - orbit2-devel-cos6-i686 >=2.6.0
     - at-spi-cos6-i686 ==1.28.1
     - atk-devel-cos6-i686 >=1.13.0
-    - gtk2-devel-cos6-i686 >=2.24.23
+    - gail-devel-cos6-i686 >=2.24.23
     - gtk2-devel-cos6-i686 >=2.10.0
     - libbonobo-devel-cos6-i686 >=2.4.0
   host:
     - orbit2-devel-cos6-i686 >=2.6.0
     - at-spi-cos6-i686 ==1.28.1
     - atk-devel-cos6-i686 >=1.13.0
-    - gtk2-devel-cos6-i686 >=2.24.23
+    - gail-devel-cos6-i686 >=2.24.23
     - gtk2-devel-cos6-i686 >=2.10.0
     - libbonobo-devel-cos6-i686 >=2.4.0
   run:
     - orbit2-devel-cos6-i686 >=2.6.0
     - at-spi-cos6-i686 ==1.28.1
     - atk-devel-cos6-i686 >=1.13.0
-    - gtk2-devel-cos6-i686 >=2.24.23
+    - gail-devel-cos6-i686 >=2.24.23
     - gtk2-devel-cos6-i686 >=2.10.0
     - libbonobo-devel-cos6-i686 >=2.4.0
 

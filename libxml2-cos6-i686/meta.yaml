@@ -3,7 +3,7 @@ package:
   version: 2.7.6
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libxml2-2.7.6-21.el6_8.1.i686.rpm
+  - url: http://vault.centos.org/centos/6.10/os/i386/Packages/libxml2-2.7.6-21.el6_8.1.i686.rpm
     sha256: 56558f0128bbf150cf6d7a1c1ef3ce09564150a1e7cbc9680e4d6e3684b5888d
     no_hoist: true
     folder: binary

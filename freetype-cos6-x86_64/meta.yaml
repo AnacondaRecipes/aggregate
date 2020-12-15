@@ -3,7 +3,7 @@ package:
   version: 2.3.11
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/freetype-2.3.11-17.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/freetype-2.3.11-17.el6.x86_64.rpm
     sha256: a4f680e25073d307608ab245d87eb982646957892d68628736e5f1a00c2ee8c3
     no_hoist: true
     folder: binary

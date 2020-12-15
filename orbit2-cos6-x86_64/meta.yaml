@@ -3,7 +3,7 @@ package:
   version: 2.14.17
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/ORBit2-2.14.17-7.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/ORBit2-2.14.17-7.el6.x86_64.rpm
     sha256: 292e8159497d55ae398fa2659bbea11d5ece3d135856654a75a3aaeae8ad00b6
     no_hoist: true
     folder: binary

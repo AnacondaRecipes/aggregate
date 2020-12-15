@@ -3,7 +3,7 @@ package:
   version: 2.24.2
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/i386/Packages/libbonobo-devel-2.24.2-5.el6.i686.rpm
+  - url: http://vault.centos.org/centos/6.10/os/i386/Packages/libbonobo-devel-2.24.2-5.el6.i686.rpm
     sha256: 5bf5816c88d7f82bc23df71d24a023ef8cffff96acaccabb06d0b5211bb77197
     no_hoist: true
     folder: binary

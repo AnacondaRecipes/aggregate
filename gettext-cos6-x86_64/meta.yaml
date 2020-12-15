@@ -3,7 +3,7 @@ package:
   version: 0.17
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/gettext-0.17-18.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/gettext-0.17-18.el6.x86_64.rpm
     sha256: 9a7a4f7101ec58412fb07e94c37eb15cefd7ed9ceb9c58e501fb41b691d29179
     no_hoist: true
     folder: binary

@@ -3,7 +3,7 @@ package:
   version: 2.12.23
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/gnutls-2.12.23-22.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/gnutls-2.12.23-22.el6.x86_64.rpm
     sha256: 8e7170cc1a879fde86c5280aa1cbc646d95e9926add022f2019f590d28b5aec5
     no_hoist: true
     folder: binary

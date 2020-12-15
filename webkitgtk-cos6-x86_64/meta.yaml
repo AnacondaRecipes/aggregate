@@ -3,7 +3,7 @@ package:
   version: 1.4.3
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/webkitgtk-1.4.3-9.el6_6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/webkitgtk-1.4.3-9.el6_6.x86_64.rpm
     sha256: add2dfc713c011e5154a53f2846698876c1743afc5df20bb07e3a9ecbe4825a1
     no_hoist: true
     folder: binary

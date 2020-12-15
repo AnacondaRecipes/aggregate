@@ -3,7 +3,7 @@ package:
   version: 1.4.2
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/cups-libs-1.4.2-79.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/cups-libs-1.4.2-79.el6.x86_64.rpm
     sha256: 0ff919a104a12bb82bab65e9a412b3693638707540c0f98fcc5f9595f853cbba
     no_hoist: true
     folder: binary

@@ -3,7 +3,7 @@ package:
   version: 1.10.3
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/krb5-libs-1.10.3-65.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/krb5-libs-1.10.3-65.el6.x86_64.rpm
     sha256: 3a6167db389a4c0f60a0170a9112a1884c56e542aaedd8339b4d622a5bdc1f03
     no_hoist: true
     folder: binary

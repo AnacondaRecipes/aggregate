@@ -3,7 +3,7 @@ package:
   version: 1.2.3
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libXtst-devel-1.2.3-1.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/libXtst-devel-1.2.3-1.el6.x86_64.rpm
     sha256: e5506db9d01d1eacb6181e8a87b0fa10b7c18e336e2ac1eee33fae8edc4d19d1
     no_hoist: true
     folder: binary

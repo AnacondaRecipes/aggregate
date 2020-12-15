@@ -3,7 +3,7 @@ package:
   version: 0.23
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/pkgconfig-0.23-9.1.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/pkgconfig-0.23-9.1.el6.x86_64.rpm
     sha256: b30108af8380be5e12f80365caf07a0d08f1da85263c35c45ef92f2040716a4d
     no_hoist: true
     folder: binary

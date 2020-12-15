@@ -3,7 +3,7 @@ package:
   version: 5.0.3
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libXfixes-5.0.3-1.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/libXfixes-5.0.3-1.el6.x86_64.rpm
     sha256: 96b5fdf0e8060ea9a2496110048412401b51361aa2f6ed43bd702a5c137273a9
     no_hoist: true
     folder: binary

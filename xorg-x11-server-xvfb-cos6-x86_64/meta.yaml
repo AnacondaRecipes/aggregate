@@ -3,7 +3,7 @@ package:
   version: 1.17.4
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/xorg-x11-server-Xvfb-1.17.4-17.el6.centos.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/xorg-x11-server-Xvfb-1.17.4-17.el6.centos.x86_64.rpm
     sha256: a19ef575f929cea75abf984d92fd5cc77e77e9b8525904b2f979c2cc89cd2c92
     no_hoist: true
     folder: binary

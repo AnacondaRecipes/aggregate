@@ -3,7 +3,7 @@ package:
   version: 1.2.2
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libXScrnSaver-devel-1.2.2-2.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/libXScrnSaver-devel-1.2.2-2.el6.x86_64.rpm
     sha256: 8a63dcfa4a48120facd315b74309c472cedf66b0373e791374884ddc43eab150
     no_hoist: true
     folder: binary

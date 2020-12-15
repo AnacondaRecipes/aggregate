@@ -3,7 +3,7 @@ package:
   version: 1.2.1
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libSM-1.2.1-2.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/libSM-1.2.1-2.el6.x86_64.rpm
     sha256: 5bbbb484f3c7a2d7cdc090b6f88fef66a290d256685cfccb9fac60c08b83050f
     no_hoist: true
     folder: binary

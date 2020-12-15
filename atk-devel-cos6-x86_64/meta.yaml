@@ -3,7 +3,7 @@ package:
   version: 1.30.0
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/atk-devel-1.30.0-1.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/atk-devel-1.30.0-1.el6.x86_64.rpm
     sha256: 2469c560033cc10d449d0a5065b3c5c4c78d5e7e9ca6cbf43ae66e8175af4ab3
     no_hoist: true
     folder: binary

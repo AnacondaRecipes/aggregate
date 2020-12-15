@@ -3,7 +3,7 @@ package:
   version: 1.6.4
 
 source:
-  - url: http://mirror.centos.org/centos/6.10/os/x86_64/Packages/libX11-1.6.4-3.el6.x86_64.rpm
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/libX11-1.6.4-3.el6.x86_64.rpm
     sha256: 10a698d15cfef14bb09a2ce4e569e8f42dca5c7197dacc04978f86d7b01c2224
     no_hoist: true
     folder: binary
