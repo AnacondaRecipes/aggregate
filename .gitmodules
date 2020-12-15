@@ -5115,10 +5115,6 @@
 	path = gin-config-feedstock
 	url = ../gin-config-feedstock
 	branch = master
-[submodule "abseil-cpp-feedstock"]
-	path = abseil-cpp-feedstock
-	url = ../abseil-cpp-feedstock
-	branch = master
 [submodule "capstone-feedstock"]
 	path = capstone-feedstock
 	url = ../capstone-feedstock
