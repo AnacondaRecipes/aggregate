@@ -1,0 +1,34 @@
+package:
+  name: pulseaudio-libs-zeroconf-cos6-x86_64
+  version: 0.9.21
+
+source:
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/pulseaudio-libs-zeroconf-0.9.21-26.el6.x86_64.rpm
+    sha256: 69dba458760d587eae153b49e07bbc3beb4d2272a2c22706ce24c766f33f9197
+    no_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/pulseaudio-0.9.21-26.el6.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - pulseaudio-libs-cos6-x86_64 ==0.9.21
+  host:
+    - pulseaudio-libs-cos6-x86_64 ==0.9.21
+  run:
+    - pulseaudio-libs-cos6-x86_64 ==0.9.21
+
+about:
+  home: http://pulseaudio.org/
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) Zeroconf support for PulseAudio clients"
+  description: |
+        This package contains the runtime libraries and tools that allow PulseAudio
+        clients to automatically detect PulseAudio servers using Zeroconf.

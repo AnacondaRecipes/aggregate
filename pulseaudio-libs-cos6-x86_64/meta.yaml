@@ -1,0 +1,28 @@
+package:
+  name: pulseaudio-libs-cos6-x86_64
+  version: 0.9.21
+
+source:
+  - url: http://vault.centos.org/centos/6.10/os/x86_64/Packages/pulseaudio-libs-0.9.21-26.el6.x86_64.rpm
+    sha256: 58babf5f33d1dd7aee534001199245b96ba9ca71382fc75fa49d015be584efa6
+    no_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/6.10/os/Source/SPackages/pulseaudio-0.9.21-26.el6.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://pulseaudio.org/
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) Libraries for PulseAudio clients"
+  description: |
+        This package contains the runtime libraries for any application that wishes to
+        interface with a PulseAudio sound server.
