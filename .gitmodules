@@ -5135,3 +5135,7 @@
 	path = unittest2-feedstock
 	url = ../unittest2-feedstock
 	branch = master
+[submodule "fmt-feedstock"]
+	path = fmt-feedstock
+	url = ../fmt-feedstock
+	branch = master
