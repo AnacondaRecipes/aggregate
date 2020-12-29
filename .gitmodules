@@ -5147,3 +5147,7 @@
 	path = anyio-feedstock
 	url = ../anyio-feedstock
 	branch = master
+[submodule "trustme-feedstock"]
+	path = trustme-feedstock
+	url = ../trustme-feedstock
+	branch = master
