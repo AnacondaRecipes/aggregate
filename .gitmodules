@@ -5151,3 +5151,7 @@
 	path = trustme-feedstock
 	url = ../trustme-feedstock
 	branch = master
+[submodule "trio-feedstock"]
+	path = trio-feedstock
+	url = ../trio-feedstock
+	branch = master
