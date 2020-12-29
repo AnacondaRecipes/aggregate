@@ -5139,3 +5139,11 @@
 	path = fmt-feedstock
 	url = ../fmt-feedstock
 	branch = master
+[submodule "jupyter_server-feedstock"]
+	path = jupyter_server-feedstock
+	url = ../jupyter_server-feedstock
+	branch = master
+[submodule "anyio-feedstock"]
+	path = anyio-feedstock
+	url = ../anyio-feedstock
+	branch = master
