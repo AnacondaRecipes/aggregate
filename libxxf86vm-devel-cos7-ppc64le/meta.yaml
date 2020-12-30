@@ -10,7 +10,7 @@ source:
     folder: source
 
 build:
-  number: 3
+  number: 0
   noarch: generic
   missing_dso_whitelist:
     - '*'

@@ -10,7 +10,7 @@ source:
     folder: source
 
 build:
-  number: 3
+  number: 0
   noarch: generic
   binary_relocation: false
   detect_binary_files_with_prefix: false
