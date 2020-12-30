@@ -1,0 +1,30 @@
+package:
+  name: kernel-headers-cos7-ppc64le
+  version: 3.10.0
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/kernel-headers-3.10.0-1160.el7.ppc64le.rpm
+    sha256: 6875ad8dbbf0cff85bf39bd2446ffb9e92de78e113496fba37fa5da9f10348b1
+    no_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/7.9.2009/os/Source/SPackages/kernel-3.10.0-1160.el7.src.rpm
+    folder: source
+
+build:
+  number: 3
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.kernel.org/
+  license: GPLv2
+  license_family: GPL2
+  summary: "(CDT) Header files for the Linux kernel for use by glibc"
+  description: |
+        Kernel-headers includes the C header files that specify the interface between
+        the Linux kernel and userspace libraries and programs.  The header files
+        define structures and constants that are needed for building most standard
+        programs and are also needed for rebuilding the glibc package.

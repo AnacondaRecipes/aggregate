@@ -1,19 +1,21 @@
 package:
   name: libdrm-cos7-ppc64le
-  version: 2.4.83
+  version: 2.4.97
 
 source:
-  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libdrm-2.4.83-2.el7.ppc64le.rpm
-    sha256: 8e1bba5e7922bc02160235aaf5aa47d60961501f6d8f654c2d21dfa90b1c79c5
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libdrm-2.4.97-2.el7.ppc64le.rpm
+    sha256: bd230232e9cb70f70cb04f123d00701f57c2c850f6eceda851171aa17af11c6b
     folder: binary/usr
-  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/libdrm-2.4.83-2.el7.src.rpm
+  - url: http://vault.centos.org/7.7.1908/os/Source/SPackages/libdrm-2.4.97-2.el7.src.rpm
     folder: source
 
 build:
+  number: 3
+  noarch: generic
+  binary_relocation: false
+  detect_binary_files_with_prefix: false
   missing_dso_whitelist:
     - '*'
-
-
 
 outputs:
   - name: libdrm-cos7-ppc64le

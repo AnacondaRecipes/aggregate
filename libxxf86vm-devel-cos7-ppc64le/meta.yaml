@@ -1,0 +1,36 @@
+package:
+  name: libxxf86vm-devel-cos7-ppc64le
+  version: 1.1.4
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libXxf86vm-devel-1.1.4-1.el7.ppc64le.rpm
+    sha256: e7ff46808f8b4bbb636a15f189297770a1529c58f7739760f8b2c0da8dfe26d5
+    folder: binary/usr
+  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/libXxf86vm-1.1.4-1.el7.src.rpm
+    folder: source
+
+build:
+  number: 3
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libxxf86vm-cos7-ppc64le ==1.1.4
+
+
+outputs:
+  - name: libxxf86vm-devel-cos7-ppc64le
+    noarch: generic
+    requirements:
+      run:
+        - libxxf86vm-cos7-ppc64le ==1.1.4
+
+    about:
+      home: http://www.x.org
+      license: MIT
+      license_family: MIT
+      summary: "(CDT) X.Org X11 libXxf86vm development package"
+      description: |
+        X.Org X11 libXxf86vm development package
