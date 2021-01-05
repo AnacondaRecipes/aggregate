@@ -5159,3 +5159,7 @@
 	path = outcome-feedstock
 	url = ../outcome-feedstock
 	branch = master
+[submodule "jupyter-packaging-feedstock"]
+	path = jupyter-packaging-feedstock
+	url = ../jupyter-packaging-feedstock
+	branch = master
