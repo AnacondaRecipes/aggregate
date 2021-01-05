@@ -5155,3 +5155,7 @@
 	path = trio-feedstock
 	url = ../trio-feedstock
 	branch = master
+[submodule "outcome-feedstock"]
+	path = outcome-feedstock
+	url = ../outcome-feedstock
+	branch = master
