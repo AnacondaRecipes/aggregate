@@ -1,0 +1,36 @@
+package:
+  name: libdrm-devel-cos7-ppc64le
+  version: 2.4.97
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libdrm-devel-2.4.97-2.el7.ppc64le.rpm
+    sha256: 81529030e4ec8cdd44c9733622d91c4a08bff7b378b3352c89351ff9431bc54f
+    no_hoist: true
+    folder: binary/usr
+  - url: http://vault.centos.org/7.7.1908/os/Source/SPackages/libdrm-2.4.97-2.el7.src.rpm
+    folder: source
+
+build:
+  number: 0
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - kernel-headers-cos7-ppc64le >=2.6.27
+    - libdrm-cos7-ppc64le ==2.4.97
+  host:
+    - kernel-headers-cos7-ppc64le >=2.6.27
+    - libdrm-cos7-ppc64le ==2.4.97
+  run:
+    - kernel-headers-cos7-ppc64le >=2.6.27
+    - libdrm-cos7-ppc64le ==2.4.97
+
+about:
+  home: http://dri.sourceforge.net
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Direct Rendering Manager development package"
+  description: |
+    Direct Rendering Manager development package

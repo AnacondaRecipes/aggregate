@@ -1,0 +1,30 @@
+package:
+  name: libglvnd-cos7-ppc64le
+  version: 1.0.1
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libglvnd-1.0.1-0.8.git5baa1e5.el7.ppc64le.rpm
+    sha256: 77195e14251cc1505ba0101fd13d408b3e8f282614eadfd8936db62588e660fb
+    no_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/7.7.1908/os/Source/SPackages/libglvnd-1.0.1-0.8.git5baa1e5.el7.src.rpm
+    no_hoist: true
+    folder: source
+
+build:
+  number: 0
+  noarch: generic
+  binary_relocation: false
+  detect_binary_files_with_prefix: false
+  missing_dso_whitelist:
+    - '*'
+
+about:
+  home: https://github.com/NVIDIA/libglvnd
+  license: MIT
+  license_family: MIT
+  license_file: libglvnd-license
+  summary: (CDT) The GL Vendor-Neutral Dispatch library
+  description: |
+    libglvnd is an implementation of the vendor-neutral dispatch layer for
+    arbitrating OpenGL API calls between multiple vendors on a per-screen basis.
