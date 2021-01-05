@@ -1,0 +1,37 @@
+package:
+  name: libglvnd-glx-cos7-ppc64le
+  version: 1.0.1
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/libglvnd-glx-1.0.1-0.8.git5baa1e5.el7.ppc64le.rpm
+    sha256: 50a356aa8e5cd7743f6e13e8c0dddcb15be678a381ef06e5a63239972ef5e01c
+    no_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/7.7.1908/os/Source/SPackages/libglvnd-1.0.1-0.8.git5baa1e5.el7.src.rpm
+    no_hoist: true
+    folder: source
+
+build:
+  number: 0
+  noarch: generic
+  binary_relocation: false
+  detect_binary_files_with_prefix: false
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libglvnd-cos7-ppc64le ==1.0.1
+  host:
+    - libglvnd-cos7-ppc64le ==1.0.1
+  run:
+    - libglvnd-cos7-ppc64le ==1.0.1
+
+about:
+  home: https://github.com/NVIDIA/libglvnd
+  license: MIT
+  license_family: MIT
+  license_file: libglvnd-license
+  summary: (CDT) GLX support for libglvnd
+  description: |
+    libGL and libGLX are the common dispatch interface for the GLX API.

@@ -1,0 +1,29 @@
+package:
+  name: mesa-khr-devel-cos7-ppc64le
+  version: 18.3.4
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/mesa-khr-devel-18.3.4-10.el7.ppc64le.rpm
+    sha256: 54ff34c19bfd6935b09aee1897751da04a1b81e9669d894dc4a19424d5dc6fe6
+    no_hoist: true
+    folder: binary
+  - url: http://vault.centos.org/7.9.2009/os/Source/SPackages/mesa-18.3.4-10.el7.src.rpm
+    no_hoist: true
+    folder: source
+
+build:
+  number: 0
+  noarch: generic
+  binary_relocation: false
+  detect_binary_files_with_prefix: false
+  missing_dso_whitelist:
+    - '*'
+
+about:
+  home: http://www.mesa3d.org
+  license: MIT
+  license_family: MIT
+  license_file: mesa-license
+  summary: (CDT) Mesa Khronos development headers
+  description: |
+    Mesa Khronos development headers
