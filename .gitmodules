@@ -5163,3 +5163,7 @@
 	path = jupyter-packaging-feedstock
 	url = ../jupyter-packaging-feedstock
 	branch = master
+[submodule "jupyterlab_widgets-feedstock"]
+	path = jupyterlab_widgets-feedstock
+	url = ../jupyterlab_widgets-feedstock
+	branch = master
