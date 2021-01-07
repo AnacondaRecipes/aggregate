@@ -5171,3 +5171,7 @@
 	path = nvcc-feedstock
 	url = ../nvcc-feedstock
 	branch = master
+[submodule "nccl-feedstock"]
+	path = nccl-feedstock
+	url = ../nccl-feedstock
+	branch = master
