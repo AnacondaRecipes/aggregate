@@ -5175,3 +5175,7 @@
 	path = nccl-feedstock
 	url = ../nccl-feedstock
 	branch = master
+[submodule "cupy-feedstock"]
+	path = cupy-feedstock
+	url = ../cupy-feedstock
+	branch = master
