@@ -5167,3 +5167,7 @@
 	path = jupyterlab_widgets-feedstock
 	url = ../jupyterlab_widgets-feedstock
 	branch = master
+[submodule "nvcc-feedstock"]
+	path = nvcc-feedstock
+	url = ../nvcc-feedstock
+	branch = master
