@@ -5171,3 +5171,7 @@
 	path = scikit-build-feedstock
 	url = ../scikit-build-feedstock
 	branch = master
+[submodule "distro-feedstock"]
+	path = distro-feedstock
+	url = ../distro-feedstock
+	branch = master
