@@ -5167,3 +5167,7 @@
 	path = jupyterlab_widgets-feedstock
 	url = ../jupyterlab_widgets-feedstock
 	branch = master
+[submodule "scikit-build-feedstock"]
+	path = scikit-build-feedstock
+	url = ../scikit-build-feedstock
+	branch = master
