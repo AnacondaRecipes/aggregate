@@ -5175,3 +5175,7 @@
 	path = distro-feedstock
 	url = ../distro-feedstock
 	branch = master
+[submodule "linux-sysroot-feedstock"]
+	path = linux-sysroot-feedstock
+	url = ../linux-sysroot-feedstock
+	branch = master
