@@ -5183,3 +5183,7 @@
 	path = crosstool-ng-feedstock
 	url = ../crosstool-ng-feedstock
 	branch = master
+[submodule "ctng-compilers-feedstock"]
+	path = ctng-compilers-feedstock
+	url = ../ctng-compilers-feedstock
+	branch = master
