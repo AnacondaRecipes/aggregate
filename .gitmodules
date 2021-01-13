@@ -5167,6 +5167,26 @@
 	path = jupyterlab_widgets-feedstock
 	url = ../jupyterlab_widgets-feedstock
 	branch = master
+[submodule "scikit-build-feedstock"]
+	path = scikit-build-feedstock
+	url = ../scikit-build-feedstock
+	branch = master
+[submodule "distro-feedstock"]
+	path = distro-feedstock
+	url = ../distro-feedstock
+	branch = master
+[submodule "linux-sysroot-feedstock"]
+	path = linux-sysroot-feedstock
+	url = ../linux-sysroot-feedstock
+	branch = master
+[submodule "crosstool-ng-feedstock"]
+	path = crosstool-ng-feedstock
+	url = ../crosstool-ng-feedstock
+	branch = master
+[submodule "ctng-compilers-feedstock"]
+	path = ctng-compilers-feedstock
+	url = ../ctng-compilers-feedstock
+	branch = master
 [submodule "nvcc-feedstock"]
 	path = nvcc-feedstock
 	url = ../nvcc-feedstock
@@ -5178,4 +5198,3 @@
 [submodule "cupy-feedstock"]
 	path = cupy-feedstock
 	url = ../cupy-feedstock
-	branch = master
