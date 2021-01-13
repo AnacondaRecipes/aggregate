@@ -5187,3 +5187,14 @@
 	path = ctng-compilers-feedstock
 	url = ../ctng-compilers-feedstock
 	branch = master
+[submodule "nvcc-feedstock"]
+	path = nvcc-feedstock
+	url = ../nvcc-feedstock
+	branch = master
+[submodule "nccl-feedstock"]
+	path = nccl-feedstock
+	url = ../nccl-feedstock
+	branch = master
+[submodule "cupy-feedstock"]
+	path = cupy-feedstock
+	url = ../cupy-feedstock
