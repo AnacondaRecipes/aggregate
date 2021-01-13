@@ -5179,3 +5179,7 @@
 	path = linux-sysroot-feedstock
 	url = ../linux-sysroot-feedstock
 	branch = master
+[submodule "crosstool-ng-feedstock"]
+	path = crosstool-ng-feedstock
+	url = ../crosstool-ng-feedstock
+	branch = master
