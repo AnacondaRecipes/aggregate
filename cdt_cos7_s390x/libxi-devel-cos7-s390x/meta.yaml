@@ -1,0 +1,33 @@
+package:
+  name: libxi-devel-cos7-s390x
+  version: 1.7.9
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libXi-devel-1.7.9-1.el7.s390x.rpm
+    sha256: 35bbc401f9719e4a8d19710d6c093c30557e5a1a5fc9a49d1484af8001f23649
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libXi-1.7.9-1.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libxi-cos7-s390x ==1.7.9
+  host:
+    - libxi-cos7-s390x ==1.7.9
+  run:
+    - libxi-cos7-s390x ==1.7.9
+
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) X.Org X11 libXi development package"
+  description: |
+        X.Org X11 libXi development package

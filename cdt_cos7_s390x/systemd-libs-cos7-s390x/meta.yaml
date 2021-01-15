@@ -1,0 +1,27 @@
+package:
+  name: systemd-libs-cos7-s390x
+  version: 219
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/systemd-libs-219-73.el7.1.s390x.rpm
+    sha256: 7b91237738e0a60ca08a56f0ce18dad510dd4ae6bdb95b6b191bd1c45846cec8
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/systemd-219-73.el7.1.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.freedesktop.org/wiki/Software/systemd
+  license: LGPLv2+ and MIT
+  license_family: LGPL
+  summary: "(CDT) systemd libraries"
+  description: |
+        Libraries for systemd and udev, as well as the systemd PAM module.

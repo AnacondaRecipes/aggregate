@@ -1,0 +1,27 @@
+package:
+  name: libbonobo-cos7-s390x
+  version: 2.32.1
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libbonobo-2.32.1-7.el7.s390x.rpm
+    sha256: 9e090f797c14f8663cb89bdc4f04ed46de3ccd816c961d9091a752d2b9a3edc3
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libbonobo-2.32.1-7.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://ftp.gnome.org
+  license: GPLv2+ and LGPLv2+
+  license_family: GPL2
+  summary: "(CDT) Bonobo component system"
+  description: |
+        Bonobo is a component system based on CORBA, used by the GNOME desktop.

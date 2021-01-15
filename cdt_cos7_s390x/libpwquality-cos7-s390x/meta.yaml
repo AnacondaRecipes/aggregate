@@ -1,0 +1,35 @@
+package:
+  name: libpwquality-cos7-s390x
+  version: 1.2.3
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libpwquality-1.2.3-5.el7.s390x.rpm
+    sha256: 73394669bd1698503ccf07dc5e238419d93be4a2c218d2476dd7420774b9e859
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libpwquality-1.2.3-5.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - cracklib-dicts-cos7-s390x >=2.8
+  host:
+    - cracklib-dicts-cos7-s390x >=2.8
+  run:
+    - cracklib-dicts-cos7-s390x >=2.8
+
+about:
+  home: https://github.com/libpwquality/libpwquality/
+  license: BSD or GPLv2+
+  license_family: GPL2
+  summary: "(CDT) A library for password generation and password quality checking"
+  description: |
+        This is a library for password quality checks and generation of random
+        passwords that pass the checks. This library uses the cracklib and cracklib
+        dictionaries to perform some of the checks.

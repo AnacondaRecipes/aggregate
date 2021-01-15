@@ -1,0 +1,33 @@
+package:
+  name: libxinerama-cos7-s390x
+  version: 1.1.3
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libXinerama-1.1.3-2.1.el7.s390x.rpm
+    sha256: 216f71181dae17b7cffabb875c68a42418fedbc8d3b90c003096e75bf11ee113
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libXinerama-1.1.3-2.1.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libx11-cos7-s390x >=1.5.99.902
+  host:
+    - libx11-cos7-s390x >=1.5.99.902
+  run:
+    - libx11-cos7-s390x >=1.5.99.902
+
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) X.Org X11 libXinerama runtime library"
+  description: |
+        X.Org X11 libXinerama runtime library

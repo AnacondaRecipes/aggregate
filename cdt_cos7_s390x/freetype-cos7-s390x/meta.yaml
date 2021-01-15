@@ -1,0 +1,31 @@
+package:
+  name: freetype-cos7-s390x
+  version: 2.8
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/freetype-2.8-14.el7.s390x.rpm
+    sha256: 7f62c400754f84d7d2e40230d22b6485d9587da361efae5c2e0ff043d10dda46
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/freetype-2.8-14.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.freetype.org
+  license: (FTL or GPLv2+) and BSD and MIT and Public Domain and zlib with acknowledgement
+  license_family: GPL2
+  summary: "(CDT) A free and portable font rendering engine"
+  description: |
+        The FreeType engine is a free and portable font rendering engine, developed to
+        provide advanced font support for a variety of platforms and environments.
+        FreeType is a library which can open and manages font files as well as
+        efficiently load, hint and render individual glyphs. FreeType is not a font
+        server or a complete text-rendering library.

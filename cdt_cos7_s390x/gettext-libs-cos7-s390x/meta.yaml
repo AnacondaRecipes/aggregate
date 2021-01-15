@@ -1,0 +1,27 @@
+package:
+  name: gettext-libs-cos7-s390x
+  version: 0.19.8.1
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/gettext-libs-0.19.8.1-3.el7.s390x.rpm
+    sha256: 243e2a33f2fc8a708c835651b737853b635eed156022f3943bf1287cd206b11b
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/gettext-0.19.8.1-3.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.gnu.org/software/gettext/
+  license: LGPLv2+ and GPLv3+
+  license_family: GPL3
+  summary: "(CDT) Libraries for gettext"
+  description: |
+        This package contains libraries used internationalization support.

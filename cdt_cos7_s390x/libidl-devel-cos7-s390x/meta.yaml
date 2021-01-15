@@ -1,0 +1,41 @@
+package:
+  name: libidl-devel-cos7-s390x
+  version: 0.8.14
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libIDL-devel-0.8.14-8.el7.s390x.rpm
+    sha256: 5285307403a3affd411c342d8461c1e7acc954e4e896643f93eb3abfb74fc47e
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libIDL-0.8.14-8.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - glib2-devel-cos7-s390x >=2.0
+    - libidl-cos7-s390x ==0.8.14
+    - pkgconfig-cos7-s390x >=0.8
+  host:
+    - glib2-devel-cos7-s390x >=2.0
+    - libidl-cos7-s390x ==0.8.14
+    - pkgconfig-cos7-s390x >=0.8
+  run:
+    - glib2-devel-cos7-s390x >=2.0
+    - libidl-cos7-s390x ==0.8.14
+    - pkgconfig-cos7-s390x >=0.8
+
+about:
+  home: http://ftp.gnome.org/pub/gnome/sources/libIDL/0.8/
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) Development libraries and header files for libIDL"
+  description: |
+        libIDL is a library for parsing IDL (Interface Definition Language). It can be
+        used for both COM-style and CORBA-style IDL.  This package contains the header
+        files and libraries needed to write or compile programs that use libIDL.

@@ -1,0 +1,40 @@
+package:
+  name: libbonobo-devel-cos7-s390x
+  version: 2.32.1
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libbonobo-devel-2.32.1-7.el7.s390x.rpm
+    sha256: 168fc2aaca40a9849c8f5141185603d953be02b56c64307a70ca2db8c9dba0e1
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libbonobo-2.32.1-7.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - orbit2-devel-cos7-s390x >=2.7.5
+    - libbonobo-cos7-s390x ==2.32.1
+    - libxml2-devel-cos7-s390x >=2.4.21
+  host:
+    - orbit2-devel-cos7-s390x >=2.7.5
+    - libbonobo-cos7-s390x ==2.32.1
+    - libxml2-devel-cos7-s390x >=2.4.21
+  run:
+    - orbit2-devel-cos7-s390x >=2.7.5
+    - libbonobo-cos7-s390x ==2.32.1
+    - libxml2-devel-cos7-s390x >=2.4.21
+
+about:
+  home: http://ftp.gnome.org
+  license: GPLv2+ and LGPLv2+
+  license_family: GPL2
+  summary: "(CDT) Libraries and headers for libbonobo"
+  description: |
+        Bonobo is a component system based on CORBA, used by the GNOME desktop.  This
+        package contains header files used to compile programs that use Bonobo.

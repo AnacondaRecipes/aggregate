@@ -1,0 +1,38 @@
+package:
+  name: libsepol-cos7-s390x
+  version: 2.5
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libsepol-2.5-10.el7.s390x.rpm
+    sha256: 10f468d14b5f1aa9aa926d76e3a76e13662806afebbfe42b670db4a10fabd381
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libsepol-2.5-10.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: https://github.com/SELinuxProject/selinux/wiki
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) SELinux binary policy manipulation library"
+  description: |
+        Security-enhanced Linux is a feature of the Linux® kernel and a number of
+        utilities with enhanced security functionality designed to add mandatory
+        access controls to Linux.  The Security-enhanced Linux kernel contains new
+        architectural components originally developed to improve the security of the
+        Flask operating system. These architectural components provide general support
+        for the enforcement of many kinds of mandatory access control policies,
+        including those based on the concepts of Type Enforcement®, Role-based Access
+        Control, and Multi-level Security.  libsepol provides an API for the
+        manipulation of SELinux binary policies. It is used by checkpolicy (the policy
+        compiler) and similar tools, as well as by programs like load_policy that need
+        to perform specific transformations on binary policies such as customizing
+        policy boolean settings.

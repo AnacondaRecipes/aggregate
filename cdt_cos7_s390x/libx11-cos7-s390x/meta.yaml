@@ -1,0 +1,33 @@
+package:
+  name: libx11-cos7-s390x
+  version: 1.6.7
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libX11-1.6.7-2.el7.s390x.rpm
+    sha256: c5f63376a640dc420a44e2606e59aa194aa204e3709046482115d14a5999c270
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libX11-1.6.7-2.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libx11-common-cos7-s390x >=1.6.7
+  host:
+    - libx11-common-cos7-s390x >=1.6.7
+  run:
+    - libx11-common-cos7-s390x >=1.6.7
+
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Core X11 protocol client library"
+  description: |
+        Core X11 protocol client library.

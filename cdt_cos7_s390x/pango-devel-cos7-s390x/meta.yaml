@@ -1,0 +1,28 @@
+package:
+  name: pango-devel-cos7-s390x
+  version: 1.42.4
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/pango-devel-1.42.4-4.el7_7.s390x.rpm
+    sha256: ea916b82a4f6337acbc06f86aa98a867e2fe954b9dc01f99de9e231a13b7f4f2
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/pango-1.42.4-4.el7_7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.pango.org
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) Development files for pango"
+  description: |
+        The pango-devel package includes the header files and developer documentation
+        for the pango package.

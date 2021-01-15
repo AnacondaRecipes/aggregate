@@ -1,0 +1,31 @@
+package:
+  name: cairo-cos7-s390x
+  version: 1.15.12
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/cairo-1.15.12-4.el7.s390x.rpm
+    sha256: 27797e67b68d8195b8f80ce5519b111540a6847453cb681742f0192906ad79e8
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/cairo-1.15.12-4.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://cairographics.org
+  license: LGPLv2 or MPLv1.1
+  license_family: LGPL
+  summary: "(CDT) A 2D graphics library"
+  description: |
+        Cairo is a 2D graphics library designed to provide high-quality display and
+        print output. Currently supported output targets include the X Window System,
+        in-memory image buffers, and image files (PDF, PostScript, and SVG).  Cairo is
+        designed to produce consistent output on all output media while taking
+        advantage of display hardware acceleration when available.

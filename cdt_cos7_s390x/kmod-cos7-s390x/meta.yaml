@@ -1,0 +1,30 @@
+package:
+  name: kmod-cos7-s390x
+  version: 20
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/kmod-20-28.el7.s390x.rpm
+    sha256: 9a24cb5895e6da98ff1685ec70b5e6fa3d83bba9a5c7eda405cf9dd6a6f40e2c
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/kmod-20-28.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://git.kernel.org/?p=utils/kernel/kmod/kmod.git;a=summary
+  license: GPL (>= 2)
+  license_family: GPL3
+  summary: "(CDT) Linux kernel module management utilities"
+  description: |
+        The kmod package provides various programs needed for automatic loading and
+        unloading of modules under 2.6, 3.x, and later kernels, as well as other
+        module management programs. Device drivers and filesystems are two examples of
+        loaded and unloaded modules.

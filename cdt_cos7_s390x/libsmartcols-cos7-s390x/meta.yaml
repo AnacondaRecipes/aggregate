@@ -1,0 +1,27 @@
+package:
+  name: libsmartcols-cos7-s390x
+  version: 2.23.2
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libsmartcols-2.23.2-63.el7.s390x.rpm
+    sha256: 982a0d45f63fde7e1523f4211b3bc307901ae87ddc7bb4e0d3f6601d2b3be066
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/util-linux-2.23.2-63.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://en.wikipedia.org/wiki/Util-linux
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) Formatting library for ls-like programs."
+  description: |
+        This is library for ls-like terminal programs, part of util-linux.

@@ -1,0 +1,27 @@
+package:
+  name: centos-release-cos7-s390x
+  version: 7
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/centos-release-7-8.2003.0.el7.centos.s390x.rpm
+    sha256: 5cea208a29c99955d2f481f0d670995cdf5c1ffd1dd3cd33af1c2357a29a3a7b
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/centos-release-7-8.2003.0.el7.centos.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: 
+  license: GPLv2
+  license_family: GPL2
+  summary: "(CDT) CentOS Linux release file"
+  description: |
+        CentOS Linux release files

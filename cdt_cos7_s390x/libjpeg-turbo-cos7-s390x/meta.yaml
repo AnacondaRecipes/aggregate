@@ -1,0 +1,28 @@
+package:
+  name: libjpeg-turbo-cos7-s390x
+  version: 1.2.90
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libjpeg-turbo-1.2.90-8.el7.s390x.rpm
+    sha256: 5731ef3ac0fa3b8a712fb00872f87ebd941fb3a056e060209f3454938210c98d
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libjpeg-turbo-1.2.90-8.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://sourceforge.net/projects/libjpeg-turbo
+  license: IJG
+  license_family: Other
+  summary: "(CDT) A MMX/SSE2 accelerated library for manipulating JPEG image files"
+  description: |
+        The libjpeg-turbo package contains a library of functions for manipulating
+        JPEG images.

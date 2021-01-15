@@ -1,0 +1,37 @@
+package:
+  name: libselinux-cos7-s390x
+  version: 2.5
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libselinux-2.5-15.el7.s390x.rpm
+    sha256: f65fd4f5bc19c002d0edb39a801b4943bdcd81aa1b0ed142360a42c103d0ebf5
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libselinux-2.5-15.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: https://github.com/SELinuxProject/selinux/wiki
+  license: Public-Domain
+  license_family: Public-Domain
+  summary: "(CDT) SELinux library and simple utilities"
+  description: |
+        Security-enhanced Linux is a feature of the Linux® kernel and a number of
+        utilities with enhanced security functionality designed to add mandatory
+        access controls to Linux.  The Security-enhanced Linux kernel contains new
+        architectural components originally developed to improve the security of the
+        Flask operating system. These architectural components provide general support
+        for the enforcement of many kinds of mandatory access control policies,
+        including those based on the concepts of Type Enforcement®, Role-based Access
+        Control, and Multi-level Security.  libselinux provides an API for SELinux
+        applications to get and set process and file security contexts and to obtain
+        security policy decisions.  Required for any applications that use the SELinux
+        API.

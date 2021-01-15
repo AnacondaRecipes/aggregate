@@ -1,0 +1,47 @@
+package:
+  name: pam-cos7-s390x
+  version: 1.1.8
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/pam-1.1.8-23.el7.s390x.rpm
+    sha256: 22afe0e0c6a6d28c7ca6084e9fd520b0168d072afa047a5aae7edb2b2e8f2036
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/pam-1.1.8-23.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - audit-libs-cos7-s390x >=1.0.8
+    - cracklib-dicts-cos7-s390x >=2.8
+    - glibc-cos7-s390x >=2.3.90
+    - libpwquality-cos7-s390x >=0.9.9
+    - libselinux-cos7-s390x >=1.33.2
+  host:
+    - audit-libs-cos7-s390x >=1.0.8
+    - cracklib-dicts-cos7-s390x >=2.8
+    - glibc-cos7-s390x >=2.3.90
+    - libpwquality-cos7-s390x >=0.9.9
+    - libselinux-cos7-s390x >=1.33.2
+  run:
+    - audit-libs-cos7-s390x >=1.0.8
+    - cracklib-dicts-cos7-s390x >=2.8
+    - glibc-cos7-s390x >=2.3.90
+    - libpwquality-cos7-s390x >=0.9.9
+    - libselinux-cos7-s390x >=1.33.2
+
+about:
+  home: http://www.linux-pam.org/
+  license: BSD and GPLv2+
+  license_family: GPL2
+  summary: "(CDT) An extensible library which provides authentication for applications"
+  description: |
+        PAM (Pluggable Authentication Modules) is a system security tool that allows
+        system administrators to set authentication policy without having to recompile
+        programs that handle authentication.

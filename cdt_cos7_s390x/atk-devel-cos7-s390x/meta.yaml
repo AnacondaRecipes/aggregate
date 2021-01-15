@@ -1,0 +1,28 @@
+package:
+  name: atk-devel-cos7-s390x
+  version: 2.28.1
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/atk-devel-2.28.1-2.el7.s390x.rpm
+    sha256: 026843b0b056df7311df296adfe3723f9864743b2ebb9d91de33a68d53f80d14
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/atk-2.28.1-2.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://developer.gnome.org/platform-overview/stable/atk
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) Development files for the ATK accessibility toolkit"
+  description: |
+        This package includes libraries, header files, and developer documentation
+        needed for development of applications or toolkits which use ATK.

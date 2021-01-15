@@ -1,0 +1,39 @@
+package:
+  name: java-1.7.0-openjdk-devel-cos7-s390x
+  version: 1.7.0.251
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/java-1.7.0-openjdk-devel-1.7.0.251-2.6.21.1.el7.s390x.rpm
+    sha256: fb5828b0d8e563de788bca391751081bcfa69ad69ac97cadfe9776c0dd100f00
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/java-1.7.0-openjdk-1.7.0.251-2.6.21.1.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - chkconfig-cos7-s390x >=1.7
+    - chkconfig-cos7-s390x >=1.7
+    - java-1.7.0-openjdk-cos7-s390x ==1.7.0.251
+  host:
+    - chkconfig-cos7-s390x >=1.7
+    - chkconfig-cos7-s390x >=1.7
+    - java-1.7.0-openjdk-cos7-s390x ==1.7.0.251
+  run:
+    - chkconfig-cos7-s390x >=1.7
+    - chkconfig-cos7-s390x >=1.7
+    - java-1.7.0-openjdk-cos7-s390x ==1.7.0.251
+
+about:
+  home: http://openjdk.java.net/
+  license: ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv1.1 and MPLv2.0 and Public Domain and W3C and zlib
+  license_family: GPL2
+  summary: "(CDT) OpenJDK Development Environment"
+  description: |
+        The OpenJDK development tools.

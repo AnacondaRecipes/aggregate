@@ -1,0 +1,36 @@
+package:
+  name: libmount-cos7-s390x
+  version: 2.23.2
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libmount-2.23.2-63.el7.s390x.rpm
+    sha256: 87c51498faea51c3d9fe02f9e5bd69b556d17aaf9c486307a4d3c1ce5a2fa023
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/util-linux-2.23.2-63.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libblkid-cos7-s390x ==2.23.2
+    - libuuid-cos7-s390x ==2.23.2
+  host:
+    - libblkid-cos7-s390x ==2.23.2
+    - libuuid-cos7-s390x ==2.23.2
+  run:
+    - libblkid-cos7-s390x ==2.23.2
+    - libuuid-cos7-s390x ==2.23.2
+
+about:
+  home: http://en.wikipedia.org/wiki/Util-linux
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) Device mounting library"
+  description: |
+        This is the device mounting library, part of util-linux.

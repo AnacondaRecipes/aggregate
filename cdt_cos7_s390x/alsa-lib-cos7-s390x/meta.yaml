@@ -1,0 +1,31 @@
+package:
+  name: alsa-lib-cos7-s390x
+  version: 1.1.8
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/alsa-lib-1.1.8-1.el7.s390x.rpm
+    sha256: 8c24899b2058bd10224138426bea8e4003a31a17becf41cbf9f146dc514b0a57
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/alsa-lib-1.1.8-1.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.alsa-project.org/
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) The Advanced Linux Sound Architecture (ALSA) library"
+  description: |
+        The Advanced Linux Sound Architecture (ALSA) provides audio and MIDI
+        functionality to the Linux operating system.  This package includes the ALSA
+        runtime libraries to simplify application programming and provide higher level
+        functionality as well as support for the older OSS API, providing binary
+        compatibility for most OSS programs.

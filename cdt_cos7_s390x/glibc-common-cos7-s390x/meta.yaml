@@ -1,0 +1,37 @@
+package:
+  name: glibc-common-cos7-s390x
+  version: 2.17
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/glibc-common-2.17-307.el7.1.s390x.rpm
+    sha256: e6a3796bf72bd92f31d7aefe0096009bfa8ab592e143362c3c1b73c2129f7bb3
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/glibc-2.17-307.el7.1.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - glibc-cos7-s390x ==2.17
+    - tzdata-cos7-s390x >=2003a
+  host:
+    - glibc-cos7-s390x ==2.17
+    - tzdata-cos7-s390x >=2003a
+  run:
+    - glibc-cos7-s390x ==2.17
+    - tzdata-cos7-s390x >=2003a
+
+about:
+  home: http://www.gnu.org/software/glibc/
+  license: LGPLv2+ and LGPLv2+ with exceptions and GPLv2+
+  license_family: GPL2
+  summary: "(CDT) Common binaries and locale data for glibc"
+  description: |
+        The glibc-common package includes common binaries for the GNU libc libraries,
+        as well as national language (locale) support.

@@ -1,0 +1,35 @@
+package:
+  name: pciutils-cos7-s390x
+  version: 3.5.1
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/pciutils-3.5.1-3.el7.s390x.rpm
+    sha256: fd8ced597e89aea9ccfb8b2e786c859ef0021ceed48a8bb4bd47b5e49696ebce
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/pciutils-3.5.1-3.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - pciutils-libs-cos7-s390x ==3.5.1
+  host:
+    - pciutils-libs-cos7-s390x ==3.5.1
+  run:
+    - pciutils-libs-cos7-s390x ==3.5.1
+
+about:
+  home: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
+  license: GPL (>= 2)
+  license_family: GPL3
+  summary: "(CDT) PCI bus related utilities"
+  description: |
+        The pciutils package contains various utilities for inspecting and setting
+        devices connected to the PCI bus. The utilities provided require kernel
+        version 2.1.82 or newer (which support the /proc/bus/pci interface).

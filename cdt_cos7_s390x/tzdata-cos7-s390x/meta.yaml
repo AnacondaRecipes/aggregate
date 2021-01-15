@@ -1,0 +1,28 @@
+package:
+  name: tzdata-cos7-s390x
+  version: 2019c
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/noarch/tzdata-2019c-1.el7.noarch.rpm
+    sha256: 1b69267254a9ebfbef4a34bac268bb67291639d7635b271db047376ffe524e9d
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/tzdata-2019c-1.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: https://www.iana.org/time-zones
+  license: Public-Domain
+  license_family: Public-Domain
+  summary: "(CDT) Timezone data"
+  description: |
+        This package contains data files with rules for various timezones around the
+        world.

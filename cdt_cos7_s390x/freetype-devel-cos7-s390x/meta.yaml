@@ -1,0 +1,35 @@
+package:
+  name: freetype-devel-cos7-s390x
+  version: 2.8
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/freetype-devel-2.8-14.el7.s390x.rpm
+    sha256: 5ba50afef4d4a0e5ccb1608ac7ed15c595c927cd1193e1ec7b269aac45f77fca
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/freetype-2.8-14.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - freetype-cos7-s390x ==2.8
+  host:
+    - freetype-cos7-s390x ==2.8
+  run:
+    - freetype-cos7-s390x ==2.8
+
+about:
+  home: http://www.freetype.org
+  license: (FTL or GPLv2+) and BSD and MIT and Public Domain and zlib with acknowledgement
+  license_family: GPL2
+  summary: "(CDT) FreeType development libraries and header files"
+  description: |
+        The freetype-devel package includes the static libraries and header files for
+        the FreeType font rendering engine.  Install freetype-devel if you want to
+        develop programs which will use FreeType.

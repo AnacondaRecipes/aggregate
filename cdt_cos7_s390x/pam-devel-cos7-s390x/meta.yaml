@@ -1,0 +1,31 @@
+package:
+  name: pam-devel-cos7-s390x
+  version: 1.1.8
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/pam-devel-1.1.8-23.el7.s390x.rpm
+    sha256: e8dc1152b8a6c98b6e48032e4d31cfa061a6e13ef58bd27642912ef3af3f1ebf
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/pam-1.1.8-23.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.linux-pam.org/
+  license: BSD and GPLv2+
+  license_family: GPL2
+  summary: "(CDT) Files needed for developing PAM-aware applications and modules for PAM"
+  description: |
+        PAM (Pluggable Authentication Modules) is a system security tool that allows
+        system administrators to set authentication policy without having to recompile
+        programs that handle authentication. This package contains header files used
+        for building both PAM-aware applications and modules for use with the PAM
+        system.
