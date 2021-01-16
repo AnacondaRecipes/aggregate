@@ -1,0 +1,33 @@
+package:
+  name: libxrender-devel-cos7-s390x
+  version: 0.9.10
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libXrender-devel-0.9.10-1.el7.s390x.rpm
+    sha256: c4832b92ae00205ba88d4dec7a1a6e11c710b052ff8dc60fffa2a2e3d14f55c5
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libXrender-0.9.10-1.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libxrender-cos7-s390x ==0.9.10
+  host:
+    - libxrender-cos7-s390x ==0.9.10
+  run:
+    - libxrender-cos7-s390x ==0.9.10
+
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) X.Org X11 libXrender development package"
+  description: |
+        X.Org X11 libXrender development package

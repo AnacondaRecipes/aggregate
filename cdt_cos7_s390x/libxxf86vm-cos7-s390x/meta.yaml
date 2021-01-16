@@ -1,0 +1,33 @@
+package:
+  name: libxxf86vm-cos7-s390x
+  version: 1.1.4
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libXxf86vm-1.1.4-1.el7.s390x.rpm
+    sha256: 4c20465744d64e3092876795d68de185506a96760c9db5e495cb05419a03b5bb
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libXxf86vm-1.1.4-1.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libx11-cos7-s390x >=1.5.99.902
+  host:
+    - libx11-cos7-s390x >=1.5.99.902
+  run:
+    - libx11-cos7-s390x >=1.5.99.902
+
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) X.Org X11 libXxf86vm runtime library"
+  description: |
+        X.Org X11 libXxf86vm runtime library

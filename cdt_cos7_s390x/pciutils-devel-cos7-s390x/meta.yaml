@@ -1,0 +1,34 @@
+package:
+  name: pciutils-devel-cos7-s390x
+  version: 3.5.1
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/pciutils-devel-3.5.1-3.el7.s390x.rpm
+    sha256: 504e4344f0493a1854cd8f90e50b598e597f06d2bcec4caefa392c113da5a172
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/pciutils-3.5.1-3.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - pciutils-cos7-s390x ==3.5.1
+  host:
+    - pciutils-cos7-s390x ==3.5.1
+  run:
+    - pciutils-cos7-s390x ==3.5.1
+
+about:
+  home: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
+  license: GPL (>= 2)
+  license_family: GPL3
+  summary: "(CDT) Linux PCI development library"
+  description: |
+        This package contains a library for inspecting and setting devices connected
+        to the PCI bus.

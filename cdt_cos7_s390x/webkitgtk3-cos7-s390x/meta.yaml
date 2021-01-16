@@ -1,0 +1,28 @@
+package:
+  name: webkitgtk3-cos7-s390x
+  version: 2.4.11
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/webkitgtk3-2.4.11-2.el7.s390x.rpm
+    sha256: a0aed361568e9566dba8eb2061742fd6c597b16bd6469a77198a45c45f7cee23
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/webkitgtk3-2.4.11-2.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.webkitgtk.org
+  license: LGPLv2+ and BSD
+  license_family: LGPL
+  summary: "(CDT) GTK+ Web content engine library"
+  description: |
+        WebKitGTK+ is the port of the portable web rendering engine WebKit to the GTK+
+        platform.  This package contains WebKitGTK+ for GTK+ 3.

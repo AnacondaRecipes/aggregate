@@ -1,0 +1,36 @@
+package:
+  name: mesa-libgbm-cos7-s390x
+  version: 18.3.4
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/mesa-libgbm-18.3.4-7.el7.s390x.rpm
+    sha256: 0cf4e33598dac1a5d4e270d779eddab77f3f82573d5fcdded96bdcff3543a8b3
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/mesa-18.3.4-7.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libdrm-cos7-s390x >=2.4.83
+    - mesa-libglapi-cos7-s390x ==18.3.4
+  host:
+    - libdrm-cos7-s390x >=2.4.83
+    - mesa-libglapi-cos7-s390x ==18.3.4
+  run:
+    - libdrm-cos7-s390x >=2.4.83
+    - mesa-libglapi-cos7-s390x ==18.3.4
+
+about:
+  home: http://www.mesa3d.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Mesa gbm library"
+  description: |
+        Mesa gbm runtime library.

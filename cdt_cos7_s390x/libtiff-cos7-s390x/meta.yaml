@@ -1,0 +1,31 @@
+package:
+  name: libtiff-cos7-s390x
+  version: 4.0.3
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libtiff-4.0.3-32.el7.s390x.rpm
+    sha256: e0c9406d1b31d39accfe05ecec4faa872892f825fc66566b65c4547019ee5ed4
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libtiff-4.0.3-32.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.remotesensing.org/libtiff/
+  license: libtiff
+  license_family: Other
+  summary: "(CDT) Library of functions for manipulating TIFF format image files"
+  description: |
+        The libtiff package contains a library of functions for manipulating TIFF
+        (Tagged Image File Format) image format files.  TIFF is a widely used file
+        format for bitmapped images.  TIFF files usually end in the .tif extension and
+        they are often quite large.  The libtiff package should be installed if you
+        need to manipulate TIFF format image files.

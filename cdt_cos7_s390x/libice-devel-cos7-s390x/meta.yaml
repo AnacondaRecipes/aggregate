@@ -1,0 +1,27 @@
+package:
+  name: libice-devel-cos7-s390x
+  version: 1.0.9
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libICE-devel-1.0.9-9.el7.s390x.rpm
+    sha256: 6029844c23bea0b59a50c64472d76ef44624ec0f38853b95c80eb94bd56a0996
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libICE-1.0.9-9.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) X.Org X11 ICE development package"
+  description: |
+        The X.Org X11 ICE (Inter-Client Exchange) development package.

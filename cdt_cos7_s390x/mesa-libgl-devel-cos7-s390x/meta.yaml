@@ -1,0 +1,33 @@
+package:
+  name: mesa-libgl-devel-cos7-s390x
+  version: 18.3.4
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/mesa-libGL-devel-18.3.4-7.el7.s390x.rpm
+    sha256: f6c5cd8af6ad0b51285058816f4fc4a2ca55827600ffcdcc76b39bb0a924b127
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/mesa-18.3.4-7.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - mesa-libgl-cos7-s390x ==18.3.4
+  host:
+    - mesa-libgl-cos7-s390x ==18.3.4
+  run:
+    - mesa-libgl-cos7-s390x ==18.3.4
+
+about:
+  home: http://www.mesa3d.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Mesa libGL development package"
+  description: |
+        Mesa libGL development package

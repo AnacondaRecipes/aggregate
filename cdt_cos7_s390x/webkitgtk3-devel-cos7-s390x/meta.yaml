@@ -1,0 +1,28 @@
+package:
+  name: webkitgtk3-devel-cos7-s390x
+  version: 2.4.11
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/webkitgtk3-devel-2.4.11-2.el7.s390x.rpm
+    sha256: aa07926c111c89400ff07173fe87903561dacc3cac67f2eb9080c7dbc9ca6a27
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/webkitgtk3-2.4.11-2.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.webkitgtk.org
+  license: LGPLv2+ and BSD
+  license_family: LGPL
+  summary: "(CDT) Development files for webkitgtk3"
+  description: |
+        The webkitgtk3-devel package contains libraries, build data, and header files
+        for developing applications that use webkitgtk3.

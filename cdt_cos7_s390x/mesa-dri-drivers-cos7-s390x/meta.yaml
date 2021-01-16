@@ -1,0 +1,33 @@
+package:
+  name: mesa-dri-drivers-cos7-s390x
+  version: 18.3.4
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/mesa-dri-drivers-18.3.4-7.el7.s390x.rpm
+    sha256: ac355ac80684d0f9b686b42e1f61e233e5e06eff36e130b73be9504e0784d782
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/mesa-18.3.4-7.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libdrm-cos7-s390x >=2.4.83
+  host:
+    - libdrm-cos7-s390x >=2.4.83
+  run:
+    - libdrm-cos7-s390x >=2.4.83
+
+about:
+  home: http://www.mesa3d.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Mesa-based DRI drivers"
+  description: |
+        Mesa-based DRI drivers.

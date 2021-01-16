@@ -1,0 +1,33 @@
+package:
+  name: mesa-libegl-cos7-s390x
+  version: 18.3.4
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/mesa-libEGL-18.3.4-7.el7.s390x.rpm
+    sha256: d8858b325d26559dcd6a6900d8a223e7f4c06bf9b3713a9904c4792da39e9273
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/mesa-18.3.4-7.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - mesa-libgbm-cos7-s390x ==18.3.4
+  host:
+    - mesa-libgbm-cos7-s390x ==18.3.4
+  run:
+    - mesa-libgbm-cos7-s390x ==18.3.4
+
+about:
+  home: http://www.mesa3d.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Mesa libEGL runtime libraries"
+  description: |
+        Mesa libEGL runtime libraries

@@ -1,0 +1,28 @@
+package:
+  name: xorg-x11-server-utils-cos7-s390x
+  version: 7.7
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/xorg-x11-server-utils-7.7-20.el7.s390x.rpm
+    sha256: 88ed481cb621cd529902e5d2953c504ee916bcf6422aa5d010ee2d874a646576
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/xorg-x11-server-utils-7.7-20.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) X.Org X11 X server utilities"
+  description: |
+        A collection of utilities used to tweak and query the runtime configuration of
+        the X server.

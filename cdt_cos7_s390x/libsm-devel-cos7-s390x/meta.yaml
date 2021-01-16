@@ -1,0 +1,33 @@
+package:
+  name: libsm-devel-cos7-s390x
+  version: 1.2.2
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libSM-devel-1.2.2-2.el7.s390x.rpm
+    sha256: f678a004d82bd21fba0db947a132ab1a362db1e62fb8242e18d6306ffc026db2
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libSM-1.2.2-2.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libsm-cos7-s390x ==1.2.2
+  host:
+    - libsm-cos7-s390x ==1.2.2
+  run:
+    - libsm-cos7-s390x ==1.2.2
+
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) X.Org X11 SM development package"
+  description: |
+        The X.Org X11 SM (Session Management) development package.

@@ -1,0 +1,28 @@
+package:
+  name: gtkmm24-devel-cos7-s390x
+  version: 2.24.5
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/gtkmm24-devel-2.24.5-1.el7.s390x.rpm
+    sha256: b2514cd9d5f2025e757d6cb982be10a1ec7a09beabf37804538da48bfb0e2903
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/gtkmm24-2.24.5-1.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.gtkmm.org/
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) Headers for developing programs that will use gtkmm24."
+  description: |
+        This package contains the static libraries and header files needed for
+        developing gtkmm applications.

@@ -1,0 +1,33 @@
+package:
+  name: libxdamage-devel-cos7-s390x
+  version: 1.1.4
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libXdamage-devel-1.1.4-4.1.el7.s390x.rpm
+    sha256: b2e9e4054c463c56ccf953190b73137eb7029cf475273cc6d644b46a8d50ff6c
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libXdamage-1.1.4-4.1.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libxdamage-cos7-s390x ==1.1.4
+  host:
+    - libxdamage-cos7-s390x ==1.1.4
+  run:
+    - libxdamage-cos7-s390x ==1.1.4
+
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Development files for libXdamage"
+  description: |
+        X.Org X11 libXdamage development package.

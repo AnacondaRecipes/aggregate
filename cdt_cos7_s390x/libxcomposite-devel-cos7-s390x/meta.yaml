@@ -1,0 +1,33 @@
+package:
+  name: libxcomposite-devel-cos7-s390x
+  version: 0.4.4
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libXcomposite-devel-0.4.4-4.1.el7.s390x.rpm
+    sha256: 9a4e4e1f99d1d8cf937c846bebc92ca479b67dd1a0f531d2f4c2712438612217
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libXcomposite-0.4.4-4.1.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libxcomposite-cos7-s390x ==0.4.4
+  host:
+    - libxcomposite-cos7-s390x ==0.4.4
+  run:
+    - libxcomposite-cos7-s390x ==0.4.4
+
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Development files for libXcomposite"
+  description: |
+        X.Org X11 libXcomposite development package

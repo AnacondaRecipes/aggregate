@@ -1,0 +1,27 @@
+package:
+  name: libxscrnsaver-cos7-s390x
+  version: 1.2.2
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libXScrnSaver-1.2.2-6.1.el7.s390x.rpm
+    sha256: 64b76103ff72390cfa34ef2f2be88e76e44e4ff1cf7ec553cdc4798e1083c472
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libXScrnSaver-1.2.2-6.1.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) X.Org X11 libXss runtime library"
+  description: |
+        X.Org X11 libXss runtime library

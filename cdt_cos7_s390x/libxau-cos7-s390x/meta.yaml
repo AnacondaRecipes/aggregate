@@ -1,0 +1,31 @@
+package:
+  name: libxau-cos7-s390x
+  version: 1.0.8
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libXau-1.0.8-2.1.el7.s390x.rpm
+    sha256: 4ef5a36406cfb0f5d67a857f88ca3d23802118cb834af9a28e8dcea24bd56bc2
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libXau-1.0.8-2.1.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Sample Authorization Protocol for X"
+  description: |
+        This is a very simple mechanism for providing individual access to an X Window
+        System display.It uses existing core protocol and library hooks for specifying
+        authorization data in the connection setup block to restrict use of the
+        display to only those clients that show that they know a server-specific key
+        called a "magic cookie".

@@ -1,0 +1,28 @@
+package:
+  name: libsoup-devel-cos7-s390x
+  version: 2.62.2
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libsoup-devel-2.62.2-2.el7.s390x.rpm
+    sha256: 4192d1101a40f95fc0648e1f714b44d555652dd68e7ce25e4bd55dacda7d8e95
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libsoup-2.62.2-2.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: https://wiki.gnome.org/Projects/libsoup
+  license: LGPLv2
+  license_family: LGPL
+  summary: "(CDT) Header files for the Soup library"
+  description: |
+        Libsoup is an HTTP library implementation in C. This package allows you to
+        develop applications that use the libsoup library.

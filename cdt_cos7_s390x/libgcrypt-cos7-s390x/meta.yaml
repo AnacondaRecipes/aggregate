@@ -1,0 +1,28 @@
+package:
+  name: libgcrypt-cos7-s390x
+  version: 1.5.3
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libgcrypt-1.5.3-14.el7.s390x.rpm
+    sha256: 4ccb480b169a46d2743e1fae14dd981fb5369bb95e67b4487cda11e6d9038d3b
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libgcrypt-1.5.3-14.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.gnupg.org/
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) A general-purpose cryptography library"
+  description: |
+        Libgcrypt is a general purpose crypto library based on the code used in GNU
+        Privacy Guard.  This is a development version.

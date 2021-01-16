@@ -1,0 +1,33 @@
+package:
+  name: libxrandr-devel-cos7-s390x
+  version: 1.5.1
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libXrandr-devel-1.5.1-2.el7.s390x.rpm
+    sha256: ce5877b39b9f79b05545e658d1b6a6af63adc95f84de231b5c6fa2b388f7d757
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libXrandr-1.5.1-2.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libxrandr-cos7-s390x ==1.5.1
+  host:
+    - libxrandr-cos7-s390x ==1.5.1
+  run:
+    - libxrandr-cos7-s390x ==1.5.1
+
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) X.Org X11 libXrandr development package"
+  description: |
+        X.Org X11 libXrandr development package

@@ -1,0 +1,33 @@
+package:
+  name: libxfixes-devel-cos7-s390x
+  version: 5.0.3
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libXfixes-devel-5.0.3-1.el7.s390x.rpm
+    sha256: dc78d4db4b7cccaf12a6eb2f7bf994d77631eded7a2bebb8f71fe1206befa6c2
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libXfixes-5.0.3-1.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - libxfixes-cos7-s390x ==5.0.3
+  host:
+    - libxfixes-cos7-s390x ==5.0.3
+  run:
+    - libxfixes-cos7-s390x ==5.0.3
+
+about:
+  home: http://www.x.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Development files for libXfixes"
+  description: |
+        libXfixes development package

@@ -1,0 +1,29 @@
+package:
+  name: libxcb-cos7-s390x
+  version: 1.13
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libxcb-1.13-1.el7.s390x.rpm
+    sha256: 2ffdf776501bef4e2bfa3dd21adb721e78aaff98719c830cfd199105f491be83
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libxcb-1.13-1.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: https://xcb.freedesktop.org/
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) A C binding to the X11 protocol"
+  description: |
+        The X protocol C-language Binding (XCB) is a replacement for Xlib featuring a
+        small footprint, latency hiding, direct access to the protocol, improved
+        threading support, and extensibility.

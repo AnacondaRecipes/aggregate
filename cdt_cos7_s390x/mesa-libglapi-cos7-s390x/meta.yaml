@@ -1,0 +1,27 @@
+package:
+  name: mesa-libglapi-cos7-s390x
+  version: 18.3.4
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/mesa-libglapi-18.3.4-7.el7.s390x.rpm
+    sha256: 8101b4e14d5a1e6e1fe2c073c62b9a2f24f1e51913224ccbce989a8fad866e58
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/mesa-18.3.4-7.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.mesa3d.org
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Mesa shared glapi"
+  description: |
+        Mesa shared glapi

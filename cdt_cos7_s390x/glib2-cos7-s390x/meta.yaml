@@ -1,0 +1,30 @@
+package:
+  name: glib2-cos7-s390x
+  version: 2.56.1
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/glib2-2.56.1-5.el7.s390x.rpm
+    sha256: c319a0cb0935314ce37e94a0bf9e92c38c14f3febd23c36dfec7926034d1bd87
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/glib2-2.56.1-5.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.gtk.org
+  license: LGPL (>= 2)
+  license_family: LGPL
+  summary: "(CDT) A library of handy utility functions"
+  description: |
+        GLib is the low-level core library that forms the basis for projects such as
+        GTK+ and GNOME. It provides data structure handling for C, portability
+        wrappers, and interfaces for such runtime functionality as an event loop,
+        threads, dynamic loading, and an object system.

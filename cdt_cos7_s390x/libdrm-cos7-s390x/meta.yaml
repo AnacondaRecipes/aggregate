@@ -1,0 +1,27 @@
+package:
+  name: libdrm-cos7-s390x
+  version: 2.4.97
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/libdrm-2.4.97-2.el7.s390x.rpm
+    sha256: 709f54b5cb6f59b04c79454c6970583185646d6983e29025d8229b049602cdda
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/libdrm-2.4.97-2.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://dri.sourceforge.net
+  license: MIT
+  license_family: MIT
+  summary: "(CDT) Direct Rendering Manager runtime library"
+  description: |
+        Direct Rendering Manager runtime library
