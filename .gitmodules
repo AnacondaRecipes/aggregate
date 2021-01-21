@@ -5202,3 +5202,7 @@
 [submodule "cupy-feedstock"]
 	path = cupy-feedstock
 	url = ../cupy-feedstock
+[submodule "libdeflate-feedstock"]
+	path = libdeflate-feedstock
+	url = ../libdeflate-feedstock
+	branch = master
