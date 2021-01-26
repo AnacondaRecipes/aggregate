@@ -5205,4 +5205,7 @@
 [submodule "libdeflate-feedstock"]
 	path = libdeflate-feedstock
 	url = ../libdeflate-feedstock
+[submodule "altgraph-feedstock"]
+	path = altgraph-feedstock
+	url = ../altgraph-feedstock
 	branch = master
