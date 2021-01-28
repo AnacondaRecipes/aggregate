@@ -20,7 +20,8 @@ requirements:
 test:
   commands:
     - test -e $PREFIX/include/utf8proc.h  # [unix]
-    - test -e $PREFIX/lib/libutf8proc.a   # [unix]
+    # no static version
+    # - test -e $PREFIX/lib/libutf8proc.a   # [unix]
     - test -e $PREFIX/lib/libutf8proc${SHLIB_EXT}  # [unix]
     - if not exist %LIBRARY_INC%\utf8proc.h exit 1 # [win]
     - if not exist %LIBRARY_LIB%\utf8proc.lib exit 1 # [win]
