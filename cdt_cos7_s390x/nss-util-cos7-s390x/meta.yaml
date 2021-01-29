@@ -1,0 +1,33 @@
+package:
+  name: nss-util-cos7-s390x
+  version: 3.44.0
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/nss-util-3.44.0-4.el7_7.s390x.rpm
+    sha256: 505dd9187d8176eac593dc8efa5218172a3141a7a21196bfc2e17e4a3f975157
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/nss-util-3.44.0-4.el7_7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - nspr-cos7-s390x >=4.21.0
+  host:
+    - nspr-cos7-s390x >=4.21.0
+  run:
+    - nspr-cos7-s390x >=4.21.0
+
+about:
+  home: http://www.mozilla.org/projects/security/pki/nss/
+  license: MPLv2.0
+  license_family: Other
+  summary: "(CDT) Network Security Services Utilities Library"
+  description: |
+        Utilities for Network Security Services and the Softoken module

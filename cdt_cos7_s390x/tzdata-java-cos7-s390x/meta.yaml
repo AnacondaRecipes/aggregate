@@ -1,0 +1,27 @@
+package:
+  name: tzdata-java-cos7-s390x
+  version: 2019c
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/noarch/tzdata-java-2019c-1.el7.noarch.rpm
+    sha256: 0002606df5728f0206da1d1407e662ea8268619152c6f7a823b8e39f9e1e90fc
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/tzdata-2019c-1.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: https://www.iana.org/time-zones
+  license: Public-Domain
+  license_family: Public-Domain
+  summary: "(CDT) Timezone data for Java"
+  description: |
+        This package contains timezone information for use by Java runtimes.

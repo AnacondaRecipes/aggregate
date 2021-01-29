@@ -1,0 +1,37 @@
+package:
+  name: nss-softokn-freebl-cos7-s390x
+  version: 3.44.0
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/nss-softokn-freebl-3.44.0-8.el7_7.s390x.rpm
+    sha256: 8c88f6be69f0d88ac91a577cfb507c879446d3950a19843927082bf0d660accf
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/nss-softokn-3.44.0-8.el7_7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - nspr-cos7-s390x >=4.21.0
+    - nss-util-cos7-s390x >=3.44.0
+  host:
+    - nspr-cos7-s390x >=4.21.0
+    - nss-util-cos7-s390x >=3.44.0
+  run:
+    - nspr-cos7-s390x >=4.21.0
+    - nss-util-cos7-s390x >=3.44.0
+
+about:
+  home: http://www.mozilla.org/projects/security/pki/nss/
+  license: MPLv2.0
+  license_family: Other
+  summary: "(CDT) Freebl library for the Network Security Services"
+  description: |
+        NSS Softoken Cryptographic Module Freebl Library  Install the nss-softokn-
+        freebl package if you need the freebl library.

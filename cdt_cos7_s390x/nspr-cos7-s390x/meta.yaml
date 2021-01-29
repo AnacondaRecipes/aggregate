@@ -1,0 +1,30 @@
+package:
+  name: nspr-cos7-s390x
+  version: 4.21.0
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/s390x/nspr-4.21.0-1.el7.s390x.rpm
+    sha256: 603833ac969d0aed5aa94c969c552dbca565d782356e6af0767bb686089b6219
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/nspr-4.21.0-1.el7.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: http://www.mozilla.org/projects/nspr/
+  license: MPLv2.0
+  license_family: Other
+  summary: "(CDT) Netscape Portable Runtime"
+  description: |
+        NSPR provides platform independence for non-GUI operating system facilities.
+        These facilities include threads, thread synchronization, normal file and
+        network I/O, interval timing and calendar time, basic memory management
+        (malloc and free) and shared library linking.

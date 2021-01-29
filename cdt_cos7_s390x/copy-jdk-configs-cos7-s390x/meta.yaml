@@ -1,0 +1,28 @@
+package:
+  name: copy-jdk-configs-cos7-s390x
+  version: 3.3
+
+source:
+  - url: http://download.sinenomine.net/clefos/7/os/noarch/copy-jdk-configs-3.3-10.el7_5.noarch.rpm
+    sha256: 21a07db923108cc57a7a0e9b2a60626a65ccef0adf964b9e3b28f5dc7731ff88
+    no_hoist: true
+    folder: binary
+  - url: http://download.sinenomine.net/clefos/7/source/srpms/copy-jdk-configs-3.3-10.el7_5.src.rpm
+    folder: source
+
+build:
+  number: 2
+  noarch: generic
+  missing_dso_whitelist:
+    - '*'
+
+
+
+about:
+  home: https://pagure.io/copy_jdk_configs
+  license: BSD
+  license_family: BSD
+  summary: "(CDT) JDKs configuration files copier"
+  description: |
+        Utility script to transfer JDKs configuration files between updates or for
+        archiving. With script to fix incorrectly created rpmnew files
