@@ -186,7 +186,7 @@ proj:
 libprotobuf:
   - 3.11.2
 python:
-  - 3.6
+  - 3.6  # [not s390x]
   - 3.7
   - 3.8
 r_version:
