@@ -36,8 +36,10 @@ fortran_compiler_version:
   - 2019.0.0                     # [win]
   - 2019.0.0                     # [win]
 # matrix on linux, because the ABI breaks at GCC 8
-  - 7.3.0                      # [linux]
-  - 8.2.0                      # [linux]
+  - 7.3.0                      # [linux and not s390x]
+  - 8.2.0                      # [linux and not s390x]
+  - 7.5.0                      # [linux and s390x]
+  - 8.4.0                      # [linux and s390x]
 m2w64_c_compiler:              # [win]
   - m2w64-toolchain            # [win]
 m2w64_cxx_compiler:            # [win]
@@ -59,13 +61,16 @@ VERBOSE_CM:
 cran_mirror:
   - https://mran.microsoft.com/snapshot/2018-01-01
 c_compiler_version:        # [linux or osx]
-  - 7.3.0                  # [linux]
+  - 7.3.0                  # [linux and not s390x]
+  - 7.5.0                  # [linux and s390x]
   - 10                     # [osx]
 cxx_compiler_version:      # [linux or osx]
-  - 7.3.0                  # [linux]
+  - 7.3.0                  # [linux and not s390x]
+  - 7.5.0                  # [linux and s390x]
   - 10                     # [osx]
 fortran_compiler_version:  # [linux]
-  - 7.3.0                  # [linux]
+  - 7.3.0                  # [linux and not s390x]
+  - 7.5.0                  # [linux and s390x]
 clang_variant:
   - clang
 cyrus_sasl:
@@ -109,7 +114,8 @@ hdfeos2:
 hdfeos5:
   - 5.1
 icu:
-  - 58
+  - 58  # [not s390x]
+  - 68  # [s390x]
 jpeg:
   - 9
 libdap4:
@@ -179,7 +185,7 @@ proj:
 libprotobuf:
   - 3.11.2
 python:
-  - 3.6
+  - 3.6      # [not s390x]
   - 3.7
   - 3.8
   - 3.9
