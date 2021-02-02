@@ -168,7 +168,8 @@ numpy_version:
 numpy_sha:
   - b6ff59cee96b454516e47e7721098e6ceebef435e3e21ac2d6c3b8b02628eb77
 openblas:
-  - 0.3.3
+  - 0.3.3   # [not s390x]
+  - 0.3.10  # [s390x]
 openjpeg:
   - 2.3
 openssl:
