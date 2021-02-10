@@ -5216,3 +5216,6 @@
 [submodule "sniffio-feedstock"]
 	path = sniffio-feedstock
 	url = ../sniffio-feedstock
+[submodule "coremltools-feedstock"]
+	path = coremltools-feedstock
+	url = ../coremltools-feedstock
