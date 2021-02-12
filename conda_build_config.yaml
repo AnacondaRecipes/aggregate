@@ -139,7 +139,8 @@ libpng:
 libtiff:
   - 4.1
 libwebp:
-  - 1.0.0
+  - 1.0.0   # [not s390x]
+  - 1.2.0   # [s390x]
 libxml2:
   - 2.9
 libxslt:
@@ -178,7 +179,8 @@ openssl:
 perl:
   - 5.26
 pixman:
-  - 0.34
+  - 0.30      # [not s390x]
+  - 0.40      # [s390x]
 proj4:
   - 5.2.0
 proj:
