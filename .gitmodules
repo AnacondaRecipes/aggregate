@@ -5219,3 +5219,6 @@
 [submodule "coremltools-feedstock"]
 	path = coremltools-feedstock
 	url = ../coremltools-feedstock
+[submodule "blist-feedstock"]
+	path = blist-feedstock
+	url = ../blist-feedstock
