@@ -11,14 +11,15 @@ source:
 
 build:
   number: 1
-  script: python setup.py install --old-and-unmanageable
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   skip: True  # [not win]
 
 requirements:
+  build:
+    - {{ compiler('c') }}
   host:
     - python
     - setuptools
-
   run:
     - python
 
