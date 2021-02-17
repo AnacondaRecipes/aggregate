@@ -5222,3 +5222,6 @@
 [submodule "blist-feedstock"]
 	path = blist-feedstock
 	url = ../blist-feedstock
+[submodule "arviz-feedstock"]
+	path = arviz-feedstock
+	url = ../arviz-feedstock
