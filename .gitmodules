@@ -5225,3 +5225,7 @@
 [submodule "arviz-feedstock"]
 	path = arviz-feedstock
 	url = ../arviz-feedstock
+[submodule "performance-feedstock"]
+	path = performance-feedstock
+	url = ../performance-feedstock
+	branch = master
