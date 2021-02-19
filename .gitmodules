@@ -5229,3 +5229,7 @@
 	path = performance-feedstock
 	url = ../performance-feedstock
 	branch = master
+[submodule "flask-restful-feedstock"]
+	path = flask-restful-feedstock
+	url = ../flask-restful-feedstock
+	branch = master
