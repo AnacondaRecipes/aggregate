@@ -5237,3 +5237,7 @@
 	path = jansson-feedstock
 	url = ../jansson-feedstock
 	branch = master
+[submodule "uwsgi-feedstock"]
+	path = uwsgi-feedstock
+	url = ../uwsgi-feedstock
+	branch = master
