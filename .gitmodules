@@ -5233,3 +5233,7 @@
 	path = flask-restful-feedstock
 	url = ../flask-restful-feedstock
 	branch = master
+[submodule "jansson-feedstock"]
+	path = jansson-feedstock
+	url = ../jansson-feedstock
+	branch = master
