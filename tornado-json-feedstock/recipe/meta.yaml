@@ -10,7 +10,7 @@ source:
   sha256: 295898576b83d48bd049f5457ed265d4b8a05f5ec05a9df442d54b9229b1a7e0
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
 
 requirements:
@@ -19,7 +19,7 @@ requirements:
     - pip
   run:
     - python
-    - jsonschema >=2.3.0,<3.0
+    - jsonschema >=2.3.0
     - tornado >=3.2.2,<6.0
 
 test:
