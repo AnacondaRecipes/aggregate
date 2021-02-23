@@ -5244,3 +5244,7 @@
 [submodule "dataclasses-feedstock"]
 	path = dataclasses-feedstock
 	url = ../dataclasses-feedstock
+[submodule "python3-openid-feedstock"]
+	path = python3-openid-feedstock
+	url = ../python3-openid-feedstock
+	branch = master
