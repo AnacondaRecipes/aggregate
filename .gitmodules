@@ -5248,3 +5248,6 @@
 	path = python3-openid-feedstock
 	url = ../python3-openid-feedstock
 	branch = master
+[submodule "grpcio-tools-feedstock"]
+	path = grpcio-tools-feedstock
+	url = ../grpcio-tools-feedstock
