@@ -5241,3 +5241,6 @@
 	path = uwsgi-feedstock
 	url = ../uwsgi-feedstock
 	branch = master
+[submodule "dataclasses-feedstock"]
+	path = dataclasses-feedstock
+	url = ../dataclasses-feedstock
