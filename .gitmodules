@@ -5251,3 +5251,6 @@
 [submodule "grpcio-tools-feedstock"]
 	path = grpcio-tools-feedstock
 	url = ../grpcio-tools-feedstock
+[submodule "echo-feedstock"]
+	path = echo-feedstock
+	url = ../echo-feedstock
