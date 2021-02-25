@@ -186,7 +186,8 @@ proj4:
 proj:
   - 6.2.1
 libprotobuf:
-  - 3.11.2
+  - 3.11.2    # [not s390x]
+  - 3.14.0    # [s390x]
 python:
   - 3.6  # [not s390x]
   - 3.7
