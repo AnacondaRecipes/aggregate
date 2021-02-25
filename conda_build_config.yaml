@@ -15,7 +15,8 @@ boost_cpp:
 bzip2:
   - 1.0
 cairo:
-  - 1.14
+  - 1.14                       # [not s390x]
+  - 1.16                       # [s390x]
 c_compiler:
   - clang                      # [osx]
   - vs2017                     # [win]
