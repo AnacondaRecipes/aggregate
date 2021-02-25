@@ -5254,3 +5254,7 @@
 [submodule "echo-feedstock"]
 	path = echo-feedstock
 	url = ../echo-feedstock
+[submodule "pytorch-feedstock"]
+	path = pytorch-feedstock
+	url = ../pytorch-feedstock
+	branch = master
