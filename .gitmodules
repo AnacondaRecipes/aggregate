@@ -5258,3 +5258,7 @@
 	path = pytorch-feedstock
 	url = ../pytorch-feedstock
 	branch = master
+[submodule "python-flatbuffers-feedstock"]
+	path = python-flatbuffers-feedstock
+	url = ../python-flatbuffers-feedstock
+	branch = master
