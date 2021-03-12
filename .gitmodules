@@ -5182,7 +5182,7 @@
 [submodule "linux-sysroot-feedstock"]
 	path = linux-sysroot-feedstock
 	url = ../linux-sysroot-feedstock
-	branch = master
+	branch = bootstrapping-10.2
 [submodule "crosstool-ng-feedstock"]
 	path = crosstool-ng-feedstock
 	url = ../crosstool-ng-feedstock
@@ -5266,3 +5266,9 @@
 	path = stone-feedstock
 	url = ../stone-feedstock
 	branch = master
+[submodule "fancycompleter-feedstock"]
+	path = fancycompleter-feedstock
+	url = git@github.com:conda-forge/fancycompleter-feedstock.git
+[submodule "setupmeta-feedstock"]
+	path = setupmeta-feedstock
+	url = git@github.com:conda-forge/setupmeta-feedstock.git
