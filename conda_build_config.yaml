@@ -1,4 +1,6 @@
 bootstrapping: no
+cdt_name:
+  - amzn2
 pin_run_as_build:
   libboost:
     max_pin: x.x.x
