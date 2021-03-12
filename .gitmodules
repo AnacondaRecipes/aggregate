@@ -5268,4 +5268,5 @@
 	branch = master
 [submodule "cdt_amzn2_aarch64"]
 	path = cdt_amzn2_aarch64
-	url = ./cdt_amzn2_aarch64/
+	url = git@github.com:AnacondaRecipes/cdt_amzn2_aarch64
+	branch = master
