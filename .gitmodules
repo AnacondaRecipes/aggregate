@@ -5266,3 +5266,6 @@
 	path = stone-feedstock
 	url = ../stone-feedstock
 	branch = master
+[submodule "cdt_amzn2_aarch64"]
+	path = cdt_amzn2_aarch64
+	url = ./cdt_amzn2_aarch64/
