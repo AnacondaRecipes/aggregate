@@ -4348,7 +4348,7 @@
 	url = ../clang-win-activation-feedstock
 	branch = master
 [submodule "autoconf-archive-feedstock"]
-	path = autoconf-archive-feedstock
+	path = autoconf-archive-feedstock.embedded
 	url = ../autoconf-archive-feedstock
 	branch = master
 [submodule "openmp-feedstock"]
