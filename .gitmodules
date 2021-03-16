@@ -5251,3 +5251,22 @@
 [submodule "grpcio-tools-feedstock"]
 	path = grpcio-tools-feedstock
 	url = ../grpcio-tools-feedstock
+[submodule "echo-feedstock"]
+	path = echo-feedstock
+	url = ../echo-feedstock
+[submodule "pytorch-feedstock"]
+	path = pytorch-feedstock
+	url = ../pytorch-feedstock
+	branch = master
+[submodule "python-flatbuffers-feedstock"]
+	path = python-flatbuffers-feedstock
+	url = ../python-flatbuffers-feedstock
+	branch = master
+[submodule "stone-feedstock"]
+	path = stone-feedstock
+	url = ../stone-feedstock
+	branch = master
+[submodule "cdt_amzn2_aarch64"]
+	path = cdt_amzn2_aarch64
+	url = git@github.com:AnacondaRecipes/cdt_amzn2_aarch64
+	branch = master
