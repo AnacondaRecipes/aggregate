@@ -5262,3 +5262,7 @@
 	path = python-flatbuffers-feedstock
 	url = ../python-flatbuffers-feedstock
 	branch = master
+[submodule "nbclassic-feedstock"]
+	path = nbclassic-feedstock
+	url = ../nbclassic-feedstock
+	branch = master
