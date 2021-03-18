@@ -5265,4 +5265,11 @@
 [submodule "nbclassic-feedstock"]
 	path = nbclassic-feedstock
 	url = ../nbclassic-feedstock
+[submodule "stone-feedstock"]
+	path = stone-feedstock
+	url = ../stone-feedstock
+	branch = master
+[submodule "cdt_amzn2_aarch64"]
+	path = cdt_amzn2_aarch64
+	url = git@github.com:AnacondaRecipes/cdt_amzn2_aarch64
 	branch = master

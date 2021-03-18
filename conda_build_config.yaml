@@ -160,11 +160,6 @@ mkl:
   - 2019
 mpfr:
   - 4
-nodejs:
-  - 8.12  # [win]
-  - 8.12  # [win]
-  - 8.12  # [win]
-  - 8.12
 # we build for an old version of numpy for forward compatibility
 numpy:
   - 1.16
@@ -241,5 +236,4 @@ zip_keys:
     - cxx_compiler              # [win]
     - fortran_compiler_version  # [win]
     - python                    # [win]
-    - nodejs                    # [win]
     - geos                      # [win]
