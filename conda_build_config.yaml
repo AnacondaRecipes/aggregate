@@ -244,6 +244,8 @@ qtwebkit:
   - true
 channel_targets:
   - defaults
+cdt_name:
+  - amzn2    #[linux and aarch64]
 zip_keys:
   -                             # [win]
     - vc                        # [win]
@@ -253,3 +255,4 @@ zip_keys:
     - python                    # [win]
     - nodejs                    # [win]
     - geos                      # [win]
+
