@@ -4,6 +4,8 @@ pin_run_as_build:
     max_pin: x.x.x
 noarch_python:
   - python
+_libgcc_mutex:
+  - 0.1 main
 apr:
   - 1.6.3
 blas_impl:
