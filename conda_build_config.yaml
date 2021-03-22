@@ -124,6 +124,7 @@ hdfeos5:
 icu:
   - 58  # [not s390x]
   - 68  # [s390x]
+  - 68.1 # [aarch64]
 jpeg:
   - 9
 libdap4:
