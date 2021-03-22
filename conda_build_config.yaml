@@ -122,7 +122,7 @@ hdfeos2:
 hdfeos5:
   - 5.1
 icu:
-  - 58  # [not s390x]
+  - 58  # [not (s390x or aarch64)]
   - 68  # [s390x]
   - 68.1 # [aarch64]
 jpeg:
