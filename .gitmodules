@@ -5266,3 +5266,7 @@
 	path = stone-feedstock
 	url = ../stone-feedstock
 	branch = master
+[submodule "jupyterhub-ldapauthenticator-feedstock"]
+	path = jupyterhub-ldapauthenticator-feedstock
+	url = ../jupyterhub-ldapauthenticator-feedstock
+	branch = master
