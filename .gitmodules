@@ -5262,6 +5262,9 @@
 	path = python-flatbuffers-feedstock
 	url = ../python-flatbuffers-feedstock
 	branch = master
+[submodule "nbclassic-feedstock"]
+	path = nbclassic-feedstock
+	url = ../nbclassic-feedstock
 [submodule "stone-feedstock"]
 	path = stone-feedstock
 	url = ../stone-feedstock
@@ -5269,4 +5272,7 @@
 [submodule "jupyterhub-ldapauthenticator-feedstock"]
 	path = jupyterhub-ldapauthenticator-feedstock
 	url = ../jupyterhub-ldapauthenticator-feedstock
+[submodule "cdt_amzn2_aarch64"]
+	path = cdt_amzn2_aarch64
+	url = git@github.com:AnacondaRecipes/cdt_amzn2_aarch64
 	branch = master
