@@ -5276,3 +5276,7 @@
 	path = cdt_amzn2_aarch64
 	url = git@github.com:AnacondaRecipes/cdt_amzn2_aarch64
 	branch = master
+[submodule "cmake-no-system-feedstock"]
+	path = cmake-no-system-feedstock
+	url = ../cmake-no-system-feedstock
+	branch = master
