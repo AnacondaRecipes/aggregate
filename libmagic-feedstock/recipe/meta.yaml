@@ -1,0 +1,47 @@
+{% set name = "libmagic" %}
+{% set version = "5.36" %}
+{% set hash_val = "fb608290c0fd2405a8f63e5717abf6d03e22e183fb21884413d1edd918184379" %}
+
+package:
+  name: libmagic
+  version: {{ version }}
+
+source:
+  fn: file-{{ version }}.tar.gz
+  url: ftp://ftp.astron.com/pub/file/file-{{ version }}.tar.gz
+  sha256: {{ hash_val }}
+
+build:
+  number: 2
+  skip: True  # [win]
+  run_exports:
+    - {{ pin_subpackage('libmagic', max_pin='x') }}
+
+requirements:
+  build:
+    - automake
+    - autoconf
+    - m4
+    - libtool
+    - make
+    - {{ compiler('c') }}
+
+test:
+  commands:
+    - "file --help &> /dev/null"
+    - "test -r $CONDA_PREFIX/lib/libmagic.so"  # [linux]
+    - "test -r $CONDA_PREFIX/lib/libmagic.dylib"  # [osx]
+    - "conda inspect linkages -p $PREFIX $PKG_NAME"  # [linux]
+    - "conda inspect objects -p $PREFIX $PKG_NAME"  # [osx]
+
+about:
+  home: http://www.darwinsys.com/file/
+  summary: "Implementation of the file(1) command"
+  license: BSD-2-Clause
+  license_family: BSD
+  license_file: COPYING
+
+extra:
+  recipe-maintainers:
+    - mariusvniekerk
+    - nwani
