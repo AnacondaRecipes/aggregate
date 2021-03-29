@@ -5280,3 +5280,7 @@
 	path = cmake-no-system-feedstock
 	url = ../cmake-no-system-feedstock
 	branch = master
+[submodule "conda-content-trust-feedstock"]
+	path = conda-content-trust-feedstock
+	url = ../conda-content-trust-feedstock.git
+	branch = master
