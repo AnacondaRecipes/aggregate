@@ -5283,4 +5283,4 @@
 [submodule "conda-content-trust-feedstock"]
 	path = conda-content-trust-feedstock
 	url = ../conda-content-trust-feedstock.git
-	branch = master
+	branch = main
