@@ -5312,3 +5312,15 @@
 	path = binaryornot-feedstock
 	url = ../binaryornot-feedstock
 	branch = master
+[submodule "libtasn1-feedstock"]
+	path = libtasn1-feedstock
+	url = ../libtasn1-feedstock.git
+	branch = master
+[submodule "libunistring-feedstock"]
+	path = libunistring-feedstock
+	url = ../libunistring-feedstock.git
+	branch = master
+[submodule "libidn2-feedstock"]
+	path = libidn2-feedstock
+	url = ../libidn2-feedstock
+	branch = master
