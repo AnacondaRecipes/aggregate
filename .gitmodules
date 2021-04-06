@@ -5284,3 +5284,11 @@
 	path = conda-content-trust-feedstock
 	url = ../conda-content-trust-feedstock.git
 	branch = main
+[submodule "qstylizer-feedstock"]
+	path = qstylizer-feedstock
+	url = ../qstylizer-feedstock
+	branch = master
+[submodule "tinycss-feedstock"]
+	path = tinycss-feedstock
+	url = ../tinycss-feedstock
+	branch = master
