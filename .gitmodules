@@ -5292,3 +5292,23 @@
 	path = tinycss-feedstock
 	url = ../tinycss-feedstock
 	branch = master
+[submodule "cookiecutter-feedstock"]
+	path = cookiecutter-feedstock
+	url = ../cookiecutter-feedstock
+	branch = master
+[submodule "jinja2-time-feedstock"]
+	path = jinja2-time-feedstock
+	url = ../jinja2-time-feedstock
+	branch = master
+[submodule "whichcraft-feedstock"]
+	path = whichcraft-feedstock
+	url = ../whichcraft-feedstock
+	branch = master
+[submodule "poyo-feedstock"]
+	path = poyo-feedstock
+	url = ../poyo-feedstock
+	branch = master
+[submodule "binaryornot-feedstock"]
+	path = binaryornot-feedstock
+	url = ../binaryornot-feedstock
+	branch = master
