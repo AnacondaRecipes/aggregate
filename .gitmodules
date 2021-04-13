@@ -5328,3 +5328,7 @@
 	path = pooch-feedstock
 	url = ../pooch-feedstock
 	branch = master
+[submodule "libmagic-feedstock"]
+	path = libmagic-feedstock
+	url = ../libmagic-feedstock
+	branch = master
