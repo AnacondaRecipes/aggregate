@@ -5324,3 +5324,7 @@
 	path = libidn2-feedstock
 	url = ../libidn2-feedstock
 	branch = master
+[submodule "pooch-feedstock"]
+	path = pooch-feedstock
+	url = ../pooch-feedstock
+	branch = master
