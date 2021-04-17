@@ -5332,3 +5332,7 @@
 	path = libmagic-feedstock
 	url = ../libmagic-feedstock
 	branch = master
+[submodule "libev-feedstock"]
+	path = libev-feedstock
+	url = ../libev-feedstock
+	branch = master
