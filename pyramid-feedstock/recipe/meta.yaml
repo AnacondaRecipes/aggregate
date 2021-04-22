@@ -1,5 +1,5 @@
 {% set name = "pyramid" %}
-{% set version = "1.10.4" %}
+{% set version = "2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d80ccb8cfa550139b50801591d4ca8a5575334adb493c402fce2312f55d07d66
+  sha256: 45431b387587ed0fac6213b54d6e9f0936f0cc85238a8f5af7852fc9484c5c77
 
 build:
+  noarch: python
   number: 0
   entry_points:
-    - pcreate=pyramid.scripts.pcreate:main
     - pserve=pyramid.scripts.pserve:main
     - pshell=pyramid.scripts.pshell:main
     - proutes=pyramid.scripts.proutes:main
@@ -20,15 +20,16 @@ build:
     - ptweens=pyramid.scripts.ptweens:main
     - prequest=pyramid.scripts.prequest:main
     - pdistreport=pyramid.scripts.pdistreport:main
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=3.6
+    - pip
     - setuptools
   run:
-    - python
-    - hupper
+    - python >=3.6
+    - hupper >=1.5
     - plaster
     - plaster_pastedeploy
     - translationstring >=0.4
@@ -36,13 +37,13 @@ requirements:
     - webob >=1.8.3
     - zope.deprecation >=3.5.0
     - zope.interface >=3.8.0
-    - repoze.lru >=0.4  # [py2k]
 
 test:
   imports:
     - pyramid
+    - pyramid.config
+    - pyramid.scripts
   commands:
-    - pcreate --help
     - pserve --help
     - pshell --help
     - proutes --help
@@ -52,15 +53,17 @@ test:
     - pdistreport --help
 
 about:
-  home: https://trypyramid.com//
-  license: BSD
+  home: https://trypyramid.com
+  license: LicenseRef-Pylons
+  license_family: BSD
   license_file: LICENSE.txt
   summary: The Pyramid Web Framework, a Pylons project
-  description: |
-    As a framework,its primary job is to make it easier for a developer to create an arbitrary
-    web application. The type of application being created isn't really
-    important; it could be a spreadsheet, a corporate intranet, or a social
-    networking platform.
-  doc_url: http://docs.pylonsproject.org/projects/pyramid/en/1.9-branch/
-  doc_source_url: https://github.com/Pylons/pyramid/blob/master/README.rst
+  doc_url: https://docs.pylonsproject.org/projects/pyramid/
   dev_url: https://github.com/Pylons/pyramid
+
+extra:
+  recipe-maintainers:
+    - lincrosenbach
+    - kfasolin
+    - ChrisBarker-NOAA
+    
