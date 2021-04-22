@@ -173,8 +173,8 @@ nodejs:
 numpy:
   - 1.16
 openblas:
-  - 0.3.3   # [not s390x]
-  - 0.3.10  # [s390x]
+  - 0.3.3   # [not (s390x or aarch64)] 
+  - 0.3.10  # [s390x or aarch64]
 openjpeg:
   - 2.3
 openssl:
