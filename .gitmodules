@@ -5336,3 +5336,7 @@
 	path = libev-feedstock
 	url = ../libev-feedstock
 	branch = master
+[submodule "pytest-flake8-feedstock"]
+	path = pytest-flake8-feedstock
+	url = ../pytest-flake8-feedstock
+	branch = master
