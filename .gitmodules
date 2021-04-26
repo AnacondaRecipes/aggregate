@@ -5340,3 +5340,7 @@
 	path = pytest-flake8-feedstock
 	url = ../pytest-flake8-feedstock
 	branch = master
+[submodule "pathy-feedstock"]
+	path = pathy-feedstock
+	url = ../pathy-feedstock
+	branch = master
