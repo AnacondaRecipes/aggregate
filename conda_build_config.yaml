@@ -157,7 +157,7 @@ macos_machine:
 MACOSX_DEPLOYMENT_TARGET:
   - 10.9
 mkl:
-  - 2019
+  - 2021
 mpfr:
   - 4
 # we build for an old version of numpy for forward compatibility
