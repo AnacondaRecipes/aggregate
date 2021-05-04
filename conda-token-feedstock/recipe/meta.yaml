@@ -1,5 +1,5 @@
 {% set name = "conda-token" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name }}
@@ -26,6 +26,7 @@ requirements:
     - python
     - conda >=4.3
     - packaging
+    - conda-content-trust
 
 test:
 # # todo: add this back once the tests pass.
