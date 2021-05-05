@@ -5344,3 +5344,11 @@
 	path = pathy-feedstock
 	url = ../pathy-feedstock
 	branch = master
+[submodule "daal4py-feedstock"]
+	path = daal4py-feedstock
+	url = ../daal4py-feedstock
+	branch = master
+[submodule "scikit-learn-intelex-feedstock"]
+	path = scikit-learn-intelex-feedstock
+	url = ../scikit-learn-intelex-feedstock
+	branch = master
