@@ -5352,3 +5352,6 @@
 	path = scikit-learn-intelex-feedstock
 	url = ../scikit-learn-intelex-feedstock
 	branch = master
+[submodule "typer-feedstock"]
+	path = typer-feedstock
+	url = ../typer-feedstock
