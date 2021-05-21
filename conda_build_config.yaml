@@ -183,8 +183,8 @@ openssl:
 perl:
   - 5.26
 pixman:
-  - 0.30      # [not s390x]
-  - 0.40      # [s390x]
+  - 0.30      # [not (s390x or aarch64)]
+  - 0.40      # [s390x or aarch64]
 proj4:
   - 5.2.0
 proj:
