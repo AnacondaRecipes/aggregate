@@ -5423,3 +5423,7 @@
 	path = msrestazure-feedstock
 	url = ../msrestazure-feedstock
 	branch = master
+[submodule "nvidia-ml-feedstock"]
+	path = nvidia-ml-feedstock
+	url = ../nvidia-ml-feedstock
+	branch = master
