@@ -5447,3 +5447,7 @@
 	path = tensorboardx-feedstock
 	url = ../tensorboardx-feedstock
 	branch = master
+[submodule "uritemplate-feedstock"]
+	path = uritemplate-feedstock
+	url = ../uritemplate-feedstock
+	branch = master
