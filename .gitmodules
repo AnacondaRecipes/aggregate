@@ -5363,3 +5363,7 @@
 	path = aioredis-feedstock
 	url = ../aioredis-feedstock
 	branch = master
+[submodule "azure-common-feedstock"]
+	path = azure-common-feedstock
+	url = ../azure-common-feedstock
+	branch = master
