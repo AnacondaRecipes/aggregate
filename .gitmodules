@@ -5431,3 +5431,7 @@
 	path = opencensus-context-feedstock
 	url = ../opencensus-context-feedstock
 	branch = master
+[submodule "opencensus-feedstock"]
+	path = opencensus-feedstock
+	url = ../opencensus-feedstock
+	branch = master
