@@ -5371,3 +5371,7 @@
 	path = azure-core-feedstock
 	url = ../azure-core-feedstock
 	branch = master
+[submodule "azure-mgmt-core-feedstock"]
+	path = azure-mgmt-core-feedstock
+	url = ../azure-mgmt-core-feedstock
+	branch = master
