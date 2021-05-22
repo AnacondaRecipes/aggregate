@@ -5355,3 +5355,7 @@
 [submodule "typer-feedstock"]
 	path = typer-feedstock
 	url = ../typer-feedstock
+[submodule "aiohttp-cors-feedstock"]
+	path = aiohttp-cors-feedstock
+	url = ../aiohttp-cors-feedstock
+	branch = master
