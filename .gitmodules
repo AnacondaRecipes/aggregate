@@ -5411,3 +5411,7 @@
 	path = mockito-feedstock
 	url = ../mockito-feedstock
 	branch = master
+[submodule "modin-feedstock"]
+	path = modin-feedstock
+	url = ../modin-feedstock
+	branch = master
