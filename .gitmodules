@@ -5439,3 +5439,7 @@
 	path = pickle5-feedstock
 	url = ../pickle5-feedstock
 	branch = master
+[submodule "ray-packages-feedstock"]
+	path = ray-packages-feedstock
+	url = ../ray-packages-feedstock
+	branch = master
