@@ -5379,3 +5379,7 @@
 	path = azure-mgmt-resource-feedstock
 	url = ../azure-mgmt-resource-feedstock
 	branch = master
+[submodule "colorful-feedstock"]
+	path = colorful-feedstock
+	url = ../colorful-feedstock
+	branch = master
