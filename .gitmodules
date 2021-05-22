@@ -5407,3 +5407,7 @@
 	path = httplib2-feedstock
 	url = ../httplib2-feedstock
 	branch = master
+[submodule "mockito-feedstock"]
+	path = mockito-feedstock
+	url = ../mockito-feedstock
+	branch = master
