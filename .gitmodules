@@ -5427,3 +5427,7 @@
 	path = nvidia-ml-feedstock
 	url = ../nvidia-ml-feedstock
 	branch = master
+[submodule "opencensus-context-feedstock"]
+	path = opencensus-context-feedstock
+	url = ../opencensus-context-feedstock
+	branch = master
