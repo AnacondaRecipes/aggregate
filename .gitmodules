@@ -5419,3 +5419,7 @@
 	path = msrest-feedstock
 	url = ../msrest-feedstock
 	branch = master
+[submodule "msrestazure-feedstock"]
+	path = msrestazure-feedstock
+	url = ../msrestazure-feedstock
+	branch = master
