@@ -5399,3 +5399,7 @@
 	path = gpustat-feedstock
 	url = ../gpustat-feedstock
 	branch = master
+[submodule "hiredis-feedstock"]
+	path = hiredis-feedstock
+	url = ../hiredis-feedstock
+	branch = master
