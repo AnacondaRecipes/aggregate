@@ -5359,3 +5359,7 @@
 	path = aiohttp-cors-feedstock
 	url = ../aiohttp-cors-feedstock
 	branch = master
+[submodule "aioredis-feedstock"]
+	path = aioredis-feedstock
+	url = ../aioredis-feedstock
+	branch = master
