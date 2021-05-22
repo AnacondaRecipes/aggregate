@@ -5415,3 +5415,7 @@
 	path = modin-feedstock
 	url = ../modin-feedstock
 	branch = master
+[submodule "msrest-feedstock"]
+	path = msrest-feedstock
+	url = ../msrest-feedstock
+	branch = master
