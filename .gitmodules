@@ -5391,3 +5391,7 @@
 	path = google-auth-httplib2-feedstock
 	url = ../google-auth-httplib2-feedstock
 	branch = master
+[submodule "googlesearch-feedstock"]
+	path = googlesearch-feedstock
+	url = ../googlesearch-feedstock
+	branch = master
