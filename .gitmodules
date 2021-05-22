@@ -5395,3 +5395,7 @@
 	path = googlesearch-feedstock
 	url = ../googlesearch-feedstock
 	branch = master
+[submodule "gpustat-feedstock"]
+	path = gpustat-feedstock
+	url = ../gpustat-feedstock
+	branch = master
