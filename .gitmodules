@@ -5403,3 +5403,7 @@
 	path = hiredis-feedstock
 	url = ../hiredis-feedstock
 	branch = master
+[submodule "httplib2-feedstock"]
+	path = httplib2-feedstock
+	url = ../httplib2-feedstock
+	branch = master
