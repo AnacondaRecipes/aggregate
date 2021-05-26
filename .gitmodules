@@ -5355,3 +5355,6 @@
 [submodule "typer-feedstock"]
 	path = typer-feedstock
 	url = ../typer-feedstock
+[submodule "pytest-mpi-feedstock"]
+	path = pytest-mpi-feedstock
+	url = ../pytest-mpi-feedstock
