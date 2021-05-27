@@ -5358,3 +5358,6 @@
 [submodule "pytest-mpi-feedstock"]
 	path = pytest-mpi-feedstock
 	url = ../pytest-mpi-feedstock
+[submodule "nsync-feedstock"]
+	path = nsync-feedstock
+	url = ../nsync-feedstock
