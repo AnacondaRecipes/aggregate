@@ -5361,3 +5361,7 @@
 [submodule "nsync-feedstock"]
 	path = nsync-feedstock
 	url = ../nsync-feedstock
+[submodule "pytorch-1.7.1-feedstock"]
+	path = pytorch-1.7.1-feedstock
+	url = ../pytorch-feedstock
+	branch = master-1.7.1
