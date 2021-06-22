@@ -41,7 +41,7 @@ fortran_compiler_version:
   - 2019.0.0                     # [win]
 # matrix on linux, because the ABI breaks at GCC 8
   - 7.5.0                      # [linux and not (s390x or aarch64 or ppc64le)]
-  - 8.2.0                      # [linux and not (s390x or aarch64 or ppc64le)]
+  - 8.4.0                      # [linux and not (s390x or aarch64 or ppc64le)]
   - 7.3.0                      # [linux and ppc64le]
   - 8.2.0                      # [linux and ppc64le]
   - 7.5.0                      # [linux and s390x]
