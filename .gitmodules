@@ -5369,3 +5369,7 @@
 	path = metis-feedstock
 	url = ../metis-feedstock
 	branch = master
+[submodule "_go_select-feedstock"]
+	path = _go_select-feedstock
+	url = ../_go_select-feedstock
+	branch = master
