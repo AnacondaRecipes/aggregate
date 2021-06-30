@@ -5373,3 +5373,7 @@
 	path = _go_select-feedstock
 	url = ../_go_select-feedstock
 	branch = master
+[submodule "beniget-feedstock"]
+	path = beniget-feedstock
+	url = ../beniget-feedstock
+	branch = master
