@@ -1,0 +1,30 @@
+package:
+  name: cupti
+  version: 10.1.168
+
+source:
+  path .
+build:
+  number: 0
+
+requirements:
+  run:
+    cudatoolkit >=11.3,<11.4
+
+test:
+  commands:
+    - test -f ${PREFIX}/lib/libcupti.so           # [linux]
+    - test -f ${PREFIX}/lib/libcupti.so.11.3      # [linux]
+
+# CUDA Profiling Tools Interface (CUPTI) Library
+about:
+  home: https://developer.nvidia.com/cuda-toolkit
+  license: proprietary - Nvidia
+  license_family: Proprietary
+  summary: development environment for GPU-accelerated applications, CUPTI components
+  description: |
+    The NVIDIA CUDA Toolkit provides a comprehensive development environment
+    for C and C++ developers building GPU-accelerated applications. The CUDA
+    Toolkit ncludes a compiler for NVIDIA GPUs, math libraries, and tools for
+    debugging and optimizing the performance of your applications.
+  doc_url: http://docs.nvidia.com/cuda/#axzz42Eea7t1I
