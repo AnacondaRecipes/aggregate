@@ -5377,3 +5377,7 @@
 	path = beniget-feedstock
 	url = ../beniget-feedstock
 	branch = master
+[submodule "xsimd-feedstock"]
+	path = xsimd-feedstock
+	url = ../xsimd-feedstock
+	branch = master
