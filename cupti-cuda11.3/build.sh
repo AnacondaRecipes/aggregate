@@ -5,6 +5,8 @@ EMBEDDED_RUNFILE="cuda_11.3.1_465.19.01_linux.run"
 TMPDIR="${SRC_DIR}/unpacked"
 RUNDIR="${SRC_DIR}/rundir"
 
+cp -f ~/nvidia/$RUNFILE .
+
 # unpack the embedded runfiles
 chmod +x ${RUNFILE}
 mkdir -p ${RUNDIR}
@@ -12,11 +14,11 @@ mkdir -p ${RUNDIR}
 
 # unpack the runfile
 mkdir -p ${TMPDIR}
-$RUNDIR/$EMBEDDED_RUNFILE -prefix=$TMPDIR -noprompt --nox11
+./$EMBEDDED_RUNFILE --tmpdir=$TMPDIR --silent --nox11
 
 # copy library to prefix
 mkdir -p $PREFIX/lib
-cp unpacked/extras/CUPTI/lib64/* $PREFIX/lib/
+cp rundir/cuda_cupti/extras/CUPTI/lib64/* $PREFIX/lib/
 
 # create symlinks
 cd $PREFIX/lib
