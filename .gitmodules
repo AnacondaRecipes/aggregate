@@ -5381,3 +5381,7 @@
 	path = xsimd-feedstock
 	url = ../xsimd-feedstock
 	branch = master
+[submodule "intel-compilers-repack-feedstock"]
+	path = intel-compilers-repack-feedstock
+	url = ../intel-compilers-repack-feedstock
+	branch = master
