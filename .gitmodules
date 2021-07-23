@@ -5429,3 +5429,7 @@
 	path = pickle5-feedstock
 	url = ../pickle5-feedstock
 	branch = master
+[submodule "tensorboardx-feedstock"]
+	path = tensorboardx-feedstock
+	url = ../tensorboardx-feedstock
+	branch = master
