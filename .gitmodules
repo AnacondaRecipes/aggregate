@@ -5385,3 +5385,7 @@
 	path = intel-compilers-repack-feedstock
 	url = ../intel-compilers-repack-feedstock
 	branch = master
+[submodule "aiohttp-cors-feedstock"]
+	path = aiohttp-cors-feedstock
+	url = ../aiohttp-cors-feedstock
+	branch = master
