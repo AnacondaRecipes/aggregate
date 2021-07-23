@@ -5437,3 +5437,7 @@
 	path = ray-packages-feedstock
 	url = ../ray-packages-feedstock
 	branch = master
+[submodule "librdkafka-feedstock"]
+	path = librdkafka-feedstock
+	url = ./librdkafka-feedstock
+	branch = master
