@@ -5393,3 +5393,7 @@
 	path = aioredis-feedstock
 	url = ../aioredis-feedstock
 	branch = master
+[submodule "colorful-feedstock"]
+	path = colorful-feedstock
+	url = ../colorful-feedstock
+	branch = master
