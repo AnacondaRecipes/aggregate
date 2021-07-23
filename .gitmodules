@@ -5433,3 +5433,7 @@
 	path = tensorboardx-feedstock
 	url = ../tensorboardx-feedstock
 	branch = master
+[submodule "ray-packages-feedstock"]
+	path = ray-packages-feedstock
+	url = ../ray-packages-feedstock
+	branch = master
