@@ -5397,3 +5397,7 @@
 	path = colorful-feedstock
 	url = ../colorful-feedstock
 	branch = master
+[submodule "gpustat-feedstock"]
+	path = gpustat-feedstock
+	url = ../gpustat-feedstock
+	branch = master
