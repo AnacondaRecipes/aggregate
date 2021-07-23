@@ -5405,3 +5405,7 @@
 	path = hiredis-feedstock
 	url = ../hiredis-feedstock
 	branch = master
+[submodule "mockito-feedstock"]
+	path = mockito-feedstock
+	url = ../mockito-feedstock
+	branch = master
