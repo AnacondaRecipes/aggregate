@@ -5425,3 +5425,7 @@
 	path = opencensus-context-feedstock
 	url = ../opencensus-context-feedstock
 	branch = master
+[submodule "pickle5-feedstock"]
+	path = pickle5-feedstock
+	url = ../pickle5-feedstock
+	branch = master
