@@ -5441,3 +5441,7 @@
 	path = librdkafka-feedstock
 	url = ../librdkafka-feedstock
 	branch = master
+[submodule "menuinst-feedstock"]
+	path = menuinst-feedstock
+	url = ../menuinst-feedstock
+	branch = master
