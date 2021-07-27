@@ -5445,3 +5445,15 @@
 	path = menuinst-feedstock
 	url = ../menuinst-feedstock
 	branch = master
+[submodule "bisonpp-feedstock"]
+	path = bisonpp-feedstock
+	url = ../bisonpp-feedstock
+	branch = master
+[submodule "netifaces-feedstock"]
+	path = netifaces-feedstock
+	url = ../netifaces-feedstock
+	branch = master
+[submodule "rbc-feedstock"]
+	path = rbc-feedstock
+	url = ../rbc-feedstock
+	branch = master
