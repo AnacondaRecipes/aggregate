@@ -5457,3 +5457,7 @@
 	path = rbc-feedstock
 	url = ../rbc-feedstock
 	branch = master
+[submodule "ldid-feedstock"]
+	path = ldid-feedstock
+	url = ../ldid-feedstock
+	branch = master
