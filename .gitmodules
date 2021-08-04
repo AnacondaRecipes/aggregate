@@ -5465,3 +5465,7 @@
 	path = lld-feedstock
 	url = ../lld-feedstock
 	branch = master
+[submodule "hicolor-icon-theme-feedstock"]
+	path = hicolor-icon-theme-feedstock
+	url = ../hicolor-icon-theme-feedstock
+	branch = master
