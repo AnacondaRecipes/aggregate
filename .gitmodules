@@ -5473,3 +5473,7 @@
 	path = librsvg-feedstock
 	url = ../librsvg-feedstock
 	branch = master
+[submodule "adwaita-icon-theme-feedstock"]
+	path = adwaita-icon-theme-feedstock
+	url = ../adwaita-icon-theme-feedstock
+	branch = master
