@@ -5469,3 +5469,7 @@
 	path = hicolor-icon-theme-feedstock
 	url = ../hicolor-icon-theme-feedstock
 	branch = master
+[submodule "librsvg-feedstock"]
+	path = librsvg-feedstock
+	url = ../librsvg-feedstock
+	branch = master
