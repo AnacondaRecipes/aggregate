@@ -5461,3 +5461,7 @@
 	path = ldid-feedstock
 	url = ../ldid-feedstock
 	branch = master
+[submodule "lld-feedstock"]
+	path = lld-feedstock
+	url = ../lld-feedstock
+	branch = master
