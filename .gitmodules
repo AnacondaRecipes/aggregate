@@ -5365,3 +5365,7 @@
 	path = pytorch-1.7.1-feedstock
 	url = ../pytorch-feedstock
 	branch = master-1.7.1
+[submodule "deprecation-feedstock"]
+	path = deprecation-feedstock
+	url = ../deprecation-feedstock
+	branch = master
