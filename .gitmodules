@@ -5477,3 +5477,7 @@
 	path = adwaita-icon-theme-feedstock
 	url = ../adwaita-icon-theme-feedstock
 	branch = master
+[submodule "mlir-feedstock"]
+	path = mlir-feedstock
+	url = ../mlir-feedstock
+	branch = master
