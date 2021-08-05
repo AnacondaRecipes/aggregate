@@ -5274,7 +5274,7 @@
 	url = ../jupyterhub-ldapauthenticator-feedstock
 [submodule "cdt_amzn2_aarch64"]
 	path = cdt_amzn2_aarch64
-	url = git@github.com:AnacondaRecipes/cdt_amzn2_aarch64
+	url = ../cdt_amzn2_aarch64
 	branch = master
 [submodule "cmake-no-system-feedstock"]
 	path = cmake-no-system-feedstock
@@ -5368,4 +5368,119 @@
 [submodule "deprecation-feedstock"]
 	path = deprecation-feedstock
 	url = ../deprecation-feedstock
+[submodule "metis-feedstock"]
+	path = metis-feedstock
+	url = ../metis-feedstock
+	branch = master
+[submodule "_go_select-feedstock"]
+	path = _go_select-feedstock
+	url = ../_go_select-feedstock
+	branch = master
+[submodule "beniget-feedstock"]
+	path = beniget-feedstock
+	url = ../beniget-feedstock
+	branch = master
+[submodule "xsimd-feedstock"]
+	path = xsimd-feedstock
+	url = ../xsimd-feedstock
+	branch = master
+[submodule "intel-compilers-repack-feedstock"]
+	path = intel-compilers-repack-feedstock
+	url = ../intel-compilers-repack-feedstock
+	branch = master
+[submodule "aiohttp-cors-feedstock"]
+	path = aiohttp-cors-feedstock
+	url = ../aiohttp-cors-feedstock
+	branch = master
+[submodule "aioredis-feedstock"]
+	path = aioredis-feedstock
+	url = ../aioredis-feedstock
+	branch = master
+[submodule "colorful-feedstock"]
+	path = colorful-feedstock
+	url = ../colorful-feedstock
+	branch = master
+[submodule "gpustat-feedstock"]
+	path = gpustat-feedstock
+	url = ../gpustat-feedstock
+	branch = master
+[submodule "hiredis-feedstock"]
+	path = hiredis-feedstock
+	url = ../hiredis-feedstock
+	branch = master
+[submodule "mockito-feedstock"]
+	path = mockito-feedstock
+	url = ../mockito-feedstock
+	branch = master
+[submodule "modin-feedstock"]
+	path = modin-feedstock
+	url = ../modin-feedstock
+	branch = master
+[submodule "nvidia-ml-feedstock"]
+	path = nvidia-ml-feedstock
+	url = ../nvidia-ml-feedstock
+	branch = master
+[submodule "opencensus-feedstock"]
+	path = opencensus-feedstock
+	url = ../opencensus-feedstock
+	branch = master
+[submodule "opencensus-context-feedstock"]
+	path = opencensus-context-feedstock
+	url = ../opencensus-context-feedstock
+	branch = master
+[submodule "pickle5-feedstock"]
+	path = pickle5-feedstock
+	url = ../pickle5-feedstock
+	branch = master
+[submodule "tensorboardx-feedstock"]
+	path = tensorboardx-feedstock
+	url = ../tensorboardx-feedstock
+	branch = master
+[submodule "ray-packages-feedstock"]
+	path = ray-packages-feedstock
+	url = ../ray-packages-feedstock
+	branch = master
+[submodule "librdkafka-feedstock"]
+	path = librdkafka-feedstock
+	url = ../librdkafka-feedstock
+	branch = master
+[submodule "menuinst-feedstock"]
+	path = menuinst-feedstock
+	url = ../menuinst-feedstock
+	branch = master
+[submodule "bisonpp-feedstock"]
+	path = bisonpp-feedstock
+	url = ../bisonpp-feedstock
+	branch = master
+[submodule "netifaces-feedstock"]
+	path = netifaces-feedstock
+	url = ../netifaces-feedstock
+	branch = master
+[submodule "rbc-feedstock"]
+	path = rbc-feedstock
+	url = ../rbc-feedstock
+	branch = master
+[submodule "ldid-feedstock"]
+	path = ldid-feedstock
+	url = ../ldid-feedstock
+	branch = master
+[submodule "lld-feedstock"]
+	path = lld-feedstock
+	url = ../lld-feedstock
+	branch = master
+[submodule "hicolor-icon-theme-feedstock"]
+	path = hicolor-icon-theme-feedstock
+	url = ../hicolor-icon-theme-feedstock
+	branch = master
+[submodule "librsvg-feedstock"]
+	path = librsvg-feedstock
+	url = ../librsvg-feedstock
+	branch = master
+[submodule "adwaita-icon-theme-feedstock"]
+	path = adwaita-icon-theme-feedstock
+	url = ../adwaita-icon-theme-feedstock
+	branch = master
+[submodule "mlir-feedstock"]
+	path = mlir-feedstock
+	url = ../mlir-feedstock
 	branch = master
