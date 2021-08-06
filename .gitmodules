@@ -5484,3 +5484,7 @@
 	path = mlir-feedstock
 	url = ../mlir-feedstock
 	branch = master
+[submodule "matplotlib-inline-feedstock"]
+	path = matplotlib-inline-feedstock
+	url = ../matplotlib-inline-feedstock
+	branch = master
