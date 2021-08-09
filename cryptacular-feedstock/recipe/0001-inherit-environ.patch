@@ -1,0 +1,12 @@
+diff --git a/SConstruct b/SConstruct
+index 12978a6..29bcb7e 100644
+--- a/SConstruct
++++ b/SConstruct
+@@ -30,6 +30,7 @@ env = Environment(
+     WHEEL_TAG=full_tag,
+     MSVC_VERSION=MSVC_VERSION,
+     TARGET_ARCH=TARGET_ARCH,
++    ENV=os.environ,
+ )
+ 
+ use_py_limited = "abi3" in full_tag

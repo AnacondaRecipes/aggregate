@@ -1,21 +1,37 @@
 {% set name = "cryptacular" %}
-{% set version = "1.4.1" %}
+{% set version = "1.6.1" %}
 
 package:
   name: "{{ name|lower }}"
   version: "{{ version }}"
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 273f03d03f9b316671ae4f1c1c6b8d3c883da19a5706873e8f3d6543e13dd4a1
-  patches:
-    - 0001-Define-__SKIP_GPU-macro-during-build.patch
-    - 0002-Drop-crypt.h-new-versions-of-python-include-crypt.h.patch
-    - 0003-Disable-namespace.patch
+  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+    sha256: f54337d1ab0cff000c0517967a9992c900018542cc2b0719872adfb615aee8a8
+    folder: source
+    patches:
+      - 0001-inherit-environ.patch
+  - url: https://files.pythonhosted.org/packages/1e/9e/1fc778e2ba74e41d502d321f2487f8a575167bdf4bac4143d52ac7ffe636/enscons-0.27.0-py2.py3-none-any.whl
+    sha256: 0578fd58a3d922d0dfdbfdd4b165a392584359b62d69e8885da8f45d2bef08f9
+    folder: builddep
+  - url: https://files.pythonhosted.org/packages/d8/29/401703b6ce7ad8b4009ab16a435a7c08827357e1c7217ad39e750e75a358/SCons-4.2.0-py3-none-any.whl
+    sha256: 663f819e744ddadcdf4f46b03289a7210313b86041efe1b9c8dde81dba437b72
+    folder: builddep
+  - url: https://files.pythonhosted.org/packages/02/5a/afc6eed6d30a100c3350dde1d78529ee4432b954816783cfc5dede3f0f12/editables-0.2-py3-none-any.whl
+    sha256: fe9afdc51df78ac3b20a2c2dd763b36ac412a70c59ca39fc782d45797dcb619a
+    folder: builddep
 
 build:
-  number: 1
-  script: "{{ PYTHON }} setup.py install --single-version-externally-managed --record record.txt"
+  number: 0
+  script:
+    - set -e
+    - {{ PYTHON }} -m pip install builddep/SCons-4.2.0-py3-none-any.whl
+    - {{ PYTHON }} -m pip install builddep/editables-0.2-py3-none-any.whl
+    - {{ PYTHON }} -m pip install builddep/enscons-0.27.0-py2.py3-none-any.whl
+    - cd source
+    - scons
+    - cd dist
+    - {{ PYTHON }} -m pip install cryptacular-{{ version }}-*.whl --no-deps -vv
   skip: True  # [ppc64le]
 
 requirements:
@@ -25,6 +41,12 @@ requirements:
     - pbkdf2
     - python
     - setuptools
+    - wheel
+    - pip
+    - packaging
+    - pytoml
+    - attrs
+
   run:
     - pbkdf2
     - python
@@ -44,12 +66,11 @@ test:
     - nosetests -v cryptacular.core
 
 about:
-  home: http://bitbucket.org/dholth/cryptacular/
-  license: MIT
+  home: https://github.com/dholth/cryptacular/
   license: MIT
   summary: password hashing framework with bcrypt and pbkdf2
   description: |
     Cryptacular is a collection of strong password hashing functions that
     share a common interface, and a nice way to use bcrypt as a password hash.
   doc_url: https://pypi.python.org/pypi/cryptacular/
-  dev_url: https://bitbucket.org/dholth/cryptacular/
+  dev_url: https://github.com/dholth/cryptacular/
