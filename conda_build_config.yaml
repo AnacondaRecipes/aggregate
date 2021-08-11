@@ -91,7 +91,8 @@ fortran_compiler_version:  # [linux]
 clang_variant:
   - clang
 cyrus_sasl:
-  - 2.1.26
+  - 2.1.26  # [not (osx and arm64)]
+  - 2.1.27  # [osx and arm64]
 dbus:
   - 1
 expat:
@@ -206,8 +207,9 @@ proj4:
 proj:
   - 6.2.1
 libprotobuf:
-  - 3.11.2    # [not (s390x or aarch64)]
+  - 3.11.2    # [not (s390x or aarch64 or (osx and arm64))]
   - 3.14.0    # [s390x or aarch64]
+  - 3.17.2    # [osx and arm64]
 python:
   - 3.6      # [not (s390x or aarch64 or arm64)]
   - 3.7      # [not arm64]
