@@ -5488,3 +5488,9 @@
 	path = matplotlib-inline-feedstock
 	url = ../matplotlib-inline-feedstock
 	branch = master
+[submodule "enscons-feedstock"]
+	path = enscons-feedstock
+	url = ../enscons-feedstock
+[submodule "editables-feedstock"]
+	path = editables-feedstock
+	url = ../editables-feedstock
