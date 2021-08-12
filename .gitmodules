@@ -5488,3 +5488,7 @@
 	path = matplotlib-inline-feedstock
 	url = ../matplotlib-inline-feedstock
 	branch = master
+[submodule "uriparser-feedstock"]
+	path = uriparser-feedstock
+	url = ../uriparser-feedstock
+	branch = master
