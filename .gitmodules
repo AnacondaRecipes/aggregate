@@ -5492,3 +5492,7 @@
 	path = uriparser-feedstock
 	url = ../uriparser-feedstock
 	branch = master
+[submodule "gnuconfig-feedstock"]
+	path = gnuconfig-feedstock
+	url = ../gnuconfig-feedstock
+	branch = master
