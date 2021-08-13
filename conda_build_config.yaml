@@ -160,8 +160,8 @@ libtiff:
   - 4.1  # [not (osx and arm64)]
   - 4.2  # [osx and arm64]
 libwebp:
-  - 1.0.0   # [not s390x]
-  - 1.2.0   # [s390x]
+  - 1.0.0   # [not (s390x or (osx and arm64))]
+  - 1.2.0   # [s390x or (osx and arm64)]
 libxml2:
   - 2.9
 libxslt:
