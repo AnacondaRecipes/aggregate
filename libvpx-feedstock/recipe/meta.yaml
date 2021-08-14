@@ -1,4 +1,4 @@
-{% set version = "1.8.2" %}
+{% set version = "1.10.0" %}
 {% set p = "m2-" if win else "" %}
 
 package:
@@ -6,11 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  git_url: https://chromium.googlesource.com/webm/libvpx
-  git_tag: v{{ version }}
-  patches:
-    - 0001-Linux-Include-unistd-h-for-off_t.patch
-
+  url: https://github.com/webmproject/libvpx/archive/v{{ version }}.tar.gz
+  sha256: 85803ccbdbdd7a3b03d930187cb055f1353596969c1f92ebec2db839fa4f834a
 build:
   number: 0
   skip: True  # [win]
@@ -27,6 +24,7 @@ requirements:
     - posix                     # [win]
     - {{ p }}git
     - {{ p }}make
+    - {{ p }}libtool
     - m2w64-toolchain          # [win]
     - yasm
   run:
