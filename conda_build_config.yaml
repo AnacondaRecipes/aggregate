@@ -15,8 +15,8 @@ boost_cpp:
 bzip2:
   - 1.0
 cairo:
-  - 1.14                       # [not (s390x or aarch64)]
-  - 1.16                       # [s390x or aarch64]
+  - 1.14                       # [not (s390x or aarch64 or (osx and arm64))]
+  - 1.16                       # [s390x or aarch64 or (osx and arm64)]
 c_compiler:
   - gcc                        # [linux and aarch64]
   - clang                      # [osx]
@@ -124,11 +124,13 @@ gmp:
 gnu:
   - 2.12.2
 harfbuzz:
-  - 2.4
+  - 2.4  # [not (osx and arm64)]
+  - 2.8  # [osx and arm64]
 hdf4:
   - 4.2
 hdf5:
-  - 1.10.6
+  - 1.10.6  # [not (osx and arm64)]
+  - 1.12.0  # [osx and arm64]
 hdfeos2:
   - 2.20
 hdfeos5:
