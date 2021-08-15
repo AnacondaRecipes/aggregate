@@ -112,7 +112,8 @@ geos:
   - 3.8.0  # [win]
   - 3.8.0  # [win]
   - 3.8.0  # [win]
-  - 3.8.0
+  - 3.8.0  # [not (osx and arm64)] 
+  - 3.9.1  # [osx and arm64]
 giflib:
   - 5
 glib:
