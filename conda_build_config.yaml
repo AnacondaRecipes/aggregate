@@ -203,8 +203,8 @@ perl:
   - 5.26    # [not (osx and arm64)]
   - 5.34    # [osx and arm64]
 pixman:
-  - 0.30      # [not (s390x or aarch64)]
-  - 0.40      # [s390x or aarch64]
+  - 0.30      # [not (s390x or aarch64 or (osx and arm64))]
+  - 0.40      # [s390x or aarch64 or (osx and arm64)]
 proj4:
   - 5.2.0
 proj:
