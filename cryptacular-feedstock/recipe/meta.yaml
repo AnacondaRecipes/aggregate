@@ -58,3 +58,7 @@ about:
     share a common interface, and a nice way to use bcrypt as a password hash.
   doc_url: https://pypi.python.org/pypi/cryptacular/
   dev_url: https://github.com/dholth/cryptacular/
+
+extra:
+  recipe-maintainers:
+    - dholth
