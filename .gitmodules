@@ -5496,3 +5496,7 @@
 	path = gnuconfig-feedstock
 	url = ../gnuconfig-feedstock
 	branch = master
+[submodule "cachy-feedstock"]
+	path = cachy-feedstock
+	url = ../cachy-feedstock
+	branch = master
