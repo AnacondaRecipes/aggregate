@@ -5503,3 +5503,7 @@
 [submodule "shellingham-feedstock"]
 	path = shellingham-feedstock
 	url = ../shellingham-feedstock
+[submodule "libzip-feedstock"]
+	path = libzip-feedstock
+	url = ../libzip-feedstock
+	branch = master
