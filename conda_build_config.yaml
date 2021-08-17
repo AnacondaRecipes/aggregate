@@ -91,12 +91,13 @@ fortran_compiler_version:  # [linux]
 clang_variant:
   - clang
 cyrus_sasl:
-  - 2.1.26  # [not (osx and arm64)]
-  - 2.1.27  # [osx and arm64]
+  - 2.1.26  # [not ((osx and arm64) or (linux and aarch64))]
+  - 2.1.27  # [(osx and arm64) or (linux and aarch64)]
 dbus:
   - 1
 expat:
-  - 2.2  # [not (osx and arm64)]
+  - 2.2  # [not ((osx and arm64) or (linux and aarch64))]
+  - 2.3  # [linux and aarch64]
   - 2.4  # [osx and arm64]
 fontconfig:
   - 2.13
@@ -125,8 +126,8 @@ gmp:
 gnu:
   - 2.12.2
 harfbuzz:
-  - 2.4  # [not (osx and arm64)]
-  - 2.8  # [osx and arm64]
+  - 2.4  # [not ((osx and arm64) or (linux and aarch64))]
+  - 2.8  # [(osx and arm64) or (linux and aarch64)]
 hdf4:
   - 4.2
 hdf5:
@@ -160,11 +161,11 @@ libnetcdf:
 libpng:
   - 1.6
 libtiff:
-  - 4.1  # [not (osx and arm64)]
-  - 4.2  # [osx and arm64]
+  - 4.1  # [not ((osx and arm64) or (linux and aarch64))]
+  - 4.2  # [(osx and arm64) or (linux and aarch64)]
 libwebp:
-  - 1.0.0   # [not (s390x or (osx and arm64))]
-  - 1.2.0   # [s390x or (osx and arm64)]
+  - 1.0.0   # [not (s390x or aarch64 or (osx and arm64))]
+  - 1.2.0   # [s390x or aarch64 or (osx and arm64)]
 libxml2:
   - 2.9
 libxslt:
