@@ -5513,3 +5513,6 @@
 	path = libzip-feedstock
 	url = ../libzip-feedstock
 	branch = master
+[submodule "cryptacular-feedstock"]
+	path = cryptacular-feedstock
+	url = ../cryptacular-feedstock
