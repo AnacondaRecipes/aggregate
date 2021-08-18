@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Get an updated config.sub and config.guess
+cp -r ${BUILD_PREFIX}/share/libtool/build-aux/config.* .
+
 if [[ $(uname) == MSYS* ]]; then
   if [[ ${ARCH} == 32 ]]; then
     HOST_BUILD="--host=i686-w64-mingw32 --build=i686-w64-mingw32"
@@ -14,5 +17,5 @@ else
   JOBS=$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1)
 fi
 
-./autogen.sh
+# ./autogen.sh
 ./configure --prefix=${PREFIX} ${HOST_BUILD} && make -j${JOBS} && make install

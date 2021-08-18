@@ -5494,3 +5494,22 @@
 [submodule "editables-feedstock"]
 	path = editables-feedstock
 	url = ../editables-feedstock
+[submodule "uriparser-feedstock"]
+	path = uriparser-feedstock
+	url = ../uriparser-feedstock
+	branch = master
+[submodule "gnuconfig-feedstock"]
+	path = gnuconfig-feedstock
+	url = ../gnuconfig-feedstock
+	branch = master
+[submodule "cachy-feedstock"]
+	path = cachy-feedstock
+	url = ../cachy-feedstock
+	branch = master
+[submodule "shellingham-feedstock"]
+	path = shellingham-feedstock
+	url = ../shellingham-feedstock
+[submodule "libzip-feedstock"]
+	path = libzip-feedstock
+	url = ../libzip-feedstock
+	branch = master
