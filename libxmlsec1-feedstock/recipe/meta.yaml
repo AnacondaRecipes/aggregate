@@ -16,7 +16,7 @@ build:
     - {{ pin_subpackage('libxmlsec1', max_pin='x.x') }}
   ignore_run_exports:  # [not linux]
     - libiconv         # [not linux]
-    - icu              # [no5 linus]
+    - icu              # [not linux]
     - libgpg-error     # [not linux]
 requirements:
   build:
