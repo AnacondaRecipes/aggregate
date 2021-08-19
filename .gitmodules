@@ -5527,3 +5527,7 @@
 	path = gl2ps-feedstock
 	url = ../gl2ps-feedstock
 	branch = master
+[submodule "freetype-py-feedstock"]
+	path = freetype-py-feedstock
+	url = ../freetype-py-feedstock
+	branch = master
