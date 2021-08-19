@@ -5531,3 +5531,7 @@
 	path = freetype-py-feedstock
 	url = ../freetype-py-feedstock
 	branch = master
+[submodule "hsluv-feedstock"]
+	path = hsluv-feedstock
+	url = ../hsluv-feedstock
+	branch = master
