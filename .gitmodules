@@ -5515,3 +5515,7 @@
 	path = glew-feedstock
 	url = ../glew-feedstock
 	branch = master
+[submodule "utfcpp-feedstock"]
+	path = utfcpp-feedstock
+	url = ../utfcpp-feedstock
+	branch = master
