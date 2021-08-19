@@ -5511,3 +5511,7 @@
 	path = pugixml-feedstock
 	url = ../pugixml-feedstock
 	branch = master
+[submodule "glew-feedstock"]
+	path = glew-feedstock
+	url = ../glew-feedstock
+	branch = master
