@@ -5535,3 +5535,7 @@
 	path = hsluv-feedstock
 	url = ../hsluv-feedstock
 	branch = master
+[submodule "sleef-feedstock"]
+	path = sleef-feedstock
+	url = ../sleef-feedstock
+	branch = master
