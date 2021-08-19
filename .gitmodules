@@ -5516,3 +5516,35 @@
 [submodule "cryptacular-feedstock"]
 	path = cryptacular-feedstock
 	url = ../cryptacular-feedstock
+[submodule "pugixml-feedstock"]
+	path = pugixml-feedstock
+	url = ../pugixml-feedstock
+	branch = master
+[submodule "glew-feedstock"]
+	path = glew-feedstock
+	url = ../glew-feedstock
+	branch = master
+[submodule "utfcpp-feedstock"]
+	path = utfcpp-feedstock
+	url = ../utfcpp-feedstock
+	branch = master
+[submodule "loguru-feedstock"]
+	path = loguru-feedstock
+	url = ../loguru-feedstock
+	branch = master
+[submodule "gl2ps-feedstock"]
+	path = gl2ps-feedstock
+	url = ../gl2ps-feedstock
+	branch = master
+[submodule "freetype-py-feedstock"]
+	path = freetype-py-feedstock
+	url = ../freetype-py-feedstock
+	branch = master
+[submodule "hsluv-feedstock"]
+	path = hsluv-feedstock
+	url = ../hsluv-feedstock
+	branch = master
+[submodule "sleef-feedstock"]
+	path = sleef-feedstock
+	url = ../sleef-feedstock
+	branch = master
