@@ -5519,3 +5519,7 @@
 	path = utfcpp-feedstock
 	url = ../utfcpp-feedstock
 	branch = master
+[submodule "loguru-feedstock"]
+	path = loguru-feedstock
+	url = ../loguru-feedstock
+	branch = master
