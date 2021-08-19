@@ -5523,3 +5523,7 @@
 	path = loguru-feedstock
 	url = ../loguru-feedstock
 	branch = master
+[submodule "gl2ps-feedstock"]
+	path = gl2ps-feedstock
+	url = ../gl2ps-feedstock
+	branch = master
