@@ -5507,3 +5507,7 @@
 	path = libzip-feedstock
 	url = ../libzip-feedstock
 	branch = master
+[submodule "pugixml-feedstock"]
+	path = pugixml-feedstock
+	url = ../pugixml-feedstock
+	branch = master
