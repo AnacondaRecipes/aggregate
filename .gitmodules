@@ -5539,3 +5539,7 @@
 	path = sleef-feedstock
 	url = ../sleef-feedstock
 	branch = master
+[submodule "requests_ntlm-feedstock"]
+	path = requests_ntlm-feedstock
+	url = ../requests_ntlm-feedstock
+	branch = master
