@@ -5547,3 +5547,7 @@
 	path = ntlm-auth-feedstock
 	url = ../ntlm-auth-feedstock
 	branch = master
+[submodule "rfc3986-feedstock"]
+	path = rfc3986-feedstock
+	url = ../rfc3986-feedstock
+	branch = master
