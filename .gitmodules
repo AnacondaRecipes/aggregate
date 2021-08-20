@@ -5543,3 +5543,7 @@
 	path = requests_ntlm-feedstock
 	url = ../requests_ntlm-feedstock
 	branch = master
+[submodule "ntlm-auth-feedstock"]
+	path = ntlm-auth-feedstock
+	url = ../ntlm-auth-feedstock
+	branch = master
