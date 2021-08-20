@@ -4,7 +4,8 @@ pin_run_as_build:
 noarch_python:
   - python
 apr:
-  - 1.6.3
+  - 1.6.3  # [not (osx and arm64)]
+  - 1.7.0  # [osx and arm64]
 blas_impl:
   - mkl                        # [x86 or x86_64]
   - openblas                   # [not win]
