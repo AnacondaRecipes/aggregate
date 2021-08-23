@@ -5579,3 +5579,11 @@
 	path = ipopt-feedstock
 	url = ../ipopt-feedstock
 	branch = master
+[submodule "mumps-feedstock"]
+	path = mumps-feedstock
+	url = ../mumps-feedstock
+	branch = master
+[submodule "ampl-mp-feedstock"]
+	path = ampl-mp-feedstock
+	url = ../ampl-mp-feedstock
+	branch = master
