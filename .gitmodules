@@ -5555,3 +5555,7 @@
 	path = pythran-feedstock
 	url = ../pythran-feedstock
 	branch = master
+[submodule "multi_key_dict-feedstock"]
+	path = multi_key_dict-feedstock
+	url = ../multi_key_dict-feedstock
+	branch = master
