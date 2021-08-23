@@ -5571,3 +5571,7 @@
 	path = gts-feedstock
 	url = ../gts-feedstock
 	branch = master
+[submodule "fonts-conda-ecosystem-feedstock"]
+	path = fonts-conda-ecosystem-feedstock
+	url = ../fonts-conda-ecosystem-feedstock
+	branch = master
