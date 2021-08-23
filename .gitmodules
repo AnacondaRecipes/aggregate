@@ -5575,3 +5575,7 @@
 	path = fonts-conda-ecosystem-feedstock
 	url = ../fonts-conda-ecosystem-feedstock
 	branch = master
+[submodule "ipopt-feedstock"]
+	path = ipopt-feedstock
+	url = ../ipopt-feedstock
+	branch = master
