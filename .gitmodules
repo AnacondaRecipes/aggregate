@@ -5559,3 +5559,7 @@
 	path = multi_key_dict-feedstock
 	url = ../multi_key_dict-feedstock
 	branch = master
+[submodule "libgd-2.2.5-feedstock"]
+	path = libgd-2.2.5-feedstock
+	url = ../libgd-feedstock
+	branch = master-2.2.5
