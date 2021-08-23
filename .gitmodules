@@ -5563,3 +5563,7 @@
 	path = libgd-2.2.5-feedstock
 	url = ../libgd-feedstock
 	branch = master-2.2.5
+[submodule "gtk2-feedstock"]
+	path = gtk2-feedstock
+	url = ../gtk2-feedstock
+	branch = master
