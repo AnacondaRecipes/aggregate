@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f7fd3a9a174a17ca36de63563f394eaafc7d4ce11fd3ae7c28d4c38cf6403bef
+  url: https://github.com/vstinner/pyperf/archive/{{ version }}.tar.gz
+  sha256: 7af7b9cfd9d26548ab7127f8e51791357ecd78cda46aad5b2d9664a70fc58878
 
 build:
   number: 0
