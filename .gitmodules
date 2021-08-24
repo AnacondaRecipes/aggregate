@@ -5587,3 +5587,7 @@
 	path = ampl-mp-feedstock
 	url = ../ampl-mp-feedstock
 	branch = master
+[submodule "pytest-filter-subpackage-feedstock"]
+	path = pytest-filter-subpackage-feedstock
+	url = ../pytest-filter-subpackage-feedstock
+	branch = master
