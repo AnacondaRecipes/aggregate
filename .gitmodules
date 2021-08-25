@@ -5603,3 +5603,7 @@
 	path = beniget-0.3.0-feedstock
 	url = ../beniget-feedstock
 	branch = archive-0.3.0
+[submodule "isl-feedstock"]
+	path = isl-feedstock
+	url = ../isl-feedstock
+	branch = master
