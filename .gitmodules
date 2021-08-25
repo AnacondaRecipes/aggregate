@@ -5595,3 +5595,7 @@
 	path = sqlalchemy-1.3.13-feedstock
 	url = ../sqlalchemy-feedstock
 	branch = archive_1.3.12
+[submodule "flask-login-0.4.1-feedstock"]
+	path = flask-login-0.4.1-feedstock
+	url = ../flask-login-feedstock
+	branch = archive-0.4.1
