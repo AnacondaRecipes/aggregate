@@ -5599,3 +5599,7 @@
 	path = flask-login-0.4.1-feedstock
 	url = ../flask-login-feedstock
 	branch = archive-0.4.1
+[submodule "beniget-0.3.0-feedstock"]
+	path = beniget-0.3.0-feedstock
+	url = ../beniget-feedstock
+	branch = archive-0.3.0
