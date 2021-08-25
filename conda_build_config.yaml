@@ -192,7 +192,8 @@ mpfr:
 # we build for an old version of numpy for forward compatibility
 numpy:
   - 1.16    # [not (osx and arm64)]
-  - 1.21    # [osx and arm64]
+  # - 1.21    # [osx and arm64]
+  - 1.19     # [osx and arm64]
 openblas:
   - 0.3.3   # [not (s390x or aarch64 or (osx and arm64))]
   - 0.3.17  # [osx and arm64]
