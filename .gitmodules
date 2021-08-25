@@ -5607,3 +5607,7 @@
 	path = isl-feedstock
 	url = ../isl-feedstock
 	branch = master
+[submodule "gfortran_osx-64-feedstock"]
+	path = gfortran_osx-64-feedstock
+	url = ../gfortran_osx-64-feedstock
+	branch = master
