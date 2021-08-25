@@ -5591,3 +5591,7 @@
 	path = pytest-filter-subpackage-feedstock
 	url = ../pytest-filter-subpackage-feedstock
 	branch = master
+[submodule "sqlalchemy-1.3.13-feedstock"]
+	path = sqlalchemy-1.3.13-feedstock
+	url = ../sqlalchemy-feedstock
+	branch = archive_1.3.12
