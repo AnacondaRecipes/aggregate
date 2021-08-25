@@ -5611,3 +5611,7 @@
 	path = gfortran_osx-64-feedstock
 	url = ../gfortran_osx-64-feedstock
 	branch = master
+[submodule "gfortran_impl_osx-64-feedstock"]
+	path = gfortran_impl_osx-64-feedstock
+	url = ../gfortran_impl_osx-64-feedstock
+	branch = master
