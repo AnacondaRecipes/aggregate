@@ -5631,3 +5631,7 @@
 	path = proj.4-5.2.0-feedstock
 	url = ../proj.4-feedstock
 	branch = master-5.2
+[submodule "thrift-0.11.0-feedstock"]
+	path = thrift-0.11.0-feedstock
+	url = ../thrift-feedstock
+	branch = main-0.11.0
