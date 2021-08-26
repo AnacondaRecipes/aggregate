@@ -17,6 +17,7 @@ requirements:
     - {{ compiler('c') }}
     - pkg-config
     - make
+    - libtool
   host:
     - openssl
     - zlib

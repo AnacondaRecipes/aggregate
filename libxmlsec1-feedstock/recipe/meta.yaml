@@ -1,4 +1,4 @@
-{% set version = "1.2.29" %}
+{% set version = "1.2.32" %}
 
 package:
   name: libxmlsec1
@@ -6,22 +6,23 @@ package:
 
 source:
   url: https://www.aleksey.com/xmlsec/download/xmlsec1-{{ version }}.tar.gz
-  sha256: b1d1deba966019930f608d1f2b95c40ca3450f1393bcd3a3c001a8ba1d2839ab
+  sha256: e383702853236004e5b08e424b8afe9b53fe9f31aaa7a5382f39d9533eb7c043
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   run_exports:
     # compatibility is not tracked at abi-laboratory, assume same as libxml2
     - {{ pin_subpackage('libxmlsec1', max_pin='x.x') }}
   ignore_run_exports:  # [not linux]
     - libiconv         # [not linux]
-    - icu              # [no5 linus]
+    - icu              # [not linux]
     - libgpg-error     # [not linux]
 requirements:
   build:
     - {{ compiler('c') }}
     - make
+    - libtool
   host:
     - icu
     - libgcrypt
@@ -31,12 +32,15 @@ requirements:
     - libxml2
     - libxslt
     - openssl
+    - xz
+    - zlib
   run:
     # libltdl is linked, which the libtool package provides.
     # This is needed to enable dynamic loading support for xmlsec-crypto
     # libraries (--enable-crypto-dl option).
     - {{ pin_compatible('libtool') }}
-
+    - {{ pin_compatible('xz') }}
+    - {{ pin_compatible('zlib') }}
 test:
   commands:
     - xmlsec1 --help

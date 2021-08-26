@@ -18,7 +18,8 @@ requirements:
   build:
     - {{ compiler('cxx') }}
   host:
-    - numpy ==1.14.6
+    - numpy ==1.14.6  # [not (osx and arm64)]
+    - numpy           # [osx and arm64]
     - pip
     - python
   run:
