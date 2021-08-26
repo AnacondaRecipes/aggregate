@@ -5623,3 +5623,7 @@
 	path = proj.4-6.2.1-feedstock
 	url = ../proj.4-feedstock
 	branch = main-6.2.1
+[submodule "proj.4-7.2.0-feedstock"]
+	path = proj.4-7.2.0-feedstock
+	url = ../proj.4-feedstock
+	branch = main-7.2.0
