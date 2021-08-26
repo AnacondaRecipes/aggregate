@@ -20,9 +20,11 @@ requirements:
     - m2w64-gcc-toolchain  # [win]
     - make  # [not win]
     - m2-make  # [win]
+    - libtool  # [not win]
 
 build:
   script:
+    - cp -r ${BUILD_PREFIX}/share/libtool/build-aux/config.* .  # [osx and arm64]
     - ./configure --prefix=${PREFIX}
     - make
     - make install
