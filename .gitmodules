@@ -5619,3 +5619,7 @@
 	path = objconv-feedstock
 	url = ../objconv-feedstock
 	branch = master
+[submodule "proj.4-6.2.1-feedstock"]
+	path = proj.4-6.2.1-feedstock
+	url = ../proj.4-feedstock
+	branch = main-6.2.1
