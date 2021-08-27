@@ -5635,3 +5635,7 @@
 	path = thrift-0.11.0-feedstock
 	url = ../thrift-feedstock
 	branch = main-0.11.0
+[submodule "charset-normalizer-feedstock"]
+	path = charset-normalizer-feedstock
+	url = ../charset-normalizer-feedstock
+	branch = master
