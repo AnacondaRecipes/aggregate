@@ -5651,3 +5651,7 @@
 	path = postgresql-9.6.6-feedstock
 	url = ../postgresql-feedstock
 	branch = main-9.6.6
+[submodule "nodejs-14.8-feedstock"]
+	path = nodejs-14.8-feedstock
+	url = ../nodejs-feedstock
+	branch = master-14-8
