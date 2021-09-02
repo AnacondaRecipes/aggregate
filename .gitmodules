@@ -5663,3 +5663,7 @@
 	path = scalapack-feedstock
 	url = ../scalapack-feedstock
 	branch = master
+[submodule "glpk-feedstock"]
+	path = glpk-feedstock
+	url = ../glpk-feedstock
+	branch = master
