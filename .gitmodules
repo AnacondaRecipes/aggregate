@@ -5655,3 +5655,7 @@
 	path = nodejs-14.8-feedstock
 	url = ../nodejs-feedstock
 	branch = master-14-8
+[submodule "scotch-feedstock"]
+	path = scotch-feedstock
+	url = ../scotch-feedstock
+	branch = master
