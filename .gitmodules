@@ -5659,3 +5659,7 @@
 	path = scotch-feedstock
 	url = ../scotch-feedstock
 	branch = master
+[submodule "scalapack-feedstock"]
+	path = scalapack-feedstock
+	url = ../scalapack-feedstock
+	branch = master
