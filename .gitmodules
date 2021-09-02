@@ -5639,3 +5639,7 @@
 	path = charset-normalizer-feedstock
 	url = ../charset-normalizer-feedstock
 	branch = master
+[submodule "tenacity-6.3.1-feedstock"]
+	path = tenacity-6.3.1-feedstock
+	url = ../tenacity-feedstock
+	branch = main-6.3.1
