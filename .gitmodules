@@ -5675,3 +5675,7 @@
 	path = django-2.1.7-feedstock
 	url = ../django-feedstock
 	branch = main-2.1.7
+[submodule "tbb-2020.01-feedstock"]
+	path = tbb-2020.01-feedstock
+	url = ../tbb-feedstock
+	branch = master-2020.01
