@@ -5667,3 +5667,7 @@
 	path = glpk-feedstock
 	url = ../glpk-feedstock
 	branch = master
+[submodule "sgmllib3k-feedstock"]
+	path = sgmllib3k-feedstock
+	url = ../sgmllib3k-feedstock
+	branch = master
