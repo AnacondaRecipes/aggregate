@@ -5671,3 +5671,7 @@
 	path = sgmllib3k-feedstock
 	url = ../sgmllib3k-feedstock
 	branch = master
+[submodule "django-2.1.7-feedstock"]
+	path = django-2.1.7-feedstock
+	url = ../django-feedstock
+	branch = main-2.1.7
