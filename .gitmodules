@@ -5679,3 +5679,7 @@
 	path = tbb-2020.01-feedstock
 	url = ../tbb-feedstock
 	branch = master-2020.01
+[submodule "assimp-feedstock"]
+	path = assimp-feedstock
+	url = ../assimp-feedstock
+	branch = master
