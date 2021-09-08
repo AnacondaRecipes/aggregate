@@ -1,4 +1,5 @@
-{% set version = '1.6.1' %}
+{% set subversion = '425.2' %}
+{% set version = '1.8.0' + '.' + subversion %}
 
 # This package is linked to Apple's ld64, but they use a very early version
 # of it, not this fork. Still, it should work OK. We do not need lzma and
@@ -11,12 +12,34 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/mackyle/xar/archive/xar-{{ version }}.tar.gz
+  # url: https://github.com/mackyle/xar/archive/xar-{{ version }}.tar.gz
+  url: https://opensource.apple.com/tarballs/xar/xar-{{ subversion }}.tar.gz
+  sha256: c632b996b2b12fc0f90a2704701788029141ca40552cf5b8b38c23ae72de15ca
+  patches:
+    # WARNING: order matters!!!
+    # mashup of patches and scripts from:
+    #   - https://github.com/macports/macports-ports/blob/master/archivers/xar/Portfile
+    #   - https://src.fedoraproject.org/rpms/xar/blob/rawhide/f/xar.spec
+    # from Debian: restore *ssl support, etc
+    - patches/0001-xar-1.8-Add-OpenSSL-To-Configuration.patch
+    - patches/0002-xar-1.8-arm-ppc.patch
+    - patches/0003-xar-1.8-openssl-1.1.patch
+    - patches/0004-xar-1.8-safe_dirname.patch
+    # don't use CommonCrypto, fix header path, etc
+    - patches/0005-patch-lib-archive.h.patch
+    - patches/0006-patch-lib-hash.c.patch
+    - patches/0007-patch-src-xar.c.patch
+    - patches/0008-patch-tpoechtrager.patch
 
 build:
+  skip: True  # [win]
+  ignore_run_exports:
+    - libxml2   # [osx]
+    - bzip2     # [osx]
+    - zlib      # [osx]
+    - xz
   # Eat static.
   ignore_run_deps:
-    - libxml2
     - bzip2
     - zlib
     - xz
@@ -26,15 +49,18 @@ requirements:
     # not osx because on that system, this is a compiler bootstrapping package
     - {{ compiler('c') }}  # [not osx]
     - autoconf
+    - make
+    - patch
   host:
     - libxml2
     - bzip2
     - zlib
     - xz
-    - openssl  # [not osx]
+    - openssl
+    - icu       # [osx]
 
 about:
-  home: http://mackyle.github.io/xar
+  home: https://opensource.apple.com/source/xar/
   license: BSD 3-clause
   license_family: BSD
   license_file: xar/LICENSE

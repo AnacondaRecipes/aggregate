@@ -37,7 +37,7 @@ pushd xar
   # instead of using '-L/usr/lib -lcrypto'
   declare -a _statics
   _statics+=(libxar.a)
-  _statics+=(libxml2.a)
+  # _statics+=(libxml2.a)
   _statics+=(libz.a)
   _statics+=(liblzma.a)
   if [[ $(uname) == Darwin ]]; then

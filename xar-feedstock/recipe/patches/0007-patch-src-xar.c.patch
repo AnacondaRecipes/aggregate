@@ -1,0 +1,12 @@
+--- xar/src/xar.c.orig	2020-12-20 20:52:48.000000000 -0600
++++ xar/src/xar.c	2020-12-20 21:00:44.000000000 -0600
+@@ -51,8 +51,8 @@
+ #include <time.h>
+ #include "xar.h"
+ #include "config.h"
+-#include "filetree.h"
+-#include "util.h"
++#include "../lib/filetree.h"
++#include "../lib/util.h"
+ #define SYMBOLIC 1
+ #define NUMERIC  2
