@@ -4098,7 +4098,7 @@
 [submodule "numpy-1.16-feedstock"]
 	path = numpy-1.16-feedstock
 	url = ../numpy-feedstock
-	branch = numpy116
+	branch = master-1.16
 [submodule "grpc-cpp-feedstock"]
 	path = grpc-cpp-feedstock
 	url = ../grpc-cpp-feedstock
