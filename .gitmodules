@@ -5683,3 +5683,7 @@
 	path = assimp-feedstock
 	url = ../assimp-feedstock
 	branch = master
+[submodule "hunspell-feedstock"]
+	path = hunspell-feedstock
+	url = ../hunspell-feedstock
+	branch = master
