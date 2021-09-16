@@ -5695,3 +5695,7 @@
 	path = autotools_clang_conda-feedstock
 	url = ../autotools_clang_conda-feedstock
 	branch = master
+[submodule "meson-0.55.3-feedstock"]
+	path = meson-0.55.3-feedstock
+	url = ../meson-feedstock
+	branch = main-0.55.3
