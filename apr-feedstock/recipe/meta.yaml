@@ -93,6 +93,10 @@ outputs:
         - expat
         - libapr
         - libapriconv
+      run:
+        - libapr
+        - expat
+
     script: install_libaprutil.sh                               # [unix]
     script: install_libaprutil.bat                              # [win]
     test:
@@ -119,6 +123,8 @@ outputs:
         - ninja                                                 # [win]
         - libtool  # [not win]
       host:
+        - libapr
+      run:
         - libapr
     script: install_libapriconv.sh                              # [unix]
     script: install_libapriconv.bat                             # [win]
