@@ -5699,3 +5699,7 @@
 	path = meson-0.55.3-feedstock
 	url = ../meson-feedstock
 	branch = main-0.55.3
+[submodule "meson-0.53.2-feedstock"]
+	path = meson-0.53.2-feedstock
+	url = ../meson-feedstock
+	branch = main-0.53.2
