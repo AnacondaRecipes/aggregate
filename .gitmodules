@@ -5691,3 +5691,7 @@
 	path = omniscidb-feedstock
 	url = ../omniscidb-feedstock
 	branch = master
+[submodule "autotools_clang_conda-feedstock"]
+	path = autotools_clang_conda-feedstock
+	url = ../autotools_clang_conda-feedstock
+	branch = master
