@@ -22,7 +22,11 @@ fi
 
 autoreconf -vfi
 
-./configure --prefix="${PREFIX}" --host="${HOST}"
+ln -s $CC ./cc
+
+export PATH=$PWD:$PATH
+
+CC="${CC}" ./configure --prefix="${PREFIX}" --host="${HOST}"
 
 make
 make install

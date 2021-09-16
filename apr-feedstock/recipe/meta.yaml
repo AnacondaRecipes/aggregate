@@ -39,7 +39,7 @@ requirements:
     - make  # [unix]
   host:
     - expat                                                     # [win]
-    - {{ compiler('c') }}  # [build_platform != target_platform]
+    - {{ compiler('c') }}                                       # [ppc64le]
   run:
     - libapr
     - libaprutil
