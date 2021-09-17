@@ -5703,3 +5703,7 @@
 	path = meson-0.53.2-feedstock
 	url = ../meson-feedstock
 	branch = main-0.53.2
+[submodule "mpg123-feedstock"]
+	path = mpg123-feedstock
+	url = ../mpg123-feedstock
+	branch = master
