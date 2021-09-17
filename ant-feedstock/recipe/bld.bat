@@ -1,9 +1,10 @@
-set JAVA_HOME=%LIBRARY_PREFIX%
-
-call build.bat dist
+@echo on
+rem set JAVA_HOME=%LIBRARY_PREFIX%
+set ANT_HOME=.\build
+call build.bat install-lite
 if errorlevel 1 exit 1
 
-cd apache-ant-%PKG_VERSION%
+cd build
 
 xcopy /f /s /y /i bin\* %LIBRARY_BIN%
 xcopy /f /s /y /i etc %LIBRARY_PREFIX%\etc

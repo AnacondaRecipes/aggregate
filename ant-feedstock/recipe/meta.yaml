@@ -1,5 +1,5 @@
-{% set version = '1.9.9' %}
-{% set sha256 = '69aa251ffb9f31312c21d67db197843e0b03b3c8cc3e0af6e6e92d98eb0f2ead' %}
+{% set version = '1.10.8' %}
+{% set sha256 = 'd9bdc6da6180b05aef8c60b06c637fc36d3741cbce109aada9586ceef2664272' %}
 
 package:
   name: ant
@@ -8,19 +8,20 @@ package:
 source:
   url: https://archive.apache.org/dist/ant/source/apache-ant-{{ version }}-src.tar.bz2
   sha256: {{ sha256 }}
-  # This patch is needed for 1.10.1
-  # patches:
-  #   - make-bootstrap-work-on-Windows.patch
 
+build:
+  number: 0
+  # no openjdk available for those platforms
+  skip: True  # [ppc64le or s390x]
 requirements:
   build:
     - openjdk
-  #   - patch     [win]
   run:
     - openjdk
 
 test:
   commands:
+    - chmod +x $PREFIX/bin/j*  # [osx]
     - ant -h
 
 about:
