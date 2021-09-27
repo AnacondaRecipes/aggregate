@@ -5707,3 +5707,7 @@
 	path = mpg123-feedstock
 	url = ../mpg123-feedstock
 	branch = master
+[submodule "thrift_sasl-0.3.0-feedstock"]
+	path = thrift_sasl-0.3.0-feedstock
+	url = ../thrift_sasl-feedstock
+	branch = main-0.3.0
