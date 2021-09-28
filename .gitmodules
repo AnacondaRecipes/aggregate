@@ -5711,3 +5711,6 @@
 	path = thrift_sasl-0.3.0-feedstock
 	url = ../thrift_sasl-feedstock
 	branch = main-0.3.0
+[submodule "python-lsp-black"]
+	path = python-lsp-black
+	url = ssh://git@github.com/AnacondaRecipes/python-lsp-black-feedstock.git
