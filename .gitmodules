@@ -5711,3 +5711,7 @@
 	path = thrift_sasl-0.3.0-feedstock
 	url = ../thrift_sasl-feedstock
 	branch = main-0.3.0
+[submodule "serverfiles-0.2.1-feddstock"]
+	path = serverfiles-0.2.1-feddstock
+	url = ../serverfiles-feedstock
+	branch = main-2.1
