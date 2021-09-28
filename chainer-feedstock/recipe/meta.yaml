@@ -1,5 +1,5 @@
 {% set name = "chainer" %}
-{% set version = "6.3.0" %}
+{% set version = "7.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: aef20f87edc2074474bcee119a42075655e7ba96bb311c0873e11de286a26c8b
+  sha256: 266de27c4beda59e58f24a5d0d60f1569703d31e8b1592aa8dd38566c955435b
 
 build:
   number: 0
@@ -16,12 +16,13 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.5
     - pip
-  run:
-    - python
+    - wheel
     - setuptools
-    - typing
+  run:
+    - python >=3.5
+    - setuptools
     - typing_extensions
     - filelock
     - numpy >=1.9.0
@@ -29,10 +30,15 @@ requirements:
     - six >=1.9.0
 
 test:
+  commands:
+    - pip check
+  requires:
+    - pip
   imports:
     - chainer
     - chainer.backends
     - chainer.dataset
+    - chainer.dataset.tabular
     - chainer.datasets
     - chainer.distributions
     - chainer.exporters
@@ -46,11 +52,24 @@ test:
     - chainer.functions.noise
     - chainer.functions.normalization
     - chainer.functions.pooling
+    - chainer.functions.rnn
     - chainer.functions.theano
     - chainer.functions.util
     - chainer.function_hooks
     - chainer.iterators
     - chainer.initializers
+    - chainer.links
+    - chainer.links.activation
+    - chainer.links.caffe
+    - chainer.links.caffe.protobuf3
+    - chainer.links.connection
+    - chainer.links.loss
+    - chainer.links.model
+    - chainer.links.model.vision
+    - chainer.links.normalization
+    - chainer.links.rnn
+    - chainer.links.theano
+    - chainer.link_hooks
     - chainer.graph_optimizations
     - chainer.optimizers
     - chainer.optimizer_hooks
@@ -66,6 +85,8 @@ test:
     - chainermn.extensions
     - chainermn.functions
     - chainermn.iterators
+    - chainermn.links
+    - chainermn.testing
 
 about:
   home: https://chainer.org/
