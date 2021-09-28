@@ -5715,3 +5715,7 @@
 	path = serverfiles-0.2.1-feddstock
 	url = ../serverfiles-feedstock
 	branch = main-2.1
+[submodule "chainer-feedstock"]
+	path = chainer-feedstock
+	url = ../chainer-feedstock
+	branch = master
