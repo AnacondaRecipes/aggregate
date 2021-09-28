@@ -5714,3 +5714,7 @@
 [submodule "python-lsp-black"]
 	path = python-lsp-black
 	url = ssh://git@github.com/AnacondaRecipes/python-lsp-black-feedstock.git
+[submodule "serverfiles-0.2.1-feddstock"]
+	path = serverfiles-0.2.1-feddstock
+	url = ../serverfiles-feedstock
+	branch = main-2.1
