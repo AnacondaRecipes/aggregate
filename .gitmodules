@@ -5719,3 +5719,7 @@
 	path = chainer-feedstock
 	url = ../chainer-feedstock
 	branch = master
+[submodule "python-3.9-feedstock"]
+	path = python-3.9-feedstock
+	url = ../python-feedstock
+	branch = main-3.9
