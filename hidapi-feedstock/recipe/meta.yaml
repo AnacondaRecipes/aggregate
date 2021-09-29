@@ -6,6 +6,7 @@ source:
   git_url: https://github.com/signal11/hidapi
 
 build:
+  skip: True  # [s390x or aarch64 or ppc64le]
   run_exports:
     - {{ pin_subpackage('hidapi', max_pin='x.x') }}
 
@@ -16,7 +17,7 @@ requirements:
     - automake  # [unix]
     - libtool   # [unix]
     - make      # [unix]
-
+    - {{ cdt('libudev-devel') }}  # [linux and x86_64]
 about:
   home: http://www.signal11.us/oss/hidapi/
   license: BSD
