@@ -5723,3 +5723,7 @@
 	path = python-3.9-feedstock
 	url = ../python-feedstock
 	branch = main-3.9
+[submodule "dm-tree-feedstock"]
+	path = dm-tree-feedstock
+	url = ../dm-tree-feedstock
+	branch = master
