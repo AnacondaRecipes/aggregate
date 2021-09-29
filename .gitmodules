@@ -5721,3 +5721,9 @@
 [submodule "fastprogress-feedstock"]
 	path = fastprogress-feedstock
 	url = ../fastprogress-feedstock
+[submodule "jax-feedstock"]
+	path = jax-feedstock
+	url = ../jax-feedstock
+[submodule "jaxlib-feedstock"]
+	path = jaxlib-feedstock
+	url = ../jaxlib-feedstock
