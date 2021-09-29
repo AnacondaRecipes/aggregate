@@ -5715,3 +5715,9 @@
 	path = serverfiles-0.2.1-feddstock
 	url = ../serverfiles-feedstock
 	branch = main-2.1
+[submodule "theano-pymc-feedstock"]
+	path = theano-pymc-feedstock
+	url = ../theano-pymc-feedstock
+[submodule "fastprogress-feedstock"]
+	path = fastprogress-feedstock
+	url = ../fastprogress-feedstock
