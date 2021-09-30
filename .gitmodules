@@ -5727,3 +5727,7 @@
 	path = dm-tree-feedstock
 	url = ../dm-tree-feedstock
 	branch = master
+[submodule "thrift-cpp-0.14-feedstock"]
+	path = thrift-cpp-0.14-feedstock
+	url = ../thrift-cpp-feedstock
+	branch = main-0.14
