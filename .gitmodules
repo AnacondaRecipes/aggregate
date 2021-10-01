@@ -5731,3 +5731,7 @@
 	path = thrift-cpp-0.14-feedstock
 	url = ../thrift-cpp-feedstock
 	branch = main-0.14
+[submodule "tensorboard-data-server-feedstock"]
+	path = tensorboard-data-server-feedstock
+	url = ../tensorboard-data-server-feedstock
+	branch = master
