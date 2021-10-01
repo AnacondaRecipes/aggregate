@@ -5755,3 +5755,7 @@
 	path = py7zr-feedstock
 	url = ../py7zr-feedstock
 	branch = master
+[submodule "bcj-cffi-feedstock"]
+	path = bcj-cffi-feedstock
+	url = ../bcj-cffi-feedstock
+	branch = master
