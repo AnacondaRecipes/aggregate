@@ -5775,3 +5775,7 @@
 	path = texttable-feedstock
 	url = ../texttable-feedstock
 	branch = master
+[submodule "brotlicffi-feedstock"]
+	path = brotlicffi-feedstock
+	url = ../brotlicffi-feedstock
+	branch = master
