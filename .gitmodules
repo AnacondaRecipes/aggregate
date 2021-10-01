@@ -5739,3 +5739,7 @@
 	path = huggingface_hub-feedstock
 	url = ../huggingface_hub-feedstock
 	branch = master
+[submodule "transformers-feedstock"]
+	path = transformers-feedstock
+	url = ../transformers-feedstock
+	branch = master
