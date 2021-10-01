@@ -5751,3 +5751,7 @@
 	path = multiprocess-feedstock
 	url = ../multiprocess-feedstock
 	branch = master
+[submodule "py7zr-feedstock"]
+	path = py7zr-feedstock
+	url = ../py7zr-feedstock
+	branch = master
