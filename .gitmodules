@@ -5787,3 +5787,7 @@
 	path = python-xxhash-feedstock
 	url = ../python-xxhash-feedstock
 	branch = master
+[submodule "xxhash-feedstock"]
+	path = xxhash-feedstock
+	url = ../xxhash-feedstock
+	branch = master
