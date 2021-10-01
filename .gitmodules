@@ -5767,3 +5767,7 @@
 	path = multivolumefile-feedstock
 	url = ../multivolumefile-feedstock
 	branch = master
+[submodule "pyppmd-feedstock"]
+	path = pyppmd-feedstock
+	url = ../pyppmd-feedstock
+	branch = master
