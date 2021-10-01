@@ -5763,3 +5763,7 @@
 	path = pyzstd-feedstock
 	url = ../pyzstd-feedstock
 	branch = master
+[submodule "multivolumefile-feedstock"]
+	path = multivolumefile-feedstock
+	url = ../multivolumefile-feedstock
+	branch = master
