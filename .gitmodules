@@ -5771,3 +5771,7 @@
 	path = pyppmd-feedstock
 	url = ../pyppmd-feedstock
 	branch = master
+[submodule "texttable-feedstock"]
+	path = texttable-feedstock
+	url = ../texttable-feedstock
+	branch = master
