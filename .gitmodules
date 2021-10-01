@@ -5779,3 +5779,7 @@
 	path = brotlicffi-feedstock
 	url = ../brotlicffi-feedstock
 	branch = master
+[submodule "pyzstd-0.14.4-feedstock"]
+	path = pyzstd-0.14.4-feedstock
+	url = ../pyzstd-feedstock
+	branch = main-0.14.4
