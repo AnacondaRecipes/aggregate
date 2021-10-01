@@ -5791,3 +5791,7 @@
 	path = xxhash-feedstock
 	url = ../xxhash-feedstock
 	branch = master
+[submodule "conllu-feedstock"]
+	path = conllu-feedstock
+	url = ../conllu-feedstock
+	branch = master
