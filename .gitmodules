@@ -5795,3 +5795,7 @@
 	path = conllu-feedstock
 	url = ../conllu-feedstock
 	branch = master
+[submodule "sacremoses-feedstock"]
+	path = sacremoses-feedstock
+	url = ../sacremoses-feedstock
+	branch = master
