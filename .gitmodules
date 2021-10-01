@@ -5735,3 +5735,7 @@
 	path = tensorboard-data-server-feedstock
 	url = ../tensorboard-data-server-feedstock
 	branch = master
+[submodule "huggingface_hub-feedstock"]
+	path = huggingface_hub-feedstock
+	url = ../huggingface_hub-feedstock
+	branch = master
