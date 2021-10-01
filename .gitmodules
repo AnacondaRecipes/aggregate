@@ -5743,3 +5743,7 @@
 	path = transformers-feedstock
 	url = ../transformers-feedstock
 	branch = master
+[submodule "datasets-feedstock"]
+	path = datasets-feedstock
+	url = ../datasets-feedstock
+	branch = master
