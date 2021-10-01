@@ -5783,3 +5783,7 @@
 	path = pyzstd-0.14.4-feedstock
 	url = ../pyzstd-feedstock
 	branch = main-0.14.4
+[submodule "python-xxhash-feedstock"]
+	path = python-xxhash-feedstock
+	url = ../python-xxhash-feedstock
+	branch = master
