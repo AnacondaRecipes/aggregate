@@ -24,6 +24,8 @@ echo "[target.powerpc64le-unknown-linux-gnu]" >> ${CARGO_CONFIG}
 echo "linker = \"${CONDA_PREFIX}/bin/powerpc64le-conda_cos7-linux-gnu-cc\"" >> ${CARGO_CONFIG}
 echo "[target.s390x-unknown-linux-gnu]" >> ${CARGO_CONFIG}
 echo "linker = \"${CONDA_PREFIX}/bin/s390x-conda_cos7-linux-gnu-cc\"" >> ${CARGO_CONFIG}
+echo "[target.aarch64-unknown-linux-gnu]" >> ${CARGO_CONFIG}
+echo "linker = \"${CONDA_PREFIX}/bin/aarch64-conda-linux-gnu-cc\"" >> ${CARGO_CONFIG}
 echo "[target.'cfg(...)']" >> ${CARGO_CONFIG}
 echo "rustflags = [\"-C\", \"link-flags=-Wl,-rpath-link=${CONDA_PREFIX}/lib,-rpath=${CONDA_PREFIX}/lib\", \"-C\", \"opt-level=z\"]" >> ${CARGO_CONFIG}
 
@@ -47,6 +49,9 @@ echo "linker = \"${CONDA_PREFIX}/bin/powerpc64le-conda_cos7-linux-gnu-cc\"" >> $
 echo "rustflags = [\"-C\", \"link-arg=-Wl,-rpath-link,${CONDA_PREFIX}/lib\", \"-C\", \"link-arg=-Wl,-rpath,${CONDA_PREFIX}/lib\", \"-C\", \"opt-level=s\"]" >> ${CARGO_CONFIG}
 echo "[target.s390x-unknown-linux-gnu]" >> ${CARGO_CONFIG}
 echo "linker = \"${CONDA_PREFIX}/bin/s390x-conda_cos7-linux-gnu-cc\"" >> ${CARGO_CONFIG}
+echo "rustflags = [\"-C\", \"link-arg=-Wl,-rpath-link,${CONDA_PREFIX}/lib\", \"-C\", \"link-arg=-Wl,-rpath,${CONDA_PREFIX}/lib\", \"-C\", \"opt-level=s\"]" >> ${CARGO_CONFIG}
+echo "[target.aarch64-unknown-linux-gnu]" >> ${CARGO_CONFIG}
+echo "linker = \"${CONDA_PREFIX}/bin/aarch64-conda-linux-gnu-cc\"" >> ${CARGO_CONFIG}
 echo "rustflags = [\"-C\", \"link-arg=-Wl,-rpath-link,${CONDA_PREFIX}/lib\", \"-C\", \"link-arg=-Wl,-rpath,${CONDA_PREFIX}/lib\", \"-C\", \"opt-level=s\"]" >> ${CARGO_CONFIG}
 echo "# Not sure about this stuff:" >> ${CARGO_CONFIG}
 echo "# [target.'cfg(...)']" >> ${CARGO_CONFIG}
