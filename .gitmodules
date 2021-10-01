@@ -5759,3 +5759,7 @@
 	path = bcj-cffi-feedstock
 	url = ../bcj-cffi-feedstock
 	branch = master
+[submodule "pyzstd-feedstock"]
+	path = pyzstd-feedstock
+	url = ../pyzstd-feedstock
+	branch = master
