@@ -5799,3 +5799,7 @@
 	path = sacremoses-feedstock
 	url = ../sacremoses-feedstock
 	branch = master
+[submodule "snowflake-connector-python-feedstock"]
+	path = snowflake-connector-python-feedstock
+	url = ../snowflake-connector-python-feedstock
+	branch = master
