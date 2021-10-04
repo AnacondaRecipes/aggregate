@@ -1,5 +1,5 @@
 {% set name = "cornice" %}
-{% set version = "3.6.0" %}
+{% set version = "6.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4dab97fe52d7075ecc87b8cadf549ca2c2c628512741193fb81a0c0433b46715
+  sha256: 532485ed53cae81ef476aaf4cc7c2e0208749ad1959119c46efefdeea5546eba
 
 build:
   number: 0
@@ -18,17 +18,21 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
+    - wheel
   run:
     - python
-    - pyramid >=1.7
-    - simplejson
-    - six
+    - pyramid >=1.7,<3
     - venusian
 
 test:
   imports:
     - cornice
     - cornice.validators
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: http://cornice.readthedocs.org/
