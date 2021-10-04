@@ -5823,3 +5823,7 @@
 	path = msrest-feedstock
 	url = ../msrest-feedstock
 	branch = master
+[submodule "featuretools-feedstock"]
+	path = featuretools-feedstock
+	url = ../featuretools-feedstock
+	branch = master
