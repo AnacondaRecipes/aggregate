@@ -5819,3 +5819,7 @@
 	path = oscrypto-feedstock
 	url = ../oscrypto-feedstock
 	branch = master
+[submodule "msrest-feedstock"]
+	path = msrest-feedstock
+	url = ../msrest-feedstock
+	branch = master
