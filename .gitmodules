@@ -5827,3 +5827,7 @@
 	path = featuretools-feedstock
 	url = ../featuretools-feedstock
 	branch = master
+[submodule "composeml-feedstock"]
+	path = composeml-feedstock
+	url = ../composeml-feedstock
+	branch = master
