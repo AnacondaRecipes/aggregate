@@ -5831,3 +5831,7 @@
 	path = composeml-feedstock
 	url = ../composeml-feedstock
 	branch = master
+[submodule "cerberus-feedstock"]
+	path = cerberus-feedstock
+	url = ../cerberus-feedstock
+	branch = master
