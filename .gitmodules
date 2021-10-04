@@ -5807,3 +5807,7 @@
 	path = azure-common-feedstock
 	url = ../azure-common-feedstock
 	branch = master
+[submodule "azure-core-feedstock"]
+	path = azure-core-feedstock
+	url = ../azure-core-feedstock
+	branch = master
