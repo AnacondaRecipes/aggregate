@@ -5811,3 +5811,7 @@
 	path = azure-core-feedstock
 	url = ../azure-core-feedstock
 	branch = master
+[submodule "azure-storage-blob-feedstock"]
+	path = azure-storage-blob-feedstock
+	url = ../azure-storage-blob-feedstock
+	branch = master
