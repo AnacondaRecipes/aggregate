@@ -5815,3 +5815,7 @@
 	path = azure-storage-blob-feedstock
 	url = ../azure-storage-blob-feedstock
 	branch = master
+[submodule "oscrypto-feedstock"]
+	path = oscrypto-feedstock
+	url = ../oscrypto-feedstock
+	branch = master
