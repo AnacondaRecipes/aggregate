@@ -5839,3 +5839,7 @@
 	path = category_encoders-feedstock
 	url = ../category_encoders-feedstock
 	branch = master
+[submodule "catboost-feedstock"]
+	path = catboost-feedstock
+	url = ../catboost-feedstock
+	branch = master
