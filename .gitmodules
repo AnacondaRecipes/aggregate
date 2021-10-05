@@ -5851,3 +5851,7 @@
 	path = shap-feedstock
 	url = ../shap-feedstock
 	branch = master
+[submodule "slicer-feedstock"]
+	path = slicer-feedstock
+	url = ../slicer-feedstock
+	branch = master
