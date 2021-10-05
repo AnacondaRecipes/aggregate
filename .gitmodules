@@ -5855,3 +5855,7 @@
 	path = slicer-feedstock
 	url = ../slicer-feedstock
 	branch = master
+[submodule "tsfresh-feedstock"]
+	path = tsfresh-feedstock
+	url = ../tsfresh-feedstock
+	branch = master
