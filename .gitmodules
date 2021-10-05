@@ -5847,3 +5847,7 @@
 	path = fastcluster-feedstock
 	url = ../fastcluster-feedstock
 	branch = master
+[submodule "shap-feedstock"]
+	path = shap-feedstock
+	url = ../shap-feedstock
+	branch = master
