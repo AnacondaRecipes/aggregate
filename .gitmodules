@@ -5859,3 +5859,7 @@
 	path = tsfresh-feedstock
 	url = ../tsfresh-feedstock
 	branch = master
+[submodule "matrixprofile-feedstock"]
+	path = matrixprofile-feedstock
+	url = ../matrixprofile-feedstock
+	branch = master
