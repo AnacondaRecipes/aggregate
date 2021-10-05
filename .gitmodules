@@ -5843,3 +5843,7 @@
 	path = catboost-feedstock
 	url = ../catboost-feedstock
 	branch = master
+[submodule "fastcluster-feedstock"]
+	path = fastcluster-feedstock
+	url = ../fastcluster-feedstock
+	branch = master
