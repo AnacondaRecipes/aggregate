@@ -5835,3 +5835,7 @@
 	path = cerberus-feedstock
 	url = ../cerberus-feedstock
 	branch = master
+[submodule "category_encoders-feedstock"]
+	path = category_encoders-feedstock
+	url = ../category_encoders-feedstock
+	branch = master
