@@ -5863,3 +5863,7 @@
 	path = matrixprofile-feedstock
 	url = ../matrixprofile-feedstock
 	branch = master
+[submodule "stumpy-feedstock"]
+	path = stumpy-feedstock
+	url = ../stumpy-feedstock
+	branch = master
