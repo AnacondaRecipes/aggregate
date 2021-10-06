@@ -149,7 +149,7 @@ libdap4:
 libffi:
   - 3.3  # [not win]
   # Patches need to be rebased
-  - 3.2.1  # [win]
+  - 3.4  # [win]
 libgd:
   - 2.2.5
 libgdal:
@@ -221,10 +221,10 @@ libprotobuf:
   - 3.14.0    # [s390x or aarch64]
   - 3.17.2    # [osx and arm64]
 python:
-  - 3.6      # [not (s390x or aarch64 or arm64)]
   - 3.7      # [not arm64]
   - 3.8
   - 3.9
+  - 3.10
 python_implementation:
   - cpython
 python_impl:
