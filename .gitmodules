@@ -5867,3 +5867,7 @@
 	path = stumpy-feedstock
 	url = ../stumpy-feedstock
 	branch = master
+[submodule "setuptools-52.0.0-feedstock"]
+	path = setuptools-52.0.0-feedstock
+	url = ../setuptools-feedstock
+	branch = main-52.0.0
