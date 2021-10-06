@@ -5879,3 +5879,7 @@
 	path = autograd-feedstock
 	url = ../autograd-feedstock
 	branch = master
+[submodule "debugpy-feedstock"]
+	path = debugpy-feedstock
+	url = ../debugpy-feedstock
+	branch = master
