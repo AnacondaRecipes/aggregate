@@ -5875,3 +5875,7 @@
 	path = configspace-feedstock
 	url = ../configspace-feedstock
 	branch = master
+[submodule "autograd-feedstock"]
+	path = autograd-feedstock
+	url = ../autograd-feedstock
+	branch = master
