@@ -5871,3 +5871,7 @@
 	path = setuptools-52.0.0-feedstock
 	url = ../setuptools-feedstock
 	branch = main-52.0.0
+[submodule "configspace-feedstock"]
+	path = configspace-feedstock
+	url = ../configspace-feedstock
+	branch = master
