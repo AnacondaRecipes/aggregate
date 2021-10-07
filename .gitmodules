@@ -5883,3 +5883,7 @@
 	path = debugpy-feedstock
 	url = ../debugpy-feedstock
 	branch = master
+[submodule "openml-feedstock"]
+	path = openml-feedstock
+	url = ../openml-feedstock
+	branch = master
