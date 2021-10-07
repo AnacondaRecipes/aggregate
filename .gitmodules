@@ -5891,3 +5891,7 @@
 	path = minio-feedstock
 	url = ../minio-feedstock
 	branch = master
+[submodule "liac-arff-feedstock"]
+	path = liac-arff-feedstock
+	url = ../liac-arff-feedstock
+	branch = master
