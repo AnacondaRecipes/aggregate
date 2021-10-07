@@ -5887,3 +5887,7 @@
 	path = openml-feedstock
 	url = ../openml-feedstock
 	branch = master
+[submodule "minio-feedstock"]
+	path = minio-feedstock
+	url = ../minio-feedstock
+	branch = master
