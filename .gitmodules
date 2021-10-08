@@ -5895,3 +5895,7 @@
 	path = liac-arff-feedstock
 	url = ../liac-arff-feedstock
 	branch = master
+[submodule "yacs-feedstock"]
+	path = yacs-feedstock
+	url = ../yacs-feedstock
+	branch = master
