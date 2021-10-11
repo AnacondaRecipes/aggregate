@@ -5899,3 +5899,7 @@
 	path = yacs-feedstock
 	url = ../yacs-feedstock
 	branch = master
+[submodule "theano-pymc-feedstock"]
+	path = theano-pymc-feedstock
+	url = ../theano-pymc-feedstock
+	branch = master
