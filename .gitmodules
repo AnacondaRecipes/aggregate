@@ -5939,3 +5939,7 @@
 	path = autocfg-feedstock
 	url = ../autocfg-feedstock
 	branch = master
+[submodule "gluon-cv-feedstock"]
+	path = gluon-cv-feedstock
+	url = ../gluon-cv-feedstock
+	branch = master
