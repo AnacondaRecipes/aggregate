@@ -5935,3 +5935,7 @@
 	path = gh-feedstock
 	url = ../gh-feedstock
 	branch = master
+[submodule "autocfg-feedstock"]
+	path = autocfg-feedstock
+	url = ../autocfg-feedstock
+	branch = master
