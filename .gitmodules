@@ -5931,3 +5931,7 @@
 	path = jaxlib-feedstock
 	url = ../jaxlib-feedstock
 	branch = master
+[submodule "gh-feedstock"]
+	path = gh-feedstock
+	url = ../gh-feedstock
+	branch = master
