@@ -5907,3 +5907,7 @@
 	path = jax-feedstock
 	url = ../jax-feedstock
 	branch = master
+[submodule "jaxlib-feedstock"]
+	path = jaxlib-feedstock
+	url = ../jaxlib-feedstock
+	branch = master
