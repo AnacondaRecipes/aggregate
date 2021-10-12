@@ -5963,3 +5963,7 @@
 	path = convertdate-feedstock
 	url = ../convertdate-feedstock
 	branch = master
+[submodule "pymeeus-feedstock"]
+	path = pymeeus-feedstock
+	url = ../pymeeus-feedstock
+	branch = master
