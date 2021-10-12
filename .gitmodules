@@ -5943,3 +5943,7 @@
 	path = gluon-cv-feedstock
 	url = ../gluon-cv-feedstock
 	branch = master
+[submodule "gluon-ts-feedstock"]
+	path = gluon-ts-feedstock
+	url = ../gluon-ts-feedstock
+	branch = master
