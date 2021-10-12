@@ -5959,3 +5959,7 @@
 	path = hijri-converter-feedstock
 	url = ../hijri-converter-feedstock
 	branch = master
+[submodule "convertdate-feedstock"]
+	path = convertdate-feedstock
+	url = ../convertdate-feedstock
+	branch = master
