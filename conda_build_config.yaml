@@ -112,7 +112,7 @@ gstreamer:
 gst_plugins_base:
   - 1.14
 geos:
-  - 3.8.0  # [win]
+  # - 3.8.0  # [win]
   - 3.8.0  # [win]
   - 3.8.0  # [win]
   - 3.8.0  # [not (osx and arm64)] 
