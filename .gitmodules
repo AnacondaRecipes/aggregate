@@ -5951,3 +5951,7 @@
 	path = holidays-feedstock
 	url = ../holidays-feedstock
 	branch = master
+[submodule "korean_lunar_calendar-feedstock"]
+	path = korean_lunar_calendar-feedstock
+	url = ../korean_lunar_calendar-feedstock
+	branch = master
