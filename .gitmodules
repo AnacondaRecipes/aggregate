@@ -5947,3 +5947,7 @@
 	path = gluon-ts-feedstock
 	url = ../gluon-ts-feedstock
 	branch = master
+[submodule "holidays-feedstock"]
+	path = holidays-feedstock
+	url = ../holidays-feedstock
+	branch = master
