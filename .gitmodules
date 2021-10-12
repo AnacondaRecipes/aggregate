@@ -5955,3 +5955,7 @@
 	path = korean_lunar_calendar-feedstock
 	url = ../korean_lunar_calendar-feedstock
 	branch = master
+[submodule "hijri-converter-feedstock"]
+	path = hijri-converter-feedstock
+	url = ../hijri-converter-feedstock
+	branch = master
