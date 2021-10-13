@@ -5975,3 +5975,7 @@
 	path = armpl-feedstock
 	url = ../armpl-feedstock
 	branch = main
+[submodule "sacrebleu-feedstock"]
+	path = sacrebleu-feedstock
+	url = ../sacrebleu-feedstock
+	branch = master
