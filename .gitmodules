@@ -5979,3 +5979,7 @@
 	path = sacrebleu-feedstock
 	url = ../sacrebleu-feedstock
 	branch = master
+[submodule "sentencepiece-feedstock"]
+	path = sentencepiece-feedstock
+	url = ../sentencepiece-feedstock
+	branch = master
