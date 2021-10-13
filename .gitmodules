@@ -5983,3 +5983,7 @@
 	path = sentencepiece-feedstock
 	url = ../sentencepiece-feedstock
 	branch = master
+[submodule "gperftools-feedstock"]
+	path = gperftools-feedstock
+	url = ../gperftools-feedstock
+	branch = master
