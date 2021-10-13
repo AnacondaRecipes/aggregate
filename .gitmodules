@@ -5971,3 +5971,7 @@
 	path = numpy-1.20-feedstock
 	url = ../numpy-feedstock
 	branch = main-1.20
+[submodule "armpl-feedstock"]
+	path = armpl-feedstock
+	url = ../armpl-feedstock
+	branch = main
