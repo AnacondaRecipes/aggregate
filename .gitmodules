@@ -1010,7 +1010,7 @@
 [submodule "numpy-feedstock"]
 	path = numpy-feedstock
 	url = ../numpy-feedstock
-	branch = numpy114
+	branch = master
 [submodule "numexpr-feedstock"]
 	path = numexpr-feedstock
 	url = ../numexpr-feedstock
