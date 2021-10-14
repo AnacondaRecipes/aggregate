@@ -5991,3 +5991,7 @@
 	path = libunwind-feedstock
 	url = ../libunwind-feedstock
 	branch = master
+[submodule "python-lsp-jsonrpc-feedstock"]
+	path = python-lsp-jsonrpc-feedstock
+	url = ../python-lsp-jsonrpc-feedstock
+	branch = master
