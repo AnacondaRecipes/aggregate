@@ -5999,3 +5999,7 @@
 	path = python-lsp-server-feedstock
 	url = ../python-lsp-server-feedstock
 	branch = master
+[submodule "python-lsp-black-feedstock"]
+	path = python-lsp-black-feedstock
+	url = ../python-lsp-black-feedstock
+	branch = master
