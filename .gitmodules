@@ -5995,3 +5995,7 @@
 	path = python-lsp-jsonrpc-feedstock
 	url = ../python-lsp-jsonrpc-feedstock
 	branch = master
+[submodule "python-lsp-server-feedstock"]
+	path = python-lsp-server-feedstock
+	url = ../python-lsp-server-feedstock
+	branch = master
