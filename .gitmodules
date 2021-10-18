@@ -6003,3 +6003,7 @@
 	path = python-lsp-black-feedstock
 	url = ../python-lsp-black-feedstock
 	branch = master
+[submodule "prefect-feedstock"]
+	path = prefect-feedstock
+	url = ../prefect-feedstock
+	branch = master
