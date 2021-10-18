@@ -6009,5 +6009,5 @@
 	branch = master
 [submodule "arrow-0.13-feedstock"]
 	path = arrow-0.13-feedstock
-	url = ../arrow-0.13-feedstock
+	url = ../arrow-feedstock
 	branch = master-0.13
