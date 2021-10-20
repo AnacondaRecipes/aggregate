@@ -6011,3 +6011,7 @@
 	path = arrow-0.13-feedstock
 	url = ../arrow-feedstock
 	branch = master-0.13
+[submodule "fastprogress-feedstock"]
+	path = fastprogress-feedstock
+	url = ../fastprogress-feedstock
+	branch = master
