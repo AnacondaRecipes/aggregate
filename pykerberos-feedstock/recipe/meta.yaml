@@ -10,7 +10,7 @@ source:
     - 0001-Implement-mempcpy-via-memcpy.patch
 
 build:
-  number: 2
+  number: 3
   detect_binary_files_with_prefix: False
   script: python setup.py install --single-version-externally-managed --root=/
   # Use winkerberos on Windows
@@ -20,9 +20,12 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - patch  # [not win]
   host:
     - python
+    - pip
     - setuptools
+    - wheel
     - krb5
   run:
     - python
@@ -31,10 +34,15 @@ requirements:
 test:
   imports:
     - kerberos
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/02strich/pykerberos
-  license: Apache
+  license: Apache-2.0
+  license_family: Apache
   license_file: LICENSE
   summary: high-level interface to Kerberos
   description: |
@@ -42,5 +50,6 @@ about:
     avoid having to build a module that wraps the entire Kerberos.framework
     and instead offer a limited set of functions that do what is needed for
     client/server Kerberos authentication.
+  dev_url: https://github.com/02strich/pykerberos
   doc_url: https://pypi.python.org/pypi/kerberos
   doc_source_url: https://github.com/apple/ccs-pykerberos/blob/master/README.rst
