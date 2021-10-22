@@ -6019,3 +6019,7 @@
 	path = pykerberos-feedstock
 	url = ../pykerberos-feedstock
 	branch = master
+[submodule "pyicu-feedstock"]
+	path = pyicu-feedstock
+	url = ../pyicu-feedstock
+	branch = master
