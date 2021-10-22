@@ -6015,3 +6015,7 @@
 	path = fastprogress-feedstock
 	url = ../fastprogress-feedstock
 	branch = master
+[submodule "pykerberos-feedstock"]
+	path = pykerberos-feedstock
+	url = ../pykerberos-feedstock
+	branch = master
