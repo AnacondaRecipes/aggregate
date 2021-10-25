@@ -6023,3 +6023,7 @@
 	path = pyicu-feedstock
 	url = ../pyicu-feedstock
 	branch = master
+[submodule "tokenizers-feedstock"]
+	path = tokenizers-feedstock
+	url = ../tokenizers-feedstock
+	branch = master
