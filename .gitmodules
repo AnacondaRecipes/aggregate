@@ -6027,3 +6027,7 @@
 	path = tokenizers-feedstock
 	url = ../tokenizers-feedstock
 	branch = master
+[submodule "prefect-test-build-feedstock"]
+	path = prefect-test-build-feedstock
+	url = ../prefect-test-build-feedstock
+	branch = master
