@@ -15,6 +15,10 @@ source:
   md5: d6fd14e208aca7e08cbe9072233d0af9
 
 requirements:
+  build:
+    - {{ compiler('c') }}
+    - make
+
   host:
     - curl
     - bzip2
@@ -26,16 +30,14 @@ requirements:
     # For running tests
     - perl
 
-  build:
-    - {{ compiler('c') }}
-
   run:
     - {{ pin_compatible('curl') }}
+    - libcurl  # [not win]
     # Will be taken care of by run_exports
     # - bzip2
     # - xz
     # - zlib
-    # - openssl
+    - openssl  # [linux]
 
 test:
   commands:
