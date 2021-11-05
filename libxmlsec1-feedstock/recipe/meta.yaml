@@ -14,10 +14,12 @@ build:
   run_exports:
     # compatibility is not tracked at abi-laboratory, assume same as libxml2
     - {{ pin_subpackage('libxmlsec1', max_pin='x.x') }}
-  ignore_run_exports:  # [not linux]
+  ignore_run_exports:
     - libiconv         # [not linux]
     - icu              # [not linux]
     - libgpg-error     # [not linux]
+    - zlib             # [unix]
+    - xz               # [unix]
 requirements:
   build:
     - {{ compiler('c') }}
