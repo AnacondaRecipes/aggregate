@@ -6031,3 +6031,7 @@
 	path = prefect-test-build-feedstock
 	url = ../prefect-test-build-feedstock
 	branch = master
+[submodule "incremental-feedstock"]
+	path = incremental-feedstock
+	url = ../incremental-feedstock
+	branch = master
