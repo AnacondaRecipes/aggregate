@@ -1,7 +1,12 @@
 About the AnacondaRecipes/aggregate repository
 ==============================================
 
-The aggregate repository is roughly similar to the concept of the ``conda-forge`` feedstocks repository. It is meant to operate as a centralization of many external repositories, with each of those external repositories following the one-recipe-per-repo concept. We fork feedstocks from ``conda-forge``, and the long-term goal is to keep in sync with ``conda-forge`` recipes. Unlike the ``conda-forge`` feedstocks repository, aggregate also contains some recipes directly in the aggregate repo. We consider this a temporary staging area for recipes that eventually need to be submitted to ``conda-forge``, or for recipes that we think ``conda-forge`` will have no interest in.
+The aggregate repository contains:
+
+- The definition of globally pinnend packages: `conda_build_config.yaml <https://github.com/AnacondaRecipes/aggregate/blob/master/conda_build_config.yaml>`_ (similar to the `conda-forge-pinnings-feedstock <https://github.com/conda-forge/conda-forge-pinning-feedstock/blob/master/recipe/conda_build_config.yaml>`_)
+- Submodule definitions to centrally reference all public maintained individual feedstocks (one recipe per repository) with relativ repo URL and their release branches: `.gitmodules <https://github.com/AnacondaRecipes/aggregate/blob/master/.gitmodules>`_. (similar to ``conda-forge`` feedstocks repository)
+- The submodule pinning to a sha1 of the invidual external repository.
+- Staging area for recipes that eventually need to be submitted to ``conda-forge``, or for recipes that we think ``conda-forge`` will have no interest in.
 
 How to add new recipes to the aggregate repository
 --------------------------------------------------
