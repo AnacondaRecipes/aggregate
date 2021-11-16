@@ -6039,3 +6039,7 @@
 	path = maturin-feedstock
 	url = ../maturin-feedstock
 	branch = master
+[submodule "tabula-py-feedstock"]
+	path = tabula-py-feedstock
+	url = ../tabula-py-feedstock
+	branch = master
