@@ -6035,3 +6035,7 @@
 	path = incremental-feedstock
 	url = ../incremental-feedstock
 	branch = master
+[submodule "maturin-feedstock"]
+	path = maturin-feedstock
+	url = ../maturin-feedstock
+	branch = master
