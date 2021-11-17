@@ -6043,3 +6043,7 @@
 	path = tabula-py-feedstock
 	url = ../tabula-py-feedstock
 	branch = master
+[submodule "python-build-feedstock"]
+	path = python-build-feedstock
+	url = ../python-build-feedstock
+	branch = master
