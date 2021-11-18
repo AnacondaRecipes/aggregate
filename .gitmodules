@@ -6047,3 +6047,7 @@
 	path = python-build-feedstock
 	url = ../python-build-feedstock
 	branch = master
+[submodule "tomli-feedstock"]
+	path = tomli-feedstock
+	url = ../tomli-feedstock
+	branch = master
