@@ -6051,3 +6051,7 @@
 	path = tomli-feedstock
 	url = ../tomli-feedstock
 	branch = master
+[submodule "pep517-feedstock"]
+	path = pep517-feedstock
+	url = ../pep517-feedstock
+	branch = master
