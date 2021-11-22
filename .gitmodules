@@ -6055,7 +6055,3 @@
 	path = pep517-feedstock
 	url = ../pep517-feedstock
 	branch = master
-[submodule "anaconda-navigator-feedstock"]
-	path = anaconda-navigator-feedstock
-	url = ../anaconda-navigator-feedstock
-	branch = master
