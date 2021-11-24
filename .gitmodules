@@ -6059,3 +6059,7 @@
 	path = aiosignal-feedstock
 	url = ../aiosignal-feedstock
 	branch = master
+[submodule "frozenlist-feedstock"]
+	path = frozenlist-feedstock
+	url = ../frozenlist-feedstock
+	branch = master
