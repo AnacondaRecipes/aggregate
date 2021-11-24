@@ -6055,3 +6055,7 @@
 	path = pep517-feedstock
 	url = ../pep517-feedstock
 	branch = master
+[submodule "aiosignal-feedstock"]
+	path = aiosignal-feedstock
+	url = ../aiosignal-feedstock
+	branch = master
