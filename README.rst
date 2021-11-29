@@ -3,10 +3,15 @@ About the AnacondaRecipes/aggregate repository
 
 The aggregate repository contains:
 
-- The definition of globally pinnend packages: `conda_build_config.yaml <https://github.com/AnacondaRecipes/aggregate/blob/master/conda_build_config.yaml>`_ (similar to the `conda-forge-pinnings-feedstock <https://github.com/conda-forge/conda-forge-pinning-feedstock/blob/master/recipe/conda_build_config.yaml>`_)
-- Submodule definitions to centrally reference all public maintained individual feedstocks (one recipe per repository) with relativ repo URL and their release branches: `.gitmodules <https://github.com/AnacondaRecipes/aggregate/blob/master/.gitmodules>`_. (similar to ``conda-forge`` feedstocks repository)
-- The submodule pinning to a sha1 of the invidual external repository.
-- Staging area for recipes that eventually need to be submitted to ``conda-forge``, or for recipes that we think ``conda-forge`` will have no interest in.
+-  The global `conda-build variant config <https://docs.conda.io/projects/conda-build/en/latest/resources/variants.html#creating-conda-build-variant-config-files>`_ file: `conda_build_config.yaml <https://github.com/AnacondaRecipes/aggregate/blob/master/conda_build_config.yaml>`_ (similar to the `conda-forge-pinnings-feedstock <https://github.com/conda-forge/conda-forge-pinning-feedstock/blob/master/recipe/conda_build_config.yaml>`_)
+-  A central list of all public maintained feedstocks:
+
+   -  most feedstocks are separate feedstock repositories:
+
+      -  They are referenced as git submodule with relative repository URL and their release branches: `.gitmodules <https://github.com/AnacondaRecipes/aggregate/blob/master/.gitmodules>`_. (similar to ``conda-forge`` feedstocks repository)
+      -  The submodule pinning to a specific sha1 in the referenced repository can point to the latest commit that was built on the according release branch. This reference is often not updated/correct to avoid concurrent writes during automatic builds.
+
+   -  some feedstocks are normal directories checked into aggregate: aggregate serves here as staging area for recipes that eventually need to be submitted to ``conda-forge`` or for recipes that we think ``conda-forge`` will have no interest in.
 
 How to add new recipes to the aggregate repository
 --------------------------------------------------
