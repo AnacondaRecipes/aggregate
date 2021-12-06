@@ -6063,3 +6063,7 @@
 	path = frozenlist-feedstock
 	url = ../frozenlist-feedstock
 	branch = master
+[submodule "rsync-feedstock"]
+	path = rsync-feedstock
+	url = ../rsync-feedstock
+	branch = master
