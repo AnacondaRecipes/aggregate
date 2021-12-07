@@ -9,7 +9,7 @@ The aggregate repository contains:
    -  most feedstocks are separate feedstock repositories:
 
       -  They are referenced as git submodule with relative repository URL and their release branches: `.gitmodules <https://github.com/AnacondaRecipes/aggregate/blob/master/.gitmodules>`_. (similar to ``conda-forge`` feedstocks repository)
-      -  The submodule pinning to a specific sha1 in the referenced repository can point to the latest commit that was built on the according release branch. This reference is often not updated/correct to avoid concurrent writes during automatic builds.
+      -  The quality on the referenced release branches is ensured via *Pull Requests* and *Automated builds*. The latest commit can be checked out via: ``git submodule update --init --remote $feedstock-folder`` (``--remote`` is important as the submodule pinning to a specific sha1 of the referenced repository is often not updated.)
 
    -  some feedstocks are normal directories checked into aggregate: aggregate serves here as staging area for recipes that eventually need to be submitted to ``conda-forge`` or for recipes that we think ``conda-forge`` will have no interest in.
 
