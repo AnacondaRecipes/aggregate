@@ -198,7 +198,7 @@
 [submodule "conda-feedstock"]
 	url = ../conda-feedstock.git
 	path = conda-feedstock
-	branch = 4.5.x
+	branch = master
 [submodule "alabaster-feedstock"]
 	url = ../alabaster-feedstock.git
 	path = alabaster-feedstock
