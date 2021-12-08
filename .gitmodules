@@ -6075,3 +6075,7 @@
 	path = platformdirs-feedstock
 	url = ../platformdirs-feedstock
 	branch = master
+[submodule "pyreadline3-feedstock"]
+	path = pyreadline3-feedstock
+	url = ../pyreadline3-feedstock
+	branch = master
