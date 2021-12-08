@@ -6067,3 +6067,11 @@
 	path = rsync-feedstock
 	url = ../rsync-feedstock
 	branch = master
+[submodule "newpackage-feedstock"]
+	path = newpackage-feedstock
+	url = ../platformdirs-feedstock
+	branch = master
+[submodule "platformdirs-feedstock"]
+	path = platformdirs-feedstock
+	url = ../platformdirs-feedstock
+	branch = master
