@@ -6079,3 +6079,7 @@
 	path = pyreadline3-feedstock
 	url = ../pyreadline3-feedstock
 	branch = master
+[submodule "types-typed-ast-feedstock"]
+	path = types-typed-ast-feedstock
+	url = ../types-typed-ast-feedstock
+	branch = master
