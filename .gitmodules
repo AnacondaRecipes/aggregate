@@ -6083,3 +6083,7 @@
 	path = types-typed-ast-feedstock
 	url = ../types-typed-ast-feedstock
 	branch = master
+[submodule "types-toml-feedstock"]
+	path = types-toml-feedstock
+	url = ../types-toml-feedstock
+	branch = master
