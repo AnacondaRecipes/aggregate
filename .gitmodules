@@ -6087,3 +6087,7 @@
 	path = types-toml-feedstock
 	url = ../types-toml-feedstock
 	branch = master
+[submodule "libvpx-feedstock"]
+	path = libvpx-feedstock
+	url = ../libvpx-feedstock
+	branch = master
