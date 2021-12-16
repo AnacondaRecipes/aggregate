@@ -6091,3 +6091,7 @@
 	path = libvpx-feedstock
 	url = ../libvpx-feedstock
 	branch = master
+[submodule "grpcio-status-feedstock"]
+	path = grpcio-status-feedstock
+	url = ../grpcio-status-feedstock
+	branch = master
