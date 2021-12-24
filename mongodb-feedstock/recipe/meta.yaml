@@ -13,6 +13,7 @@ source:
      - 0001-Add-linux-32-specific-workarounds.patch                     # [linux32]
 
 build:
+  number: 1
   detect_binary_files_with_prefix: False
   missing_dso_whitelist:          # [osx]
     - /usr/lib/libresolv.9.dylib  # [osx]
