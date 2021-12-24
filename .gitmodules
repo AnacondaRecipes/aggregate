@@ -6095,3 +6095,7 @@
 	path = grpcio-status-feedstock
 	url = ../grpcio-status-feedstock
 	branch = master
+[submodule "requests-kerberos-feedstock"]
+	path = requests-kerberos-feedstock
+	url = ../requests-kerberos-feedstock
+	branch = master
