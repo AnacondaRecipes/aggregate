@@ -6099,3 +6099,7 @@
 	path = requests-kerberos-feedstock
 	url = ../requests-kerberos-feedstock
 	branch = master
+[submodule "pyspnego-feedstock"]
+	path = pyspnego-feedstock
+	url = ../pyspnego-feedstock
+	branch = master
