@@ -6103,3 +6103,7 @@
 	path = pyspnego-feedstock
 	url = ../pyspnego-feedstock
 	branch = master
+[submodule "py-spy-feedstock"]
+	path = py-spy-feedstock
+	url = ../py-spy-feedstock
+	branch = master
