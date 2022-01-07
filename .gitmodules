@@ -6111,3 +6111,7 @@
 	path = fastapi-feedstock
 	url = ../fastapi-feedstock
 	branch = master
+[submodule "starlette-feedstock"]
+	path = starlette-feedstock
+	url = ../starlette-feedstock
+	branch = master
