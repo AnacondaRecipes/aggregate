@@ -6107,3 +6107,7 @@
 	path = py-spy-feedstock
 	url = ../py-spy-feedstock
 	branch = master
+[submodule "fastapi-feedstock"]
+	path = fastapi-feedstock
+	url = ../fastapi-feedstock
+	branch = master
