@@ -6119,3 +6119,7 @@
 	path = python-multipart-feedstock
 	url = ../python-multipart-feedstock
 	branch = master
+[submodule "rich-feedstock"]
+	path = rich-feedstock
+	url = ../rich-feedstock
+	branch = master
