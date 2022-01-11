@@ -6127,3 +6127,6 @@
 	path = uvicorn-feedstock
 	url = ../uvicorn-feedstock
 	branch = master
+[submodule "pyppeteer-feedstock"]
+	path = pyppeteer-feedstock
+	url = ../pyppeteer-feedstock
