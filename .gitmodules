@@ -6134,3 +6134,7 @@
 	path = dos2unix-feedstock
 	url = ../dos2unix-feedstock
 	branch = master
+[submodule "h11-feedstock"]
+	path = h11-feedstock
+	url = ../h11-feedstock
+	branch = master
