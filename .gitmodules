@@ -6142,3 +6142,7 @@
 	path = pathspec-feedstock
 	url = ../pathspec-feedstock
 	branch = master
+[submodule "pylev-feedstock"]
+	path = pylev-feedstock
+	url = ../pylev-feedstock
+	branch = master
