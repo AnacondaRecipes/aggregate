@@ -6138,3 +6138,7 @@
 	path = h11-feedstock
 	url = ../h11-feedstock
 	branch = master
+[submodule "pathspec-feedstock"]
+	path = pathspec-feedstock
+	url = ../pathspec-feedstock
+	branch = master
