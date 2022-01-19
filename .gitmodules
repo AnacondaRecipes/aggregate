@@ -6146,3 +6146,7 @@
 	path = pylev-feedstock
 	url = ../pylev-feedstock
 	branch = master
+[submodule "semantic_version-feedstock"]
+	path = semantic_version-feedstock
+	url = ../semantic_version-feedstock
+	branch = master
