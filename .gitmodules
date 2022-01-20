@@ -6158,3 +6158,15 @@
 	path = scikit-learn-0.24-feedstock
 	url = ../scikit-learn-feedstock
 	branch = master-0.24.2
+[submodule "intel_repack-2019-feedstock"]
+	path = intel_repack-2019-feedstock
+	url = ../intel_repack-feedstock
+	branch = main-2019
+[submodule "intel_repack-2020-feedstock"]
+	path = intel_repack-2020-feedstock
+	url = ../intel_repack-feedstock
+	branch = main-2020
+[submodule "intel_repack-2021-feedstock"]
+	path = intel_repack-2021-feedstock
+	url = ../intel_repack-feedstock
+	branch = main-2021
