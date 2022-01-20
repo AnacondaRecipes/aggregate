@@ -100,7 +100,7 @@ gstreamer:
 gst_plugins_base:
   - 1.14
 geos:
-  - 3.8.0  # [not (osx and arm64)] 
+  - 3.8.0  # [not (osx and arm64)]
   - 3.9.1  # [osx and arm64]
 giflib:
   - 5
@@ -144,8 +144,7 @@ libgsasl:
 libkml:
   - 1.3
 libnetcdf:
-  - 4.6  # [not (osx and arm64)]
-  - 4.8  # [osx and arm64]
+  - 4.8
 libpng:
   - 1.6
 libtiff:
