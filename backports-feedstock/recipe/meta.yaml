@@ -1,25 +1,39 @@
+{% set name = "backports" %}
+{% set version = "1.1" %}
+
 package:
-  name: backports
-  version: 1.0
+  name: "{{ name }}"
+  version: "{{ version }}"
+
+source:
+  url: https://github.com/brandon-rhodes/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 64fbda275c95e04f09ca5c11e33527866b1b1c8f16bb0eea2f504f2d3b60195c
 
 build:
-  number: 2
+  number: 0
   noarch: python
 
 requirements:
   host:
     - python
+    - setuptools
   run:
     - python
 
 test:
   imports:
     - backports
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
-  home: https://bitbucket.org/brandon/backports
-  license: BSD
+  home: https://github.com/brandon-rhodes/backports
+  license: MIT
+  license_family: MIT
+  summary: Namespace for backported Python features.
   description: |
     Namespace for backported Python features.
+  dev_url: https://github.com/brandon-rhodes/backports
   doc_url: https://pypi.python.org/pypi/backports/
-  doc_source_url: https://bitbucket.org/brandon/backports/src/931d2c348a93313413e444c0724db7ac5030a496/setup.py?at=default&fileviewer=file-view-default
