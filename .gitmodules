@@ -6154,3 +6154,7 @@
 	path = pyparsing-2.x-feedstock
 	url = ../pyparsing-feedstock
 	branch = master-2.x
+[submodule "scikit-learn-0.24-feedstock"]
+	path = scikit-learn-0.24-feedstock
+	url = ../scikit-learn-feedstock
+	branch = master-0.24.2
