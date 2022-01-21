@@ -6178,3 +6178,7 @@
 	path = dictdiffer-feedstock
 	url = ../dictdiffer-feedstock
 	branch = master
+[submodule "editables-feedstock"]
+	path = editables-feedstock
+	url = ../editables-feedstock
+	branch = main
