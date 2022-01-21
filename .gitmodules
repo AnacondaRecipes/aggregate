@@ -6170,3 +6170,7 @@
 	path = intel_repack-2021-feedstock
 	url = ../intel_repack-feedstock
 	branch = main-2021
+[submodule "bidict-feedstock"]
+	path = bidict-feedstock
+	url = ../bidict-feedstock
+	branch = master
