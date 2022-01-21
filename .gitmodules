@@ -6198,3 +6198,7 @@
 	path = baycomp-feedstock
 	url = ../baycomp-feedstock
 	branch = master
+[submodule "enscons-feedstock"]
+	path = enscons-feedstock
+	url = ../enscons-feedstock
+	branch = main
