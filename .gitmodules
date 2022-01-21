@@ -6190,3 +6190,7 @@
 	path = scapy-feedstock
 	url = ../scapy-feedstock
 	branch = master
+[submodule "pytest-azurepipelines-feedstock"]
+	path = pytest-azurepipelines-feedstock
+	url = ../pytest-azurepipelines-feedstock
+	branch = master
