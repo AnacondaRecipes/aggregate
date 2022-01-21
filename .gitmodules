@@ -6174,3 +6174,7 @@
 	path = bidict-feedstock
 	url = ../bidict-feedstock
 	branch = master
+[submodule "dictdiffer-feedstock"]
+	path = dictdiffer-feedstock
+	url = ../dictdiffer-feedstock
+	branch = master
