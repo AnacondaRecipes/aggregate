@@ -21,10 +21,14 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - patch  # [not win]
+    - m2-patch  # [win]
   host:
     - pbkdf2
     - python
     - setuptools
+    - pip
+    - wheel
   run:
     - pbkdf2
     - python
