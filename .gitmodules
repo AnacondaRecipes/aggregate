@@ -6194,3 +6194,7 @@
 	path = pytest-azurepipelines-feedstock
 	url = ../pytest-azurepipelines-feedstock
 	branch = master
+[submodule "baycomp-feedstock"]
+	path = baycomp-feedstock
+	url = ../baycomp-feedstock
+	branch = master
