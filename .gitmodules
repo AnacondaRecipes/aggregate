@@ -6186,3 +6186,7 @@
 	path = pefile-feedstock
 	url = ../pefile-feedstock
 	branch = master
+[submodule "scapy-feedstock"]
+	path = scapy-feedstock
+	url = ../scapy-feedstock
+	branch = master
