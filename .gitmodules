@@ -6182,3 +6182,7 @@
 	path = editables-feedstock
 	url = ../editables-feedstock
 	branch = main
+[submodule "pefile-feedstock"]
+	path = pefile-feedstock
+	url = ../pefile-feedstock
+	branch = master
