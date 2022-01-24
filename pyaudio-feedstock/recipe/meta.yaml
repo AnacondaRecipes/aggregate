@@ -18,6 +18,8 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ cdt('alsa-lib-devel') }}  # [linux]
+    - patch                        # [not win]
+    - m2-patch                     # [win]
   host:
     - python
     - portaudio
