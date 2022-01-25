@@ -6222,3 +6222,7 @@
 	path = dask-jobqueue-feedstock
 	url = ../dask-jobqueue-feedstock
 	branch = master
+[submodule "conda-prefix-replacement-feedstock"]
+	path = conda-prefix-replacement-feedstock
+	url = ../conda-prefix-replacement-feedstock
+	branch = master
