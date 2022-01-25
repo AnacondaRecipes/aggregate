@@ -6230,3 +6230,7 @@
 	path = black-feedstock
 	url = ../black-feedstock
 	branch = master
+[submodule "sip-4.19.13-feedstock"]
+	path = sip-4.19.13-feedstock
+	url = ../sip-feedstock
+	branch = master-4.19.13
