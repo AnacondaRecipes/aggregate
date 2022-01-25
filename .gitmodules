@@ -6202,3 +6202,7 @@
 	path = enscons-feedstock
 	url = ../enscons-feedstock
 	branch = main
+[submodule "cython-0.29.3-feedstock"]
+	path = cython-0.29.3-feedstock
+	url = ../cython-feedstock
+	branch = master-0.29.3
