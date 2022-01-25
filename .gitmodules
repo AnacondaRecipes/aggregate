@@ -6210,3 +6210,7 @@
 	path = quilt3-feedstock
 	url = ../quilt-feedstock
 	branch = master
+[submodule "flask_cors-feedstock"]
+	path = flask_cors-feedstock
+	url = ../flask_cors-feedstock
+	branch = master
