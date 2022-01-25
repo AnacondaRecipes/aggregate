@@ -6206,3 +6206,7 @@
 	path = cython-0.29.3-feedstock
 	url = ../cython-feedstock
 	branch = master-0.29.3
+[submodule "quilt3-feedstock"]
+	path = quilt3-feedstock
+	url = ../quilt-feedstock
+	branch = master
