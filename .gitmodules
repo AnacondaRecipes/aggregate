@@ -6214,3 +6214,7 @@
 	path = flask_cors-feedstock
 	url = ../flask_cors-feedstock
 	branch = master
+[submodule "intreehooks-feedstock"]
+	path = intreehooks-feedstock
+	url = ../intreehooks-feedstock
+	branch = master
