@@ -6237,6 +6237,8 @@
 [submodule "gdal-lib-feedstock"]
 	path = gdal-lib-feedstock
 	url = git@github.com:AnacondaRecipes/gdal-lib-feedstock
+        branch = master
 [submodule "gdal-py-feedstock"]
 	path = gdal-py-feedstock
 	url = git@github.com:AnacondaRecipes/gdal-py-feedstock
+        branch = master
