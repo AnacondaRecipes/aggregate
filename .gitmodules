@@ -6218,3 +6218,7 @@
 	path = intreehooks-feedstock
 	url = ../intreehooks-feedstock
 	branch = master
+[submodule "dask-jobqueue-feedstock"]
+	path = dask-jobqueue-feedstock
+	url = ../dask-jobqueue-feedstock
+	branch = master
