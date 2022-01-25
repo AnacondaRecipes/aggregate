@@ -6234,3 +6234,6 @@
 	path = sip-4.19.13-feedstock
 	url = ../sip-feedstock
 	branch = master-4.19.13
+[submodule "gdal-lib-feedstock"]
+	path = gdal-lib-feedstock
+	url = git@github.com:AnacondaRecipes/gdal-lib-feedstock
