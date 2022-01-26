@@ -6237,11 +6237,11 @@
 [submodule "gdal-lib-feedstock"]
 	path = gdal-lib-feedstock
 	url = ../gdal-lib-feedstock
-        branch = master
+	branch = master
 [submodule "gdal-py-feedstock"]
 	path = gdal-py-feedstock
 	url = ../gdal-py-feedstock
-        branch = master
+	branch = master
 [submodule "packaging-20.9-feedstock"]
 	path = packaging-20.9-feedstock
 	url = ../packaging-feedstock
