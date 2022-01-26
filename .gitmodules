@@ -6242,3 +6242,7 @@
 	path = gdal-py-feedstock
 	url = git@github.com:AnacondaRecipes/gdal-py-feedstock
         branch = master
+[submodule "packaging-20.9-feedstock"]
+	path = packaging-20.9-feedstock
+	url = ../packaging-feedstock
+	branch = master-20.9
