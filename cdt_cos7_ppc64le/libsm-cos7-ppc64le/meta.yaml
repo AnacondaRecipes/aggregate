@@ -17,6 +17,17 @@ build:
   missing_dso_whitelist:
     - '*'
 
+requirements:
+  build:
+    - libice-cos7-ppc64le >=1.0.9
+    - libuuid-cos7-ppc64le >=2.23.2
+  host:
+    - libice-cos7-ppc64le >=1.0.9
+    - libuuid-cos7-ppc64le >=2.23.2
+  run:
+    - libice-cos7-ppc64le >=1.0.9
+    - libuuid-cos7-ppc64le >=2.23.2
+
 about:
   home: http://www.x.org
   license: MIT
@@ -24,3 +35,7 @@ about:
   summary: "(CDT) X.Org X11 SM runtime library"
   description: |
         The X.Org X11 SM (Session Management) runtime library.
+
+extras:
+  rpm_name: libSM
+
