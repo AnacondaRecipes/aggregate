@@ -6254,3 +6254,7 @@
 	path = marshmallow-oneofschema-feedstock
 	url = ../marshmallow-oneofschema-feedstock
 	branch = master
+[submodule "llvm-spirv-feedstock"]
+	path = llvm-spirv-feedstock
+	url = ../llvm-spirv-feedstock
+	branch = master
