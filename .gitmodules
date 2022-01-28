@@ -6258,3 +6258,7 @@
 	path = llvm-spirv-feedstock
 	url = ../llvm-spirv-feedstock
 	branch = master
+[submodule "llvmdev-11.0.0-feedstock"]
+	path = llvmdev-11.0.0-feedstock
+	url = ../llvmdev-feedstock
+	branch = master-11.0.0
