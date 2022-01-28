@@ -6246,3 +6246,7 @@
 	path = packaging-20.9-feedstock
 	url = ../packaging-feedstock
 	branch = master-20.9
+[submodule "python-box-feedstock"]
+	path = python-box-feedstock
+	url = ../python-box-feedstock
+	branch = master
