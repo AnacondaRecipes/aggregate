@@ -6250,3 +6250,7 @@
 	path = python-box-feedstock
 	url = ../python-box-feedstock
 	branch = master
+[submodule "marshmallow-oneofschema-feedstock"]
+	path = marshmallow-oneofschema-feedstock
+	url = ../marshmallow-oneofschema-feedstock
+	branch = master
