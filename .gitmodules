@@ -6274,3 +6274,7 @@
 	path = langcodes-feedstock
 	url = ../langcodes-feedstock
 	branch = master
+[submodule "docutils-0.15.2-feedstock"]
+	path = docutils-0.15.2-feedstock
+	url = ../docutils-feedstock
+	branch = main-0.15.2
