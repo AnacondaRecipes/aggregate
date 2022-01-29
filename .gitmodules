@@ -6282,3 +6282,7 @@
 	path = importlib_metadata-1.7.0-feedstock
 	url = ../importlib_metadata-feedstock
 	branch = main-1.7.0
+[submodule "keyring-22.3.0-feedstock"]
+	path = keyring-22.3.0-feedstock
+	url = ../keyring-feedstock
+	branch = main-22.3.0
