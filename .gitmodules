@@ -6278,3 +6278,7 @@
 	path = docutils-0.15.2-feedstock
 	url = ../docutils-feedstock
 	branch = main-0.15.2
+[submodule "importlib_metadata-1.7.0-feedstock"]
+	path = importlib_metadata-1.7.0-feedstock
+	url = ../importlib_metadata-feedstock
+	branch = main-1.7.0
