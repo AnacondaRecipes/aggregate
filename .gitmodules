@@ -6270,3 +6270,7 @@
 	path = spacy-loggers-feedstock
 	url = ../spacy-loggers-feedstock
 	branch = master
+[submodule "langcodes-feedstock"]
+	path = langcodes-feedstock
+	url = ../langcodes-feedstock
+	branch = master
