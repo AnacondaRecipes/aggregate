@@ -6262,3 +6262,7 @@
 	path = llvmdev-11.0.0-feedstock
 	url = ../llvmdev-feedstock
 	branch = master-11.0.0
+[submodule "spacy-legacy-feedstock"]
+	path = spacy-legacy-feedstock
+	url = ../spacy-legacy-feedstock
+	branch = master
