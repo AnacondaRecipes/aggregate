@@ -6266,3 +6266,7 @@
 	path = spacy-legacy-feedstock
 	url = ../spacy-legacy-feedstock
 	branch = master
+[submodule "spacy-loggers-feedstock"]
+	path = spacy-loggers-feedstock
+	url = ../spacy-loggers-feedstock
+	branch = master
