@@ -45,6 +45,8 @@ requirements:
     - jom                                # [win]
     - make                               # [not win]
     - patchelf                           # [linux]
+    - patch     # [not win]
+    - m2-patch  # [win]
   host:
     - qt 5.15.*
     - llvmdev
