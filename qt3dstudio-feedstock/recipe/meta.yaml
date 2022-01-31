@@ -54,7 +54,11 @@ requirements:
     - jom                                # [win]
     - make                               # [not win]
     - patchelf                           # [linux]
-    - git
+    - git       # [not win]
+    - m2-git    # [win]
+    - patch     # [not win]
+    - m2-patch  # [win]
+
   host:
     - qt 5.12.*
     - libxcb                             # [linux]
