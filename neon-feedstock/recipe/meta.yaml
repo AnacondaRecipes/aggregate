@@ -15,6 +15,9 @@ build:
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
 
 requirements:
+  build:
+    - patch       # [not win]
+    - m2-patch    # [win]
   host:
     - python
     - setuptools
