@@ -19,6 +19,7 @@ requirements:
     - m2-patch  # [win]
     - m2-base  # [win]
     - m2-filesystem  # [win]
+    - patch     # [not win]
 
 test:
   requires:
