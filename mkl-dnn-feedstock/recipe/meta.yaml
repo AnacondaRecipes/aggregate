@@ -24,7 +24,9 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake >=2.8.0
-  host:
+    - patch       # [not win]
+    - m2-patch    # [win]
+   host:
     - intel-openmp
     - mklml
   run:
