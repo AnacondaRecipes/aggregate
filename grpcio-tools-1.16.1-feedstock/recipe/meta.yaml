@@ -18,7 +18,9 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-
+    - patch       # [not win]
+    - m2-patch    # [win]
+ 
   host:
     - grpcio >=1.16.1
     - pip
