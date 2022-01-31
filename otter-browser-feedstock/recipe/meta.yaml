@@ -18,5 +18,7 @@ requirements:
     - cmake
     - make  # [not win]
     - jom   # [win]
-  host:
+    - patch       # [not win]
+    - m2-patch    # [win]
+   host:
     - qt >=5.9
