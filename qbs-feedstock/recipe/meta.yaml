@@ -46,6 +46,8 @@ requirements:
     - {{ cdt('libxxf86vm') }}            # [linux]
     - jom                                # [win]
     - make                               # [not win]
+    - patch     # [not win]
+    - m2-patch  # [win]
   host:
     - qt 5.15.*
   run:
