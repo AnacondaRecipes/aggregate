@@ -24,7 +24,9 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - ninja  # [win]
-  host:
+    - patch       # [not win]
+    - m2-patch    # [win]
+   host:
     - cudatoolkit {{ cudatoolkit }}*
   run:
     - {{ pin_compatible('cudatoolkit', max_pin='x.x') }}
