@@ -35,6 +35,9 @@ requirements:
     - pymongo
     - regex
     - pywin32  # [win]
+    - patch       # [not win]
+    - m2-patch    # [win]
+ 
   run:
     # This will be taken care of by run_exports
     # - openssl
