@@ -20,6 +20,8 @@ requirements:
     - make         # [unix]
     - python
     - libtool      # [unix]
+    - patch     # [not win]
+    - m2-patch  # [win]
   host:
     - openssl      # [win]
     - expat
