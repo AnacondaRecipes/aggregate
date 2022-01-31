@@ -21,10 +21,15 @@ build:
     - python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
+  build:
+    - patch       # [not win]
+    - m2-patch    # [win]
   host:
     - python
     - setuptools
-  run:
+    - pip
+    - wheel
+   run:
     - python
     - pymongo >=2.8
     - python-dateutil >=2.1
