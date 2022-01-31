@@ -46,7 +46,9 @@ requirements:
     - pkg-config         # [unix]
     - unzip              # [unix]
     - make               # [unix]
-  host:
+    - patch       # [not win]
+    - m2-patch    # [win]
+   host:
     - zlib
 
 test:
