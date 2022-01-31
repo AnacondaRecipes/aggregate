@@ -133,7 +133,9 @@ requirements:
     - xar
     # We only use the static library from this and only get away with that as it depends on nothing.
     - zlib
-
+    - patch       # [not win]
+    - m2-patch    # [win]
+ 
 outputs:
   - name: llvm-lto
     script: install-llvm-lto.sh
