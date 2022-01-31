@@ -30,6 +30,8 @@ requirements:
     - {{ cdt('mesa-libgl-devel') }}      # [linux]
     - automake  # [unix]
     - jom       # [win]
+    - patch     # [not win]
+    - m2-patch  # [win]
   host:
     - qt
 
