@@ -6262,6 +6262,9 @@
 	path = llvmdev-11.0.0-feedstock
 	url = ../llvmdev-feedstock
 	branch = master-11.0.0
+[submodule "win32_setctime-feedstock"]
+	path = win32_setctime-feedstock
+	url = ../win32_setctime-feedstock.git
 [submodule "spacy-legacy-feedstock"]
 	path = spacy-legacy-feedstock
 	url = ../spacy-legacy-feedstock
