@@ -6265,3 +6265,27 @@
 [submodule "win32_setctime-feedstock"]
 	path = win32_setctime-feedstock
 	url = ../win32_setctime-feedstock.git
+[submodule "spacy-legacy-feedstock"]
+	path = spacy-legacy-feedstock
+	url = ../spacy-legacy-feedstock
+	branch = master
+[submodule "spacy-loggers-feedstock"]
+	path = spacy-loggers-feedstock
+	url = ../spacy-loggers-feedstock
+	branch = master
+[submodule "langcodes-feedstock"]
+	path = langcodes-feedstock
+	url = ../langcodes-feedstock
+	branch = master
+[submodule "docutils-0.15.2-feedstock"]
+	path = docutils-0.15.2-feedstock
+	url = ../docutils-feedstock
+	branch = main-0.15.2
+[submodule "importlib_metadata-1.7.0-feedstock"]
+	path = importlib_metadata-1.7.0-feedstock
+	url = ../importlib_metadata-feedstock
+	branch = main-1.7.0
+[submodule "keyring-22.3.0-feedstock"]
+	path = keyring-22.3.0-feedstock
+	url = ../keyring-feedstock
+	branch = main-22.3.0
