@@ -21,7 +21,9 @@ requirements:
     - make  # [not win]
     - m2-make  # [win]
     - libtool  # [not win]
-
+    - patch       # [not win]
+    - m2-patch    # [win]
+ 
 build:
   script:
     - cp -r ${BUILD_PREFIX}/share/libtool/build-aux/config.* .  # [osx and arm64]
