@@ -22,6 +22,9 @@ build:
   skip: True  # [py3k]
 
 requirements:
+  build:
+    - patch     # [not win]
+    - m2-patch  # [win]
   host:
     - pip
     - python
