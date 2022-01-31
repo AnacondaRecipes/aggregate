@@ -37,6 +37,8 @@ requirements:
     - ninja                                                     # [win]
     - libtool  # [not win]
     - make  # [unix]
+    - patch     # [not win]
+    - m2-patch  # [win]
   host:
     - expat                                                     # [win]
     - {{ compiler('c') }}                                       # [ppc64le]
