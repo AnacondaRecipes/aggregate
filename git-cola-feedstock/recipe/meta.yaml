@@ -11,6 +11,8 @@ source:
 
 build:
   noarch: python
+  # no qt support on those architectures
+  skip: True  # [s390x or ppc64le]
   # script: python -m pip install --no-deps --ignore-installed .
   script:
     - make NO_VENDOR_LIBS=1 prefix=${PREFIX} install
