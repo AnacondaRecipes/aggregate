@@ -13,6 +13,8 @@ requirements:
     - cmake
     - ninja
     - git
+    - m2-patch  # [win]
+    - patch     # [not win]
   host:
     - hidapi
 
