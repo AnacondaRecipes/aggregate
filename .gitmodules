@@ -6289,3 +6289,7 @@
 	path = keyring-22.3.0-feedstock
 	url = ../keyring-feedstock
 	branch = main-22.3.0
+[submodule "pyinstaller-hooks-contrib-feedstock"]
+	path = pyinstaller-hooks-contrib-feedstock
+	url = ../pyinstaller-hooks-contrib-feedstock
+	branch = master
