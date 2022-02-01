@@ -6293,3 +6293,7 @@
 	path = pyinstaller-hooks-contrib-feedstock
 	url = ../pyinstaller-hooks-contrib-feedstock
 	branch = master
+[submodule "rasterstats-feedstock"]
+	path = rasterstats-feedstock
+	url = ../rasterstats-feedstock
+	branch = master
