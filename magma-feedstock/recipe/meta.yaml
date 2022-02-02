@@ -26,7 +26,7 @@ requirements:
     - ninja  # [win]
     - patch       # [not win]
     - m2-patch    # [win]
-   host:
+  host:
     - cudatoolkit {{ cudatoolkit }}*
   run:
     - {{ pin_compatible('cudatoolkit', max_pin='x.x') }}
