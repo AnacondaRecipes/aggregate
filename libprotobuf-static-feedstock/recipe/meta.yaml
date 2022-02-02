@@ -48,7 +48,7 @@ requirements:
     - make               # [unix]
     - patch       # [not win]
     - m2-patch    # [win]
-   host:
+  host:
     - zlib
 
 test:
