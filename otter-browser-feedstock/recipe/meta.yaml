@@ -20,5 +20,5 @@ requirements:
     - jom   # [win]
     - patch       # [not win]
     - m2-patch    # [win]
-   host:
+  host:
     - qt >=5.9
