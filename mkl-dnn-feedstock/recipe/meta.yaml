@@ -26,7 +26,7 @@ requirements:
     - cmake >=2.8.0
     - patch       # [not win]
     - m2-patch    # [win]
-   host:
+  host:
     - intel-openmp
     - mklml
   run:
