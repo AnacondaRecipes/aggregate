@@ -6305,3 +6305,7 @@
 	path = capnproto-feedstock
 	url = ../capnproto-feedstock
 	branch = master
+[submodule "libmng-feedstock"]
+	path = libmng-feedstock
+	url = ../libmng-feedstock
+	branch = master
