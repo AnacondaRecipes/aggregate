@@ -6301,3 +6301,7 @@
 	path = onnx-feedstock
 	url = ../onnx-feedstock
 	branch = master
+[submodule "capnproto-feedstock"]
+	path = capnproto-feedstock
+	url = ../capnproto-feedstock
+	branch = master
