@@ -182,8 +182,8 @@ numpy:
   # python 3.8-3.9
   - 1.19    # [osx and arm64]
   - 1.19    # [osx and arm64]
-  # python 3.10
-  # - 1.21
+  # python 3.10 (osx-arm64 has not its initial built-out)
+  - 1.21    # [not arm64]
 openblas:
   - 0.3.3   # [not (s390x or aarch64 or (osx and arm64))]
   - 0.3.17  # [osx and arm64]
@@ -213,7 +213,8 @@ python:
   - 3.7      # [not arm64]
   - 3.8
   - 3.9
-  # - 3.10
+  # python 3.10  (osx-arm64 has not its initial built-out)
+  - 3.10     # [not arm64]
 python_implementation:
   - cpython
 python_impl:
