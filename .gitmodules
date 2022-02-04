@@ -6313,3 +6313,7 @@
 	path = vtk-8.2.0-feedstock
 	url = ../vtk-feedstock
 	branch = master-8.2.0
+[submodule "leveldb-1.22-feedstock"]
+	path = leveldb-1.22-feedstock
+	url = ../leveldb-feedstock
+	branch = master-1.22
