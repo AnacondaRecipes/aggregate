@@ -6317,3 +6317,7 @@
 	path = leveldb-1.22-feedstock
 	url = ../leveldb-feedstock
 	branch = master-1.22
+[submodule "crender-feedstock"]
+	path = crender-feedstock
+	url = ../crender-feedstock
+	branch = main
