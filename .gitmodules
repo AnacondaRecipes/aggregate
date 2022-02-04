@@ -6309,3 +6309,7 @@
 	path = libmng-feedstock
 	url = ../libmng-feedstock
 	branch = master
+[submodule "vtk-8.2.0-feedstock"]
+	path = vtk-8.2.0-feedstock
+	url = ../vtk-feedstock
+	branch = master-8.2.0
