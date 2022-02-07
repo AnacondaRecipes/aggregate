@@ -6321,3 +6321,7 @@
 	path = crender-feedstock
 	url = ../crender-feedstock
 	branch = main
+[submodule "rust-activation-feedstock"]
+	path = rust-activation-feedstock
+	url = ../rust-activation-feedstock
+	branch = master
