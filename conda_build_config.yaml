@@ -203,8 +203,9 @@ pixman:
 proj4:
   - 5.2.0
 proj:
-  - 6.2.1  # [not (osx and arm64)]
-  - 7.2.0  # [osx and arm64]
+  - 6.2.1  # [py<3.10 and not (osx and arm64)]
+  - 7.2.0  # [py<3.10 and osx and arm64]
+  - 8.2.1  # [py>=3.10]
 libprotobuf:
   - 3.11.2    # [not (s390x or aarch64 or (osx and arm64))]
   - 3.14.0    # [s390x or aarch64]
