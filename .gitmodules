@@ -6325,3 +6325,7 @@
 	path = rust-activation-feedstock
 	url = ../rust-activation-feedstock
 	branch = master
+[submodule "argon2-cffi-bindings-feedstock"]
+	path = argon2-cffi-bindings-feedstock
+	url = ../argon2-cffi-bindings-feedstock
+	branch = master
