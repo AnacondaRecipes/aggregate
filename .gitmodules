@@ -6329,3 +6329,7 @@
 	path = argon2-cffi-bindings-feedstock
 	url = ../argon2-cffi-bindings-feedstock
 	branch = master
+[submodule "spacy-alignments-feedstock"]
+	path = spacy-alignments-feedstock
+	url = ../spacy-alignments-feedstock
+	branch = master
