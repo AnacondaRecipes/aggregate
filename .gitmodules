@@ -6333,3 +6333,7 @@
 	path = spacy-alignments-feedstock
 	url = ../spacy-alignments-feedstock
 	branch = master
+[submodule "tomli-w-feedstock"]
+	path = tomli-w-feedstock
+	url = ../tomli-w-feedstock
+	branch = master
