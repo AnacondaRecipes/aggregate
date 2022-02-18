@@ -6337,3 +6337,6 @@
 	path = tomli-w-feedstock
 	url = ../tomli-w-feedstock
 	branch = master
+[submodule "libsolv-feedstock"]
+	path = libsolv-feedstock
+	url = https://github.com/AnacondaRecipes/libsolv-feedstock.git
