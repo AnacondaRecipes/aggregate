@@ -6340,3 +6340,6 @@
 [submodule "libsolv-feedstock"]
 	path = libsolv-feedstock
 	url = https://github.com/AnacondaRecipes/libsolv-feedstock.git
+[submodule "mamba-feedstock"]
+	path = mamba-feedstock
+	url = https://github.com/AnacondaRecipes/mamba-feedstock.git
