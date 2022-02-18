@@ -6339,10 +6339,13 @@
 	branch = master
 [submodule "libsolv-feedstock"]
 	path = libsolv-feedstock
-	url = https://github.com/AnacondaRecipes/libsolv-feedstock.git
+	url = ../libsolv-feedstock
+	branch = master
 [submodule "mamba-feedstock"]
 	path = mamba-feedstock
-	url = https://github.com/AnacondaRecipes/mamba-feedstock.git
+	url = ../mamba-feedstock
+	branch = master
 [submodule "nlohmann_json-feedstock"]
 	path = nlohmann_json-feedstock
-	url = https://github.com/AnacondaRecipes/nlohmann_json-feedstock.git
+	url = ../nlohmann_json-feedstock
+	branch = master
