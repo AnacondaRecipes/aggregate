@@ -6353,3 +6353,7 @@
 	path = cmdstan-feedstock
 	url = ../cmdstan-feedstock
 	branch = master
+[submodule "cpp-filesystem-feedstock"]
+	path = cpp-filesystem-feedstock
+	url = ../cpp-filesystem-feedstock
+	branch = main
