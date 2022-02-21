@@ -6349,3 +6349,7 @@
 	path = nlohmann_json-feedstock
 	url = ../nlohmann_json-feedstock
 	branch = master
+[submodule "cmdstan-feedstock"]
+	path = cmdstan-feedstock
+	url = ../cmdstan-feedstock
+	branch = master
