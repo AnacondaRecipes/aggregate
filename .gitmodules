@@ -6357,3 +6357,7 @@
 	path = cpp-filesystem-feedstock
 	url = ../cpp-filesystem-feedstock
 	branch = main
+[submodule "reproc-feedstock"]
+	path = reproc-feedstock
+	url = ../reproc-feedstock
+	branch = main
