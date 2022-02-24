@@ -6365,3 +6365,7 @@
 	path = yaml-cpp-feedstock
 	url = ../yaml-cpp-feedstock
 	branch = main
+[submodule "termcolor-cpp-feedstock"]
+	path = termcolor-cpp-feedstock
+	url = ../termcolor-cpp-feedstock
+	branch = main
