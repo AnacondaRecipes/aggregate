@@ -6369,3 +6369,7 @@
 	path = termcolor-cpp-feedstock
 	url = ../termcolor-cpp-feedstock
 	branch = main
+[submodule "cli11-feedstock"]
+	path = cli11-feedstock
+	url = ../cli11-feedstock
+	branch = main
