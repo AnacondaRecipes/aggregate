@@ -6361,3 +6361,7 @@
 	path = reproc-feedstock
 	url = ../reproc-feedstock
 	branch = main
+[submodule "yaml-cpp-feedstock"]
+	path = yaml-cpp-feedstock
+	url = ../yaml-cpp-feedstock
+	branch = main
