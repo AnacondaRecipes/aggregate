@@ -6381,3 +6381,7 @@
 	path = llvmlite-0.37-llvm-11.0-feedstock
 	url = ../llvmlite-feedstock
 	branch = master-0.37.0-llvm-11.0
+[submodule "spirv-tools-feedstock"]
+	path = spirv-tools-feedstock
+	url = ../spirv-tools-feedstock
+	branch = master
