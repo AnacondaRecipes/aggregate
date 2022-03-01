@@ -6373,3 +6373,7 @@
 	path = cli11-feedstock
 	url = ../cli11-feedstock
 	branch = main
+[submodule "winreg-feedstock"]
+	path = winreg-feedstock
+	url = ../winreg-feedstock
+	branch = main
