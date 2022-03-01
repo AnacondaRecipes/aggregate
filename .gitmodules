@@ -6377,3 +6377,7 @@
 	path = winreg-feedstock
 	url = ../winreg-feedstock
 	branch = main
+[submodule "llvmlite-0.37-llvm-11.0-feedstock"]
+	path = llvmlite-0.37-llvm-11.0-feedstock
+	url = ../llvmlite-feedstock
+	branch = master-0.37.0-llvm-11.0
