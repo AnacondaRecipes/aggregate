@@ -6397,3 +6397,7 @@
 	path = dpnp-feedstock
 	url = ../dpnp-feedstock
 	branch = master
+[submodule "numba-dppy-feedstock"]
+	path = numba-dppy-feedstock
+	url = ../numba-dppy-feedstock
+	branch = master
