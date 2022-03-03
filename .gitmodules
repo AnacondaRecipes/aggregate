@@ -6393,3 +6393,7 @@
 	path = dpctl-feedstock
 	url = ../dpctl-feedstock
 	branch = master
+[submodule "dpnp-feedstock"]
+	path = dpnp-feedstock
+	url = ../dpnp-feedstock
+	branch = master
