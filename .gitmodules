@@ -6389,3 +6389,7 @@
 	path = mkl_umath-feedstock
 	url = ../mkl_umath-feedstock
 	branch = master
+[submodule "dpctl-feedstock"]
+	path = dpctl-feedstock
+	url = ../dpctl-feedstock
+	branch = master
