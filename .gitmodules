@@ -6401,3 +6401,7 @@
 	path = numba-dppy-feedstock
 	url = ../numba-dppy-feedstock
 	branch = master
+[submodule "tldextract-feedstock"]
+	path = tldextract-feedstock
+	url = ../tldextract-feedstock
+	branch = master
