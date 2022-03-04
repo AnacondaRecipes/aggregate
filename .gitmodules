@@ -6385,3 +6385,23 @@
 	path = spirv-tools-feedstock
 	url = ../spirv-tools-feedstock
 	branch = master
+[submodule "mkl_umath-feedstock"]
+	path = mkl_umath-feedstock
+	url = ../mkl_umath-feedstock
+	branch = master
+[submodule "dpctl-feedstock"]
+	path = dpctl-feedstock
+	url = ../dpctl-feedstock
+	branch = master
+[submodule "dpnp-feedstock"]
+	path = dpnp-feedstock
+	url = ../dpnp-feedstock
+	branch = master
+[submodule "numba-dppy-feedstock"]
+	path = numba-dppy-feedstock
+	url = ../numba-dppy-feedstock
+	branch = master
+[submodule "tldextract-feedstock"]
+	path = tldextract-feedstock
+	url = ../tldextract-feedstock
+	branch = master
