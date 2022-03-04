@@ -6409,3 +6409,7 @@
 	path = prophet-feedstock
 	url = ../prophet-feedstock
 	branch = master
+[submodule "lunarcalendar-feedstock"]
+	path = lunarcalendar-feedstock
+	url = ../lunarcalendar-feedstock
+	branch = master
