@@ -6405,3 +6405,7 @@
 	path = tldextract-feedstock
 	url = ../tldextract-feedstock
 	branch = master
+[submodule "prophet-feedstock"]
+	path = prophet-feedstock
+	url = ../prophet-feedstock
+	branch = master
