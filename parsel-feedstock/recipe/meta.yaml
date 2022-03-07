@@ -23,7 +23,6 @@ requirements:
     - cssselect >=0.9
     - functools32  # [py==27]
     - lxml
-    - python
     - six >=1.6.0
     - w3lib >=1.19.0
 
