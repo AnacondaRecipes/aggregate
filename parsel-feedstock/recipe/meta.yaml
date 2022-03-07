@@ -38,7 +38,7 @@ test:
     - pytest
   commands:
     - pip check
-    - py.test -v tests
+    - py.test -v -k "not (test_differences_parsing_xml_vs_html or test_nested_selectors or test_re or test_replacement_null_char_from_body or test_select_on_text_nodes or test_selector_get_alias or test_selector_getall_alias or test_selector_over_text or test_selectorlist_get_alias or test_selectorlist_getall_alias or test_slicing or test_text_pseudo_element)" tests
 
 about:
   home: https://github.com/scrapy/parsel
