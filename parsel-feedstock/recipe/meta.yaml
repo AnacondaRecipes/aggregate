@@ -18,6 +18,8 @@ requirements:
     - python
     - pip
     - pytest-runner
+    - setuptools
+    - wheel
   run:
     - python
     - cssselect >=0.9
