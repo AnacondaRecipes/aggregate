@@ -1,16 +1,17 @@
-{% set version = "1.5.2" %}
+{% set name = "parsel" %}
+{% set version = "1.6.0" %}
 
 package:
-  name: parsel
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/parsel/parsel-{{ version }}.tar.gz
-  sha256: 4da4262ba4605573b6b72a5f557616a2fc9dee7a47a1efad562752a28d366723
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/parsel-{{ version }}.tar.gz
+  sha256: 70efef0b651a996cceebc69e55a85eb2233be0890959203ba7c3a03c72725c79
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -19,12 +20,12 @@ requirements:
     - pytest-runner
   run:
     - python
-    - w3lib >=1.19.0
-    - lxml
-    - six >=1.5.2
     - cssselect >=0.9
-    - pytest-runner
-    - functools32  # [py27]
+    - functools32  # [py==27]
+    - lxml
+    - python
+    - six >=1.6.0
+    - w3lib >=1.19.0
 
 test:
   source_files:
@@ -32,13 +33,16 @@ test:
   imports:
     - parsel
   requires:
+    - pip
     - pytest
   commands:
+    - pip check
     - py.test -v tests
 
 about:
   home: https://github.com/scrapy/parsel
-  license: BSD
+  license: BSD-3-Clause
+  license_family: BSD
   license_file: LICENSE
   summary: library to extract data from HTML and XML using XPath and CSS selectors
   description: |
