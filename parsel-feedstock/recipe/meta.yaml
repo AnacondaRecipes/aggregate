@@ -49,5 +49,6 @@ about:
   description: |
     Features of parcel are, Extract text using CSS or XPath selectors and
     Regular expression helper methods.
+  dev_url: https://github.com/scrapy/parsel
   doc_url: https://parsel.readthedocs.io/en/latest/
   doc_source_url: https://github.com/scrapy/parsel/blob/master/docs/index.rst
