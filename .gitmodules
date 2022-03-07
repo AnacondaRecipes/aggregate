@@ -6413,3 +6413,7 @@
 	path = lunarcalendar-feedstock
 	url = ../lunarcalendar-feedstock
 	branch = master
+[submodule "expecttest-feedstock"]
+	path = expecttest-feedstock
+	url = ../expecttest-feedstock
+	branch = main
