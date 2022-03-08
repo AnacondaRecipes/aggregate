@@ -6421,3 +6421,7 @@
 	path = torch-lr-finder-feedstock
 	url = ../torch-lr-finder-feedstock
 	branch = main
+[submodule "pytorch-1.8-feedstock"]
+	path = pytorch-1.8-feedstock
+	url = ../pytorch-feedstock
+	branch = pytorch-1.8.x
