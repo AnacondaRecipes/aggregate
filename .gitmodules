@@ -6417,3 +6417,7 @@
 	path = expecttest-feedstock
 	url = ../expecttest-feedstock
 	branch = main
+[submodule "torch-lr-finder-feedstock"]
+	path = torch-lr-finder-feedstock
+	url = ../torch-lr-finder-feedstock
+	branch = main
