@@ -38,6 +38,9 @@ test:
     - pytest
   commands:
     - pip check
+    # Tests failed on all platforms. 
+    # Probably due to this constraint https://github.com/scrapy/parsel/blob/f5f73d34ba787ad0c9df25de295de6e196ecd91d/tests/requirements.txt#L1. 
+    # We haven't psutil 5.6.3 on defaults
     - py.test -v -k "not (test_differences_parsing_xml_vs_html or test_nested_selectors or test_re or test_replacement_null_char_from_body or test_select_on_text_nodes or test_selector_get_alias or test_selector_getall_alias or test_selector_over_text or test_selectorlist_get_alias or test_selectorlist_getall_alias or test_slicing or test_text_pseudo_element)" tests
 
 about:
