@@ -6429,3 +6429,15 @@
 	path = twisted-iocpsupport-feedstock
 	url = ../twisted-iocpsupport-feedstock
 	branch = master
+[submodule "stack_data-feedstock"]
+	path = stack_data-feedstock
+	url = ../stack_data-feedstock
+[submodule "asttokens-feedstock"]
+	path = asttokens-feedstock
+	url = ../asttokens-feedstock
+[submodule "executing-feedstock"]
+	path = executing-feedstock
+	url = ../executing-feedstock
+[submodule "pure_eval-feedstock"]
+	path = pure_eval-feedstock
+	url = ../pure_eval-feedstock
