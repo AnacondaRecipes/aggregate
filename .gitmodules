@@ -6425,3 +6425,7 @@
 	path = pytorch-1.8-feedstock
 	url = ../pytorch-feedstock
 	branch = pytorch-1.8.x
+[submodule "twisted-iocpsupport-feedstock"]
+	path = twisted-iocpsupport-feedstock
+	url = ../twisted-iocpsupport-feedstock
+	branch = master
