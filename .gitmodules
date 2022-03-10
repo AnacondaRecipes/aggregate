@@ -6344,7 +6344,7 @@
 [submodule "mamba-feedstock"]
 	path = mamba-feedstock
 	url = ../mamba-feedstock
-	branch = master
+	branch = main
 [submodule "nlohmann_json-feedstock"]
 	path = nlohmann_json-feedstock
 	url = ../nlohmann_json-feedstock
