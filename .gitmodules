@@ -6429,3 +6429,7 @@
 	path = twisted-iocpsupport-feedstock
 	url = ../twisted-iocpsupport-feedstock
 	branch = master
+[submodule "stack_data-feedstock"]
+	path = stack_data-feedstock
+	url = ../stack_data-feedstock
+	branch = master
