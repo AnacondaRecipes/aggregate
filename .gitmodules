@@ -6441,3 +6441,7 @@
 	path = pure_eval-feedstock
 	url = ../pure_eval-feedstock
 	branch = master
+[submodule "asttokens-feedstock"]
+	path = asttokens-feedstock
+	url = ../asttokens-feedstock
+	branch = master
