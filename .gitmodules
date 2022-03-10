@@ -6433,3 +6433,7 @@
 	path = stack_data-feedstock
 	url = ../stack_data-feedstock
 	branch = master
+[submodule "executing-feedstock"]
+	path = executing-feedstock
+	url = ../executing-feedstock
+	branch = master
