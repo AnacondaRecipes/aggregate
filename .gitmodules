@@ -6437,3 +6437,7 @@
 	path = executing-feedstock
 	url = ../executing-feedstock
 	branch = master
+[submodule "pure_eval-feedstock"]
+	path = pure_eval-feedstock
+	url = ../pure_eval-feedstock
+	branch = master
