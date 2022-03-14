@@ -6341,9 +6341,9 @@
 	path = libsolv-feedstock
 	url = ../libsolv-feedstock
 	branch = master
-[submodule "libmambapy-feedstock"]
-	path = libmambapy-feedstock
-	url = ../libmambapy-feedstock
+[submodule "mamba-feedstock"]
+	path = mamba-feedstock
+	url = ../mamba-feedstock
 	branch = main
 [submodule "nlohmann_json-feedstock"]
 	path = nlohmann_json-feedstock
