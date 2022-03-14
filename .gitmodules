@@ -6445,3 +6445,7 @@
 	path = libmambapy-feedstock
 	url = ../libmambapy-feedstock
 	branch = main
+[submodule "conda-libmamba-solver-feedstock"]
+	path = conda-libmamba-solver-feedstock
+	url = ../conda-libmamba-solver-feedstock
+	branch = main
