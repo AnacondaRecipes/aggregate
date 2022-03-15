@@ -6449,3 +6449,11 @@
 	path = conda-libmamba-solver-feedstock
 	url = ../conda-libmamba-solver-feedstock
 	branch = main
+[submodule "llvmdev-11.0.1-feedstock"]
+	path = llvmdev-11.0.1-feedstock
+	url = ../llvmdev-feedstock
+	branch = master-11.1.0
+[submodule "llvmdev-11.1.0-feedstock"]
+	path = llvmdev-11.1.0-feedstock
+	url = ../llvmdev-feedstock
+	branch = master-11.1.0
