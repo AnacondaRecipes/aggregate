@@ -6457,3 +6457,7 @@
 	path = llvmdev-11.1.0-feedstock
 	url = ../llvmdev-feedstock
 	branch = master-11.1.0
+[submodule "ctng-compiler-activation-ppc64le-feedstock"]
+	path = ctng-compiler-activation-ppc64le-feedstock
+	url = ../ctng-compiler-activation-feedstock
+	branch = main-ppc64le
