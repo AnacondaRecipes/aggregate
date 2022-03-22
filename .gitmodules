@@ -6461,3 +6461,7 @@
 	path = ctng-compiler-activation-ppc64le-feedstock
 	url = ../ctng-compiler-activation-feedstock
 	branch = main-ppc64le
+[submodule "jellyfish-feedstock"]
+	path = jellyfish-feedstock
+	url = ../jellyfish-feedstock
+	branch = master
