@@ -6469,3 +6469,7 @@
 	path = ipython-7.31-feedstock
 	url = ../ipython-feedstock
 	branch = main-7.31
+[submodule "mistune-0.8.4-feedstock"]
+	path = mistune-0.8.4-feedstock
+	url = ../mistune-feedstock
+	branch = main-0.8.4
