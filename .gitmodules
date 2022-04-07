@@ -6473,3 +6473,7 @@
 	path = mistune-0.8.4-feedstock
 	url = ../mistune-feedstock
 	branch = main-0.8.4
+[submodule "neuralprophet-feedstock"]
+	path = neuralprophet-feedstock
+	url = ../neuralprophet-feedstock
+	branch = main
