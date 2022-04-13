@@ -27,5 +27,6 @@ test:
 
 about:
   home: https://github.com/ContinuumIO/anaconda-nb-extensions-meta-config
-  license: BSD
+  license: BSD-3-Clause
+  license_family: BSD
   summary: A configuration metapackage for enabling Anaconda-bundled jupyter extensions
