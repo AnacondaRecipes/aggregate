@@ -3,7 +3,7 @@ package:
   version: 0.1.0
 
 build:
-  number: 0
+  number: 1
   always_include_files:
     - etc/jupyter/nbconfig/notebook.json
     - etc/jupyter/jupyter_notebook_config.json
@@ -27,5 +27,6 @@ test:
 
 about:
   home: https://github.com/ContinuumIO/anaconda-nb-extensions-meta-config
-  license: BSD
+  license: BSD-3-Clause
+  license_family: BSD
   summary: A configuration metapackage for enabling Anaconda-bundled jupyter extensions
