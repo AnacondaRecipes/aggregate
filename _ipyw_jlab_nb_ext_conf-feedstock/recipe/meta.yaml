@@ -3,7 +3,7 @@ package:
   version: 0.1.0
 
 build:
-  number: 0
+  number: 1
   always_include_files:
     - etc/jupyter/nbconfig/notebook.json
     - etc/jupyter/jupyter_notebook_config.json
