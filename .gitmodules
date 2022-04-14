@@ -6477,3 +6477,7 @@
 	path = neuralprophet-feedstock
 	url = ../neuralprophet-feedstock
 	branch = main
+[submodule "pmdarima-feedstock"]
+	path = pmdarima-feedstock
+	url = ../pmdarima-feedstock
+	branch = master
