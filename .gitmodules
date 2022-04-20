@@ -6481,3 +6481,7 @@
 	path = pmdarima-feedstock
 	url = ../pmdarima-feedstock
 	branch = master
+[submodule "wget-feedstock"]
+	path = wget-feedstock
+	url = ../wget-feedstock
+	branch = master
