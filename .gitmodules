@@ -6489,3 +6489,7 @@
 	path = fuzzywuzzy-feedstock
 	url = ../fuzzywuzzy-feedstock
 	branch = master
+[submodule "mmh3-feedstock"]
+	path = mmh3-feedstock
+	url = ../mmh3-feedstock
+	branch = master
