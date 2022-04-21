@@ -6485,3 +6485,7 @@
 	path = wget-feedstock
 	url = ../wget-feedstock
 	branch = master
+[submodule "fuzzywuzzy-feedstock"]
+	path = fuzzywuzzy-feedstock
+	url = ../fuzzywuzzy-feedstock
+	branch = master
