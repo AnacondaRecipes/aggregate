@@ -6493,3 +6493,7 @@
 	path = mmh3-feedstock
 	url = ../mmh3-feedstock
 	branch = master
+[submodule "spacy-transformers-feedstock"]
+	path = spacy-transformers-feedstock
+	url = ../spacy-transformers-feedstock
+	branch = master
