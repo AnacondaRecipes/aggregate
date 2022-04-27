@@ -6497,3 +6497,7 @@
 	path = spacy-transformers-feedstock
 	url = ../spacy-transformers-feedstock
 	branch = master
+[submodule "cpp-expected-feedstock"]
+	path = cpp-expected-feedstock
+	url = ../cpp-expected-feedstock
+	branch = main
