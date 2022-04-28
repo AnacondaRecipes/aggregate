@@ -6509,3 +6509,19 @@
 	path = gcc_toolchain-sources
 	url = ../gcc_toolchain-sources
 	branch = main
+[submodule "typogrify-feedstock"]
+	path = typogrify-feedstock
+	url = ../typogrify-feedstock
+	branch = master
+[submodule "smartypants-feedstock"]
+	path = smartypants-feedstock
+	url = ../smartypants-feedstock
+	branch = master
+[submodule "gi-docgen-feedstock"]
+	path = gi-docgen-feedstock
+	url = ../gi-docgen-feedstock
+	branch = master
+[submodule "devil-feedstock"]
+	path = devil-feedstock
+	url = ../devil-feedstock
+	branch = master
