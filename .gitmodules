@@ -6501,3 +6501,11 @@
 	path = cpp-expected-feedstock
 	url = ../cpp-expected-feedstock
 	branch = main
+[submodule "gcc_toolchain-feedstock"]
+	path = gcc_toolchain-feedstock
+	url = ../gcc_toolchain-feedstock
+	branch = main
+[submodule "gcc_toolchain-sources"]
+	path = gcc_toolchain-sources
+	url = ../gcc_toolchain-sources
+	branch = main
