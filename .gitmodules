@@ -6525,3 +6525,7 @@
 	path = devil-feedstock
 	url = ../devil-feedstock
 	branch = master
+[submodule "spacy-model-en_core_web-feedstock"]
+	path = spacy-model-en_core_web-feedstock
+	url = ../spacy-model-en_core_web-feedstock
+	branch = master
