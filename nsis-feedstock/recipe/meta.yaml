@@ -44,7 +44,6 @@ requirements:
   host:
     - zlib   # [unix]
     # To run scons command in build.sh
-    - python  # [unix]
     - scons  # [unix]
   run:
 
