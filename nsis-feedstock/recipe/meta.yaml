@@ -36,16 +36,7 @@ source:
 
 build:
   number: 0
-  skip: True   # [aarch64 or ppc64le or osx]
-
-requirements:
-  build:
-    - {{ compiler('cxx') }}  # [unix]
-  host:
-    - zlib   # [unix]
-    # To run scons command in build.sh
-    - scons  # [unix]
-  run:
+  skip: True   # [unix]
 
 test:
   commands:
