@@ -6531,5 +6531,5 @@
 	branch = master
 [submodule "anaconda-clean-feedstock"]
 	path = anaconda-clean-feedstock
-	url = https://github.com/AnacondaRecipes/anaconda-clean-feedstock
+	url = ../anaconda-clean-feedstock
 	branch = main
