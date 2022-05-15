@@ -6533,3 +6533,7 @@
 	path = anaconda-clean-feedstock
 	url = ../anaconda-clean-feedstock
 	branch = main
+[submodule "gcc_activation-feedstock"]
+	path = gcc_activation-feedstock
+	url = ../gcc_activation-feedstock
+	branch = main
