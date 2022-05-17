@@ -6537,3 +6537,7 @@
 	path = gcc_activation-feedstock
 	url = ../gcc_activation-feedstock
 	branch = main
+[submodule "gdb-feedstock"]
+	path = gdb-feedstock
+	url = ../gdb-feedstock
+	branch = main
