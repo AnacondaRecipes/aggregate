@@ -6541,3 +6541,7 @@
 	path = gdb-feedstock
 	url = ../gdb-feedstock
 	branch = main
+[submodule "numpy-1.19-feedstock"]
+	path = numpy-1.19-feedstock
+	url = ../numpy-feedstock
+	branch = numpy119
