@@ -6545,3 +6545,7 @@
 	path = numpy-1.19-feedstock
 	url = ../numpy-feedstock
 	branch = numpy119
+[submodule "numpy-1.21-feedstock"]
+	path = numpy-1.21-feedstock
+	url = ../numpy-feedstock
+	branch = numpy121
