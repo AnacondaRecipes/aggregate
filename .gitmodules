@@ -6549,3 +6549,7 @@
 	path = numpy-1.21-feedstock
 	url = ../numpy-feedstock
 	branch = numpy121
+[submodule "snowpark-python-feedstock"]
+	path = snowpark-python-feedstock
+	url = ../snowpark-python-feedstock
+	branch = master
