@@ -6553,3 +6553,7 @@
 	path = snowpark-python-feedstock
 	url = ../snowpark-python-feedstock
 	branch = master
+[submodule "snowpark-python-0.6.0-feedstock"]
+	path = snowpark-python-0.6.0-feedstock
+	url = ../snowpark-python-feedstock
+	branch = main-0.6.0
