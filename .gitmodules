@@ -6557,3 +6557,7 @@
 	path = snowpark-python-0.6.0-feedstock
 	url = ../snowpark-python-feedstock
 	branch = main-0.6.0
+[submodule "protobuf-3.11.2-feedstock"]
+	path = protobuf-3.11.2-feedstock
+	url = ../protobuf-feedstock
+	branch = main-3.11.2
