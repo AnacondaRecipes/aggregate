@@ -6549,3 +6549,7 @@
 	path = numpy-1.21-feedstock
 	url = ../numpy-feedstock
 	branch = numpy121
+[submodule "protobuf-3.11.2-feedstock"]
+	path = protobuf-3.11.2-feedstock
+	url = ../protobuf-feedstock
+	branch = main-3.11.2
