@@ -6561,3 +6561,7 @@
 	path = protobuf-3.11.2-feedstock
 	url = ../protobuf-feedstock
 	branch = main-3.11.2
+[submodule "libprotobuf-3.11.2-feedstock"]
+	path = libprotobuf-3.11.2-feedstock
+	url = ../libprotobuf-feedstock
+	branch = master-3.11.2
