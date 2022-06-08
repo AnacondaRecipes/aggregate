@@ -6569,3 +6569,7 @@
 	path = libprotobuf-3.14.0-feedstock
 	url = ../libprotobuf-feedstock
 	branch = main-3.14.0
+[submodule "protobuf-3.14.0-feedstock"]
+	path = protobuf-3.14.0-feedstock
+	url = ../protobuf-feedstock
+	branch = main-3.14.0
