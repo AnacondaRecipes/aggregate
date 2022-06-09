@@ -6573,3 +6573,7 @@
 	path = protobuf-3.14.0-feedstock
 	url = ../protobuf-feedstock
 	branch = main-3.14.0
+[submodule "starlette-0.13.6-feedstock"]
+	path = starlette-0.13.6-feedstock
+	url = ../starlette-feedstock
+	branch = main-0.13.6
