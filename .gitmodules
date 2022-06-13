@@ -6585,3 +6585,7 @@
 	path = hdf5-1.10.6-feedstock
 	url = ../hdf5-feedstock
 	branch = master-1.10.6
+[submodule "grpc_java_plugin-feedstock"]
+	path = grpc_java_plugin-feedstock
+	url = ../grpc_java_plugin-feedstock
+	branch = main
