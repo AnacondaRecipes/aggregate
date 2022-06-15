@@ -6589,3 +6589,7 @@
 	path = grpc_java_plugin-feedstock
 	url = ../grpc_java_plugin-feedstock
 	branch = main
+[submodule "tiledb-2.2.9-feedstock"]
+	path = tiledb-2.2.9-feedstock
+	url = ../tiledb-feedstock
+	branch = v2.2.9
