@@ -6593,3 +6593,7 @@
 	path = tiledb-2.2.9-feedstock
 	url = ../tiledb-feedstock
 	branch = v2.2.9
+[submodule "libtiff-4.1.0-feedstock"]
+	path = libtiff-4.1.0-feedstock
+	url = ../libtiff-feedstock
+	branch = main-4.1.0
