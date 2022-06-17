@@ -212,7 +212,7 @@ python:
   - 3.7      # [not arm64]
   - 3.8
   - 3.9
-  - 3.10
+  - "3.10"
 python_implementation:
   - cpython
 python_impl:
