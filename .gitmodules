@@ -6605,3 +6605,7 @@
 	path = cunit-feedstock
 	url = ../cunit-feedstock
 	branch = main
+[submodule "protobuf-3.19.1-feedstock"]
+	path = protobuf-3.19.1-feedstock
+	url = ../protobuf-feedstock
+	branch = main-3.19.1
