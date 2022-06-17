@@ -6597,3 +6597,7 @@
 	path = libtiff-4.1.0-feedstock
 	url = ../libtiff-feedstock
 	branch = main-4.1.0
+[submodule "postgis-feedstock"]
+	path = postgis-feedstock
+	url = ../postgis-feedstock
+	branch = main
