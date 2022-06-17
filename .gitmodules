@@ -6601,3 +6601,7 @@
 	path = postgis-feedstock
 	url = ../postgis-feedstock
 	branch = main
+[submodule "cunit-feedstock"]
+	path = cunit-feedstock
+	url = ../cunit-feedstock
+	branch = main
