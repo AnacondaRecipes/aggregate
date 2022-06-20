@@ -257,3 +257,5 @@ zip_keys:
   -
     - python
     - numpy
+zstd:
+  - 1.5.2
