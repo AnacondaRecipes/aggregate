@@ -6609,3 +6609,7 @@
 	path = protobuf-3.19.1-feedstock
 	url = ../protobuf-feedstock
 	branch = main-3.19.1
+[submodule "boost-1.73-feedstock"]
+	path = boost-1.73-feedstock
+	url = ../boost-feedstock
+	branch = master-1.73
