@@ -6613,3 +6613,7 @@
 	path = boost-1.73-feedstock
 	url = ../boost-feedstock
 	branch = master-1.73
+[submodule "getopt-win32-feedstock"]
+	path = getopt-win32-feedstock
+	url = ../getopt-win32-feedstock
+	branch = main
