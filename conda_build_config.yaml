@@ -165,9 +165,7 @@ numpy:
   # python 3.10
   - 1.21
 openblas:
-  - 0.3.3   # [not (s390x or aarch64 or (osx and arm64))]
-  - 0.3.17  # [osx and arm64]
-  - 0.3.10  # [s390x or aarch64]
+  - 0.3.20
 openjpeg:
   - 2.3
 openssl:
