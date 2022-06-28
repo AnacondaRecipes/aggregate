@@ -6617,3 +6617,7 @@
 	path = getopt-win32-feedstock
 	url = ../getopt-win32-feedstock
 	branch = main
+[submodule "libaio-feedstock"]
+	path = libaio-feedstock
+	url = ../libaio-feedstock
+	branch = main
