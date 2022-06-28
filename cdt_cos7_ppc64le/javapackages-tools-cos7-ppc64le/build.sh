@@ -18,3 +18,9 @@ pushd ${PREFIX}/powerpc64le-conda_cos7-linux-gnu/sysroot/usr/share/java-utils/
   rm -f abs2rel.sh
   ln -s ${PREFIX}/powerpc64le-conda_cos7-linux-gnu/sysroot/usr/bin/abs2rel abs2rel.sh
 popd
+
+pushd "${PREFIX}"
+ln -s powerpc64le-conda_cos7-linux-gnu powerpc64le-conda-linux-gnu
+popd
+
+

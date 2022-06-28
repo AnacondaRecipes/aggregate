@@ -36,3 +36,9 @@ pushd ${PREFIX}/powerpc64le-conda_cos7-linux-gnu/sysroot/etc/pki/tls/certs
   echo "PLACEHOLDER"> ${PREFIX}/powerpc64le-conda_cos7-linux-gnu/sysroot/etc/pki/ca-trust/extracted/openssl/ca-bundle.trust.crt
   ln -s ${PREFIX}/powerpc64le-conda_cos7-linux-gnu/sysroot/etc/pki/ca-trust/extracted/openssl/ca-bundle.trust.crt ca-bundle.trust.crt
 popd
+
+pushd "${PREFIX}"
+ln -s powerpc64le-conda_cos7-linux-gnu powerpc64le-conda-linux-gnu
+popd
+
+

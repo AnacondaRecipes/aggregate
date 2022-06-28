@@ -28,3 +28,9 @@ pushd ${PREFIX}/powerpc64le-conda_cos7-linux-gnu/sysroot/usr/lib64/ruby
 popd
 
 
+
+pushd "${PREFIX}"
+ln -s powerpc64le-conda_cos7-linux-gnu powerpc64le-conda-linux-gnu
+popd
+
+
