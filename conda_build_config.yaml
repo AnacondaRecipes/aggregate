@@ -15,8 +15,7 @@ boost_cpp:
 bzip2:
   - 1.0
 cairo:
-  - 1.14                       # [not (s390x or aarch64 or (osx and arm64))]
-  - 1.16                       # [s390x or aarch64 or (osx and arm64)]
+  - 1.16
 c_compiler:
   - gcc                        # [linux]
   - clang                      # [osx]
@@ -93,8 +92,7 @@ gmp:
 gnu:
   - 2.12.2
 harfbuzz:
-  - 2.4  # [not ((osx and arm64) or (linux and aarch64))]
-  - 2.8  # [(osx and arm64) or (linux and aarch64)]
+  - 4.3.0
 hdf4:
   - 4.2
 hdf5:
@@ -116,7 +114,7 @@ libffi:
   # Patches need to be rebased
   - 3.4  # [win]
 libgd:
-  - 2.2.5
+  - 2.3.3
 libgdal:
   - 3.0
 libgsasl:
