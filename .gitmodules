@@ -6621,3 +6621,7 @@
 	path = libaio-feedstock
 	url = ../libaio-feedstock
 	branch = main
+[submodule "pyqt-builder-feedstock"]
+	path = pyqt-builder-feedstock
+	url = ../pyqt-builder-feedstock
+	branch = main
