@@ -75,9 +75,11 @@ freetype:
 g2clib:
   - 1.6
 gstreamer:
-  - 1.14
+  - 1.14  # [not win]
+  - 1.18  # [win]
 gst_plugins_base:
-  - 1.14
+  - 1.14  # [not win]
+  - 1.18  # [win]
 geos:
   - 3.8.0  # [not (osx and arm64)]
   - 3.9.1  # [osx and arm64]
