@@ -6631,13 +6631,17 @@
 	branch = main
 [submodule "virtualenv-clone-feedstock"]
 	path = virtualenv-clone-feedstock
-	url = git@github.com:AnacondaRecipes/virtualenv-clone-feedstock.git
+	url = ../virtualenv-clone-feedstock
+        branch = main
 [submodule "pipenv-feedstock"]
 	path = pipenv-feedstock
-	url = git@github.com:AnacondaRecipes/pipenv-feedstock.git
+	url = ../pipenv-feedstock
+        branch = main
 [submodule "pydeck-feedstock"]
 	path = pydeck-feedstock
-	url = https://github.com/AnacondaRecipes/pydeck-feedstock
+	url = ../pydeck-feedstock
+        branch = main
 [submodule "streamlit-feedstock"]
 	path = streamlit-feedstock
-	url = https://github.com/AnacondaRecipes/streamlit-feedstock
+	url = ../streamlit-feedstock
+        branch = main
