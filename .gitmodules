@@ -6629,3 +6629,15 @@
 	path = qt_sources-feedstock
 	url = ../qt_sources-feedstock
 	branch = main
+[submodule "virtualenv-clone-feedstock"]
+	path = virtualenv-clone-feedstock
+	url = git@github.com:AnacondaRecipes/virtualenv-clone-feedstock.git
+[submodule "pipenv-feedstock"]
+	path = pipenv-feedstock
+	url = git@github.com:AnacondaRecipes/pipenv-feedstock.git
+[submodule "pydeck-feedstock"]
+	path = pydeck-feedstock
+	url = https://github.com/AnacondaRecipes/pydeck-feedstock
+[submodule "streamlit-feedstock"]
+	path = streamlit-feedstock
+	url = https://github.com/AnacondaRecipes/streamlit-feedstock
