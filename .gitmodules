@@ -6629,19 +6629,3 @@
 	path = qt_sources-feedstock
 	url = ../qt_sources-feedstock
 	branch = main
-[submodule "virtualenv-clone-feedstock"]
-	path = virtualenv-clone-feedstock
-	url = ../virtualenv-clone-feedstock
-        branch = main
-[submodule "pipenv-feedstock"]
-	path = pipenv-feedstock
-	url = ../pipenv-feedstock
-        branch = main
-[submodule "pydeck-feedstock"]
-	path = pydeck-feedstock
-	url = ../pydeck-feedstock
-        branch = main
-[submodule "streamlit-feedstock"]
-	path = streamlit-feedstock
-	url = ../streamlit-feedstock
-        branch = main
