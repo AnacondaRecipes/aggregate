@@ -6625,3 +6625,7 @@
 	path = pyqt-builder-feedstock
 	url = ../pyqt-builder-feedstock
 	branch = main
+[submodule "qt_sources-feedstock"]
+	path = qt_sources-feedstock
+	url = ../qt_sources-feedstock
+	branch = main
