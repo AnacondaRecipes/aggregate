@@ -6632,4 +6632,4 @@
 [submodule "virtualenv-clone-feedstock"]
 	path = virtualenv-clone-feedstock
 	url = ../virtualenv-clone-feedstock
-	branch = main
+	branch = master
