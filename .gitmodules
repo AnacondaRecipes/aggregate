@@ -6641,3 +6641,7 @@
 	path = pipenv-feedstock
 	url = ../pipenv-feedstock
 	branch = master
+[submodule "streamlit-feedstock"]
+	path = streamlit-feedstock
+	url = ../streamlit-feedstock
+	branch = main
