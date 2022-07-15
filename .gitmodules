@@ -6633,3 +6633,7 @@
 	path = virtualenv-clone-feedstock
 	url = ../virtualenv-clone-feedstock
 	branch = master
+[submodule "pydeck-feedstock"]
+	path = pydeck-feedstock
+	url = ../pydeck-feedstock
+	branch = master
