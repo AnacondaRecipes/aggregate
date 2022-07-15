@@ -6637,3 +6637,7 @@
 	path = pydeck-feedstock
 	url = ../pydeck-feedstock
 	branch = master
+[submodule "pipenv-feedstock"]
+	path = pipenv-feedstock
+	url = ../pipenv-feedstock
+	branch = master
