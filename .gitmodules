@@ -6629,3 +6629,7 @@
 	path = qt_sources-feedstock
 	url = ../qt_sources-feedstock
 	branch = main
+[submodule "virtualenv-clone-feedstock"]
+	path = virtualenv-clone-feedstock
+	url = ../virtualenv-clone-feedstock
+	branch = main
