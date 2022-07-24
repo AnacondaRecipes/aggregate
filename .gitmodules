@@ -6649,3 +6649,7 @@
 	path = numpy-1.22-feedstock
 	url = ../numpy-feedstock
 	branch = numpy122
+[submodule "qt-main-feedstock"]
+	path = qt-main-feedstock
+	url = ../qt-main-feedstock
+	branch = main
