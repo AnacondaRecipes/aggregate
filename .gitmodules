@@ -6653,3 +6653,7 @@
 	path = qt-main-feedstock
 	url = ../qt-main-feedstock
 	branch = main
+[submodule "qt-webengine-feedstock"]
+	path = qt-webengine-feedstock
+	url = ../qt-webengine-feedstock
+	branch = main
