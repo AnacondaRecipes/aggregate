@@ -6669,3 +6669,11 @@
 	path = boost_mp11-feedstock
 	url = ../boost_mp11-feedstock
 	branch = master
+[submodule "safeint-feedstock"]
+	path = safeint-feedstock
+	url = ../safeint-feedstock
+	branch = main
+[submodule "optional-lite-feedstock"]
+	path = optional-lite-feedstock
+	url = ../optional-lite-feedstoc
+	branch = main
