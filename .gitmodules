@@ -6675,5 +6675,5 @@
 	branch = main
 [submodule "optional-lite-feedstock"]
 	path = optional-lite-feedstock
-	url = ../optional-lite-feedstoc
+	url = ../optional-lite-feedstock
 	branch = main
