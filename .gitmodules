@@ -6665,3 +6665,7 @@
 	path = libdate-feedstock
 	url = ../libdate-feedstock
 	branch = main
+[submodule "boost_mp11-feedstock"]
+	path = boost_mp11-feedstock
+	url = ../boost_mp11-feedstock
+	branch = main
