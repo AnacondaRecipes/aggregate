@@ -6657,3 +6657,7 @@
 	path = qt-webengine-feedstock
 	url = ../qt-webengine-feedstock
 	branch = main
+[submodule "gdbm-feedstock"]
+	path = gdbm-feedstock
+	url = ../gdbm-feedstock
+	branch = main
