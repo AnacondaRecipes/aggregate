@@ -6677,3 +6677,7 @@
 	path = optional-lite-feedstock
 	url = ../optional-lite-feedstock
 	branch = main
+[submodule "dbus-python-feedstock"]
+	path = dbus-python-feedstock
+	url = ../dbus-python-feedstock
+	branch = main
