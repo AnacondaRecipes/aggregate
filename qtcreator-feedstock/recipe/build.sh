@@ -41,12 +41,12 @@ if [[ ${HOST} =~ .*darwin.* ]]; then
   iconutil -c icns -o "${PREFIX}"/qtcreator.app/Contents/Resources/qtcreator.icns src/app/qtcreator.xcassets/qtcreator.iconset
   iconutil -c icns -o "${PREFIX}"/qtcreator.app/Contents/Resources/qtcreator-project.icns src/app/qtcreator.xcassets/qtcreator-project.iconset
   sed -i.bak  \
-    -e "s|<string>10.8</string>|<string>${MACOSX_DEPLOYMENT_TARGET}</string>|g"  \
+    -e "s|<string>10.13</string>|<string>${MACOSX_DEPLOYMENT_TARGET}</string>|g"  \
     -e "s|@FULL_VERSION@|${PKG_VERSION}|g"  \
     -e "s|@SHORT_VERSION@|${PKG_VERSION}|g"  \
     -e "s|@EXECUTABLE@|qtcreator|g"  \
     -e "s|<string>Qt Creator</string>|<string>qtcreator</string>|g"  \
-    src/app/Info.plist
+    src/app/app-Info.plist
 fi
 
 # This appears in the "About" dialog, but qmake is not good and I cannot

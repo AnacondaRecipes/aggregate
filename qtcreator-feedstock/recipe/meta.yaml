@@ -9,7 +9,7 @@ source:
   git_url: https://code.qt.io/qt-creator/qt-creator.git
   git_tag: v{{ version }}
   patches:
-    - 4.12.4/0001-macOS-Disable-app-bundle-and-do-not-put-qtcreatorlib.patch
+    - 4.9/0001-macOS-Disable-app-bundle-and-do-not-put-qtcreatorlib.patch
     - 4.9/0002-Use-systemEnvironment-for-Start-and-Debug-External-A.patch
 
 build:
@@ -47,8 +47,10 @@ requirements:
     - patchelf                           # [linux]
     - patch     # [not win]
     - m2-patch  # [win]
+    - sed   # [not win]
   host:
-    - qt 5.15.*
+    - qt-main 5.15.*
+    - qt-webengine 5.15.*
     - llvmdev
     - clangdev
     - libxcb                             # [linux]
