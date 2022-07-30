@@ -223,8 +223,6 @@ zlib:
   - 1.2
 xz:
   - 5
-qtwebkit:
-  - true
 channel_targets:
   - defaults
 cdt_name:
