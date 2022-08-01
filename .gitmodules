@@ -6681,3 +6681,7 @@
 	path = dbus-python-feedstock
 	url = ../dbus-python-feedstock
 	branch = main
+[submodule "qasync-feedstock"]
+	path = qasync-feedstock
+	url = ../qasync-feedstock
+	branch = main
