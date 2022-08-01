@@ -6685,3 +6685,7 @@
 	path = qasync-feedstock
 	url = ../qasync-feedstock
 	branch = main
+[submodule "opentsne-feedstock"]
+	path = opentsne-feedstock
+	url = ../opentsne-feedstock
+	branch = main
