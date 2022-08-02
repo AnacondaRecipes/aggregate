@@ -6689,3 +6689,7 @@
 	path = opentsne-feedstock
 	url = ../opentsne-feedstock
 	branch = main
+[submodule "orange-canvas-core-feedstock"]
+	path = orange-canvas-core-feedstock
+	url = ../orange-canvas-core-feedstock
+	branch = main
