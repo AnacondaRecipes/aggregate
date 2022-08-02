@@ -6693,3 +6693,7 @@
 	path = orange-canvas-core-feedstock
 	url = ../orange-canvas-core-feedstock
 	branch = main
+[submodule "orange-widget-base-feedstock"]
+	path = orange-widget-base-feedstock
+	url = ../orange-widget-base-feedstock
+	branch = main
