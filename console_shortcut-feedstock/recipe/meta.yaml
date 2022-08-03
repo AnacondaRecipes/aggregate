@@ -4,6 +4,7 @@ package:
 
 build:
   number: 5
+  skip: True  # [not win]
 
 app:
   entry:
