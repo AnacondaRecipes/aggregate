@@ -6701,3 +6701,7 @@
 	path = qtconsole-4.7.6-feedstock
 	url = ../qtconsole-feedstock
 	branch = archive_4.7.6
+[submodule "qtconsole-4.6.0-feedstock"]
+	path = qtconsole-4.6.0-feedstock
+	url = ../qtconsole-feedstock
+	branch = archive_4.6.0
