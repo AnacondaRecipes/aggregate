@@ -6705,3 +6705,7 @@
 	path = qtconsole-4.6.0-feedstock
 	url = ../qtconsole-feedstock
 	branch = archive_4.6.0
+[submodule "mccabe-0.6.1-feedstock"]
+	path = mccabe-0.6.1-feedstock
+	url = ../mccabe-feedstock
+	branch = main-0.6.1
