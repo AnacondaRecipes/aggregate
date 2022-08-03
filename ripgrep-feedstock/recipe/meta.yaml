@@ -18,6 +18,8 @@ build:
     - mkdir %PREFIX%\Library\mingw-w64\bin  # [win]
     - cp target/release/rg $PREFIX/bin/rg  # [not win]
     - copy target\release\rg.exe %PREFIX%\Library\mingw-w64\bin\rg.exe  # [win]
+  missing_dso_whitelist:
+    - $RPATH/ld64.so.1  # [s390x]
 
 requirements:
   build:
