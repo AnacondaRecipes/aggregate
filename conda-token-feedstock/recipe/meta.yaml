@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  # - url: https://github.com/anaconda/{{ name }}/archive/{{ version }}.tar.gz
-  # - sha256: {{ sha256 }}
+  - url: https://github.com/anaconda/{{ name }}/archive/{{ version }}.tar.gz
+  - sha256: {{ sha256 }}
   git_url: https://github.com/anaconda/{{ name }}.git
   git_tag: {{ version }}
 
@@ -29,12 +29,11 @@ requirements:
     - conda-content-trust
 
 test:
-# # todo: add this back once the tests pass.
-#   source_files:
-#     - tests
-#   requires:
-#     - pytest
-#     - pytest-cov
+  source_files:
+    - tests
+  requires:
+    - pytest
+    - pytest-cov
   commands:
     - conda-token --help
     - conda-token --version
