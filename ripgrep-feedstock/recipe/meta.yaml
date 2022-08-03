@@ -32,7 +32,9 @@ test:
 
 about:
   home: https://github.com/BurntSushi/ripgrep
+  dev_url: https://github.com/BurntSushi/ripgrep
+  doc_url: https://github.com/BurntSushi/ripgrep
   summary: ripgrep is a line-oriented search tool that recursively searches the current directory for a regex pattern.
-  license: MIT
+  license: MIT AND Unlicense
   license_file: 
     - LICENSE-MIT
