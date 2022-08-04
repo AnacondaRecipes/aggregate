@@ -1,4 +1,4 @@
-{% set version = '12.1.1' %}
+{% set version = '13.0.0' %}
 {% set name = 'ripgrep' %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/BurntSushi/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 2513338d61a5c12c8fea18a0387b3e0651079ef9b31f306050b1f0aaa926271e
+  sha256: 0fb17aaf285b3eee8ddab17b833af1e190d73de317ff9648751ab0660d763ed2
 
 build:
   script:
@@ -19,9 +19,23 @@ build:
     - cp target/release/rg $PREFIX/bin/rg  # [not win]
     - copy target\release\rg.exe %PREFIX%\Library\mingw-w64\bin\rg.exe  # [win]
   missing_dso_whitelist:
-    - /usr/lib/libresolv.9.dylib
+    - $RPATH/ld64.so.1  # [s390x]
 
 requirements:
   build:
     - {{ compiler('rust') }}  # [not win]
     - {{ compiler('rust-gnu') }}  # [win]
+
+test:
+  commands:
+    - rg --version
+
+about:
+  home: https://github.com/BurntSushi/ripgrep
+  dev_url: https://github.com/BurntSushi/ripgrep
+  doc_url: https://github.com/BurntSushi/ripgrep
+  summary: ripgrep is a line-oriented search tool that recursively searches the current directory for a regex pattern.
+  license: MIT AND Unlicense
+  license_family: Other
+  license_file: 
+    - LICENSE-MIT
