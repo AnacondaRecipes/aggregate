@@ -6709,3 +6709,7 @@
 	path = mccabe-0.6.1-feedstock
 	url = ../mccabe-feedstock
 	branch = main-0.6.1
+[submodule "cattrs-1.0.0-feedstock"]
+	path = cattrs-1.0.0-feedstock
+	url = ../cattrs-feedstock
+	branch = main-1.0.0
