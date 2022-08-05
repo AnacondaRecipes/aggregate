@@ -6741,3 +6741,7 @@
 	path = mdit-py-plugins-feedstock
 	url = ../mdit-py-plugins-feedstock
 	branch = main
+[submodule "python-ldap-feedstock"]
+	path = python-ldap-feedstock
+	url = ../python-ldap-feedstock
+	branch = main
