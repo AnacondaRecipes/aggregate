@@ -6721,3 +6721,7 @@
 	path = colorlog-4.x-feedstock
 	url = ../colorlog-feedstock
 	branch = main-4.x
+[submodule "openldap-2.4-feedstock"]
+	path = openldap-2.4-feedstock
+	url = ../openldap-feedstock
+	branch = main-2.4
