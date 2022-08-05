@@ -6717,3 +6717,7 @@
 	path = tzlocal-1.5.x-feedstock
 	url = ../tzlocal-feedstock/
 	branch = main-1.5
+[submodule "colorlog-4.x-feedstock"]
+	path = colorlog-4.x-feedstock
+	url = ../colorlog-feedstock
+	branch = main-4.x
