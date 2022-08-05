@@ -6725,3 +6725,7 @@
 	path = openldap-2.4-feedstock
 	url = ../openldap-feedstock
 	branch = main-2.4
+[submodule "dnspython-feedstock"]
+	path = dnspython-feedstock
+	url = ../dnspython-feedstock
+	branch = main
