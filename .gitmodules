@@ -6729,3 +6729,7 @@
 	path = dnspython-feedstock
 	url = ../dnspython-feedstock
 	branch = main
+[submodule "mdurl-feedstock"]
+	path = mdurl-feedstock
+	url = ../mdurl-feedstock
+	branch = main
