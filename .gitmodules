@@ -6713,3 +6713,7 @@
 	path = cattrs-1.0.0-feedstock
 	url = ../cattrs-feedstock
 	branch = main-1.0.0
+[submodule "tzlocal-1.5.x-feedstock"]
+	path = tzlocal-1.5.x-feedstock
+	url = ../tzlocal-feedstock/
+	branch = main-1.5
