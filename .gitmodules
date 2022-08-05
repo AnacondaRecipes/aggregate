@@ -6745,3 +6745,7 @@
 	path = python-ldap-feedstock
 	url = ../python-ldap-feedstock
 	branch = main
+[submodule "apache-airflow-providers-sqlite-feedstock"]
+	path = apache-airflow-providers-sqlite-feedstock
+	url = ../apache-airflow-providers-sqlite-feedstock
+	branch = main
