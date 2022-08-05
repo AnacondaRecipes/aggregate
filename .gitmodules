@@ -6733,3 +6733,7 @@
 	path = mdurl-feedstock
 	url = ../mdurl-feedstock
 	branch = main
+[submodule "markdown-it-py-feedstock"]
+	path = markdown-it-py-feedstock
+	url = ../markdown-it-py-feedstock
+	branch = main
