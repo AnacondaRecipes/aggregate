@@ -6737,3 +6737,7 @@
 	path = markdown-it-py-feedstock
 	url = ../markdown-it-py-feedstock
 	branch = main
+[submodule "mdit-py-plugins-feedstock"]
+	path = mdit-py-plugins-feedstock
+	url = ../mdit-py-plugins-feedstock
+	branch = main
