@@ -6781,3 +6781,7 @@
 	path = cachelib-feedstock
 	url = ../cachelib-feedstock
 	branch = main
+[submodule "sentry-sdk-feedstock"]
+	path = sentry-sdk-feedstock
+	url = ../sentry-sdk-feedstock
+	branch = main
