@@ -6777,3 +6777,7 @@
 	path = plyvel-feedstock
 	url = ../plyvel-feedstock
 	branch = main
+[submodule "cachelib-feedstock"]
+	path = cachelib-feedstock
+	url = ../cachelib-feedstock
+	branch = main
