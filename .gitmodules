@@ -6765,3 +6765,7 @@
 	path = apache-airflow-providers-apache-hdfs-feedstock
 	url = ../apache-airflow-providers-apache-hdfs-feedstock
 	branch = main
+[submodule "linkify-it-py-feedstock"]
+	path = linkify-it-py-feedstock
+	url = ../linkify-it-py-feedstock
+	branch = main
