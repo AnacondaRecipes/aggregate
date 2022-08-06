@@ -6785,3 +6785,7 @@
 	path = sentry-sdk-feedstock
 	url = ../sentry-sdk-feedstock
 	branch = main
+[submodule "snakebite-py3-feedstock"]
+	path = snakebite-py3-feedstock
+	url = ../snakebite-py3-feedstock
+	branch = main
