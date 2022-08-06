@@ -6773,3 +6773,7 @@
 	path = uc-micro-py-feedstock
 	url = ../uc-micro-py-feedstock
 	branch = main
+[submodule "plyvel-feedstock"]
+	path = plyvel-feedstock
+	url = ../plyvel-feedstock
+	branch = main
