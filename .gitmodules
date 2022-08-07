@@ -6797,3 +6797,7 @@
 	path = cron-descriptor-feedstock
 	url = ../cron-descriptor-feedstock
 	branch = main
+[submodule "atlasclient-feedstock"]
+	path = atlasclient-feedstock
+	url = ../atlasclient-feedstock
+	branch = main
