@@ -6793,3 +6793,7 @@
 	path = flask-session-feedstock
 	url = ../flask-session-feedstock
 	branch = main
+[submodule "cron-descriptor-feedstock"]
+	path = cron-descriptor-feedstock
+	url = ../cron-descriptor-feedstock
+	branch = main
