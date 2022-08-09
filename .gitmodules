@@ -6801,3 +6801,7 @@
 	path = atlasclient-feedstock
 	url = ../atlasclient-feedstock
 	branch = main
+[submodule "meson-python-feedstock"]
+	path = meson-python-feedstock
+	url = ../meson-python-feedstock
+	branch = main
