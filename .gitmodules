@@ -6805,3 +6805,7 @@
 	path = meson-python-feedstock
 	url = ../meson-python-feedstock
 	branch = main
+[submodule "pyproject-metadata-feedstock"]
+	path = pyproject-metadata-feedstock
+	url = ../pyproject-metadata-feedstock
+	branch = main
