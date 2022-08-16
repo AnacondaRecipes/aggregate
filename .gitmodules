@@ -6809,3 +6809,7 @@
 	path = pyproject-metadata-feedstock
 	url = ../pyproject-metadata-feedstock
 	branch = main
+[submodule "backports.zoneinfo-feedstock"]
+	path = backports.zoneinfo-feedstock
+	url = ../backports.zoneinfo-feedstock
+	branch = main
