@@ -6813,3 +6813,7 @@
 	path = backports.zoneinfo-feedstock
 	url = ../backports.zoneinfo-feedstock
 	branch = main
+[submodule "conda-token-feedstock"]
+	path = conda-token-feedstock
+	url = ../conda-token-feedstock
+	branch = main
