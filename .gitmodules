@@ -6817,3 +6817,7 @@
 	path = conda-token-feedstock
 	url = ../conda-token-feedstock
 	branch = main
+[submodule "whatthepatch-feedstock"]
+	path = whatthepatch-feedstock
+	url = ../whatthepatch-feedstock
+	branch = main
