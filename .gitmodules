@@ -6829,3 +6829,7 @@
 	path = hatchling-feedstock
 	url = ../hatchling-feedstock
 	branch = main
+[submodule "django-3-feedstock"]
+	path = django-3-feedstock
+	url = ../django-feedstock
+	branch = main-3-lts
