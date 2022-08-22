@@ -6825,3 +6825,7 @@
 	path = pytesseract-feedstock
 	url = ../pytesseract-feedstock
 	branch = main
+[submodule "hatchling-feedstock"]
+	path = hatchling-feedstock
+	url = ../hatchling-feedstock
+	branch = master
