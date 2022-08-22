@@ -6821,3 +6821,7 @@
 	path = whatthepatch-feedstock
 	url = ../whatthepatch-feedstock
 	branch = main
+[submodule "pytesseract-feedstock"]
+	path = pytesseract-feedstock
+	url = ../pytesseract-feedstock
+	branch = main
