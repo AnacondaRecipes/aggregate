@@ -6828,4 +6828,4 @@
 [submodule "hatchling-feedstock"]
 	path = hatchling-feedstock
 	url = ../hatchling-feedstock
-	branch = master
+	branch = main
