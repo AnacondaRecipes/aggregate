@@ -6833,3 +6833,7 @@
 	path = django-3-feedstock
 	url = ../django-feedstock
 	branch = main-3-lts
+[submodule "aiopg-feedstock"]
+	path = aiopg-feedstock
+	url = ../aiopg-feedstock
+	branch = main
