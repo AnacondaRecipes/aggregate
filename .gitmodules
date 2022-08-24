@@ -6837,3 +6837,7 @@
 	path = aiopg-feedstock
 	url = ../aiopg-feedstock
 	branch = main
+[submodule "hatch-vcs-feedstock"]
+	path = hatch-vcs-feedstock
+	url = ../hatch-vcs-feedstock
+	branch = main
