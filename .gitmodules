@@ -6841,3 +6841,7 @@
 	path = hatch-vcs-feedstock
 	url = ../hatch-vcs-feedstock
 	branch = main
+[submodule "orjson-feedstock"]
+	path = orjson-feedstock
+	url = ../orjson-feedstock
+	branch = main
