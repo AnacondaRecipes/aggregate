@@ -6847,5 +6847,5 @@
 	branch = main
 [submodule "tmux-feedstock"]
 	path = tmux-feedstock
-	url = /Users/sbailey/work/recipes/wip/tmux-feedstock
+	url = ../tmux-feedstock
 	branch = main
