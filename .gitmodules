@@ -6852,4 +6852,4 @@
 [submodule "pkgutil-resolve-name-feedstock"]
 	path = pkgutil-resolve-name-feedstock
 	url = ../pkgutil-resolve-name-feedstock
-	branch = master
+	branch = main
