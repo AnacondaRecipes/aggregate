@@ -6853,3 +6853,7 @@
 	path = pkgutil-resolve-name-feedstock
 	url = ../pkgutil-resolve-name-feedstock
 	branch = main
+[submodule "pyobjc-framework-coreservices-feedstock"]
+	path = pyobjc-framework-coreservices-feedstock
+	url = ../pyobjc-framework-coreservices-feedstock
+	branch = master
