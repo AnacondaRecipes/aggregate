@@ -6861,3 +6861,7 @@
 	path = pypdf2-feedstock
 	url = ../pypdf2-feedstock
 	branch = main
+[submodule "lark-feedstock"]
+	path = lark-feedstock
+	url = ../lark-feedstock
+	branch = master
