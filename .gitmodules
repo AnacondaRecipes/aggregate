@@ -6873,3 +6873,7 @@
 	path = pyjsparser-feedstock
 	url = ../pyjsparser-feedstock
 	branch = main
+[submodule "boolean.py-feedstock"]
+	path = boolean.py-feedstock
+	url = ../boolean.py-feedstock
+	branch = main
