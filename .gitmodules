@@ -6865,3 +6865,7 @@
 	path = lark-feedstock
 	url = ../lark-feedstock
 	branch = master
+[submodule "js2py-feedstock"]
+	path = js2py-feedstock
+	url = ../js2py-feedstock
+	branch = master
