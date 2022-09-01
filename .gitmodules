@@ -6864,12 +6864,12 @@
 [submodule "lark-feedstock"]
 	path = lark-feedstock
 	url = ../lark-feedstock
-	branch = master
+	branch = main
 [submodule "js2py-feedstock"]
 	path = js2py-feedstock
 	url = ../js2py-feedstock
-	branch = master
+	branch = main
 [submodule "pyjsparser-feedstock"]
 	path = pyjsparser-feedstock
 	url = ../pyjsparser-feedstock
-	branch = master
+	branch = main
