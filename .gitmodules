@@ -6869,3 +6869,7 @@
 	path = js2py-feedstock
 	url = ../js2py-feedstock
 	branch = master
+[submodule "pyjsparser-feedstock"]
+	path = pyjsparser-feedstock
+	url = ../pyjsparser-feedstock
+	branch = master
