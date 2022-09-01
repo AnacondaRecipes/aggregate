@@ -6877,3 +6877,7 @@
 	path = boolean.py-feedstock
 	url = ../boolean.py-feedstock
 	branch = main
+[submodule "license-expression-feedstock"]
+	path = license-expression-feedstock
+	url = ../license-expression-feedstock
+	branch = main
