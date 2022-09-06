@@ -6897,3 +6897,7 @@
 	path = cfgv-feedstock
 	url = ../cfgv-feedstock
 	branch = main
+[submodule "pre-commit-feedstock"]
+	path = pre-commit-feedstock
+	url = ../pre-commit-feedstock
+	branch = main
