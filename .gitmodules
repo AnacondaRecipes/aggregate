@@ -6881,3 +6881,7 @@
 	path = license-expression-feedstock
 	url = ../license-expression-feedstock
 	branch = main
+[submodule "ukkonen-feedstock"]
+	path = ukkonen-feedstock
+	url = ../ukkonen-feedstock
+	branch = main
