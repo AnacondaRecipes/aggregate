@@ -6885,3 +6885,7 @@
 	path = ukkonen-feedstock
 	url = ../ukkonen-feedstock
 	branch = main
+[submodule "identify-feedstock"]
+	path = identify-feedstock
+	url = ../identify-feedstock
+	branch = main
