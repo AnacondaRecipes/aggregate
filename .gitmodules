@@ -6889,3 +6889,7 @@
 	path = identify-feedstock
 	url = ../identify-feedstock
 	branch = main
+[submodule "nodeenv-feedstock"]
+	path = nodeenv-feedstock
+	url = ../nodeenv-feedstock
+	branch = main
