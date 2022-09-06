@@ -6893,3 +6893,7 @@
 	path = nodeenv-feedstock
 	url = ../nodeenv-feedstock
 	branch = main
+[submodule "cfgv-feedstock"]
+	path = cfgv-feedstock
+	url = ../cfgv-feedstock
+	branch = main
