@@ -6901,3 +6901,7 @@
 	path = pre-commit-feedstock
 	url = ../pre-commit-feedstock
 	branch = main
+[submodule "hdk-feedstock"]
+	path = hdk-feedstock
+	url = ../hdk-feedstock
+	branch = master
