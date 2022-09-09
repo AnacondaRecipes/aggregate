@@ -6905,3 +6905,7 @@
 	path = hdk-feedstock
 	url = ../hdk-feedstock
 	branch = master
+[submodule "vc-rutime-and-more-feedstock"]
+	path = vc-rutime-and-more-feedstock
+	url = ../vc-rutime-and-more-feedstock
+	branch = main
