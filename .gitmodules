@@ -6909,3 +6909,7 @@
 	path = vc-rutime-and-more-feedstock
 	url = ../vc-rutime-and-more-feedstock
 	branch = main
+[submodule "ucrt-feedstock"]
+	path = ucrt-feedstock
+	url = ../ucrt-feedstock
+	branch = main
