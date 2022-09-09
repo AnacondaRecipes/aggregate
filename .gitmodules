@@ -6913,3 +6913,7 @@
 	path = ucrt-feedstock
 	url = ../ucrt-feedstock
 	branch = main
+[submodule "distconfig3-feedstock"]
+	path = distconfig3-feedstock
+	url = ../distconfig3-feedstock
+	branch = main
