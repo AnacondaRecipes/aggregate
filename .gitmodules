@@ -6917,3 +6917,7 @@
 	path = distconfig3-feedstock
 	url = ../distconfig3-feedstock
 	branch = main
+[submodule "vyper-config-feedstock"]
+	path = vyper-config-feedstock
+	url = ../vyper-config-feedstock
+	branch = main
