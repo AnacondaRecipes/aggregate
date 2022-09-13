@@ -6921,3 +6921,7 @@
 	path = vyper-config-feedstock
 	url = ../vyper-config-feedstock
 	branch = main
+[submodule "mklml-feedstock"]
+	path = mklml-feedstock
+	url = ../mklml-feedstock
+	branch = main
