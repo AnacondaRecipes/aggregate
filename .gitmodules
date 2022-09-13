@@ -6925,3 +6925,7 @@
 	path = mklml-feedstock
 	url = ../mklml-feedstock
 	branch = main
+[submodule "mkl-dnn-feedstock"]
+	path = mkl-dnn-feedstock
+	url = ../mkl-dnn-feedstock
+	branch = main
