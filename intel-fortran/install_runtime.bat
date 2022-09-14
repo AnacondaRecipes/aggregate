@@ -1,6 +1,8 @@
+B
 COPY %RECIPE_DIR%\LICENSE.txt LICENSE.txt
 
 IF "%target_platform%" == "win-64" (
+B
     set "intel_platform=intel64"
 ) else (
     set "intel_platform=ia32"
@@ -8,14 +10,14 @@ IF "%target_platform%" == "win-64" (
 
 IF %compiler_version:~0,4% GEQ 2022 (
     set "INSTALLDIR=C:\Program Files (x86)\Intel\oneAPI\compiler\%compiler_version%\windows\"
-	set "SUFFIX=_win"
+    set "SUFFIX=_win"
 ) else (
     IF %compiler_version:~0,4% GEQ 2016 (
         set "INSTALLDIR=C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_%compiler_version%\windows\"
     ) else (
         set "INSTALLDIR=C:\Program Files (x86)\Intel\Composer XE 2013 SP1\"
     )
-	set "SUFFIX="
+    set "SUFFIX="
 )
 
 robocopy "%INSTALLDIR%\redist\%intel_platform%%SUFFIX%\compiler" "%LIBRARY_BIN%" *.dll /E
