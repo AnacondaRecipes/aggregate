@@ -2,24 +2,26 @@
 #     name their conda packages.
 compiler_version:
   # for VS 2008 / py27
-  - 2013.6.241
+  #- 2013.6.241
   # for VS 2010 / py34
-  - 2016.4.246
+  #- 2016.4.246
   # for VS 2015 / py3.5+
-  - 2017.4.210
+  #- 2017.4.210
   # for VS2017 / py3.5+
-  - 2019.0.117
+  #- 2019.0.117
+  - 2022.1.0
 
 # This is to keep consistent with Intel's conda package naming
 intel_fortran_version:
   # for VS 2008 / py27
-  - 13.1.6
+  #- 13.1.6
   # for VS 2010 / py34
-  - 16.0.4
+  #- 16.0.4
   # for VS 2015 / py3.5+
-  - 2017.0.4
+  #- 2017.0.4
   # for VS 2017 / py3.5+
-  - 2019.0.0
+  #- 2019.0.0
+  - 2022.1.0
 
 zip_keys:
   - compiler_version
