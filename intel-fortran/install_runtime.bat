@@ -13,10 +13,10 @@ IF %compiler_version:~0,4% GEQ 2022 (
 )
 
 IF "%target_platform%" == "win-64" (
-    set "intel_platform=intel64"
-) else (
-    set "intel_platform=ia32"
-)
+  set "intel_platform=intel64"
+  ) else (
+  set "intel_platform=ia32"
+  )
 
 robocopy "%INSTALLDIR%\redist\%intel_platform%%SUFFIX%\compiler" "%LIBRARY_BIN%" *.dll /E
 if %ERRORLEVEL% GEQ 8 exit 1
