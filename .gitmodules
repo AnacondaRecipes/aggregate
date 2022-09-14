@@ -6929,3 +6929,7 @@
 	path = mkl-dnn-feedstock
 	url = ../mkl-dnn-feedstock
 	branch = main
+[submodule "libtiff-4.2.0-feedstock"]
+	path = libtiff-4.2.0-feedstock
+	url = ../libtiff-feedstock
+	branch = main-4.2.0
