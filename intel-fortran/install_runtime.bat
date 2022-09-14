@@ -1,8 +1,6 @@
-B
 COPY %RECIPE_DIR%\LICENSE.txt LICENSE.txt
 
 IF "%target_platform%" == "win-64" (
-B
     set "intel_platform=intel64"
 ) else (
     set "intel_platform=ia32"
