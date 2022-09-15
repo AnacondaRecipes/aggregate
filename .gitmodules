@@ -6933,3 +6933,7 @@
 	path = libtiff-4.2.0-feedstock
 	url = ../libtiff-feedstock
 	branch = main-4.2.0
+[submodule "pynomaly-feedstock"]
+	path = pynomaly-feedstock
+	url = ../pynomaly-feedstock
+	branch = main
