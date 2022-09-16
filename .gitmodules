@@ -6937,3 +6937,7 @@
 	path = pynomaly-feedstock
 	url = ../pynomaly-feedstock
 	branch = main
+[submodule "cargo-bundle-licenses-feedstock"]
+	path = cargo-bundle-licenses-feedstock
+	url = ../cargo-bundle-licenses-feedstock
+	branch = main
