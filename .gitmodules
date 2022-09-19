@@ -6945,3 +6945,7 @@
 	path = schema-feedstock
 	url = ../schema-feedstock
 	branch = main
+[submodule "pythonanywhere-feedstock"]
+	path = pythonanywhere-feedstock
+	url = ../pythonanywhere-feedstock
+	branch = main
