@@ -6941,3 +6941,7 @@
 	path = cargo-bundle-licenses-feedstock
 	url = ../cargo-bundle-licenses-feedstock
 	branch = main
+[submodule "schema-feedstock"]
+	path = schema-feedstock
+	url = ../schema-feedstock
+	branch = main
