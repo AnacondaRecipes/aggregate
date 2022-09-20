@@ -6957,3 +6957,7 @@
 	path = conda-repo-cli-feedstock
 	url = ../conda-repo-cli-feedstock
 	branch = main
+[submodule "leptonica-feedstock"]
+	path = leptonica-feedstock
+	url = ../leptonica-feedstock
+	branch = main
