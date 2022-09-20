@@ -6949,3 +6949,7 @@
 	path = pythonanywhere-feedstock
 	url = ../pythonanywhere-feedstock
 	branch = main
+[submodule "oauthenticator-feedstock"]
+	path = oauthenticator-feedstock
+	url = ../oauthenticator-feedstock
+	branch = main
