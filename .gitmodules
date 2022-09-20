@@ -6953,3 +6953,7 @@
 	path = oauthenticator-feedstock
 	url = ../oauthenticator-feedstock
 	branch = main
+[submodule "conda-repo-cli-feedstock"]
+	path = conda-repo-cli-feedstock
+	url = ../conda-repo-cli-feedstock
+	branch = main
