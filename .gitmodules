@@ -6961,3 +6961,7 @@
 	path = leptonica-feedstock
 	url = ../leptonica-feedstock
 	branch = main
+[submodule "contourpy-feedstock"]
+	path = contourpy-feedstock
+	url = ../contourpy-feedstock
+	branch = main
