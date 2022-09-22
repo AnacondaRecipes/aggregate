@@ -6965,3 +6965,7 @@
 	path = contourpy-feedstock
 	url = ../contourpy-feedstock
 	branch = main
+[submodule "onnxruntime-feedstock"]
+	path = onnxruntime-feedstock
+	url = ../onnxruntime-feedstock
+	branch = master
