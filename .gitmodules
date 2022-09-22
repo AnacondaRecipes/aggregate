@@ -6968,4 +6968,4 @@
 [submodule "onnxruntime-feedstock"]
 	path = onnxruntime-feedstock
 	url = ../onnxruntime-feedstock
-	branch = master
+	branch = main
