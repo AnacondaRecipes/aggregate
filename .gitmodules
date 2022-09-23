@@ -6969,3 +6969,7 @@
 	path = onnxruntime-feedstock
 	url = ../onnxruntime-feedstock
 	branch = main
+[submodule "anaconda-linter-feedstock"]
+	path = anaconda-linter-feedstock
+	url = ../anaconda-linter-feedstock
+	branch = main
