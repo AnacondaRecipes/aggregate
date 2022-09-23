@@ -2090,7 +2090,7 @@
 [submodule "opencv-feedstock"]
 	path = opencv-feedstock
 	url = ../opencv-feedstock
-	branch = master
+	branch = main
 [submodule "python-gflags-feedstock"]
 	path = python-gflags-feedstock
 	url = ../python-gflags-feedstock
@@ -6924,4 +6924,52 @@
 [submodule "mklml-feedstock"]
 	path = mklml-feedstock
 	url = ../mklml-feedstock
+	branch = main
+[submodule "mkl-dnn-feedstock"]
+	path = mkl-dnn-feedstock
+	url = ../mkl-dnn-feedstock
+	branch = main
+[submodule "libtiff-4.2.0-feedstock"]
+	path = libtiff-4.2.0-feedstock
+	url = ../libtiff-feedstock
+	branch = main-4.2.0
+[submodule "pynomaly-feedstock"]
+	path = pynomaly-feedstock
+	url = ../pynomaly-feedstock
+	branch = main
+[submodule "cargo-bundle-licenses-feedstock"]
+	path = cargo-bundle-licenses-feedstock
+	url = ../cargo-bundle-licenses-feedstock
+	branch = main
+[submodule "schema-feedstock"]
+	path = schema-feedstock
+	url = ../schema-feedstock
+	branch = main
+[submodule "pythonanywhere-feedstock"]
+	path = pythonanywhere-feedstock
+	url = ../pythonanywhere-feedstock
+	branch = main
+[submodule "oauthenticator-feedstock"]
+	path = oauthenticator-feedstock
+	url = ../oauthenticator-feedstock
+	branch = main
+[submodule "conda-repo-cli-feedstock"]
+	path = conda-repo-cli-feedstock
+	url = ../conda-repo-cli-feedstock
+	branch = main
+[submodule "leptonica-feedstock"]
+	path = leptonica-feedstock
+	url = ../leptonica-feedstock
+	branch = main
+[submodule "contourpy-feedstock"]
+	path = contourpy-feedstock
+	url = ../contourpy-feedstock
+	branch = main
+[submodule "onnxruntime-feedstock"]
+	path = onnxruntime-feedstock
+	url = ../onnxruntime-feedstock
+	branch = main
+[submodule "anaconda-linter-feedstock"]
+	path = anaconda-linter-feedstock
+	url = ../anaconda-linter-feedstock
 	branch = main
