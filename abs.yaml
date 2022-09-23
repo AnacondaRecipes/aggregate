@@ -1,4 +1,1 @@
 aggregate_check: false
-build_parameters:
-  - "--suppress-variables"
-  - "--skip-existing"
