@@ -3043,10 +3043,6 @@
 	path = spyder-kernels-0.2.4-feedstock
 	url = ../spyder-kernels-feedstock
 	branch = master-0.2.4
-[submodule "mxnet_recipes"]
-	path = mxnet_recipes
-	url = ../mxnet_recipes
-	branch = main
 [submodule "prometheus_client-feedstock"]
 	path = prometheus_client-feedstock
 	url = ../prometheus_client-feedstock
@@ -6972,4 +6968,8 @@
 [submodule "anaconda-linter-feedstock"]
 	path = anaconda-linter-feedstock
 	url = ../anaconda-linter-feedstock
+	branch = main
+[submodule "mxnet-feedstock"]
+	path = mxnet-feedstock
+	url = ../mxnet-feedstock
 	branch = main
