@@ -65,9 +65,7 @@ cyrus_sasl:
 dbus:
   - 1
 expat:
-  - 2.2  # [not ((osx and arm64) or (linux and aarch64))]
-  - 2.3  # [linux and aarch64]
-  - 2.4  # [osx and arm64]
+  - 2
 fontconfig:
   - 2.13
 freetype:
