@@ -6973,3 +6973,7 @@
 	path = mxnet-feedstock
 	url = ../mxnet-feedstock
 	branch = main
+[submodule "thefuzz-feedstock"]
+	path = thefuzz-feedstock
+	url = ../thefuzz-feedstock
+	branch = main
