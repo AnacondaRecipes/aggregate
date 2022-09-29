@@ -6977,3 +6977,7 @@
 	path = thefuzz-feedstock
 	url = ../thefuzz-feedstock
 	branch = main
+[submodule "python-bidi-feedstock"]
+	path = python-bidi-feedstock
+	url = ../python-bidi-feedstock
+	branch = main
