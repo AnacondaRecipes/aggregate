@@ -6985,3 +6985,7 @@
 	path = easyocr-feedstock
 	url = ../easyocr-feedstock
 	branch = main
+[submodule "jupyterlab-2.x-feedstock"]
+	path = jupyterlab-2.x-feedstock
+	url = ../jupyterlab-feedstock
+	branch = master-2.x
