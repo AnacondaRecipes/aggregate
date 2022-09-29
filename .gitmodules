@@ -6981,3 +6981,7 @@
 	path = python-bidi-feedstock
 	url = ../python-bidi-feedstock
 	branch = main
+[submodule "easyocr-feedstock"]
+	path = easyocr-feedstock
+	url = ../easyocr-feedstock
+	branch = main
