@@ -6989,3 +6989,7 @@
 	path = jupyterlab-2.x-feedstock
 	url = ../jupyterlab-feedstock
 	branch = master-2.x
+[submodule "zeep-feedstock"]
+	path = zeep-feedstock
+	url = ../zeep-feedstock
+	branch = main-4.1.0
