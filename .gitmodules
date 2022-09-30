@@ -6996,4 +6996,4 @@
 [submodule "pandas-stubs-feedstock"]
 	path = pandas-stubs-feedstock
 	url = ../pandas-stubs-feedstock
-	branch = main-1.4.4.220912
+	branch = main
