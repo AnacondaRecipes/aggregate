@@ -6992,7 +6992,7 @@
 [submodule "zeep-feedstock"]
 	path = zeep-feedstock
 	url = ../zeep-feedstock
-	branch = main-4.1.0
+	branch = main
 [submodule "pandas-stubs-feedstock"]
 	path = pandas-stubs-feedstock
 	url = ../pandas-stubs-feedstock
