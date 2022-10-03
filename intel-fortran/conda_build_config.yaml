@@ -10,3 +10,7 @@ intel_fortran_version:
 zip_keys:
   - compiler_version
   - intel_fortran_version
+
+# necessary to build until updated on main cbc
+fortran_compiler_version:       # [win]
+  - 2022.1.0                    # [win]
