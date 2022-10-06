@@ -214,7 +214,7 @@ target_platform:
   - win-64                     # [win]
   # - win-32                     # [win]
 tk:
-  - 8.6                # [not ppc64le]
+  - 8.6
 vc:
   - 14                         # [win]
 zlib:
