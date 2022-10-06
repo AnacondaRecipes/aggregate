@@ -7001,3 +7001,7 @@
 	path = types-pytz-feedstock
 	url = ../types-pytz-feedstock
 	branch = main
+[submodule "scikit-image-0.16.x-feedstock"]
+	path = scikit-image-0.16.x-feedstock
+	url = ../scikit-image-feedstock
+	branch = main-0.16.x
