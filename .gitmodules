@@ -7017,3 +7017,7 @@
 	path = ps-lite-feedstock
 	url = ../ps-lite-feedstock
 	branch = main
+[submodule "libtvm-feedstock"]
+	path = libtvm-feedstock
+	url = ../libtvm-feedstock
+	branch = main
