@@ -7013,10 +7013,6 @@
 	path = dlpack-feedstock
 	url = ../dlpack-feedstock
 	branch = main
-[submodule "ps-lite-feedstock"]
-	path = ps-lite-feedstock
-	url = ../ps-lite-feedstock
-	branch = main
 [submodule "libtvm-feedstock"]
 	path = libtvm-feedstock
 	url = ../libtvm-feedstock
