@@ -7017,3 +7017,7 @@
 	path = libtvm-feedstock
 	url = ../libtvm-feedstock
 	branch = main
+[submodule "xyzservices-feedstock"]
+	path = xyzservices-feedstock
+	url = ../xyzservices-feedstock
+	branch = main
