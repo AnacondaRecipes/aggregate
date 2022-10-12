@@ -7021,3 +7021,7 @@
 	path = xyzservices-feedstock
 	url = ../xyzservices-feedstock
 	branch = main
+[submodule "tesseract-feedstock"]
+	path = tesseract-feedstock
+	url = ../tesseract-feedstock
+	branch = main
