@@ -7025,3 +7025,7 @@
 	path = tesseract-feedstock
 	url = ../tesseract-feedstock
 	branch = main
+[submodule "python-kubernetes-19.15-feedstock"]
+	path = python-kubernetes-19.15-feedstock
+	url = ../python-kubernetes-feedstock
+	branch = main-19.15
