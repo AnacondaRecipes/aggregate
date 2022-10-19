@@ -7005,14 +7005,6 @@
 	path = scikit-image-0.16.x-feedstock
 	url = ../scikit-image-feedstock
 	branch = main-0.16.x
-[submodule "dmlc-feedstock"]
-	path = dmlc-feedstock
-	url = ../dmlc-feedstock
-	branch = main
-[submodule "dlpack-feedstock"]
-	path = dlpack-feedstock
-	url = ../dlpack-feedstock
-	branch = main
 [submodule "libtvm-feedstock"]
 	path = libtvm-feedstock
 	url = ../libtvm-feedstock
