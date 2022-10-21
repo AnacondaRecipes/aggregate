@@ -3,6 +3,7 @@ pin_run_as_build:
     max_pin: x.x.x
 
 apr:
+  # latest version is 1.8
   - 1.6.3  # [not (osx and arm64)]
   - 1.7.0  # [osx and arm64]
 blas_impl:
@@ -17,14 +18,19 @@ bzip2:
 cairo:
   - 1.16
 c_compiler:
+  # latest version is 12.2
   - gcc                        # [linux]
+  # latest version is 3.5
   - clang                      # [osx]
+  # latest version is 2022
   - vs2017                     # [win]
 cxx_compiler:
   - gxx                        # [linux]
   - clangxx                    # [osx]
+  # latest version is 2022
   - vs2017                     # [win]
 fortran_compiler:
+  # latest version is 10
   - gfortran                   # [linux or osx]
   - intel-fortran              # [win]
 m2w64_c_compiler:              # [win]
