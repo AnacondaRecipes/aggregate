@@ -7021,7 +7021,3 @@
 	path = python-kubernetes-19.15-feedstock
 	url = ../python-kubernetes-feedstock
 	branch = main-19.15
-[submodule "r-htmltable-feedstock"]
-	path = r-htmltable-feedstock
-	url = ../r-htmltable-feedstock
-	branch = master
