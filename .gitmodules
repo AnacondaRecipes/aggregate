@@ -7025,3 +7025,7 @@
 	path = r-htmltable-feedstock
 	url = ../r-htmltable-feedstock
 	branch = master
+[submodule "r-htmltools-feedstock"]
+	path = r-htmltools-feedstock
+	url = ../r-htmltools-feedstock
+	branch = master
