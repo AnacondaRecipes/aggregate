@@ -7033,3 +7033,7 @@
 	path = r-checkmate-feedstock
 	url = ../r-checkmate-feedstock
 	branch = master
+[submodule "r-base-feedstock"]
+	path = r-base-feedstock
+	url = ../r-base-feedstock
+	branch = master
