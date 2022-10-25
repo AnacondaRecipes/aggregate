@@ -1498,7 +1498,7 @@
 [submodule "psycopg2-feedstock"]
 	path = psycopg2-feedstock
 	url = ../psycopg2-feedstock
-	branch = main
+	branch = master
 [submodule "pyasn1-feedstock"]
 	path = pyasn1-feedstock
 	url = ../pyasn1-feedstock
@@ -7028,8 +7028,4 @@
 [submodule "r-htmltools-feedstock"]
 	path = r-htmltools-feedstock
 	url = ../r-htmltools-feedstock
-	branch = master
-[submodule "r-checkmate-feedstock"]
-	path = r-checkmate-feedstock
-	url = ../r-checkmate-feedstock
 	branch = master
