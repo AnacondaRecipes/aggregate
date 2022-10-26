@@ -7021,3 +7021,7 @@
 	path = python-kubernetes-19.15-feedstock
 	url = ../python-kubernetes-feedstock
 	branch = main-19.15
+[submodule "_libarchive_static_for_cph-feedstock"]
+	path = _libarchive_static_for_cph-feedstock
+	url = ../_libarchive_static_for_cph-feedstock
+	branch = main
