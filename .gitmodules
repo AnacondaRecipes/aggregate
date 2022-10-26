@@ -194,7 +194,7 @@
 [submodule "pycosat-feedstock"]
 	url = ../pycosat-feedstock.git
 	path = pycosat-feedstock
-	branch = master
+	branch = main
 [submodule "conda-feedstock"]
 	url = ../conda-feedstock.git
 	path = conda-feedstock
