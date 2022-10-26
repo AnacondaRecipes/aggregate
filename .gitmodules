@@ -1498,7 +1498,7 @@
 [submodule "psycopg2-feedstock"]
 	path = psycopg2-feedstock
 	url = ../psycopg2-feedstock
-	branch = master
+	branch = main
 [submodule "pyasn1-feedstock"]
 	path = pyasn1-feedstock
 	url = ../pyasn1-feedstock
