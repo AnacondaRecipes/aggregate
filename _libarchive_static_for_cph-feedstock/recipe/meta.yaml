@@ -1,4 +1,4 @@
-{% set version = "3.4.3" %}
+{% set version = "3.6.1" %}
 
 # Recipe for a static libarchive with support for the features needed for
 # conda-package-handling (bzip2, zlib, zstd).
@@ -10,33 +10,34 @@ package:
 
 source:
   url: https://github.com/libarchive/libarchive/releases/download/v{{ version }}/libarchive-{{ version }}.tar.gz
-  sha256: ee1e749213c108cb60d53147f18c31a73d6717d7e3d2481c157e1b34c881ea39
+  sha256: c676146577d989189940f1959d9e3980d28513d74eedfbc6b7f15ea45fe54ee2
   patches:
     - patches/0001-Add-lib-to-CMAKE_FIND_LIBRARY_PREFIXES-for-lzma.patch
-    - patches/0002-VC9-compatibility-test-for-BCryptDeriveKeyPBKDF2.patch
-    - patches/0003-VC9-compatibility-define-BCRYPT_SUCCESS.patch
-    - patches/0004-VC9-compatibility-openssl-define-inline-as-__inline.patch
-    - patches/0005-VC9-compatibility-ignore-some-warnings.patch
-    - patches/0006-C99-compatibility-Remove-the-limited-amount-of-C99.patch
-    - patches/0007-CMake-Force-Multi-threaded-DLL-runtime.patch
+    - patches/0003-VC9-compatibility-test-for-BCryptDeriveKeyPBKDF2.patch
+    - patches/0004-VC9-compatibility-define-BCRYPT_SUCCESS.patch
+    - patches/0006-VC-openssl-define-inline-as-__inline.patch
+    # These warnings are errors when compiling lz-4 support
+    - patches/0007-CMake-VC9-compatibility-ignore-some-warnings.patch
+    - patches/0008-VC9-compatibility-remove-C99.patch
+    - patches/0009-CMake-Force-Multi-threaded-DLL-runtime.patch
 
 build:
-  number: 2
-  ignore_run_exports:
-    - bzip2
-    - libiconv
-    - zlib
-    - zstd  # [win]
+  number: 0
+  #ignore_run_exports:
+  #  - bzip2
+  #  - libiconv
+  #  - zlib
+  #  - zstd  # [win]
   # HACK: case-sensitive mismatch in latest conda-build
-  missing_dso_whitelist:
-    - Library/bin/VCRUNTIME140.dll    # [win]
-    - "*/MSVCR90.dll"                 # [win]
-    - "MSVCR90.dll"                   # [win]
+  #missing_dso_whitelist:
+  #  - Library/bin/VCRUNTIME140.dll    # [win]
+  #  - "*/MSVCR90.dll"                 # [win]
+  #  - "MSVCR90.dll"                   # [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
-    # Does not work in this recips at present
+    # Does not work in this recipe at present
     # we manually convert C99 to C89 instead.
     # - c99-to-c89  # [win and vc<14]
     - msinttypes  # [win and vc<14]
@@ -47,7 +48,6 @@ requirements:
     - cmake       # [win]
     - make        # [unix]
     # - ninja       # [win]
-    - jom         # [win]
     - m2-patch  # [win]
     - m2-gcc-libs  # [win]
     - patch  # [not win]
@@ -58,8 +58,7 @@ requirements:
     - bzip2
     - libiconv    # [osx]
     - zlib
-    - zstd-static  # [not win]
-    - zstd  # [win]
+    - zstd
 
 test:
   commands:
@@ -72,7 +71,13 @@ test:
     - test -f "${PREFIX}/lib/libarchive_and_deps.a"    # [unix]
 
 about:
+  home: https://libarchive.org/
   summary: a static build of libarchive containing only conda-related parts
+  license: BSD-2-Clause
+  license_file: COPYING
+  license_family: BSD
+  dev_url: https://github.com/libarchive/libarchive
+  doc_url: https://github.com/libarchive/libarchive/wiki
   license_file:
     - static_deps_licenses/bzip2.txt
     - static_deps_licenses/libarchive.txt
