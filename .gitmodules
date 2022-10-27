@@ -7037,3 +7037,7 @@
 	path = libgsf-feedstock
 	url = ../libgsf-feedstock
 	branch = main
+[submodule "perl-xml-parser-feedstock"]
+	path = perl-xml-parser-feedstock
+	url = ../perl-xml-parser-feedstock
+	branch = main
