@@ -7025,3 +7025,7 @@
 	path = tesseract-feedstock
 	url = ../tesseract-feedstock
 	branch = main
+[submodule "p7zip-feedstock"]
+	path = p7zip-feedstock
+	url = ../p7zip-feedstock
+	branch = main
