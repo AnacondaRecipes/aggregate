@@ -7029,3 +7029,7 @@
 	path = p7zip-feedstock
 	url = ../p7zip-feedstock
 	branch = main
+[submodule "msitools-feedstock"]
+	path = msitools-feedstock
+	url = ../msitools-feedstock
+	branch = main
