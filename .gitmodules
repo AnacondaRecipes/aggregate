@@ -7041,3 +7041,7 @@
 	path = perl-xml-parser-feedstock
 	url = ../perl-xml-parser-feedstock
 	branch = main
+[submodule "libnsl-feedstock"]
+	path = libnsl-feedstock
+	url = ../libnsl-feedstock
+	branch = main
