@@ -7025,3 +7025,15 @@
 	path = _libarchive_static_for_cph-feedstock
 	url = ../_libarchive_static_for_cph-feedstock
 	branch = main
+[submodule "p7zip-feedstock"]
+	path = p7zip-feedstock
+	url = ../p7zip-feedstock
+	branch = main
+[submodule "gcab-feedstock"]
+	path = gcab-feedstock
+	url = ../gcab-feedstock
+	branch = main
+[submodule "libgsf-feedstock"]
+	path = libgsf-feedstock
+	url = ../libgsf-feedstock
+	branch = main
