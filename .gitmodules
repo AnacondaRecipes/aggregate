@@ -7033,3 +7033,7 @@
 	path = msitools-feedstock
 	url = ../msitools-feedstock
 	branch = main
+[submodule "libgsf-feedstock"]
+	path = libgsf-feedstock
+	url = ../libgsf-feedstock
+	branch = main
