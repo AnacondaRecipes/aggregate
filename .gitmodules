@@ -7037,3 +7037,7 @@
 	path = libgsf-feedstock
 	url = ../libgsf-feedstock
 	branch = main
+[submodule "gcab-feedstock"]
+	path = gcab-feedstock
+	url = ../gcab-feedstock
+	branch = main
