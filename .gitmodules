@@ -7045,3 +7045,7 @@
 	path = libnsl-feedstock
 	url = ../libnsl-feedstock
 	branch = main
+[submodule "python-kubernetes-18.20-feedstock"]
+	path = python-kubernetes-18.20-feedstock
+	url = ../python-kubernetes-feedstock
+	branch = main-18.20
