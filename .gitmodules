@@ -7053,3 +7053,7 @@
 	path = python-kubernetes-20.13-feedstock
 	url = ../python-kubernetes-feedstock
 	branch = main-20.13
+[submodule "python-kubernetes-21.7-feedstock"]
+	path = python-kubernetes-21.7-feedstock
+	url = ../python-kubernetes-feedstock
+	branch = main-21.7
