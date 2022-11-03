@@ -7057,3 +7057,7 @@
 	path = python-kubernetes-21.7-feedstock
 	url = ../python-kubernetes-feedstock
 	branch = main-21.7
+[submodule "tinycss2-feedstock"]
+	path = tinycss2-feedstock
+	url = ../tinycss2-feedstock
+	branch = main
