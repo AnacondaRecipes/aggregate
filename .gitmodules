@@ -7061,3 +7061,7 @@
 	path = tinycss2-feedstock
 	url = ../tinycss2-feedstock
 	branch = main
+[submodule "accelerate-feedstock"]
+	path = accelerate-feedstock
+	url = ../accelerate-feedstock
+	branch = main
