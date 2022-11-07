@@ -7065,3 +7065,7 @@
 	path = accelerate-feedstock
 	url = ../accelerate-feedstock
 	branch = main
+[submodule "setuptools-git-versioning-feedstock"]
+	path = setuptools-git-versioning-feedstock
+	url = ../setuptools-git-versioning-feedstock
+	branch = main
