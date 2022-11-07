@@ -7069,3 +7069,7 @@
 	path = setuptools-git-versioning-feedstock
 	url = ../setuptools-git-versioning-feedstock
 	branch = main
+[submodule "diffusers-feedstock"]
+	path = diffusers-feedstock
+	url = ../diffusers-feedstock
+	branch = main
