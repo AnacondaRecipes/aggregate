@@ -7073,3 +7073,7 @@
 	path = diffusers-feedstock
 	url = ../diffusers-feedstock
 	branch = main
+[submodule "evaluate-feedstock"]
+	path = evaluate-feedstock
+	url = ../evaluate-feedstock
+	branch = main
