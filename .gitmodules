@@ -7077,3 +7077,7 @@
 	path = evaluate-feedstock
 	url = ../evaluate-feedstock
 	branch = main
+[submodule "optimum-feedstock"]
+	path = optimum-feedstock
+	url = ../optimum-feedstock
+	branch = main
