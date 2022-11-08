@@ -171,8 +171,8 @@ openssl:
   # vs2008 precludes us from newer qt, and we haven't been able to build newer qt with openssl 1.1.1 yet
   - 1.0.2   # [win and py27]
 perl:
-  - 5.26    # [not (osx and arm64)]
-  - 5.34    # [osx and arm64]
+  - 5.26    # [win]
+  - 5.34    # [not win]
 pixman:
   - 0.40
 proj4:
