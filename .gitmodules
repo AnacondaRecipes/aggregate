@@ -7081,3 +7081,7 @@
 	path = optimum-feedstock
 	url = ../optimum-feedstock
 	branch = main
+[submodule "msitools-feedstock"]
+	path = msitools-feedstock
+	url = ../msitools-feedstock
+	branch = main
