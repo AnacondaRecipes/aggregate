@@ -7089,3 +7089,7 @@
 	path = notebook-shim-feedstock
 	url = ../notebook-shim-feedstock
 	branch = main
+[submodule "cachecontrol-feedstock"]
+	path = cachecontrol-feedstock
+	url = ../cachecontrol-feedstock
+	branch = main
