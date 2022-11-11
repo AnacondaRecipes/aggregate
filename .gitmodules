@@ -7085,3 +7085,7 @@
 	path = msitools-feedstock
 	url = ../msitools-feedstock
 	branch = main
+[submodule "notebook-shim-feedstock"]
+	path = notebook-shim-feedstock
+	url = ../notebook-shim-feedstock
+	branch = main
