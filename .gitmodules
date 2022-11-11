@@ -7093,3 +7093,7 @@
 	path = cachecontrol-feedstock
 	url = ../cachecontrol-feedstock
 	branch = main
+[submodule "exceptiongroup-feedstock"]
+	path = exceptiongroup-feedstock
+	url = ../exceptiongroup-feedstock
+	branch = main
