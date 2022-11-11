@@ -7101,3 +7101,7 @@
 	path = flit-scm-feedstock
 	url = ../flit-scm-feedstock
 	branch = main
+[submodule "configupdater-feedstock"]
+	path = configupdater-feedstock
+	url = ../configupdater-feedstock
+	branch = main
