@@ -7097,3 +7097,7 @@
 	path = exceptiongroup-feedstock
 	url = ../exceptiongroup-feedstock
 	branch = main
+[submodule "flit-scm-feedstock"]
+	path = flit-scm-feedstock
+	url = ../flit-scm-feedstock
+	branch = main
