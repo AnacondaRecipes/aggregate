@@ -7105,3 +7105,7 @@
 	path = configupdater-feedstock
 	url = ../configupdater-feedstock
 	branch = main
+[submodule "requests-wsgi-adapter-feedstock"]
+	path = requests-wsgi-adapter-feedstock
+	url = ../requests-wsgi-adapter-feedstock
+	branch = main
