@@ -7109,3 +7109,7 @@
 	path = requests-wsgi-adapter-feedstock
 	url = ../requests-wsgi-adapter-feedstock
 	branch = main
+[submodule "pdm-pep517-feedstock"]
+	path = pdm-pep517-feedstock
+	url = ../pdm-pep517-feedstock
+	branch = main
