@@ -7125,3 +7125,7 @@
 	path = python-dotenv-feedstock
 	url = ../python-dotenv-feedstock
 	branch = main
+[submodule "resolvelib-feedstock"]
+	path = resolvelib-feedstock
+	url = ../resolvelib-feedstock
+	branch = main
