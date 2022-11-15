@@ -7121,3 +7121,7 @@
 	path = mamba-feedstock
 	url = ../mamba-feedstock
 	branch = main
+[submodule "python-dotenv-feedstock"]
+	path = python-dotenv-feedstock
+	url = ../python-dotenv-feedstock
+	branch = main
