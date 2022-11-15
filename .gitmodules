@@ -7129,3 +7129,7 @@
 	path = resolvelib-feedstock
 	url = ../resolvelib-feedstock
 	branch = main
+[submodule "python-installer-feedstock"]
+	path = python-installer-feedstock
+	url = ../python-installer-feedstock
+	branch = main
