@@ -7113,3 +7113,7 @@
 	path = pdm-pep517-feedstock
 	url = ../pdm-pep517-feedstock
 	branch = main
+[submodule "apache-airflow-providers-common-sql-feedstock"]
+	path = apache-airflow-providers-common-sql-feedstock
+	url = ../apache-airflow-providers-common-sql-feedstock
+	branch = main
