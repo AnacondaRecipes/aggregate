@@ -7137,3 +7137,7 @@
 	path = graphql-core-feedstock
 	url = ../graphql-core-feedstock
 	branch = main
+[submodule "pytest-describe-feedstock"]
+	path = pytest-describe-feedstock
+	url = ../pytest-describe-feedstock
+	branch = main
