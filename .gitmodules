@@ -7133,3 +7133,7 @@
 	path = python-installer-feedstock
 	url = ../python-installer-feedstock
 	branch = main
+[submodule "graphql-core-feedstock"]
+	path = graphql-core-feedstock
+	url = ../graphql-core-feedstock
+	branch = main
