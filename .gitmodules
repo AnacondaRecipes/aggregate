@@ -7141,7 +7141,3 @@
 	path = pytest-describe-feedstock
 	url = ../pytest-describe-feedstock
 	branch = main
-[submodule "pdm-feedstock"]
-	path = pdm-feedstock
-	url = ../pdm-feedstock
-	branch = main
