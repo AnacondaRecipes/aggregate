@@ -7141,3 +7141,7 @@
 	path = pytest-describe-feedstock
 	url = ../pytest-describe-feedstock
 	branch = main
+[submodule "unearth-feedstock"]
+	path = unearth-feedstock
+	url = ../unearth-feedstock
+	branch = main
