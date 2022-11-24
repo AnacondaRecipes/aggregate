@@ -7145,3 +7145,7 @@
 	path = unearth-feedstock
 	url = ../unearth-feedstock
 	branch = main
+[submodule "chex-feedstock"]
+	path = chex-feedstock
+	url = ../chex-feedstock
+	branch = main
