@@ -110,9 +110,7 @@ jpeg:
 libdap4:
   - 3.19
 libffi:
-  - 3.3  # [not win]
-  # Patches need to be rebased
-  - 3.4  # [win]
+  - 3.4
 libgd:
   - 2.3.3
 libgdal:
