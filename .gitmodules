@@ -7157,3 +7157,7 @@
 	path = optax-feedstock
 	url = ../optax-feedstock
 	branch = main
+[submodule "flax-feedstock"]
+	path = flax-feedstock
+	url = ../flax-feedstock
+	branch = main
