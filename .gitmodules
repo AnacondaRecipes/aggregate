@@ -7153,3 +7153,7 @@
 	path = chex-feedstock
 	url = ../chex-feedstock
 	branch = main
+[submodule "optax-feedstock"]
+	path = optax-feedstock
+	url = ../optax-feedstock
+	branch = main
