@@ -7165,3 +7165,7 @@
 	path = clr_loader-feedstock
 	url = ../clr_loader-feedstock
         branch = main
+[submodule "findpython-feedstock"]
+	path = findpython-feedstock
+	url = ../findpython-feedstock
+	branch = main
