@@ -7161,3 +7161,7 @@
 	path = flax-feedstock
 	url = ../flax-feedstock
 	branch = main
+[submodule "clr_loader-feedstock"]
+	path = clr_loader-feedstock
+	url = ../clr_loader-feedstock
+        branch = main
