@@ -7169,3 +7169,7 @@
 	path = findpython-feedstock
 	url = ../findpython-feedstock
 	branch = main
+[submodule "tensorstore-feedstock"]
+	path = tensorstore-feedstock
+	url = ../tensorstore-feedstock
+	branch = main
