@@ -7173,3 +7173,7 @@
 	path = tensorstore-feedstock
 	url = ../tensorstore-feedstock
 	branch = main
+[submodule "hatch-nodejs-version-feedstock"]
+	path = hatch-nodejs-version-feedstock
+	url = ../hatch-nodejs-version-feedstock
+	branch = main
