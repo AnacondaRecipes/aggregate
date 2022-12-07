@@ -7177,3 +7177,7 @@
 	path = hatch-nodejs-version-feedstock
 	url = ../hatch-nodejs-version-feedstock
 	branch = main
+[submodule "msmpi-feedstock"]
+	path = msmpi-feedstock
+	url = ../msmpi-feedstock
+	branch = main
