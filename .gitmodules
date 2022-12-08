@@ -7181,3 +7181,7 @@
 	path = msmpi-feedstock
 	url = ../msmpi-feedstock
 	branch = main
+[submodule "conda-package-streaming-feedstock"]
+	path = conda-package-streaming-feedstock
+	url = ../conda-package-streaming-feedstock
+	branch = main
