@@ -7185,3 +7185,7 @@
 	path = conda-package-streaming-feedstock
 	url = ../conda-package-streaming-feedstock
 	branch = main
+[submodule "bokeh-2.4.3-feedstock"]
+	path = bokeh-2.4.3-feedstock
+	url = ../bokeh-feedstock
+	branch = master-2.4.3
