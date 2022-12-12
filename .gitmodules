@@ -7189,3 +7189,7 @@
 	path = bokeh-2.4.3-feedstock
 	url = ../bokeh-feedstock
 	branch = master-2.4.3
+[submodule "qhull-feedstock"]
+	path = qhull-feedstock
+	url = ../qhull-feedstock
+	branch = main
