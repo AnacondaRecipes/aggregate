@@ -7193,3 +7193,7 @@
 	path = qhull-feedstock
 	url = ../qhull-feedstock
 	branch = main
+[submodule "comm-feedstock"]
+	path = comm-feedstock
+	url = ../comm-feedstock
+	branch = main
