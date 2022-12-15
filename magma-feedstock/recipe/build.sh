@@ -6,7 +6,7 @@ export PATH=$PREFIX/bin:$PATH
 
 CUDA__VERSION=$(nvcc --version|tail -n1|cut -f5 -d" "|cut -f1 -d",")
 if [ "$CUDA__VERSION" != "${cudatoolkit}" ]; then
-    echo "CUDA Version is not ${cudatoolkit} CUDA Version found: $CUDA__VERSION"
+    echo "CUDA version is not ${cudatoolkit}; CUDA version found: $CUDA__VERSION"
     exit 1
 fi
 

@@ -2,15 +2,12 @@
 # TODO: examine if it is possible to link DSO dynamically
 package:
   name: magma
-  version: 2.5.0
+  version: 2.7.0
 
 source:
-   url: http://icl.cs.utk.edu/projectsfiles/magma/downloads/magma-2.5.0.tar.gz
-   sha256: 4fd45c7e46bd9d9124253e7838bbfb9e6003c64c2c67ffcff02e6c36d2bcfa33
+   url: http://icl.cs.utk.edu/projectsfiles/magma/downloads/magma-2.7.0.tar.gz
+   sha256: fda1cbc4607e77cacd8feb1c0f633c5826ba200a018f647f1c5436975b39fd18
    patches:
-    - cmakelists_cuda90.patch   # [cudatoolkit=='9.0']
-    - cmakelists_cuda100.patch  # [cudatoolkit=='10.0']
-    - xhsgetrf_gpu.patch        # [cudatoolkit=='9.0']
     - thread_queue.patch
 
 build:
@@ -23,7 +20,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
-    - ninja  # [win]
+    - ninja       # [win]
     - patch       # [not win]
     - m2-patch    # [win]
   host:
@@ -31,9 +28,22 @@ requirements:
   run:
     - {{ pin_compatible('cudatoolkit', max_pin='x.x') }}
 
+test:
+  commands:
+      - test -f $PREFIX/include/magma.h                             # [unix]
+      - test -f $PREFIX/lib/libmagma${SHLIB_EXT}                    # [unix]
+      - test -f $PREFIX/lib/libmagma_sparse${SHLIB_EXT}             # [unix]
+      - if not exist %LIBRARY_PREFIX%\include\magma.h exit 1        # [win]
+      - if not exist %LIBRARY_PREFIX%\lib\magma.lib exit 1          # [win]
+      - if not exist %LIBRARY_PREFIX%\bin\magma.dll exit 1          # [win]
+      - if not exist %LIBRARY_PREFIX%\lib\magma_sparse.lib exit 1   # [win]
+      - if not exist %LIBRARY_PREFIX%\bin\magma_sparse.dll exit 1   # [win]
+
 about:
-  home: http://icl.cs.utk.edu/magma/software/index.html
+  home: https://icl.utk.edu/magma/index.html
   license: BSD 3-Clause
   license_family: BSD
   license_file: COPYRIGHT
   summary: Matrix Algebra on GPU and Multicore Architectures
+  doc_url: https://icl.utk.edu/projectsfiles/magma/doxygen/
+  dev_url: https://bitbucket.org/icl/magma/
