@@ -2,17 +2,11 @@
 
 export CMAKE_LIBRARY_PATH=$PREFIX/lib:$PREFIX/include:$CMAKE_LIBRARY_PATH
 export CMAKE_PREFIX_PATH=$PREFIX
-export PATH=$PREFIX/bin:$PATH
-
-CUDA__VERSION=$(nvcc --version|tail -n1|cut -f5 -d" "|cut -f1 -d",")
-if [ "$CUDA__VERSION" != "${cudatoolkit}" ]; then
-    echo "CUDA version is not ${cudatoolkit}; CUDA version found: $CUDA__VERSION"
-    exit 1
-fi
+export PATH=$PREFIX/bin:/usr/local/cuda-${cudatoolkit}/bin:$PATH
 
 mkdir build
 cd build
-cmake .. -DUSE_FORTRAN=OFF -DGPU_TARGET="All" -DCMAKE_INSTALL_PREFIX=$PREFIX
+cmake .. -DUSE_FORTRAN=OFF -DGPU_TARGET="Fermi Kepler Maxwell Pascal Volta Turing Ampere" -DMAGMA_ENABLE_CUDA=ON -DCMAKE_INSTALL_PREFIX=$PREFIX
 make -j${CPU_COUNT} ${VERBOSE_AT}
 make install
 cd ..

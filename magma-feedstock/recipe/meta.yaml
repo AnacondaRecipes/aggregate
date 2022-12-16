@@ -12,19 +12,17 @@ source:
 
 build:
   number: 0
-  skip: True  # [win and vc<14]
-  skip: True  # [win32]
+  skip: True  # [win or osx]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
-    - ninja       # [win]
-    - patch       # [not win]
-    - m2-patch    # [win]
+    - patch
   host:
     - cudatoolkit {{ cudatoolkit }}*
+    - libopenblas
   run:
     - {{ pin_compatible('cudatoolkit', max_pin='x.x') }}
 
