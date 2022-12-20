@@ -7225,3 +7225,7 @@
 	path = prettytable-feedstock
 	url = ../prettytable-feedstock
 	branch = main
+[submodule "powershell_shortcut_miniconda-feedstock"]
+	path = powershell_shortcut_miniconda-feedstock
+	url = ../powershell_shortcut_miniconda-feedstock
+	branch = main
