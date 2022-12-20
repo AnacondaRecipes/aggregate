@@ -7217,3 +7217,7 @@
 	path = ipython-sql-feedstock
 	url = ../ipython-sql-feedstock
 	branch = main
+[submodule "onnxconverter-common-feedstock"]
+	path = onnxconverter-common-feedstock
+	url = ../onnxconverter-common-feedstock
+	branch = main
