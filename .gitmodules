@@ -7221,3 +7221,7 @@
 	path = onnxconverter-common-feedstock
 	url = ../onnxconverter-common-feedstock
 	branch = main
+[submodule "prettytable-feedstock"]
+	path = prettytable-feedstock
+	url = ../prettytable-feedstock
+	branch = main
