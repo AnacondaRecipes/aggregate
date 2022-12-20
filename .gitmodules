@@ -7205,3 +7205,7 @@
 	path = console_shortcut-feedstock
 	url = ../console_shortcut-feedstock/
 	branch = main
+[submodule "skl2onnx-feedstock"]
+	path = skl2onnx-feedstock
+	url = ../skl2onnx-feedstock
+	branch = main
