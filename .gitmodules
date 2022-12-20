@@ -7201,3 +7201,7 @@
 	path = onnxmltools-feedstock
 	url = ../onnxmltools-feedstock
 	branch = main
+[submodule "console_shortcut-feedstock"]
+	path = console_shortcut-feedstock
+	url = ../console_shortcut-feedstock/
+	branch = main
