@@ -7209,3 +7209,7 @@
 	path = skl2onnx-feedstock
 	url = ../skl2onnx-feedstock
 	branch = main
+[submodule "powershell_shortcut-feedstock"]
+	path = powershell_shortcut-feedstock
+	url = ../powershell_shortcut-feedstock
+	branch = main
