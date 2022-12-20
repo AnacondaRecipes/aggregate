@@ -7229,3 +7229,7 @@
 	path = powershell_shortcut_miniconda-feedstock
 	url = ../powershell_shortcut_miniconda-feedstock
 	branch = main
+[submodule "console_shortcut_miniconda-feedstock"]
+	path = console_shortcut_miniconda-feedstock
+	url = ../console_shortcut_miniconda-feedstock
+	branch = main
