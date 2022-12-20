@@ -7197,3 +7197,7 @@
 	path = comm-feedstock
 	url = ../comm-feedstock
 	branch = main
+[submodule "onnxmltools-feedstock"]
+	path = onnxmltools-feedstock
+	url = ../onnxmltools-feedstock
+	branch = main
