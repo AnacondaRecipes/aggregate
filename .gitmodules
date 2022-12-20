@@ -7213,3 +7213,7 @@
 	path = powershell_shortcut-feedstock
 	url = ../powershell_shortcut-feedstock
 	branch = main
+[submodule "ipython-sql-feedstock"]
+	path = ipython-sql-feedstock
+	url = ../ipython-sql-feedstock
+	branch = main
