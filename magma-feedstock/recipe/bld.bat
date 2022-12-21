@@ -3,7 +3,7 @@ if errorlevel 1 exit /b 1
 
 cmake ^
   -S . ^
-  -B build
+  -B build ^
   -G "Ninja" ^
   -DUSE_FORTRAN=OFF ^
   -DMAGMA_ENABLE_CUDA=ON ^
