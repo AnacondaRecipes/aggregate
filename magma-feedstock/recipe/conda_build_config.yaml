@@ -1,8 +1,10 @@
-# cuda 9.0, 5.4
-# cuda 10.0, 7.3
-c_compiler_version:
-  - 7.3
-cxx_compiler_version:
-  - 7.3
+cxx_compiler:           # [win]
+  - vs2019              # [win]
+c_compiler:             # [win]
+  - vs2019              # [win]
+cxx_compiler_version:   # [linux64]
+  - 9.3.0               # [linux64]
+c_compiler_version:     # [linux64]
+  - 9.3.0               # [linux64]
 cudatoolkit:
-  - 10.0
+  - 11.3
