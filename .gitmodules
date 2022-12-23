@@ -7233,3 +7233,7 @@
 	path = console_shortcut_miniconda-feedstock
 	url = ../console_shortcut_miniconda-feedstock
 	branch = main
+[submodule "conda-index-feedstock"]
+	path = conda-index-feedstock
+	url = ../conda-index-feedstock
+	branch = main
