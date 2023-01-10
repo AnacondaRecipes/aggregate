@@ -7237,3 +7237,7 @@
 	path = conda-index-feedstock
 	url = ../conda-index-feedstock
 	branch = main
+[submodule "pylint-venv-feedstock"]
+	path = pylint-venv-feedstock
+	url = ../pylint-venv-feedstock
+	branch = master
