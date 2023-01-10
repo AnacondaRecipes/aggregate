@@ -7240,4 +7240,4 @@
 [submodule "pylint-venv-feedstock"]
 	path = pylint-venv-feedstock
 	url = ../pylint-venv-feedstock
-	branch = master
+	branch = main
