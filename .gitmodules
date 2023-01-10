@@ -7241,3 +7241,8 @@
 	path = pylint-venv-feedstock
 	url = ../pylint-venv-feedstock
 	branch = main
+[submodule "distlib-feedstock"]
+	url = ../distlib-feedstock.git
+	path = distlib-feedstock
+	branch = main
+	
