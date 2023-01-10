@@ -7246,3 +7246,7 @@
 	path = distlib-feedstock
 	branch = main
 	
+[submodule "docstring-to-markdown-feedstock"]
+	path = docstring-to-markdown-feedstock
+	url = ../docstring-to-markdown-feedstock
+	branch = main
