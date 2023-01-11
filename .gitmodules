@@ -7237,3 +7237,16 @@
 	path = conda-index-feedstock
 	url = ../conda-index-feedstock
 	branch = main
+[submodule "pylint-venv-feedstock"]
+	path = pylint-venv-feedstock
+	url = ../pylint-venv-feedstock
+	branch = main
+[submodule "distlib-feedstock"]
+	url = ../distlib-feedstock.git
+	path = distlib-feedstock
+	branch = main
+	
+[submodule "docstring-to-markdown-feedstock"]
+	path = docstring-to-markdown-feedstock
+	url = ../docstring-to-markdown-feedstock
+	branch = main
