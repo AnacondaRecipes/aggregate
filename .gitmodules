@@ -7254,3 +7254,7 @@
 	path = python-3.10-feedstock
 	url = ../python-feedstock
 	branch = main-3.10
+[submodule "gdal-3.0.x-feedstock"]
+	path = gdal-3.0.x-feedstock
+	url = ../gdal-feedstock
+	branch = gdal-3.0.x
