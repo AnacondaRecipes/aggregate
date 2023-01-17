@@ -7258,3 +7258,11 @@
 	path = gdal-3.0.x-feedstock
 	url = ../gdal-feedstock
 	branch = gdal-3.0.x
+[submodule "anaconda-feedstock"]
+	path = anaconda-feedstock
+	url = ../anaconda-feedstock
+	branch = main
+[submodule "anaconda_custom-feedstock"]
+	path = anaconda_custom-feedstock
+	url = ../anaconda_custom-feedstock
+	branch = main
