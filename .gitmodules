@@ -7266,3 +7266,7 @@
 	path = anaconda_custom-feedstock
 	url = ../anaconda_custom-feedstock
 	branch = main
+[submodule "pandarallel-feedstock"]
+	path = pandarallel-feedstock
+	url = ../pandarallel-feedstock
+	branch = main
