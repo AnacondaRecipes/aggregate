@@ -7270,3 +7270,7 @@
 	path = pandarallel-feedstock
 	url = ../pandarallel-feedstock
 	branch = main
+[submodule "boltons-feedstock"]
+	path = boltons-feedstock
+	url = ../boltons-feedstock
+	branch = main
