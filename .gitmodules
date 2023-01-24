@@ -7274,3 +7274,7 @@
 	path = boltons-feedstock
 	url = ../boltons-feedstock
 	branch = main
+[submodule "typeguard-feedstock"]
+	path = typeguard-feedstock
+	url = ../typeguard-feedstock
+	branch = main
