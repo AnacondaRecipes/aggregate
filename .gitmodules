@@ -7280,5 +7280,5 @@
 	branch = main
 [submodule "pytoolconfig-feedstock"]
 	path = pytoolconfig-feedstock
-	url = ../newpackage-feedstock
+	url = ../pytoolconfig-feedstock
 	branch = main
