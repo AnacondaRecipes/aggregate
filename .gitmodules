@@ -7278,3 +7278,7 @@
 	path = typeguard-feedstock
 	url = ../typeguard-feedstock
 	branch = main
+[submodule "pytoolconfig-feedstock"]
+	path = pytoolconfig-feedstock
+	url = ../newpackage-feedstock
+	branch = main
