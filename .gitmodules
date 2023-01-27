@@ -7286,3 +7286,7 @@
 	path = folium-feedstock
 	url = ../folium-feedstock
 	branch = master
+[submodule "branca-feedstock"]
+	path = branca-feedstock
+	url = ../branca-feedstock
+	branch = master
