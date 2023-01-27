@@ -7282,3 +7282,7 @@
 	path = pytoolconfig-feedstock
 	url = ../pytoolconfig-feedstock
 	branch = main
+[submodule "folium-feedstock"]
+	path = folium-feedstock
+	url = ../folium-feedstock
+	branch = master
