@@ -7290,7 +7290,7 @@
 	path = branca-feedstock
 	url = ../branca-feedstock
 	branch = master
-[submodule "widgetsnbextension-3.5.2"]
-	path = widgetsnbextension-3.5.2
+[submodule "widgetsnbextension-3.5.2-feedstock"]
+	path = widgetsnbextension-3.5.2-feedstock
 	url = ../widgetsnbextension-feedstock
 	branch = master_3.5.2
