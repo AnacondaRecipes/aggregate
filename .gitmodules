@@ -7296,5 +7296,5 @@
 	branch = master_3.5.2
 [submodule "libprotobuf-3.19-feedstock"]
 	path = libprotobuf-3.19-feedstock
-	url = ../libprotobuf-3.19-feedstock
+	url = ../libprotobuf-feedstock
 	branch = main-3.19.x
