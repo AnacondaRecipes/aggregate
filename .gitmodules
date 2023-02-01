@@ -7302,3 +7302,7 @@
 	path = slack-sdk-feedstock
 	url = ../slack-sdk-feedstock
 	branch = main
+[submodule "pythonnet-feedstock"]
+	path = pythonnet-feedstock
+	url = ../pythonnet-feedstock
+	branch = main
