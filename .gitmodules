@@ -7298,3 +7298,7 @@
 	path = libprotobuf-3.19-feedstock
 	url = ../libprotobuf-feedstock
 	branch = main-3.19.x
+[submodule "slack-sdk-feedstock"]
+	path = slack-sdk-feedstock
+	url = ../slack-sdk-feedstock
+	branch = main
