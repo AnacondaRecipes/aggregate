@@ -7310,3 +7310,7 @@
 	path = hatch-requirements-txt-feedstock
 	url = ../hatch-requirements-txt-feedstock
 	branch = main
+[submodule "click-default-group-feedstock"]
+	path = click-default-group-feedstock
+	url = ../click-default-group-feedstock
+	branch = main
