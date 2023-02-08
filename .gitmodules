@@ -7306,3 +7306,7 @@
 	path = pythonnet-feedstock
 	url = ../pythonnet-feedstock
 	branch = main
+[submodule "hatch-requirements-txt-feedstock"]
+	path = hatch-requirements-txt-feedstock
+	url = ../hatch-requirements-txt-feedstock
+	branch = main
