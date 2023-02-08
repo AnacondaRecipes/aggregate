@@ -7314,3 +7314,7 @@
 	path = click-default-group-feedstock
 	url = ../click-default-group-feedstock
 	branch = main
+[submodule "ensureconda-feedstock"]
+	path = ensureconda-feedstock
+	url = ../ensureconda-feedstock
+	branch = main
