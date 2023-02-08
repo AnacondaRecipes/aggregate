@@ -7318,3 +7318,7 @@
 	path = ensureconda-feedstock
 	url = ../ensureconda-feedstock
 	branch = main
+[submodule "conda-lock-feedstock"]
+	path = conda-lock-feedstock
+	url = ../conda-lock-feedstock
+	branch = main
