@@ -7322,3 +7322,7 @@
 	path = conda-lock-feedstock
 	url = ../conda-lock-feedstock
 	branch = main
+[submodule "rdkit-feedstock"]
+	path = rdkit-feedstock
+	url = ../rdkit-feedstock
+	branch = main
