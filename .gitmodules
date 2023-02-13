@@ -7326,7 +7326,3 @@
 	path = rdkit-feedstock
 	url = ../rdkit-feedstock
 	branch = main
-[submodule "flask-1.1.x-feedstock"]
-	path = flask-1.1.x-feedstock
-	url = ../flask-1.1.x-feedstock
-	branch = main-1.1.x
