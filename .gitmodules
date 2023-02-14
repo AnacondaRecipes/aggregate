@@ -7330,3 +7330,7 @@
 	path = flask-1.1.x-feedstock
 	url = ../flask-feedstock
 	branch = main-1.1.x
+[submodule "pytest-6-feedstock"]
+	path = pytest-6-feedstock
+	url = ../pytest-feedstock
+	branch = main-6
