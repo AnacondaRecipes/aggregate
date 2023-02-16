@@ -6602,7 +6602,7 @@
 	url = ../cunit-feedstock
 	branch = main
 [submodule "protobuf-3.19.1-feedstock"]
-	path = protobuf-3.19.1-feedstock
+	path = protobuf-3.19-feedstock
 	url = ../protobuf-feedstock
 	branch = main-3.19.1
 [submodule "boost-1.73-feedstock"]
@@ -7164,7 +7164,7 @@
 [submodule "clr_loader-feedstock"]
 	path = clr_loader-feedstock
 	url = ../clr_loader-feedstock
-        branch = main
+	branch = main
 [submodule "findpython-feedstock"]
 	path = findpython-feedstock
 	url = ../findpython-feedstock
@@ -7282,3 +7282,55 @@
 	path = pytoolconfig-feedstock
 	url = ../pytoolconfig-feedstock
 	branch = main
+[submodule "folium-feedstock"]
+	path = folium-feedstock
+	url = ../folium-feedstock
+	branch = master
+[submodule "branca-feedstock"]
+	path = branca-feedstock
+	url = ../branca-feedstock
+	branch = master
+[submodule "widgetsnbextension-3.5.2-feedstock"]
+	path = widgetsnbextension-3.5.2-feedstock
+	url = ../widgetsnbextension-feedstock
+	branch = master_3.5.2
+[submodule "libprotobuf-3.19-feedstock"]
+	path = libprotobuf-3.19-feedstock
+	url = ../libprotobuf-feedstock
+	branch = main-3.19.x
+[submodule "slack-sdk-feedstock"]
+	path = slack-sdk-feedstock
+	url = ../slack-sdk-feedstock
+	branch = main
+[submodule "pythonnet-feedstock"]
+	path = pythonnet-feedstock
+	url = ../pythonnet-feedstock
+	branch = main
+[submodule "hatch-requirements-txt-feedstock"]
+	path = hatch-requirements-txt-feedstock
+	url = ../hatch-requirements-txt-feedstock
+	branch = main
+[submodule "click-default-group-feedstock"]
+	path = click-default-group-feedstock
+	url = ../click-default-group-feedstock
+	branch = main
+[submodule "ensureconda-feedstock"]
+	path = ensureconda-feedstock
+	url = ../ensureconda-feedstock
+	branch = main
+[submodule "conda-lock-feedstock"]
+	path = conda-lock-feedstock
+	url = ../conda-lock-feedstock
+	branch = main
+[submodule "rdkit-feedstock"]
+	path = rdkit-feedstock
+	url = ../rdkit-feedstock
+	branch = main
+[submodule "flask-1.1.x-feedstock"]
+	path = flask-1.1.x-feedstock
+	url = ../flask-feedstock
+	branch = main-1.1.x
+[submodule "pytest-6-feedstock"]
+	path = pytest-6-feedstock
+	url = ../pytest-feedstock
+	branch = main-6
