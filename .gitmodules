@@ -7342,3 +7342,7 @@
 	path = ruamel.yaml.jinja2-feedstock
 	url = ../ruamel.yaml.jinja2-feedstock
 	branch = main
+[submodule "stdlib-list-feedstock"]
+	path = stdlib-list-feedstock
+	url = ../stdlib-list-feedstock
+	branch = main
