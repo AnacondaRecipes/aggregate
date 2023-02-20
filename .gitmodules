@@ -7346,3 +7346,7 @@
 	path = stdlib-list-feedstock
 	url = ../stdlib-list-feedstock
 	branch = main
+[submodule "rapidfuzz-feedstock"]
+	path = rapidfuzz-feedstock
+	url = ../rapidfuzz-feedstock
+	branch = main
