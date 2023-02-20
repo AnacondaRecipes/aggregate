@@ -7340,5 +7340,5 @@
 	branch = main
 [submodule "ruamel.yaml.jinja2-feedstock"]
 	path = ruamel.yaml.jinja2-feedstock
-	url = ../ruamel.yaml.inja2-feedstock
+	url = ../ruamel.yaml.jinja2-feedstock
 	branch = main
