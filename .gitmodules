@@ -7338,3 +7338,7 @@
 	path = grayskull-feedstock
 	url = ../grayskull-feedstock
 	branch = main
+[submodule "ruamel.yaml.jinja2-feedstock"]
+	path = ruamel.yaml.jinja2-feedstock
+	url = ../ruamel.yaml.inja2-feedstock
+	branch = main
