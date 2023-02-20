@@ -7350,3 +7350,7 @@
 	path = rapidfuzz-feedstock
 	url = ../rapidfuzz-feedstock
 	branch = main
+[submodule "conda-souschef-feedstock"]
+	path = conda-souschef-feedstock
+	url = ../conda-souschef-feedstock
+	branch = main
