@@ -7334,3 +7334,7 @@
 	path = pytest-6-feedstock
 	url = ../pytest-feedstock
 	branch = main-6
+[submodule "grayskull-feedstock"]
+	path = grayskull-feedstock
+	url = ../grayskull-feedstock
+	branch = main
