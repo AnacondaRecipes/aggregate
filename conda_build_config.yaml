@@ -127,8 +127,7 @@ libtiff:
   - 4.1  # [not ((osx and arm64) or (linux and aarch64))]
   - 4.2  # [(osx and arm64) or (linux and aarch64)]
 libwebp:
-  - 1.2.0  # [not (linux and s390x)]
-  - 1.2.2  # [linux and s390x]
+  - 1.2.4
 libxml2:
   - 2.9
 libxslt:
