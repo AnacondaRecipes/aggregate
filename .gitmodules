@@ -7362,3 +7362,7 @@
 	path = imbalanced-learn-feedstock
 	url = ../imbalanced-learn-feedstock
 	branch = main
+[submodule "setuptools-49.1.x-feedstock"]
+	path = setuptools-49.1.x-feedstock
+	url = ../setuptools-feedstock
+	branch = main-49.1.x
