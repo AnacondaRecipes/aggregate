@@ -7370,3 +7370,7 @@
 	path = lightning-utilities-feedstock
 	url = ../lightning-utilities-feedstock
 	branch = main
+[submodule "torchmetrics-feedstock"]
+	path = torchmetrics-feedstock
+	url = ../torchmetrics-feedstock
+	branch = main
