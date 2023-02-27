@@ -7366,3 +7366,7 @@
 	path = setuptools-49.1.x-feedstock
 	url = ../setuptools-feedstock
 	branch = main-49.1.x
+[submodule "lightning-utilities-feedstock"]
+	path = lightning-utilities-feedstock
+	url = ../lightning-utilities-feedstock
+	branch = main
