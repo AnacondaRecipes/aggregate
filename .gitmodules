@@ -7374,3 +7374,7 @@
 	path = torchmetrics-feedstock
 	url = ../torchmetrics-feedstock
 	branch = main
+[submodule "pytorch-lightning-feedstock"]
+	path = pytorch-lightning-feedstock
+	url = ../pytorch-lightning-feedstock
+	branch = main
