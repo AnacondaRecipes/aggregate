@@ -1,5 +1,5 @@
 {% set name = "pyramid_debugtoolbar" %}
-{% set version = "4.5" %}
+{% set version = "4.10" %}
 
 package:
   name: {{ name|lower }}
