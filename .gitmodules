@@ -7378,3 +7378,7 @@
 	path = pytorch-lightning-feedstock
 	url = ../pytorch-lightning-feedstock
 	branch = main
+[submodule "aiorwlock-feedstock"]
+	path = aiorwlock-feedstock
+	url = ../aiorwlock-feedstock
+	branch = main
