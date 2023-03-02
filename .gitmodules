@@ -7382,3 +7382,7 @@
 	path = aiorwlock-feedstock
 	url = ../aiorwlock-feedstock
 	branch = main
+[submodule "watchfiles-feedstock"]
+	path = watchfiles-feedstock
+	url = ../watchfiles-feedstock
+	branch = main
