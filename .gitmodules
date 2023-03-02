@@ -7394,3 +7394,7 @@
 	path = websockets-feedstock
 	url = ../websockets-feedstock
 	branch = main
+[submodule "jax-jumpy-feedstock"]
+	path = jax-jumpy-feedstock
+	url = ../jax-jumpy-feedstock
+	branch = main
