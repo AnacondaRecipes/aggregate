@@ -7330,3 +7330,7 @@
 	path = gstreamer-1.14.X-feedstock
 	url = ../gstreamer-feedstock
 	branch = main-1.14.X
+[submodule "qtstylizer-feedstock"]
+	path = qtstylizer-feedstock
+	url = ../qstylizer-feedstock
+	branch = master
