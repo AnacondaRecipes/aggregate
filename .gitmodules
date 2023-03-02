@@ -7402,3 +7402,7 @@
 	path = gymnasium-notices-feedstock
 	url = ../gymnasium-notices-feedstock
 	branch = main
+[submodule "pyramid_debugtoolbar-feedstock"]
+	path = pyramid_debugtoolbar-feedstock
+	url = ../pyramid_debugtoolbar-feedstock
+	branch = main
