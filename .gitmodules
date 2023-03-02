@@ -7398,3 +7398,7 @@
 	path = jax-jumpy-feedstock
 	url = ../jax-jumpy-feedstock
 	branch = main
+[submodule "gymnasium-notices-feedstock"]
+	path = gymnasium-notices-feedstock
+	url = ../gymnasium-notices-feedstock
+	branch = main
