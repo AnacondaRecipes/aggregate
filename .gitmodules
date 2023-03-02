@@ -7390,3 +7390,7 @@
 	path = httptools-feedstock
 	url = ../httptools-feedstock
 	branch = main
+[submodule "websockets-feedstock"]
+	path = websockets-feedstock
+	url = ../websockets-feedstock
+	branch = main
