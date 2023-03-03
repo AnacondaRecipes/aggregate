@@ -7410,3 +7410,7 @@
 	path = gymnasium-feedstock
 	url = ../gymnasium-feedstock
 	branch = main
+[submodule "adtk-feedstock"]
+	path = adtk-feedstock
+	url = ../adtk-feedstock
+	branch = main
