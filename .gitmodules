@@ -6852,7 +6852,7 @@
 [submodule "pyobjc-framework-coreservices-feedstock"]
 	path = pyobjc-framework-coreservices-feedstock
 	url = ../pyobjc-framework-coreservices-feedstock
-	branch = master
+	branch = main
 [submodule "pypdf2-feedstock"]
 	path = pypdf2-feedstock
 	url = ../pypdf2-feedstock
