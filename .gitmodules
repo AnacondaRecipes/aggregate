@@ -7414,3 +7414,7 @@
 	path = adtk-feedstock
 	url = ../adtk-feedstock
 	branch = main
+[submodule "pegen-feedstock"]
+	path = pegen-feedstock
+	url = ../pegen-feedstock
+	branch = main
