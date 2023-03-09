@@ -6,7 +6,8 @@ apr:
   - 1.6.3  # [not (osx and arm64)]
   - 1.7.0  # [osx and arm64]
 blas_impl:
-  - mkl                        # [x86 or x86_64]
+  # we don't build anymore mkl variant on osx-64
+  - mkl                        # [x86_64 and not osx]
   - openblas                   # [not win]
 boost:
   - 1.73
