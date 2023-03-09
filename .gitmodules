@@ -7418,3 +7418,7 @@
 	path = pegen-feedstock
 	url = ../pegen-feedstock
 	branch = main
+[submodule "scikit-optimize-feedstock"]
+	path = scikit-optimize-feedstock
+	url = ../scikit-optimize-feedstock
+	branch = main
