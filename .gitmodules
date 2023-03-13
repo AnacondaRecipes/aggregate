@@ -7426,3 +7426,7 @@
 	path = hyperopt-feedstock
 	url = ../hyperopt-feedstock
 	branch = main
+[submodule "quantlib-feedstock"]
+	path = quantlib-feedstock
+	url = ../quantlib-feedstock
+	branch = main
