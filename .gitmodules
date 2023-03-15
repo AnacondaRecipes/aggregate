@@ -7457,4 +7457,8 @@
 [submodule "word2vec-feedstock"]
 	path = word2vec-feedstock
 	url = ../word2vec-feedstock
+        branch = main
+[submodule "chameleon-feedstock"]
+	path = chameleon-feedstock
+	url = ../chameleon-feedstock
 	branch = main
