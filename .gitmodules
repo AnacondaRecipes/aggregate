@@ -7462,3 +7462,7 @@
 	path = chameleon-feedstock
 	url = ../chameleon-feedstock
 	branch = main
+[submodule "jupyter_bokeh-feedstock"]
+	path = jupyter_bokeh-feedstock
+	url = ../jupyter_bokeh-feedstock
+	branch = main
