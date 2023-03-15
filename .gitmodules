@@ -7442,3 +7442,7 @@
 	path = jupyter-server-proxy-feedstock
 	url = ../jupyter-server-proxy-feedstock
 	branch = main
+[submodule "simpervisor-feedstock"]
+	path = simpervisor-feedstock
+	url = ../simpervisor-feedstock
+	branch = main
