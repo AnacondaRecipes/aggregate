@@ -7466,3 +7466,7 @@
 	path = jupyter_bokeh-feedstock
 	url = ../jupyter_bokeh-feedstock
 	branch = main
+[submodule "implicit-feedstock"]
+	path = implicit-feedstock
+	url = ../implicit-feedstock
+	branch = main
