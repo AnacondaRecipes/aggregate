@@ -7437,7 +7437,7 @@
 [submodule "ansi2html-feedstock"]
 	path = ansi2html-feedstock
 	url = ../ansi2html-feedstock
-	branch = master
+	branch = main
 [submodule "jupyter-server-proxy-feedstock"]
 	path = jupyter-server-proxy-feedstock
 	url = ../jupyter-server-proxy-feedstock
