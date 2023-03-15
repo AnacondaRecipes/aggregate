@@ -7454,3 +7454,7 @@
 	path = ant-feedstock
 	url = ../ant-feedstock
 	branch = main
+[submodule "chameleon-feedstock"]
+	path = chameleon-feedstock
+	url = ../chameleon-feedstock
+	branch = main
