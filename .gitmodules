@@ -7446,3 +7446,7 @@
 	path = simpervisor-feedstock
 	url = ../simpervisor-feedstock
 	branch = main
+[submodule "jupyterlab-geojson-feedstock"]
+	path = jupyterlab-geojson-feedstock
+	url = ../jupyterlab-geojson-feedstock
+	branch = main
