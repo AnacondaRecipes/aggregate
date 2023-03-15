@@ -7450,3 +7450,7 @@
 	path = jupyterlab-geojson-feedstock
 	url = ../jupyterlab-geojson-feedstock
 	branch = main
+[submodule "ant-feedstock"]
+	path = ant-feedstock
+	url = ../ant-feedstock
+	branch = main
