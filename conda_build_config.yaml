@@ -160,6 +160,8 @@ numpy:
   - 1.19    # [osx and arm64]
   # python 3.10
   - 1.21
+  # python 3.11
+  - 1.23
 openblas:
   - 0.3.20
 openjpeg:
@@ -184,6 +186,7 @@ python:
   - 3.8
   - 3.9
   - "3.10"
+  - "3.11"
 python_implementation:
   - cpython
 python_impl:
