@@ -7475,3 +7475,7 @@
 	path = pytest-trio-feedstock
 	url = ../pytest-trio-feedstock
 	branch = main
+[submodule "jupyter_server_ydoc-feedstock"]
+	path = jupyter_server_ydoc-feedstock
+	url = ../jupyter_server_ydoc-feedstock
+	branch = main
