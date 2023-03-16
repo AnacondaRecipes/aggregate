@@ -7479,3 +7479,7 @@
 	path = jupyter_server_ydoc-feedstock
 	url = ../jupyter_server_ydoc-feedstock
 	branch = main
+[submodule "jupyter_ydoc-feedstock"]
+	path = jupyter_ydoc-feedstock
+	url = ../jupyter_ydoc-feedstock
+	branch = main
