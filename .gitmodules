@@ -6126,6 +6126,7 @@
 [submodule "pyppeteer-feedstock"]
 	path = pyppeteer-feedstock
 	url = ../pyppeteer-feedstock
+        branch = master
 [submodule "dos2unix-feedstock"]
 	path = dos2unix-feedstock
 	url = ../dos2unix-feedstock
