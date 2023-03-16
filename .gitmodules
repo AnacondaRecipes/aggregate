@@ -7471,3 +7471,7 @@
 	path = implicit-feedstock
 	url = ../implicit-feedstock
 	branch = main
+[submodule "pytest-trio-feedstock"]
+	path = pytest-trio-feedstock
+	url = ../pytest-trio-feedstock
+	branch = main
