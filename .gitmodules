@@ -7483,3 +7483,7 @@
 	path = jupyter_ydoc-feedstock
 	url = ../jupyter_ydoc-feedstock
 	branch = main
+[submodule "jupyter-dash-feedstock"]
+	path = jupyter-dash-feedstock
+	url = ../jupyter-dash-feedstock
+	branch = main
