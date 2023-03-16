@@ -1,5 +1,5 @@
 {% set name = "distlib" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -11,13 +11,14 @@ source:
 
 build:
   number: 0
-  noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv --no-deps
 
 requirements:
   host:
     - python
     - pip
+    - setuptools
+    - wheel
   run:
     - python
 
@@ -32,11 +33,13 @@ test:
 
 about:
   home: https://bitbucket.org/pypa/distlib
-  license: Python Software Foundation License
+  license: PSF-2.0
   license_family: OTHER
   license_file: LICENSE.txt
   summary: Distribution utilities
   description: Low-level components of distutils2/packaging, augmented with higher-level APIs for making packaging easier.
+  dev_url: https://bitbucket.org/pypa/distlib
+  doc_url: https://distlib.readthedocs.io/
 
 extra:
   recipe-maintainers:
