@@ -7491,3 +7491,7 @@
 	path = lazy_loader-feedstock
 	url = ../lazy_loader-feedstock
 	branch = main
+[submodule "pyee-feedstock"]
+	path = pyee-feedstock
+	url = ../pyee-feedstock
+	branch = main
