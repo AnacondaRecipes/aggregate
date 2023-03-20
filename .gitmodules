@@ -7495,3 +7495,7 @@
 	path = pyee-feedstock
 	url = ../pyee-feedstock
 	branch = main
+[submodule "dulwich-feedstock"]
+	path = dulwich-feedstock
+	url = ../dulwich-feedstock
+	branch = main
