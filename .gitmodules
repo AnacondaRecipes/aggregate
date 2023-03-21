@@ -7503,3 +7503,7 @@
 	path = pyee-8.x-feedstock
 	url = ../pyee-feedstock
 	branch = main-8.x
+[submodule "emfile-feedstock"]
+	path = emfile-feedstock
+	url = ../emfile-feedstock
+	branch = main
