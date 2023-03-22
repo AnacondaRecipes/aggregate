@@ -7511,3 +7511,7 @@
 	path = pyproject_hooks-feedstock
 	url = ../pyproject_hooks-feedstock
 	branch = main
+[submodule "trove-classifiers-feedstock"]
+	path = trove-classifiers-feedstock
+	url = ../trove-classifiers-feedstock
+	branch = main
