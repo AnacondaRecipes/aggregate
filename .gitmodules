@@ -7507,3 +7507,7 @@
 	path = emfile-feedstock
 	url = ../emfile-feedstock
 	branch = main
+[submodule "pyproject_hooks-feedstock"]
+	path = pyproject_hooks-feedstock
+	url = ../pyproject_hooks-feedstock
+	branch = main
