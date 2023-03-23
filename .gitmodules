@@ -7515,3 +7515,7 @@
 	path = trove-classifiers-feedstock
 	url = ../trove-classifiers-feedstock
 	branch = main
+[submodule "calver-feedstock"]
+	path = calver-feedstock
+	url = ../calver-feedstock
+	branch = main
