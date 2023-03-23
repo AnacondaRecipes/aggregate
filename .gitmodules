@@ -7523,3 +7523,7 @@
 	path = ydata-profiling-feedstock
 	url = ../ydata-profiling-feedstock
 	branch = main
+[submodule "poetry-plugin-export-feedstock"]
+	path = poetry-plugin-export-feedstock
+	url = ../poetry-plugin-export-feedstock
+	branch = main
