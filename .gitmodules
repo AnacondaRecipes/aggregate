@@ -7507,3 +7507,19 @@
 	path = emfile-feedstock
 	url = ../emfile-feedstock
 	branch = main
+[submodule "pyproject_hooks-feedstock"]
+	path = pyproject_hooks-feedstock
+	url = ../pyproject_hooks-feedstock
+	branch = main
+[submodule "trove-classifiers-feedstock"]
+	path = trove-classifiers-feedstock
+	url = ../trove-classifiers-feedstock
+	branch = main
+[submodule "calver-feedstock"]
+	path = calver-feedstock
+	url = ../calver-feedstock
+	branch = main
+[submodule "ydata-profiling-feedstock"]
+	path = ydata-profiling-feedstock
+	url = ../ydata-profiling-feedstock
+	branch = main
