@@ -7527,3 +7527,7 @@
 	path = poetry-plugin-export-feedstock
 	url = ../poetry-plugin-export-feedstock
 	branch = main
+[submodule "xattr-feedstock"]
+	path = xattr-feedstock
+	url = ../xattr-feedstock
+	branch = main
