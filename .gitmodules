@@ -7539,3 +7539,7 @@
 	path = xmlsec-feedstock
 	url = ../xmlsec-feedstock
 	branch = main
+[submodule "portpicker-feedstock"]
+	path = portpicker-feedstock
+	url = ../portpicker-feedstock
+	branch = main
