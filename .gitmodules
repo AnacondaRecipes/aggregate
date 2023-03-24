@@ -7531,3 +7531,7 @@
 	path = xattr-feedstock
 	url = ../xattr-feedstock
 	branch = main
+[submodule "libxmlsec1-feedstock"]
+	path = libxmlsec1-feedstock
+	url = ../libxmlsec1-feedstock
+	branch = main
