@@ -7535,3 +7535,7 @@
 	path = libxmlsec1-feedstock
 	url = ../libxmlsec1-feedstock
 	branch = main
+[submodule "xmlsec-feedstock"]
+	path = xmlsec-feedstock
+	url = ../xmlsec-feedstock
+	branch = main
