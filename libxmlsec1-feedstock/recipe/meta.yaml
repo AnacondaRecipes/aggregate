@@ -9,12 +9,17 @@ source:
   sha256: e383702853236004e5b08e424b8afe9b53fe9f31aaa7a5382f39d9533eb7c043
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
   run_exports:
     # compatibility is not tracked at abi-laboratory, assume same as libxml2
     - {{ pin_subpackage('libxmlsec1', max_pin='x.x') }}
-
+  ignore_run_exports:
+    - libiconv         # [not linux]
+    - icu              # [not linux]
+    - libgpg-error     # [not linux]
+    - zlib             # [unix]
+    - xz               # [unix]
 requirements:
   build:
     - {{ compiler('c') }}
@@ -26,7 +31,7 @@ requirements:
     - libgpg-error
     - libiconv  # [not linux]
     - libtool
-    - libxml2 2.10
+    - libxml2
     - libxslt
     - openssl
     - xz
