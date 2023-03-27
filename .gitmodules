@@ -7543,3 +7543,7 @@
 	path = portpicker-feedstock
 	url = ../portpicker-feedstock
 	branch = main
+[submodule "pytest-jupyter-feedstock"]
+	path = pytest-jupyter-feedstock
+	url = ../pytest-jupyter-feedstock
+	branch = main
