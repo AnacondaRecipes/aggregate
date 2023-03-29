@@ -2947,10 +2947,6 @@
 	path = pyct-feedstock
 	url = ../pyct-feedstock
 	branch = master
-[submodule "geoviews-core-feedstock"]
-	path = geoviews-core-feedstock
-	url = ../geoviews-core-feedstock
-	branch = master
 [submodule "inflection-feedstock"]
 	path = inflection-feedstock
 	url = ../inflection-feedstock
