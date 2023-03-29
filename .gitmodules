@@ -7535,3 +7535,7 @@
 	path = pytest-jupyter-feedstock
 	url = ../pytest-jupyter-feedstock
 	branch = main
+[submodule "conda-22.x-feedstock"]
+	path = conda-22.x-feedstock
+	url = ../conda-feedstock
+	branch = main-22.x
