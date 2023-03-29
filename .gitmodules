@@ -6231,14 +6231,6 @@
 	path = sip-4.19.13-feedstock
 	url = ../sip-feedstock
 	branch = master-4.19.13
-[submodule "gdal-lib-feedstock"]
-	path = gdal-lib-feedstock
-	url = ../gdal-lib-feedstock
-	branch = master
-[submodule "gdal-py-feedstock"]
-	path = gdal-py-feedstock
-	url = ../gdal-py-feedstock
-	branch = master
 [submodule "packaging-20.9-feedstock"]
 	path = packaging-20.9-feedstock
 	url = ../packaging-feedstock
