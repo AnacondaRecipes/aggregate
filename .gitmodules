@@ -7539,3 +7539,7 @@
 	path = conda-22.x-feedstock
 	url = ../conda-feedstock
 	branch = main-22.x
+[submodule "scikit-surprise-feedstock"]
+	path = scikit-surprise-feedstock
+	url = ../scikit-surprise-feedstock
+	branch = main
