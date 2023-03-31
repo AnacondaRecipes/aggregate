@@ -7543,3 +7543,7 @@
 	path = scikit-surprise-feedstock
 	url = ../scikit-surprise-feedstock
 	branch = main
+[submodule "zope.sqlalchemy-feedstock"]
+	path = zope.sqlalchemy-feedstock
+	url = ../zope.sqlalchemy-feedstock
+	branch = main
