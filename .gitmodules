@@ -7551,3 +7551,7 @@
 	path = nsis-feedstock
 	url = ../nsis-feedstock
 	branch = main
+[submodule "colorspacious-feedstock"]
+	path = colorspacious-feedstock
+	url = ../colorspacious-feedstock
+	branch = main
