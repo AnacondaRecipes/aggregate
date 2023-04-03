@@ -7555,3 +7555,7 @@
 	path = colorspacious-feedstock
 	url = ../colorspacious-feedstock
 	branch = main
+[submodule "unyt-feedstock"]
+	path = unyt-feedstock
+	url = ../unyt-feedstock
+	branch = main
