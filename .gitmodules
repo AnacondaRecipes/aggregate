@@ -7547,3 +7547,7 @@
 	path = zope.sqlalchemy-feedstock
 	url = ../zope.sqlalchemy-feedstock
 	branch = main
+[submodule "nsis-feedstock"]
+	path = nsis-feedstock
+	url = ../nsis-feedstock
+	branch = main
