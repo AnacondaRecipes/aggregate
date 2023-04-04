@@ -7567,3 +7567,7 @@
 	path = cmyt-feedstock
 	url = ../cmyt-feedstock
 	branch = main
+[submodule "zlib-ng-feedstock"]
+	path = zlib-ng-feedstock
+	url = ../zlib-ng-feedstock
+	branch = main
