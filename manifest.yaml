@@ -1,0 +1,7 @@
+feedstocks:
+  prefect-test-build-feedstock:
+    branch: master
+    commit: master
+  prefect-test-dependency-feedstock:
+    branch: master
+    commit: master
