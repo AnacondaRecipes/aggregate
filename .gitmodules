@@ -7563,3 +7563,7 @@
 	path = attrdict3-feedstock
 	url = ../attrdict3-feedstock/
 	branch = main
+[submodule "cmyt-feedstock"]
+	path = cmyt-feedstock
+	url = ../cmyt-feedstock
+	branch = main
