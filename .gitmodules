@@ -7575,3 +7575,7 @@
 	path = rankfm-feedstock
 	url = ../rankfm-feedstock
 	branch = main
+[submodule "pyyaml-5.4.1-feedstock"]
+	path = pyyaml-5.4.1-feedstock
+	url = ../pyyaml-feedstock
+	branch = master-5.4.1
