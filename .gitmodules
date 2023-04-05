@@ -7571,3 +7571,7 @@
 	path = zlib-ng-feedstock
 	url = ../zlib-ng-feedstock
 	branch = main
+[submodule "rankfm-feedstock"]
+	path = rankfm-feedstock
+	url = ../rankfm-feedstock
+	branch = main
