@@ -7579,3 +7579,7 @@
 	path = pyyaml-5.4.1-feedstock
 	url = ../pyyaml-feedstock
 	branch = master-5.4.1
+[submodule "c-blosc2-feedstock"]
+	path = c-blosc2-feedstock
+	url = ../c-blosc2-feedstock
+	branch = main
