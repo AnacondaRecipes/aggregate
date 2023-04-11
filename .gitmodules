@@ -7583,3 +7583,7 @@
 	path = c-blosc2-feedstock
 	url = ../c-blosc2-feedstock
 	branch = main
+[submodule "intel-extension-for-pytorch-feedstock"]
+	path = intel-extension-for-pytorch-feedstock
+	url = ../intel-extension-for-pytorch-feedstock
+	branch = main
