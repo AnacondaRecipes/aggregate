@@ -7587,3 +7587,7 @@
 	path = intel-extension-for-pytorch-feedstock
 	url = ../intel-extension-for-pytorch-feedstock
 	branch = main
+[submodule "xar-feedstock"]
+	path = xar-feedstock
+	url = ../xar-feedstock
+	branch = main
