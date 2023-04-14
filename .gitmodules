@@ -7587,3 +7587,7 @@
 	path = xar-feedstock
 	url = ../xar-feedstock
 	branch = main
+[submodule "mlforecast-feedstock"]
+	path = mlforecast-feedstock
+	url = ../mlforecast-feedstock
+	branch = main
