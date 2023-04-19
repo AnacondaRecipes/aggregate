@@ -7595,3 +7595,7 @@
 	path = window_ops-feedstock
 	url = ../window_ops-feedstock
 	branch = main
+[submodule "winkerberos-feedstock"]
+	path = winkerberos-feedstock
+	url = ../winkerberos-feedstock
+	branch = main
