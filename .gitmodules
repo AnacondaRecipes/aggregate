@@ -7615,3 +7615,7 @@
 	path = fastcore-feedstock
 	url = ../fastcore-feedstock
 	branch = main
+[submodule "trace-updater-feedstock"]
+	path = trace-updater-feedstock
+	url = ../trace-updater-feedstock
+	branch = main
