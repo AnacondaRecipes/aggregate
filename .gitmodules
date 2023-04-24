@@ -7599,3 +7599,7 @@
 	path = winkerberos-feedstock
 	url = ../winkerberos-feedstock
 	branch = main
+[submodule "ciso8601-feedstock"]
+	path = ciso8601-feedstock
+	url = ../ciso8601-feedstock
+	branch = main
