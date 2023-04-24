@@ -7607,3 +7607,7 @@
 	path = fs-feedstock
 	url = ../fs-feedstock
 	branch = main
+[submodule "antlr4-python3-runtime-feedstock"]
+	path = antlr4-python3-runtime-feedstock
+	url = ../antlr4-python3-runtime-feedstock
+	branch = master
