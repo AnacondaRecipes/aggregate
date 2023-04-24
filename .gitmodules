@@ -7603,3 +7603,7 @@
 	path = ciso8601-feedstock
 	url = ../ciso8601-feedstock
 	branch = main
+[submodule "fs-feedstock"]
+	path = fs-feedstock
+	url = ../fs-feedstock
+	branch = main
