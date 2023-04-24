@@ -7611,3 +7611,7 @@
 	path = antlr4-python3-runtime-feedstock
 	url = ../antlr4-python3-runtime-feedstock
 	branch = master
+[submodule "fastcore-feedstock"]
+	path = fastcore-feedstock
+	url = ../fastcore-feedstock
+	branch = main
