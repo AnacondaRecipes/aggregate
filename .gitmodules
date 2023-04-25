@@ -7651,3 +7651,7 @@
 	path = favicon-feedstock
 	url = ../favicon-feedstock
 	branch = main
+[submodule "pymdown-extensions-feedstock"]
+	path = pymdown-extensions-feedstock
+	url = ../pymdown-extensions-feedstock
+	branch = main
