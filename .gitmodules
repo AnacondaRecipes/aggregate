@@ -7631,3 +7631,7 @@
 	path = triad-feedstock
 	url = ../triad-feedstock
 	branch = main
+[submodule "sqlglot-feedstock"]
+	path = sqlglot-feedstock
+	url = ../sqlglot-feedstock
+	branch = main
