@@ -7627,3 +7627,7 @@
 	path = hatch-jupyter-builder-feedstock
 	url = git@github.com:AnacondaRecipes/hatch-jupyter-builder-feedstock.git
 	branch = main
+[submodule "triad-feedstock"]
+	path = triad-feedstock
+	url = ../triad-feedstock
+	branch = main
