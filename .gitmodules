@@ -7639,3 +7639,7 @@
 	path = neuralforecast-feedstock
 	url = ../neuralforecast-feedstock
 	branch = main
+[submodule "openai-feedstock"]
+	path = openai-feedstock
+	url = ../openai-feedstock
+	branch = main
