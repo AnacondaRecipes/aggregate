@@ -7635,3 +7635,7 @@
 	path = sqlglot-feedstock
 	url = ../sqlglot-feedstock
 	branch = main
+[submodule "neuralforecast-feedstock"]
+	path = neuralforecast-feedstock
+	url = ../neuralforecast-feedstock
+	branch = main
