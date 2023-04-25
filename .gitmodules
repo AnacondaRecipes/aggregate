@@ -7619,3 +7619,7 @@
 	path = trace-updater-feedstock
 	url = ../trace-updater-feedstock
 	branch = main
+[submodule "y-py-feedstock"]
+	path = y-py-feedstock
+	url = git@github.com:AnacondaRecipes/y-py-feedstock.git
+	branch = main
