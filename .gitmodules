@@ -7643,3 +7643,7 @@
 	path = openai-feedstock
 	url = ../openai-feedstock
 	branch = main
+[submodule "htbuilder-feedstock"]
+	path = htbuilder-feedstock
+	url = ../htbuilder-feedstock
+	branch = main
