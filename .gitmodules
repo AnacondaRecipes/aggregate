@@ -7683,3 +7683,7 @@
 	path = adagio-feedstock
 	url = ../adagio-feedstock
 	branch = main
+[submodule "scikit-learn-1.1.3-feedstock"]
+	path = scikit-learn-1.1.3-feedstock
+	url = ../scikit-learn-feedstock
+	branch = main-1.1.3
