@@ -7659,3 +7659,7 @@
 	path = streamlit-chat-feedstock
 	url = ../streamlit-chat-feedstock
 	branch = main
+[submodule "streamlit-image-coordinates-feedstock"]
+	path = streamlit-image-coordinates-feedstock
+	url = ../streamlit-image-coordinates-feedstock
+	branch = main
