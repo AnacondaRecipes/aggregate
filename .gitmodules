@@ -7716,3 +7716,7 @@
 	path = torchdata-feedstock
 	url = ../torchdata-feedstock
 	branch = main
+[submodule "st-annotated-text-feedstock"]
+	path = st-annotated-text-feedstock
+	url = ../st-annotated-text-feedstock
+	branch = main
