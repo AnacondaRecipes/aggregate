@@ -7679,3 +7679,7 @@
 	path = dataclasses-json-feedstock
 	url = ../dataclasses-json-feedstock
 	branch = main
+[submodule "adagio-feedstock"]
+	path = adagio-feedstock
+	url = ../adagio-feedstock
+	branch = main
