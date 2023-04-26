@@ -7731,4 +7731,7 @@
 [submodule "gptcache-feedstock"]
 	path = gptcache-feedstock
 	url = ../gptcache-feedstock
+[submodule "streamlit-camera-input-live-feedstock"]
+	path = streamlit-camera-input-live-feedstock
+	url = ../streamlit-camera-input-live-feedstock
 	branch = main
