@@ -7724,3 +7724,7 @@
 	path = streamlit-keyup-feedstock
 	url = ../streamlit-keyup-feedstock
 	branch = main
+[submodule "streamlit-vertical-slider-feedstock"]
+	path = streamlit-vertical-slider-feedstock
+	url = ../streamlit-vertical-slider-feedstock
+	branch = main
