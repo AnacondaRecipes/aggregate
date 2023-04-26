@@ -7744,3 +7744,7 @@
 	path = streamlit-extras-feedstock
 	url = ../streamlit-extras-feedstock
 	branch = main
+[submodule "markdownlit-feedstock"]
+	path = markdownlit-feedstock
+	url = ../markdownlit-feedstock
+	branch = main
