@@ -7700,3 +7700,7 @@
 	path = mathjax-feedstock
 	url = ../mathjax-feedstock
 	branch = main
+[submodule "isa-l-feedstock"]
+	path = isa-l-feedstock
+	url = ../isa-l-feedstock
+	branch = main
