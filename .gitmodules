@@ -7735,3 +7735,7 @@
 	path = streamlit-camera-input-live-feedstock
 	url = ../streamlit-camera-input-live-feedstock
 	branch = main
+[submodule "python-cufflinks-feedstock"]
+	path = python-cufflinks-feedstock
+	url = ../python-cufflinks-feedstock
+	branch = main
