@@ -7687,3 +7687,7 @@
 	path = scikit-learn-1.1.3-feedstock
 	url = ../scikit-learn-feedstock
 	branch = main-1.1.3
+[submodule "fugue-sql-antlr-feedstock"]
+	path = fugue-sql-antlr-feedstock
+	url = ../fugue-sql-antlr-feedstock
+	branch = main
