@@ -7748,3 +7748,7 @@
 	path = markdownlit-feedstock
 	url = ../markdownlit-feedstock
 	branch = main
+[submodule "streamlit-faker-feedstock"]
+	path = streamlit-faker-feedstock
+	url = ../streamlit-faker-feedstock
+	branch = main
