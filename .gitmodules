@@ -7712,3 +7712,7 @@
 	path = streamlit-embedcode-feedstock
 	url = ../streamlit-embedcode-feedstock
 	branch = main
+[submodule "torchdata-feedstock"]
+	path = torchdata-feedstock
+	url = ../torchdata-feedstock
+	branch = main
