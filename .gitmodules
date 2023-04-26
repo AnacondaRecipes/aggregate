@@ -7728,3 +7728,7 @@
 	path = streamlit-vertical-slider-feedstock
 	url = ../streamlit-vertical-slider-feedstock
 	branch = main
+[submodule "gptcache-feedstock"]
+	path = gptcache-feedstock
+	url = ../gptcache-feedstock
+	branch = main
