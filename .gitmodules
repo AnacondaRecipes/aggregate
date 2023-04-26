@@ -7671,3 +7671,7 @@
 	path = streamlit-toggle-switch-feedstock
 	url = ../streamlit-toggle-switch-feedstock
 	branch = main
+[submodule "openapi-schema-pydantic-feedstock"]
+	path = openapi-schema-pydantic-feedstock
+	url = ../openapi-schema-pydantic-feedstock
+	branch = main
