@@ -7691,3 +7691,8 @@
 	path = fugue-sql-antlr-feedstock
 	url = ../fugue-sql-antlr-feedstock
 	branch = main
+[submodule "python-isal-feedstock"]
+	path = python-isal-feedstock
+	url = ../python-isal-feedstock
+	branch = main
+
