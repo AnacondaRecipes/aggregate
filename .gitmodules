@@ -7704,3 +7704,7 @@
 	path = isa-l-feedstock
 	url = ../isa-l-feedstock
 	branch = main
+[submodule "qpd-feedstock"]
+	path = qpd-feedstock
+	url = ../qpd-feedstock
+	branch = main
