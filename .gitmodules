@@ -7708,3 +7708,7 @@
 	path = qpd-feedstock
 	url = ../qpd-feedstock
 	branch = main
+[submodule "streamlit-embedcode-feedstock"]
+	path = streamlit-embedcode-feedstock
+	url = ../streamlit-embedcode-feedstock
+	branch = main
