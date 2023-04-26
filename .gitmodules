@@ -7667,3 +7667,7 @@
 	path = streamlit-card-feedstock
 	url = ../streamlit-card-feedstock
 	branch = main
+[submodule "streamlit-toggle-switch-feedstock"]
+	path = streamlit-toggle-switch-feedstock
+	url = ../streamlit-toggle-switch-feedstock
+	branch = main
