@@ -7675,3 +7675,7 @@
 	path = openapi-schema-pydantic-feedstock
 	url = ../openapi-schema-pydantic-feedstock
 	branch = main
+[submodule "dataclasses-json-feedstock"]
+	path = dataclasses-json-feedstock
+	url = ../dataclasses-json-feedstock
+	branch = main
