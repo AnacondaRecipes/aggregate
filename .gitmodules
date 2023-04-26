@@ -7720,3 +7720,7 @@
 	path = st-annotated-text-feedstock
 	url = ../st-annotated-text-feedstock
 	branch = main
+[submodule "streamlit-keyup-feedstock"]
+	path = streamlit-keyup-feedstock
+	url = ../streamlit-keyup-feedstock
+	branch = main
