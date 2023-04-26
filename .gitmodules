@@ -7655,3 +7655,7 @@
 	path = pymdown-extensions-feedstock
 	url = ../pymdown-extensions-feedstock
 	branch = main
+[submodule "streamlit-chat-feedstock"]
+	path = streamlit-chat-feedstock
+	url = ../streamlit-chat-feedstock
+	branch = main
