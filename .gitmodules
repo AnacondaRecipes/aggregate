@@ -7752,3 +7752,7 @@
 	path = streamlit-faker-feedstock
 	url = ../streamlit-faker-feedstock
 	branch = main
+[submodule "numpy-1.23-feedstock"]
+	path = numpy-1.23-feedstock
+	url = ../numpy-feedstock/
+	branch = numpy123
