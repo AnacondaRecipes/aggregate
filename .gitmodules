@@ -7740,3 +7740,7 @@
 	path = python-cufflinks-feedstock
 	url = ../python-cufflinks-feedstock
 	branch = main
+[submodule "streamlit-extras-feedstock"]
+	path = streamlit-extras-feedstock
+	url = ../streamlit-extras-feedstock
+	branch = main
