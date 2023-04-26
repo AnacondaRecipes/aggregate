@@ -7663,3 +7663,7 @@
 	path = streamlit-image-coordinates-feedstock
 	url = ../streamlit-image-coordinates-feedstock
 	branch = main
+[submodule "streamlit-card-feedstock"]
+	path = streamlit-card-feedstock
+	url = ../streamlit-card-feedstock
+	branch = main
