@@ -7760,3 +7760,7 @@
 	path = plotly-resampler-feedstock
 	url = ../plotly-resampler-feedstock
 	branch = main
+[submodule "cmdstanpy-feedstock"]
+	path = cmdstanpy-feedstock
+	url = ../cmdstanpy-feedstock
+	branch = master
