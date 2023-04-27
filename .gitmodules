@@ -7764,3 +7764,8 @@
 	path = cmdstanpy-feedstock
 	url = ../cmdstanpy-feedstock
 	branch = master
+[submodule "asammdf-feedstock"]
+	path = asammdf-feedstock
+	url = ../asammdf-feedstock
+	branch = main
+
