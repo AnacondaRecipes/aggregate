@@ -7773,3 +7773,7 @@
 	path = versioneer-feedstock
 	url = ../versioneer-feedstock
 	branch = main
+[submodule "prefect-test-dependency-feedstock"]
+	path = prefect-test-dependency-feedstock
+	url = ../prefect-test-dependency-feedstock
+	branch = master
