@@ -7769,3 +7769,7 @@
 	url = ../asammdf-feedstock
 	branch = main
 
+[submodule "versioneer-feedstock"]
+	path = versioneer-feedstock
+	url = ../versioneer-feedstock
+	branch = main
