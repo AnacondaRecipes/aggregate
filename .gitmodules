@@ -7756,3 +7756,7 @@
 	path = numpy-1.23-feedstock
 	url = ../numpy-feedstock/
 	branch = numpy123
+[submodule "plotly-resampler-feedstock"]
+	path = plotly-resampler-feedstock
+	url = ../plotly-resampler-feedstock
+	branch = main
