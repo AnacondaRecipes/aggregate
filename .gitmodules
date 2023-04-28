@@ -7777,3 +7777,7 @@
 	path = prefect-test-dependency-feedstock
 	url = ../prefect-test-dependency-feedstock
 	branch = master
+[submodule "fugue-feedstock"]
+	path = fugue-feedstock
+	url = ../fugue-feedstock
+	branch = main
