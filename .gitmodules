@@ -7781,3 +7781,7 @@
 	path = fugue-feedstock
 	url = ../fugue-feedstock
 	branch = main
+[submodule "draco-feedstock"]
+	path = draco-feedstock
+	url = ../draco-feedstock
+	branch = main
