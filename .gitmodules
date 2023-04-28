@@ -7789,3 +7789,7 @@
 	path = nitro-feedstock
 	url = ../nitro-feedstock
 	branch = main
+[submodule "ceres-solver-feedstock"]
+	path = ceres-solver-feedstock
+	url = ../ceres-solver-feedstock
+	branch = main
