@@ -7785,3 +7785,7 @@
 	path = draco-feedstock
 	url = ../draco-feedstock
 	branch = main
+[submodule "nitro-feedstock"]
+	path = nitro-feedstock
+	url = ../nitro-feedstock
+	branch = main
