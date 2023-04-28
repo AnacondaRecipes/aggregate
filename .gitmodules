@@ -7797,3 +7797,7 @@
 	path = statsforecast-feedstock
 	url = ../statsforecast-feedstock
 	branch = main
+[submodule "igraph-feedstock"]
+	path = igraph-feedstock
+	url = ../igraph-feedstock
+	branch = master
