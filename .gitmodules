@@ -7793,3 +7793,7 @@
 	path = ceres-solver-feedstock
 	url = ../ceres-solver-feedstock
 	branch = main
+[submodule "statsforecast-feedstock"]
+	path = statsforecast-feedstock
+	url = ../statsforecast-feedstock
+	branch = main
