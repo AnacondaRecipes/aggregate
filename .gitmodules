@@ -7825,3 +7825,7 @@
 	path = databricks-cli-feedstock
 	url = ../databricks-cli-feedstock
 	branch = main
+[submodule "langchain-feedstock"]
+	path = langchain-feedstock
+	url = ../langchain-feedstock
+	branch = main
