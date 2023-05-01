@@ -7809,3 +7809,7 @@
 	path = jupyter_server_terminals-feedstock
 	url = ../jupyter_server_terminals-feedstock
 	branch = main
+[submodule "jupyter_server_fileid-feedstock"]
+	path = jupyter_server_fileid-feedstock
+	url = ../jupyter_server_fileid-feedstock
+	branch = main
