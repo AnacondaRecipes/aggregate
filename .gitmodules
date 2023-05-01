@@ -7821,3 +7821,7 @@
 	path = mlflow-feedstock
 	url = ../mlflow-feedstock
 	branch = main
+[submodule "databricks-cli-feedstock"]
+	path = databricks-cli-feedstock
+	url = ../databricks-cli-feedstock
+	branch = main
