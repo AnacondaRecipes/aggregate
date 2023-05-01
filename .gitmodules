@@ -7821,3 +7821,15 @@
 	path = mlflow-feedstock
 	url = ../mlflow-feedstock
 	branch = main
+[submodule "databricks-cli-feedstock"]
+	path = databricks-cli-feedstock
+	url = ../databricks-cli-feedstock
+	branch = main
+[submodule "langchain-feedstock"]
+	path = langchain-feedstock
+	url = ../langchain-feedstock
+	branch = main
+[submodule "querystring_parser-feedstock"]
+	path = querystring_parser-feedstock
+	url = ../querystring_parser-feedstock
+	branch = main
