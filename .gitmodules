@@ -7817,3 +7817,7 @@
 	path = jupyter_events-feedstock
 	url = ../jupyter_events-feedstock
 	branch = main
+[submodule "mlflow-feedstock"]
+	path = mlflow-feedstock
+	url = ../mlflow-feedstock
+	branch = main
