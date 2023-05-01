@@ -7801,3 +7801,11 @@
 	path = igraph-feedstock
 	url = ../igraph-feedstock
 	branch = master
+[submodule "pytest-tornasync-feedstock"]
+	path = pytest-tornasync-feedstock
+	url = ../pytest-tornasync-feedstock
+	branch = main
+[submodule "jupyter_server_terminals-feedstock"]
+	path = jupyter_server_terminals-feedstock
+	url = ../jupyter_server_terminals-feedstock
+	branch = main
