@@ -7813,3 +7813,7 @@
 	path = jupyter_server_fileid-feedstock
 	url = ../jupyter_server_fileid-feedstock
 	branch = main
+[submodule "jupyter_events-feedstock"]
+	path = jupyter_events-feedstock
+	url = ../jupyter_events-feedstock
+	branch = main
