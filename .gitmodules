@@ -7829,3 +7829,7 @@
 	path = langchain-feedstock
 	url = ../langchain-feedstock
 	branch = main
+[submodule "querystring_parser-feedstock"]
+	path = querystring_parser-feedstock
+	url = ../querystring_parser-feedstock
+	branch = main
