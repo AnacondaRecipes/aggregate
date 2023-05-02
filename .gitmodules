@@ -7833,3 +7833,7 @@
 	path = querystring_parser-feedstock
 	url = ../querystring_parser-feedstock
 	branch = main
+[submodule "prometheus_flask_exporter-feedstock"]
+	path = prometheus_flask_exporter-feedstock
+	url = ../prometheus_flask_exporter-feedstock
+	branch = master
