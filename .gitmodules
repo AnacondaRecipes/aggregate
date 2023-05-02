@@ -7836,7 +7836,7 @@
 [submodule "prometheus_flask_exporter-feedstock"]
 	path = prometheus_flask_exporter-feedstock
 	url = ../prometheus_flask_exporter-feedstock
-	branch = master
+	branch = main
 [submodule "rfc3986-validator-feedstock"]
 	path = rfc3986-validator-feedstock
 	url = ../rfc3986-validator-feedstock
