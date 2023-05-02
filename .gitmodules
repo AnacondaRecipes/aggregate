@@ -7845,3 +7845,7 @@
 	path = rfc3339-validator-feedstock
 	url = ../rfc3339-validator-feedstock
 	branch = main
+[submodule "strict-rfc3339-feedstock"]
+	path = strict-rfc3339-feedstock
+	url = ../strict-rfc3339-feedstock
+	branch = main
