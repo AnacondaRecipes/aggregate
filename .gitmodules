@@ -7858,7 +7858,3 @@
 	path = canmatrix-feedstock
 	url = ../canmatrix-feedstock
 	branch = main
-[submodule "farama-notifications-feedstock"]
-	path = farama-notifications-feedstock
-	url = git@github.com:AnacondaRecipes/farama-notifications-feedstock.git
-	branch = main
