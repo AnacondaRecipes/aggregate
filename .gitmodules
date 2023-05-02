@@ -7800,7 +7800,7 @@
 [submodule "igraph-feedstock"]
 	path = igraph-feedstock
 	url = ../igraph-feedstock
-	branch = master
+	branch = main
 [submodule "pytest-tornasync-feedstock"]
 	path = pytest-tornasync-feedstock
 	url = ../pytest-tornasync-feedstock
