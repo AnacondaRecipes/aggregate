@@ -7862,3 +7862,7 @@
 	path = farama-notifications-feedstock
 	url = ../farama-notifications-feedstock
 	branch = main
+[submodule "pdal-feedstock"]
+	path = pdal-feedstock
+	url = ../pdal-feedstock
+	branch = main
