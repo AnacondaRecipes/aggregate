@@ -7866,3 +7866,7 @@
 	path = pdal-feedstock
 	url = ../pdal-feedstock
 	branch = main
+[submodule "ypy-websocket-feedstock"]
+	path = ypy-websocket-feedstock
+	url = ../ypy-websocket-feedstock
+	branch = main
