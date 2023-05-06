@@ -7870,3 +7870,7 @@
 	path = ypy-websocket-feedstock
 	url = ../ypy-websocket-feedstock
 	branch = main
+[submodule "aiosqlite-feedstock"]
+	path = aiosqlite-feedstock
+	url = ../aiosqlite-feedstock
+	branch = main
