@@ -162,7 +162,7 @@ numpy:
   # python 3.11
   - 1.23
 openblas:
-  - 0.3.20
+  - 0.3.21
 openjpeg:
   - 2.3
 openssl:
