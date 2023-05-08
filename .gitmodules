@@ -7853,7 +7853,6 @@
 	path = cchardet-feedstock
 	url = ../cchardet-feedstock
 	branch = main
-
 [submodule "canmatrix-feedstock"]
 	path = canmatrix-feedstock
 	url = ../canmatrix-feedstock
@@ -7878,3 +7877,7 @@
 	path = wheel-0.38.1-feedstock
 	url = ../wheel-feedstock
 	branch = main-0.38.1
+[submodule "libmicrohttpd-feedstock"]
+	path = libmicrohttpd-feedstock
+	url = ../libmicrohttpd-feedstock
+	branch = main
