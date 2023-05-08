@@ -7874,3 +7874,7 @@
 	path = aiosqlite-feedstock
 	url = ../aiosqlite-feedstock
 	branch = main
+[submodule "wheel-0.38.1-feedstock"]
+	path = wheel-0.38.1-feedstock
+	url = ../wheel-feedstock
+	branch = main-0.38.1
