@@ -7881,3 +7881,7 @@
 	path = libmicrohttpd-feedstock
 	url = ../libmicrohttpd-feedstock
 	branch = main
+[submodule "ruptures-feedstock"]
+	path = ruptures-feedstock
+	url = ../ruptures-feedstock
+	branch = main
