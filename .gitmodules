@@ -7901,3 +7901,7 @@
 	path = datarobot-feedstock
 	url = ../datarobot-feedstock
 	branch = main
+[submodule "pybcj-feedstock"]
+	path = pybcj-feedstock
+	url = ../pybcj-feedstock
+	branch = main
