@@ -7885,3 +7885,7 @@
 	path = ruptures-feedstock
 	url = ../ruptures-feedstock
 	branch = main
+[submodule "inflate64-feedstock"]
+	path = inflate64-feedstock
+	url = ../inflate64-feedstock
+	branch = main
