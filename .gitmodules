@@ -7905,3 +7905,7 @@
 	path = pybcj-feedstock
 	url = ../pybcj-feedstock
 	branch = main
+[submodule "pyecharts-feedstock"]
+	path = pyecharts-feedstock
+	url = ../pyecharts-feedstock
+	branch = main
