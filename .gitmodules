@@ -7913,3 +7913,7 @@
 	path = coin-or-utils-feedstock
 	url = ../coin-or-utils-feedstock
 	branch = main
+[submodule "loky-feedstock"]
+	path = loky-feedstock
+	url = ../loky-feedstock
+	branch = main
