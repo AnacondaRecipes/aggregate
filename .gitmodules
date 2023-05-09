@@ -7889,3 +7889,7 @@
 	path = inflate64-feedstock
 	url = ../inflate64-feedstock
 	branch = main
+[submodule "trafaret-feedstock"]
+	path = trafaret-feedstock
+	url = ../trafaret-feedstock
+	branch = main
