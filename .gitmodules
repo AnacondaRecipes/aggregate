@@ -7909,3 +7909,7 @@
 	path = pyecharts-feedstock
 	url = ../pyecharts-feedstock
 	branch = main
+[submodule "coin-or-utils-feedstock"]
+	path = coin-or-utils-feedstock
+	url = ../coin-or-utils-feedstock
+	branch = main
