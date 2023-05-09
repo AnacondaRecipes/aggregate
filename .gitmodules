@@ -7893,3 +7893,7 @@
 	path = trafaret-feedstock
 	url = ../trafaret-feedstock
 	branch = main
+[submodule "setuptools-60.9.3-feedstock"]
+	path = setuptools-60.9.3-feedstock
+	url = ../setuptools-feedstock
+	branch = main-60.9.3
