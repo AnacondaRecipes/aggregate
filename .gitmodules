@@ -7929,3 +7929,7 @@
 	path = chart-studio-feedstock
 	url = ../chart-studio-feedstock
 	branch = main
+[submodule "arpack-feedstock"]
+	path = arpack-feedstock
+	url = ../arpack-feedstock
+	branch = master
