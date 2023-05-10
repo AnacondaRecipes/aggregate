@@ -7933,3 +7933,7 @@
 	path = arpack-feedstock
 	url = ../arpack-feedstock
 	branch = master
+[submodule "pybcpy-feedstock"]
+	path = pybcpy-feedstock
+	url = ../pybcpy-feedstock
+	branch = main
