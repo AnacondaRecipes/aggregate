@@ -7937,3 +7937,7 @@
 	path = pybcpy-feedstock
 	url = ../pybcpy-feedstock
 	branch = main
+[submodule "zipfile-deflate64-feedstock"]
+	path = zipfile-deflate64-feedstock
+	url = ../zipfile-deflate64-feedstock
+	branch = main
