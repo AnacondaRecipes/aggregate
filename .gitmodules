@@ -7945,3 +7945,7 @@
 	path = pytest-httpserver-feedstock
 	url = ../pytest-httpserver-feedstock
 	branch = master
+[submodule "pytest-sugar-feedstock"]
+	path = pytest-sugar-feedstock
+	url = ../pytest-sugar-feedstock
+	branch = main
