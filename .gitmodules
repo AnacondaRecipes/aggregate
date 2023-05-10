@@ -7925,3 +7925,7 @@
 	path = lightfm-feedstock
 	url = ../lightfm-feedstock
 	branch = main
+[submodule "chart-studio-feedstock"]
+	path = chart-studio-feedstock
+	url = ../chart-studio-feedstock
+	branch = main
