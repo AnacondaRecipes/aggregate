@@ -7941,3 +7941,7 @@
 	path = zipfile-deflate64-feedstock
 	url = ../zipfile-deflate64-feedstock
 	branch = main
+[submodule "pytest-httpserver-feedstock"]
+	path = pytest-httpserver-feedstock
+	url = ../pytest-httpserver-feedstock
+	branch = master
