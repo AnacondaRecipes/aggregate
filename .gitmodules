@@ -7917,3 +7917,7 @@
 	path = loky-feedstock
 	url = ../loky-feedstock
 	branch = main
+[submodule "pysbd-feedstock"]
+	path = pysbd-feedstock
+	url = ../pysbd-feedstock
+	branch = main
