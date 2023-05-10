@@ -7921,3 +7921,7 @@
 	path = pysbd-feedstock
 	url = ../pysbd-feedstock
 	branch = main
+[submodule "lightfm-feedstock"]
+	path = lightfm-feedstock
+	url = ../lightfm-feedstock
+	branch = main
