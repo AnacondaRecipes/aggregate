@@ -7977,3 +7977,7 @@
 	path = pyrush-feedstock
 	url = ../pyrush-feedstock
 	branch = main
+[submodule "geopy-feedstock"]
+	path = geopy-feedstock
+	url = ../geopy-feedstock/
+	branch = main
