@@ -7953,3 +7953,7 @@
 	path = unqlite-feedstock
 	url = ../unqlite-feedstock
 	branch = main
+[submodule "quicksectx-feedstock"]
+	path = quicksectx-feedstock
+	url = ../quicksectx-feedstock
+	branch = main
