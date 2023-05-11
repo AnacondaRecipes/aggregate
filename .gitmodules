@@ -7981,3 +7981,7 @@
 	path = geopy-feedstock
 	url = ../geopy-feedstock/
 	branch = main
+[submodule "leb128-feedstock"]
+	path = leb128-feedstock
+	url = ../leb128-feedstock
+	branch = main
