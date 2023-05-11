@@ -7969,3 +7969,7 @@
 	path = geographiclib-feedstock
 	url = ../geographiclib-feedstock
 	branch = main
+[submodule "medspacy_quickumls-feedstock"]
+	path = medspacy_quickumls-feedstock
+	url = ../medspacy_quickumls-feedstock
+	branch = main
