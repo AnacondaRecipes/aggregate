@@ -7961,3 +7961,7 @@
 	path = pysimstring-feedstock
 	url = ../pysimstring-feedstock
 	branch = main
+[submodule "pyfastner-feedstock"]
+	path = pyfastner-feedstock
+	url = ../pyfastner-feedstock
+	branch = main
