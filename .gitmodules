@@ -7973,3 +7973,7 @@
 	path = medspacy_quickumls-feedstock
 	url = ../medspacy_quickumls-feedstock
 	branch = main
+[submodule "pyrush-feedstock"]
+	path = pyrush-feedstock
+	url = ../pyrush-feedstock
+	branch = main
