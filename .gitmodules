@@ -7949,3 +7949,7 @@
 	path = pytest-sugar-feedstock
 	url = ../pytest-sugar-feedstock
 	branch = main
+[submodule "unqlite-feedstock"]
+	path = unqlite-feedstock
+	url = ../unqlite-feedstock
+	branch = main
