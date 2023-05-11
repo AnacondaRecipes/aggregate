@@ -7965,3 +7965,7 @@
 	path = pyfastner-feedstock
 	url = ../pyfastner-feedstock
 	branch = main
+[submodule "geographiclib-feedstock"]
+	path = geographiclib-feedstock
+	url = ../geographiclib-feedstock
+	branch = main
