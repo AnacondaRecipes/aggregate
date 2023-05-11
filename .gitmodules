@@ -7985,3 +7985,7 @@
 	path = leb128-feedstock
 	url = ../leb128-feedstock
 	branch = main
+[submodule "types-urllib3-feedstock"]
+	path = types-urllib3-feedstock
+	url = ../types-urllib3-feedstock
+	branch = main
