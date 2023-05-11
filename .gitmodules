@@ -7957,3 +7957,7 @@
 	path = quicksectx-feedstock
 	url = ../quicksectx-feedstock
 	branch = main
+[submodule "pysimstring-feedstock"]
+	path = pysimstring-feedstock
+	url = ../pysimstring-feedstock
+	branch = main
