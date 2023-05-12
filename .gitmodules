@@ -7989,3 +7989,7 @@
 	path = types-urllib3-feedstock
 	url = ../types-urllib3-feedstock
 	branch = main
+[submodule "pydantic-1.8.2-feedstock"]
+	path = pydantic-1.8.2-feedstock
+	url = ../pydantic-feedstock
+	branch = master-1.8.2
