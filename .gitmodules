@@ -7993,3 +7993,7 @@
 	path = pydantic-1.8.2-feedstock
 	url = ../pydantic-feedstock
 	branch = master-1.8.2
+[submodule "confection-feedstock"]
+	path = confection-feedstock
+	url = ../confection-feedstock
+	branch = main
