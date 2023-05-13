@@ -7997,3 +7997,7 @@
 	path = confection-feedstock
 	url = ../confection-feedstock
 	branch = main
+[submodule "mono-feedstock"]
+	path = mono-feedstock
+	url = ../mono-feedstock
+	branch = main
