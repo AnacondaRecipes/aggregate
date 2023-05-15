@@ -8005,3 +8005,7 @@
 	path = msal-feedstock
 	url = ../msal-feedstock
 	branch = main
+[submodule "types-requests-feedstock"]
+	path = types-requests-feedstock
+	url = ../types-requests-feedstock
+	branch = main
