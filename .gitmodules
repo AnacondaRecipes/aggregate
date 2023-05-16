@@ -8009,3 +8009,7 @@
 	path = types-requests-feedstock
 	url = ../types-requests-feedstock
 	branch = main
+[submodule "types-futures-feedstock"]
+	path = types-futures-feedstock
+	url = ../types-futures-feedstock
+	branch = main
