@@ -8017,3 +8017,7 @@
 	path = coin-or-osi-feedstock
 	url = ../coin-or-osi-feedstock
 	branch = main
+[submodule "types-protobuf-feedstock"]
+	path = types-protobuf-feedstock
+	url = ../types-protobuf-feedstock
+	branch = main
