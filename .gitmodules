@@ -8021,3 +8021,7 @@
 	path = types-protobuf-feedstock
 	url = ../types-protobuf-feedstock
 	branch = main
+[submodule "mypy-protobuf-feedstock"]
+	path = mypy-protobuf-feedstock
+	url = ../mypy-protobuf-feedstock
+	branch = main
