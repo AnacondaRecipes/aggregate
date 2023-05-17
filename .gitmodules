@@ -8033,3 +8033,7 @@
 	path = coin-or-cgl-feedstock
 	url = ../coin-or-cgl-feedstock
 	branch = main
+[submodule "coin-or-cbc-feedstock"]
+	path = coin-or-cbc-feedstock
+	url = ../coin-or-cbc-feedstock
+	branch = main
