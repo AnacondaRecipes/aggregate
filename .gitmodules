@@ -8025,3 +8025,7 @@
 	path = mypy-protobuf-feedstock
 	url = ../mypy-protobuf-feedstock
 	branch = main
+[submodule "coin-or-clp-feedstock"]
+	path = coin-or-clp-feedstock
+	url = ../coin-or-clp-feedstock
+	branch = main
