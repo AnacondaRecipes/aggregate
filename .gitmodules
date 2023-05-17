@@ -8037,3 +8037,7 @@
 	path = coin-or-cbc-feedstock
 	url = ../coin-or-cbc-feedstock
 	branch = main
+[submodule "or-tools-feedstock"]
+	path = or-tools-feedstock
+	url = ../or-tools-feedstock
+	branch = main
