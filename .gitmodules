@@ -8045,3 +8045,7 @@
 	path = medspacy-feedstock
 	url = ../medspacy-feedstock
 	branch = main
+[submodule "k-means-constrained-feedstock"]
+	path = k-means-constrained-feedstock
+	url = ../k-means-constrained-feedstock
+	branch = main
