@@ -8041,3 +8041,7 @@
 	path = or-tools-feedstock
 	url = ../or-tools-feedstock
 	branch = main
+[submodule "medspacy-feedstock"]
+	path = medspacy-feedstock
+	url = ../medspacy-feedstock
+	branch = main
