@@ -8053,3 +8053,7 @@
 	path = r-terra-feedstock
 	url = ../r-terra-feedstock
 	branch = main
+[submodule "python-tblib-feedstock"]
+	path = python-tblib-feedstock
+	url = ../python-tblib-feedstock
+	branch = main
