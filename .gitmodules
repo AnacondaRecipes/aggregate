@@ -8049,3 +8049,7 @@
 	path = k-means-constrained-feedstock
 	url = ../k-means-constrained-feedstock
 	branch = main
+[submodule "r-terra-feedstock"]
+	path = r-terra-feedstock
+	url = ../r-terra-feedstock
+	branch = main
