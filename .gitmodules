@@ -8065,3 +8065,7 @@
 	path = spacy-pkuseg-feedstock
 	url = ../spacy-pkuseg-feedstock
 	branch = main
+[submodule "f2c-feedstock"]
+	path = f2c-feedstock
+	url = ../f2c-feedstock
+	branch = main
