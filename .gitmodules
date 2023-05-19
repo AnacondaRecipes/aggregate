@@ -8061,3 +8061,7 @@
 	path = pytest-console-scripts-feedstock
 	url = ../pytest-console-scripts-feedstock
 	branch = main
+[submodule "spacy-pkuseg-feedstock"]
+	path = spacy-pkuseg-feedstock
+	url = ../spacy-pkuseg-feedstock
+	branch = main
