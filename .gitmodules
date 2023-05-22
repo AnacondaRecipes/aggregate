@@ -8073,3 +8073,7 @@
 	path = dawg-python-feedstock
 	url = ../dawg-python-feedstock
 	branch = main
+[submodule "pymorphy3-dicts-ru-feedstock"]
+	path = pymorphy3-dicts-ru-feedstock
+	url = ../pymorphy3-dicts-ru-feedstock
+	branch = main
