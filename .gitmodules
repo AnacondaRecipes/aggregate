@@ -8081,3 +8081,7 @@
 	path = pymorphy3-dicts-uk-feedstock
 	url = ../pymorphy3-dicts-uk-feedstock
 	branch = main
+[submodule "pymorphy3-feedstock"]
+	path = pymorphy3-feedstock
+	url = ../pymorphy3-feedstock
+	branch = main
