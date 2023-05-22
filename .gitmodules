@@ -8069,3 +8069,7 @@
 	path = f2c-feedstock
 	url = ../f2c-feedstock
 	branch = main
+[submodule "dawg-python-feedstock"]
+	path = dawg-python-feedstock
+	url = ../dawg-python-feedstock
+	branch = main
