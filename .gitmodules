@@ -8089,3 +8089,7 @@
 	path = snowflake-telemetry-python-feedstock
 	url = ../snowflake-telemetry-python-feedstock
 	branch = main
+[submodule "fastai-feedstock"]
+	path = fastai-feedstock
+	url = ../fastai-feedstock
+	branch = main
