@@ -8085,3 +8085,7 @@
 	path = pymorphy3-feedstock
 	url = ../pymorphy3-feedstock
 	branch = main
+[submodule "snowflake-telemetry-python-feedstock"]
+	path = snowflake-telemetry-python-feedstock
+	url = ../snowflake-telemetry-python-feedstock
+	branch = main
