@@ -8093,3 +8093,7 @@
 	path = fastai-feedstock
 	url = ../fastai-feedstock
 	branch = main
+[submodule "fastdownload-feedstock"]
+	path = fastdownload-feedstock
+	url = ../fastdownload-feedstock
+	branch = main
