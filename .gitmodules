@@ -8097,3 +8097,7 @@
 	path = fastdownload-feedstock
 	url = ../fastdownload-feedstock
 	branch = main
+[submodule "opentelemetry-api-feedstock"]
+	path = opentelemetry-api-feedstock
+	url = ../opentelemetry-api-feedstock
+	branch = main
