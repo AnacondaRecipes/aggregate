@@ -8101,3 +8101,7 @@
 	path = opentelemetry-api-feedstock
 	url = ../opentelemetry-api-feedstock
 	branch = main
+[submodule "lifetimes-feedstock"]
+	path = lifetimes-feedstock
+	url = ../lifetimes-feedstock
+	branch = main
