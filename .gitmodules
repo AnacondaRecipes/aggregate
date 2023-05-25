@@ -8097,3 +8097,7 @@
 	path = lifetimes-feedstock
 	url = ../lifetimes-feedstock
 	branch = main
+[submodule "cramjam-feedstock"]
+	path = cramjam-feedstock
+	url = ../cramjam-feedstock/
+	branch = main
