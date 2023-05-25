@@ -8101,3 +8101,7 @@
 	path = cramjam-feedstock
 	url = ../cramjam-feedstock/
 	branch = main
+[submodule "lazrs-python-feedstock"]
+	path = lazrs-python-feedstock
+	url = ../lazrs-python-feedstock
+	branch = main
