@@ -8105,3 +8105,7 @@
 	path = lazrs-python-feedstock
 	url = ../lazrs-python-feedstock
 	branch = main
+[submodule "spacy-3.4.0-feedstock"]
+	path = spacy-3.4.0-feedstock
+	url = ../spacy-feedstock
+	branch = master-3.4.0
