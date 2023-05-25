@@ -2713,7 +2713,7 @@
 	branch = master
 [submodule "mysql-connector-c-feedstock"]
 	path = mysql-connector-c-feedstock
-	url = ../mysql-connector-c-feedstock/
+	url = ../mysql-connector-c-feedstock
 	branch = master
 [submodule "gnutls-feedstock"]
 	path = gnutls-feedstock
@@ -7754,7 +7754,7 @@
 	branch = main
 [submodule "numpy-1.23-feedstock"]
 	path = numpy-1.23-feedstock
-	url = ../numpy-feedstock/
+	url = ../numpy-feedstock
 	branch = numpy123
 [submodule "plotly-resampler-feedstock"]
 	path = plotly-resampler-feedstock
