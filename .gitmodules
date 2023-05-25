@@ -8112,3 +8112,7 @@
 [submodule "opencv-python-headless-feedstock"]
 	path = opencv-python-headless-feedstock
 	url = ../opencv-python-headless-feedstock
+[submodule "pytest-grpc-feedstock"]
+	path = pytest-grpc-feedstock
+	url = ../pytest-grpc-feedstock
+	branch = main
