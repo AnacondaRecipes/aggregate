@@ -8116,3 +8116,7 @@
 	path = pytest-grpc-feedstock
 	url = ../pytest-grpc-feedstock
 	branch = main
+[submodule "ordered-set-feedstock"]
+	path = ordered-set-feedstock
+	url = ../ordered-set-feedstock
+	branch = main
