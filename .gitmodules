@@ -8120,3 +8120,7 @@
 	path = ordered-set-feedstock
 	url = ../ordered-set-feedstock
 	branch = main
+[submodule "docutils-0.16-feedstock"]
+	path = docutils-0.16-feedstock
+	url = ../docutils-feedstock
+	branch = main-0.16
