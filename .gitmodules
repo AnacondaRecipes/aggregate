@@ -8124,3 +8124,7 @@
 	path = docutils-0.16-feedstock
 	url = ../docutils-feedstock
 	branch = main-0.16
+[submodule "laspy-feedstock"]
+	path = laspy-feedstock
+	url = ../laspy-feedstock
+	branch = main
