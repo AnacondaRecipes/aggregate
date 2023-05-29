@@ -8128,3 +8128,7 @@
 	path = laspy-feedstock
 	url = ../laspy-feedstock
 	branch = main
+[submodule "spacy-models-feedstock"]
+	path = spacy-models-feedstock
+	url = ../spacy-models-feedstock
+	branch = main
