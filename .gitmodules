@@ -8132,3 +8132,7 @@
 	path = spacy-models-feedstock
 	url = ../spacy-models-feedstock
 	branch = main
+[submodule "sudachipy-feedstock"]
+	path = sudachipy-feedstock
+	url = ../sudachipy-feedstock
+	branch = main
