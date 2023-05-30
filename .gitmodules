@@ -8140,3 +8140,7 @@
 	path = spacy-3.4.4-feedstock
 	url = ../spacy-feedstock
 	branch = master-3.4.4
+[submodule "scispacy-feedstock"]
+	path = scispacy-feedstock
+	url = ../scispacy-feedstock
+	branch = main
