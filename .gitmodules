@@ -8148,3 +8148,11 @@
 	path = nmslib-feedstock
 	url = ../nmslib-feedstock
 	branch = main
+[submodule "rdt-feedstock"]
+	path = rdt-feedstock
+	url = ../rdt-feedstock
+	branch = main
+[submodule "copulas-feedstock"]
+	path = copulas-feedstock
+	url = ../copulas-feedstock
+	branch = main
