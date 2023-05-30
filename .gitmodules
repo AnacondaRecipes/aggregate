@@ -8144,3 +8144,7 @@
 	path = scispacy-feedstock
 	url = ../scispacy-feedstock
 	branch = main
+[submodule "nmslib-feedstock"]
+	path = nmslib-feedstock
+	url = ../nmslib-feedstock
+	branch = main
