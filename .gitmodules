@@ -8105,10 +8105,6 @@
 	path = lazrs-python-feedstock
 	url = ../lazrs-python-feedstock
 	branch = main
-[submodule "spacy-3.4.0-feedstock"]
-	path = spacy-3.4.0-feedstock
-	url = ../spacy-feedstock
-	branch = master-3.4.0
 [submodule "opencv-python-headless-feedstock"]
 	path = opencv-python-headless-feedstock
 	url = ../opencv-python-headless-feedstock
