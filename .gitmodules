@@ -8136,3 +8136,7 @@
 	path = sudachidict-core-feedstock
 	url = ../sudachidict-core-feedstock
 	branch = main
+[submodule "spacy-3.4.4-feedstock"]
+	path = spacy-3.4.4-feedstock
+	url = ../spacy-feedstock
+	branch = master-3.4.4
