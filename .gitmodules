@@ -8132,3 +8132,7 @@
 	path = sudachipy-feedstock
 	url = ../sudachipy-feedstock
 	branch = main
+[submodule "sudachidict-core-feedstock"]
+	path = sudachidict-core-feedstock
+	url = ../sudachidict-core-feedstock
+	branch = main
