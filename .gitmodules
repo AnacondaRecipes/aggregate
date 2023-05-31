@@ -8157,3 +8157,7 @@
 	path = tsai-feedstock
 	url = ../tsai-feedstock
 	branch = main
+[submodule "pyts-feedstock"]
+	path = pyts-feedstock
+	url = ../pyts-feedstock
+	branch = main
