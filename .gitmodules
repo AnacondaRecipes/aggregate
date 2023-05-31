@@ -8161,3 +8161,7 @@
 	path = pyts-feedstock
 	url = ../pyts-feedstock
 	branch = main
+[submodule "tesserocr-feedstock"]
+	path = tesserocr-feedstock
+	url = ../tesserocr-feedstock
+	branch = main
