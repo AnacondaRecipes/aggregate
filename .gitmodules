@@ -8153,7 +8153,3 @@
 	path = copulas-feedstock
 	url = ../copulas-feedstock
 	branch = main
-[submodule "tsai--feedstock"]
-	path = tsai--feedstock
-	url = ../tsai-feedstock
-	branch = main
