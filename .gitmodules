@@ -8173,3 +8173,7 @@
 	path = deepecho-feedstock
 	url = ../deepecho-feedstock
 	branch = main
+[submodule "percy-feedstock"]
+	path = percy-feedstock
+	url = ../percy-feedstock
+	branch = main
