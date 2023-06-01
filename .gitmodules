@@ -8169,3 +8169,7 @@
 	path = sdmetrics-feedstock
 	url = ../sdmetrics-feedstock
 	branch = main
+[submodule "deepecho-feedstock"]
+	path = deepecho-feedstock
+	url = ../deepecho-feedstock
+	branch = main
