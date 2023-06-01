@@ -8165,3 +8165,7 @@
 	path = tesserocr-feedstock
 	url = ../tesserocr-feedstock
 	branch = main
+[submodule "sdmetrics-feedstock"]
+	path = sdmetrics-feedstock
+	url = ../sdmetrics-feedstock
+	branch = main
