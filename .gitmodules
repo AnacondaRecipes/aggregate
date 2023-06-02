@@ -8177,3 +8177,7 @@
 	path = percy-feedstock
 	url = ../percy-feedstock
 	branch = main
+[submodule "anaconda-catalogs-feedstock"]
+	path = anaconda-catalogs-feedstock
+	url = ../anaconda-catalogs-feedstock
+	branch = main
