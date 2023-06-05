@@ -8181,3 +8181,7 @@
 	path = anaconda-catalogs-feedstock
 	url = ../anaconda-catalogs-feedstock
 	branch = main
+[submodule "faker-10.0.0-feedstock"]
+	path = faker-10.0.0-feedstock
+	url = ../faker-feedstock
+	branch = main-10.0.0
