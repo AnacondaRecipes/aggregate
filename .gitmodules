@@ -8189,3 +8189,7 @@
 	path = scikit-learn-extra-feedstock
 	url = ../scikit-learn-extra-feedstock
 	branch = main
+[submodule "mgrs-feedstock"]
+	path = mgrs-feedstock
+	url = ../mgrs-feedstock
+	branch = main
