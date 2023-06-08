@@ -8197,3 +8197,7 @@
 	path = pycaret-feedstock
 	url = ../pycaret-feedstock
 	branch = main
+[submodule "pyod-feedstock"]
+	path = pyod-feedstock
+	url = ../pyod-feedstock
+	branch = main
