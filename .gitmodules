@@ -8201,3 +8201,7 @@
 	path = pyod-feedstock
 	url = ../pyod-feedstock
 	branch = main
+[submodule "schemdraw-feedstock"]
+	path = schemdraw-feedstock
+	url = ../schemdraw-feedstock
+	branch = main
