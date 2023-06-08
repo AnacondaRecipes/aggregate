@@ -8217,3 +8217,7 @@
 	path = scikit-plot-feedstock
 	url = ../scikit-plot-feedstock
 	branch = main
+[submodule "kmodes-feedstock"]
+	path = kmodes-feedstock
+	url = ../kmodes-feedstock
+	branch = main
