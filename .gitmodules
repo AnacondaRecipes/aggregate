@@ -8229,3 +8229,7 @@
 	path = quantlib-python-feedstock
 	url = ../quantlib-python-feedstock
 	branch = main
+[submodule "sktime-feedstock"]
+	path = sktime-feedstock
+	url = ../sktime-feedstock
+	branch = main
