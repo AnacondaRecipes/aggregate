@@ -8225,3 +8225,7 @@
 	path = yellowbrick-feedstock
 	url = ../yellowbrick-feedstock
 	branch = main
+[submodule "quantlib-python-feedstock"]
+	path = quantlib-python-feedstock
+	url = ../quantlib-python-feedstock
+	branch = main
