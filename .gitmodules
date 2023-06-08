@@ -8205,3 +8205,7 @@
 	path = schemdraw-feedstock
 	url = ../schemdraw-feedstock
 	branch = main
+[submodule "tbats-feedstock"]
+	path = tbats-feedstock
+	url = ../tbats-feedstock
+	branch = main
