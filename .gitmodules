@@ -8193,3 +8193,7 @@
 	path = mgrs-feedstock
 	url = ../mgrs-feedstock
 	branch = main
+[submodule "pycaret-feedstock"]
+	path = pycaret-feedstock
+	url = ../pycaret-feedstock
+	branch = main
