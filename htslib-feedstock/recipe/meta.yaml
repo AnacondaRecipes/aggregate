@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 build:
-  number: 0
+  number: 1
   # https://github.com/samtools/htslib/issues/86
   skip: True  # [win]
 
@@ -26,7 +26,7 @@ requirements:
     - zlib
     # Only required for libcrypto.
     # On macOS, links to libSystem
-    - openssl  # [linux]
+    - openssl {{ openssl }}  # [linux]
     # For running tests
     - perl
 
@@ -37,7 +37,7 @@ requirements:
     # - bzip2
     # - xz
     # - zlib
-    - openssl  # [linux]
+    - openssl 3.*  # [linux]
 
 test:
   commands:
