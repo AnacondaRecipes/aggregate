@@ -8245,3 +8245,7 @@
 	path = mlxtend-feedstock
 	url = ../mlxtend-feedstock
 	branch = main
+[submodule "kaleido-core-feedstock"]
+	path = kaleido-core-feedstock
+	url = ../kaleido-core-feedstock
+	branch = main
