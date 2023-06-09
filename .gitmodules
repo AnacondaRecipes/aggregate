@@ -8241,3 +8241,7 @@
 	path = cmaes-feedstock
 	url = ../cmaes-feedstock
 	branch = main
+[submodule "mlxtend-feedstock"]
+	path = mlxtend-feedstock
+	url = ../mlxtend-feedstock
+	branch = main
