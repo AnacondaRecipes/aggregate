@@ -8233,3 +8233,7 @@
 	path = sktime-feedstock
 	url = ../sktime-feedstock
 	branch = main
+[submodule "m2cgen-feedstock"]
+	path = m2cgen-feedstock
+	url = ../m2cgen-feedstock
+	branch = main
