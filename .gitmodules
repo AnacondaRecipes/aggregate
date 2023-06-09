@@ -8237,3 +8237,7 @@
 	path = m2cgen-feedstock
 	url = ../m2cgen-feedstock
 	branch = main
+[submodule "cmaes-feedstock"]
+	path = cmaes-feedstock
+	url = ../cmaes-feedstock
+	branch = main
