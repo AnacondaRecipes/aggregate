@@ -8249,3 +8249,7 @@
 	path = kaleido-core-feedstock
 	url = ../kaleido-core-feedstock
 	branch = main
+[submodule "quantile-forest-feedstock"]
+	path = quantile-forest-feedstock
+	url = ../quantile-forest-feedstock
+	branch = main
