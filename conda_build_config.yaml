@@ -165,8 +165,7 @@ openjpeg:
   - 2.3
 openssl:
   - 1.1.1
-  # vs2008 precludes us from newer qt, and we haven't been able to build newer qt with openssl 1.1.1 yet
-  - 1.0.2   # [win and py27]
+  - 3.0
 perl:
   - 5.26    # [win]
   - 5.34    # [not win]
