@@ -8261,3 +8261,7 @@
 	path = spin-feedstock
 	url = ../spin-feedstock
 	branch = main
+[submodule "curl-7.88.x-feedstock"]
+	path = curl-7.88.x-feedstock
+	url = ../curl-feedstock
+	branch = master-7.88.x
