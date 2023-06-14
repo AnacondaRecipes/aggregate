@@ -8193,3 +8193,67 @@
 	path = mgrs-feedstock
 	url = ../mgrs-feedstock
 	branch = main
+[submodule "pycaret-feedstock"]
+	path = pycaret-feedstock
+	url = ../pycaret-feedstock
+	branch = main
+[submodule "pyod-feedstock"]
+	path = pyod-feedstock
+	url = ../pyod-feedstock
+	branch = main
+[submodule "schemdraw-feedstock"]
+	path = schemdraw-feedstock
+	url = ../schemdraw-feedstock
+	branch = main
+[submodule "tbats-feedstock"]
+	path = tbats-feedstock
+	url = ../tbats-feedstock
+	branch = main
+[submodule "umap-learn-feedstock"]
+	path = umap-learn-feedstock
+	url = ../umap-learn-feedstock
+	branch = main
+[submodule "scikit-plot-feedstock"]
+	path = scikit-plot-feedstock
+	url = ../scikit-plot-feedstock
+	branch = main
+[submodule "kmodes-feedstock"]
+	path = kmodes-feedstock
+	url = ../kmodes-feedstock
+	branch = main
+[submodule "yellowbrick-feedstock"]
+	path = yellowbrick-feedstock
+	url = ../yellowbrick-feedstock
+	branch = main
+[submodule "quantlib-python-feedstock"]
+	path = quantlib-python-feedstock
+	url = ../quantlib-python-feedstock
+	branch = main
+[submodule "sktime-feedstock"]
+	path = sktime-feedstock
+	url = ../sktime-feedstock
+	branch = main
+[submodule "m2cgen-feedstock"]
+	path = m2cgen-feedstock
+	url = ../m2cgen-feedstock
+	branch = main
+[submodule "cmaes-feedstock"]
+	path = cmaes-feedstock
+	url = ../cmaes-feedstock
+	branch = main
+[submodule "mlxtend-feedstock"]
+	path = mlxtend-feedstock
+	url = ../mlxtend-feedstock
+	branch = main
+[submodule "kaleido-core-feedstock"]
+	path = kaleido-core-feedstock
+	url = ../kaleido-core-feedstock
+	branch = main
+[submodule "quantile-forest-feedstock"]
+	path = quantile-forest-feedstock
+	url = ../quantile-forest-feedstock
+	branch = main
+[submodule "spatialpandas-feedstock"]
+	path = spatialpandas-feedstock
+	url = ../spatialpandas-feedstock
+	branch = main
