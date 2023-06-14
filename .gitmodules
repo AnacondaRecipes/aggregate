@@ -8257,3 +8257,7 @@
 	path = spatialpandas-feedstock
 	url = ../spatialpandas-feedstock
 	branch = main
+[submodule "spin-feedstock"]
+	path = spin-feedstock
+	url = ../spin-feedstock
+	branch = main
