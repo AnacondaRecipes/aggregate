@@ -8265,3 +8265,7 @@
 	path = curl-7.88.x-feedstock
 	url = ../curl-feedstock
 	branch = master-7.88.x
+[submodule "ripgrep-feedstock"]
+	path = ripgrep-feedstock
+	url = ../ripgrep-feedstock
+	branch = main
