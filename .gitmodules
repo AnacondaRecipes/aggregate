@@ -8276,4 +8276,4 @@
 [submodule "dacite-feedstock"]
 	path = dacite-feedstock
 	url = ../dacite-feedstock
-	branch = master
+	branch = main
