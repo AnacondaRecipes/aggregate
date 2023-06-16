@@ -8273,3 +8273,7 @@
 	path = wordcloud-feedstock
 	url = ../wordcloud-feedstock
 	branch = master
+[submodule "dacite-feedstock"]
+	path = dacite-feedstock
+	url = ../dacite-feedstock
+	branch = master
