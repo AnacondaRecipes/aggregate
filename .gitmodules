@@ -8269,3 +8269,7 @@
 	path = ripgrep-feedstock
 	url = ../ripgrep-feedstock
 	branch = main
+[submodule "wordcloud-feedstock"]
+	path = wordcloud-feedstock
+	url = ../wordcloud-feedstock
+	branch = master
