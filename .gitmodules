@@ -8281,3 +8281,7 @@
 	path = libqdldl-feedstock
 	url = ../libqdldl-feedstock/
 	branch = main
+[submodule "qdldl-python-feedstock"]
+	path = qdldl-python-feedstock
+	url = ../qdldl-python-feedstock
+	branch = main
