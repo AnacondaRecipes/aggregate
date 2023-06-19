@@ -8285,3 +8285,7 @@
 	path = qdldl-python-feedstock
 	url = ../qdldl-python-feedstock
 	branch = main
+[submodule "libosqp-feedstock"]
+	path = libosqp-feedstock
+	url = ../libosqp-feedstock
+	branch = main
