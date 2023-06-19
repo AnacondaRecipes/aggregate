@@ -8277,3 +8277,7 @@
 	path = dacite-feedstock
 	url = ../dacite-feedstock
 	branch = main
+[submodule "libqdldl-feedstock"]
+	path = libqdldl-feedstock
+	url = ../libqdldl-feedstock/
+	branch = main
