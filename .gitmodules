@@ -8289,3 +8289,7 @@
 	path = libosqp-feedstock
 	url = ../libosqp-feedstock
 	branch = main
+[submodule "python-igraph-feedstock"]
+	path = python-igraph-feedstock
+	url = ../python-igraph-feedstock
+	branch = main
