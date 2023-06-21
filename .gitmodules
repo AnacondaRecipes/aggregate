@@ -8305,3 +8305,7 @@
 	path = libavif-feedstock
 	url = ../libavif-feedstock
 	branch = main
+[submodule "openssl-1.1.1-feedstock"]
+	path = openssl-1.1.1-feedstock
+	url = ../openssl-feedstock
+	branch = master-1.1.1
