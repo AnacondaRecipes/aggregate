@@ -8301,3 +8301,7 @@
 	path = dav1d-feedstock
 	url = ../dav1d-feedstock
 	branch = main
+[submodule "libavif-feedstock"]
+	path = libavif-feedstock
+	url = ../libavif-feedstock
+	branch = main
