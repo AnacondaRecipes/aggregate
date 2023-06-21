@@ -8293,3 +8293,7 @@
 	path = python-igraph-feedstock
 	url = ../python-igraph-feedstock
 	branch = main
+[submodule "aom-feedstock"]
+	path = aom-feedstock
+	url = ../aom-feedstock
+	branch = main
