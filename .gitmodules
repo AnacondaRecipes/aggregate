@@ -8309,3 +8309,7 @@
 	path = openssl-1.1.1-feedstock
 	url = ../openssl-feedstock
 	branch = master-1.1.1
+[submodule "whylogs-feedstock"]
+	path = whylogs-feedstock
+	url = ../whylogs-feedstock
+	branch = main
