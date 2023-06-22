@@ -8313,3 +8313,7 @@
 	path = whylogs-feedstock
 	url = ../whylogs-feedstock
 	branch = main
+[submodule "whylogs-sketching-feedstock"]
+	path = whylogs-sketching-feedstock
+	url = ../whylogs-sketching-feedstock
+	branch = main
