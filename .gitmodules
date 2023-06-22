@@ -8321,3 +8321,7 @@
 	path = python-3.11-feedstock
 	url = ../python-feedstock
 	branch = main-3.11
+[submodule "pyre2-feedstock"]
+	path = pyre2-feedstock
+	url = ../pyre2-feedstock
+	branch = main
