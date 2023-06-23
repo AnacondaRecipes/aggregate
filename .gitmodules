@@ -8329,3 +8329,7 @@
 	path = osqp-feedstock
 	url = ../osqp-feedstock
 	branch = main
+[submodule "azure-keyvault-secrets-feedstock"]
+	path = azure-keyvault-secrets-feedstock
+	url = ../azure-keyvault-secrets-feedstock
+	branch = main
