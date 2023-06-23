@@ -8325,3 +8325,7 @@
 	path = pyre2-feedstock
 	url = ../pyre2-feedstock
 	branch = main
+[submodule "osqp-feedstock"]
+	path = osqp-feedstock
+	url = ../osqp-feedstock
+	branch = main
