@@ -8341,3 +8341,7 @@
 	path = dunamai-feedstock
 	url = ../dunamai-feedstock
 	branch = main
+[submodule "poetry-dynamic-versioning-feedstock"]
+	path = poetry-dynamic-versioning-feedstock
+	url = ../poetry-dynamic-versioning-feedstock
+	branch = main
