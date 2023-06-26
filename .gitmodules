@@ -8353,3 +8353,7 @@
 	path = formulaic-feedstock
 	url = ../formulaic-feedstock
 	branch = main
+[submodule "autograd-gamma-feedstock"]
+	path = autograd-gamma-feedstock
+	url = ../autograd-gamma-feedstock
+	branch = main
