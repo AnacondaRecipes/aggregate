@@ -8333,3 +8333,7 @@
 	path = azure-keyvault-secrets-feedstock
 	url = ../azure-keyvault-secrets-feedstock
 	branch = main
+[submodule "graphlib-backport-feedstock"]
+	path = graphlib-backport-feedstock
+	url = ../graphlib-backport-feedstock
+	branch = main
