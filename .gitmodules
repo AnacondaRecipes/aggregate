@@ -8349,3 +8349,7 @@
 	path = interface_meta-feedstock
 	url = ../interface_meta-feedstock
 	branch = main
+[submodule "formulaic-feedstock"]
+	path = formulaic-feedstock
+	url = ../formulaic-feedstock
+	branch = main
