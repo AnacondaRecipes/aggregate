@@ -8345,3 +8345,7 @@
 	path = poetry-dynamic-versioning-feedstock
 	url = ../poetry-dynamic-versioning-feedstock
 	branch = main
+[submodule "interface_meta-feedstock"]
+	path = interface_meta-feedstock
+	url = ../interface_meta-feedstock
+	branch = main
