@@ -8357,3 +8357,7 @@
 	path = autograd-gamma-feedstock
 	url = ../autograd-gamma-feedstock
 	branch = main
+[submodule "lifelines-feedstock"]
+	path = lifelines-feedstock
+	url = ../lifelines-feedstock
+	branch = main
