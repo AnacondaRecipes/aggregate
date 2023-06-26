@@ -8337,3 +8337,7 @@
 	path = graphlib-backport-feedstock
 	url = ../graphlib-backport-feedstock
 	branch = main
+[submodule "dunamai-feedstock"]
+	path = dunamai-feedstock
+	url = ../dunamai-feedstock
+	branch = main
