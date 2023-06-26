@@ -8361,3 +8361,7 @@
 	path = lifelines-feedstock
 	url = ../lifelines-feedstock
 	branch = main
+[submodule "asv-feedstock"]
+	path = asv-feedstock
+	url = ../asv-feedstock
+	branch = main
