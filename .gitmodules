@@ -8365,3 +8365,7 @@
 	path = asv-feedstock
 	url = ../asv-feedstock
 	branch = main
+[submodule "scikit-survival-feedstock"]
+	path = scikit-survival-feedstock
+	url = ../scikit-survival-feedstock
+	branch = main
