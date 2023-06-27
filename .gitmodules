@@ -8369,3 +8369,7 @@
 	path = scikit-survival-feedstock
 	url = ../scikit-survival-feedstock
 	branch = main
+[submodule "sentence-transformers-feedstock"]
+	path = sentence-transformers-feedstock
+	url = ../sentence-transformers-feedstock
+	branch = master
