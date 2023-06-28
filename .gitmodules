@@ -8381,3 +8381,7 @@
 	path = whylabs-client-feedstock
 	url = ../whylabs-client-feedstock
 	branch = main
+[submodule "faiss-split-feedstock"]
+	path = faiss-split-feedstock
+	url = ../faiss-split-feedstock
+	branch = main
