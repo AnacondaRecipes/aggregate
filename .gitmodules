@@ -8377,3 +8377,7 @@
 	path = prince-feedstock
 	url = ../prince-feedstock
 	branch = main
+[submodule "whylabs-client-feedstock"]
+	path = whylabs-client-feedstock
+	url = ../whylabs-client-feedstock
+	branch = main
