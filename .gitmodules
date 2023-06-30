@@ -8293,3 +8293,95 @@
 	path = python-igraph-feedstock
 	url = ../python-igraph-feedstock
 	branch = main
+[submodule "aom-feedstock"]
+	path = aom-feedstock
+	url = ../aom-feedstock
+	branch = main
+[submodule "dav1d-feedstock"]
+	path = dav1d-feedstock
+	url = ../dav1d-feedstock
+	branch = main
+[submodule "libavif-feedstock"]
+	path = libavif-feedstock
+	url = ../libavif-feedstock
+	branch = main
+[submodule "openssl-1.1.1-feedstock"]
+	path = openssl-1.1.1-feedstock
+	url = ../openssl-feedstock
+	branch = master-1.1.1
+[submodule "whylogs-feedstock"]
+	path = whylogs-feedstock
+	url = ../whylogs-feedstock
+	branch = main
+[submodule "whylogs-sketching-feedstock"]
+	path = whylogs-sketching-feedstock
+	url = ../whylogs-sketching-feedstock
+	branch = main
+[submodule "python-3.11-feedstock"]
+	path = python-3.11-feedstock
+	url = ../python-feedstock
+	branch = main-3.11
+[submodule "pyre2-feedstock"]
+	path = pyre2-feedstock
+	url = ../pyre2-feedstock
+	branch = main
+[submodule "osqp-feedstock"]
+	path = osqp-feedstock
+	url = ../osqp-feedstock
+	branch = main
+[submodule "azure-keyvault-secrets-feedstock"]
+	path = azure-keyvault-secrets-feedstock
+	url = ../azure-keyvault-secrets-feedstock
+	branch = main
+[submodule "graphlib-backport-feedstock"]
+	path = graphlib-backport-feedstock
+	url = ../graphlib-backport-feedstock
+	branch = main
+[submodule "dunamai-feedstock"]
+	path = dunamai-feedstock
+	url = ../dunamai-feedstock
+	branch = main
+[submodule "poetry-dynamic-versioning-feedstock"]
+	path = poetry-dynamic-versioning-feedstock
+	url = ../poetry-dynamic-versioning-feedstock
+	branch = main
+[submodule "interface_meta-feedstock"]
+	path = interface_meta-feedstock
+	url = ../interface_meta-feedstock
+	branch = main
+[submodule "formulaic-feedstock"]
+	path = formulaic-feedstock
+	url = ../formulaic-feedstock
+	branch = main
+[submodule "autograd-gamma-feedstock"]
+	path = autograd-gamma-feedstock
+	url = ../autograd-gamma-feedstock
+	branch = main
+[submodule "lifelines-feedstock"]
+	path = lifelines-feedstock
+	url = ../lifelines-feedstock
+	branch = main
+[submodule "asv-feedstock"]
+	path = asv-feedstock
+	url = ../asv-feedstock
+	branch = main
+[submodule "scikit-survival-feedstock"]
+	path = scikit-survival-feedstock
+	url = ../scikit-survival-feedstock
+	branch = main
+[submodule "sentence-transformers-feedstock"]
+	path = sentence-transformers-feedstock
+	url = ../sentence-transformers-feedstock
+	branch = master
+[submodule "prince-feedstock"]
+	path = prince-feedstock
+	url = ../prince-feedstock
+	branch = main
+[submodule "whylabs-client-feedstock"]
+	path = whylabs-client-feedstock
+	url = ../whylabs-client-feedstock
+	branch = main
+[submodule "faiss-split-feedstock"]
+	path = faiss-split-feedstock
+	url = ../faiss-split-feedstock
+	branch = main
