@@ -3427,10 +3427,6 @@
 	path = fftw-feedstock
 	url = ../fftw-feedstock
 	branch = master
-[submodule "salt-feedstock"]
-	path = salt-feedstock
-	url = ../salt-feedstock
-	branch = master
 [submodule "gitea-feedstock"]
 	path = gitea-feedstock
 	url = ../gitea-feedstock
