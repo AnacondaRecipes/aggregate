@@ -8385,3 +8385,7 @@
 	path = faiss-split-feedstock
 	url = ../faiss-split-feedstock
 	branch = main
+[submodule "cmarkgfm-feedstock"]
+	path = cmarkgfm-feedstock
+	url = ../cmarkgfm-feedstock
+	branch = main
