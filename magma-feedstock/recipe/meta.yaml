@@ -28,12 +28,11 @@ requirements:
     - cudatoolkit {{ cudatoolkit }}*
     - intel-openmp {{ mkl }}
     - mkl {{ mkl }}
-    - mkl-service
+    - mkl-include
   run:
     - {{ pin_compatible('cudatoolkit', max_pin='x.x') }}
     - intel-openmp {{ mkl }}
     - mkl {{ mkl }}
-    - mkl-service
 
 test:
   commands:
