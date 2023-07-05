@@ -6,7 +6,7 @@ export PATH=$PREFIX/bin:/usr/local/cuda-${cudatoolkit}/bin:$PATH
 
 mkdir build
 cd build
-cmake .. -DUSE_FORTRAN=OFF -DGPU_TARGET="Fermi Kepler Maxwell Pascal Volta Turing Ampere" -DMAGMA_ENABLE_CUDA=ON -DMAGMA_WITH_MKL -DCMAKE_INSTALL_PREFIX=$PREFIX
+cmake .. -DUSE_FORTRAN=OFF -DGPU_TARGET="Fermi Kepler Maxwell Pascal Volta Turing Ampere" -DMAGMA_ENABLE_CUDA=ON -DCMAKE_INSTALL_PREFIX=$PREFIX
 make -j${CPU_COUNT} ${VERBOSE_AT}
 make install
 cd ..
