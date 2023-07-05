@@ -2,9 +2,10 @@ cxx_compiler:           # [win]
   - vs2019              # [win]
 c_compiler:             # [win]
   - vs2019              # [win]
-cxx_compiler_version:   # [linux64]
-  - 9.3.0               # [linux64]
-c_compiler_version:     # [linux64]
-  - 9.3.0               # [linux64]
+# CUDA 11.8 is compatible with gcc 11, see https://docs.nvidia.com/cuda/archive/11.8.0/cuda-installation-guide-linux/index.html
+cxx_compiler_version:
+  - 11
+c_compiler_version:
+  - 11
 cudatoolkit:
-  - 11.3
+  - 11.8

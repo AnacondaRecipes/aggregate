@@ -2,17 +2,19 @@
 # TODO: examine if it is possible to link DSO dynamically
 package:
   name: magma
-  version: 2.7.0
+  version: 2.7.1
 
 source:
-   url: http://icl.cs.utk.edu/projectsfiles/magma/downloads/magma-2.7.0.tar.gz
-   sha256: fda1cbc4607e77cacd8feb1c0f633c5826ba200a018f647f1c5436975b39fd18
+   url: http://icl.cs.utk.edu/projectsfiles/magma/downloads/magma-2.7.1.tar.gz
+   sha256: d9c8711c047a38cae16efde74bee2eb3333217fd2711e1e9b8606cbbb4ae1a50
    patches:
     - thread_queue.patch
 
 build:
   number: 0
-  skip: True  # [osx or win32]
+  # we currently only need this for pytorch GPU, which currently only uses this for linux-64.
+  # Windows is theoretically possible but we haven't got the CMake CUDA support to work there yet.
+  skip: True  # [not (linux and x86_64)]
 
 requirements:
   build:
