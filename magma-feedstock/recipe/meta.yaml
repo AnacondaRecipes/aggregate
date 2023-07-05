@@ -26,9 +26,12 @@ requirements:
     - patch       # [not win]
   host:
     - cudatoolkit {{ cudatoolkit }}*
-    - mkl
+    - intel-openmp {{ mkl }}
+    - mkl {{ mkl }}
   run:
     - {{ pin_compatible('cudatoolkit', max_pin='x.x') }}
+    - intel-openmp {{ mkl }}
+    - mkl {{ mkl }}
 
 test:
   commands:
