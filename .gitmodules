@@ -8385,3 +8385,7 @@
 	path = cmarkgfm-feedstock
 	url = ../cmarkgfm-feedstock
 	branch = main
+[submodule "cupti-feedstock"]
+	path = cupti-feedstock
+	url = ../cupti-feedstock
+	branch = main
