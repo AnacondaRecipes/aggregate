@@ -8389,3 +8389,7 @@
 	path = cupti-feedstock
 	url = ../cupti-feedstock
 	branch = main
+[submodule "pymc-marketing-feedstock"]
+	path = pymc-marketing-feedstock
+	url = ../pymc-marketing-feedstock
+	branch = main
