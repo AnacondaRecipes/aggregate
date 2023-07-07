@@ -667,10 +667,6 @@
 	url = ../patch-feedstock.git
 	path = patch-feedstock
 	branch = master
-[submodule "backports_abc-feedstock"]
-	url = ../backports_abc-feedstock.git
-	path = backports_abc-feedstock
-	branch = master
 [submodule "flask-cors-feedstock"]
 	url = ../flask-cors-feedstock.git
 	path = flask-cors-feedstock
