@@ -955,10 +955,6 @@
 	path = anyjson-feedstock
 	url = ../anyjson-feedstock
 	branch = master
-[submodule "backports.functools_lru_cache-feedstock"]
-	path = backports.functools_lru_cache-feedstock
-	url = ../backports.functools_lru_cache-feedstock
-	branch = master
 [submodule "capturer-feedstock"]
 	path = capturer-feedstock
 	url = ../capturer-feedstock
