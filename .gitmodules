@@ -8397,3 +8397,7 @@
 	path = xarray-einstats-feedstock
 	url = ../xarray-einstats-feedstock
 	branch = main
+[submodule "h5netcdf-feedstock"]
+	path = h5netcdf-feedstock
+	url = ../h5netcdf-feedstock
+	branch = main
