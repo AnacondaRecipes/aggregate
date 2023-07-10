@@ -8389,3 +8389,7 @@
 	path = aws-encryption-sdk-feedstock
 	url = ../aws-encryption-sdk-feedstock
 	branch = main
+[submodule "optuna-feedstock"]
+	path = optuna-feedstock
+	url = ../optuna-feedstock
+	branch = main
