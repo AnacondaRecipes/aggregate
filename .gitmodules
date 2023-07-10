@@ -8405,3 +8405,7 @@
 	path = cornac-feedstock
 	url = ../cornac-feedstock
 	branch = main
+[submodule "powerlaw-feedstock"]
+	path = powerlaw-feedstock
+	url = ../powerlaw-feedstock
+	branch = main
