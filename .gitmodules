@@ -8385,3 +8385,7 @@
 	path = pymc-marketing-feedstock
 	url = ../pymc-marketing-feedstock
 	branch = main
+[submodule "aws-encryption-sdk-feedstock"]
+	path = aws-encryption-sdk-feedstock
+	url = ../aws-encryption-sdk-feedstock
+	branch = main
