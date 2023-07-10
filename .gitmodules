@@ -8393,3 +8393,7 @@
 	path = optuna-feedstock
 	url = ../optuna-feedstock
 	branch = main
+[submodule "xarray-einstats-feedstock"]
+	path = xarray-einstats-feedstock
+	url = ../xarray-einstats-feedstock
+	branch = main
