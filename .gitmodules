@@ -8401,3 +8401,7 @@
 	path = h5netcdf-feedstock
 	url = ../h5netcdf-feedstock
 	branch = main
+[submodule "cornac-feedstock"]
+	path = cornac-feedstock
+	url = ../cornac-feedstock
+	branch = main
