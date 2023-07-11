@@ -8409,3 +8409,7 @@
 	path = powerlaw-feedstock
 	url = ../powerlaw-feedstock
 	branch = main
+[submodule "pandera-core-feedstock"]
+	path = pandera-core-feedstock
+	url = ../pandera-core-feedstock
+	branch = main
