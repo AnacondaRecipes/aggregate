@@ -8413,3 +8413,7 @@
 	path = pandera-core-feedstock
 	url = ../pandera-core-feedstock
 	branch = main
+[submodule "numpy-1.24-feedstock"]
+	path = numpy-1.24-feedstock
+	url = ../numpy-feedstock
+	branch = numpy124
