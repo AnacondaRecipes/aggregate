@@ -8417,3 +8417,7 @@
 	path = numpy-1.24-feedstock
 	url = ../numpy-feedstock
 	branch = numpy124
+[submodule "pytorch-forecasting-feedstock"]
+	path = pytorch-forecasting-feedstock
+	url = ../pytorch-forecasting-feedstock
+	branch = main
