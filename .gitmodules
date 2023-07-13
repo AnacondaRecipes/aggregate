@@ -8421,3 +8421,7 @@
 	path = pytorch-forecasting-feedstock
 	url = ../pytorch-forecasting-feedstock
 	branch = main
+[submodule "pytensor-suite-feedstock"]
+	path = pytensor-suite-feedstock
+	url = ../pytensor-suite-feedstock
+	branch = main
