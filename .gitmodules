@@ -8429,3 +8429,7 @@
 	path = logical-unification-feedstock
 	url = ../logical-unification-feedstock
 	branch = main
+[submodule "cons-feedstock"]
+	path = cons-feedstock
+	url = ../cons-feedstock
+	branch = main
