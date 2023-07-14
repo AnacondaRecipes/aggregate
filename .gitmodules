@@ -8433,3 +8433,7 @@
 	path = cons-feedstock
 	url = ../cons-feedstock
 	branch = main
+[submodule "minikanren-feedstock"]
+	path = minikanren-feedstock
+	url = ../minikanren-feedstock
+	branch = main
