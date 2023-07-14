@@ -8445,3 +8445,7 @@
 	path = recommenders-feedstock
 	url = ../recommenders-feedstock
 	branch = main
+[submodule "backports-feedstock"]
+	path = backports-feedstock
+	url = https://github.com/AnacondaRecipes/backports-feedstock
+	branch = main
