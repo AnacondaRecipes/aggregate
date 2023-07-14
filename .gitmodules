@@ -8425,3 +8425,7 @@
 	path = pytensor-suite-feedstock
 	url = ../pytensor-suite-feedstock
 	branch = main
+[submodule "logical-unification-feedstock"]
+	path = logical-unification-feedstock
+	url = ../logical-unification-feedstock
+	branch = main
