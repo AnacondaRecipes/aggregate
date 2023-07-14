@@ -8437,3 +8437,7 @@
 	path = minikanren-feedstock
 	url = ../minikanren-feedstock
 	branch = main
+[submodule "etuples-feedstock"]
+	path = etuples-feedstock
+	url = ../etuples-feedstock
+	branch = main
