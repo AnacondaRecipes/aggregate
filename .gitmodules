@@ -8441,3 +8441,7 @@
 	path = etuples-feedstock
 	url = ../etuples-feedstock
 	branch = main
+[submodule "recommenders-feedstock"]
+	path = recommenders-feedstock
+	url = ../recommenders-feedstock
+	branch = main
