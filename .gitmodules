@@ -8445,3 +8445,7 @@
 	path = recommenders-feedstock
 	url = ../recommenders-feedstock
 	branch = main
+[submodule "polars-feedstock"]
+	path = polars-feedstock
+	url = ../polars-feedstock
+	branch = main
