@@ -8449,3 +8449,23 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "ctng-dbg-compilers-activation-feedstock"]
+	path = ctng-dbg-compilers-activation-feedstock
+	url = https://github.com/AnacondaRecipes/ctng-dbg-compilers-activation-feedstock
+	branch = main
+[submodule "ctng-osize-compilers-activation-feedstock"]
+	path = ctng-osize-compilers-activation-feedstock
+	url = https://github.com/AnacondaRecipes/ctng-osize-compilers-activation-feedstock
+	branch = main
+[submodule "cubes-feedstock"]
+	path = cubes-feedstock
+	url = https://github.com/AnacondaRecipes/cubes-feedstock
+	branch = main
+[submodule "cvxcanon-feedstock"]
+	path = cvxcanon-feedstock
+	url = https://github.com/AnacondaRecipes/cvxcanon-feedstock
+	branch = main
+[submodule "double-conversion-feedstock"]
+	path = double-conversion-feedstock
+	url = https://github.com/AnacondaRecipes/double-conversion-feedstock
+	branch = main
