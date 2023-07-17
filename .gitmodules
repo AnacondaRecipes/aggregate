@@ -8449,3 +8449,23 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "stripe-feedstock"]
+	path = stripe-feedstock
+	url = https://github.com/AnacondaRecipes/stripe-feedstock
+	branch = main
+[submodule "svn-feedstock"]
+	path = svn-feedstock
+	url = https://github.com/AnacondaRecipes/svn-feedstock
+	branch = main
+[submodule "tabpy-client-feedstock"]
+	path = tabpy-client-feedstock
+	url = https://github.com/AnacondaRecipes/tabpy-client-feedstock
+	branch = main
+[submodule "tabpy-server-feedstock"]
+	path = tabpy-server-feedstock
+	url = https://github.com/AnacondaRecipes/tabpy-server-feedstock
+	branch = main
+[submodule "tensorboard-feedstock"]
+	path = tensorboard-feedstock
+	url = https://github.com/AnacondaRecipes/tensorboard-feedstock
+	branch = main
