@@ -8449,3 +8449,23 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "tornado-json-feedstock"]
+	path = tornado-json-feedstock
+	url = https://github.com/AnacondaRecipes/tornado-json-feedstock
+	branch = main
+[submodule "translationstring-feedstock"]
+	path = translationstring-feedstock
+	url = https://github.com/AnacondaRecipes/translationstring-feedstock
+	branch = main
+[submodule "utf8proc-feedstock"]
+	path = utf8proc-feedstock
+	url = https://github.com/AnacondaRecipes/utf8proc-feedstock
+	branch = main
+[submodule "vega_datasets-feedstock"]
+	path = vega_datasets-feedstock
+	url = https://github.com/AnacondaRecipes/vega_datasets-feedstock
+	branch = main
+[submodule "venusian-feedstock"]
+	path = venusian-feedstock
+	url = https://github.com/AnacondaRecipes/venusian-feedstock
+	branch = main
