@@ -8449,3 +8449,23 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "caffe-gpu-feedstock"]
+	path = caffe-gpu-feedstock
+	url = https://github.com/AnacondaRecipes/caffe-gpu-feedstock
+	branch = main
+[submodule "casuarius-feedstock"]
+	path = casuarius-feedstock
+	url = https://github.com/AnacondaRecipes/casuarius-feedstock
+	branch = main
+[submodule "cctools-ld64-feedstock"]
+	path = cctools-ld64-feedstock
+	url = https://github.com/AnacondaRecipes/cctools-ld64-feedstock
+	branch = main
+[submodule "chameleon-3.6.2-feedstock"]
+	path = chameleon-3.6.2-feedstock
+	url = https://github.com/AnacondaRecipes/chameleon-3.6.2-feedstock
+	branch = main
+[submodule "characteristic-feedstock"]
+	path = characteristic-feedstock
+	url = https://github.com/AnacondaRecipes/characteristic-feedstock
+	branch = main
