@@ -8449,3 +8449,23 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "tensorflow-metadata-feedstock"]
+	path = tensorflow-metadata-feedstock
+	url = https://github.com/AnacondaRecipes/tensorflow-metadata-feedstock
+	branch = main
+[submodule "teradata-feedstock"]
+	path = teradata-feedstock
+	url = https://github.com/AnacondaRecipes/teradata-feedstock
+	branch = main
+[submodule "testscenarios-feedstock"]
+	path = testscenarios-feedstock
+	url = https://github.com/AnacondaRecipes/testscenarios-feedstock
+	branch = main
+[submodule "thrift-0.9.3-feedstock"]
+	path = thrift-0.9.3-feedstock
+	url = https://github.com/AnacondaRecipes/thrift-0.9.3-feedstock
+	branch = main
+[submodule "tktable-feedstock"]
+	path = tktable-feedstock
+	url = https://github.com/AnacondaRecipes/tktable-feedstock
+	branch = main
