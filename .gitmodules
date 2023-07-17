@@ -8449,3 +8449,23 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "7za-feedstock"]
+	path = 7za-feedstock
+	url = https://github.com/AnacondaRecipes/7za-feedstock
+	branch = main
+[submodule "alacritty-feedstock"]
+	path = alacritty-feedstock
+	url = https://github.com/AnacondaRecipes/alacritty-feedstock
+	branch = main
+[submodule "altair3_2-feedstock"]
+	path = altair3_2-feedstock
+	url = https://github.com/AnacondaRecipes/altair3_2-feedstock
+	branch = main
+[submodule "ant-1.10.8-feedstock"]
+	path = ant-1.10.8-feedstock
+	url = https://github.com/AnacondaRecipes/ant-1.10.8-feedstock
+	branch = main
+[submodule "apr-feedstock"]
+	path = apr-feedstock
+	url = https://github.com/AnacondaRecipes/apr-feedstock
+	branch = main
