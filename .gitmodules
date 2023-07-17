@@ -8449,3 +8449,23 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "meld3-feedstock"]
+	path = meld3-feedstock
+	url = https://github.com/AnacondaRecipes/meld3-feedstock
+	branch = main
+[submodule "moltenvk-feedstock"]
+	path = moltenvk-feedstock
+	url = https://github.com/AnacondaRecipes/moltenvk-feedstock
+	branch = main
+[submodule "mongodb-feedstock"]
+	path = mongodb-feedstock
+	url = https://github.com/AnacondaRecipes/mongodb-feedstock
+	branch = main
+[submodule "mtq-feedstock"]
+	path = mtq-feedstock
+	url = https://github.com/AnacondaRecipes/mtq-feedstock
+	branch = main
+[submodule "mysql-python-feedstock"]
+	path = mysql-python-feedstock
+	url = https://github.com/AnacondaRecipes/mysql-python-feedstock
+	branch = main
