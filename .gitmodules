@@ -8449,3 +8449,23 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "libprotobuf-static-feedstock"]
+	path = libprotobuf-static-feedstock
+	url = https://github.com/AnacondaRecipes/libprotobuf-static-feedstock
+	branch = main
+[submodule "libpython-feedstock"]
+	path = libpython-feedstock
+	url = https://github.com/AnacondaRecipes/libpython-feedstock
+	branch = main
+[submodule "libvpx-1.10.0-feedstock"]
+	path = libvpx-1.10.0-feedstock
+	url = https://github.com/AnacondaRecipes/libvpx-1.10.0-feedstock
+	branch = main
+[submodule "libxml2-bootstrap-feedstock"]
+	path = libxml2-bootstrap-feedstock
+	url = https://github.com/AnacondaRecipes/libxml2-bootstrap-feedstock
+	branch = main
+[submodule "libxmlsec1-1.2.32-feedstock"]
+	path = libxmlsec1-1.2.32-feedstock
+	url = https://github.com/AnacondaRecipes/libxmlsec1-1.2.32-feedstock
+	branch = main
