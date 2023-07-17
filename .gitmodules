@@ -8449,3 +8449,23 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "llvm-compilers-feedstock"]
+	path = llvm-compilers-feedstock
+	url = https://github.com/AnacondaRecipes/llvm-compilers-feedstock
+	branch = main
+[submodule "lockfile-feedstock"]
+	path = lockfile-feedstock
+	url = https://github.com/AnacondaRecipes/lockfile-feedstock
+	branch = main
+[submodule "locustio-feedstock"]
+	path = locustio-feedstock
+	url = https://github.com/AnacondaRecipes/locustio-feedstock
+	branch = main
+[submodule "magma-feedstock"]
+	path = magma-feedstock
+	url = https://github.com/AnacondaRecipes/magma-feedstock
+	branch = main
+[submodule "mdp-feedstock"]
+	path = mdp-feedstock
+	url = https://github.com/AnacondaRecipes/mdp-feedstock
+	branch = main
