@@ -8449,3 +8449,23 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "neon-feedstock"]
+	path = neon-feedstock
+	url = https://github.com/AnacondaRecipes/neon-feedstock
+	branch = main
+[submodule "neotime-feedstock"]
+	path = neotime-feedstock
+	url = https://github.com/AnacondaRecipes/neotime-feedstock
+	branch = main
+[submodule "nomkl-feedstock"]
+	path = nomkl-feedstock
+	url = https://github.com/AnacondaRecipes/nomkl-feedstock
+	branch = main
+[submodule "openhmd-feedstock"]
+	path = openhmd-feedstock
+	url = https://github.com/AnacondaRecipes/openhmd-feedstock
+	branch = main
+[submodule "otter-browser-feedstock"]
+	path = otter-browser-feedstock
+	url = https://github.com/AnacondaRecipes/otter-browser-feedstock
+	branch = main
