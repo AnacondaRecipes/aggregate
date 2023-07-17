@@ -8449,3 +8449,23 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "ripgrep-13.0.0-feedstock"]
+	path = ripgrep-13.0.0-feedstock
+	url = https://github.com/AnacondaRecipes/ripgrep-13.0.0-feedstock
+	branch = main
+[submodule "rust-nightly-activation-feedstock"]
+	path = rust-nightly-activation-feedstock
+	url = https://github.com/AnacondaRecipes/rust-nightly-activation-feedstock
+	branch = main
+[submodule "sas7bdat-feedstock"]
+	path = sas7bdat-feedstock
+	url = https://github.com/AnacondaRecipes/sas7bdat-feedstock
+	branch = main
+[submodule "selectors2-feedstock"]
+	path = selectors2-feedstock
+	url = https://github.com/AnacondaRecipes/selectors2-feedstock
+	branch = main
+[submodule "serf-feedstock"]
+	path = serf-feedstock
+	url = https://github.com/AnacondaRecipes/serf-feedstock
+	branch = main
