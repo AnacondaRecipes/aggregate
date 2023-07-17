@@ -8449,3 +8449,23 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "aredis-feedstock"]
+	path = aredis-feedstock
+	url = https://github.com/AnacondaRecipes/aredis-feedstock
+	branch = main
+[submodule "backports-feedstock"]
+	path = backports-feedstock
+	url = https://github.com/AnacondaRecipes/backports-feedstock
+	branch = main
+[submodule "bandersnatch-feedstock"]
+	path = bandersnatch-feedstock
+	url = https://github.com/AnacondaRecipes/bandersnatch-feedstock
+	branch = main
+[submodule "binsort-feedstock"]
+	path = binsort-feedstock
+	url = https://github.com/AnacondaRecipes/binsort-feedstock
+	branch = main
+[submodule "boto-feedstock"]
+	path = boto-feedstock
+	url = https://github.com/AnacondaRecipes/boto-feedstock
+	branch = main
