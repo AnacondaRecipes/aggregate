@@ -1,9 +1,0 @@
-general:
-  branches:
-    ignore:
-      - /.*/
-
-test:
-  override:
-    # The Circle-CI build should not be active, but if this is not true for some reason, do a fast finish.
-    - exit 0
