@@ -8449,3 +8449,7 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "python-kaleido-feedstock"]
+	path = python-kaleido-feedstock
+	url = ../python-kaleido-feedstock
+	branch = main
