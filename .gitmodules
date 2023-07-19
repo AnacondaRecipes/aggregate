@@ -8453,3 +8453,7 @@
 	path = python-kaleido-feedstock
 	url = ../python-kaleido-feedstock
 	branch = main
+[submodule "mizani-feedstock"]
+	path = mizani-feedstock
+	url = ../mizani-feedstock
+	branch = main
