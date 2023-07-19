@@ -8457,3 +8457,7 @@
 	path = mizani-feedstock
 	url = ../mizani-feedstock
 	branch = main
+[submodule "tune-sklearn-feedstock"]
+	path = tune-sklearn-feedstock
+	url = ../tune-sklearn-feedstock
+	branch = main
