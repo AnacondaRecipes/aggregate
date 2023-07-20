@@ -8461,3 +8461,7 @@
 	path = tune-sklearn-feedstock
 	url = ../tune-sklearn-feedstock
 	branch = main
+[submodule "dbt-extractor-feedstock"]
+	path = dbt-extractor-feedstock
+	url = ../dbt-extractor-feedstock
+	branch = main
