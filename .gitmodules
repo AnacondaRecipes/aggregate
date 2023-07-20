@@ -8465,3 +8465,7 @@
 	path = dbt-extractor-feedstock
 	url = ../dbt-extractor-feedstock
 	branch = main
+[submodule "plotnine-feedstock"]
+	path = plotnine-feedstock
+	url = ../plotnine-feedstock
+	branch = main
