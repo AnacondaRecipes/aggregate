@@ -8477,3 +8477,7 @@
 	path = minimal-snowplow-tracker-feedstock
 	url = ../minimal-snowplow-tracker-feedstock
 	branch = main
+[submodule "mashumaro-feedstock"]
+	path = mashumaro-feedstock
+	url = ../mashumaro-feedstock
+	branch = main
