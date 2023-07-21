@@ -8469,3 +8469,7 @@
 	path = plotnine-feedstock
 	url = ../plotnine-feedstock
 	branch = main
+[submodule "logbook-feedstock"]
+	path = logbook-feedstock
+	url = ../logbook-feedstock
+	branch = main
