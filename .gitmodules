@@ -8473,3 +8473,7 @@
 	path = logbook-feedstock
 	url = ../logbook-feedstock
 	branch = main
+[submodule "minimal-snowplow-tracker-feedstock"]
+	path = minimal-snowplow-tracker-feedstock
+	url = ../minimal-snowplow-tracker-feedstock
+	branch = main
