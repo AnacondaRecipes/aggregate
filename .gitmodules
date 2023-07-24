@@ -8493,3 +8493,7 @@
 	path = elementpath-feedstock
 	url = ../elementpath-feedstock
 	branch = main
+[submodule "evidently-feedstock"]
+	path = evidently-feedstock
+	url = ../evidently-feedstock
+	branch = main
