@@ -8485,3 +8485,7 @@
 	path = pkce-feedstock
 	url = ../pkce-feedstock
 	branch = main
+[submodule "hologram-feedstock"]
+	path = hologram-feedstock
+	url = ../hologram-feedstock
+	branch = main
