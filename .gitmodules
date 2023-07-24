@@ -3795,10 +3795,6 @@
 	path = bash-feedstock
 	url = ../bash-feedstock
 	branch = master
-[submodule "cython-0.28.4-feedstock"]
-	path = cython-0.28.4-feedstock
-	url = ../cython-feedstock
-	branch = archive_0.28.4
 [submodule "wheel-0.32.3-feedstock"]
 	path = wheel-0.32.3-feedstock
 	url = ../wheel-feedstock
@@ -6183,10 +6179,6 @@
 	path = enscons-feedstock
 	url = ../enscons-feedstock
 	branch = main
-[submodule "cython-0.29.3-feedstock"]
-	path = cython-0.29.3-feedstock
-	url = ../cython-feedstock
-	branch = master-0.29.3
 [submodule "quilt3-feedstock"]
 	path = quilt3-feedstock
 	url = ../quilt-feedstock
@@ -8497,3 +8489,7 @@
 	path = evidently-feedstock
 	url = ../evidently-feedstock
 	branch = main
+[submodule "cython-0.29-feedstock"]
+	path = cython-0.29-feedstock
+	url = ../cython-feedstock
+	branch = 0.29
