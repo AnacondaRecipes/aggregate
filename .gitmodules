@@ -8489,3 +8489,7 @@
 	path = hologram-feedstock
 	url = ../hologram-feedstock
 	branch = main
+[submodule "elementpath-feedstock"]
+	path = elementpath-feedstock
+	url = ../elementpath-feedstock
+	branch = main
