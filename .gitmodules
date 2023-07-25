@@ -8505,3 +8505,7 @@
 	path = xmlschema-feedstock
 	url = ../xmlschema-feedstock
 	branch = main
+[submodule "readme_renderer-feedstock"]
+	path = readme_renderer-feedstock
+	url = ../readme_renderer-feedstock
+	branch = main
