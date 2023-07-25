@@ -8501,3 +8501,7 @@
 	path = user-agents-feedstock
 	url = ../user-agents-feedstock
 	branch = main
+[submodule "xmlschema-feedstock"]
+	path = xmlschema-feedstock
+	url = ../xmlschema-feedstock
+	branch = main
