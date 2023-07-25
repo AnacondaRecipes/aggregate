@@ -8493,3 +8493,7 @@
 	path = cython-0.29-feedstock
 	url = ../cython-feedstock
 	branch = 0.29
+[submodule "ua-parser-feedstock"]
+	path = ua-parser-feedstock
+	url = ../ua-parser-feedstock
+	branch = main
