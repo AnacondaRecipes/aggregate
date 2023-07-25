@@ -8497,3 +8497,7 @@
 	path = ua-parser-feedstock
 	url = ../ua-parser-feedstock
 	branch = main
+[submodule "user-agents-feedstock"]
+	path = user-agents-feedstock
+	url = ../user-agents-feedstock
+	branch = main
