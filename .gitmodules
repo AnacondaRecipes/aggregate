@@ -8532,4 +8532,4 @@
 [submodule "category_encoders-1.3.0-feedstock"]
 	path = category_encoders-1.3.0-feedstock
 	url = ../category_encoders-feedstock
-	branch = master
+	branch = main-1.3.0
