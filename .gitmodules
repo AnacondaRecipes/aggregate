@@ -3795,10 +3795,6 @@
 	path = bash-feedstock
 	url = ../bash-feedstock
 	branch = master
-[submodule "cython-0.28.4-feedstock"]
-	path = cython-0.28.4-feedstock
-	url = ../cython-feedstock
-	branch = archive_0.28.4
 [submodule "wheel-0.32.3-feedstock"]
 	path = wheel-0.32.3-feedstock
 	url = ../wheel-feedstock
@@ -6183,10 +6179,6 @@
 	path = enscons-feedstock
 	url = ../enscons-feedstock
 	branch = main
-[submodule "cython-0.29.3-feedstock"]
-	path = cython-0.29.3-feedstock
-	url = ../cython-feedstock
-	branch = master-0.29.3
 [submodule "quilt3-feedstock"]
 	path = quilt3-feedstock
 	url = ../quilt-feedstock
@@ -8468,4 +8460,72 @@
 [submodule "apr-feedstock"]
 	path = apr-feedstock
 	url = https://github.com/AnacondaRecipes/apr-feedstock
+  branch = main
+[submodule "python-kaleido-feedstock"]
+	path = python-kaleido-feedstock
+	url = ../python-kaleido-feedstock
+	branch = main
+[submodule "mizani-feedstock"]
+	path = mizani-feedstock
+	url = ../mizani-feedstock
+	branch = main
+[submodule "tune-sklearn-feedstock"]
+	path = tune-sklearn-feedstock
+	url = ../tune-sklearn-feedstock
+	branch = main
+[submodule "dbt-extractor-feedstock"]
+	path = dbt-extractor-feedstock
+	url = ../dbt-extractor-feedstock
+	branch = main
+[submodule "plotnine-feedstock"]
+	path = plotnine-feedstock
+	url = ../plotnine-feedstock
+	branch = main
+[submodule "logbook-feedstock"]
+	path = logbook-feedstock
+	url = ../logbook-feedstock
+	branch = main
+[submodule "minimal-snowplow-tracker-feedstock"]
+	path = minimal-snowplow-tracker-feedstock
+	url = ../minimal-snowplow-tracker-feedstock
+	branch = main
+[submodule "mashumaro-feedstock"]
+	path = mashumaro-feedstock
+	url = ../mashumaro-feedstock
+	branch = main
+[submodule "pkce-feedstock"]
+	path = pkce-feedstock
+	url = ../pkce-feedstock
+	branch = main
+[submodule "hologram-feedstock"]
+	path = hologram-feedstock
+	url = ../hologram-feedstock
+	branch = main
+[submodule "elementpath-feedstock"]
+	path = elementpath-feedstock
+	url = ../elementpath-feedstock
+	branch = main
+[submodule "evidently-feedstock"]
+	path = evidently-feedstock
+	url = ../evidently-feedstock
+	branch = main
+[submodule "cython-0.29-feedstock"]
+	path = cython-0.29-feedstock
+	url = ../cython-feedstock
+	branch = 0.29
+[submodule "ua-parser-feedstock"]
+	path = ua-parser-feedstock
+	url = ../ua-parser-feedstock
+	branch = main
+[submodule "user-agents-feedstock"]
+	path = user-agents-feedstock
+	url = ../user-agents-feedstock
+	branch = main
+[submodule "xmlschema-feedstock"]
+	path = xmlschema-feedstock
+	url = ../xmlschema-feedstock
+	branch = main
+[submodule "readme_renderer-feedstock"]
+	path = readme_renderer-feedstock
+	url = ../readme_renderer-feedstock
 	branch = main
