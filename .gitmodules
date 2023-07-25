@@ -8529,3 +8529,7 @@
 	path = readme_renderer-feedstock
 	url = ../readme_renderer-feedstock
 	branch = main
+[submodule "category_encoders-1.3.0-feedstock"]
+	path = category_encoders-1.3.0-feedstock
+	url = ../category_encoders-feedstock
+	branch = master
