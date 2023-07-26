@@ -8441,6 +8441,26 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "qbs-feedstock"]
+	path = qbs-feedstock
+	url = https://github.com/AnacondaRecipes/qbs-feedstock
+	branch = main
+[submodule "qcachegrind-feedstock"]
+	path = qcachegrind-feedstock
+	url = https://github.com/AnacondaRecipes/qcachegrind-feedstock
+	branch = main
+[submodule "qt3dstudio-feedstock"]
+	path = qt3dstudio-feedstock
+	url = https://github.com/AnacondaRecipes/qt3dstudio-feedstock
+	branch = main
+[submodule "qtcreator-feedstock"]
+	path = qtcreator-feedstock
+	url = https://github.com/AnacondaRecipes/qtcreator-feedstock
+	branch = main
+[submodule "queuelib-feedstock"]
+	path = queuelib-feedstock
+	url = https://github.com/AnacondaRecipes/queuelib-feedstock
+	branch = main
 [submodule "pyperformance-feedstock"]
 	path = pyperformance-feedstock
 	url = https://github.com/AnacondaRecipes/pyperformance-feedstock
