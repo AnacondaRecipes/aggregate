@@ -8441,6 +8441,26 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "perf-feedstock"]
+	path = perf-feedstock
+	url = https://github.com/AnacondaRecipes/perf-feedstock
+	branch = main
+[submodule "perl-carp-feedstock"]
+	path = perl-carp-feedstock
+	url = https://github.com/AnacondaRecipes/perl-carp-feedstock
+	branch = main
+[submodule "perl-exporter-lite-feedstock"]
+	path = perl-exporter-lite-feedstock
+	url = https://github.com/AnacondaRecipes/perl-exporter-lite-feedstock
+	branch = main
+[submodule "perl-extutils-makemaker-feedstock"]
+	path = perl-extutils-makemaker-feedstock
+	url = https://github.com/AnacondaRecipes/perl-extutils-makemaker-feedstock
+	branch = main
+[submodule "perl-file-which-feedstock"]
+	path = perl-file-which-feedstock
+	url = https://github.com/AnacondaRecipes/perl-file-which-feedstock
+	branch = main
 [submodule "pandasql-feedstock"]
 	path = pandasql-feedstock
 	url = https://github.com/AnacondaRecipes/pandasql-feedstock
