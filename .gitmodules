@@ -8441,6 +8441,26 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "pivottablejs-airgap-feedstock"]
+	path = pivottablejs-airgap-feedstock
+	url = https://github.com/AnacondaRecipes/pivottablejs-airgap-feedstock
+	branch = main
+[submodule "pivottablejs-feedstock"]
+	path = pivottablejs-feedstock
+	url = https://github.com/AnacondaRecipes/pivottablejs-feedstock
+	branch = main
+[submodule "plaster-feedstock"]
+	path = plaster-feedstock
+	url = https://github.com/AnacondaRecipes/plaster-feedstock
+	branch = main
+[submodule "plaster_pastedeploy-feedstock"]
+	path = plaster_pastedeploy-feedstock
+	url = https://github.com/AnacondaRecipes/plaster_pastedeploy-feedstock
+	branch = main
+[submodule "posix_ipc-feedstock"]
+	path = posix_ipc-feedstock
+	url = https://github.com/AnacondaRecipes/posix_ipc-feedstock
+	branch = main
 [submodule "perl-getopt-tabular-feedstock"]
 	path = perl-getopt-tabular-feedstock
 	url = https://github.com/AnacondaRecipes/perl-getopt-tabular-feedstock
