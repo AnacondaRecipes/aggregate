@@ -8441,6 +8441,26 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "quiver_engine-feedstock"]
+	path = quiver_engine-feedstock
+	url = https://github.com/AnacondaRecipes/quiver_engine-feedstock
+	branch = main
+[submodule "recommonmark-feedstock"]
+	path = recommonmark-feedstock
+	url = https://github.com/AnacondaRecipes/recommonmark-feedstock
+	branch = main
+[submodule "redis-feedstock"]
+	path = redis-feedstock
+	url = https://github.com/AnacondaRecipes/redis-feedstock
+	branch = main
+[submodule "repoze.lru-feedstock"]
+	path = repoze.lru-feedstock
+	url = https://github.com/AnacondaRecipes/repoze.lru-feedstock
+	branch = main
+[submodule "requests-file-feedstock"]
+	path = requests-file-feedstock
+	url = https://github.com/AnacondaRecipes/requests-file-feedstock
+	branch = main
 [submodule "qbs-feedstock"]
 	path = qbs-feedstock
 	url = https://github.com/AnacondaRecipes/qbs-feedstock
