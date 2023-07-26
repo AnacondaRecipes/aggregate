@@ -8441,6 +8441,26 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "xar-1.8.0-feedstock"]
+	path = xar-1.8.0-feedstock
+	url = https://github.com/AnacondaRecipes/xar-1.8.0-feedstock
+	branch = main
+[submodule "xar-bootstrap-feedstock"]
+	path = xar-bootstrap-feedstock
+	url = https://github.com/AnacondaRecipes/xar-bootstrap-feedstock
+	branch = main
+[submodule "xmlrpc2-feedstock"]
+	path = xmlrpc2-feedstock
+	url = https://github.com/AnacondaRecipes/xmlrpc2-feedstock
+	branch = main
+[submodule "xmlsec-1.13.10-feedstock"]
+	path = xmlsec-1.13.10-feedstock
+	url = https://github.com/AnacondaRecipes/xmlsec-1.13.10-feedstock
+	branch = main
+[submodule "zope-feedstock"]
+	path = zope-feedstock
+	url = https://github.com/AnacondaRecipes/zope-feedstock
+	branch = main
 [submodule "zope.component-feedstock"]
 	path = zope.component-feedstock
 	url = https://github.com/AnacondaRecipes/zope.component-feedstock
