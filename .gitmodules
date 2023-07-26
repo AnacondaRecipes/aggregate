@@ -8441,6 +8441,26 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "pyperformance-feedstock"]
+	path = pyperformance-feedstock
+	url = https://github.com/AnacondaRecipes/pyperformance-feedstock
+	branch = main
+[submodule "pyprof2calltree-feedstock"]
+	path = pyprof2calltree-feedstock
+	url = https://github.com/AnacondaRecipes/pyprof2calltree-feedstock
+	branch = main
+[submodule "pyramid_jinja2-feedstock"]
+	path = pyramid_jinja2-feedstock
+	url = https://github.com/AnacondaRecipes/pyramid_jinja2-feedstock
+	branch = main
+[submodule "pyramid_mako-feedstock"]
+	path = pyramid_mako-feedstock
+	url = https://github.com/AnacondaRecipes/pyramid_mako-feedstock
+	branch = main
+[submodule "pyramid_tm-feedstock"]
+	path = pyramid_tm-feedstock
+	url = https://github.com/AnacondaRecipes/pyramid_tm-feedstock
+	branch = main
 [submodule "pytest-csv-feedstock"]
 	path = pytest-csv-feedstock
 	url = https://github.com/AnacondaRecipes/pytest-csv-feedstock
