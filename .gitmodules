@@ -8732,3 +8732,23 @@
 	path = font-ttf-source-code-pro-feedstock
 	url = https://github.com/AnacondaRecipes/font-ttf-source-code-pro-feedstock
 	branch = main
+[submodule "gridmap-feedstock"]
+	path = gridmap-feedstock
+	url = https://github.com/AnacondaRecipes/gridmap-feedstock
+	branch = main
+[submodule "grpcio-tools-1.16.1-feedstock"]
+	path = grpcio-tools-1.16.1-feedstock
+	url = https://github.com/AnacondaRecipes/grpcio-tools-1.16.1-feedstock
+	branch = main
+[submodule "htslib-feedstock"]
+	path = htslib-feedstock
+	url = https://github.com/AnacondaRecipes/htslib-feedstock
+	branch = main
+[submodule "hupper-feedstock"]
+	path = hupper-feedstock
+	url = https://github.com/AnacondaRecipes/hupper-feedstock
+	branch = main
+[submodule "intellij-idea-ce-feedstock"]
+	path = intellij-idea-ce-feedstock
+	url = https://github.com/AnacondaRecipes/intellij-idea-ce-feedstock
+	branch = main
