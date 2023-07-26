@@ -4949,8 +4949,8 @@
 	branch = master
 [submodule "setuptools-scm-git-archive-feedstock"]
 	path = setuptools-scm-git-archive-feedstock
-	url = ../setuptools-scm-git-archive-feedstock
-	branch = master
+	url = https://github.com/AnacondaRecipes/setuptools-scm-git-archive-feedstock
+	branch = main
 [submodule "nghttp2-feedstock"]
 	path = nghttp2-feedstock
 	url = ../nghttp2-feedstock
@@ -8440,6 +8440,22 @@
 [submodule "polars-feedstock"]
 	path = polars-feedstock
 	url = ../polars-feedstock
+	branch = main
+[submodule "snakeviz-feedstock"]
+	path = snakeviz-feedstock
+	url = https://github.com/AnacondaRecipes/snakeviz-feedstock
+	branch = main
+[submodule "sockjs-tornado-feedstock"]
+	path = sockjs-tornado-feedstock
+	url = https://github.com/AnacondaRecipes/sockjs-tornado-feedstock
+	branch = main
+[submodule "sphinxcontrib-feedstock"]
+	path = sphinxcontrib-feedstock
+	url = https://github.com/AnacondaRecipes/sphinxcontrib-feedstock
+	branch = main
+[submodule "spyder_parso_requirement-feedstock"]
+	path = spyder_parso_requirement-feedstock
+	url = https://github.com/AnacondaRecipes/spyder_parso_requirement-feedstock
 	branch = main
 [submodule "ripgrep-13.0.0-feedstock"]
 	path = ripgrep-13.0.0-feedstock
