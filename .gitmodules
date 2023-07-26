@@ -8693,6 +8693,25 @@
 	path = category_encoders-1.3.0-feedstock
 	url = ../category_encoders-feedstock
 	branch = main-1.3.0
+[submodule "font-ttf-ubuntu-feedstock"]
+	path = font-ttf-ubuntu-feedstock
+	url = https://github.com/AnacondaRecipes/font-ttf-ubuntu-feedstock
+	branch = main
+[submodule "fonts-anaconda-feedstock"]
+	path = fonts-anaconda-feedstock
+	url = https://github.com/AnacondaRecipes/fonts-anaconda-feedstock
+	branch = main
+[submodule "fuel-feedstock"]
+	path = fuel-feedstock
+	url = https://github.com/AnacondaRecipes/fuel-feedstock
+	branch = main
+[submodule "functools_lru_cache-feedstock"]
+	path = functools_lru_cache-feedstock
+	url = https://github.com/AnacondaRecipes/functools_lru_cache-feedstock
+	branch = main
+[submodule "get_terminal_size-feedstock"]
+	path = get_terminal_size-feedstock
+	url = https://github.com/AnacondaRecipes/get_terminal_size-feedstock
 [submodule "flite-feedstock"]
 	path = flite-feedstock
 	url = https://github.com/AnacondaRecipes/flite-feedstock
