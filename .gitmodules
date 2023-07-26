@@ -8460,6 +8460,7 @@
 [submodule "libxmlsec1-1.2.32-feedstock"]
 	path = libxmlsec1-1.2.32-feedstock
 	url = https://github.com/AnacondaRecipes/libxmlsec1-1.2.32-feedstock
+	branch = main
 [submodule "efficientnet-feedstock"]
 	path = efficientnet-feedstock
 	url = https://github.com/AnacondaRecipes/efficientnet-feedstock
