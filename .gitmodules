@@ -8441,6 +8441,26 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "crashpad-feedstock"]
+	path = crashpad-feedstock
+	url = https://github.com/AnacondaRecipes/crashpad-feedstock
+	branch = main
+[submodule "creduce-feedstock"]
+	path = creduce-feedstock
+	url = https://github.com/AnacondaRecipes/creduce-feedstock
+	branch = main
+[submodule "crosstool-ng-WIP-feedstock"]
+	path = crosstool-ng-WIP-feedstock
+	url = https://github.com/AnacondaRecipes/crosstool-ng-WIP-feedstock
+	branch = main
+[submodule "crosstool-ng-bootstrap-feedstock"]
+	path = crosstool-ng-bootstrap-feedstock
+	url = https://github.com/AnacondaRecipes/crosstool-ng-bootstrap-feedstock
+	branch = main
+[submodule "ctng-compilers-2.23-feedstock"]
+	path = ctng-compilers-2.23-feedstock
+	url = https://github.com/AnacondaRecipes/ctng-compilers-2.23-feedstock
+	branch = main
 [submodule "chromium-feedstock"]
 	path = chromium-feedstock
 	url = https://github.com/AnacondaRecipes/chromium-feedstock
