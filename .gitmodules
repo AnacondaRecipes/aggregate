@@ -9180,3 +9180,7 @@
 	path = intellij-idea-ce-feedstock
 	url = https://github.com/AnacondaRecipes/intellij-idea-ce-feedstock
 	branch = main
+[submodule "pytensor-2.12.3-feedstock"]
+	path = pytensor-2.12.3-feedstock
+	url = ../pytensor-suite-feedstock
+	branch = main-2.12.3
