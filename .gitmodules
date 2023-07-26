@@ -8441,6 +8441,26 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "bottlechest-feedstock"]
+	path = bottlechest-feedstock
+	url = https://github.com/AnacondaRecipes/bottlechest-feedstock
+	branch = main
+[submodule "bsdiff4-feedstock"]
+	path = bsdiff4-feedstock
+	url = https://github.com/AnacondaRecipes/bsdiff4-feedstock
+	branch = main
+[submodule "btrees-feedstock"]
+	path = btrees-feedstock
+	url = https://github.com/AnacondaRecipes/btrees-feedstock
+	branch = main
+[submodule "bwidget-feedstock"]
+	path = bwidget-feedstock
+	url = https://github.com/AnacondaRecipes/bwidget-feedstock
+	branch = main
+[submodule "bz2file-feedstock"]
+	path = bz2file-feedstock
+	url = https://github.com/AnacondaRecipes/bz2file-feedstock
+	branch = main
 [submodule "aredis-feedstock"]
 	path = aredis-feedstock
 	url = https://github.com/AnacondaRecipes/aredis-feedstock
