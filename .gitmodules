@@ -8441,6 +8441,26 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "priority-feedstock"]
+	path = priority-feedstock
+	url = https://github.com/AnacondaRecipes/priority-feedstock
+	branch = main
+[submodule "pyaudio-feedstock"]
+	path = pyaudio-feedstock
+	url = https://github.com/AnacondaRecipes/pyaudio-feedstock
+	branch = main
+[submodule "pyhive-feedstock"]
+	path = pyhive-feedstock
+	url = https://github.com/AnacondaRecipes/pyhive-feedstock
+	branch = main
+[submodule "pyo3-pack-feedstock"]
+	path = pyo3-pack-feedstock
+	url = https://github.com/AnacondaRecipes/pyo3-pack-feedstock
+	branch = main
+[submodule "pyopengl-accelerate-feedstock"]
+	path = pyopengl-accelerate-feedstock
+	url = https://github.com/AnacondaRecipes/pyopengl-accelerate-feedstock
+	branch = main
 [submodule "pivottablejs-airgap-feedstock"]
 	path = pivottablejs-airgap-feedstock
 	url = https://github.com/AnacondaRecipes/pivottablejs-airgap-feedstock
