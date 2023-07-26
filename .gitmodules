@@ -8441,6 +8441,26 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "perl-getopt-tabular-feedstock"]
+	path = perl-getopt-tabular-feedstock
+	url = https://github.com/AnacondaRecipes/perl-getopt-tabular-feedstock
+	branch = main
+[submodule "perl-regexp-common-feedstock"]
+	path = perl-regexp-common-feedstock
+	url = https://github.com/AnacondaRecipes/perl-regexp-common-feedstock
+	branch = main
+[submodule "perl-sys-cpu-feedstock"]
+	path = perl-sys-cpu-feedstock
+	url = https://github.com/AnacondaRecipes/perl-sys-cpu-feedstock
+	branch = main
+[submodule "persistent-feedstock"]
+	path = persistent-feedstock
+	url = https://github.com/AnacondaRecipes/persistent-feedstock
+	branch = main
+[submodule "picklable-itertools-feedstock"]
+	path = picklable-itertools-feedstock
+	url = https://github.com/AnacondaRecipes/picklable-itertools-feedstock
+	branch = main
 [submodule "perf-feedstock"]
 	path = perf-feedstock
 	url = https://github.com/AnacondaRecipes/perf-feedstock
