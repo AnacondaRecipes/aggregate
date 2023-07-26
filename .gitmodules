@@ -8449,3 +8449,23 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "efficientnet-feedstock"]
+	path = efficientnet-feedstock
+	url = https://github.com/AnacondaRecipes/efficientnet-feedstock
+	branch = main
+[submodule "essential_generators-feedstock"]
+	path = essential_generators-feedstock
+	url = https://github.com/AnacondaRecipes/essential_generators-feedstock
+	branch = main
+[submodule "expressions-feedstock"]
+	path = expressions-feedstock
+	url = https://github.com/AnacondaRecipes/expressions-feedstock
+	branch = main
+[submodule "faulthandler-feedstock"]
+	path = faulthandler-feedstock
+	url = https://github.com/AnacondaRecipes/faulthandler-feedstock
+	branch = main
+[submodule "feedparser-feedstock"]
+	path = feedparser-feedstock
+	url = https://github.com/AnacondaRecipes/feedparser-feedstock
+	branch = main
