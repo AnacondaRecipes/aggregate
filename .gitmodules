@@ -8441,6 +8441,26 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "w3lib-feedstock"]
+	path = w3lib-feedstock
+	url = https://github.com/AnacondaRecipes/w3lib-feedstock
+	branch = main
+[submodule "webtest-feedstock"]
+	path = webtest-feedstock
+	url = https://github.com/AnacondaRecipes/webtest-feedstock
+	branch = main
+[submodule "whisper-feedstock"]
+	path = whisper-feedstock
+	url = https://github.com/AnacondaRecipes/whisper-feedstock
+	branch = main
+[submodule "word2vec-0.9.4-feedstock"]
+	path = word2vec-0.9.4-feedstock
+	url = https://github.com/AnacondaRecipes/word2vec-0.9.4-feedstock
+	branch = main
+[submodule "workerpool-feedstock"]
+	path = workerpool-feedstock
+	url = https://github.com/AnacondaRecipes/workerpool-feedstock
+	branch = main
 [submodule "xar-1.8.0-feedstock"]
 	path = xar-1.8.0-feedstock
 	url = https://github.com/AnacondaRecipes/xar-1.8.0-feedstock
