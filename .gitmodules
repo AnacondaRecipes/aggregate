@@ -8712,4 +8712,23 @@
 [submodule "get_terminal_size-feedstock"]
 	path = get_terminal_size-feedstock
 	url = https://github.com/AnacondaRecipes/get_terminal_size-feedstock
+[submodule "flite-feedstock"]
+	path = flite-feedstock
+	url = https://github.com/AnacondaRecipes/flite-feedstock
+	branch = main
+[submodule "flutter-sdk-feedstock"]
+	path = flutter-sdk-feedstock
+	url = https://github.com/AnacondaRecipes/flutter-sdk-feedstock
+	branch = main
+[submodule "font-ttf-dejavu-sans-mono-feedstock"]
+	path = font-ttf-dejavu-sans-mono-feedstock
+	url = https://github.com/AnacondaRecipes/font-ttf-dejavu-sans-mono-feedstock
+	branch = main
+[submodule "font-ttf-inconsolata-feedstock"]
+	path = font-ttf-inconsolata-feedstock
+	url = https://github.com/AnacondaRecipes/font-ttf-inconsolata-feedstock
+	branch = main
+[submodule "font-ttf-source-code-pro-feedstock"]
+	path = font-ttf-source-code-pro-feedstock
+	url = https://github.com/AnacondaRecipes/font-ttf-source-code-pro-feedstock
 	branch = main
