@@ -8441,6 +8441,26 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "pandasql-feedstock"]
+	path = pandasql-feedstock
+	url = https://github.com/AnacondaRecipes/pandasql-feedstock
+	branch = main
+[submodule "parsel-feedstock"]
+	path = parsel-feedstock
+	url = https://github.com/AnacondaRecipes/parsel-feedstock
+	branch = main
+[submodule "pastedeploy-feedstock"]
+	path = pastedeploy-feedstock
+	url = https://github.com/AnacondaRecipes/pastedeploy-feedstock
+	branch = main
+[submodule "pbkdf2-feedstock"]
+	path = pbkdf2-feedstock
+	url = https://github.com/AnacondaRecipes/pbkdf2-feedstock
+	branch = main
+[submodule "pendulum-1.4.4-feedstock"]
+	path = pendulum-1.4.4-feedstock
+	url = https://github.com/AnacondaRecipes/pendulum-1.4.4-feedstock
+	branch = main
 [submodule "neon-feedstock"]
 	path = neon-feedstock
 	url = https://github.com/AnacondaRecipes/neon-feedstock
