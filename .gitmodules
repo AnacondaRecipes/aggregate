@@ -8441,6 +8441,26 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "tensorflow-base-feedstock"]
+	path = tensorflow-base-feedstock
+	url = https://github.com/AnacondaRecipes/tensorflow-base-feedstock
+	branch = main
+[submodule "tensorflow-datasets-feedstock"]
+	path = tensorflow-datasets-feedstock
+	url = https://github.com/AnacondaRecipes/tensorflow-datasets-feedstock
+	branch = main
+[submodule "tensorflow-feedstock"]
+	path = tensorflow-feedstock
+	url = https://github.com/AnacondaRecipes/tensorflow-feedstock
+	branch = main
+[submodule "tensorflow-gpu-base-feedstock"]
+	path = tensorflow-gpu-base-feedstock
+	url = https://github.com/AnacondaRecipes/tensorflow-gpu-base-feedstock
+	branch = main
+[submodule "tensorflow-gpu-feedstock"]
+	path = tensorflow-gpu-feedstock
+	url = https://github.com/AnacondaRecipes/tensorflow-gpu-feedstock
+	branch = main
 [submodule "stripe-feedstock"]
 	path = stripe-feedstock
 	url = https://github.com/AnacondaRecipes/stripe-feedstock
