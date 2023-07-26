@@ -8441,6 +8441,18 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "zope.component-feedstock"]
+	path = zope.component-feedstock
+	url = https://github.com/AnacondaRecipes/zope.component-feedstock
+	branch = main
+[submodule "zope.deprecation-feedstock"]
+	path = zope.deprecation-feedstock
+	url = https://github.com/AnacondaRecipes/zope.deprecation-feedstock
+	branch = main
+[submodule "zope.event-feedstock"]
+	path = zope.event-feedstock
+	url = https://github.com/AnacondaRecipes/zope.event-feedstock
+	branch = main
 [submodule "tensorflow-metadata-feedstock"]
 	path = tensorflow-metadata-feedstock
 	url = https://github.com/AnacondaRecipes/tensorflow-metadata-feedstock
