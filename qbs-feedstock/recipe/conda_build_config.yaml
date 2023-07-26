@@ -1,3 +1,0 @@
-CONDA_BUILD_SYSROOT:  ä [osx and x86_64]
-  - /opt/MacOSX10.14.sdk        # [osx and x86_64]
-
