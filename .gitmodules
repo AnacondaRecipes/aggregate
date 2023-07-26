@@ -3795,10 +3795,6 @@
 	path = bash-feedstock
 	url = ../bash-feedstock
 	branch = master
-[submodule "cython-0.28.4-feedstock"]
-	path = cython-0.28.4-feedstock
-	url = ../cython-feedstock
-	branch = archive_0.28.4
 [submodule "wheel-0.32.3-feedstock"]
 	path = wheel-0.32.3-feedstock
 	url = ../wheel-feedstock
@@ -6183,10 +6179,6 @@
 	path = enscons-feedstock
 	url = ../enscons-feedstock
 	branch = main
-[submodule "cython-0.29.3-feedstock"]
-	path = cython-0.29.3-feedstock
-	url = ../cython-feedstock
-	branch = master-0.29.3
 [submodule "quilt3-feedstock"]
 	path = quilt3-feedstock
 	url = ../quilt-feedstock
@@ -8468,4 +8460,495 @@
 [submodule "pywget-feedstock"]
 	path = pywget-feedstock
 	url = https://github.com/AnacondaRecipes/pywget-feedstock
+	branch = main
+[submodule "priority-feedstock"]
+	path = priority-feedstock
+	url = https://github.com/AnacondaRecipes/priority-feedstock
+	branch = main
+[submodule "pyaudio-feedstock"]
+	path = pyaudio-feedstock
+	url = https://github.com/AnacondaRecipes/pyaudio-feedstock
+	branch = main
+[submodule "pyhive-feedstock"]
+	path = pyhive-feedstock
+	url = https://github.com/AnacondaRecipes/pyhive-feedstock
+	branch = main
+[submodule "pyo3-pack-feedstock"]
+	path = pyo3-pack-feedstock
+	url = https://github.com/AnacondaRecipes/pyo3-pack-feedstock
+	branch = main
+[submodule "pyopengl-accelerate-feedstock"]
+	path = pyopengl-accelerate-feedstock
+	url = https://github.com/AnacondaRecipes/pyopengl-accelerate-feedstock
+	branch = main
+[submodule "pivottablejs-airgap-feedstock"]
+	path = pivottablejs-airgap-feedstock
+	url = https://github.com/AnacondaRecipes/pivottablejs-airgap-feedstock
+	branch = main
+[submodule "pivottablejs-feedstock"]
+	path = pivottablejs-feedstock
+	url = https://github.com/AnacondaRecipes/pivottablejs-feedstock
+	branch = main
+[submodule "plaster-feedstock"]
+	path = plaster-feedstock
+	url = https://github.com/AnacondaRecipes/plaster-feedstock
+	branch = main
+[submodule "plaster_pastedeploy-feedstock"]
+	path = plaster_pastedeploy-feedstock
+	url = https://github.com/AnacondaRecipes/plaster_pastedeploy-feedstock
+	branch = main
+[submodule "posix_ipc-feedstock"]
+	path = posix_ipc-feedstock
+	url = https://github.com/AnacondaRecipes/posix_ipc-feedstock
+	branch = main
+[submodule "perl-getopt-tabular-feedstock"]
+	path = perl-getopt-tabular-feedstock
+	url = https://github.com/AnacondaRecipes/perl-getopt-tabular-feedstock
+	branch = main
+[submodule "perl-regexp-common-feedstock"]
+	path = perl-regexp-common-feedstock
+	url = https://github.com/AnacondaRecipes/perl-regexp-common-feedstock
+	branch = main
+[submodule "perl-sys-cpu-feedstock"]
+	path = perl-sys-cpu-feedstock
+	url = https://github.com/AnacondaRecipes/perl-sys-cpu-feedstock
+	branch = main
+[submodule "persistent-feedstock"]
+	path = persistent-feedstock
+	url = https://github.com/AnacondaRecipes/persistent-feedstock
+	branch = main
+[submodule "picklable-itertools-feedstock"]
+	path = picklable-itertools-feedstock
+	url = https://github.com/AnacondaRecipes/picklable-itertools-feedstock
+	branch = main
+[submodule "perf-feedstock"]
+	path = perf-feedstock
+	url = https://github.com/AnacondaRecipes/perf-feedstock
+	branch = main
+[submodule "perl-carp-feedstock"]
+	path = perl-carp-feedstock
+	url = https://github.com/AnacondaRecipes/perl-carp-feedstock
+	branch = main
+[submodule "perl-exporter-lite-feedstock"]
+	path = perl-exporter-lite-feedstock
+	url = https://github.com/AnacondaRecipes/perl-exporter-lite-feedstock
+	branch = main
+[submodule "perl-extutils-makemaker-feedstock"]
+	path = perl-extutils-makemaker-feedstock
+	url = https://github.com/AnacondaRecipes/perl-extutils-makemaker-feedstock
+	branch = main
+[submodule "perl-file-which-feedstock"]
+	path = perl-file-which-feedstock
+	url = https://github.com/AnacondaRecipes/perl-file-which-feedstock
+	branch = main
+[submodule "pandasql-feedstock"]
+	path = pandasql-feedstock
+	url = https://github.com/AnacondaRecipes/pandasql-feedstock
+	branch = main
+[submodule "parsel-feedstock"]
+	path = parsel-feedstock
+	url = https://github.com/AnacondaRecipes/parsel-feedstock
+	branch = main
+[submodule "pastedeploy-feedstock"]
+	path = pastedeploy-feedstock
+	url = https://github.com/AnacondaRecipes/pastedeploy-feedstock
+	branch = main
+[submodule "pbkdf2-feedstock"]
+	path = pbkdf2-feedstock
+	url = https://github.com/AnacondaRecipes/pbkdf2-feedstock
+	branch = main
+[submodule "pendulum-1.4.4-feedstock"]
+	path = pendulum-1.4.4-feedstock
+	url = https://github.com/AnacondaRecipes/pendulum-1.4.4-feedstock
+	branch = main
+[submodule "neon-feedstock"]
+	path = neon-feedstock
+	url = https://github.com/AnacondaRecipes/neon-feedstock
+	branch = main
+[submodule "neotime-feedstock"]
+	path = neotime-feedstock
+	url = https://github.com/AnacondaRecipes/neotime-feedstock
+	branch = main
+[submodule "nomkl-feedstock"]
+	path = nomkl-feedstock
+	url = https://github.com/AnacondaRecipes/nomkl-feedstock
+	branch = main
+[submodule "openhmd-feedstock"]
+	path = openhmd-feedstock
+	url = https://github.com/AnacondaRecipes/openhmd-feedstock
+	branch = main
+[submodule "otter-browser-feedstock"]
+	path = otter-browser-feedstock
+	url = https://github.com/AnacondaRecipes/otter-browser-feedstock
+	branch = main
+[submodule "meld3-feedstock"]
+	path = meld3-feedstock
+	url = https://github.com/AnacondaRecipes/meld3-feedstock
+	branch = main
+[submodule "moltenvk-feedstock"]
+	path = moltenvk-feedstock
+	url = https://github.com/AnacondaRecipes/moltenvk-feedstock
+	branch = main
+[submodule "mongodb-feedstock"]
+	path = mongodb-feedstock
+	url = https://github.com/AnacondaRecipes/mongodb-feedstock
+	branch = main
+[submodule "mtq-feedstock"]
+	path = mtq-feedstock
+	url = https://github.com/AnacondaRecipes/mtq-feedstock
+	branch = main
+[submodule "mysql-python-feedstock"]
+	path = mysql-python-feedstock
+	url = https://github.com/AnacondaRecipes/mysql-python-feedstock
+	branch = main
+[submodule "llvm-compilers-feedstock"]
+	path = llvm-compilers-feedstock
+	url = https://github.com/AnacondaRecipes/llvm-compilers-feedstock
+	branch = main
+[submodule "lockfile-feedstock"]
+	path = lockfile-feedstock
+	url = https://github.com/AnacondaRecipes/lockfile-feedstock
+	branch = main
+[submodule "locustio-feedstock"]
+	path = locustio-feedstock
+	url = https://github.com/AnacondaRecipes/locustio-feedstock
+	branch = main
+[submodule "magma-feedstock"]
+	path = magma-feedstock
+	url = https://github.com/AnacondaRecipes/magma-feedstock
+	branch = main
+[submodule "mdp-feedstock"]
+	path = mdp-feedstock
+	url = https://github.com/AnacondaRecipes/mdp-feedstock
+	branch = main
+[submodule "libprotobuf-static-feedstock"]
+	path = libprotobuf-static-feedstock
+	url = https://github.com/AnacondaRecipes/libprotobuf-static-feedstock
+	branch = main
+[submodule "libpython-feedstock"]
+	path = libpython-feedstock
+	url = https://github.com/AnacondaRecipes/libpython-feedstock
+	branch = main
+[submodule "libvpx-1.10.0-feedstock"]
+	path = libvpx-1.10.0-feedstock
+	url = https://github.com/AnacondaRecipes/libvpx-1.10.0-feedstock
+	branch = main
+[submodule "libxml2-bootstrap-feedstock"]
+	path = libxml2-bootstrap-feedstock
+	url = https://github.com/AnacondaRecipes/libxml2-bootstrap-feedstock
+	branch = main
+[submodule "libxmlsec1-1.2.32-feedstock"]
+	path = libxmlsec1-1.2.32-feedstock
+	url = https://github.com/AnacondaRecipes/libxmlsec1-1.2.32-feedstock
+	branch = main
+[submodule "efficientnet-feedstock"]
+	path = efficientnet-feedstock
+	url = https://github.com/AnacondaRecipes/efficientnet-feedstock
+	branch = main
+[submodule "essential_generators-feedstock"]
+	path = essential_generators-feedstock
+	url = https://github.com/AnacondaRecipes/essential_generators-feedstock
+	branch = main
+[submodule "expressions-feedstock"]
+	path = expressions-feedstock
+	url = https://github.com/AnacondaRecipes/expressions-feedstock
+	branch = main
+[submodule "faulthandler-feedstock"]
+	path = faulthandler-feedstock
+	url = https://github.com/AnacondaRecipes/faulthandler-feedstock
+	branch = main
+[submodule "feedparser-feedstock"]
+	path = feedparser-feedstock
+	url = https://github.com/AnacondaRecipes/feedparser-feedstock
+	branch = main
+[submodule "jupyter_dashboards_bundlers-feedstock"]
+	path = jupyter_dashboards_bundlers-feedstock
+	url = https://github.com/AnacondaRecipes/jupyter_dashboards_bundlers-feedstock
+	branch = main
+[submodule "kitty-feedstock"]
+	path = kitty-feedstock
+	url = https://github.com/AnacondaRecipes/kitty-feedstock
+	branch = main
+[submodule "libaio-0.3.111-feedstock"]
+	path = libaio-0.3.111-feedstock
+	url = https://github.com/AnacondaRecipes/libaio-0.3.111-feedstock
+	branch = main
+[submodule "libgcc-feedstock"]
+	path = libgcc-feedstock
+	url = https://github.com/AnacondaRecipes/libgcc-feedstock
+	branch = main
+[submodule "libopus-feedstock"]
+	path = libopus-feedstock
+	url = https://github.com/AnacondaRecipes/libopus-feedstock
+	branch = main
+[submodule "ctng-dbg-compilers-activation-feedstock"]
+	path = ctng-dbg-compilers-activation-feedstock
+	url = https://github.com/AnacondaRecipes/ctng-dbg-compilers-activation-feedstock
+	branch = main
+[submodule "ctng-osize-compilers-activation-feedstock"]
+	path = ctng-osize-compilers-activation-feedstock
+	url = https://github.com/AnacondaRecipes/ctng-osize-compilers-activation-feedstock
+	branch = main
+[submodule "cubes-feedstock"]
+	path = cubes-feedstock
+	url = https://github.com/AnacondaRecipes/cubes-feedstock
+	branch = main
+[submodule "cvxcanon-feedstock"]
+	path = cvxcanon-feedstock
+	url = https://github.com/AnacondaRecipes/cvxcanon-feedstock
+	branch = main
+[submodule "double-conversion-feedstock"]
+	path = double-conversion-feedstock
+	url = https://github.com/AnacondaRecipes/double-conversion-feedstock
+	branch = main
+[submodule "crashpad-feedstock"]
+	path = crashpad-feedstock
+	url = https://github.com/AnacondaRecipes/crashpad-feedstock
+	branch = main
+[submodule "creduce-feedstock"]
+	path = creduce-feedstock
+	url = https://github.com/AnacondaRecipes/creduce-feedstock
+	branch = main
+[submodule "crosstool-ng-WIP-feedstock"]
+	path = crosstool-ng-WIP-feedstock
+	url = https://github.com/AnacondaRecipes/crosstool-ng-WIP-feedstock
+	branch = main
+[submodule "crosstool-ng-bootstrap-feedstock"]
+	path = crosstool-ng-bootstrap-feedstock
+	url = https://github.com/AnacondaRecipes/crosstool-ng-bootstrap-feedstock
+	branch = main
+[submodule "ctng-compilers-2.23-feedstock"]
+	path = ctng-compilers-2.23-feedstock
+	url = https://github.com/AnacondaRecipes/ctng-compilers-2.23-feedstock
+	branch = main
+[submodule "chromium-feedstock"]
+	path = chromium-feedstock
+	url = https://github.com/AnacondaRecipes/chromium-feedstock
+	branch = main
+[submodule "cmake-binary-feedstock"]
+	path = cmake-binary-feedstock
+	url = https://github.com/AnacondaRecipes/cmake-binary-feedstock
+	branch = main
+[submodule "colander-feedstock"]
+	path = colander-feedstock
+	url = https://github.com/AnacondaRecipes/colander-feedstock
+	branch = main
+[submodule "configobj-feedstock"]
+	path = configobj-feedstock
+	url = https://github.com/AnacondaRecipes/configobj-feedstock
+	branch = main
+[submodule "cornice-feedstock"]
+	path = cornice-feedstock
+	url = https://github.com/AnacondaRecipes/cornice-feedstock
+	branch = main
+[submodule "caffe-gpu-feedstock"]
+	path = caffe-gpu-feedstock
+	url = https://github.com/AnacondaRecipes/caffe-gpu-feedstock
+	branch = main
+[submodule "casuarius-feedstock"]
+	path = casuarius-feedstock
+	url = https://github.com/AnacondaRecipes/casuarius-feedstock
+	branch = main
+[submodule "cctools-ld64-feedstock"]
+	path = cctools-ld64-feedstock
+	url = https://github.com/AnacondaRecipes/cctools-ld64-feedstock
+	branch = main
+[submodule "chameleon-3.6.2-feedstock"]
+	path = chameleon-3.6.2-feedstock
+	url = https://github.com/AnacondaRecipes/chameleon-3.6.2-feedstock
+	branch = main
+[submodule "characteristic-feedstock"]
+	path = characteristic-feedstock
+	url = https://github.com/AnacondaRecipes/characteristic-feedstock
+	branch = main
+[submodule "bottlechest-feedstock"]
+	path = bottlechest-feedstock
+	url = https://github.com/AnacondaRecipes/bottlechest-feedstock
+	branch = main
+[submodule "bsdiff4-feedstock"]
+	path = bsdiff4-feedstock
+	url = https://github.com/AnacondaRecipes/bsdiff4-feedstock
+	branch = main
+[submodule "btrees-feedstock"]
+	path = btrees-feedstock
+	url = https://github.com/AnacondaRecipes/btrees-feedstock
+	branch = main
+[submodule "bwidget-feedstock"]
+	path = bwidget-feedstock
+	url = https://github.com/AnacondaRecipes/bwidget-feedstock
+	branch = main
+[submodule "bz2file-feedstock"]
+	path = bz2file-feedstock
+	url = https://github.com/AnacondaRecipes/bz2file-feedstock
+	branch = main
+[submodule "aredis-feedstock"]
+	path = aredis-feedstock
+	url = https://github.com/AnacondaRecipes/aredis-feedstock
+	branch = main
+[submodule "backports-feedstock"]
+	path = backports-feedstock
+	url = https://github.com/AnacondaRecipes/backports-feedstock
+	branch = main
+[submodule "bandersnatch-feedstock"]
+	path = bandersnatch-feedstock
+	url = https://github.com/AnacondaRecipes/bandersnatch-feedstock
+	branch = main
+[submodule "binsort-feedstock"]
+	path = binsort-feedstock
+	url = https://github.com/AnacondaRecipes/binsort-feedstock
+	branch = main
+[submodule "boto-feedstock"]
+	path = boto-feedstock
+	url = https://github.com/AnacondaRecipes/boto-feedstock
+  branch = main
+[submodule "7za-feedstock"]
+	path = 7za-feedstock
+	url = https://github.com/AnacondaRecipes/7za-feedstock
+	branch = main
+[submodule "alacritty-feedstock"]
+	path = alacritty-feedstock
+	url = https://github.com/AnacondaRecipes/alacritty-feedstock
+	branch = main
+[submodule "altair3_2-feedstock"]
+	path = altair3_2-feedstock
+	url = https://github.com/AnacondaRecipes/altair3_2-feedstock
+	branch = main
+[submodule "ant-1.10.8-feedstock"]
+	path = ant-1.10.8-feedstock
+	url = https://github.com/AnacondaRecipes/ant-1.10.8-feedstock
+	branch = main
+[submodule "apr-feedstock"]
+	path = apr-feedstock
+	url = https://github.com/AnacondaRecipes/apr-feedstock
+	branch = main
+[submodule "python-kaleido-feedstock"]
+	path = python-kaleido-feedstock
+	url = ../python-kaleido-feedstock
+	branch = main
+[submodule "mizani-feedstock"]
+	path = mizani-feedstock
+	url = ../mizani-feedstock
+	branch = main
+[submodule "tune-sklearn-feedstock"]
+	path = tune-sklearn-feedstock
+	url = ../tune-sklearn-feedstock
+	branch = main
+[submodule "dbt-extractor-feedstock"]
+	path = dbt-extractor-feedstock
+	url = ../dbt-extractor-feedstock
+	branch = main
+[submodule "plotnine-feedstock"]
+	path = plotnine-feedstock
+	url = ../plotnine-feedstock
+	branch = main
+[submodule "logbook-feedstock"]
+	path = logbook-feedstock
+	url = ../logbook-feedstock
+	branch = main
+[submodule "minimal-snowplow-tracker-feedstock"]
+	path = minimal-snowplow-tracker-feedstock
+	url = ../minimal-snowplow-tracker-feedstock
+	branch = main
+[submodule "mashumaro-feedstock"]
+	path = mashumaro-feedstock
+	url = ../mashumaro-feedstock
+	branch = main
+[submodule "pkce-feedstock"]
+	path = pkce-feedstock
+	url = ../pkce-feedstock
+	branch = main
+[submodule "hologram-feedstock"]
+	path = hologram-feedstock
+	url = ../hologram-feedstock
+	branch = main
+[submodule "elementpath-feedstock"]
+	path = elementpath-feedstock
+	url = ../elementpath-feedstock
+	branch = main
+[submodule "evidently-feedstock"]
+	path = evidently-feedstock
+	url = ../evidently-feedstock
+	branch = main
+[submodule "cython-0.29-feedstock"]
+	path = cython-0.29-feedstock
+	url = ../cython-feedstock
+	branch = 0.29
+[submodule "ua-parser-feedstock"]
+	path = ua-parser-feedstock
+	url = ../ua-parser-feedstock
+	branch = main
+[submodule "user-agents-feedstock"]
+	path = user-agents-feedstock
+	url = ../user-agents-feedstock
+	branch = main
+[submodule "xmlschema-feedstock"]
+	path = xmlschema-feedstock
+	url = ../xmlschema-feedstock
+	branch = main
+[submodule "readme_renderer-feedstock"]
+	path = readme_renderer-feedstock
+	url = ../readme_renderer-feedstock
+	branch = main
+[submodule "category_encoders-1.3.0-feedstock"]
+	path = category_encoders-1.3.0-feedstock
+	url = ../category_encoders-feedstock
+	branch = main-1.3.0
+[submodule "font-ttf-ubuntu-feedstock"]
+	path = font-ttf-ubuntu-feedstock
+	url = https://github.com/AnacondaRecipes/font-ttf-ubuntu-feedstock
+	branch = main
+[submodule "fonts-anaconda-feedstock"]
+	path = fonts-anaconda-feedstock
+	url = https://github.com/AnacondaRecipes/fonts-anaconda-feedstock
+	branch = main
+[submodule "fuel-feedstock"]
+	path = fuel-feedstock
+	url = https://github.com/AnacondaRecipes/fuel-feedstock
+	branch = main
+[submodule "functools_lru_cache-feedstock"]
+	path = functools_lru_cache-feedstock
+	url = https://github.com/AnacondaRecipes/functools_lru_cache-feedstock
+	branch = main
+[submodule "get_terminal_size-feedstock"]
+	path = get_terminal_size-feedstock
+	url = https://github.com/AnacondaRecipes/get_terminal_size-feedstock
+[submodule "flite-feedstock"]
+	path = flite-feedstock
+	url = https://github.com/AnacondaRecipes/flite-feedstock
+	branch = main
+[submodule "flutter-sdk-feedstock"]
+	path = flutter-sdk-feedstock
+	url = https://github.com/AnacondaRecipes/flutter-sdk-feedstock
+	branch = main
+[submodule "font-ttf-dejavu-sans-mono-feedstock"]
+	path = font-ttf-dejavu-sans-mono-feedstock
+	url = https://github.com/AnacondaRecipes/font-ttf-dejavu-sans-mono-feedstock
+	branch = main
+[submodule "font-ttf-inconsolata-feedstock"]
+	path = font-ttf-inconsolata-feedstock
+	url = https://github.com/AnacondaRecipes/font-ttf-inconsolata-feedstock
+	branch = main
+[submodule "font-ttf-source-code-pro-feedstock"]
+	path = font-ttf-source-code-pro-feedstock
+	url = https://github.com/AnacondaRecipes/font-ttf-source-code-pro-feedstock
+	branch = main
+[submodule "gridmap-feedstock"]
+	path = gridmap-feedstock
+	url = https://github.com/AnacondaRecipes/gridmap-feedstock
+	branch = main
+[submodule "grpcio-tools-1.16.1-feedstock"]
+	path = grpcio-tools-1.16.1-feedstock
+	url = https://github.com/AnacondaRecipes/grpcio-tools-1.16.1-feedstock
+	branch = main
+[submodule "htslib-feedstock"]
+	path = htslib-feedstock
+	url = https://github.com/AnacondaRecipes/htslib-feedstock
+	branch = main
+[submodule "hupper-feedstock"]
+	path = hupper-feedstock
+	url = https://github.com/AnacondaRecipes/hupper-feedstock
+	branch = main
+[submodule "intellij-idea-ce-feedstock"]
+	path = intellij-idea-ce-feedstock
+	url = https://github.com/AnacondaRecipes/intellij-idea-ce-feedstock
 	branch = main
