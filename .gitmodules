@@ -8441,6 +8441,26 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "jupyter_dashboards_bundlers-feedstock"]
+	path = jupyter_dashboards_bundlers-feedstock
+	url = https://github.com/AnacondaRecipes/jupyter_dashboards_bundlers-feedstock
+	branch = main
+[submodule "kitty-feedstock"]
+	path = kitty-feedstock
+	url = https://github.com/AnacondaRecipes/kitty-feedstock
+	branch = main
+[submodule "libaio-0.3.111-feedstock"]
+	path = libaio-0.3.111-feedstock
+	url = https://github.com/AnacondaRecipes/libaio-0.3.111-feedstock
+	branch = main
+[submodule "libgcc-feedstock"]
+	path = libgcc-feedstock
+	url = https://github.com/AnacondaRecipes/libgcc-feedstock
+	branch = main
+[submodule "libopus-feedstock"]
+	path = libopus-feedstock
+	url = https://github.com/AnacondaRecipes/libopus-feedstock
+	branch = main
 [submodule "ctng-dbg-compilers-activation-feedstock"]
 	path = ctng-dbg-compilers-activation-feedstock
 	url = https://github.com/AnacondaRecipes/ctng-dbg-compilers-activation-feedstock
