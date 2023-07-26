@@ -8441,6 +8441,26 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "pytest-csv-feedstock"]
+	path = pytest-csv-feedstock
+	url = https://github.com/AnacondaRecipes/pytest-csv-feedstock
+	branch = main
+[submodule "python-daemon-2.2.3-feedstock"]
+	path = python-daemon-2.2.3-feedstock
+	url = https://github.com/AnacondaRecipes/python-daemon-2.2.3-feedstock
+	branch = main
+[submodule "python-ntlm-feedstock"]
+	path = python-ntlm-feedstock
+	url = https://github.com/AnacondaRecipes/python-ntlm-feedstock
+	branch = main
+[submodule "python3-saml-feedstock"]
+	path = python3-saml-feedstock
+	url = https://github.com/AnacondaRecipes/python3-saml-feedstock
+	branch = main
+[submodule "pywget-feedstock"]
+	path = pywget-feedstock
+	url = https://github.com/AnacondaRecipes/pywget-feedstock
+	branch = main
 [submodule "priority-feedstock"]
 	path = priority-feedstock
 	url = https://github.com/AnacondaRecipes/priority-feedstock
