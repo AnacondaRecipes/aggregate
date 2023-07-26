@@ -8441,6 +8441,26 @@
 	path = polars-feedstock
 	url = ../polars-feedstock
 	branch = main
+[submodule "chromium-feedstock"]
+	path = chromium-feedstock
+	url = https://github.com/AnacondaRecipes/chromium-feedstock
+	branch = main
+[submodule "cmake-binary-feedstock"]
+	path = cmake-binary-feedstock
+	url = https://github.com/AnacondaRecipes/cmake-binary-feedstock
+	branch = main
+[submodule "colander-feedstock"]
+	path = colander-feedstock
+	url = https://github.com/AnacondaRecipes/colander-feedstock
+	branch = main
+[submodule "configobj-feedstock"]
+	path = configobj-feedstock
+	url = https://github.com/AnacondaRecipes/configobj-feedstock
+	branch = main
+[submodule "cornice-feedstock"]
+	path = cornice-feedstock
+	url = https://github.com/AnacondaRecipes/cornice-feedstock
+	branch = main
 [submodule "caffe-gpu-feedstock"]
 	path = caffe-gpu-feedstock
 	url = https://github.com/AnacondaRecipes/caffe-gpu-feedstock
