@@ -9160,6 +9160,26 @@
 	path = font-ttf-source-code-pro-feedstock
 	url = https://github.com/AnacondaRecipes/font-ttf-source-code-pro-feedstock
 	branch = main
+[submodule "gevent-websocket-feedstock"]
+	path = gevent-websocket-feedstock
+	url = https://github.com/AnacondaRecipes/gevent-websocket-feedstock
+	branch = main
+[submodule "gfortran-feedstock"]
+	path = gfortran-feedstock
+	url = https://github.com/AnacondaRecipes/gfortran-feedstock
+	branch = main
+[submodule "git-cola-feedstock"]
+	path = git-cola-feedstock
+	url = https://github.com/AnacondaRecipes/git-cola-feedstock
+	branch = main
+[submodule "gptfdisk-feedstock"]
+	path = gptfdisk-feedstock
+	url = https://github.com/AnacondaRecipes/gptfdisk-feedstock
+	branch = main
+[submodule "grako-feedstock"]
+	path = grako-feedstock
+	url = https://github.com/AnacondaRecipes/grako-feedstock
+	branch = main
 [submodule "gridmap-feedstock"]
 	path = gridmap-feedstock
 	url = https://github.com/AnacondaRecipes/gridmap-feedstock
