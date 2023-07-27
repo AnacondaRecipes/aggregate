@@ -9204,3 +9204,7 @@
 	path = pytensor-2.12.3-feedstock
 	url = ../pytensor-feedstock
 	branch = main-2.12.3
+[submodule "snowflake-ml-python-feedstock"]
+	path = snowflake-ml-python-feedstock
+	url = ../snowflake-ml-python-feedstock
+	branch = main
