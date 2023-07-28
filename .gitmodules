@@ -9220,3 +9220,7 @@
 	path = pulp-feedstock
 	url = ../pulp-feedstock
 	branch = main
+[submodule "pymc-experimental-feedstock"]
+	path = pymc-experimental-feedstock
+	url = ../pymc-experimental-feedstock
+	branch = main
