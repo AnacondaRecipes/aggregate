@@ -9208,3 +9208,7 @@
 	path = snowflake-ml-python-feedstock
 	url = ../snowflake-ml-python-feedstock
 	branch = main
+[submodule "hdbscan-feedstock"]
+	path = hdbscan-feedstock
+	url = ../hdbscan-feedstock
+	branch = main
