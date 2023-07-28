@@ -9212,3 +9212,7 @@
 	path = hdbscan-feedstock
 	url = ../hdbscan-feedstock
 	branch = main
+[submodule "amply-feedstock"]
+	path = amply-feedstock
+	url = ../amply-feedstock
+	branch = main
