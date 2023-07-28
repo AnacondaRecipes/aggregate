@@ -9216,3 +9216,7 @@
 	path = amply-feedstock
 	url = ../amply-feedstock
 	branch = main
+[submodule "pulp-feedstock"]
+	path = pulp-feedstock
+	url = ../pulp-feedstock
+	branch = main
