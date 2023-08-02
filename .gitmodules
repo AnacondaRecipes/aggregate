@@ -9244,3 +9244,7 @@
 	path = hidapi-feedstock
 	url = git@github.com:AnacondaRecipes/hidapi-feedstock.git
 	branch = main
+[submodule "pymupdf-feedstock"]
+	path = pymupdf-feedstock
+	url = ../pymupdf-feedstock
+	branch = main
