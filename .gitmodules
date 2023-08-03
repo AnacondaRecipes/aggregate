@@ -9248,3 +9248,7 @@
 	path = pymupdf-feedstock
 	url = ../pymupdf-feedstock
 	branch = main
+[submodule "imutils-feedstock"]
+	path = imutils-feedstock
+	url = ../imutils-feedstock
+	branch = main
