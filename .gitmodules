@@ -9252,3 +9252,7 @@
 	path = imutils-feedstock
 	url = ../imutils-feedstock
 	branch = main
+[submodule "jenkspy-feedstock"]
+	path = jenkspy-feedstock
+	url = ../jenkspy-feedstock
+	branch = main
