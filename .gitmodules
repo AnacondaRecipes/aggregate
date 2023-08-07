@@ -8455,7 +8455,7 @@
 	branch = main
 [submodule "vega_datasets-feedstock"]
 	path = vega_datasets-feedstock
-	url = https://github.com/AnacondaRecipes/vega_datasets-feedstock
+	url = ../vega_datasets-feedstock
 	branch = main
 [submodule "venusian-feedstock"]
 	path = venusian-feedstock
