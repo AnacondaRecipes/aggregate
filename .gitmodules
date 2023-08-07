@@ -9260,3 +9260,7 @@
 	path = great-expectations-feedstock
 	url = ../great-expectations-feedstock
 	branch = main
+[submodule "makefun-feedstock"]
+	path = makefun-feedstock
+	url = ../makefun-feedstock
+	branch = main
