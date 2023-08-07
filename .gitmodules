@@ -9256,3 +9256,7 @@
 	path = jenkspy-feedstock
 	url = ../jenkspy-feedstock
 	branch = main
+[submodule "great-expectations-feedstock"]
+	path = great-expectations-feedstock
+	url = ../great-expectations-feedstock
+	branch = main
