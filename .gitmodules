@@ -9264,3 +9264,7 @@
 	path = makefun-feedstock
 	url = ../makefun-feedstock
 	branch = main
+[submodule "pypdfium2-feedstock"]
+	path = pypdfium2-feedstock
+	url = ../pypdfium2-feedstock
+	branch = main
