@@ -9280,3 +9280,7 @@
 	path = ctypesgen-pypdfium2-team-8a62d0-feedstock
 	url = ../ctypesgen-pypdfium2-team-8a62d0-feedstock
 	branch = main-8a62d0
+[submodule "ctypesgen-pypdfium2-team-8a62d0-feedstock"]
+	path = ctypesgen-pypdfium2-team-8a62d0-feedstock
+	url = ../ctypesgen-pypdfium2-team-8a62d0-feedstock
+	branch = main-8a62d0
