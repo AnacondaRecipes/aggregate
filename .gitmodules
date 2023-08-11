@@ -9284,3 +9284,7 @@
 	path = build-feedstock
 	url = ../build-feedstock
 	branch = main
+[submodule "nose2-feedstock"]
+	path = nose2-feedstock
+	url = ../nose2-feedstock
+	branch = main
