@@ -9304,3 +9304,7 @@
 	path = pox-feedstock
 	url = ../pox-feedstock
 	branch = main
+[submodule "treeinterpreter-feedstock"]
+	path = treeinterpreter-feedstock
+	url = ../treeinterpreter-feedstock
+	branch = main
