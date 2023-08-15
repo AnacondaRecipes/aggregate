@@ -9292,3 +9292,7 @@
 	path = json_stream-feedstock
 	url = ../json_stream-feedstock
 	branch = main
+[submodule "json-stream-rs-tokenizer-feedstock"]
+	path = json-stream-rs-tokenizer-feedstock
+	url = ../json-stream-rs-tokenizer-feedstock
+	branch = main
