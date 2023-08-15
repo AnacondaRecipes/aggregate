@@ -9296,3 +9296,7 @@
 	path = json-stream-rs-tokenizer-feedstock
 	url = ../json-stream-rs-tokenizer-feedstock
 	branch = main
+[submodule "ppft-feedstock"]
+	path = ppft-feedstock
+	url = ../ppft-feedstock
+	branch = main
