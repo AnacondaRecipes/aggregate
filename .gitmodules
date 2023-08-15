@@ -9300,3 +9300,7 @@
 	path = ppft-feedstock
 	url = ../ppft-feedstock
 	branch = main
+[submodule "pox-feedstock"]
+	path = pox-feedstock
+	url = ../pox-feedstock
+	branch = main
