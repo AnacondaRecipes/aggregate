@@ -9308,3 +9308,7 @@
 	path = treeinterpreter-feedstock
 	url = ../treeinterpreter-feedstock
 	branch = main
+[submodule "pathos-feedstock"]
+	path = pathos-feedstock
+	url = ../pathos-feedstock
+	branch = main
