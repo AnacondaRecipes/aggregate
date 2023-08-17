@@ -9316,3 +9316,7 @@
 	path = dash_cytoscape-feedstock
 	url = ../dash_cytoscape-feedstock
 	branch = main
+[submodule "ruamel.yaml-feedstock-0.16"]
+	path = ruamel.yaml-feedstock-0.16
+	url = ../ruamel.yaml-feedstock
+	branch = master-0.16
