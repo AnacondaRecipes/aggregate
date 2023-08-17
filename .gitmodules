@@ -7675,7 +7675,6 @@
 	path = python-isal-feedstock
 	url = ../python-isal-feedstock
 	branch = main
-
 [submodule "mathjax-feedstock"]
 	path = mathjax-feedstock
 	url = ../mathjax-feedstock
@@ -8607,7 +8606,7 @@
 	branch = main
 [submodule "serf-feedstock"]
 	path = serf-feedstock
-	url = https://github.com/AnacondaRecipes/serf-feedstock
+	url = ../serf-feedstock
 	branch = main
 [submodule "quiver_engine-feedstock"]
 	path = quiver_engine-feedstock
