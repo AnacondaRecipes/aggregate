@@ -9312,3 +9312,7 @@
 	path = pathos-feedstock
 	url = ../pathos-feedstock
 	branch = main
+[submodule "dash_cytoscape-feedstock"]
+	path = dash_cytoscape-feedstock
+	url = ../dash_cytoscape-feedstock
+	branch = main
