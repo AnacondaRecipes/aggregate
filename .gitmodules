@@ -9331,3 +9331,7 @@
 	path = lime-feedstock
 	url = ../lime-feedstock
 	branch = main
+[submodule "allure-python-feedstock"]
+	path = allure-python-feedstock
+	url = ../allure-python-feedstock
+	branch = main
