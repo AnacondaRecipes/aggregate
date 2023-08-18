@@ -9327,3 +9327,7 @@
 	path = salib-feedstock
 	url = ../salib-feedstock
 	branch = main
+[submodule "lime-feedstock"]
+	path = lime-feedstock
+	url = ../lime-feedstock
+	branch = main
