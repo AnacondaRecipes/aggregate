@@ -8810,7 +8810,7 @@
 	branch = main
 [submodule "meld3-feedstock"]
 	path = meld3-feedstock
-	url = https://github.com/AnacondaRecipes/meld3-feedstock
+	url = ../meld3-feedstock
 	branch = main
 [submodule "moltenvk-feedstock"]
 	path = moltenvk-feedstock
