@@ -9323,3 +9323,7 @@
 	path = altair-4.x-feedstock
 	url = ../altair-feedstock
 	branch = master-4.x
+[submodule "salib-feedstock"]
+	path = salib-feedstock
+	url = ../salib-feedstock
+	branch = main
