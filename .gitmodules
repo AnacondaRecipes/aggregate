@@ -9341,3 +9341,7 @@
 [submodule "wasmtime-py-feedstock"]
 	path = wasmtime-py-feedstock
 	url = ../wasmtime-py-feedstock
+[submodule "pdfium2-binaries-feedstock"]
+	path = pdfium2-binaries-feedstock
+	url = ../pdfium2-binaries-feedstock
+	branch = main
