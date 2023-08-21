@@ -9338,3 +9338,6 @@
 [submodule "wasmtime-feedstock"]
 	path = wasmtime-feedstock
 	url = ../wasmtime-feedstock
+[submodule "wasmtime-py-feedstock"]
+	path = wasmtime-py-feedstock
+	url = ../wasmtime-py-feedstock
