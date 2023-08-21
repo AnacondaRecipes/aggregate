@@ -9338,9 +9338,11 @@
 [submodule "wasmtime-feedstock"]
 	path = wasmtime-feedstock
 	url = ../wasmtime-feedstock
+	branch = main
 [submodule "wasmtime-py-feedstock"]
 	path = wasmtime-py-feedstock
 	url = ../wasmtime-py-feedstock
+	branch = main
 [submodule "python-pdal-feedstock"]
 	path = python-pdal-feedstock
 	url = ../python-pdal-feedstock
