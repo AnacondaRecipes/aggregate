@@ -5272,7 +5272,7 @@
 [submodule "setupmeta-feedstock"]
 	path = setupmeta-feedstock
 	url = git@github.com:conda-forge/setupmeta-feedstock.git
-[submodule "wasmtime-feedstock"]
-	path = wasmtime-feedstock
-	url = ../wasmtime-feedstock
+[submodule "wasmtime-py-feedstock"]
+	path = wasmtime-py-feedstock
+	url = ../wasmtime-py-feedstock
 	branch = main
