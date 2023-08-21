@@ -9046,7 +9046,7 @@
 	branch = main
 [submodule "apr-feedstock"]
 	path = apr-feedstock
-	url = https://github.com/AnacondaRecipes/apr-feedstock
+	url = ../apr-feedstock
 	branch = main
 [submodule "python-kaleido-feedstock"]
 	path = python-kaleido-feedstock
