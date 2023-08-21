@@ -9335,3 +9335,6 @@
 	path = allure-python-feedstock
 	url = ../allure-python-feedstock
 	branch = main
+[submodule "wasmtime-feedstock"]
+	path = wasmtime-feedstock
+	url = ../wasmtime-feedstock
