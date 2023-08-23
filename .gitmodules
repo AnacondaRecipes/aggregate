@@ -9348,4 +9348,4 @@
 [submodule "pdfium-binaries-feedstock"]
 	path = pdfium-binaries-feedstock
 	url = ../pdfium-binaries-feedstock
-	branch = pkg-2559_repack_pdium2
+	branch = main
