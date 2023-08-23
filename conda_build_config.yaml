@@ -35,9 +35,12 @@ m2w64_fortran_compiler:        # [win]
   - m2w64-toolchain            # [win]
 rust_compiler:
   - rust
-  - rust-gnu                   # [win]
 rust_compiler_version:
   - 1.71.1
+rust_gnu_compiler:             # [win]
+  - rust-gnu                   # [win]
+rust_gnu_compiler_version:     # [win]
+  - 1.71.1                     # [win]
 CONDA_BUILD_SYSROOT:
   - /opt/MacOSX10.10.sdk        # [osx and x86_64]
   - /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk  # [osx and arm64]
