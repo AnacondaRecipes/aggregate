@@ -9355,3 +9355,7 @@
 	path = flatten_json-feedstock
 	url = ../flatten_json-feedstock
 	branch = main
+[submodule "safetensors-feedstock"]
+	path = safetensors-feedstock
+	url = ../safetensors-feedstock
+	branch = main
