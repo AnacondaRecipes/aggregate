@@ -9367,3 +9367,7 @@
 	path = pdfium-binaries-feedstock
 	url = ../pdfium-binaries-feedstock
 	branch = main
+[submodule "anaconda-ident-feedstock"]
+	path = anaconda-ident-feedstock
+	url = ../anaconda-ident-feedstock
+	branch = main
