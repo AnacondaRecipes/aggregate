@@ -9367,7 +9367,7 @@
 	path = pdfium-binaries-feedstock
 	url = ../pdfium-binaries-feedstock
 	branch = main
-[submodule "parse-feedstock"]
-	path = parse-feedstock
-	url = ../parse-feedstock
+[submodule "parse_type-feedstock"]
+	path = parse_type-feedstock
+	url = ../parse_type-feedstock
 	branch = main
