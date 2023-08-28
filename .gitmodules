@@ -9367,3 +9367,7 @@
 	path = pdfium-binaries-feedstock
 	url = ../pdfium-binaries-feedstock
 	branch = main
+[submodule "behave-feedstock"]
+	path = behave-feedstock
+	url = ../behave-feedstock
+	branch = main
