@@ -9371,3 +9371,7 @@
 	path = parse_type-feedstock
 	url = ../parse_type-feedstock
 	branch = main
+[submodule "parse-feedstock"]
+	path = parse-feedstock
+	url = ../parse-feedstock
+	branch = main
