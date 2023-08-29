@@ -9379,3 +9379,7 @@
   path = behave-feedstock
   url = ../behave-feedstock
   branch = main
+[submodule "cvxpy-feedstock"]
+	path = cvxpy-feedstock
+	url = ../cvxpy-feedstock
+	branch = main
