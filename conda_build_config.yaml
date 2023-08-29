@@ -64,8 +64,7 @@ fortran_compiler_version:
 clang_variant:
   - clang
 cyrus_sasl:
-  - 2.1.26  # [not ((osx and arm64) or (linux and aarch64))]
-  - 2.1.27  # [(osx and arm64) or (linux and aarch64)]
+  - 2.1.28
 dbus:
   - 1
 expat:
@@ -100,8 +99,7 @@ harfbuzz:
 hdf4:
   - 4.2
 hdf5:
-  - 1.10.6  # [not (osx and arm64)]
-  - 1.12.1  # [osx and arm64]
+  - 1.12.1
 hdfeos2:
   - 2.20
 hdfeos5:
