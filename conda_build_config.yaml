@@ -9,9 +9,9 @@ blas_impl:
   - mkl                        # [x86 or x86_64]
   - openblas                   # [not win]
 boost:
-  - 1.73
+  - 1.82
 boost_cpp:
-  - 1.73
+  - 1.82
 bzip2:
   - 1.0
 cairo:
@@ -103,8 +103,7 @@ hdfeos2:
 hdfeos5:
   - 5.1
 icu:
-  - 58  # [not (s390x or aarch64 or (osx and arm64))]
-  - 68  # [s390x or aarch64 or (osx and arm64)]
+  - 73
 jpeg:
   - 9
 libdap4:
