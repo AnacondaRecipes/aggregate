@@ -9383,3 +9383,7 @@
 	path = cvxpy-feedstock
 	url = ../cvxpy-feedstock
 	branch = main
+[submodule "scs-feedstock"]
+	path = scs-feedstock
+	url = ../scs-feedstock
+	branch = main
