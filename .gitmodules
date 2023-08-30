@@ -9391,3 +9391,7 @@
 	path = datasketch-feedstock
 	url = ../datasketch-feedstock
 	branch = main
+[submodule "h3-py-feedstock"]
+	path = h3-py-feedstock
+	url = ../h3-py-feedstock
+	branch = main
