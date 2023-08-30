@@ -9399,7 +9399,3 @@
 	path = backoff-feedstock
 	url = ../backoff-feedstock
 	branch = main
-[submodule "pdfium-binaries-118.0.5868-feedstock"]
-	path = pdfium-binaries-118.0.5868-feedstock
-	url = ../pdfium-binaries-feedstock
-	branch = main-118.0.5868
