@@ -9395,3 +9395,7 @@
 	path = h3-py-feedstock
 	url = ../h3-py-feedstock
 	branch = main
+[submodule "backoff-feedstock"]
+	path = backoff-feedstock
+	url = ../backoff-feedstock
+	branch = main
