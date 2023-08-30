@@ -9387,3 +9387,7 @@
 	path = scs-feedstock
 	url = ../scs-feedstock
 	branch = main
+[submodule "datasketch-feedstock"]
+	path = datasketch-feedstock
+	url = ../datasketch-feedstock
+	branch = main
