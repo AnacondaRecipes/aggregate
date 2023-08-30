@@ -3039,10 +3039,6 @@
 	path = qtwebkit-feedstock
 	url = ../qtwebkit-feedstock
 	branch = master
-[submodule "h2o-feedstock"]
-	path = h2o-feedstock
-	url = ../h2o-feedstock
-	branch = master
 [submodule "grpcio-feedstock"]
 	path = grpcio-feedstock
 	url = ../grpcio-feedstock
@@ -9398,4 +9394,8 @@
 [submodule "backoff-feedstock"]
 	path = backoff-feedstock
 	url = ../backoff-feedstock
+	branch = main
+[submodule "h2o-feedstock"]
+	path = h2o-feedstock
+	url = ../h2o-feedstock
 	branch = main
