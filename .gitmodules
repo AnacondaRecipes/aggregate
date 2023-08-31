@@ -9399,3 +9399,7 @@
 	path = h2o-feedstock
 	url = ../h2o-feedstock
 	branch = main
+[submodule "opencensus-proto-feedstock"]
+	path = opencensus-proto-feedstock
+	url = ../opencensus-proto-feedstock
+	branch = main
