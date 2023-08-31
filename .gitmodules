@@ -9403,3 +9403,7 @@
 	path = opencensus-proto-feedstock
 	url = ../opencensus-proto-feedstock
 	branch = main
+[submodule "python-confluent-kafka-feedstock"]
+	path = python-confluent-kafka-feedstock
+	url = ../python-confluent-kafka-feedstock
+	branch = main
