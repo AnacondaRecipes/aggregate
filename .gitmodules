@@ -9411,3 +9411,7 @@
 	path = sphinx-design-feedstock
 	url = ../sphinx-design-feedstock
 	branch = main
+[submodule "sphinx-sitemap-feedstock"]
+	path = sphinx-sitemap-feedstock
+	url = ../sphinx-sitemap-feedstock
+	branch = main
