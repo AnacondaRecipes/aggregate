@@ -9415,3 +9415,7 @@
 	path = sphinx-sitemap-feedstock
 	url = ../sphinx-sitemap-feedstock
 	branch = main
+[submodule "anaconda-anon-usage-feedstock"]
+	path = anaconda-anon-usage-feedstock
+	url = ../anaconda-anon-usage-feedstock
+	branch = main
