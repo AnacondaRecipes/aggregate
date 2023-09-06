@@ -9423,3 +9423,7 @@
 	path = anaconda-cloud-auth-feedstock
 	url = ../anaconda-cloud-auth-feedstock
 	branch = main
+[submodule "ml_dtypes-feedstock"]
+	path = ml_dtypes-feedstock
+	url = ../ml_dtypes-feedstock
+	branch = main
