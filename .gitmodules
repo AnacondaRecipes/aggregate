@@ -9419,3 +9419,7 @@
 	path = anaconda-anon-usage-feedstock
 	url = ../anaconda-anon-usage-feedstock
 	branch = main
+[submodule "anaconda-cloud-auth-feedstock"]
+	path = anaconda-cloud-auth-feedstock
+	url = ../anaconda-cloud-auth-feedstock
+	branch = main
