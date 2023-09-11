@@ -37,7 +37,7 @@ rust_compiler:
   - rust
 rust_compiler_version:
   - 1.71.1
-# use {{ compiler('rust-gnu') }} when requiring a build using the m2w64-toolchain 
+# use {{ compiler('rust-gnu') }} when requiring a build using the m2w64-toolchain
 rust_gnu_compiler:             # [win]
   - rust-gnu                   # [win]
 rust_gnu_compiler_version:     # [win]
@@ -165,7 +165,6 @@ openblas:
 openjpeg:
   - 2.3
 openssl:
-  - 1.1.1
   - 3.0
 perl:
   - 5.26    # [win]
