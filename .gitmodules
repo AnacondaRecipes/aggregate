@@ -9427,3 +9427,7 @@
 	path = ml_dtypes-feedstock
 	url = ../ml_dtypes-feedstock
 	branch = main
+[submodule "opentelemetry-python-feedstock"]
+	path = opentelemetry-python-feedstock
+	url = ../opentelemetry-python-feedstock
+	branch = main
