@@ -9435,3 +9435,7 @@
 	path = snowflake-telemetry-python
 	url = ../snowflake-telemetry-python
 	branch = main
+[submodule "opentelemetry-python-1.12.0-feedstock"]
+	path = opentelemetry-python-1.12.0-feedstock
+	url = ../opentelemetry-python-feedstock
+	branch = main-1.12.0
