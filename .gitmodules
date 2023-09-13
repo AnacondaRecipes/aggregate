@@ -9439,3 +9439,7 @@
 	path = opentelemetry-python-1.12.0-feedstock
 	url = ../opentelemetry-python-feedstock
 	branch = main-1.12.0
+[submodule "backoff-1.11.1-feedstock"]
+	path = backoff-1.11.1-feedstock
+	url = ../backoff-feedstock
+	branch = main-1.11.1
