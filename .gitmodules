@@ -9443,3 +9443,7 @@
 	path = snowflake-telemetry-python-feedstock
 	url = ../snowflake-telemetry-python-feedstock/
 	branch = main
+[submodule "pdm-backend-feedstock"]
+	path = pdm-backend-feedstock
+	url = ../pdm-backend-feedstock
+	branch = main
