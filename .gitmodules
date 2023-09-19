@@ -9459,3 +9459,7 @@
 	path = recordlinkage-feedstock
 	url = ../recordlinkage-feedstock
 	branch = main
+[submodule "datasketches-feedstock"]
+	path = datasketches-feedstock
+	url = ../datasketches-feedstock
+	branch = main
