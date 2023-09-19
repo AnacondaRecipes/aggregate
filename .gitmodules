@@ -9455,3 +9455,7 @@
 	path = routingpy-feedstock
 	url = ../routingpy-feedstock
 	branch = main
+[submodule "recordlinkage-feedstock"]
+	path = recordlinkage-feedstock
+	url = ../recordlinkage-feedstock
+	branch = main
