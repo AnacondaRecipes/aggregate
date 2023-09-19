@@ -9451,3 +9451,7 @@
 	path = atpublic-feedstock
 	url = ../atpublic-feedstock
 	branch = main
+[submodule "routingpy-feedstock"]
+	path = routingpy-feedstock
+	url = ../routingpy-feedstock
+	branch = main
