@@ -9467,3 +9467,7 @@
 	path = arrow-cpp-10.0.1-feedstock
 	url = ../arrow-cpp-feedstock
 	branch = master-10.0.1
+[submodule "truststore-feedstock"]
+	path = truststore-feedstock
+	url = ../truststore-feedstock
+	branch = main
