@@ -9471,3 +9471,7 @@
 	path = truststore-feedstock
 	url = ../truststore-feedstock
 	branch = main
+[submodule "pytest-shard-feedstock"]
+	path = pytest-shard-feedstock
+	url = ../pytest-shard-feedstock
+	branch = main
