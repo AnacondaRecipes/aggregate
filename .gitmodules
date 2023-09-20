@@ -9463,3 +9463,7 @@
 	path = datasketches-feedstock
 	url = ../datasketches-feedstock
 	branch = main
+[submodule "arrow-cpp-10.0.1-feedstock"]
+	path = arrow-cpp-10.0.1-feedstock
+	url = ../arrow-cpp-feedstock
+	branch = master-10.0.1
