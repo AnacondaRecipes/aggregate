@@ -9475,3 +9475,7 @@
 	path = pytest-shard-feedstock
 	url = ../pytest-shard-feedstock
 	branch = main
+[submodule "pytest-flakefinder-feedstock"]
+	path = pytest-flakefinder-feedstock
+	url = ../pytest-flakefinder-feedstock
+	branch = main
