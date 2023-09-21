@@ -9487,3 +9487,7 @@
 	path = stringcase-feedstock
 	url = ../stringcase-feedstock
 	branch = main
+[submodule "langsmith-feedstock"]
+	path = langsmith-feedstock
+	url = ../langsmith-feedstock
+	branch = main
