@@ -9479,3 +9479,7 @@
 	path = pytest-flakefinder-feedstock
 	url = ../pytest-flakefinder-feedstock
 	branch = main
+[submodule "tiktoken-feedstock"]
+	path = tiktoken-feedstock
+	url = ../tiktoken-feedstock
+	branch = main
