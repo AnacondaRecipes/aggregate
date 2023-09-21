@@ -9483,3 +9483,7 @@
 	path = tiktoken-feedstock
 	url = ../tiktoken-feedstock
 	branch = main
+[submodule "stringcase-feedstock"]
+	path = stringcase-feedstock
+	url = ../stringcase-feedstock
+	branch = main
