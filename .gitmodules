@@ -9491,3 +9491,7 @@
 	path = langsmith-feedstock
 	url = ../langsmith-feedstock
 	branch = main
+[submodule "snowflake-ml-python-1.0.6-feedstock"]
+	path = snowflake-ml-python-1.0.6-feedstock
+	url = ../snowflake-ml-python-feedstock
+	branch = main-1.0.6
