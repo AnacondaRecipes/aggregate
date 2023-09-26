@@ -9499,3 +9499,7 @@
 	path = python-poppler-feedstock
 	url = ../python-poppler-feedstock
 	branch = main
+[submodule "llama-index-feedstock"]
+	path = llama-index-feedstock
+	url = ../llama-index-feedstock
+	branch = main
