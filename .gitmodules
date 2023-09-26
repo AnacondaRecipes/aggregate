@@ -9495,3 +9495,7 @@
 	path = snowflake-ml-python-1.0.6-feedstock
 	url = ../snowflake-ml-python-feedstock
 	branch = main-1.0.6
+[submodule "python-poppler-feedstock"]
+	path = python-poppler-feedstock
+	url = ../python-poppler-feedstock
+	branch = main
