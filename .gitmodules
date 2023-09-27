@@ -9503,3 +9503,7 @@
 	path = llama-index-feedstock
 	url = ../llama-index-feedstock
 	branch = main
+[submodule "laszip-feedstock"]
+	path = laszip-feedstock
+	url = ../laszip-feedstock
+	branch = main
