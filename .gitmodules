@@ -9507,3 +9507,7 @@
 	path = laszip-feedstock
 	url = ../laszip-feedstock
 	branch = main
+[submodule "numpy-1.25-feedstock"]
+	path = numpy-1.25-feedstock
+	url = ../numpy-feedstock
+	branch = numpy125
