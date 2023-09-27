@@ -5059,10 +5059,6 @@
 	path = abseil-cpp-feedstock
 	url = ../abseil-cpp-feedstock
 	branch = master
-[submodule "abseil-cpp-feedstock.embedded"]
-	path = abseil-cpp-feedstock.embedded
-	url = ../abseil-cpp-feedstock
-	branch = master
 [submodule "re2-feedstock"]
 	path = re2-feedstock
 	url = ../re2-feedstock
