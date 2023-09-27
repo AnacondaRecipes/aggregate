@@ -1131,10 +1131,6 @@
 	path = ipython-5.x-feedstock
 	url = ../ipython-feedstock
 	branch = 5.x
-[submodule "backports.shutil_get_terminal_size-feedstock"]
-	path = backports.shutil_get_terminal_size-feedstock
-	url = ../backports.shutil_get_terminal_size-feedstock
-	branch = master
 [submodule "dask-core-feedstock"]
 	path = dask-core-feedstock
 	url = ../dask-core-feedstock
@@ -1767,10 +1763,6 @@
 	path = virtualenv-feedstock
 	url = ../virtualenv-feedstock
 	branch = master
-[submodule "backports.weakref-feedstock"]
-	path = backports.weakref-feedstock
-	url = ../backports.weakref-feedstock
-	branch = master
 [submodule "jsondate-feedstock"]
 	path = jsondate-feedstock
 	url = ../jsondate-feedstock
@@ -2175,10 +2167,6 @@
 	path = descartes-feedstock
 	url = ../descartes-feedstock
 	branch = master
-[submodule "backports.lzma-feedstock"]
-	path = backports.lzma-feedstock
-	url = ../backports.lzma-feedstock/
-	branch = master
 [submodule "jemalloc-feedstock"]
 	path = jemalloc-feedstock
 	url = ../jemalloc-feedstock/
@@ -2258,10 +2246,6 @@
 [submodule "pywinpty-feedstock"]
 	path = pywinpty-feedstock
 	url = ../pywinpty-feedstock
-	branch = master
-[submodule "backports.shutil_which-feedstock"]
-	path = backports.shutil_which-feedstock
-	url = ../backports.shutil_which-feedstock
 	branch = master
 [submodule "selenium-feedstock"]
 	path = selenium-feedstock
@@ -3327,10 +3311,6 @@
 	path = importlib_metadata-feedstock
 	url = ../importlib_metadata-feedstock
 	branch = master
-[submodule "backports.os-feedstock"]
-	path = backports.os-feedstock
-	url = ../backports.os-feedstock
-	branch = master
 [submodule "twisted-feedstock"]
 	path = twisted-feedstock
 	url = ../twisted-feedstock
@@ -3506,10 +3486,6 @@
 [submodule "jsonpickle-feedstock"]
 	path = jsonpickle-feedstock
 	url = ../jsonpickle-feedstock
-	branch = master
-[submodule "backports.tempfile-feedstock"]
-	path = backports.tempfile-feedstock
-	url = ../backports.tempfile-feedstock
 	branch = master
 [submodule "twofish-feedstock"]
 	path = twofish-feedstock
