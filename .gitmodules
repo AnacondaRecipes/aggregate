@@ -1447,10 +1447,6 @@
 	path = libglu-feedstock
 	url = ../libglu-feedstock
 	branch = master
-[submodule "libpq-feedstock"]
-	path = libpq-feedstock
-	url = ../libpq-feedstock
-	branch = master
 [submodule "cached-property-feedstock"]
 	path = cached-property-feedstock
 	url = ../cached-property-feedstock
