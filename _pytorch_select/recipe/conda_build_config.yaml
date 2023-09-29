@@ -1,3 +1,0 @@
-pytorch_variant:
-  - cpu   # version 0.1
-  - gpu   # version 0.2
