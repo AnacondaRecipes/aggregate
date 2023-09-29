@@ -9471,3 +9471,43 @@
 	path = numpy-1.25-feedstock
 	url = ../numpy-feedstock
 	branch = numpy125
+[submodule "intel-fortran-feedstock"]
+	path = intel-fortran-feedstock
+	url = ../intel-fortran-feedstock
+	branch = main
+[submodule "_ipyw_jlab_nb_ext_conf-feedstock"]
+	path = _ipyw_jlab_nb_ext_conf-feedstock
+	url = ../_ipyw_jlab_nb_ext_conf-feedstock
+	branch = main
+[submodule "_pytorch_select-feedstock"]
+	path = _pytorch_select-feedstock
+	url = ../_pytorch_select-feedstock
+	branch = main
+[submodule "_low_priority-feedstock"]
+	path = _low_priority-feedstock
+	url = ../_low_priority-feedstock
+	branch = main
+[submodule "cdt_cos6_x86_64-feedstock"]
+	path = cdt_cos6_x86_64-feedstock
+	url = ../cdt_cos6_x86_64-feedstock
+	branch = main
+[submodule "cdt_cos7_ppc64le-feedstock"]
+	path = cdt_cos7_ppc64le-feedstock
+	url = ../cdt_cos7_ppc64le-feedstock
+	branch = main
+[submodule "cdt_cos7_s390x-feedstock"]
+	path = cdt_cos7_s390x-feedstock
+	url = ../cdt_cos7_s390x-feedstock
+	branch = main
+[submodule "vs2015-feedstock"]
+	path = vs2015-feedstock
+	url = ../vs2015-feedstock
+	branch = main
+[submodule "vs2017-feedstock"]
+	path = vs2017-feedstock
+	url = ../vs2017-feedstock
+	branch = main
+[submodule "vs2019-feedstock"]
+	path = vs2019-feedstock
+	url = ../vs2019-feedstock
+	branch = main
