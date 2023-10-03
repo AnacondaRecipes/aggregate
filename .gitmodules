@@ -9511,3 +9511,7 @@
 	path = vs2019-feedstock
 	url = ../vs2019-feedstock
 	branch = main
+[submodule "bertopic-feedstock"]
+	path = bertopic-feedstock
+	url = ../bertopic-feedstock
+	branch = main
