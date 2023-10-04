@@ -9519,3 +9519,7 @@
 	path = pyphen-feedstock
 	url = ../pyphen-feedstock
 	branch = main
+[submodule "textstat-feedstock"]
+	path = textstat-feedstock
+	url = ../textstat-feedstock
+	branch = main
