@@ -9515,3 +9515,7 @@
 	path = bertopic-feedstock
 	url = ../bertopic-feedstock
 	branch = main
+[submodule "pyphen-feedstock"]
+	path = pyphen-feedstock
+	url = ../pyphen-feedstock
+	branch = main
