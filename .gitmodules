@@ -9523,3 +9523,7 @@
 	path = textstat-feedstock
 	url = ../textstat-feedstock
 	branch = main
+[submodule "sparse_dot_topn-feedstock"]
+	path = sparse_dot_topn-feedstock
+	url = ../sparse_dot_topn-feedstock
+	branch = main
