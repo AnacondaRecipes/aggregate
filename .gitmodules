@@ -9542,3 +9542,7 @@
 	path = scikit-criteria-feedstock
 	url = ../scikit-criteria-feedstock
 	branch = main
+[submodule "wirerope-feedstock"]
+	path = wirerope-feedstock
+	url = ../wirerope-feedstock
+	branch = main
