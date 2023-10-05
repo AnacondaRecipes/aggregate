@@ -9538,3 +9538,7 @@
 	path = methodtools-feedstock
 	url = ../methodtools-feedstock
 	branch = main
+[submodule "scikit-criteria-feedstock"]
+	path = scikit-criteria-feedstock
+	url = ../scikit-criteria-feedstock
+	branch = main
