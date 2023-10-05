@@ -9527,3 +9527,7 @@
 	path = sparse_dot_topn-feedstock
 	url = ../sparse_dot_topn-feedstock
 	branch = main
+[submodule "python-ffmpeg-feedstock"]
+	path = python-ffmpeg-feedstock
+	url = ../python-ffmpeg-feedstock
+	branch = main
