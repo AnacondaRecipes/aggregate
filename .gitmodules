@@ -9534,3 +9534,7 @@
 	path = custom-inherit-feedstock
 	url = ../custom-inherit-feedstock
 	branch = main
+[submodule "methodtools-feedstock"]
+	path = methodtools-feedstock
+	url = ../methodtools-feedstock
+	branch = main
