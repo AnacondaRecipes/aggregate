@@ -9546,7 +9546,3 @@
 	path = wirerope-feedstock
 	url = ../wirerope-feedstock
 	branch = main
-[submodule "inspect2-feedstock"]
-	path = inspect2-feedstock
-	url = ../inspect2-feedstock
-	branch = main
