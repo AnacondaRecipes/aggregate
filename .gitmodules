@@ -9530,4 +9530,7 @@
 [submodule "python-ffmpeg-feedstock"]
 	path = python-ffmpeg-feedstock
 	url = ../python-ffmpeg-feedstock
+[submodule "custom-inherit-feedstock"]
+	path = custom-inherit-feedstock
+	url = ../custom-inherit-feedstock
 	branch = main
