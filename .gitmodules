@@ -9423,10 +9423,6 @@
 	path = datasketches-feedstock
 	url = ../datasketches-feedstock
 	branch = main
-[submodule "arrow-cpp-10.0.1-feedstock"]
-	path = arrow-cpp-10.0.1-feedstock
-	url = ../arrow-cpp-feedstock
-	branch = master-10.0.1
 [submodule "truststore-feedstock"]
 	path = truststore-feedstock
 	url = ../truststore-feedstock
@@ -9550,7 +9546,6 @@
 	path = spark-nlp-feedstock
 	url = ../spark-nlp-feedstock
 	branch = main
-[submodule "arrow-cpp-10.0.1-feedstock"]
-        path = arrow-cpp-10.0.1-feedstock
-        url = ../arrow-cpp-feedstock
-        branch = arrow-cpp-10.0.1
+[submodule "arrow-cpp-10.0.1+openssl1-feedstock"]
+	path = arrow-cpp-10.0.1+openssl1-feedstock
+	url = ./arrow-cpp-10.0.1+openssl1-feedstock/
