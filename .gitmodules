@@ -9550,3 +9550,7 @@
 	path = spark-nlp-feedstock
 	url = ../spark-nlp-feedstock
 	branch = main
+[submodule "arrow-cpp-10.0.1-feedstock"]
+        path = arrow-cpp-10.0.1-feedstock
+        url = ../arrow-cpp-feedstock
+        branch = arrow-cpp-10.0.1
