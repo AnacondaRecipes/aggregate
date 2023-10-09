@@ -9549,4 +9549,4 @@
 [submodule "arrow-cpp-10.0.1+openssl1-feedstock"]
 	path = arrow-cpp-10.0.1-openssl1-feedstock
 	url = ../arrow-cpp-10.0.1-openssl1-feedstock
-	branch = arrow-cpp-10.0.1
+	branch = master-10.0.1
