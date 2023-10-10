@@ -4399,10 +4399,6 @@
 	path = flask-appbuilder-feedstock
 	url = ../flask-appbuilder-feedstock
 	branch = master
-[submodule "airflow-feedstock"]
-	path = airflow-feedstock
-	url = ../airflow-feedstock
-	branch = master
 [submodule "altiar-feedstock"]
 	path = altiar-feedstock
 	url = ../altair-feedstock
