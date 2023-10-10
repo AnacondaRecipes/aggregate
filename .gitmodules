@@ -9554,3 +9554,7 @@
 	path = snowflake-connector-python-3.2.0-feedstock
 	url = ../snowflake-connector-python-feedstock
 	branch = master-3.2.0
+[submodule "pyarrow-10.0.1-feedstock"]
+	path = pyarrow-10.0.1-feedstock
+	url = ../pyarrow-feedstock
+	branch = master-10.0.1
