@@ -2027,10 +2027,6 @@
 	path = opencv-feedstock
 	url = ../opencv-feedstock
 	branch = main
-[submodule "python-gflags-feedstock"]
-	path = python-gflags-feedstock
-	url = ../python-gflags-feedstock
-	branch = master
 [submodule "gflags-feedstock"]
 	path = gflags-feedstock
 	url = ../gflags-feedstock
