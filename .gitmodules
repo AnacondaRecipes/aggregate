@@ -859,10 +859,6 @@
 	url = ../enum34-feedstock.git
 	path = enum34-feedstock
 	branch = master
-[submodule "funcsigs-feedstock"]
-	url = ../funcsigs-feedstock.git
-	path = funcsigs-feedstock
-	branch = master
 [submodule "ipaddress-feedstock"]
 	url = ../ipaddress-feedstock.git
 	path = ipaddress-feedstock
