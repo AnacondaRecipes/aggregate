@@ -8840,10 +8840,6 @@
 	path = cubes-feedstock
 	url = ../cubes-feedstock
 	branch = main
-[submodule "cvxcanon-feedstock"]
-	path = cvxcanon-feedstock
-	url = ../cvxcanon-feedstock
-	branch = main
 [submodule "double-conversion-feedstock"]
 	path = double-conversion-feedstock
 	url = ../double-conversion-feedstock
