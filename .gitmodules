@@ -8960,10 +8960,6 @@
 	path = binsort-feedstock
 	url = ../binsort-feedstock
 	branch = main
-[submodule "boto-feedstock"]
-	path = boto-feedstock
-	url = ../boto-feedstock
-  branch = main
 [submodule "7za-feedstock"]
 	path = 7za-feedstock
 	url = ../7za-feedstock
