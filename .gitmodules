@@ -695,10 +695,6 @@
 	url = ../pkgconfig-feedstock.git
 	path = pkgconfig-feedstock
 	branch = master
-[submodule "odo-feedstock"]
-	url = ../odo-feedstock.git
-	path = odo-feedstock
-	branch = master
 [submodule "icu-feedstock"]
 	url = ../icu-feedstock.git
 	path = icu-feedstock
