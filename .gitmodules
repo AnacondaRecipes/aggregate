@@ -4367,10 +4367,6 @@
 	path = wasabi-feedstock
 	url = ../wasabi-feedstock
 	branch = master
-[submodule "brotlipy-feedstock"]
-	path = brotlipy-feedstock
-	url = ../brotlipy-feedstock
-	branch = master
 [submodule "conda-pack-feedstock"]
 	path = conda-pack-feedstock
 	url = ../conda-pack-feedstock
