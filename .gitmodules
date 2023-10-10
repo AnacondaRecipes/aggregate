@@ -223,10 +223,6 @@
 	url = ../beautifulsoup4-feedstock.git
 	path = beautifulsoup4-feedstock
 	branch = master
-[submodule "bkcharts-feedstock"]
-	url = ../bkcharts-feedstock.git
-	path = bkcharts-feedstock
-	branch = master
 [submodule "bleach-feedstock"]
 	url = ../bleach-feedstock.git
 	path = bleach-feedstock
