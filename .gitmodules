@@ -8392,10 +8392,6 @@
 	path = tensorflow-metadata-feedstock
 	url = ../tensorflow-metadata-feedstock
 	branch = main
-[submodule "teradata-feedstock"]
-	path = teradata-feedstock
-	url = ../teradata-feedstock
-	branch = main
 [submodule "thrift-0.9.3-feedstock"]
 	path = thrift-0.9.3-feedstock
 	url = ../thrift-0.9.3-feedstock
