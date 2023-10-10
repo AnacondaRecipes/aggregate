@@ -8560,10 +8560,6 @@
 	path = pytest-csv-feedstock
 	url = ../pytest-csv-feedstock
 	branch = main
-[submodule "python-daemon-2.2.3-feedstock"]
-	path = python-daemon-2.2.3-feedstock
-	url = ../python-daemon-2.2.3-feedstock
-	branch = main
 [submodule "python-ntlm-feedstock"]
 	path = python-ntlm-feedstock
 	url = ../python-ntlm-feedstock
