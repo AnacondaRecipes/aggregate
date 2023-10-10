@@ -8588,10 +8588,6 @@
 	path = pyaudio-feedstock
 	url = ../pyaudio-feedstock
 	branch = main
-[submodule "pyhive-feedstock"]
-	path = pyhive-feedstock
-	url = ../pyhive-feedstock
-	branch = main
 [submodule "pyo3-pack-feedstock"]
 	path = pyo3-pack-feedstock
 	url = ../pyo3-pack-feedstock
