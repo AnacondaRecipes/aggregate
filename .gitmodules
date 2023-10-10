@@ -3203,10 +3203,6 @@
 	path = pydotplus-feedstock
 	url = ../pydotplus-feedstock
 	branch = master
-[submodule "toro-feedstock"]
-	path = toro-feedstock
-	url = ../toro-feedstock
-	branch = master
 [submodule "pathlib-feedstock"]
 	path = pathlib-feedstock
 	url = ../pathlib-feedstock
