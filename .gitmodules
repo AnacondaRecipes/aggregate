@@ -791,10 +791,6 @@
 	url = ../webencodings-feedstock.git
 	path = webencodings-feedstock
 	branch = master
-[submodule "unicodecsv-feedstock"]
-	url = ../unicodecsv-feedstock.git
-	path = unicodecsv-feedstock
-	branch = master
 [submodule "jbig-feedstock"]
 	url = ../jbig-feedstock.git
 	path = jbig-feedstock
