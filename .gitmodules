@@ -5067,10 +5067,6 @@
 	path = three-merge-feedstock
 	url = ../three-merge-feedstock
 	branch = master
-[submodule "unittest2-feedstock"]
-	path = unittest2-feedstock
-	url = ../unittest2-feedstock
-	branch = master
 [submodule "fmt-feedstock"]
 	path = fmt-feedstock
 	url = ../fmt-feedstock
