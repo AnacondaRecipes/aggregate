@@ -2655,10 +2655,6 @@
 	path = traitsui-feedstock
 	url = ../traitsui-feedstock
 	branch = master
-[submodule "flake8-polyfill-feedstock"]
-	path = flake8-polyfill-feedstock
-	url = ../flake8-polyfill-feedstock
-	branch = master
 [submodule "geotiff-feedstock"]
 	path = geotiff-feedstock
 	url = ../geotiff-feedstock
