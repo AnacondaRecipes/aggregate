@@ -951,10 +951,6 @@
 	path = capturer-feedstock
 	url = ../capturer-feedstock
 	branch = master
-[submodule "chai-feedstock"]
-	path = chai-feedstock
-	url = ../chai-feedstock
-	branch = master
 [submodule "flake8-import-order-feedstock"]
 	path = flake8-import-order-feedstock
 	url = ../flake8-import-order-feedstock
