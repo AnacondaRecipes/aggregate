@@ -3207,10 +3207,6 @@
 	path = toro-feedstock
 	url = ../toro-feedstock
 	branch = master
-[submodule "sputnik-feedstock"]
-	path = sputnik-feedstock
-	url = ../sputnik-feedstock
-	branch = master
 [submodule "pathlib-feedstock"]
 	path = pathlib-feedstock
 	url = ../pathlib-feedstock
