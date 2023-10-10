@@ -8396,10 +8396,6 @@
 	path = teradata-feedstock
 	url = ../teradata-feedstock
 	branch = main
-[submodule "testscenarios-feedstock"]
-	path = testscenarios-feedstock
-	url = ../testscenarios-feedstock
-	branch = main
 [submodule "thrift-0.9.3-feedstock"]
 	path = thrift-0.9.3-feedstock
 	url = ../thrift-0.9.3-feedstock
