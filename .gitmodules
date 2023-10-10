@@ -2783,10 +2783,6 @@
 	path = atomicwrites-feedstock
 	url = ../atomicwrites-feedstock
 	branch = master
-[submodule "lancet-feedstock"]
-	path = lancet-feedstock
-	url = ../lancet-feedstock
-	branch = master
 [submodule "geoviews-feedstock"]
 	path = geoviews-feedstock
 	url = ../geoviews-feedstock
