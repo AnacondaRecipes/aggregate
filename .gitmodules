@@ -3659,10 +3659,6 @@
 	path = vswhere-feedstock
 	url = ../vswhere-feedstock
 	branch = master
-[submodule "theano-feedstock"]
-	path = theano-feedstock
-	url = ../theano-feedstock
-	branch = master
 [submodule "bcrypt-feedstock"]
 	path = bcrypt-feedstock
 	url = ../bcrypt-feedstock
@@ -5850,10 +5846,6 @@
 [submodule "yacs-feedstock"]
 	path = yacs-feedstock
 	url = ../yacs-feedstock
-	branch = master
-[submodule "theano-pymc-feedstock"]
-	path = theano-pymc-feedstock
-	url = ../theano-pymc-feedstock
 	branch = master
 [submodule "jax-feedstock"]
 	path = jax-feedstock
