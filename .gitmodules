@@ -8728,10 +8728,6 @@
 	path = llvm-compilers-feedstock
 	url = ../llvm-compilers-feedstock
 	branch = main
-[submodule "lockfile-feedstock"]
-	path = lockfile-feedstock
-	url = ../lockfile-feedstock
-	branch = main
 [submodule "locustio-feedstock"]
 	path = locustio-feedstock
 	url = ../locustio-feedstock
