@@ -9550,3 +9550,7 @@
 	path = arrow-cpp-10.0.1-feedstock
 	url = ../arrow-cpp-feedstock
 	branch = master-10.0.1
+[submodule "snowflake-connector-python-3.2.0-feedstock"]
+	path = snowflake-connector-python-3.2.0-feedstock
+	url = ../snowflake-connector-python-feedstock
+	branch = master-3.2.0
