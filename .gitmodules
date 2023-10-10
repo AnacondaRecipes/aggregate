@@ -8564,10 +8564,6 @@
 	path = python3-saml-feedstock
 	url = ../python3-saml-feedstock
 	branch = main
-[submodule "pywget-feedstock"]
-	path = pywget-feedstock
-	url = ../pywget-feedstock
-	branch = main
 [submodule "priority-feedstock"]
 	path = priority-feedstock
 	url = ../priority-feedstock
