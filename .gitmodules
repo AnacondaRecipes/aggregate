@@ -507,10 +507,6 @@
 	url = ../patsy-feedstock.git
 	path = patsy-feedstock
 	branch = master
-[submodule "pep8-feedstock"]
-	url = ../pep8-feedstock.git
-	path = pep8-feedstock
-	branch = master
 [submodule "pexpect-feedstock"]
 	url = ../pexpect-feedstock.git
 	path = pexpect-feedstock
