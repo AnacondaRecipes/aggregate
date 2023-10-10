@@ -1731,10 +1731,6 @@
 	path = virtualenv-feedstock
 	url = ../virtualenv-feedstock
 	branch = master
-[submodule "jsondate-feedstock"]
-	path = jsondate-feedstock
-	url = ../jsondate-feedstock
-	branch = master
 [submodule "pysmi-feedstock"]
 	path = pysmi-feedstock
 	url = ../pysmi-feedstock
