@@ -2243,10 +2243,6 @@
 	path = pytest-astropy-feedstock
 	url = ../pytest-astropy-feedstock
 	branch = master
-[submodule "setuptools_scm_git_archive-feedstock"]
-	path = setuptools_scm_git_archive-feedstock
-	url = ../setuptools_scm_git_archive-feedstock
-	branch = master
 [submodule "django-feedstock"]
 	path = django-feedstock
 	url = ../django-feedstock
