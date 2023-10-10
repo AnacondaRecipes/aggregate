@@ -1555,10 +1555,6 @@
 	path = traceback2-feedstock
 	url = ../traceback2-feedstock
 	branch = master
-[submodule "linecache2-feedstock"]
-	path = linecache2-feedstock
-	url = ../linecache2-feedstock
-	branch = master
 [submodule "pymc3-feedstock"]
 	path = pymc3-feedstock
 	url = ../pymc3-feedstock
