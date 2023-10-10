@@ -1403,10 +1403,6 @@
 	path = ws4py-feedstock
 	url = ../ws4py-feedstock
 	branch = master
-[submodule "colour-feedstock"]
-	path = colour-feedstock
-	url = ../colour-feedstock
-	branch = master
 [submodule "intervals-feedstock"]
 	path = intervals-feedstock
 	url = ../intervals-feedstock
