@@ -239,10 +239,6 @@
 	url = ../cloudpickle-feedstock.git
 	path = cloudpickle-feedstock
 	branch = master
-[submodule "clyent-feedstock"]
-	url = ../clyent-feedstock.git
-	path = clyent-feedstock
-	branch = master
 [submodule "colorama-feedstock"]
 	url = ../colorama-feedstock.git
 	path = colorama-feedstock
