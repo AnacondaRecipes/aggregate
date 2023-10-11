@@ -9430,3 +9430,23 @@
 	path = pyarrow-10.0.1-feedstock
 	url = ../pyarrow-feedstock
 	branch = master-10.0.1
+[submodule "aext-assistant-feedstock"]
+	path = aext-assistant-feedstock
+	url = ../aext-assistant-feedstock
+	branch = main
+[submodule "aext-core-feedstock"]
+	path = aext-core-feedstock
+	url = ../aext-core-feedstock
+	branch = main
+[submodule "aext-shared-feedstock"]
+	path = aext-shared-feedstock
+	url = ../aext-shared-feedstock
+	branch = main
+[submodule "aext-core-server-feedstock"]
+	path = aext-core-server-feedstock
+	url = ../aext-core-server-feedstock
+	branch = main
+[submodule "aext-assistant-server-feedstock"]
+	path = aext-assistant-server-feedstock
+	url = ../aext-assistant-server-feedstock
+	branch = main
