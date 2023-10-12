@@ -9454,3 +9454,7 @@
 	path = anaconda-toolbox-feedstock
 	url = ../anaconda-toolbox-feedstock
 	branch = main
+[submodule "numpy-financial-feedstock"]
+	path = numpy-financial-feedstock
+	url = ../numpy-financial-feedstock
+	branch = main
