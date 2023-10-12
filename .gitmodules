@@ -9470,3 +9470,7 @@
 	path = colorlover-feedstock
 	url = ../colorlover-feedstock
 	branch = main
+[submodule "oblivious-feedstock"]
+	path = oblivious-feedstock
+	url = ../oblivious-feedstock
+	branch = main
