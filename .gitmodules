@@ -9458,3 +9458,7 @@
 	path = numpy-financial-feedstock
 	url = ../numpy-financial-feedstock
 	branch = main
+[submodule "jinjasql-feedstock"]
+	path = jinjasql-feedstock
+	url = ../jinjasql-feedstock
+	branch = main
