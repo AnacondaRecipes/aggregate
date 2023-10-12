@@ -9466,3 +9466,7 @@
 	path = u8darts-feedstock
 	url = ../u8darts-feedstock
 	branch = main
+[submodule "colorlover-feedstock"]
+	path = colorlover-feedstock
+	url = ../colorlover-feedstock
+	branch = main
