@@ -9462,3 +9462,7 @@
 	path = jinjasql-feedstock
 	url = ../jinjasql-feedstock
 	branch = main
+[submodule "u8darts-feedstock"]
+	path = u8darts-feedstock
+	url = ../u8darts-feedstock
+	branch = main
