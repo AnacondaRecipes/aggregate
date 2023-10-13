@@ -9478,3 +9478,7 @@
 	path = nfoursid-feedstock
 	url = ../nfoursid-feedstock
 	branch = main
+[submodule "jinjasql2-feedstock"]
+	path = jinjasql2-feedstock
+	url = ../jinjasql2-feedstock
+	branch = main
