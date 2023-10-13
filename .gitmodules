@@ -9482,3 +9482,15 @@
 	path = jinjasql2-feedstock
 	url = ../jinjasql2-feedstock
 	branch = main
+[submodule "anaconda-cli-base-feedstock"]
+	path = anaconda-cli-base-feedstock
+	url = ../anaconda-cli-base-feedstock
+	branch = main
+[submodule "anaconda-cloud-cli-feedstock"]
+	path = anaconda-cloud-cli-feedstock
+	url = ../anaconda-cloud-cli-feedstock
+	branch = main
+[submodule "anaconda-cloud-feedstock"]
+	path = anaconda-cloud-feedstock
+	url = ../anaconda-cloud-feedstock
+	branch = main
