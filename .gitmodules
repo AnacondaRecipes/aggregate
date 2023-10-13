@@ -9474,3 +9474,7 @@
 	path = oblivious-feedstock
 	url = ../oblivious-feedstock
 	branch = main
+[submodule "nfoursid-feedstock"]
+	path = nfoursid-feedstock
+	url = ../nfoursid-feedstock
+	branch = main
