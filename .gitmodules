@@ -9494,3 +9494,7 @@
 	path = anaconda-cloud-feedstock
 	url = ../anaconda-cloud-feedstock
 	branch = main
+[submodule "readchar-feedstock"]
+	path = readchar-feedstock
+	url = ../readchar-feedstock
+	branch = main
