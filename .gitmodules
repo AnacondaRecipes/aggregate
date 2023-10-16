@@ -9526,3 +9526,7 @@
 	path = fountains-feedstock
 	url = ../fountains-feedstock
 	branch = main
+[submodule "bitlist-feedstock"]
+	path = bitlist-feedstock
+	url = ../bitlist-feedstock
+	branch = main
