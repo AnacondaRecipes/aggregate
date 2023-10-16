@@ -9510,3 +9510,7 @@
 	path = bn254-feedstock
 	url = ../bn254-feedstock
 	branch = main
+[submodule "parts-feedstock"]
+	path = parts-feedstock
+	url = ../parts-feedstock
+	branch = main
