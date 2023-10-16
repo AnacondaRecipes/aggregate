@@ -9530,3 +9530,7 @@
 	path = bitlist-feedstock
 	url = ../bitlist-feedstock
 	branch = main
+[submodule "librdkafka-master-2.2.0-feedstock"]
+	path = librdkafka-master-2.2.0-feedstock
+	url = ../librdkafka-feedstock
+	branch = master-2.2.0
