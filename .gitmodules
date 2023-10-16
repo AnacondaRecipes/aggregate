@@ -9506,3 +9506,7 @@
 	path = snowpark-python-1.8.0-feedstock
 	url = ../snowpark-python-feedstock/
 	branch = master-1.8.0
+[submodule "bn254-feedstock"]
+	path = bn254-feedstock
+	url = ../bn254-feedstock
+	branch = main
