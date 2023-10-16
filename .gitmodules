@@ -9518,3 +9518,7 @@
 	path = fe25519-feedstock
 	url = ../fe25519-feedstock
 	branch = main
+[submodule "ge25519-feedstock"]
+	path = ge25519-feedstock
+	url = ../ge25519-feedstock
+	branch = main
