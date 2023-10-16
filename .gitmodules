@@ -9502,3 +9502,7 @@
 	path = regex-2023.8.8-feedstock
 	url = ../regex-feedstock
 	branch = master-2023.8.8
+[submodule "snowpark-python-1.8.0-feedstock"]
+	path = snowpark-python-1.8.0-feedstock
+	url = ../snowpark-python-feedstock/
+	branch = master-1.8.0
