@@ -9533,4 +9533,4 @@
 [submodule "librdkafka-master-2.2.0-feedstock"]
 	path = librdkafka-master-2.2.0-feedstock
 	url = ../librdkafka-feedstock
-	branch = master-2.2.0
+	branch = master-2.2.0-openssl1
