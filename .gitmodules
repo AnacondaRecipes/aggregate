@@ -9538,3 +9538,7 @@
 	path = rbcl-feedstock
 	url = ../rbcl-feedstock
 	branch = main
+[submodule "pystache-feedstock"]
+	path = pystache-feedstock
+	url = ../pystache-feedstock
+	branch = main
