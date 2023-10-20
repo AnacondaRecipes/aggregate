@@ -675,10 +675,6 @@
 	url = ../icu-feedstock.git
 	path = icu-feedstock
 	branch = master
-[submodule "xlwt-feedstock"]
-	url = ../xlwt-feedstock.git
-	path = xlwt-feedstock
-	branch = master
 [submodule "jpeg-feedstock"]
 	url = ../jpeg-feedstock.git
 	path = jpeg-feedstock
