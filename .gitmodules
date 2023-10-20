@@ -419,10 +419,6 @@
 	url = ../futures-feedstock.git
 	path = futures-feedstock
 	branch = master
-[submodule "functools32-feedstock"]
-	url = ../functools32-feedstock.git
-	path = functools32-feedstock
-	branch = master
 [submodule "bokeh-feedstock"]
 	url = ../bokeh-feedstock.git
 	path = bokeh-feedstock
