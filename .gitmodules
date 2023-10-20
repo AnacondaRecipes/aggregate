@@ -8516,10 +8516,6 @@
 	path = python3-saml-feedstock
 	url = ../python3-saml-feedstock
 	branch = main
-[submodule "priority-feedstock"]
-	path = priority-feedstock
-	url = ../priority-feedstock
-	branch = main
 [submodule "pyaudio-feedstock"]
 	path = pyaudio-feedstock
 	url = ../pyaudio-feedstock
