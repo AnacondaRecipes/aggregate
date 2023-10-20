@@ -571,10 +571,6 @@
 	url = ../sympy-feedstock.git
 	path = sympy-feedstock
 	branch = master
-[submodule "subprocess32-feedstock"]
-	url = ../subprocess32-feedstock.git
-	path = subprocess32-feedstock
-	branch = master
 [submodule "statsmodels-feedstock"]
 	url = ../statsmodels-feedstock.git
 	path = statsmodels-feedstock
