@@ -9542,3 +9542,7 @@
 	path = pystache-feedstock
 	url = ../pystache-feedstock
 	branch = main
+[submodule "barriers-feedstock"]
+	path = barriers-feedstock
+	url = ../barriers-feedstock
+	branch = main
