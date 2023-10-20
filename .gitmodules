@@ -9550,3 +9550,7 @@
 	path = streamlit-folium-feedstock
 	url = ../streamlit-folium-feedstock
 	branch = main
+[submodule "meson-1.0-feedstock"]
+	path = meson-1.0-feedstock
+	url = ../meson-feedstock
+	branch = master-1.0
