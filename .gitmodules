@@ -9546,3 +9546,7 @@
 	path = barriers-feedstock
 	url = ../barriers-feedstock
 	branch = main
+[submodule "streamlit-folium-feedstock"]
+	path = streamlit-folium-feedstock
+	url = ../streamlit-folium-feedstock
+	branch = main
