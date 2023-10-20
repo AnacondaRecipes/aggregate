@@ -9331,14 +9331,6 @@
 	path = cdt_cos7_s390x-feedstock
 	url = ../cdt_cos7_s390x-feedstock
 	branch = main
-[submodule "vs2015-feedstock"]
-	path = vs2015-feedstock
-	url = ../vs2015-feedstock
-	branch = main
-[submodule "vs2017-feedstock"]
-	path = vs2017-feedstock
-	url = ../vs2017-feedstock
-	branch = main
 [submodule "vs2019-feedstock"]
 	path = vs2019-feedstock
 	url = ../vs2019-feedstock
