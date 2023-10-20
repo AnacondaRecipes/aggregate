@@ -2347,10 +2347,6 @@
 	path = pytest-benchmark-feedstock
 	url = ../pytest-benchmark-feedstock
 	branch = master
-[submodule "statistics-feedstock"]
-	path = statistics-feedstock
-	url = ../statistics-feedstock
-	branch = master
 [submodule "wxpython-feedstock"]
 	path = wxpython-feedstock
 	url = ../wxpython-feedstock
