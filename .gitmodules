@@ -4691,10 +4691,6 @@
 	path = access-feedstock
 	url = ../access-feedstock
 	branch = master
-[submodule "python-daemon-feedstock"]
-	path = python-daemon-feedstock
-	url = ../python-daemon-feedstock
-	branch = master
 [submodule "httpcore-feedstock"]
 	path = httpcore-feedstock
 	url = ../httpcore-feedstock
