@@ -415,10 +415,6 @@
 	url = ../greenlet-feedstock.git
 	path = greenlet-feedstock
 	branch = master
-[submodule "futures-feedstock"]
-	url = ../futures-feedstock.git
-	path = futures-feedstock
-	branch = master
 [submodule "bokeh-feedstock"]
 	url = ../bokeh-feedstock.git
 	path = bokeh-feedstock
