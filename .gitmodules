@@ -8300,10 +8300,6 @@
 	path = xar-bootstrap-feedstock
 	url = ../xar-bootstrap-feedstock
 	branch = main
-[submodule "xmlrpc2-feedstock"]
-	path = xmlrpc2-feedstock
-	url = ../xmlrpc2-feedstock
-	branch = main
 [submodule "xmlsec-1.13.10-feedstock"]
 	path = xmlsec-1.13.10-feedstock
 	url = ../xmlsec-1.13.10-feedstock
