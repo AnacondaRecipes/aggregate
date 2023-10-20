@@ -2855,10 +2855,6 @@
 	path = tzlocal-feedstock
 	url = ../tzlocal-feedstock
 	branch = master
-[submodule "zipfile36-feedstock"]
-	path = zipfile36-feedstock
-	url = ../zipfile36-feedstock
-	branch = master
 [submodule "secretstorage-feedstock"]
 	path = secretstorage-feedstock
 	url = ../secretstorage-feedstock
