@@ -4823,10 +4823,6 @@
 	path = starkbank-ecdsa-feedstock
 	url = git@github.com:AnacondaRecipes/starkbank-ecdsa-feedstock.git
 	branch = master
-[submodule "setuptools-scm-git-archive-feedstock"]
-	path = setuptools-scm-git-archive-feedstock
-	url = ../setuptools-scm-git-archive-feedstock
-	branch = main
 [submodule "nghttp2-feedstock"]
 	path = nghttp2-feedstock
 	url = ../nghttp2-feedstock
