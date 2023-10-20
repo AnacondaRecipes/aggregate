@@ -7251,10 +7251,6 @@
 	path = ant-feedstock
 	url = ../ant-feedstock
 	branch = main
-[submodule "word2vec-feedstock"]
-	path = word2vec-feedstock
-	url = ../word2vec-feedstock
-        branch = main
 [submodule "chameleon-feedstock"]
 	path = chameleon-feedstock
 	url = ../chameleon-feedstock
@@ -8295,10 +8291,6 @@
 [submodule "whisper-feedstock"]
 	path = whisper-feedstock
 	url = ../whisper-feedstock
-	branch = main
-[submodule "word2vec-0.9.4-feedstock"]
-	path = word2vec-0.9.4-feedstock
-	url = ../word2vec-0.9.4-feedstock
 	branch = main
 [submodule "workerpool-feedstock"]
 	path = workerpool-feedstock
