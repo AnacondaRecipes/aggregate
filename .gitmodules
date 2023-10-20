@@ -1231,10 +1231,6 @@
 	path = msinttypes-feedstock
 	url = ../msinttypes-feedstock
 	branch = master
-[submodule "wincertstore-feedstock"]
-	path = wincertstore-feedstock
-	url = ../wincertstore-feedstock
-	branch = master
 [submodule "numpy-1.11-feedstock"]
 	path = numpy-1.11-feedstock
 	url = ../numpy-feedstock
