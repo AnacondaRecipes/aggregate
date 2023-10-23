@@ -9486,3 +9486,7 @@
 	path = mclbn256-feedstock
 	url = ../mclbn256-feedstock
 	branch = main
+[submodule "mcl-feedstock"]
+	path = mcl-feedstock
+	url = ../mcl-feedstock
+	branch = main
