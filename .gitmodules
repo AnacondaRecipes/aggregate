@@ -9490,3 +9490,7 @@
 	path = mcl-feedstock
 	url = ../mcl-feedstock
 	branch = main
+[submodule "triton-feedstock"]
+	path = triton-feedstock
+	url = ../triton-feedstock
+	branch = main
