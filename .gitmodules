@@ -9482,3 +9482,7 @@
 	path = meson-1.0-feedstock
 	url = ../meson-feedstock
 	branch = master-1.0
+[submodule "mclbn256-feedstock"]
+	path = mclbn256-feedstock
+	url = ../mclbn256-feedstock
+	branch = main
