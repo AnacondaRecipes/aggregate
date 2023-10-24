@@ -9494,3 +9494,7 @@
 	path = triton-feedstock
 	url = ../triton-feedstock
 	branch = main
+[submodule "woodwork-feedstock"]
+	path = woodwork-feedstock
+	url = ../woodwork-feedstock
+	branch = main
