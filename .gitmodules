@@ -9506,3 +9506,7 @@
 	path = ctransformers-feedstock
 	url = ../ctransformers-feedstock
 	branch = main
+[submodule "sf-hamilton-feedstock"]
+	path = sf-hamilton-feedstock
+	url = ../sf-hamilton-feedstock
+	branch = main
