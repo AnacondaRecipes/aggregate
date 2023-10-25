@@ -9502,3 +9502,7 @@
 	path = urllib3-1.x.x-feedstock
 	url = ../urllib3-feedstock
 	branch = master-1.x.x
+[submodule "ctransformers-feedstock"]
+	path = ctransformers-feedstock
+	url = ../ctransformers-feedstock
+	branch = main
