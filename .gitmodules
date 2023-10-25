@@ -9498,3 +9498,7 @@
 	path = woodwork-feedstock
 	url = ../woodwork-feedstock
 	branch = main
+[submodule "urllib3-1.x.x-feedstock"]
+	path = urllib3-1.x.x-feedstock
+	url = ../urllib3-feedstock
+	branch = master-1.x.x
