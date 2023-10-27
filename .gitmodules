@@ -9514,3 +9514,7 @@
 	path = forex-python-feedstock
 	url = ../forex-python-feedstock
 	branch = main
+[submodule "pydicom-feedstock"]
+	path = pydicom-feedstock
+	url = ../pydicom-feedstock
+	branch = main
