@@ -9510,3 +9510,7 @@
 	path = sf-hamilton-feedstock
 	url = ../sf-hamilton-feedstock
 	branch = main
+[submodule "forex-python-feedstock"]
+	path = forex-python-feedstock
+	url = ../forex-python-feedstock
+	branch = main
