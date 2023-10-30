@@ -9522,3 +9522,7 @@
 	path = peft-feedstock
 	url = ../peft-feedstock
 	branch = main
+[submodule "rpds-py-feedstock"]
+	path = rpds-py-feedstock
+	url = ../rpds-py-feedstock
+	branch = main
