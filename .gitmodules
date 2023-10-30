@@ -9518,3 +9518,7 @@
 	path = pydicom-feedstock
 	url = ../pydicom-feedstock
 	branch = main
+[submodule "peft-feedstock"]
+	path = peft-feedstock
+	url = ../peft-feedstock
+	branch = main
