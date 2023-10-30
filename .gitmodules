@@ -4789,7 +4789,7 @@
 	branch = master
 [submodule "starkbank-ecdsa-feedstock"]
 	path = starkbank-ecdsa-feedstock
-	url = git@github.com:AnacondaRecipes/starkbank-ecdsa-feedstock.git
+	url = ../starkbank-ecdsa-feedstock.git
 	branch = master
 [submodule "nghttp2-feedstock"]
 	path = nghttp2-feedstock
@@ -7035,7 +7035,7 @@
 	url = ../pylint-venv-feedstock
 	branch = main
 [submodule "distlib-feedstock"]
-	url = git@github.com:AnacondaRecipes/distlib-feedstock.git
+	url = ../distlib-feedstock.git
 	path = distlib-feedstock
 	branch = main
 
@@ -8993,23 +8993,23 @@
 	branch = main
 [submodule "cryptacular-feedstock"]
 	path = cryptacular-feedstock
-	url = git@github.com:AnacondaRecipes/cryptacular-feedstock
+	url = ../cryptacular-feedstock
 	branch = main
 [submodule "ecdsa-feedstock"]
 	path = ecdsa-feedstock
-	url = git@github.com:AnacondaRecipes/ecdsa-feedstock.git
+	url = ../ecdsa-feedstock.git
 	branch = master
 [submodule "pyramid-feedstock"]
 	path = pyramid-feedstock
-	url = git@github.com:AnacondaRecipes/pyramid-feedstock.git
+	url = ../pyramid-feedstock.git
 	branch = master
 [submodule "keras-ocr-feedstock"]
 	path = keras-ocr-feedstock
-	url = git@github.com:AnacondaRecipes/keras-ocr-feedstock.git
+	url = ../keras-ocr-feedstock.git
 	branch = main
 [submodule "hidapi-feedstock"]
 	path = hidapi-feedstock
-	url = git@github.com:AnacondaRecipes/hidapi-feedstock.git
+	url = ../hidapi-feedstock.git
 	branch = main
 [submodule "pymupdf-feedstock"]
 	path = pymupdf-feedstock
