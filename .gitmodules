@@ -8951,10 +8951,6 @@
 	path = gridmap-feedstock
 	url = ../gridmap-feedstock
 	branch = main
-[submodule "grpcio-tools-1.16.1-feedstock"]
-	path = grpcio-tools-1.16.1-feedstock
-	url = ../grpcio-tools-1.16.1-feedstock
-	branch = main
 [submodule "htslib-feedstock"]
 	path = htslib-feedstock
 	url = ../htslib-feedstock
