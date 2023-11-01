@@ -9522,3 +9522,7 @@
 	path = referencing-feedstock
 	url = ../referencing-feedstock
 	branch = main
+[submodule "pytest-randomly-feedstock"]
+	path = pytest-randomly-feedstock
+	url = ../pytest-randomly-feedstock
+	branch = main
