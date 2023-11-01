@@ -9518,3 +9518,7 @@
 	path = rpds-py-feedstock
 	url = ../rpds-py-feedstock
 	branch = main
+[submodule "referencing-feedstock"]
+	path = referencing-feedstock
+	url = ../referencing-feedstock
+	branch = main
