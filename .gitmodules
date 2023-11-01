@@ -9526,3 +9526,7 @@
 	path = pytest-randomly-feedstock
 	url = ../pytest-randomly-feedstock
 	branch = main
+[submodule "pytest-dependency-feedstock"]
+	path = pytest-dependency-feedstock
+	url = ../pytest-dependency-feedstock
+	branch = main
