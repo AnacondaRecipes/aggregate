@@ -4118,6 +4118,10 @@ feedstocks:
   p7zip-feedstock:
     branch:   main
     commit:   27b9eaac3b148bc0586ce415adb9f25450399f46
+  package-testing:
+    repo:     anaconda-distribution/package-testing
+    branch:   main
+    commit:   32928da0a88b5d30803098729c3c716347cf94cd
   packaging-20.9-feedstock:
     repo:     packaging-feedstock
     branch:   master-20.9
