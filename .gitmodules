@@ -9534,3 +9534,7 @@
 	path = pykx-feedstock
 	url = ../pykx-feedstock
 	branch = main
+[submodule "anaconda-packaging-utils-feedstock"]
+	path = anaconda-packaging-utils-feedstock
+	url = ../anaconda-packaging-utils-feedstock
+	branch = main
