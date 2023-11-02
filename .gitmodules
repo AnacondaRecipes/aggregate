@@ -9538,3 +9538,7 @@
 	path = anaconda-packaging-utils-feedstock
 	url = ../anaconda-packaging-utils-feedstock
 	branch = main
+[submodule "jsonschema-specifications-feedstock"]
+	path = jsonschema-specifications-feedstock
+	url = ../jsonschema-specifications-feedstock
+	branch = main
