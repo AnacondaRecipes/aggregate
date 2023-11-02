@@ -9530,3 +9530,7 @@
 	path = pytest-dependency-feedstock
 	url = ../pytest-dependency-feedstock
 	branch = main
+[submodule "pykx-feedstock"]
+	path = pykx-feedstock
+	url = ../pykx-feedstock
+	branch = main
