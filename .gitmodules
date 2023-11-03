@@ -9542,3 +9542,7 @@
 	path = jsonschema-specifications-feedstock
 	url = ../jsonschema-specifications-feedstock
 	branch = main
+[submodule "types-pyyaml-feedstock"]
+	path = types-pyyaml-feedstock
+	url = ../types-pyyaml-feedstock
+	branch = main
