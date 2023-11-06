@@ -9550,3 +9550,7 @@
 	path = types-jsonschema-feedstock
 	url = ../types-jsonschema-feedstock
 	branch = main
+[submodule "overrides-feedstock"]
+	path = overrides-feedstock
+	url = ../overrides-feedstock
+	branch = main
