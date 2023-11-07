@@ -9558,3 +9558,7 @@
 	path = geoip-feedstock
 	url = ../geoip-feedstock
 	branch = main
+[submodule "dlfcn-win32-feedstock"]
+	path = dlfcn-win32-feedstock
+	url = ../dlfcn-win32-feedstock
+	branch = main
