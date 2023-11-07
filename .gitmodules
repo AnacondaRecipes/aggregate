@@ -9554,3 +9554,7 @@
 	path = overrides-feedstock
 	url = ../overrides-feedstock
 	branch = main
+[submodule "geoip-feedstock"]
+	path = geoip-feedstock
+	url = ../geoip-feedstock
+	branch = main
