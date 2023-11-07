@@ -9562,3 +9562,7 @@
 	path = dlfcn-win32-feedstock
 	url = ../dlfcn-win32-feedstock
 	branch = main
+[submodule "scikit-build-core-feedstock"]
+	path = scikit-build-core-feedstock
+	url = ../scikit-build-core-feedstock
+	branch = main
