@@ -9574,3 +9574,7 @@
 	path = async-lru-feedstock
 	url = ../async-lru-feedstock
 	branch = main
+[submodule "jupyter-lsp-feedstock"]
+	path = jupyter-lsp-feedstock
+	url = ../jupyter-lsp-feedstock
+	branch = main
