@@ -9566,3 +9566,7 @@
 	path = scikit-build-core-feedstock
 	url = ../scikit-build-core-feedstock
 	branch = main
+[submodule "pytest-subprocess-feedstock"]
+	path = pytest-subprocess-feedstock
+	url = ../pytest-subprocess-feedstock
+	branch = main
