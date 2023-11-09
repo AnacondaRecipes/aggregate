@@ -9578,3 +9578,7 @@
 	path = jupyter-lsp-feedstock
 	url = ../jupyter-lsp-feedstock
 	branch = main
+[submodule "pytest-bdd-feedstock"]
+	path = pytest-bdd-feedstock
+	url = ../pytest-bdd-feedstock
+	branch = main
