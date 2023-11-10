@@ -9582,3 +9582,7 @@
 	path = pytest-bdd-feedstock
 	url = ../pytest-bdd-feedstock
 	branch = main
+[submodule "dbt-semantic-interfaces-feedstock"]
+	path = dbt-semantic-interfaces-feedstock
+	url = ../dbt-semantic-interfaces-feedstock
+	branch = main
