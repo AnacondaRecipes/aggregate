@@ -9590,11 +9590,3 @@
 	path = dbt-feedstock
 	url = ../dbt-feedstock
 	branch = main
-[submodule "requests-cache-feedstock"]
-	path = requests-cache-feedstock
-	url = ../requests-cache-feedstock
-	branch = main
-[submodule "pytest-check-links-feedstock"]
-	path = pytest-check-links-feedstock
-	url = ../pytest-check-links-feedstock
-	branch = main
