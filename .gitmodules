@@ -9586,3 +9586,7 @@
 	path = dbt-semantic-interfaces-feedstock
 	url = ../dbt-semantic-interfaces-feedstock
 	branch = main
+[submodule "dbt-feedstock"]
+	path = dbt-feedstock
+	url = ../dbt-feedstock
+	branch = main
