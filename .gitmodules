@@ -9590,3 +9590,7 @@
 	path = dbt-feedstock
 	url = ../dbt-feedstock
 	branch = main
+[submodule "maxminddb-feedstock"]
+	path = maxminddb-feedstock
+	url = ../maxminddb-feedstock
+	branch = main
