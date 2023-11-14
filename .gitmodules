@@ -9594,3 +9594,7 @@
 	path = maxminddb-feedstock
 	url = ../maxminddb-feedstock
 	branch = main
+[submodule "geoip2-feedstock"]
+	path = geoip2-feedstock
+	url = ../geoip2-feedstock
+	branch = main
