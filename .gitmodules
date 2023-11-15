@@ -9598,3 +9598,7 @@
 	path = geoip2-feedstock
 	url = ../geoip2-feedstock
 	branch = main
+[submodule "jupyterlab-lsp-feedstock"]
+	path = jupyterlab-lsp-feedstock
+	url = ../jupyterlab-lsp-feedstock
+	branch = main
