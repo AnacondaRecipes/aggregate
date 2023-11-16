@@ -9602,3 +9602,7 @@
 	path = jupyterlab-lsp-feedstock
 	url = ../jupyterlab-lsp-feedstock
 	branch = main
+[submodule "robotframework-feedstock"]
+	path = robotframework-feedstock
+	url = ../robotframework-feedstock
+	branch = main
