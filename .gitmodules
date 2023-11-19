@@ -9606,3 +9606,7 @@
 	path = robotframework-feedstock
 	url = ../robotframework-feedstock
 	branch = main
+[submodule "sse2neon-feedstock"]
+	path = sse2neon-feedstock
+	url = ../sse2neon-feedstock
+	branch = main
