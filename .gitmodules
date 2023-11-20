@@ -9610,3 +9610,7 @@
 	path = sse2neon-feedstock
 	url = ../sse2neon-feedstock
 	branch = main
+[submodule "ensmallen-feedstock"]
+	path = ensmallen-feedstock
+	url = ../ensmallen-feedstock
+	branch = main
