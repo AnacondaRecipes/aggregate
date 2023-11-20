@@ -2139,10 +2139,6 @@
 	path = bazel-feedstock
 	url = ../bazel-feedstock
 	branch = master
-[submodule "anaconda-client-feedstock"]
-	path = anaconda-client-feedstock
-	url = ../anaconda-client-feedstock
-	branch = master
 [submodule "fastavro-feedstock"]
 	path = fastavro-feedstock
 	url = ../fastavro-feedstock
