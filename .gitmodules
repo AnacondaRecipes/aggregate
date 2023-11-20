@@ -9614,3 +9614,7 @@
 	path = ensmallen-feedstock
 	url = ../ensmallen-feedstock
 	branch = main
+[submodule "superlu-feedstock"]
+	path = superlu-feedstock
+	url = ../superlu-feedstock
+	branch = main
