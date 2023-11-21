@@ -9622,3 +9622,7 @@
 	path = dynaconf-feedstock
 	url = ../dynaconf-feedstock
 	branch = main
+[submodule "armadillo-feedstock"]
+	path = armadillo-feedstock
+	url = ../armadillo-feedstock
+	branch = main
