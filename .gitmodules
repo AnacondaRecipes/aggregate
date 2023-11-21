@@ -9618,3 +9618,7 @@
 	path = nlp-primitives-feedstock
 	url = ../nlp-primitives-feedstock
 	branch = main
+[submodule "dynaconf-feedstock"]
+	path = dynaconf-feedstock
+	url = ../dynaconf-feedstock
+	branch = main
