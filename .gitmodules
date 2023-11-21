@@ -9626,3 +9626,7 @@
 	path = armadillo-feedstock
 	url = ../armadillo-feedstock
 	branch = main
+[submodule "antlr4-python3-runtime-4.9.3-feedstock"]
+	path = antlr4-python3-runtime-4.9.3-feedstock
+	url = ../antlr4-python3-runtime-feedstock
+	branch = master-4.9.3
