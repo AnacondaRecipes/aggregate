@@ -9614,3 +9614,7 @@
 	path = evalml-feedstock
 	url = ../evalml-feedstock
 	branch = main
+[submodule "nlp-primitives-feedstock"]
+	path = nlp-primitives-feedstock
+	url = ../nlp-primitives-feedstock
+	branch = main
