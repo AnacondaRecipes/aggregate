@@ -9610,3 +9610,7 @@
 	path = superlu-feedstock
 	url = ../superlu-feedstock
 	branch = main
+[submodule "evalml-feedstock"]
+	path = evalml-feedstock
+	url = ../evalml-feedstock
+	branch = main
