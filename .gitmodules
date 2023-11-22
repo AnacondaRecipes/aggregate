@@ -9630,3 +9630,7 @@
 	path = antlr4-python3-runtime-4.9.3-feedstock
 	url = ../antlr4-python3-runtime-feedstock
 	branch = master-4.9.3
+[submodule "omegaconf-feedstock"]
+	path = omegaconf-feedstock
+	url = ../omegaconf-feedstock
+	branch = main
