@@ -9638,3 +9638,7 @@
 	path = pytest-lazy-fixture-feedstock
 	url = ../pytest-lazy-fixture-feedstock
 	branch = main
+[submodule "attr-feedstock"]
+	path = attr-feedstock
+	url = ../attr-feedstock
+	branch = main
