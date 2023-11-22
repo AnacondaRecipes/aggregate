@@ -9634,3 +9634,7 @@
 	path = omegaconf-feedstock
 	url = ../omegaconf-feedstock
 	branch = main
+[submodule "pytest-lazy-fixture-feedstock"]
+	path = pytest-lazy-fixture-feedstock
+	url = ../pytest-lazy-fixture-feedstock
+	branch = main
