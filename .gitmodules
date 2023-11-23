@@ -9650,3 +9650,7 @@
 	path = skbase-feedstock
 	url = ../skbase-feedstock
 	branch = main
+[submodule "vowpalwabbit-feedstock"]
+	path = vowpalwabbit-feedstock
+	url = ../vowpalwabbit-feedstock
+	branch = main
