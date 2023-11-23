@@ -9645,4 +9645,7 @@
 [submodule "anyconfig-feedstock"]
 	path = anyconfig-feedstock
 	url = ../anyconfig-feedstock
+[submodule "skbase-feedstock"]
+	path = skbase-feedstock
+	url = ../skbase-feedstock
 	branch = main
