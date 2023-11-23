@@ -9642,3 +9642,7 @@
 	path = sktime-feedstock
 	url = ../sktime-feedstock
 	branch = main
+[submodule "anyconfig-feedstock"]
+	path = anyconfig-feedstock
+	url = ../anyconfig-feedstock
+	branch = main
