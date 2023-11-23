@@ -8012,10 +8012,6 @@
 	path = quantlib-python-feedstock
 	url = ../quantlib-python-feedstock
 	branch = main
-[submodule "sktime-feedstock"]
-	path = sktime-feedstock
-	url = ../sktime-feedstock
-	branch = main
 [submodule "m2cgen-feedstock"]
 	path = m2cgen-feedstock
 	url = ../m2cgen-feedstock
@@ -9641,4 +9637,8 @@
 [submodule "attr-feedstock"]
 	path = attr-feedstock
 	url = ../attr-feedstock
+	branch = main
+[submodule "sktime-feedstock"]
+	path = sktime-feedstock
+	url = ../sktime-feedstock
 	branch = main
