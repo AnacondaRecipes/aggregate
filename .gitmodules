@@ -9654,3 +9654,7 @@
 	path = vowpalwabbit-feedstock
 	url = ../vowpalwabbit-feedstock
 	branch = main
+[submodule "toposort-feedstock"]
+	path = toposort-feedstock
+	url = ../toposort-feedstock
+	branch = main
