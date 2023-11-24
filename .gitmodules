@@ -9658,3 +9658,7 @@
 	path = toposort-feedstock
 	url = ../toposort-feedstock
 	branch = main
+[submodule "pip-tools-feedstock"]
+	path = pip-tools-feedstock
+	url = ../pip-tools-feedstock
+	branch = main
