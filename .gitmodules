@@ -9673,3 +9673,7 @@
 	path = jupyterlab-variableinspector-feedstock
 	url = ../jupyterlab-variableinspector-feedstock
 	branch = main
+[submodule "jupyterlab_code_formatter-feedstock"]
+	path = jupyterlab_code_formatter-feedstock
+	url = ../jupyterlab_code_formatter-feedstock
+	branch = main
