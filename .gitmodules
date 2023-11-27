@@ -9669,3 +9669,7 @@
 	path = jupyter-server-mathjax-feedstock
 	url = ../jupyter-server-mathjax-feedstock
 	branch = main
+[submodule "jupyterlab-variableinspector-feedstock"]
+	path = jupyterlab-variableinspector-feedstock
+	url = ../jupyterlab-variableinspector-feedstock
+	branch = main
