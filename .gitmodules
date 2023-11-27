@@ -9665,3 +9665,7 @@
 	path = nbgrader-feedstock
 	url = ../nbgrader-feedstock
 	branch = main
+[submodule "jupyter-server-mathjax-feedstock"]
+	path = jupyter-server-mathjax-feedstock
+	url = ../jupyter-server-mathjax-feedstock
+	branch = main
