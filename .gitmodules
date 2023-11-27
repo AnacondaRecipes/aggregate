@@ -9705,3 +9705,7 @@
 	path = ipyleaflet-feedstock
 	url = ../ipyleaflet-feedstock
 	branch = main
+[submodule "nbdime-feedstock"]
+	path = nbdime-feedstock
+	url = ../nbdime-feedstock
+	branch = main
