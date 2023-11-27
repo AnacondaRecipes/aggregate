@@ -9677,3 +9677,7 @@
 	path = jupyterlab_code_formatter-feedstock
 	url = ../jupyterlab_code_formatter-feedstock
 	branch = main
+[submodule "jupytext-feedstock"]
+	path = jupytext-feedstock
+	url = ../jupytext-feedstock
+	branch = main
