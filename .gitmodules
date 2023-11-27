@@ -9701,3 +9701,7 @@
 	path = jupyterlab-git-feedstock
 	url = ../jupyterlab-git-feedstock
 	branch = main
+[submodule "ipyleaflet-feedstock"]
+	path = ipyleaflet-feedstock
+	url = ../ipyleaflet-feedstock
+	branch = main
