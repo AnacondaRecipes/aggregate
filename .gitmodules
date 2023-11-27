@@ -9709,3 +9709,7 @@
 	path = nbdime-feedstock
 	url = ../nbdime-feedstock
 	branch = main
+[submodule "conda-auth-feedstock"]
+	path = conda-auth-feedstock
+	url = ../conda-auth-feedstock
+	branch = main
