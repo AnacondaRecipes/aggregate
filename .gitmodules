@@ -9689,3 +9689,7 @@
 	path = expandvars-feedstock
 	url = ../expandvars-feedstock
 	branch = main
+[submodule "re-assert-feedstock"]
+	path = re-assert-feedstock
+	url = ../re-assert-feedstock
+	branch = main
