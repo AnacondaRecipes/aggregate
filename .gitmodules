@@ -9685,3 +9685,7 @@
 	path = traittypes-feedstock
 	url = ../traittypes-feedstock
 	branch = main
+[submodule "expandvars-feedstock"]
+	path = expandvars-feedstock
+	url = ../expandvars-feedstock
+	branch = main
