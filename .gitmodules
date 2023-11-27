@@ -9693,3 +9693,7 @@
 	path = re-assert-feedstock
 	url = ../re-assert-feedstock
 	branch = main
+[submodule "voila-feedstock"]
+	path = voila-feedstock
+	url = ../voila-feedstock
+	branch = main
