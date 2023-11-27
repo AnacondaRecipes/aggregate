@@ -9697,3 +9697,7 @@
 	path = voila-feedstock
 	url = ../voila-feedstock
 	branch = main
+[submodule "jupyterlab-git-feedstock"]
+	path = jupyterlab-git-feedstock
+	url = ../jupyterlab-git-feedstock
+	branch = main
