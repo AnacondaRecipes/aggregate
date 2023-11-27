@@ -9681,3 +9681,7 @@
 	path = jupytext-feedstock
 	url = ../jupytext-feedstock
 	branch = main
+[submodule "traittypes-feedstock"]
+	path = traittypes-feedstock
+	url = ../traittypes-feedstock
+	branch = main
