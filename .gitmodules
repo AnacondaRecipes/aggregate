@@ -9717,3 +9717,7 @@
 	path = kedro-feedstock
 	url = ../kedro-feedstock
 	branch = main
+[submodule "azure-mgmt-core-feedstock"]
+	path = azure-mgmt-core-feedstock
+	url = ../azure-mgmt-core-feedstock
+	branch = main
