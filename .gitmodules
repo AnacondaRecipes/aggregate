@@ -9713,3 +9713,7 @@
 	path = conda-auth-feedstock
 	url = ../conda-auth-feedstock
 	branch = main
+[submodule "kedro-feedstock"]
+	path = kedro-feedstock
+	url = ../kedro-feedstock
+	branch = main
