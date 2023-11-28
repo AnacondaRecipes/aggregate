@@ -9730,3 +9730,7 @@
 	path = azure-storage-file-share-feedstock
 	url = ../azure-storage-file-share-feedstock
 	branch = main
+[submodule "streamlit-1.22.0-feedstock"]
+	path = streamlit-1.22.0-feedstock
+	url = ../streamlit-feedstock
+	branch = main-1.22.0
