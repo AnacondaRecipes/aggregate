@@ -9661,6 +9661,7 @@
 [submodule "pip-tools-feedstock"]
 	path = pip-tools-feedstock
 	url = ../pip-tools-feedstock
+	branch = main
 [submodule "nbgrader-feedstock"]
 	path = nbgrader-feedstock
 	url = ../nbgrader-feedstock
