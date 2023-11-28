@@ -9721,3 +9721,7 @@
 	path = azure-mgmt-core-feedstock
 	url = ../azure-mgmt-core-feedstock
 	branch = main
+[submodule "azure-storage-file-datalake-feedstock"]
+	path = azure-storage-file-datalake-feedstock
+	url = ../azure-storage-file-datalake-feedstock
+	branch = main
