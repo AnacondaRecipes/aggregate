@@ -9738,3 +9738,7 @@
 	path = msal_extensions-feedstock
 	url = ../msal_extensions-feedstock
 	branch = main
+[submodule "azure-identity-feedstock"]
+	path = azure-identity-feedstock
+	url = ../azure-identity-feedstock
+	branch = main
