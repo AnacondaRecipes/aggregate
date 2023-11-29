@@ -9758,3 +9758,7 @@
 	path = azure-ai-ml-feedstock
 	url = ../azure-ai-ml-feedstock
 	branch = main
+[submodule "dsnparse-feedstock"]
+	path = dsnparse-feedstock
+	url = ../dsnparse-feedstock
+	branch = main
