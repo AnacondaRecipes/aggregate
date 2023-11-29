@@ -9750,3 +9750,7 @@
 	path = pydash-feedstock
 	url = ../pydash-feedstock
 	branch = main
+[submodule "strictyaml-feedstock"]
+	path = strictyaml-feedstock
+	url = ../strictyaml-feedstock
+	branch = main
