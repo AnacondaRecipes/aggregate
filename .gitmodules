@@ -9746,3 +9746,7 @@
 	path = opencensus-ext-azure-feedstock
 	url = ../opencensus-ext-azure-feedstock
 	branch = main
+[submodule "pydash-feedstock"]
+	path = pydash-feedstock
+	url = ../pydash-feedstock
+	branch = main
