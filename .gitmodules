@@ -9734,3 +9734,7 @@
 	path = streamlit-1.22.0-feedstock
 	url = ../streamlit-feedstock
 	branch = main-1.22.0
+[submodule "msal_extensions-feedstock"]
+	path = msal_extensions-feedstock
+	url = ../msal_extensions-feedstock
+	branch = main
