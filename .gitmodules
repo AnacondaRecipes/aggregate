@@ -9762,3 +9762,7 @@
 	path = dsnparse-feedstock
 	url = ../dsnparse-feedstock
 	branch = main
+[submodule "data-diff-feedstock"]
+	path = data-diff-feedstock
+	url = ../data-diff-feedstock
+	branch = main
