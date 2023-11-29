@@ -9754,3 +9754,7 @@
 	path = strictyaml-feedstock
 	url = ../strictyaml-feedstock
 	branch = main
+[submodule "azure-ai-ml-feedstock"]
+	path = azure-ai-ml-feedstock
+	url = ../azure-ai-ml-feedstock
+	branch = main
