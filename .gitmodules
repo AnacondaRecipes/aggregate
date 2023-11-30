@@ -9766,3 +9766,7 @@
 	path = data-diff-feedstock
 	url = ../data-diff-feedstock
 	branch = main
+[submodule "python-pptx-feedstock"]
+	path = python-pptx-feedstock
+	url = ../python-pptx-feedstock
+	branch = main
