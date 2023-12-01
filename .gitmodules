@@ -2139,10 +2139,6 @@
 	path = bazel-feedstock
 	url = ../bazel-feedstock
 	branch = master
-[submodule "anaconda-client-feedstock"]
-	path = anaconda-client-feedstock
-	url = ../anaconda-client-feedstock
-	branch = master
 [submodule "fastavro-feedstock"]
 	path = fastavro-feedstock
 	url = ../fastavro-feedstock
@@ -2615,10 +2611,6 @@
 	path = python-3.6-feedstock
 	url = ../python-feedstock
 	branch = master-3.6
-[submodule "botocore-1.8.21-feedstock"]
-	path = botocore-1.8.21-feedstock
-	url = ../botocore-feedstock
-	branch = master-1.8.21
 [submodule "numba-feedstock"]
 	path = numba-feedstock
 	url = ../numba-feedstock
@@ -2759,10 +2751,6 @@
 	path = pyflakes-1.6.0-feedstock
 	url = ../pyflakes-feedstock
 	branch = master-1.6.0
-[submodule "botocore-1.10.12-feedstock"]
-	path = botocore-1.10.12-feedstock
-	url = ../botocore-feedstock
-	branch = master-1.10.12
 [submodule "testtools-feedstock"]
 	path = testtools-feedstock
 	url = ../testtools-feedstock
@@ -4235,10 +4223,6 @@
 	path = aws-sam-translator-feedstock
 	url = ../aws-sam-translator-feedstock
 	branch = master
-[submodule "conda-package-handling-feedstock-1.6.0"]
-	path = conda-package-handling-feedstock-1.6
-	url = ../conda-package-handling-feedstock
-	branch = las-3.3
 [submodule "compilers-feedstock"]
 	path = compilers-feedstock
 	url = ../compilers-feedstock
@@ -8020,10 +8004,6 @@
 	path = quantlib-python-feedstock
 	url = ../quantlib-python-feedstock
 	branch = main
-[submodule "sktime-feedstock"]
-	path = sktime-feedstock
-	url = ../sktime-feedstock
-	branch = main
 [submodule "m2cgen-feedstock"]
 	path = m2cgen-feedstock
 	url = ../m2cgen-feedstock
@@ -9606,3 +9586,187 @@
 	path = robotframework-feedstock
 	url = ../robotframework-feedstock
 	branch = main
+[submodule "sse2neon-feedstock"]
+	path = sse2neon-feedstock
+	url = ../sse2neon-feedstock
+	branch = main
+[submodule "ensmallen-feedstock"]
+	path = ensmallen-feedstock
+	url = ../ensmallen-feedstock
+	branch = main
+[submodule "superlu-feedstock"]
+	path = superlu-feedstock
+	url = ../superlu-feedstock
+	branch = main
+[submodule "evalml-feedstock"]
+	path = evalml-feedstock
+	url = ../evalml-feedstock
+	branch = main
+[submodule "nlp-primitives-feedstock"]
+	path = nlp-primitives-feedstock
+	url = ../nlp-primitives-feedstock
+	branch = main
+[submodule "dynaconf-feedstock"]
+	path = dynaconf-feedstock
+	url = ../dynaconf-feedstock
+	branch = main
+[submodule "armadillo-feedstock"]
+	path = armadillo-feedstock
+	url = ../armadillo-feedstock
+	branch = main
+[submodule "antlr4-python3-runtime-4.9.3-feedstock"]
+	path = antlr4-python3-runtime-4.9.3-feedstock
+	url = ../antlr4-python3-runtime-feedstock
+	branch = master-4.9.3
+[submodule "omegaconf-feedstock"]
+	path = omegaconf-feedstock
+	url = ../omegaconf-feedstock
+	branch = main
+[submodule "pytest-lazy-fixture-feedstock"]
+	path = pytest-lazy-fixture-feedstock
+	url = ../pytest-lazy-fixture-feedstock
+	branch = main
+[submodule "attr-feedstock"]
+	path = attr-feedstock
+	url = ../attr-feedstock
+	branch = main
+[submodule "sktime-feedstock"]
+	path = sktime-feedstock
+	url = ../sktime-feedstock
+	branch = main
+[submodule "anyconfig-feedstock"]
+	path = anyconfig-feedstock
+	url = ../anyconfig-feedstock
+	branch = main
+[submodule "skbase-feedstock"]
+	path = skbase-feedstock
+	url = ../skbase-feedstock
+	branch = main
+[submodule "vowpalwabbit-feedstock"]
+	path = vowpalwabbit-feedstock
+	url = ../vowpalwabbit-feedstock
+	branch = main
+[submodule "toposort-feedstock"]
+	path = toposort-feedstock
+	url = ../toposort-feedstock
+	branch = main
+[submodule "pip-tools-feedstock"]
+	path = pip-tools-feedstock
+	url = ../pip-tools-feedstock
+	branch = main
+[submodule "nbgrader-feedstock"]
+	path = nbgrader-feedstock
+	url = ../nbgrader-feedstock
+	branch = main
+[submodule "jupyter-server-mathjax-feedstock"]
+	path = jupyter-server-mathjax-feedstock
+	url = ../jupyter-server-mathjax-feedstock
+	branch = main
+[submodule "jupyterlab-variableinspector-feedstock"]
+	path = jupyterlab-variableinspector-feedstock
+	url = ../jupyterlab-variableinspector-feedstock
+	branch = main
+[submodule "jupyterlab_code_formatter-feedstock"]
+	path = jupyterlab_code_formatter-feedstock
+	url = ../jupyterlab_code_formatter-feedstock
+	branch = main
+[submodule "jupytext-feedstock"]
+	path = jupytext-feedstock
+	url = ../jupytext-feedstock
+	branch = main
+[submodule "traittypes-feedstock"]
+	path = traittypes-feedstock
+	url = ../traittypes-feedstock
+	branch = main
+[submodule "expandvars-feedstock"]
+	path = expandvars-feedstock
+	url = ../expandvars-feedstock
+	branch = main
+[submodule "re-assert-feedstock"]
+	path = re-assert-feedstock
+	url = ../re-assert-feedstock
+	branch = main
+[submodule "voila-feedstock"]
+	path = voila-feedstock
+	url = ../voila-feedstock
+	branch = main
+[submodule "jupyterlab-git-feedstock"]
+	path = jupyterlab-git-feedstock
+	url = ../jupyterlab-git-feedstock
+	branch = main
+[submodule "ipyleaflet-feedstock"]
+	path = ipyleaflet-feedstock
+	url = ../ipyleaflet-feedstock
+	branch = main
+[submodule "nbdime-feedstock"]
+	path = nbdime-feedstock
+	url = ../nbdime-feedstock
+	branch = main
+[submodule "conda-auth-feedstock"]
+	path = conda-auth-feedstock
+	url = ../conda-auth-feedstock
+	branch = main
+[submodule "kedro-feedstock"]
+	path = kedro-feedstock
+	url = ../kedro-feedstock
+	branch = main
+[submodule "azure-mgmt-core-feedstock"]
+	path = azure-mgmt-core-feedstock
+	url = ../azure-mgmt-core-feedstock
+	branch = main
+[submodule "azure-storage-file-datalake-feedstock"]
+	path = azure-storage-file-datalake-feedstock
+	url = ../azure-storage-file-datalake-feedstock
+	branch = main
+[submodule "azure-storage-file-share-feedstock"]
+	path = azure-storage-file-share-feedstock
+	url = ../azure-storage-file-share-feedstock
+	branch = main
+[submodule "streamlit-1.22.0-feedstock"]
+	path = streamlit-1.22.0-feedstock
+	url = ../streamlit-feedstock
+	branch = main-1.22.0
+[submodule "msal_extensions-feedstock"]
+	path = msal_extensions-feedstock
+	url = ../msal_extensions-feedstock
+	branch = main
+[submodule "azure-identity-feedstock"]
+	path = azure-identity-feedstock
+	url = ../azure-identity-feedstock
+	branch = main
+[submodule "opencensus-ext-azure-feedstock"]
+	path = opencensus-ext-azure-feedstock
+	url = ../opencensus-ext-azure-feedstock
+	branch = main
+[submodule "pydash-feedstock"]
+	path = pydash-feedstock
+	url = ../pydash-feedstock
+	branch = main
+[submodule "strictyaml-feedstock"]
+	path = strictyaml-feedstock
+	url = ../strictyaml-feedstock
+	branch = main
+[submodule "azure-ai-ml-feedstock"]
+	path = azure-ai-ml-feedstock
+	url = ../azure-ai-ml-feedstock
+	branch = main
+[submodule "dsnparse-feedstock"]
+	path = dsnparse-feedstock
+	url = ../dsnparse-feedstock
+	branch = main
+[submodule "data-diff-feedstock"]
+	path = data-diff-feedstock
+	url = ../data-diff-feedstock
+	branch = main
+[submodule "python-pptx-feedstock"]
+	path = python-pptx-feedstock
+	url = ../python-pptx-feedstock
+	branch = main
+[submodule "botocore-1.31-feedstock"]
+	path = botocore-1.31-feedstock
+	url = ../botocore-feedstock
+	branch = main-1.31
+[submodule "boto3-1.28-feedstock"]
+	path = boto3-1.28-feedstock
+	url = ../boto3-feedstock
+	branch = master-1.28
