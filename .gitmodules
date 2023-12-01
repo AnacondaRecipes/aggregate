@@ -9778,3 +9778,7 @@
 	path = gspread-feedstock
 	url = ../gspread-feedstock
 	branch = main
+[submodule "gspread-dataframe"]
+	path = gspread-dataframe
+	url = ../gspread-dataframe
+	branch = main
