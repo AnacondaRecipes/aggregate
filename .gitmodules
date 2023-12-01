@@ -9786,3 +9786,7 @@
 	path = feature_engine-feedstock
 	url = ../feature_engine-feedstock
 	branch = main
+[submodule "pyxlsb-feedstock"]
+	path = pyxlsb-feedstock
+	url = ../pyxlsb-feedstock
+	branch = main
