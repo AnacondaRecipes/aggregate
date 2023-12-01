@@ -9774,3 +9774,7 @@
 	path = dbt-snowflake-feedstock
 	url = ../dbt-snowflake-feedstock
 	branch = main
+[submodule "gspread-feedstock"]
+	path = gspread-feedstock
+	url = ../gspread-feedstock
+	branch = main
