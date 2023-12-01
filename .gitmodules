@@ -9782,3 +9782,7 @@
 	path = gspread-dataframe-feedstock
 	url = ../gspread-dataframe-feedstock
 	branch = main
+[submodule "feature_engine-feedstock"]
+	path = feature_engine-feedstock
+	url = ../feature_engine-feedstock
+	branch = main
