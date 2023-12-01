@@ -9770,3 +9770,7 @@
 	path = boto3-1.28-feedstock
 	url = ../boto3-feedstock
 	branch = master-1.28
+[submodule "dbt-snowflake-feedstock"]
+	path = dbt-snowflake-feedstock
+	url = ../dbt-snowflake-feedstock
+	branch = main
