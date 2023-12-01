@@ -2611,10 +2611,6 @@
 	path = python-3.6-feedstock
 	url = ../python-feedstock
 	branch = master-3.6
-[submodule "botocore-1.8.21-feedstock"]
-	path = botocore-1.8.21-feedstock
-	url = ../botocore-feedstock
-	branch = master-1.8.21
 [submodule "numba-feedstock"]
 	path = numba-feedstock
 	url = ../numba-feedstock
@@ -2755,10 +2751,6 @@
 	path = pyflakes-1.6.0-feedstock
 	url = ../pyflakes-feedstock
 	branch = master-1.6.0
-[submodule "botocore-1.10.12-feedstock"]
-	path = botocore-1.10.12-feedstock
-	url = ../botocore-feedstock
-	branch = master-1.10.12
 [submodule "testtools-feedstock"]
 	path = testtools-feedstock
 	url = ../testtools-feedstock
@@ -9770,3 +9762,11 @@
 	path = python-pptx-feedstock
 	url = ../python-pptx-feedstock
 	branch = main
+[submodule "botocore-1.31-feedstock"]
+	path = botocore-1.31-feedstock
+	url = ../botocore-feedstock
+	branch = main-1.31
+[submodule "boto3-1.28-feedstock"]
+	path = boto3-1.28-feedstock
+	url = ../boto3-feedstock
+	branch = master-1.28
