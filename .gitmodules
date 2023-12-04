@@ -9798,3 +9798,7 @@
 	path = dateutils-feedstock
 	url = ../dateutils-feedstock
 	branch = main
+[submodule "deepdiff-feedstock"]
+	path = deepdiff-feedstock
+	url = ../deepdiff-feedstock
+	branch = master
