@@ -2907,10 +2907,6 @@
 	path = qtwebkit-feedstock
 	url = ../qtwebkit-feedstock
 	branch = master
-[submodule "grpcio-feedstock"]
-	path = grpcio-feedstock
-	url = ../grpcio-feedstock
-	branch = master
 [submodule "fribidi-feedstock"]
 	path = fribidi-feedstock
 	url = ../fribidi-feedstock
