@@ -9794,7 +9794,3 @@
 	path = jinxed-feedstock
 	url = ../jinxed-feedstock
 	branch = main
-[submodule "omegaconf-2.2.3-feedstock"]
-	path = omegaconf-2.2.3-feedstock
-	url = ../omegaconf-feedstock
-	branch = main-2.2.3
