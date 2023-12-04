@@ -9794,3 +9794,7 @@
 	path = jinxed-feedstock
 	url = ../jinxed-feedstock
 	branch = main
+[submodule "dateutils-feedstock"]
+	path = dateutils-feedstock
+	url = ../dateutils-feedstock
+	branch = main
