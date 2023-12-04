@@ -9802,3 +9802,7 @@
 	path = deepdiff-feedstock
 	url = ../deepdiff-feedstock
 	branch = master
+[submodule "typish-feedstock"]
+	path = typish-feedstock
+	url = ../typish-feedstock
+	branch = main
