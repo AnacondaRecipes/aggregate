@@ -9766,3 +9766,35 @@
 	path = boto3-1.28-feedstock
 	url = ../boto3-feedstock
 	branch = master-1.28
+[submodule "dbt-snowflake-feedstock"]
+	path = dbt-snowflake-feedstock
+	url = ../dbt-snowflake-feedstock
+	branch = main
+[submodule "gspread-feedstock"]
+	path = gspread-feedstock
+	url = ../gspread-feedstock
+	branch = main
+[submodule "gspread-dataframe-feedstock"]
+	path = gspread-dataframe-feedstock
+	url = ../gspread-dataframe-feedstock
+	branch = main
+[submodule "feature_engine-feedstock"]
+	path = feature_engine-feedstock
+	url = ../feature_engine-feedstock
+	branch = main
+[submodule "pyxlsb-feedstock"]
+	path = pyxlsb-feedstock
+	url = ../pyxlsb-feedstock
+	branch = main
+[submodule "ansicon-feedstock"]
+	path = ansicon-feedstock
+	url = ../ansicon-feedstock
+	branch = main
+[submodule "jinxed-feedstock"]
+	path = jinxed-feedstock
+	url = ../jinxed-feedstock
+	branch = main
+[submodule "dateutils-feedstock"]
+	path = dateutils-feedstock
+	url = ../dateutils-feedstock
+	branch = main
