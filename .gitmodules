@@ -9794,3 +9794,7 @@
 	path = ansicon-feedstock
 	url = ../ansicon-feedstock
 	branch = main
+[submodule "jinxed-feedstock"]
+	path = jinxed-feedstock
+	url = ../jinxed-feedstock
+	branch = main
