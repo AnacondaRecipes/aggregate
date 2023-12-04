@@ -9790,3 +9790,7 @@
 	path = pyxlsb-feedstock
 	url = ../pyxlsb-feedstock
 	branch = main
+[submodule "ansicon-feedstock"]
+	path = ansicon-feedstock
+	url = ../ansicon-feedstock
+	branch = main
