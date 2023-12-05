@@ -9826,3 +9826,7 @@
 	path = pytorch-metric-learning-feedstock
 	url = ../pytorch-metric-learning-feedstock
 	branch = main
+[submodule "seqeval-feedstock"]
+	path = seqeval-feedstock
+	url = ../seqeval-feedstock
+	branch = main
