@@ -9806,3 +9806,7 @@
 	path = typish-feedstock
 	url = ../typish-feedstock
 	branch = main
+[submodule "starsessions-feedstock"]
+	path = starsessions-feedstock
+	url = ../starsessions-feedstock
+	branch = main
