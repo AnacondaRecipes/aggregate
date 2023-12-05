@@ -9818,3 +9818,7 @@
 	path = libansicon-feedstock
 	url = ../libansicon-feedstock
 	branch = main
+[submodule "timm-feedstock"]
+	path = timm-feedstock
+	url = ../timm-feedstock
+	branch = main
