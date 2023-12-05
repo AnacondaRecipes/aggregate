@@ -9814,3 +9814,7 @@
 	path = transformers-4.31.0-feedstock
 	url = ../transformers-feedstock
 	branch = master-4.31.0
+[submodule "libansicon-feedstock"]
+	path = libansicon-feedstock
+	url = ../libansicon-feedstock
+	branch = main
