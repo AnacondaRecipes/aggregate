@@ -9822,3 +9822,7 @@
 	path = timm-feedstock
 	url = ../timm-feedstock
 	branch = main
+[submodule "pytorch-metric-learning-feedstock"]
+	path = pytorch-metric-learning-feedstock
+	url = ../pytorch-metric-learning-feedstock
+	branch = main
