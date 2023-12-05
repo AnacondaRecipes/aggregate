@@ -9830,3 +9830,7 @@
 	path = seqeval-feedstock
 	url = ../seqeval-feedstock
 	branch = main
+[submodule "blessed-feedstock"]
+	path = blessed-feedstock
+	url = ../blessed-feedstock
+	branch = main
