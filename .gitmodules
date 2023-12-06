@@ -9845,3 +9845,7 @@
 	path = nlpaug-feedstock
 	url = ../nlpaug-feedstock
 	branch = main
+[submodule "gdown-feedstock"]
+	path = gdown-feedstock
+	url = ../gdown-feedstock
+	branch = main
