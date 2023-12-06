@@ -9834,3 +9834,7 @@
 	path = blessed-feedstock
 	url = ../blessed-feedstock
 	branch = main
+[submodule "nvidia-ml-py-feedstock"]
+	path = nvidia-ml-py-feedstock
+	url = ../nvidia-ml-py-feedstock
+	branch = main
