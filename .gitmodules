@@ -9837,4 +9837,7 @@
 [submodule "nvidia-ml-py-feedstock"]
 	path = nvidia-ml-py-feedstock
 	url = ../nvidia-ml-py-feedstock
+[submodule "model-index-feedstock"]
+	path = model-index-feedstock
+	url = ../model-index-feedstock
 	branch = main
