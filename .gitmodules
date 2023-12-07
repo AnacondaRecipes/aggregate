@@ -9853,3 +9853,7 @@
 	path = inquirer-feedstock
 	url = ../inquirer-feedstock
 	branch = main
+[submodule "nptyping-feedstock"]
+	path = nptyping-feedstock
+	url = ../nptyping-feedstock
+	branch = main
