@@ -9865,3 +9865,7 @@
 	path = lightning-cloud-feedstock
 	url = ../lightning-cloud-feedstock
 	branch = main
+[submodule "lightning-feedstock"]
+	path = lightning-feedstock
+	url = ../lightning-feedstock
+	branch = main
