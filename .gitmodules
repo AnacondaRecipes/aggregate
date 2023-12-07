@@ -9861,3 +9861,7 @@
 	path = openmim-feedstock
 	url = ../openmim-feedstock
 	branch = main
+[submodule "lightning-cloud-feedstock"]
+	path = lightning-cloud-feedstock
+	url = ../lightning-cloud-feedstock
+	branch = main
