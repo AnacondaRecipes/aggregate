@@ -9849,3 +9849,7 @@
 	path = gdown-feedstock
 	url = ../gdown-feedstock
 	branch = main
+[submodule "inquirer-feedstock"]
+	path = inquirer-feedstock
+	url = ../inquirer-feedstock
+	branch = main
