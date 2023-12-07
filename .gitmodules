@@ -9857,3 +9857,7 @@
 	path = nptyping-feedstock
 	url = ../nptyping-feedstock
 	branch = main
+[submodule "openmim-feedstock"]
+	path = openmim-feedstock
+	url = ../openmim-feedstock
+	branch = main
