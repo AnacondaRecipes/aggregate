@@ -9877,3 +9877,7 @@
 	path = openxlab-feedstock
 	url = ../openxlab-feedstock
 	branch = main
+[submodule "autogluon-feedstock"]
+	path = autogluon-feedstock
+	url = ../autogluon-feedstock
+	branch = master
