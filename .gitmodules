@@ -9873,3 +9873,7 @@
 	path = opendatalab-feedstock
 	url = ../opendatalab-feedstock
 	branch = main
+[submodule "openxlab-feedstock"]
+	path = openxlab-feedstock
+	url = ../openxlab-feedstock
+	branch = main
