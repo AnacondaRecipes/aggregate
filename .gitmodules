@@ -9869,3 +9869,7 @@
 	path = lightning-feedstock
 	url = ../lightning-feedstock
 	branch = main
+[submodule "opendatalab-feedstock"]
+	path = opendatalab-feedstock
+	url = ../opendatalab-feedstock
+	branch = main
