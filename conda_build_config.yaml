@@ -176,8 +176,7 @@ pixman:
 proj4:
   - 5.2.0
 proj:
-  - 6.2.1  # [not (osx and arm64)]
-  - 7.2.0  # [osx and arm64]
+  - 8.2.1
 libprotobuf:
   - 3.20.3
 python:
