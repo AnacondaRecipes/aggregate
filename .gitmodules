@@ -9881,3 +9881,7 @@
 	path = autogluon-feedstock
 	url = ../autogluon-feedstock
 	branch = master
+[submodule "utilsforecast-feedstock"]
+	path = utilsforecast-feedstock
+	url = ../utilsforecast-feedstock
+	branch = main
