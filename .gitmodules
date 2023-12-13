@@ -9885,3 +9885,7 @@
 	path = utilsforecast-feedstock
 	url = ../utilsforecast-feedstock
 	branch = main
+[submodule "minizip-feedstock"]
+	path = minizip-feedstock
+	url = ../minizip-feedstock
+	branch = main
