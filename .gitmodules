@@ -9889,7 +9889,3 @@
 	path = minizip-feedstock
 	url = ../minizip-feedstock
 	branch = main
-[submodule "libmcl-feedstock"]
-	path = libmcl-feedstock
-	url = ../libmcl-feedstock
-	branch = main
