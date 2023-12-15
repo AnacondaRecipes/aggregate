@@ -4046,7 +4046,7 @@
 [submodule "importlib_resources-feedstock"]
 	path = importlib_resources-feedstock
 	url = ../importlib_resources-feedstock
-	branch = master
+	branch = main
 [submodule "treelib-feedstock"]
 	path = treelib-feedstock
 	url = ../treelib-feedstock
