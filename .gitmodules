@@ -4046,7 +4046,7 @@
 [submodule "importlib_resources-feedstock"]
 	path = importlib_resources-feedstock
 	url = ../importlib_resources-feedstock
-	branch = master
+	branch = main
 [submodule "treelib-feedstock"]
 	path = treelib-feedstock
 	url = ../treelib-feedstock
@@ -9797,4 +9797,95 @@
 [submodule "dateutils-feedstock"]
 	path = dateutils-feedstock
 	url = ../dateutils-feedstock
+	branch = main
+[submodule "deepdiff-feedstock"]
+	path = deepdiff-feedstock
+	url = ../deepdiff-feedstock
+	branch = master
+[submodule "typish-feedstock"]
+	path = typish-feedstock
+	url = ../typish-feedstock
+	branch = main
+[submodule "starsessions-feedstock"]
+	path = starsessions-feedstock
+	url = ../starsessions-feedstock
+	branch = main
+[submodule "transformers-4.31.0-feedstock"]
+	path = transformers-4.31.0-feedstock
+	url = ../transformers-feedstock
+	branch = master-4.31.0
+[submodule "libansicon-feedstock"]
+	path = libansicon-feedstock
+	url = ../libansicon-feedstock
+	branch = main
+[submodule "timm-feedstock"]
+	path = timm-feedstock
+	url = ../timm-feedstock
+	branch = main
+[submodule "pytorch-metric-learning-feedstock"]
+	path = pytorch-metric-learning-feedstock
+	url = ../pytorch-metric-learning-feedstock
+	branch = main
+[submodule "seqeval-feedstock"]
+	path = seqeval-feedstock
+	url = ../seqeval-feedstock
+	branch = main
+[submodule "blessed-feedstock"]
+	path = blessed-feedstock
+	url = ../blessed-feedstock
+	branch = main
+[submodule "nvidia-ml-py-feedstock"]
+	path = nvidia-ml-py-feedstock
+	url = ../nvidia-ml-py-feedstock
+[submodule "model-index-feedstock"]
+	path = model-index-feedstock
+	url = ../model-index-feedstock
+	branch = main
+[submodule "nlpaug-feedstock"]
+	path = nlpaug-feedstock
+	url = ../nlpaug-feedstock
+	branch = main
+[submodule "gdown-feedstock"]
+	path = gdown-feedstock
+	url = ../gdown-feedstock
+	branch = main
+[submodule "inquirer-feedstock"]
+	path = inquirer-feedstock
+	url = ../inquirer-feedstock
+	branch = main
+[submodule "nptyping-feedstock"]
+	path = nptyping-feedstock
+	url = ../nptyping-feedstock
+	branch = main
+[submodule "openmim-feedstock"]
+	path = openmim-feedstock
+	url = ../openmim-feedstock
+	branch = main
+[submodule "lightning-cloud-feedstock"]
+	path = lightning-cloud-feedstock
+	url = ../lightning-cloud-feedstock
+	branch = main
+[submodule "lightning-feedstock"]
+	path = lightning-feedstock
+	url = ../lightning-feedstock
+	branch = main
+[submodule "opendatalab-feedstock"]
+	path = opendatalab-feedstock
+	url = ../opendatalab-feedstock
+	branch = main
+[submodule "openxlab-feedstock"]
+	path = openxlab-feedstock
+	url = ../openxlab-feedstock
+	branch = main
+[submodule "autogluon-feedstock"]
+	path = autogluon-feedstock
+	url = ../autogluon-feedstock
+	branch = master
+[submodule "utilsforecast-feedstock"]
+	path = utilsforecast-feedstock
+	url = ../utilsforecast-feedstock
+	branch = main
+[submodule "minizip-feedstock"]
+	path = minizip-feedstock
+	url = ../minizip-feedstock
 	branch = main
