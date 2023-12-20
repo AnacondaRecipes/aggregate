@@ -9897,3 +9897,7 @@
 	path = statsforecast-1.4-feedstock
 	url = ../statsforecast-feedstock
 	branch = main-1.4.x
+[submodule "cloudpathlib-feedstock"]
+	path = cloudpathlib-feedstock
+	url = ../cloudpathlib-feedstock
+	branch = main
