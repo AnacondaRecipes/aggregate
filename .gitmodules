@@ -9901,3 +9901,7 @@
 	path = cloudpathlib-feedstock
 	url = ../cloudpathlib-feedstock
 	branch = main
+[submodule "weasel-feedstock"]
+	path = weasel-feedstock
+	url = ../weasel-feedstock
+	branch = main
