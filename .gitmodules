@@ -9904,7 +9904,7 @@
 [submodule "weasel-feedstock"]
 	path = weasel-feedstock
 	url = ../weasel-feedstock
-        branch = main
+    branch = main
 [submodule "phonetics-feedstock"]
 	path = phonetics-feedstock
 	url = ../phonetics-feedstock
