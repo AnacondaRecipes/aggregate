@@ -9909,3 +9909,7 @@
 	path = phonetics-feedstock
 	url = ../phonetics-feedstock
 	branch = main
+[submodule "splink-feedstock"]
+	path = splink-feedstock
+	url = ../splink-feedstock
+	branch = main
