@@ -9913,3 +9913,7 @@
 	path = splink-feedstock
 	url = ../splink-feedstock
 	branch = main
+[submodule "sqlalchemy-1.4.51-feedstock"]
+	path = sqlalchemy-1.4.51-feedstock
+	url = ../sqlalchemy-1.4.51-feedstock
+	branch = main
