@@ -9916,7 +9916,7 @@
 [submodule "sqlalchemy-1.4.51-feedstock"]
 	path = sqlalchemy-1.4.51-feedstock
 	url = ../sqlalchemy-feedstock
-	branch = master-1..51
+	branch = master-1.4.51
 [submodule "itables-feedstock"]
 	path = itables-feedstock
 	url = ../itables-feedstock
