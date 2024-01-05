@@ -9929,3 +9929,7 @@
 	path = streamlit-plotly-events-feedstock
 	url = ../streamlit-plotly-events-feedstock
 	branch = main
+[submodule "docrepr-feedstock"]
+	path = docrepr-feedstock
+	url = ../docrepr-feedstock
+	branch = main
