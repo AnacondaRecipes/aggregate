@@ -9921,3 +9921,7 @@
 	path = itables-feedstock
 	url = ../itables-feedstock
 	branch = main
+[submodule "httpagentparser-feedstock"]
+	path = httpagentparser-feedstock
+	url = ../httpagentparser-feedstock
+	branch = main
