@@ -9925,3 +9925,7 @@
 	path = httpagentparser-feedstock
 	url = ../httpagentparser-feedstock
 	branch = main
+[submodule "streamlit-plotly-events-feedstock"]
+	path = streamlit-plotly-events-feedstock
+	url = ../streamlit-plotly-events-feedstock
+	branch = main
