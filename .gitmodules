@@ -9945,3 +9945,7 @@
 	path = isotree-feedstock
 	url = ../isotree-feedstock
 	branch = main
+[submodule "openfst-feedstock"]
+	path = openfst-feedstock
+	url = ../openfst-feedstock
+	branch = main
