@@ -9941,3 +9941,7 @@
 	path = sparse-feedstock
 	url = ../sparse-feedstock
 	branch = main
+[submodule "isotree-feedstock"]
+	path = isotree-feedstock
+	url = ../isotree-feedstock
+	branch = main
