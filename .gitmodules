@@ -9949,7 +9949,3 @@
 	path = openfst-feedstock
 	url = ../openfst-feedstock
 	branch = main
-[submodule "sphinxcontrib-jquery-feedstock"]
-	path = sphinxcontrib-jquery-feedstock
-	url = ../sphinxcontrib-jquery-feedstock
-	branch = main
