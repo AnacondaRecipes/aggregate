@@ -9933,3 +9933,7 @@
 	path = docrepr-feedstock
 	url = ../docrepr-feedstock
 	branch = main
+[submodule "mahotas-feedstock"]
+	path = mahotas-feedstock
+	url = ../mahotas-feedstock
+	branch = main
