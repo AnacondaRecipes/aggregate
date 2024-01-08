@@ -9937,3 +9937,7 @@
 	path = mahotas-feedstock
 	url = ../mahotas-feedstock
 	branch = main
+[submodule "sparse-feedstock"]
+	path = sparse-feedstock
+	url = ../sparse-feedstock
+	branch = main
