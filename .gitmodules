@@ -9889,3 +9889,63 @@
 	path = minizip-feedstock
 	url = ../minizip-feedstock
 	branch = main
+[submodule "nameparser-feedstock"]
+	path = nameparser-feedstock
+	url = ../nameparser-feedstock
+	branch = main
+[submodule "statsforecast-1.4-feedstock"]
+	path = statsforecast-1.4-feedstock
+	url = ../statsforecast-feedstock
+	branch = main-1.4.x
+[submodule "cloudpathlib-feedstock"]
+	path = cloudpathlib-feedstock
+	url = ../cloudpathlib-feedstock
+	branch = main
+[submodule "weasel-feedstock"]
+	path = weasel-feedstock
+	url = ../weasel-feedstock
+	branch = main
+[submodule "phonetics-feedstock"]
+	path = phonetics-feedstock
+	url = ../phonetics-feedstock
+	branch = main
+[submodule "splink-feedstock"]
+	path = splink-feedstock
+	url = ../splink-feedstock
+	branch = main
+[submodule "sqlalchemy-1.4.51-feedstock"]
+	path = sqlalchemy-1.4.51-feedstock
+	url = ../sqlalchemy-feedstock
+	branch = master-1.4.51
+[submodule "itables-feedstock"]
+	path = itables-feedstock
+	url = ../itables-feedstock
+	branch = main
+[submodule "httpagentparser-feedstock"]
+	path = httpagentparser-feedstock
+	url = ../httpagentparser-feedstock
+	branch = main
+[submodule "streamlit-plotly-events-feedstock"]
+	path = streamlit-plotly-events-feedstock
+	url = ../streamlit-plotly-events-feedstock
+	branch = main
+[submodule "docrepr-feedstock"]
+	path = docrepr-feedstock
+	url = ../docrepr-feedstock
+	branch = main
+[submodule "mahotas-feedstock"]
+	path = mahotas-feedstock
+	url = ../mahotas-feedstock
+	branch = main
+[submodule "sparse-feedstock"]
+	path = sparse-feedstock
+	url = ../sparse-feedstock
+	branch = main
+[submodule "isotree-feedstock"]
+	path = isotree-feedstock
+	url = ../isotree-feedstock
+	branch = main
+[submodule "openfst-feedstock"]
+	path = openfst-feedstock
+	url = ../openfst-feedstock
+	branch = main
