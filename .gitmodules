@@ -9953,3 +9953,7 @@
 	path = sphinxcontrib-jquery-feedstock
 	url = ../sphinxcontrib-jquery-feedstock
 	branch = main
+[submodule "bcl-feedstock"]
+	path = bcl-feedstock
+	url = ../bcl-feedstock
+	branch = main
