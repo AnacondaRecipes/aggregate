@@ -9961,3 +9961,7 @@
 	path = datatable-feedstock
 	url = ../datatable-feedstock
 	branch = main
+[submodule "cuda-cudart-feedstock"]
+	path = cuda-cudart-feedstock
+	url = ../cuda-cudart-feedstock
+	branch = main
