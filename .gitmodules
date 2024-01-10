@@ -9957,3 +9957,7 @@
 	path = bcl-feedstock
 	url = ../bcl-feedstock
 	branch = main
+[submodule "datatable-feedstock"]
+	path = datatable-feedstock
+	url = ../datatable-feedstock
+	branch = main
