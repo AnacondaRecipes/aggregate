@@ -9989,3 +9989,7 @@
 	path = funcy-feedstock
 	url = ../funcy-feedstock
 	branch = main
+[submodule "bazel-toolchain-feedstock"]
+	path = bazel-toolchain-feedstock
+	url = ../bazel-toolchain-feedstock
+	branch = main
