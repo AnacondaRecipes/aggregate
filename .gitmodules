@@ -9985,3 +9985,7 @@
 	path = langdetect-feedstock
 	url = ../langdetect-feedstock
 	branch = main
+[submodule "funcy-feedstock"]
+	path = funcy-feedstock
+	url = ../funcy-feedstock
+	branch = main
