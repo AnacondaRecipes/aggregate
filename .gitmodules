@@ -9969,3 +9969,7 @@
 	path = vadersentiment-feedstock
 	url = ../vadersentiment-feedstock
 	branch = main
+[submodule "spacy-langdetect-feedstock"]
+	path = spacy-langdetect-feedstock
+	url = ../spacy-langdetect-feedstock
+	branch = main
