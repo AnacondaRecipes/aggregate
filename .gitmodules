@@ -9965,3 +9965,7 @@
 	path = sqlalchemy-1.4.51-feedstock
 	url = ../sqlalchemy-feedstock
 	branch = master-1.4.51
+[submodule "vadersentiment-feedstock"]
+	path = vadersentiment-feedstock
+	url = ../vadersentiment-feedstock
+	branch = main
