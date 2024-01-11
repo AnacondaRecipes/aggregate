@@ -9973,3 +9973,8 @@
 	path = spacy-langdetect-feedstock
 	url = ../spacy-langdetect-feedstock
 	branch = main
+[submodule "textblob-feedstock"]
+	path = textblob-feedstock
+	url = ../textblob-feedstock
+	branch = main
+
