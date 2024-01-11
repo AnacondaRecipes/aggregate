@@ -9977,8 +9977,11 @@
 	path = textblob-feedstock
 	url = ../textblob-feedstock
 	branch = main
-
 [submodule "py-ard-feedstock"]
 	path = py-ard-feedstock
 	url = ../py-ard-feedstock
+	branch = main
+[submodule "langdetect-feedstock"]
+	path = langdetect-feedstock
+	url = ../langdetect-feedstock
 	branch = main
