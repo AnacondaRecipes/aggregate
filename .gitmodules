@@ -9913,10 +9913,6 @@
 	path = splink-feedstock
 	url = ../splink-feedstock
 	branch = main
-[submodule "sqlalchemy-1.4.51-feedstock"]
-	path = sqlalchemy-1.4.51-feedstock
-	url = ../sqlalchemy-feedstock
-	branch = master-1.4.51
 [submodule "itables-feedstock"]
 	path = itables-feedstock
 	url = ../itables-feedstock
@@ -9948,4 +9944,52 @@
 [submodule "openfst-feedstock"]
 	path = openfst-feedstock
 	url = ../openfst-feedstock
+	branch = main
+[submodule "sphinxcontrib-jquery-feedstock"]
+	path = sphinxcontrib-jquery-feedstock
+	url = ../sphinxcontrib-jquery-feedstock
+	branch = main
+[submodule "bcl-feedstock"]
+	path = bcl-feedstock
+	url = ../bcl-feedstock
+	branch = main
+[submodule "datatable-feedstock"]
+	path = datatable-feedstock
+	url = ../datatable-feedstock
+	branch = main
+[submodule "cuda-cudart-feedstock"]
+	path = cuda-cudart-feedstock
+	url = ../cuda-cudart-feedstock
+	branch = main
+[submodule "sqlalchemy-1.4.51-feedstock"]
+	path = sqlalchemy-1.4.51-feedstock
+	url = ../sqlalchemy-feedstock
+	branch = master-1.4.51
+[submodule "vadersentiment-feedstock"]
+	path = vadersentiment-feedstock
+	url = ../vadersentiment-feedstock
+	branch = main
+[submodule "spacy-langdetect-feedstock"]
+	path = spacy-langdetect-feedstock
+	url = ../spacy-langdetect-feedstock
+	branch = main
+[submodule "textblob-feedstock"]
+	path = textblob-feedstock
+	url = ../textblob-feedstock
+	branch = main
+[submodule "py-ard-feedstock"]
+	path = py-ard-feedstock
+	url = ../py-ard-feedstock
+	branch = main
+[submodule "langdetect-feedstock"]
+	path = langdetect-feedstock
+	url = ../langdetect-feedstock
+	branch = main
+[submodule "funcy-feedstock"]
+	path = funcy-feedstock
+	url = ../funcy-feedstock
+	branch = main
+[submodule "bazel-toolchain-feedstock"]
+	path = bazel-toolchain-feedstock
+	url = ../bazel-toolchain-feedstock
 	branch = main
