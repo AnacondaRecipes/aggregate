@@ -10013,3 +10013,7 @@
 	path = xsimd-7.4-feedstock
 	url = ../xsimd-feedstock
 	branch = master-7.4.x
+[submodule "xtensor-feedstock"]
+	path = xtensor-feedstock
+	url = ../xtensor-feedstock
+	branch = main
