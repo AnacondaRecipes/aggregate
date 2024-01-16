@@ -10009,3 +10009,7 @@
 	path = ms-gsl-feeedstock
 	url = ../ms-gsl-feedstock
 	branch = main
+[submodule "xsimd-7.4-feedstock"]
+	path = xsimd-7.4-feedstock
+	url = ../xsimd-feedstock
+	branch = master-7.4.x
