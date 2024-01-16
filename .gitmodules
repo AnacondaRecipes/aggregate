@@ -10001,3 +10001,7 @@
 	path = doctest-feedstock
 	url = ../doctest-feedstock
 	branch = main
+[submodule "xtl-feedstock"]
+	path = xtl-feedstock
+	url = ../xtl-feedstock
+	branch = main
