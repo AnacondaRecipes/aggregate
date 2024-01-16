@@ -9993,3 +9993,7 @@
 	path = bazel-toolchain-feedstock
 	url = ../bazel-toolchain-feedstock
 	branch = main
+[submodule "sql-metadata-feedstock"]
+	path = sql-metadata-feedstock
+	url = ../sql-metadata-feedstock
+	branch = main
