@@ -10005,3 +10005,7 @@
 	path = xtl-feedstock
 	url = ../xtl-feedstock
 	branch = main
+[submodule "ms-gsl-feeedstock"]
+	path = ms-gsl-feeedstock
+	url = ../ms-gsl-feedstock
+	branch = main
