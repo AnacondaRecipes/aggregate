@@ -9997,3 +9997,7 @@
 	path = sql-metadata-feedstock
 	url = ../sql-metadata-feedstock
 	branch = main
+[submodule "doctest-feedstock"]
+	path = doctest-feedstock
+	url = ../doctest-feedstock
+	branch = main
