@@ -10017,3 +10017,7 @@
 	path = xtensor-feedstock
 	url = ../xtensor-feedstock
 	branch = main
+[submodule "seal-feedstock"]
+	path = seal-feedstock
+	url = ../seal-feedstock
+	branch = main
