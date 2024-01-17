@@ -6514,10 +6514,6 @@
 	path = apache-airflow-providers-sqlite-feedstock
 	url = ../apache-airflow-providers-sqlite-feedstock
 	branch = main
-[submodule "apache-airflow-providers-imap-feedstock"]
-	path = apache-airflow-providers-imap-feedstock
-	url = ../apache-airflow-providers-imap-feedstock
-	branch = main
 [submodule "linkify-it-py-feedstock"]
 	path = linkify-it-py-feedstock
 	url = ../linkify-it-py-feedstock
