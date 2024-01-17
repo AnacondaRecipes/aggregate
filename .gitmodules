@@ -10021,3 +10021,7 @@
 	path = seal-feedstock
 	url = ../seal-feedstock
 	branch = main
+[submodule "yara-python-feedstock"]
+	path = yara-python-feedstock
+	url = ../yara-python-feedstock
+	branch = main
