@@ -6518,10 +6518,6 @@
 	path = apache-airflow-providers-imap-feedstock
 	url = ../apache-airflow-providers-imap-feedstock
 	branch = main
-[submodule "apache-airflow-providers-http-feedstock"]
-	path = apache-airflow-providers-http-feedstock
-	url = ../apache-airflow-providers-http-feedstock
-	branch = main
 [submodule "linkify-it-py-feedstock"]
 	path = linkify-it-py-feedstock
 	url = ../linkify-it-py-feedstock
