@@ -10029,3 +10029,7 @@
 	path = pyreadstat-feedstock
 	url = ../pyreadstat-feedstock
 	branch = main
+[submodule "tenseal-feedstock"]
+	path = tenseal-feedstock
+	url = ../tenseal-feedstock
+	branch = main
