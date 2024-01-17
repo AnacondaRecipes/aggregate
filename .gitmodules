@@ -10025,3 +10025,7 @@
 	path = yara-python-feedstock
 	url = ../yara-python-feedstock
 	branch = main
+[submodule "pyreadstat-feedstock"]
+	path = pyreadstat-feedstock
+	url = ../pyreadstat-feedstock
+	branch = main
