@@ -10009,3 +10009,7 @@
 	path = tenseal-feedstock
 	url = ../tenseal-feedstock
 	branch = main
+[submodule "cuda-version-feedstock"]
+	path = cuda-version-feedstock
+	url = ../cuda-version-feedstock
+	branch = main
