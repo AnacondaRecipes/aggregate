@@ -10017,3 +10017,7 @@
 	path = tsl_robin_map-feedstock
 	url = ../tsl_robin_map-feedstock
 	branch = main
+[submodule "streamlit-pandas-profiling-feedstock"]
+	path = streamlit-pandas-profiling-feedstock
+	url = ../streamlit-pandas-profiling-feedstock
+	branch = main
