@@ -10025,3 +10025,7 @@
 	path = tzfpy-feedstock
 	url = ../tzfpy-feedstock
 	branch = main
+[submodule "openskill-feedstock"]
+	path = openskill-feedstock
+	url = ../openskill-feedstock
+	branch = main
