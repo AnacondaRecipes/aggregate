@@ -10029,3 +10029,7 @@
 	path = openskill-feedstock
 	url = ../openskill-feedstock
 	branch = main
+[submodule "laszip-python-feedstock"]
+	path = laszip-python-feedstock
+	url = ../laszip-python-feedstock
+	branch = main
