@@ -10021,3 +10021,7 @@
 	path = streamlit-pandas-profiling-feedstock
 	url = ../streamlit-pandas-profiling-feedstock
 	branch = main
+[submodule "tzfpy-feedstock"]
+	path = tzfpy-feedstock
+	url = ../tzfpy-feedstock
+	branch = main
