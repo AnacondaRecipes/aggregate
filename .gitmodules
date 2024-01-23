@@ -10013,3 +10013,7 @@
 	path = cuda-version-feedstock
 	url = ../cuda-version-feedstock
 	branch = main
+[submodule "tsl_robin_map-feedstock"]
+	path = tsl_robin_map-feedstock
+	url = ../tsl_robin_map-feedstock
+	branch = main
