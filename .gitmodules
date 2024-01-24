@@ -10033,3 +10033,7 @@
 	path = laszip-python-feedstock
 	url = ../laszip-python-feedstock
 	branch = main
+[submodule "cuda-cccl-feedstock"]
+	path = cuda-cccl-feedstock
+	url = ../cuda-cccl-feedstock
+	branch = main
