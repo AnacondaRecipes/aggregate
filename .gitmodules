@@ -10057,3 +10057,7 @@
 	path = aws-c-cal-feedstock
 	url = ../aws-c-cal-feedstock
 	branch = master
+[submodule "aws-c-io-feedstock"]
+	path = aws-c-io-feedstock
+	url = ../aws-c-io-feedstock
+	branch = master
