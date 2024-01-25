@@ -10061,3 +10061,8 @@
 	path = aws-c-io-feedstock
 	url = ../aws-c-io-feedstock
 	branch = master
+[submodule "s2n-feedstock"]
+	path = s2n-feedstock
+	url = ../s2n-feedstock
+	branch = master
+
