@@ -10053,3 +10053,7 @@
 	path = types-pyfarmhash-feedstock
 	url = ../types-pyfarmhash-feedstock
 	branch = main
+[submodule "aws-c-cal-feedstock"]
+	path = aws-c-cal-feedstock
+	url = ../aws-c-cal-feedstock
+	branch = master
