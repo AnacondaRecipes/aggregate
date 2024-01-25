@@ -10045,3 +10045,7 @@
 	path = timezonefinder-feedstock
 	url = ../timezonefinder-feedstock
 	branch = main
+[submodule "researchpy-feedstock"]
+	path = researchpy-feedstock
+	url = ../researchpy-feedstock
+	branch = main
