@@ -10037,3 +10037,7 @@
 	path = cuda-cccl-feedstock
 	url = ../cuda-cccl-feedstock
 	branch = main
+[submodule "movingpandas-feedstock"]
+	path = movingpandas-feedstock
+	url = ../movingpandas-feedstock
+	branch = main
