@@ -10066,3 +10066,7 @@
 	url = ../s2n-feedstock
 	branch = master
 
+[submodule "sklearn-pandas-feedstock"]
+	path = sklearn-pandas-feedstock
+	url = ../sklearn-pandas-feedstock
+	branch = main
