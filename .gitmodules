@@ -10049,3 +10049,7 @@
 	path = researchpy-feedstock
 	url = ../researchpy-feedstock
 	branch = main
+[submodule "types-pyfarmhash-feedstock"]
+	path = types-pyfarmhash-feedstock
+	url = ../types-pyfarmhash-feedstock
+	branch = main
