@@ -10041,3 +10041,7 @@
 	path = movingpandas-feedstock
 	url = ../movingpandas-feedstock
 	branch = main
+[submodule "timezonefinder-feedstock"]
+	path = timezonefinder-feedstock
+	url = ../timezonefinder-feedstock
+	branch = main
