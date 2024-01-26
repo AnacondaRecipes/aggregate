@@ -10070,3 +10070,7 @@
 	path = sklearn-pandas-feedstock
 	url = ../sklearn-pandas-feedstock
 	branch = main
+[submodule "aws-crt-cpp-feedstock"]
+	path = aws-crt-cpp-feedstock
+	url = ../aws-crt-cpp-feedstock/
+	branch = main
