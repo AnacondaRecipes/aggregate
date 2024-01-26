@@ -10078,3 +10078,7 @@
 	path = aws-c-auth-feedstock
 	url = ../aws-c-auth-feedstock
 	branch = main
+[submodule "aws-c-compression-feedstock"]
+	path = aws-c-compression-feedstock
+	url = ../aws-c-compression-feedstock
+	branch = main
