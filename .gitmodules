@@ -10090,3 +10090,7 @@
 	path = aws-c-s3-feedstock
 	url = ../aws-c-s3-feedstock
 	branch = main
+[submodule "aws-c-sdkutils-feedstock"]
+	path = aws-c-sdkutils-feedstock
+	url = ../aws-c-sdkutils-feedstock
+	branch = main
