@@ -10086,3 +10086,7 @@
 	path = aws-c-mqtt-feedstock
 	url = ../aws-c-mqtt-feedstock
 	branch = main
+[submodule "aws-c-s3-feedstock"]
+	path = aws-c-s3-feedstock
+	url = ../aws-c-s3-feedstock
+	branch = main
