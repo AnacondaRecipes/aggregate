@@ -10074,3 +10074,7 @@
 	path = aws-crt-cpp-feedstock
 	url = ../aws-crt-cpp-feedstock/
 	branch = main
+[submodule "aws-c-auth-feedstock"]
+	path = aws-c-auth-feedstock
+	url = ../aws-c-auth-feedstock
+	branch = main
