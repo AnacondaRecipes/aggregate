@@ -10082,3 +10082,7 @@
 	path = aws-c-compression-feedstock
 	url = ../aws-c-compression-feedstock
 	branch = main
+[submodule "aws-c-mqtt-feedstock"]
+	path = aws-c-mqtt-feedstock
+	url = ../aws-c-mqtt-feedstock
+	branch = main
