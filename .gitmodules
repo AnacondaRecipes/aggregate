@@ -10097,4 +10097,4 @@
 [submodule "aws-c-http-feedstock"]
 	path = aws-c-http-feedstock
 	url = ../aws-c-http-feedstock
-	branch = master
+	branch = main
