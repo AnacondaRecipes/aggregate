@@ -10094,3 +10094,7 @@
 	path = aws-c-sdkutils-feedstock
 	url = ../aws-c-sdkutils-feedstock
 	branch = main
+[submodule "aws-c-http-feedstock"]
+	path = aws-c-http-feedstock
+	url = ../aws-c-http-feedstock
+	branch = master
