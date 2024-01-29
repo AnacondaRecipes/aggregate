@@ -10098,3 +10098,7 @@
 	path = aws-c-http-feedstock
 	url = ../aws-c-http-feedstock
 	branch = main
+[submodule "socksio-feedstock"]
+	path = socksio-feedstock
+	url = ../socksio-feedstock
+	branch = main
