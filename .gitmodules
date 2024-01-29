@@ -10102,3 +10102,7 @@
 	path = socksio-feedstock
 	url = ../socksio-feedstock
 	branch = main
+[submodule "cuda-cccl-impl-feedstock"]
+	path = cuda-cccl-impl-feedstock
+	url = ../cuda-cccl-impl-feedstock
+	branch = main
