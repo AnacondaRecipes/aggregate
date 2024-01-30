@@ -10106,7 +10106,3 @@
 	path = cuda-cccl-impl-feedstock
 	url = ../cuda-cccl-impl-feedstock
 	branch = main
-[submodule "hatch-fancy-pypi-readme-feedstock"]
-	path = hatch-fancy-pypi-readme-feedstock
-	url = ../hatch-fancy-pypi-readme-feedstock
-	branch = main
