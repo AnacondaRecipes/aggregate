@@ -10110,3 +10110,7 @@
 	path = hatch-fancy-pypi-readme-feedstock
 	url = ../hatch-fancy-pypi-readme-feedstock
 	branch = main
+[submodule "structlog-feedstock"]
+	path = structlog-feedstock
+	url = ../structlog-feedstock
+	branch = main
