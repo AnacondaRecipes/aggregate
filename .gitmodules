@@ -10118,3 +10118,7 @@
 	path = chainladder-feedstock
 	url = ../chainladder-feedstock
 	branch = main
+[submodule "pytorch-tabnet-feedstock"]
+	path = pytorch-tabnet-feedstock
+	url = ../pytorch-tabnet-feedstock
+	branch = main
