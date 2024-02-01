@@ -10114,3 +10114,7 @@
 	path = structlog-feedstock
 	url = ../structlog-feedstock
 	branch = main
+[submodule "chainladder-feedstock"]
+	path = chainladder-feedstock
+	url = ../chainladder-feedstock
+	branch = main
