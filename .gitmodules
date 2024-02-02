@@ -10122,3 +10122,7 @@
 	path = pytorch-tabnet-feedstock
 	url = ../pytorch-tabnet-feedstock
 	branch = main
+[submodule "pysam-feedstock"]
+	path = pysam-feedstock
+	url = ../pysam-feedstock
+	branch = main
