@@ -10130,3 +10130,7 @@
 	path = snowflake-sqlalchemy-feedstock
 	url = ../snowflake-sqlalchemy-feedstock
 	branch = main
+[submodule "urllib3-2.0.7-feedstock"]
+	path = urllib3-2.0.7-feedstock
+	url = ../urllib3-feedstock
+	branch = master-2.0.7
