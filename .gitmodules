@@ -10126,3 +10126,7 @@
 	path = pysam-feedstock
 	url = ../pysam-feedstock
 	branch = main
+[submodule "snowflake-sqlalchemy-feedstock"]
+	path = snowflake-sqlalchemy-feedstock
+	url = ../snowflake-sqlalchemy-feedstock
+	branch = main
