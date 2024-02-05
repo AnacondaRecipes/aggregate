@@ -10134,3 +10134,7 @@
 	path = urllib3-2.0.7-feedstock
 	url = ../urllib3-feedstock
 	branch = master-2.0.7
+[submodule "tableauserverclient-feedstock"]
+	path = tableauserverclient-feedstock
+	url = ../tableauserverclient-feedstock
+	branch = main
