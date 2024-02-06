@@ -10138,3 +10138,7 @@
 	path = tableauserverclient-feedstock
 	url = ../tableauserverclient-feedstock
 	branch = main
+[submodule "requests-mock-feedstock"]
+	path = requests-mock-feedstock
+	url = ../requests-mock-feedstock
+	branch = main
