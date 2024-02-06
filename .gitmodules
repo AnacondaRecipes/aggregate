@@ -10142,3 +10142,7 @@
 	path = requests-mock-feedstock
 	url = ../requests-mock-feedstock
 	branch = main
+[submodule "metaphone-feedstock"]
+	path = metaphone-feedstock
+	url = ../metaphone-feedstock
+	branch = main
