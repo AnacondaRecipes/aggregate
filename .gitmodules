@@ -10150,3 +10150,7 @@
 	path = probableparsing-feedstock
 	url = ../probableparsing-feedstock
 	branch = main
+[submodule "usaddress-feedstock"]
+	path = usaddress-feedstock
+	url = ../usaddress-feedstock
+	branch = main
