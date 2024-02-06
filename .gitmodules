@@ -10146,3 +10146,7 @@
 	path = metaphone-feedstock
 	url = ../metaphone-feedstock
 	branch = main
+[submodule "probableparsing-feedstock"]
+	path = probableparsing-feedstock
+	url = ../probableparsing-feedstock
+	branch = main
