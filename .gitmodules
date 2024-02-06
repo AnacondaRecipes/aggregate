@@ -6510,26 +6510,6 @@
 	path = python-ldap-feedstock
 	url = ../python-ldap-feedstock
 	branch = main
-[submodule "apache-airflow-providers-sqlite-feedstock"]
-	path = apache-airflow-providers-sqlite-feedstock
-	url = ../apache-airflow-providers-sqlite-feedstock
-	branch = main
-[submodule "apache-airflow-providers-imap-feedstock"]
-	path = apache-airflow-providers-imap-feedstock
-	url = ../apache-airflow-providers-imap-feedstock
-	branch = main
-[submodule "apache-airflow-providers-http-feedstock"]
-	path = apache-airflow-providers-http-feedstock
-	url = ../apache-airflow-providers-http-feedstock
-	branch = main
-[submodule "apache-airflow-providers-ftp-feedstock"]
-	path = apache-airflow-providers-ftp-feedstock
-	url = ../apache-airflow-providers-ftp-feedstock
-	branch = main
-[submodule "apache-airflow-providers-apache-hdfs-feedstock"]
-	path = apache-airflow-providers-apache-hdfs-feedstock
-	url = ../apache-airflow-providers-apache-hdfs-feedstock
-	branch = main
 [submodule "linkify-it-py-feedstock"]
 	path = linkify-it-py-feedstock
 	url = ../linkify-it-py-feedstock
@@ -6885,10 +6865,6 @@
 [submodule "pdm-feedstock"]
 	path = pdm-feedstock
 	url = ../pdm-feedstock
-	branch = main
-[submodule "apache-airflow-providers-common-sql-feedstock"]
-	path = apache-airflow-providers-common-sql-feedstock
-	url = ../apache-airflow-providers-common-sql-feedstock
 	branch = main
 [submodule "mamba-feedstock"]
 	path = mamba-feedstock
@@ -9992,4 +9968,189 @@
 [submodule "bazel-toolchain-feedstock"]
 	path = bazel-toolchain-feedstock
 	url = ../bazel-toolchain-feedstock
+	branch = main
+[submodule "sql-metadata-feedstock"]
+	path = sql-metadata-feedstock
+	url = ../sql-metadata-feedstock
+	branch = main
+[submodule "doctest-feedstock"]
+	path = doctest-feedstock
+	url = ../doctest-feedstock
+	branch = main
+[submodule "xtl-feedstock"]
+	path = xtl-feedstock
+	url = ../xtl-feedstock
+	branch = main
+[submodule "ms-gsl-feeedstock"]
+	path = ms-gsl-feeedstock
+	url = ../ms-gsl-feedstock
+	branch = main
+[submodule "xsimd-7.4-feedstock"]
+	path = xsimd-7.4-feedstock
+	url = ../xsimd-feedstock
+	branch = master-7.4.x
+[submodule "xtensor-feedstock"]
+	path = xtensor-feedstock
+	url = ../xtensor-feedstock
+	branch = main
+[submodule "seal-feedstock"]
+	path = seal-feedstock
+	url = ../seal-feedstock
+	branch = main
+[submodule "yara-python-feedstock"]
+	path = yara-python-feedstock
+	url = ../yara-python-feedstock
+	branch = main
+[submodule "pyreadstat-feedstock"]
+	path = pyreadstat-feedstock
+	url = ../pyreadstat-feedstock
+	branch = main
+[submodule "tenseal-feedstock"]
+	path = tenseal-feedstock
+	url = ../tenseal-feedstock
+	branch = main
+[submodule "cuda-version-feedstock"]
+	path = cuda-version-feedstock
+	url = ../cuda-version-feedstock
+	branch = main
+[submodule "tsl_robin_map-feedstock"]
+	path = tsl_robin_map-feedstock
+	url = ../tsl_robin_map-feedstock
+	branch = main
+[submodule "streamlit-pandas-profiling-feedstock"]
+	path = streamlit-pandas-profiling-feedstock
+	url = ../streamlit-pandas-profiling-feedstock
+	branch = main
+[submodule "tzfpy-feedstock"]
+	path = tzfpy-feedstock
+	url = ../tzfpy-feedstock
+	branch = main
+[submodule "openskill-feedstock"]
+	path = openskill-feedstock
+	url = ../openskill-feedstock
+	branch = main
+[submodule "laszip-python-feedstock"]
+	path = laszip-python-feedstock
+	url = ../laszip-python-feedstock
+	branch = main
+[submodule "cuda-cccl-feedstock"]
+	path = cuda-cccl-feedstock
+	url = ../cuda-cccl-feedstock
+	branch = main
+[submodule "movingpandas-feedstock"]
+	path = movingpandas-feedstock
+	url = ../movingpandas-feedstock
+	branch = main
+[submodule "timezonefinder-feedstock"]
+	path = timezonefinder-feedstock
+	url = ../timezonefinder-feedstock
+	branch = main
+[submodule "researchpy-feedstock"]
+	path = researchpy-feedstock
+	url = ../researchpy-feedstock
+	branch = main
+[submodule "types-pyfarmhash-feedstock"]
+	path = types-pyfarmhash-feedstock
+	url = ../types-pyfarmhash-feedstock
+	branch = main
+[submodule "aws-c-cal-feedstock"]
+	path = aws-c-cal-feedstock
+	url = ../aws-c-cal-feedstock
+	branch = master
+[submodule "aws-c-io-feedstock"]
+	path = aws-c-io-feedstock
+	url = ../aws-c-io-feedstock
+	branch = master
+[submodule "s2n-feedstock"]
+	path = s2n-feedstock
+	url = ../s2n-feedstock
+	branch = master
+
+[submodule "sklearn-pandas-feedstock"]
+	path = sklearn-pandas-feedstock
+	url = ../sklearn-pandas-feedstock
+	branch = main
+[submodule "aws-crt-cpp-feedstock"]
+	path = aws-crt-cpp-feedstock
+	url = ../aws-crt-cpp-feedstock/
+	branch = main
+[submodule "aws-c-auth-feedstock"]
+	path = aws-c-auth-feedstock
+	url = ../aws-c-auth-feedstock
+	branch = main
+[submodule "aws-c-compression-feedstock"]
+	path = aws-c-compression-feedstock
+	url = ../aws-c-compression-feedstock
+	branch = main
+[submodule "aws-c-mqtt-feedstock"]
+	path = aws-c-mqtt-feedstock
+	url = ../aws-c-mqtt-feedstock
+	branch = main
+[submodule "aws-c-s3-feedstock"]
+	path = aws-c-s3-feedstock
+	url = ../aws-c-s3-feedstock
+	branch = main
+[submodule "aws-c-sdkutils-feedstock"]
+	path = aws-c-sdkutils-feedstock
+	url = ../aws-c-sdkutils-feedstock
+	branch = main
+[submodule "aws-c-http-feedstock"]
+	path = aws-c-http-feedstock
+	url = ../aws-c-http-feedstock
+	branch = main
+[submodule "socksio-feedstock"]
+	path = socksio-feedstock
+	url = ../socksio-feedstock
+	branch = main
+[submodule "cuda-cccl-impl-feedstock"]
+	path = cuda-cccl-impl-feedstock
+	url = ../cuda-cccl-impl-feedstock
+	branch = main
+[submodule "hatch-fancy-pypi-readme-feedstock"]
+	path = hatch-fancy-pypi-readme-feedstock
+	url = ../hatch-fancy-pypi-readme-feedstock
+	branch = main
+[submodule "structlog-feedstock"]
+	path = structlog-feedstock
+	url = ../structlog-feedstock
+	branch = main
+[submodule "chainladder-feedstock"]
+	path = chainladder-feedstock
+	url = ../chainladder-feedstock
+	branch = main
+[submodule "pytorch-tabnet-feedstock"]
+	path = pytorch-tabnet-feedstock
+	url = ../pytorch-tabnet-feedstock
+	branch = main
+[submodule "pysam-feedstock"]
+	path = pysam-feedstock
+	url = ../pysam-feedstock
+	branch = main
+[submodule "snowflake-sqlalchemy-feedstock"]
+	path = snowflake-sqlalchemy-feedstock
+	url = ../snowflake-sqlalchemy-feedstock
+	branch = main
+[submodule "urllib3-2.0.7-feedstock"]
+	path = urllib3-2.0.7-feedstock
+	url = ../urllib3-feedstock
+	branch = master-2.0.7
+[submodule "tableauserverclient-feedstock"]
+	path = tableauserverclient-feedstock
+	url = ../tableauserverclient-feedstock
+	branch = main
+[submodule "requests-mock-feedstock"]
+	path = requests-mock-feedstock
+	url = ../requests-mock-feedstock
+	branch = main
+[submodule "metaphone-feedstock"]
+	path = metaphone-feedstock
+	url = ../metaphone-feedstock
+	branch = main
+[submodule "probableparsing-feedstock"]
+	path = probableparsing-feedstock
+	url = ../probableparsing-feedstock
+	branch = main
+[submodule "usaddress-feedstock"]
+	path = usaddress-feedstock
+	url = ../usaddress-feedstock
 	branch = main
