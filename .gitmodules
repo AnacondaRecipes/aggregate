@@ -10154,3 +10154,7 @@
 	path = usaddress-feedstock
 	url = ../usaddress-feedstock
 	branch = main
+[submodule "signal-processing-algorithms-feedstock"]
+	path = signal-processing-algorithms-feedstock
+	url = ../signal-processing-algorithms-feedstock
+	branch = main
