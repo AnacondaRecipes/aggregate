@@ -10158,3 +10158,7 @@
 	path = signal-processing-algorithms-feedstock
 	url = ../signal-processing-algorithms-feedstock
 	branch = main
+[submodule "cuda-nvcc-impl-feedstock"]
+	path = cuda-nvcc-impl-feedstock
+	url = ../cuda-nvcc-impl-feedstock
+	branch = main
