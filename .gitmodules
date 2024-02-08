@@ -10162,3 +10162,7 @@
 	path = cuda-nvcc-impl-feedstock
 	url = ../cuda-nvcc-impl-feedstock
 	branch = main
+[submodule "simhash-feedstock"]
+	path = simhash-feedstock
+	url = ../simhash-feedstock
+	branch = main
