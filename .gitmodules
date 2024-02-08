@@ -10166,3 +10166,7 @@
 	path = simhash-feedstock
 	url = ../simhash-feedstock
 	branch = main
+[submodule "file-feedstock"]
+	path = file-feedstock
+	url = ../file-feedstock
+	branch = master
