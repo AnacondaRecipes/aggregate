@@ -10170,3 +10170,7 @@
 	path = file-feedstock
 	url = ../file-feedstock
 	branch = master
+[submodule "libsimdpp-feedstock"]
+	path = libsimdpp-feedstock
+	url = ../libsimdpp-feedstock
+	branch = main
