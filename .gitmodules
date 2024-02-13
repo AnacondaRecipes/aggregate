@@ -10174,3 +10174,7 @@
 	path = libsimdpp-feedstock
 	url = ../libsimdpp-feedstock
 	branch = main
+[submodule "sklearn-som-feedstock"]
+	path = sklearn-som-feedstock
+	url = ../sklearn-som-feedstock
+	branch = main
