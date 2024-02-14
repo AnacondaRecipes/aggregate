@@ -10178,3 +10178,11 @@
 	path = sklearn-som-feedstock
 	url = ../sklearn-som-feedstock
 	branch = main
+[submodule "types-setuptools-feedstock"]
+	path = types-setuptools-feedstock
+	url = ../types-setuptools-feedstock
+	branch = main
+[submodule "types-psutil-feedstock"]
+	path = types-psutil-feedstock
+	url = ../types-psutil-feedstock
+	branch = main
