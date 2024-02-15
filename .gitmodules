@@ -10186,3 +10186,7 @@
 	path = types-psutil-feedstock
 	url = ../types-psutil-feedstock
 	branch = main
+[submodule "avro-feedstock"]
+	path = avro-feedstock
+	url = ../avro-feedstock
+	branch = main
