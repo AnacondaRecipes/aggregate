@@ -10190,3 +10190,7 @@
 	path = avro-feedstock
 	url = ../avro-feedstock
 	branch = main
+[submodule "avro-python3-feedstock"]
+	path = avro-python3-feedstock
+	url = ../avro-python3-feedstock
+	branch = main
