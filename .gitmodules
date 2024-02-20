@@ -10154,3 +10154,51 @@
 	path = usaddress-feedstock
 	url = ../usaddress-feedstock
 	branch = main
+[submodule "signal-processing-algorithms-feedstock"]
+	path = signal-processing-algorithms-feedstock
+	url = ../signal-processing-algorithms-feedstock
+	branch = main
+[submodule "cuda-nvcc-impl-feedstock"]
+	path = cuda-nvcc-impl-feedstock
+	url = ../cuda-nvcc-impl-feedstock
+	branch = main
+[submodule "simhash-feedstock"]
+	path = simhash-feedstock
+	url = ../simhash-feedstock
+	branch = main
+[submodule "file-feedstock"]
+	path = file-feedstock
+	url = ../file-feedstock
+	branch = master
+[submodule "libsimdpp-feedstock"]
+	path = libsimdpp-feedstock
+	url = ../libsimdpp-feedstock
+	branch = main
+[submodule "sklearn-som-feedstock"]
+	path = sklearn-som-feedstock
+	url = ../sklearn-som-feedstock
+	branch = main
+[submodule "types-setuptools-feedstock"]
+	path = types-setuptools-feedstock
+	url = ../types-setuptools-feedstock
+	branch = main
+[submodule "types-psutil-feedstock"]
+	path = types-psutil-feedstock
+	url = ../types-psutil-feedstock
+	branch = main
+[submodule "avro-feedstock"]
+	path = avro-feedstock
+	url = ../avro-feedstock
+	branch = main
+[submodule "avro-python3-feedstock"]
+	path = avro-python3-feedstock
+	url = ../avro-python3-feedstock
+	branch = main
+[submodule "titus2-feedstock"]
+	path = titus2-feedstock
+	url = ../titus2-feedstock
+	branch = main
+[submodule "minisom-feedstock"]
+	path = minisom-feedstock
+	url = ../minisom-feedstock
+	branch = main
