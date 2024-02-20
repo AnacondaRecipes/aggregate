@@ -10198,3 +10198,7 @@
 	path = titus2-feedstock
 	url = ../titus2-feedstock
 	branch = main
+[submodule "minisom-feedstock"]
+	path = minisom-feedstock
+	url = ../minisom-feedstock
+	branch = main
