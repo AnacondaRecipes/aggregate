@@ -10202,3 +10202,7 @@
 	path = minisom-feedstock
 	url = ../minisom-feedstock
 	branch = main
+[submodule "azure-mgmt-storage-feedstock"]
+	path = azure-mgmt-storage-feedstock
+	url = ../azure-mgmt-storage-feedstock
+	branch = main
