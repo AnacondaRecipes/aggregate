@@ -10206,3 +10206,7 @@
 	path = azure-mgmt-storage-feedstock
 	url = ../azure-mgmt-storage-feedstock
 	branch = main
+[submodule "janus-feedstock"]
+	path = janus-feedstock
+	url = ../janus-feedstock
+	branch = main
