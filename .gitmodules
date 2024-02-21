@@ -10214,3 +10214,7 @@
 	path = hail-feedstock
 	url = ../hail-feedstock
 	branch = main
+[submodule "parsimonious-feedstock"]
+	path = parsimonious-feedstock
+	url = ../parsimonious-feedstock
+	branch = main
