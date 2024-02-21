@@ -10218,3 +10218,7 @@
 	path = parsimonious-feedstock
 	url = ../parsimonious-feedstock
 	branch = main
+[submodule "jproperties-feedstock"]
+	path = jproperties-feedstock
+	url = ../jproperties-feedstock
+	branch = main
