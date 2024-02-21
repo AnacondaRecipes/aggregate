@@ -10226,3 +10226,7 @@
 	path = humanize-1.x-feedstock
 	url = ../humanize-feedstock
 	branch = master-1.x
+[submodule "cuda-nvcc-feedstock"]
+	path = cuda-nvcc-feedstock
+	url = ../cuda-nvcc-feedstock
+	branch = main
