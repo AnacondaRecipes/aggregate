@@ -10210,3 +10210,7 @@
 	path = janus-feedstock
 	url = ../janus-feedstock
 	branch = main
+[submodule "hail-feedstock"]
+	path = hail-feedstock
+	url = ../hail-feedstock
+	branch = main
