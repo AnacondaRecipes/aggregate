@@ -10222,3 +10222,7 @@
 	path = jproperties-feedstock
 	url = ../jproperties-feedstock
 	branch = main
+[submodule "humanize-1.x-feedstock"]
+	path = humanize-1.x-feedstock
+	url = ../humanize-feedstock
+	branch = master-1.x
