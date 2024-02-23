@@ -10230,3 +10230,7 @@
 	path = cuda-nvcc-feedstock
 	url = ../cuda-nvcc-feedstock
 	branch = main
+[submodule "azureml-mlflow-feedstock"]
+	path = azureml-mlflow-feedstock
+	url = ../azureml-mlflow-feedstock
+	branch = main
