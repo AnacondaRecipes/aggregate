@@ -10202,3 +10202,35 @@
 	path = minisom-feedstock
 	url = ../minisom-feedstock
 	branch = main
+[submodule "azure-mgmt-storage-feedstock"]
+	path = azure-mgmt-storage-feedstock
+	url = ../azure-mgmt-storage-feedstock
+	branch = main
+[submodule "janus-feedstock"]
+	path = janus-feedstock
+	url = ../janus-feedstock
+	branch = main
+[submodule "hail-feedstock"]
+	path = hail-feedstock
+	url = ../hail-feedstock
+	branch = main
+[submodule "parsimonious-feedstock"]
+	path = parsimonious-feedstock
+	url = ../parsimonious-feedstock
+	branch = main
+[submodule "jproperties-feedstock"]
+	path = jproperties-feedstock
+	url = ../jproperties-feedstock
+	branch = main
+[submodule "humanize-1.x-feedstock"]
+	path = humanize-1.x-feedstock
+	url = ../humanize-feedstock
+	branch = master-1.x
+[submodule "cuda-nvcc-feedstock"]
+	path = cuda-nvcc-feedstock
+	url = ../cuda-nvcc-feedstock
+	branch = main
+[submodule "azureml-mlflow-feedstock"]
+	path = azureml-mlflow-feedstock
+	url = ../azureml-mlflow-feedstock
+	branch = main
