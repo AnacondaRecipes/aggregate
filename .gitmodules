@@ -10238,3 +10238,7 @@
 	path = pydantic-core-feedstock
 	url = ../pydantic-core-feedstock
 	branch = main
+[submodule "fpdf-feedstock"]
+	path = fpdf-feedstock
+	url = ../fpdf-feedstock
+	branch = main
