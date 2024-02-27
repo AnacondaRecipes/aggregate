@@ -10234,3 +10234,7 @@
 	path = azureml-mlflow-feedstock
 	url = ../azureml-mlflow-feedstock
 	branch = main
+[submodule "pydantic-core-feedstock"]
+	path = pydantic-core-feedstock
+	url = ../pydantic-core-feedstock
+	branch = main
