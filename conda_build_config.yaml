@@ -161,8 +161,6 @@ numpy:
   - 1.21
   # python 3.11
   - 1.23
-  # python 3.12
-  - 1.26
 openblas:
   - 0.3.21
 openjpeg:
@@ -185,7 +183,6 @@ python:
   - 3.9
   - "3.10"
   - "3.11"
-  - "3.12"
 python_implementation:
   - cpython
 python_impl:
