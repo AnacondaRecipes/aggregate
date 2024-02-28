@@ -10242,3 +10242,7 @@
 	path = fpdf-feedstock
 	url = ../fpdf-feedstock
 	branch = main
+[submodule "kneed-feedstock"]
+	path = kneed-feedstock
+	url = ../kneed-feedstock
+	branch = main
