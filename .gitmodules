@@ -10246,3 +10246,7 @@
 	path = kneed-feedstock
 	url = ../kneed-feedstock
 	branch = main
+[submodule "time-machine-feedstock"]
+	path = time-machine-feedstock
+	url = ../time-machine-feedstock
+	branch = main
