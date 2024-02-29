@@ -10250,3 +10250,7 @@
 	path = time-machine-feedstock
 	url = ../time-machine-feedstock
 	branch = main
+[submodule "s3path-feedstock"]
+	path = s3path-feedstock
+	url = ../s3path-feedstock
+	branch = main
