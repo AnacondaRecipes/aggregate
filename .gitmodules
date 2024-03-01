@@ -10262,3 +10262,7 @@
 	path = pydantic-settings-feedstock
 	url = ../pydantic-settings-feedstock
 	branch = main
+[submodule "catch2-feedstock"]
+	path = catch2-feedstock
+	url = ../catch2-feedstock
+	branch = main
