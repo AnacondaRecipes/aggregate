@@ -10258,3 +10258,7 @@
 	path = annotated-types-feedstock
 	url = ../annotated-types-feedstock
 	branch = main
+[submodule "pydantic-settings-feedstock"]
+	path = pydantic-settings-feedstock
+	url = ../pydantic-settings-feedstock
+	branch = main
