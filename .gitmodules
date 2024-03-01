@@ -10254,3 +10254,7 @@
 	path = s3path-feedstock
 	url = ../s3path-feedstock
 	branch = main
+[submodule "annotated-types-feedstock"]
+	path = annotated-types-feedstock
+	url = ../annotated-types-feedstock
+	branch = main
