@@ -10234,3 +10234,7 @@
 	path = azureml-mlflow-feedstock
 	url = ../azureml-mlflow-feedstock
 	branch = main
+[submodule "s3path-feedstock"]
+	path = s3path-feedstock
+	url = ../s3path-feedstock
+	branch = main
