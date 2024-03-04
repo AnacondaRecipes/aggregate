@@ -10266,3 +10266,7 @@
 	path = catch2-feedstock
 	url = ../catch2-feedstock
 	branch = main
+[submodule "sarif-python-om-feedstock"]
+	path = sarif-python-om-feedstock
+	url = ../sarif-python-om-feedstock
+	branch = main
