@@ -8848,10 +8848,6 @@
 	path = fuel-feedstock
 	url = ../fuel-feedstock
 	branch = main
-[submodule "functools_lru_cache-feedstock"]
-	path = functools_lru_cache-feedstock
-	url = ../functools_lru_cache-feedstock
-	branch = main
 [submodule "get_terminal_size-feedstock"]
 	path = get_terminal_size-feedstock
 	url = ../get_terminal_size-feedstock
