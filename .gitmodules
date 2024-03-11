@@ -10270,3 +10270,7 @@
 	path = cuda-nvrtc-feedstock
 	url = ../cuda-nvrtc-feedstock
 	branch = main
+[submodule "libcublas-feedstock"]
+	path = libcublas-feedstock
+	url = ../libcublas-feedstock
+	branch = main
