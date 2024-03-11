@@ -10266,3 +10266,7 @@
 	path = sarif-python-om-feedstock
 	url = ../sarif-python-om-feedstock
 	branch = main
+[submodule "cuda-nvrtc-feedstock"]
+	path = cuda-nvrtc-feedstock
+	url = ../cuda-nvrtc-feedstock
+	branch = main
