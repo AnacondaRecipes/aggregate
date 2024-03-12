@@ -10274,3 +10274,7 @@
 	path = libcublas-feedstock
 	url = ../libcublas-feedstock
 	branch = main
+[submodule "python-decouple-feedstock"]
+	path = python-decouple-feedstock
+	url = ../python-decouple-feedstock
+	branch = main
