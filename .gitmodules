@@ -10286,3 +10286,7 @@
 	path = stix2-patterns-feedstock
 	url = ../stix2-patterns-feedstock
 	branch = main
+[submodule "stix2-feedstock"]
+	path = stix2-feedstock
+	url = ../stix2-feedstock
+	branch = main
