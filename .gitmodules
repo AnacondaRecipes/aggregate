@@ -10278,3 +10278,7 @@
 	path = python-decouple-feedstock
 	url = ../python-decouple-feedstock
 	branch = main
+[submodule "quadprog-feedstock"]
+	path = quadprog-feedstock
+	url = ../quadprog-feedstock
+	branch = main
