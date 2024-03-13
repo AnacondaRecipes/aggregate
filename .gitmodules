@@ -10282,3 +10282,7 @@
 	path = quadprog-feedstock
 	url = ../quadprog-feedstock
 	branch = main
+[submodule "stix2-patterns-feedstock"]
+	path = stix2-patterns-feedstock
+	url = ../stix2-patterns-feedstock
+	branch = main
