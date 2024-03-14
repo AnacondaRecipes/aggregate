@@ -10294,3 +10294,7 @@
 	path = pyfftw-feedstock
 	url = ../pyfftw-feedstock
 	branch = main
+[submodule "hierarchicalforecast-feedstock"]
+	path = hierarchicalforecast-feedstock
+	url = ../hierarchicalforecast-feedstock
+	branch = main
