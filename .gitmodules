@@ -10290,3 +10290,7 @@
 	path = stix2-feedstock
 	url = ../stix2-feedstock
 	branch = main
+[submodule "pyfftw-feedstock"]
+	path = pyfftw-feedstock
+	url = ../pyfftw-feedstock
+	branch = main
