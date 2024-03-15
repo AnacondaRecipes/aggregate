@@ -10298,3 +10298,7 @@
 	path = hierarchicalforecast-feedstock
 	url = ../hierarchicalforecast-feedstock
 	branch = main
+[submodule "snowpark-python-1.12.1-feedstock"]
+	path = snowpark-python-1.12.1-feedstock
+	url = ../snowpark-python-feedstock
+	branch = master-1.12.1
