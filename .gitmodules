@@ -10302,3 +10302,7 @@
 	path = snowpark-python-1.12.1-feedstock
 	url = ../snowpark-python-feedstock
 	branch = master-1.12.1
+[submodule "jschema-to-python-feedstock"]
+	path = jschema-to-python-feedstock
+	url = ../jschema-to-python-feedstock
+	branch = main
