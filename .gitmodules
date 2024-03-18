@@ -10306,3 +10306,7 @@
 	path = jschema-to-python-feedstock
 	url = ../jschema-to-python-feedstock
 	branch = main
+[submodule "llama-cpp-python-feedstock"]
+	path = llama-cpp-python-feedstock
+	url = ../llama-cpp-python-feedstock
+	branch = main
