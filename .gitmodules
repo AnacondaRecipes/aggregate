@@ -10310,3 +10310,7 @@
 	path = llama-cpp-python-feedstock
 	url = ../llama-cpp-python-feedstock
 	branch = main
+[submodule "langchain-core-feedstock"]
+	path = langchain-core-feedstock
+	url = ../langchain-core-feedstock
+	branch = main
