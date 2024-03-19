@@ -10314,3 +10314,7 @@
 	path = langchain-core-feedstock
 	url = ../langchain-core-feedstock
 	branch = main
+[submodule "pyfhel-feedstock"]
+	path = pyfhel-feedstock
+	url = ../pyfhel-feedstock
+	branch = main
