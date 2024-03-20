@@ -10318,3 +10318,7 @@
 	path = pyfhel-feedstock
 	url = ../pyfhel-feedstock
 	branch = main
+[submodule "econml-feedstock"]
+	path = econml-feedstock
+	url = ../econml-feedstock
+	branch = main
