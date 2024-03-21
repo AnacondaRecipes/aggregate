@@ -10322,3 +10322,7 @@
 	path = econml-feedstock
 	url = ../econml-feedstock
 	branch = main
+[submodule "pymcdm-feedstock"]
+	path = pymcdm-feedstock
+	url = ../pymcdm-feedstock
+	branch = main
