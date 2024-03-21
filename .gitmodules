@@ -10326,3 +10326,7 @@
 	path = pymcdm-feedstock
 	url = ../pymcdm-feedstock
 	branch = main
+[submodule "pyrecorder-feedstock"]
+	path = pyrecorder-feedstock
+	url = ../pyrecorder-feedstock
+	branch = main
