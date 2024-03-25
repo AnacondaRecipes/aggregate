@@ -10338,3 +10338,7 @@
 	path = weakrefmethod-feedstock
 	url = ../weakrefmethod-feedstock
 	branch = main
+[submodule "mixbox-feedstock"]
+	path = mixbox-feedstock
+	url = ../mixbox-feedstock
+	branch = main
