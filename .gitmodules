@@ -10346,3 +10346,7 @@
 	path = cybox-feedstock
 	url = ../cybox-feedstock
 	branch = main
+[submodule "stix-feedstock"]
+	path = stix-feedstock
+	url = ../stix-feedstock
+	branch = main
