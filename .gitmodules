@@ -10330,3 +10330,7 @@
 	path = pyrecorder-feedstock
 	url = ../pyrecorder-feedstock
 	branch = main
+[submodule "streamlit-aggrid-feedstock"]
+	path = streamlit-aggrid-feedstock
+	url = ../streamlit-aggrid-feedstock
+	branch = main
