@@ -10334,3 +10334,7 @@
 	path = streamlit-aggrid-feedstock
 	url = ../streamlit-aggrid-feedstock
 	branch = main
+[submodule "weakrefmethod-feedstock"]
+	path = weakrefmethod-feedstock
+	url = ../weakrefmethod-feedstock
+	branch = main
