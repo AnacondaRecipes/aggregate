@@ -10342,3 +10342,7 @@
 	path = mixbox-feedstock
 	url = ../mixbox-feedstock
 	branch = main
+[submodule "cybox-feedstock"]
+	path = cybox-feedstock
+	url = ../cybox-feedstock
+	branch = main
