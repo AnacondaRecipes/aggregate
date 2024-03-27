@@ -10354,3 +10354,7 @@
 	path = requests-cache-feedstock
 	url = ../requests-cache-feedstock
 	branch = main
+[submodule "url-normalize-feedstock"]
+	path = url-normalize-feedstock
+	url = ../url-normalize-feedstock
+	branch = main
