@@ -10350,3 +10350,7 @@
 	path = stix-feedstock
 	url = ../stix-feedstock
 	branch = main
+[submodule "requests-cache-feedstock"]
+	path = requests-cache-feedstock
+	url = ../requests-cache-feedstock
+	branch = main
