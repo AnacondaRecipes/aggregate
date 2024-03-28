@@ -10358,3 +10358,7 @@
 	path = url-normalize-feedstock
 	url = ../url-normalize-feedstock
 	branch = main
+[submodule "array-api-strict-feedstock"]
+	path = array-api-strict-feedstock
+	url = ../array-api-strict-feedstock
+	branch = main
