@@ -10362,3 +10362,7 @@
 	path = array-api-strict-feedstock
 	url = ../array-api-strict-feedstock
 	branch = main
+[submodule "llama.cpp-feedstock"]
+	path = llama.cpp-feedstock
+	url = ../llama.cpp-feedstock
+	branch = main
