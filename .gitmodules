@@ -10366,3 +10366,7 @@
 	path = llama.cpp-feedstock
 	url = ../llama.cpp-feedstock
 	branch = main
+[submodule "opentelemetry-semantic-conventions-feedstock"]
+	path = opentelemetry-semantic-conventions-feedstock
+	url = ../opentelemetry-semantic-conventions-feedstock
+	branch = main
