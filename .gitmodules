@@ -10370,3 +10370,7 @@
 	path = opentelemetry-semantic-conventions-feedstock
 	url = ../opentelemetry-semantic-conventions-feedstock
 	branch = main
+[submodule "jsonschema-path-feedstock"]
+	path = jsonschema-path-feedstock
+	url = ../jsonschema-path-feedstock
+	branch = main
