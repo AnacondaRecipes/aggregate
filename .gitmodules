@@ -10390,3 +10390,7 @@
 	path = opentelemetry-exporter-otlp-proto-common-feedstock
 	url = ../opentelemetry-exporter-otlp-proto-common-feedstock
 	branch = main
+[submodule "rust-activation-1.76.0.dev20231115-feedstock"]
+	path = rust-activation-1.76.0.dev20231115-feedstock
+	url = ../rust-activation-feedstock
+	branch = master-1.76.0.dev20231115
