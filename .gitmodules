@@ -10386,3 +10386,7 @@
 	path = opentelemetry-proto-feedstock
 	url = ../opentelemetry-proto-feedstock
 	branch = main
+[submodule "opentelemetry-exporter-otlp-proto-common-feedstock"]
+	path = opentelemetry-exporter-otlp-proto-common-feedstock
+	url = ../opentelemetry-exporter-otlp-proto-common-feedstock
+	branch = main
