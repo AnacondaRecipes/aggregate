@@ -10378,3 +10378,7 @@
 	path = mamba-feedstock
 	url = ../mamba-feedstock
 	branch = main
+[submodule "pathable-feedstock"]
+	path = pathable-feedstock
+	url = ../pathable-feedstock
+	branch = main
