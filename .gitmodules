@@ -10376,5 +10376,5 @@
 	branch = main
 [submodule "rust-1.76.0.dev20231115-feedstock"]
 	path = rust-1.76.0.dev20231115-feedstock
-	url = ../rust-1.76.0.dev20231115-feedstock
+	url = ../rust-feedstock
 	branch = master-1.76.0.dev20231115
