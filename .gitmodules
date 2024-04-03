@@ -10382,3 +10382,7 @@
 	path = pathable-feedstock
 	url = ../pathable-feedstock
 	branch = main
+[submodule "opentelemetry-proto-feedstock"]
+	path = opentelemetry-proto-feedstock
+	url = ../opentelemetry-proto-feedstock
+	branch = main
