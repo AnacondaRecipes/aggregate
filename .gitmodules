@@ -10398,3 +10398,7 @@
 	path = opentelemetry-api-feedstock
 	url = ../opentelemetry-api-feedstock
 	branch = main
+[submodule "opentelemetry-sdk-feedstock"]
+	path = opentelemetry-sdk-feedstock
+	url = ../opentelemetry-sdk-feedstock
+	branch = main
