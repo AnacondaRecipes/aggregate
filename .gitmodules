@@ -10402,3 +10402,7 @@
 	path = opentelemetry-sdk-feedstock
 	url = ../opentelemetry-sdk-feedstock
 	branch = main
+[submodule "pytest-json-report-feedstock"]
+	path = pytest-json-report-feedstock
+	url = ../pytest-json-report-feedstock
+	branch = main
