@@ -10370,10 +10370,6 @@
 	path = jsonschema-path-feedstock
 	url = ../jsonschema-path-feedstock
 	branch = main
-[submodule "rust-1.76.0.dev20231115-feedstock"]
-	path = rust-1.76.0.dev20231115-feedstock
-	url = ../rust-feedstock
-	branch = master-1.76.0.dev20231115
 [submodule "mamba-feedstock"]
 	path = mamba-feedstock
 	url = ../mamba-feedstock
@@ -10406,3 +10402,7 @@
 	path = pytest-json-report-feedstock
 	url = ../pytest-json-report-feedstock
 	branch = main
+[submodule "rust-1.79.0.dev20240328-feedstock"]
+	path = rust-1.79.0.dev20240328-feedstock
+	url = ../rust-feedstock
+	branch = master-1.79.0.dev20240328
