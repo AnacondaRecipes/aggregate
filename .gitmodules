@@ -10406,3 +10406,7 @@
 	path = rust-1.79.0.dev20240328-feedstock
 	url = ../rust-feedstock
 	branch = master-1.79.0.dev20240328
+[submodule "oracledb-feedstock"]
+	path = oracledb-feedstock
+	url = ../oracledb-feedstock
+	branch = main
