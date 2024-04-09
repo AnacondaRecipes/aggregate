@@ -10386,10 +10386,6 @@
 	path = opentelemetry-exporter-otlp-proto-common-feedstock
 	url = ../opentelemetry-exporter-otlp-proto-common-feedstock
 	branch = main
-[submodule "rust-activation-1.76.0.dev20231115-feedstock"]
-	path = rust-activation-1.76.0.dev20231115-feedstock
-	url = ../rust-activation-feedstock
-	branch = master-1.76.0.dev20231115
 [submodule "opentelemetry-api-feedstock"]
 	path = opentelemetry-api-feedstock
 	url = ../opentelemetry-api-feedstock
@@ -10410,3 +10406,7 @@
 	path = oracledb-feedstock
 	url = ../oracledb-feedstock
 	branch = main
+[submodule "rust-activation-1.79.0.dev20240328-feedstock"]
+	path = rust-activation-1.79.0.dev20240328-feedstock
+	url = ../rust-activation-feedstock
+	branch = master-1.79.0.dev20240328
