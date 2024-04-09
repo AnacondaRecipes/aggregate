@@ -10418,3 +10418,7 @@
 	path = cuda-nvdisasm-feedstock
 	url = ../cuda-nvdisasm-feedstock
 	branch = main
+[submodule "cuda-cuobjdump-feedstock"]
+	path = cuda-cuobjdump-feedstock
+	url = ../cuda-cuobjdump-feedstock
+	branch = main
