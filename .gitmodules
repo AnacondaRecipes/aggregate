@@ -10422,3 +10422,7 @@
 	path = cuda-cuobjdump-feedstock
 	url = ../cuda-cuobjdump-feedstock
 	branch = main
+[submodule "cuda-cupti-feedstock"]
+	path = cuda-cupti-feedstock
+	url = ../cuda-cupti-feedstock
+	branch = main
