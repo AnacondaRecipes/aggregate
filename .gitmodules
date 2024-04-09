@@ -10410,3 +10410,7 @@
 	path = rust-activation-1.79.0.dev20240328-feedstock
 	url = ../rust-activation-feedstock
 	branch = master-1.79.0.dev20240328
+[submodule "openapi-schema-validator-feedstock"]
+	path = openapi-schema-validator-feedstock
+	url = ../openapi-schema-validator-feedstock
+	branch = main
