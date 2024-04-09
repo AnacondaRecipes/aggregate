@@ -10414,3 +10414,7 @@
 	path = openapi-schema-validator-feedstock
 	url = ../openapi-schema-validator-feedstock
 	branch = main
+[submodule "cuda-nvdisasm-feedstock"]
+	path = cuda-nvdisasm-feedstock
+	url = ../cuda-nvdisasm-feedstock
+	branch = main
