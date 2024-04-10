@@ -10434,7 +10434,7 @@
 	path = ruff-feedstock
 	url = ../ruff-feedstock
 	branch = main
-[submodule "cuda-profiler-api-feedstock"]
-	path = cuda-profiler-api-feedstock
-	url = ../cuda-profiler-api-feedstock
+[submodule "libnvjitlink-feedstock"]
+	path = libnvjitlink-feedstock
+	url = ../libnvjitlink-feedstock
 	branch = main
