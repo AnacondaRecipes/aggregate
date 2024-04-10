@@ -10430,3 +10430,7 @@
 	path = pytest-metadata-2.x-feedstock
 	url = ../pytest-metadata-feedstock
 	branch = master-2.x
+[submodule "ruff-feedstock"]
+	path = ruff-feedstock
+	url = ../ruff-feedstock
+	branch = main
