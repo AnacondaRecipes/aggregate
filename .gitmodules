@@ -10426,3 +10426,7 @@
 	path = cuda-cupti-feedstock
 	url = ../cuda-cupti-feedstock
 	branch = main
+[submodule "pytest-metadata-2.x-feedstock"]
+	path = pytest-metadata-2.x-feedstock
+	url = ../pytest-metadata-feedstock
+	branch = master-2.x
