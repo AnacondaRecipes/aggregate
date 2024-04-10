@@ -10438,3 +10438,7 @@
 	path = libnvjitlink-feedstock
 	url = ../libnvjitlink-feedstock
 	branch = main
+[submodule "libcusparse-feedstock"]
+	path = libcusparse-feedstock
+	url = ../libcusparse-feedstock
+	branch = main
