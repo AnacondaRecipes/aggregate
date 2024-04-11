@@ -10446,3 +10446,7 @@
 	path = libcusparse-feedstock
 	url = ../libcusparse-feedstock
 	branch = main
+[submodule "python-docx-feedstock"]
+	path = python-docx-feedstock
+	url = ../python-docx-feedstock
+	branch = main
