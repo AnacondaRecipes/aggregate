@@ -10462,3 +10462,7 @@
 	path = libcufft-feedstock
 	url = ../libcufft-feedstock
 	branch = main
+[submodule "libcurand-feedstock"]
+	path = libcurand-feedstock
+	url = ../libcurand-feedstock
+	branch = main
