@@ -10450,3 +10450,7 @@
 	path = python-docx-feedstock
 	url = ../python-docx-feedstock
 	branch = main
+[submodule "cuda-nvtx-feedstock"]
+	path = cuda-nvtx-feedstock
+	url = ../cuda-nvtx-feedstock
+	branch = main
