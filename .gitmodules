@@ -10458,3 +10458,7 @@
 	path = cuda-nvml-dev-feedstock
 	url = ../cuda-nvml-dev-feedstock
 	branch = main
+[submodule "libcufft-feedstock"]
+	path = libcufft-feedstock
+	url = ../libcufft-feedstock
+	branch = main
