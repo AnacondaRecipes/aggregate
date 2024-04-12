@@ -10466,3 +10466,7 @@
 	path = libcurand-feedstock
 	url = ../libcurand-feedstock
 	branch = main
+[submodule "libcusolver-feedstock"]
+	path = libcusolver-feedstock
+	url = ../libcusolver-feedstock
+	branch = main
