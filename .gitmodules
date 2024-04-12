@@ -10454,3 +10454,7 @@
 	path = cuda-nvtx-feedstock
 	url = ../cuda-nvtx-feedstock
 	branch = main
+[submodule "cuda-nvml-dev-feedstock"]
+	path = cuda-nvml-dev-feedstock
+	url = ../cuda-nvml-dev-feedstock
+	branch = main
