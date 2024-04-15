@@ -10474,3 +10474,7 @@
 	path = joserfc-feedstock
 	url = ../joserfc-feedstock
 	branch = main
+[submodule "frozendict-feedstock"]
+	path = frozendict-feedstock
+	url = ../frozendict-feedstock
+	branch = main
