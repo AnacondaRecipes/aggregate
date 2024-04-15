@@ -10470,3 +10470,7 @@
 	path = libcusolver-feedstock
 	url = ../libcusolver-feedstock
 	branch = main
+[submodule "joserfc-feedstock"]
+	path = joserfc-feedstock
+	url = ../joserfc-feedstock
+	branch = main
