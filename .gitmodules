@@ -10478,3 +10478,7 @@
 	path = frozendict-feedstock
 	url = ../frozendict-feedstock
 	branch = main
+[submodule "tensorflow-text-feedstock"]
+	path = tensorflow-text-feedstock
+	url = ../tensorflow-text-feedstock
+	branch = main
