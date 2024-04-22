@@ -10482,3 +10482,7 @@
 	path = tensorflow-text-feedstock
 	url = ../tensorflow-text-feedstock
 	branch = main
+[submodule "pytest-3.x-feedstock"]
+	path = pytest-3.x-feedstock
+	url = ../pytest-benchmark-feedstock
+	branch = master-3.x
