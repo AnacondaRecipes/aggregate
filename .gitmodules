@@ -10490,3 +10490,7 @@
 	path = pykrb5-feedstock
 	url = ../pykrb5-feedstock
 	branch = main
+[submodule "sspilib-feedstock"]
+	path = sspilib-feedstock
+	url = ../sspilib-feedstock
+	branch = main
