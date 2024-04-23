@@ -10494,3 +10494,7 @@
 	path = sspilib-feedstock
 	url = ../sspilib-feedstock
 	branch = main
+[submodule "streamlit-condition-tree-feedstock"]
+	path = streamlit-condition-tree-feedstock
+	url = ../streamlit-condition-tree-feedstock
+	branch = main
