@@ -10486,3 +10486,7 @@
 	path = pytest-3.x-feedstock
 	url = ../pytest-benchmark-feedstock
 	branch = master-3.x
+[submodule "pykrb5-feedstock"]
+	path = pykrb5-feedstock
+	url = ../pykrb5-feedstock
+	branch = main
