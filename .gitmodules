@@ -10502,3 +10502,7 @@
 	path = python-gssapi-feedstock
 	url = ../python-gssapi-feedstock
 	branch = main
+[submodule "jsonpath-ng-feedstock"]
+	path = jsonpath-ng-feedstock
+	url = ../jsonpath-ng-feedstock
+	branch = main
