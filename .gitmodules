@@ -10506,3 +10506,7 @@
 	path = jsonpath-ng-feedstock
 	url = ../jsonpath-ng-feedstock
 	branch = main
+[submodule "py-partiql-parser-feedstock"]
+	path = py-partiql-parser-feedstock
+	url = ../py-partiql-parser-feedstock
+	branch = main
