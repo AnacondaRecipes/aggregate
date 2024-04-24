@@ -10510,3 +10510,7 @@
 	path = py-partiql-parser-feedstock
 	url = ../py-partiql-parser-feedstock
 	branch = main
+[submodule "multipart-feedstock"]
+	path = multipart-feedstock
+	url = ../multipart-feedstock
+	branch = main
