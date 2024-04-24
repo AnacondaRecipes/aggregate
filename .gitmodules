@@ -10498,3 +10498,7 @@
 	path = streamlit-condition-tree-feedstock
 	url = ../streamlit-condition-tree-feedstock
 	branch = main
+[submodule "python-gssapi-feedstock"]
+	path = python-gssapi-feedstock
+	url = ../python-gssapi-feedstock
+	branch = main
