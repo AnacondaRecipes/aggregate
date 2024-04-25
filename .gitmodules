@@ -10514,3 +10514,7 @@
 	path = multipart-feedstock
 	url = ../multipart-feedstock
 	branch = main
+[submodule "streamlit-feedback-feedstock"]
+	path = streamlit-feedback-feedstock
+	url = ../streamlit-feedback-feedstock
+	branch = main
