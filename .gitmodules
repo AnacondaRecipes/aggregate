@@ -10530,3 +10530,7 @@
 	path = hydralit_components-feedstock
 	url = ../hydralit_components-feedstock
 	branch = main
+[submodule "cccl-feedstock"]
+	path = cccl-feedstock
+	url = ../cccl-feedstock
+	branch = main
