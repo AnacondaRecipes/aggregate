@@ -10522,3 +10522,7 @@
 	path = streamlit-option-menu-feedstock
 	url = ../streamlit-option-menu-feedstock
 	branch = main
+[submodule "mimesis-feedstock"]
+	path = mimesis-feedstock
+	url = ../mimesis-feedstock
+	branch = main
