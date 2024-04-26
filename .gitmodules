@@ -10518,3 +10518,7 @@
 	path = streamlit-feedback-feedstock
 	url = ../streamlit-feedback-feedstock
 	branch = main
+[submodule "streamlit-option-menu-feedstock"]
+	path = streamlit-option-menu-feedstock
+	url = ../streamlit-option-menu-feedstock
+	branch = main
