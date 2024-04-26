@@ -10526,3 +10526,7 @@
 	path = mimesis-feedstock
 	url = ../mimesis-feedstock
 	branch = main
+[submodule "hydralit_components-feedstock"]
+	path = hydralit_components-feedstock
+	url = ../hydralit_components-feedstock
+	branch = main
