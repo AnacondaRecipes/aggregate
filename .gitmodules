@@ -10534,3 +10534,7 @@
 	path = cccl-feedstock
 	url = ../cccl-feedstock
 	branch = main
+[submodule "grype-feedstock"]
+	path = grype-feedstock
+	url = ../grype-feedstock
+	branch = main
