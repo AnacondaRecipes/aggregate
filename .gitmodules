@@ -10538,3 +10538,7 @@
 	path = grype-feedstock
 	url = ../grype-feedstock
 	branch = main
+[submodule "pygrype-feedstock"]
+	path = pygrype-feedstock
+	url = ../pygrype-feedstock
+	branch = main
