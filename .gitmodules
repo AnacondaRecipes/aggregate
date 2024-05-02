@@ -10542,10 +10542,6 @@
 	path = pygrype-feedstock
 	url = ../pygrype-feedstock
 	branch = main
-[submodule "snowflake._legacy-feedstock"]
-	path = snowflake._legacy-feedstock
-	url = ../snowflake._legacy-feedstock
-	branch = main
 [submodule "snowflake.core-feedstock"]
 	path = snowflake.core-feedstock
 	url = ../snowflake.core-feedstock
