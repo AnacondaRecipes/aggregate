@@ -10550,3 +10550,7 @@
 	path = snowflake-feedstock
 	url = ../snowflake-feedstock
 	branch = main
+[submodule "snowflake_legacy-feedstock"]
+	path = snowflake_legacy-feedstock
+	url = ../snowflake_legacy-feedstock
+	branch = main
