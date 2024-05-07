@@ -10574,3 +10574,7 @@
 	path = namex-feedstock
 	url = ../namex-feedstock
 	branch = main
+[submodule "graphql-relay-feedstock"]
+	path = graphql-relay-feedstock
+	url = ../graphql-relay-feedstock
+	branch = main
