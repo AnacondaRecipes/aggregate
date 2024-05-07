@@ -10554,3 +10554,7 @@
 	path = snowflake_legacy-feedstock
 	url = ../snowflake_legacy-feedstock
 	branch = main
+[submodule "cuda-compat-feedstock"]
+	path = cuda-compat-feedstock
+	url = ../cuda-compat-feedstock
+	branch = main
