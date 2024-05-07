@@ -10566,3 +10566,7 @@
 	path = cuda-nvprune-feedstock
 	url = ../cuda-nvprune-feedstock
 	branch = main
+[submodule "cuda-compiler-feedstock"]
+	path = cuda-compiler-feedstock
+	url = ../cuda-compiler-feedstock
+	branch = main
