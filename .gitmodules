@@ -10562,3 +10562,7 @@
 	path = cuda-cuxxfilt-feedstock
 	url = ../cuda-cuxxfilt-feedstock
 	branch = main
+[submodule "cuda-nvprune-feedstock"]
+	path = cuda-nvprune-feedstock
+	url = ../cuda-nvprune-feedstock
+	branch = main
