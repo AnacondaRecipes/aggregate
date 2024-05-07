@@ -10578,3 +10578,7 @@
 	path = graphql-relay-feedstock
 	url = ../graphql-relay-feedstock
 	branch = main
+[submodule "libcufile-feedstock"]
+	path = libcufile-feedstock
+	url = ../libcufile-feedstock
+	branch = main
