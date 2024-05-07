@@ -10558,3 +10558,7 @@
 	path = cuda-compat-feedstock
 	url = ../cuda-compat-feedstock
 	branch = main
+[submodule "cuda-cuxxfilt-feedstock"]
+	path = cuda-cuxxfilt-feedstock
+	url = ../cuda-cuxxfilt-feedstock
+	branch = main
