@@ -10590,3 +10590,7 @@
 	path = libnvjpeg-feedstock
 	url = ../libnvjpeg-feedstock
 	branch = main
+[submodule "libnpp-feedstock"]
+	path = libnpp-feedstock
+	url = ../libnpp-feedstock
+	branch = main
