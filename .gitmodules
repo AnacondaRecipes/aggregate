@@ -10582,3 +10582,7 @@
 	path = libcufile-feedstock
 	url = ../libcufile-feedstock
 	branch = main
+[submodule "stringdist-feedstock"]
+	path = stringdist-feedstock
+	url = ../stringdist-feedstock
+	branch = main
