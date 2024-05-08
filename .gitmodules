@@ -10598,3 +10598,7 @@
 	path = cuda-gdb-feedstock
 	url = ../cuda-gdb-feedstock
 	branch = main
+[submodule "cuda-nsight-feedstock"]
+	path = cuda-nsight-feedstock
+	url = ../cuda-nsight-feedstock
+	branch = main
