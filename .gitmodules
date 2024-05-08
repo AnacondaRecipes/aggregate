@@ -10594,3 +10594,7 @@
 	path = libnpp-feedstock
 	url = ../libnpp-feedstock
 	branch = main
+[submodule "cuda-gdb-feedstock"]
+	path = cuda-gdb-feedstock
+	url = ../cuda-gdb-feedstock
+	branch = main
