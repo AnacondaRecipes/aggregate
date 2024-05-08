@@ -10586,3 +10586,7 @@
 	path = stringdist-feedstock
 	url = ../stringdist-feedstock
 	branch = main
+[submodule "libnvjpeg-feedstock"]
+	path = libnvjpeg-feedstock
+	url = ../libnvjpeg-feedstock
+	branch = main
