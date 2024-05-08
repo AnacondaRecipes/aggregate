@@ -10602,3 +10602,7 @@
 	path = cuda-nsight-feedstock
 	url = ../cuda-nsight-feedstock
 	branch = main
+[submodule "cuda-nvprof-feedstock"]
+	path = cuda-nvprof-feedstock
+	url = ../cuda-nvprof-feedstock
+	branch = main
