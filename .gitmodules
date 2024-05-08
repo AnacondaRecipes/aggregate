@@ -10606,3 +10606,7 @@
 	path = cuda-nvprof-feedstock
 	url = ../cuda-nvprof-feedstock
 	branch = main
+[submodule "cuda-sanitizer-api-feedstock"]
+	path = cuda-sanitizer-api-feedstock
+	url = ../cuda-sanitizer-api-feedstock
+	branch = main
