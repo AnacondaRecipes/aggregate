@@ -10630,3 +10630,7 @@
 	path = alive-progress-feedstock
 	url = ../alive-progress-feedstock
 	branch = main
+[submodule "cma-feedstock"]
+	path = cma-feedstock
+	url = ../cma-feedstock
+	branch = main
