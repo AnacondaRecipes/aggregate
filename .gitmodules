@@ -10618,3 +10618,7 @@
 	path = pypdf-feedstock
 	url = ../pypdf-feedstock
 	branch = main
+[submodule "grapheme-feedstock"]
+	path = grapheme-feedstock
+	url = ../grapheme-feedstock
+	branch = main
