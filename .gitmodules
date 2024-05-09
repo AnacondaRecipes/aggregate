@@ -10622,3 +10622,7 @@
 	path = grapheme-feedstock
 	url = ../grapheme-feedstock
 	branch = main
+[submodule "about-time-feedstock"]
+	path = about-time-feedstock
+	url = ../about-time-feedstock
+	branch = main
