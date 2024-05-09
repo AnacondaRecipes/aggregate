@@ -10626,3 +10626,7 @@
 	path = about-time-feedstock
 	url = ../about-time-feedstock
 	branch = main
+[submodule "alive-progress-feedstock"]
+	path = alive-progress-feedstock
+	url = ../alive-progress-feedstock
+	branch = main
