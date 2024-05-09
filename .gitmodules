@@ -10610,3 +10610,7 @@
 	path = cuda-sanitizer-api-feedstock
 	url = ../cuda-sanitizer-api-feedstock
 	branch = main
+[submodule "azure-functions-feedstock"]
+	path = azure-functions-feedstock
+	url = ../azure-functions-feedstock
+	branch = main
