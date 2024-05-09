@@ -10614,3 +10614,7 @@
 	path = azure-functions-feedstock
 	url = ../azure-functions-feedstock
 	branch = main
+[submodule "pypdf-feedstock"]
+	path = pypdf-feedstock
+	url = ../pypdf-feedstock
+	branch = main
