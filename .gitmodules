@@ -10646,3 +10646,7 @@
 	path = hypercorn-feedstock
 	url = ../hypercorn-feedstock
 	branch = main
+[submodule "motor-feedstock"]
+	path = motor-feedstock
+	url = ../motor-feedstock
+	branch = main
