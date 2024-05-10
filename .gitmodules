@@ -10702,3 +10702,7 @@
 	path = cuda-toolkit-feedstock
 	url = ../cuda-toolkit-feedstock
 	branch = main
+[submodule "nvidia-gds-feedstock"]
+	path = nvidia-gds-feedstock
+	url = ../nvidia-gds-feedstock
+	branch = main
