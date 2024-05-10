@@ -10650,3 +10650,7 @@
 	path = motor-feedstock
 	url = ../motor-feedstock
 	branch = main
+[submodule "wsproto-feedstock"]
+	path = wsproto-feedstock
+	url = ../wsproto-feedstock
+	branch = main
