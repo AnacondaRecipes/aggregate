@@ -10638,3 +10638,7 @@
 	path = pm4py-feedstock
 	url = ../pm4py-feedstock
 	branch = main
+[submodule "pymoo-feedstock"]
+	path = pymoo-feedstock
+	url = ../pymoo-feedstock
+	branch = main
