@@ -10654,3 +10654,7 @@
 	path = wsproto-feedstock
 	url = ../wsproto-feedstock
 	branch = main
+[submodule "cuda-opencl-feedstock"]
+	path = cuda-opencl-feedstock
+	url = ../cuda-opencl-feedstock
+	branch = main
