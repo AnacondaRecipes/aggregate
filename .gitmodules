@@ -10686,3 +10686,7 @@
 	path = cuda-minimal-build-feedstock
 	url = ../cuda-minimal-build-feedstock
 	branch = main
+[submodule "cuda-runtime-feedstock"]
+	path = cuda-runtime-feedstock
+	url = ../cuda-runtime-feedstock
+	branch = main
