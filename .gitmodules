@@ -10658,3 +10658,7 @@
 	path = cuda-opencl-feedstock
 	url = ../cuda-opencl-feedstock
 	branch = main
+[submodule "cuda-libraries-feedstock"]
+	path = cuda-libraries-feedstock
+	url = ../cuda-libraries-feedstock
+	branch = main
