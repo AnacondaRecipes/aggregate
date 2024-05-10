@@ -10682,3 +10682,7 @@
 	path = cuda-command-line-tools-feedstock
 	url = ../cuda-command-line-tools-feedstock
 	branch = main
+[submodule "cuda-minimal-build-feedstock"]
+	path = cuda-minimal-build-feedstock
+	url = ../cuda-minimal-build-feedstock
+	branch = main
