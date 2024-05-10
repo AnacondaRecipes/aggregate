@@ -10678,3 +10678,7 @@
 	path = nsight-compute-feedstock
 	url = ../nsight-compute-feedstock
 	branch = main
+[submodule "cuda-command-line-tools-feedstock"]
+	path = cuda-command-line-tools-feedstock
+	url = ../cuda-command-line-tools-feedstock
+	branch = main
