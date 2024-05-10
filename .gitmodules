@@ -10674,3 +10674,7 @@
 	path = cuda-nvvp-feedstock
 	url = ../cuda-nvvp-feedstock
 	branch = main
+[submodule "nsight-compute-feedstock"]
+	path = nsight-compute-feedstock
+	url = ../nsight-compute-feedstock
+	branch = main
