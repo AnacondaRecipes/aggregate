@@ -10666,3 +10666,7 @@
 	path = cuda-libraries-dev-feedstock
 	url = ../cuda-libraries-dev-feedstock
 	branch = main
+[submodule "cuda-libraries-static-feedstock"]
+	path = cuda-libraries-static-feedstock
+	url = ../cuda-libraries-static-feedstock
+	branch = main
