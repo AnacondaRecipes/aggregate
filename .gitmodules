@@ -10670,3 +10670,7 @@
 	path = cuda-libraries-static-feedstock
 	url = ../cuda-libraries-static-feedstock
 	branch = main
+[submodule "cuda-nvvp-feedstock"]
+	path = cuda-nvvp-feedstock
+	url = ../cuda-nvvp-feedstock
+	branch = main
