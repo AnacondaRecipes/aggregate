@@ -10694,3 +10694,7 @@
 	path = cuda-visual-tools-feedstock
 	url = ../cuda-visual-tools-feedstock
 	branch = main
+[submodule "cuda-tools-feedstock"]
+	path = cuda-tools-feedstock
+	url = ../cuda-tools-feedstock
+	branch = main
