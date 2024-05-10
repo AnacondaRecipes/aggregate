@@ -10642,3 +10642,7 @@
 	path = pymoo-feedstock
 	url = ../pymoo-feedstock
 	branch = main
+[submodule "hypercorn-feedstock"]
+	path = hypercorn-feedstock
+	url = ../hypercorn-feedstock
+	branch = main
