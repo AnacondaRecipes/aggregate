@@ -10634,3 +10634,7 @@
 	path = cma-feedstock
 	url = ../cma-feedstock
 	branch = main
+[submodule "pm4py-feedstock"]
+	path = pm4py-feedstock
+	url = ../pm4py-feedstock
+	branch = main
