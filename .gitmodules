@@ -10710,3 +10710,7 @@
 	path = cuda-feedstock
 	url = ../cuda-feedstock
 	branch = main
+[submodule "langchain-text-splitters-feedstock"]
+	path = langchain-text-splitters-feedstock
+	url = ../langchain-text-splitters-feedstock
+	branch = main
