@@ -10714,3 +10714,7 @@
 	path = langchain-text-splitters-feedstock
 	url = ../langchain-text-splitters-feedstock
 	branch = main
+[submodule "langchain-community-feedstock"]
+	path = langchain-community-feedstock
+	url = ../langchain-community-feedstock
+	branch = main
