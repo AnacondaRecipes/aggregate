@@ -10722,3 +10722,7 @@
 	path = prophet-pystan-model-feedstock
 	url = ../prophet-pystan-model-feedstock
 	branch = main
+[submodule "khronos-opencl-icd-loader-feedstock"]
+	path = khronos-opencl-icd-loader-feedstock
+	url = ../khronos-opencl-icd-loader-feedstock
+	branch = main
