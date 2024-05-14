@@ -10718,3 +10718,7 @@
 	path = langchain-community-feedstock
 	url = ../langchain-community-feedstock
 	branch = main
+[submodule "prophet-pystan-model-feedstock"]
+	path = prophet-pystan-model-feedstock
+	url = ../prophet-pystan-model-feedstock
+	branch = main
