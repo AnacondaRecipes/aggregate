@@ -10730,3 +10730,7 @@
 	path = dask-expr-feedstock
 	url = ../dask-expr-feedstock
 	branch = main
+[submodule "ocl-icd-feedstock"]
+	path = ocl-icd-feedstock
+	url = ../ocl-icd-feedstock
+	branch = main
