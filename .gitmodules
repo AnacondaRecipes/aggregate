@@ -10726,3 +10726,7 @@
 	path = khronos-opencl-icd-loader-feedstock
 	url = ../khronos-opencl-icd-loader-feedstock
 	branch = main
+[submodule "dask-expr-feedstock"]
+	path = dask-expr-feedstock
+	url = ../dask-expr-feedstock
+	branch = main
