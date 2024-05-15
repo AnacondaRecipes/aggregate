@@ -10734,3 +10734,7 @@
 	path = ocl-icd-feedstock
 	url = ../ocl-icd-feedstock
 	branch = main
+[submodule "libnvfatbin-feedstock"]
+	path = libnvfatbin-feedstock
+	url = ../libnvfatbin-feedstock
+	branch = main
