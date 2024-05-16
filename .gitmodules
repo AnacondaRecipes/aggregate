@@ -10738,3 +10738,7 @@
 	path = libnvfatbin-feedstock
 	url = ../libnvfatbin-feedstock
 	branch = main
+[submodule "cutensor-feedstock"]
+	path = cutensor-feedstock
+	url = ../cutensor-feedstock
+	branch = main
