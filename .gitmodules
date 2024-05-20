@@ -10746,3 +10746,7 @@
 	path = langchain-experimental-feedstock
 	url = ../langchain-experimental-feedstock
 	branch = main
+[submodule "qrcode-feedstock"]
+	path = qrcode-feedstock
+	url = ../qrcode-feedstock
+	branch = main
