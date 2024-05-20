@@ -10746,3 +10746,7 @@
 	path = langchain-experimental-feedstock
 	url = ../langchain-experimental-feedstock
 	branch = main
+[submodule "pypng-feedstock"]
+	path = pypng-feedstock
+	url = ../pypng-feedstock
+	branch = main
