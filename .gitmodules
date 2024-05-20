@@ -10742,3 +10742,7 @@
 	path = cutensor-feedstock
 	url = ../cutensor-feedstock
 	branch = main
+[submodule "langchain-experimental-feedstock"]
+	path = langchain-experimental-feedstock
+	url = ../langchain-experimental-feedstock
+	branch = main
