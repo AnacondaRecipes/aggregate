@@ -10750,3 +10750,7 @@
 	path = pypng-feedstock
 	url = ../pypng-feedstock
 	branch = main
+[submodule "qrcode-feedstock"]
+	path = qrcode-feedstock
+	url = ../qrcode-feedstock
+	branch = main
