@@ -10754,3 +10754,7 @@
 	path = qrcode-feedstock
 	url = ../qrcode-feedstock
 	branch = main
+[submodule "clustergram-feedstock"]
+	path = clustergram-feedstock
+	url = ../clustergram-feedstock
+	branch = main
