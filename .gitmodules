@@ -10758,3 +10758,7 @@
 	path = clustergram-feedstock
 	url = ../clustergram-feedstock
 	branch = main
+[submodule "rai-sdk-feedstock"]
+	path = rai-sdk-feedstock
+	url = ../rai-sdk-feedstock
+	branch = main
