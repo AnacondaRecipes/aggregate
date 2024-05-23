@@ -10770,3 +10770,7 @@
 	path = lockfile-feedstock
 	url = ../lockfile-feedstock
 	branch = main
+[submodule "conda-project-feedstock"]
+	path = conda-project-feedstock
+	url = ../conda-project-feedstock
+	branch = main
