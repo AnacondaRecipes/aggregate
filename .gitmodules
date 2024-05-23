@@ -10774,3 +10774,7 @@
 	path = conda-project-feedstock
 	url = ../conda-project-feedstock
 	branch = main
+[submodule "captum-feedstock"]
+	path = captum-feedstock
+	url = ../captum-feedstock
+	branch = main
