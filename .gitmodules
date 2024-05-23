@@ -10782,3 +10782,7 @@
 	path = gravis-feedstock
 	url = ../gravis-feedstock
 	branch = main
+[submodule "momepy-feedstock"]
+	path = momepy-feedstock
+	url = ../momepy-feedstock
+	branch = main
