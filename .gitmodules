@@ -10778,3 +10778,7 @@
 	path = captum-feedstock
 	url = ../captum-feedstock
 	branch = main
+[submodule "gravis-feedstock"]
+	path = gravis-feedstock
+	url = ../gravis-feedstock
+	branch = main
