@@ -19,11 +19,11 @@ cairo:
 c_compiler:
   - gcc                        # [linux]
   - clang                      # [osx]
-  - vs2017                     # [win]
+  - vs2019                     # [win]
 cxx_compiler:
   - gxx                        # [linux]
   - clangxx                    # [osx]
-  - vs2017                     # [win]
+  - vs2019                     # [win]
 cuda_compiler:
   - cuda-nvcc
 fortran_compiler:
