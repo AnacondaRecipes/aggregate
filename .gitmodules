@@ -10790,3 +10790,7 @@
 	path = pfzy-feedstock
 	url = ../pfzy-feedstock
 	branch = main
+[submodule "inquirerpy-feedstock"]
+	path = inquirerpy-feedstock
+	url = ../inquirerpy-feedstock
+	branch = main
