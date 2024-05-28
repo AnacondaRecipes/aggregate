@@ -8360,10 +8360,6 @@
 	path = redis-feedstock
 	url = ../redis-feedstock
 	branch = main
-[submodule "repoze.lru-feedstock"]
-	path = repoze.lru-feedstock
-	url = ../repoze.lru-feedstock
-	branch = main
 [submodule "requests-file-feedstock"]
 	path = requests-file-feedstock
 	url = ../requests-file-feedstock
