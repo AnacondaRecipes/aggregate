@@ -10786,3 +10786,7 @@
 	path = momepy-feedstock
 	url = ../momepy-feedstock
 	branch = main
+[submodule "pfzy-feedstock"]
+	path = pfzy-feedstock
+	url = ../pfzy-feedstock
+	branch = main
