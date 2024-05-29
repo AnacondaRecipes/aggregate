@@ -10790,3 +10790,7 @@
 	path = inquirerpy-feedstock
 	url = ../inquirerpy-feedstock
 	branch = main
+[submodule "repoze.lru-feedstock"]
+	path = repoze.lru-feedstock
+	url = ../repoze.lru-feedstock
+	branch = main
