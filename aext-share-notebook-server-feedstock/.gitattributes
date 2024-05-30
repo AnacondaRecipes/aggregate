@@ -1,0 +1,13 @@
+* text=auto
+
+*.patch text eol=lf
+*.diff text eol=lf
+meta.yaml text eol=lf
+build.sh text eol=lf
+bld.bat text eol=crlf
+
+.gitattributes linguist-generated=true
+.gitignore linguist-generated=true
+LICENSE.txt linguist-generated=true
+README.md linguist-generated=true
+
