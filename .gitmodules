@@ -10794,3 +10794,7 @@
 	path = repoze.lru-feedstock
 	url = ../repoze.lru-feedstock
 	branch = main
+[submodule "squarify-feedstock"]
+	path = squarify-feedstock
+	url = ../squarify-feedstock
+	branch = main
