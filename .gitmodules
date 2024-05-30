@@ -10798,3 +10798,7 @@
 	path = squarify-feedstock
 	url = ../squarify-feedstock
 	branch = main
+[submodule "osmnx-feedstock"]
+	path = osmnx-feedstock
+	url = ../osmnx-feedstock
+	branch = main
