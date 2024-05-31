@@ -6,7 +6,7 @@ apr:
   - 1.6.3  # [not (osx and arm64)]
   - 1.7.0  # [osx and arm64]
 blas_impl:
-  - mkl                        # [x86 or x86_64]
+  - mkl                        # [(x86 or x86_64) and not osx]
   - openblas                   # [not win]
 boost:
   - 1.82
@@ -45,7 +45,7 @@ rust_gnu_compiler:             # [win]
 rust_gnu_compiler_version:     # [win]
   - 1.71.1                     # [win]
 CONDA_BUILD_SYSROOT:
-  - /opt/MacOSX10.10.sdk        # [osx and x86_64]
+  - /opt/MacOSX10.15.sdk        # [osx and x86_64]
   - /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk  # [osx and arm64]
 VERBOSE_AT:
   - V=1
@@ -143,13 +143,13 @@ llvm_variant:
 lzo:
   - 2
 macos_min_version:
-  - 10.9  # [osx and x86_64]
+  - 10.15 # [osx and x86_64]
   - 11.1  # [osx and arm64]
 macos_machine:
   - x86_64-apple-darwin13.4.0  # [osx and x86_64]
   - arm64-apple-darwin20.0.0   # [osx and arm64]
 MACOSX_DEPLOYMENT_TARGET:
-  - 10.9  # [osx and x86_64]
+  - 10.15 # [osx and x86_64]
   - 11.1  # [osx and arm64]
 mkl:
   - 2023.*
