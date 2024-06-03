@@ -10802,3 +10802,7 @@
 	path = osmnx-feedstock
 	url = ../osmnx-feedstock
 	branch = main
+[submodule "relationalai-feedstock"]
+	path = relationalai-feedstock
+	url = ../relationalai-feedstock
+	branch = main
