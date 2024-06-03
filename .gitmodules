@@ -9302,6 +9302,10 @@
 	path = aext-shared-feedstock
 	url = ../aext-shared-feedstock
 	branch = main
+[submodule "aext-share-notebook-feedstock"]
+	path = aext-share-notebook-feedstock
+	url = ../aext-share-notebook-feedstock
+	branch = main
 [submodule "aext-core-server-feedstock"]
 	path = aext-core-server-feedstock
 	url = ../aext-core-server-feedstock
