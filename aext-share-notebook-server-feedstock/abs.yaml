@@ -1,7 +1,0 @@
-# the conda-build parameters to use
-build_parameters:
-  - "--skip-existing"
-  - "--error-overlinking"
-  - "--error-overdepending"
-  - "--no-include-recipe"
-  #- "--use-repo-access"
