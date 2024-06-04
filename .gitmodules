@@ -10822,3 +10822,7 @@
 	path = shareplum-feedstock
 	url = ../shareplum-feedstock
 	branch = main
+[submodule "pyxirr-feedstock"]
+	path = pyxirr-feedstock
+	url = ../pyxirr-feedstock
+	branch = main
