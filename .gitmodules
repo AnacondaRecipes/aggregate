@@ -10818,3 +10818,7 @@
 	path = relationalai-feedstock
 	url = ../relationalai-feedstock
 	branch = main
+[submodule "shareplum-feedstock"]
+	path = shareplum-feedstock
+	url = ../shareplum-feedstock
+	branch = main
