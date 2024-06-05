@@ -10826,3 +10826,7 @@
 	path = pyxirr-feedstock
 	url = ../pyxirr-feedstock
 	branch = main
+[submodule "astropy-iers-data-feedstock"]
+	path = astropy-iers-data-feedstock
+	url = ../astropy-iers-data-feedstock
+	branch = main
