@@ -10830,3 +10830,7 @@
 	path = astropy-iers-data-feedstock
 	url = ../astropy-iers-data-feedstock
 	branch = main
+[submodule "hmmlearn-feedstock"]
+	path = hmmlearn-feedstock
+	url = ../hmmlearn-feedstock
+	branch = main
