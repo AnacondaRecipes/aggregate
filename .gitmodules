@@ -10850,3 +10850,7 @@
 	path = rouge-score-feedstock
 	url = ../rouge-score-feedstock
 	branch = main
+[submodule "anaconda_prompt-feedstock"]
+	path = anaconda_prompt-feedstock
+	url = ../anaconda_prompt-feedstock
+	branch = main
