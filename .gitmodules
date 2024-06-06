@@ -10842,3 +10842,7 @@
 	path = pytorch-lightning-1.9.5-feedstock
 	url = ../pytorch-lightning-feedstock
 	branch = main-1.9.5
+[submodule "pyvinecopulib-feedstock"]
+	path = pyvinecopulib-feedstock
+	url = ../pyvinecopulib-feedstock
+	branch = main
