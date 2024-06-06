@@ -10838,3 +10838,7 @@
 	path = aext-share-notebook-server-feedstock
 	url = ../aext-share-notebook-server-feedstock
 	branch = main
+[submodule "pytorch-lightning-1.9.5-feedstock"]
+	path = pytorch-lightning-1.9.5-feedstock
+	url = ../pytorch-lightning-feedstock
+	branch = main-1.9.5
