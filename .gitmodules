@@ -10834,3 +10834,7 @@
 	path = hmmlearn-feedstock
 	url = ../hmmlearn-feedstock
 	branch = main
+[submodule "aext-share-notebook-server-feedstock"]
+	path = aext-share-notebook-server-feedstock
+	url = ../aext-share-notebook-server-feedstock
+	branch = main
