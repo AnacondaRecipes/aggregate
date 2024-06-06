@@ -10846,3 +10846,7 @@
 	path = pyvinecopulib-feedstock
 	url = ../pyvinecopulib-feedstock
 	branch = main
+[submodule "rouge-score-feedstock"]
+	path = rouge-score-feedstock
+	url = ../rouge-score-feedstock
+	branch = main
