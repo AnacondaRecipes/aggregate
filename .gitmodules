@@ -10854,3 +10854,7 @@
 	path = anaconda_prompt-feedstock
 	url = ../anaconda_prompt-feedstock
 	branch = main
+[submodule "keplergl-feedstock"]
+	path = keplergl-feedstock
+	url = ../keplergl-feedstock
+	branch = main
