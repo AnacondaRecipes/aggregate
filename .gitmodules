@@ -602,7 +602,7 @@
 [submodule "seaborn-feedstock"]
 	url = ../seaborn-feedstock.git
 	path = seaborn-feedstock
-	branch = master
+	branch = main
 [submodule "singledispatch-feedstock"]
 	url = ../singledispatch-feedstock.git
 	path = singledispatch-feedstock
