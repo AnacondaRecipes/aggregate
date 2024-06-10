@@ -10858,3 +10858,7 @@
 	path = keplergl-feedstock
 	url = ../keplergl-feedstock
 	branch = main
+[submodule "pyprind-feedstock"]
+	path = pyprind-feedstock
+	url = ../pyprind-feedstock
+	branch = main
