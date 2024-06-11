@@ -10862,3 +10862,7 @@
 	path = pyprind-feedstock
 	url = ../pyprind-feedstock
 	branch = main
+[submodule "py_stringmatching-feedstock"]
+	path = py_stringmatching-feedstock
+	url = ../py_stringmatching-feedstock
+	branch = main
