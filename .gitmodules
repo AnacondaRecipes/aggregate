@@ -10866,3 +10866,7 @@
 	path = py_stringmatching-feedstock
 	url = ../py_stringmatching-feedstock
 	branch = main
+[submodule "py_stringsimjoin-feedstock"]
+	path = py_stringsimjoin-feedstock
+	url = ../py_stringsimjoin-feedstock
+	branch = main
