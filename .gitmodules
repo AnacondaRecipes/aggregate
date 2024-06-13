@@ -10882,3 +10882,7 @@
 	path = torchaudio-feedstock
 	url = ../torchaudio-feedstock
 	branch = main
+[submodule "py_entitymatching-feedstock"]
+	path = py_entitymatching-feedstock
+	url = ../py_entitymatching-feedstock
+	branch = main
