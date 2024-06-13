@@ -10878,3 +10878,7 @@
 	path = wdm-feedstock
 	url = ../wdm-feedstock
 	branch = main
+[submodule "torchaudio-feedstock"]
+	path = torchaudio-feedstock
+	url = ../torchaudio-feedstock
+	branch = main
