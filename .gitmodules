@@ -10890,3 +10890,7 @@
 	path = streamlit-keplergl-feedstock
 	url = ../streamlit-keplergl-feedstock
 	branch = main
+[submodule "vinecopulib-feedstock"]
+	path = vinecopulib-feedstock
+	url = ../vinecopulib-feedstock
+	branch = main
