@@ -10886,3 +10886,7 @@
 	path = py_entitymatching-feedstock
 	url = ../py_entitymatching-feedstock
 	branch = main
+[submodule "streamlit-keplergl-feedstock"]
+	path = streamlit-keplergl-feedstock
+	url = ../streamlit-keplergl-feedstock
+	branch = main
