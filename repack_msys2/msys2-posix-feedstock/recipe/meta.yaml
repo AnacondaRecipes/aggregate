@@ -1,0 +1,20 @@
+package:
+  name: msys2-posix
+  version: 1.0.0
+
+build:
+  number: 0
+  skip: True             # [not win]
+
+requirements:
+  run:
+  - msys2-base                               >=1.0.0     
+  - msys2-make                               >=4.4.1     
+  - msys2-tar                                >=1.35      
+  - msys2-zip                                >=3.0       
+  - msys2-unzip                              >=6.0       
+  - msys2-diffutils                          >=3.10      
+
+about:
+  summary: "MSYS POSIX development packages"
+  license: "BSD-3-Clause"

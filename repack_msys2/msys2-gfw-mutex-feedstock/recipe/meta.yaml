@@ -1,0 +1,12 @@
+# mutex package to keep only one MSYS2 MSYS env in a given conda env
+package:
+  name: msys2-msys-mutex
+  version: 1.0
+
+build:
+  number: 0
+  string: gfw
+
+about:
+  summary: "A mutex package to ensure environment exclusivity between MSYS2 MSYS environments"
+  license: "BSD-3-Clause"

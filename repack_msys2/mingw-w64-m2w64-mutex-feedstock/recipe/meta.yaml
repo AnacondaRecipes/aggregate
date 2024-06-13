@@ -1,0 +1,12 @@
+# mutex package to keep only one MSYS2 MINGW env in a given conda env
+package:
+  name: msys2-mingw-w64-mutex
+  version: 1.0
+
+build:
+  number: 0
+  string: m2w64
+
+about:
+  summary: "A mutex package to ensure environment exclusivity between MSYS2 mingw-w64 environments"
+  license: "BSD-3-Clause"

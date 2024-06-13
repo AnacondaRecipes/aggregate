@@ -1,0 +1,38 @@
+package:
+  name: msys2-base
+  version: 1.0.0
+
+build:
+  number: 0
+  skip: True             # [not win]
+
+requirements:
+  run:
+  - msys2-bash                               >=5.2.026   
+  - msys2-bash-completion                    >=2.11      
+  - msys2-coreutils                          >=8.32      
+  - msys2-dash                               >=0.5.12    
+  - msys2-file                               >=5.45      
+  - msys2-filesystem                         >=2023.02.07
+  - msys2-findutils                          >=4.9.0     
+  - msys2-gawk                               >=5.3.0     
+  - msys2-gcc-libs                           >=13.2.0    
+  - msys2-grep                               >=3.0       
+  - msys2-gzip                               >=1.13      
+  - msys2-inetutils                          >=2.5       
+  - msys2-info                               >=7.1       
+  - msys2-less                               >=643       
+  - msys2-mintty                             >=3.7.1     
+  - msys2-msys2-launcher                     >=1.5       
+  - msys2-msys2-runtime                      >=3.4.10    
+  - msys2-ncurses                            >=6.4       
+  - msys2-sed                                >=4.9       
+  - msys2-time                               >=1.9       
+  - msys2-tzcode                             >=2024a     
+  - msys2-util-linux                         >=2.35.2    
+  - msys2-which                              >=2.21      
+  - msys2-libxml2                            >=2.12.5    
+
+about:
+  summary: "MSYS base development packages"
+  license: "BSD-3-Clause"

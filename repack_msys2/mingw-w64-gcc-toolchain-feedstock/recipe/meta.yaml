@@ -1,0 +1,92 @@
+# This is a metapackage defined in gen-conda-repack-recipe
+{% set pkgname = "repack_mingw-w64-gcc-toolchain" %}
+{% set pkgver = "13.2.0" %}
+{% set pkgrel = "5" %}
+{% set build_number = pkgrel|int * 1000 + 0 %}
+
+package:
+  name: {{ pkgname }}
+  version: {{ pkgver }}
+
+build:
+  number: {{ build_number }}
+  skip: True             # [not win]
+
+requirements:
+  run:
+
+outputs:
+  - name: mingw64-gcc-toolchain
+    skip: True          # [not (win and x86_64)]
+    build:
+      number: {{ build_number }}
+    requirements:
+      run:
+      - mingw64-binutils                         >=2.42      
+      - mingw64-crt-git                          >=11.0.0.r631.ga4c0c1d00
+      - mingw64-gcc                              >=13.2.0    
+      - mingw64-gcc-ada                          >=13.2.0    
+      - mingw64-gcc-fortran                      >=13.2.0    
+      - mingw64-gcc-libgfortran                  >=13.2.0    
+      - mingw64-gcc-libs                         >=13.2.0    
+      - mingw64-gcc-objc                         >=13.2.0    
+      - mingw64-headers-git                      >=11.0.0.r631.ga4c0c1d00
+      - mingw64-libmangle-git                    >=11.0.0.r631.ga4c0c1d00
+      - mingw64-libwinpthread-git                >=11.0.0.r631.ga4c0c1d00
+      - mingw64-make                             >=4.4.1     
+      - mingw64-pkg-config                       >=0.29.2    
+      - mingw64-tools-git                        >=11.0.0.r631.ga4c0c1d00
+      - mingw64-winpthreads-git                  >=11.0.0.r631.ga4c0c1d00
+
+    about:
+      summary: "MINGW64 GCC toolchain packages"
+      license: "BSD-3-Clause"
+
+  - name: mingw64-gcc-toolchain_win-64
+    skip: True          # [not (win and x86_64)]
+    build:
+      number: {{ build_number }}
+    requirements:
+      run:
+      - mingw64-gcc-toolchain                    >={{ pkgver }}
+
+    about:
+      summary: "MINGW64 GCC toolchain metapackage"
+      license: "BSD-3-Clause"
+  - name: ucrt64-gcc-toolchain
+    skip: True          # [not (win and x86_64)]
+    build:
+      number: {{ build_number }}
+    requirements:
+      run:
+      - ucrt64-binutils                          >=2.42      
+      - ucrt64-crt-git                           >=11.0.0.r631.ga4c0c1d00
+      - ucrt64-gcc                               >=13.2.0    
+      - ucrt64-gcc-ada                           >=13.2.0    
+      - ucrt64-gcc-fortran                       >=13.2.0    
+      - ucrt64-gcc-libgfortran                   >=13.2.0    
+      - ucrt64-gcc-libs                          >=13.2.0    
+      - ucrt64-gcc-objc                          >=13.2.0    
+      - ucrt64-headers-git                       >=11.0.0.r631.ga4c0c1d00
+      - ucrt64-libmangle-git                     >=11.0.0.r631.ga4c0c1d00
+      - ucrt64-libwinpthread-git                 >=11.0.0.r631.ga4c0c1d00
+      - ucrt64-make                              >=4.4.1     
+      - ucrt64-pkg-config                        >=0.29.2    
+      - ucrt64-tools-git                         >=11.0.0.r631.ga4c0c1d00
+      - ucrt64-winpthreads-git                   >=11.0.0.r631.ga4c0c1d00
+
+    about:
+      summary: "UCRT64 GCC toolchain packages"
+      license: "BSD-3-Clause"
+
+  - name: ucrt64-gcc-toolchain_win-64
+    skip: True          # [not (win and x86_64)]
+    build:
+      number: {{ build_number }}
+    requirements:
+      run:
+      - ucrt64-gcc-toolchain                     >={{ pkgver }}
+
+    about:
+      summary: "UCRT64 GCC toolchain metapackage"
+      license: "BSD-3-Clause"
