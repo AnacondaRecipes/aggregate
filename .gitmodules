@@ -10874,3 +10874,7 @@
 	path = anaconda_powershell_prompt-feedstock
 	url = ../anaconda_powershell_prompt-feedstock
 	branch = main
+[submodule "wdm-feedstock"]
+	path = wdm-feedstock
+	url = ../wdm-feedstock
+	branch = main
