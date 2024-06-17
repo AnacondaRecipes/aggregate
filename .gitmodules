@@ -10894,3 +10894,7 @@
 	path = vinecopulib-feedstock
 	url = ../vinecopulib-feedstock
 	branch = main
+[submodule "repack_msys2"]
+	path = repack_msys2
+	url = ../repack_msys2
+	branch = main
