@@ -10898,3 +10898,7 @@
 	path = repack_msys2
 	url = ../repack_msys2
 	branch = main
+[submodule "cspy-feedstock"]
+	path = cspy-feedstock
+	url = ../cspy-feedstock
+	branch = main
