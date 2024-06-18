@@ -10906,3 +10906,7 @@
 	path = datetime-distance-feedstock
 	url = ../datetime-distance-feedstock
 	branch = main
+[submodule "simplecosine-feedstock"]
+	path = simplecosine-feedstock
+	url = ../simplecosine-feedstock
+	branch = main
