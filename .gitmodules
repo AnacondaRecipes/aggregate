@@ -10914,3 +10914,7 @@
 	path = categorical-distance-feedstock
 	url = ../categorical-distance-feedstock
 	branch = main
+[submodule "pynisher-feedstock"]
+	path = pynisher-feedstock
+	url = ../pynisher-feedstock
+	branch = main
