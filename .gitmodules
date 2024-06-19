@@ -10922,3 +10922,7 @@
 	path = haversine-feedstock
 	url = ../haversine-feedstock
 	branch = main
+[submodule "affinegap-feedstock"]
+	path = affinegap-feedstock
+	url = ../affinegap-feedstock
+	branch = main
