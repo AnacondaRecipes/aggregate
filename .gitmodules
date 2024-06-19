@@ -10926,3 +10926,7 @@
 	path = affinegap-feedstock
 	url = ../affinegap-feedstock
 	branch = main
+[submodule "pylbfgs-feedstock"]
+	path = pylbfgs-feedstock
+	url = ../pylbfgs-feedstock
+	branch = main
