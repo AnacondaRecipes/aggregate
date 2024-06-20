@@ -10950,3 +10950,7 @@
 	path = dedupe_lehvenshtein_search-feedstock
 	url = ../dedupe_lehvenshtein_search-feedstock
 	branch = main
+[submodule "imbalanced-ensemble-feedstock"]
+	path = imbalanced-ensemble-feedstock
+	url = ../imbalanced-ensemble-feedstock
+	branch = main
