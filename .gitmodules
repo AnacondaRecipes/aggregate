@@ -10930,3 +10930,7 @@
 	path = pylbfgs-feedstock
 	url = ../pylbfgs-feedstock
 	branch = main
+[submodule "pyhacrf-datamade-feedstock"]
+	path = pyhacrf-datamade-feedstock
+	url = ../pyhacrf-datamade-feedstock
+	branch = main
