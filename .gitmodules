@@ -10938,3 +10938,7 @@
 	path = xcb-util-cursor-feedstock
 	url = ../xcb-util-cursor-feedstock
 	branch = main
+[submodule "lemon-feedstock"]
+	path = lemon-feedstock
+	url = ../lemon-feedstock
+	branch = main
