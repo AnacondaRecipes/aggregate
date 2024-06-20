@@ -10942,3 +10942,7 @@
 	path = lemon-feedstock
 	url = ../lemon-feedstock
 	branch = main
+[submodule "highered-feedstock"]
+	path = highered-feedstock
+	url = ../highered-feedstock
+	branch = main
