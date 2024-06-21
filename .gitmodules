@@ -10954,3 +10954,7 @@
 	path = imbalanced-ensemble-feedstock
 	url = ../imbalanced-ensemble-feedstock
 	branch = main
+[submodule "doublemetaphone-feedstock"]
+	path = doublemetaphone-feedstock
+	url = ../doublemetaphone-feedstock
+	branch = main
