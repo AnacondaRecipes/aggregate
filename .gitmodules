@@ -10947,7 +10947,7 @@
 	url = ../highered-feedstock
 	branch = main
 [submodule "dedupe_lehvenshtein_search-feedstock"]
-	path = dedupe_lehvenshtein_search-feedstock
+	path = dedupe_levenshtein_search-feedstock
 	url = ../dedupe_lehvenshtein_search-feedstock
 	branch = main
 [submodule "imbalanced-ensemble-feedstock"]
