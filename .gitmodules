@@ -10958,3 +10958,7 @@
 	path = doublemetaphone-feedstock
 	url = ../doublemetaphone-feedstock
 	branch = main
+[submodule "zope.index-feedstock"]
+	path = zope.index-feedstock
+	url = ../zope.index-feedstock
+	branch = main
