@@ -10962,3 +10962,7 @@
 	path = dedupe_levenshtein_search-feedstock
 	url = ../dedupe_levenshtein_search-feedstock
 	branch = main
+[submodule "emoji-feedstock"]
+	path = emoji-feedstock
+	url = ../emoji-feedstock
+	branch = main
