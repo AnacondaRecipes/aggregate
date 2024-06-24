@@ -10946,6 +10946,10 @@
 	path = highered-feedstock
 	url = ../highered-feedstock
 	branch = main
+[submodule "dedupe_lehvenshtein_search-feedstock"]
+	path = dedupe_levenshtein_search-feedstock
+	url = ../dedupe_lehvenshtein_search-feedstock
+	branch = main
 [submodule "imbalanced-ensemble-feedstock"]
 	path = imbalanced-ensemble-feedstock
 	url = ../imbalanced-ensemble-feedstock
@@ -10958,9 +10962,9 @@
 	path = zope.index-feedstock
 	url = ../zope.index-feedstock
 	branch = main
-[submodule "dedupe_levenshtein_search-feedstock"]
-	path = dedupe_levenshtein_search-feedstock
-	url = ../dedupe_levenshtein_search-feedstock
+[submodule "pyrfr-feedstock"]
+	path = pyrfr-feedstock
+	url = ../pyrfr-feedstock
 	branch = main
 [submodule "emoji-feedstock"]
 	path = emoji-feedstock
