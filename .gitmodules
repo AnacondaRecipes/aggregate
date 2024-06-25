@@ -10974,3 +10974,7 @@
 	path = alibi-detect-feedstock
 	url = ../alibi-detect-feedstock
 	branch = main
+[submodule "smac-feedstock"]
+	path = smac-feedstock
+	url = ../smac-feedstock
+	branch = main
