@@ -10918,3 +10918,59 @@
 	path = pynisher-feedstock
 	url = ../pynisher-feedstock
 	branch = main
+[submodule "haversine-feedstock"]
+	path = haversine-feedstock
+	url = ../haversine-feedstock
+	branch = main
+[submodule "affinegap-feedstock"]
+	path = affinegap-feedstock
+	url = ../affinegap-feedstock
+	branch = main
+[submodule "pylbfgs-feedstock"]
+	path = pylbfgs-feedstock
+	url = ../pylbfgs-feedstock
+	branch = main
+[submodule "pyhacrf-datamade-feedstock"]
+	path = pyhacrf-datamade-feedstock
+	url = ../pyhacrf-datamade-feedstock
+	branch = main
+[submodule "xcb-util-cursor-feedstock"]
+	path = xcb-util-cursor-feedstock
+	url = ../xcb-util-cursor-feedstock
+	branch = main
+[submodule "lemon-feedstock"]
+	path = lemon-feedstock
+	url = ../lemon-feedstock
+	branch = main
+[submodule "highered-feedstock"]
+	path = highered-feedstock
+	url = ../highered-feedstock
+	branch = main
+[submodule "dedupe_lehvenshtein_search-feedstock"]
+	path = dedupe_levenshtein_search-feedstock
+	url = ../dedupe_lehvenshtein_search-feedstock
+	branch = main
+[submodule "imbalanced-ensemble-feedstock"]
+	path = imbalanced-ensemble-feedstock
+	url = ../imbalanced-ensemble-feedstock
+	branch = main
+[submodule "doublemetaphone-feedstock"]
+	path = doublemetaphone-feedstock
+	url = ../doublemetaphone-feedstock
+	branch = main
+[submodule "zope.index-feedstock"]
+	path = zope.index-feedstock
+	url = ../zope.index-feedstock
+	branch = main
+[submodule "pyrfr-feedstock"]
+	path = pyrfr-feedstock
+	url = ../pyrfr-feedstock
+	branch = main
+[submodule "emoji-feedstock"]
+	path = emoji-feedstock
+	url = ../emoji-feedstock
+	branch = main
+[submodule "alibi-detect-feedstock"]
+	path = alibi-detect-feedstock
+	url = ../alibi-detect-feedstock
+	branch = main
