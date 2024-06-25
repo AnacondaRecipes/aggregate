@@ -10970,3 +10970,7 @@
 	path = emoji-feedstock
 	url = ../emoji-feedstock
 	branch = main
+[submodule "alibi-detect-feedstock"]
+	path = alibi-detect-feedstock
+	url = ../alibi-detect-feedstock
+	branch = main
