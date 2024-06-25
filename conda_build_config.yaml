@@ -133,7 +133,7 @@ libwebp:
 libxml2:
   - 2.13.1
 libxslt:
-  - 1.1
+  - 1.1.41
 llvm_variant:
   - llvm
 lzo:
