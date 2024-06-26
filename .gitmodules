@@ -10978,3 +10978,7 @@
 	path = smac-feedstock
 	url = ../smac-feedstock
 	branch = main
+[submodule "dedupe-variable-datetime-feedstock"]
+	path = dedupe-variable-datetime-feedstock
+	url = ../dedupe-variable-datetime-feedstock
+	branch = main
