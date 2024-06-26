@@ -10990,3 +10990,7 @@
 	path = dedupe_levenshtein_search-feedstock
 	url = ../dedupe_levenshtein_search-feedstock
 	branch = main
+[submodule "sis-extras-feedstock"]
+	path = sis-extras-feedstock
+	url = ../sis-extras-feedstock
+	branch = main
