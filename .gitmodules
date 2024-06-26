@@ -10982,3 +10982,7 @@
 	path = dedupe-variable-datetime-feedstock
 	url = ../dedupe-variable-datetime-feedstock
 	branch = main
+[submodule "dedupe-feedstock"]
+	path = dedupe-feedstock
+	url = ../dedupe-feedstock
+	branch = main
