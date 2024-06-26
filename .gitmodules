@@ -10986,3 +10986,7 @@
 	path = dedupe-feedstock
 	url = ../dedupe-feedstock
 	branch = main
+[submodule "dedupe_levenshtein_search-feedstock"]
+	path = dedupe_levenshtein_search-feedstock
+	url = ../dedupe_levenshtein_search-feedstock
+	branch = main
