@@ -10994,3 +10994,7 @@
 	path = sis-extras-feedstock
 	url = ../sis-extras-feedstock
 	branch = main
+[submodule "autokeras-feedstock"]
+	path = autokeras-feedstock
+	url = ../autokeras-feedstock
+	branch = main
