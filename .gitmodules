@@ -10998,3 +10998,7 @@
 	path = autokeras-feedstock
 	url = ../autokeras-feedstock
 	branch = main
+[submodule "emcee-feedstock"]
+	path = emcee-feedstock
+	url = ../emcee-feedstock
+	branch = main
