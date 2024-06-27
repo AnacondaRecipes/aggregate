@@ -11002,3 +11002,7 @@
 	path = emcee-feedstock
 	url = ../emcee-feedstock
 	branch = main
+[submodule "autoviml-feedstock"]
+	path = autoviml-feedstock
+	url = ../autoviml-feedstock
+	branch = main
