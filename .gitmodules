@@ -11014,3 +11014,7 @@
 	path = census-feedstock
 	url = ../census-feedstock
 	branch = main
+[submodule "matplotlib-venn-feedstock"]
+	path = matplotlib-venn-feedstock
+	url = ../matplotlib-venn-feedstock
+	branch = main
