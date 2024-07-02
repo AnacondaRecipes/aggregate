@@ -11006,3 +11006,7 @@
 	path = autoviml-feedstock
 	url = ../autoviml-feedstock
 	branch = main
+[submodule "dmglib-feedstock"]
+	path = dmglib-feedstock
+	url = ../dmglib-feedstock
+	branch = main
