@@ -11010,3 +11010,7 @@
 	path = dmglib-feedstock
 	url = ../dmglib-feedstock
 	branch = main
+[submodule "census-feedstock"]
+	path = census-feedstock
+	url = ../census-feedstock
+	branch = main
