@@ -11018,3 +11018,7 @@
 	path = matplotlib-venn-feedstock
 	url = ../matplotlib-venn-feedstock
 	branch = main
+[submodule "us-feedstock"]
+	path = us-feedstock
+	url = ../us-feedstock
+	branch = main
