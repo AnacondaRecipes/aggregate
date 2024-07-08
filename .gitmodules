@@ -11022,3 +11022,7 @@
 	path = us-feedstock
 	url = ../us-feedstock
 	branch = main
+[submodule "keras-tuner-feedstock"]
+	path = keras-tuner-feedstock
+	url = ../keras-tuner-feedstock
+	branch = main
