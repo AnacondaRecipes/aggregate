@@ -11026,3 +11026,7 @@
 	path = keras-tuner-feedstock
 	url = ../keras-tuner-feedstock
 	branch = main
+[submodule "keras-nlp-feedstock"]
+	path = keras-nlp-feedstock
+	url = ../keras-nlp-feedstock
+	branch = main
