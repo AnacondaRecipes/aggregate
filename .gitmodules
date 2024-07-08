@@ -11030,3 +11030,7 @@
 	path = keras-nlp-feedstock
 	url = ../keras-nlp-feedstock
 	branch = main
+[submodule "kagglehub-feedstock"]
+	path = kagglehub-feedstock
+	url = ../kagglehub-feedstock
+	branch = main
