@@ -11034,3 +11034,7 @@
 	path = kagglehub-feedstock
 	url = ../kagglehub-feedstock
 	branch = main
+[submodule "xgboost-1.5.1-feedstock"]
+	path = xgboost-1.5.1-feedstock
+	url = ../xgboost-feedstock
+	branch = master-1.5.1
