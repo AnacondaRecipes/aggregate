@@ -11042,3 +11042,7 @@
 	path = vrpy-feedstock
 	url = ../vrpy-feedstock
 	branch = main
+[submodule "environs-feedstock"]
+	path = environs-feedstock
+	url = ../environs-feedstock
+	branch = main
