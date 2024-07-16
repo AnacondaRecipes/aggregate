@@ -11038,3 +11038,7 @@
 	path = xgboost-1.5.1-feedstock
 	url = ../xgboost-feedstock
 	branch = master-1.5.1
+[submodule "vrpy-feedstock"]
+	path = vrpy-feedstock
+	url = ../vrpy-feedstock
+	branch = main
