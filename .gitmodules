@@ -11046,3 +11046,7 @@
 	path = environs-feedstock
 	url = ../environs-feedstock
 	branch = main
+[submodule "flit-core-feedstock"]
+	path = flit-core-feedstock
+	url = ../flit-core-feedstock
+	branch = main
