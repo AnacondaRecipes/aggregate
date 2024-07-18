@@ -11050,3 +11050,43 @@
 	path = flit-core-feedstock
 	url = ../flit-core-feedstock
 	branch = main
+[submodule "qtbase-feedstock"]
+	path = qtbase-feedstock
+	url = ../qtbase-feedstock
+	branch = main
+[submodule "qt5compat-feedstock"]
+	path = qt5compat-feedstock
+	url = ../qt5compat-feedstock
+	branch = main
+[submodule "qtdeclarative-feedstock"]
+	path = qtdeclarative-feedstock
+	url = ../qtdeclarative-feedstock
+	branch = main
+[submodule "qtimageformats-feedstock"]
+	path = qtimageformats-feedstock
+	url = ../qtimageformats-feedstock
+	branch = main
+[submodule "qtshadertools-feedstock"]
+	path = qtshadertools-feedstock
+	url = ../qtshadertools-feedstock
+	branch = main
+[submodule "qtsvg-feedstock"]
+	path = qtsvg-feedstock
+	url = ../qtsvg-feedstock
+	branch = main
+[submodule "qttools-feedstock"]
+	path = qttools-feedstock
+	url = ../qttools-feedstock
+	branch = main
+[submodule "qttranslations-feedstock"]
+	path = qttranslations-feedstock
+	url = ../qttranslations-feedstock
+	branch = main
+[submodule "qtwebchannel-feedstock"]
+	path = qtwebchannel-feedstock
+	url = ../qtwebchannel-feedstock
+	branch = main
+[submodule "qtwebsockets-feedstock"]
+	path = qtwebsockets-feedstock
+	url = ../qtwebsockets-feedstock
+	branch = main
