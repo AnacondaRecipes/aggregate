@@ -11090,3 +11090,7 @@
 	path = qtwebsockets-feedstock
 	url = ../qtwebsockets-feedstock
 	branch = main
+[submodule "pyatlan-feedstock"]
+	path = pyatlan-feedstock
+	url = ../pyatlan-feedstock
+	branch = main
