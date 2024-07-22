@@ -11094,3 +11094,7 @@
 	path = pyatlan-feedstock
 	url = ../pyatlan-feedstock
 	branch = main
+[submodule "python-magic-feedstock"]
+	path = python-magic-feedstock
+	url = ../python-magic-feedstock
+	branch = main
