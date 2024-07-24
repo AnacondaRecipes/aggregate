@@ -11098,3 +11098,7 @@
 	path = python-magic-feedstock
 	url = ../python-magic-feedstock
 	branch = main
+[submodule "pyomo-feedstock"]
+	path = pyomo-feedstock
+	url = ../pyomo-feedstock
+	branch = main
