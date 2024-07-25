@@ -11102,3 +11102,7 @@
 	path = pyomo-feedstock
 	url = ../pyomo-feedstock
 	branch = main
+[submodule "auto-sklearn-feedstock"]
+	path = auto-sklearn-feedstock
+	url = ../auto-sklearn-feedstock
+	branch = main
