@@ -131,7 +131,7 @@ libtiff:
 libwebp:
   - 1.3.2
 libxml2:
-  - 2.10
+  - 2.13
 libxslt:
   - 1.1
 llvm_variant:
