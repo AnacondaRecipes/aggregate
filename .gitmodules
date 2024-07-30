@@ -11106,3 +11106,7 @@
 	path = auto-sklearn-feedstock
 	url = ../auto-sklearn-feedstock
 	branch = main
+[submodule "milvus-lite-feedstock"]
+	path = milvus-lite-feedstock
+	url = ../milvus-lite-feedstock
+	branch = main
