@@ -11110,3 +11110,7 @@
 	path = milvus-lite-feedstock
 	url = ../milvus-lite-feedstock
 	branch = main
+[submodule "imbalanced-ensemble-0.2.1-feedstock"]
+	path = imbalanced-ensemble-0.2.1-feedstock
+	url = ../imbalanced-ensemble-feedstock
+	branch = main-0.2.1
