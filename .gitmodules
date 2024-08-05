@@ -11114,3 +11114,15 @@
 	path = imbalanced-ensemble-0.2.1-feedstock
 	url = ../imbalanced-ensemble-feedstock
 	branch = main-0.2.1
+[submodule "vs2022-feedstock"]
+	path = vs2022-feedstock
+	url = ../vs2022-feedstock
+	branch = main
+[submodule "optree-feedstock"]
+	path = optree-feedstock
+	url = ../optree-feedstock
+	branch = main
+[submodule "popt-feedstock"]
+	path = popt-feedstock
+	url = ../popt-feedstock
+	branch = main
