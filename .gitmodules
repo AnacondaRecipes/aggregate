@@ -11126,3 +11126,7 @@
 	path = popt-feedstock
 	url = ../popt-feedstock
 	branch = main
+[submodule "libml_dtypes-headers-feedstock"]
+	path = libml_dtypes-headers-feedstock
+	url = ../libml_dtypes-headers-feedstock
+	branch = main
