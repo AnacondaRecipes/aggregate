@@ -11130,3 +11130,7 @@
 	path = libml_dtypes-headers-feedstock
 	url = ../libml_dtypes-headers-feedstock
 	branch = main
+[submodule "sphinxcontrib-youtube-feedstock"]
+	path = sphinxcontrib-youtube-feedstock
+	url = ../sphinxcontrib-youtube-feedstock
+	branch = main
