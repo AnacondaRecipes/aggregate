@@ -11134,3 +11134,7 @@
 	path = sphinxcontrib-youtube-feedstock
 	url = ../sphinxcontrib-youtube-feedstock
 	branch = main
+[submodule "libpostal-feedstock"]
+	path = libpostal-feedstock
+	url = ../libpostal-feedstock
+	branch = master
