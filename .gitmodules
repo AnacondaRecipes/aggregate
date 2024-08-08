@@ -11138,3 +11138,7 @@
 	path = libpostal-feedstock
 	url = ../libpostal-feedstock
 	branch = master
+[submodule "postal-feedstock"]
+	path = postal-feedstock
+	url = ../postal-feedstock
+	branch = master
