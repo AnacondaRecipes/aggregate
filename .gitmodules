@@ -11142,3 +11142,7 @@
 	path = postal-feedstock
 	url = ../postal-feedstock
 	branch = master
+[submodule "sphinxcontrib-images-feedstock"]
+	path = sphinxcontrib-images-feedstock
+	url = ../sphinxcontrib-images-feedstock
+	branch = main
