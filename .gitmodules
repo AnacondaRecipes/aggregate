@@ -11146,3 +11146,7 @@
 	path = sphinxcontrib-images-feedstock
 	url = ../sphinxcontrib-images-feedstock
 	branch = main
+[submodule "pymilvus-feedstock"]
+	path = pymilvus-feedstock
+	url = ../pymilvus-feedstock
+	branch = main
