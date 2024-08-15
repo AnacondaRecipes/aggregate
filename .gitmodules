@@ -11154,3 +11154,7 @@
 	path = st-theme-feedstock
 	url = ../st-theme-feedstock
 	branch = main
+[submodule "bson-feedstock"]
+	path = bson-feedstock
+	url = ../bson-feedstock
+	branch = main
