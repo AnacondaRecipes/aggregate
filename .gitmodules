@@ -11158,3 +11158,7 @@
 	path = bson-feedstock
 	url = ../bson-feedstock
 	branch = main
+[submodule "streamlit-navigation-bar-feedstock"]
+	path = streamlit-navigation-bar-feedstock
+	url = ../streamlit-navigation-bar-feedstock
+	branch = main
