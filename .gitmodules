@@ -11174,7 +11174,3 @@
 	path = filetype-feedstock
 	url = ../filetype-feedstock
 	branch = main
-[submodule "snowflake-snowpark-python-feedstock"]
-	path = snowflake-snowpark-python-feedstock
-	url = ../snowflake-snowpark-python-feedstock
-	branch = main
