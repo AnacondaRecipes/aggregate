@@ -11170,3 +11170,7 @@
 	path = python-iso639-feedstock
 	url = ../python-iso639-feedstock
 	branch = main
+[submodule "filetype-feedstock"]
+	path = filetype-feedstock
+	url = ../filetype-feedstock
+	branch = main
