@@ -11162,3 +11162,7 @@
 	path = streamlit-navigation-bar-feedstock
 	url = ../streamlit-navigation-bar-feedstock
 	branch = main
+[submodule "jsonpath-feedstock"]
+	path = jsonpath-feedstock
+	url = ../jsonpath-feedstock
+	branch = main
