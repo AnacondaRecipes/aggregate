@@ -11166,3 +11166,7 @@
 	path = jsonpath-feedstock
 	url = ../jsonpath-feedstock
 	branch = main
+[submodule "python-iso639-feedstock"]
+	path = python-iso639-feedstock
+	url = ../python-iso639-feedstock
+	branch = main
