@@ -11182,3 +11182,7 @@
 	path = jiwer-feedstock
 	url = ../jiwer-feedstock
 	branch = main
+[submodule "gguf-feedstock"]
+	path = gguf-feedstock
+	url = ../gguf-feedstock
+	branch = main
