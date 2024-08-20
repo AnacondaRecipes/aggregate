@@ -11174,3 +11174,7 @@
 	path = filetype-feedstock
 	url = ../filetype-feedstock
 	branch = main
+[submodule "torcheval-feedstock"]
+	path = torcheval-feedstock
+	url = ../torcheval-feedstock
+	branch = main
