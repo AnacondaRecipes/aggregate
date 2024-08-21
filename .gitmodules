@@ -11186,3 +11186,7 @@
 	path = gguf-feedstock
 	url = ../gguf-feedstock
 	branch = main
+[submodule "pydantic-core-2.20.1-feedstock"]
+	path = pydantic-core-2.20.1-feedstock
+	url = ../pydantic-core-feedstock
+	branch = main-2.20.1
