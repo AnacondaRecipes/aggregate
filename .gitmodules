@@ -11189,7 +11189,7 @@
 [submodule "pydantic-core-2.20.1-feedstock"]
 	path = pydantic-core-2.20.1-feedstock
 	url = ../pydantic-core-2.20.1-feedstock
-	branch = main-2.20.1
+	branch = main
 [submodule "jsonpath-python-feedstock"]
 	path = jsonpath-python-feedstock
 	url = ../jsonpath-python-feedstock
