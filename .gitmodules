@@ -11202,3 +11202,7 @@
 	path = unstructured-client-feedstock
 	url = ../unstructured-client-feedstock
 	branch = main
+[submodule "libsndfile-feedstock"]
+	path = libsndfile-feedstock
+	url = ../libsndfile-feedstock
+	branch = main
