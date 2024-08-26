@@ -11194,3 +11194,7 @@
 	path = jsonpath-python-feedstock
 	url = ../jsonpath-python-feedstock
 	branch = main
+[submodule "libflac-feedstock"]
+	path = libflac-feedstock
+	url = ../libflac-feedstock
+	branch = main
