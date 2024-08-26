@@ -11198,3 +11198,7 @@
 	path = libflac-feedstock
 	url = ../libflac-feedstock
 	branch = main
+[submodule "unstructured-client-feedstock"]
+	path = unstructured-client-feedstock
+	url = ../unstructured-client-feedstock
+	branch = main
