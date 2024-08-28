@@ -11202,3 +11202,7 @@
 	path = libsndfile-feedstock
 	url = ../libsndfile-feedstock
 	branch = main
+[submodule "jaraco.test-feedstock"]
+	path = jaraco.test-feedstock
+	url = ../jaraco.test-feedstock
+	branch = main
