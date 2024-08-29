@@ -11206,3 +11206,7 @@
 	path = jaraco.test-feedstock
 	url = ../jaraco.test-feedstock
 	branch = main
+[submodule "snowflake-ml-python-1.6.0-feedstock"]
+	path = snowflake-ml-python-1.6.0-feedstock
+	url = ../snowflake-ml-python-feedstock
+	branch = main-1.6.0
