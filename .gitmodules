@@ -11222,3 +11222,7 @@
 	path = mmhash3-feedstock
 	url = ../mmhash3-feedstock
 	branch = main
+[submodule "streamlit-echarts-feedstock"]
+	path = streamlit-echarts-feedstock
+	url = ../streamlit-echarts-feedstock
+	branch = main
