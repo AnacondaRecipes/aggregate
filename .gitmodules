@@ -11210,3 +11210,7 @@
 	path = snowflake-ml-python-1.6.0-feedstock
 	url = ../snowflake-ml-python-feedstock
 	branch = main-1.6.0
+[submodule "aiohappyeyeballs-feedstock"]
+	path = aiohappyeyeballs-feedstock
+	url = ../aiohappyeyeballs-feedstock
+	branch = main
