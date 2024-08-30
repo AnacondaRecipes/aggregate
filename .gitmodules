@@ -11218,3 +11218,7 @@
 	path = unstructured-feedstock
 	url = ../unstructured-feedstock
 	branch = main
+[submodule "mmhash3-feedstock"]
+	path = mmhash3-feedstock
+	url = ../mmhash3-feedstock
+	branch = main
