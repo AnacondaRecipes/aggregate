@@ -11214,3 +11214,7 @@
 	path = aiohappyeyeballs-feedstock
 	url = ../aiohappyeyeballs-feedstock
 	branch = main
+[submodule "unstructured-feedstock"]
+	path = unstructured-feedstock
+	url = ../unstructured-feedstock
+	branch = main
