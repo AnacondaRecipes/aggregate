@@ -11226,3 +11226,7 @@
 	path = streamlit-echarts-feedstock
 	url = ../streamlit-echarts-feedstock
 	branch = main
+[submodule "data-science-utils-feedstock"]
+	path = data-science-utils-feedstock
+	url = ../data-science-utils-feedstock
+	branch = main
