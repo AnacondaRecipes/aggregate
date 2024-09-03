@@ -11230,3 +11230,7 @@
 	path = data-science-utils-feedstock
 	url = ../data-science-utils-feedstock
 	branch = main
+[submodule "mockupdb-feedstock"]
+	path = mockupdb-feedstock
+	url = ../mockupdb-feedstock
+	branch = main
