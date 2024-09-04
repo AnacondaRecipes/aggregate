@@ -11234,7 +11234,7 @@
 	path = mockupdb-feedstock
 	url = ../mockupdb-feedstock
 	branch = main
-[submodule "Office365-REST-Python-Client-feedstock"]
-	path = Office365-REST-Python-Client-feedstock
-	url = ../Office365-REST-Python-Client-feedstock
+[submodule "office365-rest-python-client-feedstock"]
+	path = office365-rest-python-client-feedstock
+	url = ../office365-rest-python-client-feedstock
 	branch = main
