@@ -11242,3 +11242,7 @@
 	path = trio-websocket-feedstock
 	url = ../trio-websocket-feedstock
 	branch = main
+[submodule "fairseq-feedstock"]
+	path = fairseq-feedstock
+	url = ../fairseq-feedstock
+	branch = main
