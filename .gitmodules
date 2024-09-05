@@ -11238,3 +11238,7 @@
 	path = office365-rest-python-client-feedstock
 	url = ../office365-rest-python-client-feedstock
 	branch = main
+[submodule "trio-websocket-feedstock"]
+	path = trio-websocket-feedstock
+	url = ../trio-websocket-feedstock
+	branch = main
