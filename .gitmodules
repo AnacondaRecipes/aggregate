@@ -11246,3 +11246,7 @@
 	path = fairseq-feedstock
 	url = ../fairseq-feedstock
 	branch = main
+[submodule "hydra-core-feedstock"]
+	path = hydra-core-feedstock
+	url = ../hydra-core-feedstock
+	branch = main
