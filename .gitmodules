@@ -11250,3 +11250,7 @@
 	path = hydra-core-feedstock
 	url = ../hydra-core-feedstock
 	branch = main
+[submodule "pyiceberg-feedstock"]
+	path = pyiceberg-feedstock
+	url = ../pyiceberg-feedstock
+	branch = main
