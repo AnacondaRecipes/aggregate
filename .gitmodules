@@ -11254,3 +11254,7 @@
 	path = pyiceberg-feedstock
 	url = ../pyiceberg-feedstock
 	branch = main
+[submodule "antlr-feedstock"]
+	path = antlr-feedstock
+	url = ../antlr-feedstock
+	branch = main
