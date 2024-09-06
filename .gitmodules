@@ -11258,3 +11258,7 @@
 	path = antlr-feedstock
 	url = ../antlr-feedstock
 	branch = main
+[submodule "mpdecimal-feedstock"]
+	path = mpdecimal-feedstock
+	url = ../mpdecimal-feedstock
+	branch = main
