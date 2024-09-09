@@ -11262,3 +11262,7 @@
 	path = mpdecimal-feedstock
 	url = ../mpdecimal-feedstock
 	branch = main
+[submodule "pyuca-feedstock"]
+	path = pyuca-feedstock
+	url = ../pyuca-feedstock
+	branch = main
