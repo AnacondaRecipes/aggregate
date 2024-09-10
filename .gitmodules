@@ -11270,3 +11270,7 @@
 	path = fzf-feedstock
 	url = ../fzf-feedstock
 	branch = main
+[submodule "go-licenses-feedstock"]
+	path = go-licenses-feedstock
+	url = ../go-licenses-feedstock
+	branch = main
