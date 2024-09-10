@@ -11266,3 +11266,7 @@
 	path = pyuca-feedstock
 	url = ../pyuca-feedstock
 	branch = main
+[submodule "fzf-feedstock"]
+	path = fzf-feedstock
+	url = ../fzf-feedstock
+	branch = main
