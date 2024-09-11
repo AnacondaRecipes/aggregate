@@ -11274,3 +11274,7 @@
 	path = go-licenses-feedstock
 	url = ../go-licenses-feedstock
 	branch = main
+[submodule "hiclass-feedstock"]
+	path = hiclass-feedstock
+	url = ../hiclass-feedstock
+	branch = main
