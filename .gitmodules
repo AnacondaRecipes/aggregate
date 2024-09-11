@@ -11278,3 +11278,7 @@
 	path = hiclass-feedstock
 	url = ../hiclass-feedstock
 	branch = main
+[submodule "dspy-ai-feedstock"]
+	path = dspy-ai-feedstock
+	url = ../dspy-ai-feedstock
+	branch = main
