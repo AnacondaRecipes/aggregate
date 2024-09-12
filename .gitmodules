@@ -679,10 +679,6 @@
 	url = ../jpeg-feedstock.git
 	path = jpeg-feedstock
 	branch = master
-[submodule "conda-verify-feedstock"]
-	url = ../conda-verify-feedstock.git
-	path = conda-verify-feedstock
-	branch = master
 [submodule "filelock-feedstock"]
 	url = ../filelock-feedstock.git
 	path = filelock-feedstock
@@ -3098,10 +3094,6 @@
 [submodule "jupyterlab_server-feedstock"]
 	path = jupyterlab_server-feedstock
 	url = ../jupyterlab_server-feedstock
-	branch = master
-[submodule "basemap-data-hires-feedstock"]
-	path = basemap-data-hires-feedstock
-	url = ../basemap-data-hires-feedstock
 	branch = master
 [submodule "cram-feedstock"]
 	path = cram-feedstock
@@ -5803,10 +5795,6 @@
 	path = rsync-feedstock
 	url = ../rsync-feedstock
 	branch = master
-[submodule "newpackage-feedstock"]
-	path = newpackage-feedstock
-	url = ../platformdirs-feedstock
-	branch = master
 [submodule "platformdirs-feedstock"]
 	path = platformdirs-feedstock
 	url = ../platformdirs-feedstock
@@ -5983,10 +5971,6 @@
 	path = llvm-spirv-feedstock
 	url = ../llvm-spirv-feedstock
 	branch = master
-[submodule "llvmdev-11.0.0-feedstock"]
-	path = llvmdev-11.0.0-feedstock
-	url = ../llvmdev-feedstock
-	branch = master-11.0.0
 [submodule "win32_setctime-feedstock"]
 	path = win32_setctime-feedstock
 	url = ../win32_setctime-feedstock.git
@@ -6098,10 +6082,6 @@
 	path = winreg-feedstock
 	url = ../winreg-feedstock
 	branch = main
-[submodule "llvmlite-0.37-llvm-11.0-feedstock"]
-	path = llvmlite-0.37-llvm-11.0-feedstock
-	url = ../llvmlite-feedstock
-	branch = master-0.37.0-llvm-11.0
 [submodule "spirv-tools-feedstock"]
 	path = spirv-tools-feedstock
 	url = ../spirv-tools-feedstock
@@ -6172,10 +6152,6 @@
 	branch = main
 [submodule "llvmdev-11.0.1-feedstock"]
 	path = llvmdev-11.0.1-feedstock
-	url = ../llvmdev-feedstock
-	branch = master-11.1.0
-[submodule "llvmdev-11.1.0-feedstock"]
-	path = llvmdev-11.1.0-feedstock
 	url = ../llvmdev-feedstock
 	branch = master-11.1.0
 [submodule "ctng-compiler-activation-ppc64le-feedstock"]
@@ -8192,10 +8168,6 @@
 	path = xar-bootstrap-feedstock
 	url = ../xar-bootstrap-feedstock
 	branch = main
-[submodule "xmlsec-1.13.10-feedstock"]
-	path = xmlsec-1.13.10-feedstock
-	url = ../xmlsec-1.13.10-feedstock
-	branch = main
 [submodule "zope-feedstock"]
 	path = zope-feedstock
 	url = ../zope-feedstock
@@ -8239,10 +8211,6 @@
 [submodule "tensorflow-gpu-base-feedstock"]
 	path = tensorflow-gpu-base-feedstock
 	url = ../tensorflow-gpu-base-feedstock
-	branch = main
-[submodule "tensorflow-gpu-feedstock"]
-	path = tensorflow-gpu-feedstock
-	url = ../tensorflow-gpu-feedstock
 	branch = main
 [submodule "stripe-feedstock"]
 	path = stripe-feedstock
@@ -8500,10 +8468,6 @@
 	path = mysql-python-feedstock
 	url = ../mysql-python-feedstock
 	branch = main
-[submodule "llvm-compilers-feedstock"]
-	path = llvm-compilers-feedstock
-	url = ../llvm-compilers-feedstock
-	branch = main
 [submodule "locustio-feedstock"]
 	path = locustio-feedstock
 	url = ../locustio-feedstock
@@ -8515,10 +8479,6 @@
 [submodule "mdp-feedstock"]
 	path = mdp-feedstock
 	url = ../mdp-feedstock
-	branch = main
-[submodule "libprotobuf-static-feedstock"]
-	path = libprotobuf-static-feedstock
-	url = ../libprotobuf-static-feedstock
 	branch = main
 [submodule "libpython-feedstock"]
 	path = libpython-feedstock
