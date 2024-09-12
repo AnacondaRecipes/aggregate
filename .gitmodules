@@ -1227,10 +1227,6 @@
 	path = msinttypes-feedstock
 	url = ../msinttypes-feedstock
 	branch = master
-[submodule "numpy-1.11-feedstock"]
-	path = numpy-1.11-feedstock
-	url = ../numpy-feedstock
-	branch = numpy111
 [submodule "win_inet_pton-feedstock"]
 	path = win_inet_pton-feedstock
 	url = ../win_inet_pton-feedstock
@@ -1767,10 +1763,6 @@
 	path = cligj-feedstock
 	url = ../cligj-feedstock
 	branch = master
-[submodule "numpy-1.12-feedstock"]
-	path = numpy-1.12-feedstock
-	url = ../numpy-feedstock
-	branch = numpy112
 [submodule "click-plugins-feedstock"]
 	path = click-plugins-feedstock
 	url = ../click-plugins-feedstock
@@ -2107,10 +2099,6 @@
 	path = caffe-feedstock
 	url = ../caffe-feedstock
 	branch = master
-[submodule "numpy-1.13-feedstock"]
-	path = numpy-1.13-feedstock
-	url = ../numpy-feedstock
-	branch = numpy113
 [submodule "libgsasl-feedstock"]
 	path = libgsasl-feedstock
 	url = ../libgsasl-feedstock
@@ -2947,10 +2935,6 @@
 	path = libgd-feedstock
 	url = ../libgd-feedstock
 	branch = master
-[submodule "numpy-1.14-feedstock"]
-	path = numpy-1.14-feedstock
-	url = ../numpy-feedstock
-	branch = numpy114
 [submodule "hdmedians-feedstock"]
 	path = hdmedians-feedstock
 	url = ../hdmedians-feedstock
@@ -3911,10 +3895,6 @@
 	path = pywin32-ctypes-feedstock
 	url = ../pywin32-ctypes-feedstock
 	branch = master
-[submodule "numpy-1.16-feedstock"]
-	path = numpy-1.16-feedstock
-	url = ../numpy-feedstock
-	branch = numpy116
 [submodule "grpc-cpp-feedstock"]
 	path = grpc-cpp-feedstock
 	url = ../grpc-cpp-feedstock
@@ -5751,10 +5731,6 @@
 	path = pymeeus-feedstock
 	url = ../pymeeus-feedstock
 	branch = master
-[submodule "numpy-1.20-feedstock"]
-	path = numpy-1.20-feedstock
-	url = ../numpy-feedstock
-	branch = main-1.20
 [submodule "armpl-feedstock"]
 	path = armpl-feedstock
 	url = ../armpl-feedstock
@@ -6306,10 +6282,6 @@
 	path = gdb-feedstock
 	url = ../gdb-feedstock
 	branch = main
-[submodule "numpy-1.19-feedstock"]
-	path = numpy-1.19-feedstock
-	url = ../numpy-feedstock
-	branch = numpy119
 [submodule "numpy-1.21-feedstock"]
 	path = numpy-1.21-feedstock
 	url = ../numpy-feedstock
@@ -11282,3 +11254,7 @@
 	path = dspy-ai-feedstock
 	url = ../dspy-ai-feedstock
 	branch = main
+[submodule "numpy-1.26-feedstock"]
+	path = numpy-1.26-feedstock
+	url = ../numpy-feedstock
+	branch = numpy126
