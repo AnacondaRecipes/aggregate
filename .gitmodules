@@ -867,18 +867,6 @@
 	url = ../libuuid-feedstock.git
 	path = libuuid-feedstock
 	branch = master
-[submodule "python-3.5-feedstock"]
-	url = ../python-feedstock.git
-	path = python-3.5-feedstock
-	branch = master-3.5
-[submodule "python-2.7.13-feedstock"]
-	path = python-2.7.13-feedstock
-	url = ../python-feedstock
-	branch = master-2.7.13
-[submodule "python-2.7-feedstock"]
-	url = ../python-feedstock.git
-	path = python-2.7-feedstock
-	branch = master-2.7
 [submodule "libgfortran-feedstock"]
 	path = libgfortran-feedstock
 	url = ../libgfortran-feedstock
@@ -2595,10 +2583,6 @@
 	path = pyopengl-feedstock
 	url = ../pyopengl-feedstock
 	branch = master
-[submodule "python-3.6-feedstock"]
-	path = python-3.6-feedstock
-	url = ../python-feedstock
-	branch = master-3.6
 [submodule "numba-feedstock"]
 	path = numba-feedstock
 	url = ../numba-feedstock
@@ -3491,10 +3475,6 @@
 	path = toolchain-feedstock
 	url = ../toolchain-feedstock
 	branch = master
-[submodule "python-3.7-feedstock"]
-	path = python-3.7-feedstock
-	url = ../python-feedstock
-	branch = master-3.7
 [submodule "python-3.8-feedstock"]
 	path = python-3.8-feedstock
 	url = ../python-feedstock
@@ -11258,3 +11238,7 @@
 	path = numpy-1.26-feedstock
 	url = ../numpy-feedstock
 	branch = numpy126
+[submodule "python-3.12-feedstock"]
+	path = python-3.12-feedstock
+	url = ../python-feedstock
+	branch = main-3.12
