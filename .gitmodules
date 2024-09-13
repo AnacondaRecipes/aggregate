@@ -11218,3 +11218,7 @@
 	path = google-cloud-resource-manager-feedstock
 	url = ../google-cloud-resource-manager-feedstock
 	branch = main
+[submodule "googlemaps-feedstock"]
+	path = googlemaps-feedstock
+	url = ../googlemaps-feedstock
+	branch = main
