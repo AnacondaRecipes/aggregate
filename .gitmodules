@@ -11214,3 +11214,7 @@
 	path = docstring_parser-feedstock
 	url = ../docstring_parser-feedstock
 	branch = main
+[submodule "google-cloud-resource-manager-feedstock"]
+	path = google-cloud-resource-manager-feedstock
+	url = ../google-cloud-resource-manager-feedstock
+	branch = main
