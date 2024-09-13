@@ -11210,3 +11210,7 @@
 	path = go-activation-feedstock
 	url = ../go-activation-feedstock
 	branch = main
+[submodule "docstring_parser-feedstock"]
+	path = docstring_parser-feedstock
+	url = ../docstring_parser-feedstock
+	branch = main
