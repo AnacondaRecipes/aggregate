@@ -11206,3 +11206,7 @@
 	path = grpc-google-iam-v1-feedstock
 	url = ../grpc-google-iam-v1-feedstock
 	branch = main
+[submodule "go-activation-feedstock"]
+	path = go-activation-feedstock
+	url = ../go-activation-feedstock
+	branch = main
