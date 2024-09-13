@@ -11222,3 +11222,7 @@
 	path = googlemaps-feedstock
 	url = ../googlemaps-feedstock
 	branch = main
+[submodule "google-feedstock"]
+	path = google-feedstock
+	url = ../googlemaps-feedstock
+	branch = main
