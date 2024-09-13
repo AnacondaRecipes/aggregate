@@ -11202,3 +11202,7 @@
 	path = python-3.12-feedstock
 	url = ../python-feedstock
 	branch = main-3.12
+[submodule "grpc-google-iam-v1-feedstock"]
+	path = grpc-google-iam-v1-feedstock
+	url = ../grpc-google-iam-v1-feedstock
+	branch = main
