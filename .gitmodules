@@ -11230,3 +11230,7 @@
 	path = socrata-py-feedstock
 	url = ../socrata-py-feedstock
 	branch = main
+[submodule "google-cloud-bigquery-storage-feedstock"]
+	path = google-cloud-bigquery-storage-feedstock
+	url = ../google-cloud-bigquery-storage-feedstock
+	branch = master
