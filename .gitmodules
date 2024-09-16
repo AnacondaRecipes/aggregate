@@ -11226,3 +11226,7 @@
 	path = db-dtypes-feedstock
 	url = ../db-dtypes-feedstock
 	branch = main
+[submodule "socrata-py-feedstock"]
+	path = socrata-py-feedstock
+	url = ../socrata-py-feedstock
+	branch = main
