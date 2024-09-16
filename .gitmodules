@@ -11222,10 +11222,6 @@
 	path = googlemaps-feedstock
 	url = ../googlemaps-feedstock
 	branch = main
-[submodule "google-feedstock"]
-	path = google-feedstock
-	url = ../googlemaps-feedstock
-	branch = main
 [submodule "db-dtypes-feedstock"]
 	path = db-dtypes-feedstock
 	url = ../db-dtypes-feedstock
