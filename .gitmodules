@@ -11238,3 +11238,7 @@
 	path = google-cloud-bigquery-feedstock
 	url = ../google-cloud-bigquery-feedstock
 	branch = master
+[submodule "google-cloud-aiplatform-feedstock"]
+	path = google-cloud-aiplatform-feedstock
+	url = ../google-cloud-aiplatform-feedstock
+	branch = main
