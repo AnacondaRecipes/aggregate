@@ -11242,3 +11242,7 @@
 	path = google-cloud-aiplatform-feedstock
 	url = ../google-cloud-aiplatform-feedstock
 	branch = main
+[submodule "superqt-feedstock"]
+	path = superqt-feedstock
+	url = ../superqt-feedstock
+	branch = main
