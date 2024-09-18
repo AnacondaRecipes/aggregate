@@ -11253,4 +11253,4 @@
 [submodule "google-ads-feedstock"]
 	path = google-ads-feedstock
 	url = ../google-ads-feedstock
-	branch = master
+	branch = main
