@@ -94,6 +94,22 @@ gmp:
 # glibc used in ctng compiler builds
 gnu:
   - 2.12.2
+# The basic go-compiler with CGO disabled (CGO_ENABLED=0).
+# It generates fat binaries without libc dependencies.
+go_compiler:
+  - go-nocgo          # [not s390x]
+go_compiler_version:
+  - 1.21              # [not s390x]
+# The go compiler build with CGO enabled (CGO_ENABLED=1).
+# It can generate fat binaries that depend on conda's libc.
+# You should use this compiler if the underlying
+# program needs to link against other C libraries, in which
+# case make sure to add 'c,cpp,fortran_compiler' for unix
+# and the m2w64 equivalent for windows.
+cgo_compiler:
+  - go-cgo            # [not s390x]
+cgo_compiler_version:
+  - 1.21              # [not s390x]
 harfbuzz:
   - 4.3.0
 hdf4:
