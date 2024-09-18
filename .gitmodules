@@ -11246,3 +11246,7 @@
 	path = superqt-feedstock
 	url = ../superqt-feedstock
 	branch = main
+[submodule "pytest-qt-feedstock"]
+	path = pytest-qt-feedstock
+	url = ../pytest-qt-feedstock
+	branch = main
