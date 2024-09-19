@@ -11262,3 +11262,7 @@
 	path = python_abi-feedstock
 	url = ../python_abi-feedstock
 	branch = main
+[submodule "python-daemon-feedstock"]
+	path = python-daemon-feedstock
+	url = ../python-daemon-feedstock
+	branch = master
