@@ -11258,3 +11258,7 @@
 	path = opentelemetry-instrumentation-feedstock
 	url = ../opentelemetry-instrumentation-feedstock
 	branch = main
+[submodule "python_abi-feedstock"]
+	path = python_abi-feedstock
+	url = ../python_abi-feedstock
+	branch = main
