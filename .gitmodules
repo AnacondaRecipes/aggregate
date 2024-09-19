@@ -11254,3 +11254,7 @@
 	path = google-ads-feedstock
 	url = ../google-ads-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-feedstock"]
+	path = opentelemetry-instrumentation-feedstock
+	url = ../opentelemetry-instrumentation-feedstock
+	branch = main
