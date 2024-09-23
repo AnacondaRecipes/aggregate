@@ -11271,6 +11271,6 @@
 	url = ../mip-feedstock
 	branch = main
 [submodule "pgpyfeedstock"]
-	path = pgpyfeedstock
+	path = pgpy-feedstock
 	url = ../pgpy-feedstock
 	branch = main
