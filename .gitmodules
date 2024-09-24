@@ -11274,3 +11274,7 @@
 	path = pgpy-feedstock
 	url = ../pgpy-feedstock
 	branch = main
+[submodule "diptest-feedstock"]
+	path = diptest-feedstock
+	url = ../diptest-feedstock
+	branch = main
