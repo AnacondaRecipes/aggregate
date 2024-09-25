@@ -11278,3 +11278,7 @@
 	path = diptest-feedstock
 	url = ../diptest-feedstock
 	branch = main
+[submodule "coin-or-cbc-main-2.10.2+661_fd3b338-feedstock"]
+	path = coin-or-cbc-main-2.10.2+661_fd3b338-feedstock
+	url = ../coin-or-cbc-feedstock
+	branch = main-2.10.2+661_fd3b338
