@@ -11282,3 +11282,7 @@
 	path = coin-or-cbc-main-2.10.2+661_fd3b338-feedstock
 	url = ../coin-or-cbc-feedstock
 	branch = main-2.10.2+661_fd3b338
+[submodule "diff-cover-feedstock"]
+	path = diff-cover-feedstock
+	url = ../diff-cover-feedstock
+	branch = main
