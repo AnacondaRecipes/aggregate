@@ -11286,3 +11286,7 @@
 	path = diff-cover-feedstock
 	url = ../diff-cover-feedstock
 	branch = main
+[submodule "lunarcalendar-ext-feedstock"]
+	path = lunarcalendar-ext-feedstock
+	url = ../lunarcalendar-ext-feedstock
+	branch = main
