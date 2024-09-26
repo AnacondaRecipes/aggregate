@@ -11294,3 +11294,7 @@
 	path = pysoundfile-feedstock
 	url = ../pysoundfile-feedstock
 	branch = main
+[submodule "autots-feedstock"]
+	path = autots-feedstock
+	url = ../autots-feedstock
+	branch = main
