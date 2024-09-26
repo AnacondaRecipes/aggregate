@@ -11290,3 +11290,7 @@
 	path = lunarcalendar-ext-feedstock
 	url = ../lunarcalendar-ext-feedstock
 	branch = main
+[submodule "pysoundfile-feedstock"]
+	path = pysoundfile-feedstock
+	url = ../pysoundfile-feedstock
+	branch = main
