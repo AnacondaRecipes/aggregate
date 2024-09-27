@@ -11298,3 +11298,7 @@
 	path = autots-feedstock
 	url = ../autots-feedstock
 	branch = main
+[submodule "databricks-sdk-feedstock"]
+	path = databricks-sdk-feedstock
+	url = ../databricks-sdk-feedstock
+	branch = main
