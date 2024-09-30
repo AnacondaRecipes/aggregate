@@ -11302,3 +11302,7 @@
 	path = databricks-sdk-feedstock
 	url = ../databricks-sdk-feedstock
 	branch = main
+[submodule "sqlfluff-feedstock"]
+	path = sqlfluff-feedstock
+	url = ../sqlfluff-feedstock
+	branch = main
