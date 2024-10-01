@@ -11310,3 +11310,7 @@
 	path = greykite-feedstock
 	url = ../greykite-feedstock
 	branch = main
+[submodule "wfdb-feedstock"]
+	path = wfdb-feedstock
+	url = ../wfdb-feedstock
+	branch = main
