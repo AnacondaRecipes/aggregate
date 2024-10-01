@@ -11310,3 +11310,7 @@
 	path = holidays-ext-feedstock
 	url = ../holidays-ext-feedstock
 	branch = main
+[submodule "greykite-feedstock"]
+	path = greykite-feedstock
+	url = ../greykite-feedstock
+	branch = main
