@@ -11306,3 +11306,7 @@
 	path = sqlfluff-feedstock
 	url = ../sqlfluff-feedstock
 	branch = main
+[submodule "holidays-ext-feedstock"]
+	path = holidays-ext-feedstock
+	url = ../holidays-ext-feedstock
+	branch = main
