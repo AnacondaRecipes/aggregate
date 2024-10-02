@@ -11314,3 +11314,7 @@
 	path = wfdb-feedstock
 	url = ../wfdb-feedstock
 	branch = main
+[submodule "streamlit-1.26.1-feedstock"]
+	path = streamlit-1.26.1-feedstock
+	url = ../streamlit-feedstock
+	branch = main-1.26.1
