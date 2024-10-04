@@ -11330,3 +11330,7 @@
 	path = pyfakefs-feedstock
 	url = ../pyfakefs-feedstock
 	branch = main
+[submodule "python-barcode-feedstock"]
+	path = python-barcode-feedstock
+	url = ../python-barcode-feedstock
+	branch = main
