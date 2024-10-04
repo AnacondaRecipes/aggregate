@@ -11326,3 +11326,7 @@
 	path = tiledb-py-feedstock
 	url = ../tiledb-py-feedstock
 	branch = main
+[submodule "pyfakefs-feedstock"]
+	path = pyfakefs-feedstock
+	url = ../pyfakefs-feedstock
+	branch = main
