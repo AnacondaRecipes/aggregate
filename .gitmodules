@@ -11322,3 +11322,7 @@
 	path = konlpy-feedstock
 	url = ../konlpy-feedstock
 	branch = main
+[submodule "tiledb-py-feedstock"]
+	path = tiledb-py-feedstock
+	url = ../tiledb-py-feedstock
+	branch = main
