@@ -11338,3 +11338,7 @@
 	path = backports.tarfile-feedstock
 	url = ../backports.tarfile-feedstock
 	branch = main
+[submodule "jaraco.context-feedstock"]
+	path = jaraco.context-feedstock
+	url = ../jaraco.context-feedstock
+	branch = main
