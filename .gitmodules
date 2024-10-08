@@ -11334,3 +11334,7 @@
 	path = python-barcode-feedstock
 	url = ../python-barcode-feedstock
 	branch = main
+[submodule "backports.tarfile-feedstock"]
+	path = backports.tarfile-feedstock
+	url = ../backports.tarfile-feedstock
+	branch = main
