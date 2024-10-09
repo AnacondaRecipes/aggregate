@@ -11342,3 +11342,7 @@
 	path = jaraco.context-feedstock
 	url = ../jaraco.context-feedstock
 	branch = main
+[submodule "opentelemetry-distro-feedstock"]
+	path = opentelemetry-distro-feedstock
+	url = ../opentelemetry-distro-feedstock
+	branch = main
