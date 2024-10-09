@@ -11346,3 +11346,7 @@
 	path = opentelemetry-distro-feedstock
 	url = ../opentelemetry-distro-feedstock
 	branch = main
+[submodule "xgboost-2.0.3-feedstock"]
+	path = xgboost-2.0.3-feedstock
+	url = ../xgboost-feedstock
+	branch = master-2.0.3
