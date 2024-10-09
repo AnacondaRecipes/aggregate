@@ -11350,3 +11350,7 @@
 	path = xgboost-2.0.3-feedstock
 	url = ../xgboost-feedstock
 	branch = master-2.0.3
+[submodule "setuptools-72-feedstock"]
+	path = setuptools-72-feedstock
+	url = ../setuptools-feedstock
+	branch = main-72
