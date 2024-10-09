@@ -11354,3 +11354,7 @@
 	path = setuptools-72-feedstock
 	url = ../setuptools-feedstock
 	branch = main-72
+[submodule "pip-24.0-feedstock"]
+	path = pip-24.0-feedstock
+	url = ../pip-feedstock
+	branch = main-24.0
