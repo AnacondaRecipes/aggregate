@@ -11358,3 +11358,7 @@
 	path = pip-24.0-feedstock
 	url = ../pip-feedstock
 	branch = main-24.0
+[submodule "streamlit-mermaid-feedstock"]
+	path = streamlit-mermaid-feedstock
+	url = ../streamlit-mermaid-feedstock
+	branch = main
