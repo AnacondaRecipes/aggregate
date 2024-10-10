@@ -11378,3 +11378,7 @@
 	path = trulens-feedback-feedstock
 	url = ../trulens-feedback-feedstock
 	branch = main
+[submodule "trulens-core-feedstock"]
+	path = trulens-core-feedstock
+	url = ../trulens-core-feedstock
+	branch = main
