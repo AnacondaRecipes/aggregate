@@ -11362,3 +11362,7 @@
 	path = streamlit-mermaid-feedstock
 	url = ../streamlit-mermaid-feedstock
 	branch = main
+[submodule "streamlit-antd-components-feedstock"]
+	path = streamlit-antd-components-feedstock
+	url = ../streamlit-antd-components-feedstock
+	branch = main
