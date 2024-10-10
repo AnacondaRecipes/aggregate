@@ -11374,3 +11374,7 @@
 	path = kaldi-native-fbank-feedstock
 	url = ../kaldi-native-fbank-feedstock
 	branch = main
+[submodule "trulens-feedback-feedstock"]
+	path = trulens-feedback-feedstock
+	url = ../trulens-feedback-feedstock
+	branch = main
