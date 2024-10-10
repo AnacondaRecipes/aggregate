@@ -11366,3 +11366,7 @@
 	path = streamlit-antd-components-feedstock
 	url = ../streamlit-antd-components-feedstock
 	branch = main
+[submodule "types-python-dateutil-feedstock"]
+	path = types-python-dateutil-feedstock
+	url = ../types-python-dateutil-feedstock
+	branch = main
