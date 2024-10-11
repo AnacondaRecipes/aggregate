@@ -11382,3 +11382,7 @@
 	path = trulens-core-feedstock
 	url = ../trulens-core-feedstock
 	branch = main
+[submodule "asynch-feedstock"]
+	path = asynch-feedstock
+	url = ../asynch-feedstock
+	branch = main
