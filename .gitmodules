@@ -11390,3 +11390,7 @@
 	path = fairseq2-feedstock
 	url = ../fairseq2-feedstock
 	branch = main
+[submodule "python-zstd-feedstock"]
+	path = python-zstd-feedstock
+	url = ../python-zstd-feedstock
+	branch = main
