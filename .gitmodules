@@ -11358,3 +11358,35 @@
 	path = pip-24.0-feedstock
 	url = ../pip-feedstock
 	branch = main-24.0
+[submodule "streamlit-mermaid-feedstock"]
+	path = streamlit-mermaid-feedstock
+	url = ../streamlit-mermaid-feedstock
+	branch = main
+[submodule "streamlit-antd-components-feedstock"]
+	path = streamlit-antd-components-feedstock
+	url = ../streamlit-antd-components-feedstock
+	branch = main
+[submodule "types-python-dateutil-feedstock"]
+	path = types-python-dateutil-feedstock
+	url = ../types-python-dateutil-feedstock
+	branch = main
+[submodule "kaldi-native-fbank-feedstock"]
+	path = kaldi-native-fbank-feedstock
+	url = ../kaldi-native-fbank-feedstock
+	branch = main
+[submodule "trulens-feedback-feedstock"]
+	path = trulens-feedback-feedstock
+	url = ../trulens-feedback-feedstock
+	branch = main
+[submodule "trulens-core-feedstock"]
+	path = trulens-core-feedstock
+	url = ../trulens-core-feedstock
+	branch = main
+[submodule "asynch-feedstock"]
+	path = asynch-feedstock
+	url = ../asynch-feedstock
+	branch = main
+[submodule "fairseq2-feedstock"]
+	path = fairseq2-feedstock
+	url = ../fairseq2-feedstock
+	branch = main
