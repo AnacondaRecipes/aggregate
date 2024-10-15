@@ -11386,3 +11386,7 @@
 	path = asynch-feedstock
 	url = ../asynch-feedstock
 	branch = main
+[submodule "fairseq2-feedstock"]
+	path = fairseq2-feedstock
+	url = ../fairseq2-feedstock
+	branch = main
