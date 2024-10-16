@@ -11394,3 +11394,7 @@
 	path = python-zstd-feedstock
 	url = ../python-zstd-feedstock
 	branch = main
+[submodule "asyncssh-feedstock"]
+	path = asyncssh-feedstock
+	url = ../asyncssh-feedstock
+	branch = main
