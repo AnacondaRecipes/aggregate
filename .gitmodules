@@ -11398,3 +11398,7 @@
 	path = asyncssh-feedstock
 	url = ../asyncssh-feedstock
 	branch = main
+[submodule "trulens-providers-cortex-feedstock"]
+	path = trulens-providers-cortex-feedstock
+	url = ../trulens-providers-cortex-feedstock
+	branch = main
