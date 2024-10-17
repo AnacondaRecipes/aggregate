@@ -11402,3 +11402,8 @@
 	path = trulens-providers-cortex-feedstock
 	url = ../trulens-providers-cortex-feedstock
 	branch = main
+	branch = main
+[submodule "trulens-connectors-snowflake-feedstock"]
+	path = trulens-connectors-snowflake-feedstock
+	url = ../trulens-connectors-snowflake-feedstock
+	branch = main
