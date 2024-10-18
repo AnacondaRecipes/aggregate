@@ -11406,3 +11406,7 @@
 	path = trulens-connectors-snowflake-feedstock
 	url = ../trulens-connectors-snowflake-feedstock
 	branch = main
+[submodule "pypyodbc-feedstock"]
+	path = pypyodbc-feedstock
+	url = ../pypyodbc-feedstock
+	branch = main
