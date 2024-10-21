@@ -11410,3 +11410,7 @@
 	path = pypyodbc-feedstock
 	url = ../pypyodbc-feedstock
 	branch = main
+[submodule "fitter-feedstock"]
+	path = fitter-feedstock
+	url = ../fitter-feedstock
+	branch = main
