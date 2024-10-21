@@ -11414,3 +11414,7 @@
 	path = fitter-feedstock
 	url = ../fitter-feedstock
 	branch = main
+[submodule "rich-click-feedstock"]
+	path = rich-click-feedstock
+	url = ../rich-click-feedstock
+	branch = main
