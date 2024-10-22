@@ -11418,3 +11418,7 @@
 	path = rich-click-feedstock
 	url = ../rich-click-feedstock
 	branch = main
+[submodule "plumbum-feedstock"]
+	path = plumbum-feedstock
+	url = ../plumbum-feedstock
+	branch = main
