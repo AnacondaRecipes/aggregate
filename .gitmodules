@@ -2695,10 +2695,6 @@
 	path = wtforms-feedstock
 	url = ../wtforms-feedstock
 	branch = master
-[submodule "tensorflow_recipes"]
-	path = tensorflow_recipes
-	url = ../tensorflow_recipes
-	branch = master
 [submodule "nbsmoke-feedstock"]
 	path = nbsmoke-feedstock
 	url = ../nbsmoke-feedstock
@@ -8196,10 +8192,6 @@
 	path = tktable-feedstock
 	url = ../tktable-feedstock
 	branch = main
-[submodule "tensorflow-base-feedstock"]
-	path = tensorflow-base-feedstock
-	url = ../tensorflow-base-feedstock
-	branch = main
 [submodule "tensorflow-datasets-feedstock"]
 	path = tensorflow-datasets-feedstock
 	url = ../tensorflow-datasets-feedstock
@@ -8207,10 +8199,6 @@
 [submodule "tensorflow-feedstock"]
 	path = tensorflow-feedstock
 	url = ../tensorflow-feedstock
-	branch = main
-[submodule "tensorflow-gpu-base-feedstock"]
-	path = tensorflow-gpu-base-feedstock
-	url = ../tensorflow-gpu-base-feedstock
 	branch = main
 [submodule "stripe-feedstock"]
 	path = stripe-feedstock
