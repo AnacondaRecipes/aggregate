@@ -11410,3 +11410,7 @@
 	path = plumbum-feedstock
 	url = ../plumbum-feedstock
 	branch = main
+[submodule "python-pandoc-feedstock"]
+	path = python-pandoc-feedstock
+	url = ../python-pandoc-feedstock
+	branch = main
