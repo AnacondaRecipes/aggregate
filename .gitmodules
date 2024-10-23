@@ -11414,3 +11414,7 @@
 	path = python-pandoc-feedstock
 	url = ../python-pandoc-feedstock
 	branch = main
+[submodule "jiter-feedstock"]
+	path = jiter-feedstock
+	url = ../jiter-feedstock
+	branch = main
