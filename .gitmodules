@@ -11418,3 +11418,7 @@
 	path = jiter-feedstock
 	url = ../jiter-feedstock
 	branch = main
+[submodule "polyfactory-feedstock"]
+	path = polyfactory-feedstock
+	url = ../polyfactory-feedstock
+	branch = main
