@@ -11422,3 +11422,7 @@
 	path = polyfactory-feedstock
 	url = ../polyfactory-feedstock
 	branch = main
+[submodule "langchain-snowflake-feedstock"]
+	path = langchain-snowflake-feedstock
+	url = ../langchain-snowflake-feedstock
+	branch = main
