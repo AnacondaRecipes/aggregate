@@ -11426,3 +11426,8 @@
 	path = langchain-snowflake-feedstock
 	url = ../langchain-snowflake-feedstock
 	branch = main
+[submodule "prefect-test-noarch-dependency-feedstock"]
+	path = prefect-test-noarch-dependency-feedstock
+	url = ../prefect-test-noarch-dependency-feedstock
+  branch = master
+
