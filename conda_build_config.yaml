@@ -32,6 +32,12 @@ m2w64_cxx_compiler:            # [win]
   - m2w64-toolchain            # [win]
 m2w64_fortran_compiler:        # [win]
   - m2w64-toolchain            # [win]
+ucrt64_c_compiler:             # [win]
+  - ucrt64-gcc-toolchain       # [win]
+ucrt64_cxx_compiler:           # [win]
+  - ucrt64-gcc-toolchain       # [win]
+ucrt64_fortran_compiler:       # [win]
+  - ucrt64-gcc-toolchain       # [win]
 rust_compiler:
   - rust
 rust_compiler_version:
