@@ -11431,3 +11431,7 @@
 	url = ../prefect-test-noarch-dependency-feedstock
   branch = master
 
+[submodule "msgspec-feedstock"]
+	path = msgspec-feedstock
+	url = ../msgspec-feedstock
+	branch = main
