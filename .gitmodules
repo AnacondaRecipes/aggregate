@@ -11435,3 +11435,6 @@
 	path = msgspec-feedstock
 	url = ../msgspec-feedstock
 	branch = main
+[submodule "prefect-test-skip-dependency-feedstock"]
+	path = prefect-test-skip-dependency-feedstock
+	url = ../prefect-test-skip-dependency-feedstock
