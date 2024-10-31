@@ -11442,3 +11442,7 @@
 	path = immutabledict-feedstock
 	url = ../immutabledict-feedstock
 	branch = main
+[submodule "thop-feedstock"]
+	path = thop-feedstock
+	url = ../thop-feedstock
+	branch = main
