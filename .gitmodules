@@ -11450,7 +11450,3 @@
 	path = recbole-feedstock
 	url = ../recbole-feedstock
 	branch = main
-[submodule "kt-legacy-feedstock"]
-	path = kt-legacy-feedstock
-	url = ../kt-legacy-feedstock
-	branch = main
