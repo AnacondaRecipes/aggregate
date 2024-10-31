@@ -11438,3 +11438,7 @@
 [submodule "prefect-test-skip-dependency-feedstock"]
 	path = prefect-test-skip-dependency-feedstock
 	url = ../prefect-test-skip-dependency-feedstock
+[submodule "immutabledict-feedstock"]
+	path = immutabledict-feedstock
+	url = ../immutabledict-feedstock
+	branch = main
