@@ -11446,3 +11446,7 @@
 	path = thop-feedstock
 	url = ../thop-feedstock
 	branch = main
+[submodule "recbole-feedstock"]
+	path = recbole-feedstock
+	url = ../recbole-feedstock
+	branch = main
