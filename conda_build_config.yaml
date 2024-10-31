@@ -175,8 +175,6 @@ mpfr:
   - 4
 # we build for an old version of numpy for forward compatibility
 numpy:
-  # python 3.8
-  - 1.21
   # python 3.9
   - 1.21
   # python 3.10
@@ -209,7 +207,6 @@ libabseil:
 libgrpc:
   - 1.62.2
 python:
-  - 3.8
   - 3.9
   - "3.10"
   - "3.11"
