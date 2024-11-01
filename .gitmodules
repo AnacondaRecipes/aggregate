@@ -11458,3 +11458,7 @@
 	path = kmeans-pytorch-feedstock
 	url = ../kmeans-pytorch-feedstock
 	branch = main
+[submodule "bottle-feedstock"]
+	path = bottle-feedstock
+	url = ../bottle-feedstock
+	branch = main
