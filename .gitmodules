@@ -11454,3 +11454,7 @@
 	path = kt-legacy-feedstock
 	url = ../kt-legacy-feedstock
 	branch = main
+[submodule "kmeans-pytorch-feedstock"]
+	path = kmeans-pytorch-feedstock
+	url = ../kmeans-pytorch-feedstock
+	branch = main
