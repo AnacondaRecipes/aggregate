@@ -11462,3 +11462,7 @@
 	path = bottle-feedstock
 	url = ../bottle-feedstock
 	branch = main
+[submodule "uuid6-feedstock"]
+	path = uuid6-feedstock
+	url = ../uuid6-feedstock
+	branch = main
