@@ -11466,3 +11466,7 @@
 	path = uuid6-feedstock
 	url = ../uuid6-feedstock
 	branch = main
+[submodule "iterative-telemetry-feedstock"]
+	path = iterative-telemetry-feedstock
+	url = ../iterative-telemetry-feedstock
+	branch = main
