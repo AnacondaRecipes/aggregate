@@ -11474,3 +11474,7 @@
 	path = numpyro-feedstock
 	url = ../numpyro-feedstock
 	branch = main
+[submodule "litestar-feedstock"]
+	path = litestar-feedstock
+	url = ../litestar-feedstock
+	branch = main
