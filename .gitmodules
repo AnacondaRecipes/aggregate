@@ -11477,7 +11477,3 @@
 	path = litestar-feedstock
 	url = ../litestar-feedstock
 	branch = main
-[submodule "sentencepiece-fairseq2-feedstock"]
-	path = sentencepiece-fairseq2-feedstock
-	url = ../sentencepiece-feedstock
-	branch = master-fairseq2
