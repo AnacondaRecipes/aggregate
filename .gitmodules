@@ -11470,3 +11470,7 @@
 	path = iterative-telemetry-feedstock
 	url = ../iterative-telemetry-feedstock
 	branch = main
+[submodule "numpyro-feedstock"]
+	path = numpyro-feedstock
+	url = ../numpyro-feedstock
+	branch = main
