@@ -11429,8 +11429,7 @@
 [submodule "prefect-test-noarch-dependency-feedstock"]
 	path = prefect-test-noarch-dependency-feedstock
 	url = ../prefect-test-noarch-dependency-feedstock
-  branch = master
-
+    branch = master
 [submodule "msgspec-feedstock"]
 	path = msgspec-feedstock
 	url = ../msgspec-feedstock
@@ -11478,3 +11477,7 @@
 	path = litestar-feedstock
 	url = ../litestar-feedstock
 	branch = main
+[submodule "sentencepiece-fairseq2-feedstock"]
+	path = sentencepiece-fairseq2-feedstock
+	url = ../sentencepiece-feedstock
+	branch = master-fairseq2
