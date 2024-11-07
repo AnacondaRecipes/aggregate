@@ -11497,3 +11497,7 @@
 	path = opentelemetry-distro-0.47b0-feedstock
 	url = ../opentelemetry-distro-feedstock
 	branch = base-0.47b0
+[submodule "opentelemetry-instrumentation-0.47b0-feedstock"]
+	path = opentelemetry-instrumentation-0.47b0-feedstock
+	url = ../opentelemetry-instrumentation-feedstock
+	branch = main-0.47b0-2
