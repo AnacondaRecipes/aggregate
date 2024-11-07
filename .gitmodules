@@ -11477,3 +11477,7 @@
 	path = litestar-feedstock
 	url = ../litestar-feedstock
 	branch = main
+[submodule "eth-typing-feedstock"]
+	path = eth-typing-feedstock
+	url = ../eth-typing-feedstock
+	branch = main
