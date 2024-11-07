@@ -11489,3 +11489,11 @@
 	path = eth-hash-feedstock
 	url = ../eth-hash-feedstock
 	branch = main
+[submodule "opentelemetry-distro-0.47b-feedstock"]
+	path = opentelemetry-distro-0.47b-feedstock
+	url = ../opentelemetry-distro-feedstock
+	branch = base-0.47b0
+[submodule "opentelemetry-distro-0.47b0-feedstock"]
+	path = opentelemetry-distro-0.47b0-feedstock
+	url = ../opentelemetry-distro-feedstock
+	branch = base-0.47b0
