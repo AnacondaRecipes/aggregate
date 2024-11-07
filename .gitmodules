@@ -11485,3 +11485,7 @@
 	path = setuptools-markdown-feedstock
 	url = ../setuptools-markdown-feedstock
 	branch = main
+[submodule "eth-hash-feedstock"]
+	path = eth-hash-feedstock
+	url = ../eth-hash-feedstock
+	branch = main
