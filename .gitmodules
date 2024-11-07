@@ -11481,3 +11481,7 @@
 	path = eth-typing-feedstock
 	url = ../eth-typing-feedstock
 	branch = main
+[submodule "setuptools-markdown-feedstock"]
+	path = setuptools-markdown-feedstock
+	url = ../setuptools-markdown-feedstock
+	branch = main
