@@ -1055,10 +1055,6 @@
 	path = anaconda-project-feedstock
 	url = ../anaconda-project-feedstock
 	branch = master
-[submodule "numpy-1.9-feedstock"]
-	path = numpy-1.9-feedstock
-	url = ../numpy-feedstock
-	branch = numpy19
 [submodule "rhash-feedstock"]
 	path = rhash-feedstock
 	url = ../rhash-feedstock
@@ -4035,10 +4031,6 @@
 	path = jupyter_telemetry-feedstock
 	url = ../jupyter_telemetry-feedstock
 	branch = master
-[submodule "numpy-1.8-feedstock"]
-	path = numpy-1.8-feedstock
-	url = ../numpy-feedstock
-	branch = numpy18
 [submodule "python-json-logger-feedstock"]
 	path = python-json-logger-feedstock
 	url = ../python-json-logger-feedstock
@@ -11501,3 +11493,7 @@
 	path = opentelemetry-instrumentation-0.47b0-feedstock
 	url = ../opentelemetry-instrumentation-feedstock
 	branch = main-0.47b0-2
+[submodule "numpy-2.0-feedstock"]
+	path = numpy-2.0-feedstock
+	url = ../numpy-feedstock
+	branch = numpy20
