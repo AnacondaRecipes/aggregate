@@ -11497,3 +11497,7 @@
 	path = numpy-2.0-feedstock
 	url = ../numpy-feedstock
 	branch = numpy20
+[submodule "eth-utils-feedstock"]
+	path = eth-utils-feedstock
+	url = ../eth-utils-feedstock
+	branch = main
