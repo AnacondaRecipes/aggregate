@@ -11501,3 +11501,7 @@
 	path = eth-utils-feedstock
 	url = ../eth-utils-feedstock
 	branch = main
+[submodule "lightweight-mmm-feedstock"]
+	path = lightweight-mmm-feedstock
+	url = ../lightweight-mmm-feedstock
+	branch = main
