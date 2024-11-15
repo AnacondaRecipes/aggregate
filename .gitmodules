@@ -11509,3 +11509,7 @@
 	path = pyside2-feedstock
 	url = ../pyside2-feedstock
 	branch = main
+[submodule "simdjson-feedstock"]
+	path = simdjson-feedstock
+	url = ../simdjson-feedstock
+	branch = main
