@@ -11505,3 +11505,7 @@
 	path = lightweight-mmm-feedstock
 	url = ../lightweight-mmm-feedstock
 	branch = main
+[submodule "pyside2-feedstock"]
+	path = pyside2-feedstock
+	url = ../pyside2-feedstock
+	branch = main
