@@ -11513,3 +11513,7 @@
 	path = simdjson-feedstock
 	url = ../simdjson-feedstock
 	branch = main
+[submodule "conda-recipe-manager-feedstock"]
+	path = conda-recipe-manager-feedstock
+	url = ../conda-recipe-manager-feedstock
+	branch = main
