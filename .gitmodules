@@ -11521,3 +11521,7 @@
 	path = opentelemetry-propagator-b3-feedstock
 	url = ../opentelemetry-propagator-b3-feedstock
 	branch = main
+[submodule "aws-msk-iam-sasl-signer-python-feedstock"]
+	path = aws-msk-iam-sasl-signer-python-feedstock
+	url = ../aws-msk-iam-sasl-signer-python-feedstock
+	branch = main
