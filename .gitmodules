@@ -11517,3 +11517,7 @@
 	path = conda-recipe-manager-feedstock
 	url = ../conda-recipe-manager-feedstock
 	branch = main
+[submodule "opentelemetry-propagator-b3-feedstock"]
+	path = opentelemetry-propagator-b3-feedstock
+	url = ../opentelemetry-propagator-b3-feedstock
+	branch = main
