@@ -11525,3 +11525,7 @@
 	path = aws-msk-iam-sasl-signer-python-feedstock
 	url = ../aws-msk-iam-sasl-signer-python-feedstock
 	branch = main
+[submodule "sybil-feedstock"]
+	path = sybil-feedstock
+	url = ../sybil-feedstock
+	branch = main
