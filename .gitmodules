@@ -11533,3 +11533,7 @@
 	path = uritemplate-feedstock
 	url = ../uritemplate-feedstock
 	branch = master
+[submodule "pbp-test-feedstock"]
+	path = pbp-test-feedstock
+	url = ../pbp-test-feedstock
+	branch = master
