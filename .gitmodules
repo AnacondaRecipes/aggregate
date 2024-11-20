@@ -11529,3 +11529,7 @@
 	path = sybil-feedstock
 	url = ../sybil-feedstock
 	branch = main
+[submodule "uritemplate-feedstock"]
+	path = uritemplate-feedstock
+	url = ../uritemplate-feedstock
+	branch = master
