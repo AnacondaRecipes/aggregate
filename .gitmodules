@@ -11545,3 +11545,7 @@
 	path = google-auth-httplib2-feedstock
 	url = ../google-auth-httplib2-feedstock
 	branch = master
+[submodule "google-api-python-client-feedstock"]
+	path = google-api-python-client-feedstock
+	url = ../google-api-python-client-feedstock
+	branch = master
