@@ -11549,3 +11549,7 @@
 	path = google-api-python-client-feedstock
 	url = ../google-api-python-client-feedstock
 	branch = master
+[submodule "google-ai-generativelanguage-feedstock"]
+	path = google-ai-generativelanguage-feedstock
+	url = ../google-ai-generativelanguage-feedstock
+	branch = main
