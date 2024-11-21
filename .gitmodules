@@ -11541,3 +11541,7 @@
 	path = httplib2-feedstock
 	url = ../httplib2-feedstock
 	branch = master
+[submodule "google-auth-httplib2-feedstock"]
+	path = google-auth-httplib2-feedstock
+	url = ../google-auth-httplib2-feedstock
+	branch = master
