@@ -11561,3 +11561,7 @@
 	path = openapi-pydantic-feedstock
 	url = ../openapi-pydantic-feedstock
 	branch = main
+[submodule "propcache-feedstock"]
+	path = propcache-feedstock
+	url = ../propcache-feedstock
+	branch = main
