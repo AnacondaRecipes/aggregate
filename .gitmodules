@@ -11553,3 +11553,7 @@
 	path = google-ai-generativelanguage-feedstock
 	url = ../google-ai-generativelanguage-feedstock
 	branch = main
+[submodule "google-generativeai-feedstock"]
+	path = google-generativeai-feedstock
+	url = ../google-generativeai-feedstock
+	branch = main
