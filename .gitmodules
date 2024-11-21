@@ -11537,3 +11537,7 @@
 	path = pbp-test-feedstock
 	url = ../pbp-test-feedstock
 	branch = master
+[submodule "httplib2-feedstock"]
+	path = httplib2-feedstock
+	url = ../httplib2-feedstock
+	branch = master
