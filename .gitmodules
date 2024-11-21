@@ -11557,3 +11557,7 @@
 	path = google-generativeai-feedstock
 	url = ../google-generativeai-feedstock
 	branch = main
+[submodule "openapi-pydantic-feedstock"]
+	path = openapi-pydantic-feedstock
+	url = ../openapi-pydantic-feedstock
+	branch = main
