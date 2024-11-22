@@ -11569,3 +11569,7 @@
 	path = meson-python-0.13.1-feedstock
 	url = ../meson-python-feedstock
 	branch = main-0.13.1
+[submodule "pytest-codspeed-feedstock"]
+	path = pytest-codspeed-feedstock
+	url = ../pytest-codspeed-feedstock
+	branch = main
