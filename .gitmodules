@@ -11565,3 +11565,7 @@
 	path = propcache-feedstock
 	url = ../propcache-feedstock
 	branch = main
+[submodule "meson-python-0.13.1-feedstock"]
+	path = meson-python-0.13.1-feedstock
+	url = ../meson-python-feedstock
+	branch = main-0.13.1
