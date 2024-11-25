@@ -11573,3 +11573,7 @@
 	path = pytest-codspeed-feedstock
 	url = ../pytest-codspeed-feedstock
 	branch = main
+[submodule "torchmetrics-1.2.1-feedstock"]
+	path = torchmetrics-1.2.1-feedstock
+	url = ../torchmetrics-feedstock
+	branch = main-1.2.1
