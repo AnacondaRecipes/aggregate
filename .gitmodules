@@ -11577,3 +11577,7 @@
 	path = torchmetrics-1.2.1-feedstock
 	url = ../torchmetrics-feedstock
 	branch = main-1.2.1
+[submodule "aext-project-filebrowser-server-feedstock"]
+	path = aext-project-filebrowser-server-feedstock
+	url = ../aext-project-filebrowser-server-feedstock
+	branch = main
