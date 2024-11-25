@@ -11585,3 +11585,7 @@
 	path = transformers-4.40.2-feedstock
 	url = ../transformers-feedstock
 	branch = master-4.40.2
+[submodule "geojson-feedstock"]
+	path = geojson-feedstock
+	url = ../geojson-feedstock
+	branch = main
