@@ -11581,3 +11581,7 @@
 	path = aext-project-filebrowser-server-feedstock
 	url = ../aext-project-filebrowser-server-feedstock
 	branch = main
+[submodule "transformers-4.40.2-feedstock"]
+	path = transformers-4.40.2-feedstock
+	url = ../transformers-feedstock
+	branch = master-4.40.2
