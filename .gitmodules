@@ -11601,3 +11601,7 @@
 	path = opentelemetry-exporter-otlp-feedstock
 	url = ../opentelemetry-exporter-otlp-feedstock
 	branch = main
+[submodule "pdf2image-feedstock"]
+	path = pdf2image-feedstock
+	url = ../pdf2image-feedstock
+	branch = main
