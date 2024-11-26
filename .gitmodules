@@ -11589,3 +11589,15 @@
 	path = geojson-feedstock
 	url = ../geojson-feedstock
 	branch = main
+[submodule "opentelemetry-exporter-otlp-proto-grpc-feedstock"]
+	path = opentelemetry-exporter-otlp-proto-grpc-feedstock
+	url = ../opentelemetry-exporter-otlp-proto-grpc-feedstock
+	branch = main
+[submodule "opentelemetry-exporter-otlp-proto-http-feedstock"]
+	path = opentelemetry-exporter-otlp-proto-http-feedstock
+	url = ../opentelemetry-exporter-otlp-proto-http-feedstock
+	branch = main
+[submodule "opentelemetry-exporter-otlp-feedstock"]
+	path = opentelemetry-exporter-otlp-feedstock
+	url = ../opentelemetry-exporter-otlp-feedstock
+	branch = main
