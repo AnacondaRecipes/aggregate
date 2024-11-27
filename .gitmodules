@@ -11609,3 +11609,7 @@
 	path = scikit-mobility-feedstock
 	url = ../scikit-mobility-feedstock
 	branch = main
+[submodule "causalimpact-feedstock"]
+	path = causalimpact-feedstock
+	url = ../causalimpact-feedstock
+	branch = main
