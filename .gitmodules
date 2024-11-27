@@ -11605,3 +11605,7 @@
 	path = pdf2image-feedstock
 	url = ../pdf2image-feedstock
 	branch = main
+[submodule "scikit-mobility-feedstock"]
+	path = scikit-mobility-feedstock
+	url = ../scikit-mobility-feedstock
+	branch = main
