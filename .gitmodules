@@ -11605,3 +11605,7 @@
 	path = causalimpact-feedstock
 	url = ../causalimpact-feedstock
 	branch = main
+[submodule "eth-abi-feedstock"]
+	path = eth-abi-feedstock
+	url = ../eth-abi-feedstock
+	branch = main
