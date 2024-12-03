@@ -11613,3 +11613,7 @@
 	path = unittest-xml-reporting-feedstock
 	url = ../unittest-xml-reporting-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-system-metrics-feedstock"]
+	path = opentelemetry-instrumentation-system-metrics-feedstock
+	url = ../opentelemetry-instrumentation-system-metrics-feedstock
+	branch = main
