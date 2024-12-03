@@ -11609,3 +11609,7 @@
 	path = eth-abi-feedstock
 	url = ../eth-abi-feedstock
 	branch = main
+[submodule "unittest-xml-reporting-feedstock"]
+	path = unittest-xml-reporting-feedstock
+	url = ../unittest-xml-reporting-feedstock
+	branch = main
