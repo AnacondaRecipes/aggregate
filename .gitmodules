@@ -11617,3 +11617,7 @@
 	path = opentelemetry-instrumentation-system-metrics-feedstock
 	url = ../opentelemetry-instrumentation-system-metrics-feedstock
 	branch = main
+[submodule "splunk-opentelemetry-feedstock"]
+	path = splunk-opentelemetry-feedstock
+	url = ../splunk-opentelemetry-feedstock
+	branch = main
