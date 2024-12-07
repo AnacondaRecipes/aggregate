@@ -656,9 +656,9 @@
 	path = bitarray-feedstock
 	branch = master
 [submodule "jedi-feedstock"]
-	url = ../jedi-feedstock.git
+	url = ../jedi-feedstock
 	path = jedi-feedstock
-	branch = master
+	branch = main
 [submodule "libssh2-feedstock"]
 	url = ../libssh2-feedstock.git
 	path = libssh2-feedstock
@@ -9019,14 +9019,6 @@
 	path = ml_dtypes-feedstock
 	url = ../ml_dtypes-feedstock
 	branch = main
-[submodule "opentelemetry-python-feedstock"]
-	path = opentelemetry-python-feedstock
-	url = ../opentelemetry-python-feedstock
-	branch = main
-[submodule "opentelemetry-python-1.12.0-feedstock"]
-	path = opentelemetry-python-1.12.0-feedstock
-	url = ../opentelemetry-python-feedstock
-	branch = main-1.12.0
 [submodule "backoff-1.11.1-feedstock"]
 	path = backoff-1.11.1-feedstock
 	url = ../backoff-feedstock
@@ -11512,4 +11504,120 @@
 [submodule "simdjson-feedstock"]
 	path = simdjson-feedstock
 	url = ../simdjson-feedstock
+	branch = main
+[submodule "conda-recipe-manager-feedstock"]
+	path = conda-recipe-manager-feedstock
+	url = ../conda-recipe-manager-feedstock
+	branch = main
+[submodule "opentelemetry-propagator-b3-feedstock"]
+	path = opentelemetry-propagator-b3-feedstock
+	url = ../opentelemetry-propagator-b3-feedstock
+	branch = main
+[submodule "aws-msk-iam-sasl-signer-python-feedstock"]
+	path = aws-msk-iam-sasl-signer-python-feedstock
+	url = ../aws-msk-iam-sasl-signer-python-feedstock
+	branch = main
+[submodule "sybil-feedstock"]
+	path = sybil-feedstock
+	url = ../sybil-feedstock
+	branch = main
+[submodule "uritemplate-feedstock"]
+	path = uritemplate-feedstock
+	url = ../uritemplate-feedstock
+	branch = master
+[submodule "pbp-test-feedstock"]
+	path = pbp-test-feedstock
+	url = ../pbp-test-feedstock
+	branch = master
+[submodule "httplib2-feedstock"]
+	path = httplib2-feedstock
+	url = ../httplib2-feedstock
+	branch = master
+[submodule "google-auth-httplib2-feedstock"]
+	path = google-auth-httplib2-feedstock
+	url = ../google-auth-httplib2-feedstock
+	branch = master
+[submodule "google-api-python-client-feedstock"]
+	path = google-api-python-client-feedstock
+	url = ../google-api-python-client-feedstock
+	branch = master
+[submodule "google-ai-generativelanguage-feedstock"]
+	path = google-ai-generativelanguage-feedstock
+	url = ../google-ai-generativelanguage-feedstock
+	branch = main
+[submodule "google-generativeai-feedstock"]
+	path = google-generativeai-feedstock
+	url = ../google-generativeai-feedstock
+	branch = main
+[submodule "openapi-pydantic-feedstock"]
+	path = openapi-pydantic-feedstock
+	url = ../openapi-pydantic-feedstock
+	branch = main
+[submodule "propcache-feedstock"]
+	path = propcache-feedstock
+	url = ../propcache-feedstock
+	branch = main
+[submodule "meson-python-0.13.1-feedstock"]
+	path = meson-python-0.13.1-feedstock
+	url = ../meson-python-feedstock
+	branch = main-0.13.1
+[submodule "pytest-codspeed-feedstock"]
+	path = pytest-codspeed-feedstock
+	url = ../pytest-codspeed-feedstock
+	branch = main
+[submodule "torchmetrics-1.2.1-feedstock"]
+	path = torchmetrics-1.2.1-feedstock
+	url = ../torchmetrics-feedstock
+	branch = main-1.2.1
+[submodule "aext-project-filebrowser-server-feedstock"]
+	path = aext-project-filebrowser-server-feedstock
+	url = ../aext-project-filebrowser-server-feedstock
+	branch = main
+[submodule "transformers-4.40.2-feedstock"]
+	path = transformers-4.40.2-feedstock
+	url = ../transformers-feedstock
+	branch = master-4.40.2
+[submodule "geojson-feedstock"]
+	path = geojson-feedstock
+	url = ../geojson-feedstock
+	branch = main
+[submodule "opentelemetry-exporter-otlp-proto-grpc-feedstock"]
+	path = opentelemetry-exporter-otlp-proto-grpc-feedstock
+	url = ../opentelemetry-exporter-otlp-proto-grpc-feedstock
+	branch = main
+[submodule "opentelemetry-exporter-otlp-proto-http-feedstock"]
+	path = opentelemetry-exporter-otlp-proto-http-feedstock
+	url = ../opentelemetry-exporter-otlp-proto-http-feedstock
+	branch = main
+[submodule "opentelemetry-exporter-otlp-feedstock"]
+	path = opentelemetry-exporter-otlp-feedstock
+	url = ../opentelemetry-exporter-otlp-feedstock
+	branch = main
+[submodule "pdf2image-feedstock"]
+	path = pdf2image-feedstock
+	url = ../pdf2image-feedstock
+	branch = main
+[submodule "scikit-mobility-feedstock"]
+	path = scikit-mobility-feedstock
+	url = ../scikit-mobility-feedstock
+	branch = main
+[submodule "causalimpact-feedstock"]
+	path = causalimpact-feedstock
+	url = ../causalimpact-feedstock
+	branch = main
+[submodule "eth-abi-feedstock"]
+	path = eth-abi-feedstock
+	url = ../eth-abi-feedstock
+	branch = main
+[submodule "unittest-xml-reporting-feedstock"]
+	path = unittest-xml-reporting-feedstock
+	url = ../unittest-xml-reporting-feedstock
+	branch = main
+[submodule "opentelemetry-instrumentation-system-metrics-feedstock"]
+	path = opentelemetry-instrumentation-system-metrics-feedstock
+	url = ../opentelemetry-instrumentation-system-metrics-feedstock
+	branch = main
+[submodule "splunk-opentelemetry-feedstock"]
+	path = splunk-opentelemetry-feedstock
+	url = ../splunk-opentelemetry-feedstock
 	branch = main
