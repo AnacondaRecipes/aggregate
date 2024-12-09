@@ -11513,3 +11513,7 @@
 	path = simdjson-feedstock
 	url = ../simdjson-feedstock
 	branch = main
+[submodule "gql-feedstock"]
+	path = gql-feedstock
+	url = ../gql-feedstock
+	branch = main
