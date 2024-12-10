@@ -11517,3 +11517,7 @@
 	path = gql-feedstock
 	url = ../gql-feedstock
 	branch = main
+[submodule "causalimpact-feedstock"]
+	path = causalimpact-feedstock
+	url = ../causalimpact-feedstock
+	branch = main
