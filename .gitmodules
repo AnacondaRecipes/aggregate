@@ -11623,3 +11623,7 @@
 	path = splunk-opentelemetry-feedstock
 	url = ../splunk-opentelemetry-feedstock
 	branch = main
+[submodule "numba-cuda-feedstock"]
+	path = numba-cuda-feedstock
+	url = ../numba-cuda-feedstock
+	branch = main
