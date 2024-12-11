@@ -11625,3 +11625,7 @@
 	path = libde265-feedstock
 	url = ../libde265-feedstock
 	branch = main
+[submodule "gql-feedstock"]
+	path = gql-feedstock
+	url = ../gql-feedstock
+	branch = main
