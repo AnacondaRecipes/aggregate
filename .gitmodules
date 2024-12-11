@@ -655,10 +655,6 @@
 	url = ../bitarray-feedstock.git
 	path = bitarray-feedstock
 	branch = master
-[submodule "jedi-feedstock"]
-	url = ../jedi-feedstock
-	path = jedi-feedstock
-	branch = main
 [submodule "libssh2-feedstock"]
 	url = ../libssh2-feedstock.git
 	path = libssh2-feedstock
