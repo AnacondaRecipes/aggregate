@@ -11624,3 +11624,7 @@
 	path = numba-cuda-feedstock
 	url = ../numba-cuda-feedstock
 	branch = main
+[submodule "libde265-feedstock"]
+	path = libde265-feedstock
+	url = ../libde265-feedstock
+	branch = main
