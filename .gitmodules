@@ -11604,9 +11604,6 @@
 	path = causalimpact-feedstock
 	url = ../causalimpact-feedstock
 	branch = main
-[submodule "libde265-feedstock"]
-	path = libde265-feedstock
-	url = ../libde265-feedstock
 [submodule "eth-abi-feedstock"]
 	path = eth-abi-feedstock
 	url = ../eth-abi-feedstock
