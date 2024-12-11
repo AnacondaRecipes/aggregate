@@ -11629,3 +11629,7 @@
 	path = jedi-feedstock
 	url = ../jedi-feedstock
 	branch = master
+[submodule "fpdf2-feedstock"]
+	path = fpdf2-feedstock
+	url = ../fpdf2-feedstock
+	branch = main
