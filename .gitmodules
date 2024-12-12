@@ -11637,3 +11637,7 @@
 	path = pyvis-feedstock
 	url = ../pyvis-feedstock
 	branch = main
+[submodule "raphtory-feedstock"]
+	path = raphtory-feedstock
+	url = ../raphtory-feedstock
+	branch = main
