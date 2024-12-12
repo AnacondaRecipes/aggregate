@@ -11633,3 +11633,7 @@
 	path = fpdf2-feedstock
 	url = ../fpdf2-feedstock
 	branch = main
+[submodule "pyvis-feedstock"]
+	path = pyvis-feedstock
+	url = ../pyvis-feedstock
+	branch = main
