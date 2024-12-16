@@ -89,8 +89,7 @@ gst_plugins_base:
   - 1.14  # [not win]
   - 1.22  # [win]
 geos:
-  - 3.8.0  # [not (osx and arm64)]
-  - 3.9.1  # [osx and arm64]
+  - 3.10.6
 giflib:
   - 5
 glib:
