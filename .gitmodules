@@ -5431,10 +5431,6 @@
 	path = hunspell-feedstock
 	url = ../hunspell-feedstock
 	branch = master
-[submodule "omniscidb-feedstock"]
-	path = omniscidb-feedstock
-	url = ../omniscidb-feedstock
-	branch = master
 [submodule "autotools_clang_conda-feedstock"]
 	path = autotools_clang_conda-feedstock
 	url = ../autotools_clang_conda-feedstock
@@ -5546,10 +5542,6 @@
 [submodule "snowflake-connector-python-feedstock"]
 	path = snowflake-connector-python-feedstock
 	url = ../snowflake-connector-python-feedstock
-	branch = master
-[submodule "azure-common-feedstock"]
-	path = azure-common-feedstock
-	url = ../azure-common-feedstock
 	branch = master
 [submodule "azure-core-feedstock"]
 	path = azure-core-feedstock
@@ -6449,10 +6441,6 @@
 [submodule "cron-descriptor-feedstock"]
 	path = cron-descriptor-feedstock
 	url = ../cron-descriptor-feedstock
-	branch = main
-[submodule "atlasclient-feedstock"]
-	path = atlasclient-feedstock
-	url = ../atlasclient-feedstock
 	branch = main
 [submodule "meson-python-feedstock"]
 	path = meson-python-feedstock
@@ -11640,4 +11628,16 @@
 [submodule "raphtory-feedstock"]
 	path = raphtory-feedstock
 	url = ../raphtory-feedstock
+	branch = main
+[submodule "langchain-google-genai-feedstock"]
+	path = langchain-google-genai-feedstock
+	url = ../langchain-google-genai-feedstock
+	branch = main
+[submodule "astral-feedstock"]
+	path = astral-feedstock
+	url = ../astral-feedstock
+	branch = main
+[submodule "rioxarray-feedstock"]
+	path = rioxarray-feedstock
+	url = ../rioxarray-feedstock
 	branch = main
