@@ -11637,3 +11637,7 @@
 	path = astral-feedstock
 	url = ../astral-feedstock
 	branch = main
+[submodule "rioxarray-feedstock"]
+	path = rioxarray-feedstock
+	url = ../rioxarray-feedstock
+	branch = main
