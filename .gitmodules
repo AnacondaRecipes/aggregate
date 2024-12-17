@@ -5431,10 +5431,6 @@
 	path = hunspell-feedstock
 	url = ../hunspell-feedstock
 	branch = master
-[submodule "omniscidb-feedstock"]
-	path = omniscidb-feedstock
-	url = ../omniscidb-feedstock
-	branch = master
 [submodule "autotools_clang_conda-feedstock"]
 	path = autotools_clang_conda-feedstock
 	url = ../autotools_clang_conda-feedstock
