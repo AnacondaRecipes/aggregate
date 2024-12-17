@@ -11641,3 +11641,7 @@
 	path = raphtory-feedstock
 	url = ../raphtory-feedstock
 	branch = main
+[submodule "langchain-google-genai-feedstock"]
+	path = langchain-google-genai-feedstock
+	url = ../langchain-google-genai-feedstock
+	branch = main
