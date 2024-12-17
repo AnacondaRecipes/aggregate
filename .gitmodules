@@ -11645,3 +11645,7 @@
 	path = langchain-google-genai-feedstock
 	url = ../langchain-google-genai-feedstock
 	branch = main
+[submodule "astral-feedstock"]
+	path = astral-feedstock
+	url = ../astral-feedstock
+	branch = main
