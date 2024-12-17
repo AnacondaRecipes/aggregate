@@ -5547,10 +5547,6 @@
 	path = snowflake-connector-python-feedstock
 	url = ../snowflake-connector-python-feedstock
 	branch = master
-[submodule "azure-common-feedstock"]
-	path = azure-common-feedstock
-	url = ../azure-common-feedstock
-	branch = master
 [submodule "azure-core-feedstock"]
 	path = azure-core-feedstock
 	url = ../azure-core-feedstock
