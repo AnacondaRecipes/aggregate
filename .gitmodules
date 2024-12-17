@@ -6450,10 +6450,6 @@
 	path = cron-descriptor-feedstock
 	url = ../cron-descriptor-feedstock
 	branch = main
-[submodule "atlasclient-feedstock"]
-	path = atlasclient-feedstock
-	url = ../atlasclient-feedstock
-	branch = main
 [submodule "meson-python-feedstock"]
 	path = meson-python-feedstock
 	url = ../meson-python-feedstock
