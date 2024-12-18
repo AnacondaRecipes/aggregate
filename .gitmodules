@@ -11649,3 +11649,7 @@
 	path = qpdf-feedstock
 	url = ../qpdf-feedstock
 	branch = main
+[submodule "pdfminer.six-feedstock"]
+	path = pdfminer.six-feedstock
+	url = ../pdfminer.six-feedstock
+	branch = main
