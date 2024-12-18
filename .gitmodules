@@ -11645,3 +11645,7 @@
 	path = httpx-sse-feedstock
 	url = ../httpx-sse-feedstock
 	branch = main
+[submodule "qpdf-feedstock"]
+	path = qpdf-feedstock
+	url = ../qpdf-feedstock
+	branch = main
