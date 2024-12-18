@@ -11653,3 +11653,7 @@
 	path = pdfminer.six-feedstock
 	url = ../pdfminer.six-feedstock
 	branch = main
+[submodule "dbt-common-feedstock"]
+	path = dbt-common-feedstock
+	url = ../dbt-common-feedstock
+	branch = main
