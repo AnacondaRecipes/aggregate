@@ -11641,3 +11641,7 @@
 	path = rioxarray-feedstock
 	url = ../rioxarray-feedstock
 	branch = main
+[submodule "httpx-sse-feedstock"]
+	path = httpx-sse-feedstock
+	url = ../httpx-sse-feedstock
+	branch = main
