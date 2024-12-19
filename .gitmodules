@@ -11656,6 +11656,7 @@
 [submodule "dbt-common-feedstock"]
 	path = dbt-common-feedstock
 	url = ../dbt-common-feedstock
+	branch = main
 [submodule "pikepdf-feedstock"]
 	path = pikepdf-feedstock
 	url = ../pikepdf-feedstock
