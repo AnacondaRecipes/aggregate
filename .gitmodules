@@ -11661,3 +11661,7 @@
 	path = pikepdf-feedstock
 	url = ../pikepdf-feedstock
 	branch = main
+[submodule "daff-feedstock"]
+	path = daff-feedstock
+	url = ../daff-feedstock
+	branch = main
