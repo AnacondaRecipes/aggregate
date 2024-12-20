@@ -11665,3 +11665,7 @@
 	path = daff-feedstock
 	url = ../daff-feedstock
 	branch = main
+[submodule "pytest-socket-feedstock"]
+	path = pytest-socket-feedstock
+	url = ../pytest-socket-feedstock
+	branch = main
