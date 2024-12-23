@@ -11673,3 +11673,7 @@
 	path = iopath-feedstock
 	url = ../iopath-feedstock
 	branch = main
+[submodule "pdfplumber-feedstock"]
+	path = pdfplumber-feedstock
+	url = ../pdfplumber-feedstock
+	branch = main
