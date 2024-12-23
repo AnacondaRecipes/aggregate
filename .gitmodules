@@ -11677,3 +11677,7 @@
 	path = pdfplumber-feedstock
 	url = ../pdfplumber-feedstock
 	branch = main
+[submodule "google-cloud-vision-feedstock"]
+	path = google-cloud-vision-feedstock
+	url = ../google-cloud-vision-feedstock
+	branch = main
