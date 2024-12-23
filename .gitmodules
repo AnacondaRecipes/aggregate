@@ -11669,3 +11669,7 @@
 	path = pytest-socket-feedstock
 	url = ../pytest-socket-feedstock
 	branch = main
+[submodule "iopath-feedstock"]
+	path = iopath-feedstock
+	url = ../iopath-feedstock
+	branch = main
