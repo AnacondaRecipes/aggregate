@@ -11681,3 +11681,7 @@
 	path = google-cloud-vision-feedstock
 	url = ../google-cloud-vision-feedstock
 	branch = main
+[submodule "dbt-adapters-feedstock"]
+	path = dbt-adapters-feedstock
+	url = ../dbt-adapters-feedstock
+	branch = main
