@@ -11685,3 +11685,7 @@
 	path = dbt-adapters-feedstock
 	url = ../dbt-adapters-feedstock
 	branch = main
+[submodule "dbt-postgres-feedstock"]
+	path = dbt-postgres-feedstock
+	url = ../dbt-postgres-feedstock
+	branch = main
