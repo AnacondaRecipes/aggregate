@@ -11693,3 +11693,7 @@
 	path = jaxlib-0.4.30-feedstock
 	url = ../jaxlib-feedstock
 	branch = master-0.4.30
+[submodule "unstructured-inference-feedstock"]
+	path = unstructured-inference-feedstock
+	url = ../unstructured-inference-feedstock
+	branch = main
