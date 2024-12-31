@@ -11697,3 +11697,7 @@
 	path = unstructured-inference-feedstock
 	url = ../unstructured-inference-feedstock
 	branch = main
+[submodule "layoutparser-feedstock"]
+	path = layoutparser-feedstock
+	url = ../layoutparser-feedstock
+	branch = main
