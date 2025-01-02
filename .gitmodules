@@ -11701,3 +11701,7 @@
 	path = layoutparser-feedstock
 	url = ../layoutparser-feedstock
 	branch = main
+[submodule "x265-feedstock"]
+	path = x265-feedstock
+	url = ../x265-feedstock
+	branch = main
