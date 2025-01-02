@@ -11705,3 +11705,7 @@
 	path = flaml-feedstock
 	url = ../flaml-feedstock
 	branch = main
+[submodule "jaxlib-0.4.30-feedstock"]
+	path = jaxlib-0.4.30-feedstock
+	url = ../jaxlib-feedstock
+	branch = master-0.4.30
