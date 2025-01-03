@@ -11705,3 +11705,7 @@
 	path = x265-feedstock
 	url = ../x265-feedstock
 	branch = main
+[submodule "flaml-feedstock"]
+	path = flaml-feedstock
+	url = ../flaml-feedstock
+	branch = main
