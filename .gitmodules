@@ -11728,6 +11728,10 @@
 [submodule "pyjstat-feedstock"]
 	path = pyjstat-feedstock
 	url = ../pyjstat-feedstock
+	branch = msal_extensions
+[submodule "azure-iot-hub-feedstock"]
+	path = azure-iot-hub-feedstock
+	url = ../azure-iot-hub-feedstock
 	branch = main
 [submodule "gcsfs-feedstock"]
 	path = gcsfs-feedstock
