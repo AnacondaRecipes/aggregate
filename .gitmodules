@@ -11717,3 +11717,7 @@
 	path = nannyml-feedstock
 	url = ../nannyml-feedstock
 	branch = main
+[submodule "analytics-python-feedstock"]
+	path = analytics-python-feedstock
+	url = ../analytics-python-feedstock
+	branch = main
