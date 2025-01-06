@@ -11721,3 +11721,7 @@
 	path = analytics-python-feedstock
 	url = ../analytics-python-feedstock
 	branch = main
+[submodule "tomlkit-0.12.5-feedstock"]
+	path = tomlkit-0.12.5-feedstock
+	url = ../tomlkit-feedstock
+	branch = base-0.12.5
