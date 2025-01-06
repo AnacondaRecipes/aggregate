@@ -11709,3 +11709,7 @@
 	path = jaxlib-0.4.30-feedstock
 	url = ../jaxlib-feedstock
 	branch = master-0.4.30
+[submodule "pyfiglet-feedstock"]
+	path = pyfiglet-feedstock
+	url = ../pyfiglet-feedstock
+	branch = main
