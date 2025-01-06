@@ -11713,3 +11713,7 @@
 	path = pyfiglet-feedstock
 	url = ../pyfiglet-feedstock
 	branch = main
+[submodule "nannyml-feedstock"]
+	path = nannyml-feedstock
+	url = ../nannyml-feedstock
+	branch = main
