@@ -11725,3 +11725,7 @@
 	path = tomlkit-0.12.5-feedstock
 	url = ../tomlkit-feedstock
 	branch = base-0.12.5
+[submodule "pyjstat-feedstock"]
+	path = pyjstat-feedstock
+	url = ../pyjstat-feedstock
+	branch = main
