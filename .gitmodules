@@ -11728,7 +11728,7 @@
 [submodule "pyjstat-feedstock"]
 	path = pyjstat-feedstock
 	url = ../pyjstat-feedstock
-	branch = msal_extensions
+	branch = main
 [submodule "azure-iot-hub-feedstock"]
 	path = azure-iot-hub-feedstock
 	url = ../azure-iot-hub-feedstock
