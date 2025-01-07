@@ -11729,3 +11729,7 @@
 	path = pyjstat-feedstock
 	url = ../pyjstat-feedstock
 	branch = main
+[submodule "gcsfs-feedstock"]
+	path = gcsfs-feedstock
+	url = ../gcsfs-feedstock
+	branch = main
