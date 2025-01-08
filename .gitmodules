@@ -11749,3 +11749,7 @@
 	path = gcsfs-2022.11.0-feedstock
 	url = ../gcsfs-feedstock
 	branch = main-2022.11.0
+[submodule "python-gnupg-feedstock"]
+	path = python-gnupg-feedstock
+	url = ../python-gnupg-feedstock
+	branch = main
