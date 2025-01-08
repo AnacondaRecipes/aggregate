@@ -11741,3 +11741,7 @@
 	path = pycocotools-feedstock
 	url = ../pycocotools-feedstock
 	branch = main
+[submodule "effdet-feedstock"]
+	path = effdet-feedstock
+	url = ../effdet-feedstock
+	branch = main
