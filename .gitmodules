@@ -11745,3 +11745,7 @@
 	path = effdet-feedstock
 	url = ../effdet-feedstock
 	branch = main
+[submodule "gcsfs-2022.11.0-feedstock"]
+	path = gcsfs-2022.11.0-feedstock
+	url = ../gcsfs-feedstock
+	branch = main-2022.11.0
