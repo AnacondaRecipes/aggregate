@@ -11737,3 +11737,7 @@
 	path = gcsfs-feedstock
 	url = ../gcsfs-feedstock
 	branch = main
+[submodule "pycocotools-feedstock"]
+	path = pycocotools-feedstock
+	url = ../pycocotools-feedstock
+	branch = main
