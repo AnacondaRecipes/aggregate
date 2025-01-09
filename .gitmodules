@@ -11761,3 +11761,7 @@
 	path = filesystem-spec-2022.11.0-feedstock
 	url = ../filesystem-spec-feedstock
 	branch = main-2022.11.0
+[submodule "elastic-transport-feedstock"]
+	path = elastic-transport-feedstock
+	url = ../elastic-transport-feedstock
+	branch = main
