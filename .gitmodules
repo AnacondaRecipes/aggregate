@@ -11765,3 +11765,7 @@
 	path = elastic-transport-feedstock
 	url = ../elastic-transport-feedstock
 	branch = main
+[submodule "jax-0.4.25-feedstock"]
+	path = jax-0.4.25-feedstock
+	url = ../jax-feedstock
+	branch = master-0.4.25
