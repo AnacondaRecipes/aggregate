@@ -11757,3 +11757,7 @@
 	path = libheif-feedstock
 	url = ../libheif-feedstock
 	branch = main
+[submodule "filesystem-spec-2022.11.0-feedstock"]
+	path = filesystem-spec-2022.11.0-feedstock
+	url = ../filesystem-spec-feedstock
+	branch = main-2022.11.0
