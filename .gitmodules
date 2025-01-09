@@ -11753,3 +11753,7 @@
 	path = python-gnupg-feedstock
 	url = ../python-gnupg-feedstock
 	branch = main
+[submodule "libheif-feedstock"]
+	path = libheif-feedstock
+	url = ../libheif-feedstock
+	branch = main
