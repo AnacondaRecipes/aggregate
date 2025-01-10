@@ -11773,3 +11773,7 @@
 	path = howso-engine-no-telemetry-feedstock
 	url = ../howso-engine-no-telemetry-feedstock
 	branch = main
+[submodule "jaxlib-0.4.25-feedstock"]
+	path = jaxlib-0.4.25-feedstock
+	url = ../jaxlib-feedstock
+	branch = master-0.4.25
