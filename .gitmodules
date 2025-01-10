@@ -11769,3 +11769,7 @@
 	path = jax-0.4.25-feedstock
 	url = ../jax-feedstock
 	branch = master-0.4.25
+[submodule "s3fs-2022.11.0-feedstock"]
+	path = s3fs-2022.11.0-feedstock
+	url = ../s3fs-feedstock
+	branch = main-2022.11.0
