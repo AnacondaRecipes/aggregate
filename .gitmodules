@@ -11773,3 +11773,7 @@
 	path = s3fs-2022.11.0-feedstock
 	url = ../s3fs-feedstock
 	branch = main-2022.11.0
+[submodule "howso-engine-no-telemetry-feedstock"]
+	path = howso-engine-no-telemetry-feedstock
+	url = ../howso-engine-no-telemetry-feedstock
+	branch = main
