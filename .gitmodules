@@ -11777,3 +11777,7 @@
 	path = jaxlib-0.4.25-feedstock
 	url = ../jaxlib-feedstock
 	branch = master-0.4.25
+[submodule "npth-feedstock"]
+	path = npth-feedstock
+	url = ../npth-feedstock
+	branch = main
