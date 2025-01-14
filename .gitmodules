@@ -11781,3 +11781,7 @@
 	path = npth-feedstock
 	url = ../npth-feedstock
 	branch = main
+[submodule "libassuan-feedstock"]
+	path = libassuan-feedstock
+	url = ../libassuan-feedstock
+	branch = main
