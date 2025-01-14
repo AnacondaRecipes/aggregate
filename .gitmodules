@@ -11793,3 +11793,7 @@
 	path = puremagic-feedstock
 	url = ../puremagic-feedstock
 	branch = main
+[submodule "geomet-feedstock"]
+	path = geomet-feedstock
+	url = ../geomet-feedstock
+	branch = main
