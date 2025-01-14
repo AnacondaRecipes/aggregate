@@ -11785,3 +11785,7 @@
 	path = libassuan-feedstock
 	url = ../libassuan-feedstock
 	branch = main
+[submodule "libksba-feedstock"]
+	path = libksba-feedstock
+	url = ../libksba-feedstock
+	branch = main
