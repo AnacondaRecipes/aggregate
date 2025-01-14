@@ -11789,3 +11789,7 @@
 	path = libksba-feedstock
 	url = ../libksba-feedstock
 	branch = main
+[submodule "puremagic-feedstock"]
+	path = puremagic-feedstock
+	url = ../puremagic-feedstock
+	branch = main
