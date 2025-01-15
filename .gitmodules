@@ -11801,3 +11801,7 @@
 	path = requests-gssapi-feedstock
 	url = ../requests-gssapi-feedstock
 	branch = main
+[submodule "arcgis-feedstock"]
+	path = arcgis-feedstock
+	url = ../arcgis-feedstock
+	branch = main
