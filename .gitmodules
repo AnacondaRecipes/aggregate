@@ -11809,3 +11809,7 @@
 	path = pinentry-feedstock
 	url = ../pinentry-feedstock
 	branch = main
+[submodule "python-oxmsg-feedstock"]
+	path = python-oxmsg-feedstock
+	url = ../python-oxmsg-feedstock
+	branch = main
