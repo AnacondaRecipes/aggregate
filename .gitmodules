@@ -11805,3 +11805,7 @@
 	path = arcgis-feedstock
 	url = ../arcgis-feedstock
 	branch = main
+[submodule "pinentry-feedstock"]
+	path = pinentry-feedstock
+	url = ../pinentry-feedstock
+	branch = main
