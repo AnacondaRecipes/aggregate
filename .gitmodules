@@ -11813,3 +11813,7 @@
 	path = python-oxmsg-feedstock
 	url = ../python-oxmsg-feedstock
 	branch = main
+[submodule "ntbtls-feedstock"]
+	path = ntbtls-feedstock
+	url = ../ntbtls-feedstock
+	branch = main
