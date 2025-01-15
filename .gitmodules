@@ -11817,3 +11817,7 @@
 	path = ntbtls-feedstock
 	url = ../ntbtls-feedstock
 	branch = main
+[submodule "gnupg-feedstock"]
+	path = gnupg-feedstock
+	url = ../gnupg-feedstock
+	branch = main
