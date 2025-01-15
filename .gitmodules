@@ -11797,3 +11797,7 @@
 	path = geomet-feedstock
 	url = ../geomet-feedstock
 	branch = main
+[submodule "requests-gssapi-feedstock"]
+	path = requests-gssapi-feedstock
+	url = ../requests-gssapi-feedstock
+	branch = main
