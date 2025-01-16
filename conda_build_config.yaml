@@ -120,7 +120,7 @@ harfbuzz:
 hdf4:
   - 4.2
 hdf5:
-  - 1.12.1
+  - 1.14.5
 hdfeos2:
   - 2.20
 hdfeos5:
@@ -191,8 +191,7 @@ openjpeg:
 openssl:
   - 3.0
 perl:
-  - 5.26    # [win]
-  - 5.34    # [not win]
+  - 5.38
 pixman:
   - 0.40
 proj4:
