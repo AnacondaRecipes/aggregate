@@ -11825,3 +11825,7 @@
 	path = nutpie-feedstock
 	url = ../nutpie-feedstock
 	branch = main
+[submodule "microarch-level-feedstock"]
+	path = microarch-level-feedstock
+	url = ../microarch-level-feedstock
+	branch = main
