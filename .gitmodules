@@ -11829,3 +11829,7 @@
 	path = microarch-level-feedstock
 	url = ../microarch-level-feedstock
 	branch = main
+[submodule "earthengine-api-feedstock"]
+	path = earthengine-api-feedstock
+	url = ../earthengine-api-feedstock
+	branch = main
