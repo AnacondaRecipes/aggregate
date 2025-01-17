@@ -11833,3 +11833,7 @@
 	path = earthengine-api-feedstock
 	url = ../earthengine-api-feedstock
 	branch = main
+[submodule "uuid-utils-feedstock"]
+	path = uuid-utils-feedstock
+	url = ../uuid-utils-feedstock
+	branch = main
