@@ -11837,3 +11837,7 @@
 	path = uuid-utils-feedstock
 	url = ../uuid-utils-feedstock
 	branch = main
+[submodule "sklearn-compat-feedstock"]
+	path = sklearn-compat-feedstock
+	url = ../sklearn-compat-feedstock
+	branch = main
