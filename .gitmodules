@@ -11845,3 +11845,7 @@
 	path = segmentation-mask-overlay-feedstock
 	url = ../segmentation-mask-overlay-feedstock
 	branch = main
+[submodule "bbox-visualizer-feedstock"]
+	path = bbox-visualizer-feedstock
+	url = ../bbox-visualizer-feedstock
+	branch = main
