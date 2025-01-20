@@ -11841,3 +11841,7 @@
 	path = sklearn-compat-feedstock
 	url = ../sklearn-compat-feedstock
 	branch = main
+[submodule "segmentation-mask-overlay-feedstock"]
+	path = segmentation-mask-overlay-feedstock
+	url = ../segmentation-mask-overlay-feedstock
+	branch = main
