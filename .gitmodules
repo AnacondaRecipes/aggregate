@@ -11849,3 +11849,7 @@
 	path = bbox-visualizer-feedstock
 	url = ../bbox-visualizer-feedstock
 	branch = main
+[submodule "landingai-feedstock"]
+	path = landingai-feedstock
+	url = ../landingai-feedstock
+	branch = main
