@@ -11853,3 +11853,7 @@
 	path = landingai-feedstock
 	url = ../landingai-feedstock
 	branch = main
+[submodule "uamqp-feedstock"]
+	path = uamqp-feedstock
+	url = ../uamqp-feedstock
+	branch = main
