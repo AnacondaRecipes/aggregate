@@ -11857,3 +11857,7 @@
 	path = uamqp-feedstock
 	url = ../uamqp-feedstock
 	branch = main
+[submodule "pi-heif-feedstock"]
+	path = pi-heif-feedstock
+	url = ../pi-heif-feedstock
+	branch = main
