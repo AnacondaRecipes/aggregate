@@ -11861,3 +11861,7 @@
 	path = pi-heif-feedstock
 	url = ../pi-heif-feedstock
 	branch = main
+[submodule "eval-type-backport-feedstock"]
+	path = eval-type-backport-feedstock
+	url = ../eval-type-backport-feedstock
+	branch = main
