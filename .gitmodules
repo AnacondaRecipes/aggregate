@@ -11865,3 +11865,7 @@
 	path = eval-type-backport-feedstock
 	url = ../eval-type-backport-feedstock
 	branch = main
+[submodule "tslearn-feedstock"]
+	path = tslearn-feedstock
+	url = ../tslearn-feedstock
+	branch = main
