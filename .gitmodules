@@ -11869,3 +11869,7 @@
 	path = tslearn-feedstock
 	url = ../tslearn-feedstock
 	branch = main
+[submodule "python-calamine-feedstock"]
+	path = python-calamine-feedstock
+	url = ../python-calamine-feedstock
+	branch = main
