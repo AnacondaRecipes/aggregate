@@ -11873,3 +11873,7 @@
 	path = python-calamine-feedstock
 	url = ../python-calamine-feedstock
 	branch = main
+[submodule "weave-feedstock"]
+	path = weave-feedstock
+	url = ../weave-feedstock
+	branch = main
