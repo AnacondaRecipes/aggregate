@@ -95,7 +95,7 @@ giflib:
 glib:
   - 2
 gmp:
-  - 6.2
+  - 6.3
 # glibc used in ctng compiler builds
 gnu:
   - 2.12.2
