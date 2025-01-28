@@ -11877,3 +11877,7 @@
 	path = weave-feedstock
 	url = ../weave-feedstock
 	branch = main
+[submodule "zopfli-feedstock"]
+	path = zopfli-feedstock
+	url = ../zopfli-feedstock
+	branch = main
