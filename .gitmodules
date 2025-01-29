@@ -11889,3 +11889,7 @@
 	path = securesystemslib-feedstock
 	url = ../securesystemslib-feedstock
 	branch = main
+[submodule "cssselect2-feedstock"]
+	path = cssselect2-feedstock
+	url = ../cssselect2-feedstock
+	branch = main
