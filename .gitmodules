@@ -11897,3 +11897,7 @@
 	path = pydyf-feedstock
 	url = ../pydyf-feedstock
 	branch = main
+[submodule "metric-learn-feedstock"]
+	path = metric-learn-feedstock
+	url = ../metric-learn-feedstock
+	branch = main
