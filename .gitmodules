@@ -11893,3 +11893,7 @@
 	path = cssselect2-feedstock
 	url = ../cssselect2-feedstock
 	branch = main
+[submodule "pydyf-feedstock"]
+	path = pydyf-feedstock
+	url = ../pydyf-feedstock
+	branch = main
