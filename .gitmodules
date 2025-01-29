@@ -11885,3 +11885,7 @@
 	path = contourpy-1.2.1-feedstock
 	url = ../contourpy-feedstock
 	branch = main-1.2.1
+[submodule "securesystemslib-feedstock"]
+	path = securesystemslib-feedstock
+	url = ../securesystemslib-feedstock
+	branch = main
