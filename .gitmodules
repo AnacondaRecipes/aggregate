@@ -11881,3 +11881,7 @@
 	path = zopfli-feedstock
 	url = ../zopfli-feedstock
 	branch = main
+[submodule "contourpy-1.2.1-feedstock"]
+	path = contourpy-1.2.1-feedstock
+	url = ../contourpy-feedstock
+	branch = main-1.2.1
