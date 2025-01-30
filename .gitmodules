@@ -11905,3 +11905,7 @@
 	path = scikit-misc-feedstock
 	url = ../scikit-misc-feedstock
 	branch = main
+[submodule "pyogrio-feedstock"]
+	path = pyogrio-feedstock
+	url = ../pyogrio-feedstock
+	branch = main
