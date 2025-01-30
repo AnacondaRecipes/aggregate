@@ -11901,3 +11901,7 @@
 	path = metric-learn-feedstock
 	url = ../metric-learn-feedstock
 	branch = main
+[submodule "scikit-misc-feedstock"]
+	path = scikit-misc-feedstock
+	url = ../scikit-misc-feedstock
+	branch = main
