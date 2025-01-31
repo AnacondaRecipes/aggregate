@@ -11917,3 +11917,7 @@
 	path = scrubadub-feedstock
 	url = ../scrubadub-feedstock
 	branch = main
+[submodule "smote-variants-feedstock"]
+	path = smote-variants-feedstock
+	url = ../smote-variants-feedstock
+	branch = main
