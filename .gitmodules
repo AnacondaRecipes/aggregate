@@ -11913,3 +11913,7 @@
 	path = python-stdnum-feedstock
 	url = ../python-stdnum-feedstock
 	branch = main
+[submodule "scrubadub-feedstock"]
+	path = scrubadub-feedstock
+	url = ../scrubadub-feedstock
+	branch = main
