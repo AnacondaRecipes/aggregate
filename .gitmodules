@@ -11909,3 +11909,7 @@
 	path = pyogrio-feedstock
 	url = ../pyogrio-feedstock
 	branch = main
+[submodule "python-stdnum-feedstock"]
+	path = python-stdnum-feedstock
+	url = ../python-stdnum-feedstock
+	branch = main
