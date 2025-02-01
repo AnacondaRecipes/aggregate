@@ -11921,3 +11921,7 @@
 	path = smote-variants-feedstock
 	url = ../smote-variants-feedstock
 	branch = main
+[submodule "scrubadub_spacy-feedstock"]
+	path = scrubadub_spacy-feedstock
+	url = ../scrubadub_spacy-feedstock
+	branch = main
