@@ -11925,3 +11925,7 @@
 	path = scrubadub_spacy-feedstock
 	url = ../scrubadub_spacy-feedstock
 	branch = main
+[submodule "carto-auth-feedstock"]
+	path = carto-auth-feedstock
+	url = ../carto-auth-feedstock
+	branch = main
