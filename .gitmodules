@@ -11937,3 +11937,7 @@
 	path = pyside6-feedstock
 	url = ../pyside6-feedstock
 	branch = main
+[submodule "qtwebengine-feedstock"]
+	path = qtwebengine-feedstock
+	url = ../qtwebengine-feedstock
+	branch = main
