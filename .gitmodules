@@ -11941,3 +11941,7 @@
 	path = qtwebengine-feedstock
 	url = ../qtwebengine-feedstock
 	branch = main
+[submodule "weasyprint-feedstock"]
+	path = weasyprint-feedstock
+	url = ../weasyprint-feedstock
+	branch = main
