@@ -11933,3 +11933,7 @@
 	path = pydeck-carto-feedstock
 	url = ../pydeck-carto-feedstock
 	branch = main
+[submodule "pyside6-feedstock"]
+	path = pyside6-feedstock
+	url = ../pyside6-feedstock
+	branch = main
