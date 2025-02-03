@@ -11929,3 +11929,7 @@
 	path = carto-auth-feedstock
 	url = ../carto-auth-feedstock
 	branch = main
+[submodule "pydeck-carto-feedstock"]
+	path = pydeck-carto-feedstock
+	url = ../pydeck-carto-feedstock
+	branch = main
