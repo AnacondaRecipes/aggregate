@@ -11945,3 +11945,7 @@
 	path = weasyprint-feedstock
 	url = ../weasyprint-feedstock
 	branch = main
+[submodule "level-zero-feedstock"]
+	path = level-zero-feedstock
+	url = ../level-zero-feedstock
+	branch = main
