@@ -11953,3 +11953,7 @@
 	path = pyap-feedstock
 	url = ../pyap-feedstock
 	branch = main
+[submodule "scrubadub_address-feedstock"]
+	path = scrubadub_address-feedstock
+	url = ../scrubadub_address-feedstock
+	branch = main
