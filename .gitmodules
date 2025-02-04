@@ -11949,3 +11949,7 @@
 	path = level-zero-feedstock
 	url = ../level-zero-feedstock
 	branch = main
+[submodule "pyap-feedstock"]
+	path = pyap-feedstock
+	url = ../pyap-feedstock
+	branch = main
