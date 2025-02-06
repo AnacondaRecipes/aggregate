@@ -11957,3 +11957,7 @@
 	path = scrubadub_address-feedstock
 	url = ../scrubadub_address-feedstock
 	branch = main
+[submodule "numpy-2.1-feedstock"]
+	path = numpy-2.1-feedstock
+	url = ../numpy-feedstock
+	branch = numpy21
