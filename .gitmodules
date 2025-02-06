@@ -11961,3 +11961,7 @@
 	path = numpy-2.1-feedstock
 	url = ../numpy-feedstock
 	branch = numpy21
+[submodule "sphinx-theme-builder-feedstock"]
+	path = sphinx-theme-builder-feedstock
+	url = ../sphinx-theme-builder-feedstock
+	branch = main
