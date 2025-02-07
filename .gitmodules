@@ -11965,3 +11965,7 @@
 	path = sphinx-theme-builder-feedstock
 	url = ../sphinx-theme-builder-feedstock
 	branch = main
+[submodule "qt-main-5-feedstock"]
+	path = qt-main-5-feedstock
+	url = ../qt-main-feedstock
+	branch = main-5
