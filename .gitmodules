@@ -11969,3 +11969,7 @@
 	path = qt-main-5-feedstock
 	url = ../qt-main-feedstock
 	branch = main-5
+[submodule "accessible-pygments-feedstock"]
+	path = accessible-pygments-feedstock
+	url = ../accessible-pygments-feedstock
+	branch = main
