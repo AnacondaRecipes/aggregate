@@ -11973,3 +11973,7 @@
 	path = accessible-pygments-feedstock
 	url = ../accessible-pygments-feedstock
 	branch = main
+[submodule "pydata-sphinx-theme-feedstock"]
+	path = pydata-sphinx-theme-feedstock
+	url = ../pydata-sphinx-theme-feedstock
+	branch = main
