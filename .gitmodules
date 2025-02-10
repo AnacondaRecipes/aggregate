@@ -11977,3 +11977,7 @@
 	path = pydata-sphinx-theme-feedstock
 	url = ../pydata-sphinx-theme-feedstock
 	branch = main
+[submodule "tf-keras-feedstock"]
+	path = tf-keras-feedstock
+	url = ../tf-keras-feedstock
+	branch = main
