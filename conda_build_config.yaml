@@ -116,7 +116,7 @@ cgo_compiler:
 cgo_compiler_version:
   - 1.21              # [not s390x]
 harfbuzz:
-  - 4.3.0
+  - 10
 hdf4:
   - 4.2
 hdf5:
