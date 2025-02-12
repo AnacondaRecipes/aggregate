@@ -11985,3 +11985,7 @@
 	path = perpetual-feedstock
 	url = ../perpetual-feedstock
 	branch = main
+[submodule "ewah-bool-utils-feedstock"]
+	path = ewah-bool-utils-feedstock
+	url = ../ewah-bool-utils-feedstock
+	branch = main
