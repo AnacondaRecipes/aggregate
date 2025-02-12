@@ -11981,3 +11981,7 @@
 	path = tf-keras-feedstock
 	url = ../tf-keras-feedstock
 	branch = main
+[submodule "perpetual-feedstock"]
+	path = perpetual-feedstock
+	url = ../perpetual-feedstock
+	branch = main
