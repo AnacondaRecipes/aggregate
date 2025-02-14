@@ -11989,3 +11989,7 @@
 	path = ewah-bool-utils-feedstock
 	url = ../ewah-bool-utils-feedstock
 	branch = main
+[submodule "dataframe_image-feedstock"]
+	path = dataframe_image-feedstock
+	url = ../dataframe_image-feedstock
+	branch = main
