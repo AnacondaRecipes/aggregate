@@ -11997,3 +11997,7 @@
 	path = cssutils-feedstock
 	url = ../cssutils-feedstock
 	branch = main
+[submodule "fasttext-feedstock"]
+	path = fasttext-feedstock
+	url = ../fasttext-feedstock
+	branch = main
