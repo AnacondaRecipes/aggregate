@@ -12001,3 +12001,7 @@
 	path = fasttext-feedstock
 	url = ../fasttext-feedstock
 	branch = main
+[submodule "mockseries-feedstock"]
+	path = mockseries-feedstock
+	url = ../mockseries-feedstock
+	branch = main
