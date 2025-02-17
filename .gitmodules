@@ -11993,3 +11993,7 @@
 	path = dataframe_image-feedstock
 	url = ../dataframe_image-feedstock
 	branch = main
+[submodule "cssutils-feedstock"]
+	path = cssutils-feedstock
+	url = ../cssutils-feedstock
+	branch = main
