@@ -12005,3 +12005,7 @@
 	path = mockseries-feedstock
 	url = ../mockseries-feedstock
 	branch = main
+[submodule "pnpm-feedstock"]
+	path = pnpm-feedstock
+	url = ../pnpm-feedstock
+	branch = main
