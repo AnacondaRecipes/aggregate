@@ -12009,3 +12009,7 @@
 	path = pnpm-feedstock
 	url = ../pnpm-feedstock
 	branch = main
+[submodule "pnpm-licenses-feedstock"]
+	path = pnpm-licenses-feedstock
+	url = ../pnpm-licenses-feedstock
+	branch = main
