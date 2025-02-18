@@ -12013,3 +12013,7 @@
 	path = pnpm-licenses-feedstock
 	url = ../pnpm-licenses-feedstock
 	branch = main
+[submodule "playwright-feedstock"]
+	path = playwright-feedstock
+	url = ../playwright-feedstock
+	branch = main
