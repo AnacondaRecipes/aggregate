@@ -12017,3 +12017,7 @@
 	path = playwright-feedstock
 	url = ../playwright-feedstock
 	branch = main
+[submodule "playwright-python-feedstock"]
+	path = playwright-python-feedstock
+	url = ../playwright-python-feedstock
+	branch = main
