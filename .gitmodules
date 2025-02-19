@@ -12021,3 +12021,7 @@
 	path = playwright-python-feedstock
 	url = ../playwright-python-feedstock
 	branch = main
+[submodule "pytest-split-feedstock"]
+	path = pytest-split-feedstock
+	url = ../pytest-split-feedstock
+	branch = main
