@@ -12033,3 +12033,7 @@
 	path = backtrace-feedstock
 	url = ../backtrace-feedstock
 	branch = main
+[submodule "pytest-xprocess-feedstock"]
+	path = pytest-xprocess-feedstock
+	url = ../pytest-xprocess-feedstock
+	branch = main
