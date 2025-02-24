@@ -12029,3 +12029,7 @@
 	path = trubar-feedstock
 	url = ../trubar-feedstock
 	branch = main
+[submodule "backtrace-feedstock"]
+	path = backtrace-feedstock
+	url = ../backtrace-feedstock
+	branch = main
