@@ -12025,3 +12025,7 @@
 	path = pytest-split-feedstock
 	url = ../pytest-split-feedstock
 	branch = main
+[submodule "trubar-feedstock"]
+	path = trubar-feedstock
+	url = ../trubar-feedstock
+	branch = main
