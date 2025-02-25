@@ -12041,3 +12041,7 @@
 	path = just-feedstock
 	url = ../just-feedstock
 	branch = main
+[submodule "awscli-feedstock"]
+	path = awscli-feedstock
+	url = ../awscli-feedstock
+	branch = main
