@@ -17,6 +17,8 @@ c_compiler:
   - gcc                        # [linux]
   - clang                      # [osx]
   - vs2019                     # [win]
+c_stdlib                       # [linux]
+  - sysroot                    # [linux]
 cxx_compiler:
   - gxx                        # [linux]
   - clangxx                    # [osx]
@@ -60,6 +62,9 @@ cran_mirror:
 c_compiler_version:        # [linux or osx]
   - 11.2.0                 # [linux]
   - 14                     # [osx]
+c_stdlib_version:          # [linux]
+  - 2.17                   # [linux and not aarch64]
+  - 2.26                   # [linux and aarch64]
 cxx_compiler_version:      # [linux or osx]
   - 11.2.0                 # [linux]
   - 14                     # [osx]
