@@ -12037,3 +12037,7 @@
 	path = pytest-xprocess-feedstock
 	url = ../pytest-xprocess-feedstock
 	branch = main
+[submodule "just-feedstock"]
+	path = just-feedstock
+	url = ../just-feedstock
+	branch = main
