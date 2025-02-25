@@ -17,7 +17,7 @@ c_compiler:
   - gcc                        # [linux]
   - clang                      # [osx]
   - vs2019                     # [win]
-c_stdlib                       # [linux]
+c_stdlib:                      # [linux]
   - sysroot                    # [linux]
 cxx_compiler:
   - gxx                        # [linux]
