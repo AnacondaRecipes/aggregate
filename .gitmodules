@@ -12057,3 +12057,7 @@
 	path = skrub-feedstock
 	url = ../skrub-feedstock
 	branch = main
+[submodule "tink-feedstock"]
+	path = tink-feedstock
+	url = ../tink-feedstock
+	branch = main
