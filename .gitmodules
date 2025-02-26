@@ -12045,3 +12045,7 @@
 	path = awscli-feedstock
 	url = ../awscli-feedstock
 	branch = main
+[submodule "google-cloud-kms-feedstock"]
+	path = google-cloud-kms-feedstock
+	url = ../google-cloud-kms-feedstock
+	branch = main
