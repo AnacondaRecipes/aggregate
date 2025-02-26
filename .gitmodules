@@ -12053,3 +12053,7 @@
 	path = pandera-feedstock
 	url = ../pandera-feedstock
 	branch = main
+[submodule "skrub-feedstock"]
+	path = skrub-feedstock
+	url = ../skrub-feedstock
+	branch = main
