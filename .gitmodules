@@ -12061,3 +12061,7 @@
 	path = tink-feedstock
 	url = ../tink-feedstock
 	branch = main
+[submodule "streamlit-1.39.0-feedstock"]
+	path = streamlit-1.39.0-feedstock
+	url = ../streamlit-feedstock
+	branch = main-1.39.0
