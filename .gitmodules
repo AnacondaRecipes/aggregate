@@ -12065,3 +12065,7 @@
 	path = posthog-feedstock
 	url = ../posthog-feedstock
 	branch = main
+[submodule "awscli2-feedstock"]
+	path = awscli2-feedstock
+	url = ../awscli2-feedstock
+	branch = main
