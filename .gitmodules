@@ -12049,3 +12049,7 @@
 	path = google-cloud-kms-feedstock
 	url = ../google-cloud-kms-feedstock
 	branch = main
+[submodule "pandera-feedstock"]
+	path = pandera-feedstock
+	url = ../pandera-feedstock
+	branch = main
