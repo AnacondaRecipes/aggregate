@@ -12073,3 +12073,7 @@
 	path = pandera-report-feedstock
 	url = ../pandera-report-feedstock
 	branch = main
+[submodule "snowpark-checkpoints-feedstock"]
+	path = snowpark-checkpoints-feedstock
+	url = ../snowpark-checkpoints-feedstock
+	branch = main
