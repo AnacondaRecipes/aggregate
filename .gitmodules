@@ -12069,3 +12069,7 @@
 	path = awscli2-feedstock
 	url = ../awscli2-feedstock
 	branch = main
+[submodule "pandera-report-feedstock"]
+	path = pandera-report-feedstock
+	url = ../pandera-report-feedstock
+	branch = main
