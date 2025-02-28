@@ -12077,3 +12077,7 @@
 	path = snowpark-checkpoints-feedstock
 	url = ../snowpark-checkpoints-feedstock
 	branch = main
+[submodule "pytest-nunit-feedstock"]
+	path = pytest-nunit-feedstock
+	url = ../pytest-nunit-feedstock
+	branch = main
