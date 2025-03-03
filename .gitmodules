@@ -12081,3 +12081,7 @@
 	path = pytest-nunit-feedstock
 	url = ../pytest-nunit-feedstock
 	branch = main
+[submodule "securesystemslib-v0.30.x-feedstock"]
+	path = securesystemslib-v0.30.x-feedstock
+	url = ../securesystemslib-feedstock
+	branch = main-v0.30.x
