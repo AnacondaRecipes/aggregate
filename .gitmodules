@@ -12085,3 +12085,7 @@
 	path = securesystemslib-v0.30.x-feedstock
 	url = ../securesystemslib-feedstock
 	branch = main-v0.30.x
+[submodule "meos-feedstock"]
+	path = meos-feedstock
+	url = ../meos-feedstock
+	branch = main
