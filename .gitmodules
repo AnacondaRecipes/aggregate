@@ -12089,3 +12089,7 @@
 	path = meos-feedstock
 	url = ../meos-feedstock
 	branch = main
+[submodule "simpleeval-feedstock"]
+	path = simpleeval-feedstock
+	url = ../simpleeval-feedstock
+	branch = main
