@@ -12097,3 +12097,7 @@
 	path = marko-feedstock
 	url = ../marko-feedstock
 	branch = main
+[submodule "frictionless-feedstock"]
+	path = frictionless-feedstock
+	url = ../frictionless-feedstock
+	branch = main
