@@ -12093,3 +12093,7 @@
 	path = simpleeval-feedstock
 	url = ../simpleeval-feedstock
 	branch = main
+[submodule "marko-feedstock"]
+	path = marko-feedstock
+	url = ../marko-feedstock
+	branch = main
