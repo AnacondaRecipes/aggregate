@@ -12109,3 +12109,7 @@
 	path = pymeos-cffi-feedstock
 	url = ../pymeos-cffi-feedstock
 	branch = main
+[submodule "pymeos-feedstock"]
+	path = pymeos-feedstock
+	url = ../pymeos-feedstock
+	branch = main
