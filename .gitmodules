@@ -12101,3 +12101,7 @@
 	path = frictionless-feedstock
 	url = ../frictionless-feedstock
 	branch = main
+[submodule "frictionless-4.40.11-feedstock"]
+	path = frictionless-4.40.11-feedstock
+	url = ../frictionless-feedstock
+	branch = main-4.40.11
