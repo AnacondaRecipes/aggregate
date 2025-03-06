@@ -12105,3 +12105,7 @@
 	path = frictionless-4.40.11-feedstock
 	url = ../frictionless-feedstock
 	branch = main-4.40.11
+[submodule "pymeos-cffi-feedstock"]
+	path = pymeos-cffi-feedstock
+	url = ../pymeos-cffi-feedstock
+	branch = main
