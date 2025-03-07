@@ -12113,3 +12113,7 @@
 	path = pymeos-feedstock
 	url = ../pymeos-feedstock
 	branch = main
+[submodule "snowflake.demos-feedstock"]
+	path = snowflake.demos-feedstock
+	url = ../snowflake.demos-feedstock
+	branch = main
