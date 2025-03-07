@@ -12117,3 +12117,7 @@
 	path = snowflake.demos-feedstock
 	url = ../snowflake.demos-feedstock
 	branch = main
+[submodule "awscrt-feedstock"]
+	path = awscrt-feedstock
+	url = ../awscrt-feedstock
+	branch = main
