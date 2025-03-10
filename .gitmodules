@@ -12121,3 +12121,7 @@
 	path = awscrt-feedstock
 	url = ../awscrt-feedstock
 	branch = main
+[submodule "hvac-feedstock"]
+	path = hvac-feedstock
+	url = ../hvac-feedstock
+	branch = main
