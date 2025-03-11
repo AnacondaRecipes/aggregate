@@ -12133,3 +12133,7 @@
 	path = donfig-feedstock
 	url = ../donfig-feedstock
 	branch = main
+[submodule "benchmark-feedstock"]
+	path = benchmark-feedstock
+	url = ../benchmark-feedstock
+	branch = main
