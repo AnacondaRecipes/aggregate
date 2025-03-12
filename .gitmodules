@@ -12125,3 +12125,7 @@
 	path = hvac-feedstock
 	url = ../hvac-feedstock
 	branch = main
+[submodule "crc32c-feedstock"]
+	path = crc32c-feedstock
+	url = ../crc32c-feedstock
+	branch = main
