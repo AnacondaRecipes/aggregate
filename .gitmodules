@@ -12129,3 +12129,7 @@
 	path = crc32c-feedstock
 	url = ../crc32c-feedstock
 	branch = main
+[submodule "donfig-feedstock"]
+	path = donfig-feedstock
+	url = ../donfig-feedstock
+	branch = main
