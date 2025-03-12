@@ -12137,3 +12137,7 @@
 	path = benchmark-feedstock
 	url = ../benchmark-feedstock
 	branch = main
+[submodule "fredapi-feedstock"]
+	path = fredapi-feedstock
+	url = ../fredapi-feedstock
+	branch = main
