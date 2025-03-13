@@ -12141,3 +12141,7 @@
 	path = fredapi-feedstock
 	url = ../fredapi-feedstock
 	branch = main
+[submodule "streamlit-slickgrid-feedstock"]
+	path = streamlit-slickgrid-feedstock
+	url = ../streamlit-slickgrid-feedstock
+	branch = main
