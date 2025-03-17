@@ -172,7 +172,8 @@ mkl:
   - 2023.*
 mpfr:
   - 4
-# we build for an old version of numpy for forward compatibility
+# numpy will by default use a compatible ABI for the oldest still-supported numpy versions
+# `{{ pin_compatible("numpy") }}` is no longer needed as builds of numpy from version 2 have run_exports.
 numpy:
   # python 3.9
   - 2.0
