@@ -175,13 +175,13 @@ mpfr:
 # we build for an old version of numpy for forward compatibility
 numpy:
   # python 3.9
-  - 1.21
+  - 2.0
   # python 3.10
-  - 1.21
+  - 2.0
   # python 3.11
-  - 1.23
+  - 2.0
   # python 3.12
-  - 1.26
+  - 2.0
   # python 3.13
   - 2.1  # [ANACONDA_ROCKET_ENABLE_PY313]
 openblas:
