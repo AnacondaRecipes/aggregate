@@ -12157,3 +12157,7 @@
 	path = narwhals-feedstock
 	url = ../narwhals-feedstock
 	branch = main
+[submodule "msodbcsql18-feedstock"]
+	path = msodbcsql18-feedstock
+	url = ../msodbcsql18-feedstock
+	branch = main
