@@ -12153,3 +12153,7 @@
 	path = streamlit-1.39-feedstock
 	url = ../streamlit-feedstock
 	branch = main-1.39
+[submodule "narwhals-feedstock"]
+	path = narwhals-feedstock
+	url = ../narwhals-feedstock
+	branch = main
