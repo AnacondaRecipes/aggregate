@@ -12161,3 +12161,7 @@
 	path = msodbcsql18-feedstock
 	url = ../msodbcsql18-feedstock
 	branch = main
+[submodule "hvsampledata-feedstock"]
+	path = hvsampledata-feedstock
+	url = ../hvsampledata-feedstock
+	branch = main
