@@ -12169,3 +12169,7 @@
 	path = vsg-feedstock
 	url = ../vsg-feedstock
 	branch = main
+[submodule "psygnal-feedstock"]
+	path = psygnal-feedstock
+	url = ../psygnal-feedstock
+	branch = main
