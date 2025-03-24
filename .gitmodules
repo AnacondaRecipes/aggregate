@@ -12173,3 +12173,7 @@
 	path = psygnal-feedstock
 	url = ../psygnal-feedstock
 	branch = main
+[submodule "anywidget-feedstock"]
+	path = anywidget-feedstock
+	url = ../anywidget-feedstock
+	branch = main
