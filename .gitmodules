@@ -12177,3 +12177,7 @@
 	path = anywidget-feedstock
 	url = ../anywidget-feedstock
 	branch = main
+[submodule "devil-feedstock"]
+	path = devil-feedstock
+	url = ../devil-feedstock
+	branch = main
