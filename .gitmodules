@@ -12181,3 +12181,7 @@
 	path = devil-feedstock
 	url = ../devil-feedstock
 	branch = main
+[submodule "nanobind-feedstock"]
+	path = nanobind-feedstock
+	url = ../nanobind-feedstock
+	branch = main
