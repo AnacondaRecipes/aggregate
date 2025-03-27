@@ -12185,3 +12185,7 @@
 	path = nanobind-feedstock
 	url = ../nanobind-feedstock
 	branch = main
+[submodule "durationpy-feedstock"]
+	path = durationpy-feedstock
+	url = ../durationpy-feedstock
+	branch = main
