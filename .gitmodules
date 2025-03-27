@@ -12193,3 +12193,7 @@
 	path = msodbcsql-feedstock
 	url = ../msodbcsql-feedstock
 	branch = main
+[submodule "opentelemetry-proto-1.30-feedstock"]
+	path = opentelemetry-proto-1.30-feedstock
+	url = ../opentelemetry-proto-feedstock
+	branch = main-1.30
