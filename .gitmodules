@@ -12189,3 +12189,7 @@
 	path = durationpy-feedstock
 	url = ../durationpy-feedstock
 	branch = main
+[submodule "msodbcsql-feedstock"]
+	path = msodbcsql-feedstock
+	url = ../msodbcsql-feedstock
+	branch = main
