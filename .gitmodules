@@ -12197,3 +12197,7 @@
 	path = opentelemetry-proto-1.30-feedstock
 	url = ../opentelemetry-proto-feedstock
 	branch = main-1.30
+[submodule "roman-numerals-py-feedstock"]
+	path = roman-numerals-py-feedstock
+	url = ../roman-numerals-py-feedstock
+	branch = main
