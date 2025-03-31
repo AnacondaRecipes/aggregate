@@ -216,10 +216,9 @@ python_implementation:
 python_impl:
   - cpython
 r_version:
-  - 3.5.0
+  - 4.3.1
 r_implementation:
-  - 'r-base'
-  - 'mro-base'  # [not osx]
+  - 'r-base'    # [linux and x86_64]
 readline:
   - 8.1
 sqlite:
