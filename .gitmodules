@@ -12201,3 +12201,7 @@
 	path = roman-numerals-py-feedstock
 	url = ../roman-numerals-py-feedstock
 	branch = main
+[submodule "evalidate-feedstock"]
+	path = evalidate-feedstock
+	url = ../evalidate-feedstock
+	branch = main
