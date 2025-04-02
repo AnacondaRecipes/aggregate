@@ -12205,3 +12205,7 @@
 	path = evalidate-feedstock
 	url = ../evalidate-feedstock
 	branch = main
+[submodule "python-duckdb-feedstock"]
+	path = python-duckdb-feedstock
+	url = ../python-duckdb-feedstock
+	branch = main
