@@ -6121,7 +6121,7 @@
 [submodule "asttokens-feedstock"]
 	path = asttokens-feedstock
 	url = ../asttokens-feedstock
-	branch = master
+	branch = main
 [submodule "conda-libmamba-solver-feedstock"]
 	path = conda-libmamba-solver-feedstock
 	url = ../conda-libmamba-solver-feedstock
