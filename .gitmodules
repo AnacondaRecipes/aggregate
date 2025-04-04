@@ -12211,5 +12211,5 @@
 	branch = main
 [submodule "gluonts-feedstock"]
 	path = gluonts-feedstock
-	url = ../gluonts-feedstock
-	branch = main
+	url = ../gluon-ts-feedstock
+	branch = master
