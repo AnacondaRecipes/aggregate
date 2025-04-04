@@ -12209,3 +12209,7 @@
 	path = python-duckdb-feedstock
 	url = ../python-duckdb-feedstock
 	branch = main
+[submodule "gluonts-feedstock"]
+	path = gluonts-feedstock
+	url = ../gluonts-feedstock
+	branch = main
