@@ -12213,3 +12213,7 @@
 	path = gluonts-feedstock
 	url = ../gluon-ts-feedstock
 	branch = master
+[submodule "json-log-formatter-feedstock"]
+	path = json-log-formatter-feedstock
+	url = ../json-log-formatter-feedstock
+	branch = main
