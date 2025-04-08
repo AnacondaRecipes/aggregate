@@ -12217,3 +12217,7 @@
 	path = json-log-formatter-feedstock
 	url = ../json-log-formatter-feedstock
 	branch = main
+[submodule "aext-environments-server-feedstock"]
+	path = aext-environments-server-feedstock
+	url = ../aext-environments-server-feedstock
+	branch = main
