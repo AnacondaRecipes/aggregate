@@ -12225,3 +12225,7 @@
 	path = grpcio-health-checking-feedstock
 	url = ../grpcio-health-checking-feedstock
 	branch = main
+[submodule "grpcio-reflection-feedstock"]
+	path = grpcio-reflection-feedstock
+	url = ../grpcio-reflection-feedstock
+	branch = main
