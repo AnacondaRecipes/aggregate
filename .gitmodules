@@ -12229,3 +12229,7 @@
 	path = grpcio-reflection-feedstock
 	url = ../grpcio-reflection-feedstock
 	branch = main
+[submodule "py-grpc-prometheus-feedstock"]
+	path = py-grpc-prometheus-feedstock
+	url = ../py-grpc-prometheus-feedstock
+	branch = main
