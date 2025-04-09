@@ -12221,3 +12221,7 @@
 	path = aext-environments-server-feedstock
 	url = ../aext-environments-server-feedstock
 	branch = main
+[submodule "grpcio-health-checking-feedstock"]
+	path = grpcio-health-checking-feedstock
+	url = ../grpcio-health-checking-feedstock
+	branch = main
