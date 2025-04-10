@@ -12233,3 +12233,7 @@
 	path = py-grpc-prometheus-feedstock
 	url = ../py-grpc-prometheus-feedstock
 	branch = main
+[submodule "anaconda-assistant-sdk-feedstock"]
+	path = anaconda-assistant-sdk-feedstock
+	url = ../anaconda-assistant-sdk-feedstock
+	branch = main
