@@ -12237,3 +12237,7 @@
 	path = anaconda-assistant-sdk-feedstock
 	url = ../anaconda-assistant-sdk-feedstock
 	branch = main
+[submodule "anaconda-assistant-conda-feedstock"]
+	path = anaconda-assistant-conda-feedstock
+	url = ../anaconda-assistant-conda-feedstock
+	branch = main
