@@ -184,7 +184,7 @@ numpy:
   # python 3.12
   - 2.0
   # python 3.13
-  - 2.1  # [ANACONDA_ROCKET_ENABLE_PY313]
+  - 2.1
 openblas:
   - 0.3.21
 openjpeg:
@@ -210,7 +210,7 @@ python:
   - "3.10"
   - "3.11"
   - "3.12"
-  - "3.13"  # [ANACONDA_ROCKET_ENABLE_PY313]
+  - "3.13"
 python_implementation:
   - cpython
 python_impl:
