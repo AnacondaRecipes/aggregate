@@ -12241,3 +12241,7 @@
 	path = htbuilder-0.6.1-feedstock
 	url = ../htbuilder-feedstock
 	branch = main-0.6.1
+[submodule "gstreamer-orc-feedstock"]
+	path = gstreamer-orc-feedstock
+	url = ../gstreamer-orc-feedstock
+	branch = main
