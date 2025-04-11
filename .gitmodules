@@ -12245,3 +12245,7 @@
 	path = python-grpc-prometheus-feedstock
 	url = ../python-grpc-prometheus-feedstock
 	branch = main
+[submodule "streamlit-avatar-feedstock"]
+	path = streamlit-avatar-feedstock
+	url = ../streamlit-avatar-feedstock
+	branch = main
