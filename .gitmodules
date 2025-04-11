@@ -5203,10 +5203,6 @@
 	path = rbc-feedstock
 	url = ../rbc-feedstock
 	branch = master
-[submodule "ldid-feedstock"]
-	path = ldid-feedstock
-	url = ../ldid-feedstock
-	branch = master
 [submodule "lld-feedstock"]
 	path = lld-feedstock
 	url = ../lld-feedstock
@@ -5942,10 +5938,6 @@
 [submodule "marshmallow-oneofschema-feedstock"]
 	path = marshmallow-oneofschema-feedstock
 	url = ../marshmallow-oneofschema-feedstock
-	branch = master
-[submodule "llvm-spirv-feedstock"]
-	path = llvm-spirv-feedstock
-	url = ../llvm-spirv-feedstock
 	branch = master
 [submodule "win32_setctime-feedstock"]
 	path = win32_setctime-feedstock
@@ -8559,10 +8551,6 @@
 [submodule "casuarius-feedstock"]
 	path = casuarius-feedstock
 	url = ../casuarius-feedstock
-	branch = main
-[submodule "cctools-ld64-feedstock"]
-	path = cctools-ld64-feedstock
-	url = ../cctools-ld64-feedstock
 	branch = main
 [submodule "chameleon-3.6.2-feedstock"]
 	path = chameleon-3.6.2-feedstock
