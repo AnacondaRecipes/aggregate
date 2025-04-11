@@ -12241,3 +12241,7 @@
 	path = anaconda-assistant-conda-feedstock
 	url = ../anaconda-assistant-conda-feedstock
 	branch = main
+[submodule "python-grpc-prometheus-feedstock"]
+	path = python-grpc-prometheus-feedstock
+	url = ../python-grpc-prometheus-feedstock
+	branch = main
