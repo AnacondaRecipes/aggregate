@@ -12249,3 +12249,7 @@
 	path = streamlit-avatar-feedstock
 	url = ../streamlit-avatar-feedstock
 	branch = main
+[submodule "htbuilder-0.6.1-feedstock"]
+	path = htbuilder-0.6.1-feedstock
+	url = ../htbuilder-feedstock
+	branch = main-0.6.1
