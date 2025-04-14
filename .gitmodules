@@ -12245,3 +12245,7 @@
 	path = gstreamer-orc-feedstock
 	url = ../gstreamer-orc-feedstock
 	branch = main
+[submodule "pycrdt-feedstock"]
+	path = pycrdt-feedstock
+	url = ../pycrdt-feedstock
+	branch = main
