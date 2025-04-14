@@ -12249,3 +12249,7 @@
 	path = pycrdt-feedstock
 	url = ../pycrdt-feedstock
 	branch = main
+[submodule "pycrdt-websocket-feedstock"]
+	path = pycrdt-websocket-feedstock
+	url = ../pycrdt-websocket-feedstock
+	branch = main
