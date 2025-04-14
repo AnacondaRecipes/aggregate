@@ -12253,3 +12253,7 @@
 	path = pycrdt-websocket-feedstock
 	url = ../pycrdt-websocket-feedstock
 	branch = main
+[submodule "sqlite-anyio-feedstock"]
+	path = sqlite-anyio-feedstock
+	url = ../sqlite-anyio-feedstock
+	branch = main
