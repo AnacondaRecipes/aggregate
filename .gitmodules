@@ -12257,3 +12257,7 @@
 	path = sqlite-anyio-feedstock
 	url = ../sqlite-anyio-feedstock
 	branch = main
+[submodule "ipython_pygments_lexers-feedstock"]
+	path = ipython_pygments_lexers-feedstock
+	url = ../ipython_pygments_lexers-feedstock
+	branch = main
