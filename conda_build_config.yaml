@@ -83,11 +83,9 @@ freetype:
 g2clib:
   - 1.6
 gstreamer:
-  - 1.14  # [not win]
-  - 1.22  # [win]
+  - 1.24
 gst_plugins_base:
-  - 1.14  # [not win]
-  - 1.22  # [win]
+  - 1.24
 geos:
   - 3.10.6
 giflib:
