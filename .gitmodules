@@ -12265,3 +12265,7 @@
 	path = instructor-feedstock
 	url = ../instructor-feedstock
 	branch = main
+[submodule "importlib_metadata-6.x-feedstock"]
+	path = importlib_metadata-6.x-feedstock
+	url = ../importlib_metadata-feedstock
+	branch = master-6.x
