@@ -12281,3 +12281,7 @@
 	path = sse-starlette-feedstock
 	url = ../sse-starlette-feedstock
 	branch = main
+[submodule "mcp-feedstock"]
+	path = mcp-feedstock
+	url = ../mcp-feedstock
+	branch = main
