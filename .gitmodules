@@ -12261,3 +12261,7 @@
 	path = ipython_pygments_lexers-feedstock
 	url = ../ipython_pygments_lexers-feedstock
 	branch = main
+[submodule "instructor-feedstock"]
+	path = instructor-feedstock
+	url = ../instructor-feedstock
+	branch = main
