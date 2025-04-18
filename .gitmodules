@@ -12277,3 +12277,7 @@
 	path = limits-feedstock
 	url = ../limits-feedstock
 	branch = main
+[submodule "sse-starlette-feedstock"]
+	path = sse-starlette-feedstock
+	url = ../sse-starlette-feedstock
+	branch = main
