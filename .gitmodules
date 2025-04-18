@@ -12273,3 +12273,7 @@
 	path = flask-limiter-feedstock
 	url = ../flask-limiter-feedstock
 	branch = main
+[submodule "limits-feedstock"]
+	path = limits-feedstock
+	url = ../limits-feedstock
+	branch = main
