@@ -12269,3 +12269,7 @@
 	path = importlib_metadata-6.x-feedstock
 	url = ../importlib_metadata-feedstock
 	branch = master-6.x
+[submodule "flask-limiter-feedstock"]
+	path = flask-limiter-feedstock
+	url = ../flask-limiter-feedstock
+	branch = main
