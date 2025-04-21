@@ -12285,3 +12285,7 @@
 	path = mcp-feedstock
 	url = ../mcp-feedstock
 	branch = main
+[submodule "markitdown-feedstock"]
+	path = markitdown-feedstock
+	url = ../markitdown-feedstock
+	branch = main
