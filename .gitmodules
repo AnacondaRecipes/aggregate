@@ -12297,3 +12297,7 @@
 	path = snowplow-tracker-feedstock
 	url = ../snowplow-tracker-feedstock
 	branch = main
+[submodule "flask-2.x.x-feedstock"]
+	path = flask-2.x.x-feedstock
+	url = ../flask-feedstock
+	branch = main_2.x.x
