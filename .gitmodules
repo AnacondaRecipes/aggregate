@@ -12289,3 +12289,7 @@
 	path = markitdown-feedstock
 	url = ../markitdown-feedstock
 	branch = main
+[submodule "databricks-sql-connector-feedstock"]
+	path = databricks-sql-connector-feedstock
+	url = ../databricks-sql-connector-feedstock
+	branch = main
