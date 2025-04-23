@@ -12301,3 +12301,7 @@
 	path = flask-2.x.x-feedstock
 	url = ../flask-feedstock
 	branch = main_2.x.x
+[submodule "httpstan-feedstock"]
+	path = httpstan-feedstock
+	url = ../httpstan-feedstock
+	branch = main
