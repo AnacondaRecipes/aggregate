@@ -12293,3 +12293,7 @@
 	path = databricks-sql-connector-feedstock
 	url = ../databricks-sql-connector-feedstock
 	branch = main
+[submodule "snowplow-tracker-feedstock"]
+	path = snowplow-tracker-feedstock
+	url = ../snowplow-tracker-feedstock
+	branch = main
