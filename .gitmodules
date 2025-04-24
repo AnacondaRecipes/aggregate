@@ -12349,3 +12349,7 @@
 	path = libxkbfile-feedstock
 	url = ../libxkbfile-feedstock
 	branch = main
+[submodule "xorg-libxfixes-feedstock"]
+	path = xorg-libxfixes-feedstock
+	url = ../xorg-libxfixes-feedstock
+	branch = main
