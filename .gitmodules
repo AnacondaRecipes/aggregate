@@ -12357,3 +12357,7 @@
 	path = xorg-libxdamage-feedstock
 	url = ../xorg-libxdamage-feedstock
 	branch = main
+[submodule "xorg-libxrender-feedstock"]
+	path = xorg-libxrender-feedstock
+	url = ../xorg-libxrender-feedstock
+	branch = main
