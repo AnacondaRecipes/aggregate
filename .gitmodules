@@ -12373,3 +12373,7 @@
 	path = xorg-libxi-feedstock
 	url = ../xorg-libxi-feedstock
 	branch = main
+[submodule "xorg-libxtst-feedstock"]
+	path = xorg-libxtst-feedstock
+	url = ../xorg-libxtst-feedstock
+	branch = main
