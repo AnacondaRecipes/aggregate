@@ -12393,3 +12393,7 @@
 	path = xorg-libxft-feedstock
 	url = ../xorg-libxft-feedstock
 	branch = main
+[submodule "xorg-libxcomposite-feedstock"]
+	path = xorg-libxcomposite-feedstock
+	url = ../xorg-libxcomposite-feedstock
+	branch = main
