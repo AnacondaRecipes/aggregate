@@ -12409,3 +12409,7 @@
 	path = xcb-util-feedstock
 	url = ../xcb-util-feedstock
 	branch = main
+[submodule "xcb-util-image-feedstock"]
+	path = xcb-util-image-feedstock
+	url = ../xcb-util-image-feedstock
+	branch = main
