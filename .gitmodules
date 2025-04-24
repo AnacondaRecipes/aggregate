@@ -12433,3 +12433,7 @@
 	path = mesalib-feedstock
 	url = ../mesalib-feedstock
 	branch = main
+[submodule "alsa-lib-feedstock"]
+	path = alsa-lib-feedstock
+	url = ../alsa-lib-feedstock
+	branch = main
