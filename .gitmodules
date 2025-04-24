@@ -12361,3 +12361,7 @@
 	path = xorg-libxrender-feedstock
 	url = ../xorg-libxrender-feedstock
 	branch = main
+[submodule "xorg-libxrandr-feedstock"]
+	path = xorg-libxrandr-feedstock
+	url = ../xorg-libxrandr-feedstock
+	branch = main
