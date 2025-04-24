@@ -12341,3 +12341,7 @@
 	path = xorg-libxt-feedstock
 	url = ../xorg-libxt-feedstock
 	branch = main
+[submodule "xorg-xauth-feedstock"]
+	path = xorg-xauth-feedstock
+	url = ../xorg-xauth-feedstock
+	branch = main
