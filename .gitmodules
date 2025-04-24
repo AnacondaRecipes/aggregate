@@ -12325,3 +12325,7 @@
 	path = xorg-libice-feedstock
 	url = ../xorg-libice-feedstock
 	branch = main
+[submodule "xorg-libsm-feedstock"]
+	path = xorg-libsm-feedstock
+	url = ../xorg-libsm-feedstock
+	branch = main
