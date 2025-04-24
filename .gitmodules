@@ -12417,3 +12417,7 @@
 	path = xcb-util-keysyms-feedstock
 	url = ../xcb-util-keysyms-feedstock
 	branch = main
+[submodule "xcb-util-renderutil-feedstock"]
+	path = xcb-util-renderutil-feedstock
+	url = ../xcb-util-renderutil-feedstock
+	branch = main
