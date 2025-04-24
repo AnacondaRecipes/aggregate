@@ -12421,3 +12421,7 @@
 	path = xcb-util-renderutil-feedstock
 	url = ../xcb-util-renderutil-feedstock
 	branch = main
+[submodule "xcb-util-wm-feedstock"]
+	path = xcb-util-wm-feedstock
+	url = ../xcb-util-wm-feedstock
+	branch = main
