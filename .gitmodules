@@ -12429,3 +12429,7 @@
 	path = libdrm-feedstock
 	url = ../libdrm-feedstock
 	branch = main
+[submodule "mesalib-feedstock"]
+	path = mesalib-feedstock
+	url = ../mesalib-feedstock
+	branch = main
