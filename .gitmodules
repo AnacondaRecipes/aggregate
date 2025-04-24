@@ -12313,3 +12313,7 @@
 	path = xorg-xorgproto-feedstock
 	url = ../xorg-xorgproto-feedstock
 	branch = main
+[submodule "xorg-xtrans-feedstock"]
+	path = xorg-xtrans-feedstock
+	url = ../xorg-xtrans-feedstock
+	branch = main
