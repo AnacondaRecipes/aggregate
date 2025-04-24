@@ -12329,3 +12329,7 @@
 	path = xorg-libsm-feedstock
 	url = ../xorg-libsm-feedstock
 	branch = main
+[submodule "xorg-libx11-feedstock"]
+	path = xorg-libx11-feedstock
+	url = ../xorg-libx11-feedstock
+	branch = main
