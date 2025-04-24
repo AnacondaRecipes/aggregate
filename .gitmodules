@@ -12413,3 +12413,7 @@
 	path = xcb-util-image-feedstock
 	url = ../xcb-util-image-feedstock
 	branch = main
+[submodule "xcb-util-keysyms-feedstock"]
+	path = xcb-util-keysyms-feedstock
+	url = ../xcb-util-keysyms-feedstock
+	branch = main
