@@ -12365,3 +12365,7 @@
 	path = xorg-libxrandr-feedstock
 	url = ../xorg-libxrandr-feedstock
 	branch = main
+[submodule "xorg-libxcursor-feedstock"]
+	path = xorg-libxcursor-feedstock
+	url = ../xorg-libxcursor-feedstock
+	branch = main
