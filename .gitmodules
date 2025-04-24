@@ -12425,3 +12425,7 @@
 	path = xcb-util-wm-feedstock
 	url = ../xcb-util-wm-feedstock
 	branch = main
+[submodule "libdrm-feedstock"]
+	path = libdrm-feedstock
+	url = ../libdrm-feedstock
+	branch = main
