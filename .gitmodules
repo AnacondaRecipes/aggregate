@@ -12405,3 +12405,7 @@
 	path = xorg-libxmu-feedstock
 	url = ../xorg-libxmu-feedstock
 	branch = main
+[submodule "xcb-util-feedstock"]
+	path = xcb-util-feedstock
+	url = ../xcb-util-feedstock
+	branch = main
