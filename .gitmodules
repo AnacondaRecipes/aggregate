@@ -12321,3 +12321,7 @@
 	path = libpciaccess-feedstock
 	url = ../libpciaccess-feedstock
 	branch = main
+[submodule "xorg-libice-feedstock"]
+	path = xorg-libice-feedstock
+	url = ../xorg-libice-feedstock
+	branch = main
