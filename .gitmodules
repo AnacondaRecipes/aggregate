@@ -12309,3 +12309,7 @@
 	path = anthropic-feedstock
 	url = ../anthropic-feedstock
 	branch = main
+[submodule "xorg-xorgproto-feedstock"]
+	path = xorg-xorgproto-feedstock
+	url = ../xorg-xorgproto-feedstock
+	branch = main
