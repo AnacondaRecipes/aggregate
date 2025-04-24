@@ -12377,3 +12377,7 @@
 	path = xorg-libxtst-feedstock
 	url = ../xorg-libxtst-feedstock
 	branch = main
+[submodule "xorg-libxxf86vm-feedstock"]
+	path = xorg-libxxf86vm-feedstock
+	url = ../xorg-libxxf86vm-feedstock
+	branch = main
