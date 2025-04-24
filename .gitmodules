@@ -12305,3 +12305,7 @@
 	path = httpstan-feedstock
 	url = ../httpstan-feedstock
 	branch = main
+[submodule "anthropic-feedstock"]
+	path = anthropic-feedstock
+	url = ../anthropic-feedstock
+	branch = main
