@@ -12381,3 +12381,7 @@
 	path = xorg-libxxf86vm-feedstock
 	url = ../xorg-libxxf86vm-feedstock
 	branch = main
+[submodule "xorg-libxscrnsaver-feedstock"]
+	path = xorg-libxscrnsaver-feedstock
+	url = ../xorg-libxscrnsaver-feedstock
+	branch = main
