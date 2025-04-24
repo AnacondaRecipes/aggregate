@@ -12401,3 +12401,7 @@
 	path = xorg-libxshmfence-feedstock
 	url = ../xorg-libxshmfence-feedstock
 	branch = main
+[submodule "xorg-libxmu-feedstock"]
+	path = xorg-libxmu-feedstock
+	url = ../xorg-libxmu-feedstock
+	branch = main
