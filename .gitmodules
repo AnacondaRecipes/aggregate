@@ -12345,3 +12345,7 @@
 	path = xorg-xauth-feedstock
 	url = ../xorg-xauth-feedstock
 	branch = main
+[submodule "libxkbfile-feedstock"]
+	path = libxkbfile-feedstock
+	url = ../libxkbfile-feedstock
+	branch = main
