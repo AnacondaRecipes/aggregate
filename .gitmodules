@@ -12317,3 +12317,7 @@
 	path = xorg-xtrans-feedstock
 	url = ../xorg-xtrans-feedstock
 	branch = main
+[submodule "libpciaccess-feedstock"]
+	path = libpciaccess-feedstock
+	url = ../libpciaccess-feedstock
+	branch = main
