@@ -12397,3 +12397,7 @@
 	path = xorg-libxcomposite-feedstock
 	url = ../xorg-libxcomposite-feedstock
 	branch = main
+[submodule "xorg-libxshmfence-feedstock"]
+	path = xorg-libxshmfence-feedstock
+	url = ../xorg-libxshmfence-feedstock
+	branch = main
