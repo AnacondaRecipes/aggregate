@@ -12337,3 +12337,7 @@
 	path = xorg-libxext-feedstock
 	url = ../xorg-libxext-feedstock
 	branch = main
+[submodule "xorg-libxt-feedstock"]
+	path = xorg-libxt-feedstock
+	url = ../xorg-libxt-feedstock
+	branch = main
