@@ -12353,3 +12353,7 @@
 	path = xorg-libxfixes-feedstock
 	url = ../xorg-libxfixes-feedstock
 	branch = main
+[submodule "xorg-libxdamage-feedstock"]
+	path = xorg-libxdamage-feedstock
+	url = ../xorg-libxdamage-feedstock
+	branch = main
