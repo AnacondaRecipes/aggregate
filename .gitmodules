@@ -12441,3 +12441,7 @@
 	path = xorg-libxau-feedstock
 	url = ../xorg-libxau-feedstock
 	branch = main
+[submodule "xorg-libxdmcp-feedstock"]
+	path = xorg-libxdmcp-feedstock
+	url = ../xorg-libxdmcp-feedstock
+	branch = main
