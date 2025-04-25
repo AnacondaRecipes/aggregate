@@ -12437,3 +12437,7 @@
 	path = alsa-lib-feedstock
 	url = ../alsa-lib-feedstock
 	branch = main
+[submodule "xorg-libxau-feedstock"]
+	path = xorg-libxau-feedstock
+	url = ../xorg-libxau-feedstock
+	branch = main
