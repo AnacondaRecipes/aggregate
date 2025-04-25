@@ -12457,3 +12457,7 @@
 	path = xorg-inputproto-feedstock
 	url = ../xorg-inputproto-feedstock
 	branch = main
+[submodule "magika-feedstock"]
+	path = magika-feedstock
+	url = ../magika-feedstock
+	branch = main
