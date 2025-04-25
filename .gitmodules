@@ -12453,3 +12453,7 @@
 	path = xorg-xextproto-feedstock
 	url = ../xorg-xextproto-feedstock
 	branch = main
+[submodule "xorg-inputproto-feedstock"]
+	path = xorg-inputproto-feedstock
+	url = ../xorg-inputproto-feedstock
+	branch = main
