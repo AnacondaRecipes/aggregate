@@ -12449,3 +12449,7 @@
 	path = xorg-kbproto-feedstock
 	url = ../xorg-kbproto-feedstock
 	branch = main
+[submodule "xorg-xextproto-feedstock"]
+	path = xorg-xextproto-feedstock
+	url = ../xorg-xextproto-feedstock
+	branch = main
