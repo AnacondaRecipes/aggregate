@@ -12445,3 +12445,7 @@
 	path = xorg-libxdmcp-feedstock
 	url = ../xorg-libxdmcp-feedstock
 	branch = main
+[submodule "xorg-kbproto-feedstock"]
+	path = xorg-kbproto-feedstock
+	url = ../xorg-kbproto-feedstock
+	branch = main
