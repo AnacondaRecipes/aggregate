@@ -12473,3 +12473,7 @@
 	path = wil-feedstock
 	url = ../wil-feedstock
 	branch = main
+[submodule "azure-core-cpp-feedstock"]
+	path = azure-core-cpp-feedstock
+	url = ../azure-core-cpp-feedstock
+	branch = main
