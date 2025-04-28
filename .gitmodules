@@ -12481,3 +12481,7 @@
 	path = azure-identity-cpp-feedstock
 	url = ../azure-identity-cpp-feedstock
 	branch = main
+[submodule "azure-storage-common-cpp-feedstock"]
+	path = azure-storage-common-cpp-feedstock
+	url = ../azure-storage-common-cpp-feedstock
+	branch = main
