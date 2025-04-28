@@ -12485,3 +12485,7 @@
 	path = azure-storage-common-cpp-feedstock
 	url = ../azure-storage-common-cpp-feedstock
 	branch = main
+[submodule "azure-storage-blobs-cpp-feedstock"]
+	path = azure-storage-blobs-cpp-feedstock
+	url = ../azure-storage-blobs-cpp-feedstock
+	branch = main
