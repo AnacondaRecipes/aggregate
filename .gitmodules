@@ -12469,3 +12469,7 @@
 	path = tensorboard-2.18-feedstock
 	url = ../tensorboard-feedstock
 	branch = main-2.18
+[submodule "wil-feedstock"]
+	path = wil-feedstock
+	url = ../wil-feedstock
+	branch = main
