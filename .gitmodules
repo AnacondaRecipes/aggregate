@@ -12461,3 +12461,11 @@
 	path = magika-feedstock
 	url = ../magika-feedstock
 	branch = main
+[submodule "ml_dtypes-0.4.x-feedstock"]
+	path = ml_dtypes-0.4.x-feedstock
+	url = ../ml_dtypes-feedstock
+	branch = main-0.4.x
+[submodule "tensorboard-2.18-feedstock"]
+	path = tensorboard-2.18-feedstock
+	url = ../tensorboard-feedstock
+	branch = main-2.18
