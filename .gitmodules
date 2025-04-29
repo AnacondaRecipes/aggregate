@@ -12497,3 +12497,7 @@
 	path = typing-inspection-feedstock
 	url = ../typing-inspection-feedstock
 	branch = main
+[submodule "mistralai-feedstock"]
+	path = mistralai-feedstock
+	url = ../mistralai-feedstock
+	branch = main
