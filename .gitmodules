@@ -12493,3 +12493,7 @@
 	path = winpthreads-feedstock
 	url = ../winpthreads-feedstock
 	branch = main
+[submodule "typing-inspection-feedstock"]
+	path = typing-inspection-feedstock
+	url = ../typing-inspection-feedstock
+	branch = main
