@@ -12489,3 +12489,7 @@
 	path = azure-storage-blobs-cpp-feedstock
 	url = ../azure-storage-blobs-cpp-feedstock
 	branch = main
+[submodule "winpthreads-feedstock"]
+	path = winpthreads-feedstock
+	url = ../winpthreads-feedstock
+	branch = main
