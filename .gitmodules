@@ -11117,3 +11117,7 @@
 	path = mistralai-feedstock
 	url = ../mistralai-feedstock
 	branch = main
+[submodule "markdownify-feedstock"]
+	path = markdownify-feedstock
+	url = ../markdownify-feedstock
+	branch = main
