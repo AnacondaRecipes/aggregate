@@ -11121,3 +11121,7 @@
 	path = markdownify-feedstock
 	url = ../markdownify-feedstock
 	branch = main
+[submodule "scikit-llm-feedstock"]
+	path = scikit-llm-feedstock
+	url = ../scikit-llm-feedstock
+	branch = main
