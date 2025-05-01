@@ -11125,3 +11125,7 @@
 	path = scikit-llm-feedstock
 	url = ../scikit-llm-feedstock
 	branch = main
+[submodule "httpx-0.23.x-feedstock"]
+	path = httpx-0.23.x-feedstock
+	url = ../httpx-feedstock
+	branch = main-0.23.x
