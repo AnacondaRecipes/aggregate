@@ -11129,3 +11129,7 @@
 	path = httpx-0.23.x-feedstock
 	url = ../httpx-feedstock
 	branch = main-0.23.x
+[submodule "webargs-feedstock"]
+	path = webargs-feedstock
+	url = ../webargs-feedstock
+	branch = main
