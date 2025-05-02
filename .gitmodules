@@ -11137,3 +11137,7 @@
 	path = glslang-feedstock
 	url = ../glslang-feedstock
 	branch = main
+[submodule "libglvnd-feedstock"]
+	path = libglvnd-feedstock
+	url = ../libglvnd-feedstock
+	branch = main
