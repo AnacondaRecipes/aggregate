@@ -11133,3 +11133,7 @@
 	path = webargs-feedstock
 	url = ../webargs-feedstock
 	branch = main
+[submodule "glslang-feedstock"]
+	path = glslang-feedstock
+	url = ../glslang-feedstock
+	branch = main
