@@ -11149,3 +11149,7 @@
 	path = spirv-headers-feedstock
 	url = ../spirv-headers-feedstock
 	branch = main
+[submodule "python-blockbuster-feedstock"]
+	path = python-blockbuster-feedstock
+	url = ../python-blockbuster-feedstock
+	branch = main
