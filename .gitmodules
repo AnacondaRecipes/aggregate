@@ -11145,3 +11145,7 @@
 	path = xkeyboard-config-feedstock
 	url = ../xkeyboard-config-feedstock
 	branch = main
+[submodule "spirv-headers-feedstock"]
+	path = spirv-headers-feedstock
+	url = ../spirv-headers-feedstock
+	branch = main
