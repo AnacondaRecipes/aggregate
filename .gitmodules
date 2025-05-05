@@ -11157,3 +11157,7 @@
 	path = forbiddenfruit-feedstock
 	url = ../forbiddenfruit-feedstock
 	branch = main
+[submodule "proxyspy-feedstock"]
+	path = proxyspy-feedstock
+	url = ../proxyspy-feedstock
+	branch = main
