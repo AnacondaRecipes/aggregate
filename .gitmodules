@@ -11153,3 +11153,7 @@
 	path = python-blockbuster-feedstock
 	url = ../python-blockbuster-feedstock
 	branch = main
+[submodule "forbiddenfruit-feedstock"]
+	path = forbiddenfruit-feedstock
+	url = ../forbiddenfruit-feedstock
+	branch = main
