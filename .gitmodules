@@ -11141,3 +11141,7 @@
 	path = libglvnd-feedstock
 	url = ../libglvnd-feedstock
 	branch = main
+[submodule "xkeyboard-config-feedstock"]
+	path = xkeyboard-config-feedstock
+	url = ../xkeyboard-config-feedstock
+	branch = main
