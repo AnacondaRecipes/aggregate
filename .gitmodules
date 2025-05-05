@@ -11161,3 +11161,7 @@
 	path = proxyspy-feedstock
 	url = ../proxyspy-feedstock
 	branch = main
+[submodule "backports-datetime-fromisoformat-feedstock"]
+	path = backports-datetime-fromisoformat-feedstock
+	url = ../backports-datetime-fromisoformat-feedstock
+	branch = main
