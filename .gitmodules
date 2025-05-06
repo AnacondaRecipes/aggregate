@@ -11173,3 +11173,7 @@
 	path = mbedtls-feedstock
 	url = ../mbedtls-feedstock
 	branch = main
+[submodule "lumen-feedstock"]
+	path = lumen-feedstock
+	url = ../lumen-feedstock
+	branch = main
