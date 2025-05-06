@@ -11169,3 +11169,7 @@
 	path = griffe-feedstock
 	url = ../griffe-feedstock
 	branch = main
+[submodule "mbedtls-feedstock"]
+	path = mbedtls-feedstock
+	url = ../mbedtls-feedstock
+	branch = main
