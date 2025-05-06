@@ -11165,3 +11165,7 @@
 	path = backports-datetime-fromisoformat-feedstock
 	url = ../backports-datetime-fromisoformat-feedstock
 	branch = main
+[submodule "griffe-feedstock"]
+	path = griffe-feedstock
+	url = ../griffe-feedstock
+	branch = main
