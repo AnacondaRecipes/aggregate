@@ -11177,3 +11177,7 @@
 	path = lumen-feedstock
 	url = ../lumen-feedstock
 	branch = main
+[submodule "langchain-openai-feedstock"]
+	path = langchain-openai-feedstock
+	url = ../langchain-openai-feedstock
+	branch = main
