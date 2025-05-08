@@ -480,7 +480,7 @@ libntlm:
 libogg:
   - '1.3'
 libopenblas:
-  - '0'
+  - 0.3.29
 libopengl:
   - '1'
 libopus:
@@ -576,7 +576,7 @@ metis:
 minizip:
   - '4'
 mkl:
-  - '2025'
+  - '2023'
 mkl_service:
   - '2'
 mpc:
@@ -610,7 +610,7 @@ ocl_icd:
 oniguruma:
   - '6.9'
 openblas:
-  - 0.3.21
+  - 0.3.29
 openh264:
   - '2.6'
 openjpeg:
