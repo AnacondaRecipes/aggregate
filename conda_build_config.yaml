@@ -1,3 +1,6 @@
+## GLOBAL config
+## Compilers, blas, R, python...
+
 pin_run_as_build:
   libboost:
     max_pin: x.x.x
@@ -5,14 +8,6 @@ pin_run_as_build:
 blas_impl:
   - mkl                        # [(x86 or x86_64) and not osx]
   - openblas                   # [not win]
-boost:
-  - 1.82
-boost_cpp:
-  - 1.82
-bzip2:
-  - 1.0
-cairo:
-  - 1.16
 c_compiler:
   - gcc                        # [linux]
   - clang                      # [osx]
@@ -69,6 +64,89 @@ fortran_compiler_version:
   - 11.2.0                       # [osx or linux]
 clang_variant:
   - clang
+# The basic go-compiler with CGO disabled (CGO_ENABLED=0).
+# It generates fat binaries without libc dependencies.
+go_compiler:
+  - go-nocgo
+go_compiler_version:
+  - 1.21
+# The go compiler build with CGO enabled (CGO_ENABLED=1).
+# It can generate fat binaries that depend on conda's libc.
+# You should use this compiler if the underlying
+# program needs to link against other C libraries, in which
+# case make sure to add 'c,cpp,fortran_compiler' for unix
+# and the m2w64 equivalent for windows.
+cgo_compiler:
+  - go-cgo
+cgo_compiler_version:
+  - 1.21
+macos_min_version:
+  - 10.15 # [osx and x86_64]
+  - 11.1  # [osx and arm64]
+macos_machine:
+  - x86_64-apple-darwin13.4.0  # [osx and x86_64]
+  - arm64-apple-darwin20.0.0   # [osx and arm64]
+MACOSX_DEPLOYMENT_TARGET:
+  - 10.15 # [osx and x86_64]
+  - 11.1  # [osx and arm64]
+python:
+  - 3.9
+  - "3.10"
+  - "3.11"
+  - "3.12"
+  - "3.13"
+# numpy will by default use a compatible ABI for the oldest still-supported numpy versions
+# `{{ pin_compatible("numpy") }}` is no longer needed as builds of numpy from version 2 have run_exports.
+numpy:
+  # python 3.9
+  - 2.0
+  # python 3.10
+  - 2.0
+  # python 3.11
+  - 2.0
+  # python 3.12
+  - 2.0
+  # python 3.13
+  - 2.1
+zip_keys:
+  -
+    - python
+    - numpy
+python_implementation:
+  - cpython
+python_impl:
+  - cpython
+r_base:
+  - 4.3.1
+r_version:
+  - 4.3.1
+r_implementation:
+  - 'r-base'    # [linux and x86_64]
+# This differs from target_platform in that it determines what subdir the compiler
+#    will target, not what subdir the compiler package will be itself.
+#    For example, we need a win-64 vs2008_win-32 package, so that we compile win-32
+#    code on win-64 miniconda.
+cross_compiler_target_platform:
+  # - win-32                     # [win]
+  - win-64                     # [win]
+target_platform:
+  - win-64                     # [win]
+  # - win-32                     # [win]
+channel_targets:
+  - defaults
+cdt_name:
+  - amzn2    # [linux and aarch64]
+
+
+## GLOBAL pinnings
+boost:
+  - 1.82
+boost_cpp:
+  - 1.82
+bzip2:
+  - 1.0
+cairo:
+  - 1.16
 cyrus_sasl:
   - 2.1.28
 dbus:
@@ -81,10 +159,6 @@ freetype:
   - 2.10
 g2clib:
   - 1.6
-gstreamer:
-  - 1.24
-gst_plugins_base:
-  - 1.24
 geos:
   - 3.10.6
 giflib:
@@ -93,25 +167,10 @@ glib:
   - 2
 gmp:
   - 6.3
-# glibc used in ctng compiler builds
-gnu:
-  - 2.12.2
-# The basic go-compiler with CGO disabled (CGO_ENABLED=0).
-# It generates fat binaries without libc dependencies.
-go_compiler:
-  - go-nocgo          # [not s390x]
-go_compiler_version:
-  - 1.21              # [not s390x]
-# The go compiler build with CGO enabled (CGO_ENABLED=1).
-# It can generate fat binaries that depend on conda's libc.
-# You should use this compiler if the underlying
-# program needs to link against other C libraries, in which
-# case make sure to add 'c,cpp,fortran_compiler' for unix
-# and the m2w64 equivalent for windows.
-cgo_compiler:
-  - go-cgo            # [not s390x]
-cgo_compiler_version:
-  - 1.21              # [not s390x]
+gstreamer:
+  - 1.24
+gst_plugins_base:
+  - 1.24
 harfbuzz:
   - 10
 hdf4:
@@ -126,6 +185,8 @@ icu:
   - 73
 jpeg:
   - 9
+libabseil:
+  - 20250127.0
 libcurl:
   - 8.1.1
 libdap4:
@@ -136,6 +197,8 @@ libgd:
   - 2.3.3
 libgdal:
   - 3.6.2
+libgrpc:
+  - 1.71.0
 libgsasl:
   - 1.10
 libkml:
@@ -144,6 +207,8 @@ libnetcdf:
   - 4.8
 libpng:
   - 1.6
+libprotobuf:
+  - 5.29.3
 libtiff:
   - 4.7
 libwebp:
@@ -152,36 +217,12 @@ libxml2:
   - 2.13
 libxslt:
   - 1.1
-llvm_variant:
-  - llvm
 lzo:
   - 2
-macos_min_version:
-  - 10.15 # [osx and x86_64]
-  - 11.1  # [osx and arm64]
-macos_machine:
-  - x86_64-apple-darwin13.4.0  # [osx and x86_64]
-  - arm64-apple-darwin20.0.0   # [osx and arm64]
-MACOSX_DEPLOYMENT_TARGET:
-  - 10.15 # [osx and x86_64]
-  - 11.1  # [osx and arm64]
 mkl:
-  - 2023.*
+  - 2023
 mpfr:
   - 4
-# numpy will by default use a compatible ABI for the oldest still-supported numpy versions
-# `{{ pin_compatible("numpy") }}` is no longer needed as builds of numpy from version 2 have run_exports.
-numpy:
-  # python 3.9
-  - 2.0
-  # python 3.10
-  - 2.0
-  # python 3.11
-  - 2.0
-  # python 3.12
-  - 2.0
-  # python 3.13
-  - 2.1
 openblas:
   - 0.3.21
 openjpeg:
@@ -192,61 +233,21 @@ perl:
   - 5.38
 pixman:
   - 0.40
-proj4:
-  - 5.2.0
 proj:
   - 9.3.1
-libprotobuf:
-  - 5.29.3
-libabseil:
-  - 20250127.0
-libgrpc:
-  - 1.71.0
-python:
-  - 3.9
-  - "3.10"
-  - "3.11"
-  - "3.12"
-  - "3.13"
-python_implementation:
-  - cpython
-python_impl:
-  - cpython
-r_base:
-  - 4.3.1
-r_version:
-  - 4.3.1
-r_implementation:
-  - 'r-base'    # [linux and x86_64]
+proj4:
+  - 5.2.0
 readline:
   - 8.1
 sqlite:
   - 3
-# This differs from target_platform in that it determines what subdir the compiler
-#    will target, not what subdir the compiler package will be itself.
-#    For example, we need a win-64 vs2008_win-32 package, so that we compile win-32
-#    code on win-64 miniconda.
-cross_compiler_target_platform:
-  # - win-32                     # [win]
-  - win-64                     # [win]
-target_platform:
-  - win-64                     # [win]
-  # - win-32                     # [win]
 tk:
   - 8.6
 vc:
-  - 14                         # [win]
-zlib:
-  - 1.2
+  - 14
 xz:
   - 5
-channel_targets:
-  - defaults
-cdt_name:
-  - amzn2    # [linux and aarch64]
-zip_keys:
-  -
-    - python
-    - numpy
+zlib:
+  - 1.2
 zstd:
   - 1.5.2
