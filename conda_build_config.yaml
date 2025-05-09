@@ -603,14 +603,12 @@ nss:
   - '3'
 ntbtls:
   - '0'
-numpy:
-  - ''
 ocl_icd:
   - '2'
 oniguruma:
   - '6.9'
 openblas:
-  - 0.3.29
+  - 0
 openh264:
   - '2.6'
 openjpeg:
