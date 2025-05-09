@@ -11181,3 +11181,7 @@
 	path = langchain-openai-feedstock
 	url = ../langchain-openai-feedstock
 	branch = main
+[submodule "logging_tree-feedstock"]
+	path = logging_tree-feedstock
+	url = ../logging_tree-feedstock
+	branch = main
