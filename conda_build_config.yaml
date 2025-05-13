@@ -607,7 +607,7 @@ oniguruma:
   - '6.9'
 openblas:
   - 0
-openblas-devel:
+openblas_devel:
   - '0'
 openh264:
   - '2.6'
