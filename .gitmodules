@@ -11189,3 +11189,7 @@
 	path = at-spi2-atk-feedstock
 	url = ../at-spi2-atk-feedstock
 	branch = main
+[submodule "conda-project-feedstock"]
+	path = conda-project-feedstock
+	url = ../conda-project-feedstock
+	branch = main
