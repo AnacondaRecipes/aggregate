@@ -11185,3 +11185,7 @@
 	path = logging_tree-feedstock
 	url = ../logging_tree-feedstock
 	branch = main
+[submodule "at-spi2-atk-feedstock"]
+	path = at-spi2-atk-feedstock
+	url = ../at-spi2-atk-feedstock
+	branch = main
