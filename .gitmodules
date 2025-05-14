@@ -11193,3 +11193,7 @@
 	path = conda-project-feedstock
 	url = ../conda-project-feedstock
 	branch = main
+[submodule "esbuild-feedstock"]
+	path = esbuild-feedstock
+	url = ../esbuild-feedstock
+	branch = main
