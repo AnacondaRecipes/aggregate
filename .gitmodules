@@ -11213,3 +11213,7 @@
 	path = mistletoe-feedstock
 	url = ../mistletoe-feedstock
 	branch = main
+[submodule "deprecation-alias-feedstock"]
+	path = deprecation-alias-feedstock
+	url = ../deprecation-alias-feedstock
+	branch = main
