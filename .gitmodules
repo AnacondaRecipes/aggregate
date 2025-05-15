@@ -11217,3 +11217,7 @@
 	path = deprecation-alias-feedstock
 	url = ../deprecation-alias-feedstock
 	branch = main
+[submodule "pydantic-extra-types-feedstock"]
+	path = pydantic-extra-types-feedstock
+	url = ../pydantic-extra-types-feedstock
+	branch = main
