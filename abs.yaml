@@ -1,1 +1,7 @@
+build_env_vars:
+  ANACONDA_ROCKET_ENABLE_PY313: yes
+
 aggregate_check: false
+upload_channels:
+  - sfe1ed40
+

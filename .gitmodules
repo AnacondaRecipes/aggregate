@@ -11209,3 +11209,7 @@
 	path = apeye-core-feedstock
 	url = ../apeye-core-feedstock
 	branch = main
+[submodule "mistletoe-feedstock"]
+	path = mistletoe-feedstock
+	url = ../mistletoe-feedstock
+	branch = main
