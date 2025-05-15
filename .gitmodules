@@ -11229,3 +11229,7 @@
 	path = coincidence-feedstock
 	url = ../coincidence-feedstock
 	branch = main
+[submodule "pytest-regressions-feedstock"]
+	path = pytest-regressions-feedstock
+	url = ../pytest-regressions-feedstock
+	branch = main
