@@ -11201,3 +11201,7 @@
 	path = panel-graphic-walker-feedstock
 	url = ../panel-graphic-walker-feedstock
 	branch = main
+[submodule "domdf-python-tools-feedstock"]
+	path = domdf-python-tools-feedstock
+	url = ../domdf-python-tools-feedstock
+	branch = main
