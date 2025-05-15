@@ -11237,3 +11237,7 @@
 	path = pytest-datadir-feedstock
 	url = ../pytest-datadir-feedstock
 	branch = main
+[submodule "typed-ast-feedstock"]
+	path = typed-ast-feedstock
+	url = ../typed-ast-feedstock
+	branch = master
