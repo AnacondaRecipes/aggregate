@@ -11225,3 +11225,7 @@
 	path = handy-archives-feedstock
 	url = ../handy-archives-feedstock
 	branch = main
+[submodule "coincidence-feedstock"]
+	path = coincidence-feedstock
+	url = ../coincidence-feedstock
+	branch = main
