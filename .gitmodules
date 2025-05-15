@@ -11205,3 +11205,7 @@
 	path = domdf-python-tools-feedstock
 	url = ../domdf-python-tools-feedstock
 	branch = main
+[submodule "apeye-core-feedstock"]
+	path = apeye-core-feedstock
+	url = ../apeye-core-feedstock
+	branch = main
