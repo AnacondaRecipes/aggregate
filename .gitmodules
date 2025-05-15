@@ -11233,3 +11233,7 @@
 	path = pytest-regressions-feedstock
 	url = ../pytest-regressions-feedstock
 	branch = main
+[submodule "pytest-datadir-feedstock"]
+	path = pytest-datadir-feedstock
+	url = ../pytest-datadir-feedstock
+	branch = main
