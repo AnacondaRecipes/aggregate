@@ -11221,3 +11221,7 @@
 	path = pydantic-extra-types-feedstock
 	url = ../pydantic-extra-types-feedstock
 	branch = main
+[submodule "handy-archives-feedstock"]
+	path = handy-archives-feedstock
+	url = ../handy-archives-feedstock
+	branch = main
