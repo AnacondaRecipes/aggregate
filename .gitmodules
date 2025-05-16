@@ -11241,3 +11241,7 @@
 	path = typed-ast-feedstock
 	url = ../typed-ast-feedstock
 	branch = master
+[submodule "setuptools-65.x-feedstock"]
+	path = setuptools-65.x-feedstock
+	url = ../setuptools-feedstock
+	branch = master-65.x
