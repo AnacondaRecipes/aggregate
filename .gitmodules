@@ -11245,3 +11245,7 @@
 	path = setuptools-65.x-feedstock
 	url = ../setuptools-feedstock
 	branch = master-65.x
+[submodule "dom-toml-feedstock"]
+	path = dom-toml-feedstock
+	url = ../dom-toml-feedstock
+	branch = main
