@@ -11253,3 +11253,7 @@
 	path = dist-meta-feedstock
 	url = ../dist-meta-feedstock
 	branch = main
+[submodule "intake-sql-feedstock"]
+	path = intake-sql-feedstock
+	url = ../intake-sql-feedstock
+	branch = main
