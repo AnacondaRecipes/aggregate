@@ -11249,3 +11249,7 @@
 	path = dom-toml-feedstock
 	url = ../dom-toml-feedstock
 	branch = main
+[submodule "dist-meta-feedstock"]
+	path = dist-meta-feedstock
+	url = ../dist-meta-feedstock
+	branch = main
