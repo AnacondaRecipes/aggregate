@@ -11265,3 +11265,7 @@
 	path = shippinglabel-feedstock
 	url = ../shippinglabel-feedstock
 	branch = main
+[submodule "pyproject-parser-feedstock"]
+	path = pyproject-parser-feedstock
+	url = ../pyproject-parser-feedstock
+	branch = main
