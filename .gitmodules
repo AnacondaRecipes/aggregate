@@ -11281,3 +11281,7 @@
 	path = neo4j-viz-feedstock
 	url = ../neo4j-viz-feedstock
 	branch = main
+[submodule "anaconda-ai-feedstock"]
+	path = anaconda-ai-feedstock
+	url = ../anaconda-ai-feedstock
+	branch = main
