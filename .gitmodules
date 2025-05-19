@@ -11269,3 +11269,7 @@
 	path = pyproject-parser-feedstock
 	url = ../pyproject-parser-feedstock
 	branch = main
+[submodule "whey-feedstock"]
+	path = whey-feedstock
+	url = ../whey-feedstock
+	branch = main
