@@ -11257,3 +11257,7 @@
 	path = intake-sql-feedstock
 	url = ../intake-sql-feedstock
 	branch = main
+[submodule "consolekit-feedstock"]
+	path = consolekit-feedstock
+	url = ../consolekit-feedstock
+	branch = main
