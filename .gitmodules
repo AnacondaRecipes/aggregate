@@ -11277,3 +11277,7 @@
 	path = enum-tools-feedstock
 	url = ../enum-tools-feedstock
 	branch = main
+[submodule "neo4j-viz-feedstock"]
+	path = neo4j-viz-feedstock
+	url = ../neo4j-viz-feedstock
+	branch = main
