@@ -11285,3 +11285,7 @@
 	path = anaconda-ai-feedstock
 	url = ../anaconda-ai-feedstock
 	branch = main
+[submodule "anaconda-catalogs-feedstock"]
+	path = anaconda-catalogs-feedstock
+	url = ../anaconda-catalogs-feedstock
+	branch = main
