@@ -11293,3 +11293,7 @@
 	path = pyproject-examples-feedstock
 	url = ../pyproject-examples-feedstock
 	branch = main
+[submodule "pysimdjson-feedstock"]
+	path = pysimdjson-feedstock
+	url = ../pysimdjson-feedstock
+	branch = main
