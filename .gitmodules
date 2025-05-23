@@ -11301,3 +11301,7 @@
 	path = pipreqs-feedstock
 	url = ../pipreqs-feedstock
 	branch = main
+[submodule "yarg-feedstock"]
+	path = yarg-feedstock
+	url = ../yarg-feedstock
+	branch = main
