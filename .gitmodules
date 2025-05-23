@@ -11297,3 +11297,7 @@
 	path = pysimdjson-feedstock
 	url = ../pysimdjson-feedstock
 	branch = main
+[submodule "pipreqs-feedstock"]
+	path = pipreqs-feedstock
+	url = ../pipreqs-feedstock
+	branch = main
