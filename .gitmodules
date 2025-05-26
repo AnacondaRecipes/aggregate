@@ -11305,10 +11305,6 @@
 	path = yarg-feedstock
 	url = ../yarg-feedstock
 	branch = main
-[submodule "fivetran_connector_sdk-feedstock"]
-	path = fivetran_connector_sdk-feedstock
-	url = ../fivetran_connector_sdk-feedstock
-	branch = main
 [submodule "redshift-connector-feedstock"]
 	path = redshift-connector-feedstock
 	url = ../redshift-connector-feedstock
