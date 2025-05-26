@@ -11309,3 +11309,7 @@
 	path = redshift-connector-feedstock
 	url = ../redshift-connector-feedstock
 	branch = main
+[submodule "fivetran-connector-sdk-feedstock"]
+	path = fivetran-connector-sdk-feedstock
+	url = ../fivetran-connector-sdk-feedstock
+	branch = main
