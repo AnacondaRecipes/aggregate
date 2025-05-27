@@ -11317,3 +11317,7 @@
 	path = langgraph-prebuilt-feedstock
 	url = ../langgraph-prebuilt-feedstock
 	branch = main
+[submodule "diffutils-feedstock"]
+	path = diffutils-feedstock
+	url = ../diffutils-feedstock
+	branch = main
