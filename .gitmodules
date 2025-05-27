@@ -11325,3 +11325,7 @@
 	path = langgraph-checkpoint-feedstock
 	url = ../langgraph-checkpoint-feedstock
 	branch = main
+[submodule "langgraph-sdk-feedstock"]
+	path = langgraph-sdk-feedstock
+	url = ../langgraph-sdk-feedstock
+	branch = main
