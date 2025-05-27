@@ -11313,3 +11313,7 @@
 	path = fivetran-connector-sdk-feedstock
 	url = ../fivetran-connector-sdk-feedstock
 	branch = main
+[submodule "langgraph-prebuilt-feedstock"]
+	path = langgraph-prebuilt-feedstock
+	url = ../langgraph-prebuilt-feedstock
+	branch = main
