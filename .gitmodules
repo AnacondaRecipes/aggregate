@@ -11329,3 +11329,7 @@
 	path = langgraph-sdk-feedstock
 	url = ../langgraph-sdk-feedstock
 	branch = main
+[submodule "ormsgpack-feedstock"]
+	path = ormsgpack-feedstock
+	url = ../ormsgpack-feedstock
+	branch = main
