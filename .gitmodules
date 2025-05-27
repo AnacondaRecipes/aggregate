@@ -11321,3 +11321,7 @@
 	path = diffutils-feedstock
 	url = ../diffutils-feedstock
 	branch = main
+[submodule "langgraph-checkpoint-feedstock"]
+	path = langgraph-checkpoint-feedstock
+	url = ../langgraph-checkpoint-feedstock
+	branch = main
