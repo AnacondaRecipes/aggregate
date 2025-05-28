@@ -11333,3 +11333,7 @@
 	path = ormsgpack-feedstock
 	url = ../ormsgpack-feedstock
 	branch = main
+[submodule "wxpython-feedstock"]
+	path = wxpython-feedstock
+	url = ../wxpython-feedstock
+	branch = master
