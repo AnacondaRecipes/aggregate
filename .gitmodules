@@ -11337,3 +11337,7 @@
 	path = wxpython-feedstock
 	url = ../wxpython-feedstock
 	branch = master
+[submodule "langgraph-feedstock"]
+	path = langgraph-feedstock
+	url = ../langgraph-feedstock
+	branch = main
