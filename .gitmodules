@@ -11341,3 +11341,7 @@
 	path = langgraph-feedstock
 	url = ../langgraph-feedstock
 	branch = main
+[submodule "conda-tree-feedstock"]
+	path = conda-tree-feedstock
+	url = ../conda-tree-feedstock
+	branch = main
