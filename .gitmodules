@@ -11345,3 +11345,7 @@
 	path = conda-tree-feedstock
 	url = ../conda-tree-feedstock
 	branch = main
+[submodule "psycopg-feedstock"]
+	path = psycopg-feedstock
+	url = ../psycopg-feedstock
+	branch = main
