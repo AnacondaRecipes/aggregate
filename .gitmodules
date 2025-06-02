@@ -454,7 +454,7 @@
 [submodule "msgpack-python-feedstock"]
 	url = ../msgpack-python-feedstock.git
 	path = msgpack-python-feedstock
-	branch = master
+	branch = main
 [submodule "multipledispatch-feedstock"]
 	url = ../multipledispatch-feedstock.git
 	path = multipledispatch-feedstock
