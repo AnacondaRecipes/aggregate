@@ -11353,3 +11353,6 @@
 	path = unidist-packages-feedstock
 	url = ../unidist-packages-feedstock
 	branch = main
+[submodule "cdt_el8_aarch64-feedstock"]
+	path = cdt_el8_aarch64-feedstock
+	url = ./cdt_el8_aarch64-feedstock
