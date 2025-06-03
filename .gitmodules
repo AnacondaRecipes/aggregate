@@ -11349,3 +11349,7 @@
 	path = psycopg-feedstock
 	url = ../psycopg-feedstock
 	branch = main
+[submodule "unidist-packages-feedstock"]
+	path = unidist-packages-feedstock
+	url = ../unidist-packages-feedstock
+	branch = main
