@@ -11360,3 +11360,6 @@
 	path = oracle-instant-client-feedstock
 	url = ../oracle-instant-client-feedstock
 	branch = main
+[submodule "cdt_el8_x86_64-feedstock"]
+	path = cdt_el8_x86_64-feedstock
+	url = ../cdt_el8_x86_64-feedstock
