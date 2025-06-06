@@ -11367,3 +11367,7 @@
 	path = lua-feedstock
 	url = ../lua-feedstock
 	branch = master
+[submodule "simple-websocket-feedstock"]
+	path = simple-websocket-feedstock
+	url = ../simple-websocket-feedstock
+	branch = main
