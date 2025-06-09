@@ -11375,3 +11375,7 @@
 	path = aioredis-feedstock
 	url = ../aioredis-feedstock
 	branch = master
+[submodule "osx-sysroot-feedstock"]
+	path = osx-sysroot-feedstock
+	url = ../osx-sysroot-feedstock
+	branch = main
