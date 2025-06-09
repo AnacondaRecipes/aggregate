@@ -11371,3 +11371,7 @@
 	path = simple-websocket-feedstock
 	url = ../simple-websocket-feedstock
 	branch = main
+[submodule "aioredis-feedstock"]
+	path = aioredis-feedstock
+	url = ../aioredis-feedstock
+	branch = master
