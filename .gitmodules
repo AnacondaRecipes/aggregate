@@ -11379,3 +11379,7 @@
 	path = osx-sysroot-feedstock
 	url = ../osx-sysroot-feedstock
 	branch = main
+[submodule "hstspreload-feedstock"]
+	path = hstspreload-feedstock
+	url = ../hstspreload-feedstock
+	branch = master
