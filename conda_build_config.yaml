@@ -12,6 +12,8 @@ c_compiler:
   - gcc                        # [linux]
   - clang                      # [osx]
   - vs2019                     # [win]
+c_stdlib:
+  - sysroot                    # [linux]
 cxx_compiler:
   - gxx                        # [linux]
   - clangxx                    # [osx]
@@ -54,6 +56,9 @@ cran_mirror:
 c_compiler_version:        # [linux or osx]
   - 11.2.0                 # [linux]
   - 14                     # [osx]
+c_stdlib_version:          # [unix]
+  - 2.17                   # [linux and (not ANACONDA_ROCKET_GLIBC or ANACONDA_ROCKET_GLIBC == "2.17")]
+  - 2.28                   # [linux and ANACONDA_ROCKET_GLIBC == "2.28"]
 cxx_compiler_version:      # [linux or osx]
   - 11.2.0                 # [linux]
   - 14                     # [osx]
@@ -134,9 +139,13 @@ target_platform:
   # - win-32                     # [win]
 channel_targets:
   - defaults
-cdt_name:
-  - amzn2    # [linux and aarch64]
+cdt_name:          # [linux]
+  - amzn2          # [linux and aarch64 and (not ANACONDA_ROCKET_GLIBC or ANACONDA_ROCKET_GLIBC == "2.17")]
+  - el8            # [linux and ANACONDA_ROCKET_GLIBC == "2.28"]
 
+# https://github.com/conda/conda-build/issues/5733
+BUILD: x86_64-conda_el8-linux-gnu   # [linux and x86_64 and ANACONDA_ROCKET_GLIBC == "2.28"]
+BUILD: aarch64-conda_el8-linux-gnu  # [linux and aarch64 and ANACONDA_ROCKET_GLIBC == "2.28"]
 
 ## GLOBAL pinnings
 alsa_lib:
