@@ -11383,3 +11383,7 @@
 	path = hstspreload-feedstock
 	url = ../hstspreload-feedstock
 	branch = master
+[submodule "python-daemon-feedstock"]
+	path = python-daemon-feedstock
+	url = ../python-daemon-feedstock
+	branch = master
