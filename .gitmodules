@@ -11387,3 +11387,7 @@
 	path = python-daemon-feedstock
 	url = ../python-daemon-feedstock
 	branch = master
+[submodule "changelog-chug-feedstock"]
+	path = changelog-chug-feedstock
+	url = ../changelog-chug-feedstock
+	branch = main
