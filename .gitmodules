@@ -11391,3 +11391,7 @@
 	path = changelog-chug-feedstock
 	url = ../changelog-chug-feedstock
 	branch = main
+[submodule "parserator-feedstock"]
+	path = parserator-feedstock
+	url = ../parserator-feedstock
+	branch = main
