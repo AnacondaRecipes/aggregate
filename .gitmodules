@@ -11407,3 +11407,7 @@
 	path = ragel-feedstock
 	url = ../ragel-feedstock
 	branch = main
+[submodule "diskcache-feedstock"]
+	path = diskcache-feedstock
+	url = ../diskcache-feedstock
+	branch = main
