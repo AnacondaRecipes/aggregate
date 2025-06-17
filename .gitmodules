@@ -11403,3 +11403,7 @@
 	path = arrow-cpp-18.1.x-feedstock
 	url = ../arrow-cpp-feedstock
 	branch = master-18.1x
+[submodule "ragel-feedstock"]
+	path = ragel-feedstock
+	url = ../ragel-feedstock
+	branch = main
