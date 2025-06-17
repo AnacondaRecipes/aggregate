@@ -57,7 +57,8 @@ c_compiler_version:        # [linux or osx]
   - 11.2.0                 # [linux]
   - 14                     # [osx]
 c_stdlib_version:          # [unix]
-  - 2.17                   # [linux and (not ANACONDA_ROCKET_GLIBC or ANACONDA_ROCKET_GLIBC == "2.17")]
+  - 2.17                   # [linux and x86_64 and (not ANACONDA_ROCKET_GLIBC or ANACONDA_ROCKET_GLIBC == "2.17")]
+  - 2.26                   # [linux and aarch64 and (not ANACONDA_ROCKET_GLIBC or ANACONDA_ROCKET_GLIBC == "2.26")]
   - 2.28                   # [linux and ANACONDA_ROCKET_GLIBC == "2.28"]
 cxx_compiler_version:      # [linux or osx]
   - 11.2.0                 # [linux]
@@ -140,7 +141,7 @@ target_platform:
 channel_targets:
   - defaults
 cdt_name:          # [linux]
-  - amzn2          # [linux and aarch64 and (not ANACONDA_ROCKET_GLIBC or ANACONDA_ROCKET_GLIBC == "2.17")]
+  - amzn2          # [linux and aarch64 and (not ANACONDA_ROCKET_GLIBC or ANACONDA_ROCKET_GLIBC == "2.26")]
   - el8            # [linux and ANACONDA_ROCKET_GLIBC == "2.28"]
 
 # https://github.com/conda/conda-build/issues/5733
