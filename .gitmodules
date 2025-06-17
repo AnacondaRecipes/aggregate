@@ -11395,3 +11395,7 @@
 	path = parserator-feedstock
 	url = ../parserator-feedstock
 	branch = main
+[submodule "st-link-analysis-feedstock"]
+	path = st-link-analysis-feedstock
+	url = ../st-link-analysis-feedstock
+	branch = main
