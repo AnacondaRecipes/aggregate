@@ -11395,3 +11395,19 @@
 	path = parserator-feedstock
 	url = ../parserator-feedstock
 	branch = main
+[submodule "st-link-analysis-feedstock"]
+	path = st-link-analysis-feedstock
+	url = ../st-link-analysis-feedstock
+	branch = main
+[submodule "arrow-cpp-18.1.x-feedstock"]
+	path = arrow-cpp-18.1.x-feedstock
+	url = ../arrow-cpp-feedstock
+	branch = master-18.1x
+[submodule "ragel-feedstock"]
+	path = ragel-feedstock
+	url = ../ragel-feedstock
+	branch = main
+[submodule "diskcache-feedstock"]
+	path = diskcache-feedstock
+	url = ../diskcache-feedstock
+	branch = main
