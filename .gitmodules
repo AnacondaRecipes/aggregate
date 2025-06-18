@@ -11411,3 +11411,7 @@
 	path = diskcache-feedstock
 	url = ../diskcache-feedstock
 	branch = main
+[submodule "pyarrow-18.1.x-feedstock"]
+	path = pyarrow-18.1.x-feedstock
+	url = ../pyarrow-feedstock
+	branch = master-18.1.x
