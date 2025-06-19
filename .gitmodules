@@ -11415,3 +11415,7 @@
 	path = pyarrow-18.1.x-feedstock
 	url = ../pyarrow-feedstock
 	branch = master-18.1.x
+[submodule "libhiredis-feedstock"]
+	path = libhiredis-feedstock
+	url = ../libhiredis-feedstock
+	branch = main
