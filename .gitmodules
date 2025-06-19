@@ -11423,3 +11423,7 @@
 	path = yfinance-feedstock
 	url = ../yfinance-feedstock
 	branch = main
+[submodule "xorg-xproto-feedstock"]
+	path = xorg-xproto-feedstock
+	url = ../xorg-xproto-feedstock
+	branch = master
