@@ -11431,3 +11431,7 @@
 	path = curl-cffi-feedstock
 	url = ../curl-cffi-feedstock
 	branch = main
+[submodule "peewee-feedstock"]
+	path = peewee-feedstock
+	url = ../peewee-feedstock
+	branch = main
