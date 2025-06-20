@@ -11427,3 +11427,7 @@
 	path = xorg-xproto-feedstock
 	url = ../xorg-xproto-feedstock
 	branch = master
+[submodule "curl-cffi-feedstock"]
+	path = curl-cffi-feedstock
+	url = ../curl-cffi-feedstock
+	branch = main
