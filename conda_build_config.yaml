@@ -403,6 +403,8 @@ libcryptominisat:
   - '5.6'
 libcurl:
   - '8'
+libcxx:
+  - '14'
 libdap4:
   - '3.19'
 libdb:
