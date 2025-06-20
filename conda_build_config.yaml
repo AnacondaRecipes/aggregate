@@ -38,12 +38,12 @@ ucrt64_fortran_compiler:       # [win]
 rust_compiler:
   - rust
 rust_compiler_version:
-  - 1.82.0
+  - 1.87.0
 # use {{ compiler('rust-gnu') }} when requiring a build using the m2w64-toolchain
 rust_gnu_compiler:             # [win]
   - rust-gnu                   # [win]
 rust_gnu_compiler_version:     # [win]
-  - 1.82.0                     # [win]
+  - 1.87.0                     # [win]
 CONDA_BUILD_SYSROOT:
   - /opt/MacOSX10.15.sdk        # [osx and x86_64]
   - /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk  # [osx and arm64]
