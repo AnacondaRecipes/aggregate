@@ -11435,3 +11435,7 @@
 	path = peewee-feedstock
 	url = ../peewee-feedstock
 	branch = main
+[submodule "winflexbison-feedstock"]
+	path = winflexbison-feedstock
+	url = ../winflexbison-feedstock
+	branch = main
