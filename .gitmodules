@@ -11439,3 +11439,7 @@
 	path = winflexbison-feedstock
 	url = ../winflexbison-feedstock
 	branch = main
+[submodule "simple-parsing-feedstock"]
+	path = simple-parsing-feedstock
+	url = ../simple-parsing-feedstock
+	branch = main
