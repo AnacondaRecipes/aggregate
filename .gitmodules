@@ -11443,3 +11443,7 @@
 	path = simple-parsing-feedstock
 	url = ../simple-parsing-feedstock
 	branch = main
+[submodule "starlette-context-feedstock"]
+	path = starlette-context-feedstock
+	url = ../starlette-context-feedstock
+	branch = main
