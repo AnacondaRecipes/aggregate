@@ -11447,3 +11447,7 @@
 	path = starlette-context-feedstock
 	url = ../starlette-context-feedstock
 	branch = main
+[submodule "etils-feedstock"]
+	path = etils-feedstock
+	url = ../etils-feedstock
+	branch = main
