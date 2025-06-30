@@ -139,11 +139,14 @@ cdt_name:          # [linux]
 BUILD: x86_64-conda_el8-linux-gnu   # [linux and x86_64 and ANACONDA_ROCKET_GLIBC == "2.28"]
 BUILD: aarch64-conda_el8-linux-gnu  # [linux and aarch64 and ANACONDA_ROCKET_GLIBC == "2.28"]
 
-# TODO: These are only necessary as we transition to using the stdlib('c') macro. They should be
-# removed once it is safe to do so.
 OSX_SDK_DIR:
   - /opt                                      # [osx and x86_64]
   - /Library/Developer/CommandLineTools/SDKs  # [osx and arm64]
+# TODO: These are only necessary as we transition to using the stdlib('c') macro. They should be
+# removed once it is safe to do so.
+CONDA_BUILD_SYSROOT:
+  - /opt/MacOSX10.15.sdk        # [osx and x86_64]
+  - /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk  # [osx and arm64]
 macos_min_version:
   - 10.15 # [osx and x86_64]
   - 11.1  # [osx and arm64]
