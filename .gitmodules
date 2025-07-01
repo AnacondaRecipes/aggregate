@@ -11455,3 +11455,7 @@
 	path = grpc-interceptor-feedstock
 	url = ../grpc-interceptor-feedstock
 	branch = main
+[submodule "sqlmodel-feedstock"]
+	path = sqlmodel-feedstock
+	url = ../sqlmodel-feedstock
+	branch = main
