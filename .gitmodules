@@ -11451,3 +11451,7 @@
 	path = etils-feedstock
 	url = ../etils-feedstock
 	branch = main
+[submodule "grpc-interceptor-feedstock"]
+	path = grpc-interceptor-feedstock
+	url = ../grpc-interceptor-feedstock
+	branch = main
