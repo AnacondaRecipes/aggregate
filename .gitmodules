@@ -11459,3 +11459,7 @@
 	path = sqlmodel-feedstock
 	url = ../sqlmodel-feedstock
 	branch = main
+[submodule "authzed-py-feedstock"]
+	path = authzed-py-feedstock
+	url = ../authzed-py-feedstock
+	branch = main
