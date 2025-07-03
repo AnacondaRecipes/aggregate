@@ -11463,3 +11463,7 @@
 	path = authzed-py-feedstock
 	url = ../authzed-py-feedstock
 	branch = main
+[submodule "glextrusion-feedstock"]
+	path = glextrusion-feedstock
+	url = ../glextrusion-feedstock
+	branch = main
