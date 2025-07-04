@@ -11467,3 +11467,7 @@
 	path = glextrusion-feedstock
 	url = ../glextrusion-feedstock
 	branch = main
+[submodule "openjdk-17.0.14-feedstock"]
+	path = openjdk-17.0.14-feedstock
+	url = ../openjdk-feedstock
+	branch = master-17.0.14
