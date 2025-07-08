@@ -11475,3 +11475,7 @@
 	path = aws-lc-feedstock
 	url = ../aws-lc-feedstock
 	branch = main
+[submodule "orbax-checkpoint-feedstock"]
+	path = orbax-checkpoint-feedstock
+	url = ../orbax-checkpoint-feedstock
+	branch = main
