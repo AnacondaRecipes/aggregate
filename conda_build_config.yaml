@@ -15,6 +15,7 @@ c_compiler:
 c_stdlib:
   - sysroot                    # [linux]
   - macosx_deployment_target   # [osx]
+  - vs                         # [win]
 cxx_compiler:
   - gxx                        # [linux]
   - clangxx                    # [osx]
@@ -51,18 +52,21 @@ VERBOSE_CM:
   - VERBOSE=1
 cran_mirror:
   - https://cran.r-project.org
-c_compiler_version:        # [linux or osx]
+c_compiler_version:
   - 11.2.0                 # [linux]
   - 14                     # [osx]
-c_stdlib_version:          # [unix]
+  - 19.29                  # [win]
+c_stdlib_version:
   - 2.17                   # [linux and x86_64 and (not ANACONDA_ROCKET_GLIBC or ANACONDA_ROCKET_GLIBC == "2.17")]
   - 2.26                   # [linux and aarch64 and (not ANACONDA_ROCKET_GLIBC or ANACONDA_ROCKET_GLIBC == "2.26")]
   - 2.28                   # [linux and ANACONDA_ROCKET_GLIBC == "2.28"]
   - 10.15                  # [osx and x86_64]
   - 11.1                   # [osx and arm64]
-cxx_compiler_version:      # [linux or osx]
+  - 2019.11                # [win]
+cxx_compiler_version:
   - 11.2.0                 # [linux]
   - 14                     # [osx]
+  - 19.29                  # [win]
 cuda_compiler_version:
   - 12.4
 fortran_compiler_version:
