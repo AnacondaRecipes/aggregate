@@ -11323,3 +11323,7 @@
 	path = openjdk-feedstock-11.0.27
 	url = ../openjdk-feedstock
 	branch = master-11.0.27
+[submodule "vc-feedstock"]
+	path = vc-feedstock
+	url = ../vc-feedstock
+	branch = main
