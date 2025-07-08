@@ -11319,3 +11319,7 @@
 	path = orbax-checkpoint-feedstock
 	url = ../orbax-checkpoint-feedstock
 	branch = main
+[submodule "openjdk-feedstock-11.0.27"]
+	path = openjdk-feedstock-11.0.27
+	url = ../openjdk-feedstock
+	branch = master-11.0.27
