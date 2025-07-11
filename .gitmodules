@@ -11327,3 +11327,7 @@
 	path = vc-feedstock
 	url = ../vc-feedstock
 	branch = main
+[submodule "array-record-feedstock"]
+	path = array-record-feedstock
+	url = ../array-record-feedstock
+	branch = main
