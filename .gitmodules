@@ -11331,3 +11331,7 @@
 	path = array-record-feedstock
 	url = ../array-record-feedstock
 	branch = main
+[submodule "aiokafka-feedstock"]
+	path = aiokafka-feedstock
+	url = ../aiokafka-feedstock
+	branch = main
