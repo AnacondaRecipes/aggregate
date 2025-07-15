@@ -11335,3 +11335,7 @@
 	path = aiokafka-feedstock
 	url = ../aiokafka-feedstock
 	branch = main
+[submodule "kopf-feedstock"]
+	path = kopf-feedstock
+	url = ../kopf-feedstock
+	branch = main
