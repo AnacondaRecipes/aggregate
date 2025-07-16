@@ -11339,3 +11339,7 @@
 	path = kopf-feedstock
 	url = ../kopf-feedstock
 	branch = main
+[submodule "streamlit-quill-feedstock"]
+	path = streamlit-quill-feedstock
+	url = ../streamlit-quill-feedstock
+	branch = main
