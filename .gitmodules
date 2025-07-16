@@ -11343,3 +11343,7 @@
 	path = streamlit-quill-feedstock
 	url = ../streamlit-quill-feedstock
 	branch = main
+[submodule "winningvariant-feedstock"]
+	path = winningvariant-feedstock
+	url = ../winningvariant-feedstock
+	branch = main
