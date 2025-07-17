@@ -11347,3 +11347,7 @@
 	path = winningvariant-feedstock
 	url = ../winningvariant-feedstock
 	branch = main
+[submodule "dask-ml-1.9.x-feedstock"]
+	path = dask-ml-1.9.x-feedstock
+	url = ../dask-ml-feedstock
+	branch = master-1.9.x
