@@ -11363,3 +11363,7 @@
 	path = qtwayland-feedstock
 	url = ../qtwayland-feedstock
 	branch = main
+[submodule "vulkan-loader-feedstock"]
+	path = vulkan-loader-feedstock
+	url = ../vulkan-loader-feedstock
+	branch = main
