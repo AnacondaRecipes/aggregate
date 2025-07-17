@@ -11351,3 +11351,7 @@
 	path = dask-ml-1.9.x-feedstock
 	url = ../dask-ml-feedstock
 	branch = master-1.9.x
+[submodule "esda-2.4.1-feedstock"]
+	path = esda-2.4.1-feedstock
+	url = ../esda-feedstock
+	branch = master-2.4.1
