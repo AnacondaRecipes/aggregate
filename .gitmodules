@@ -11367,3 +11367,7 @@
 	path = vulkan-loader-feedstock
 	url = ../vulkan-loader-feedstock
 	branch = main
+[submodule "vulkan-headers-feedstock"]
+	path = vulkan-headers-feedstock
+	url = ../vulkan-headers-feedstock
+	branch = main
