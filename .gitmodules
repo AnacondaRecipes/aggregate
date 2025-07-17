@@ -11355,3 +11355,7 @@
 	path = esda-2.4.1-feedstock
 	url = ../esda-feedstock
 	branch = master-2.4.1
+[submodule "wayland-feedstock"]
+	path = wayland-feedstock
+	url = ../wayland-feedstock
+	branch = main
