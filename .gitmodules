@@ -11359,3 +11359,7 @@
 	path = wayland-feedstock
 	url = ../wayland-feedstock
 	branch = main
+[submodule "qtwayland-feedstock"]
+	path = qtwayland-feedstock
+	url = ../qtwayland-feedstock
+	branch = main
