@@ -11379,3 +11379,7 @@
 	path = pymc-extras-feedstock
 	url = ../pymc-extras-feedstock
 	branch = main
+[submodule "better-optimize-feedstock"]
+	path = better-optimize-feedstock
+	url = ../better-optimize-feedstock
+	branch = main
