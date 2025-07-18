@@ -11375,3 +11375,7 @@
 	path = pynndescent-0.5.4-feedstock
 	url = ../pynndescent-feedstock
 	branch = master-0.5.4
+[submodule "pymc-extras-feedstock"]
+	path = pymc-extras-feedstock
+	url = ../pymc-extras-feedstock
+	branch = main
