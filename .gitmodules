@@ -11371,3 +11371,7 @@
 	path = vulkan-headers-feedstock
 	url = ../vulkan-headers-feedstock
 	branch = main
+[submodule "pynndescent-0.5.4-feedstock"]
+	path = pynndescent-0.5.4-feedstock
+	url = ../pynndescent-feedstock
+	branch = master-0.5.4
