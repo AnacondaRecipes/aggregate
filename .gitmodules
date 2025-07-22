@@ -11383,3 +11383,7 @@
 	path = better-optimize-feedstock
 	url = ../better-optimize-feedstock
 	branch = main
+[submodule "multitasking-feedstock"]
+	path = multitasking-feedstock
+	url = ../multitasking-feedstock
+	branch = main
