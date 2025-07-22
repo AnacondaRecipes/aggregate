@@ -11387,3 +11387,7 @@
 	path = multitasking-feedstock
 	url = ../multitasking-feedstock
 	branch = main
+[submodule "python-3.13-feedstock"]
+	path = python-3.13-feedstock
+	url = ../python-feedstock
+	branch = main-3.13
