@@ -11395,3 +11395,7 @@
 	path = conda-self-feedstock
 	url = ../conda-self-feedstock
 	branch = main
+[submodule "systemd-feedstock"]
+	path = systemd-feedstock
+	url = ../systemd-feedstock
+	branch = main
