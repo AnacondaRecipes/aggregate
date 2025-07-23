@@ -11399,3 +11399,7 @@
 	path = systemd-feedstock
 	url = ../systemd-feedstock
 	branch = main
+[submodule "keras-hub-feedstock"]
+	path = keras-hub-feedstock
+	url = ../keras-hub-feedstock
+	branch = main
