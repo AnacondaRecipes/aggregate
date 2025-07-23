@@ -11391,3 +11391,7 @@
 	path = python-3.13-feedstock
 	url = ../python-feedstock
 	branch = main-3.13
+[submodule "conda-self-feedstock"]
+	path = conda-self-feedstock
+	url = ../conda-self-feedstock
+	branch = main
