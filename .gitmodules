@@ -11403,3 +11403,7 @@
 	path = keras-hub-feedstock
 	url = ../keras-hub-feedstock
 	branch = main
+[submodule "pywin32-on-windows-feedstock"]
+	path = pywin32-on-windows-feedstock
+	url = ../pywin32-on-windows-feedstock
+	branch = main
