@@ -11407,3 +11407,7 @@
 	path = pywin32-on-windows-feedstock
 	url = ../pywin32-on-windows-feedstock
 	branch = main
+[submodule "legacy-cgi-feedstock"]
+	path = legacy-cgi-feedstock
+	url = ./legacy-cgi-feedstock
+	branch = main
