@@ -11411,3 +11411,7 @@
 	path = legacy-cgi-feedstock
 	url = ../legacy-cgi-feedstock
 	branch = main
+[submodule "flang-feedstock"]
+	path = flang-feedstock
+	url = ../flang-feedstock
+	branch = main
