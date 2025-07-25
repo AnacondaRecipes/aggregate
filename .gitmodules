@@ -11415,3 +11415,7 @@
 	path = flang-feedstock
 	url = ../flang-feedstock
 	branch = main
+[submodule "briefcase-feedstock"]
+	path = briefcase-feedstock
+	url = ../briefcase-feedstock
+	branch = main
