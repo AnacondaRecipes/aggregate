@@ -11409,5 +11409,5 @@
 	branch = main
 [submodule "legacy-cgi-feedstock"]
 	path = legacy-cgi-feedstock
-	url = ./legacy-cgi-feedstock
+	url = ../legacy-cgi-feedstock
 	branch = main
