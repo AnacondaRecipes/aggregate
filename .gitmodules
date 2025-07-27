@@ -11419,7 +11419,3 @@
 	path = briefcase-feedstock
 	url = ../briefcase-feedstock
 	branch = main
-[submodule "apache-airflow-feedstock"]
-	path = apache-airflow-feedstock
-	url = ../apache-airflow-feedstock
-	branch = services
