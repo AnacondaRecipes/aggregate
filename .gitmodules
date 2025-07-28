@@ -11431,3 +11431,7 @@
 	path = libhdfs3-feedstock
 	url = ../libhdfs3-feedstock
 	branch = master
+[submodule "snowpark-connect-feedstock"]
+	path = snowpark-connect-feedstock
+	url = ../snowpark-connect-feedstock
+	branch = main
