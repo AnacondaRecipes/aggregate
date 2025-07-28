@@ -11423,10 +11423,6 @@
 	path = snowpark-submit-feedstock
 	url = ../snowpark-submit-feedstock
 	branch = main
-[submodule "airflow-feedstock"]
-	path = airflow-feedstock
-	url = ../airflow-feedstock
-	branch = master
 [submodule "libhdfs3-feedstock"]
 	path = libhdfs3-feedstock
 	url = ../libhdfs3-feedstock
