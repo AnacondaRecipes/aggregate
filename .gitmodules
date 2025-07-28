@@ -11423,3 +11423,7 @@
 	path = snowpark-submit-feedstock
 	url = ../snowpark-submit-feedstock
 	branch = main
+[submodule "airflow-feedstock"]
+	path = airflow-feedstock
+	url = ../airflow-feedstock
+	branch = master
