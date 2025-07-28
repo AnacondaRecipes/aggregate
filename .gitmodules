@@ -11419,7 +11419,3 @@
 	path = briefcase-feedstock
 	url = ../briefcase-feedstock
 	branch = main
-[submodule "snowpark-submit-feedstock"]
-	path = snowpark-submit-feedstock
-	url = ../snowpark-submit-feedstock
-	branch = main
