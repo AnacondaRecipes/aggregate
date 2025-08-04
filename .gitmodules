@@ -11431,3 +11431,7 @@
 	path = snowpark-connect-feedstock
 	url = ../snowpark-connect-feedstock
 	branch = main
+[submodule "arm-variant-feedstock"]
+	path = arm-variant-feedstock
+	url = ../arm-variant-feedstock
+	branch = main
