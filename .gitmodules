@@ -11435,3 +11435,7 @@
 	path = arm-variant-feedstock
 	url = ../arm-variant-feedstock
 	branch = main
+[submodule "cf-nvidia-tools-feedstock"]
+	path = cf-nvidia-tools-feedstock
+	url = ../cf-nvidia-tools-feedstock
+	branch = main
