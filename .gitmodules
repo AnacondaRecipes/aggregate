@@ -11443,3 +11443,7 @@
 	path = pycountry-feedstock
 	url = ../pycountry-feedstock
 	branch = main
+[submodule "mistral-common-feedstock"]
+	path = mistral-common-feedstock
+	url = ../mistral-common-feedstock
+	branch = main
