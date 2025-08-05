@@ -11439,3 +11439,7 @@
 	path = cf-nvidia-tools-feedstock
 	url = ../cf-nvidia-tools-feedstock
 	branch = main
+[submodule "pycountry-feedstock"]
+	path = pycountry-feedstock
+	url = ../pycountry-feedstock
+	branch = main
