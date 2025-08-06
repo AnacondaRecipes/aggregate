@@ -11459,3 +11459,7 @@
 	path = ucx-split-feedstock
 	url = ../ucx-split-feedstock
 	branch = main
+[submodule "rdma-core-feedstock"]
+	path = rdma-core-feedstock
+	url = ../rdma-core-feedstock
+	branch = main
