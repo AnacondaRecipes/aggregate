@@ -11467,3 +11467,7 @@
 	path = snakesay-feedstock
 	url = ../snakesay-feedstock
 	branch = main
+[submodule "pythonanywhere-core-feedstock"]
+	path = pythonanywhere-core-feedstock
+	url = ../pythonanywhere-core-feedstock
+	branch = main
