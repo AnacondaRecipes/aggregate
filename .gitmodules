@@ -11463,3 +11463,7 @@
 	path = snakesay-feedstock
 	url = ../snakesay-feedstock
 	branch = main
+[submodule "ucx-split-feedstock"]
+	path = ucx-split-feedstock
+	url = ../ucx-split-feedstock
+	branch = main
