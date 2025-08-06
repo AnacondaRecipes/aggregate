@@ -11455,3 +11455,7 @@
 	path = curtsies-feedstock
 	url = ../curtsies-feedstock
 	branch = master
+[submodule "ucx-split-feedstock"]
+	path = ucx-split-feedstock
+	url = ../ucx-split-feedstock
+	branch = main
