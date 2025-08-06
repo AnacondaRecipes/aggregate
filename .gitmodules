@@ -11471,3 +11471,7 @@
 	path = pythonanywhere-core-feedstock
 	url = ../pythonanywhere-core-feedstock
 	branch = main
+[submodule "libnl-feedstock"]
+	path = libnl-feedstock
+	url = ../libnl-feedstock
+	branch = main
