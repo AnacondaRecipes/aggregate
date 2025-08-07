@@ -11475,3 +11475,7 @@
 	path = libnl-feedstock
 	url = ../libnl-feedstock
 	branch = main
+[submodule "jupyter_conda-feedstock"]
+	path = jupyter_conda-feedstock
+	url = ../jupyter_conda-feedstock
+	branch = main
