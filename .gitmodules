@@ -11483,3 +11483,7 @@
 	path = libhwloc-feedstock
 	url = ../libhwloc-feedstock
 	branch = main
+[submodule "apricot-select-feedstock"]
+	path = apricot-select-feedstock
+	url = ../apricot-select-feedstock
+	branch = main
