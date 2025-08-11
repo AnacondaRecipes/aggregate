@@ -11487,3 +11487,7 @@
 	path = apricot-select-feedstock
 	url = ../apricot-select-feedstock
 	branch = main
+[submodule "curl-impersonate-feedstock"]
+	path = curl-impersonate-feedstock
+	url = ../curl-impersonate-feedstock
+	branch = main
