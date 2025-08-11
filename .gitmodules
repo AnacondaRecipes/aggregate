@@ -11479,3 +11479,7 @@
 	path = jupyter_conda-feedstock
 	url = ../jupyter_conda-feedstock
 	branch = main
+[submodule "libhwloc-feedstock"]
+	path = libhwloc-feedstock
+	url = ../libhwloc-feedstock
+	branch = main
