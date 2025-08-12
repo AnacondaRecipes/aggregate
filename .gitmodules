@@ -11495,3 +11495,7 @@
 	path = pytest-celery-feedstock
 	url = ../pytest-celery-feedstock
 	branch = master
+[submodule "numactl-feedstock"]
+	path = numactl-feedstock
+	url = ../numactl-feedstock
+	branch = main
