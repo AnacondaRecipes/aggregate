@@ -368,7 +368,7 @@ jpeg:
 json_c:
   - '0.16'
 jsoncpp:
-  - 1.9.4
+  - 1.9.6
 jxrlib:
   - '1.1'
 kealib:
