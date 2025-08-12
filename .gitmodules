@@ -11491,3 +11491,7 @@
 	path = curl-impersonate-feedstock
 	url = ../curl-impersonate-feedstock
 	branch = main
+[submodule "pytest-celery-feedstock"]
+	path = pytest-celery-feedstock
+	url = ../pytest-celery-feedstock
+	branch = master
