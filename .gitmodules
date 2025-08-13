@@ -11507,3 +11507,7 @@
 	path = spopt-feedstock
 	url = ../spopt-feedstock
 	branch = main
+[submodule "anaconda-opentelemetry-feedstock"]
+	path = anaconda-opentelemetry-feedstock
+	url = ../anaconda-opentelemetry-feedstock.git
+	branch = main
