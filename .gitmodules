@@ -11515,3 +11515,7 @@
 	path = trust3-client-feedstock
 	url = ../trust3-client-feedstock
 	branch = main
+[submodule "pythonanywhere-core-0.2.4-feedstock"]
+	path = pythonanywhere-core-0.2.4-feedstock
+	url = ../pythonanywhere-core-feedstock
+	branch = main-0.2.4
