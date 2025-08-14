@@ -11511,3 +11511,7 @@
 	path = anaconda-opentelemetry-feedstock
 	url = ../anaconda-opentelemetry-feedstock.git
 	branch = main
+[submodule "trust3-client-feedstock"]
+	path = trust3-client-feedstock
+	url = ../trust3-client-feedstock
+	branch = main
