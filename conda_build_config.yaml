@@ -685,7 +685,7 @@ pdal:
 perl:
   - 5.38
 pixman:
-  - '0'
+  - '0.46.4'
 popt:
   - '1'
 proj:
