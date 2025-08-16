@@ -713,7 +713,7 @@ qhull:
 qpdf:
   - '11'
 qt:
-  - '6.7'
+  - '6.9'
 quantlib:
   - '1'
 rdkit:
