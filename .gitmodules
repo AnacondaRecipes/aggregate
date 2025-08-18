@@ -11519,3 +11519,7 @@
 	path = pythonanywhere-core-0.2.4-feedstock
 	url = ../pythonanywhere-core-feedstock
 	branch = main-0.2.4
+[submodule "numpy-2.2.x-feedstock"]
+	path = numpy-2.2.x-feedstock
+	url = ../numpy-feedstock
+	branch = numpy22
