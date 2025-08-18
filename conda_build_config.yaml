@@ -94,7 +94,6 @@ python:
   - "3.11"
   - "3.12"
   - "3.13"
-  - "3.14"                 # [ANACONDA_ROCKET_ENABLE_PY314]
 # numpy will by default use a compatible ABI for the oldest still-supported numpy versions
 # `{{ pin_compatible("numpy") }}` is no longer needed as builds of numpy from version 2 have run_exports.
 numpy:
@@ -108,8 +107,6 @@ numpy:
   - 2.0
   # python 3.13
   - 2.1
-  # python 3.14            # [ANACONDA_ROCKET_ENABLE_PY314]
-  - 2.3                    # [ANACONDA_ROCKET_ENABLE_PY314]
 zip_keys:
   -
     - python
@@ -152,7 +149,7 @@ OSX_SDK_DIR:                                  # [osx]
 # removed once it is safe to do so.
 CONDA_BUILD_SYSROOT:
   - /opt/MacOSX10.15.sdk        # [osx and x86_64]
-  - /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk  # [osx and arm64]
+  - /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk  # [osx and arm64]
 macos_min_version:
   - 10.15 # [osx and x86_64]
   - 11.1  # [osx and arm64]
@@ -321,7 +318,7 @@ glpk:
 glslang:
   - '15'
 gmp:
-  - '6'
+  - '6.3.0'
 gnupg:
   - '2.4'
 gnutls:
@@ -371,7 +368,7 @@ jpeg:
 json_c:
   - '0.16'
 jsoncpp:
-  - 1.9.6
+  - 1.9.4
 jxrlib:
   - '1.1'
 kealib:
@@ -685,7 +682,7 @@ pdal:
 perl:
   - 5.38
 pixman:
-  - '0.46.4'
+  - '0'
 popt:
   - '1'
 proj:
@@ -713,7 +710,7 @@ qhull:
 qpdf:
   - '11'
 qt:
-  - '6.9'
+  - '6.7'
 quantlib:
   - '1'
 rdkit:
