@@ -218,7 +218,9 @@ backtrace:
   - '20241216'
 blosc:
   - '1'
-boost:
+libboost:
+  - 1.88.0
+libboost-devel:
   - 1.88.0
 brotli:
   - '1'
