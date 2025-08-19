@@ -11523,3 +11523,7 @@
 	path = numpy-2.2.x-feedstock
 	url = ../numpy-feedstock
 	branch = numpy22
+[submodule "streamlit-flow-component-feedstock"]
+	path = streamlit-flow-component-feedstock
+	url = ../streamlit-flow-component-feedstock
+	branch = main
