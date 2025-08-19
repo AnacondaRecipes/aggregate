@@ -11531,3 +11531,7 @@
 	path = tfcausalimpact-feedstock
 	url = ../tfcausalimpact-feedstock
 	branch = main
+[submodule "hf-xet-feedstock"]
+	path = hf-xet-feedstock
+	url = ../hf-xet-feedstock
+	branch = main
