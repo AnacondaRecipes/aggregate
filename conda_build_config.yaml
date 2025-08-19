@@ -219,9 +219,7 @@ backtrace:
 blosc:
   - '1'
 boost:
-  - 1.82
-boost_cpp:
-  - 1.82
+  - 1.88.0
 brotli:
   - '1'
 brunsli:
