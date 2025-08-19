@@ -11527,3 +11527,7 @@
 	path = streamlit-flow-component-feedstock
 	url = ../streamlit-flow-component-feedstock
 	branch = main
+[submodule "tfcausalimpact-feedstock"]
+	path = tfcausalimpact-feedstock
+	url = ../tfcausalimpact-feedstock
+	branch = main
