@@ -220,7 +220,7 @@ blosc:
   - '1'
 libboost:
   - 1.88.0
-libboost-devel:
+libboost_devel:
   - 1.88.0
 brotli:
   - '1'
