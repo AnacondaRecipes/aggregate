@@ -218,10 +218,10 @@ backtrace:
   - '20241216'
 blosc:
   - '1'
-boost:
-  - 1.82
-boost_cpp:
-  - 1.82
+libboost:
+  - 1.88.0
+libboost-devel:
+  - 1.88.0
 brotli:
   - '1'
 brunsli:
