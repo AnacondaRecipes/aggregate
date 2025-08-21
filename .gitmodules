@@ -11535,3 +11535,7 @@
 	path = hf-xet-feedstock
 	url = ../hf-xet-feedstock
 	branch = main
+[submodule "flang-activation-feedstock"]
+	path = flang-activation-feedstock
+	url = ../flang-activation-feedstock
+	branch = main
