@@ -11539,3 +11539,7 @@
 	path = flang-activation-feedstock
 	url = ../flang-activation-feedstock
 	branch = main
+[submodule "pyccolo-feedstock"]
+	path = pyccolo-feedstock
+	url = ../pyccolo-feedstock
+	branch = main
