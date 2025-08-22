@@ -11555,3 +11555,7 @@
 	path = html5rdf-feedstock
 	url = ../html5rdf-feedstock
 	branch = main
+[submodule "conda-anaconda-telemetry-feedstock"]
+	path = conda-anaconda-telemetry-feedstock
+	url = ../conda-anaconda-telemetry-feedstock
+	branch = main
