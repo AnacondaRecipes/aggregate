@@ -11547,3 +11547,7 @@
 	path = streamlit-agraph-feedstock
 	url = ../streamlit-agraph-feedstock
 	branch = main
+[submodule "rdflib-feedstock"]
+	path = rdflib-feedstock
+	url = ../rdflib-feedstock
+	branch = main
