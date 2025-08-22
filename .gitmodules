@@ -11551,3 +11551,7 @@
 	path = rdflib-feedstock
 	url = ../rdflib-feedstock
 	branch = main
+[submodule "html5rdf-feedstock"]
+	path = html5rdf-feedstock
+	url = ../html5rdf-feedstock
+	branch = main
