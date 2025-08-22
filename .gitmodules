@@ -11543,3 +11543,7 @@
 	path = pyccolo-feedstock
 	url = ../pyccolo-feedstock
 	branch = main
+[submodule "streamlit-agraph-feedstock"]
+	path = streamlit-agraph-feedstock
+	url = ../streamlit-agraph-feedstock
+	branch = main
