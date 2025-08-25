@@ -11559,3 +11559,7 @@
 	path = conda-anaconda-telemetry-feedstock
 	url = ../conda-anaconda-telemetry-feedstock
 	branch = main
+[submodule "orderly-set-feedstock"]
+	path = orderly-set-feedstock
+	url = ../orderly-set-feedstock
+	branch = main
