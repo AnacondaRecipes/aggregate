@@ -11563,3 +11563,7 @@
 	path = orderly-set-feedstock
 	url = ../orderly-set-feedstock
 	branch = main
+[submodule "winloop-feedstock"]
+	path = winloop-feedstock
+	url = ../winloop-feedstock
+	branch = main
