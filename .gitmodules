@@ -11575,3 +11575,7 @@
 	path = furo-feedstock
 	url = ../furo-feedstock
 	branch = main
+[submodule "sphinx-basic-ng-feedstock"]
+	path = sphinx-basic-ng-feedstock
+	url = ../sphinx-basic-ng-feedstock
+	branch = main
