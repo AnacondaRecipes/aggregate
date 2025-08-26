@@ -11567,3 +11567,7 @@
 	path = winloop-feedstock
 	url = ../winloop-feedstock
 	branch = main
+[submodule "pytest-docker-tools-feedstock"]
+	path = pytest-docker-tools-feedstock
+	url = ../pytest-docker-tools-feedstock
+	branch = main
