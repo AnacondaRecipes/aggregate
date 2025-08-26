@@ -739,7 +739,7 @@ serf:
 simdjson:
   - '3.10'
 sip:
-  - '6.10'
+  - '6.12'
 sleef:
   - '3'
 snappy:
