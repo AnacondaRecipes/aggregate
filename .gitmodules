@@ -11571,3 +11571,7 @@
 	path = pytest-docker-tools-feedstock
 	url = ../pytest-docker-tools-feedstock
 	branch = main
+[submodule "furo-feedstock"]
+	path = furo-feedstock
+	url = ../furo-feedstock
+	branch = main
