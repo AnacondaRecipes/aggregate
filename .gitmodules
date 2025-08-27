@@ -11583,3 +11583,7 @@
 	path = pyscaffold-feedstock
 	url = ../pyscaffold-feedstock
 	branch = main
+[submodule "levenshtein-feedstock"]
+	path = levenshtein-feedstock
+	url = ../levenshtein-feedstock
+	branch = main
