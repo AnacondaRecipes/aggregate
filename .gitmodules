@@ -11595,3 +11595,7 @@
 	path = grpc-bazel-rules-feedstock
 	url = ../grpc-bazel-rules-feedstock
 	branch = main
+[submodule "protobuf-bazel-rules-feedstock"]
+	path = protobuf-bazel-rules-feedstock
+	url = ../protobuf-bazel-rules-feedstock
+	branch = main
