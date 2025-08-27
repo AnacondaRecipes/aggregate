@@ -11587,3 +11587,7 @@
 	path = levenshtein-feedstock
 	url = ../levenshtein-feedstock
 	branch = main
+[submodule "aext-notebook-load-server-feedstock"]
+	path = aext-notebook-load-server-feedstock
+	url = ../aext-notebook-load-server-feedstock
+	branch = main
