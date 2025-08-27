@@ -11603,3 +11603,7 @@
 	path = ijar-feedstock
 	url = ../ijar-feedstock
 	branch = main
+[submodule "singlejar-feedstock"]
+	path = singlejar-feedstock
+	url = ../singlejar-feedstock
+	branch = main
