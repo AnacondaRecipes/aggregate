@@ -11591,3 +11591,7 @@
 	path = aext-notebook-load-server-feedstock
 	url = ../aext-notebook-load-server-feedstock
 	branch = main
+[submodule "grpc-bazel-rules-feedstock"]
+	path = grpc-bazel-rules-feedstock
+	url = ../grpc-bazel-rules-feedstock
+	branch = main
