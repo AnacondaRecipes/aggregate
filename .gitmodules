@@ -11599,3 +11599,7 @@
 	path = protobuf-bazel-rules-feedstock
 	url = ../protobuf-bazel-rules-feedstock
 	branch = main
+[submodule "ijar-feedstock"]
+	path = ijar-feedstock
+	url = ../ijar-feedstock
+	branch = main
