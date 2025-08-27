@@ -11579,3 +11579,7 @@
 	path = sphinx-basic-ng-feedstock
 	url = ../sphinx-basic-ng-feedstock
 	branch = main
+[submodule "pyscaffold-feedstock"]
+	path = pyscaffold-feedstock
+	url = ../pyscaffold-feedstock
+	branch = main
