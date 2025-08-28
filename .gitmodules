@@ -11607,3 +11607,7 @@
 	path = singlejar-feedstock
 	url = ../singlejar-feedstock
 	branch = main
+[submodule "imblanced-learn-feedstock"]
+	path = imblanced-learn-feedstock
+	url = ../imblanced-learn-feedstock
+	branch = main
