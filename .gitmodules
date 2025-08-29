@@ -11607,3 +11607,7 @@
 	path = singlejar-feedstock
 	url = ../singlejar-feedstock
 	branch = main
+[submodule "papermill-feedstock"]
+	path = papermill-feedstock
+	url = ../papermill-feedstock
+	branch = main
