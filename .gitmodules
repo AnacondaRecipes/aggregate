@@ -11611,3 +11611,7 @@
 	path = papermill-feedstock
 	url = ../papermill-feedstock
 	branch = main
+[submodule "ansicolors-feedstock"]
+	path = ansicolors-feedstock
+	url = ../ansicolors-feedstock
+	branch = main
