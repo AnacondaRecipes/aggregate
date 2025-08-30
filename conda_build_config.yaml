@@ -718,11 +718,11 @@ pugixml:
 py_lief:
   - '0.16'
 pyqt:
-  - '6.7'
+  - '6.9'
 pyqtchart:
   - '5.15'
 pyqtwebengine:
-  - '6.7'
+  - '6.9'
 python_igraph:
   - '0.10'
 pytorch:
