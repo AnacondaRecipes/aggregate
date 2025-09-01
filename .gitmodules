@@ -11619,3 +11619,7 @@
 	path = assertpy-feedstock
 	url = ../assertpy-feedstock
 	branch = main
+[submodule "versioningit-feedstock"]
+	path = versioningit-feedstock
+	url = ../versioningit-feedstock
+	branch = main
