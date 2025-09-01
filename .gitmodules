@@ -11615,3 +11615,7 @@
 	path = ansicolors-feedstock
 	url = ../ansicolors-feedstock
 	branch = main
+[submodule "assertpy-feedstock"]
+	path = assertpy-feedstock
+	url = ../assertpy-feedstock
+	branch = main
