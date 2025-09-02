@@ -11627,3 +11627,7 @@
 	path = deprecat-feedstock
 	url = ../deprecat-feedstock
 	branch = main
+[submodule "theano-pymc-feedstock"]
+	path = theano-pymc-feedstock
+	url = ../theano-pymc-feedstock
+	branch = master
