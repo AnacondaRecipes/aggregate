@@ -11631,3 +11631,7 @@
 	path = theano-pymc-feedstock
 	url = ../theano-pymc-feedstock
 	branch = master
+[submodule "quilt-feedstock"]
+	path = quilt-feedstock
+	url = ../quilt-feedstock
+	branch = master
