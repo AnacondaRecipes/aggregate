@@ -11635,3 +11635,7 @@
 	path = quilt-feedstock
 	url = ../quilt-feedstock
 	branch = master
+[submodule "streamlit-tree-select-feedstock"]
+	path = streamlit-tree-select-feedstock
+	url = ../streamlit-tree-select-feedstock
+	branch = main
