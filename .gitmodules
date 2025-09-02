@@ -11623,3 +11623,7 @@
 	path = versioningit-feedstock
 	url = ../versioningit-feedstock
 	branch = main
+[submodule "deprecat-feedstock"]
+	path = deprecat-feedstock
+	url = ../deprecat-feedstock
+	branch = main
