@@ -56,11 +56,9 @@ c_compiler_version:        # [linux or osx]
   - 11.2.0                 # [linux]
   - 14                     # [osx]
 c_stdlib_version:
-  - 2.17                   # [linux and x86_64 and (not ANACONDA_ROCKET_GLIBC or ANACONDA_ROCKET_GLIBC == "2.17")]
-  - 2.26                   # [linux and aarch64 and (not ANACONDA_ROCKET_GLIBC or ANACONDA_ROCKET_GLIBC == "2.26")]
-  - 2.28                   # [linux and ANACONDA_ROCKET_GLIBC == "2.28"]
+  - 2.28                   # [linux]
   - 10.15                  # [osx and x86_64]
-  - 11.1                   # [osx and arm64]
+  - 12.1                   # [osx and arm64]
   - 2019.11                # [win]
 cxx_compiler_version:      # [linux or osx]
   - 11.2.0                 # [linux]
@@ -137,12 +135,11 @@ target_platform:
 channel_targets:
   - defaults
 cdt_name:          # [linux]
-  - amzn2          # [linux and aarch64 and (not ANACONDA_ROCKET_GLIBC or ANACONDA_ROCKET_GLIBC == "2.26")]
-  - el8            # [linux and ANACONDA_ROCKET_GLIBC == "2.28"]
+  - el8            # [linux]
 
 # https://github.com/conda/conda-build/issues/5733
-BUILD: x86_64-conda_el8-linux-gnu   # [linux and x86_64 and ANACONDA_ROCKET_GLIBC == "2.28"]
-BUILD: aarch64-conda_el8-linux-gnu  # [linux and aarch64 and ANACONDA_ROCKET_GLIBC == "2.28"]
+BUILD: x86_64-conda_el8-linux-gnu   # [linux and x86_64]
+BUILD: aarch64-conda_el8-linux-gnu  # [linux and aarch64]
 
 OSX_SDK_DIR:                                  # [osx]
   - /opt                                      # [osx and x86_64]
@@ -151,17 +148,17 @@ OSX_SDK_DIR:                                  # [osx]
 # TODO: These are only necessary as we transition to using the stdlib('c') macro. They should be
 # removed once it is safe to do so.
 CONDA_BUILD_SYSROOT:
-  - /opt/MacOSX10.15.sdk        # [osx and x86_64]
-  - /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk  # [osx and arm64]
+  - /opt/MacOSX10.15.sdk                                     # [osx and x86_64]
+  - /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk  # [osx and arm64]
 macos_min_version:
   - 10.15 # [osx and x86_64]
-  - 11.1  # [osx and arm64]
+  - 12.1  # [osx and arm64]
 macos_machine:
   - x86_64-apple-darwin13.4.0  # [osx and x86_64]
   - arm64-apple-darwin20.0.0   # [osx and arm64]
 MACOSX_DEPLOYMENT_TARGET:
   - 10.15 # [osx and x86_64]
-  - 11.1  # [osx and arm64]
+  - 12.1  # [osx and arm64]
 
 ## GLOBAL pinnings
 alsa_lib:
