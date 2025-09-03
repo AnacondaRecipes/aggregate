@@ -11347,14 +11347,6 @@
 	path = winningvariant-feedstock
 	url = ../winningvariant-feedstock
 	branch = main
-[submodule "dask-ml-1.9.x-feedstock"]
-	path = dask-ml-1.9.x-feedstock
-	url = ../dask-ml-feedstock
-	branch = master-1.9.x
-[submodule "esda-2.4.1-feedstock"]
-	path = esda-2.4.1-feedstock
-	url = ../esda-feedstock
-	branch = master-2.4.1
 [submodule "wayland-feedstock"]
 	path = wayland-feedstock
 	url = ../wayland-feedstock
@@ -11371,10 +11363,6 @@
 	path = vulkan-headers-feedstock
 	url = ../vulkan-headers-feedstock
 	branch = main
-[submodule "pynndescent-0.5.4-feedstock"]
-	path = pynndescent-0.5.4-feedstock
-	url = ../pynndescent-feedstock
-	branch = master-0.5.4
 [submodule "pymc-extras-feedstock"]
 	path = pymc-extras-feedstock
 	url = ../pymc-extras-feedstock
@@ -11515,10 +11503,6 @@
 	path = trust3-client-feedstock
 	url = ../trust3-client-feedstock
 	branch = main
-[submodule "pythonanywhere-core-0.2.4-feedstock"]
-	path = pythonanywhere-core-0.2.4-feedstock
-	url = ../pythonanywhere-core-feedstock
-	branch = main-0.2.4
 [submodule "numpy-2.2.x-feedstock"]
 	path = numpy-2.2.x-feedstock
 	url = ../numpy-feedstock
