@@ -649,7 +649,7 @@ metis:
 minizip:
   - '4'
 mkl:
-  - '2023'
+  - '2025'
 mkl_service:
   - '2'
 mpc:
