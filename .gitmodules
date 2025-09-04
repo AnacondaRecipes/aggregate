@@ -11639,3 +11639,15 @@
 	path = dbt-databricks-feedstock
 	url = ../dbt-databricks-feedstock
 	branch = main
+[submodule "setuptools-72-feedstock"]
+	path = setuptools-72-feedstock
+	url = ../setuptools-feedstock
+	branch = main-72
+[submodule "pytest-6-feedstock"]
+	path = pytest-6-feedstock
+	url = ../pytest-feedstock
+	branch = main-6
+[submodule "pytest-7-feedstock"]
+	path = pytest-7-feedstock
+	url = ../pytest-feedstock
+	branch = main-7
