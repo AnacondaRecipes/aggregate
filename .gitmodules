@@ -11635,3 +11635,7 @@
 	path = sqlparams-feedstock
 	url = ../sqlparams-feedstock
 	branch = main
+[submodule "dbt-databricks-feedstock"]
+	path = dbt-databricks-feedstock
+	url = ../dbt-databricks-feedstock
+	branch = main
