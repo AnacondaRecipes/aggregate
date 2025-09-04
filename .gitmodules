@@ -11631,3 +11631,7 @@
 	path = dbt-spark-feedstock
 	url = ../dbt-spark-feedstock
 	branch = main
+[submodule "sqlparams-feedstock"]
+	path = sqlparams-feedstock
+	url = ../sqlparams-feedstock
+	branch = main
