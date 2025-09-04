@@ -11627,3 +11627,7 @@
 	path = dbt-protos-feedstock
 	url = ../dbt-protos-feedstock
 	branch = main
+[submodule "dbt-spark-feedstock"]
+	path = dbt-spark-feedstock
+	url = ../dbt-spark-feedstock
+	branch = main
