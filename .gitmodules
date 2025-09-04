@@ -11623,3 +11623,7 @@
 	path = streamlit-tree-select-feedstock
 	url = ../streamlit-tree-select-feedstock
 	branch = main
+[submodule "dbt-protos-feedstock"]
+	path = dbt-protos-feedstock
+	url = ../dbt-protos-feedstock
+	branch = main
