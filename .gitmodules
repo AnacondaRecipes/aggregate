@@ -11651,3 +11651,7 @@
 	path = pytest-7-feedstock
 	url = ../pytest-feedstock
 	branch = main-7
+[submodule "biom-format-feedstock"]
+	path = biom-format-feedstock
+	url = ../biom-format-feedstock
+	branch = main
