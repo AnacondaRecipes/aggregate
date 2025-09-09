@@ -11655,3 +11655,11 @@
 	path = biom-format-feedstock
 	url = ../biom-format-feedstock
 	branch = main
+[submodule "array-api-compat-feedstock"]
+	path = array-api-compat-feedstock
+	url = ../array-api-compat-feedstock
+	branch = main
+[submodule "language-data-feedstock"]
+	path = language-data-feedstock
+	url = ../language-data-feedstock
+	branch = main
