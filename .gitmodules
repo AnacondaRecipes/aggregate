@@ -11679,3 +11679,7 @@
 	path = parmed-feedstock
 	url = ../parmed-feedstock
 	branch = main
+[submodule "clarabel-feedstock"]
+	path = clarabel-feedstock
+	url = ../clarabel-feedstock
+	branch = main
