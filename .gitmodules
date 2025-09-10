@@ -11667,3 +11667,7 @@
 	path = python-marisa-trie-feedstock
 	url = ../python-marisa-trie-feedstock
 	branch = main
+[submodule "periodictable-feedstock"]
+	path = periodictable-feedstock
+	url = ../periodictable-feedstock
+	branch = main
