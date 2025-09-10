@@ -11671,3 +11671,7 @@
 	path = periodictable-feedstock
 	url = ../periodictable-feedstock
 	branch = main
+[submodule "geoparse-feedstock"]
+	path = geoparse-feedstock
+	url = ../geoparse-feedstock
+	branch = main
