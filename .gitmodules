@@ -11675,3 +11675,7 @@
 	path = geoparse-feedstock
 	url = ../geoparse-feedstock
 	branch = main
+[submodule "parmed-feedstock"]
+	path = parmed-feedstock
+	url = ../parmed-feedstock
+	branch = main
