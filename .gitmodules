@@ -11687,3 +11687,7 @@
 	path = empyrical-feedstock
 	url = ../empyrical-feedstock
 	branch = main
+[submodule "anaconda-ident-feedstock"]
+	path = anaconda-ident-feedstock
+	url = ../anaconda-ident-feedstock
+	branch = main
