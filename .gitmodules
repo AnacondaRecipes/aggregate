@@ -11683,3 +11683,7 @@
 	path = clarabel-feedstock
 	url = ../clarabel-feedstock
 	branch = main
+[submodule "empyrical-feedstock"]
+	path = empyrical-feedstock
+	url = ../empyrical-feedstock
+	branch = main
