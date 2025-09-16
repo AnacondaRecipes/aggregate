@@ -11691,3 +11691,7 @@
 	path = anaconda-ident-feedstock
 	url = ../anaconda-ident-feedstock
 	branch = main
+[submodule "poetry-feedstock"]
+	path = poetry-feedstock
+	url = ../poetry-feedstock
+	branch = main
