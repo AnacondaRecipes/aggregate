@@ -11699,3 +11699,7 @@
 	path = jupysql-feedstock
 	url = ../jupysql-feedstock
 	branch = main
+[submodule "ploomber-core-feedstock"]
+	path = ploomber-core-feedstock
+	url = ../ploomber-core-feedstock
+	branch = main
