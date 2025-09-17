@@ -11695,3 +11695,7 @@
 	path = poetry-feedstock
 	url = ../poetry-feedstock
 	branch = main
+[submodule "jupysql-feedstock"]
+	path = jupysql-feedstock
+	url = ../jupysql-feedstock
+	branch = main
