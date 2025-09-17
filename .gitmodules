@@ -11707,3 +11707,7 @@
 	path = jupysql-plugin-feedstock
 	url = ../jupysql-plugin-feedstock
 	branch = main
+[submodule "treescope-feedstock"]
+	path = treescope-feedstock
+	url = ../treescope-feedstock
+	branch = main
