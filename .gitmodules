@@ -11711,3 +11711,6 @@
 	path = treescope-feedstock
 	url = ../treescope-feedstock
 	branch = main
+[submodule "anaconda-client-feedstock"]
+	path = anaconda-client-feedstock
+	url = git@github.com:AnacondaRecipes/anaconda-client-feedstock.git
