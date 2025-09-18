@@ -11726,3 +11726,7 @@
 	path = opentelemetry-semantic-conventions-ai-feedstock
 	url = ../opentelemetry-semantic-conventions-ai-feedstock
 	branch = main
+[submodule "cuid-feedstock"]
+	path = cuid-feedstock
+	url = ../cuid-feedstock
+	branch = main
