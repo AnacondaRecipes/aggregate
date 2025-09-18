@@ -11714,3 +11714,7 @@
 [submodule "anaconda-client-feedstock"]
 	path = anaconda-client-feedstock
 	url = git@github.com:AnacondaRecipes/anaconda-client-feedstock.git
+[submodule "superqt-0.6.7-feedstock"]
+	path = superqt-0.6.7-feedstock
+	url = ../superqt-feedstock
+	branch = main-0.6.7
