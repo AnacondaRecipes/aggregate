@@ -11730,3 +11730,7 @@
 	path = cuid-feedstock
 	url = ../cuid-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-alephalpha-feedstock"]
+	path = opentelemetry-instrumentation-alephalpha-feedstock
+	url = ../opentelemetry-instrumentation-alephalpha-feedstock
+	branch = main
