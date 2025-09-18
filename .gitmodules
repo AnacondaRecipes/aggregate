@@ -11734,3 +11734,7 @@
 	path = opentelemetry-instrumentation-alephalpha-feedstock
 	url = ../opentelemetry-instrumentation-alephalpha-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-anthropic-feedstock"]
+	path = opentelemetry-instrumentation-anthropic-feedstock
+	url = ../opentelemetry-instrumentation-anthropic-feedstock
+	branch = main
