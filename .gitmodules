@@ -11722,3 +11722,7 @@
 	path = traceloop-sdk-feedstock
 	url = ../traceloop-sdk-feedstock
 	branch = main
+[submodule "opentelemetry-semantic-conventions-ai-feedstock"]
+	path = opentelemetry-semantic-conventions-ai-feedstock
+	url = ../opentelemetry-semantic-conventions-ai-feedstock
+	branch = main
