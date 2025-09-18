@@ -11718,3 +11718,7 @@
 	path = superqt-0.6.7-feedstock
 	url = ../superqt-feedstock
 	branch = main-0.6.7
+[submodule "traceloop-sdk-feedstock"]
+	path = traceloop-sdk-feedstock
+	url = ../traceloop-sdk-feedstock
+	branch = main
