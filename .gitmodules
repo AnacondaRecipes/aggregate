@@ -11742,3 +11742,7 @@
 	path = gherkin-official-feedstock
 	url = ../gherkin-official-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-bedrock-feedstock"]
+	path = opentelemetry-instrumentation-bedrock-feedstock
+	url = ../opentelemetry-instrumentation-bedrock-feedstock
+	branch = main
