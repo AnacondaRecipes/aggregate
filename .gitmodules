@@ -11770,3 +11770,7 @@
 	path = opentelemetry-instrumentation-groq-feedstock
 	url = ../opentelemetry-instrumentation-groq-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-haystack-feedstock"]
+	path = opentelemetry-instrumentation-haystack-feedstock
+	url = ../opentelemetry-instrumentation-haystack-feedstock
+	branch = main
