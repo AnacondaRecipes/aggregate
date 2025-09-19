@@ -11750,3 +11750,7 @@
 	path = sseclient-py-feedstock
 	url = ../sseclient-py-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-chromadb-feedstock"]
+	path = opentelemetry-instrumentation-chromadb-feedstock
+	url = ../opentelemetry-instrumentation-chromadb-feedstock
+	branch = main
