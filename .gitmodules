@@ -11758,3 +11758,7 @@
 	path = opentelemetry-instrumentation-cohere-feedstock
 	url = ../opentelemetry-instrumentation-cohere-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-crewai-feedstock"]
+	path = opentelemetry-instrumentation-crewai-feedstock
+	url = ../opentelemetry-instrumentation-crewai-feedstock
+	branch = main
