@@ -11786,3 +11786,7 @@
 	path = libllhttp-feedstock
 	url = ../libllhttp-feedstock
 	branch = main
+[submodule "sphinx-book-theme-feedstock"]
+	path = sphinx-book-theme-feedstock
+	url = ../sphinx-book-theme-feedstock
+	branch = main
