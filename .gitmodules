@@ -11746,3 +11746,7 @@
 	path = opentelemetry-instrumentation-bedrock-feedstock
 	url = ../opentelemetry-instrumentation-bedrock-feedstock
 	branch = main
+[submodule "sseclient-py-feedstock"]
+	path = sseclient-py-feedstock
+	url = ../sseclient-py-feedstock
+	branch = main
