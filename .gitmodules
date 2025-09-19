@@ -11754,3 +11754,7 @@
 	path = opentelemetry-instrumentation-chromadb-feedstock
 	url = ../opentelemetry-instrumentation-chromadb-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-cohere-feedstock"]
+	path = opentelemetry-instrumentation-cohere-feedstock
+	url = ../opentelemetry-instrumentation-cohere-feedstock
+	branch = main
