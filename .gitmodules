@@ -11762,3 +11762,7 @@
 	path = opentelemetry-instrumentation-crewai-feedstock
 	url = ../opentelemetry-instrumentation-crewai-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-google-generativeai-feedstock"]
+	path = opentelemetry-instrumentation-google-generativeai-feedstock
+	url = ../opentelemetry-instrumentation-google-generativeai-feedstock
+	branch = main
