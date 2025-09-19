@@ -11778,3 +11778,7 @@
 	path = opentelemetry-instrumentation-lancedb-feedstock
 	url = ../opentelemetry-instrumentation-lancedb-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-langchain-feedstock"]
+	path = opentelemetry-instrumentation-langchain-feedstock
+	url = ../opentelemetry-instrumentation-langchain-feedstock
+	branch = main
