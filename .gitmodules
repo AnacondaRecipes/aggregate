@@ -11746,3 +11746,43 @@
 	path = opentelemetry-instrumentation-bedrock-feedstock
 	url = ../opentelemetry-instrumentation-bedrock-feedstock
 	branch = main
+[submodule "sseclient-py-feedstock"]
+	path = sseclient-py-feedstock
+	url = ../sseclient-py-feedstock
+	branch = main
+[submodule "opentelemetry-instrumentation-chromadb-feedstock"]
+	path = opentelemetry-instrumentation-chromadb-feedstock
+	url = ../opentelemetry-instrumentation-chromadb-feedstock
+	branch = main
+[submodule "opentelemetry-instrumentation-cohere-feedstock"]
+	path = opentelemetry-instrumentation-cohere-feedstock
+	url = ../opentelemetry-instrumentation-cohere-feedstock
+	branch = main
+[submodule "opentelemetry-instrumentation-crewai-feedstock"]
+	path = opentelemetry-instrumentation-crewai-feedstock
+	url = ../opentelemetry-instrumentation-crewai-feedstock
+	branch = main
+[submodule "opentelemetry-instrumentation-google-generativeai-feedstock"]
+	path = opentelemetry-instrumentation-google-generativeai-feedstock
+	url = ../opentelemetry-instrumentation-google-generativeai-feedstock
+	branch = main
+[submodule "opentelemetry-instrumentation-groq-feedstock"]
+	path = opentelemetry-instrumentation-groq-feedstock
+	url = ../opentelemetry-instrumentation-groq-feedstock
+	branch = main
+[submodule "opentelemetry-instrumentation-haystack-feedstock"]
+	path = opentelemetry-instrumentation-haystack-feedstock
+	url = ../opentelemetry-instrumentation-haystack-feedstock
+	branch = main
+[submodule "opentelemetry-instrumentation-lancedb-feedstock"]
+	path = opentelemetry-instrumentation-lancedb-feedstock
+	url = ../opentelemetry-instrumentation-lancedb-feedstock
+	branch = main
+[submodule "opentelemetry-instrumentation-langchain-feedstock"]
+	path = opentelemetry-instrumentation-langchain-feedstock
+	url = ../opentelemetry-instrumentation-langchain-feedstock
+	branch = main
+[submodule "libllhttp-feedstock"]
+	path = libllhttp-feedstock
+	url = ../libllhttp-feedstock
+	branch = main
