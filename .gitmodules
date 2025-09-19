@@ -11766,3 +11766,7 @@
 	path = opentelemetry-instrumentation-google-generativeai-feedstock
 	url = ../opentelemetry-instrumentation-google-generativeai-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-groq-feedstock"]
+	path = opentelemetry-instrumentation-groq-feedstock
+	url = ../opentelemetry-instrumentation-groq-feedstock
+	branch = main
