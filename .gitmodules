@@ -11794,3 +11794,7 @@
 	path = stack-feedstock
 	url = ../stack-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-llamaindex-feedstock"]
+	path = opentelemetry-instrumentation-llamaindex-feedstock
+	url = ../opentelemetry-instrumentation-llamaindex-feedstock
+	branch = main
