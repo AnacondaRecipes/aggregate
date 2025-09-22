@@ -11846,3 +11846,7 @@
 	path = opentelemetry-instrumentation-requests-feedstock
 	url = ../opentelemetry-instrumentation-requests-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-sqlalchemy-feedstock"]
+	path = opentelemetry-instrumentation-sqlalchemy-feedstock
+	url = ../opentelemetry-instrumentation-sqlalchemy-feedstock
+	branch = main
