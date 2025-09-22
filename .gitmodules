@@ -11810,3 +11810,7 @@
 	path = opentelemetry-instrumentation-mcp-feedstock
 	url = ../opentelemetry-instrumentation-mcp-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-milvus-feedstock"]
+	path = opentelemetry-instrumentation-milvus-feedstock
+	url = ../opentelemetry-instrumentation-milvus-feedstock
+	branch = main
