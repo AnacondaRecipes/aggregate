@@ -11822,3 +11822,7 @@
 	path = opentelemetry-instrumentation-ollama-feedstock
 	url = ../opentelemetry-instrumentation-ollama-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-openai-agents-feedstock"]
+	path = opentelemetry-instrumentation-openai-agents-feedstock
+	url = ../opentelemetry-instrumentation-openai-agents-feedstock
+	branch = main
