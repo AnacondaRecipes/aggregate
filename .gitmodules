@@ -11858,3 +11858,7 @@
 	path = opentelemetry-instrumentation-sagemaker-feedstock
 	url = ../opentelemetry-instrumentation-sagemaker-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-together-feedstock"]
+	path = opentelemetry-instrumentation-together-feedstock
+	url = ../opentelemetry-instrumentation-together-feedstock
+	branch = main
