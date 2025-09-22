@@ -11802,3 +11802,7 @@
 	path = opentelemetry-instrumentation-logging-feedstock
 	url = ../opentelemetry-instrumentation-logging-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-marqo-feedstock"]
+	path = opentelemetry-instrumentation-marqo-feedstock
+	url = ../opentelemetry-instrumentation-marqo-feedstock
+	branch = main
