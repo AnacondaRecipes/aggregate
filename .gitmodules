@@ -11814,3 +11814,7 @@
 	path = opentelemetry-instrumentation-milvus-feedstock
 	url = ../opentelemetry-instrumentation-milvus-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-mistralai-feedstock"]
+	path = opentelemetry-instrumentation-mistralai-feedstock
+	url = ../opentelemetry-instrumentation-mistralai-feedstock
+	branch = main
