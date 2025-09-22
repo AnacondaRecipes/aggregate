@@ -11818,3 +11818,7 @@
 	path = opentelemetry-instrumentation-mistralai-feedstock
 	url = ../opentelemetry-instrumentation-mistralai-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-ollama-feedstock"]
+	path = opentelemetry-instrumentation-ollama-feedstock
+	url = ../opentelemetry-instrumentation-ollama-feedstock
+	branch = main
