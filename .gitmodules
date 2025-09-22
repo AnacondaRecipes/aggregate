@@ -11862,3 +11862,7 @@
 	path = opentelemetry-instrumentation-together-feedstock
 	url = ../opentelemetry-instrumentation-together-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-threading-feedstock"]
+	path = opentelemetry-instrumentation-threading-feedstock
+	url = ../opentelemetry-instrumentation-threading-feedstock
+	branch = main
