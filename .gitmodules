@@ -11790,3 +11790,7 @@
 	path = sphinx-book-theme-feedstock
 	url = ../sphinx-book-theme-feedstock
 	branch = main
+[submodule "stack-feedstock"]
+	path = stack-feedstock
+	url = ../stack-feedstock
+	branch = main
