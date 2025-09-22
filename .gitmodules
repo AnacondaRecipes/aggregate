@@ -11878,3 +11878,7 @@
 	path = opentelemetry-instrumentation-transformers-feedstock
 	url = ../opentelemetry-instrumentation-transformers-feedstock
 	branch = main
+[submodule "python-genai-feedstock"]
+	path = python-genai-feedstock
+	url = ../python-genai-feedstock
+	branch = main
