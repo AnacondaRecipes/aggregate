@@ -11826,3 +11826,7 @@
 	path = opentelemetry-instrumentation-openai-agents-feedstock
 	url = ../opentelemetry-instrumentation-openai-agents-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-openai-feedstock"]
+	path = opentelemetry-instrumentation-openai-feedstock
+	url = ../opentelemetry-instrumentation-openai-feedstock
+	branch = main
