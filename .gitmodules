@@ -11862,7 +11862,7 @@
 	path = opentelemetry-instrumentation-together-feedstock
 	url = ../opentelemetry-instrumentation-together-feedstock
 	branch = main
-[submodule "opentelemetry-instrumentation-watsonx-feedstock"]
-	path = opentelemetry-instrumentation-watsonx-feedstock
-	url = ../opentelemetry-instrumentation-watsonx-feedstock
+[submodule "opentelemetry-instrumentation-weaviate-feedstock"]
+	path = opentelemetry-instrumentation-weaviate-feedstock
+	url = ../opentelemetry-instrumentation-weaviate-feedstock
 	branch = main
