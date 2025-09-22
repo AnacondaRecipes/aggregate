@@ -11830,3 +11830,7 @@
 	path = opentelemetry-instrumentation-openai-feedstock
 	url = ../opentelemetry-instrumentation-openai-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-pinecone-feedstock"]
+	path = opentelemetry-instrumentation-pinecone-feedstock
+	url = ../opentelemetry-instrumentation-pinecone-feedstock
+	branch = main
