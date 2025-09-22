@@ -11866,3 +11866,7 @@
 	path = opentelemetry-instrumentation-writer-feedstock
 	url = ../opentelemetry-instrumentation-writer-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-replicate-feedstock"]
+	path = opentelemetry-instrumentation-replicate-feedstock
+	url = ../opentelemetry-instrumentation-replicate-feedstock
+	branch = main
