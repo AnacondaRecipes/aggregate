@@ -11842,3 +11842,7 @@
 	path = opentelemetry-instrumentation-redis-feedstock
 	url = ../opentelemetry-instrumentation-redis-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-requests-feedstock"]
+	path = opentelemetry-instrumentation-requests-feedstock
+	url = ../opentelemetry-instrumentation-requests-feedstock
+	branch = main
