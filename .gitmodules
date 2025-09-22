@@ -11854,3 +11854,7 @@
 	path = opentelemetry-instrumentation-urllib3-feedstock
 	url = ../opentelemetry-instrumentation-urllib3-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-replicate-feedstock"]
+	path = opentelemetry-instrumentation-replicate-feedstock
+	url = ../opentelemetry-instrumentation-replicate-feedstock
+	branch = main
