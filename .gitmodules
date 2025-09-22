@@ -11834,3 +11834,7 @@
 	path = opentelemetry-instrumentation-pinecone-feedstock
 	url = ../opentelemetry-instrumentation-pinecone-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-qdrant-feedstock"]
+	path = opentelemetry-instrumentation-qdrant-feedstock
+	url = ../opentelemetry-instrumentation-qdrant-feedstock
+	branch = main
