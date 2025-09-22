@@ -11806,3 +11806,7 @@
 	path = opentelemetry-instrumentation-marqo-feedstock
 	url = ../opentelemetry-instrumentation-marqo-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-mcp-feedstock"]
+	path = opentelemetry-instrumentation-mcp-feedstock
+	url = ../opentelemetry-instrumentation-mcp-feedstock
+	branch = main
