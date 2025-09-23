@@ -11882,3 +11882,7 @@
 	path = python-genai-feedstock
 	url = ../python-genai-feedstock
 	branch = main
+[submodule "google-genai-feedstock"]
+	path = google-genai-feedstock
+	url = ../google-genai-feedstock
+	branch = main
