@@ -11918,3 +11918,7 @@
 	path = gw-dsl-parser-feedstock
 	url = ../gw-dsl-parser-feedstock
 	branch = main
+[submodule "segment-analytics-python-feedstock"]
+	path = segment-analytics-python-feedstock
+	url = ../segment-analytics-python-feedstock
+	branch = main
