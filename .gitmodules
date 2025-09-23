@@ -11890,3 +11890,7 @@
 	path = opentelemetry-util-http-feedstock
 	url = ../opentelemetry-util-http-feedstock
 	branch = main
+[submodule "unearth-feedstock"]
+	path = unearth-feedstock
+	url = ../unearth-feedstock
+	branch = main
