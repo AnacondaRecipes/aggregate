@@ -11898,3 +11898,7 @@
 	path = opentelemetry-instrumentation-vertexai-feedstock
 	url = ../opentelemetry-instrumentation-vertexai-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-watsonx-feedstock"]
+	path = opentelemetry-instrumentation-watsonx-feedstock
+	url = ../opentelemetry-instrumentation-watsonx-feedstock
+	branch = main
