@@ -11894,3 +11894,7 @@
 	path = unearth-feedstock
 	url = ../unearth-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-vertexai-feedstock"]
+	path = opentelemetry-instrumentation-vertexai-feedstock
+	url = ../opentelemetry-instrumentation-vertexai-feedstock
+	branch = main
