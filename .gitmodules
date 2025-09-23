@@ -11906,3 +11906,7 @@
 	path = opentelemetry-instrumentation-weaviate-feedstock
 	url = ../opentelemetry-instrumentation-weaviate-feedstock
 	branch = main
+[submodule "literalai-feedstock"]
+	path = literalai-feedstock
+	url = ../literalai-feedstock
+	branch = services
