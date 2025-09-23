@@ -11914,3 +11914,7 @@
 	path = pygwalker-feedstock
 	url = ../pygwalker-feedstock
 	branch = main
+[submodule "gw-dsl-parser-feedstock"]
+	path = gw-dsl-parser-feedstock
+	url = ../gw-dsl-parser-feedstock
+	branch = main
