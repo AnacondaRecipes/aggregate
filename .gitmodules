@@ -11910,3 +11910,7 @@
 	path = literalai-feedstock
 	url = ../literalai-feedstock
 	branch = services
+[submodule "pygwalker-feedstock"]
+	path = pygwalker-feedstock
+	url = ../pygwalker-feedstock
+	branch = main
