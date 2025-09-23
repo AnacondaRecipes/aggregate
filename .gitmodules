@@ -11886,3 +11886,7 @@
 	path = google-genai-feedstock
 	url = ../google-genai-feedstock
 	branch = main
+[submodule "opentelemetry-util-http-feedstock"]
+	path = opentelemetry-util-http-feedstock
+	url = ../opentelemetry-util-http-feedstock
+	branch = main
