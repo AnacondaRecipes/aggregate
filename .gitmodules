@@ -11926,3 +11926,7 @@
 	path = dirty-equals-feedstock
 	url = ../dirty-equals-feedstock
 	branch = main
+[submodule "python-quickjs-feedstock"]
+	path = python-quickjs-feedstock
+	url = ../python-quickjs-feedstock
+	branch = main
