@@ -11922,3 +11922,7 @@
 	path = segment-analytics-python-feedstock
 	url = ../segment-analytics-python-feedstock
 	branch = main
+[submodule "dirty-equals-feedstock"]
+	path = dirty-equals-feedstock
+	url = ../dirty-equals-feedstock
+	branch = main
