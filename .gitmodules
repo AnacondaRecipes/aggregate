@@ -11934,3 +11934,7 @@
 	path = id-feedstock
 	url = ../id-feedstock
 	branch = main
+[submodule "glfw-feedstock"]
+	path = glfw-feedstock
+	url = ../glfw-feedstock
+	branch = main
