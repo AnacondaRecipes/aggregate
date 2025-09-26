@@ -11938,3 +11938,7 @@
 	path = glfw-feedstock
 	url = ../glfw-feedstock
 	branch = main
+[submodule "audioop-lts-feedstock"]
+	path = audioop-lts-feedstock
+	url = ../audioop-lts-feedstock
+	branch = main
