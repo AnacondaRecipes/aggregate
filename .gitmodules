@@ -11942,3 +11942,7 @@
 	path = audioop-lts-feedstock
 	url = ../audioop-lts-feedstock
 	branch = main
+[submodule "kanaries-track-feedstock"]
+	path = kanaries-track-feedstock
+	url = ../kanaries-track-feedstock
+	branch = main
