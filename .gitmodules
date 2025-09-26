@@ -11946,3 +11946,7 @@
 	path = kanaries-track-feedstock
 	url = ../kanaries-track-feedstock
 	branch = main
+[submodule "ipylab-feedstock"]
+	path = ipylab-feedstock
+	url = ../ipylab-feedstock
+	branch = main
