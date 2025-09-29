@@ -11958,3 +11958,7 @@
 	path = litellm-feedstock
 	url = ../litellm-feedstock
 	branch = main
+[submodule "semchunk-feedstock"]
+	path = semchunk-feedstock
+	url = ../semchunk-feedstock
+	branch = main
