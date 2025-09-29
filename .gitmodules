@@ -11962,3 +11962,7 @@
 	path = semchunk-feedstock
 	url = ../semchunk-feedstock
 	branch = main
+[submodule "mpire-feedstock"]
+	path = mpire-feedstock
+	url = ../mpire-feedstock
+	branch = main
