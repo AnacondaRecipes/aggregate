@@ -11950,3 +11950,7 @@
 	path = ipylab-feedstock
 	url = ../ipylab-feedstock
 	branch = main
+[submodule "jupyter-rfb-feedstock"]
+	path = jupyter-rfb-feedstock
+	url = ../jupyter-rfb-feedstock
+	branch = main
