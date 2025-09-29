@@ -11954,3 +11954,7 @@
 	path = jupyter-rfb-feedstock
 	url = ../jupyter-rfb-feedstock
 	branch = main
+[submodule "litellm-feedstock"]
+	path = litellm-feedstock
+	url = ../litellm-feedstock
+	branch = main
