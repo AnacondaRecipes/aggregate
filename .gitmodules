@@ -11970,3 +11970,7 @@
 	path = glue-qt-feedstock
 	url = ../glue-qt-feedstock
 	branch = main
+[submodule "uv-build-feedstock"]
+	path = uv-build-feedstock
+	url = ../uv-build-feedstock
+	branch = main
