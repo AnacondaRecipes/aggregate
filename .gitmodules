@@ -11966,3 +11966,7 @@
 	path = mpire-feedstock
 	url = ../mpire-feedstock
 	branch = main
+[submodule "glue-qt-feedstock"]
+	path = glue-qt-feedstock
+	url = ../glue-qt-feedstock
+	branch = main
