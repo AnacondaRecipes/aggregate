@@ -11982,3 +11982,7 @@
 	path = spectral-cube-feedstock
 	url = ../spectral-cube-feedstock
 	branch = main
+[submodule "radio-beam-feedstock"]
+	path = radio-beam-feedstock
+	url = ../radio-beam-feedstock
+	branch = main
