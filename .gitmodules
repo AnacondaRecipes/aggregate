@@ -11974,3 +11974,7 @@
 	path = uv-build-feedstock
 	url = ../uv-build-feedstock
 	branch = main
+[submodule "pvextractor-feedstock"]
+	path = pvextractor-feedstock
+	url = ../pvextractor-feedstock
+	branch = main
