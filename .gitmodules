@@ -11978,3 +11978,7 @@
 	path = pvextractor-feedstock
 	url = ../pvextractor-feedstock
 	branch = main
+[submodule "spectral-cube-feedstock"]
+	path = spectral-cube-feedstock
+	url = ../spectral-cube-feedstock
+	branch = main
