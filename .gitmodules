@@ -11986,3 +11986,7 @@
 	path = radio-beam-feedstock
 	url = ../radio-beam-feedstock
 	branch = main
+[submodule "casa_formats_io-feedstock"]
+	path = casa_formats_io-feedstock
+	url = ../casa_formats_io-feedstock
+	branch = main
