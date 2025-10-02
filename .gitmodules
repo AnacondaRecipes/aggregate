@@ -11990,3 +11990,7 @@
 	path = casa_formats_io-feedstock
 	url = ../casa_formats_io-feedstock
 	branch = main
+[submodule "pyportfolioopt-feedstock"]
+	path = pyportfolioopt-feedstock
+	url = ../pyportfolioopt-feedstock
+	branch = main
