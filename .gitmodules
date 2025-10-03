@@ -11994,3 +11994,7 @@
 	path = pyportfolioopt-feedstock
 	url = ../pyportfolioopt-feedstock
 	branch = main
+[submodule "git-credential-manager-feedstock"]
+	path = git-credential-manager-feedstock
+	url = ../git-credential-manager-feedstock
+	branch = main
