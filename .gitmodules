@@ -11998,3 +11998,7 @@
 	path = git-credential-manager-feedstock
 	url = ../git-credential-manager-feedstock
 	branch = main
+[submodule "streamlit-pdf-feedstock"]
+	path = streamlit-pdf-feedstock
+	url = ../streamlit-pdf-feedstock
+	branch = main
