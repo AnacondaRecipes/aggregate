@@ -12010,3 +12010,7 @@
 	path = lsprotocol-feedstock
 	url = ../lsprotocol-feedstock
 	branch = main
+[submodule "marimo-feedstock"]
+	path = marimo-feedstock
+	url = ../marimo-feedstock
+	branch = main
