@@ -12002,3 +12002,7 @@
 	path = streamlit-pdf-feedstock
 	url = ../streamlit-pdf-feedstock
 	branch = main
+[submodule "python-lsp-ruff-feedstock"]
+	path = python-lsp-ruff-feedstock
+	url = ../python-lsp-ruff-feedstock
+	branch = main
