@@ -305,6 +305,8 @@ gl2ps:
   - 1.4.2
 glew:
   - '2.2'
+glfw:
+  - '3'
 glib:
   - 2
 glog:
@@ -453,6 +455,8 @@ libffi:
   - '3.4'
 libflac:
   - '1.4'
+libflang:
+  - 20.1.8
 libgcrypt:
   - '1'
 libgd:
@@ -512,9 +516,9 @@ libllvm_c19:
 libllvm_c20:
   - '20.1'
 libmamba:
-  - '2.0'
+  - '2.3'
 libmambapy:
-  - '2.0'
+  - '2.3'
 libmlir19:
   - '19.1'
 libmlir20:
@@ -533,6 +537,8 @@ libnsl:
   - '2.0'
 libntlm:
   - '1'
+libnuma:
+  - '2'
 libogg:
   - '1.3'
 libopenblas:
@@ -544,7 +550,7 @@ libopus:
 libortools:
   - '9.9'
 libosqp:
-  - 0.6.3
+  - 1.0.0
 libpcap:
   - '1.10'
 libpciaccess:
@@ -556,7 +562,7 @@ libpq:
 libprotobuf:
   - 5.29.3
 libqdldl:
-  - 0.1.7
+  - 0.1.8
 librdkafka:
   - '2.2'
 libre2_11:
@@ -582,7 +588,7 @@ libtensorflow:
 libtensorflow_cc:
   - 2.18.1
 libtheora:
-  - '1'
+  - '1.2'
 libthrift:
   - '0.15'
 libtiff:
@@ -679,6 +685,10 @@ ocl_icd:
   - '2'
 oniguruma:
   - '6.9'
+onnxruntime_cpp:
+  - 1.22.2
+onnxruntime_novec_cpp:
+  - 1.22.2
 openblas:
   - 0
 openblas_devel:
