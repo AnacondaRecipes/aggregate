@@ -12006,3 +12006,7 @@
 	path = python-lsp-ruff-feedstock
 	url = ../python-lsp-ruff-feedstock
 	branch = main
+[submodule "lsprotocol-feedstock"]
+	path = lsprotocol-feedstock
+	url = ../lsprotocol-feedstock
+	branch = main
