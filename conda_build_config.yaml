@@ -39,13 +39,17 @@ ucrt64_fortran_compiler:       # [win]
   - ucrt64-gcc-toolchain       # [win]
 rust_compiler:
   - rust
+rust_nightly_compiler:
+  - rust-nightly
 rust_compiler_version:
-  - 1.87.0
+  - 1.89.0
+rust_nightly_compiler_version:
+  - 1.89.0
 # use {{ compiler('rust-gnu') }} when requiring a build using the m2w64-toolchain
 rust_gnu_compiler:             # [win]
   - rust-gnu                   # [win]
 rust_gnu_compiler_version:     # [win]
-  - 1.87.0                     # [win]
+  - 1.89.0                     # [win]
 VERBOSE_AT:
   - V=1
 VERBOSE_CM:
