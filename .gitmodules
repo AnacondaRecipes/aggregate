@@ -11902,3 +11902,7 @@
 	path = marimo-feedstock
 	url = ../marimo-feedstock
 	branch = main
+[submodule "loro-feedstock"]
+	path = loro-feedstock
+	url = ../loro-feedstock
+	branch = main
