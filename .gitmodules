@@ -11906,3 +11906,7 @@
 	path = loro-feedstock
 	url = ../loro-feedstock
 	branch = main
+[submodule "asv_runner-feedstock"]
+	path = asv_runner-feedstock
+	url = ../asv_runner-feedstock
+	branch = main
