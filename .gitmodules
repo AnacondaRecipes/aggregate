@@ -11910,3 +11910,7 @@
 	path = asv_runner-feedstock
 	url = ../asv_runner-feedstock
 	branch = main
+[submodule "pgvector-feedstock"]
+	path = pgvector-feedstock
+	url = ../pgvector-feedstock
+	branch = main
