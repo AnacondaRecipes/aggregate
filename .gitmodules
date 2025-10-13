@@ -11914,3 +11914,7 @@
 	path = pgvector-feedstock
 	url = ../pgvector-feedstock
 	branch = main
+[submodule "cargo-auditable-feedstock"]
+	path = cargo-auditable-feedstock
+	url = ../cargo-auditable-feedstock
+	branch = main
