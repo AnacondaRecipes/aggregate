@@ -11938,3 +11938,7 @@
 	path = pathvalidate-feedstock
 	url = ../pathvalidate-feedstock
 	branch = main
+[submodule "requirements-parser-feedstock"]
+	path = requirements-parser-feedstock
+	url = ../requirements-parser-feedstock
+	branch = main
