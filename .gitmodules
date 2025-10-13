@@ -11922,3 +11922,7 @@
 	path = giturlparse-feedstock
 	url = ../giturlparse-feedstock
 	branch = main
+[submodule "hexbytes-feedstock"]
+	path = hexbytes-feedstock
+	url = ../hexbytes-feedstock
+	branch = main
