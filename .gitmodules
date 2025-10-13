@@ -11918,3 +11918,7 @@
 	path = cargo-auditable-feedstock
 	url = ../cargo-auditable-feedstock
 	branch = main
+[submodule "giturlparse-feedstock"]
+	path = giturlparse-feedstock
+	url = ../giturlparse-feedstock
+	branch = main
