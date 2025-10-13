@@ -11926,3 +11926,7 @@
 	path = hexbytes-feedstock
 	url = ../hexbytes-feedstock
 	branch = main
+[submodule "rich-argparse-feedstock"]
+	path = rich-argparse-feedstock
+	url = ../rich-argparse-feedstock
+	branch = main
