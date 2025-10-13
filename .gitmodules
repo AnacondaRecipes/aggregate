@@ -11934,3 +11934,7 @@
 	path = releasecmd-feedstock
 	url = ../releasecmd-feedstock
 	branch = main
+[submodule "pathvalidate-feedstock"]
+	path = pathvalidate-feedstock
+	url = ../pathvalidate-feedstock
+	branch = main
