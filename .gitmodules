@@ -11942,3 +11942,7 @@
 	path = requirements-parser-feedstock
 	url = ../requirements-parser-feedstock
 	branch = main
+[submodule "dlt-pendulum-feedstock"]
+	path = dlt-pendulum-feedstock
+	url = ../dlt-pendulum-feedstock
+	branch = main
