@@ -11946,3 +11946,7 @@
 	path = dlt-pendulum-feedstock
 	url = ../dlt-pendulum-feedstock
 	branch = main
+[submodule "pyclibrary-feedstock"]
+	path = pyclibrary-feedstock
+	url = ../pyclibrary-feedstock
+	branch = main
