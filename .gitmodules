@@ -11950,3 +11950,7 @@
 	path = pyclibrary-feedstock
 	url = ../pyclibrary-feedstock
 	branch = main
+[submodule "dlt-feedstock"]
+	path = dlt-feedstock
+	url = ../dlt-feedstock
+	branch = main
