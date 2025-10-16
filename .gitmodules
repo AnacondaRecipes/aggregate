@@ -11958,3 +11958,7 @@
 	path = runs-feedstock
 	url = ../runs-feedstock
 	branch = main
+[submodule "xmod-feedstock"]
+	path = xmod-feedstock
+	url = ../xmod-feedstock
+	branch = main
