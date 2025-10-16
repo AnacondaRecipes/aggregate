@@ -11966,3 +11966,7 @@
 	path = editor-feedstock
 	url = ../editor-feedstock
 	branch = main
+[submodule "pytokens-feedstock"]
+	path = pytokens-feedstock
+	url = ../pytokens-feedstock
+	branch = main
