@@ -11954,3 +11954,7 @@
 	path = dlt-feedstock
 	url = ../dlt-feedstock
 	branch = main
+[submodule "runs-feedstock"]
+	path = runs-feedstock
+	url = ../runs-feedstock
+	branch = main
