@@ -11962,3 +11962,7 @@
 	path = xmod-feedstock
 	url = ../xmod-feedstock
 	branch = main
+[submodule "editor-feedstock"]
+	path = editor-feedstock
+	url = ../editor-feedstock
+	branch = main
