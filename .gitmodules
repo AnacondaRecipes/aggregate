@@ -11970,3 +11970,7 @@
 	path = pytokens-feedstock
 	url = ../pytokens-feedstock
 	branch = main
+[submodule "snowpark-connect-deps-1-feedstock"]
+	path = snowpark-connect-deps-1-feedstock
+	url = ../snowpark-connect-deps-1-feedstock
+	branch = main
