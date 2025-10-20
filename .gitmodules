@@ -11978,3 +11978,7 @@
 	path = snowpark-connect-deps-2-feedstock
 	url = ../snowpark-connect-deps-2-feedstock
 	branch = main
+[submodule "whisper.cpp-feedstock"]
+	path = whisper.cpp-feedstock
+	url = git@github.com:AnacondaRecipes/whisper.cpp-feedstock.git
+	branch = main
