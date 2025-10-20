@@ -58,7 +58,7 @@ cran_mirror:
   - https://cran.r-project.org
 c_compiler_version:        # [linux or osx]
   - 11.2.0                 # [linux]
-  - 17                     # [osx]
+  - 20                     # [osx]
 c_stdlib_version:
   - 2.28                   # [linux]
   - 10.15                  # [osx and x86_64]
@@ -66,7 +66,7 @@ c_stdlib_version:
   - 2019.11                # [win]
 cxx_compiler_version:      # [linux or osx]
   - 11.2.0                 # [linux]
-  - 17                     # [osx]
+  - 20                     # [osx]
 cuda_compiler_version:
   - 12.4
 fortran_compiler_version:
