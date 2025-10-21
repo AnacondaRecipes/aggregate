@@ -11982,3 +11982,7 @@
 	path = whisper.cpp-feedstock
 	url = git@github.com:AnacondaRecipes/whisper.cpp-feedstock.git
 	branch = main
+[submodule "zope.deferredimport-feedstock"]
+	path = zope.deferredimport-feedstock
+	url = ../zope.deferredimport-feedstock
+	branch = main
