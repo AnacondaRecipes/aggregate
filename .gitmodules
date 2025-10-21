@@ -11986,3 +11986,7 @@
 	path = zope.deferredimport-feedstock
 	url = ../zope.deferredimport-feedstock
 	branch = main
+[submodule "zope.proxy-feedstock"]
+	path = zope.proxy-feedstock
+	url = ../zope.proxy-feedstock
+	branch = main
