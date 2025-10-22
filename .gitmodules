@@ -11998,3 +11998,7 @@
 	path = cucumber-expressions-feedstock
 	url = ../cucumber-expressions-feedstock
 	branch = main
+[submodule "tika-feedstock"]
+	path = tika-feedstock
+	url = ../tika-feedstock
+	branch = main
