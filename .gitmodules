@@ -12002,3 +12002,7 @@
 	path = tika-feedstock
 	url = ../tika-feedstock
 	branch = main
+[submodule "manuel-feedstock"]
+	path = manuel-feedstock
+	url = ../manuel-feedstock
+	branch = main
