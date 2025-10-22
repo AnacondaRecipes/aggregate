@@ -11994,3 +11994,7 @@
 	path = cucumber-tag-expressions-feedstock
 	url = ../cucumber-tag-expressions-feedstock
 	branch = main
+[submodule "cucumber-expressions-feedstock"]
+	path = cucumber-expressions-feedstock
+	url = ../cucumber-expressions-feedstock
+	branch = main
