@@ -11990,3 +11990,7 @@
 	path = zope.proxy-feedstock
 	url = ../zope.proxy-feedstock
 	branch = main
+[submodule "cucumber-tag-expressions-feedstock"]
+	path = cucumber-tag-expressions-feedstock
+	url = ../cucumber-tag-expressions-feedstock
+	branch = main
