@@ -12010,3 +12010,7 @@
 	path = tika-client-feedstock
 	url = ../tika-client-feedstock
 	branch = main
+[submodule "pathlib-abc-feedstock"]
+	path = pathlib-abc-feedstock
+	url = ../pathlib-abc-feedstock
+	branch = main
