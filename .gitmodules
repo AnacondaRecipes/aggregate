@@ -12014,3 +12014,7 @@
 	path = pathlib-abc-feedstock
 	url = ../pathlib-abc-feedstock
 	branch = main
+[submodule "cadical-feedstock"]
+	path = cadical-feedstock
+	url = ../cadical-feedstock
+	branch = main
