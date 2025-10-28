@@ -12018,3 +12018,7 @@
 	path = cadical-feedstock
 	url = ../cadical-feedstock
 	branch = main
+[submodule "anaconda-registration-feedstock"]
+	path = anaconda-registration-feedstock
+	url = ../anaconda-registration-feedstock
+	branch = main
