@@ -12022,3 +12022,7 @@
 	path = anaconda-registration-feedstock
 	url = ../anaconda-registration-feedstock
 	branch = main
+[submodule "packageurl-python-feedstock"]
+	path = packageurl-python-feedstock
+	url = ../packageurl-python-feedstock
+	branch = main
