@@ -12026,3 +12026,7 @@
 	path = packageurl-python-feedstock
 	url = ../packageurl-python-feedstock
 	branch = main
+[submodule "nvtx-c-feedstock"]
+	path = nvtx-c-feedstock
+	url = ../nvtx-c-feedstock
+	branch = main
