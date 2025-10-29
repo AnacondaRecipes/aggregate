@@ -12030,3 +12030,7 @@
 	path = nvtx-c-feedstock
 	url = ../nvtx-c-feedstock
 	branch = main
+[submodule "nvtx-feedstock"]
+	path = nvtx-feedstock
+	url = ../nvtx-feedstock
+	branch = main
