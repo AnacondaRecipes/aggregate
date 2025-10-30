@@ -12034,3 +12034,7 @@
 	path = nvtx-feedstock
 	url = ../nvtx-feedstock
 	branch = main
+[submodule "pep517-feedstock"]
+	path = pep517-feedstock
+	url = ../pep517-feedstock
+	branch = master
