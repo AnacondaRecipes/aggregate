@@ -176,7 +176,7 @@ armadillo:
 arpack:
   - '3.9'
 arrow_cpp:
-  - 19.0.0
+  - 21.0.0
 assimp:
   - 6.0.2
 at_spi2_core:
@@ -249,6 +249,8 @@ coin_or_osi:
   - '0.108'
 coin_or_utils:
   - '2.11'
+cryptography_vectors:
+  - 46.0.2
 cudnn:
   - '9'
 cutensor:
@@ -338,7 +340,7 @@ gstreamer:
 gstreamer_orc:
   - '0.4'
 gtest:
-  - 1.14.0
+  - 1.17.0
 gtk3:
   - '3'
 gts:
@@ -370,7 +372,7 @@ jemalloc:
 jpeg:
   - 9e
 json_c:
-  - '0.16'
+  - '0.18'
 jsoncpp:
   - 1.9.6
 jxrlib:
@@ -549,6 +551,8 @@ libopenblas:
   - '0'
 libopengl:
   - '1'
+libopenjpeg:
+  - '2.5'
 libopus:
   - '1'
 libortools:
@@ -594,7 +598,7 @@ libtensorflow_cc:
 libtheora:
   - '1.2'
 libthrift:
-  - '0.15'
+  - '0.22'
 libtiff:
   - '4'
 libtmglib:
@@ -614,7 +618,7 @@ libuv:
 libvorbis:
   - '1'
 libvpx:
-  - '1.13'
+  - '1.15'
 libvulkan:
   - 1.4
 libwebp:
@@ -704,7 +708,7 @@ openjpeg:
 openldap:
   - '2.6'
 openmpi:
-  - '4.1'
+  - '5.0'
 openssl:
   - '3'
 orc:
@@ -764,7 +768,7 @@ reproc_cpp:
 rhash:
   - '1'
 ruby:
-  - '3.2'
+  - '3.4'
 s2n:
   - 1.5.14
 scotch:
@@ -802,9 +806,9 @@ unixodbc:
 vc:
   - '14'
 vtk_base:
-  - 9.4.1
+  - 9.5.2
 vtk_io_ffmpeg:
-  - 9.4.1
+  - 9.5.2
 wayland:
   - '1.24'
 x264:
@@ -822,7 +826,7 @@ xcb_util_renderutil:
 xcb_util_wm:
   - '0.4'
 xerces_c:
-  - '3.2'
+  - '3.3'
 xorg_libice:
   - '1'
 xorg_libsm:
