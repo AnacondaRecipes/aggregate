@@ -12038,3 +12038,7 @@
 	path = pep517-feedstock
 	url = ../pep517-feedstock
 	branch = master
+[submodule "cuda-python-feedstock"]
+	path = cuda-python-feedstock
+	url = ../cuda-python-feedstock
+	branch = main
