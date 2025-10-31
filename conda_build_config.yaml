@@ -91,7 +91,6 @@ cgo_compiler:
 cgo_compiler_version:
   - 1.21
 python:
-  - 3.9
   - "3.10"
   - "3.11"
   - "3.12"
@@ -100,14 +99,12 @@ python:
 # numpy will by default use a compatible ABI for the oldest still-supported numpy versions
 # `{{ pin_compatible("numpy") }}` is no longer needed as builds of numpy from version 2 have run_exports.
 numpy:
-  # python 3.9
-  - 2.0
   # python 3.10
-  - 2.0
+  - 2.1
   # python 3.11
-  - 2.0
+  - 2.1
   # python 3.12
-  - 2.0
+  - 2.1
   # python 3.13
   - 2.1
   # python 3.14            # [ANACONDA_ROCKET_ENABLE_PY314]
