@@ -12042,3 +12042,7 @@
 	path = cuda-python-feedstock
 	url = ../cuda-python-feedstock
 	branch = main
+[submodule "cuda-core-feedstock"]
+	path = cuda-core-feedstock
+	url = ../cuda-core-feedstock
+	branch = main
