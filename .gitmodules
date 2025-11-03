@@ -12050,3 +12050,7 @@
 	path = ultralytics-feedstock
 	url = ../ultralytics-feedstock
 	branch = main
+[submodule "cuda-pathfinder-feedstock"]
+	path = cuda-pathfinder-feedstock
+	url = ../cuda-pathfinder-feedstock
+	branch = main
