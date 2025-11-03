@@ -12046,3 +12046,7 @@
 	path = cuda-core-feedstock
 	url = ../cuda-core-feedstock
 	branch = main
+[submodule "ultralytics-feedstock"]
+	path = ultralytics-feedstock
+	url = ../ultralytics-feedstock
+	branch = main
