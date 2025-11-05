@@ -12062,3 +12062,7 @@
 	path = qdrant-client-feedstock
 	url = ../qdrant-client-feedstock
 	branch = main
+[submodule "polars-ols-feedstock"]
+	path = polars-ols-feedstock
+	url = ../polars-ols-feedstock
+	branch = main
