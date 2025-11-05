@@ -139,8 +139,9 @@ cdt_name:          # [linux]
   - el8            # [linux]
 
 # https://github.com/conda/conda-build/issues/5733
-BUILD: x86_64-conda_el8-linux-gnu   # [linux and x86_64]
-BUILD: aarch64-conda_el8-linux-gnu  # [linux and aarch64]
+BUILD:                           # [linux]
+  - x86_64-conda_el8-linux-gnu   # [linux and x86_64]
+  - aarch64-conda_el8-linux-gnu  # [linux and aarch64]
 
 OSX_SDK_DIR:                                  # [osx]
   - /opt                                      # [osx and x86_64]
