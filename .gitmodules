@@ -12070,7 +12070,3 @@
 	path = nh3-feedstock
 	url = ../nh3-feedstock
 	branch = main
-[submodule "pytest-asyncio-0.25-feedstock"]
-	path = pytest-asyncio-0.25-feedstock
-	url = ../pytest-asyncio-feedstock
-	branch = main-0.25
