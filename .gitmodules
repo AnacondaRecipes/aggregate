@@ -12070,3 +12070,7 @@
 	path = nh3-feedstock
 	url = ../nh3-feedstock
 	branch = main
+[submodule "gepa-feedstock"]
+	path = gepa-feedstock
+	url = ../gepa-feedstock
+	branch = main
