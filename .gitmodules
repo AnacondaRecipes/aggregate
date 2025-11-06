@@ -12078,3 +12078,7 @@
 	path = json-repair-feedstock
 	url = ../json-repair-feedstock
 	branch = main
+[submodule "magicattr-feedstock"]
+	path = magicattr-feedstock
+	url = ../magicattr-feedstock
+	branch = main
