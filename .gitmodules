@@ -12074,3 +12074,7 @@
 	path = gepa-feedstock
 	url = ../gepa-feedstock
 	branch = main
+[submodule "json-repair-feedstock"]
+	path = json-repair-feedstock
+	url = ../json-repair-feedstock
+	branch = main
