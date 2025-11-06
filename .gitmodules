@@ -12066,3 +12066,7 @@
 	path = polars-ols-feedstock
 	url = ../polars-ols-feedstock
 	branch = main
+[submodule "nh3-feedstock"]
+	path = nh3-feedstock
+	url = ../nh3-feedstock
+	branch = main
