@@ -12082,3 +12082,7 @@
 	path = magicattr-feedstock
 	url = ../magicattr-feedstock
 	branch = main
+[submodule "fastuuid-feedstock"]
+	path = fastuuid-feedstock
+	url = ../fastuuid-feedstock
+	branch = main
