@@ -12090,3 +12090,7 @@
 	path = pondpond-feedstock
 	url = ../pondpond-feedstock
 	branch = main
+[submodule "madoka-feedstock"]
+	path = madoka-feedstock
+	url = ../madoka-feedstock
+	branch = main
