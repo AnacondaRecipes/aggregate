@@ -12098,3 +12098,7 @@
 	path = colorlog-feedstock
 	url = ../colorlog-feedstock
 	branch = master
+[submodule "meson-python-0.16.0-feedstock"]
+	path = meson-python-0.16.0-feedstock
+	url = ../meson-python-feedstock
+	branch = main-0.16.0
