@@ -12094,3 +12094,7 @@
 	path = madoka-feedstock
 	url = ../madoka-feedstock
 	branch = main
+[submodule "colorlog-feedstock"]
+	path = colorlog-feedstock
+	url = ../colorlog-feedstock
+	branch = master
