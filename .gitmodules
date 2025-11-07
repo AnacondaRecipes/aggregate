@@ -12086,3 +12086,7 @@
 	path = fastuuid-feedstock
 	url = ../fastuuid-feedstock
 	branch = main
+[submodule "pondpond-feedstock"]
+	path = pondpond-feedstock
+	url = ../pondpond-feedstock
+	branch = main
