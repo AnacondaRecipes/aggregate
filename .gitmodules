@@ -12102,3 +12102,7 @@
 	path = meson-python-0.16.0-feedstock
 	url = ../meson-python-feedstock
 	branch = main-0.16.0
+[submodule "xorg-xserver-xvfb-feedstock"]
+	path = xorg-xserver-xvfb-feedstock
+	url = ../xorg-xserver-xvfb-feedstock
+	branch = main
