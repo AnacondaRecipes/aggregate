@@ -12106,3 +12106,7 @@
 	path = xorg-xserver-xvfb-feedstock
 	url = ../xorg-xserver-xvfb-feedstock
 	branch = main
+[submodule "gradio-feedstock"]
+	path = gradio-feedstock
+	url = ../gradio-feedstock
+	branch = main
