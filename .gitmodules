@@ -12126,3 +12126,7 @@
 	path = pydub-feedstock
 	url = ../pydub-feedstock
 	branch = main
+[submodule "safehttpx-feedstock"]
+	path = safehttpx-feedstock
+	url = ../safehttpx-feedstock
+	branch = main
