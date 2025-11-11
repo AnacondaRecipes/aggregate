@@ -12122,3 +12122,7 @@
 	path = groovy-python-feedstock
 	url = ../groovy-python-feedstock
 	branch = main
+[submodule "pydub-feedstock"]
+	path = pydub-feedstock
+	url = ../pydub-feedstock
+	branch = main
