@@ -12110,3 +12110,7 @@
 	path = gradio-feedstock
 	url = ../gradio-feedstock
 	branch = main
+[submodule "ffmpy-feedstock"]
+	path = ffmpy-feedstock
+	url = ../ffmpy-feedstock
+	branch = main
