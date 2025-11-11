@@ -12118,3 +12118,7 @@
 	path = gradio-client-feedstock
 	url = ../gradio-client-feedstock
 	branch = main
+[submodule "groovy-python-feedstock"]
+	path = groovy-python-feedstock
+	url = ../groovy-python-feedstock
+	branch = main
