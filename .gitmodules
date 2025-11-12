@@ -12138,3 +12138,7 @@
 	path = xorg-libfontenc-feedstock
 	url = ../xorg-libfontenc-feedstock
 	branch = main
+[submodule "xorg-libxfont2-feedstock"]
+	path = xorg-libxfont2-feedstock
+	url = ../xorg-libxfont2-feedstock
+	branch = main
