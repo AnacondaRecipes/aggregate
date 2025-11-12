@@ -12134,3 +12134,7 @@
 	path = sphinx-last-updated-by-git-feedstock
 	url = ../sphinx-last-updated-by-git-feedstock
 	branch = main
+[submodule "xorg-libfontenc-feedstock"]
+	path = xorg-libfontenc-feedstock
+	url = ../xorg-libfontenc-feedstock
+	branch = main
