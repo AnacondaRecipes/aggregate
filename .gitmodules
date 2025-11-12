@@ -12130,3 +12130,7 @@
 	path = safehttpx-feedstock
 	url = ../safehttpx-feedstock
 	branch = main
+[submodule "sphinx-last-updated-by-git-feedstock"]
+	path = sphinx-last-updated-by-git-feedstock
+	url = ../sphinx-last-updated-by-git-feedstock
+	branch = main
