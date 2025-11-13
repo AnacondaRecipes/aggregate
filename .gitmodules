@@ -12142,3 +12142,7 @@
 	path = xorg-libxfont2-feedstock
 	url = ../xorg-libxfont2-feedstock
 	branch = main
+[submodule "pytorch-2.6-feedstock"]
+	path = pytorch-2.6-feedstock
+	url = ../pytorch-feedstock
+	branch = master-2.6
