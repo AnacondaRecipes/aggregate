@@ -12146,3 +12146,7 @@
 	path = pytorch-2.6-feedstock
 	url = ../pytorch-feedstock
 	branch = master-2.6
+[submodule "annotated-doc-feedstock"]
+	path = annotated-doc-feedstock
+	url = ../annotated-doc-feedstock
+	branch = main
