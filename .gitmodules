@@ -12150,3 +12150,7 @@
 	path = annotated-doc-feedstock
 	url = ../annotated-doc-feedstock
 	branch = main
+[submodule "xorg-font-util-feedstock"]
+	path = xorg-font-util-feedstock
+	url = ../xorg-font-util-feedstock
+	branch = main
