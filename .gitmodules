@@ -12154,3 +12154,7 @@
 	path = xorg-font-util-feedstock
 	url = ../xorg-font-util-feedstock
 	branch = main
+[submodule "xorg-macros-feedstock"]
+	path = xorg-macros-feedstock
+	url = ../xorg-macros-feedstock
+	branch = main
