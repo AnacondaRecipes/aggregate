@@ -12166,3 +12166,7 @@
 	path = panel-material-ui-feedstock
 	url = ../panel-material-ui-feedstock
 	branch = main
+[submodule "click-loglevel-feedstock"]
+	path = click-loglevel-feedstock
+	url = ../click-loglevel-feedstock
+	branch = main
