@@ -12158,3 +12158,7 @@
 	path = xorg-macros-feedstock
 	url = ../xorg-macros-feedstock
 	branch = main
+[submodule "inline-snapshot-feedstock"]
+	path = inline-snapshot-feedstock
+	url = ../inline-snapshot-feedstock
+	branch = main
