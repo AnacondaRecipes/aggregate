@@ -12170,3 +12170,7 @@
 	path = click-loglevel-feedstock
 	url = ../click-loglevel-feedstock
 	branch = main
+[submodule "boto3-1.39.8-feedstock"]
+	path = boto3-1.39.8-feedstock
+	url = ../boto3-feedstock
+	branch = master-1.39.8
