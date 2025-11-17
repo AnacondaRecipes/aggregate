@@ -12174,3 +12174,7 @@
 	path = boto3-1.39.8-feedstock
 	url = ../boto3-feedstock
 	branch = master-1.39.8
+[submodule "s3transfer-0.13.1-feedstock"]
+	path = s3transfer-0.13.1-feedstock
+	url = ../s3transfer-feedstock
+	branch = master-0.13.1
