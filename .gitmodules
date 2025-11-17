@@ -12162,3 +12162,7 @@
 	path = inline-snapshot-feedstock
 	url = ../inline-snapshot-feedstock
 	branch = main
+[submodule "panel-material-ui-feedstock"]
+	path = panel-material-ui-feedstock
+	url = ../panel-material-ui-feedstock
+	branch = main
