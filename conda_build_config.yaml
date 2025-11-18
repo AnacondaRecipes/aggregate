@@ -260,7 +260,7 @@ dav1d:
 dbus:
   - '1'
 eigen:
-  - 3.3.7
+  - 5.0.1
 epoxy:
   - '1.5'
 expat:
