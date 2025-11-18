@@ -12182,3 +12182,7 @@
 	path = dotnet-feedstock
 	url = ../dotnet-feedstock
 	branch = main
+[submodule "grpc-cpp-feedstock"]
+	path = grpc-cpp-feedstock
+	url = ../grpc-cpp-feedstock
+	branch = master
