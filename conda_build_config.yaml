@@ -57,7 +57,7 @@ VERBOSE_CM:
 cran_mirror:
   - https://cran.r-project.org
 c_compiler_version:        # [linux or osx]
-  - 11.2.0                 # [linux]
+  - 14.3.0                 # [linux]
   - 20                     # [osx]
 c_stdlib_version:
   - 2.28                   # [linux]
@@ -65,7 +65,7 @@ c_stdlib_version:
   - 12.1                   # [osx and arm64]
   - 2019.11                # [win]
 cxx_compiler_version:      # [linux or osx]
-  - 11.2.0                 # [linux]
+  - 14.3.0                 # [linux]
   - 20                     # [osx]
 cuda_compiler_version:
   - 12.4
