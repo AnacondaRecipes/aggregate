@@ -12178,3 +12178,7 @@
 	path = s3transfer-0.13.1-feedstock
 	url = ../s3transfer-feedstock
 	branch = master-0.13.1
+[submodule "dotnet-feedstock"]
+	path = dotnet-feedstock
+	url = ../dotnet-feedstock
+	branch = main
