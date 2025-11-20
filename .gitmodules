@@ -12186,3 +12186,7 @@
 	path = grpc-cpp-feedstock
 	url = ../grpc-cpp-feedstock
 	branch = master
+[submodule "langchain-anthropic-feedstock"]
+	path = langchain-anthropic-feedstock
+	url = ../langchain-anthropic-feedstock
+	branch = main
