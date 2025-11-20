@@ -12190,3 +12190,7 @@
 	path = langchain-anthropic-feedstock
 	url = ../langchain-anthropic-feedstock
 	branch = main
+[submodule "qdrant-feedstock"]
+	path = qdrant-feedstock
+	url = ../qdrant-feedstock
+	branch = main
