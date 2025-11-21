@@ -12194,3 +12194,7 @@
 	path = qdrant-feedstock
 	url = ../qdrant-feedstock
 	branch = main
+[submodule "opencl-headers-feedstock"]
+	path = opencl-headers-feedstock
+	url = ../opencl-headers-feedstock
+	branch = main
