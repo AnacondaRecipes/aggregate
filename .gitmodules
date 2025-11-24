@@ -12198,3 +12198,7 @@
 	path = opencl-headers-feedstock
 	url = ../opencl-headers-feedstock
 	branch = main
+[submodule "cuda-ctadvisor-feedstock"]
+	path = cuda-ctadvisor-feedstock
+	url = ../cuda-ctadvisor-feedstock
+	branch = main
