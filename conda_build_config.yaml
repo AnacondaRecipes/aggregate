@@ -71,7 +71,7 @@ cuda_compiler_version:
   - 12.4
 fortran_compiler_version:
   - 2022.1.0                     # [win]
-  - 11.2.0                       # [osx or linux]
+  - 14.3.0                       # [osx or linux]
 clang_variant:
   - clang
 # The basic go-compiler with CGO disabled (CGO_ENABLED=0).
