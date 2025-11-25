@@ -394,7 +394,7 @@ level_zero:
 leveldb:
   - '1.23'
 libabseil:
-  - '20250127.0'
+  - '20250814.1'
 libaec:
   - '1'
 libaio:
@@ -486,7 +486,7 @@ libglx:
 libgpg_error:
   - '1'
 libgrpc:
-  - '1.71'
+  - '1.74'
 libgsasl:
   - '1'
 libgsf:
@@ -566,13 +566,13 @@ libpng:
 libpq:
   - '17'
 libprotobuf:
-  - 5.29.3
+  - 6.33.0
 libqdldl:
   - 0.1.8
 librdkafka:
   - '2.2'
 libre2_11:
-  - '2024'
+  - '2025'
 librsvg:
   - '2'
 libsentencepiece:
@@ -756,7 +756,7 @@ rdkit:
 rdma_core:
   - '58.0'
 re2:
-  - '2024'
+  - '2025'
 readline:
   - '8'
 reproc:
