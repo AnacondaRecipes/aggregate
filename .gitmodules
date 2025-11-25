@@ -12202,3 +12202,7 @@
 	path = cuda-ctadvisor-feedstock
 	url = ../cuda-ctadvisor-feedstock
 	branch = main
+[submodule "panel-splitjs-feedstock"]
+	path = panel-splitjs-feedstock
+	url = ../panel-splitjs-feedstock
+	branch = main
