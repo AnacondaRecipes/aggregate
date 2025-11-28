@@ -12206,3 +12206,7 @@
 	path = panel-splitjs-feedstock
 	url = ../panel-splitjs-feedstock
 	branch = main
+[submodule "rpcsvc-proto-feedstock"]
+	path = rpcsvc-proto-feedstock
+	url = ../rpcsvc-proto-feedstock
+	branch = main
