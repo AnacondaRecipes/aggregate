@@ -12214,3 +12214,7 @@
 	path = backports.zstd-feedstock
 	url = ../backports.zstd-feedstock
 	branch = main
+[submodule "cuda-culibos-feedstock"]
+	path = cuda-culibos-feedstock
+	url = ../cuda-culibos-feedstock
+	branch = main
