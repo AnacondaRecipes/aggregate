@@ -12210,3 +12210,7 @@
 	path = rpcsvc-proto-feedstock
 	url = ../rpcsvc-proto-feedstock
 	branch = main
+[submodule "backports.zstd-feedstock"]
+	path = backports.zstd-feedstock
+	url = ../backports.zstd-feedstock
+	branch = main
