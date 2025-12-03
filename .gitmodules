@@ -12226,3 +12226,7 @@
 	path = kumo-api-feedstock
 	url = ../kumo-api-feedstock
 	branch = main
+[submodule "redis-server-feedstock"]
+	path = redis-server-feedstock
+	url = ../redis-server-feedstock
+	branch = main
