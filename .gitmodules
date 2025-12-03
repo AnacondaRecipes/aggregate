@@ -12222,3 +12222,7 @@
 	path = kumoai-feedstock
 	url = ../kumoai-feedstock
 	branch = main
+[submodule "kumo-api-feedstock"]
+	path = kumo-api-feedstock
+	url = ../kumo-api-feedstock
+	branch = main
