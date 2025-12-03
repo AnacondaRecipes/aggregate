@@ -12218,3 +12218,7 @@
 	path = cuda-culibos-feedstock
 	url = ../cuda-culibos-feedstock
 	branch = main
+[submodule "kumoai-feedstock"]
+	path = kumoai-feedstock
+	url = ../kumoai-feedstock
+	branch = main
