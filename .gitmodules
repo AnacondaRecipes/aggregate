@@ -12230,3 +12230,7 @@
 	path = redis-server-feedstock
 	url = ../redis-server-feedstock
 	branch = main
+[submodule "installer-attribution-bootstrap-feedstock"]
+	path = installer-attribution-bootstrap-feedstock
+	url = ../installer-attribution-bootstrap-feedstock
+	branch = main
