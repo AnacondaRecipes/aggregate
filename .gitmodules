@@ -12262,3 +12262,7 @@
 	path = kaitaistruct-feedstock
 	url = ../kaitaistruct-feedstock
 	branch = main
+[submodule "libtirpc-feedstock"]
+	path = libtirpc-feedstock
+	url = ../libtirpc-feedstock
+	branch = main
