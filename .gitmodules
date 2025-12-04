@@ -12250,3 +12250,7 @@
 	path = pyyaml-ft-feedstock
 	url = ../pyyaml-ft-feedstock
 	branch = main
+[submodule "abi3info-feedstock"]
+	path = abi3info-feedstock
+	url = ../abi3info-feedstock
+	branch = main
