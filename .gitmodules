@@ -12254,3 +12254,7 @@
 	path = abi3info-feedstock
 	url = ../abi3info-feedstock
 	branch = main
+[submodule "pyelftools-feedstock"]
+	path = pyelftools-feedstock
+	url = ../pyelftools-feedstock
+	branch = main
