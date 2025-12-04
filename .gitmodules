@@ -12258,3 +12258,7 @@
 	path = pyelftools-feedstock
 	url = ../pyelftools-feedstock
 	branch = main
+[submodule "kaitaistruct-feedstock"]
+	path = kaitaistruct-feedstock
+	url = ../kaitaistruct-feedstock
+	branch = main
