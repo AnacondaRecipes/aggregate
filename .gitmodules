@@ -12242,3 +12242,7 @@
 	path = py-rattler-feedstock
 	url = ../py-rattler-feedstock
 	branch = main
+[submodule "abi3audit-feedstock"]
+	path = abi3audit-feedstock
+	url = ../abi3audit-feedstock
+	branch = main
