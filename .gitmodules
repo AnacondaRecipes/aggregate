@@ -12234,3 +12234,7 @@
 	path = installer-attribution-bootstrap-feedstock
 	url = ../installer-attribution-bootstrap-feedstock
 	branch = main
+[submodule "conda-rattler-solver-feedstock"]
+	path = conda-rattler-solver-feedstock
+	url = ../conda-rattler-solver-feedstock
+	branch = main
