@@ -12238,3 +12238,7 @@
 	path = conda-rattler-solver-feedstock
 	url = ../conda-rattler-solver-feedstock
 	branch = main
+[submodule "py-rattler-feedstock"]
+	path = py-rattler-feedstock
+	url = ../py-rattler-feedstock
+	branch = main
