@@ -12266,3 +12266,7 @@
 	path = libtirpc-feedstock
 	url = ../libtirpc-feedstock
 	branch = main
+[submodule "roman-numerals-feedstock"]
+	path = roman-numerals-feedstock
+	url = ../roman-numerals-feedstock
+	branch = main
