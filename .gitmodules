@@ -12274,3 +12274,7 @@
 	path = roman-numerals-feedstock
 	url = ../roman-numerals-feedstock
 	branch = main
+[submodule "commonmark-feedstock"]
+	path = commonmark-feedstock
+	url = ../commonmark-feedstock
+	branch = master
