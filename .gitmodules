@@ -12278,3 +12278,7 @@
 	path = commonmark-feedstock
 	url = ../commonmark-feedstock
 	branch = master
+[submodule "snowpark-connect-deps-1-3.56.2-feedstock"]
+	path = snowpark-connect-deps-1-3.56.2-feedstock
+	url = ../snowpark-connect-deps-1-feedstock
+	branch = main_3.56.2
