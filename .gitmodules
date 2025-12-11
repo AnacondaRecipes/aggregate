@@ -12270,3 +12270,7 @@
 	path = uutils-coreutils-feedstock
 	url = ../uutils-coreutils-feedstock
 	branch = main
+[submodule "roman-numerals-feedstock"]
+	path = roman-numerals-feedstock
+	url = ../roman-numerals-feedstock
+	branch = main
