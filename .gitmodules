@@ -12302,3 +12302,7 @@
 	path = libgumbo-feedstock
 	url = ../libgumbo-feedstock
 	branch = main
+[submodule "jbig2dec-feedstock"]
+	path = jbig2dec-feedstock
+	url = ../jbig2dec-feedstock
+	branch = main
