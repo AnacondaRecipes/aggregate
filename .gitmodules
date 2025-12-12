@@ -12290,3 +12290,7 @@
 	path = cutlass-feedstock
 	url = ../cutlass-feedstock
 	branch = main
+[submodule "snowpark-connect-1.2.0-feedstock"]
+	path = snowpark-connect-1.2.0-feedstock
+	url = ../snowpark-connect-feedstock
+	branch = main_1.2.0
