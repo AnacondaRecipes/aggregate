@@ -12298,3 +12298,7 @@
 	path = mupdf-feedstock
 	url = ../mupdf-feedstock
 	branch = main
+[submodule "libgumbo-feedstock"]
+	path = libgumbo-feedstock
+	url = ../libgumbo-feedstock
+	branch = main
