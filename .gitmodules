@@ -811,10 +811,6 @@
 	url = ../libuuid-feedstock.git
 	path = libuuid-feedstock
 	branch = master
-[submodule "libgfortran-feedstock"]
-	path = libgfortran-feedstock
-	url = ../libgfortran-feedstock
-	branch = master
 [submodule "hypothesis-feedstock"]
 	path = hypothesis-feedstock
 	url = ../hypothesis-feedstock
@@ -1247,10 +1243,6 @@
 	path = make-feedstock
 	url = ../make-feedstock
 	branch = master
-[submodule "udunits2-feedstock"]
-	path = udunits2-feedstock
-	url = ../udunits2-feedstock
-	branch = master
 [submodule "libglu-feedstock"]
 	path = libglu-feedstock
 	url = ../libglu-feedstock
@@ -1390,10 +1382,6 @@
 [submodule "regex-feedstock"]
 	path = regex-feedstock
 	url = ../regex-feedstock
-	branch = master
-[submodule "sh-feedstock"]
-	path = sh-feedstock
-	url = ../sh-feedstock
 	branch = master
 [submodule "ftfy-feedstock"]
 	path = ftfy-feedstock
@@ -1606,10 +1594,6 @@
 [submodule "cligj-feedstock"]
 	path = cligj-feedstock
 	url = ../cligj-feedstock
-	branch = master
-[submodule "click-plugins-feedstock"]
-	path = click-plugins-feedstock
-	url = ../click-plugins-feedstock
 	branch = master
 [submodule "affine-feedstock"]
 	path = affine-feedstock
@@ -1870,10 +1854,6 @@
 [submodule "jasper-feedstock"]
 	path = jasper-feedstock
 	url = ../jasper-feedstock
-	branch = master
-[submodule "hdfeos5-feedstock"]
-	path = hdfeos5-feedstock
-	url = ../hdfeos5-feedstock
 	branch = master
 [submodule "libspatialindex-feedstock"]
 	path = libspatialindex-feedstock
@@ -2223,10 +2203,6 @@
 	path = python-lmdb-feedstock
 	url = ../python-lmdb-feedstock
 	branch = master
-[submodule "pygmo-feedstock"]
-	path = pygmo-feedstock
-	url = ../pygmo-feedstock
-	branch = master
 [submodule "param-feedstock"]
 	path = param-feedstock
 	url = ../param-feedstock
@@ -2294,10 +2270,6 @@
 [submodule "pyarrow-feedstock"]
 	path = pyarrow-feedstock
 	url = ../pyarrow-feedstock
-	branch = master
-[submodule "c99-to-c89"]
-	path = c99-to-c89
-	url = ../c99-to-c89
 	branch = master
 [submodule "absl-py-feedstock"]
 	path = absl-py-feedstock
@@ -2563,10 +2535,6 @@
 	path = reportlab-feedstock
 	url = ../reportlab-feedstock
 	branch = master
-[submodule "lbzip2-feedstock"]
-	path = lbzip2-feedstock
-	url = ../lbzip2-feedstock
-	branch = master
 [submodule "comtypes-feedstock"]
 	path = comtypes-feedstock
 	url = ../comtypes-feedstock
@@ -2699,10 +2667,6 @@
 	path = rust-feedstock
 	url = ../rust-feedstock
 	branch = master
-[submodule "jags-feedstock"]
-	path = jags-feedstock
-	url = ../jags-feedstock
-	branch = master
 [submodule "orc-feedstock"]
 	path = orc-feedstock
 	url = ../orc-feedstock
@@ -2779,14 +2743,6 @@
 	path = jupyterhub-feedstock
 	url = ../jupyterhub-feedstock
 	branch = master
-[submodule "tini-feedstock"]
-	path = tini-feedstock
-	url = ../tini-feedstock
-	branch = master
-[submodule "fbprophet-feedstock"]
-	path = fbprophet-feedstock
-	url = ../fbprophet-feedstock
-	branch = master
 [submodule "pycryptodome-feedstock"]
 	path = pycryptodome-feedstock
 	url = ../pycryptodome-feedstock
@@ -2834,10 +2790,6 @@
 [submodule "fftw-feedstock"]
 	path = fftw-feedstock
 	url = ../fftw-feedstock
-	branch = master
-[submodule "gitea-feedstock"]
-	path = gitea-feedstock
-	url = ../gitea-feedstock
 	branch = master
 [submodule "apache-libcloud-feedstock"]
 	path = apache-libcloud-feedstock
@@ -3575,10 +3527,6 @@
 	path = mando-feedstock
 	url = ../mando-feedstock.git
 	branch = master
-[submodule "fossil-feedstock"]
-	path = fossil-feedstock
-	url = ../fossil-feedstock.git
-	branch = master
 [submodule "cctools-and-ld64-feedstock"]
 	path = cctools-and-ld64-feedstock
 	url = ../cctools-and-ld64-feedstock
@@ -3778,10 +3726,6 @@
 [submodule "flask-bcrypt-feedstock"]
 	path = flask-bcrypt-feedstock
 	url = ../flask-bcrypt-feedstock
-	branch = master
-[submodule "librabbitmq-feedstock"]
-	path = librabbitmq-feedstock
-	url = ../librabbitmq-feedstock
 	branch = master
 [submodule "simple-salesforce-feedstock"]
 	path = simple-salesforce-feedstock
@@ -4055,10 +3999,6 @@
 	path = click-repl-feedstock
 	url = ../click-repl-feedstock
 	branch = master
-[submodule "openrefine-feedstock"]
-	path = openrefine-feedstock
-	url = ../openrefine-feedstock
-	branch = master
 [submodule "psqlodbc-feedstock"]
 	path = psqlodbc-feedstock
 	url = ../psqlodbc-feedstock
@@ -4158,10 +4098,6 @@
 [submodule "archspec-feedstock"]
 	path = archspec-feedstock
 	url = ../archspec-feedstock
-	branch = master
-[submodule "pagmo-feedstock"]
-	path = pagmo-feedstock
-	url = ../pagmo-feedstock
 	branch = master
 [submodule "pytest-subtests-feedstock"]
 	path = pytest-subtests-feedstock
@@ -4283,10 +4219,6 @@
 	path = gin-config-feedstock
 	url = ../gin-config-feedstock
 	branch = master
-[submodule "capstone-feedstock"]
-	path = capstone-feedstock
-	url = ../capstone-feedstock
-	branch = master
 [submodule "pyls-spyder-feedstock"]
 	path = pyls-spyder-feedstock
 	url = ../pyls-spyder-feedstock
@@ -4338,10 +4270,6 @@
 [submodule "linux-sysroot-feedstock"]
 	path = linux-sysroot-feedstock
 	url = ../linux-sysroot-feedstock
-	branch = master
-[submodule "crosstool-ng-feedstock"]
-	path = crosstool-ng-feedstock
-	url = ../crosstool-ng-feedstock
 	branch = master
 [submodule "ctng-compilers-feedstock"]
 	path = ctng-compilers-feedstock
@@ -4403,10 +4331,6 @@
 	path = python3-openid-feedstock
 	url = ../python3-openid-feedstock
 	branch = master
-[submodule "grpcio-tools-feedstock"]
-	path = grpcio-tools-feedstock
-	url = ../grpcio-tools-feedstock
-	branch = master
 [submodule "echo-feedstock"]
 	path = echo-feedstock
 	url = ../echo-feedstock
@@ -4430,10 +4354,6 @@
 [submodule "jupyterhub-ldapauthenticator-feedstock"]
 	path = jupyterhub-ldapauthenticator-feedstock
 	url = ../jupyterhub-ldapauthenticator-feedstock
-	branch = master
-[submodule "cdt_amzn2_aarch64"]
-	path = cdt_amzn2_aarch64
-	url = ../cdt_amzn2_aarch64
 	branch = master
 [submodule "cmake-no-system-feedstock"]
 	path = cmake-no-system-feedstock
@@ -4699,14 +4619,6 @@
 	path = fonts-conda-ecosystem-feedstock
 	url = ../fonts-conda-ecosystem-feedstock
 	branch = master
-[submodule "ipopt-feedstock"]
-	path = ipopt-feedstock
-	url = ../ipopt-feedstock
-	branch = master
-[submodule "mumps-feedstock"]
-	path = mumps-feedstock
-	url = ../mumps-feedstock
-	branch = master
 [submodule "ampl-mp-feedstock"]
 	path = ampl-mp-feedstock
 	url = ../ampl-mp-feedstock
@@ -4735,14 +4647,6 @@
 	path = charset-normalizer-feedstock
 	url = ../charset-normalizer-feedstock
 	branch = master
-[submodule "scotch-feedstock"]
-	path = scotch-feedstock
-	url = ../scotch-feedstock
-	branch = master
-[submodule "scalapack-feedstock"]
-	path = scalapack-feedstock
-	url = ../scalapack-feedstock
-	branch = master
 [submodule "glpk-feedstock"]
 	path = glpk-feedstock
 	url = ../glpk-feedstock
@@ -4754,10 +4658,6 @@
 [submodule "assimp-feedstock"]
 	path = assimp-feedstock
 	url = ../assimp-feedstock
-	branch = master
-[submodule "hunspell-feedstock"]
-	path = hunspell-feedstock
-	url = ../hunspell-feedstock
 	branch = master
 [submodule "autotools_clang_conda-feedstock"]
 	path = autotools_clang_conda-feedstock
@@ -4931,17 +4831,9 @@
 	path = jaxlib-feedstock
 	url = ../jaxlib-feedstock
 	branch = master
-[submodule "gh-feedstock"]
-	path = gh-feedstock
-	url = ../gh-feedstock
-	branch = master
 [submodule "autocfg-feedstock"]
 	path = autocfg-feedstock
 	url = ../autocfg-feedstock
-	branch = master
-[submodule "gluon-cv-feedstock"]
-	path = gluon-cv-feedstock
-	url = ../gluon-cv-feedstock
 	branch = master
 [submodule "gluon-ts-feedstock"]
 	path = gluon-ts-feedstock
@@ -4975,10 +4867,6 @@
 	path = sentencepiece-feedstock
 	url = ../sentencepiece-feedstock
 	branch = master
-[submodule "gperftools-feedstock"]
-	path = gperftools-feedstock
-	url = ../gperftools-feedstock
-	branch = master
 [submodule "libunwind-feedstock"]
 	path = libunwind-feedstock
 	url = ../libunwind-feedstock
@@ -4994,10 +4882,6 @@
 [submodule "python-lsp-black-feedstock"]
 	path = python-lsp-black-feedstock
 	url = ../python-lsp-black-feedstock
-	branch = master
-[submodule "prefect-feedstock"]
-	path = prefect-feedstock
-	url = ../prefect-feedstock
 	branch = master
 [submodule "fastprogress-feedstock"]
 	path = fastprogress-feedstock
@@ -5055,10 +4939,6 @@
 	path = pyreadline3-feedstock
 	url = ../pyreadline3-feedstock
 	branch = master
-[submodule "types-typed-ast-feedstock"]
-	path = types-typed-ast-feedstock
-	url = ../types-typed-ast-feedstock
-	branch = master
 [submodule "types-toml-feedstock"]
 	path = types-toml-feedstock
 	url = ../types-toml-feedstock
@@ -5102,10 +4982,6 @@
 [submodule "uvicorn-feedstock"]
 	path = uvicorn-feedstock
 	url = ../uvicorn-feedstock
-	branch = master
-[submodule "pyppeteer-feedstock"]
-	path = pyppeteer-feedstock
-	url = ../pyppeteer-feedstock
 	branch = master
 [submodule "dos2unix-feedstock"]
 	path = dos2unix-feedstock
@@ -5217,10 +5093,6 @@
 [submodule "capnproto-feedstock"]
 	path = capnproto-feedstock
 	url = ../capnproto-feedstock
-	branch = master
-[submodule "libmng-feedstock"]
-	path = libmng-feedstock
-	url = ../libmng-feedstock
 	branch = master
 [submodule "crender-feedstock"]
 	path = crender-feedstock
@@ -5366,10 +5238,6 @@
 	path = gcc_toolchain-feedstock
 	url = ../gcc_toolchain-feedstock
 	branch = main
-[submodule "gcc_toolchain-sources"]
-	path = gcc_toolchain-sources
-	url = ../gcc_toolchain-sources
-	branch = main
 [submodule "typogrify-feedstock"]
 	path = typogrify-feedstock
 	url = ../typogrify-feedstock
@@ -5437,10 +5305,6 @@
 [submodule "pyqt-builder-feedstock"]
 	path = pyqt-builder-feedstock
 	url = ../pyqt-builder-feedstock
-	branch = main
-[submodule "qt_sources-feedstock"]
-	path = qt_sources-feedstock
-	url = ../qt_sources-feedstock
 	branch = main
 [submodule "virtualenv-clone-feedstock"]
 	path = virtualenv-clone-feedstock
@@ -5650,14 +5514,6 @@
 	path = pre-commit-feedstock
 	url = ../pre-commit-feedstock
 	branch = main
-[submodule "hdk-feedstock"]
-	path = hdk-feedstock
-	url = ../hdk-feedstock
-	branch = main
-[submodule "vc-rutime-and-more-feedstock"]
-	path = vc-rutime-and-more-feedstock
-	url = ../vc-rutime-and-more-feedstock
-	branch = main
 [submodule "ucrt-feedstock"]
 	path = ucrt-feedstock
 	url = ../ucrt-feedstock
@@ -5741,10 +5597,6 @@
 [submodule "types-pytz-feedstock"]
 	path = types-pytz-feedstock
 	url = ../types-pytz-feedstock
-	branch = main
-[submodule "libtvm-feedstock"]
-	path = libtvm-feedstock
-	url = ../libtvm-feedstock
 	branch = main
 [submodule "xyzservices-feedstock"]
 	path = xyzservices-feedstock
@@ -5858,10 +5710,6 @@
 	path = optax-feedstock
 	url = ../optax-feedstock
 	branch = main
-[submodule "flax-feedstock"]
-	path = flax-feedstock
-	url = ../flax-feedstock
-	branch = main
 [submodule "clr_loader-feedstock"]
 	path = clr_loader-feedstock
 	url = ../clr_loader-feedstock
@@ -5869,10 +5717,6 @@
 [submodule "findpython-feedstock"]
 	path = findpython-feedstock
 	url = ../findpython-feedstock
-	branch = main
-[submodule "tensorstore-feedstock"]
-	path = tensorstore-feedstock
-	url = ../tensorstore-feedstock
 	branch = main
 [submodule "hatch-nodejs-version-feedstock"]
 	path = hatch-nodejs-version-feedstock
@@ -5950,10 +5794,6 @@
 [submodule "anaconda-feedstock"]
 	path = anaconda-feedstock
 	url = ../anaconda-feedstock
-	branch = main
-[submodule "anaconda_custom-feedstock"]
-	path = anaconda_custom-feedstock
-	url = ../anaconda_custom-feedstock
 	branch = main
 [submodule "pandarallel-feedstock"]
 	path = pandarallel-feedstock
@@ -6508,10 +6348,6 @@
 	path = trafaret-feedstock
 	url = ../trafaret-feedstock
 	branch = main
-[submodule "datarobot-feedstock"]
-	path = datarobot-feedstock
-	url = ../datarobot-feedstock
-	branch = main
 [submodule "pybcj-feedstock"]
 	path = pybcj-feedstock
 	url = ../pybcj-feedstock
@@ -6543,10 +6379,6 @@
 [submodule "arpack-feedstock"]
 	path = arpack-feedstock
 	url = ../arpack-feedstock
-	branch = main
-[submodule "pybcpy-feedstock"]
-	path = pybcpy-feedstock
-	url = ../pybcpy-feedstock
 	branch = main
 [submodule "zipfile-deflate64-feedstock"]
 	path = zipfile-deflate64-feedstock
@@ -6652,10 +6484,6 @@
 	path = k-means-constrained-feedstock
 	url = ../k-means-constrained-feedstock
 	branch = main
-[submodule "r-terra-feedstock"]
-	path = r-terra-feedstock
-	url = ../r-terra-feedstock
-	branch = main
 [submodule "python-tblib-feedstock"]
 	path = python-tblib-feedstock
 	url = ../python-tblib-feedstock
@@ -6740,14 +6568,6 @@
 	path = nmslib-feedstock
 	url = ../nmslib-feedstock
 	branch = main
-[submodule "rdt-feedstock"]
-	path = rdt-feedstock
-	url = ../rdt-feedstock
-	branch = main
-[submodule "copulas-feedstock"]
-	path = copulas-feedstock
-	url = ../copulas-feedstock
-	branch = main
 [submodule "tsai-feedstock"]
 	path = tsai-feedstock
 	url = ../tsai-feedstock
@@ -6759,14 +6579,6 @@
 [submodule "tesserocr-feedstock"]
 	path = tesserocr-feedstock
 	url = ../tesserocr-feedstock
-	branch = main
-[submodule "sdmetrics-feedstock"]
-	path = sdmetrics-feedstock
-	url = ../sdmetrics-feedstock
-	branch = main
-[submodule "deepecho-feedstock"]
-	path = deepecho-feedstock
-	url = ../deepecho-feedstock
 	branch = main
 [submodule "percy-feedstock"]
 	path = percy-feedstock
@@ -6787,10 +6599,6 @@
 [submodule "pyod-feedstock"]
 	path = pyod-feedstock
 	url = ../pyod-feedstock
-	branch = main
-[submodule "schemdraw-feedstock"]
-	path = schemdraw-feedstock
-	url = ../schemdraw-feedstock
 	branch = main
 [submodule "tbats-feedstock"]
 	path = tbats-feedstock
@@ -6984,10 +6792,6 @@
 	path = cornac-feedstock
 	url = ../cornac-feedstock
 	branch = main
-[submodule "powerlaw-feedstock"]
-	path = powerlaw-feedstock
-	url = ../powerlaw-feedstock
-	branch = main
 [submodule "pandera-core-feedstock"]
 	path = pandera-core-feedstock
 	url = ../pandera-core-feedstock
@@ -7048,14 +6852,6 @@
 	path = workerpool-feedstock
 	url = ../workerpool-feedstock
 	branch = main
-[submodule "xar-1.8.0-feedstock"]
-	path = xar-1.8.0-feedstock
-	url = ../xar-1.8.0-feedstock
-	branch = main
-[submodule "xar-bootstrap-feedstock"]
-	path = xar-bootstrap-feedstock
-	url = ../xar-bootstrap-feedstock
-	branch = main
 [submodule "zope-feedstock"]
 	path = zope-feedstock
 	url = ../zope-feedstock
@@ -7067,10 +6863,6 @@
 [submodule "tensorflow-metadata-feedstock"]
 	path = tensorflow-metadata-feedstock
 	url = ../tensorflow-metadata-feedstock
-	branch = main
-[submodule "thrift-0.9.3-feedstock"]
-	path = thrift-0.9.3-feedstock
-	url = ../thrift-0.9.3-feedstock
 	branch = main
 [submodule "tktable-feedstock"]
 	path = tktable-feedstock
@@ -7108,10 +6900,6 @@
 	path = spyder_parso_requirement-feedstock
 	url = ../spyder_parso_requirement-feedstock
 	branch = main
-[submodule "ripgrep-13.0.0-feedstock"]
-	path = ripgrep-13.0.0-feedstock
-	url = ../ripgrep-13.0.0-feedstock
-	branch = main
 [submodule "rust-nightly-activation-feedstock"]
 	path = rust-nightly-activation-feedstock
 	url = ../rust-nightly-activation-feedstock
@@ -7131,14 +6919,6 @@
 [submodule "qbs-feedstock"]
 	path = qbs-feedstock
 	url = ../qbs-feedstock
-	branch = main
-[submodule "qt3dstudio-feedstock"]
-	path = qt3dstudio-feedstock
-	url = ../qt3dstudio-feedstock
-	branch = main
-[submodule "qtcreator-feedstock"]
-	path = qtcreator-feedstock
-	url = ../qtcreator-feedstock
 	branch = main
 [submodule "queuelib-feedstock"]
 	path = queuelib-feedstock
@@ -7175,10 +6955,6 @@
 [submodule "perl-regexp-common-feedstock"]
 	path = perl-regexp-common-feedstock
 	url = ../perl-regexp-common-feedstock
-	branch = main
-[submodule "perl-sys-cpu-feedstock"]
-	path = perl-sys-cpu-feedstock
-	url = ../perl-sys-cpu-feedstock
 	branch = main
 [submodule "persistent-feedstock"]
 	path = persistent-feedstock
@@ -7220,10 +6996,6 @@
 	path = pbkdf2-feedstock
 	url = ../pbkdf2-feedstock
 	branch = main
-[submodule "pendulum-1.4.4-feedstock"]
-	path = pendulum-1.4.4-feedstock
-	url = ../pendulum-1.4.4-feedstock
-	branch = main
 [submodule "neotime-feedstock"]
 	path = neotime-feedstock
 	url = ../neotime-feedstock
@@ -7236,14 +7008,6 @@
 	path = openhmd-feedstock
 	url = ../openhmd-feedstock
 	branch = main
-[submodule "otter-browser-feedstock"]
-	path = otter-browser-feedstock
-	url = ../otter-browser-feedstock
-	branch = main
-[submodule "moltenvk-feedstock"]
-	path = moltenvk-feedstock
-	url = ../moltenvk-feedstock
-	branch = main
 [submodule "magma-feedstock"]
 	path = magma-feedstock
 	url = ../magma-feedstock
@@ -7252,29 +7016,9 @@
 	path = libpython-feedstock
 	url = ../libpython-feedstock
 	branch = main
-[submodule "libvpx-1.10.0-feedstock"]
-	path = libvpx-1.10.0-feedstock
-	url = ../libvpx-1.10.0-feedstock
-	branch = main
-[submodule "libxml2-bootstrap-feedstock"]
-	path = libxml2-bootstrap-feedstock
-	url = ../libxml2-bootstrap-feedstock
-	branch = main
-[submodule "libxmlsec1-1.2.32-feedstock"]
-	path = libxmlsec1-1.2.32-feedstock
-	url = ../libxmlsec1-1.2.32-feedstock
-	branch = main
 [submodule "feedparser-feedstock"]
 	path = feedparser-feedstock
 	url = ../feedparser-feedstock
-	branch = main
-[submodule "kitty-feedstock"]
-	path = kitty-feedstock
-	url = ../kitty-feedstock
-	branch = main
-[submodule "libaio-0.3.111-feedstock"]
-	path = libaio-0.3.111-feedstock
-	url = ../libaio-0.3.111-feedstock
 	branch = main
 [submodule "libgcc-feedstock"]
 	path = libgcc-feedstock
@@ -7288,37 +7032,13 @@
 	path = ctng-dbg-compilers-activation-feedstock
 	url = ../ctng-dbg-compilers-activation-feedstock
 	branch = main
-[submodule "ctng-osize-compilers-activation-feedstock"]
-	path = ctng-osize-compilers-activation-feedstock
-	url = ../ctng-osize-compilers-activation-feedstock
-	branch = main
 [submodule "double-conversion-feedstock"]
 	path = double-conversion-feedstock
 	url = ../double-conversion-feedstock
 	branch = main
-[submodule "crashpad-feedstock"]
-	path = crashpad-feedstock
-	url = ../crashpad-feedstock
-	branch = main
-[submodule "creduce-feedstock"]
-	path = creduce-feedstock
-	url = ../creduce-feedstock
-	branch = main
-[submodule "crosstool-ng-WIP-feedstock"]
-	path = crosstool-ng-WIP-feedstock
-	url = ../crosstool-ng-WIP-feedstock
-	branch = main
 [submodule "crosstool-ng-bootstrap-feedstock"]
 	path = crosstool-ng-bootstrap-feedstock
 	url = ../crosstool-ng-bootstrap-feedstock
-	branch = main
-[submodule "ctng-compilers-2.23-feedstock"]
-	path = ctng-compilers-2.23-feedstock
-	url = ../ctng-compilers-2.23-feedstock
-	branch = main
-[submodule "chromium-feedstock"]
-	path = chromium-feedstock
-	url = ../chromium-feedstock
 	branch = main
 [submodule "cmake-binary-feedstock"]
 	path = cmake-binary-feedstock
@@ -7327,10 +7047,6 @@
 [submodule "configobj-feedstock"]
 	path = configobj-feedstock
 	url = ../configobj-feedstock
-	branch = main
-[submodule "chameleon-3.6.2-feedstock"]
-	path = chameleon-3.6.2-feedstock
-	url = ../chameleon-3.6.2-feedstock
 	branch = main
 [submodule "bsdiff4-feedstock"]
 	path = bsdiff4-feedstock
@@ -7351,18 +7067,6 @@
 [submodule "7za-feedstock"]
 	path = 7za-feedstock
 	url = ../7za-feedstock
-	branch = main
-[submodule "alacritty-feedstock"]
-	path = alacritty-feedstock
-	url = ../alacritty-feedstock
-	branch = main
-[submodule "altair3_2-feedstock"]
-	path = altair3_2-feedstock
-	url = ../altair3_2-feedstock
-	branch = main
-[submodule "ant-1.10.8-feedstock"]
-	path = ant-1.10.8-feedstock
-	url = ../ant-1.10.8-feedstock
 	branch = main
 [submodule "python-kaleido-feedstock"]
 	path = python-kaleido-feedstock
@@ -7435,10 +7139,6 @@
 	path = flite-feedstock
 	url = ../flite-feedstock
 	branch = main
-[submodule "flutter-sdk-feedstock"]
-	path = flutter-sdk-feedstock
-	url = ../flutter-sdk-feedstock
-	branch = main
 [submodule "font-ttf-dejavu-sans-mono-feedstock"]
 	path = font-ttf-dejavu-sans-mono-feedstock
 	url = ../font-ttf-dejavu-sans-mono-feedstock
@@ -7447,17 +7147,9 @@
 	path = gevent-websocket-feedstock
 	url = ../gevent-websocket-feedstock
 	branch = main
-[submodule "gfortran-feedstock"]
-	path = gfortran-feedstock
-	url = ../gfortran-feedstock
-	branch = main
 [submodule "git-cola-feedstock"]
 	path = git-cola-feedstock
 	url = ../git-cola-feedstock
-	branch = main
-[submodule "gptfdisk-feedstock"]
-	path = gptfdisk-feedstock
-	url = ../gptfdisk-feedstock
 	branch = main
 [submodule "gridmap-feedstock"]
 	path = gridmap-feedstock
@@ -7466,10 +7158,6 @@
 [submodule "hupper-feedstock"]
 	path = hupper-feedstock
 	url = ../hupper-feedstock
-	branch = main
-[submodule "intellij-idea-ce-feedstock"]
-	path = intellij-idea-ce-feedstock
-	url = ../intellij-idea-ce-feedstock
 	branch = main
 [submodule "snowflake-ml-python-feedstock"]
 	path = snowflake-ml-python-feedstock
@@ -7498,10 +7186,6 @@
 [submodule "hidapi-feedstock"]
 	path = hidapi-feedstock
 	url = ../hidapi-feedstock.git
-	branch = main
-[submodule "pymupdf-feedstock"]
-	path = pymupdf-feedstock
-	url = ../pymupdf-feedstock
 	branch = main
 [submodule "imutils-feedstock"]
 	path = imutils-feedstock
@@ -7727,14 +7411,6 @@
 	path = numpy-1.25-feedstock
 	url = ../numpy-feedstock
 	branch = numpy125
-[submodule "intel-fortran-feedstock"]
-	path = intel-fortran-feedstock
-	url = ../intel-fortran-feedstock
-	branch = main
-[submodule "_ipyw_jlab_nb_ext_conf-feedstock"]
-	path = _ipyw_jlab_nb_ext_conf-feedstock
-	url = ../_ipyw_jlab_nb_ext_conf-feedstock
-	branch = main
 [submodule "_pytorch_select-feedstock"]
 	path = _pytorch_select-feedstock
 	url = ../_pytorch_select-feedstock
@@ -7742,22 +7418,6 @@
 [submodule "_low_priority-feedstock"]
 	path = _low_priority-feedstock
 	url = ../_low_priority-feedstock
-	branch = main
-[submodule "cdt_cos6_x86_64-feedstock"]
-	path = cdt_cos6_x86_64-feedstock
-	url = ../cdt_cos6_x86_64-feedstock
-	branch = main
-[submodule "cdt_cos7_ppc64le-feedstock"]
-	path = cdt_cos7_ppc64le-feedstock
-	url = ../cdt_cos7_ppc64le-feedstock
-	branch = main
-[submodule "cdt_cos7_s390x-feedstock"]
-	path = cdt_cos7_s390x-feedstock
-	url = ../cdt_cos7_s390x-feedstock
-	branch = main
-[submodule "vs2019-feedstock"]
-	path = vs2019-feedstock
-	url = ../vs2019-feedstock
 	branch = main
 [submodule "bertopic-feedstock"]
 	path = bertopic-feedstock
@@ -7837,10 +7497,6 @@
 [submodule "numpy-financial-feedstock"]
 	path = numpy-financial-feedstock
 	url = ../numpy-financial-feedstock
-	branch = main
-[submodule "jinjasql-feedstock"]
-	path = jinjasql-feedstock
-	url = ../jinjasql-feedstock
 	branch = main
 [submodule "u8darts-feedstock"]
 	path = u8darts-feedstock
@@ -7950,10 +7606,6 @@
 	path = pydicom-feedstock
 	url = ../pydicom-feedstock
 	branch = main
-[submodule "peft-feedstock"]
-	path = peft-feedstock
-	url = ../peft-feedstock
-	branch = main
 [submodule "rpds-py-feedstock"]
 	path = rpds-py-feedstock
 	url = ../rpds-py-feedstock
@@ -7973,10 +7625,6 @@
 [submodule "pykx-feedstock"]
 	path = pykx-feedstock
 	url = ../pykx-feedstock
-	branch = main
-[submodule "anaconda-packaging-utils-feedstock"]
-	path = anaconda-packaging-utils-feedstock
-	url = ../anaconda-packaging-utils-feedstock
 	branch = main
 [submodule "jsonschema-specifications-feedstock"]
 	path = jsonschema-specifications-feedstock
@@ -8038,10 +7686,6 @@
 	path = geoip2-feedstock
 	url = ../geoip2-feedstock
 	branch = main
-[submodule "jupyterlab-lsp-feedstock"]
-	path = jupyterlab-lsp-feedstock
-	url = ../jupyterlab-lsp-feedstock
-	branch = main
 [submodule "robotframework-feedstock"]
 	path = robotframework-feedstock
 	url = ../robotframework-feedstock
@@ -8081,10 +7725,6 @@
 [submodule "pytest-lazy-fixture-feedstock"]
 	path = pytest-lazy-fixture-feedstock
 	url = ../pytest-lazy-fixture-feedstock
-	branch = main
-[submodule "attr-feedstock"]
-	path = attr-feedstock
-	url = ../attr-feedstock
 	branch = main
 [submodule "sktime-feedstock"]
 	path = sktime-feedstock
@@ -8250,10 +7890,6 @@
 	path = deepdiff-feedstock
 	url = ../deepdiff-feedstock
 	branch = master
-[submodule "typish-feedstock"]
-	path = typish-feedstock
-	url = ../typish-feedstock
-	branch = main
 [submodule "starsessions-feedstock"]
 	path = starsessions-feedstock
 	url = ../starsessions-feedstock
@@ -8313,14 +7949,6 @@
 	path = lightning-feedstock
 	url = ../lightning-feedstock
 	branch = main
-[submodule "opendatalab-feedstock"]
-	path = opendatalab-feedstock
-	url = ../opendatalab-feedstock
-	branch = main
-[submodule "openxlab-feedstock"]
-	path = openxlab-feedstock
-	url = ../openxlab-feedstock
-	branch = main
 [submodule "autogluon-feedstock"]
 	path = autogluon-feedstock
 	url = ../autogluon-feedstock
@@ -8349,10 +7977,6 @@
 	path = phonetics-feedstock
 	url = ../phonetics-feedstock
 	branch = main
-[submodule "splink-feedstock"]
-	path = splink-feedstock
-	url = ../splink-feedstock
-	branch = main
 [submodule "itables-feedstock"]
 	path = itables-feedstock
 	url = ../itables-feedstock
@@ -8365,10 +7989,6 @@
 	path = streamlit-plotly-events-feedstock
 	url = ../streamlit-plotly-events-feedstock
 	branch = main
-[submodule "docrepr-feedstock"]
-	path = docrepr-feedstock
-	url = ../docrepr-feedstock
-	branch = main
 [submodule "mahotas-feedstock"]
 	path = mahotas-feedstock
 	url = ../mahotas-feedstock
@@ -8380,10 +8000,6 @@
 [submodule "isotree-feedstock"]
 	path = isotree-feedstock
 	url = ../isotree-feedstock
-	branch = main
-[submodule "openfst-feedstock"]
-	path = openfst-feedstock
-	url = ../openfst-feedstock
 	branch = main
 [submodule "sphinxcontrib-jquery-feedstock"]
 	path = sphinxcontrib-jquery-feedstock
@@ -8412,10 +8028,6 @@
 [submodule "textblob-feedstock"]
 	path = textblob-feedstock
 	url = ../textblob-feedstock
-	branch = main
-[submodule "py-ard-feedstock"]
-	path = py-ard-feedstock
-	url = ../py-ard-feedstock
 	branch = main
 [submodule "langdetect-feedstock"]
 	path = langdetect-feedstock
@@ -8549,14 +8161,6 @@
 [submodule "aws-c-http-feedstock"]
 	path = aws-c-http-feedstock
 	url = ../aws-c-http-feedstock
-	branch = main
-[submodule "socksio-feedstock"]
-	path = socksio-feedstock
-	url = ../socksio-feedstock
-	branch = main
-[submodule "cuda-cccl-impl-feedstock"]
-	path = cuda-cccl-impl-feedstock
-	url = ../cuda-cccl-impl-feedstock
 	branch = main
 [submodule "hatch-fancy-pypi-readme-feedstock"]
 	path = hatch-fancy-pypi-readme-feedstock
@@ -8746,10 +8350,6 @@
 	path = jschema-to-python-feedstock
 	url = ../jschema-to-python-feedstock
 	branch = main
-[submodule "llama-cpp-python-feedstock"]
-	path = llama-cpp-python-feedstock
-	url = ../llama-cpp-python-feedstock
-	branch = main
 [submodule "langchain-core-feedstock"]
 	path = langchain-core-feedstock
 	url = ../langchain-core-feedstock
@@ -8802,10 +8402,6 @@
 	path = llama.cpp-feedstock
 	url = ../llama.cpp-feedstock
 	branch = main
-[submodule "opentelemetry-semantic-conventions-feedstock"]
-	path = opentelemetry-semantic-conventions-feedstock
-	url = ../opentelemetry-semantic-conventions-feedstock
-	branch = main
 [submodule "jsonschema-path-feedstock"]
 	path = jsonschema-path-feedstock
 	url = ../jsonschema-path-feedstock
@@ -8833,10 +8429,6 @@
 [submodule "opentelemetry-sdk-feedstock"]
 	path = opentelemetry-sdk-feedstock
 	url = ../opentelemetry-sdk-feedstock
-	branch = main
-[submodule "pytest-json-report-feedstock"]
-	path = pytest-json-report-feedstock
-	url = ../pytest-json-report-feedstock
 	branch = main
 [submodule "rust-1.79.0.dev20240328-feedstock"]
 	path = rust-1.79.0.dev20240328-feedstock
@@ -9073,10 +8665,6 @@
 [submodule "pymoo-feedstock"]
 	path = pymoo-feedstock
 	url = ../pymoo-feedstock
-	branch = main
-[submodule "hypercorn-feedstock"]
-	path = hypercorn-feedstock
-	url = ../hypercorn-feedstock
 	branch = main
 [submodule "motor-feedstock"]
 	path = motor-feedstock
@@ -9406,10 +8994,6 @@
 	path = sis-extras-feedstock
 	url = ../sis-extras-feedstock
 	branch = main
-[submodule "autokeras-feedstock"]
-	path = autokeras-feedstock
-	url = ../autokeras-feedstock
-	branch = main
 [submodule "emcee-feedstock"]
 	path = emcee-feedstock
 	url = ../emcee-feedstock
@@ -9437,10 +9021,6 @@
 [submodule "keras-tuner-feedstock"]
 	path = keras-tuner-feedstock
 	url = ../keras-tuner-feedstock
-	branch = main
-[submodule "keras-nlp-feedstock"]
-	path = keras-nlp-feedstock
-	url = ../keras-nlp-feedstock
 	branch = main
 [submodule "kagglehub-feedstock"]
 	path = kagglehub-feedstock
@@ -9510,10 +9090,6 @@
 	path = auto-sklearn-feedstock
 	url = ../auto-sklearn-feedstock
 	branch = main
-[submodule "milvus-lite-feedstock"]
-	path = milvus-lite-feedstock
-	url = ../milvus-lite-feedstock
-	branch = main
 [submodule "vs2022-feedstock"]
 	path = vs2022-feedstock
 	url = ../vs2022-feedstock
@@ -9582,10 +9158,6 @@
 	path = jiwer-feedstock
 	url = ../jiwer-feedstock
 	branch = main
-[submodule "gguf-feedstock"]
-	path = gguf-feedstock
-	url = ../gguf-feedstock
-	branch = main
 [submodule "jsonpath-python-feedstock"]
 	path = jsonpath-python-feedstock
 	url = ../jsonpath-python-feedstock
@@ -9613,10 +9185,6 @@
 [submodule "unstructured-feedstock"]
 	path = unstructured-feedstock
 	url = ../unstructured-feedstock
-	branch = main
-[submodule "mmhash3-feedstock"]
-	path = mmhash3-feedstock
-	url = ../mmhash3-feedstock
 	branch = main
 [submodule "streamlit-echarts-feedstock"]
 	path = streamlit-echarts-feedstock
@@ -9745,10 +9313,6 @@
 [submodule "python_abi-feedstock"]
 	path = python_abi-feedstock
 	url = ../python_abi-feedstock
-	branch = main
-[submodule "mip-feedstock"]
-	path = mip-feedstock
-	url = ../mip-feedstock
 	branch = main
 [submodule "pgpy-feedstock"]
 	path = pgpy-feedstock
@@ -9906,9 +9470,6 @@
 	path = msgspec-feedstock
 	url = ../msgspec-feedstock
 	branch = main
-[submodule "prefect-test-skip-dependency-feedstock"]
-	path = prefect-test-skip-dependency-feedstock
-	url = ../prefect-test-skip-dependency-feedstock
 [submodule "immutabledict-feedstock"]
 	path = immutabledict-feedstock
 	url = ../immutabledict-feedstock
@@ -9976,10 +9537,6 @@
 [submodule "lightweight-mmm-feedstock"]
 	path = lightweight-mmm-feedstock
 	url = ../lightweight-mmm-feedstock
-	branch = main
-[submodule "pyside2-feedstock"]
-	path = pyside2-feedstock
-	url = ../pyside2-feedstock
 	branch = main
 [submodule "simdjson-feedstock"]
 	path = simdjson-feedstock
@@ -10217,14 +9774,6 @@
 	path = gcsfs-feedstock
 	url = ../gcsfs-feedstock
 	branch = main
-[submodule "pycocotools-feedstock"]
-	path = pycocotools-feedstock
-	url = ../pycocotools-feedstock
-	branch = main
-[submodule "effdet-feedstock"]
-	path = effdet-feedstock
-	url = ../effdet-feedstock
-	branch = main
 [submodule "python-gnupg-feedstock"]
 	path = python-gnupg-feedstock
 	url = ../python-gnupg-feedstock
@@ -10236,10 +9785,6 @@
 [submodule "elastic-transport-feedstock"]
 	path = elastic-transport-feedstock
 	url = ../elastic-transport-feedstock
-	branch = main
-[submodule "howso-engine-no-telemetry-feedstock"]
-	path = howso-engine-no-telemetry-feedstock
-	url = ../howso-engine-no-telemetry-feedstock
 	branch = main
 [submodule "npth-feedstock"]
 	path = npth-feedstock
@@ -10260,14 +9805,6 @@
 [submodule "geomet-feedstock"]
 	path = geomet-feedstock
 	url = ../geomet-feedstock
-	branch = main
-[submodule "requests-gssapi-feedstock"]
-	path = requests-gssapi-feedstock
-	url = ../requests-gssapi-feedstock
-	branch = main
-[submodule "arcgis-feedstock"]
-	path = arcgis-feedstock
-	url = ../arcgis-feedstock
 	branch = main
 [submodule "pinentry-feedstock"]
 	path = pinentry-feedstock
@@ -10461,14 +9998,6 @@
 	path = mockseries-feedstock
 	url = ../mockseries-feedstock
 	branch = main
-[submodule "pnpm-feedstock"]
-	path = pnpm-feedstock
-	url = ../pnpm-feedstock
-	branch = main
-[submodule "pnpm-licenses-feedstock"]
-	path = pnpm-licenses-feedstock
-	url = ../pnpm-licenses-feedstock
-	branch = main
 [submodule "playwright-feedstock"]
 	path = playwright-feedstock
 	url = ../playwright-feedstock
@@ -10593,17 +10122,9 @@
 	path = narwhals-feedstock
 	url = ../narwhals-feedstock
 	branch = main
-[submodule "msodbcsql18-feedstock"]
-	path = msodbcsql18-feedstock
-	url = ../msodbcsql18-feedstock
-	branch = main
 [submodule "hvsampledata-feedstock"]
 	path = hvsampledata-feedstock
 	url = ../hvsampledata-feedstock
-	branch = main
-[submodule "vsg-feedstock"]
-	path = vsg-feedstock
-	url = ../vsg-feedstock
 	branch = main
 [submodule "psygnal-feedstock"]
 	path = psygnal-feedstock
@@ -10652,10 +10173,6 @@
 [submodule "grpcio-reflection-feedstock"]
 	path = grpcio-reflection-feedstock
 	url = ../grpcio-reflection-feedstock
-	branch = main
-[submodule "py-grpc-prometheus-feedstock"]
-	path = py-grpc-prometheus-feedstock
-	url = ../py-grpc-prometheus-feedstock
 	branch = main
 [submodule "anaconda-assistant-sdk-feedstock"]
 	path = anaconda-assistant-sdk-feedstock
@@ -10904,10 +10421,6 @@
 [submodule "azure-storage-blobs-cpp-feedstock"]
 	path = azure-storage-blobs-cpp-feedstock
 	url = ../azure-storage-blobs-cpp-feedstock
-	branch = main
-[submodule "winpthreads-feedstock"]
-	path = winpthreads-feedstock
-	url = ../winpthreads-feedstock
 	branch = main
 [submodule "typing-inspection-feedstock"]
 	path = typing-inspection-feedstock
@@ -11167,10 +10680,6 @@
 	path = st-link-analysis-feedstock
 	url = ../st-link-analysis-feedstock
 	branch = main
-[submodule "ragel-feedstock"]
-	path = ragel-feedstock
-	url = ../ragel-feedstock
-	branch = main
 [submodule "diskcache-feedstock"]
 	path = diskcache-feedstock
 	url = ../diskcache-feedstock
@@ -11179,21 +10688,9 @@
 	path = libhiredis-feedstock
 	url = ../libhiredis-feedstock
 	branch = main
-[submodule "yfinance-feedstock"]
-	path = yfinance-feedstock
-	url = ../yfinance-feedstock
-	branch = main
-[submodule "curl-cffi-feedstock"]
-	path = curl-cffi-feedstock
-	url = ../curl-cffi-feedstock
-	branch = main
 [submodule "peewee-feedstock"]
 	path = peewee-feedstock
 	url = ../peewee-feedstock
-	branch = main
-[submodule "winflexbison-feedstock"]
-	path = winflexbison-feedstock
-	url = ../winflexbison-feedstock
 	branch = main
 [submodule "simple-parsing-feedstock"]
 	path = simple-parsing-feedstock
@@ -11219,18 +10716,6 @@
 	path = authzed-py-feedstock
 	url = ../authzed-py-feedstock
 	branch = main
-[submodule "glextrusion-feedstock"]
-	path = glextrusion-feedstock
-	url = ../glextrusion-feedstock
-	branch = main
-[submodule "aws-lc-feedstock"]
-	path = aws-lc-feedstock
-	url = ../aws-lc-feedstock
-	branch = main
-[submodule "orbax-checkpoint-feedstock"]
-	path = orbax-checkpoint-feedstock
-	url = ../orbax-checkpoint-feedstock
-	branch = main
 [submodule "openjdk-11.0.27-feedstock"]
 	path = openjdk-11.0.27-feedstock
 	url = ../openjdk-feedstock
@@ -11238,10 +10723,6 @@
 [submodule "vc-feedstock"]
 	path = vc-feedstock
 	url = ../vc-feedstock
-	branch = main
-[submodule "array-record-feedstock"]
-	path = array-record-feedstock
-	url = ../array-record-feedstock
 	branch = main
 [submodule "aiokafka-feedstock"]
 	path = aiokafka-feedstock
@@ -11295,18 +10776,6 @@
 	path = conda-self-feedstock
 	url = ../conda-self-feedstock
 	branch = main
-[submodule "systemd-feedstock"]
-	path = systemd-feedstock
-	url = ../systemd-feedstock
-	branch = main
-[submodule "keras-hub-feedstock"]
-	path = keras-hub-feedstock
-	url = ../keras-hub-feedstock
-	branch = main
-[submodule "pywin32-on-windows-feedstock"]
-	path = pywin32-on-windows-feedstock
-	url = ../pywin32-on-windows-feedstock
-	branch = main
 [submodule "legacy-cgi-feedstock"]
 	path = legacy-cgi-feedstock
 	url = ../legacy-cgi-feedstock
@@ -11314,10 +10783,6 @@
 [submodule "flang-feedstock"]
 	path = flang-feedstock
 	url = ../flang-feedstock
-	branch = main
-[submodule "briefcase-feedstock"]
-	path = briefcase-feedstock
-	url = ../briefcase-feedstock
 	branch = main
 [submodule "snowpark-submit-feedstock"]
 	path = snowpark-submit-feedstock
@@ -11379,10 +10844,6 @@
 	path = apricot-select-feedstock
 	url = ../apricot-select-feedstock
 	branch = main
-[submodule "curl-impersonate-feedstock"]
-	path = curl-impersonate-feedstock
-	url = ../curl-impersonate-feedstock
-	branch = main
 [submodule "pytest-celery-feedstock"]
 	path = pytest-celery-feedstock
 	url = ../pytest-celery-feedstock
@@ -11435,10 +10896,6 @@
 	path = rdflib-feedstock
 	url = ../rdflib-feedstock
 	branch = main
-[submodule "html5rdf-feedstock"]
-	path = html5rdf-feedstock
-	url = ../html5rdf-feedstock
-	branch = main
 [submodule "conda-anaconda-telemetry-feedstock"]
 	path = conda-anaconda-telemetry-feedstock
 	url = ../conda-anaconda-telemetry-feedstock
@@ -11454,14 +10911,6 @@
 [submodule "pytest-docker-tools-feedstock"]
 	path = pytest-docker-tools-feedstock
 	url = ../pytest-docker-tools-feedstock
-	branch = main
-[submodule "furo-feedstock"]
-	path = furo-feedstock
-	url = ../furo-feedstock
-	branch = main
-[submodule "sphinx-basic-ng-feedstock"]
-	path = sphinx-basic-ng-feedstock
-	url = ../sphinx-basic-ng-feedstock
 	branch = main
 [submodule "pyscaffold-feedstock"]
 	path = pyscaffold-feedstock
@@ -11559,10 +11008,6 @@
 	path = language-data-feedstock
 	url = ../language-data-feedstock
 	branch = main
-[submodule "python-marisa-trie-feedstock"]
-	path = python-marisa-trie-feedstock
-	url = ../python-marisa-trie-feedstock
-	branch = main
 [submodule "periodictable-feedstock"]
 	path = periodictable-feedstock
 	url = ../periodictable-feedstock
@@ -11583,10 +11028,6 @@
 	path = empyrical-feedstock
 	url = ../empyrical-feedstock
 	branch = main
-[submodule "anaconda-ident-feedstock"]
-	path = anaconda-ident-feedstock
-	url = ../anaconda-ident-feedstock
-	branch = main
 [submodule "jupysql-feedstock"]
 	path = jupysql-feedstock
 	url = ../jupysql-feedstock
@@ -11603,9 +11044,6 @@
 	path = treescope-feedstock
 	url = ../treescope-feedstock
 	branch = main
-[submodule "anaconda-client-feedstock"]
-	path = anaconda-client-feedstock
-	url = git@github.com:AnacondaRecipes/anaconda-client-feedstock.git
 [submodule "traceloop-sdk-feedstock"]
 	path = traceloop-sdk-feedstock
 	url = ../traceloop-sdk-feedstock
@@ -11765,10 +11203,6 @@
 [submodule "opentelemetry-instrumentation-transformers-feedstock"]
 	path = opentelemetry-instrumentation-transformers-feedstock
 	url = ../opentelemetry-instrumentation-transformers-feedstock
-	branch = main
-[submodule "python-genai-feedstock"]
-	path = python-genai-feedstock
-	url = ../python-genai-feedstock
 	branch = main
 [submodule "google-genai-feedstock"]
 	path = google-genai-feedstock
@@ -12034,10 +11468,6 @@
 	path = nvtx-feedstock
 	url = ../nvtx-feedstock
 	branch = main
-[submodule "pep517-feedstock"]
-	path = pep517-feedstock
-	url = ../pep517-feedstock
-	branch = master
 [submodule "cuda-python-feedstock"]
 	path = cuda-python-feedstock
 	url = ../cuda-python-feedstock
@@ -12045,10 +11475,6 @@
 [submodule "cuda-core-feedstock"]
 	path = cuda-core-feedstock
 	url = ../cuda-core-feedstock
-	branch = main
-[submodule "ultralytics-feedstock"]
-	path = ultralytics-feedstock
-	url = ../ultralytics-feedstock
 	branch = main
 [submodule "cuda-pathfinder-feedstock"]
 	path = cuda-pathfinder-feedstock
@@ -12094,18 +11520,10 @@
 	path = madoka-feedstock
 	url = ../madoka-feedstock
 	branch = main
-[submodule "colorlog-feedstock"]
-	path = colorlog-feedstock
-	url = ../colorlog-feedstock
-	branch = master
 [submodule "meson-python-0.16.0-feedstock"]
 	path = meson-python-0.16.0-feedstock
 	url = ../meson-python-feedstock
 	branch = main-0.16.0
-[submodule "xorg-xserver-xvfb-feedstock"]
-	path = xorg-xserver-xvfb-feedstock
-	url = ../xorg-xserver-xvfb-feedstock
-	branch = main
 [submodule "gradio-feedstock"]
 	path = gradio-feedstock
 	url = ../gradio-feedstock
@@ -12153,10 +11571,6 @@
 [submodule "xorg-font-util-feedstock"]
 	path = xorg-font-util-feedstock
 	url = ../xorg-font-util-feedstock
-	branch = main
-[submodule "xorg-macros-feedstock"]
-	path = xorg-macros-feedstock
-	url = ../xorg-macros-feedstock
 	branch = main
 [submodule "inline-snapshot-feedstock"]
 	path = inline-snapshot-feedstock
@@ -12214,10 +11628,6 @@
 	path = backports.zstd-feedstock
 	url = ../backports.zstd-feedstock
 	branch = main
-[submodule "cuda-culibos-feedstock"]
-	path = cuda-culibos-feedstock
-	url = ../cuda-culibos-feedstock
-	branch = main
 [submodule "kumoai-feedstock"]
 	path = kumoai-feedstock
 	url = ../kumoai-feedstock
@@ -12233,10 +11643,6 @@
 [submodule "installer-attribution-bootstrap-feedstock"]
 	path = installer-attribution-bootstrap-feedstock
 	url = ../installer-attribution-bootstrap-feedstock
-	branch = main
-[submodule "conda-rattler-solver-feedstock"]
-	path = conda-rattler-solver-feedstock
-	url = ../conda-rattler-solver-feedstock
 	branch = main
 [submodule "py-rattler-feedstock"]
 	path = py-rattler-feedstock
@@ -12266,18 +11672,10 @@
 	path = libtirpc-feedstock
 	url = ../libtirpc-feedstock
 	branch = main
-[submodule "uutils-coreutils-feedstock"]
-	path = uutils-coreutils-feedstock
-	url = ../uutils-coreutils-feedstock
-	branch = main
 [submodule "roman-numerals-feedstock"]
 	path = roman-numerals-feedstock
 	url = ../roman-numerals-feedstock
 	branch = main
-[submodule "commonmark-feedstock"]
-	path = commonmark-feedstock
-	url = ../commonmark-feedstock
-	branch = master
 [submodule "snowpark-connect-deps-1-3.56.2-feedstock"]
 	path = snowpark-connect-deps-1-3.56.2-feedstock
 	url = ../snowpark-connect-deps-1-feedstock
@@ -12286,23 +11684,87 @@
 	path = snowpark-connect-deps-2-3.56.2-feedstock
 	url = ../snowpark-connect-deps-2-feedstock
 	branch = main_3.56.2
-[submodule "cutlass-feedstock"]
-	path = cutlass-feedstock
-	url = ../cutlass-feedstock
-	branch = main
 [submodule "snowpark-connect-1.2.0-feedstock"]
 	path = snowpark-connect-1.2.0-feedstock
 	url = ../snowpark-connect-feedstock
 	branch = main_1.2.0
-[submodule "mupdf-feedstock"]
-	path = mupdf-feedstock
-	url = ../mupdf-feedstock
+[submodule "apr-feedstock"]
+	path = apr-feedstock
+	url = ../apr-feedstock
 	branch = main
-[submodule "libgumbo-feedstock"]
-	path = libgumbo-feedstock
-	url = ../libgumbo-feedstock
+[submodule "asyncer-feedstock"]
+	path = asyncer-feedstock
+	url = ../asyncer-feedstock
 	branch = main
-[submodule "jbig2dec-feedstock"]
-	path = jbig2dec-feedstock
-	url = ../jbig2dec-feedstock
+[submodule "atlasclient-feedstock"]
+	path = atlasclient-feedstock
+	url = ../atlasclient-feedstock
+	branch = main
+[submodule "azure-common-feedstock"]
+	path = azure-common-feedstock
+	url = ../azure-common-feedstock
+	branch = master
+[submodule "chainlit-feedstock"]
+	path = chainlit-feedstock
+	url = ../chainlit-feedstock
+	branch = services
+[submodule "chevron-feedstock"]
+	path = chevron-feedstock
+	url = ../chevron-feedstock
+	branch = main
+[submodule "conda-verify-feedstock"]
+	path = conda-verify-feedstock
+	url = ../conda-verify-feedstock
+	branch = master
+[submodule "dlpack-feedstock"]
+	path = dlpack-feedstock
+	url = ../dlpack-feedstock
+	branch = main
+[submodule "ghc-feedstock"]
+	path = ghc-feedstock
+	url = ../ghc-feedstock
+	branch = master
+[submodule "glad-feedstock"]
+	path = glad-feedstock
+	url = ../glad-feedstock
+	branch = main
+[submodule "lazify-feedstock"]
+	path = lazify-feedstock
+	url = ../lazify-feedstock
+	branch = services
+[submodule "ldid-feedstock"]
+	path = ldid-feedstock
+	url = ../ldid-feedstock
+	branch = master
+[submodule "libdb-feedstock"]
+	path = libdb-feedstock
+	url = ../libdb-feedstock
+	branch = master
+[submodule "llvm-spirv-feedstock"]
+	path = llvm-spirv-feedstock
+	url = ../llvm-spirv-feedstock
+	branch = master
+[submodule "ms-gsl-feedstock"]
+	path = ms-gsl-feedstock
+	url = ../ms-gsl-feedstock
+	branch = main
+[submodule "opentelemetry-python-feedstock"]
+	path = opentelemetry-python-feedstock
+	url = ../opentelemetry-python-feedstock
+	branch = main
+[submodule "python-chromedriver-binary-feedstock"]
+	path = python-chromedriver-binary-feedstock
+	url = ../python-chromedriver-binary-feedstock
+	branch = master
+[submodule "setuptools-scm-git-archive-feedstock"]
+	path = setuptools-scm-git-archive-feedstock
+	url = ../setuptools-scm-git-archive-feedstock
+	branch = main
+[submodule "syncer-feedstock"]
+	path = syncer-feedstock
+	url = ../syncer-feedstock
+	branch = services
+[submodule "tensorflow-gpu-feedstock"]
+	path = tensorflow-gpu-feedstock
+	url = ../tensorflow-gpu-feedstock
 	branch = main
