@@ -12294,3 +12294,7 @@
 	path = snowpark-connect-1.2.0-feedstock
 	url = ../snowpark-connect-feedstock
 	branch = main_1.2.0
+[submodule "mupdf-feedstock"]
+	path = mupdf-feedstock
+	url = ../mupdf-feedstock
+	branch = main
