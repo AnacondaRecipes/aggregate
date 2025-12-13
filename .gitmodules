@@ -12318,3 +12318,7 @@
 	path = cel-python-feedstock
 	url = ../cel-python-feedstock
 	branch = main
+[submodule "libnvcomp-feedstock"]
+	path = libnvcomp-feedstock
+	url = ../libnvcomp-feedstock
+	branch = main
