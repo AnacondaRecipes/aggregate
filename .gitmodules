@@ -12322,3 +12322,7 @@
 	path = libnvcomp-feedstock
 	url = ../libnvcomp-feedstock
 	branch = main
+[submodule "nvcomp-feedstock"]
+	path = nvcomp-feedstock
+	url = ../nvcomp-feedstock
+	branch = main
