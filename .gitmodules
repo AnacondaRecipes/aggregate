@@ -12310,3 +12310,7 @@
 	path = google-re2-feedstock
 	url = ../google-re2-feedstock
 	branch = main
+[submodule "lark-0.12.0-feedstock"]
+	path = lark-0.12.0-feedstock
+	url = ../lark-feedstock
+	branch = main-0.12.0
