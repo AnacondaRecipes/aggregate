@@ -12306,3 +12306,7 @@
 	path = jbig2dec-feedstock
 	url = ../jbig2dec-feedstock
 	branch = main
+[submodule "google-re2-feedstock"]
+	path = google-re2-feedstock
+	url = ../google-re2-feedstock
+	branch = main
