@@ -12314,3 +12314,7 @@
 	path = lark-0.12.0-feedstock
 	url = ../lark-feedstock
 	branch = main-0.12.0
+[submodule "cel-python-feedstock"]
+	path = cel-python-feedstock
+	url = ../cel-python-feedstock
+	branch = main
