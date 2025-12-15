@@ -461,9 +461,9 @@ libclang_cpp14:
   - '14.0'
 libclang_cpp17:
   - '17.0'
-libclang_cpp19.1:
+libclang_cpp19_1:
   - '19.1'
-libclang_cpp20.1:
+libclang_cpp20_1:
   - '20.1'
 libcrc32c:
   - '1.1'
