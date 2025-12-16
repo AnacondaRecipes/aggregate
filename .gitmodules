@@ -12326,3 +12326,7 @@
 	path = nvcomp-feedstock
 	url = ../nvcomp-feedstock
 	branch = main
+[submodule "ucc-feedstock"]
+	path = ucc-feedstock
+	url = ../ucc-feedstock
+	branch = main
