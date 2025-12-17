@@ -8,7 +8,13 @@ permissions:
 jobs:
   automerge:
     runs-on: ubuntu-latest
+    # Only run if ALL conditions are met:
+    #   1. PR is not from a fork (head and base repos match)
+    #   2. PR was opened by the service account
+    #   3. PR has the 'aggregate-duct-tape' label
+    #   4. PR has the 'automerge' label
     if: >
+      github.event.pull_request.head.repo.full_name == github.event.pull_request.base.repo.full_name &&
       github.event.pull_request.user.login == 'anacondarecipe-pr-service-account' &&
       contains(github.event.pull_request.labels.*.name, 'aggregate-duct-tape') &&
       contains(github.event.pull_request.labels.*.name, 'automerge')
