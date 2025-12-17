@@ -1,0 +1,25 @@
+name: Auto-merge Update submodules PRs opened from anaconda/aggregate-duct-tape 
+on: pull_request
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  automerge:
+    runs-on: ubuntu-24.04
+    # Only run if ALL conditions are met:
+    #   1. PR is not from a fork (head and base repos match)
+    #   2. PR was opened by the service account
+    #   3. PR has the 'aggregate-duct-tape' label
+    #   4. PR has the 'automerge' label
+    if: >
+      github.event.pull_request.head.repo.full_name == github.event.pull_request.base.repo.full_name &&
+      github.event.pull_request.user.login == 'anacondarecipe-pr-service-account' &&
+      contains(github.event.pull_request.labels.*.name, 'aggregate-duct-tape') &&
+      contains(github.event.pull_request.labels.*.name, 'automerge')
+    steps:
+      - name: Enable Pull Request Automerge
+        run: gh pr merge --merge --auto "${{ github.event.pull_request.number }}"
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
