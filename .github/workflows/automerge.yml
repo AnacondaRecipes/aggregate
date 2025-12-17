@@ -9,7 +9,7 @@ jobs:
   automerge:
     runs-on: ubuntu-latest
     if: >
-      github.actor == 'anacondarecipe-pr-service-account' &&
+      github.event.pull_request.user.login == 'anacondarecipe-pr-service-account' &&
       contains(github.event.pull_request.labels.*.name, 'aggregate-duct-tape') &&
       contains(github.event.pull_request.labels.*.name, 'automerge')
     steps:
