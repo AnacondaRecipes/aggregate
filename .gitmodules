@@ -11812,3 +11812,7 @@
 	path = tensorflow-gpu-feedstock
 	url = ../tensorflow-gpu-feedstock
 	branch = main
+[submodule "protovalidate-python-feedstock"]
+	path = protovalidate-python-feedstock
+	url = ../protovalidate-python-feedstock
+	branch = main
