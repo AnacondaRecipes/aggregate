@@ -1,0 +1,820 @@
+name: Build/Test Graph 'anaconda-cloud-auth-feedstock' and 0 more
+priority: 0
+user: anum
+src_channels:
+- main
+dest_channel: main
+tasks:
+- description: Build task for anaconda-cloud-auth-feedstock @ e95650f (e95650fd297b55dc59b2906c6e890d975e4376b3)
+    linux-64 3.10 channel_targets=defaults target_platform=linux-64 2025-12-17 20:28:03
+  public_name: build-anaconda-cloud-auth-feedstock-linux-64_py3.10_11683059b64adbf1
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.10'
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/anaconda-cloud-auth-feedstock
+  feedstock_ref: e95650fd297b55dc59b2906c6e890d975e4376b3
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for anaconda-cloud-auth-feedstock @ e95650f (e95650fd297b55dc59b2906c6e890d975e4376b3)
+    linux-64 3.11 channel_targets=defaults target_platform=linux-64 2025-12-17 20:28:03
+  public_name: build-anaconda-cloud-auth-feedstock-linux-64_py3.11_42900305da3d10f5
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.11'
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/anaconda-cloud-auth-feedstock
+  feedstock_ref: e95650fd297b55dc59b2906c6e890d975e4376b3
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for anaconda-cloud-auth-feedstock @ e95650f (e95650fd297b55dc59b2906c6e890d975e4376b3)
+    linux-64 3.12 channel_targets=defaults target_platform=linux-64 2025-12-17 20:28:03
+  public_name: build-anaconda-cloud-auth-feedstock-linux-64_py3.12_01588a66acf35e07
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.12'
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/anaconda-cloud-auth-feedstock
+  feedstock_ref: e95650fd297b55dc59b2906c6e890d975e4376b3
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for anaconda-cloud-auth-feedstock @ e95650f (e95650fd297b55dc59b2906c6e890d975e4376b3)
+    linux-64 3.13 channel_targets=defaults target_platform=linux-64 2025-12-17 20:28:03
+  public_name: build-anaconda-cloud-auth-feedstock-linux-64_py3.13_46cde2105499e564
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.13'
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/anaconda-cloud-auth-feedstock
+  feedstock_ref: e95650fd297b55dc59b2906c6e890d975e4376b3
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for anaconda-cloud-auth-feedstock @ e95650f (e95650fd297b55dc59b2906c6e890d975e4376b3)
+    linux-aarch64 3.10 channel_targets=defaults target_platform=linux-aarch64 2025-12-17
+    20:28:03
+  public_name: build-anaconda-cloud-auth-feedstock-linux-aarch64_py3.10_3e993cf6a0204ec9
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.10'
+    target_platform: linux-aarch64
+  feedstock_url: https://github.com/AnacondaRecipes/anaconda-cloud-auth-feedstock
+  feedstock_ref: e95650fd297b55dc59b2906c6e890d975e4376b3
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for anaconda-cloud-auth-feedstock @ e95650f (e95650fd297b55dc59b2906c6e890d975e4376b3)
+    linux-aarch64 3.11 channel_targets=defaults target_platform=linux-aarch64 2025-12-17
+    20:28:03
+  public_name: build-anaconda-cloud-auth-feedstock-linux-aarch64_py3.11_e3c6a9ea5dda4c11
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.11'
+    target_platform: linux-aarch64
+  feedstock_url: https://github.com/AnacondaRecipes/anaconda-cloud-auth-feedstock
+  feedstock_ref: e95650fd297b55dc59b2906c6e890d975e4376b3
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for anaconda-cloud-auth-feedstock @ e95650f (e95650fd297b55dc59b2906c6e890d975e4376b3)
+    linux-aarch64 3.12 channel_targets=defaults target_platform=linux-aarch64 2025-12-17
+    20:28:03
+  public_name: build-anaconda-cloud-auth-feedstock-linux-aarch64_py3.12_e5658c3f6fe95dd7
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.12'
+    target_platform: linux-aarch64
+  feedstock_url: https://github.com/AnacondaRecipes/anaconda-cloud-auth-feedstock
+  feedstock_ref: e95650fd297b55dc59b2906c6e890d975e4376b3
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for anaconda-cloud-auth-feedstock @ e95650f (e95650fd297b55dc59b2906c6e890d975e4376b3)
+    linux-aarch64 3.13 channel_targets=defaults target_platform=linux-aarch64 2025-12-17
+    20:28:03
+  public_name: build-anaconda-cloud-auth-feedstock-linux-aarch64_py3.13_d20b752b5916cf7d
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.13'
+    target_platform: linux-aarch64
+  feedstock_url: https://github.com/AnacondaRecipes/anaconda-cloud-auth-feedstock
+  feedstock_ref: e95650fd297b55dc59b2906c6e890d975e4376b3
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for anaconda-cloud-auth-feedstock @ e95650f (e95650fd297b55dc59b2906c6e890d975e4376b3)
+    osx-arm64 3.10 channel_targets=defaults target_platform=osx-arm64 2025-12-17 20:28:03
+  public_name: build-anaconda-cloud-auth-feedstock-osx-arm64_py3.10_1fb655d515b8e932
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.10'
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/anaconda-cloud-auth-feedstock
+  feedstock_ref: e95650fd297b55dc59b2906c6e890d975e4376b3
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for anaconda-cloud-auth-feedstock @ e95650f (e95650fd297b55dc59b2906c6e890d975e4376b3)
+    osx-arm64 3.11 channel_targets=defaults target_platform=osx-arm64 2025-12-17 20:28:03
+  public_name: build-anaconda-cloud-auth-feedstock-osx-arm64_py3.11_2b10d55787d7b746
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.11'
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/anaconda-cloud-auth-feedstock
+  feedstock_ref: e95650fd297b55dc59b2906c6e890d975e4376b3
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for anaconda-cloud-auth-feedstock @ e95650f (e95650fd297b55dc59b2906c6e890d975e4376b3)
+    osx-arm64 3.12 channel_targets=defaults target_platform=osx-arm64 2025-12-17 20:28:03
+  public_name: build-anaconda-cloud-auth-feedstock-osx-arm64_py3.12_307979e57c084dd4
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.12'
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/anaconda-cloud-auth-feedstock
+  feedstock_ref: e95650fd297b55dc59b2906c6e890d975e4376b3
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for anaconda-cloud-auth-feedstock @ e95650f (e95650fd297b55dc59b2906c6e890d975e4376b3)
+    osx-arm64 3.13 channel_targets=defaults target_platform=osx-arm64 2025-12-17 20:28:03
+  public_name: build-anaconda-cloud-auth-feedstock-osx-arm64_py3.13_1b4ae4d71bf6b4c5
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.13'
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/anaconda-cloud-auth-feedstock
+  feedstock_ref: e95650fd297b55dc59b2906c6e890d975e4376b3
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for anaconda-cloud-auth-feedstock @ e95650f (e95650fd297b55dc59b2906c6e890d975e4376b3)
+    win-64 3.10 channel_targets=defaults target_platform=win-64 2025-12-17 20:28:03
+  public_name: build-anaconda-cloud-auth-feedstock-win-64_py3.10_15dd27269c853c91
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.10'
+    target_platform: win-64
+  feedstock_url: https://github.com/AnacondaRecipes/anaconda-cloud-auth-feedstock
+  feedstock_ref: e95650fd297b55dc59b2906c6e890d975e4376b3
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for anaconda-cloud-auth-feedstock @ e95650f (e95650fd297b55dc59b2906c6e890d975e4376b3)
+    win-64 3.11 channel_targets=defaults target_platform=win-64 2025-12-17 20:28:03
+  public_name: build-anaconda-cloud-auth-feedstock-win-64_py3.11_d74064a5866b413a
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.11'
+    target_platform: win-64
+  feedstock_url: https://github.com/AnacondaRecipes/anaconda-cloud-auth-feedstock
+  feedstock_ref: e95650fd297b55dc59b2906c6e890d975e4376b3
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for anaconda-cloud-auth-feedstock @ e95650f (e95650fd297b55dc59b2906c6e890d975e4376b3)
+    win-64 3.12 channel_targets=defaults target_platform=win-64 2025-12-17 20:28:03
+  public_name: build-anaconda-cloud-auth-feedstock-win-64_py3.12_35a7d75955ddf4a4
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.12'
+    target_platform: win-64
+  feedstock_url: https://github.com/AnacondaRecipes/anaconda-cloud-auth-feedstock
+  feedstock_ref: e95650fd297b55dc59b2906c6e890d975e4376b3
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for anaconda-cloud-auth-feedstock @ e95650f (e95650fd297b55dc59b2906c6e890d975e4376b3)
+    win-64 3.13 channel_targets=defaults target_platform=win-64 2025-12-17 20:28:03
+  public_name: build-anaconda-cloud-auth-feedstock-win-64_py3.13_037a82f1661fb86a
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.13'
+    target_platform: win-64
+  feedstock_url: https://github.com/AnacondaRecipes/anaconda-cloud-auth-feedstock
+  feedstock_ref: e95650fd297b55dc59b2906c6e890d975e4376b3
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) linux-64 3.10 channel_targets=defaults
+    target_platform=linux-64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-auth-linux-64_py3.10_11683059b64adbf1
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-linux-64_py3.10_11683059b64adbf1
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.10'
+    target_platform: linux-64
+  package_def:
+    matchspec: anaconda-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) linux-64 3.11 channel_targets=defaults
+    target_platform=linux-64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-auth-linux-64_py3.11_42900305da3d10f5
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-linux-64_py3.11_42900305da3d10f5
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.11'
+    target_platform: linux-64
+  package_def:
+    matchspec: anaconda-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) linux-64 3.12 channel_targets=defaults
+    target_platform=linux-64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-auth-linux-64_py3.12_01588a66acf35e07
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-linux-64_py3.12_01588a66acf35e07
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.12'
+    target_platform: linux-64
+  package_def:
+    matchspec: anaconda-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) linux-64 3.13 channel_targets=defaults
+    target_platform=linux-64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-auth-linux-64_py3.13_46cde2105499e564
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-linux-64_py3.13_46cde2105499e564
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.13'
+    target_platform: linux-64
+  package_def:
+    matchspec: anaconda-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) linux-aarch64 3.10 channel_targets=defaults
+    target_platform=linux-aarch64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-auth-linux-aarch64_py3.10_3e993cf6a0204ec9
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-linux-aarch64_py3.10_3e993cf6a0204ec9
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.10'
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: anaconda-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) linux-aarch64 3.11 channel_targets=defaults
+    target_platform=linux-aarch64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-auth-linux-aarch64_py3.11_e3c6a9ea5dda4c11
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-linux-aarch64_py3.11_e3c6a9ea5dda4c11
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.11'
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: anaconda-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) linux-aarch64 3.12 channel_targets=defaults
+    target_platform=linux-aarch64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-auth-linux-aarch64_py3.12_e5658c3f6fe95dd7
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-linux-aarch64_py3.12_e5658c3f6fe95dd7
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.12'
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: anaconda-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) linux-aarch64 3.13 channel_targets=defaults
+    target_platform=linux-aarch64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-auth-linux-aarch64_py3.13_d20b752b5916cf7d
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-linux-aarch64_py3.13_d20b752b5916cf7d
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.13'
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: anaconda-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) osx-arm64 3.10 channel_targets=defaults
+    target_platform=osx-arm64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-auth-osx-arm64_py3.10_1fb655d515b8e932
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-osx-arm64_py3.10_1fb655d515b8e932
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.10'
+    target_platform: osx-arm64
+  package_def:
+    matchspec: anaconda-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) osx-arm64 3.11 channel_targets=defaults
+    target_platform=osx-arm64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-auth-osx-arm64_py3.11_2b10d55787d7b746
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-osx-arm64_py3.11_2b10d55787d7b746
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.11'
+    target_platform: osx-arm64
+  package_def:
+    matchspec: anaconda-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) osx-arm64 3.12 channel_targets=defaults
+    target_platform=osx-arm64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-auth-osx-arm64_py3.12_307979e57c084dd4
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-osx-arm64_py3.12_307979e57c084dd4
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.12'
+    target_platform: osx-arm64
+  package_def:
+    matchspec: anaconda-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) osx-arm64 3.13 channel_targets=defaults
+    target_platform=osx-arm64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-auth-osx-arm64_py3.13_1b4ae4d71bf6b4c5
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-osx-arm64_py3.13_1b4ae4d71bf6b4c5
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.13'
+    target_platform: osx-arm64
+  package_def:
+    matchspec: anaconda-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) win-64 3.10 channel_targets=defaults
+    target_platform=win-64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-auth-win-64_py3.10_15dd27269c853c91
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-win-64_py3.10_15dd27269c853c91
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.10'
+    target_platform: win-64
+  package_def:
+    matchspec: anaconda-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) win-64 3.11 channel_targets=defaults
+    target_platform=win-64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-auth-win-64_py3.11_d74064a5866b413a
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-win-64_py3.11_d74064a5866b413a
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.11'
+    target_platform: win-64
+  package_def:
+    matchspec: anaconda-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) win-64 3.12 channel_targets=defaults
+    target_platform=win-64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-auth-win-64_py3.12_35a7d75955ddf4a4
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-win-64_py3.12_35a7d75955ddf4a4
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.12'
+    target_platform: win-64
+  package_def:
+    matchspec: anaconda-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) win-64 3.13 channel_targets=defaults
+    target_platform=win-64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-auth-win-64_py3.13_037a82f1661fb86a
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-win-64_py3.13_037a82f1661fb86a
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.13'
+    target_platform: win-64
+  package_def:
+    matchspec: anaconda-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-cloud-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) linux-64 3.10 channel_targets=defaults
+    target_platform=linux-64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-cloud-auth-linux-64_py3.10_11683059b64adbf1
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-linux-64_py3.10_11683059b64adbf1
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.10'
+    target_platform: linux-64
+  package_def:
+    matchspec: anaconda-cloud-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-cloud-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) linux-64 3.11 channel_targets=defaults
+    target_platform=linux-64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-cloud-auth-linux-64_py3.11_42900305da3d10f5
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-linux-64_py3.11_42900305da3d10f5
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.11'
+    target_platform: linux-64
+  package_def:
+    matchspec: anaconda-cloud-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-cloud-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) linux-64 3.12 channel_targets=defaults
+    target_platform=linux-64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-cloud-auth-linux-64_py3.12_01588a66acf35e07
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-linux-64_py3.12_01588a66acf35e07
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.12'
+    target_platform: linux-64
+  package_def:
+    matchspec: anaconda-cloud-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-cloud-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) linux-64 3.13 channel_targets=defaults
+    target_platform=linux-64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-cloud-auth-linux-64_py3.13_46cde2105499e564
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-linux-64_py3.13_46cde2105499e564
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.13'
+    target_platform: linux-64
+  package_def:
+    matchspec: anaconda-cloud-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-cloud-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) linux-aarch64 3.10 channel_targets=defaults
+    target_platform=linux-aarch64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-cloud-auth-linux-aarch64_py3.10_3e993cf6a0204ec9
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-linux-aarch64_py3.10_3e993cf6a0204ec9
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.10'
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: anaconda-cloud-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-cloud-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) linux-aarch64 3.11 channel_targets=defaults
+    target_platform=linux-aarch64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-cloud-auth-linux-aarch64_py3.11_e3c6a9ea5dda4c11
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-linux-aarch64_py3.11_e3c6a9ea5dda4c11
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.11'
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: anaconda-cloud-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-cloud-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) linux-aarch64 3.12 channel_targets=defaults
+    target_platform=linux-aarch64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-cloud-auth-linux-aarch64_py3.12_e5658c3f6fe95dd7
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-linux-aarch64_py3.12_e5658c3f6fe95dd7
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.12'
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: anaconda-cloud-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-cloud-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) linux-aarch64 3.13 channel_targets=defaults
+    target_platform=linux-aarch64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-cloud-auth-linux-aarch64_py3.13_d20b752b5916cf7d
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-linux-aarch64_py3.13_d20b752b5916cf7d
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.13'
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: anaconda-cloud-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-cloud-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) osx-arm64 3.10 channel_targets=defaults
+    target_platform=osx-arm64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-cloud-auth-osx-arm64_py3.10_1fb655d515b8e932
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-osx-arm64_py3.10_1fb655d515b8e932
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.10'
+    target_platform: osx-arm64
+  package_def:
+    matchspec: anaconda-cloud-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-cloud-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) osx-arm64 3.11 channel_targets=defaults
+    target_platform=osx-arm64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-cloud-auth-osx-arm64_py3.11_2b10d55787d7b746
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-osx-arm64_py3.11_2b10d55787d7b746
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.11'
+    target_platform: osx-arm64
+  package_def:
+    matchspec: anaconda-cloud-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-cloud-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) osx-arm64 3.12 channel_targets=defaults
+    target_platform=osx-arm64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-cloud-auth-osx-arm64_py3.12_307979e57c084dd4
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-osx-arm64_py3.12_307979e57c084dd4
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.12'
+    target_platform: osx-arm64
+  package_def:
+    matchspec: anaconda-cloud-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-cloud-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) osx-arm64 3.13 channel_targets=defaults
+    target_platform=osx-arm64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-cloud-auth-osx-arm64_py3.13_1b4ae4d71bf6b4c5
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-osx-arm64_py3.13_1b4ae4d71bf6b4c5
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.13'
+    target_platform: osx-arm64
+  package_def:
+    matchspec: anaconda-cloud-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-cloud-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) win-64 3.10 channel_targets=defaults
+    target_platform=win-64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-cloud-auth-win-64_py3.10_15dd27269c853c91
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-win-64_py3.10_15dd27269c853c91
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.10'
+    target_platform: win-64
+  package_def:
+    matchspec: anaconda-cloud-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-cloud-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) win-64 3.11 channel_targets=defaults
+    target_platform=win-64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-cloud-auth-win-64_py3.11_d74064a5866b413a
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-win-64_py3.11_d74064a5866b413a
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.11'
+    target_platform: win-64
+  package_def:
+    matchspec: anaconda-cloud-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-cloud-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) win-64 3.12 channel_targets=defaults
+    target_platform=win-64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-cloud-auth-win-64_py3.12_35a7d75955ddf4a4
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-win-64_py3.12_35a7d75955ddf4a4
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.12'
+    target_platform: win-64
+  package_def:
+    matchspec: anaconda-cloud-auth
+  external_dependencies: []
+- description: Test task for anaconda-cloud-auth-feedstock anaconda-cloud-auth @ e95650f
+    (e95650fd297b55dc59b2906c6e890d975e4376b3) win-64 3.13 channel_targets=defaults
+    target_platform=win-64 2025-12-17 20:28:03
+  public_name: test-anaconda-cloud-auth-feedstock-anaconda-cloud-auth-win-64_py3.13_037a82f1661fb86a
+  dependencies:
+  - build-anaconda-cloud-auth-feedstock-win-64_py3.13_037a82f1661fb86a
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.13'
+    target_platform: win-64
+  package_def:
+    matchspec: anaconda-cloud-auth
+  external_dependencies: []
+notification: []
+custom_metadata: {}
+system_metadata:
+  release_destination:
+    destination: pbp-release-api
+    channel: main
+    release_name: null
+task_counts_by_status: {}
+total_tasks: 0

@@ -1,0 +1,3057 @@
+name: Build/Test Graph 'pytorch-feedstock' and 0 more
+priority: 0
+user: anum
+src_channels:
+- main
+dest_channel: main
+tasks:
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.10 blas_impl=mkl c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 pytorch=2.7 r_version=4.3.1
+    target_platform=linux-64 2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-linux-64_py3.10_c7fe997783a17215
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    blas_impl: mkl
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    platform: linux-64
+    python: '3.10'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.10 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 pytorch=2.7
+    r_version=4.3.1 target_platform=linux-64 2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-linux-64_py3.10_fefcf304d586af97
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-64
+    python: '3.10'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.11 blas_impl=mkl c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 pytorch=2.7 r_version=4.3.1
+    target_platform=linux-64 2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-linux-64_py3.11_5df8fdf5dbc83caa
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    blas_impl: mkl
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    platform: linux-64
+    python: '3.11'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.11 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 pytorch=2.7
+    r_version=4.3.1 target_platform=linux-64 2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-linux-64_py3.11_d66b0890fb47420a
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-64
+    python: '3.11'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.12 blas_impl=mkl c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 pytorch=2.7 r_version=4.3.1
+    target_platform=linux-64 2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-linux-64_py3.12_273fd950848e8ddc
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    blas_impl: mkl
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    platform: linux-64
+    python: '3.12'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.12 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 pytorch=2.7
+    r_version=4.3.1 target_platform=linux-64 2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-linux-64_py3.12_fcca45b53f728a32
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-64
+    python: '3.12'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.13 blas_impl=mkl c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 pytorch=2.7 r_version=4.3.1
+    target_platform=linux-64 2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-linux-64_py3.13_177b2cfa518526a6
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    blas_impl: mkl
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    platform: linux-64
+    python: '3.13'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.13 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 pytorch=2.7
+    r_version=4.3.1 target_platform=linux-64 2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-linux-64_py3.13_eed6c34710949287
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-64
+    python: '3.13'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-aarch64 3.10 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0
+    c_stdlib=sysroot c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4
+    cuda_cupti=13 cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 pytorch=2.7
+    r_version=4.3.1 target_platform=linux-aarch64 2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-linux-aarch64_py3.10_468798ef5b93c79a
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-aarch64
+    python: '3.10'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-aarch64 3.11 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0
+    c_stdlib=sysroot c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4
+    cuda_cupti=13 cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 pytorch=2.7
+    r_version=4.3.1 target_platform=linux-aarch64 2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-linux-aarch64_py3.11_60da65cb48b7b97c
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-aarch64
+    python: '3.11'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-aarch64 3.12 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0
+    c_stdlib=sysroot c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4
+    cuda_cupti=13 cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 pytorch=2.7
+    r_version=4.3.1 target_platform=linux-aarch64 2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-linux-aarch64_py3.12_973145c9f69cc237
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-aarch64
+    python: '3.12'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-aarch64 3.13 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0
+    c_stdlib=sysroot c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4
+    cuda_cupti=13 cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 pytorch=2.7
+    r_version=4.3.1 target_platform=linux-aarch64 2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-linux-aarch64_py3.13_0825a86d47a1b2cf
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-aarch64
+    python: '3.13'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.10 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    MACOSX_SDK_VERSION=13.3 blas_impl=openblas c_compiler=clang c_compiler_version=17
+    c_stdlib=macosx_deployment_target c_stdlib_version=12.1 channel_targets=defaults
+    cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=clangxx cxx_compiler_version=17
+    gpu_variant=metal libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1
+    llvm_openmp=20.1.8 megabuild=false mkl=2025 openblas=0 pytorch=2.7 r_version=4.3.1
+    target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-osx-arm64_py3.10_22f03cf6c5603407
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    MACOSX_SDK_VERSION: '13.3'
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: metal
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    llvm_openmp: 20.1.8
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.10'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.10 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl=openblas c_compiler=clang c_compiler_version=17 c_stdlib=macosx_deployment_target
+    c_stdlib_version=12.1 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=clangxx cxx_compiler_version=17 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 llvm_openmp=20.1.8 megabuild=false mkl=2025
+    openblas=0 pytorch=2.7 r_version=4.3.1 target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-osx-arm64_py3.10_878019a015fcfe65
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    llvm_openmp: 20.1.8
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.10'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.11 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl=openblas c_compiler=clang c_compiler_version=17 c_stdlib=macosx_deployment_target
+    c_stdlib_version=12.1 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=clangxx cxx_compiler_version=17 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 llvm_openmp=20.1.8 megabuild=false mkl=2025
+    openblas=0 pytorch=2.7 r_version=4.3.1 target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-osx-arm64_py3.11_333e77a95b99b65a
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    llvm_openmp: 20.1.8
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.11'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.11 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    MACOSX_SDK_VERSION=13.3 blas_impl=openblas c_compiler=clang c_compiler_version=17
+    c_stdlib=macosx_deployment_target c_stdlib_version=12.1 channel_targets=defaults
+    cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=clangxx cxx_compiler_version=17
+    gpu_variant=metal libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1
+    llvm_openmp=20.1.8 megabuild=false mkl=2025 openblas=0 pytorch=2.7 r_version=4.3.1
+    target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-osx-arm64_py3.11_d9325d50253260c2
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    MACOSX_SDK_VERSION: '13.3'
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: metal
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    llvm_openmp: 20.1.8
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.11'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.12 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl=openblas c_compiler=clang c_compiler_version=17 c_stdlib=macosx_deployment_target
+    c_stdlib_version=12.1 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=clangxx cxx_compiler_version=17 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 llvm_openmp=20.1.8 megabuild=false mkl=2025
+    openblas=0 pytorch=2.7 r_version=4.3.1 target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-osx-arm64_py3.12_8be892e6f9560b70
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    llvm_openmp: 20.1.8
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.12'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.12 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    MACOSX_SDK_VERSION=13.3 blas_impl=openblas c_compiler=clang c_compiler_version=17
+    c_stdlib=macosx_deployment_target c_stdlib_version=12.1 channel_targets=defaults
+    cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=clangxx cxx_compiler_version=17
+    gpu_variant=metal libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1
+    llvm_openmp=20.1.8 megabuild=false mkl=2025 openblas=0 pytorch=2.7 r_version=4.3.1
+    target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-osx-arm64_py3.12_904ea0d00062ddda
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    MACOSX_SDK_VERSION: '13.3'
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: metal
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    llvm_openmp: 20.1.8
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.12'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.13 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl=openblas c_compiler=clang c_compiler_version=17 c_stdlib=macosx_deployment_target
+    c_stdlib_version=12.1 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=clangxx cxx_compiler_version=17 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 llvm_openmp=20.1.8 megabuild=false mkl=2025
+    openblas=0 pytorch=2.7 r_version=4.3.1 target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-osx-arm64_py3.13_1b2fdf5b11bce2ea
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    llvm_openmp: 20.1.8
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.13'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.13 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    MACOSX_SDK_VERSION=13.3 blas_impl=openblas c_compiler=clang c_compiler_version=17
+    c_stdlib=macosx_deployment_target c_stdlib_version=12.1 channel_targets=defaults
+    cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=clangxx cxx_compiler_version=17
+    gpu_variant=metal libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1
+    llvm_openmp=20.1.8 megabuild=false mkl=2025 openblas=0 pytorch=2.7 r_version=4.3.1
+    target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-osx-arm64_py3.13_ed9376ac6614212c
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    MACOSX_SDK_VERSION: '13.3'
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: metal
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    llvm_openmp: 20.1.8
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.13'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    win-64 3.10 blas_impl=mkl c_compiler=vs2019 c_stdlib=vs c_stdlib_version=2019.11
+    channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=vs2019
+    gpu_variant=cpu libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false
+    megabuild_python=3.12 mkl=2025 pytorch=2.7 r_version=4.3.1 target_platform=win-64
+    2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-win-64_py3.10_334b5a1d5b5ac4ff
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    blas_impl: mkl
+    c_compiler: vs2019
+    c_stdlib: vs
+    c_stdlib_version: '2019.11'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: vs2019
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    megabuild_python: '3.12'
+    mkl: '2025'
+    platform: win-64
+    python: '3.10'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: win-64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    win-64 3.11 blas_impl=mkl c_compiler=vs2019 c_stdlib=vs c_stdlib_version=2019.11
+    channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=vs2019
+    gpu_variant=cpu libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false
+    megabuild_python=3.12 mkl=2025 pytorch=2.7 r_version=4.3.1 target_platform=win-64
+    2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-win-64_py3.11_be4fbf7727569176
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    blas_impl: mkl
+    c_compiler: vs2019
+    c_stdlib: vs
+    c_stdlib_version: '2019.11'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: vs2019
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    megabuild_python: '3.12'
+    mkl: '2025'
+    platform: win-64
+    python: '3.11'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: win-64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    win-64 3.12 blas_impl=mkl c_compiler=vs2019 c_stdlib=vs c_stdlib_version=2019.11
+    channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=vs2019
+    gpu_variant=cpu libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false
+    megabuild_python=3.12 mkl=2025 pytorch=2.7 r_version=4.3.1 target_platform=win-64
+    2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-win-64_py3.12_cf92d7dce49c4163
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    blas_impl: mkl
+    c_compiler: vs2019
+    c_stdlib: vs
+    c_stdlib_version: '2019.11'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: vs2019
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    megabuild_python: '3.12'
+    mkl: '2025'
+    platform: win-64
+    python: '3.12'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: win-64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for pytorch-feedstock @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    win-64 3.13 blas_impl=mkl c_compiler=vs2019 c_stdlib=vs c_stdlib_version=2019.11
+    channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=vs2019
+    gpu_variant=cpu libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false
+    megabuild_python=3.12 mkl=2025 pytorch=2.7 r_version=4.3.1 target_platform=win-64
+    2025-12-17 18:08:49
+  public_name: build-pytorch-feedstock-win-64_py3.13_61ee8db68bebee18
+  dependencies: []
+  max_run_time: 72000
+  type: build
+  variant:
+    blas_impl: mkl
+    c_compiler: vs2019
+    c_stdlib: vs
+    c_stdlib_version: '2019.11'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: vs2019
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    megabuild_python: '3.12'
+    mkl: '2025'
+    platform: win-64
+    python: '3.13'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: win-64
+  feedstock_url: https://github.com/AnacondaRecipes/pytorch-feedstock
+  feedstock_ref: 6f5fec6a96d73386d6393afbd0816e36b246edf2
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.10 blas_impl=mkl c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 r_version=4.3.1
+    target_platform=linux-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-libtorch-linux-64_py3.10_c7fe997783a17215
+  dependencies:
+  - build-pytorch-feedstock-linux-64_py3.10_c7fe997783a17215
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: mkl
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    platform: linux-64
+    python: '3.10'
+    r_version: 4.3.1
+    target_platform: linux-64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.10 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 r_version=4.3.1
+    target_platform=linux-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-libtorch-linux-64_py3.10_fefcf304d586af97
+  dependencies:
+  - build-pytorch-feedstock-linux-64_py3.10_fefcf304d586af97
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-64
+    python: '3.10'
+    r_version: 4.3.1
+    target_platform: linux-64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.11 blas_impl=mkl c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 r_version=4.3.1
+    target_platform=linux-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-libtorch-linux-64_py3.11_5df8fdf5dbc83caa
+  dependencies:
+  - build-pytorch-feedstock-linux-64_py3.11_5df8fdf5dbc83caa
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: mkl
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    platform: linux-64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: linux-64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.11 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 r_version=4.3.1
+    target_platform=linux-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-libtorch-linux-64_py3.11_d66b0890fb47420a
+  dependencies:
+  - build-pytorch-feedstock-linux-64_py3.11_d66b0890fb47420a
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: linux-64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.12 blas_impl=mkl c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 r_version=4.3.1
+    target_platform=linux-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-libtorch-linux-64_py3.12_273fd950848e8ddc
+  dependencies:
+  - build-pytorch-feedstock-linux-64_py3.12_273fd950848e8ddc
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: mkl
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    platform: linux-64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: linux-64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.12 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 r_version=4.3.1
+    target_platform=linux-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-libtorch-linux-64_py3.12_fcca45b53f728a32
+  dependencies:
+  - build-pytorch-feedstock-linux-64_py3.12_fcca45b53f728a32
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: linux-64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.13 blas_impl=mkl c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 r_version=4.3.1
+    target_platform=linux-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-libtorch-linux-64_py3.13_177b2cfa518526a6
+  dependencies:
+  - build-pytorch-feedstock-linux-64_py3.13_177b2cfa518526a6
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: mkl
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    platform: linux-64
+    python: '3.13'
+    r_version: 4.3.1
+    target_platform: linux-64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.13 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 r_version=4.3.1
+    target_platform=linux-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-libtorch-linux-64_py3.13_eed6c34710949287
+  dependencies:
+  - build-pytorch-feedstock-linux-64_py3.13_eed6c34710949287
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-64
+    python: '3.13'
+    r_version: 4.3.1
+    target_platform: linux-64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-aarch64 3.10 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0
+    c_stdlib=sysroot c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4
+    cuda_cupti=13 cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 r_version=4.3.1
+    target_platform=linux-aarch64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-libtorch-linux-aarch64_py3.10_468798ef5b93c79a
+  dependencies:
+  - build-pytorch-feedstock-linux-aarch64_py3.10_468798ef5b93c79a
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-aarch64
+    python: '3.10'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-aarch64 3.11 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0
+    c_stdlib=sysroot c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4
+    cuda_cupti=13 cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 r_version=4.3.1
+    target_platform=linux-aarch64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-libtorch-linux-aarch64_py3.11_60da65cb48b7b97c
+  dependencies:
+  - build-pytorch-feedstock-linux-aarch64_py3.11_60da65cb48b7b97c
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-aarch64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-aarch64 3.12 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0
+    c_stdlib=sysroot c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4
+    cuda_cupti=13 cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 r_version=4.3.1
+    target_platform=linux-aarch64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-libtorch-linux-aarch64_py3.12_973145c9f69cc237
+  dependencies:
+  - build-pytorch-feedstock-linux-aarch64_py3.12_973145c9f69cc237
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-aarch64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-aarch64 3.13 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0
+    c_stdlib=sysroot c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4
+    cuda_cupti=13 cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 r_version=4.3.1
+    target_platform=linux-aarch64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-libtorch-linux-aarch64_py3.13_0825a86d47a1b2cf
+  dependencies:
+  - build-pytorch-feedstock-linux-aarch64_py3.13_0825a86d47a1b2cf
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-aarch64
+    python: '3.13'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.10 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    blas_impl=openblas c_compiler=clang c_compiler_version=17 c_stdlib=macosx_deployment_target
+    c_stdlib_version=12.1 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=clangxx cxx_compiler_version=17 gpu_variant=metal libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 r_version=4.3.1
+    target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-libtorch-osx-arm64_py3.10_22f03cf6c5603407
+  dependencies:
+  - build-pytorch-feedstock-osx-arm64_py3.10_22f03cf6c5603407
+  max_run_time: 72000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: metal
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.10'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.10 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl=openblas c_compiler=clang c_compiler_version=17 c_stdlib=macosx_deployment_target
+    c_stdlib_version=12.1 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=clangxx cxx_compiler_version=17 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 r_version=4.3.1
+    target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-libtorch-osx-arm64_py3.10_878019a015fcfe65
+  dependencies:
+  - build-pytorch-feedstock-osx-arm64_py3.10_878019a015fcfe65
+  max_run_time: 72000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.10'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.11 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl=openblas c_compiler=clang c_compiler_version=17 c_stdlib=macosx_deployment_target
+    c_stdlib_version=12.1 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=clangxx cxx_compiler_version=17 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 r_version=4.3.1
+    target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-libtorch-osx-arm64_py3.11_333e77a95b99b65a
+  dependencies:
+  - build-pytorch-feedstock-osx-arm64_py3.11_333e77a95b99b65a
+  max_run_time: 72000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.11 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    blas_impl=openblas c_compiler=clang c_compiler_version=17 c_stdlib=macosx_deployment_target
+    c_stdlib_version=12.1 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=clangxx cxx_compiler_version=17 gpu_variant=metal libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 r_version=4.3.1
+    target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-libtorch-osx-arm64_py3.11_d9325d50253260c2
+  dependencies:
+  - build-pytorch-feedstock-osx-arm64_py3.11_d9325d50253260c2
+  max_run_time: 72000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: metal
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.12 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl=openblas c_compiler=clang c_compiler_version=17 c_stdlib=macosx_deployment_target
+    c_stdlib_version=12.1 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=clangxx cxx_compiler_version=17 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 r_version=4.3.1
+    target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-libtorch-osx-arm64_py3.12_8be892e6f9560b70
+  dependencies:
+  - build-pytorch-feedstock-osx-arm64_py3.12_8be892e6f9560b70
+  max_run_time: 72000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.12 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    blas_impl=openblas c_compiler=clang c_compiler_version=17 c_stdlib=macosx_deployment_target
+    c_stdlib_version=12.1 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=clangxx cxx_compiler_version=17 gpu_variant=metal libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 r_version=4.3.1
+    target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-libtorch-osx-arm64_py3.12_904ea0d00062ddda
+  dependencies:
+  - build-pytorch-feedstock-osx-arm64_py3.12_904ea0d00062ddda
+  max_run_time: 72000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: metal
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.13 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl=openblas c_compiler=clang c_compiler_version=17 c_stdlib=macosx_deployment_target
+    c_stdlib_version=12.1 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=clangxx cxx_compiler_version=17 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 r_version=4.3.1
+    target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-libtorch-osx-arm64_py3.13_1b2fdf5b11bce2ea
+  dependencies:
+  - build-pytorch-feedstock-osx-arm64_py3.13_1b2fdf5b11bce2ea
+  max_run_time: 72000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.13'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.13 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    blas_impl=openblas c_compiler=clang c_compiler_version=17 c_stdlib=macosx_deployment_target
+    c_stdlib_version=12.1 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=clangxx cxx_compiler_version=17 gpu_variant=metal libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 r_version=4.3.1
+    target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-libtorch-osx-arm64_py3.13_ed9376ac6614212c
+  dependencies:
+  - build-pytorch-feedstock-osx-arm64_py3.13_ed9376ac6614212c
+  max_run_time: 72000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: metal
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.13'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    win-64 3.10 blas_impl=mkl c_compiler=vs2019 c_stdlib=vs c_stdlib_version=2019.11
+    channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=vs2019
+    gpu_variant=cpu libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false
+    megabuild_python=3.12 mkl=2025 r_version=4.3.1 target_platform=win-64 2025-12-17
+    18:08:49
+  public_name: test-pytorch-feedstock-libtorch-win-64_py3.10_334b5a1d5b5ac4ff
+  dependencies:
+  - build-pytorch-feedstock-win-64_py3.10_334b5a1d5b5ac4ff
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: mkl
+    c_compiler: vs2019
+    c_stdlib: vs
+    c_stdlib_version: '2019.11'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: vs2019
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    megabuild_python: '3.12'
+    mkl: '2025'
+    platform: win-64
+    python: '3.10'
+    r_version: 4.3.1
+    target_platform: win-64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    win-64 3.11 blas_impl=mkl c_compiler=vs2019 c_stdlib=vs c_stdlib_version=2019.11
+    channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=vs2019
+    gpu_variant=cpu libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false
+    megabuild_python=3.12 mkl=2025 r_version=4.3.1 target_platform=win-64 2025-12-17
+    18:08:49
+  public_name: test-pytorch-feedstock-libtorch-win-64_py3.11_be4fbf7727569176
+  dependencies:
+  - build-pytorch-feedstock-win-64_py3.11_be4fbf7727569176
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: mkl
+    c_compiler: vs2019
+    c_stdlib: vs
+    c_stdlib_version: '2019.11'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: vs2019
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    megabuild_python: '3.12'
+    mkl: '2025'
+    platform: win-64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: win-64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    win-64 3.12 blas_impl=mkl c_compiler=vs2019 c_stdlib=vs c_stdlib_version=2019.11
+    channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=vs2019
+    gpu_variant=cpu libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false
+    megabuild_python=3.12 mkl=2025 r_version=4.3.1 target_platform=win-64 2025-12-17
+    18:08:49
+  public_name: test-pytorch-feedstock-libtorch-win-64_py3.12_cf92d7dce49c4163
+  dependencies:
+  - build-pytorch-feedstock-win-64_py3.12_cf92d7dce49c4163
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: mkl
+    c_compiler: vs2019
+    c_stdlib: vs
+    c_stdlib_version: '2019.11'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: vs2019
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    megabuild_python: '3.12'
+    mkl: '2025'
+    platform: win-64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: win-64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock libtorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    win-64 3.13 blas_impl=mkl c_compiler=vs2019 c_stdlib=vs c_stdlib_version=2019.11
+    channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=vs2019
+    gpu_variant=cpu libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false
+    megabuild_python=3.12 mkl=2025 r_version=4.3.1 target_platform=win-64 2025-12-17
+    18:08:49
+  public_name: test-pytorch-feedstock-libtorch-win-64_py3.13_61ee8db68bebee18
+  dependencies:
+  - build-pytorch-feedstock-win-64_py3.13_61ee8db68bebee18
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: mkl
+    c_compiler: vs2019
+    c_stdlib: vs
+    c_stdlib_version: '2019.11'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: vs2019
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    megabuild_python: '3.12'
+    mkl: '2025'
+    platform: win-64
+    python: '3.13'
+    r_version: 4.3.1
+    target_platform: win-64
+  package_def:
+    matchspec: libtorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch-cpu @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.11 blas_impl=mkl c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 r_version=4.3.1
+    target_platform=linux-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-cpu-linux-64_py3.11_5df8fdf5dbc83caa
+  dependencies:
+  - build-pytorch-feedstock-linux-64_py3.11_5df8fdf5dbc83caa
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: mkl
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    platform: linux-64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: linux-64
+  package_def:
+    matchspec: pytorch-cpu
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch-cpu @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.11 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 r_version=4.3.1
+    target_platform=linux-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-cpu-linux-64_py3.11_d66b0890fb47420a
+  dependencies:
+  - build-pytorch-feedstock-linux-64_py3.11_d66b0890fb47420a
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: linux-64
+  package_def:
+    matchspec: pytorch-cpu
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch-cpu @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-aarch64 3.11 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0
+    c_stdlib=sysroot c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4
+    cuda_cupti=13 cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 r_version=4.3.1
+    target_platform=linux-aarch64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-cpu-linux-aarch64_py3.11_60da65cb48b7b97c
+  dependencies:
+  - build-pytorch-feedstock-linux-aarch64_py3.11_60da65cb48b7b97c
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-aarch64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: pytorch-cpu
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch-cpu @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.11 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl=openblas c_compiler=clang c_compiler_version=17 c_stdlib=macosx_deployment_target
+    c_stdlib_version=12.1 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=clangxx cxx_compiler_version=17 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 r_version=4.3.1
+    target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-cpu-osx-arm64_py3.11_333e77a95b99b65a
+  dependencies:
+  - build-pytorch-feedstock-osx-arm64_py3.11_333e77a95b99b65a
+  max_run_time: 72000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  package_def:
+    matchspec: pytorch-cpu
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch-cpu @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    win-64 3.11 blas_impl=mkl c_compiler=vs2019 c_stdlib=vs c_stdlib_version=2019.11
+    channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=vs2019
+    gpu_variant=cpu libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false
+    mkl=2025 r_version=4.3.1 target_platform=win-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-cpu-win-64_py3.11_be4fbf7727569176
+  dependencies:
+  - build-pytorch-feedstock-win-64_py3.11_be4fbf7727569176
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: mkl
+    c_compiler: vs2019
+    c_stdlib: vs
+    c_stdlib_version: '2019.11'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: vs2019
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    platform: win-64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: win-64
+  package_def:
+    matchspec: pytorch-cpu
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch-gpu @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.11 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    blas_impl=openblas c_compiler=clang c_compiler_version=17 c_stdlib=macosx_deployment_target
+    c_stdlib_version=12.1 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=clangxx cxx_compiler_version=17 gpu_variant=metal libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 r_version=4.3.1
+    target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-gpu-osx-arm64_py3.11_d9325d50253260c2
+  dependencies:
+  - build-pytorch-feedstock-osx-arm64_py3.11_d9325d50253260c2
+  max_run_time: 72000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: metal
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  package_def:
+    matchspec: pytorch-gpu
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.10 blas_impl=mkl c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 pytorch=2.7 r_version=4.3.1
+    target_platform=linux-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-linux-64_py3.10_c7fe997783a17215
+  dependencies:
+  - build-pytorch-feedstock-linux-64_py3.10_c7fe997783a17215
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: mkl
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    platform: linux-64
+    python: '3.10'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.10 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 pytorch=2.7
+    r_version=4.3.1 target_platform=linux-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-linux-64_py3.10_fefcf304d586af97
+  dependencies:
+  - build-pytorch-feedstock-linux-64_py3.10_fefcf304d586af97
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-64
+    python: '3.10'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.11 blas_impl=mkl c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 pytorch=2.7 r_version=4.3.1
+    target_platform=linux-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-linux-64_py3.11_5df8fdf5dbc83caa
+  dependencies:
+  - build-pytorch-feedstock-linux-64_py3.11_5df8fdf5dbc83caa
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: mkl
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    platform: linux-64
+    python: '3.11'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.11 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 pytorch=2.7
+    r_version=4.3.1 target_platform=linux-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-linux-64_py3.11_d66b0890fb47420a
+  dependencies:
+  - build-pytorch-feedstock-linux-64_py3.11_d66b0890fb47420a
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-64
+    python: '3.11'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.12 blas_impl=mkl c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 pytorch=2.7 r_version=4.3.1
+    target_platform=linux-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-linux-64_py3.12_273fd950848e8ddc
+  dependencies:
+  - build-pytorch-feedstock-linux-64_py3.12_273fd950848e8ddc
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: mkl
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    platform: linux-64
+    python: '3.12'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.12 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 pytorch=2.7
+    r_version=4.3.1 target_platform=linux-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-linux-64_py3.12_fcca45b53f728a32
+  dependencies:
+  - build-pytorch-feedstock-linux-64_py3.12_fcca45b53f728a32
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-64
+    python: '3.12'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.13 blas_impl=mkl c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 pytorch=2.7 r_version=4.3.1
+    target_platform=linux-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-linux-64_py3.13_177b2cfa518526a6
+  dependencies:
+  - build-pytorch-feedstock-linux-64_py3.13_177b2cfa518526a6
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: mkl
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    platform: linux-64
+    python: '3.13'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-64 3.13 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot
+    c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 pytorch=2.7
+    r_version=4.3.1 target_platform=linux-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-linux-64_py3.13_eed6c34710949287
+  dependencies:
+  - build-pytorch-feedstock-linux-64_py3.13_eed6c34710949287
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-64
+    python: '3.13'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-aarch64 3.10 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0
+    c_stdlib=sysroot c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4
+    cuda_cupti=13 cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 pytorch=2.7
+    r_version=4.3.1 target_platform=linux-aarch64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-linux-aarch64_py3.10_468798ef5b93c79a
+  dependencies:
+  - build-pytorch-feedstock-linux-aarch64_py3.10_468798ef5b93c79a
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-aarch64
+    python: '3.10'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-aarch64 3.11 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0
+    c_stdlib=sysroot c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4
+    cuda_cupti=13 cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 pytorch=2.7
+    r_version=4.3.1 target_platform=linux-aarch64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-linux-aarch64_py3.11_60da65cb48b7b97c
+  dependencies:
+  - build-pytorch-feedstock-linux-aarch64_py3.11_60da65cb48b7b97c
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-aarch64
+    python: '3.11'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-aarch64 3.12 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0
+    c_stdlib=sysroot c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4
+    cuda_cupti=13 cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 pytorch=2.7
+    r_version=4.3.1 target_platform=linux-aarch64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-linux-aarch64_py3.12_973145c9f69cc237
+  dependencies:
+  - build-pytorch-feedstock-linux-aarch64_py3.12_973145c9f69cc237
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-aarch64
+    python: '3.12'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    linux-aarch64 3.13 blas_impl=openblas c_compiler=gcc c_compiler_version=14.3.0
+    c_stdlib=sysroot c_stdlib_version=2.28 channel_targets=defaults cuda_compiler_version=12.4
+    cuda_cupti=13 cxx_compiler=gxx cxx_compiler_version=14.3.0 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false mkl=2025 openblas=0 pytorch=2.7
+    r_version=4.3.1 target_platform=linux-aarch64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-linux-aarch64_py3.13_0825a86d47a1b2cf
+  dependencies:
+  - build-pytorch-feedstock-linux-aarch64_py3.13_0825a86d47a1b2cf
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: openblas
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: linux-aarch64
+    python: '3.13'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.10 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    MACOSX_SDK_VERSION=13.3 blas_impl=openblas c_compiler=clang c_compiler_version=17
+    c_stdlib=macosx_deployment_target c_stdlib_version=12.1 channel_targets=defaults
+    cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=clangxx cxx_compiler_version=17
+    gpu_variant=metal libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1
+    llvm_openmp=20.1.8 megabuild=false mkl=2025 openblas=0 pytorch=2.7 r_version=4.3.1
+    target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-osx-arm64_py3.10_22f03cf6c5603407
+  dependencies:
+  - build-pytorch-feedstock-osx-arm64_py3.10_22f03cf6c5603407
+  max_run_time: 72000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    MACOSX_SDK_VERSION: '13.3'
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: metal
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    llvm_openmp: 20.1.8
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.10'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.10 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl=openblas c_compiler=clang c_compiler_version=17 c_stdlib=macosx_deployment_target
+    c_stdlib_version=12.1 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=clangxx cxx_compiler_version=17 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 llvm_openmp=20.1.8 megabuild=false mkl=2025
+    openblas=0 pytorch=2.7 r_version=4.3.1 target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-osx-arm64_py3.10_878019a015fcfe65
+  dependencies:
+  - build-pytorch-feedstock-osx-arm64_py3.10_878019a015fcfe65
+  max_run_time: 72000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    llvm_openmp: 20.1.8
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.10'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.11 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl=openblas c_compiler=clang c_compiler_version=17 c_stdlib=macosx_deployment_target
+    c_stdlib_version=12.1 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=clangxx cxx_compiler_version=17 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 llvm_openmp=20.1.8 megabuild=false mkl=2025
+    openblas=0 pytorch=2.7 r_version=4.3.1 target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-osx-arm64_py3.11_333e77a95b99b65a
+  dependencies:
+  - build-pytorch-feedstock-osx-arm64_py3.11_333e77a95b99b65a
+  max_run_time: 72000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    llvm_openmp: 20.1.8
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.11'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.11 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    MACOSX_SDK_VERSION=13.3 blas_impl=openblas c_compiler=clang c_compiler_version=17
+    c_stdlib=macosx_deployment_target c_stdlib_version=12.1 channel_targets=defaults
+    cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=clangxx cxx_compiler_version=17
+    gpu_variant=metal libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1
+    llvm_openmp=20.1.8 megabuild=false mkl=2025 openblas=0 pytorch=2.7 r_version=4.3.1
+    target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-osx-arm64_py3.11_d9325d50253260c2
+  dependencies:
+  - build-pytorch-feedstock-osx-arm64_py3.11_d9325d50253260c2
+  max_run_time: 72000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    MACOSX_SDK_VERSION: '13.3'
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: metal
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    llvm_openmp: 20.1.8
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.11'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.12 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl=openblas c_compiler=clang c_compiler_version=17 c_stdlib=macosx_deployment_target
+    c_stdlib_version=12.1 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=clangxx cxx_compiler_version=17 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 llvm_openmp=20.1.8 megabuild=false mkl=2025
+    openblas=0 pytorch=2.7 r_version=4.3.1 target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-osx-arm64_py3.12_8be892e6f9560b70
+  dependencies:
+  - build-pytorch-feedstock-osx-arm64_py3.12_8be892e6f9560b70
+  max_run_time: 72000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    llvm_openmp: 20.1.8
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.12'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.12 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    MACOSX_SDK_VERSION=13.3 blas_impl=openblas c_compiler=clang c_compiler_version=17
+    c_stdlib=macosx_deployment_target c_stdlib_version=12.1 channel_targets=defaults
+    cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=clangxx cxx_compiler_version=17
+    gpu_variant=metal libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1
+    llvm_openmp=20.1.8 megabuild=false mkl=2025 openblas=0 pytorch=2.7 r_version=4.3.1
+    target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-osx-arm64_py3.12_904ea0d00062ddda
+  dependencies:
+  - build-pytorch-feedstock-osx-arm64_py3.12_904ea0d00062ddda
+  max_run_time: 72000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    MACOSX_SDK_VERSION: '13.3'
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: metal
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    llvm_openmp: 20.1.8
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.12'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.13 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl=openblas c_compiler=clang c_compiler_version=17 c_stdlib=macosx_deployment_target
+    c_stdlib_version=12.1 channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13
+    cxx_compiler=clangxx cxx_compiler_version=17 gpu_variant=cpu libabseil=20250814.1
+    libprotobuf=6.33.0 libtorch=2.7 libuv=1 llvm_openmp=20.1.8 megabuild=false mkl=2025
+    openblas=0 pytorch=2.7 r_version=4.3.1 target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-osx-arm64_py3.13_1b2fdf5b11bce2ea
+  dependencies:
+  - build-pytorch-feedstock-osx-arm64_py3.13_1b2fdf5b11bce2ea
+  max_run_time: 72000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    llvm_openmp: 20.1.8
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.13'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    osx-arm64 3.13 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    MACOSX_SDK_VERSION=13.3 blas_impl=openblas c_compiler=clang c_compiler_version=17
+    c_stdlib=macosx_deployment_target c_stdlib_version=12.1 channel_targets=defaults
+    cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=clangxx cxx_compiler_version=17
+    gpu_variant=metal libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1
+    llvm_openmp=20.1.8 megabuild=false mkl=2025 openblas=0 pytorch=2.7 r_version=4.3.1
+    target_platform=osx-arm64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-osx-arm64_py3.13_ed9376ac6614212c
+  dependencies:
+  - build-pytorch-feedstock-osx-arm64_py3.13_ed9376ac6614212c
+  max_run_time: 72000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+    MACOSX_SDK_VERSION: '13.3'
+    blas_impl: openblas
+    c_compiler: clang
+    c_compiler_version: '17'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '17'
+    gpu_variant: metal
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    llvm_openmp: 20.1.8
+    megabuild: 'false'
+    mkl: '2025'
+    openblas: '0'
+    platform: osx-arm64
+    python: '3.13'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    win-64 3.10 blas_impl=mkl c_compiler=vs2019 c_stdlib=vs c_stdlib_version=2019.11
+    channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=vs2019
+    gpu_variant=cpu libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false
+    mkl=2025 pytorch=2.7 r_version=4.3.1 target_platform=win-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-win-64_py3.10_334b5a1d5b5ac4ff
+  dependencies:
+  - build-pytorch-feedstock-win-64_py3.10_334b5a1d5b5ac4ff
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: mkl
+    c_compiler: vs2019
+    c_stdlib: vs
+    c_stdlib_version: '2019.11'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: vs2019
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    platform: win-64
+    python: '3.10'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: win-64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    win-64 3.11 blas_impl=mkl c_compiler=vs2019 c_stdlib=vs c_stdlib_version=2019.11
+    channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=vs2019
+    gpu_variant=cpu libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false
+    mkl=2025 pytorch=2.7 r_version=4.3.1 target_platform=win-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-win-64_py3.11_be4fbf7727569176
+  dependencies:
+  - build-pytorch-feedstock-win-64_py3.11_be4fbf7727569176
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: mkl
+    c_compiler: vs2019
+    c_stdlib: vs
+    c_stdlib_version: '2019.11'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: vs2019
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    platform: win-64
+    python: '3.11'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: win-64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    win-64 3.12 blas_impl=mkl c_compiler=vs2019 c_stdlib=vs c_stdlib_version=2019.11
+    channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=vs2019
+    gpu_variant=cpu libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false
+    mkl=2025 pytorch=2.7 r_version=4.3.1 target_platform=win-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-win-64_py3.12_cf92d7dce49c4163
+  dependencies:
+  - build-pytorch-feedstock-win-64_py3.12_cf92d7dce49c4163
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: mkl
+    c_compiler: vs2019
+    c_stdlib: vs
+    c_stdlib_version: '2019.11'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: vs2019
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    platform: win-64
+    python: '3.12'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: win-64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+- description: Test task for pytorch-feedstock pytorch @ 6f5fec6 (6f5fec6a96d73386d6393afbd0816e36b246edf2)
+    win-64 3.13 blas_impl=mkl c_compiler=vs2019 c_stdlib=vs c_stdlib_version=2019.11
+    channel_targets=defaults cuda_compiler_version=12.4 cuda_cupti=13 cxx_compiler=vs2019
+    gpu_variant=cpu libabseil=20250814.1 libprotobuf=6.33.0 libtorch=2.7 libuv=1 megabuild=false
+    mkl=2025 pytorch=2.7 r_version=4.3.1 target_platform=win-64 2025-12-17 18:08:49
+  public_name: test-pytorch-feedstock-pytorch-win-64_py3.13_61ee8db68bebee18
+  dependencies:
+  - build-pytorch-feedstock-win-64_py3.13_61ee8db68bebee18
+  max_run_time: 72000
+  type: test
+  variant:
+    blas_impl: mkl
+    c_compiler: vs2019
+    c_stdlib: vs
+    c_stdlib_version: '2019.11'
+    channel_targets: defaults
+    cuda_compiler_version: '12.4'
+    cuda_cupti: '13'
+    cxx_compiler: vs2019
+    gpu_variant: cpu
+    libabseil: '20250814.1'
+    libprotobuf: 6.33.0
+    libtorch: '2.7'
+    libuv: '1'
+    megabuild: 'false'
+    mkl: '2025'
+    platform: win-64
+    python: '3.13'
+    pytorch: '2.7'
+    r_version: 4.3.1
+    target_platform: win-64
+  package_def:
+    matchspec: pytorch
+  external_dependencies: []
+notification: []
+custom_metadata: {}
+system_metadata:
+  release_destination:
+    destination: pbp-release-api
+    channel: main
+    release_name: null
+task_counts_by_status: {}
+total_tasks: 0

@@ -1,0 +1,268 @@
+name: Build/Test Graph 'cutensor-feedstock' and 0 more
+priority: 0
+user: anum
+src_channels:
+- main
+dest_channel: main
+tasks:
+- description: Build task for cutensor-feedstock @ 535a884 (535a8849682707f28c2dbdb527f8d28e5cbae201)
+    linux-64 3.12 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=13.0 cutensor=2
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 libcublas=13 r_version=4.3.1 target_platform=linux-64
+    xz=5 2025-12-17 20:44:07
+  public_name: build-cutensor-feedstock-linux-64_py3.12_0bbbcffcda4f293a
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: '13.0'
+    cutensor: '2'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    libcublas: '13'
+    platform: linux-64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: linux-64
+    xz: '5'
+  feedstock_url: https://github.com/AnacondaRecipes/cutensor-feedstock
+  feedstock_ref: 535a8849682707f28c2dbdb527f8d28e5cbae201
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --skip-existing
+- description: Build task for cutensor-feedstock @ 535a884 (535a8849682707f28c2dbdb527f8d28e5cbae201)
+    linux-64 3.12 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=12.8 cutensor=2
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 libcublas=12 r_version=4.3.1 target_platform=linux-64
+    xz=5 2025-12-17 20:44:07
+  public_name: build-cutensor-feedstock-linux-64_py3.12_b003b2167b056652
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: '12.8'
+    cutensor: '2'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    libcublas: '12'
+    platform: linux-64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: linux-64
+    xz: '5'
+  feedstock_url: https://github.com/AnacondaRecipes/cutensor-feedstock
+  feedstock_ref: 535a8849682707f28c2dbdb527f8d28e5cbae201
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --skip-existing
+- description: Build task for cutensor-feedstock @ 535a884 (535a8849682707f28c2dbdb527f8d28e5cbae201)
+    linux-aarch64 3.12 arm_variant_type=sbsa c_compiler=gcc c_compiler_version=14.3.0
+    c_stdlib=sysroot c_stdlib_version=2.28 channel_targets=defaults cuda_compiler=cuda-nvcc
+    cuda_compiler_version=12.8 cutensor=2 cxx_compiler=gxx cxx_compiler_version=14.3.0
+    libcublas=12 r_version=4.3.1 target_platform=linux-aarch64 xz=5 2025-12-17 20:44:07
+  public_name: build-cutensor-feedstock-linux-aarch64_py3.12_747772aac9e3ea40
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    arm_variant_type: sbsa
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: '12.8'
+    cutensor: '2'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    libcublas: '12'
+    platform: linux-aarch64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+    xz: '5'
+  feedstock_url: https://github.com/AnacondaRecipes/cutensor-feedstock
+  feedstock_ref: 535a8849682707f28c2dbdb527f8d28e5cbae201
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --skip-existing
+- description: Build task for cutensor-feedstock @ 535a884 (535a8849682707f28c2dbdb527f8d28e5cbae201)
+    linux-aarch64 3.12 arm_variant_type=sbsa c_compiler=gcc c_compiler_version=14.3.0
+    c_stdlib=sysroot c_stdlib_version=2.28 channel_targets=defaults cuda_compiler=cuda-nvcc
+    cuda_compiler_version=13.0 cutensor=2 cxx_compiler=gxx cxx_compiler_version=14.3.0
+    libcublas=13 r_version=4.3.1 target_platform=linux-aarch64 xz=5 2025-12-17 20:44:07
+  public_name: build-cutensor-feedstock-linux-aarch64_py3.12_ce99b6c9f2d98511
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    arm_variant_type: sbsa
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: '13.0'
+    cutensor: '2'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    libcublas: '13'
+    platform: linux-aarch64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+    xz: '5'
+  feedstock_url: https://github.com/AnacondaRecipes/cutensor-feedstock
+  feedstock_ref: 535a8849682707f28c2dbdb527f8d28e5cbae201
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --skip-existing
+- description: Test task for cutensor-feedstock cutensor @ 535a884 (535a8849682707f28c2dbdb527f8d28e5cbae201)
+    linux-64 3.12 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=13.0 cutensor=2
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 libcublas=13 r_version=4.3.1 target_platform=linux-64
+    xz=5 2025-12-17 20:44:07
+  public_name: test-cutensor-feedstock-cutensor-linux-64_py3.12_0bbbcffcda4f293a
+  dependencies:
+  - build-cutensor-feedstock-linux-64_py3.12_0bbbcffcda4f293a
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: '13.0'
+    cutensor: '2'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    libcublas: '13'
+    platform: linux-64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: linux-64
+    xz: '5'
+  package_def:
+    matchspec: cutensor
+  external_dependencies: []
+- description: Test task for cutensor-feedstock cutensor @ 535a884 (535a8849682707f28c2dbdb527f8d28e5cbae201)
+    linux-64 3.12 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=12.8 cutensor=2
+    cxx_compiler=gxx cxx_compiler_version=14.3.0 libcublas=12 r_version=4.3.1 target_platform=linux-64
+    xz=5 2025-12-17 20:44:07
+  public_name: test-cutensor-feedstock-cutensor-linux-64_py3.12_b003b2167b056652
+  dependencies:
+  - build-cutensor-feedstock-linux-64_py3.12_b003b2167b056652
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: '12.8'
+    cutensor: '2'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    libcublas: '12'
+    platform: linux-64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: linux-64
+    xz: '5'
+  package_def:
+    matchspec: cutensor
+  external_dependencies: []
+- description: Test task for cutensor-feedstock cutensor @ 535a884 (535a8849682707f28c2dbdb527f8d28e5cbae201)
+    linux-aarch64 3.12 arm_variant_type=sbsa c_compiler=gcc c_compiler_version=14.3.0
+    c_stdlib=sysroot c_stdlib_version=2.28 channel_targets=defaults cuda_compiler=cuda-nvcc
+    cuda_compiler_version=12.8 cutensor=2 cxx_compiler=gxx cxx_compiler_version=14.3.0
+    libcublas=12 r_version=4.3.1 target_platform=linux-aarch64 xz=5 2025-12-17 20:44:07
+  public_name: test-cutensor-feedstock-cutensor-linux-aarch64_py3.12_747772aac9e3ea40
+  dependencies:
+  - build-cutensor-feedstock-linux-aarch64_py3.12_747772aac9e3ea40
+  max_run_time: 7200
+  type: test
+  variant:
+    arm_variant_type: sbsa
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: '12.8'
+    cutensor: '2'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    libcublas: '12'
+    platform: linux-aarch64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+    xz: '5'
+  package_def:
+    matchspec: cutensor
+  external_dependencies: []
+- description: Test task for cutensor-feedstock cutensor @ 535a884 (535a8849682707f28c2dbdb527f8d28e5cbae201)
+    linux-aarch64 3.12 arm_variant_type=sbsa c_compiler=gcc c_compiler_version=14.3.0
+    c_stdlib=sysroot c_stdlib_version=2.28 channel_targets=defaults cuda_compiler=cuda-nvcc
+    cuda_compiler_version=13.0 cutensor=2 cxx_compiler=gxx cxx_compiler_version=14.3.0
+    libcublas=13 r_version=4.3.1 target_platform=linux-aarch64 xz=5 2025-12-17 20:44:07
+  public_name: test-cutensor-feedstock-cutensor-linux-aarch64_py3.12_ce99b6c9f2d98511
+  dependencies:
+  - build-cutensor-feedstock-linux-aarch64_py3.12_ce99b6c9f2d98511
+  max_run_time: 7200
+  type: test
+  variant:
+    arm_variant_type: sbsa
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: '13.0'
+    cutensor: '2'
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    libcublas: '13'
+    platform: linux-aarch64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+    xz: '5'
+  package_def:
+    matchspec: cutensor
+  external_dependencies: []
+notification: []
+custom_metadata: {}
+system_metadata:
+  release_destination:
+    destination: pbp-release-api
+    channel: main
+    release_name: null
+task_counts_by_status: {}
+total_tasks: 0

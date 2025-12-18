@@ -1,0 +1,552 @@
+name: Build/Test Graph 'pytest-replay-feedstock' and 0 more
+priority: 0
+user: anum
+src_channels:
+- main
+dest_channel: main
+tasks:
+- description: Build task for pytest-replay-feedstock @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    linux-64 3.10 channel_targets=defaults target_platform=linux-64 2025-12-12 12:46:05
+  public_name: build-pytest-replay-feedstock-linux-64_py3.10_11683059b64adbf1
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.10'
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/pytest-replay-feedstock.git
+  feedstock_ref: 14363523a52298d60c80bbaaeb0d92159f6d4c2f
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for pytest-replay-feedstock @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    linux-64 3.11 channel_targets=defaults target_platform=linux-64 2025-12-12 12:46:05
+  public_name: build-pytest-replay-feedstock-linux-64_py3.11_42900305da3d10f5
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.11'
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/pytest-replay-feedstock.git
+  feedstock_ref: 14363523a52298d60c80bbaaeb0d92159f6d4c2f
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for pytest-replay-feedstock @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    linux-64 3.12 channel_targets=defaults target_platform=linux-64 2025-12-12 12:46:05
+  public_name: build-pytest-replay-feedstock-linux-64_py3.12_01588a66acf35e07
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.12'
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/pytest-replay-feedstock.git
+  feedstock_ref: 14363523a52298d60c80bbaaeb0d92159f6d4c2f
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for pytest-replay-feedstock @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    linux-64 3.13 channel_targets=defaults target_platform=linux-64 2025-12-12 12:46:05
+  public_name: build-pytest-replay-feedstock-linux-64_py3.13_46cde2105499e564
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.13'
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/pytest-replay-feedstock.git
+  feedstock_ref: 14363523a52298d60c80bbaaeb0d92159f6d4c2f
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for pytest-replay-feedstock @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    linux-aarch64 3.10 channel_targets=defaults target_platform=linux-aarch64 2025-12-12
+    12:46:05
+  public_name: build-pytest-replay-feedstock-linux-aarch64_py3.10_3e993cf6a0204ec9
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.10'
+    target_platform: linux-aarch64
+  feedstock_url: https://github.com/AnacondaRecipes/pytest-replay-feedstock.git
+  feedstock_ref: 14363523a52298d60c80bbaaeb0d92159f6d4c2f
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for pytest-replay-feedstock @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    linux-aarch64 3.11 channel_targets=defaults target_platform=linux-aarch64 2025-12-12
+    12:46:05
+  public_name: build-pytest-replay-feedstock-linux-aarch64_py3.11_e3c6a9ea5dda4c11
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.11'
+    target_platform: linux-aarch64
+  feedstock_url: https://github.com/AnacondaRecipes/pytest-replay-feedstock.git
+  feedstock_ref: 14363523a52298d60c80bbaaeb0d92159f6d4c2f
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for pytest-replay-feedstock @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    linux-aarch64 3.12 channel_targets=defaults target_platform=linux-aarch64 2025-12-12
+    12:46:05
+  public_name: build-pytest-replay-feedstock-linux-aarch64_py3.12_e5658c3f6fe95dd7
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.12'
+    target_platform: linux-aarch64
+  feedstock_url: https://github.com/AnacondaRecipes/pytest-replay-feedstock.git
+  feedstock_ref: 14363523a52298d60c80bbaaeb0d92159f6d4c2f
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for pytest-replay-feedstock @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    linux-aarch64 3.13 channel_targets=defaults target_platform=linux-aarch64 2025-12-12
+    12:46:05
+  public_name: build-pytest-replay-feedstock-linux-aarch64_py3.13_d20b752b5916cf7d
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.13'
+    target_platform: linux-aarch64
+  feedstock_url: https://github.com/AnacondaRecipes/pytest-replay-feedstock.git
+  feedstock_ref: 14363523a52298d60c80bbaaeb0d92159f6d4c2f
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for pytest-replay-feedstock @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    osx-arm64 3.10 channel_targets=defaults target_platform=osx-arm64 2025-12-12 12:46:05
+  public_name: build-pytest-replay-feedstock-osx-arm64_py3.10_1fb655d515b8e932
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.10'
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/pytest-replay-feedstock.git
+  feedstock_ref: 14363523a52298d60c80bbaaeb0d92159f6d4c2f
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for pytest-replay-feedstock @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    osx-arm64 3.11 channel_targets=defaults target_platform=osx-arm64 2025-12-12 12:46:05
+  public_name: build-pytest-replay-feedstock-osx-arm64_py3.11_2b10d55787d7b746
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.11'
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/pytest-replay-feedstock.git
+  feedstock_ref: 14363523a52298d60c80bbaaeb0d92159f6d4c2f
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for pytest-replay-feedstock @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    osx-arm64 3.12 channel_targets=defaults target_platform=osx-arm64 2025-12-12 12:46:05
+  public_name: build-pytest-replay-feedstock-osx-arm64_py3.12_307979e57c084dd4
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.12'
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/pytest-replay-feedstock.git
+  feedstock_ref: 14363523a52298d60c80bbaaeb0d92159f6d4c2f
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for pytest-replay-feedstock @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    osx-arm64 3.13 channel_targets=defaults target_platform=osx-arm64 2025-12-12 12:46:05
+  public_name: build-pytest-replay-feedstock-osx-arm64_py3.13_1b4ae4d71bf6b4c5
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.13'
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/pytest-replay-feedstock.git
+  feedstock_ref: 14363523a52298d60c80bbaaeb0d92159f6d4c2f
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for pytest-replay-feedstock @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    win-64 3.10 channel_targets=defaults target_platform=win-64 2025-12-12 12:46:05
+  public_name: build-pytest-replay-feedstock-win-64_py3.10_15dd27269c853c91
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.10'
+    target_platform: win-64
+  feedstock_url: https://github.com/AnacondaRecipes/pytest-replay-feedstock.git
+  feedstock_ref: 14363523a52298d60c80bbaaeb0d92159f6d4c2f
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for pytest-replay-feedstock @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    win-64 3.11 channel_targets=defaults target_platform=win-64 2025-12-12 12:46:05
+  public_name: build-pytest-replay-feedstock-win-64_py3.11_d74064a5866b413a
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.11'
+    target_platform: win-64
+  feedstock_url: https://github.com/AnacondaRecipes/pytest-replay-feedstock.git
+  feedstock_ref: 14363523a52298d60c80bbaaeb0d92159f6d4c2f
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for pytest-replay-feedstock @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    win-64 3.12 channel_targets=defaults target_platform=win-64 2025-12-12 12:46:05
+  public_name: build-pytest-replay-feedstock-win-64_py3.12_35a7d75955ddf4a4
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.12'
+    target_platform: win-64
+  feedstock_url: https://github.com/AnacondaRecipes/pytest-replay-feedstock.git
+  feedstock_ref: 14363523a52298d60c80bbaaeb0d92159f6d4c2f
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for pytest-replay-feedstock @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    win-64 3.13 channel_targets=defaults target_platform=win-64 2025-12-12 12:46:05
+  public_name: build-pytest-replay-feedstock-win-64_py3.13_037a82f1661fb86a
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.13'
+    target_platform: win-64
+  feedstock_url: https://github.com/AnacondaRecipes/pytest-replay-feedstock.git
+  feedstock_ref: 14363523a52298d60c80bbaaeb0d92159f6d4c2f
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Test task for pytest-replay-feedstock pytest-replay @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    linux-64 3.10 channel_targets=defaults target_platform=linux-64 2025-12-12 12:46:05
+  public_name: test-pytest-replay-feedstock-pytest-replay-linux-64_py3.10_11683059b64adbf1
+  dependencies:
+  - build-pytest-replay-feedstock-linux-64_py3.10_11683059b64adbf1
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.10'
+    target_platform: linux-64
+  package_def:
+    matchspec: pytest-replay
+  external_dependencies: []
+- description: Test task for pytest-replay-feedstock pytest-replay @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    linux-64 3.11 channel_targets=defaults target_platform=linux-64 2025-12-12 12:46:05
+  public_name: test-pytest-replay-feedstock-pytest-replay-linux-64_py3.11_42900305da3d10f5
+  dependencies:
+  - build-pytest-replay-feedstock-linux-64_py3.11_42900305da3d10f5
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.11'
+    target_platform: linux-64
+  package_def:
+    matchspec: pytest-replay
+  external_dependencies: []
+- description: Test task for pytest-replay-feedstock pytest-replay @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    linux-64 3.12 channel_targets=defaults target_platform=linux-64 2025-12-12 12:46:05
+  public_name: test-pytest-replay-feedstock-pytest-replay-linux-64_py3.12_01588a66acf35e07
+  dependencies:
+  - build-pytest-replay-feedstock-linux-64_py3.12_01588a66acf35e07
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.12'
+    target_platform: linux-64
+  package_def:
+    matchspec: pytest-replay
+  external_dependencies: []
+- description: Test task for pytest-replay-feedstock pytest-replay @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    linux-64 3.13 channel_targets=defaults target_platform=linux-64 2025-12-12 12:46:05
+  public_name: test-pytest-replay-feedstock-pytest-replay-linux-64_py3.13_46cde2105499e564
+  dependencies:
+  - build-pytest-replay-feedstock-linux-64_py3.13_46cde2105499e564
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.13'
+    target_platform: linux-64
+  package_def:
+    matchspec: pytest-replay
+  external_dependencies: []
+- description: Test task for pytest-replay-feedstock pytest-replay @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    linux-aarch64 3.10 channel_targets=defaults target_platform=linux-aarch64 2025-12-12
+    12:46:05
+  public_name: test-pytest-replay-feedstock-pytest-replay-linux-aarch64_py3.10_3e993cf6a0204ec9
+  dependencies:
+  - build-pytest-replay-feedstock-linux-aarch64_py3.10_3e993cf6a0204ec9
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.10'
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: pytest-replay
+  external_dependencies: []
+- description: Test task for pytest-replay-feedstock pytest-replay @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    linux-aarch64 3.11 channel_targets=defaults target_platform=linux-aarch64 2025-12-12
+    12:46:05
+  public_name: test-pytest-replay-feedstock-pytest-replay-linux-aarch64_py3.11_e3c6a9ea5dda4c11
+  dependencies:
+  - build-pytest-replay-feedstock-linux-aarch64_py3.11_e3c6a9ea5dda4c11
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.11'
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: pytest-replay
+  external_dependencies: []
+- description: Test task for pytest-replay-feedstock pytest-replay @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    linux-aarch64 3.12 channel_targets=defaults target_platform=linux-aarch64 2025-12-12
+    12:46:05
+  public_name: test-pytest-replay-feedstock-pytest-replay-linux-aarch64_py3.12_e5658c3f6fe95dd7
+  dependencies:
+  - build-pytest-replay-feedstock-linux-aarch64_py3.12_e5658c3f6fe95dd7
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.12'
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: pytest-replay
+  external_dependencies: []
+- description: Test task for pytest-replay-feedstock pytest-replay @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    linux-aarch64 3.13 channel_targets=defaults target_platform=linux-aarch64 2025-12-12
+    12:46:05
+  public_name: test-pytest-replay-feedstock-pytest-replay-linux-aarch64_py3.13_d20b752b5916cf7d
+  dependencies:
+  - build-pytest-replay-feedstock-linux-aarch64_py3.13_d20b752b5916cf7d
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.13'
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: pytest-replay
+  external_dependencies: []
+- description: Test task for pytest-replay-feedstock pytest-replay @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    osx-arm64 3.10 channel_targets=defaults target_platform=osx-arm64 2025-12-12 12:46:05
+  public_name: test-pytest-replay-feedstock-pytest-replay-osx-arm64_py3.10_1fb655d515b8e932
+  dependencies:
+  - build-pytest-replay-feedstock-osx-arm64_py3.10_1fb655d515b8e932
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.10'
+    target_platform: osx-arm64
+  package_def:
+    matchspec: pytest-replay
+  external_dependencies: []
+- description: Test task for pytest-replay-feedstock pytest-replay @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    osx-arm64 3.11 channel_targets=defaults target_platform=osx-arm64 2025-12-12 12:46:05
+  public_name: test-pytest-replay-feedstock-pytest-replay-osx-arm64_py3.11_2b10d55787d7b746
+  dependencies:
+  - build-pytest-replay-feedstock-osx-arm64_py3.11_2b10d55787d7b746
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.11'
+    target_platform: osx-arm64
+  package_def:
+    matchspec: pytest-replay
+  external_dependencies: []
+- description: Test task for pytest-replay-feedstock pytest-replay @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    osx-arm64 3.12 channel_targets=defaults target_platform=osx-arm64 2025-12-12 12:46:05
+  public_name: test-pytest-replay-feedstock-pytest-replay-osx-arm64_py3.12_307979e57c084dd4
+  dependencies:
+  - build-pytest-replay-feedstock-osx-arm64_py3.12_307979e57c084dd4
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.12'
+    target_platform: osx-arm64
+  package_def:
+    matchspec: pytest-replay
+  external_dependencies: []
+- description: Test task for pytest-replay-feedstock pytest-replay @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    osx-arm64 3.13 channel_targets=defaults target_platform=osx-arm64 2025-12-12 12:46:05
+  public_name: test-pytest-replay-feedstock-pytest-replay-osx-arm64_py3.13_1b4ae4d71bf6b4c5
+  dependencies:
+  - build-pytest-replay-feedstock-osx-arm64_py3.13_1b4ae4d71bf6b4c5
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.13'
+    target_platform: osx-arm64
+  package_def:
+    matchspec: pytest-replay
+  external_dependencies: []
+- description: Test task for pytest-replay-feedstock pytest-replay @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    win-64 3.10 channel_targets=defaults target_platform=win-64 2025-12-12 12:46:05
+  public_name: test-pytest-replay-feedstock-pytest-replay-win-64_py3.10_15dd27269c853c91
+  dependencies:
+  - build-pytest-replay-feedstock-win-64_py3.10_15dd27269c853c91
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.10'
+    target_platform: win-64
+  package_def:
+    matchspec: pytest-replay
+  external_dependencies: []
+- description: Test task for pytest-replay-feedstock pytest-replay @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    win-64 3.11 channel_targets=defaults target_platform=win-64 2025-12-12 12:46:05
+  public_name: test-pytest-replay-feedstock-pytest-replay-win-64_py3.11_d74064a5866b413a
+  dependencies:
+  - build-pytest-replay-feedstock-win-64_py3.11_d74064a5866b413a
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.11'
+    target_platform: win-64
+  package_def:
+    matchspec: pytest-replay
+  external_dependencies: []
+- description: Test task for pytest-replay-feedstock pytest-replay @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    win-64 3.12 channel_targets=defaults target_platform=win-64 2025-12-12 12:46:05
+  public_name: test-pytest-replay-feedstock-pytest-replay-win-64_py3.12_35a7d75955ddf4a4
+  dependencies:
+  - build-pytest-replay-feedstock-win-64_py3.12_35a7d75955ddf4a4
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.12'
+    target_platform: win-64
+  package_def:
+    matchspec: pytest-replay
+  external_dependencies: []
+- description: Test task for pytest-replay-feedstock pytest-replay @ 1436352 (14363523a52298d60c80bbaaeb0d92159f6d4c2f)
+    win-64 3.13 channel_targets=defaults target_platform=win-64 2025-12-12 12:46:05
+  public_name: test-pytest-replay-feedstock-pytest-replay-win-64_py3.13_037a82f1661fb86a
+  dependencies:
+  - build-pytest-replay-feedstock-win-64_py3.13_037a82f1661fb86a
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.13'
+    target_platform: win-64
+  package_def:
+    matchspec: pytest-replay
+  external_dependencies: []
+notification: []
+custom_metadata: {}
+system_metadata:
+  release_destination:
+    destination: pbp-release-api
+    channel: main
+    release_name: null
+task_counts_by_status: {}
+total_tasks: 0

@@ -1,0 +1,355 @@
+name: Build/Test Graph 'openjpeg-feedstock' and 0 more
+priority: 0
+user: anum
+src_channels:
+- main
+dest_channel: main
+tasks:
+- description: Build task for openjpeg-feedstock @ df107f8 (df107f877ae35d90cdcce4836749051450cce201)
+    linux-64 3.10 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults jpeg=9e lcms2=2 libpng=1.6 libtiff=4 openjpeg=2 target_platform=linux-64
+    zlib=1.2 2025-12-17 20:18:39
+  public_name: build-openjpeg-feedstock-linux-64_py3.10_d6fc65768d4cf677
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    jpeg: 9e
+    lcms2: '2'
+    libpng: '1.6'
+    libtiff: '4'
+    openjpeg: '2'
+    platform: linux-64
+    python: '3.10'
+    target_platform: linux-64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/openjpeg-feedstock
+  feedstock_ref: df107f877ae35d90cdcce4836749051450cce201
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for openjpeg-feedstock @ df107f8 (df107f877ae35d90cdcce4836749051450cce201)
+    linux-aarch64 3.10 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults jpeg=9e lcms2=2 libpng=1.6 libtiff=4 openjpeg=2 target_platform=linux-aarch64
+    zlib=1.2 2025-12-17 20:18:39
+  public_name: build-openjpeg-feedstock-linux-aarch64_py3.10_4078554331554bb2
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    jpeg: 9e
+    lcms2: '2'
+    libpng: '1.6'
+    libtiff: '4'
+    openjpeg: '2'
+    platform: linux-aarch64
+    python: '3.10'
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/openjpeg-feedstock
+  feedstock_ref: df107f877ae35d90cdcce4836749051450cce201
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for openjpeg-feedstock @ df107f8 (df107f877ae35d90cdcce4836749051450cce201)
+    osx-arm64 3.10 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults jpeg=9e lcms2=2 libpng=1.6 libtiff=4 openjpeg=2 target_platform=osx-arm64
+    zlib=1.2 2025-12-17 20:18:39
+  public_name: build-openjpeg-feedstock-osx-arm64_py3.10_1ae5ffbe4440992b
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    jpeg: 9e
+    lcms2: '2'
+    libpng: '1.6'
+    libtiff: '4'
+    openjpeg: '2'
+    platform: osx-arm64
+    python: '3.10'
+    target_platform: osx-arm64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/openjpeg-feedstock
+  feedstock_ref: df107f877ae35d90cdcce4836749051450cce201
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for openjpeg-feedstock @ df107f8 (df107f877ae35d90cdcce4836749051450cce201)
+    win-64 3.10 c_compiler=vs2019 c_stdlib=vs c_stdlib_version=2019.11 channel_targets=defaults
+    jpeg=9e lcms2=2 libpng=1.6 libtiff=4 openjpeg=2 target_platform=win-64 zlib=1.2
+    2025-12-17 20:18:39
+  public_name: build-openjpeg-feedstock-win-64_py3.10_1d940f9e202338f8
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    c_compiler: vs2019
+    c_stdlib: vs
+    c_stdlib_version: '2019.11'
+    channel_targets: defaults
+    jpeg: 9e
+    lcms2: '2'
+    libpng: '1.6'
+    libtiff: '4'
+    openjpeg: '2'
+    platform: win-64
+    python: '3.10'
+    target_platform: win-64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/openjpeg-feedstock
+  feedstock_ref: df107f877ae35d90cdcce4836749051450cce201
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Test task for openjpeg-feedstock libopenjpeg @ df107f8 (df107f877ae35d90cdcce4836749051450cce201)
+    linux-64 3.10 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults jpeg=9e lcms2=2 libpng=1.6 libtiff=4 openjpeg=2 target_platform=linux-64
+    zlib=1.2 2025-12-17 20:18:39
+  public_name: test-openjpeg-feedstock-libopenjpeg-linux-64_py3.10_d6fc65768d4cf677
+  dependencies:
+  - build-openjpeg-feedstock-linux-64_py3.10_d6fc65768d4cf677
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    jpeg: 9e
+    lcms2: '2'
+    libpng: '1.6'
+    libtiff: '4'
+    openjpeg: '2'
+    platform: linux-64
+    python: '3.10'
+    target_platform: linux-64
+    zlib: '1.2'
+  package_def:
+    matchspec: libopenjpeg
+  external_dependencies: []
+- description: Test task for openjpeg-feedstock libopenjpeg @ df107f8 (df107f877ae35d90cdcce4836749051450cce201)
+    linux-aarch64 3.10 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults jpeg=9e lcms2=2 libpng=1.6 libtiff=4 openjpeg=2 target_platform=linux-aarch64
+    zlib=1.2 2025-12-17 20:18:39
+  public_name: test-openjpeg-feedstock-libopenjpeg-linux-aarch64_py3.10_4078554331554bb2
+  dependencies:
+  - build-openjpeg-feedstock-linux-aarch64_py3.10_4078554331554bb2
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    jpeg: 9e
+    lcms2: '2'
+    libpng: '1.6'
+    libtiff: '4'
+    openjpeg: '2'
+    platform: linux-aarch64
+    python: '3.10'
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  package_def:
+    matchspec: libopenjpeg
+  external_dependencies: []
+- description: Test task for openjpeg-feedstock libopenjpeg @ df107f8 (df107f877ae35d90cdcce4836749051450cce201)
+    osx-arm64 3.10 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults jpeg=9e lcms2=2 libpng=1.6 libtiff=4 openjpeg=2 target_platform=osx-arm64
+    zlib=1.2 2025-12-17 20:18:39
+  public_name: test-openjpeg-feedstock-libopenjpeg-osx-arm64_py3.10_1ae5ffbe4440992b
+  dependencies:
+  - build-openjpeg-feedstock-osx-arm64_py3.10_1ae5ffbe4440992b
+  max_run_time: 7200
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    jpeg: 9e
+    lcms2: '2'
+    libpng: '1.6'
+    libtiff: '4'
+    openjpeg: '2'
+    platform: osx-arm64
+    python: '3.10'
+    target_platform: osx-arm64
+    zlib: '1.2'
+  package_def:
+    matchspec: libopenjpeg
+  external_dependencies: []
+- description: Test task for openjpeg-feedstock libopenjpeg @ df107f8 (df107f877ae35d90cdcce4836749051450cce201)
+    win-64 3.10 c_compiler=vs2019 c_stdlib=vs c_stdlib_version=2019.11 channel_targets=defaults
+    jpeg=9e lcms2=2 libpng=1.6 libtiff=4 openjpeg=2 target_platform=win-64 zlib=1.2
+    2025-12-17 20:18:39
+  public_name: test-openjpeg-feedstock-libopenjpeg-win-64_py3.10_1d940f9e202338f8
+  dependencies:
+  - build-openjpeg-feedstock-win-64_py3.10_1d940f9e202338f8
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: vs2019
+    c_stdlib: vs
+    c_stdlib_version: '2019.11'
+    channel_targets: defaults
+    jpeg: 9e
+    lcms2: '2'
+    libpng: '1.6'
+    libtiff: '4'
+    openjpeg: '2'
+    platform: win-64
+    python: '3.10'
+    target_platform: win-64
+    zlib: '1.2'
+  package_def:
+    matchspec: libopenjpeg
+  external_dependencies: []
+- description: Test task for openjpeg-feedstock openjpeg @ df107f8 (df107f877ae35d90cdcce4836749051450cce201)
+    linux-64 3.10 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults jpeg=9e lcms2=2 libpng=1.6 libtiff=4 openjpeg=2 target_platform=linux-64
+    zlib=1.2 2025-12-17 20:18:39
+  public_name: test-openjpeg-feedstock-openjpeg-linux-64_py3.10_d6fc65768d4cf677
+  dependencies:
+  - build-openjpeg-feedstock-linux-64_py3.10_d6fc65768d4cf677
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    jpeg: 9e
+    lcms2: '2'
+    libpng: '1.6'
+    libtiff: '4'
+    openjpeg: '2'
+    platform: linux-64
+    python: '3.10'
+    target_platform: linux-64
+    zlib: '1.2'
+  package_def:
+    matchspec: openjpeg
+  external_dependencies: []
+- description: Test task for openjpeg-feedstock openjpeg @ df107f8 (df107f877ae35d90cdcce4836749051450cce201)
+    linux-aarch64 3.10 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults jpeg=9e lcms2=2 libpng=1.6 libtiff=4 openjpeg=2 target_platform=linux-aarch64
+    zlib=1.2 2025-12-17 20:18:39
+  public_name: test-openjpeg-feedstock-openjpeg-linux-aarch64_py3.10_4078554331554bb2
+  dependencies:
+  - build-openjpeg-feedstock-linux-aarch64_py3.10_4078554331554bb2
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    jpeg: 9e
+    lcms2: '2'
+    libpng: '1.6'
+    libtiff: '4'
+    openjpeg: '2'
+    platform: linux-aarch64
+    python: '3.10'
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  package_def:
+    matchspec: openjpeg
+  external_dependencies: []
+- description: Test task for openjpeg-feedstock openjpeg @ df107f8 (df107f877ae35d90cdcce4836749051450cce201)
+    osx-arm64 3.10 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults jpeg=9e lcms2=2 libpng=1.6 libtiff=4 openjpeg=2 target_platform=osx-arm64
+    zlib=1.2 2025-12-17 20:18:39
+  public_name: test-openjpeg-feedstock-openjpeg-osx-arm64_py3.10_1ae5ffbe4440992b
+  dependencies:
+  - build-openjpeg-feedstock-osx-arm64_py3.10_1ae5ffbe4440992b
+  max_run_time: 7200
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    jpeg: 9e
+    lcms2: '2'
+    libpng: '1.6'
+    libtiff: '4'
+    openjpeg: '2'
+    platform: osx-arm64
+    python: '3.10'
+    target_platform: osx-arm64
+    zlib: '1.2'
+  package_def:
+    matchspec: openjpeg
+  external_dependencies: []
+- description: Test task for openjpeg-feedstock openjpeg @ df107f8 (df107f877ae35d90cdcce4836749051450cce201)
+    win-64 3.10 c_compiler=vs2019 c_stdlib=vs c_stdlib_version=2019.11 channel_targets=defaults
+    jpeg=9e lcms2=2 libpng=1.6 libtiff=4 openjpeg=2 target_platform=win-64 zlib=1.2
+    2025-12-17 20:18:39
+  public_name: test-openjpeg-feedstock-openjpeg-win-64_py3.10_1d940f9e202338f8
+  dependencies:
+  - build-openjpeg-feedstock-win-64_py3.10_1d940f9e202338f8
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: vs2019
+    c_stdlib: vs
+    c_stdlib_version: '2019.11'
+    channel_targets: defaults
+    jpeg: 9e
+    lcms2: '2'
+    libpng: '1.6'
+    libtiff: '4'
+    openjpeg: '2'
+    platform: win-64
+    python: '3.10'
+    target_platform: win-64
+    zlib: '1.2'
+  package_def:
+    matchspec: openjpeg
+  external_dependencies: []
+notification: []
+custom_metadata: {}
+system_metadata:
+  release_destination:
+    destination: pbp-release-api
+    channel: main
+    release_name: null
+task_counts_by_status: {}
+total_tasks: 0
