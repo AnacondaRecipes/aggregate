@@ -11816,3 +11816,11 @@
 	path = protovalidate-python-feedstock
 	url = ../protovalidate-python-feedstock
 	branch = main
+[submodule "xkbcomp-feedstock"]
+	path = xkbcomp-feedstock
+	url = ../xkbcomp-feedstock
+	branch = main
+[submodule "xorg-xserver-xvfb-feedstock"]
+	path = xorg-xserver-xvfb-feedstock
+	url = ../xorg-xserver-xvfb-feedstock
+	branch = main
