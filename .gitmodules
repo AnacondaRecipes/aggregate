@@ -11824,7 +11824,3 @@
 	path = xorg-xserver-xvfb-feedstock
 	url = ../xorg-xserver-xvfb-feedstock
 	branch = main
-[submodule "mujs-feedstock"]
-	path = mujs-feedstock
-	url = ../mujs-feedstock
-	branch = main
