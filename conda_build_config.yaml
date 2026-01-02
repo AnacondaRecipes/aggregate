@@ -184,19 +184,19 @@ at_spi2_core:
 atk_1_0:
   - 2.36.0
 aws_c_auth:
-  - 0.9.0
+  - 0.9.4
 aws_c_cal:
-  - 0.9.2
+  - 0.9.13
 aws_c_common:
   - 0.12.6
 aws_c_compression:
   - 0.3.1
 aws_c_event_stream:
-  - 0.5.6
+  - 0.5.9
 aws_c_http:
-  - 0.10.4
+  - 0.10.7
 aws_c_io:
-  - 0.21.4
+  - 0.23.3
 aws_c_mqtt:
   - 0.13.3
 aws_c_s3:
@@ -204,7 +204,7 @@ aws_c_s3:
 aws_c_sdkutils:
   - 0.2.4
 aws_checksums:
-  - 0.2.7
+  - 0.2.8
 aws_crt_cpp:
   - 0.34.0
 aws_sdk_cpp:
@@ -882,7 +882,7 @@ rhash:
 ruby:
   - '3.4'
 s2n:
-  - 1.5.14
+  - 1.6.2
 scotch:
   - 6.0.9
 serf:
