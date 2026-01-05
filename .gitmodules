@@ -11824,3 +11824,7 @@
 	path = xorg-xserver-xvfb-feedstock
 	url = ../xorg-xserver-xvfb-feedstock
 	branch = main
+[submodule "google-cloud-storage-control-feedstock"]
+	path = google-cloud-storage-control-feedstock
+	url = ../google-cloud-storage-control-feedstock
+	branch = main
