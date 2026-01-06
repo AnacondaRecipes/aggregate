@@ -11828,3 +11828,7 @@
 	path = google-cloud-storage-control-feedstock
 	url = ../google-cloud-storage-control-feedstock
 	branch = main
+[submodule "sphinx-7.3.7-feedstock"]
+	path = sphinx-7.3.7-feedstock
+	url = ../sphinx-feedstock
+	branch = master_7.3.7
