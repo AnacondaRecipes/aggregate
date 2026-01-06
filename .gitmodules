@@ -11832,3 +11832,7 @@
 	path = sphinx-7.3.7-feedstock
 	url = ../sphinx-feedstock
 	branch = master_7.3.7
+[submodule "interegular-feedstock"]
+	path = interegular-feedstock
+	url = ../interegular-feedstock
+	branch = main
