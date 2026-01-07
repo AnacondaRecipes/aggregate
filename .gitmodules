@@ -11852,3 +11852,7 @@
 	path = azure-storage-files-datalake-cpp-feedstock
 	url = ../azure-storage-files-datalake-cpp-feedstock
 	branch = main
+[submodule "airportsdata-feedstock"]
+	path = airportsdata-feedstock
+	url = ../airportsdata-feedstock
+	branch = main
