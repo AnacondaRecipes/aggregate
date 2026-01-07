@@ -11856,3 +11856,7 @@
 	path = airportsdata-feedstock
 	url = ../airportsdata-feedstock
 	branch = main
+[submodule "lm-format-enforcer-feedstock"]
+	path = lm-format-enforcer-feedstock
+	url = ../lm-format-enforcer-feedstock
+	branch = main
