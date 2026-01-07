@@ -11848,3 +11848,7 @@
 	path = pycrdt-store-feedstock
 	url = ../pycrdt-store-feedstock
 	branch = main
+[submodule "winpty-rs-feedstock"]
+	path = winpty-rs-feedstock
+	url = ../winpty-rs-feedstock
+	branch = main
