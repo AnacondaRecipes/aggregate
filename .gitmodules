@@ -11836,3 +11836,7 @@
 	path = interegular-feedstock
 	url = ../interegular-feedstock
 	branch = main
+[submodule "compressed-tensors-feedstock"]
+	path = compressed-tensors-feedstock
+	url = ../compressed-tensors-feedstock
+	branch = main
