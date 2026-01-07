@@ -11840,3 +11840,7 @@
 	path = compressed-tensors-feedstock
 	url = ../compressed-tensors-feedstock
 	branch = main
+[submodule "prometheus-fastapi-instrumentator-feedstock"]
+	path = prometheus-fastapi-instrumentator-feedstock
+	url = ../prometheus-fastapi-instrumentator-feedstock
+	branch = main
