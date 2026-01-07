@@ -11848,3 +11848,7 @@
 	path = commonmark-feedstock
 	url = ../commonmark-feedstock
 	branch = master
+[submodule "azure-storage-files-datalake-cpp-feedstock"]
+	path = azure-storage-files-datalake-cpp-feedstock
+	url = ../azure-storage-files-datalake-cpp-feedstock
+	branch = main
