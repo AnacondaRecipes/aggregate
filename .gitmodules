@@ -11844,3 +11844,7 @@
 	path = prometheus-fastapi-instrumentator-feedstock
 	url = ../prometheus-fastapi-instrumentator-feedstock
 	branch = main
+[submodule "pycrdt-store-feedstock"]
+	path = pycrdt-store-feedstock
+	url = ../pycrdt-store-feedstock
+	branch = main
