@@ -11852,3 +11852,7 @@
 	path = winpty-rs-feedstock
 	url = ../winpty-rs-feedstock
 	branch = main
+[submodule "commonmark-feedstock"]
+	path = commonmark-feedstock
+	url = ../commonmark-feedstock
+	branch = master
