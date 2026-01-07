@@ -11824,10 +11824,6 @@
 	path = xorg-xserver-xvfb-feedstock
 	url = ../xorg-xserver-xvfb-feedstock
 	branch = main
-[submodule "google-cloud-storage-control-feedstock"]
-	path = google-cloud-storage-control-feedstock
-	url = ../google-cloud-storage-control-feedstock
-	branch = main
 [submodule "sphinx-7.3.7-feedstock"]
 	path = sphinx-7.3.7-feedstock
 	url = ../sphinx-feedstock
@@ -11844,11 +11840,7 @@
 	path = prometheus-fastapi-instrumentator-feedstock
 	url = ../prometheus-fastapi-instrumentator-feedstock
 	branch = main
-[submodule "pycrdt-store-feedstock"]
-	path = pycrdt-store-feedstock
-	url = ../pycrdt-store-feedstock
-	branch = main
-[submodule "winpty-rs-feedstock"]
-	path = winpty-rs-feedstock
-	url = ../winpty-rs-feedstock
+[submodule "mujs-feedstock"]
+	path = mujs-feedstock
+	url = ../mujs-feedstock
 	branch = main
