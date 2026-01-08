@@ -11868,3 +11868,7 @@
 	path = pylint-3.3.8-feedstock
 	url = ../pylint-feedstock
 	branch = master_3.3.8
+[submodule "pydocstyle-feedstock"]
+	path = pydocstyle-feedstock
+	url = ../pydocstyle-feedstock
+	branch = master
