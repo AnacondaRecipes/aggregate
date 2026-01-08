@@ -11864,3 +11864,7 @@
 	path = uv-dynamic-versioning-feedstock
 	url = ../uv-dynamic-versioning-feedstock
 	branch = main
+[submodule "pylint-3.3.8-feedstock"]
+	path = pylint-3.3.8-feedstock
+	url = ../pylint-feedstock
+	branch = master_3.3.8
