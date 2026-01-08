@@ -11860,3 +11860,7 @@
 	path = lm-format-enforcer-feedstock
 	url = ../lm-format-enforcer-feedstock
 	branch = main
+[submodule "uv-dynamic-versioning-feedstock"]
+	path = uv-dynamic-versioning-feedstock
+	url = ../uv-dynamic-versioning-feedstock
+	branch = main
