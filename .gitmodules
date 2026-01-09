@@ -11864,3 +11864,7 @@
 	path = pycrdt-store-feedstock
 	url = ../pycrdt-store-feedstock
 	branch = main
+[submodule "snowpipe-streaming-feedstock"]
+	path = snowpipe-streaming-feedstock
+	url = ../snowpipe-streaming-feedstock
+	branch = main
