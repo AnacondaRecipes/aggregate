@@ -11872,3 +11872,7 @@
 	path = snowpipe-streaming-feedstock
 	url = ../snowpipe-streaming-feedstock
 	branch = main
+[submodule "glum-feedstock"]
+	path = glum-feedstock
+	url = ../glum-feedstock
+	branch = main
