@@ -200,23 +200,23 @@ aws_c_io:
 aws_c_mqtt:
   - 0.13.3
 aws_c_s3:
-  - 0.8.7
+  - 0.11.3
 aws_c_sdkutils:
   - 0.2.4
 aws_checksums:
   - 0.2.8
 aws_crt_cpp:
-  - 0.34.0
+  - 0.35.4
 aws_sdk_cpp:
-  - 1.11.638
+  - 1.11.720
 azure_core_cpp:
-  - 1.14.1
+  - 1.16.1
 azure_identity_cpp:
-  - 1.10.1
+  - 1.13.2
 azure_storage_blobs_cpp:
   - 12.13.0
 azure_storage_common_cpp:
-  - 12.10.0
+  - 12.11.0
 backtrace:
   - '20241216'
 blosc:
@@ -238,7 +238,7 @@ capnproto:
 ceres_solver:
   - '2.2'
 cfitsio:
-  - 4.6.2
+  - 4.6.3
 charls:
   - '2.4'
 coin_or_cbc:
@@ -362,7 +362,7 @@ gtk3:
 gts:
   - '0.7'
 harfbuzz:
-  - '10'
+  - '12'
 hdf4:
   - 4.2.13
 hdf5:
