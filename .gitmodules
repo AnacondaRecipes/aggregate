@@ -11876,3 +11876,7 @@
 	path = glum-feedstock
 	url = ../glum-feedstock
 	branch = main
+[submodule "tabmat-feedstock"]
+	path = tabmat-feedstock
+	url = ../tabmat-feedstock
+	branch = main
