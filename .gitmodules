@@ -11876,3 +11876,7 @@
 	path = minify-html-feedstock
 	url = ../minify-html-feedstock
 	branch = main
+[submodule "pytest-pretty-feedstock"]
+	path = pytest-pretty-feedstock
+	url = ../pytest-pretty-feedstock
+	branch = main
