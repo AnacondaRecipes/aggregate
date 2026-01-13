@@ -11872,3 +11872,7 @@
 	path = altex-feedstock
 	url = ../altex-feedstock
 	branch = main
+[submodule "minify-html-feedstock"]
+	path = minify-html-feedstock
+	url = ../minify-html-feedstock
+	branch = main
