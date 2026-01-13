@@ -11868,15 +11868,7 @@
 	path = google-cloud-storage-control-feedstock
 	url = ../google-cloud-storage-control-feedstock
 	branch = main
-[submodule "altex-feedstock"]
-	path = altex-feedstock
-	url = ../altex-feedstock
-	branch = main
-[submodule "minify-html-feedstock"]
-	path = minify-html-feedstock
-	url = ../minify-html-feedstock
-	branch = main
-[submodule "pytest-pretty-feedstock"]
-	path = pytest-pretty-feedstock
-	url = ../pytest-pretty-feedstock
+[submodule "snowpipe-streaming-feedstock"]
+	path = snowpipe-streaming-feedstock
+	url = ../snowpipe-streaming-feedstock
 	branch = main
