@@ -11,7 +11,8 @@ blas_impl:
 c_compiler:
   - gcc                        # [linux]
   - clang                      # [osx]
-  - vs2019                     # [win]
+  - vs2019                     # [win and x86_64]
+  - vs2022                     # [win and arm64]
 c_stdlib:
   - sysroot                    # [linux]
   - macosx_deployment_target   # [osx]
@@ -19,7 +20,9 @@ c_stdlib:
 cxx_compiler:
   - gxx                        # [linux]
   - clangxx                    # [osx]
-  - vs2019                     # [win]
+  - vs2019                     # [win and x86_64]
+  - vs2022                     # [win and arm64]
+
 cuda_compiler:
   - cuda-nvcc
 fortran_compiler:
@@ -63,7 +66,8 @@ c_stdlib_version:
   - 2.28                   # [linux]
   - 10.15                  # [osx and x86_64]
   - 12.1                   # [osx and arm64]
-  - 2019.11                # [win]
+  - 2019.11                # [win and x86_64]
+  - 2022.12                # [win and arm64]
 cxx_compiler_version:      # [linux or osx]
   - 14.3.0                 # [linux]
   - 20                     # [osx]
@@ -129,9 +133,11 @@ r_implementation:
 #    code on win-64 miniconda.
 cross_compiler_target_platform:
   # - win-32                     # [win]
-  - win-64                     # [win]
+  - win-64                     # [win and x86_64]
+  - win-arm64                  # [win and arm64]
 target_platform:
-  - win-64                     # [win]
+  - win-64                     # [win and x86_64]
+  - win-arm64                  # [win and arm64]
   # - win-32                     # [win]
 channel_targets:
   - defaults
