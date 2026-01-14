@@ -1,0 +1,9 @@
+c_compiler:
+  - vs2022
+cxx_compiler:
+  - vs2022
+c_stdlib_version:
+  - 2022.14
+
+target_platform:
+  - win-arm64
