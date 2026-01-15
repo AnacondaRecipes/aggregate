@@ -11872,11 +11872,31 @@
 	path = snowpipe-streaming-feedstock
 	url = ../snowpipe-streaming-feedstock
 	branch = main
-[submodule "glum-feedstock"]
-	path = glum-feedstock
-	url = ../glum-feedstock
+[submodule "altex-feedstock"]
+	path = altex-feedstock
+	url = ../altex-feedstock
 	branch = main
-[submodule "tabmat-feedstock"]
-	path = tabmat-feedstock
-	url = ../tabmat-feedstock
+[submodule "azure-storage-files-datalake-cpp-feedstock"]
+	path = azure-storage-files-datalake-cpp-feedstock
+	url = ../azure-storage-files-datalake-cpp-feedstock
+	branch = main
+[submodule "fastapi-cli-feedstock"]
+	path = fastapi-cli-feedstock
+	url = ../fastapi-cli-feedstock
+	branch = main
+[submodule "minify-html-feedstock"]
+	path = minify-html-feedstock
+	url = ../minify-html-feedstock
+	branch = main
+[submodule "mupdf-feedstock"]
+	path = mupdf-feedstock
+	url = ../mupdf-feedstock
+	branch = main
+[submodule "pytest-pretty-feedstock"]
+	path = pytest-pretty-feedstock
+	url = ../pytest-pretty-feedstock
+	branch = main
+[submodule "rich-toolkit-feedstock"]
+	path = rich-toolkit-feedstock
+	url = ../rich-toolkit-feedstock
 	branch = main
