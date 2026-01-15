@@ -214,9 +214,11 @@ azure_core_cpp:
 azure_identity_cpp:
   - 1.13.2
 azure_storage_blobs_cpp:
-  - 12.13.0
+  - 12.15.0
 azure_storage_common_cpp:
   - 12.11.0
+azure_storage_files_datalake_cpp:
+  - 12.13.0
 backtrace:
   - '20241216'
 blosc:
