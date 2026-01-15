@@ -11900,3 +11900,7 @@
 	path = rich-toolkit-feedstock
 	url = ../rich-toolkit-feedstock
 	branch = main
+[submodule "conda-pypi-feedstock"]
+	path = conda-pypi-feedstock
+	url = ../conda-pypi-feedstock
+	branch = main
