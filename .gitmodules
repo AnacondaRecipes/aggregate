@@ -11904,3 +11904,7 @@
 	path = conda-pypi-feedstock
 	url = ../conda-pypi-feedstock
 	branch = main
+[submodule "pymupdf-feedstock"]
+	path = pymupdf-feedstock
+	url = ../pymupdf-feedstock
+	branch = main
