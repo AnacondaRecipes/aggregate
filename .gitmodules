@@ -11919,3 +11919,7 @@
 [submodule "llama-cpp-python-feedstock"]
 	path = llama-cpp-python-feedstock
 	url = ../llama-cpp-python-feedstock
+[submodule "einops-feedstock"]
+	path = einops-feedstock
+	url = ../einops-feedstock
+	branch = main
