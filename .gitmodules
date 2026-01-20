@@ -11916,3 +11916,6 @@
 	path = pytorch-2.7.0-feedstock
 	url = ../pytorch-feedstock
 	branch = 2.7.0-release
+[submodule "llama-cpp-python-feedstock"]
+	path = llama-cpp-python-feedstock
+	url = ../llama-cpp-python-feedstock
