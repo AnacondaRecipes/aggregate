@@ -11912,3 +11912,7 @@
 	path = tabmat-feedstock
 	url = ../tabmat-feedstock
 	branch = main
+[submodule "pytorch-2.7.0-feedstock"]
+	path = pytorch-2.7.0-feedstock
+	url = ../pytorch-feedstock
+	branch = 2.7.0-release
