@@ -416,7 +416,7 @@ kealib:
 khronos_opencl_icd_loader:
   - 2025.7.22
 krb5:
-  - '1.21'
+  - '1.22'
 lame:
   - '3.100'
 lcms2:
