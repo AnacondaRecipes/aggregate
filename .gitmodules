@@ -11923,3 +11923,7 @@
 	path = einops-feedstock
 	url = ../einops-feedstock
 	branch = main
+[submodule "libass-feedstock"]
+	path = libass-feedstock
+	url = ../libass-feedstock
+	branch = main
