@@ -182,7 +182,7 @@ assimp:
 at_spi2_core:
   - '2.36'
 atk_1_0:
-  - 2.36.0
+  - 2.38.0
 aws_c_auth:
   - 0.9.4
 aws_c_cal:
@@ -914,7 +914,7 @@ tbb:
 tesseract:
   - 5.2.0
 tiledb:
-  - '2.26'
+  - '2.30'
 tk:
   - '8.6'
 ucc:
