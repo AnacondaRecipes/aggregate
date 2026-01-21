@@ -11,7 +11,7 @@ blas_impl:
 c_compiler:
   - gcc                        # [linux]
   - clang                      # [osx]
-  - vc2022                     # [win]
+  - vs2022                     # [win]
 c_stdlib:
   - sysroot                    # [linux]
   - macosx_deployment_target   # [osx]
@@ -19,7 +19,7 @@ c_stdlib:
 cxx_compiler:
   - gxx                        # [linux]
   - clangxx                    # [osx]
-  - vc2022                     # [win]
+  - vs2022                     # [win]
 cuda_compiler:
   - cuda-nvcc
 fortran_compiler:
