@@ -11927,3 +11927,7 @@
 	path = glum-feedstock
 	url = ../glum-feedstock
 	branch = main
+[submodule "cuda-tileiras-feedstock"]
+	path = cuda-tileiras-feedstock
+	url = ../cuda-tileiras-feedstock
+	branch = main
