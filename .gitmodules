@@ -11931,3 +11931,7 @@
 	path = cuda-tileiras-feedstock
 	url = ../cuda-tileiras-feedstock
 	branch = main
+[submodule "shaderc-feedstock"]
+	path = shaderc-feedstock
+	url = ../shaderc-feedstock
+	branch = main
