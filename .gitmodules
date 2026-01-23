@@ -11939,3 +11939,7 @@
 	path = svt-av1-feedstock
 	url = ../svt-av1-feedstock
 	branch = main
+[submodule "libvpl-feedstock"]
+	path = libvpl-feedstock
+	url = ../libvpl-feedstock
+	branch = main
