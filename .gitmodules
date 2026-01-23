@@ -11947,3 +11947,7 @@
 	path = pulseaudio-feedstock
 	url = ../pulseaudio-feedstock
 	branch = main
+[submodule "libva-feedstock"]
+	path = libva-feedstock
+	url = ../libva-feedstock
+	branch = main
