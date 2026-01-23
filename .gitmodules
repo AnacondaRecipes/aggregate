@@ -11951,3 +11951,7 @@
 	path = libva-feedstock
 	url = ../libva-feedstock
 	branch = main
+[submodule "wayland-protocols-feedstock"]
+	path = wayland-protocols-feedstock
+	url = ../wayland-protocols-feedstock
+	branch = main
