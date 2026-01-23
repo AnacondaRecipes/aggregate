@@ -11943,3 +11943,7 @@
 	path = libvpl-feedstock
 	url = ../libvpl-feedstock
 	branch = main
+[submodule "pulseaudio-feedstock"]
+	path = pulseaudio-feedstock
+	url = ../pulseaudio-feedstock
+	branch = main
