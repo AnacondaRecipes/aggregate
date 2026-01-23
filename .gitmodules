@@ -11955,3 +11955,7 @@
 	path = wayland-protocols-feedstock
 	url = ../wayland-protocols-feedstock
 	branch = main
+[submodule "intel-media-driver-feedstock"]
+	path = intel-media-driver-feedstock
+	url = ../intel-media-driver-feedstock
+	branch = main
