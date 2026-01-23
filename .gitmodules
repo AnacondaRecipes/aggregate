@@ -11959,3 +11959,7 @@
 	path = intel-media-driver-feedstock
 	url = ../intel-media-driver-feedstock
 	branch = main
+[submodule "intel-gmmlib-feedstock"]
+	path = intel-gmmlib-feedstock
+	url = ../intel-gmmlib-feedstock
+	branch = main
