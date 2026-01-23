@@ -11963,3 +11963,7 @@
 	path = intel-gmmlib-feedstock
 	url = ../intel-gmmlib-feedstock
 	branch = main
+[submodule "ragel-feedstock"]
+	path = ragel-feedstock
+	url = ../ragel-feedstock
+	branch = main
