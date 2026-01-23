@@ -11967,3 +11967,7 @@
 	path = ragel-feedstock
 	url = ../ragel-feedstock
 	branch = main
+[submodule "pixi-feedstock"]
+	path = pixi-feedstock
+	url = ../pixi-feedstock
+	branch = main
