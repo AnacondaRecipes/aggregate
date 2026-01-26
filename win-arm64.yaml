@@ -7,3 +7,21 @@ c_stdlib_version:
 
 target_platform:
   - win-arm64
+
+perl:
+  - 5.42
+
+zlib:
+  - 1.3
+
+python:
+  - 3.10
+  - 3.11
+  - 3.12
+  - 3.13
+  
+numpy:
+  - 2.2
+  - 2.3
+  - 2.4
+  - 2.4
