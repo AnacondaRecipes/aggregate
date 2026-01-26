@@ -810,7 +810,7 @@ pcre2:
 pdal:
   - '2.5'
 perl:
-  - 5.43
+  - 5.42
 pixman:
   - 0.46.4
 popt:
