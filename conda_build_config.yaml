@@ -387,6 +387,10 @@ intel_cmplr_lib_ur:
   - '2025'
 intel_fortran_rt:
   - '2025'
+intel_gmmlib:
+  - '22'
+intel_media_driver:
+  - '26.1'
 intel_opencl_rt:
   - '2025'
 intel_sycl_rt:
@@ -443,6 +447,8 @@ libaprutil:
   - '1'
 libarchive:
   - '3.8'
+libass:
+  - 0.17.4
 libassuan:
   - '3'
 libavif:
@@ -460,7 +466,7 @@ libbrotlidec:
 libbrotlienc:
   - '1.2'
 libclang13:
-  - 20.1.8
+  - 21.1.8
 libclang_cpp10:
   - '10.0'
 libclang_cpp12:
@@ -473,6 +479,8 @@ libclang_cpp19_1:
   - '19.1'
 libclang_cpp20_1:
   - '20.1'
+libclang_cpp21_1:
+  - '21.1'
 libcrc32c:
   - '1.1'
 libcryptominisat:
@@ -581,12 +589,16 @@ libllvm19:
   - '19.1'
 libllvm20:
   - '20.1'
+libllvm21:
+  - '21.1'
 libllvm_c17:
   - '17.0'
 libllvm_c19:
   - '19.1'
 libllvm_c20:
   - '20.1'
+libllvm_c21:
+  - '21.1'
 libmamba:
   - '2.3'
 libmambapy:
@@ -699,6 +711,8 @@ libuuid:
   - '1'
 libuv:
   - '1'
+libva:
+  - '2'
 libvorbis:
   - '1'
 libvpx:
@@ -891,6 +905,8 @@ scotch:
   - 6.0.9
 serf:
   - '1.3'
+shaderc:
+  - '2025.5'
 simdjson:
   - '3.10'
 sip:
@@ -909,6 +925,8 @@ sqlite:
   - '3'
 suitesparse:
   - '7'
+svt_av1:
+  - 3.1.2
 tbb:
   - 2022.3.0
 tesseract:
