@@ -816,7 +816,7 @@ pixman:
 popt:
   - '1'
 proj:
-  - 9.3.1
+  - 9.7.1
 ptscotch:
   - 6.0.9
 pugixml:
