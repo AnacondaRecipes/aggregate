@@ -147,10 +147,6 @@
 	url = ../cryptography-feedstock.git
 	path = cryptography-feedstock
 	branch = master
-[submodule "ruamel_yaml-feedstock"]
-	url = ../ruamel_yaml-feedstock.git
-	path = ruamel_yaml-feedstock
-	branch = master
 [submodule "vcversioner-feedstock"]
 	url = ../vcversioner-feedstock.git
 	path = vcversioner-feedstock
@@ -8890,10 +8886,6 @@
 	path = vinecopulib-feedstock
 	url = ../vinecopulib-feedstock
 	branch = main
-[submodule "repack_msys2"]
-	path = repack_msys2
-	url = ../repack_msys2
-	branch = main
 [submodule "cspy-feedstock"]
 	path = cspy-feedstock
 	url = ../cspy-feedstock
@@ -11927,10 +11919,6 @@
 	path = glum-feedstock
 	url = ../glum-feedstock
 	branch = main
-[submodule "cuda-tileiras-feedstock"]
-	path = cuda-tileiras-feedstock
-	url = ../cuda-tileiras-feedstock
-	branch = main
 [submodule "shaderc-feedstock"]
 	path = shaderc-feedstock
 	url = ../shaderc-feedstock
@@ -11938,14 +11926,6 @@
 [submodule "svt-av1-feedstock"]
 	path = svt-av1-feedstock
 	url = ../svt-av1-feedstock
-	branch = main
-[submodule "libvpl-feedstock"]
-	path = libvpl-feedstock
-	url = ../libvpl-feedstock
-	branch = main
-[submodule "pulseaudio-feedstock"]
-	path = pulseaudio-feedstock
-	url = ../pulseaudio-feedstock
 	branch = main
 [submodule "libva-feedstock"]
 	path = libva-feedstock
@@ -11967,11 +11947,19 @@
 	path = ragel-feedstock
 	url = ../ragel-feedstock
 	branch = main
-[submodule "pixi-feedstock"]
-	path = pixi-feedstock
-	url = ../pixi-feedstock
+[submodule "blas-feedstock"]
+	path = blas-feedstock
+	url = ../blas-feedstock
+	branch = master
+[submodule "cuda-culibos-feedstock"]
+	path = cuda-culibos-feedstock
+	url = ../cuda-culibos-feedstock
 	branch = main
-[submodule "vl-convert-python-feedstock"]
-	path = vl-convert-python-feedstock
-	url = ../vl-convert-python-feedstock
+[submodule "libass-feedstock"]
+	path = libass-feedstock
+	url = ../libass-feedstock
+	branch = main
+[submodule "torchtriton-feedstock"]
+	path = torchtriton-feedstock
+	url = ../torchtriton-feedstock
 	branch = main
