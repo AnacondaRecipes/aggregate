@@ -1,11 +1,14 @@
 # Sirius CUDA Test Feedstock - PBP Configuration
-# Pure Python package for QA testing (no CUDA compilation required)
+# Pure Python package for QA testing (builds for each platform)
 
 upload_channels: [ad_package_build]
 aggregate_check: false
 pbp_autopublish: true
 pbp_only_deployment: pre-prod
 
-# noarch package - only needs to build once
+# Build on all platforms that tests expect
 use_prefect_platforms:
   - linux-64
+  - linux-aarch64
+  - win-64
+  - osx-arm64
