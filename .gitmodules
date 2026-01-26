@@ -11971,3 +11971,7 @@
 	path = pixi-feedstock
 	url = ../pixi-feedstock
 	branch = main
+[submodule "vl-convert-python-feedstock"]
+	path = vl-convert-python-feedstock
+	url = ../vl-convert-python-feedstock
+	branch = main
