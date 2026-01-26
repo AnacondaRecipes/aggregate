@@ -4,7 +4,7 @@ setlocal enabledelayedexpansion
 mkdir build
 cd build
 
-cmake .. ^
+cmake %SRC_DIR% ^
     -GNinja ^
     -DCMAKE_BUILD_TYPE=Release ^
     -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%" ^

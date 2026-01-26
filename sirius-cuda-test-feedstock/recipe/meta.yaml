@@ -11,11 +11,7 @@ source:
 
 build:
   number: {{ build_number }}
-  # Only build CUDA variant when CUDA is enabled
-  skip: true  # [not (ANACONDA_ROCKET_ENABLE_CUDA and (win or (linux and x86_64)))]
-  # Use build number difference for GPU variant preference
-  number: {{ build_number + 100 }}  # [cuda_compiler_version != "none"]
-  string: cuda{{ cuda_compiler_version | replace('.', '') }}_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "none"]
+  string: cuda{{ cuda_compiler_version | replace('.', '') }}_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}
   missing_dso_whitelist:
     - "**/libcuda.so*"   # [linux]
     - "**/nvcuda.dll"    # [win]
