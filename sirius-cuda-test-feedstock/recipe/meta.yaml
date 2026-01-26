@@ -1,0 +1,57 @@
+{% set name = "sirius-cuda-test" %}
+{% set version = "1.0" %}
+{% set build_number = 0 %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  path: ../src
+
+build:
+  number: {{ build_number }}
+  # Only build CUDA variant when CUDA is enabled
+  skip: true  # [not (ANACONDA_ROCKET_ENABLE_CUDA and (win or (linux and x86_64)))]
+  # Use build number difference for GPU variant preference
+  number: {{ build_number + 100 }}  # [cuda_compiler_version != "none"]
+  string: cuda{{ cuda_compiler_version | replace('.', '') }}_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "none"]
+  missing_dso_whitelist:
+    - "**/libcuda.so*"   # [linux]
+    - "**/nvcuda.dll"    # [win]
+
+requirements:
+  build:
+    - {{ stdlib('c') }}
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - {{ compiler('cuda') }}
+    - cmake
+    - ninja-base
+  host:
+    - cuda-version {{ cuda_compiler_version }}
+    - cuda-cudart-dev {{ cuda_compiler_version }}
+  run:
+    - {{ pin_compatible('cuda-version', max_pin='x.x') }}
+    - cuda-version {{ cuda_compiler_version }}
+    - __cuda
+
+test:
+  commands:
+    - sirius-cuda-test  # Will show device info or graceful message if no GPU
+
+about:
+  home: https://github.com/anaconda/sirius-qa-suite
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: Minimal CUDA test package for Sirius QA testing
+  description: |
+    A minimal CUDA package designed for testing the PBP CUDA build pipeline.
+    This package builds quickly (seconds, not hours) and validates that CUDA
+    compilation and packaging work correctly.
+  dev_url: https://github.com/anaconda/sirius-qa-suite
+
+extra:
+  recipe-maintainers:
+    - sirius-qa-team

@@ -1,0 +1,16 @@
+# Sirius CUDA Test Feedstock - PBP Configuration
+# Minimal CUDA package for QA testing
+
+upload_channels: [ad_package_build]
+aggregate_check: false
+pbp_autopublish: true
+pbp_only_deployment: pre-prod
+
+# Enable CUDA builds
+build_env_vars:
+  ANACONDA_ROCKET_ENABLE_CUDA: 1
+
+# Only build on CUDA-capable platforms (Linux x64, Windows x64)
+use_prefect_platforms:
+  - linux-64
+  - win-64

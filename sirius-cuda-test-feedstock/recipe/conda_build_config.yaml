@@ -1,0 +1,13 @@
+# CUDA test feedstock build configuration
+# Minimal configuration for testing CUDA build pipeline
+
+c_compiler:                        # [win]
+  - vs2019                         # [win]
+cxx_compiler:                      # [win]
+  - vs2019                         # [win]
+
+cuda_compiler_version:             # [ANACONDA_ROCKET_ENABLE_CUDA and (win or (linux and x86_64))]
+  - 12.4                           # [ANACONDA_ROCKET_ENABLE_CUDA and (win or (linux and x86_64))]
+
+cuda_compiler:                     # [ANACONDA_ROCKET_ENABLE_CUDA and (win or (linux and x86_64))]
+  - cuda-nvcc                      # [ANACONDA_ROCKET_ENABLE_CUDA and (win or (linux and x86_64))]
