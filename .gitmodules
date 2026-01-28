@@ -11967,3 +11967,7 @@
 	path = check-feedstock
 	url = ../check-feedstock
 	branch = main
+[submodule "systemd-feedstock"]
+	path = systemd-feedstock
+	url = ../systemd-feedstock
+	branch = main
