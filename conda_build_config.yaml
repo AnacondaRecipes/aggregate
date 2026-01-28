@@ -350,11 +350,11 @@ graphite2:
 gsl:
   - '2.7'
 gst_plugins_base:
-  - '1.24'
+  - '1.26'
 gst_plugins_good:
-  - '1.24'
+  - '1.26'
 gstreamer:
-  - '1.24'
+  - '1.26'
 gstreamer_orc:
   - '0.4'
 gtest:
@@ -715,6 +715,8 @@ libva:
   - '2'
 libvorbis:
   - '1'
+libvpl:
+  - '2.15'
 libvpx:
   - '1.15'
 libvulkan:
