@@ -11963,3 +11963,7 @@
 	path = torchtriton-feedstock
 	url = ../torchtriton-feedstock
 	branch = main
+[submodule "check-feedstock"]
+	path = check-feedstock
+	url = ../check-feedstock
+	branch = main
