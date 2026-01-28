@@ -11963,15 +11963,11 @@
 	path = torchtriton-feedstock
 	url = ../torchtriton-feedstock
 	branch = main
-[submodule "check-feedstock"]
-	path = check-feedstock
-	url = ../check-feedstock
+[submodule "cuda-tileiras-feedstock"]
+	path = cuda-tileiras-feedstock
+	url = ../cuda-tileiras-feedstock
 	branch = main
-[submodule "systemd-feedstock"]
-	path = systemd-feedstock
-	url = ../systemd-feedstock
+[submodule "libvpl-feedstock"]
+	path = libvpl-feedstock
+	url = ../libvpl-feedstock
 	branch = main
-[submodule "vala-feedstock"]
-	path = vala-feedstock
-	url = ../vala-feedstock
-	branch = master
