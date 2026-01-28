@@ -11971,3 +11971,7 @@
 	path = systemd-feedstock
 	url = ../systemd-feedstock
 	branch = main
+[submodule "vala-feedstock"]
+	path = vala-feedstock
+	url = ../vala-feedstock
+	branch = master
