@@ -11975,3 +11975,7 @@
 	path = vala-feedstock
 	url = ../vala-feedstock
 	branch = master
+[submodule "langchain-1.2.6-feedstock"]
+	path = langchain-1.2.6-feedstock
+	url = ../langchain-feedstock
+	branch = main-1.2.6
