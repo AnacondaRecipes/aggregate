@@ -11979,3 +11979,7 @@
 	path = langchain-1.2.6-feedstock
 	url = ../langchain-feedstock
 	branch = main-1.2.6
+[submodule "libcap-feedstock"]
+	path = libcap-feedstock
+	url = ../libcap-feedstock
+	branch = main
