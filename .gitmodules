@@ -11983,3 +11983,7 @@
 	path = libcap-feedstock
 	url = ../libcap-feedstock
 	branch = main
+[submodule "attr-feedstock"]
+	path = attr-feedstock
+	url = ../attr-feedstock
+	branch = main
