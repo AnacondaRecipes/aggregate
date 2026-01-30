@@ -12019,3 +12019,7 @@
 	path = apswutils-feedstock
 	url = ../apswutils-feedstock
 	branch = main
+[submodule "apsw-feedstock"]
+	path = apsw-feedstock
+	url = ../apsw-feedstock
+	branch = main
