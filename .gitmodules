@@ -11987,3 +11987,7 @@
 	path = attr-feedstock
 	url = ../attr-feedstock
 	branch = main
+[submodule "python-fasthtml-feedstock"]
+	path = python-fasthtml-feedstock
+	url = ../python-fasthtml-feedstock
+	branch = main
