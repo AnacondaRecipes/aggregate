@@ -12003,3 +12003,7 @@
 	path = libacl-feedstock
 	url = ../libacl-feedstock
 	branch = main
+[submodule "seccomp-split-feedstock"]
+	path = seccomp-split-feedstock
+	url = ../seccomp-split-feedstock
+	branch = main
