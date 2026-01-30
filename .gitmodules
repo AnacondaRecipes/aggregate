@@ -12011,3 +12011,7 @@
 	path = p11-kit-feedstock
 	url = ../p11-kit-feedstock
 	branch = main
+[submodule "util-linux-feedstock"]
+	path = util-linux-feedstock
+	url = ../util-linux-feedstock
+	branch = main
