@@ -12007,3 +12007,7 @@
 	path = seccomp-split-feedstock
 	url = ../seccomp-split-feedstock
 	branch = main
+[submodule "p11-kit-feedstock"]
+	path = p11-kit-feedstock
+	url = ../p11-kit-feedstock
+	branch = main
