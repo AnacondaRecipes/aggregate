@@ -11991,3 +11991,7 @@
 	path = python-fasthtml-feedstock
 	url = ../python-fasthtml-feedstock
 	branch = main
+[submodule "fastlite-feedstock"]
+	path = fastlite-feedstock
+	url = ../fastlite-feedstock
+	branch = main
