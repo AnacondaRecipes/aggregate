@@ -11967,10 +11967,6 @@
 	path = check-feedstock
 	url = ../check-feedstock
 	branch = main
-[submodule "systemd-feedstock"]
-	path = systemd-feedstock
-	url = ../systemd-feedstock
-	branch = main
 [submodule "vala-feedstock"]
 	path = vala-feedstock
 	url = ../vala-feedstock
@@ -11987,9 +11983,13 @@
 	path = attr-feedstock
 	url = ../attr-feedstock
 	branch = main
-[submodule "python-fasthtml-feedstock"]
-	path = python-fasthtml-feedstock
-	url = ../python-fasthtml-feedstock
+[submodule "cuda-tileiras-feedstock"]
+	path = cuda-tileiras-feedstock
+	url = ../cuda-tileiras-feedstock
+	branch = main
+[submodule "libvpl-feedstock"]
+	path = libvpl-feedstock
+	url = ../libvpl-feedstock
 	branch = main
 [submodule "fastlite-feedstock"]
 	path = fastlite-feedstock
