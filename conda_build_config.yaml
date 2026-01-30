@@ -183,6 +183,8 @@ at_spi2_core:
   - '2.36'
 atk_1_0:
   - 2.38.0
+attr:
+  - '2.5'
 aws_c_auth:
   - 0.9.4
 aws_c_cal:
@@ -465,6 +467,8 @@ libbrotlidec:
   - '1.2'
 libbrotlienc:
   - '1.2'
+libcap:
+  - '2.77'
 libclang13:
   - 21.1.8
 libclang_cpp10:
@@ -530,7 +534,7 @@ libfaiss:
 libffi:
   - '3.4'
 libflac:
-  - '1.4'
+  - '1.5'
 libflang:
   - 20.1.8
 libgcrypt:
@@ -613,6 +617,8 @@ libmlir19:
   - '19.1'
 libmlir20:
   - '20.1'
+libmlir21:
+  - '21.1'
 libmpdec:
   - '4'
 libmpdecxx:
@@ -771,6 +777,8 @@ mpc:
   - '1'
 mpfr:
   - '4'
+mpg123:
+  - '1.33'
 mpich:
   - '4'
 mysql_libs:
