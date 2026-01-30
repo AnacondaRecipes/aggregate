@@ -11995,3 +11995,7 @@
 	path = fastlite-feedstock
 	url = ../fastlite-feedstock
 	branch = main
+[submodule "elfutils-feedstock"]
+	path = elfutils-feedstock
+	url = ../elfutils-feedstock
+	branch = main
