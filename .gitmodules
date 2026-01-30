@@ -11999,3 +11999,7 @@
 	path = elfutils-feedstock
 	url = ../elfutils-feedstock
 	branch = main
+[submodule "libacl-feedstock"]
+	path = libacl-feedstock
+	url = ../libacl-feedstock
+	branch = main
