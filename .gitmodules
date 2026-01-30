@@ -12015,3 +12015,7 @@
 	path = util-linux-feedstock
 	url = ../util-linux-feedstock
 	branch = main
+[submodule "apswutils-feedstock"]
+	path = apswutils-feedstock
+	url = ../apswutils-feedstock
+	branch = main
