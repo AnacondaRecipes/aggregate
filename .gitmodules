@@ -12027,3 +12027,7 @@
 	path = tensorstore-feedstock
 	url = ../tensorstore-feedstock
 	branch = main
+[submodule "libseccomp-feedstock"]
+	path = libseccomp-feedstock
+	url = ../libseccomp-feedstock
+	branch = main
