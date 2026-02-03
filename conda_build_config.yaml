@@ -283,6 +283,8 @@ dpcpp_cpp_rt:
   - '2023'
 eigen:
   - 3.3.7
+elfutils:
+  - '0.194'
 epoxy:
   - '1.5'
 expat:
@@ -437,6 +439,8 @@ leveldb:
   - '1.23'
 libabseil:
   - '20250814.1'
+libacl:
+  - '2.3'
 libaec:
   - '1'
 libaio:
@@ -677,6 +681,8 @@ libre2_11:
   - '2025'
 librsvg:
   - '2'
+libseccomp:
+  - '2'
 libsentencepiece:
   - 0.2.1
 libsndfile:
@@ -825,6 +831,8 @@ openssl:
   - '3'
 orc:
   - 2.2.0
+p11_kit:
+  - '0.26'
 pango:
   - '1'
 pcre:
