@@ -12031,3 +12031,7 @@
 	path = libseccomp-feedstock
 	url = ../libseccomp-feedstock
 	branch = main
+[submodule "soxr-feedstock"]
+	path = soxr-feedstock
+	url = ../soxr-feedstock
+	branch = main
