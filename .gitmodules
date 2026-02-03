@@ -12039,3 +12039,7 @@
 	path = jack-feedstock
 	url = ../jack-feedstock
 	branch = main
+[submodule "libxcrypt-feedstock"]
+	path = libxcrypt-feedstock
+	url = ../libxcrypt-feedstock
+	branch = main
