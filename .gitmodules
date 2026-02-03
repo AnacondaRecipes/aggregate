@@ -12035,3 +12035,7 @@
 	path = soxr-feedstock
 	url = ../soxr-feedstock
 	branch = main
+[submodule "jack-feedstock"]
+	path = jack-feedstock
+	url = ../jack-feedstock
+	branch = main
