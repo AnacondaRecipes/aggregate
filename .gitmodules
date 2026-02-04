@@ -12059,3 +12059,7 @@
 	path = orbax-checkpoint-feedstock
 	url = ../orbax-checkpoint-feedstock
 	branch = main
+[submodule "rattler-build-feedstock"]
+	path = rattler-build-feedstock
+	url = ../rattler-build-feedstock
+	branch = main
