@@ -12051,3 +12051,7 @@
 	path = langchain-classic-feedstock
 	url = ../langchain-classic-feedstock
 	branch = main
+[submodule "flax-feedstock"]
+	path = flax-feedstock
+	url = ../flax-feedstock
+	branch = main
