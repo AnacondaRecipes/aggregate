@@ -401,6 +401,8 @@ intel_sycl_rt:
   - '2025'
 isl:
   - '0.22'
+jack:
+  - '1.9'
 jansson:
   - '2'
 jasper:
@@ -607,6 +609,8 @@ libllvm_c20:
   - '20.1'
 libllvm_c21:
   - '21.1'
+libltdl:
+  - '2.6'
 libmamba:
   - '2.3'
 libmambapy:
@@ -739,6 +743,8 @@ libwebp_base:
   - '1'
 libxcb:
   - '1'
+libxcrypt:
+  - 4.5.2
 libxkbcommon:
   - '1'
 libxkbfile:
@@ -959,6 +965,8 @@ ucx:
   - '1.18'
 unixodbc:
   - '2.3'
+util_linux:
+  - '2.39'
 vc:
   - '14'
 vtk_base:
