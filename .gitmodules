@@ -12055,3 +12055,7 @@
 	path = flax-feedstock
 	url = ../flax-feedstock
 	branch = main
+[submodule "orbax-checkpoint-feedstock"]
+	path = orbax-checkpoint-feedstock
+	url = ../orbax-checkpoint-feedstock
+	branch = main
