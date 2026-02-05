@@ -12027,3 +12027,7 @@
 	path = libxcrypt-feedstock
 	url = ../libxcrypt-feedstock
 	branch = main
+[submodule "fastmcp-feedstock"]
+	path = fastmcp-feedstock
+	url = ../fastmcp-feedstock
+	branch = main
