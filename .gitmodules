@@ -11991,10 +11991,6 @@
 	path = libvpl-feedstock
 	url = ../libvpl-feedstock
 	branch = main
-[submodule "fastlite-feedstock"]
-	path = fastlite-feedstock
-	url = ../fastlite-feedstock
-	branch = main
 [submodule "elfutils-feedstock"]
 	path = elfutils-feedstock
 	url = ../elfutils-feedstock
@@ -12003,10 +11999,6 @@
 	path = libacl-feedstock
 	url = ../libacl-feedstock
 	branch = main
-[submodule "seccomp-split-feedstock"]
-	path = seccomp-split-feedstock
-	url = ../seccomp-split-feedstock
-	branch = main
 [submodule "p11-kit-feedstock"]
 	path = p11-kit-feedstock
 	url = ../p11-kit-feedstock
@@ -12014,10 +12006,6 @@
 [submodule "util-linux-feedstock"]
 	path = util-linux-feedstock
 	url = ../util-linux-feedstock
-	branch = main
-[submodule "apswutils-feedstock"]
-	path = apswutils-feedstock
-	url = ../apswutils-feedstock
 	branch = main
 [submodule "apsw-feedstock"]
 	path = apsw-feedstock
@@ -12031,10 +12019,6 @@
 	path = libseccomp-feedstock
 	url = ../libseccomp-feedstock
 	branch = main
-[submodule "soxr-feedstock"]
-	path = soxr-feedstock
-	url = ../soxr-feedstock
-	branch = main
 [submodule "jack-feedstock"]
 	path = jack-feedstock
 	url = ../jack-feedstock
@@ -12042,24 +12026,4 @@
 [submodule "libxcrypt-feedstock"]
 	path = libxcrypt-feedstock
 	url = ../libxcrypt-feedstock
-	branch = main
-[submodule "conpty-feedstock"]
-	path = conpty-feedstock
-	url = ../conpty-feedstock
-	branch = main
-[submodule "langchain-classic-feedstock"]
-	path = langchain-classic-feedstock
-	url = ../langchain-classic-feedstock
-	branch = main
-[submodule "flax-feedstock"]
-	path = flax-feedstock
-	url = ../flax-feedstock
-	branch = main
-[submodule "orbax-checkpoint-feedstock"]
-	path = orbax-checkpoint-feedstock
-	url = ../orbax-checkpoint-feedstock
-	branch = main
-[submodule "rattler-build-feedstock"]
-	path = rattler-build-feedstock
-	url = ../rattler-build-feedstock
 	branch = main
