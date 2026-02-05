@@ -1,0 +1,2228 @@
+name: Build/Test Graph 'tensorflow-feedstock' and 0 more
+priority: 0
+user: AbdulRehmanAlvi
+src_channels:
+- main
+dest_channel: main
+tasks:
+- description: Build task for tensorflow-feedstock @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-64 3.10 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 perl=5.42
+    python_impl=cpython r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-64
+    zlib=1.2 2026-02-05 17:44:19
+  public_name: build-tensorflow-feedstock-linux-64_py3.10_91ed2f4d44e56f77
+  dependencies: []
+  max_run_time: 54000
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-64
+    python: '3.10'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/tensorflow-feedstock
+  feedstock_ref: 647150fb3ff128a8b7d4a15ce345c1f65b919948
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for tensorflow-feedstock @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-64 3.11 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 perl=5.42
+    python_impl=cpython r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-64
+    zlib=1.2 2026-02-05 17:44:19
+  public_name: build-tensorflow-feedstock-linux-64_py3.11_5745c1f1191e0933
+  dependencies: []
+  max_run_time: 54000
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-64
+    python: '3.11'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/tensorflow-feedstock
+  feedstock_ref: 647150fb3ff128a8b7d4a15ce345c1f65b919948
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for tensorflow-feedstock @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-64 3.12 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 perl=5.42
+    python_impl=cpython r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-64
+    zlib=1.2 2026-02-05 17:44:19
+  public_name: build-tensorflow-feedstock-linux-64_py3.12_9b12bacdc8ca54b1
+  dependencies: []
+  max_run_time: 54000
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-64
+    python: '3.12'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/tensorflow-feedstock
+  feedstock_ref: 647150fb3ff128a8b7d4a15ce345c1f65b919948
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for tensorflow-feedstock @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-64 3.13 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 perl=5.42
+    python_impl=cpython r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-64
+    zlib=1.2 2026-02-05 17:44:19
+  public_name: build-tensorflow-feedstock-linux-64_py3.13_691e5b98d78f6418
+  dependencies: []
+  max_run_time: 54000
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-64
+    python: '3.13'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/tensorflow-feedstock
+  feedstock_ref: 647150fb3ff128a8b7d4a15ce345c1f65b919948
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for tensorflow-feedstock @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-aarch64 3.10 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 perl=5.42
+    python_impl=cpython r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-aarch64
+    zlib=1.2 2026-02-05 17:44:19
+  public_name: build-tensorflow-feedstock-linux-aarch64_py3.10_d0807a156c56e293
+  dependencies: []
+  max_run_time: 54000
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-aarch64
+    python: '3.10'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/tensorflow-feedstock
+  feedstock_ref: 647150fb3ff128a8b7d4a15ce345c1f65b919948
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for tensorflow-feedstock @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-aarch64 3.11 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 perl=5.42
+    python_impl=cpython r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-aarch64
+    zlib=1.2 2026-02-05 17:44:19
+  public_name: build-tensorflow-feedstock-linux-aarch64_py3.11_452cabe1fb7bce17
+  dependencies: []
+  max_run_time: 54000
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-aarch64
+    python: '3.11'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/tensorflow-feedstock
+  feedstock_ref: 647150fb3ff128a8b7d4a15ce345c1f65b919948
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for tensorflow-feedstock @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-aarch64 3.12 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 perl=5.42
+    python_impl=cpython r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-aarch64
+    zlib=1.2 2026-02-05 17:44:19
+  public_name: build-tensorflow-feedstock-linux-aarch64_py3.12_fe3ae96505ec728e
+  dependencies: []
+  max_run_time: 54000
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-aarch64
+    python: '3.12'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/tensorflow-feedstock
+  feedstock_ref: 647150fb3ff128a8b7d4a15ce345c1f65b919948
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for tensorflow-feedstock @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-aarch64 3.13 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 perl=5.42
+    python_impl=cpython r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-aarch64
+    zlib=1.2 2026-02-05 17:44:19
+  public_name: build-tensorflow-feedstock-linux-aarch64_py3.13_efd2da9dc22b7887
+  dependencies: []
+  max_run_time: 54000
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-aarch64
+    python: '3.13'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/tensorflow-feedstock
+  feedstock_ref: 647150fb3ff128a8b7d4a15ce345c1f65b919948
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for tensorflow-feedstock @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    osx-arm64 3.10 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    OSX_SDK_DIR=/Library/Developer/CommandLineTools/SDKs OSX_SDK_VER=12.3 c_compiler=clang
+    c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=clangxx
+    cxx_compiler_version=20 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=osx-arm64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: build-tensorflow-feedstock-osx-arm64_py3.10_1c04729263494e0c
+  dependencies: []
+  max_run_time: 54000
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    OSX_SDK_DIR: /Library/Developer/CommandLineTools/SDKs
+    OSX_SDK_VER: '12.3'
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.10'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: osx-arm64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/tensorflow-feedstock
+  feedstock_ref: 647150fb3ff128a8b7d4a15ce345c1f65b919948
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for tensorflow-feedstock @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    osx-arm64 3.11 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    OSX_SDK_DIR=/Library/Developer/CommandLineTools/SDKs OSX_SDK_VER=12.3 c_compiler=clang
+    c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=clangxx
+    cxx_compiler_version=20 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=osx-arm64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: build-tensorflow-feedstock-osx-arm64_py3.11_5840d9a13e58c092
+  dependencies: []
+  max_run_time: 54000
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    OSX_SDK_DIR: /Library/Developer/CommandLineTools/SDKs
+    OSX_SDK_VER: '12.3'
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.11'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: osx-arm64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/tensorflow-feedstock
+  feedstock_ref: 647150fb3ff128a8b7d4a15ce345c1f65b919948
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for tensorflow-feedstock @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    osx-arm64 3.12 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    OSX_SDK_DIR=/Library/Developer/CommandLineTools/SDKs OSX_SDK_VER=12.3 c_compiler=clang
+    c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=clangxx
+    cxx_compiler_version=20 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=osx-arm64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: build-tensorflow-feedstock-osx-arm64_py3.12_f48a1759d922ff58
+  dependencies: []
+  max_run_time: 54000
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    OSX_SDK_DIR: /Library/Developer/CommandLineTools/SDKs
+    OSX_SDK_VER: '12.3'
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.12'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: osx-arm64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/tensorflow-feedstock
+  feedstock_ref: 647150fb3ff128a8b7d4a15ce345c1f65b919948
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for tensorflow-feedstock @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    osx-arm64 3.13 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    OSX_SDK_DIR=/Library/Developer/CommandLineTools/SDKs OSX_SDK_VER=12.3 c_compiler=clang
+    c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=clangxx
+    cxx_compiler_version=20 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=osx-arm64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: build-tensorflow-feedstock-osx-arm64_py3.13_70a9d1d8d25d2e0e
+  dependencies: []
+  max_run_time: 54000
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    OSX_SDK_DIR: /Library/Developer/CommandLineTools/SDKs
+    OSX_SDK_VER: '12.3'
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.13'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: osx-arm64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/tensorflow-feedstock
+  feedstock_ref: 647150fb3ff128a8b7d4a15ce345c1f65b919948
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Test task for tensorflow-feedstock tensorflow-base @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-64 3.10 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 perl=5.42
+    python_impl=cpython r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-64
+    zlib=1.2 2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-base-linux-64_py3.10_91ed2f4d44e56f77
+  dependencies:
+  - build-tensorflow-feedstock-linux-64_py3.10_91ed2f4d44e56f77
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-64
+    python: '3.10'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-base
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-base @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-64 3.11 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 perl=5.42
+    python_impl=cpython r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-64
+    zlib=1.2 2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-base-linux-64_py3.11_5745c1f1191e0933
+  dependencies:
+  - build-tensorflow-feedstock-linux-64_py3.11_5745c1f1191e0933
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-64
+    python: '3.11'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-base
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-base @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-64 3.12 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 perl=5.42
+    python_impl=cpython r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-64
+    zlib=1.2 2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-base-linux-64_py3.12_9b12bacdc8ca54b1
+  dependencies:
+  - build-tensorflow-feedstock-linux-64_py3.12_9b12bacdc8ca54b1
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-64
+    python: '3.12'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-base
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-base @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-64 3.13 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 perl=5.42
+    python_impl=cpython r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-64
+    zlib=1.2 2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-base-linux-64_py3.13_691e5b98d78f6418
+  dependencies:
+  - build-tensorflow-feedstock-linux-64_py3.13_691e5b98d78f6418
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-64
+    python: '3.13'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-base
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-base @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-aarch64 3.10 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 perl=5.42
+    python_impl=cpython r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-aarch64
+    zlib=1.2 2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-base-linux-aarch64_py3.10_d0807a156c56e293
+  dependencies:
+  - build-tensorflow-feedstock-linux-aarch64_py3.10_d0807a156c56e293
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-aarch64
+    python: '3.10'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-base
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-base @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-aarch64 3.11 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 perl=5.42
+    python_impl=cpython r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-aarch64
+    zlib=1.2 2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-base-linux-aarch64_py3.11_452cabe1fb7bce17
+  dependencies:
+  - build-tensorflow-feedstock-linux-aarch64_py3.11_452cabe1fb7bce17
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-aarch64
+    python: '3.11'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-base
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-base @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-aarch64 3.12 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 perl=5.42
+    python_impl=cpython r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-aarch64
+    zlib=1.2 2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-base-linux-aarch64_py3.12_fe3ae96505ec728e
+  dependencies:
+  - build-tensorflow-feedstock-linux-aarch64_py3.12_fe3ae96505ec728e
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-aarch64
+    python: '3.12'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-base
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-base @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-aarch64 3.13 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 perl=5.42
+    python_impl=cpython r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-aarch64
+    zlib=1.2 2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-base-linux-aarch64_py3.13_efd2da9dc22b7887
+  dependencies:
+  - build-tensorflow-feedstock-linux-aarch64_py3.13_efd2da9dc22b7887
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-aarch64
+    python: '3.13'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-base
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-base @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    osx-arm64 3.10 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    OSX_SDK_DIR=/Library/Developer/CommandLineTools/SDKs OSX_SDK_VER=12.3 c_compiler=clang
+    c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=clangxx
+    cxx_compiler_version=20 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=osx-arm64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-base-osx-arm64_py3.10_1c04729263494e0c
+  dependencies:
+  - build-tensorflow-feedstock-osx-arm64_py3.10_1c04729263494e0c
+  max_run_time: 54000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    OSX_SDK_DIR: /Library/Developer/CommandLineTools/SDKs
+    OSX_SDK_VER: '12.3'
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.10'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: osx-arm64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-base
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-base @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    osx-arm64 3.11 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    OSX_SDK_DIR=/Library/Developer/CommandLineTools/SDKs OSX_SDK_VER=12.3 c_compiler=clang
+    c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=clangxx
+    cxx_compiler_version=20 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=osx-arm64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-base-osx-arm64_py3.11_5840d9a13e58c092
+  dependencies:
+  - build-tensorflow-feedstock-osx-arm64_py3.11_5840d9a13e58c092
+  max_run_time: 54000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    OSX_SDK_DIR: /Library/Developer/CommandLineTools/SDKs
+    OSX_SDK_VER: '12.3'
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.11'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: osx-arm64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-base
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-base @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    osx-arm64 3.12 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    OSX_SDK_DIR=/Library/Developer/CommandLineTools/SDKs OSX_SDK_VER=12.3 c_compiler=clang
+    c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=clangxx
+    cxx_compiler_version=20 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=osx-arm64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-base-osx-arm64_py3.12_f48a1759d922ff58
+  dependencies:
+  - build-tensorflow-feedstock-osx-arm64_py3.12_f48a1759d922ff58
+  max_run_time: 54000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    OSX_SDK_DIR: /Library/Developer/CommandLineTools/SDKs
+    OSX_SDK_VER: '12.3'
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.12'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: osx-arm64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-base
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-base @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    osx-arm64 3.13 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    OSX_SDK_DIR=/Library/Developer/CommandLineTools/SDKs OSX_SDK_VER=12.3 c_compiler=clang
+    c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=clangxx
+    cxx_compiler_version=20 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 numpy=2.1 openssl=3 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=osx-arm64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-base-osx-arm64_py3.13_70a9d1d8d25d2e0e
+  dependencies:
+  - build-tensorflow-feedstock-osx-arm64_py3.13_70a9d1d8d25d2e0e
+  max_run_time: 54000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    OSX_SDK_DIR: /Library/Developer/CommandLineTools/SDKs
+    OSX_SDK_VER: '12.3'
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    numpy: '2.1'
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.13'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: osx-arm64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-base
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-cpu @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-64 3.10 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 perl=5.42 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-cpu-linux-64_py3.10_91ed2f4d44e56f77
+  dependencies:
+  - build-tensorflow-feedstock-linux-64_py3.10_91ed2f4d44e56f77
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-64
+    python: '3.10'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-cpu
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-cpu @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-64 3.11 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 perl=5.42 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-cpu-linux-64_py3.11_5745c1f1191e0933
+  dependencies:
+  - build-tensorflow-feedstock-linux-64_py3.11_5745c1f1191e0933
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-64
+    python: '3.11'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-cpu
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-cpu @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-64 3.12 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 perl=5.42 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-cpu-linux-64_py3.12_9b12bacdc8ca54b1
+  dependencies:
+  - build-tensorflow-feedstock-linux-64_py3.12_9b12bacdc8ca54b1
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-64
+    python: '3.12'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-cpu
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-cpu @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-64 3.13 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 perl=5.42 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-cpu-linux-64_py3.13_691e5b98d78f6418
+  dependencies:
+  - build-tensorflow-feedstock-linux-64_py3.13_691e5b98d78f6418
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-64
+    python: '3.13'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-cpu
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-cpu @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-aarch64 3.10 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 perl=5.42 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-aarch64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-cpu-linux-aarch64_py3.10_d0807a156c56e293
+  dependencies:
+  - build-tensorflow-feedstock-linux-aarch64_py3.10_d0807a156c56e293
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-aarch64
+    python: '3.10'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-cpu
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-cpu @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-aarch64 3.11 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 perl=5.42 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-aarch64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-cpu-linux-aarch64_py3.11_452cabe1fb7bce17
+  dependencies:
+  - build-tensorflow-feedstock-linux-aarch64_py3.11_452cabe1fb7bce17
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-aarch64
+    python: '3.11'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-cpu
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-cpu @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-aarch64 3.12 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 perl=5.42 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-aarch64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-cpu-linux-aarch64_py3.12_fe3ae96505ec728e
+  dependencies:
+  - build-tensorflow-feedstock-linux-aarch64_py3.12_fe3ae96505ec728e
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-aarch64
+    python: '3.12'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-cpu
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-cpu @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-aarch64 3.13 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 perl=5.42 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-aarch64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-cpu-linux-aarch64_py3.13_efd2da9dc22b7887
+  dependencies:
+  - build-tensorflow-feedstock-linux-aarch64_py3.13_efd2da9dc22b7887
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-aarch64
+    python: '3.13'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-cpu
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-cpu @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    osx-arm64 3.10 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=clangxx
+    cxx_compiler_version=20 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=osx-arm64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-cpu-osx-arm64_py3.10_1c04729263494e0c
+  dependencies:
+  - build-tensorflow-feedstock-osx-arm64_py3.10_1c04729263494e0c
+  max_run_time: 54000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.10'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: osx-arm64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-cpu
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-cpu @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    osx-arm64 3.11 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=clangxx
+    cxx_compiler_version=20 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=osx-arm64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-cpu-osx-arm64_py3.11_5840d9a13e58c092
+  dependencies:
+  - build-tensorflow-feedstock-osx-arm64_py3.11_5840d9a13e58c092
+  max_run_time: 54000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.11'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: osx-arm64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-cpu
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-cpu @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    osx-arm64 3.12 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=clangxx
+    cxx_compiler_version=20 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=osx-arm64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-cpu-osx-arm64_py3.12_f48a1759d922ff58
+  dependencies:
+  - build-tensorflow-feedstock-osx-arm64_py3.12_f48a1759d922ff58
+  max_run_time: 54000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.12'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: osx-arm64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-cpu
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow-cpu @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    osx-arm64 3.13 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=clangxx
+    cxx_compiler_version=20 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=osx-arm64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-cpu-osx-arm64_py3.13_70a9d1d8d25d2e0e
+  dependencies:
+  - build-tensorflow-feedstock-osx-arm64_py3.13_70a9d1d8d25d2e0e
+  max_run_time: 54000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.13'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: osx-arm64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow-cpu
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-64 3.10 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 perl=5.42 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-linux-64_py3.10_91ed2f4d44e56f77
+  dependencies:
+  - build-tensorflow-feedstock-linux-64_py3.10_91ed2f4d44e56f77
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-64
+    python: '3.10'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-64 3.11 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 perl=5.42 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-linux-64_py3.11_5745c1f1191e0933
+  dependencies:
+  - build-tensorflow-feedstock-linux-64_py3.11_5745c1f1191e0933
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-64
+    python: '3.11'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-64 3.12 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 perl=5.42 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-linux-64_py3.12_9b12bacdc8ca54b1
+  dependencies:
+  - build-tensorflow-feedstock-linux-64_py3.12_9b12bacdc8ca54b1
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-64
+    python: '3.12'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-64 3.13 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 perl=5.42 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-linux-64_py3.13_691e5b98d78f6418
+  dependencies:
+  - build-tensorflow-feedstock-linux-64_py3.13_691e5b98d78f6418
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-64
+    python: '3.13'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-aarch64 3.10 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 perl=5.42 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-aarch64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-linux-aarch64_py3.10_d0807a156c56e293
+  dependencies:
+  - build-tensorflow-feedstock-linux-aarch64_py3.10_d0807a156c56e293
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-aarch64
+    python: '3.10'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-aarch64 3.11 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 perl=5.42 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-aarch64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-linux-aarch64_py3.11_452cabe1fb7bce17
+  dependencies:
+  - build-tensorflow-feedstock-linux-aarch64_py3.11_452cabe1fb7bce17
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-aarch64
+    python: '3.11'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-aarch64 3.12 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 perl=5.42 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-aarch64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-linux-aarch64_py3.12_fe3ae96505ec728e
+  dependencies:
+  - build-tensorflow-feedstock-linux-aarch64_py3.12_fe3ae96505ec728e
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-aarch64
+    python: '3.12'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    linux-aarch64 3.13 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=gxx
+    cxx_compiler_version=14.3.0 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 perl=5.42 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=linux-aarch64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-linux-aarch64_py3.13_efd2da9dc22b7887
+  dependencies:
+  - build-tensorflow-feedstock-linux-aarch64_py3.13_efd2da9dc22b7887
+  max_run_time: 54000
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: gxx
+    cxx_compiler_version: 14.3.0
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    perl: '5.42'
+    platform: linux-aarch64
+    python: '3.13'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    osx-arm64 3.10 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=clangxx
+    cxx_compiler_version=20 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=osx-arm64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-osx-arm64_py3.10_1c04729263494e0c
+  dependencies:
+  - build-tensorflow-feedstock-osx-arm64_py3.10_1c04729263494e0c
+  max_run_time: 54000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.10'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: osx-arm64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    osx-arm64 3.11 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=clangxx
+    cxx_compiler_version=20 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=osx-arm64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-osx-arm64_py3.11_5840d9a13e58c092
+  dependencies:
+  - build-tensorflow-feedstock-osx-arm64_py3.11_5840d9a13e58c092
+  max_run_time: 54000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.11'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: osx-arm64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    osx-arm64 3.12 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=clangxx
+    cxx_compiler_version=20 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=osx-arm64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-osx-arm64_py3.12_f48a1759d922ff58
+  dependencies:
+  - build-tensorflow-feedstock-osx-arm64_py3.12_f48a1759d922ff58
+  max_run_time: 54000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.12'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: osx-arm64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow
+  external_dependencies: []
+- description: Test task for tensorflow-feedstock tensorflow @ 647150f (647150fb3ff128a8b7d4a15ce345c1f65b919948)
+    osx-arm64 3.13 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cxx_compiler=clangxx
+    cxx_compiler_version=20 giflib=5.2 gpu_variant=None icu=73 jpeg=9e libabseil=20250814.1
+    libcurl=8 libgrpc=1.74 libpng=1.6 libprotobuf=6.33.0 openssl=3 python_impl=cpython
+    r_version=4.3.1 skip_cuda_pbp=true sqlite=3 target_platform=osx-arm64 zlib=1.2
+    2026-02-05 17:44:19
+  public_name: test-tensorflow-feedstock-tensorflow-osx-arm64_py3.13_70a9d1d8d25d2e0e
+  dependencies:
+  - build-tensorflow-feedstock-osx-arm64_py3.13_70a9d1d8d25d2e0e
+  max_run_time: 54000
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    giflib: '5.2'
+    gpu_variant: None
+    icu: '73'
+    jpeg: 9e
+    libabseil: '20250814.1'
+    libcurl: '8'
+    libgrpc: '1.74'
+    libpng: '1.6'
+    libprotobuf: 6.33.0
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.13'
+    python_impl: cpython
+    r_version: 4.3.1
+    skip_cuda_pbp: 'true'
+    sqlite: '3'
+    target_platform: osx-arm64
+    zlib: '1.2'
+  package_def:
+    matchspec: tensorflow
+  external_dependencies: []
+notification: []
+custom_metadata: {}
+system_metadata:
+  release_destination:
+    destination: pbp-release-api
+    channel: main
+    release_name: null
+task_counts_by_status: {}
+total_tasks: 0

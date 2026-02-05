@@ -1,0 +1,212 @@
+name: Build/Test Graph 'libxslt-feedstock' and 0 more
+priority: 0
+user: AbdulRehmanAlvi
+src_channels:
+- main
+dest_channel: main
+tasks:
+- description: Build task for libxslt-feedstock @ 1.1.33-21-g027b441 (027b4416957d569d88628126f4ea4cb9103d99f5)
+    linux-64 3.10 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults libxml2=2.13 libxslt=1 target_platform=linux-64 2026-02-05
+    17:52:26
+  public_name: build-libxslt-feedstock-linux-64_py3.10_6c2b184a4c1ea076
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    libxml2: '2.13'
+    libxslt: '1'
+    platform: linux-64
+    python: '3.10'
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/libxslt-feedstock.git
+  feedstock_ref: 027b4416957d569d88628126f4ea4cb9103d99f5
+  recipe_dir: recipe
+  build_options:
+  - --error-overlinking
+  - --suppress-variables
+  - --skip-existing
+- description: Build task for libxslt-feedstock @ 1.1.33-21-g027b441 (027b4416957d569d88628126f4ea4cb9103d99f5)
+    linux-aarch64 3.10 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults libxml2=2.13 libxslt=1 target_platform=linux-aarch64
+    2026-02-05 17:52:26
+  public_name: build-libxslt-feedstock-linux-aarch64_py3.10_8f517248c1e1d08a
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    libxml2: '2.13'
+    libxslt: '1'
+    platform: linux-aarch64
+    python: '3.10'
+    target_platform: linux-aarch64
+  feedstock_url: https://github.com/AnacondaRecipes/libxslt-feedstock.git
+  feedstock_ref: 027b4416957d569d88628126f4ea4cb9103d99f5
+  recipe_dir: recipe
+  build_options:
+  - --error-overlinking
+  - --suppress-variables
+  - --skip-existing
+- description: Build task for libxslt-feedstock @ 1.1.33-21-g027b441 (027b4416957d569d88628126f4ea4cb9103d99f5)
+    osx-arm64 3.10 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults libxml2=2.13 libxslt=1 target_platform=osx-arm64 2026-02-05
+    17:52:26
+  public_name: build-libxslt-feedstock-osx-arm64_py3.10_d9d6ef96253deb34
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    libxml2: '2.13'
+    libxslt: '1'
+    platform: osx-arm64
+    python: '3.10'
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/libxslt-feedstock.git
+  feedstock_ref: 027b4416957d569d88628126f4ea4cb9103d99f5
+  recipe_dir: recipe
+  build_options:
+  - --error-overlinking
+  - --suppress-variables
+  - --skip-existing
+- description: Build task for libxslt-feedstock @ 1.1.33-21-g027b441 (027b4416957d569d88628126f4ea4cb9103d99f5)
+    win-64 3.10 c_compiler=vs2022 c_stdlib=vs c_stdlib_version=2022.14 channel_targets=defaults
+    libxml2=2.13 libxslt=1 target_platform=win-64 2026-02-05 17:52:26
+  public_name: build-libxslt-feedstock-win-64_py3.10_6f3b9ff94476335a
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    c_compiler: vs2022
+    c_stdlib: vs
+    c_stdlib_version: '2022.14'
+    channel_targets: defaults
+    libxml2: '2.13'
+    libxslt: '1'
+    platform: win-64
+    python: '3.10'
+    target_platform: win-64
+  feedstock_url: https://github.com/AnacondaRecipes/libxslt-feedstock.git
+  feedstock_ref: 027b4416957d569d88628126f4ea4cb9103d99f5
+  recipe_dir: recipe
+  build_options:
+  - --error-overlinking
+  - --suppress-variables
+  - --skip-existing
+- description: Test task for libxslt-feedstock libxslt @ 1.1.33-21-g027b441 (027b4416957d569d88628126f4ea4cb9103d99f5)
+    linux-64 3.10 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults libxml2=2.13 libxslt=1 target_platform=linux-64 2026-02-05
+    17:52:26
+  public_name: test-libxslt-feedstock-libxslt-linux-64_py3.10_6c2b184a4c1ea076
+  dependencies:
+  - build-libxslt-feedstock-linux-64_py3.10_6c2b184a4c1ea076
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    libxml2: '2.13'
+    libxslt: '1'
+    platform: linux-64
+    python: '3.10'
+    target_platform: linux-64
+  package_def:
+    matchspec: libxslt
+  external_dependencies: []
+- description: Test task for libxslt-feedstock libxslt @ 1.1.33-21-g027b441 (027b4416957d569d88628126f4ea4cb9103d99f5)
+    linux-aarch64 3.10 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults libxml2=2.13 libxslt=1 target_platform=linux-aarch64
+    2026-02-05 17:52:26
+  public_name: test-libxslt-feedstock-libxslt-linux-aarch64_py3.10_8f517248c1e1d08a
+  dependencies:
+  - build-libxslt-feedstock-linux-aarch64_py3.10_8f517248c1e1d08a
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    libxml2: '2.13'
+    libxslt: '1'
+    platform: linux-aarch64
+    python: '3.10'
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: libxslt
+  external_dependencies: []
+- description: Test task for libxslt-feedstock libxslt @ 1.1.33-21-g027b441 (027b4416957d569d88628126f4ea4cb9103d99f5)
+    osx-arm64 3.10 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults libxml2=2.13 libxslt=1 target_platform=osx-arm64 2026-02-05
+    17:52:26
+  public_name: test-libxslt-feedstock-libxslt-osx-arm64_py3.10_d9d6ef96253deb34
+  dependencies:
+  - build-libxslt-feedstock-osx-arm64_py3.10_d9d6ef96253deb34
+  max_run_time: 7200
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    libxml2: '2.13'
+    libxslt: '1'
+    platform: osx-arm64
+    python: '3.10'
+    target_platform: osx-arm64
+  package_def:
+    matchspec: libxslt
+  external_dependencies: []
+- description: Test task for libxslt-feedstock libxslt @ 1.1.33-21-g027b441 (027b4416957d569d88628126f4ea4cb9103d99f5)
+    win-64 3.10 c_compiler=vs2022 c_stdlib=vs c_stdlib_version=2022.14 channel_targets=defaults
+    libxml2=2.13 libxslt=1 target_platform=win-64 2026-02-05 17:52:26
+  public_name: test-libxslt-feedstock-libxslt-win-64_py3.10_6f3b9ff94476335a
+  dependencies:
+  - build-libxslt-feedstock-win-64_py3.10_6f3b9ff94476335a
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: vs2022
+    c_stdlib: vs
+    c_stdlib_version: '2022.14'
+    channel_targets: defaults
+    libxml2: '2.13'
+    libxslt: '1'
+    platform: win-64
+    python: '3.10'
+    target_platform: win-64
+  package_def:
+    matchspec: libxslt
+  external_dependencies: []
+notification: []
+custom_metadata: {}
+system_metadata:
+  release_destination:
+    destination: pbp-release-api
+    channel: main
+    release_name: null
+task_counts_by_status: {}
+total_tasks: 0

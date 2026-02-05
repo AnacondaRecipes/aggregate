@@ -1,0 +1,712 @@
+name: Build/Test Graph 'sphinx-feedstock' and 0 more
+priority: 0
+user: AbdulRehmanAlvi
+src_channels:
+- main
+dest_channel: main
+tasks:
+- description: Build task for sphinx-feedstock @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    linux-64 3.11 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults target_platform=linux-64 2026-01-22 20:39:33
+  public_name: build-sphinx-feedstock-linux-64_py3.11_584eacbc2b4f384c
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.11'
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/sphinx-feedstock.git
+  feedstock_ref: 50203d9ac8ed7246e6f645a22eafc7f50960edd8
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for sphinx-feedstock @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    linux-64 3.12 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults target_platform=linux-64 2026-01-22 20:39:33
+  public_name: build-sphinx-feedstock-linux-64_py3.12_b56a7bc7d876bf2d
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.12'
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/sphinx-feedstock.git
+  feedstock_ref: 50203d9ac8ed7246e6f645a22eafc7f50960edd8
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for sphinx-feedstock @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    linux-64 3.13 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults target_platform=linux-64 2026-01-22 20:39:33
+  public_name: build-sphinx-feedstock-linux-64_py3.13_67744bad0a4928c0
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.13'
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/sphinx-feedstock.git
+  feedstock_ref: 50203d9ac8ed7246e6f645a22eafc7f50960edd8
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for sphinx-feedstock @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    linux-64 3.14 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults target_platform=linux-64 2026-01-22 20:39:33
+  public_name: build-sphinx-feedstock-linux-64_py3.14_8b8c26a3a50c2d67
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.14'
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/sphinx-feedstock.git
+  feedstock_ref: 50203d9ac8ed7246e6f645a22eafc7f50960edd8
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for sphinx-feedstock @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    linux-aarch64 3.11 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults target_platform=linux-aarch64 2026-01-22 20:39:33
+  public_name: build-sphinx-feedstock-linux-aarch64_py3.11_555a58c7930c140c
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.11'
+    target_platform: linux-aarch64
+  feedstock_url: https://github.com/AnacondaRecipes/sphinx-feedstock.git
+  feedstock_ref: 50203d9ac8ed7246e6f645a22eafc7f50960edd8
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for sphinx-feedstock @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    linux-aarch64 3.12 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults target_platform=linux-aarch64 2026-01-22 20:39:33
+  public_name: build-sphinx-feedstock-linux-aarch64_py3.12_9d586b135375be09
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.12'
+    target_platform: linux-aarch64
+  feedstock_url: https://github.com/AnacondaRecipes/sphinx-feedstock.git
+  feedstock_ref: 50203d9ac8ed7246e6f645a22eafc7f50960edd8
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for sphinx-feedstock @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    linux-aarch64 3.13 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults target_platform=linux-aarch64 2026-01-22 20:39:33
+  public_name: build-sphinx-feedstock-linux-aarch64_py3.13_59ed926dd60ef55a
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.13'
+    target_platform: linux-aarch64
+  feedstock_url: https://github.com/AnacondaRecipes/sphinx-feedstock.git
+  feedstock_ref: 50203d9ac8ed7246e6f645a22eafc7f50960edd8
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for sphinx-feedstock @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    linux-aarch64 3.14 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults target_platform=linux-aarch64 2026-01-22 20:39:33
+  public_name: build-sphinx-feedstock-linux-aarch64_py3.14_7e488c47686c23e8
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.14'
+    target_platform: linux-aarch64
+  feedstock_url: https://github.com/AnacondaRecipes/sphinx-feedstock.git
+  feedstock_ref: 50203d9ac8ed7246e6f645a22eafc7f50960edd8
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for sphinx-feedstock @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    osx-arm64 3.11 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults target_platform=osx-arm64 2026-01-22 20:39:33
+  public_name: build-sphinx-feedstock-osx-arm64_py3.11_5d37166e42fd7049
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.11'
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/sphinx-feedstock.git
+  feedstock_ref: 50203d9ac8ed7246e6f645a22eafc7f50960edd8
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for sphinx-feedstock @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    osx-arm64 3.12 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults target_platform=osx-arm64 2026-01-22 20:39:33
+  public_name: build-sphinx-feedstock-osx-arm64_py3.12_56ff2d9cfe44b75b
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.12'
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/sphinx-feedstock.git
+  feedstock_ref: 50203d9ac8ed7246e6f645a22eafc7f50960edd8
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for sphinx-feedstock @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    osx-arm64 3.13 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults target_platform=osx-arm64 2026-01-22 20:39:33
+  public_name: build-sphinx-feedstock-osx-arm64_py3.13_e2f1b6da31b4386c
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.13'
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/sphinx-feedstock.git
+  feedstock_ref: 50203d9ac8ed7246e6f645a22eafc7f50960edd8
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for sphinx-feedstock @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    osx-arm64 3.14 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults target_platform=osx-arm64 2026-01-22 20:39:33
+  public_name: build-sphinx-feedstock-osx-arm64_py3.14_d243667aa6c060ca
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.14'
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/sphinx-feedstock.git
+  feedstock_ref: 50203d9ac8ed7246e6f645a22eafc7f50960edd8
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for sphinx-feedstock @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    win-64 3.11 c_compiler=vs2022 c_stdlib=vs c_stdlib_version=2022.14 channel_targets=defaults
+    target_platform=win-64 2026-01-22 20:39:33
+  public_name: build-sphinx-feedstock-win-64_py3.11_3d6e7732924aa08f
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    c_compiler: vs2022
+    c_stdlib: vs
+    c_stdlib_version: '2022.14'
+    channel_targets: defaults
+    platform: win-64
+    python: '3.11'
+    target_platform: win-64
+  feedstock_url: https://github.com/AnacondaRecipes/sphinx-feedstock.git
+  feedstock_ref: 50203d9ac8ed7246e6f645a22eafc7f50960edd8
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for sphinx-feedstock @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    win-64 3.12 c_compiler=vs2022 c_stdlib=vs c_stdlib_version=2022.14 channel_targets=defaults
+    target_platform=win-64 2026-01-22 20:39:33
+  public_name: build-sphinx-feedstock-win-64_py3.12_47130e4af44069df
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    c_compiler: vs2022
+    c_stdlib: vs
+    c_stdlib_version: '2022.14'
+    channel_targets: defaults
+    platform: win-64
+    python: '3.12'
+    target_platform: win-64
+  feedstock_url: https://github.com/AnacondaRecipes/sphinx-feedstock.git
+  feedstock_ref: 50203d9ac8ed7246e6f645a22eafc7f50960edd8
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for sphinx-feedstock @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    win-64 3.13 c_compiler=vs2022 c_stdlib=vs c_stdlib_version=2022.14 channel_targets=defaults
+    target_platform=win-64 2026-01-22 20:39:33
+  public_name: build-sphinx-feedstock-win-64_py3.13_51ce8bd337d68ed2
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    c_compiler: vs2022
+    c_stdlib: vs
+    c_stdlib_version: '2022.14'
+    channel_targets: defaults
+    platform: win-64
+    python: '3.13'
+    target_platform: win-64
+  feedstock_url: https://github.com/AnacondaRecipes/sphinx-feedstock.git
+  feedstock_ref: 50203d9ac8ed7246e6f645a22eafc7f50960edd8
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Build task for sphinx-feedstock @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    win-64 3.14 c_compiler=vs2022 c_stdlib=vs c_stdlib_version=2022.14 channel_targets=defaults
+    target_platform=win-64 2026-01-22 20:39:33
+  public_name: build-sphinx-feedstock-win-64_py3.14_7b1d3820652072fe
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    c_compiler: vs2022
+    c_stdlib: vs
+    c_stdlib_version: '2022.14'
+    channel_targets: defaults
+    platform: win-64
+    python: '3.14'
+    target_platform: win-64
+  feedstock_url: https://github.com/AnacondaRecipes/sphinx-feedstock.git
+  feedstock_ref: 50203d9ac8ed7246e6f645a22eafc7f50960edd8
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --error-overlinking
+  - --skip-existing
+- description: Test task for sphinx-feedstock sphinx @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    linux-64 3.11 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults target_platform=linux-64 2026-01-22 20:39:33
+  public_name: test-sphinx-feedstock-sphinx-linux-64_py3.11_584eacbc2b4f384c
+  dependencies:
+  - build-sphinx-feedstock-linux-64_py3.11_584eacbc2b4f384c
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.11'
+    target_platform: linux-64
+  package_def:
+    matchspec: sphinx
+  external_dependencies: []
+- description: Test task for sphinx-feedstock sphinx @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    linux-64 3.12 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults target_platform=linux-64 2026-01-22 20:39:33
+  public_name: test-sphinx-feedstock-sphinx-linux-64_py3.12_b56a7bc7d876bf2d
+  dependencies:
+  - build-sphinx-feedstock-linux-64_py3.12_b56a7bc7d876bf2d
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.12'
+    target_platform: linux-64
+  package_def:
+    matchspec: sphinx
+  external_dependencies: []
+- description: Test task for sphinx-feedstock sphinx @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    linux-64 3.13 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults target_platform=linux-64 2026-01-22 20:39:33
+  public_name: test-sphinx-feedstock-sphinx-linux-64_py3.13_67744bad0a4928c0
+  dependencies:
+  - build-sphinx-feedstock-linux-64_py3.13_67744bad0a4928c0
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.13'
+    target_platform: linux-64
+  package_def:
+    matchspec: sphinx
+  external_dependencies: []
+- description: Test task for sphinx-feedstock sphinx @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    linux-64 3.14 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults target_platform=linux-64 2026-01-22 20:39:33
+  public_name: test-sphinx-feedstock-sphinx-linux-64_py3.14_8b8c26a3a50c2d67
+  dependencies:
+  - build-sphinx-feedstock-linux-64_py3.14_8b8c26a3a50c2d67
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.14'
+    target_platform: linux-64
+  package_def:
+    matchspec: sphinx
+  external_dependencies: []
+- description: Test task for sphinx-feedstock sphinx @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    linux-aarch64 3.11 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults target_platform=linux-aarch64 2026-01-22 20:39:33
+  public_name: test-sphinx-feedstock-sphinx-linux-aarch64_py3.11_555a58c7930c140c
+  dependencies:
+  - build-sphinx-feedstock-linux-aarch64_py3.11_555a58c7930c140c
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.11'
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: sphinx
+  external_dependencies: []
+- description: Test task for sphinx-feedstock sphinx @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    linux-aarch64 3.12 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults target_platform=linux-aarch64 2026-01-22 20:39:33
+  public_name: test-sphinx-feedstock-sphinx-linux-aarch64_py3.12_9d586b135375be09
+  dependencies:
+  - build-sphinx-feedstock-linux-aarch64_py3.12_9d586b135375be09
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.12'
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: sphinx
+  external_dependencies: []
+- description: Test task for sphinx-feedstock sphinx @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    linux-aarch64 3.13 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults target_platform=linux-aarch64 2026-01-22 20:39:33
+  public_name: test-sphinx-feedstock-sphinx-linux-aarch64_py3.13_59ed926dd60ef55a
+  dependencies:
+  - build-sphinx-feedstock-linux-aarch64_py3.13_59ed926dd60ef55a
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.13'
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: sphinx
+  external_dependencies: []
+- description: Test task for sphinx-feedstock sphinx @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    linux-aarch64 3.14 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults target_platform=linux-aarch64 2026-01-22 20:39:33
+  public_name: test-sphinx-feedstock-sphinx-linux-aarch64_py3.14_7e488c47686c23e8
+  dependencies:
+  - build-sphinx-feedstock-linux-aarch64_py3.14_7e488c47686c23e8
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: gcc
+    c_compiler_version: 14.3.0
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.14'
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: sphinx
+  external_dependencies: []
+- description: Test task for sphinx-feedstock sphinx @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    osx-arm64 3.11 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults target_platform=osx-arm64 2026-01-22 20:39:33
+  public_name: test-sphinx-feedstock-sphinx-osx-arm64_py3.11_5d37166e42fd7049
+  dependencies:
+  - build-sphinx-feedstock-osx-arm64_py3.11_5d37166e42fd7049
+  max_run_time: 7200
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.11'
+    target_platform: osx-arm64
+  package_def:
+    matchspec: sphinx
+  external_dependencies: []
+- description: Test task for sphinx-feedstock sphinx @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    osx-arm64 3.12 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults target_platform=osx-arm64 2026-01-22 20:39:33
+  public_name: test-sphinx-feedstock-sphinx-osx-arm64_py3.12_56ff2d9cfe44b75b
+  dependencies:
+  - build-sphinx-feedstock-osx-arm64_py3.12_56ff2d9cfe44b75b
+  max_run_time: 7200
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.12'
+    target_platform: osx-arm64
+  package_def:
+    matchspec: sphinx
+  external_dependencies: []
+- description: Test task for sphinx-feedstock sphinx @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    osx-arm64 3.13 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults target_platform=osx-arm64 2026-01-22 20:39:33
+  public_name: test-sphinx-feedstock-sphinx-osx-arm64_py3.13_e2f1b6da31b4386c
+  dependencies:
+  - build-sphinx-feedstock-osx-arm64_py3.13_e2f1b6da31b4386c
+  max_run_time: 7200
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.13'
+    target_platform: osx-arm64
+  package_def:
+    matchspec: sphinx
+  external_dependencies: []
+- description: Test task for sphinx-feedstock sphinx @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    osx-arm64 3.14 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults target_platform=osx-arm64 2026-01-22 20:39:33
+  public_name: test-sphinx-feedstock-sphinx-osx-arm64_py3.14_d243667aa6c060ca
+  dependencies:
+  - build-sphinx-feedstock-osx-arm64_py3.14_d243667aa6c060ca
+  max_run_time: 7200
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.14'
+    target_platform: osx-arm64
+  package_def:
+    matchspec: sphinx
+  external_dependencies: []
+- description: Test task for sphinx-feedstock sphinx @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    win-64 3.11 c_compiler=vs2022 c_stdlib=vs c_stdlib_version=2022.14 channel_targets=defaults
+    target_platform=win-64 2026-01-22 20:39:33
+  public_name: test-sphinx-feedstock-sphinx-win-64_py3.11_3d6e7732924aa08f
+  dependencies:
+  - build-sphinx-feedstock-win-64_py3.11_3d6e7732924aa08f
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: vs2022
+    c_stdlib: vs
+    c_stdlib_version: '2022.14'
+    channel_targets: defaults
+    platform: win-64
+    python: '3.11'
+    target_platform: win-64
+  package_def:
+    matchspec: sphinx
+  external_dependencies: []
+- description: Test task for sphinx-feedstock sphinx @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    win-64 3.12 c_compiler=vs2022 c_stdlib=vs c_stdlib_version=2022.14 channel_targets=defaults
+    target_platform=win-64 2026-01-22 20:39:33
+  public_name: test-sphinx-feedstock-sphinx-win-64_py3.12_47130e4af44069df
+  dependencies:
+  - build-sphinx-feedstock-win-64_py3.12_47130e4af44069df
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: vs2022
+    c_stdlib: vs
+    c_stdlib_version: '2022.14'
+    channel_targets: defaults
+    platform: win-64
+    python: '3.12'
+    target_platform: win-64
+  package_def:
+    matchspec: sphinx
+  external_dependencies: []
+- description: Test task for sphinx-feedstock sphinx @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    win-64 3.13 c_compiler=vs2022 c_stdlib=vs c_stdlib_version=2022.14 channel_targets=defaults
+    target_platform=win-64 2026-01-22 20:39:33
+  public_name: test-sphinx-feedstock-sphinx-win-64_py3.13_51ce8bd337d68ed2
+  dependencies:
+  - build-sphinx-feedstock-win-64_py3.13_51ce8bd337d68ed2
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: vs2022
+    c_stdlib: vs
+    c_stdlib_version: '2022.14'
+    channel_targets: defaults
+    platform: win-64
+    python: '3.13'
+    target_platform: win-64
+  package_def:
+    matchspec: sphinx
+  external_dependencies: []
+- description: Test task for sphinx-feedstock sphinx @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8)
+    win-64 3.14 c_compiler=vs2022 c_stdlib=vs c_stdlib_version=2022.14 channel_targets=defaults
+    target_platform=win-64 2026-01-22 20:39:33
+  public_name: test-sphinx-feedstock-sphinx-win-64_py3.14_7b1d3820652072fe
+  dependencies:
+  - build-sphinx-feedstock-win-64_py3.14_7b1d3820652072fe
+  max_run_time: 7200
+  type: test
+  variant:
+    c_compiler: vs2022
+    c_stdlib: vs
+    c_stdlib_version: '2022.14'
+    channel_targets: defaults
+    platform: win-64
+    python: '3.14'
+    target_platform: win-64
+  package_def:
+    matchspec: sphinx
+  external_dependencies: []
+notification: []
+custom_metadata: {}
+system_metadata:
+  release_destination:
+    destination: pbp-release-api
+    channel: main
+    release_name: null
+task_counts_by_status: {}
+total_tasks: 0

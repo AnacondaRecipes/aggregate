@@ -1,0 +1,1123 @@
+name: Build/Test Graph 'jaxlib-feedstock' and 0 more
+priority: 0
+user: AbdulRehmanAlvi
+src_channels:
+- main
+dest_channel: main
+tasks:
+- description: Build task for jaxlib-feedstock @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-64 3.11 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-64 zlib=1.2
+    2026-02-05 16:50:16
+  public_name: build-jaxlib-feedstock-linux-64_py3.11_088af3d67d3cd7d9
+  dependencies: []
+  max_run_time: 57600
+  type: build
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: linux-64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/jaxlib-feedstock
+  feedstock_ref: 5bb4f901f23430f9fcd33c221bbee664731c5a7d
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for jaxlib-feedstock @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-64 3.11 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=12.8 cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-64 zlib=1.2
+    2026-02-05 16:50:16
+  public_name: build-jaxlib-feedstock-linux-64_py3.11_d3ce5d91b9d83b60
+  dependencies: []
+  max_run_time: 57600
+  type: build
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: '12.8'
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: linux-64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/jaxlib-feedstock
+  feedstock_ref: 5bb4f901f23430f9fcd33c221bbee664731c5a7d
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for jaxlib-feedstock @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-64 3.12 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-64 zlib=1.2
+    2026-02-05 16:50:16
+  public_name: build-jaxlib-feedstock-linux-64_py3.12_0b88eca4338edba6
+  dependencies: []
+  max_run_time: 57600
+  type: build
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: linux-64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/jaxlib-feedstock
+  feedstock_ref: 5bb4f901f23430f9fcd33c221bbee664731c5a7d
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for jaxlib-feedstock @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-64 3.12 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=12.8 cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-64 zlib=1.2
+    2026-02-05 16:50:16
+  public_name: build-jaxlib-feedstock-linux-64_py3.12_938128d459b2e5fd
+  dependencies: []
+  max_run_time: 57600
+  type: build
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: '12.8'
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: linux-64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/jaxlib-feedstock
+  feedstock_ref: 5bb4f901f23430f9fcd33c221bbee664731c5a7d
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for jaxlib-feedstock @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-64 3.13 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=12.8 cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-64 zlib=1.2
+    2026-02-05 16:50:16
+  public_name: build-jaxlib-feedstock-linux-64_py3.13_4628f88602f6806f
+  dependencies: []
+  max_run_time: 57600
+  type: build
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: '12.8'
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-64
+    python: '3.13'
+    r_version: 4.3.1
+    target_platform: linux-64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/jaxlib-feedstock
+  feedstock_ref: 5bb4f901f23430f9fcd33c221bbee664731c5a7d
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for jaxlib-feedstock @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-64 3.13 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-64 zlib=1.2
+    2026-02-05 16:50:16
+  public_name: build-jaxlib-feedstock-linux-64_py3.13_abfe566b2b22d766
+  dependencies: []
+  max_run_time: 57600
+  type: build
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-64
+    python: '3.13'
+    r_version: 4.3.1
+    target_platform: linux-64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/jaxlib-feedstock
+  feedstock_ref: 5bb4f901f23430f9fcd33c221bbee664731c5a7d
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for jaxlib-feedstock @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-aarch64 3.11 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-aarch64
+    zlib=1.2 2026-02-05 16:50:16
+  public_name: build-jaxlib-feedstock-linux-aarch64_py3.11_25515ffce0c15258
+  dependencies: []
+  max_run_time: 57600
+  type: build
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-aarch64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/jaxlib-feedstock
+  feedstock_ref: 5bb4f901f23430f9fcd33c221bbee664731c5a7d
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for jaxlib-feedstock @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-aarch64 3.11 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=12.8 cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-aarch64
+    zlib=1.2 2026-02-05 16:50:16
+  public_name: build-jaxlib-feedstock-linux-aarch64_py3.11_579738d754dd25af
+  dependencies: []
+  max_run_time: 57600
+  type: build
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: '12.8'
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-aarch64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/jaxlib-feedstock
+  feedstock_ref: 5bb4f901f23430f9fcd33c221bbee664731c5a7d
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for jaxlib-feedstock @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-aarch64 3.12 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=12.8 cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-aarch64
+    zlib=1.2 2026-02-05 16:50:16
+  public_name: build-jaxlib-feedstock-linux-aarch64_py3.12_73499a7da755f499
+  dependencies: []
+  max_run_time: 57600
+  type: build
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: '12.8'
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-aarch64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/jaxlib-feedstock
+  feedstock_ref: 5bb4f901f23430f9fcd33c221bbee664731c5a7d
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for jaxlib-feedstock @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-aarch64 3.12 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-aarch64
+    zlib=1.2 2026-02-05 16:50:16
+  public_name: build-jaxlib-feedstock-linux-aarch64_py3.12_ec7b9e705f475723
+  dependencies: []
+  max_run_time: 57600
+  type: build
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-aarch64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/jaxlib-feedstock
+  feedstock_ref: 5bb4f901f23430f9fcd33c221bbee664731c5a7d
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for jaxlib-feedstock @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-aarch64 3.13 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-aarch64
+    zlib=1.2 2026-02-05 16:50:16
+  public_name: build-jaxlib-feedstock-linux-aarch64_py3.13_46ea76813cec0191
+  dependencies: []
+  max_run_time: 57600
+  type: build
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-aarch64
+    python: '3.13'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/jaxlib-feedstock
+  feedstock_ref: 5bb4f901f23430f9fcd33c221bbee664731c5a7d
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for jaxlib-feedstock @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-aarch64 3.13 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=12.8 cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-aarch64
+    zlib=1.2 2026-02-05 16:50:16
+  public_name: build-jaxlib-feedstock-linux-aarch64_py3.13_4b45bae164cb22b3
+  dependencies: []
+  max_run_time: 57600
+  type: build
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: '12.8'
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-aarch64
+    python: '3.13'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/jaxlib-feedstock
+  feedstock_ref: 5bb4f901f23430f9fcd33c221bbee664731c5a7d
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for jaxlib-feedstock @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    osx-arm64 3.11 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=osx-arm64
+    zlib=1.2 2026-02-05 16:50:16
+  public_name: build-jaxlib-feedstock-osx-arm64_py3.11_ea3bdbd86b299a45
+  dependencies: []
+  max_run_time: 57600
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/jaxlib-feedstock
+  feedstock_ref: 5bb4f901f23430f9fcd33c221bbee664731c5a7d
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for jaxlib-feedstock @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    osx-arm64 3.12 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=osx-arm64
+    zlib=1.2 2026-02-05 16:50:16
+  public_name: build-jaxlib-feedstock-osx-arm64_py3.12_2fcc2d27e3cdeec5
+  dependencies: []
+  max_run_time: 57600
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/jaxlib-feedstock
+  feedstock_ref: 5bb4f901f23430f9fcd33c221bbee664731c5a7d
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Build task for jaxlib-feedstock @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    osx-arm64 3.13 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=osx-arm64
+    zlib=1.2 2026-02-05 16:50:16
+  public_name: build-jaxlib-feedstock-osx-arm64_py3.13_cf3e4c30e9f3085f
+  dependencies: []
+  max_run_time: 57600
+  type: build
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.13'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+    zlib: '1.2'
+  feedstock_url: https://github.com/AnacondaRecipes/jaxlib-feedstock
+  feedstock_ref: 5bb4f901f23430f9fcd33c221bbee664731c5a7d
+  recipe_dir: recipe
+  build_options:
+  - --skip-existing
+  - --error-overlinking
+  - --suppress-variables
+- description: Test task for jaxlib-feedstock jaxlib @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-64 3.11 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-64 zlib=1.2
+    2026-02-05 16:50:16
+  public_name: test-jaxlib-feedstock-jaxlib-linux-64_py3.11_088af3d67d3cd7d9
+  dependencies:
+  - build-jaxlib-feedstock-linux-64_py3.11_088af3d67d3cd7d9
+  max_run_time: 57600
+  type: test
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: linux-64
+    zlib: '1.2'
+  package_def:
+    matchspec: jaxlib
+  external_dependencies: []
+- description: Test task for jaxlib-feedstock jaxlib @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-64 3.11 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=12.8 cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-64 zlib=1.2
+    2026-02-05 16:50:16
+  public_name: test-jaxlib-feedstock-jaxlib-linux-64_py3.11_d3ce5d91b9d83b60
+  dependencies:
+  - build-jaxlib-feedstock-linux-64_py3.11_d3ce5d91b9d83b60
+  max_run_time: 57600
+  type: test
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: '12.8'
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: linux-64
+    zlib: '1.2'
+  package_def:
+    matchspec: jaxlib
+  external_dependencies: []
+- description: Test task for jaxlib-feedstock jaxlib @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-64 3.12 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-64 zlib=1.2
+    2026-02-05 16:50:16
+  public_name: test-jaxlib-feedstock-jaxlib-linux-64_py3.12_0b88eca4338edba6
+  dependencies:
+  - build-jaxlib-feedstock-linux-64_py3.12_0b88eca4338edba6
+  max_run_time: 57600
+  type: test
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: linux-64
+    zlib: '1.2'
+  package_def:
+    matchspec: jaxlib
+  external_dependencies: []
+- description: Test task for jaxlib-feedstock jaxlib @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-64 3.12 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=12.8 cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-64 zlib=1.2
+    2026-02-05 16:50:16
+  public_name: test-jaxlib-feedstock-jaxlib-linux-64_py3.12_938128d459b2e5fd
+  dependencies:
+  - build-jaxlib-feedstock-linux-64_py3.12_938128d459b2e5fd
+  max_run_time: 57600
+  type: test
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: '12.8'
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: linux-64
+    zlib: '1.2'
+  package_def:
+    matchspec: jaxlib
+  external_dependencies: []
+- description: Test task for jaxlib-feedstock jaxlib @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-64 3.13 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=12.8 cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-64 zlib=1.2
+    2026-02-05 16:50:16
+  public_name: test-jaxlib-feedstock-jaxlib-linux-64_py3.13_4628f88602f6806f
+  dependencies:
+  - build-jaxlib-feedstock-linux-64_py3.13_4628f88602f6806f
+  max_run_time: 57600
+  type: test
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: '12.8'
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-64
+    python: '3.13'
+    r_version: 4.3.1
+    target_platform: linux-64
+    zlib: '1.2'
+  package_def:
+    matchspec: jaxlib
+  external_dependencies: []
+- description: Test task for jaxlib-feedstock jaxlib @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-64 3.13 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-64 zlib=1.2
+    2026-02-05 16:50:16
+  public_name: test-jaxlib-feedstock-jaxlib-linux-64_py3.13_abfe566b2b22d766
+  dependencies:
+  - build-jaxlib-feedstock-linux-64_py3.13_abfe566b2b22d766
+  max_run_time: 57600
+  type: test
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-64
+    python: '3.13'
+    r_version: 4.3.1
+    target_platform: linux-64
+    zlib: '1.2'
+  package_def:
+    matchspec: jaxlib
+  external_dependencies: []
+- description: Test task for jaxlib-feedstock jaxlib @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-aarch64 3.11 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-aarch64
+    zlib=1.2 2026-02-05 16:50:16
+  public_name: test-jaxlib-feedstock-jaxlib-linux-aarch64_py3.11_25515ffce0c15258
+  dependencies:
+  - build-jaxlib-feedstock-linux-aarch64_py3.11_25515ffce0c15258
+  max_run_time: 57600
+  type: test
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-aarch64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  package_def:
+    matchspec: jaxlib
+  external_dependencies: []
+- description: Test task for jaxlib-feedstock jaxlib @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-aarch64 3.11 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=12.8 cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-aarch64
+    zlib=1.2 2026-02-05 16:50:16
+  public_name: test-jaxlib-feedstock-jaxlib-linux-aarch64_py3.11_579738d754dd25af
+  dependencies:
+  - build-jaxlib-feedstock-linux-aarch64_py3.11_579738d754dd25af
+  max_run_time: 57600
+  type: test
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: '12.8'
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-aarch64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  package_def:
+    matchspec: jaxlib
+  external_dependencies: []
+- description: Test task for jaxlib-feedstock jaxlib @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-aarch64 3.12 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=12.8 cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-aarch64
+    zlib=1.2 2026-02-05 16:50:16
+  public_name: test-jaxlib-feedstock-jaxlib-linux-aarch64_py3.12_73499a7da755f499
+  dependencies:
+  - build-jaxlib-feedstock-linux-aarch64_py3.12_73499a7da755f499
+  max_run_time: 57600
+  type: test
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: '12.8'
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-aarch64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  package_def:
+    matchspec: jaxlib
+  external_dependencies: []
+- description: Test task for jaxlib-feedstock jaxlib @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-aarch64 3.12 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-aarch64
+    zlib=1.2 2026-02-05 16:50:16
+  public_name: test-jaxlib-feedstock-jaxlib-linux-aarch64_py3.12_ec7b9e705f475723
+  dependencies:
+  - build-jaxlib-feedstock-linux-aarch64_py3.12_ec7b9e705f475723
+  max_run_time: 57600
+  type: test
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-aarch64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  package_def:
+    matchspec: jaxlib
+  external_dependencies: []
+- description: Test task for jaxlib-feedstock jaxlib @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-aarch64 3.13 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-aarch64
+    zlib=1.2 2026-02-05 16:50:16
+  public_name: test-jaxlib-feedstock-jaxlib-linux-aarch64_py3.13_46ea76813cec0191
+  dependencies:
+  - build-jaxlib-feedstock-linux-aarch64_py3.13_46ea76813cec0191
+  max_run_time: 57600
+  type: test
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-aarch64
+    python: '3.13'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  package_def:
+    matchspec: jaxlib
+  external_dependencies: []
+- description: Test task for jaxlib-feedstock jaxlib @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    linux-aarch64 3.13 c_compiler=clang c_compiler_version=20 c_stdlib=sysroot c_stdlib_version=2.28
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=12.8 cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=linux-aarch64
+    zlib=1.2 2026-02-05 16:50:16
+  public_name: test-jaxlib-feedstock-jaxlib-linux-aarch64_py3.13_4b45bae164cb22b3
+  dependencies:
+  - build-jaxlib-feedstock-linux-aarch64_py3.13_4b45bae164cb22b3
+  max_run_time: 57600
+  type: test
+  variant:
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: sysroot
+    c_stdlib_version: '2.28'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: '12.8'
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: linux-aarch64
+    python: '3.13'
+    r_version: 4.3.1
+    target_platform: linux-aarch64
+    zlib: '1.2'
+  package_def:
+    matchspec: jaxlib
+  external_dependencies: []
+- description: Test task for jaxlib-feedstock jaxlib @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    osx-arm64 3.11 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=osx-arm64
+    zlib=1.2 2026-02-05 16:50:16
+  public_name: test-jaxlib-feedstock-jaxlib-osx-arm64_py3.11_ea3bdbd86b299a45
+  dependencies:
+  - build-jaxlib-feedstock-osx-arm64_py3.11_ea3bdbd86b299a45
+  max_run_time: 57600
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.11'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+    zlib: '1.2'
+  package_def:
+    matchspec: jaxlib
+  external_dependencies: []
+- description: Test task for jaxlib-feedstock jaxlib @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    osx-arm64 3.12 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=osx-arm64
+    zlib=1.2 2026-02-05 16:50:16
+  public_name: test-jaxlib-feedstock-jaxlib-osx-arm64_py3.12_2fcc2d27e3cdeec5
+  dependencies:
+  - build-jaxlib-feedstock-osx-arm64_py3.12_2fcc2d27e3cdeec5
+  max_run_time: 57600
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.12'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+    zlib: '1.2'
+  package_def:
+    matchspec: jaxlib
+  external_dependencies: []
+- description: Test task for jaxlib-feedstock jaxlib @ 5bb4f90 (5bb4f901f23430f9fcd33c221bbee664731c5a7d)
+    osx-arm64 3.13 CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler=clang c_compiler_version=20 c_stdlib=macosx_deployment_target c_stdlib_version=12.1
+    channel_targets=defaults cuda_compiler=cuda-nvcc cuda_compiler_version=None cudnn=9
+    cxx_compiler=clangxx cxx_compiler_version=20 libabseil=20250814.1 libgrpc=1.74
+    libprotobuf=6.33.0 nccl=2 openssl=3 r_version=4.3.1 target_platform=osx-arm64
+    zlib=1.2 2026-02-05 16:50:16
+  public_name: test-jaxlib-feedstock-jaxlib-osx-arm64_py3.13_cf3e4c30e9f3085f
+  dependencies:
+  - build-jaxlib-feedstock-osx-arm64_py3.13_cf3e4c30e9f3085f
+  max_run_time: 57600
+  type: test
+  variant:
+    CONDA_BUILD_SYSROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+    c_compiler: clang
+    c_compiler_version: '20'
+    c_stdlib: macosx_deployment_target
+    c_stdlib_version: '12.1'
+    channel_targets: defaults
+    cuda_compiler: cuda-nvcc
+    cuda_compiler_version: None
+    cudnn: '9'
+    cxx_compiler: clangxx
+    cxx_compiler_version: '20'
+    libabseil: '20250814.1'
+    libgrpc: '1.74'
+    libprotobuf: 6.33.0
+    nccl: '2'
+    openssl: '3'
+    platform: osx-arm64
+    python: '3.13'
+    r_version: 4.3.1
+    target_platform: osx-arm64
+    zlib: '1.2'
+  package_def:
+    matchspec: jaxlib
+  external_dependencies: []
+notification: []
+custom_metadata: {}
+system_metadata:
+  release_destination:
+    destination: pbp-release-api
+    channel: main
+    release_name: null
+task_counts_by_status: {}
+total_tasks: 0

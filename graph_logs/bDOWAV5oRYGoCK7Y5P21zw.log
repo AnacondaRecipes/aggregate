@@ -1,0 +1,975 @@
+[taskcluster 2026-01-22T14:16:45.236Z] Worker Type (aws/linux-amd64) settings:
+[taskcluster 2026-01-22T14:16:45.236Z]   {
+[taskcluster 2026-01-22T14:16:45.236Z]     "availability-zone": "us-east-1b",
+[taskcluster 2026-01-22T14:16:45.236Z]     "config": {
+[taskcluster 2026-01-22T14:16:45.236Z]       "deploymentId": "4e3f3455c2d0e093f580022e5620aebcc932c4822eec7336cd32b38d791e26a2"
+[taskcluster 2026-01-22T14:16:45.236Z]     },
+[taskcluster 2026-01-22T14:16:45.236Z]     "generic-worker": {
+[taskcluster 2026-01-22T14:16:45.236Z]       "config": {
+[taskcluster 2026-01-22T14:16:45.236Z]         "headlessTasks": true
+[taskcluster 2026-01-22T14:16:45.236Z]       },
+[taskcluster 2026-01-22T14:16:45.236Z]       "engine": "multiuser",
+[taskcluster 2026-01-22T14:16:45.236Z]       "go-arch": "amd64",
+[taskcluster 2026-01-22T14:16:45.236Z]       "go-os": "linux",
+[taskcluster 2026-01-22T14:16:45.236Z]       "go-version": "go1.24.5",
+[taskcluster 2026-01-22T14:16:45.236Z]       "release": "https://github.com/taskcluster/taskcluster/releases/tag/v88.0.2",
+[taskcluster 2026-01-22T14:16:45.236Z]       "revision": "fcaf4a25fc4a3eb8543bc8605d77ce319306d7c6",
+[taskcluster 2026-01-22T14:16:45.236Z]       "source": "https://github.com/taskcluster/taskcluster/commits/fcaf4a25fc4a3eb8543bc8605d77ce319306d7c6",
+[taskcluster 2026-01-22T14:16:45.236Z]       "version": "88.0.2"
+[taskcluster 2026-01-22T14:16:45.236Z]     },
+[taskcluster 2026-01-22T14:16:45.236Z]     "image": "ami-0562c136a5d84d0d6",
+[taskcluster 2026-01-22T14:16:45.236Z]     "instance-id": "i-0601417dd2d1ca408",
+[taskcluster 2026-01-22T14:16:45.236Z]     "instance-type": "m7i-flex.2xlarge",
+[taskcluster 2026-01-22T14:16:45.236Z]     "local-ipv4": "10.2.117.185",
+[taskcluster 2026-01-22T14:16:45.236Z]     "public-hostname": "ec2-35-175-123-28.compute-1.amazonaws.com",
+[taskcluster 2026-01-22T14:16:45.236Z]     "public-ipv4": "35.175.123.28",
+[taskcluster 2026-01-22T14:16:45.236Z]     "region": "us-east-1"
+[taskcluster 2026-01-22T14:16:45.236Z]   }
+[taskcluster 2026-01-22T14:16:45.236Z] Task ID: bDOWAV5oRYGoCK7Y5P21zw
+[taskcluster 2026-01-22T14:16:45.236Z] === Task Starting ===
+[taskcluster 2026-01-22T14:16:45.388Z] Uploading redirect artifact public/logs/live.log to URL https://ws.taskcluster.anacondaconnect.com/us-east-1.i-0601417dd2d1ca408.60099/log/RboMSPe7Rg2MWqlSSg3Tyw with mime type "text/plain; charset=utf-8" and expiry 2026-01-22T16:31:45.359Z
+[taskcluster 2026-01-22T14:16:45.489Z] Executing command 0: /opt/conda/bin/python -c '#!/usr/bin/env python3
+[taskcluster 2026-01-22T14:16:45.489Z] import base64
+[taskcluster 2026-01-22T14:16:45.489Z] import json
+[taskcluster 2026-01-22T14:16:45.489Z] import os
+[taskcluster 2026-01-22T14:16:45.489Z] import sys
+[taskcluster 2026-01-22T14:16:45.489Z] from urllib.request import urlopen
+[taskcluster 2026-01-22T14:16:45.489Z] 
+[taskcluster 2026-01-22T14:16:45.489Z] 
+[taskcluster 2026-01-22T14:16:45.489Z] def deserialize_bin(taskcluster_proxy_url: str, task_id: str) -> None:
+[taskcluster 2026-01-22T14:16:45.489Z] 
+[taskcluster 2026-01-22T14:16:45.489Z]     try:
+[taskcluster 2026-01-22T14:16:45.489Z]         with urlopen(f"{taskcluster_proxy_url}/api/queue/v1/task/{task_id}") as response:  # nosec
+[taskcluster 2026-01-22T14:16:45.489Z]             response_data = response.read()
+[taskcluster 2026-01-22T14:16:45.489Z]             data = json.loads(response_data.decode())
+[taskcluster 2026-01-22T14:16:45.489Z]             bin_files: dict = data.get("extra", {}).get("bin", {})
+[taskcluster 2026-01-22T14:16:45.489Z]             for bin_file in bin_files:
+[taskcluster 2026-01-22T14:16:45.489Z]                 encoded_content = bin_files[bin_file]
+[taskcluster 2026-01-22T14:16:45.489Z]                 try:
+[taskcluster 2026-01-22T14:16:45.489Z]                     decoded_content = base64.b64decode(encoded_content)
+[taskcluster 2026-01-22T14:16:45.489Z]                 except (ValueError, TypeError) as e:
+[taskcluster 2026-01-22T14:16:45.489Z]                     raise ValueError(f"Failed to decode base64 content for {bin_file}: {e}")
+[taskcluster 2026-01-22T14:16:45.489Z]                 with open(f"{bin_file}", "wb") as f:
+[taskcluster 2026-01-22T14:16:45.489Z]                     f.write(decoded_content)
+[taskcluster 2026-01-22T14:16:45.489Z]                     print(f"Serialized {bin_file} to worker successfully.")
+[taskcluster 2026-01-22T14:16:45.489Z]     except Exception as e:
+[taskcluster 2026-01-22T14:16:45.489Z]         raise ValueError(f"Error fetching task data: {e}") from e
+[taskcluster 2026-01-22T14:16:45.489Z] 
+[taskcluster 2026-01-22T14:16:45.489Z] 
+[taskcluster 2026-01-22T14:16:45.489Z] if __name__ == "__main__":
+[taskcluster 2026-01-22T14:16:45.489Z]     try:
+[taskcluster 2026-01-22T14:16:45.489Z]         if "TASK_ID" not in os.environ:
+[taskcluster 2026-01-22T14:16:45.489Z]             print("TASK_ID is not set", file=sys.stderr)
+[taskcluster 2026-01-22T14:16:45.489Z]             sys.exit(1)
+[taskcluster 2026-01-22T14:16:45.489Z]         if "TASKCLUSTER_PROXY_URL" not in os.environ:
+[taskcluster 2026-01-22T14:16:45.489Z]             print("TASKCLUSTER_PROXY_URL is not set", file=sys.stderr)
+[taskcluster 2026-01-22T14:16:45.489Z]             sys.exit(1)
+[taskcluster 2026-01-22T14:16:45.489Z] 
+[taskcluster 2026-01-22T14:16:45.489Z]         deserialize_bin(os.environ.get("TASKCLUSTER_PROXY_URL"), os.environ.get("TASK_ID"))
+[taskcluster 2026-01-22T14:16:45.489Z] 
+[taskcluster 2026-01-22T14:16:45.489Z]     except Exception as e:
+[taskcluster 2026-01-22T14:16:45.489Z]         print(f"Error deserializing to worker: {e}", file=sys.stderr)
+[taskcluster 2026-01-22T14:16:45.489Z]         sys.exit(1)
+[taskcluster 2026-01-22T14:16:45.489Z] '
+Serialized build.py to worker successfully.
+Serialized shared_utils.py to worker successfully.
+Serialized secret_manager.py to worker successfully.
+Serialized dump_job_params.py to worker successfully.
+Serialized download_dependencies.py to worker successfully.
+Serialized download_conda_build_config.py to worker successfully.
+[taskcluster 2026-01-22T14:16:45.598Z]                        Exit Code: 0
+[taskcluster 2026-01-22T14:16:45.598Z]                        User Time: 62.936ms
+[taskcluster 2026-01-22T14:16:45.598Z]                      Kernel Time: 9.764ms
+[taskcluster 2026-01-22T14:16:45.598Z]                        Wall Time: 106.123523ms
+[taskcluster 2026-01-22T14:16:45.598Z]                           Result: SUCCEEDED
+[taskcluster 2026-01-22T14:16:45.598Z] Executing command 1: true 'shared_utils.py'
+[taskcluster 2026-01-22T14:16:45.599Z]                        Exit Code: 0
+[taskcluster 2026-01-22T14:16:45.599Z]                        User Time: 0s
+[taskcluster 2026-01-22T14:16:45.599Z]                      Kernel Time: 538µs
+[taskcluster 2026-01-22T14:16:45.599Z]                        Wall Time: 726.229µs
+[taskcluster 2026-01-22T14:16:45.599Z]                           Result: SUCCEEDED
+[taskcluster 2026-01-22T14:16:45.599Z] Executing command 2: true 'secret_manager.py'
+[taskcluster 2026-01-22T14:16:45.600Z]                        Exit Code: 0
+[taskcluster 2026-01-22T14:16:45.600Z]                        User Time: 0s
+[taskcluster 2026-01-22T14:16:45.600Z]                      Kernel Time: 499µs
+[taskcluster 2026-01-22T14:16:45.600Z]                        Wall Time: 624.195µs
+[taskcluster 2026-01-22T14:16:45.600Z]                           Result: SUCCEEDED
+[taskcluster 2026-01-22T14:16:45.600Z] Executing command 3: /opt/conda/bin/python 'dump_job_params.py'
+{
+  "provisionerId": "aws",
+  "workerType": "linux-amd64",
+  "taskQueueId": "aws/linux-amd64",
+  "schedulerId": "package-build-platform",
+  "projectId": "none",
+  "taskGroupId": "B2akr3v2QU-r4B7C3PNLkg",
+  "dependencies": [
+    "B2akr3v2QU-r4B7C3PNLkg"
+  ],
+  "requires": "all-completed",
+  "routes": [
+    "pkg_orchestrator.v1"
+  ],
+  "priority": "lowest",
+  "retries": 5,
+  "created": "2026-01-22T14:16:39.013Z",
+  "deadline": "2026-01-25T14:16:39.013Z",
+  "expires": "2027-01-25T14:16:39.013Z",
+  "scopes": [
+    "queue:*",
+    "assume:task-by-type:build-conda",
+    "secrets:get:GH_ACCESS_TOKEN"
+  ],
+  "payload": {
+    "env": {
+      "PLATFORM": "linux-64",
+      "RECIPE_DIR": "recipe",
+      "SRC_CHANNELS": "main",
+      "BUILD_OPTIONS": "--error-overlinking --suppress-variables --skip-existing",
+      "FEEDSTOCK_REF": "50203d9ac8ed7246e6f645a22eafc7f50960edd8",
+      "FEEDSTOCK_URL": "https://github.com/AnacondaRecipes/sphinx-feedstock.git",
+      "PYTHON_VERSION": "3.12",
+      "TREAT_AS_PRIVATE": "true",
+      "RUN_FROM_DEPENDENCIES": "false"
+    },
+    "command": [
+      [
+        "/opt/conda/bin/python",
+        "-c",
+        "#!/usr/bin/env python3\nimport base64\nimport json\nimport os\nimport sys\nfrom urllib.request import urlopen\n\n\ndef deserialize_bin(taskcluster_proxy_url: str, task_id: str) -> None:\n\n    try:\n        with urlopen(f\"{taskcluster_proxy_url}/api/queue/v1/task/{task_id}\") as response:  # nosec\n            response_data = response.read()\n            data = json.loads(response_data.decode())\n            bin_files: dict = data.get(\"extra\", {}).get(\"bin\", {})\n            for bin_file in bin_files:\n                encoded_content = bin_files[bin_file]\n                try:\n                    decoded_content = base64.b64decode(encoded_content)\n                except (ValueError, TypeError) as e:\n                    raise ValueError(f\"Failed to decode base64 content for {bin_file}: {e}\")\n                with open(f\"{bin_file}\", \"wb\") as f:\n                    f.write(decoded_content)\n                    print(f\"Serialized {bin_file} to worker successfully.\")\n    except Exception as e:\n        raise ValueError(f\"Error fetching task data: {e}\") from e\n\n\nif __name__ == \"__main__\":\n    try:\n        if \"TASK_ID\" not in os.environ:\n            print(\"TASK_ID is not set\", file=sys.stderr)\n            sys.exit(1)\n        if \"TASKCLUSTER_PROXY_URL\" not in os.environ:\n            print(\"TASKCLUSTER_PROXY_URL is not set\", file=sys.stderr)\n            sys.exit(1)\n\n        deserialize_bin(os.environ.get(\"TASKCLUSTER_PROXY_URL\"), os.environ.get(\"TASK_ID\"))\n\n    except Exception as e:\n        print(f\"Error deserializing to worker: {e}\", file=sys.stderr)\n        sys.exit(1)\n"
+      ],
+      [
+        "true",
+        "shared_utils.py"
+      ],
+      [
+        "true",
+        "secret_manager.py"
+      ],
+      [
+        "/opt/conda/bin/python",
+        "dump_job_params.py"
+      ],
+      [
+        "/opt/conda/bin/python",
+        "download_conda_build_config.py"
+      ],
+      [
+        "/opt/conda/bin/python",
+        "download_dependencies.py"
+      ],
+      [
+        "/opt/conda/bin/python",
+        "build.py"
+      ]
+    ],
+    "features": {
+      "taskclusterProxy": true
+    },
+    "artifacts": [
+      {
+        "path": "public",
+        "type": "directory",
+        "contentEncoding": "identity"
+      }
+    ],
+    "maxRunTime": 7200
+  },
+  "metadata": {
+    "name": "build-sphinx-feedstock-linux-64_py3.12_b56a7bc7d876bf2d",
+    "owner": "AbdulRehmanAlvi",
+    "source": "http://taskcluster/tasks/create",
+    "description": "Build task for sphinx-feedstock @ 50203d9 (50203d9ac8ed7246e6f645a22eafc7f50960edd8) linux-64 3.12 c_compiler=gcc c_compiler_version=14.3.0 c_stdlib=sysroot c_stdlib_version=2.28 channel_targets=defaults target_platform=linux-64 2026-01-22 19:08:19"
+  },
+  "tags": {},
+  "extra": {
+    "bin": {
+      "build.py": "IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwoKaW1wb3J0IGhhc2hsaWIKaW1wb3J0IG9zCmltcG9ydCBzaHV0aWwKaW1wb3J0IHN1YnByb2Nlc3MgICMgbm9zZWMKaW1wb3J0IHN5cwppbXBvcnQgdGFyZmlsZQpmcm9tIGNvbnRleHRsaWIgaW1wb3J0IG51bGxjb250ZXh0CmZyb20gcGF0aGxpYiBpbXBvcnQgUGF0aApmcm9tIHRlbXBmaWxlIGltcG9ydCBUZW1wb3JhcnlEaXJlY3RvcnkKCmZyb20gc2VjcmV0X21hbmFnZXIgaW1wb3J0IFNlY3JldCwgaW5pdF9naXRfYXNrcGFzcwpmcm9tIHNoYXJlZF91dGlscyBpbXBvcnQgKAogICAgY29uZGFfaW5kZXgsCiAgICBnZXRfYmFzZV9lbnZfYmluX3BhdGgsCiAgICBnZXRfY29uZGFfYmluLAogICAgZ2V0X2hvbWVfZGlyLAogICAgdGVtcG9yYXJ5X2NvbmRhcmNfd2l0aF9tdWx0aWNoYW5uZWxzLAopCgp1c2Vfc2hlbGwgPSBGYWxzZQppZiBvcy5uYW1lID09ICJudCI6CiAgICB1c2Vfc2hlbGwgPSBUcnVlCgoKZGVmIGNyZWF0ZV9idWlsZF9lbnYoc3JjX2NoYW5uZWxzOiBsaXN0W3N0cl0sIGVudjogZGljdCkgLT4gTm9uZToKICAgICIiIkNyZWF0ZSBhIGNvbmRhIGVudmlyb25tZW50IGZvciBidWlsZGluZyBwYWNrYWdlcy4iIiIKCiAgICAjIDEuIGNwaF9lbnYKICAgIGNwaF9lbnZfcGF0aCA9IGdldF9ob21lX2RpcigpIC8gImNwaCIKICAgIGNvbmRhX2NyZWF0ZV9lbnZfY21kID0gWwogICAgICAgIHN0cihnZXRfY29uZGFfYmluKCkpLAogICAgICAgICJjcmVhdGUiLAogICAgICAgICItLXByZWZpeCIsCiAgICAgICAgc3RyKGNwaF9lbnZfcGF0aCksCiAgICAgICAgImNvbmRhLXBhY2thZ2UtaGFuZGxpbmciLAogICAgICAgICIteSIsCiAgICAgICAgIi0tcXVpZXQiLAogICAgXQogICAgcHJpbnQoZiJFeGVjdXRpbmcgY29tbWFuZDogeycgJy5qb2luKGNvbmRhX2NyZWF0ZV9lbnZfY21kKX0iLCBmbHVzaD1UcnVlKQogICAgcmVzdWx0ID0gc3VicHJvY2Vzcy5ydW4oY29uZGFfY3JlYXRlX2Vudl9jbWQsIHNoZWxsPXVzZV9zaGVsbCkgICMgbm9zZWMKICAgIGlmIHJlc3VsdC5yZXR1cm5jb2RlICE9IDA6CiAgICAgICAgcmFpc2UgUnVudGltZUVycm9yKCJFcnJvciBjcmVhdGluZyBjb25kYSBlbnZpcm9ubWVudC4gU2VlIGFib3ZlIGZvciBlcnJvci4iKQoKICAgICMgMi4gYnVpbGRfZW52CiAgICBidWlsZF9lbnZfcGF0aCA9IGdldF9ob21lX2RpcigpIC8gImJsZCIKICAgIGNvbmRhX2NyZWF0ZV9lbnZfY21kID0gWwogICAgICAgIHN0cihnZXRfY29uZGFfYmluKCkpLAogICAgICAgICJjcmVhdGUiLAogICAgICAgICItLXByZWZpeCIsCiAgICAgICAgc3RyKGJ1aWxkX2Vudl9wYXRoKSwKICAgICAgICAiY29uZGEtYnVpbGQ9PTI1LjEuMiIsCiAgICAgICAgIi15IiwKICAgICAgICAiLS1xdWlldCIsCiAgICBdCgogICAgaWYgc3JjX2NoYW5uZWxzOgogICAgICAgIGNvbmRhX2NyZWF0ZV9lbnZfY21kICs9IHNyY19jaGFubmVscwoKICAgIHByaW50KGYiRXhlY3V0aW5nIGNvbW1hbmQ6IHsnICcuam9pbihjb25kYV9jcmVhdGVfZW52X2NtZCl9IiwgZmx1c2g9VHJ1ZSkKICAgIHJlc3VsdCA9IHN1YnByb2Nlc3MucnVuKGNvbmRhX2NyZWF0ZV9lbnZfY21kLCBzaGVsbD11c2Vfc2hlbGwsIGVudj1lbnYpICAjIG5vc2VjCiAgICBpZiByZXN1bHQucmV0dXJuY29kZSAhPSAwOgogICAgICAgIHJhaXNlIFJ1bnRpbWVFcnJvcigiRXJyb3IgY3JlYXRpbmcgY29uZGEgZW52aXJvbm1lbnQuIFNlZSBhYm92ZSBmb3IgZXJyb3IuIikKCgpkZWYgY29uZGFfYnVpbGQoCiAgICBmZWVkc3RvY2tfcGF0aDogUGF0aCwgYnVpbGRfZGlyOiBQYXRoLCBzcmNfY2hhbm5lbHM6IGxpc3Rbc3RyXSwgZW52OiBkaWN0LCBzcmNfY2FjaGU6IHN0ciA9IE5vbmUKKSAtPiBOb25lOgogICAgIyBBY3RpdmF0ZSBlbnYgYW5kIHJ1biBjb25kYSBidWlsZCAtLXRlc3QKICAgICMgTm90ZTogc3VicHJvY2VzcyBjYW5ub3QgYWN0aXZhdGUgZW52IGluIGN1cnJlbnQgcHJvY2Vzcywgc28gd2UgY2FsbCBjb25kYSBydW4KICAgICMgTm90ZTogLW0gLi9jb25kYV9idWlsZF9jb25maWdfcGJwX2dlbmVyYXRlZC55YW1sIC0tY2xvYmJlci1maWxlIC4vY29uZGFfYnVpbGRfY29uZmlnX3BicF9nZW5lcmF0ZWQueWFtbAogICAgIyBpcyByZXF1aXJlZCB0byBpZ25vcmUgcmVjaXBlIGNiYyBhbmQgb25seSB1c2UgdGhlIG9uZSBncmFwaCBnZW5lcmF0aW9uIGNyZWF0ZWQuCiAgICBidWlsZF9lbnZfcGF0aCA9IGdldF9ob21lX2RpcigpIC8gImJsZCIKICAgIGNyb290X3BhdGggPSBnZXRfaG9tZV9kaXIoKSAvICJjcm9vdCIKCiAgICBidWlsZF9jbWQgPSBbCiAgICAgICAgc3RyKGdldF9jb25kYV9iaW4oKSksCiAgICAgICAgInJ1biIsCiAgICAgICAgIi0tbGl2ZS1zdHJlYW0iLAogICAgICAgICItLXByZWZpeCIsCiAgICAgICAgc3RyKGJ1aWxkX2Vudl9wYXRoKSwKICAgICAgICAiY29uZGEiLAogICAgICAgICJidWlsZCIsCiAgICAgICAgc3RyKGZlZWRzdG9ja19wYXRoKSwKICAgICAgICAiLS1jYWNoZS1kaXIiLAogICAgICAgIHN0cihzcmNfY2FjaGUpLAogICAgICAgICItLW91dHB1dC1mb2xkZXIiLAogICAgICAgIHN0cihidWlsZF9kaXIpLAogICAgICAgICItLWNyb290IiwKICAgICAgICBzdHIoY3Jvb3RfcGF0aCksCiAgICAgICAgIi1tIiwKICAgICAgICAiLi9jb25kYV9idWlsZF9jb25maWdfcGJwX2dlbmVyYXRlZC55YW1sIiwKICAgICAgICAiLS1jbG9iYmVyLWZpbGUiLAogICAgICAgICIuL2NvbmRhX2J1aWxkX2NvbmZpZ19wYnBfZ2VuZXJhdGVkLnlhbWwiLAogICAgICAgICItLW92ZXJyaWRlLWNoYW5uZWxzIiwKICAgICAgICAiLS1uby10ZXN0IiwKICAgICAgICAiLS1uby12ZXJpZnkiLAogICAgXQoKICAgIGlmIHNyY19jaGFubmVsczoKICAgICAgICBidWlsZF9jbWQgKz0gc3JjX2NoYW5uZWxzCgogICAgYnVpbGRfb3B0aW9ucyA9IGVudi5nZXQoIkJVSUxEX09QVElPTlMiLCAiIikKICAgIGlmIGJ1aWxkX29wdGlvbnM6CiAgICAgICAgYnVpbGRfb3B0aW9ucyA9IGJ1aWxkX29wdGlvbnMuc3BsaXQoIiAiKQogICAgICAgIHByaW50KGYiVXNpbmcgdGhlIGZvbGxvd2luZyBidWlsZCB0aW1lIG9wdGlvbnM6IHtidWlsZF9vcHRpb25zfSIsIGZsdXNoPVRydWUpCiAgICAgICAgYnVpbGRfY21kLmV4dGVuZChidWlsZF9vcHRpb25zKQoKICAgIHRyZWF0X2FzX3ByaXZhdGVfcmVwbyA9IGJvb2woZW52LmdldCgiVFJFQVRfQVNfUFJJVkFURSIsIFRydWUpKQogICAgd2l0aCBUZW1wb3JhcnlEaXJlY3RvcnkocHJlZml4PSJjb25kYV9wa2dzXyIpIGFzIHRtcF9wa2dzX2RpcjoKICAgICAgICAjIFNvbWUgcGFja2FnZXMgbWF5IHRyaWdnZXIgZG93bmxvYWRzIGR1cmluZyB0aGUgYnVpbGQvdGVzdCBwaGFzZS4KICAgICAgICAjIFNldHRpbmcgQ09OREFfUEtHU19ESVJTIGVuc3VyZXMgY29uZGEgaGFzIGEgd3JpdGFibGUgY2FjaGUgZGlyZWN0b3J5CiAgICAgICAgIyBmb3IgYW55IHJlcXVpcmVkIGRlcGVuZGVuY2llcywgYXZvaWRpbmcgcGVybWlzc2lvbiBlcnJvcnMgaW4gbG9ja2VkLWRvd24gZW52aXJvbm1lbnRzLgoKICAgICAgICAjIENob29zZSBjb250ZXh0IG1hbmFnZXIKICAgICAgICBpZiB0cmVhdF9hc19wcml2YXRlX3JlcG86CiAgICAgICAgICAgIGNtID0gaW5pdF9naXRfYXNrcGFzcyhTZWNyZXQoIkdIX0FDQ0VTU19UT0tFTiIsIGZhaWxfaWZfbWlzc2luZz1GYWxzZSksIGVudj1lbnYpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgY20gPSBudWxsY29udGV4dChlbnYpCgogICAgICAgIHdpdGggY20gYXMgZ2l0X2VudjoKICAgICAgICAgICAgZ2l0X2VudlsiQ09OREFfUEtHU19ESVJTIl0gPSB0bXBfcGtnc19kaXIKICAgICAgICAgICAgZ2l0X2VudlsiQ09OREFfQ0hBTk5FTF9QUklPUklUWSJdID0gInN0cmljdCIKCiAgICAgICAgICAgIHByaW50KGYiRXhlY3V0aW5nIGNvbW1hbmQ6IHsnICcuam9pbihidWlsZF9jbWQpfSIsIGZsdXNoPVRydWUpCiAgICAgICAgICAgIHJlc3VsdCA9IHN1YnByb2Nlc3MucnVuKGJ1aWxkX2NtZCwgZW52PWdpdF9lbnYsIHNoZWxsPXVzZV9zaGVsbCkgICMgbm9zZWMKICAgICAgICAgICAgaWYgcmVzdWx0LnJldHVybmNvZGUgIT0gMDoKICAgICAgICAgICAgICAgIHJhaXNlIFJ1bnRpbWVFcnJvcigiRXJyb3IgcnVubmluZyBjb25kYSBidWlsZCAtLW5vLXRlc3QuIFNlZSBhYm92ZSBmb3IgZXJyb3IuIikKCgpkZWYgZ2V0X2ZlZWRzdG9jayhmZWVkc3RvY2tfdXJsOiBzdHIsIGZlZWRzdG9ja19yZWY6IHN0cikgLT4gc3RyOgoKICAgIHByaW50KGYiRGVidWc6Q2xvbmluZyBmZWVkc3RvY2sgZnJvbSB7ZmVlZHN0b2NrX3VybH0uLi4iLCBmbHVzaD1UcnVlKQoKICAgIGdpdF9iaW5hcnkgPSBzdHIoZ2V0X2Jhc2VfZW52X2Jpbl9wYXRoKCkgLyAiZ2l0IikKCiAgICB0cmVhdF9hc19wcml2YXRlX3JlcG8gPSBib29sKG9zLmVudmlyb24uZ2V0KCJUUkVBVF9BU19QUklWQVRFIiwgVHJ1ZSkpCiAgICAjIENob29zZSBjb250ZXh0IG1hbmFnZXIKICAgIGlmIHRyZWF0X2FzX3ByaXZhdGVfcmVwbzoKICAgICAgICBjbSA9IGluaXRfZ2l0X2Fza3Bhc3MoU2VjcmV0KCJHSF9BQ0NFU1NfVE9LRU4iLCBmYWlsX2lmX21pc3Npbmc9RmFsc2UpKQogICAgZWxzZToKICAgICAgICBjbSA9IG51bGxjb250ZXh0KG9zLmVudmlyb24uY29weSgpKQoKICAgIHdpdGggY20gYXMgZ2l0X2VudjoKCiAgICAgICAgY2xvbmVfY21kID0gW2dpdF9iaW5hcnksICJjbG9uZSIsIGZlZWRzdG9ja191cmxdCiAgICAgICAgcmVzdWx0ID0gc3VicHJvY2Vzcy5ydW4oY2xvbmVfY21kLCBlbnY9Z2l0X2VudikgICMgbm9zZWMKICAgICAgICBpZiByZXN1bHQucmV0dXJuY29kZSAhPSAwOgogICAgICAgICAgICByYWlzZSBSdW50aW1lRXJyb3IoZiJFcnJvciBydW5uaW5nIGdpdCBjbG9uZSB7ZmVlZHN0b2NrX3VybH0uIFNlZSBhYm92ZSBmb3IgZXJyb3IuIikKCiAgICAgICAgZmVlZHN0b2NrX2RpciA9IG9zLnBhdGguYmFzZW5hbWUoZmVlZHN0b2NrX3VybCkKICAgICAgICBpZiBmZWVkc3RvY2tfZGlyLmVuZHN3aXRoKCIuZ2l0Iik6CiAgICAgICAgICAgIGZlZWRzdG9ja19kaXIgPSBmZWVkc3RvY2tfZGlyLnJzdHJpcCgiLmdpdCIpCgogICAgICAgICMgRmV0Y2ggdGhlIGV4YWN0IHRoaW5nIHdlIHBsYW4gdG8gY2hlY2sgb3V0IChicmFuY2gvdGFnL1NIQSkKICAgICAgICBmZXRjaF9jbWQgPSBbZ2l0X2JpbmFyeSwgIi1DIiwgZmVlZHN0b2NrX2RpciwgImZldGNoIiwgIi0tbm8tdGFncyIsICJvcmlnaW4iLCBmZWVkc3RvY2tfcmVmXQoKICAgICAgICByZXN1bHQgPSBzdWJwcm9jZXNzLnJ1bihmZXRjaF9jbWQsIGVudj1naXRfZW52KSAgIyBub3NlYwogICAgICAgIGlmIHJlc3VsdC5yZXR1cm5jb2RlICE9IDA6CiAgICAgICAgICAgIHJhaXNlIFJ1bnRpbWVFcnJvcihmIkVycm9yIHJ1bm5pbmcgZ2l0IGZldGNoIG9yaWdpbiB7ZmVlZHN0b2NrX3JlZn0uIikKCiAgICByZXN1bHQgPSBzdWJwcm9jZXNzLnJ1bihbZ2l0X2JpbmFyeSwgIi1DIiwgZmVlZHN0b2NrX2RpciwgImNoZWNrb3V0IiwgZmVlZHN0b2NrX3JlZl0pICAjIG5vc2VjCiAgICBpZiByZXN1bHQucmV0dXJuY29kZSAhPSAwOgogICAgICAgIHJhaXNlIFJ1bnRpbWVFcnJvcigKICAgICAgICAgICAgZiJFcnJvciBydW5uaW5nIGdpdCBjaGVja291dCB7ZmVlZHN0b2NrX2Rpcn0sIHtmZWVkc3RvY2tfcmVmfS4gU2VlIGFib3ZlIGZvciBlcnJvci4iCiAgICAgICAgKQoKICAgIHByaW50KGYiUmVub3JtYWxpemluZyBsaW5lIGVuZGluZ3MgaW4ge2ZlZWRzdG9ja19kaXJ9Li4uIiwgZmx1c2g9VHJ1ZSkKICAgIHJlc3VsdCA9IHN1YnByb2Nlc3MucnVuKFtnaXRfYmluYXJ5LCAiYWRkIiwgIi0tcmVub3JtYWxpemUiLCAiLiJdLCBjd2Q9c3RyKGZlZWRzdG9ja19kaXIpKSAgIyBub3NlYwogICAgaWYgcmVzdWx0LnJldHVybmNvZGUgIT0gMDoKICAgICAgICByYWlzZSBSdW50aW1lRXJyb3IoZiJFcnJvciBydW5uaW5nIGdpdCBhZGQgLS1yZW5vcm1hbGl6ZSB7ZmVlZHN0b2NrX2Rpcn0uIFNlZSBhYm92ZSBmb3IgZXJyb3IuIikKCiAgICByZXR1cm4gZmVlZHN0b2NrX2RpcgoKCmRlZiBnZXRfc2hhMjU2KHBhdGg6IFBhdGgpIC0+IHN0cjoKICAgIGggPSBoYXNobGliLnNoYTI1NigpCiAgICB3aXRoIG9wZW4ocGF0aCwgInJiIikgYXMgZjoKICAgICAgICBmb3IgY2h1bmsgaW4gaXRlcihsYW1iZGE6IGYucmVhZCg2NTUzNiksIGIiIik6CiAgICAgICAgICAgIGgudXBkYXRlKGNodW5rKQogICAgcmV0dXJuIGguaGV4ZGlnZXN0KCkKCgpkZWYgcGFja2FnZXNfZXhjbHVkZV9maWx0ZXIodGFyaW5mbzogdGFyZmlsZS5UYXJJbmZvKSAtPiB0YXJmaWxlLlRhckluZm8gfCBOb25lOgogICAgaWYgdGFyaW5mby5uYW1lID09ICJzb3VyY2VfY2FjaGVkLnRneiI6CiAgICAgICAgcmV0dXJuIE5vbmUKICAgIGlmIHRhcmluZm8ubmFtZSA9PSAic291cmNlX2NhY2hlIiBvciB0YXJpbmZvLm5hbWUuc3RhcnRzd2l0aCgic291cmNlX2NhY2hlLyIpOgogICAgICAgIHJldHVybiBOb25lCiAgICByZXR1cm4gdGFyaW5mbwoKCmRlZiBpc19jcmVkZW50aWFsX2hlbHBlcl9kZWZpbmVkKCkgLT4gYm9vbDoKICAgIGdpdF9iaW5hcnkgPSBzdHIoZ2V0X2Jhc2VfZW52X2Jpbl9wYXRoKCkgLyAiZ2l0IikKICAgIHJlc3VsdCA9IHN1YnByb2Nlc3MucnVuKAogICAgICAgIFtnaXRfYmluYXJ5LCAiY29uZmlnIiwgIi0tZ2V0IiwgImNyZWRlbnRpYWwuaGVscGVyIl0sIGNhcHR1cmVfb3V0cHV0PVRydWUsIHRleHQ9VHJ1ZQogICAgKSAgIyBub3NlYwogICAgb3V0cHV0ID0gcmVzdWx0LnN0ZG91dC5zdHJpcCgpCiAgICByZXR1cm4gYm9vbChvdXRwdXQpCgoKZGVmIHJlaW5zdGFsbF9naXQoKSAtPiBOb25lOgogICAgY29uZGFfYmluYXJ5ID0gc3RyKGdldF9jb25kYV9iaW4oKSkKICAgIGdpdF9iaW5hcnkgPSBzdHIoZ2V0X2Jhc2VfZW52X2Jpbl9wYXRoKCkgLyAiZ2l0IikKICAgICMgdW5pbnN0YWxsIGV4aXN0aW5nIGdpdCBwYWNrYWdlIGZyb20gdGhlIGVudgogICAgc3VicHJvY2Vzcy5ydW4oCiAgICAgICAgW2NvbmRhX2JpbmFyeSwgInJlbW92ZSIsICItLXllcyIsICJnaXQiXSwKICAgICAgICBjaGVjaz1UcnVlLAogICAgKSAgIyBub3NlYwoKICAgICMgaW5zdGFsbCB0aGUgbGF0ZXN0IGF2YWlsYWJsZSBnaXQgcGFja2FnZQogICAgc3VicHJvY2Vzcy5ydW4oCiAgICAgICAgW2NvbmRhX2JpbmFyeSwgImluc3RhbGwiLCAiLS15ZXMiLCAiZ2l0Il0sCiAgICAgICAgY2hlY2s9VHJ1ZSwKICAgICkgICMgbm9zZWMKCiAgICAjIGNvbmZpcm0gdmVyc2lvbgogICAgc3VicHJvY2Vzcy5ydW4oW2dpdF9iaW5hcnksICItLXZlcnNpb24iXSwgY2hlY2s9VHJ1ZSkgICMgbm9zZWMKICAgIHN1YnByb2Nlc3MucnVuKFtnaXRfYmluYXJ5LCAiY29uZmlnIiwgIi0tc3lzdGVtIiwgImNyZWRlbnRpYWwuaGVscGVyIiwgIiJdLCBjaGVjaz1UcnVlKSAgIyBub3NlYwogICAgc3VicHJvY2Vzcy5ydW4oW2dpdF9iaW5hcnksICJjb25maWciLCAiLS1zeXN0ZW0iLCAiY29yZS5hdXRvY3JsZiIsICJmYWxzZSJdLCBjaGVjaz1UcnVlKSAgIyBub3NlYwogICAgc3VicHJvY2Vzcy5ydW4oW2dpdF9iaW5hcnksICJjb25maWciLCAiLS1zeXN0ZW0iLCAiY29yZS5sb25ncGF0aHMiLCAidHJ1ZSJdLCBjaGVjaz1UcnVlKSAgIyBub3NlYwogICAgc3VicHJvY2Vzcy5ydW4oW2dpdF9iaW5hcnksICJjb25maWciLCAiLS1zeXN0ZW0iLCAic2FmZS5kaXJlY3RvcnkiLCAiKiJdLCBjaGVjaz1UcnVlKSAgIyBub3NlYwoKCmRlZiBtYWluKCk6CiAgICBvcy5lbnZpcm9uWyJDT05EQV9SRVBPUlRfRVJST1JTIl0gPSAiZmFsc2UiCgogICAgc2tpcF90Z3pfYXJjaGl2ZSA9IEZhbHNlCiAgICBpZiBzeXMucGxhdGZvcm0gPT0gIndpbjMyIjoKICAgICAgICAjIE5lZWQgdG8gc2tpcCwgYmVjYXVzZSB3aW5kb3dzIHdpbGwgc2lnbiBhZnRlciB0aGlzIHNjcmlwdAogICAgICAgIHNraXBfdGd6X2FyY2hpdmUgPSBUcnVlCgogICAgaWYgb3MubmFtZSA9PSAibnQiIGFuZCBib29sKG9zLmVudmlyb24uZ2V0KCJUUkVBVF9BU19QUklWQVRFIiwgVHJ1ZSkpOgogICAgICAgIHJlaW5zdGFsbF9naXQoKQoKICAgICMgQ2hlY2sgZm9yIGNvbmRhX2J1aWxkX2NvbmZpZ19wYnBfZ2VuZXJhdGVkLnlhbWwKICAgIGlmIG5vdCBQYXRoKCJjb25kYV9idWlsZF9jb25maWdfcGJwX2dlbmVyYXRlZC55YW1sIikuZXhpc3RzKCk6CiAgICAgICAgcHJpbnQoImNvbmRhX2J1aWxkX2NvbmZpZ19wYnBfZ2VuZXJhdGVkLnlhbWwgZG9lcyBub3QgZXhpc3QuIikKICAgICAgICByZXR1cm4gMQoKICAgIHBsYXRmb3JtID0gb3MuZW52aXJvbi5nZXQoIlBMQVRGT1JNIikKICAgIGlmIG5vdCBwbGF0Zm9ybToKICAgICAgICBwcmludCgiRXJyb3I6IFBMQVRGT1JNIGVudmlyb25tZW50IHZhcmlhYmxlIGlzIG5vdCBzZXQuIFBsZWFzZSBwcm92aWRlIHRoZSBQTEFURk9STSIpCiAgICAgICAgcmV0dXJuIDEKCiAgICBmZWVkc3RvY2tfdXJsID0gb3MuZW52aXJvbi5nZXQoIkZFRURTVE9DS19VUkwiKQogICAgaWYgbm90IGZlZWRzdG9ja191cmw6CiAgICAgICAgcHJpbnQoIkVycm9yOiBUaGUgZW52aXJvbm1lbnQgdmFyaWFibGUgRkVFRFNUT0NLX1VSTCBpcyBub3Qgc2V0LiIpCiAgICAgICAgcmV0dXJuIDEKCiAgICBmZWVkc3RvY2tfcmVmID0gb3MuZW52aXJvbi5nZXQoIkZFRURTVE9DS19SRUYiKQogICAgaWYgbm90IGZlZWRzdG9ja19yZWY6CiAgICAgICAgcHJpbnQoIkVycm9yOiBUaGUgZW52aXJvbm1lbnQgdmFyaWFibGUgRkVFRFNUT0NLX1JFRiBpcyBub3Qgc2V0LiIpCiAgICAgICAgcmV0dXJuIDEKCiAgICByZWNpcGVfZGlyID0gb3MuZW52aXJvbi5nZXQoIlJFQ0lQRV9ESVIiKQoKICAgIHJ1bl9mcm9tX2RlcHMgPSBvcy5lbnZpcm9uLmdldCgiUlVOX0ZST01fREVQRU5ERU5DSUVTIikKICAgIGlmIG5vdCBydW5fZnJvbV9kZXBzOgogICAgICAgIHByaW50KAogICAgICAgICAgICAiRXJyb3I6IFRoZSBlbnZpcm9ubWVudCB2YXJpYWJsZSBSVU5fRlJPTV9ERVBFTkRFTkNJRVMgaXMgbm90IHNldC5cblBsZWFzZSBwcm92aWRlIGEgYm9vbGVhbiBmbGFnICh0cnVlL2ZhbHNlKSB0byBpbmRpY2F0ZSB3aGV0aGVyIHRvIHRlc3QgZnJvbSBkZXBlbmRlbmNpZXMuIgogICAgICAgICkKICAgICAgICByZXR1cm4gMQoKICAgIGRlcGVuZGVuY2llcyA9IG9zLmVudmlyb24uZ2V0KCJERVBFTkRFTkNJRVMiKQogICAgaWYgcnVuX2Zyb21fZGVwcy5sb3dlcigpID09ICJ0cnVlIiBhbmQgbm90IGRlcGVuZGVuY2llczoKICAgICAgICBwcmludCgKICAgICAgICAgICAgIkVycm9yOiBUaGUgZW52aXJvbm1lbnQgdmFyaWFibGUgREVQRU5ERU5DSUVTIGlzIG5vdCBzZXQuXG5QbGVhc2UgcHJvdmlkZSBhIHNwYWNlLXNlcGFyYXRlZCBsaXN0IG9mIHRhc2sgSURzIGZvciB0aGUgZGVwZW5kZW5jaWVzIHRoYXQgbmVlZCB0byBiZSBidWlsdC4iCiAgICAgICAgKQogICAgICAgIHJldHVybiAxCgogICAgZXh0X3NyY19jaGFubmVscyA9IFtjaCBmb3IgY2ggaW4gb3MuZW52aXJvbi5nZXQoIlNSQ19DSEFOTkVMUyIsICIiKS5zdHJpcCgpLnNwbGl0KCIsIikgaWYgY2hdCiAgICBpbnRlcm5hbF9zcmNfY2hhbm5lbHMgPSBbXQoKICAgIHRyeToKCiAgICAgICAgaWYgcnVuX2Zyb21fZGVwcy5sb3dlcigpID09ICJ0cnVlIjoKICAgICAgICAgICAgdGVtcF9jaGFubmVsID0gUGF0aCgidGVtcF9jaGFubmVsIikKICAgICAgICAgICAgY29uZGFfaW5kZXgodGVtcF9jaGFubmVsLCB1c2Vfc2hlbGwpCiAgICAgICAgICAgIHRlbXBfY2hhbm5lbF91cmkgPSAoUGF0aChvcy5nZXRjd2QoKSkgLyB0ZW1wX2NoYW5uZWwpLnJlc29sdmUoKS5hc191cmkoKQogICAgICAgICAgICBpbnRlcm5hbF9zcmNfY2hhbm5lbHMgKz0gWyItYyIsIHRlbXBfY2hhbm5lbF91cmkucnN0cmlwKCIvIikgKyAiLyJdCgogICAgICAgIHB1YmxpY19kaXIgPSBQYXRoKCJwdWJsaWMiKQogICAgICAgIHB1YmxpY19kaXIubWtkaXIocGFyZW50cz1UcnVlLCBleGlzdF9vaz1UcnVlKQogICAgICAgIHNyY19jYWNoZSA9IFBhdGgoInNyY19jYWNoZSIpCiAgICAgICAgc3JjX2NhY2hlLm1rZGlyKHBhcmVudHM9VHJ1ZSwgZXhpc3Rfb2s9VHJ1ZSkKCiAgICAgICAgZmVlZHN0b2NrX2RpciA9IGdldF9mZWVkc3RvY2soZmVlZHN0b2NrX3VybCwgZmVlZHN0b2NrX3JlZikKICAgICAgICAjIENvbnN0cnVjdCBmdWxsIHBhdGggdG8gdGhlIGZlZWRzdG9jay4gSW5jbHVkZSByZWNpcGUgZGlyIGlmIGF2YWlsYWJsZS4KICAgICAgICBmZWVkc3RvY2tfcGF0aCA9IFBhdGgoZmVlZHN0b2NrX2RpcikKICAgICAgICBpZiByZWNpcGVfZGlyOgogICAgICAgICAgICBmZWVkc3RvY2tfcGF0aCAvPSByZWNpcGVfZGlyCgogICAgICAgICMgQ2hvb3NlIGNvbnRleHQgbWFuYWdlcgogICAgICAgIGlmIGV4dF9zcmNfY2hhbm5lbHM6CiAgICAgICAgICAgIGV4dF9tdWx0aWNoYW5uZWxfbmFtZSA9ICJwYnBfc3JjX211bHRpY2hhbm5lbCIKICAgICAgICAgICAgY20gPSB0ZW1wb3JhcnlfY29uZGFyY193aXRoX211bHRpY2hhbm5lbHMoCiAgICAgICAgICAgICAgICBjaGFubmVsX25hbWU9ZXh0X211bHRpY2hhbm5lbF9uYW1lLCBjaGFubmVscz1leHRfc3JjX2NoYW5uZWxzLCB1c2Vfc2hlbGw9dXNlX3NoZWxsCiAgICAgICAgICAgICkKICAgICAgICAgICAgc3JjX2NoYW5uZWxzID0gaW50ZXJuYWxfc3JjX2NoYW5uZWxzICsgWyItYyIsIGV4dF9tdWx0aWNoYW5uZWxfbmFtZV0KICAgICAgICBlbHNlOgogICAgICAgICAgICBjbSA9IG51bGxjb250ZXh0KG9zLmVudmlyb24uY29weSgpKQogICAgICAgICAgICBzcmNfY2hhbm5lbHMgPSBpbnRlcm5hbF9zcmNfY2hhbm5lbHMKCiAgICAgICAgd2l0aCBjbSBhcyBjb25kYV9lbnY6CiAgICAgICAgICAgIGNyZWF0ZV9idWlsZF9lbnYoc3JjX2NoYW5uZWxzLCBjb25kYV9lbnYpCgogICAgICAgICAgICBjb25kYV9idWlsZChmZWVkc3RvY2tfcGF0aCwgcHVibGljX2Rpciwgc3JjX2NoYW5uZWxzLCBjb25kYV9lbnYsIHNyY19jYWNoZS5hYnNvbHV0ZSgpKQoKICAgICAgICBmb3IgZmlsZSBpbiBQYXRoKHB1YmxpY19kaXIpLnJnbG9iKCIqLmNvbmRhIik6CiAgICAgICAgICAgIHByaW50KGYiVHJhbnNtdXRpbmcgZmlsZToge2ZpbGV9IiwgZmx1c2g9VHJ1ZSkKICAgICAgICAgICAgY3BoX2Vudl9wYXRoID0gZ2V0X2hvbWVfZGlyKCkgLyAiY3BoIgogICAgICAgICAgICByZXN1bHQgPSBzdWJwcm9jZXNzLnJ1bigKICAgICAgICAgICAgICAgIFsKICAgICAgICAgICAgICAgICAgICBzdHIoZ2V0X2NvbmRhX2JpbigpKSwKICAgICAgICAgICAgICAgICAgICAicnVuIiwKICAgICAgICAgICAgICAgICAgICAiLS1wcmVmaXgiLAogICAgICAgICAgICAgICAgICAgIHN0cihjcGhfZW52X3BhdGgpLAogICAgICAgICAgICAgICAgICAgICJjcGgiLAogICAgICAgICAgICAgICAgICAgICJ0cmFuc211dGUiLAogICAgICAgICAgICAgICAgICAgICItLXpzdGQtY29tcHJlc3Npb24tbGV2ZWwiLAogICAgICAgICAgICAgICAgICAgICIxNSIsCiAgICAgICAgICAgICAgICAgICAgZiJ7ZmlsZX0iLAogICAgICAgICAgICAgICAgICAgICIudGFyLmJ6MiIsCiAgICAgICAgICAgICAgICBdLAogICAgICAgICAgICAgICAgc2hlbGw9dXNlX3NoZWxsLAogICAgICAgICAgICApICAjIG5vc2VjCiAgICAgICAgICAgIGlmIHJlc3VsdC5yZXR1cm5jb2RlICE9IDA6CiAgICAgICAgICAgICAgICByYWlzZSBSdW50aW1lRXJyb3IoZiJFcnJvciB0cmFuc211dGluZyBmaWxlIHtmaWxlfS4gU2VlIGFib3ZlIGZvciBlcnJvci4iKQogICAgICAgICAgICBwcmludChmIkZpbGUgdHJhbnNtdXRlZDoge2ZpbGV9LiIsIGZsdXNoPVRydWUpCgogICAgICAgIGZvciByb290LCBkaXJzLCBmaWxlcyBpbiBvcy53YWxrKHB1YmxpY19kaXIpOgogICAgICAgICAgICBmb3IgZmlsZSBpbiBmaWxlczoKICAgICAgICAgICAgICAgIGlmIGZpbGUuZW5kc3dpdGgoKCIuanNvbiIsICIuaHRtbCIsICIuZGIiKSk6CiAgICAgICAgICAgICAgICAgICAgZmlsZV9wYXRoID0gb3MucGF0aC5qb2luKHJvb3QsIGZpbGUpCgogICAgICAgICAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgICAgICAgICAgb3MucmVtb3ZlKGZpbGVfcGF0aCkKICAgICAgICAgICAgICAgICAgICAgICAgcHJpbnQoZiJEZWxldGVkOiB7ZmlsZV9wYXRofSIpCiAgICAgICAgICAgICAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbiBhcyBlOgogICAgICAgICAgICAgICAgICAgICAgICBwcmludChmIkZhaWxlZCB0byBkZWxldGUge2ZpbGVfcGF0aH06IHtlfSIpCgogICAgICAgIHByaW50KCJBcmNoaXZpbmcgdGhlIHVzZWQgc291cmNlIGlucHV0cy4uLiIpCiAgICAgICAgcHVibGljX3NyY19kaXIgPSBwdWJsaWNfZGlyIC8gInNvdXJjZV9jYWNoZSIKICAgICAgICBwdWJsaWNfc3JjX2Rpci5ta2RpcihwYXJlbnRzPVRydWUsIGV4aXN0X29rPVRydWUpCiAgICAgICAgIyBTb21lIHNvdXJjZXMgKGZpbGUsIGdpdCwgc3ZuKSBtYXkgbm90IGNyZWF0ZSB0aGlzIGRpcmVjdG9yeSwgc28gY3JlYXRlIGl0IHRvIHByZXZlbnQgYnJlYWthZ2UuCiAgICAgICAgIyBXZSBuZWVkIHRvIGNhcHR1cmUgdGhlc2UgYXQgc29tZSBwb2ludC4gVHJhY2tlZCB3aXRoIFNJUi0yMzk3LgogICAgICAgIChzcmNfY2FjaGUgLyAic3JjX2NhY2hlIikubWtkaXIocGFyZW50cz1UcnVlLCBleGlzdF9vaz1UcnVlKQogICAgICAgIGZvciBmaWxlIGluIChzcmNfY2FjaGUgLyAic3JjX2NhY2hlIikuaXRlcmRpcigpOgogICAgICAgICAgICBuZXdfa2V5ID0gZiJ7Z2V0X3NoYTI1NihmaWxlKX0tXy17ZmlsZS5uYW1lfSIKICAgICAgICAgICAgc2h1dGlsLm1vdmUoZmlsZSwgcHVibGljX3NyY19kaXIgLyBuZXdfa2V5KQoKICAgICAgICB3aXRoIHRhcmZpbGUub3Blbigic291cmNlX2NhY2hlZC50Z3oiLCAidzpneiIsIGZvcm1hdD10YXJmaWxlLlBBWF9GT1JNQVQpIGFzIHRhcjoKICAgICAgICAgICAgdGFyLmFkZChwdWJsaWNfc3JjX2RpciwgYXJjbmFtZT0iLiIsIHJlY3Vyc2l2ZT1UcnVlKQoKICAgICAgICBzaHV0aWwubW92ZSgic291cmNlX2NhY2hlZC50Z3oiLCBwdWJsaWNfZGlyIC8gInNvdXJjZV9jYWNoZWQudGd6IikKICAgICAgICBwcmludCgiU291cmNlIGNhY2hlIGFyY2hpdmVkIHN1Y2Nlc3NmdWxseS4iKQoKICAgICAgICBwcmludCgiQXJjaGl2aW5nIHRoZSBjb25kYSBwYWNrYWdlcyBpbiB0aGUgcHVibGljIGZvbGRlci4uLiIpCiAgICAgICAgaWYgc2tpcF90Z3pfYXJjaGl2ZToKICAgICAgICAgICAgcHJpbnQoIi4uLlNraXBwZWQgc28gd2UgY2FuIHNpZ24gdGhlIGZpbGVzIikKICAgICAgICBlbHNlOgogICAgICAgICAgICB3aXRoIHRhcmZpbGUub3BlbigicGFja2FnZXMudGd6IiwgInc6Z3oiLCBmb3JtYXQ9dGFyZmlsZS5QQVhfRk9STUFUKSBhcyB0YXI6CiAgICAgICAgICAgICAgICB0YXIuYWRkKHB1YmxpY19kaXIsIGFyY25hbWU9Ii4iLCByZWN1cnNpdmU9VHJ1ZSwgZmlsdGVyPXBhY2thZ2VzX2V4Y2x1ZGVfZmlsdGVyKQoKICAgICAgICAgICAgc2h1dGlsLm1vdmUoInBhY2thZ2VzLnRneiIsIHB1YmxpY19kaXIgLyAicGFja2FnZXMudGd6IikKICAgICAgICAgICAgcHJpbnQoIkNvbmRhIHBhY2thZ2VzIGFyY2hpdmVkIHN1Y2Nlc3NmdWxseS4iKQoKICAgICAgICBwcmludCgiPT09PT0gUGFja2FnZSBidWlsZCBhbmQgcHJvY2Vzc2luZyBjb21wbGV0ZWQhID09PT09IikKICAgIGV4Y2VwdCBFeGNlcHRpb24gYXMgZToKICAgICAgICBwcmludChmIkVycm9yOiB7c3RyKGUpfSIpCiAgICAgICAgcmV0dXJuIDEKCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgc3lzLmV4aXQobWFpbigpKQo=",
+      "shared_utils.py": "aW1wb3J0IGZ1bmN0b29scwppbXBvcnQganNvbgppbXBvcnQgb3MKaW1wb3J0IHNodXRpbAppbXBvcnQgc3VicHJvY2VzcyAgIyBub3NlYwppbXBvcnQgc3lzCmltcG9ydCB0YXJmaWxlCmltcG9ydCB0ZW1wZmlsZQppbXBvcnQgdGltZQpmcm9tIGNvbnRleHRsaWIgaW1wb3J0IGNvbnRleHRtYW5hZ2VyCmZyb20gcGF0aGxpYiBpbXBvcnQgUGF0aApmcm9tIHR5cGluZyBpbXBvcnQgQW55CmZyb20gdXJsbGliLmVycm9yIGltcG9ydCBIVFRQRXJyb3IKZnJvbSB1cmxsaWIucmVxdWVzdCBpbXBvcnQgUmVxdWVzdCwgdXJsb3BlbgoKaW1wb3J0IGJvdG8zCmltcG9ydCB5YW1sCgp1c2Vfc2hlbGwgPSBGYWxzZQppZiBvcy5uYW1lID09ICJudCI6CiAgICB1c2Vfc2hlbGwgPSBUcnVlCgoKZGVmIGdldF9jb25kYV9iaW4oKSAtPiBQYXRoOgogICAgIyBjb25kYSBpdHNlbGYgaXMgYSBzcGVjaWFsIGNhc2UsIGFzIGl0J3Mgbm90IGFuIGV4ZWN1dGFibGUgYXMgc3VjaC4gSXQncwogICAgIyBkaWZmZXJlbnQgb24gZWFjaCBwbGF0Zm9ybSBhbmQgd2Ugd2FudCB0byBtYWtlIHN1cmUgd2UncmUgcnVubmluZyB0aGUKICAgICMgY29ycmVjdCBvbmUuCiAgICBpZiBzeXMucGxhdGZvcm0gPT0gIndpbjMyIjoKICAgICAgICAjIFRPRE86IHRyaXBsZSBjaGVjayBpZiB0aGlzIGlzIHRoZSBjb3JyZWN0IHBhdGggd2hlbiBydW5uaW5nIGNvbmRhIGJ1aWxkCiAgICAgICAgcmV0dXJuIFBhdGgoIkM6XFxtaW5pY29uZGEzXFxjb25kYWJpblxcY29uZGEuYmF0IikucmVzb2x2ZSgpCiAgICBlbGlmIHN5cy5wbGF0Zm9ybSA9PSAiZGFyd2luIjoKICAgICAgICByZXR1cm4gUGF0aCgiL29wdC9taW5pY29uZGEzL2Jpbi9jb25kYSIpLnJlc29sdmUoKQogICAgZWxpZiBzeXMucGxhdGZvcm0gPT0gImxpbnV4IjoKICAgICAgICByZXR1cm4gUGF0aCgiL29wdC9jb25kYS9iaW4vY29uZGEiKS5yZXNvbHZlKCkKICAgIGVsc2U6CiAgICAgICAgcmFpc2UgVmFsdWVFcnJvcihmIlVuc3VwcG9ydGVkIHBsYXRmb3JtOiB7c3lzLnBsYXRmb3JtfSIpCgoKZGVmIGdldF9iYXNlX2Vudl9iaW5fcGF0aCgpIC0+IFBhdGg6CiAgICAjIHRoaXMgaGVscCBmdW5jdGlvbiBlbmFibGVzIHVzIHRvIGV4cGxpY2l0bHkgdXNlIHRoZSBjb25kYSBiaW4gcGF0aAogICAgIyB3aXRob3V0IGV4cGxpY2l0bHkgaGF2aW5nIGl0IG9uIHRoZSBwYXRoCiAgICAjIERPIE5PVCBVU0UgVEhJUyBUTyBJTlZPS0UgYGNvbmRhYCAtIHVzZSBnZXRfY29uZGFfYmluKCkgZm9yIHRoYXQKICAgIGlmIHN5cy5wbGF0Zm9ybSA9PSAid2luMzIiOgogICAgICAgIHJldHVybiBQYXRoKCJDOlxcbWluaWNvbmRhM1xcTGlicmFyeVxcYmluIikucmVzb2x2ZSgpCiAgICBlbGlmIHN5cy5wbGF0Zm9ybSA9PSAiZGFyd2luIjoKICAgICAgICByZXR1cm4gUGF0aCgiL29wdC9taW5pY29uZGEzL2JpbiIpLnJlc29sdmUoKQogICAgZWxpZiBzeXMucGxhdGZvcm0gPT0gImxpbnV4IjoKICAgICAgICByZXR1cm4gUGF0aCgiL29wdC9jb25kYS9iaW4iKS5yZXNvbHZlKCkKICAgIGVsc2U6CiAgICAgICAgcmFpc2UgVmFsdWVFcnJvcihmIlVuc3VwcG9ydGVkIHBsYXRmb3JtOiB7c3lzLnBsYXRmb3JtfSIpCgoKZGVmIGdldF9ob21lX2RpcigpIC0+IFBhdGg6CiAgICBob21lX2RpciA9IFBhdGguaG9tZSgpCiAgICBpZiBub3QgaG9tZV9kaXI6CiAgICAgICAgcmFpc2UgUnVudGltZUVycm9yKCJFcnJvcjogSG9tZSBkaXJlY3Rvcnkgbm90IGZvdW5kLiIpCiAgICBwcmludChmIkRlYnVnOkZvdW5kIGhvbWUgZGlyZWN0b3J5OiB7c3RyKGhvbWVfZGlyKX0iLCBmbHVzaD1UcnVlKQogICAgcmV0dXJuIGhvbWVfZGlyCgoKZGVmIGNvbmRhX2luZGV4KHRlbXBfY2hhbm5lbDogUGF0aCwgdXNlX3NoZWxsOiBib29sKSAtPiBOb25lOgoKICAgIHByaW50KGYicnVubmluZyBjb25kYSBpbmRleCBvbiB7dGVtcF9jaGFubmVsLnJlc29sdmUoKX0iLCBmbHVzaD1UcnVlKQoKICAgIHJlc3VsdCA9IHN1YnByb2Nlc3MucnVuKFtzdHIoZ2V0X2NvbmRhX2JpbigpKSwgImluZGV4Iiwgc3RyKHRlbXBfY2hhbm5lbCldLCBzaGVsbD11c2Vfc2hlbGwpICAjIG5vc2VjCgogICAgaWYgcmVzdWx0LnJldHVybmNvZGUgIT0gMDoKICAgICAgICByYWlzZSBSdW50aW1lRXJyb3IoZiJFcnJvciBydW5uaW5nIGNvbmRhIGluZGV4IG9uIHt0ZW1wX2NoYW5uZWx9LiBTZWUgYWJvdmUgZm9yIGVycm9yLiIpCgogICAgcHJpbnQoImNvbXBsZXRlZCBjb25kYSBpbmRleCIsIGZsdXNoPVRydWUpCgoKZGVmIGNsZWFuX2NvbmRhX2NhY2hlKHVzZV9zaGVsbDogYm9vbCkgLT4gTm9uZToKICAgIHJlc3VsdCA9IHN1YnByb2Nlc3MucnVuKFtzdHIoZ2V0X2NvbmRhX2JpbigpKSwgImNsZWFuIiwgIi1mIiwgIi15Il0sIHNoZWxsPXVzZV9zaGVsbCkgICMgbm9zZWMKICAgIGlmIHJlc3VsdC5yZXR1cm5jb2RlICE9IDA6CiAgICAgICAgcmFpc2UgUnVudGltZUVycm9yKCJGYWlsZWQgdG8gY2xlYW4gY29uZGEgY2FjaGUuIikKCgpAY29udGV4dG1hbmFnZXIKZGVmIHRlbXBvcmFyeV9jb25kYXJjX3dpdGhfbXVsdGljaGFubmVscygKICAgIGNoYW5uZWxfbmFtZTogc3RyLCBjaGFubmVsczogbGlzdFtzdHJdLCBiYXNlX2VudjogZGljdFtzdHIsIHN0cl0gfCBOb25lID0gTm9uZSwgdXNlX3NoZWxsOiBib29sID0gRmFsc2UKKToKICAgIGVudiA9IChiYXNlX2VudiBvciBvcy5lbnZpcm9uKS5jb3B5KCkKCiAgICBpZiBub3QgY2hhbm5lbHM6CiAgICAgICAgeWllbGQgZW52CiAgICAgICAgcmV0dXJuCgogICAgc291cmNlcyA9IGdldF9jb25kYV9jb25maWdfZmlsZV9zb3VyY2VzKCkKICAgIHByaW50KGYiRm91bmQgY29uZGEgY29uZmlnIHNvdXJjZXM6IHtzb3VyY2VzfSIpCgogICAgIyBDdXJyZW50bHksIHRoZXJlIHdpbGwgYmUgdHlwaWNhbGx5IG5vIG1vcmUgdGhhbiAxIHNvdXJjZS4KICAgIGlmIGxlbihzb3VyY2VzKSA+IDE6CiAgICAgICAgcmFpc2UgUnVudGltZUVycm9yKCJGb3VuZCBtdWx0aXBsZSBjb25kYSBjb25maWd1cmF0aW9uIHNvdXJjZXMuIFVuYWJsZSB0byBwcm9jZWVkLi4uIikKCiAgICBiYXNlX3NyYyA9IHNvdXJjZXNbMF0gaWYgc291cmNlcyBlbHNlIE5vbmUKCiAgICB0bXBkaXIgPSBQYXRoKHRlbXBmaWxlLm1rZHRlbXAocHJlZml4PSJjb25kYXJjLSIpKQogICAgZHN0ID0gdG1wZGlyIC8gImNvbmRhcmMueWFtbCIKCiAgICAjIENvcHkgdGhlIG9yaWdpbmFsIGNvbmZpZyB0byBhIHRlbXBvcmFyeSBsb2NhdGlvbgogICAgaWYgYmFzZV9zcmM6CiAgICAgICAgc2h1dGlsLmNvcHkoYmFzZV9zcmMsIGRzdCkKICAgIGVsc2U6CiAgICAgICAgZHN0LndyaXRlX3RleHQoIiIpCgogICAgdHJ5OgogICAgICAgIGVudlsiQ09OREFSQyJdID0gc3RyKGRzdCkKCiAgICAgICAgIyBFeHBhbmQgYW55IGV4aXN0aW5nIG11bHRpY2hhbm5lbCByZWZlcmVuY2VzIChlLmcuLCAiZGVmYXVsdHMiKQogICAgICAgIGV4aXN0aW5nX211bHRpY2hhbm5lbHMgPSBnZXRfY3VycmVudF9tdWx0aWNoYW5uZWxzKCkKICAgICAgICBleHBhbmRlZDogbGlzdFtzdHJdID0gW10KICAgICAgICBmb3IgbmFtZSBpbiBzZXQoY2hhbm5lbHMpOgogICAgICAgICAgICBpZiBuYW1lIGluIGV4aXN0aW5nX211bHRpY2hhbm5lbHM6CiAgICAgICAgICAgICAgICBleHBhbmRlZC5leHRlbmQoZXhpc3RpbmdfbXVsdGljaGFubmVsc1tuYW1lXSkKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIGV4cGFuZGVkLmFwcGVuZChuYW1lKQoKICAgICAgICBrZXkgPSBmImN1c3RvbV9tdWx0aWNoYW5uZWxzLntjaGFubmVsX25hbWV9IgoKICAgICAgICAjIHJlbW92ZSBleGlzdGluZyBrZXkgKGlnbm9yZSBmYWlsdXJlIGlmIGl0IGRvZXNuJ3QgZXhpc3QpCiAgICAgICAgc3VicHJvY2Vzcy5ydW4oCiAgICAgICAgICAgIFtzdHIoZ2V0X2NvbmRhX2JpbigpKSwgImNvbmZpZyIsICItLWZpbGUiLCBzdHIoZHN0KSwgIi0tcmVtb3ZlLWtleSIsIGtleV0sCiAgICAgICAgICAgIGNoZWNrPUZhbHNlLAogICAgICAgICAgICBzdGRvdXQ9c3VicHJvY2Vzcy5ERVZOVUxMLAogICAgICAgICAgICBzdGRlcnI9c3VicHJvY2Vzcy5ERVZOVUxMLAogICAgICAgICAgICBlbnY9ZW52LAogICAgICAgICAgICBzaGVsbD11c2Vfc2hlbGwsCiAgICAgICAgKSAgIyBub3NlYwoKICAgICAgICAjIEFkZCBhIGN1c3RvbSBtdWx0aWNoYW5uZWwgd2l0aCBjaGFubmVscy4KICAgICAgICBmb3IgY2ggaW4gZXhwYW5kZWQ6CiAgICAgICAgICAgIHN1YnByb2Nlc3MucnVuKAogICAgICAgICAgICAgICAgW3N0cihnZXRfY29uZGFfYmluKCkpLCAiY29uZmlnIiwgIi0tZmlsZSIsIHN0cihkc3QpLCAiLS1hZGQiLCBrZXksIGNoXSwKICAgICAgICAgICAgICAgIGNoZWNrPVRydWUsCiAgICAgICAgICAgICAgICBlbnY9ZW52LAogICAgICAgICAgICAgICAgc2hlbGw9dXNlX3NoZWxsLAogICAgICAgICAgICApICAjIG5vc2VjCiAgICAgICAgeWllbGQgZW52CiAgICBmaW5hbGx5OgogICAgICAgIHRyeToKICAgICAgICAgICAgc2h1dGlsLnJtdHJlZSh0bXBkaXIsIGlnbm9yZV9lcnJvcnM9VHJ1ZSkKICAgICAgICBleGNlcHQgT1NFcnJvcjoKICAgICAgICAgICAgcGFzcwoKCiIiIgogICAgUmV0cnkgZGVjb3JhdG9yIHdpdGggZXhwb25lbnRpYWwgYmFja29mZgogICAgbWF4X3JldHJpZXM6IG1heGltdW0gbnVtYmVyIG9mIHJldHJpZXMKICAgIGluaXRpYWxfYmFja29mZjogaW5pdGlhbCB3YWl0IHRpbWUgaW4gc2Vjb25kcwoiIiIKCgpkZWYgcmV0cnkobWF4X3JldHJpZXM6IGludCwgaW5pdGlhbF9iYWNrb2ZmOiBmbG9hdCk6CiAgICBkZWYgZGVjb3JhdG9yKGZ1bmMpOgogICAgICAgIEBmdW5jdG9vbHMud3JhcHMoZnVuYykKICAgICAgICBkZWYgd3JhcHBlcigqYXJncywgKiprd2FyZ3MpOgogICAgICAgICAgICByZXRyaWVzID0gMAogICAgICAgICAgICB3aGlsZSByZXRyaWVzIDwgbWF4X3JldHJpZXM6CiAgICAgICAgICAgICAgICB0cnk6CiAgICAgICAgICAgICAgICAgICAgcmV0dXJuIGZ1bmMoKmFyZ3MsICoqa3dhcmdzKQogICAgICAgICAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbiBhcyBlOgogICAgICAgICAgICAgICAgICAgIHdhaXRfdGltZSA9IGluaXRpYWxfYmFja29mZiAqIDIgKiogKHJldHJpZXMpCiAgICAgICAgICAgICAgICAgICAgcmV0cmllcyArPSAxCiAgICAgICAgICAgICAgICAgICAgaWYgcmV0cmllcyA+PSBtYXhfcmV0cmllczoKICAgICAgICAgICAgICAgICAgICAgICAgcHJpbnQoZiJNYXggcmV0cmllcyAoe21heF9yZXRyaWVzfSkgb2YgZnVuY3Rpb24ge2Z1bmMuX19uYW1lX199IGV4Y2VlZGVkOiB7ZX0iKQogICAgICAgICAgICAgICAgICAgICAgICByYWlzZQogICAgICAgICAgICAgICAgICAgIHByaW50KGYiQXR0ZW1wdCB7cmV0cmllc30gb2Yge2Z1bmMuX19uYW1lX199IGZhaWxlZDoge2V9LiBSZXRyeWluZyBpbiB7d2FpdF90aW1lOi4xZn1zIikKICAgICAgICAgICAgICAgICAgICB0aW1lLnNsZWVwKHdhaXRfdGltZSkKCiAgICAgICAgcmV0dXJuIHdyYXBwZXIKCiAgICByZXR1cm4gZGVjb3JhdG9yCgoKQHJldHJ5KG1heF9yZXRyaWVzPTUsIGluaXRpYWxfYmFja29mZj0yLjApCmRlZiBkb3dubG9hZF9maWxlKHBhY2thZ2VzX3VybDogc3RyLCBvdXRwdXRfcGF0aDogUGF0aCkgLT4gTm9uZToKICAgICMgVXNlIGEgdXNlciBhZ2VudCBmb3IgcHVsbGluZyBzZWUgdGhyZWFkOiBodHRwczovL2FuYWNvbmRhLnNsYWNrLmNvbS9hcmNoaXZlcy9DMDFUWFBLSk5BRC9wMTc1MDc5ODgxMzczMjgxOQogICAgIyA+IEl0IGlzIGEgY2xvdWRmbGFyZSBtYW5hZ2VkIHJ1bGUgdG8gcmVkdWNlIGV4cGxvaXRhdGlvbiBieSBib3RzIGFuZCBtYWxmb3JtZWQgdHJhZmZpYwogICAgaGVhZGVycyA9IHsiVXNlci1BZ2VudCI6ICJhbmFjb25kYS9wYWNrYWdlLWJ1aWxkLXBsYXRmb3JtIn0KICAgIHJlcXVlc3QgPSBSZXF1ZXN0KHBhY2thZ2VzX3VybCwgaGVhZGVycz1oZWFkZXJzKQogICAgd2l0aCB1cmxvcGVuKHJlcXVlc3QpIGFzIGZpbGVfcmVzcG9uc2UsIG91dHB1dF9wYXRoLm9wZW4oIndiIikgYXMgb3V0X2ZpbGU6ICAjIG5vc2VjCiAgICAgICAgc2h1dGlsLmNvcHlmaWxlb2JqKGZpbGVfcmVzcG9uc2UsIG91dF9maWxlKQoKICAgIHNpemUgPSBvdXRwdXRfcGF0aC5zdGF0KCkuc3Rfc2l6ZQogICAgcHJpbnQoZiJEb3dubG9hZGVkIGZpbGUgbG9jYXRlZCBhdCBVUkw6IHtwYWNrYWdlc191cmx9ICh7c2l6ZSAvICgxMDI0KjEwMjQpOi4yZn0gTUIpIikKCgpkZWYgZXh0cmFjdF90YXJfZmlsZShmaWxlcGF0aDogUGF0aCwgZGVzdGluYXRpb246IFBhdGgpIC0+IE5vbmU6CiAgICAiIiJFeHRyYWN0IGEgdGFyIGFyY2hpdmUgdG8gYSBzcGVjaWZpZWQgZGVzdGluYXRpb24gZGlyZWN0b3J5LiIiIgogICAgaWYgbm90IGZpbGVwYXRoLmV4aXN0cygpOgogICAgICAgIHJhaXNlIEZpbGVOb3RGb3VuZEVycm9yKGYiQXJjaGl2ZSBmaWxlIG5vdCBmb3VuZDoge2ZpbGVwYXRofSIpCgogICAgcHJpbnQoZiJFeHRyYWN0aW5nIGFyY2hpdmUge2ZpbGVwYXRofS4uLiIpCgogICAgdHJ5OgogICAgICAgIHdpdGggdGFyZmlsZS5vcGVuKGZpbGVwYXRoKSBhcyB0YXI6CiAgICAgICAgICAgIHRhci5leHRyYWN0YWxsKHBhdGg9ZGVzdGluYXRpb24pICAjIG5vc2VjCiAgICAgICAgcHJpbnQoIkZpbGUgY29udGVudHMgZXh0cmFjdGVkIHN1Y2Nlc3NmdWxseS4iKQogICAgZXhjZXB0IHRhcmZpbGUuVGFyRXJyb3IgYXMgZToKICAgICAgICBwcmludChmIkVycm9yIGV4dHJhY3RpbmcgdGFyIGZpbGU6IHtlfSIpCiAgICAgICAgcmFpc2UKCgpkZWYgY29weV9maWxlcyhzb3VyY2U6IFBhdGgsIGRlc3RpbmF0aW9uOiBQYXRoLCBwYXR0ZXJuczogc2V0W3N0cl0gfCBOb25lKSAtPiBOb25lOgogICAgIiIiCiAgICBDb3B5IGZpbGVzIGZyb20gc291cmNlIHRvIGRlc3RpbmF0aW9uLCBwcmVzZXJ2aW5nIHJlbGF0aXZlIHBhdGhzLgoKICAgIC0gSWYgYHBhdHRlcm5zYCBpcyBwcm92aWRlZCAoZS5nLiwgeyIqLmNvbmRhIiwgIioudGFyLmJ6MiJ9KSwgb25seSBtYXRjaGluZyBmaWxlcyBhcmUgY29waWVkLgogICAgLSBJZiBgcGF0dGVybnNgIGlzIE5vbmUgb3IgZW1wdHksIGFsbCBmaWxlcyBhcmUgY29waWVkIChlcXVpdmFsZW50IHRvIHsiKiJ9KS4KICAgICIiIgogICAgcGF0X3NldCA9IHBhdHRlcm5zIG9yIHsiKiJ9CiAgICBmb3IgZmlsZV9wYXR0ZXJuIGluIHBhdF9zZXQ6CiAgICAgICAgZm9yIGZpbGUgaW4gc291cmNlLnJnbG9iKGZpbGVfcGF0dGVybik6CiAgICAgICAgICAgIHByaW50KGYiRm91bmQgcGFja2FnZToge2ZpbGV9IikKICAgICAgICAgICAgZGVzdF9wYXRoID0gZGVzdGluYXRpb24gLyBmaWxlLnJlbGF0aXZlX3RvKHNvdXJjZSkKICAgICAgICAgICAgZGVzdF9wYXRoLnBhcmVudC5ta2RpcihwYXJlbnRzPVRydWUsIGV4aXN0X29rPVRydWUpCiAgICAgICAgICAgIHNodXRpbC5jb3B5MihmaWxlLCBkZXN0X3BhdGgpCgoKZGVmIGdldF9zM19jbGllbnQoYWNjZXNzX2tleT1Ob25lLCBzZWNyZXRfa2V5PU5vbmUpIC0+IEFueToKICAgICIiIgogICAgQ3JlYXRlIGFuZCByZXR1cm4gYSBib3RvMyBTMyBjbGllbnQgdXNpbmcgY3JlZGVudGlhbHMgc3RvcmVkIGluIHNlY3JldHMuCiAgICAiIiIKCiAgICBwcmludCgiQ3JlYXRpbmcgczMgY2xpZW50Li4uIiwgZmx1c2g9VHJ1ZSkKICAgIGNsaWVudCA9IGJvdG8zLmNsaWVudCgKICAgICAgICAiczMiLAogICAgICAgIGF3c19hY2Nlc3Nfa2V5X2lkPWFjY2Vzc19rZXkuZ2V0KCkgaWYgYWNjZXNzX2tleSBlbHNlIE5vbmUsCiAgICAgICAgYXdzX3NlY3JldF9hY2Nlc3Nfa2V5PXNlY3JldF9rZXkuZ2V0KCkgaWYgc2VjcmV0X2tleSBlbHNlIE5vbmUsCiAgICApCiAgICBwcmludCgiczMgY2xpZW50IGNyZWF0ZWQuIiwgZmx1c2g9VHJ1ZSkKICAgIHJldHVybiBjbGllbnQKCgpkZWYgZ2V0X2NvbmRhX2NvbmZpZ19maWxlX3NvdXJjZXMoKSAtPiB0dXBsZVtsaXN0W1BhdGhdLCBkaWN0W3N0ciwgZGljdF1dOgogICAgb3V0ID0gc3VicHJvY2Vzcy5jaGVja19vdXRwdXQoCiAgICAgICAgW3N0cihnZXRfY29uZGFfYmluKCkpLCAiY29uZmlnIiwgIi0tc2hvdy1zb3VyY2VzIiwgIi0tanNvbiJdLCB0ZXh0PVRydWUsIHNoZWxsPXVzZV9zaGVsbAogICAgKSAgIyBub3NlYwogICAgcmF3ID0ganNvbi5sb2FkcyhvdXQpCgogICAgZmlsZV9rZXlzID0gW10KICAgIGZvciBrIGluIHJhdy5rZXlzKCk6CiAgICAgICAgcCA9IFBhdGgoaykKICAgICAgICBpZiBQYXRoKHApLmV4aXN0cygpOgogICAgICAgICAgICBmaWxlX2tleXMuYXBwZW5kKGspCgogICAgcmV0dXJuIGZpbGVfa2V5cwoKCmRlZiBnZXRfY3VycmVudF9tdWx0aWNoYW5uZWxzKCkgLT4gbGlzdFtzdHJdOgogICAgb3V0ID0gc3VicHJvY2Vzcy5jaGVja19vdXRwdXQoCiAgICAgICAgW3N0cihnZXRfY29uZGFfYmluKCkpLCAiY29uZmlnIiwgIi0tc2hvdyIsICJjdXN0b21fbXVsdGljaGFubmVscyJdLCB0ZXh0PVRydWUsIHNoZWxsPXVzZV9zaGVsbAogICAgKSAgIyBub3NlYwogICAgcmVzdWx0ID0geWFtbC5zYWZlX2xvYWQob3V0KQogICAgcmV0dXJuIHJlc3VsdFsiY3VzdG9tX211bHRpY2hhbm5lbHMiXQoKCmRlZiBnZXRfZGVwZW5kZW5jaWVzKCkgLT4gbGlzdFtzdHJdOgogICAgZGVwZW5kZW5jaWVzX2VudiA9IG9zLmVudmlyb24uZ2V0KCJERVBFTkRFTkNJRVMiLCAiIikKICAgIGlmIG5vdCBkZXBlbmRlbmNpZXNfZW52OgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoIlRoZSBlbnZpcm9ubWVudCB2YXJpYWJsZSBERVBFTkRFTkNJRVMgaXMgbm90IHNldC4iKQoKICAgIGRlcGVuZGVuY2llcyA9IGRlcGVuZGVuY2llc19lbnYuc3BsaXQoKQogICAgaWYgbm90IGRlcGVuZGVuY2llczoKICAgICAgICBwcmludCgiV2FybmluZzogREVQRU5ERU5DSUVTIGlzIHNldCwgYnV0IHRoZSBsaXN0IGlzIGVtcHR5LiIpCgogICAgcmV0dXJuIGRlcGVuZGVuY2llcwoKCmRlZiBjb21wcmVzc190b190Z3ooc291cmNlOiBQYXRoLCBkZXN0aW5hdGlvbjogUGF0aCwgZmlsZW5hbWU6IHN0cikgLT4gTm9uZToKICAgIGRlc3RpbmF0aW9uLm1rZGlyKGV4aXN0X29rPVRydWUpCiAgICBhcmNoaXZlX3BhdGggPSBkZXN0aW5hdGlvbiAvIGZpbGVuYW1lCiAgICBwcmludChmIkFyY2hpdmluZyBhbGwgY29udGVudHMgb2Yge3NvdXJjZX0gYXMge2FyY2hpdmVfcGF0aH0iKQoKICAgIHdpdGggdGFyZmlsZS5vcGVuKGFyY2hpdmVfcGF0aCwgInc6Z3oiLCBmb3JtYXQ9dGFyZmlsZS5QQVhfRk9STUFUKSBhcyB0YXI6CiAgICAgICAgdGFyLmFkZChzb3VyY2UsIGFyY25hbWU9Ii4iLCByZWN1cnNpdmU9VHJ1ZSkKCiAgICBwcmludChmIkFyY2hpdmUgY3JlYXRlZCBhdDoge2FyY2hpdmVfcGF0aH0iKQoKCmRlZiBkb3dubG9hZF9hbmRfc3RhZ2VfYXJ0aWZhY3RzKAogICAgKiwKICAgIGRlc3RpbmF0aW9uX2RpcjogUGF0aCwKICAgIGRlcGVuZGVuY2llczogbGlzdFtzdHJdLAogICAgcHJveHlfdXJsOiBzdHIsCiAgICBhcnRpZmFjdF9maWxlbmFtZTogc3RyLAogICAgcGtnX2Zvcm1hdHM6IHNldFtzdHJdIHwgTm9uZSwKICAgIGZhaWxfaWZfbm90X2ZvdW5kOiBib29sLAopIC0+IE5vbmU6CiAgICB0Z3pfZmlsZW5hbWUgPSBQYXRoKGFydGlmYWN0X2ZpbGVuYW1lKQoKICAgIGlmIGRlc3RpbmF0aW9uX2Rpci5leGlzdHMoKToKICAgICAgICBzaHV0aWwucm10cmVlKGRlc3RpbmF0aW9uX2RpcikKICAgIGRlc3RpbmF0aW9uX2Rpci5ta2RpcihwYXJlbnRzPVRydWUpCgogICAgZm9yIGRlcGVuZGVuY3kgaW4gZGVwZW5kZW5jaWVzOgogICAgICAgIHByaW50KGYiUHJvY2Vzc2luZyBkZXBlbmRlbmN5IHdpdGggdGFzayBJRDoge2RlcGVuZGVuY3l9IikKICAgICAgICBhcnRpZmFjdF91cmwgPSBmIntwcm94eV91cmx9L2FwaS9xdWV1ZS92MS90YXNrL3tkZXBlbmRlbmN5fS9hcnRpZmFjdHMvcHVibGljL3t0Z3pfZmlsZW5hbWV9IgoKICAgICAgICB0cnk6CiAgICAgICAgICAgIGRvd25sb2FkX2ZpbGUoYXJ0aWZhY3RfdXJsLCB0Z3pfZmlsZW5hbWUpCiAgICAgICAgZXhjZXB0IEhUVFBFcnJvciBhcyBlOgogICAgICAgICAgICBpZiBlLmNvZGUgPT0gNDA0OgogICAgICAgICAgICAgICAgaWYgZmFpbF9pZl9ub3RfZm91bmQ6CiAgICAgICAgICAgICAgICAgICAgcHJpbnQoZiJFcnJvcjogQXJ0aWZhY3Qgbm90IGZvdW5kIGZvciB0YXNrIHtkZXBlbmRlbmN5fSAoNDA0KS4iKQogICAgICAgICAgICAgICAgICAgIHJhaXNlCiAgICAgICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgICAgIHByaW50KGYiQXJ0aWZhY3Qgbm90IGZvdW5kIGZvciB0YXNrIHtkZXBlbmRlbmN5fSAoNDA0KS4gU2tpcHBpbmcuIikKICAgICAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgcHJpbnQoZiJIVFRQIGVycm9yIGZvciB0YXNrIHtkZXBlbmRlbmN5fToge2V9IikKICAgICAgICAgICAgICAgIHJhaXNlCiAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbiBhcyBlOgogICAgICAgICAgICByYWlzZSBSdW50aW1lRXJyb3IoZiJVbmV4cGVjdGVkIGV4Y2VwdGlvbiBvY2N1cnJlZDoge2V9IikgZnJvbSBlCgogICAgICAgIHdpdGggdGVtcGZpbGUuVGVtcG9yYXJ5RGlyZWN0b3J5KCkgYXMgdG1wX2RpcjoKICAgICAgICAgICAgZXh0cmFjdGVkX2RpciA9IFBhdGgodG1wX2RpcikKICAgICAgICAgICAgZXh0cmFjdF90YXJfZmlsZSh0Z3pfZmlsZW5hbWUsIGV4dHJhY3RlZF9kaXIpCiAgICAgICAgICAgIGNvcHlfZmlsZXMoZXh0cmFjdGVkX2RpciwgZGVzdGluYXRpb25fZGlyLCBwa2dfZm9ybWF0cykKCiAgICAgICAgdGd6X2ZpbGVuYW1lLnVubGluayhtaXNzaW5nX29rPVRydWUpCgoKZGVmIGRvd25sb2FkX2RlcGVuZGVuY2llc19jb25kYSgKICAgIGRlc3RpbmF0aW9uX2RpcjogUGF0aCwKICAgIGRlcGVuZGVuY2llczogbGlzdFtzdHJdLAogICAgcHJveHlfdXJsOiBzdHIsCiAgICBwa2dfZm9ybWF0czogc2V0W3N0cl0sCiAgICBmYWlsX2lmX25vdF9mb3VuZDogYm9vbCA9IFRydWUsCikgLT4gTm9uZToKICAgIGRvd25sb2FkX2FuZF9zdGFnZV9hcnRpZmFjdHMoCiAgICAgICAgZGVzdGluYXRpb25fZGlyPWRlc3RpbmF0aW9uX2RpciwKICAgICAgICBkZXBlbmRlbmNpZXM9ZGVwZW5kZW5jaWVzLAogICAgICAgIHByb3h5X3VybD1wcm94eV91cmwsCiAgICAgICAgYXJ0aWZhY3RfZmlsZW5hbWU9InBhY2thZ2VzLnRneiIsCiAgICAgICAgcGtnX2Zvcm1hdHM9cGtnX2Zvcm1hdHMsCiAgICAgICAgZmFpbF9pZl9ub3RfZm91bmQ9ZmFpbF9pZl9ub3RfZm91bmQsCiAgICApCgoKZGVmIGRvd25sb2FkX2RlcGVuZGVuY2llc19zb3VyY2VzKAogICAgc291cmNlc19kaXI6IFBhdGgsCiAgICBkZXBlbmRlbmNpZXM6IGxpc3Rbc3RyXSwKICAgIHByb3h5X3VybDogc3RyLAogICAgZmFpbF9pZl9ub3RfZm91bmQ6IGJvb2wgPSBUcnVlLAopIC0+IE5vbmU6CiAgICBkb3dubG9hZF9hbmRfc3RhZ2VfYXJ0aWZhY3RzKAogICAgICAgIGRlc3RpbmF0aW9uX2Rpcj1zb3VyY2VzX2RpciwKICAgICAgICBkZXBlbmRlbmNpZXM9ZGVwZW5kZW5jaWVzLAogICAgICAgIHByb3h5X3VybD1wcm94eV91cmwsCiAgICAgICAgYXJ0aWZhY3RfZmlsZW5hbWU9InNvdXJjZV9jYWNoZWQudGd6IiwKICAgICAgICBwa2dfZm9ybWF0cz1Ob25lLCAgIyBjb3B5IGV2ZXJ5dGhpbmcKICAgICAgICBmYWlsX2lmX25vdF9mb3VuZD1mYWlsX2lmX25vdF9mb3VuZCwKICAgICkK",
+      "secret_manager.py": "aW1wb3J0IG9zCmltcG9ydCBzdGF0CmltcG9ydCBzeXMKaW1wb3J0IHRlbXBmaWxlCmZyb20gY29udGV4dGxpYiBpbXBvcnQgY29udGV4dG1hbmFnZXIKCmltcG9ydCByZXF1ZXN0cwpmcm9tIHNoYXJlZF91dGlscyBpbXBvcnQgcmV0cnkKCkFTS1BBU1NfV0lORE9XUyA9IHIiQzpcUHJvZ3JhbURhdGFcZ2l0LWFza3Bhc3MuY21kIgpBU0tQQVNTX1VOSVggPSAiL3Vzci9sb2NhbC9iaW4vZ2l0LWFza3Bhc3Muc2giCgpwcm94eV91cmwgPSBvcy5lbnZpcm9uLmdldCgiVEFTS0NMVVNURVJfUFJPWFlfVVJMIikKCgpjbGFzcyBTZWNyZXQ6CiAgICBkZWYgX19pbml0X18oc2VsZiwgc2VjcmV0X2tleTogc3RyLCBmYWlsX2lmX21pc3Npbmc6IGJvb2wgPSBUcnVlKToKICAgICAgICBzZWxmLl9rZXkgPSBzZWNyZXRfa2V5CgogICAgICAgIHRyeToKICAgICAgICAgICAgc2VsZi5fdmFsdWUgPSBzZWxmLl9mZXRjaF9zZWNyZXQoc2VjcmV0X2tleSkKICAgICAgICBleGNlcHQgRXhjZXB0aW9uOgogICAgICAgICAgICBpZiBmYWlsX2lmX21pc3Npbmc6CiAgICAgICAgICAgICAgICByYWlzZSBSdW50aW1lRXJyb3IoIlNlY3JldCB7c2VjcmV0X2tleX0gd2FzIG5vdCByZXRyaWV2ZWQuIikKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHByaW50KGYiV0FSTklORzoge3NlY3JldF9rZXl9IHdhcyBub3QgcmV0cmlldmVkLiIsIGZsdXNoPVRydWUpCiAgICAgICAgICAgICAgICBzZWxmLl92YWx1ZSA9IE5vbmUKCiAgICBAcmV0cnkobWF4X3JldHJpZXM9NSwgaW5pdGlhbF9iYWNrb2ZmPTIuMCkKICAgIGRlZiBfZmV0Y2hfc2VjcmV0KHNlbGYsIHNlY3JldF9rZXk6IHN0cik6CiAgICAgICAgc2VjcmV0X3VybCA9IGYie3Byb3h5X3VybH0vYXBpL3NlY3JldHMvdjEvc2VjcmV0L3tzZWNyZXRfa2V5fSIKICAgICAgICByZXNwb25zZSA9IHJlcXVlc3RzLmdldChzZWNyZXRfdXJsLCB0aW1lb3V0PTUpCiAgICAgICAgcmVzcG9uc2UucmFpc2VfZm9yX3N0YXR1cygpCiAgICAgICAgcmV0dXJuIHJlc3BvbnNlLmpzb24oKVsic2VjcmV0Il1bInZhbHVlIl0KCiAgICBkZWYgZ2V0KHNlbGYpOgogICAgICAgIHJldHVybiBzZWxmLl92YWx1ZQoKICAgIGRlZiBhdmFpbGFibGUoc2VsZik6CiAgICAgICAgcmV0dXJuIHNlbGYuX3ZhbHVlIGlzIG5vdCBOb25lCgogICAgZGVmIF9fc3RyX18oc2VsZik6CiAgICAgICAgcmV0dXJuIGYie3NlbGYuX2tleX06IHsnKioqKicgaWYgc2VsZi5fdmFsdWUgaXMgbm90IE5vbmUgZWxzZSAnTm9uZSd9IgoKICAgIGRlZiBfX3JlcHJfXyhzZWxmKToKICAgICAgICByZXR1cm4gZiI8e3NlbGYuX2tleX06IHsnKioqKicgaWYgc2VsZi5fdmFsdWUgaXMgbm90IE5vbmUgZWxzZSAnTm9uZSd9PiIKCgpAY29udGV4dG1hbmFnZXIKZGVmIGluaXRfZ2l0X2Fza3Bhc3MoCiAgICB0b2tlbjogU2VjcmV0LAogICAgZW52OiBkaWN0W3N0ciwgc3RyXSA9IE5vbmUsCik6CiAgICAiIiIKICAgIFVzZXMgR0lUX0FTS1BBU1MgZm9yIGF1dGguIE1ha2VzIHVzZSBvZiBzY3JpcHRzIGJha2VkIGludG8gQU1Jcy4KICAgIENyZWF0ZXMgYSB0ZW1wb3JhcnkgZmlsZSB3aXRoIHRoZSB0b2tlbi4gRGVsZXRlcyBpdCBvbiBleGl0LgogICAgIiIiCgogICAgX2VudiA9IChlbnYgb3Igb3MuZW52aXJvbikuY29weSgpCiAgICBfZW52LnNldGRlZmF1bHQoIkdJVF9URVJNSU5BTF9QUk9NUFQiLCAiMCIpCgogICAgaWYgbm90IHRva2VuLmF2YWlsYWJsZSgpOgogICAgICAgICMgTm90aGluZyB0byBzZWVkOyBhY3QgYXMgYSBuby1vcCBjb250ZXh0IG1hbmFnZXIuCiAgICAgICAgeWllbGQgX2VudgogICAgICAgIHJldHVybgoKICAgIGlzX3dpbmRvd3MgPSBzeXMucGxhdGZvcm0gPT0gIndpbjMyIgoKICAgIHRva2VuX3BhdGggPSBOb25lCiAgICB0cnk6CiAgICAgICAgIyAxKSBzaG9ydC1saXZlZCB0b2tlbiBmaWxlICgwNjAwKQogICAgICAgIGZkLCB0b2tlbl9wYXRoID0gdGVtcGZpbGUubWtzdGVtcChwcmVmaXg9ImdpdC10b2tlbi0iLCB0ZXh0PVRydWUpCiAgICAgICAgd2l0aCBvcy5mZG9wZW4oZmQsICJ3IiwgZW5jb2Rpbmc9InV0Zi04IikgYXMgZjoKICAgICAgICAgICAgZi53cml0ZSh0b2tlbi5nZXQoKSkKICAgICAgICAgICAgZi5mbHVzaCgpCiAgICAgICAgICAgIG9zLmZzeW5jKGYuZmlsZW5vKCkpCiAgICAgICAgb3MuY2htb2QodG9rZW5fcGF0aCwgc3RhdC5TX0lSVVNSIHwgc3RhdC5TX0lXVVNSKSAgIyAwNjAwCgogICAgICAgIGFza3Bhc3MgPSBBU0tQQVNTX1dJTkRPV1MgaWYgaXNfd2luZG93cyBlbHNlIEFTS1BBU1NfVU5JWAoKICAgICAgICBfZW52WyJHSVRfVE9LRU5fRklMRSJdID0gdG9rZW5fcGF0aAogICAgICAgIF9lbnZbIkdJVF9BU0tQQVNTIl0gPSBhc2twYXNzCgogICAgICAgIHlpZWxkIF9lbnYKICAgIGZpbmFsbHk6CiAgICAgICAgaWYgdG9rZW5fcGF0aDoKICAgICAgICAgICAgb3MucmVtb3ZlKHRva2VuX3BhdGgpCg==",
+      "dump_job_params.py": "IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwoKaW1wb3J0IGpzb24KaW1wb3J0IG9zCmltcG9ydCBzeXMKCmltcG9ydCByZXF1ZXN0cwoKCmRlZiBkdW1wX2pvYl9wYXJhbXMoKToKCiAgICAjIGNoZWNrIGlmIFRBU0tfSUQgb3IgVEFTS0NMVVNURVJfUFJPWFlfVVJMIGlzIHNldAogICAgaWYgIlRBU0tfSUQiIG5vdCBpbiBvcy5lbnZpcm9uOgogICAgICAgIHByaW50KCJUQVNLX0lEIGlzIG5vdCBzZXQiLCBmaWxlPXN5cy5zdGRlcnIpCiAgICAgICAgc3lzLmV4aXQoMSkKICAgIGlmICJUQVNLQ0xVU1RFUl9QUk9YWV9VUkwiIG5vdCBpbiBvcy5lbnZpcm9uOgogICAgICAgIHByaW50KCJUQVNLQ0xVU1RFUl9QUk9YWV9VUkwgaXMgbm90IHNldCIsIGZpbGU9c3lzLnN0ZGVycikKICAgICAgICBzeXMuZXhpdCgxKQoKICAgICMgZmV0Y2ggdGhlIHRhc2sgaW5mbyBmcm9tIHRhc2tjbHVzdGVyIHByb3h5CiAgICB0cnk6CiAgICAgICAgdGFza19pbmZvID0gcmVxdWVzdHMuZ2V0KAogICAgICAgICAgICBmIntvcy5lbnZpcm9uWydUQVNLQ0xVU1RFUl9QUk9YWV9VUkwnXX0vYXBpL3F1ZXVlL3YxL3Rhc2sve29zLmVudmlyb25bJ1RBU0tfSUQnXX0iICAjIG5vc2VjCiAgICAgICAgKQogICAgICAgIHRhc2tfaW5mby5yYWlzZV9mb3Jfc3RhdHVzKCkKICAgIGV4Y2VwdCByZXF1ZXN0cy5leGNlcHRpb25zLlJlcXVlc3RFeGNlcHRpb24gYXMgZToKICAgICAgICBwcmludChmIkVycm9yIGZldGNoaW5nIHRhc2sgaW5mbzoge2V9IiwgZmlsZT1zeXMuc3RkZXJyKQogICAgICAgIHN5cy5leGl0KDEpCgogICAgcHJpbnQoanNvbi5kdW1wcyh0YXNrX2luZm8uanNvbigpLCBpbmRlbnQ9MikpCgoKaWYgX19uYW1lX18gPT0gIl9fbWFpbl9fIjoKICAgIGR1bXBfam9iX3BhcmFtcygpCg==",
+      "download_dependencies.py": "IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwoKaW1wb3J0IG9zCmltcG9ydCBzeXMKZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCgpmcm9tIHNoYXJlZF91dGlscyBpbXBvcnQgY2xlYW5fY29uZGFfY2FjaGUsIGRvd25sb2FkX2RlcGVuZGVuY2llc19jb25kYSwgZ2V0X2RlcGVuZGVuY2llcwoKdGVtcF9jaGFubmVsID0gUGF0aCgidGVtcF9jaGFubmVsIikKCnVzZV9zaGVsbCA9IEZhbHNlCmlmIG9zLm5hbWUgPT0gIm50IjoKICAgIHVzZV9zaGVsbCA9IFRydWUKCgpkZWYgbWFpbigpIC0+IGludDoKICAgIHByb3h5X3VybCA9IG9zLmVudmlyb24uZ2V0KCJUQVNLQ0xVU1RFUl9QUk9YWV9VUkwiKQogICAgaWYgbm90IHByb3h5X3VybDoKICAgICAgICBwcmludCgiRXJyb3I6IFRoZSBlbnZpcm9ubWVudCB2YXJpYWJsZSBUQVNLQ0xVU1RFUl9QUk9YWV9VUkwgaXMgbm90IHNldC4iKQogICAgICAgIHJldHVybiAxCgogICAgcnVuX2Zyb21fZGVwcyA9IG9zLmVudmlyb24uZ2V0KCJSVU5fRlJPTV9ERVBFTkRFTkNJRVMiLCAiIikKICAgIGlmIHJ1bl9mcm9tX2RlcHMgPT0gIiI6CiAgICAgICAgcHJpbnQoIkVycm9yOiBUaGUgZW52aXJvbm1lbnQgdmFyaWFibGUgUlVOX0ZST01fREVQRU5ERU5DSUVTIGlzIG5vdCBzZXQuIikKICAgICAgICBwcmludCgiUGxlYXNlIHByb3ZpZGUgYSBib29sZWFuIGZsYWcgKHRydWUvZmFsc2UpIHRvIGluZGljYXRlIHdoZXRoZXIgdG8gdGVzdCBmcm9tIGRlcGVuZGVuY2llcy4iKQogICAgICAgIHJldHVybiAxCgogICAgdHJ5OgogICAgICAgIGlmIHJ1bl9mcm9tX2RlcHMubG93ZXIoKSA9PSAidHJ1ZSI6CiAgICAgICAgICAgIGRlcGVuZGVuY2llcyA9IGdldF9kZXBlbmRlbmNpZXMoKQogICAgICAgICAgICBpZiBub3QgZGVwZW5kZW5jaWVzOgogICAgICAgICAgICAgICAgcHJpbnQoIkVycm9yOiBSVU5fRlJPTV9ERVBFTkRFTkNJRVMgaXMgc2V0IHRvIHRydWUgYnV0IERFUEVOREVOQ0lFUyBsaXN0IGlzIGVtcHR5LiIpCiAgICAgICAgICAgICAgICByZXR1cm4gMQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGRlcGVuZGVuY2llcyA9IFtdCgogICAgICAgIGNsZWFuX2NvbmRhX2NhY2hlKHVzZV9zaGVsbD11c2Vfc2hlbGwpCgogICAgICAgIGRvd25sb2FkX2RlcGVuZGVuY2llc19jb25kYSgKICAgICAgICAgICAgdGVtcF9jaGFubmVsLCBkZXBlbmRlbmNpZXMsIHByb3h5X3VybCwgeyIqLmNvbmRhIn0sIGZhaWxfaWZfbm90X2ZvdW5kPVRydWUKICAgICAgICApCiAgICAgICAgbm9hcmNoX2RpciA9IFBhdGgob3MucGF0aC5qb2luKHRlbXBfY2hhbm5lbCwgIm5vYXJjaCIpKQogICAgICAgIG5vYXJjaF9kaXIubWtkaXIocGFyZW50cz1UcnVlLCBleGlzdF9vaz1UcnVlKQoKICAgIGV4Y2VwdCBFeGNlcHRpb24gYXMgZToKICAgICAgICBwcmludChmIkVycm9yOiB7c3RyKGUpfSIpCiAgICAgICAgcmV0dXJuIDEKCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgc3lzLmV4aXQobWFpbigpKQo=",
+      "download_conda_build_config.py": "IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwoKaW1wb3J0IG9zCmltcG9ydCBzeXMKCmltcG9ydCByZXF1ZXN0cwppbXBvcnQgeWFtbAoKdGFza2NsdXN0ZXJfcHJveHlfdXJsID0gb3MuZW52aXJvbi5nZXQoIlRBU0tDTFVTVEVSX1BST1hZX1VSTCIpCnRhc2tfaWQgPSBvcy5lbnZpcm9uLmdldCgiVEFTS19JRCIpCgoKZGVmIGRvd25sb2FkX2NvbmRhX2J1aWxkX2NvbmZpZyh0YXNrY2x1c3Rlcl9wcm94eV91cmw6IHN0ciwgdGFza19pZDogc3RyKSAtPiBOb25lOgoKICAgIGlmIG5vdCB0YXNrY2x1c3Rlcl9wcm94eV91cmwgb3Igbm90IHRhc2tfaWQ6CiAgICAgICAgcmFpc2UgT1NFcnJvcigiVEFTS0NMVVNURVJfUFJPWFlfVVJMIGFuZCBUQVNLX0lEIG11c3QgYmUgc2V0IGluIHRoZSBlbnZpcm9ubWVudC4iKQoKICAgIHVybCA9IGYie3Rhc2tjbHVzdGVyX3Byb3h5X3VybH0vYXBpL3F1ZXVlL3YxL3Rhc2sve3Rhc2tfaWR9IgogICAgcmVzcG9uc2UgPSByZXF1ZXN0cy5nZXQodXJsKSAgIyBub3NlYwogICAgcmVzcG9uc2UucmFpc2VfZm9yX3N0YXR1cygpCiAgICBkYXRhID0gcmVzcG9uc2UuanNvbigpCgogICAgY29uZGFfYnVpbGRfY29uZmlnOiBkaWN0ID0gZGF0YS5nZXQoImV4dHJhIiwge30pLmdldCgiZmlsZXMiLCB7fSkuZ2V0KCJjb25kYV9idWlsZF9jb25maWciKQogICAgaWYgY29uZGFfYnVpbGRfY29uZmlnIGlzIE5vbmU6CiAgICAgICAgcmFpc2UgS2V5RXJyb3IoImNvbmRhX2J1aWxkX2NvbmZpZyBub3QgZm91bmQgaW4gdGFzayBkZWZpbml0aW9uLiIpCgogICAgd2l0aCBvcGVuKCJjb25kYV9idWlsZF9jb25maWdfcGJwX2dlbmVyYXRlZC55YW1sIiwgInciKSBhcyBmOgogICAgICAgIHlhbWwuZHVtcChjb25kYV9idWlsZF9jb25maWcsIGYsIGRlZmF1bHRfZmxvd19zdHlsZT1GYWxzZSkKCgpkZWYgbWFpbigpIC0+IGludDoKICAgIHRyeToKICAgICAgICBkb3dubG9hZF9jb25kYV9idWlsZF9jb25maWcodGFza2NsdXN0ZXJfcHJveHlfdXJsLCB0YXNrX2lkKQogICAgICAgIHByaW50KCJjb25kYV9idWlsZF9jb25maWdfcGJwX2dlbmVyYXRlZC55YW1sIGRvd25sb2FkZWQgc3VjY2Vzc2Z1bGx5LiIpCiAgICAgICAgcmV0dXJuIDAKICAgIGV4Y2VwdCBFeGNlcHRpb24gYXMgZToKICAgICAgICBwcmludChmIkVycm9yIGRvd25sb2FkaW5nIGNvbmRhX2J1aWxkX2NvbmZpZ19wYnBfZ2VuZXJhdGVkLnlhbWw6IHtlfSIpCiAgICAgICAgcmV0dXJuIDEKCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgc3lzLmV4aXQobWFpbigpKQo="
+    },
+    "files": {
+      "conda_build_config": {
+        "python": "3.12",
+        "c_stdlib": "sysroot",
+        "platform": "linux-64",
+        "c_compiler": "gcc",
+        "channel_targets": "defaults",
+        "target_platform": "linux-64",
+        "c_stdlib_version": "2.28",
+        "c_compiler_version": "14.3.0"
+      }
+    }
+  }
+}
+[taskcluster 2026-01-22T14:16:45.770Z]                        Exit Code: 0
+[taskcluster 2026-01-22T14:16:45.770Z]                        User Time: 129.407ms
+[taskcluster 2026-01-22T14:16:45.770Z]                      Kernel Time: 11.852ms
+[taskcluster 2026-01-22T14:16:45.770Z]                        Wall Time: 170.458659ms
+[taskcluster 2026-01-22T14:16:45.770Z]                           Result: SUCCEEDED
+[taskcluster 2026-01-22T14:16:45.770Z] Executing command 4: /opt/conda/bin/python 'download_conda_build_config.py'
+conda_build_config_pbp_generated.yaml downloaded successfully.
+[taskcluster 2026-01-22T14:16:45.940Z]                        Exit Code: 0
+[taskcluster 2026-01-22T14:16:45.940Z]                        User Time: 132.303ms
+[taskcluster 2026-01-22T14:16:45.940Z]                      Kernel Time: 19.119ms
+[taskcluster 2026-01-22T14:16:45.940Z]                        Wall Time: 169.046827ms
+[taskcluster 2026-01-22T14:16:45.940Z]                           Result: SUCCEEDED
+[taskcluster 2026-01-22T14:16:45.940Z] Executing command 5: /opt/conda/bin/python 'download_dependencies.py'
+There are no package cache(s) to remove.
+[taskcluster 2026-01-22T14:16:46.586Z]                        Exit Code: 0
+[taskcluster 2026-01-22T14:16:46.586Z]                        User Time: 587.332ms
+[taskcluster 2026-01-22T14:16:46.586Z]                      Kernel Time: 53.596ms
+[taskcluster 2026-01-22T14:16:46.586Z]                        Wall Time: 646.402241ms
+[taskcluster 2026-01-22T14:16:46.586Z]  Average Available System Memory: 29.84 GiB
+[taskcluster 2026-01-22T14:16:46.586Z]       Average System Memory Used: 391.21 MiB
+[taskcluster 2026-01-22T14:16:46.586Z]          Peak System Memory Used: 391.21 MiB
+[taskcluster 2026-01-22T14:16:46.586Z]              Total System Memory: 30.61 GiB
+[taskcluster 2026-01-22T14:16:46.586Z]                           Result: SUCCEEDED
+[taskcluster 2026-01-22T14:16:46.587Z] Executing command 6: /opt/conda/bin/python 'build.py'
+Debug:Cloning feedstock from https://github.com/AnacondaRecipes/sphinx-feedstock.git...
+Cloning into 'sphinx-feedstock'...
+From https://github.com/AnacondaRecipes/sphinx-feedstock
+ * branch            50203d9ac8ed7246e6f645a22eafc7f50960edd8 -> FETCH_HEAD
+Note: switching to '50203d9ac8ed7246e6f645a22eafc7f50960edd8'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 50203d9 Revert "add libarchive to build"
+Renormalizing line endings in sphinx-feedstock...
+Found conda config sources: ['/opt/conda/.condarc']
+Debug:Found home directory: /home/task_176909134256538
+Executing command: /opt/conda/bin/conda create --prefix /home/task_176909134256538/cph conda-package-handling -y --quiet
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: /home/task_176909134256538/cph
+
+  added / updated specs:
+    - conda-package-handling
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    brotlicffi-1.2.0.0         |  py314h7354ed3_0         372 KB
+    certifi-2026.01.04         |  py314h06a4308_0         148 KB
+    cffi-2.0.0                 |  py314h4eded50_1         291 KB
+    charset-normalizer-3.4.4   |  py314h06a4308_0         102 KB
+    conda-package-handling-2.4.0|  py314h06a4308_1         279 KB
+    conda-package-streaming-0.12.0|  py314h06a4308_1          38 KB
+    idna-3.11                  |  py314h06a4308_0         208 KB
+    ld_impl_linux-64-2.44      |       h153f514_2         672 KB
+    libexpat-2.7.3             |       h7354ed3_4         121 KB
+    libgcc-15.2.0              |       h69a1729_7         806 KB
+    libgcc-ng-15.2.0           |       h166f726_7          28 KB
+    libgomp-15.2.0             |       h4751f2c_7         436 KB
+    libmpdec-4.0.0             |       h5eee18b_0          86 KB
+    libstdcxx-15.2.0           |       h39759b7_7         3.7 MB
+    libstdcxx-ng-15.2.0        |       hc03a8fd_7          28 KB
+    libzlib-1.3.1              |       hb25bd0a_0          59 KB
+    ncurses-6.5                |       h7934f7d_0         1.1 MB
+    pysocks-1.7.1              |  py314h06a4308_1          35 KB
+    python-3.14.2              |h90eec9f_101_cp314        35.2 MB
+    python_abi-3.14            |          2_cp314           6 KB
+    readline-8.3               |       hc2a1206_0         471 KB
+    requests-2.32.5            |  py314h06a4308_1         168 KB
+    sqlite-3.51.1              |       he0a8d7e_0         1.2 MB
+    tzdata-2025c               |       he532380_0         118 KB
+    urllib3-2.6.3              |  py314h06a4308_0         360 KB
+    xz-5.6.4                   |       h5eee18b_1         567 KB
+    zlib-1.3.1                 |       hb25bd0a_0          96 KB
+    zstandard-0.24.0           |  py314h3d778a8_0         415 KB
+    zstd-1.5.7                 |       h11fc155_0         608 KB
+    ------------------------------------------------------------
+                                           Total:        47.6 MB
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main 
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-1_gnu 
+  brotlicffi         pkgs/main/linux-64::brotlicffi-1.2.0.0-py314h7354ed3_0 
+  bzip2              pkgs/main/linux-64::bzip2-1.0.8-h5eee18b_6 
+  ca-certificates    pkgs/main/linux-64::ca-certificates-2025.12.2-h06a4308_0 
+  certifi            pkgs/main/linux-64::certifi-2026.01.04-py314h06a4308_0 
+  cffi               pkgs/main/linux-64::cffi-2.0.0-py314h4eded50_1 
+  charset-normalizer pkgs/main/linux-64::charset-normalizer-3.4.4-py314h06a4308_0 
+  conda-package-han~ pkgs/main/linux-64::conda-package-handling-2.4.0-py314h06a4308_1 
+  conda-package-str~ pkgs/main/linux-64::conda-package-streaming-0.12.0-py314h06a4308_1 
+  idna               pkgs/main/linux-64::idna-3.11-py314h06a4308_0 
+  ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.44-h153f514_2 
+  libexpat           pkgs/main/linux-64::libexpat-2.7.3-h7354ed3_4 
+  libffi             pkgs/main/linux-64::libffi-3.4.4-h6a678d5_1 
+  libgcc             pkgs/main/linux-64::libgcc-15.2.0-h69a1729_7 
+  libgcc-ng          pkgs/main/linux-64::libgcc-ng-15.2.0-h166f726_7 
+  libgomp            pkgs/main/linux-64::libgomp-15.2.0-h4751f2c_7 
+  libmpdec           pkgs/main/linux-64::libmpdec-4.0.0-h5eee18b_0 
+  libstdcxx          pkgs/main/linux-64::libstdcxx-15.2.0-h39759b7_7 
+  libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-15.2.0-hc03a8fd_7 
+  libuuid            pkgs/main/linux-64::libuuid-1.41.5-h5eee18b_0 
+  libxcb             pkgs/main/linux-64::libxcb-1.17.0-h9b100fa_0 
+  libzlib            pkgs/main/linux-64::libzlib-1.3.1-hb25bd0a_0 
+  lz4-c              pkgs/main/linux-64::lz4-c-1.9.4-h6a678d5_1 
+  ncurses            pkgs/main/linux-64::ncurses-6.5-h7934f7d_0 
+  openssl            pkgs/main/linux-64::openssl-3.0.18-hd6dcaed_0 
+  pthread-stubs      pkgs/main/linux-64::pthread-stubs-0.3-h0ce48e5_1 
+  pycparser          pkgs/main/noarch::pycparser-2.21-pyhd3eb1b0_0 
+  pysocks            pkgs/main/linux-64::pysocks-1.7.1-py314h06a4308_1 
+  python             pkgs/main/linux-64::python-3.14.2-h90eec9f_101_cp314 
+  python_abi         pkgs/main/linux-64::python_abi-3.14-2_cp314 
+  readline           pkgs/main/linux-64::readline-8.3-hc2a1206_0 
+  requests           pkgs/main/linux-64::requests-2.32.5-py314h06a4308_1 
+  sqlite             pkgs/main/linux-64::sqlite-3.51.1-he0a8d7e_0 
+  tk                 pkgs/main/linux-64::tk-8.6.15-h54e0aa7_0 
+  tzdata             pkgs/main/noarch::tzdata-2025c-he532380_0 
+  urllib3            pkgs/main/linux-64::urllib3-2.6.3-py314h06a4308_0 
+  xorg-libx11        pkgs/main/linux-64::xorg-libx11-1.8.12-h9b100fa_1 
+  xorg-libxau        pkgs/main/linux-64::xorg-libxau-1.0.12-h9b100fa_0 
+  xorg-libxdmcp      pkgs/main/linux-64::xorg-libxdmcp-1.1.5-h9b100fa_0 
+  xorg-xorgproto     pkgs/main/linux-64::xorg-xorgproto-2024.1-h5eee18b_1 
+  xz                 pkgs/main/linux-64::xz-5.6.4-h5eee18b_1 
+  zlib               pkgs/main/linux-64::zlib-1.3.1-hb25bd0a_0 
+  zstandard          pkgs/main/linux-64::zstandard-0.24.0-py314h3d778a8_0 
+  zstd               pkgs/main/linux-64::zstd-1.5.7-h11fc155_0 
+
+
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+Debug:Found home directory: /home/task_176909134256538
+Executing command: /opt/conda/bin/conda create --prefix /home/task_176909134256538/bld conda-build==25.1.2 -y --quiet -c pbp_src_multichannel
+Channels:
+ - pbp_src_multichannel
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: /home/task_176909134256538/bld
+
+  added / updated specs:
+    - conda-build==25.1.2
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    _libgcc_mutex-0.1          |             main           3 KB  pbp_src_multichannel
+    _openmp_mutex-5.1          |            1_gnu          20 KB  pbp_src_multichannel
+    archspec-0.2.5             |     pyhd3eb1b0_0          50 KB  pbp_src_multichannel
+    attrs-25.4.0               |  py312h06a4308_2         163 KB  pbp_src_multichannel
+    beautifulsoup4-4.14.2      |  py312h06a4308_0         247 KB  pbp_src_multichannel
+    boltons-25.0.0             |  py312h06a4308_0         491 KB  pbp_src_multichannel
+    brotlicffi-1.2.0.0         |  py312h7354ed3_0         410 KB  pbp_src_multichannel
+    bzip2-1.0.8                |       h5eee18b_6         418 KB  pbp_src_multichannel
+    c-ares-1.34.6              |       hd44998d_0         209 KB  pbp_src_multichannel
+    ca-certificates-2025.12.2  |       h06a4308_0         132 KB  pbp_src_multichannel
+    certifi-2026.01.04         |  py312h06a4308_0         151 KB  pbp_src_multichannel
+    cffi-2.0.0                 |  py312h4eded50_1         289 KB  pbp_src_multichannel
+    chardet-5.2.0              |  py312h06a4308_0         1.9 MB  pbp_src_multichannel
+    charset-normalizer-3.4.4   |  py312h06a4308_0          98 KB  pbp_src_multichannel
+    click-8.2.1                |  py312h06a4308_1         324 KB  pbp_src_multichannel
+    conda-25.7.0               |  py312h06a4308_0         1.2 MB  pbp_src_multichannel
+    conda-build-25.1.2         |  py312h06a4308_0         769 KB  pbp_src_multichannel
+    conda-index-0.7.0          |  py312h06a4308_0         259 KB  pbp_src_multichannel
+    conda-libmamba-solver-25.4.0|     pyhdf14ebd_1          37 KB  pbp_src_multichannel
+    conda-package-handling-2.4.0|  py312h06a4308_1         285 KB  pbp_src_multichannel
+    conda-package-streaming-0.12.0|  py312h06a4308_1          36 KB  pbp_src_multichannel
+    cpp-expected-1.1.0         |       hdb19cb5_0         117 KB  pbp_src_multichannel
+    distro-1.9.0               |  py312h06a4308_0          37 KB  pbp_src_multichannel
+    expat-2.7.3                |       h7354ed3_4          26 KB  pbp_src_multichannel
+    filelock-3.20.0            |  py312h06a4308_0          36 KB  pbp_src_multichannel
+    fmt-11.2.0                 |       hca5f364_0         192 KB  pbp_src_multichannel
+    frozendict-2.4.6           |  py312hee96239_0          38 KB  pbp_src_multichannel
+    gettext-0.21.0             |       hedfda30_2         3.5 MB  pbp_src_multichannel
+    icu-73.1                   |       h6a678d5_0        27.7 MB  pbp_src_multichannel
+    idna-3.11                  |  py312h06a4308_0         243 KB  pbp_src_multichannel
+    jansson-2.14               |       h5eee18b_1          38 KB  pbp_src_multichannel
+    jinja2-3.1.6               |  py312h06a4308_0         341 KB  pbp_src_multichannel
+    jsonpatch-1.33             |  py312h06a4308_1          35 KB  pbp_src_multichannel
+    jsonpointer-3.0.0          |  py312h06a4308_0          21 KB  pbp_src_multichannel
+    jsonschema-4.25.1          |  py312h06a4308_0         181 KB  pbp_src_multichannel
+    jsonschema-specifications-2025.9.1|  py312h06a4308_0          16 KB  pbp_src_multichannel
+    ld_impl_linux-64-2.44      |       h153f514_2         746 KB  pbp_src_multichannel
+    libarchive-3.8.2           |       h3ec8f01_0         1.7 MB  pbp_src_multichannel
+    libcurl-8.17.0             |       hc93bc37_0         490 KB  pbp_src_multichannel
+    libev-4.33                 |       h7f8727e_1         106 KB  pbp_src_multichannel
+    libexpat-2.7.3             |       h7354ed3_4         129 KB  pbp_src_multichannel
+    libffi-3.4.4               |       h6a678d5_1         150 KB  pbp_src_multichannel
+    libgcc-15.2.0              |       h69a1729_7         1.0 MB  pbp_src_multichannel
+    libgcc-ng-15.2.0           |       h166f726_7          27 KB  pbp_src_multichannel
+    libgomp-15.2.0             |       h4751f2c_7         521 KB  pbp_src_multichannel
+    libiconv-1.16              |       h5eee18b_3         1.4 MB  pbp_src_multichannel
+    libidn2-2.3.8              |       hf80d704_0         100 KB  pbp_src_multichannel
+    liblief-0.12.3             |       h6a678d5_0         2.1 MB  pbp_src_multichannel
+    libmamba-2.3.2             |       h860b5fb_1         2.3 MB  pbp_src_multichannel
+    libmambapy-2.3.2           |  py312h3f77f5b_1         814 KB  pbp_src_multichannel
+    libnghttp2-1.67.1          |       h697f920_0         757 KB  pbp_src_multichannel
+    libnsl-2.0.0               |       h5eee18b_0          31 KB  pbp_src_multichannel
+    libsolv-0.7.30             |       h6f1ccf3_2         470 KB  pbp_src_multichannel
+    libssh2-1.11.1             |       h251f7ec_0         294 KB  pbp_src_multichannel
+    libstdcxx-15.2.0           |       h39759b7_7         4.9 MB  pbp_src_multichannel
+    libstdcxx-ng-15.2.0        |       hc03a8fd_7          27 KB  pbp_src_multichannel
+    libunistring-1.3           |       hb25bd0a_0         833 KB  pbp_src_multichannel
+    libuuid-1.41.5             |       h5eee18b_0          29 KB  pbp_src_multichannel
+    libxcb-1.17.0              |       h9b100fa_0         407 KB  pbp_src_multichannel
+    libxml2-2.13.9             |       h2c43086_0         733 KB  pbp_src_multichannel
+    libzlib-1.3.1              |       hb25bd0a_0          65 KB  pbp_src_multichannel
+    lz4-c-1.9.4                |       h6a678d5_1         161 KB  pbp_src_multichannel
+    markupsafe-3.0.2           |  py312h5eee18b_0          27 KB  pbp_src_multichannel
+    menuinst-2.4.2             |  py312h06a4308_1         284 KB  pbp_src_multichannel
+    msgpack-python-1.1.1       |  py312h6a678d5_0         118 KB  pbp_src_multichannel
+    ncurses-6.5                |       h7934f7d_0         1.1 MB  pbp_src_multichannel
+    nlohmann_json-3.11.2       |       h6a678d5_0         111 KB  pbp_src_multichannel
+    openssl-3.0.18             |       hd6dcaed_0         5.3 MB  pbp_src_multichannel
+    packaging-25.0             |  py312h06a4308_1         184 KB  pbp_src_multichannel
+    patch-2.8                  |       hb25bd0a_0         109 KB  pbp_src_multichannel
+    patchelf-0.17.2            |       h6a678d5_0          95 KB  pbp_src_multichannel
+    pcre2-10.46                |       hf426167_0         3.2 MB  pbp_src_multichannel
+    pkginfo-1.12.1.2           |  py312h06a4308_0          63 KB  pbp_src_multichannel
+    platformdirs-4.5.0         |  py312h06a4308_0          39 KB  pbp_src_multichannel
+    pluggy-1.5.0               |  py312h06a4308_0          45 KB  pbp_src_multichannel
+    psutil-7.0.0               |  py312hee96239_1         550 KB  pbp_src_multichannel
+    pthread-stubs-0.3          |       h0ce48e5_1           5 KB  pbp_src_multichannel
+    py-lief-0.12.3             |  py312h6a678d5_0         1.7 MB  pbp_src_multichannel
+    pybind11-abi-5             |       hd3eb1b0_0          13 KB  pbp_src_multichannel
+    pycosat-0.6.6              |  py312h5eee18b_2         112 KB  pbp_src_multichannel
+    pycparser-2.23             |  py312h06a4308_0         285 KB  pbp_src_multichannel
+    pysocks-1.7.1              |  py312h06a4308_1          34 KB  pbp_src_multichannel
+    python-3.12.12             |       hd17a9e1_1        38.4 MB  pbp_src_multichannel
+    python-libarchive-c-5.1    |     pyhd3eb1b0_0          51 KB  pbp_src_multichannel
+    pytz-2025.2                |  py312h06a4308_0         273 KB  pbp_src_multichannel
+    pyyaml-6.0.3               |  py312h591646f_0         254 KB  pbp_src_multichannel
+    readline-8.3               |       hc2a1206_0         573 KB  pbp_src_multichannel
+    referencing-0.37.0         |  py312h06a4308_0          75 KB  pbp_src_multichannel
+    reproc-14.2.4              |       h6a678d5_2          29 KB  pbp_src_multichannel
+    reproc-cpp-14.2.4          |       h6a678d5_2          21 KB  pbp_src_multichannel
+    requests-2.32.5            |  py312h06a4308_1         162 KB  pbp_src_multichannel
+    rpds-py-0.28.0             |  py312h498d7c9_0         380 KB  pbp_src_multichannel
+    ruamel.yaml-0.18.16        |  py312h4aee224_0         255 KB  pbp_src_multichannel
+    ruamel.yaml.clib-0.2.14    |  py312h4aee224_0         144 KB  pbp_src_multichannel
+    setuptools-80.9.0          |  py312h06a4308_0         2.2 MB  pbp_src_multichannel
+    simdjson-3.10.1            |       hdb19cb5_0         524 KB  pbp_src_multichannel
+    soupsieve-2.5              |  py312h06a4308_0          84 KB  pbp_src_multichannel
+    sqlite-3.51.1              |       he0a8d7e_0         1.7 MB  pbp_src_multichannel
+    tk-8.6.15                  |       h54e0aa7_0         3.4 MB  pbp_src_multichannel
+    tqdm-4.67.1                |  py312h7040dfc_1         147 KB  pbp_src_multichannel
+    truststore-0.10.1          |  py312h06a4308_1          46 KB  pbp_src_multichannel
+    typing-extensions-4.15.0   |  py312h06a4308_0          11 KB  pbp_src_multichannel
+    typing_extensions-4.15.0   |  py312h06a4308_0          93 KB  pbp_src_multichannel
+    tzdata-2025c               |       he532380_0         126 KB  pbp_src_multichannel
+    urllib3-2.6.3              |  py312h06a4308_0         341 KB  pbp_src_multichannel
+    xorg-libx11-1.8.12         |       h9b100fa_1         922 KB  pbp_src_multichannel
+    xorg-libxau-1.0.12         |       h9b100fa_0          14 KB  pbp_src_multichannel
+    xorg-libxdmcp-1.1.5        |       h9b100fa_0          20 KB  pbp_src_multichannel
+    xorg-xorgproto-2024.1      |       h5eee18b_1         560 KB  pbp_src_multichannel
+    xz-5.6.4                   |       h5eee18b_1         567 KB  pbp_src_multichannel
+    yaml-0.2.5                 |       h7b6447c_0          87 KB  pbp_src_multichannel
+    yaml-cpp-0.8.0             |       h6a678d5_1         613 KB  pbp_src_multichannel
+    zlib-1.3.1                 |       hb25bd0a_0          93 KB  pbp_src_multichannel
+    zstandard-0.24.0           |  py312h3d778a8_0         458 KB  pbp_src_multichannel
+    zstd-1.5.7                 |       h11fc155_0         1.0 MB  pbp_src_multichannel
+    ------------------------------------------------------------
+                                           Total:       126.8 MB
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      main/linux-64::_libgcc_mutex-0.1-main 
+  _openmp_mutex      main/linux-64::_openmp_mutex-5.1-1_gnu 
+  archspec           main/noarch::archspec-0.2.5-pyhd3eb1b0_0 
+  attrs              main/linux-64::attrs-25.4.0-py312h06a4308_2 
+  beautifulsoup4     main/linux-64::beautifulsoup4-4.14.2-py312h06a4308_0 
+  boltons            main/linux-64::boltons-25.0.0-py312h06a4308_0 
+  brotlicffi         main/linux-64::brotlicffi-1.2.0.0-py312h7354ed3_0 
+  bzip2              main/linux-64::bzip2-1.0.8-h5eee18b_6 
+  c-ares             main/linux-64::c-ares-1.34.6-hd44998d_0 
+  ca-certificates    main/linux-64::ca-certificates-2025.12.2-h06a4308_0 
+  certifi            main/linux-64::certifi-2026.01.04-py312h06a4308_0 
+  cffi               main/linux-64::cffi-2.0.0-py312h4eded50_1 
+  chardet            main/linux-64::chardet-5.2.0-py312h06a4308_0 
+  charset-normalizer main/linux-64::charset-normalizer-3.4.4-py312h06a4308_0 
+  click              main/linux-64::click-8.2.1-py312h06a4308_1 
+  conda              main/linux-64::conda-25.7.0-py312h06a4308_0 
+  conda-build        main/linux-64::conda-build-25.1.2-py312h06a4308_0 
+  conda-index        main/linux-64::conda-index-0.7.0-py312h06a4308_0 
+  conda-libmamba-so~ main/noarch::conda-libmamba-solver-25.4.0-pyhdf14ebd_1 
+  conda-package-han~ main/linux-64::conda-package-handling-2.4.0-py312h06a4308_1 
+  conda-package-str~ main/linux-64::conda-package-streaming-0.12.0-py312h06a4308_1 
+  cpp-expected       main/linux-64::cpp-expected-1.1.0-hdb19cb5_0 
+  distro             main/linux-64::distro-1.9.0-py312h06a4308_0 
+  expat              main/linux-64::expat-2.7.3-h7354ed3_4 
+  filelock           main/linux-64::filelock-3.20.0-py312h06a4308_0 
+  fmt                main/linux-64::fmt-11.2.0-hca5f364_0 
+  frozendict         main/linux-64::frozendict-2.4.6-py312hee96239_0 
+  gettext            main/linux-64::gettext-0.21.0-hedfda30_2 
+  icu                main/linux-64::icu-73.1-h6a678d5_0 
+  idna               main/linux-64::idna-3.11-py312h06a4308_0 
+  jansson            main/linux-64::jansson-2.14-h5eee18b_1 
+  jinja2             main/linux-64::jinja2-3.1.6-py312h06a4308_0 
+  jsonpatch          main/linux-64::jsonpatch-1.33-py312h06a4308_1 
+  jsonpointer        main/linux-64::jsonpointer-3.0.0-py312h06a4308_0 
+  jsonschema         main/linux-64::jsonschema-4.25.1-py312h06a4308_0 
+  jsonschema-specif~ main/linux-64::jsonschema-specifications-2025.9.1-py312h06a4308_0 
+  ld_impl_linux-64   main/linux-64::ld_impl_linux-64-2.44-h153f514_2 
+  libarchive         main/linux-64::libarchive-3.8.2-h3ec8f01_0 
+  libcurl            main/linux-64::libcurl-8.17.0-hc93bc37_0 
+  libev              main/linux-64::libev-4.33-h7f8727e_1 
+  libexpat           main/linux-64::libexpat-2.7.3-h7354ed3_4 
+  libffi             main/linux-64::libffi-3.4.4-h6a678d5_1 
+  libgcc             main/linux-64::libgcc-15.2.0-h69a1729_7 
+  libgcc-ng          main/linux-64::libgcc-ng-15.2.0-h166f726_7 
+  libgomp            main/linux-64::libgomp-15.2.0-h4751f2c_7 
+  libiconv           main/linux-64::libiconv-1.16-h5eee18b_3 
+  libidn2            main/linux-64::libidn2-2.3.8-hf80d704_0 
+  liblief            main/linux-64::liblief-0.12.3-h6a678d5_0 
+  libmamba           main/linux-64::libmamba-2.3.2-h860b5fb_1 
+  libmambapy         main/linux-64::libmambapy-2.3.2-py312h3f77f5b_1 
+  libnghttp2         main/linux-64::libnghttp2-1.67.1-h697f920_0 
+  libnsl             main/linux-64::libnsl-2.0.0-h5eee18b_0 
+  libsolv            main/linux-64::libsolv-0.7.30-h6f1ccf3_2 
+  libssh2            main/linux-64::libssh2-1.11.1-h251f7ec_0 
+  libstdcxx          main/linux-64::libstdcxx-15.2.0-h39759b7_7 
+  libstdcxx-ng       main/linux-64::libstdcxx-ng-15.2.0-hc03a8fd_7 
+  libunistring       main/linux-64::libunistring-1.3-hb25bd0a_0 
+  libuuid            main/linux-64::libuuid-1.41.5-h5eee18b_0 
+  libxcb             main/linux-64::libxcb-1.17.0-h9b100fa_0 
+  libxml2            main/linux-64::libxml2-2.13.9-h2c43086_0 
+  libzlib            main/linux-64::libzlib-1.3.1-hb25bd0a_0 
+  lz4-c              main/linux-64::lz4-c-1.9.4-h6a678d5_1 
+  markupsafe         main/linux-64::markupsafe-3.0.2-py312h5eee18b_0 
+  menuinst           main/linux-64::menuinst-2.4.2-py312h06a4308_1 
+  msgpack-python     main/linux-64::msgpack-python-1.1.1-py312h6a678d5_0 
+  ncurses            main/linux-64::ncurses-6.5-h7934f7d_0 
+  nlohmann_json      main/linux-64::nlohmann_json-3.11.2-h6a678d5_0 
+  openssl            main/linux-64::openssl-3.0.18-hd6dcaed_0 
+  packaging          main/linux-64::packaging-25.0-py312h06a4308_1 
+  patch              main/linux-64::patch-2.8-hb25bd0a_0 
+  patchelf           main/linux-64::patchelf-0.17.2-h6a678d5_0 
+  pcre2              main/linux-64::pcre2-10.46-hf426167_0 
+  pkginfo            main/linux-64::pkginfo-1.12.1.2-py312h06a4308_0 
+  platformdirs       main/linux-64::platformdirs-4.5.0-py312h06a4308_0 
+  pluggy             main/linux-64::pluggy-1.5.0-py312h06a4308_0 
+  psutil             main/linux-64::psutil-7.0.0-py312hee96239_1 
+  pthread-stubs      main/linux-64::pthread-stubs-0.3-h0ce48e5_1 
+  py-lief            main/linux-64::py-lief-0.12.3-py312h6a678d5_0 
+  pybind11-abi       main/noarch::pybind11-abi-5-hd3eb1b0_0 
+  pycosat            main/linux-64::pycosat-0.6.6-py312h5eee18b_2 
+  pycparser          main/linux-64::pycparser-2.23-py312h06a4308_0 
+  pysocks            main/linux-64::pysocks-1.7.1-py312h06a4308_1 
+  python             main/linux-64::python-3.12.12-hd17a9e1_1 
+  python-libarchive~ main/noarch::python-libarchive-c-5.1-pyhd3eb1b0_0 
+  pytz               main/linux-64::pytz-2025.2-py312h06a4308_0 
+  pyyaml             main/linux-64::pyyaml-6.0.3-py312h591646f_0 
+  readline           main/linux-64::readline-8.3-hc2a1206_0 
+  referencing        main/linux-64::referencing-0.37.0-py312h06a4308_0 
+  reproc             main/linux-64::reproc-14.2.4-h6a678d5_2 
+  reproc-cpp         main/linux-64::reproc-cpp-14.2.4-h6a678d5_2 
+  requests           main/linux-64::requests-2.32.5-py312h06a4308_1 
+  rpds-py            main/linux-64::rpds-py-0.28.0-py312h498d7c9_0 
+  ruamel.yaml        main/linux-64::ruamel.yaml-0.18.16-py312h4aee224_0 
+  ruamel.yaml.clib   main/linux-64::ruamel.yaml.clib-0.2.14-py312h4aee224_0 
+  setuptools         main/linux-64::setuptools-80.9.0-py312h06a4308_0 
+  simdjson           main/linux-64::simdjson-3.10.1-hdb19cb5_0 
+  soupsieve          main/linux-64::soupsieve-2.5-py312h06a4308_0 
+  sqlite             main/linux-64::sqlite-3.51.1-he0a8d7e_0 
+  tk                 main/linux-64::tk-8.6.15-h54e0aa7_0 
+  tqdm               main/linux-64::tqdm-4.67.1-py312h7040dfc_1 
+  truststore         main/linux-64::truststore-0.10.1-py312h06a4308_1 
+  typing-extensions  main/linux-64::typing-extensions-4.15.0-py312h06a4308_0 
+  typing_extensions  main/linux-64::typing_extensions-4.15.0-py312h06a4308_0 
+  tzdata             main/noarch::tzdata-2025c-he532380_0 
+  urllib3            main/linux-64::urllib3-2.6.3-py312h06a4308_0 
+  xorg-libx11        main/linux-64::xorg-libx11-1.8.12-h9b100fa_1 
+  xorg-libxau        main/linux-64::xorg-libxau-1.0.12-h9b100fa_0 
+  xorg-libxdmcp      main/linux-64::xorg-libxdmcp-1.1.5-h9b100fa_0 
+  xorg-xorgproto     main/linux-64::xorg-xorgproto-2024.1-h5eee18b_1 
+  xz                 main/linux-64::xz-5.6.4-h5eee18b_1 
+  yaml               main/linux-64::yaml-0.2.5-h7b6447c_0 
+  yaml-cpp           main/linux-64::yaml-cpp-0.8.0-h6a678d5_1 
+  zlib               main/linux-64::zlib-1.3.1-hb25bd0a_0 
+  zstandard          main/linux-64::zstandard-0.24.0-py312h3d778a8_0 
+  zstd               main/linux-64::zstd-1.5.7-h11fc155_0 
+
+
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+Debug:Found home directory: /home/task_176909134256538
+Debug:Found home directory: /home/task_176909134256538
+Using the following build time options: ['--error-overlinking', '--suppress-variables', '--skip-existing']
+Executing command: /opt/conda/bin/conda run --live-stream --prefix /home/task_176909134256538/bld conda build sphinx-feedstock/recipe --cache-dir /home/task_176909134256538/src_cache --output-folder public --croot /home/task_176909134256538/croot -m ./conda_build_config_pbp_generated.yaml --clobber-file ./conda_build_config_pbp_generated.yaml --override-channels --no-test --no-verify -c pbp_src_multichannel --error-overlinking --suppress-variables --skip-existing
+WARNING: No numpy version specified in conda_build_config.yaml.  Falling back to default numpy value of 1.26
+Adding in variants from internal_defaults
+Adding in variants from /home/task_176909134256538/conda_build_config_pbp_generated.yaml
+WARNING: Number of parsed outputs does not match detected raw metadata blocks. Identified output block may be wrong! If you are using Jinja conditionals to include or exclude outputs, consider using `skip: true  # [condition]` instead.
+Attempting to finalize metadata for sphinx
+Reloading output folder: ...working... done
+Getting pinned dependencies: ...working... done
+Reloading output folder: ...working... done
+Getting pinned dependencies: ...working... done
+Indexing ['linux-64'] does not include 'noarch'
+
+Indexing ['linux-64'] does not include 'noarch'
+
+BUILD START: ['sphinx-9.0.0-py312h893fd2c_0.conda']
+Reloading output folder: ...working... done
+Solving environment (_h_env): ...working... done
+
+## Package Plan ##
+
+  environment location: /home/task_176909134256538/croot/sphinx_1769091440949/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac
+
+
+The following NEW packages will be INSTALLED:
+
+    _libgcc_mutex:    0.1-main               pbp_src_multichannel
+    _openmp_mutex:    5.1-1_gnu              pbp_src_multichannel
+    bzip2:            1.0.8-h5eee18b_6       pbp_src_multichannel
+    ca-certificates:  2025.12.2-h06a4308_0   pbp_src_multichannel
+    expat:            2.7.3-h7354ed3_4       pbp_src_multichannel
+    flit-core:        3.12.0-py312hee27c6d_1 pbp_src_multichannel
+    ld_impl_linux-64: 2.44-h153f514_2        pbp_src_multichannel
+    libexpat:         2.7.3-h7354ed3_4       pbp_src_multichannel
+    libffi:           3.4.4-h6a678d5_1       pbp_src_multichannel
+    libgcc:           15.2.0-h69a1729_7      pbp_src_multichannel
+    libgcc-ng:        15.2.0-h166f726_7      pbp_src_multichannel
+    libgomp:          15.2.0-h4751f2c_7      pbp_src_multichannel
+    libnsl:           2.0.0-h5eee18b_0       pbp_src_multichannel
+    libstdcxx:        15.2.0-h39759b7_7      pbp_src_multichannel
+    libstdcxx-ng:     15.2.0-hc03a8fd_7      pbp_src_multichannel
+    libuuid:          1.41.5-h5eee18b_0      pbp_src_multichannel
+    libxcb:           1.17.0-h9b100fa_0      pbp_src_multichannel
+    libzlib:          1.3.1-hb25bd0a_0       pbp_src_multichannel
+    ncurses:          6.5-h7934f7d_0         pbp_src_multichannel
+    openssl:          3.0.18-hd6dcaed_0      pbp_src_multichannel
+    pip:              25.3-pyhc872135_0      pbp_src_multichannel
+    pthread-stubs:    0.3-h0ce48e5_1         pbp_src_multichannel
+    python:           3.12.12-hd17a9e1_1     pbp_src_multichannel
+    readline:         8.3-hc2a1206_0         pbp_src_multichannel
+    setuptools:       80.9.0-py312h06a4308_0 pbp_src_multichannel
+    sqlite:           3.51.1-he0a8d7e_0      pbp_src_multichannel
+    tk:               8.6.15-h54e0aa7_0      pbp_src_multichannel
+    tzdata:           2025c-he532380_0       pbp_src_multichannel
+    wheel:            0.45.1-py312h06a4308_0 pbp_src_multichannel
+    xorg-libx11:      1.8.12-h9b100fa_1      pbp_src_multichannel
+    xorg-libxau:      1.0.12-h9b100fa_0      pbp_src_multichannel
+    xorg-libxdmcp:    1.1.5-h9b100fa_0       pbp_src_multichannel
+    xorg-xorgproto:   2024.1-h5eee18b_1      pbp_src_multichannel
+    xz:               5.6.4-h5eee18b_1       pbp_src_multichannel
+    zlib:             1.3.1-hb25bd0a_0       pbp_src_multichannel
+
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+Source cache directory is: /home/task_176909134256538/src_cache/src_cache
+Downloading source to cache: sphinx-9.0.0_dc75216d69.tar.gz
+Downloading https://pypi.org/packages/source/s/sphinx/sphinx-9.0.0.tar.gz
+Success
+checking file pyproject.toml
+patching file pyproject.toml
+  Running command Preparing metadata (pyproject.toml)
+  Running command Building wheel for Sphinx (pyproject.toml)
+Indexing ['linux-64'] does not include 'noarch'
+
+Indexing ['linux-64'] does not include 'noarch'
+
+Extracting download
+Applying patch: /home/task_176909134256538/sphinx-feedstock/recipe/0001-reverting-pyproject-changes.patch
+Applying patch: /home/task_176909134256538/sphinx-feedstock/recipe/0001-reverting-pyproject-changes.patch with args:
+['-Np1', '-i', '/tmp/tmpvj_4tunn/0001-reverting-pyproject-changes.patch.native', '--binary']
+Patch analysis gives:
+[[ RA-MD1LOVE ]] - [[                                  0001-reverting-pyproject-changes.patch ]]
+
+Key:
+
+R :: Reversible                       A :: Applicable
+Y :: Build-prefix patch in use        M :: Minimal, non-amalgamated
+D :: Dry-runnable                     N :: Patch level (1 is preferred)
+L :: Patch level not-ambiguous        O :: Patch applies without offsets
+V :: Patch applies without fuzz       E :: Patch applies without emitting to stderr
+
+
+Rendered as:
+```yaml
+package:
+  name: sphinx
+  version: 9.0.0
+source:
+  url: https://pypi.org/packages/source/s/sphinx/sphinx-9.0.0.tar.gz
+  sha256: dc75216d69e00f170cb236eee17e66bcd89c4c2b5fe938ca8532fd7fe5abb23f
+  patches:
+    - 0001-reverting-pyproject-changes.patch
+build:
+  number: '0'
+  script: /home/task_176909134256538/croot/sphinx_1769091440949/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac/bin/python
+    -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir
+    -vv
+  entry_points:
+    - sphinx-build = sphinx.cmd.build:main
+    - sphinx-quickstart = sphinx.cmd.quickstart:main
+    - sphinx-apidoc = sphinx.ext.apidoc:main
+    - sphinx-autogen = sphinx.ext.autosummary.generate:main
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - ca-certificates 2025.12.2 h06a4308_0
+    - ld_impl_linux-64 2.44 h153f514_2
+    - libgomp 15.2.0 h4751f2c_7
+    - tzdata 2025c he532380_0
+    - _openmp_mutex 5.1 1_gnu
+    - libgcc 15.2.0 h69a1729_7
+    - libgcc-ng 15.2.0 h166f726_7
+    - libstdcxx 15.2.0 h39759b7_7
+    - bzip2 1.0.8 h5eee18b_6
+    - libexpat 2.7.3 h7354ed3_4
+    - libnsl 2.0.0 h5eee18b_0
+    - libstdcxx-ng 15.2.0 hc03a8fd_7
+    - libuuid 1.41.5 h5eee18b_0
+    - libzlib 1.3.1 hb25bd0a_0
+    - ncurses 6.5 h7934f7d_0
+    - openssl 3.0.18 hd6dcaed_0
+    - pthread-stubs 0.3 h0ce48e5_1
+    - xorg-libxau 1.0.12 h9b100fa_0
+    - xorg-libxdmcp 1.1.5 h9b100fa_0
+    - xorg-xorgproto 2024.1 h5eee18b_1
+    - xz 5.6.4 h5eee18b_1
+    - expat 2.7.3 h7354ed3_4
+    - libffi 3.4.4 h6a678d5_1
+    - libxcb 1.17.0 h9b100fa_0
+    - readline 8.3 hc2a1206_0
+    - zlib 1.3.1 hb25bd0a_0
+    - sqlite 3.51.1 he0a8d7e_0
+    - xorg-libx11 1.8.12 h9b100fa_1
+    - tk 8.6.15 h54e0aa7_0
+    - python 3.12.12 hd17a9e1_1
+    - flit-core 3.12.0 py312hee27c6d_1
+    - setuptools 80.9.0 py312h06a4308_0
+    - wheel 0.45.1 py312h06a4308_0
+    - pip 25.3 pyhc872135_0
+  run:
+    - pygments >=2.17
+    - docutils >=0.20,<0.23
+    - sphinxcontrib-htmlhelp >=2.0.6
+    - requests >=2.30.0
+    - snowballstemmer >=2.2
+    - sphinxcontrib-serializinghtml >=1.1.9
+    - python >=3.12,<3.13.0a0
+    - packaging >=23.0
+    - sphinxcontrib-qthelp >=1.0.6
+    - alabaster >=0.7.14
+    - jinja2 >=3.1
+    - roman-numerals >=1.0.0
+    - babel >=2.13
+    - imagesize >=1.3
+    - sphinxcontrib-applehelp >=1.0.7
+    - sphinxcontrib-jsmath >=1.0.1
+    - sphinxcontrib-devhelp >=1.0.6
+test:
+  imports:
+    - sphinx
+    - sphinx.builders
+  source_files:
+    - tests
+  requires:
+    - pytest >=8.0
+    - pytest-xdist >=3.4
+    - psutil
+    - typing-extensions >=4.9
+    - defusedxml >=0.7.1
+    - setuptools >=70.0
+    - gcc_linux-64 14.3.0.*
+    - pip
+    - cython >=3.0
+    - sysroot_linux-64 2.28.*
+  commands:
+    - pip check
+    - sphinx-build --help
+    - sphinx-quickstart --help
+    - sphinx-apidoc --help
+    - sphinx-autogen --help
+    - pytest -v -k "not (test_autodoc_type_aliases or test_ModuleAnalyzer_for_module)"
+about:
+  home: https://www.sphinx-doc.org
+  license: BSD-2-Clause
+  license_file: LICENSE.rst
+  license_family: BSD
+  summary: Sphinx is a tool that makes it easy to create intelligent and beautiful
+    documentation
+  description: 'Sphinx is a tool that makes it easy to create intelligent and beautiful
+    documentation,
+
+    written by Georg Brandl and licensed under the BSD license.
+
+    It was originally created for the new Python documentation, and it has excellent
+
+    facilities for the documentation of Python projects, but C/C++ is already supported
+
+    as well, and it is planned to add special support for other languages as well.
+
+    '
+  doc_url: https://www.sphinx-doc.org
+  dev_url: https://github.com/sphinx-doc/sphinx
+extra:
+  recipe-maintainers:
+    - chohner
+    - jakirkham
+    - ocefpaf
+    - blink1073
+  final: true
+  copy_test_source_files: true
+```
+
+source tree in: /home/task_176909134256538/croot/sphinx_1769091440949/work
+export PREFIX=/home/task_176909134256538/croot/sphinx_1769091440949/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac
+export BUILD_PREFIX=/home/task_176909134256538/croot/sphinx_1769091440949/_build_env
+export SRC_DIR=/home/task_176909134256538/croot/sphinx_1769091440949/work
+Using pip 25.3 from $PREFIX/lib/python3.12/site-packages/pip (python 3.12)
+Non-user install because user site-packages disabled
+Ignoring indexes: https://pypi.org/simple
+Created temporary directory: /tmp/pip-build-tracker-_6rkrz4_
+Initialized build tracking at /tmp/pip-build-tracker-_6rkrz4_
+Created build tracker: /tmp/pip-build-tracker-_6rkrz4_
+Entered build tracker: /tmp/pip-build-tracker-_6rkrz4_
+Created temporary directory: /tmp/pip-install-9dbinxjr
+Created temporary directory: /tmp/pip-ephem-wheel-cache-l609s884
+Processing $SRC_DIR
+  Added file://$SRC_DIR to build tracker '/tmp/pip-build-tracker-_6rkrz4_'
+  Created temporary directory: /tmp/pip-modern-metadata-idwdmlzg
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+  Source in $SRC_DIR has version 9.0.0, which satisfies requirement Sphinx==9.0.0 from file://$SRC_DIR
+  Removed Sphinx==9.0.0 from file://$SRC_DIR from build tracker '/tmp/pip-build-tracker-_6rkrz4_'
+Created temporary directory: /tmp/pip-unpack-xm0k_h0x
+Building wheels for collected packages: Sphinx
+  Destination directory: /tmp/pip-ephem-wheel-cache-l609s884/wheels/d3/29/75/b8bc688abdb37ad07d61b1de917dc93e9b413c31227f43ec41/tmphgghcqz0
+  Building wheel for Sphinx (pyproject.toml): started
+  Building wheel for Sphinx (pyproject.toml): finished with status 'done'
+  Created wheel for Sphinx: filename=sphinx-9.0.0-py3-none-any.whl size=3762793 sha256=51cb7c4e566b2dcc961d9592c8f9db7ba00c9bb51e99f29c5d57fbeadd8f84b7
+  Stored in directory: /tmp/pip-ephem-wheel-cache-l609s884/wheels/d3/29/75/b8bc688abdb37ad07d61b1de917dc93e9b413c31227f43ec41
+Successfully built Sphinx
+Installing collected packages: Sphinx
+
+  changing mode of $PREFIX/bin/sphinx-apidoc to 755
+  changing mode of $PREFIX/bin/sphinx-autogen to 755
+  changing mode of $PREFIX/bin/sphinx-build to 755
+  changing mode of $PREFIX/bin/sphinx-quickstart to 755
+Successfully installed Sphinx-9.0.0
+Removed build tracker: '/tmp/pip-build-tracker-_6rkrz4_'
+
+Resource usage statistics from building sphinx:
+   Process count: 3
+   CPU time: Sys=0:00:00.0, User=0:00:00.2
+   Memory: 55.3M
+   Disk usage: 26.8K
+   Time elapsed: 0:00:04.0
+
+
+Packaging sphinx
+Packaging sphinx-9.0.0-py312h893fd2c_0
+WARNING: Importing conda-verify failed.  Please be sure to test your packages.  conda install conda-verify to make this message go away.
+compiling .pyc files...
+number of files: 938
+Fixing permissions
+Packaged license file/s.
+INFO :: Time taken to mark (prefix)
+        0 replacements in 0 files was 0.05 seconds
+Files containing CONDA_PREFIX
+-----------------------------
+bin/sphinx-apidoc (text): Patching
+bin/sphinx-autogen (text): Patching
+bin/sphinx-build (text): Patching
+bin/sphinx-quickstart (text): Patching
+Renaming work directory '/home/task_176909134256538/croot/sphinx_1769091440949/work' to '/home/task_176909134256538/croot/sphinx_1769091440949/work_moved_sphinx-9.0.0-py312h893fd2c_0_linux-64_main_build_loop'
+shutil.move(work)=/home/task_176909134256538/croot/sphinx_1769091440949/work, dest=/home/task_176909134256538/croot/sphinx_1769091440949/work_moved_sphinx-9.0.0-py312h893fd2c_0_linux-64_main_build_loop)
+# Automatic uploading is disabled
+# If you want to upload package(s) to anaconda.org later, type:
+
+
+# To have conda build upload to anaconda.org automatically, use
+# conda config --set anaconda_upload yes
+anaconda upload \
+    public/linux-64/sphinx-9.0.0-py312h893fd2c_0.conda
+anaconda_upload is not set.  Not uploading wheels: []
+
+INFO :: The inputs making up the hashes for the built packages are as follows:
+{
+  "sphinx-9.0.0-py312h893fd2c_0.conda": {
+    "recipe": {
+      "c_compiler": "gcc",
+      "c_compiler_version": "14.3.0",
+      "c_stdlib": "sysroot",
+      "c_stdlib_version": "2.28",
+      "channel_targets": "defaults",
+      "target_platform": "linux-64"
+    }
+  }
+}
+
+
+####################################################################################
+Resource usage summary:
+
+Total time: 0:00:51.2
+CPU usage: sys=0:00:00.0, user=0:00:00.2
+Maximum memory usage observed: 55.3M
+Total disk usage observed (not including envs): 26.8K
+Transmuting file: public/linux-64/sphinx-9.0.0-py312h893fd2c_0.conda
+Debug:Found home directory: /home/task_176909134256538
+File transmuted: public/linux-64/sphinx-9.0.0-py312h893fd2c_0.conda.
+Deleted: public/index.html
+Deleted: public/channeldata.json
+Deleted: public/linux-64/repodata_from_packages.json
+Deleted: public/linux-64/repodata.json
+Deleted: public/linux-64/current_repodata.json
+Deleted: public/linux-64/index.html
+Deleted: public/linux-64/.cache/cache.db
+Deleted: public/noarch/repodata_from_packages.json
+Deleted: public/noarch/repodata.json
+Deleted: public/noarch/current_repodata.json
+Deleted: public/noarch/index.html
+Deleted: public/noarch/.cache/cache.db
+Archiving the used source inputs...
+Source cache archived successfully.
+Archiving the conda packages in the public folder...
+Conda packages archived successfully.
+===== Package build and processing completed! =====
+[taskcluster 2026-01-22T14:18:20.458Z]                        Exit Code: 0
+[taskcluster 2026-01-22T14:18:20.458Z]                        User Time: 1m34.133888s
+[taskcluster 2026-01-22T14:18:20.458Z]                      Kernel Time: 9.931733s
+[taskcluster 2026-01-22T14:18:20.458Z]                        Wall Time: 1m33.871405027s
+[taskcluster 2026-01-22T14:18:20.458Z]  Average Available System Memory: 29.45 GiB
+[taskcluster 2026-01-22T14:18:20.458Z]       Average System Memory Used: 765.38 MiB
+[taskcluster 2026-01-22T14:18:20.458Z]          Peak System Memory Used: 1.23 GiB
+[taskcluster 2026-01-22T14:18:20.458Z]              Total System Memory: 30.61 GiB
+[taskcluster 2026-01-22T14:18:20.458Z]                           Result: SUCCEEDED
+[taskcluster 2026-01-22T14:18:20.458Z] === Task Finished ===
+[taskcluster 2026-01-22T14:18:20.458Z] Task Duration: 1m34.968998095s
+[taskcluster 2026-01-22T14:18:20.552Z] Uploading artifact public/source_cache/dc75216d69e00f170cb236eee17e66bcd89c4c2b5fe938ca8532fd7fe5abb23f-_-sphinx-9.0.0_dc75216d69.tar.gz from file /home/task_176909134256538/public/source_cache/dc75216d69e00f170cb236eee17e66bcd89c4c2b5fe938ca8532fd7fe5abb23f-_-sphinx-9.0.0_dc75216d69.tar.gz with content encoding "identity", mime type "application/gzip" and expiry 2027-01-25T14:16:39.013Z
+[taskcluster 2026-01-22T14:18:20.555Z] Uploading artifact public/packages.tgz from file /home/task_176909134256538/public/packages.tgz with content encoding "identity", mime type "application/x-compressed-tar" and expiry 2027-01-25T14:16:39.013Z
+[taskcluster 2026-01-22T14:18:20.557Z] Uploading artifact public/linux-64/sphinx-9.0.0-py312h893fd2c_0.tar.bz2 from file /home/task_176909134256538/public/linux-64/sphinx-9.0.0-py312h893fd2c_0.tar.bz2 with content encoding "identity", mime type "application/x-bzip" and expiry 2027-01-25T14:16:39.013Z
+[taskcluster 2026-01-22T14:18:20.557Z] Uploading artifact public/linux-64/sphinx-9.0.0-py312h893fd2c_0.conda from file /home/task_176909134256538/public/linux-64/sphinx-9.0.0-py312h893fd2c_0.conda with content encoding "identity", mime type "application/octet-stream" and expiry 2027-01-25T14:16:39.013Z
+[taskcluster 2026-01-22T14:18:20.559Z] Uploading artifact public/source_cached.tgz from file /home/task_176909134256538/public/source_cached.tgz with content encoding "identity", mime type "application/x-compressed-tar" and expiry 2027-01-25T14:16:39.013Z
+[taskcluster 2026-01-22T14:18:21.048Z] Uploading link artifact public/logs/live.log to artifact public/logs/live_backing.log with expiry 2027-01-25T14:16:39.013Z

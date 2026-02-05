@@ -1,0 +1,153 @@
+name: Build/Test Graph 'prefect-test-dependency-feedstock' and 0 more
+priority: 0
+user: AbdulRehmanAlvi
+src_channels:
+- main
+dest_channel: ad_package_build
+tasks:
+- description: Build task for prefect-test-dependency-feedstock @ 1422371 (14223716092c73a14d8d09b76f32668ad5d03dae)
+    linux-64 3.12 channel_targets=defaults target_platform=linux-64 2026-01-22 21:34:59
+  public_name: build-prefect-test-dependency-feedstock-linux-64_py3.12_01588a66acf35e07
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.12'
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/prefect-test-dependency-feedstock
+  feedstock_ref: 14223716092c73a14d8d09b76f32668ad5d03dae
+  recipe_dir: recipe
+  build_options:
+  - --error-overlinking
+  - --skip-existing
+  - --suppress-variables
+- description: Build task for prefect-test-dependency-feedstock @ 1422371 (14223716092c73a14d8d09b76f32668ad5d03dae)
+    linux-aarch64 3.12 channel_targets=defaults target_platform=linux-aarch64 2026-01-22
+    21:34:59
+  public_name: build-prefect-test-dependency-feedstock-linux-aarch64_py3.12_e5658c3f6fe95dd7
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.12'
+    target_platform: linux-aarch64
+  feedstock_url: https://github.com/AnacondaRecipes/prefect-test-dependency-feedstock
+  feedstock_ref: 14223716092c73a14d8d09b76f32668ad5d03dae
+  recipe_dir: recipe
+  build_options:
+  - --error-overlinking
+  - --skip-existing
+  - --suppress-variables
+- description: Build task for prefect-test-dependency-feedstock @ 1422371 (14223716092c73a14d8d09b76f32668ad5d03dae)
+    osx-arm64 3.12 channel_targets=defaults target_platform=osx-arm64 2026-01-22 21:34:59
+  public_name: build-prefect-test-dependency-feedstock-osx-arm64_py3.12_307979e57c084dd4
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.12'
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/prefect-test-dependency-feedstock
+  feedstock_ref: 14223716092c73a14d8d09b76f32668ad5d03dae
+  recipe_dir: recipe
+  build_options:
+  - --error-overlinking
+  - --skip-existing
+  - --suppress-variables
+- description: Build task for prefect-test-dependency-feedstock @ 1422371 (14223716092c73a14d8d09b76f32668ad5d03dae)
+    win-64 3.12 channel_targets=defaults target_platform=win-64 2026-01-22 21:34:59
+  public_name: build-prefect-test-dependency-feedstock-win-64_py3.12_35a7d75955ddf4a4
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.12'
+    target_platform: win-64
+  feedstock_url: https://github.com/AnacondaRecipes/prefect-test-dependency-feedstock
+  feedstock_ref: 14223716092c73a14d8d09b76f32668ad5d03dae
+  recipe_dir: recipe
+  build_options:
+  - --error-overlinking
+  - --skip-existing
+  - --suppress-variables
+- description: Test task for prefect-test-dependency-feedstock prefect-test-dependency
+    @ 1422371 (14223716092c73a14d8d09b76f32668ad5d03dae) linux-64 3.12 channel_targets=defaults
+    target_platform=linux-64 2026-01-22 21:34:59
+  public_name: test-prefect-test-dependency-feedstock-prefect-test-dependency-linux-64_py3.12_01588a66acf35e07
+  dependencies:
+  - build-prefect-test-dependency-feedstock-linux-64_py3.12_01588a66acf35e07
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.12'
+    target_platform: linux-64
+  package_def:
+    matchspec: prefect-test-dependency
+  external_dependencies: []
+- description: Test task for prefect-test-dependency-feedstock prefect-test-dependency
+    @ 1422371 (14223716092c73a14d8d09b76f32668ad5d03dae) linux-aarch64 3.12 channel_targets=defaults
+    target_platform=linux-aarch64 2026-01-22 21:34:59
+  public_name: test-prefect-test-dependency-feedstock-prefect-test-dependency-linux-aarch64_py3.12_e5658c3f6fe95dd7
+  dependencies:
+  - build-prefect-test-dependency-feedstock-linux-aarch64_py3.12_e5658c3f6fe95dd7
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.12'
+    target_platform: linux-aarch64
+  package_def:
+    matchspec: prefect-test-dependency
+  external_dependencies: []
+- description: Test task for prefect-test-dependency-feedstock prefect-test-dependency
+    @ 1422371 (14223716092c73a14d8d09b76f32668ad5d03dae) osx-arm64 3.12 channel_targets=defaults
+    target_platform=osx-arm64 2026-01-22 21:34:59
+  public_name: test-prefect-test-dependency-feedstock-prefect-test-dependency-osx-arm64_py3.12_307979e57c084dd4
+  dependencies:
+  - build-prefect-test-dependency-feedstock-osx-arm64_py3.12_307979e57c084dd4
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.12'
+    target_platform: osx-arm64
+  package_def:
+    matchspec: prefect-test-dependency
+  external_dependencies: []
+- description: Test task for prefect-test-dependency-feedstock prefect-test-dependency
+    @ 1422371 (14223716092c73a14d8d09b76f32668ad5d03dae) win-64 3.12 channel_targets=defaults
+    target_platform=win-64 2026-01-22 21:34:59
+  public_name: test-prefect-test-dependency-feedstock-prefect-test-dependency-win-64_py3.12_35a7d75955ddf4a4
+  dependencies:
+  - build-prefect-test-dependency-feedstock-win-64_py3.12_35a7d75955ddf4a4
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.12'
+    target_platform: win-64
+  package_def:
+    matchspec: prefect-test-dependency
+  external_dependencies: []
+notification: []
+custom_metadata: {}
+system_metadata:
+  release_destination:
+    destination: pbp-release-api
+    channel: ad_package_build
+    release_name: null
+task_counts_by_status: {}
+total_tasks: 0
