@@ -12035,3 +12035,7 @@
 	path = python-fasthtml-feedstock
 	url = ../python-fasthtml-feedstock
 	branch = main
+[submodule "pot-feedstock"]
+	path = pot-feedstock
+	url = ../pot-feedstock
+	branch = main
