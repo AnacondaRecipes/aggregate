@@ -12039,3 +12039,7 @@
 	path = pot-feedstock
 	url = ../pot-feedstock
 	branch = main
+[submodule "pyperclip-feedstock"]
+	path = pyperclip-feedstock
+	url = ../pyperclip-feedstock
+	branch = main
