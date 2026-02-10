@@ -12043,3 +12043,7 @@
 	path = pyperclip-feedstock
 	url = ../pyperclip-feedstock
 	branch = main
+[submodule "pixi-feedstock"]
+	path = pixi-feedstock
+	url = ../pixi-feedstock
+	branch = main
