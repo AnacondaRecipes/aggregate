@@ -256,7 +256,7 @@ coin_or_osi:
 coin_or_utils:
   - '2.11'
 cryptography_vectors:
-  - 46.0.3
+  - 46.0.4
 cuda_cudart:
   - '13'
 cuda_cupti:
@@ -290,7 +290,7 @@ epoxy:
 expat:
   - '2'
 ffmpeg:
-  - '6'
+  - '8'
 fftw:
   - '3.3'
 flatbuffers:
@@ -440,7 +440,7 @@ level_zero:
 leveldb:
   - '1.23'
 libabseil:
-  - '20250814.1'
+  - '20260107'
 libacl:
   - '2.3'
 libaec:
@@ -543,6 +543,8 @@ libflac:
   - '1.5'
 libflang:
   - 20.1.8
+libflang_rt:
+  - 21.1.8
 libgcrypt:
   - '1'
 libgd:
@@ -568,7 +570,7 @@ libglx:
 libgpg_error:
   - '1'
 libgrpc:
-  - '1.74'
+  - '1.78'
 libgsasl:
   - '1'
 libgsf:
@@ -676,7 +678,7 @@ libpng:
 libpq:
   - '17'
 libprotobuf:
-  - 6.33.0
+  - 6.33.5
 libqdldl:
   - 0.1.8
 librdkafka:
@@ -859,6 +861,10 @@ ptscotch:
   - 6.0.9
 pugixml:
   - '1.11'
+pulseaudio_client:
+  - '17.0'
+pulseaudio_daemon:
+  - '17.0'
 py_lief:
   - '0.16'
 pyqt:
@@ -878,33 +884,33 @@ qpdf:
 qt:
   - '6.9'
 qt5compat:
-  - '6.9'
+  - '6.10'
 qt_main:
-  - '6.9'
+  - '6.10'
 qt_webengine:
   - '5.15'
 qtbase:
-  - '6.9'
+  - '6.10'
 qtdeclarative:
-  - '6.9'
+  - '6.10'
 qtimageformats:
-  - '6.9'
+  - '6.10'
 qtshadertools:
-  - '6.9'
+  - '6.10'
 qtsvg:
-  - '6.9'
+  - '6.10'
 qttools:
-  - '6.9'
+  - '6.10'
 qttranslations:
-  - '6.9'
+  - '6.10'
 qtwayland:
-  - '6.9'
+  - '6.10'
 qtwebchannel:
-  - '6.9'
+  - '6.10'
 qtwebengine:
-  - '6.9'
+  - '6.10'
 qtwebsockets:
-  - '6.9'
+  - '6.10'
 quantlib:
   - '1'
 rdkit:
@@ -934,11 +940,13 @@ shaderc:
 simdjson:
   - '3.10'
 sip:
-  - '6.12'
+  - '6.15'
 sleef:
   - '3'
 snappy:
   - '1'
+soxr:
+  - 0.1.3
 spdlog:
   - '1'
 spdlog_fmt_embed:
