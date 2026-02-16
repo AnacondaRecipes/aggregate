@@ -811,10 +811,6 @@
 	path = hypothesis-feedstock
 	url = ../hypothesis-feedstock
 	branch = master
-[submodule "cryptography-vectors-feedstock"]
-	path = cryptography-vectors-feedstock
-	url = ../cryptography-vectors-feedstock
-	branch = master
 [submodule "pretend-feedstock"]
 	path = pretend-feedstock
 	url = ../pretend-feedstock
@@ -12027,23 +12023,43 @@
 	path = libxcrypt-feedstock
 	url = ../libxcrypt-feedstock
 	branch = main
-[submodule "fastmcp-feedstock"]
-	path = fastmcp-feedstock
-	url = ../fastmcp-feedstock
-	branch = main
 [submodule "python-fasthtml-feedstock"]
 	path = python-fasthtml-feedstock
 	url = ../python-fasthtml-feedstock
 	branch = main
-[submodule "pot-feedstock"]
-	path = pot-feedstock
-	url = ../pot-feedstock
-	branch = main
-[submodule "pyperclip-feedstock"]
-	path = pyperclip-feedstock
-	url = ../pyperclip-feedstock
-	branch = main
 [submodule "pixi-feedstock"]
 	path = pixi-feedstock
 	url = ../pixi-feedstock
+	branch = main
+[submodule "apswutils-feedstock"]
+	path = apswutils-feedstock
+	url = ../apswutils-feedstock
+	branch = main
+[submodule "conpty-feedstock"]
+	path = conpty-feedstock
+	url = ../conpty-feedstock
+	branch = main
+[submodule "fastlite-feedstock"]
+	path = fastlite-feedstock
+	url = ../fastlite-feedstock
+	branch = main
+[submodule "flang-rt-feedstock"]
+	path = flang-rt-feedstock
+	url = ../flang-rt-feedstock
+	branch = main
+[submodule "langchain-classic-feedstock"]
+	path = langchain-classic-feedstock
+	url = ../langchain-classic-feedstock
+	branch = main
+[submodule "pulseaudio-feedstock"]
+	path = pulseaudio-feedstock
+	url = ../pulseaudio-feedstock
+	branch = main
+[submodule "rattler-build-feedstock"]
+	path = rattler-build-feedstock
+	url = ../rattler-build-feedstock
+	branch = main
+[submodule "soxr-feedstock"]
+	path = soxr-feedstock
+	url = ../soxr-feedstock
 	branch = main
