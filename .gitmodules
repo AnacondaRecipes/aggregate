@@ -12067,3 +12067,7 @@
 	path = streamlit-searchbox-feedstock
 	url = ../streamlit-searchbox-feedstock
 	branch = main
+[submodule "grpc_java_plugin-1.62.2-feedstock"]
+	path = grpc_java_plugin-1.62.2-feedstock
+	url = ../grpc_java_plugin-feedstock
+	branch = main-1.62.2
