@@ -12071,3 +12071,7 @@
 	path = grpc_java_plugin-1.62.2-feedstock
 	url = ../grpc_java_plugin-feedstock
 	branch = main-1.62.2
+[submodule "xclip-feedstock"]
+	path = xclip-feedstock
+	url = ../xclip-feedstock
+	branch = main
