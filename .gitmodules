@@ -12063,3 +12063,7 @@
 	path = soxr-feedstock
 	url = ../soxr-feedstock
 	branch = main
+[submodule "streamlit-searchbox-feedstock"]
+	path = streamlit-searchbox-feedstock
+	url = ../streamlit-searchbox-feedstock
+	branch = main
