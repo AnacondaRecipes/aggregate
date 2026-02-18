@@ -12079,3 +12079,7 @@
 	path = cyclopts-feedstock
 	url = ../cyclopts-feedstock
 	branch = main
+[submodule "rich-rst-feedstock"]
+	path = rich-rst-feedstock
+	url = ../rich-rst-feedstock
+	branch = main
