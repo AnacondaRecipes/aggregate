@@ -12075,3 +12075,7 @@
 	path = xclip-feedstock
 	url = ../xclip-feedstock
 	branch = main
+[submodule "cyclopts-feedstock"]
+	path = cyclopts-feedstock
+	url = ../cyclopts-feedstock
+	branch = main
