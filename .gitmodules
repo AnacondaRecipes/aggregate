@@ -12075,11 +12075,7 @@
 	path = xclip-feedstock
 	url = ../xclip-feedstock
 	branch = main
-[submodule "cyclopts-feedstock"]
-	path = cyclopts-feedstock
-	url = ../cyclopts-feedstock
-	branch = main
-[submodule "rich-rst-feedstock"]
-	path = rich-rst-feedstock
-	url = ../rich-rst-feedstock
+[submodule "bitsandbytes-feedstock"]
+	path = bitsandbytes-feedstock
+	url = ../bitsandbytes-feedstock
 	branch = main
