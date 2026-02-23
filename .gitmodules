@@ -12079,3 +12079,7 @@
 	path = bitsandbytes-feedstock
 	url = ../bitsandbytes-feedstock
 	branch = main
+[submodule "pot-feedstock"]
+	path = pot-feedstock
+	url = ../pot-feedstock
+	branch = main
