@@ -1058,7 +1058,7 @@ zeromq:
 zfp:
   - '1'
 zlib:
-  - '1.2'
+  - '1.3'
 zlib_ng:
   - '2.0'
 zstd:
