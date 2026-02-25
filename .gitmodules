@@ -12091,3 +12091,7 @@
 	path = rich-rst-feedstock
 	url = ../rich-rst-feedstock
 	branch = main
+[submodule "cargo-c-feedstock"]
+	path = cargo-c-feedstock
+	url = ../cargo-c-feedstock
+	branch = main
