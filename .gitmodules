@@ -12099,3 +12099,7 @@
 	path = backports-asyncio-runner-feedstock
 	url = ../backports-asyncio-runner-feedstock
 	branch = main
+[submodule "libcuobjclient-feedstock"]
+	path = libcuobjclient-feedstock
+	url = ../libcuobjclient-feedstock
+	branch = main
