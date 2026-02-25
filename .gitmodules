@@ -12095,3 +12095,7 @@
 	path = cargo-c-feedstock
 	url = ../cargo-c-feedstock
 	branch = main
+[submodule "backports-asyncio-runner-feedstock"]
+	path = backports-asyncio-runner-feedstock
+	url = ../backports-asyncio-runner-feedstock
+	branch = main
