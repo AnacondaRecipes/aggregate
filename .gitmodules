@@ -12107,3 +12107,7 @@
 	path = pydocket-feedstock
 	url = ../pydocket-feedstock
 	branch = main
+[submodule "fakeredis-feedstock"]
+	path = fakeredis-feedstock
+	url = ../fakeredis-feedstock
+	branch = main
