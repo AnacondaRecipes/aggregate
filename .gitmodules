@@ -12115,3 +12115,7 @@
 	path = cyclopts-feedstock
 	url = ../cyclopts-feedstock
 	branch = main
+[submodule "py-key-value-feedstock"]
+	path = py-key-value-feedstock
+	url = ../py-key-value-feedstock
+	branch = main
