@@ -12119,3 +12119,7 @@
 	path = py-key-value-feedstock
 	url = ../py-key-value-feedstock
 	branch = main
+[submodule "beartype-feedstock"]
+	path = beartype-feedstock
+	url = ../beartype-feedstock
+	branch = main
