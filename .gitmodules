@@ -12103,3 +12103,7 @@
 	path = libcuobjclient-feedstock
 	url = ../libcuobjclient-feedstock
 	branch = main
+[submodule "pydocket-feedstock"]
+	path = pydocket-feedstock
+	url = ../pydocket-feedstock
+	branch = main
