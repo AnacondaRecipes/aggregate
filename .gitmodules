@@ -12111,3 +12111,7 @@
 	path = fakeredis-feedstock
 	url = ../fakeredis-feedstock
 	branch = main
+[submodule "cyclopts-feedstock"]
+	path = cyclopts-feedstock
+	url = ../cyclopts-feedstock
+	branch = main
