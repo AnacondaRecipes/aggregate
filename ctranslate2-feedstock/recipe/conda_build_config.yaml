@@ -1,0 +1,18 @@
+blas_impl:
+  - mkl                        # [win or (linux and x86_64)]
+  - openblas                   # [linux]
+  - accelerate                 # [osx]
+  - cublas                     # [win or linux]
+
+gpu_variant:
+  - none
+  - cuda-12                    # [win or linux]
+
+cuda_compiler_version:         # [win or linux]
+  - none                       # [win or linux]
+  - 12.8                       # [win or linux]
+
+zip_keys:                      # [win or linux]
+  -                            # [win or linux]
+    - gpu_variant              # [win or linux]
+    - cuda_compiler_version    # [win or linux]

@@ -1,0 +1,154 @@
+{% set name = "ctranslate2" %}
+{% set version = "4.7.1" %}
+{% set build_number = 0 %}
+
+package:
+  name: {{ name }}-meta
+  version: {{ version }}
+
+source:
+  - url: https://github.com/OpenNMT/CTranslate2/archive/refs/tags/v{{ version }}.tar.gz
+    sha256: 64beb499c1e33500a691dfbe10cc5def7b914413c7f7c2830b0e0d8d544a9f7e
+  - url: https://github.com/gabime/spdlog/archive/v1.14.1.tar.gz
+    sha256: 1586508029a7d0670dfcb2d97575dcdc242d3868a259742b69f100801ab4e16b
+    folder: third_party/spdlog
+  - url: https://github.com/jarro2783/cxxopts/archive/v3.1.1.tar.gz
+    sha256: 523175f792eb0ff04f9e653c90746c12655f10cb70f1d5e6d6d9491420298a08
+    folder: third_party/cxxopts
+  - url: https://github.com/google/cpu_features/archive/v0.9.0.tar.gz
+    sha256: bdb3484de8297c49b59955c3b22dba834401bc2df984ef5cfc17acbe69c5018e
+    folder: third_party/cpu_features
+
+build:
+  number: {{ build_number }}
+
+outputs:
+  - name: libctranslate2
+    script: build-libctranslate2.sh   # [not win]
+    script: bld-libctranslate2.bat    # [win]
+    version: {{ version }}
+
+    build:
+      # do not mix cublas and mkl/openblas/accelerate
+      skip: true  # [((gpu_variant or "").startswith("cuda") and (blas_impl != "cublas")) or (not (gpu_variant or "").startswith("cuda") and (blas_impl == "cublas"))]
+      # GPU variant gets build_number + 100 for solver preference
+      number: {{ build_number + 100 }}  # [gpu_variant != "none"]
+      number: {{ build_number }}        # [gpu_variant == "none"]
+      string: cuda{{ cuda_compiler_version | replace('.', '') }}_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [(gpu_variant or "").startswith("cuda")]
+      string: cpu_{{ blas_impl }}_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}                                 # [gpu_variant == "none"]
+      missing_dso_whitelist:                        # [(gpu_variant or "").startswith("cuda")]
+        - "**/libcuda.so*"                          # [(gpu_variant or "").startswith("cuda")]
+        - "**/nvcuda.dll"                           # [(gpu_variant or "").startswith("cuda")]
+      run_exports:
+        - {{ pin_subpackage('libctranslate2', exact=True) }}
+
+    requirements:
+      build:
+        - {{ stdlib('c') }}
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - {{ compiler('cuda') }}                              # [(gpu_variant or "").startswith("cuda")]
+        - cmake
+        - ninja-base
+      host:
+        - cuda-version     {{ cuda_compiler_version }}        # [(gpu_variant or "").startswith("cuda")]
+        - cuda-cudart-dev  {{ cuda_compiler_version }}        # [(gpu_variant or "").startswith("cuda")]
+        - libcublas-dev                                       # [(gpu_variant or "").startswith("cuda")]
+        - cudnn                                               # [(gpu_variant or "").startswith("cuda")]
+        - cuda-compat      {{ cuda_compiler_version }}        # [(gpu_variant or "").startswith("cuda") and linux]
+        - mkl-devel {{ mkl }}                                 # [blas_impl == "mkl"]
+        - intel-openmp {{ mkl }}                              # [blas_impl == "mkl"]
+        - openblas-devel {{ openblas }}                       # [blas_impl == "openblas"]
+        - llvm-openmp                                         # [osx]
+      run:
+        - {{ pin_compatible('cuda-version', max_pin='x.x') }}  # [(gpu_variant or "").startswith("cuda")]
+        - cuda-version     {{ cuda_compiler_version }}          # [(gpu_variant or "").startswith("cuda")]
+        - __cuda                                                # [(gpu_variant or "").startswith("cuda")]
+        - {{ pin_compatible('intel-openmp') }}                  # [blas_impl == "mkl"]
+        - llvm-openmp                                           # [osx]
+        - _openmp_mutex                                         # [linux]
+
+    test:
+      commands:
+        - test -f $PREFIX/lib/libctranslate2${SHLIB_EXT}      # [unix]
+        - test -f $PREFIX/include/ctranslate2/translator.h    # [unix]
+        - if not exist %PREFIX%\Library\bin\ctranslate2.dll exit 1        # [win]
+        - if not exist %PREFIX%\Library\include\ctranslate2\translator.h exit 1  # [win]
+
+    about:
+      home: https://github.com/OpenNMT/CTranslate2
+      summary: C++ library for efficient inference with Transformer models
+      license: MIT
+      license_family: MIT
+      license_file: LICENSE
+      dev_url: https://github.com/OpenNMT/CTranslate2
+
+  - name: ctranslate2
+    script: build-ctranslate2.sh   # [not win]
+    script: bld-ctranslate2.bat    # [win]
+    version: {{ version }}
+
+    build:
+      # Match skip logic from libctranslate2
+      skip: true  # [((gpu_variant or "").startswith("cuda") and (blas_impl != "cublas")) or (not (gpu_variant or "").startswith("cuda") and (blas_impl == "cublas"))]
+      number: {{ build_number + 100 }}  # [gpu_variant != "none"]
+      number: {{ build_number }}        # [gpu_variant == "none"]
+      string: cuda{{ cuda_compiler_version | replace('.', '') }}_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [(gpu_variant or "").startswith("cuda")]
+      string: cpu_{{ blas_impl }}_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}                                 # [gpu_variant == "none"]
+      missing_dso_whitelist:                        # [(gpu_variant or "").startswith("cuda")]
+        - "**/libcuda.so*"                          # [(gpu_variant or "").startswith("cuda")]
+        - "**/nvcuda.dll"                           # [(gpu_variant or "").startswith("cuda")]
+
+    requirements:
+      build:
+        - python                                              # [build_platform != target_platform]
+        - cross-python_{{ target_platform }}                   # [build_platform != target_platform]
+        - numpy                                               # [build_platform != target_platform]
+      host:
+        - python
+        - pip
+        - setuptools
+        - pybind11
+        - numpy
+        - {{ pin_subpackage('libctranslate2', exact=True) }}
+      run:
+        - python
+        - numpy
+        - pyyaml >=5.3,<7
+        - setuptools
+        - {{ pin_subpackage('libctranslate2', exact=True) }}
+
+    test:
+      imports:
+        - ctranslate2
+      commands:
+        - pip check
+        - ct2-opennmt-py-converter --help
+      requires:
+        - pip
+
+    about:
+      home: https://github.com/OpenNMT/CTranslate2
+      summary: Python bindings for CTranslate2 - fast Transformer inference
+      license: MIT
+      license_family: MIT
+      license_file: LICENSE
+      dev_url: https://github.com/OpenNMT/CTranslate2
+
+about:
+  home: https://github.com/OpenNMT/CTranslate2
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Fast inference engine for Transformer models
+  description: |
+    CTranslate2 is a C++ and Python library for efficient inference with Transformer models.
+    It implements a custom runtime that applies many performance optimization techniques such
+    as weights quantization, layer fusion, batch reordering, etc., to accelerate and reduce
+    the memory usage of Transformer models on CPU and GPU.
+  dev_url: https://github.com/OpenNMT/CTranslate2
+  doc_url: https://opennmt.net/CTranslate2
+
+extra:
+  recipe-maintainers:
+    - xkong
