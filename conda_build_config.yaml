@@ -256,7 +256,7 @@ coin_or_osi:
 coin_or_utils:
   - '2.11'
 cryptography_vectors:
-  - 46.0.4
+  - 46.0.5
 cuda_cudart:
   - '13'
 cuda_cupti:
@@ -455,6 +455,8 @@ libaprutil:
   - '1'
 libarchive:
   - '3.8'
+libasprintf:
+  - '0'
 libass:
   - 0.17.4
 libassuan:
@@ -505,6 +507,8 @@ libcufft:
   - '12'
 libcufile:
   - '1'
+libcuobjclient:
+  - '1'
 libcups:
   - '2.4'
 libcurand:
@@ -553,6 +557,8 @@ libgdal:
   - '3.11'
 libgdal_core:
   - '3.11'
+libgettextpo:
+  - '0'
 libgit2:
   - '1.6'
 libgl:
@@ -585,6 +591,8 @@ libiconv:
   - '1'
 libidn2:
   - '2'
+libintl:
+  - '0'
 libjpeg_turbo:
   - '3'
 libkml:
@@ -694,7 +702,7 @@ libsentencepiece:
 libsndfile:
   - '1.2'
 libsodium:
-  - 1.0.20
+  - 1.0.21
 libspatialindex:
   - 2.1.0
 libspatialite:
@@ -764,7 +772,7 @@ libzlib_wapi:
 libzopfli:
   - '1.0'
 llvm_openmp:
-  - 20.1.8
+  - 21.1.8
 lmdb:
   - '0'
 lz4_c:
@@ -804,7 +812,7 @@ nccl:
 ncurses:
   - '6'
 nettle:
-  - '3.10'
+  - '4.0'
 nlopt:
   - '2.7'
 npth:
@@ -868,11 +876,11 @@ pulseaudio_daemon:
 py_lief:
   - '0.16'
 pyqt:
-  - '6.9'
+  - '6.10'
 pyqtchart:
   - '5.15'
 pyqtwebengine:
-  - '6.9'
+  - '6.10'
 python_igraph:
   - '0.10'
 pytorch:
@@ -882,7 +890,7 @@ qhull:
 qpdf:
   - '11'
 qt:
-  - '6.9'
+  - '6.10'
 qt5compat:
   - '6.10'
 qt_main:
