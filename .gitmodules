@@ -12123,3 +12123,7 @@
 	path = beartype-feedstock
 	url = ../beartype-feedstock
 	branch = main
+[submodule "banks-feedstock"]
+	path = banks-feedstock
+	url = ../banks-feedstock
+	branch = main
