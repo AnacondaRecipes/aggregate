@@ -12135,3 +12135,7 @@
 	path = dirtyjson-feedstock
 	url = ../dirtyjson-feedstock
 	branch = main
+[submodule "textual-feedstock"]
+	path = textual-feedstock
+	url = ../textual-feedstock
+	branch = main
