@@ -12131,3 +12131,7 @@
 	path = llama-index-instrumentation-feedstock
 	url = ../llama-index-instrumentation-feedstock
 	branch = main
+[submodule "dirtyjson-feedstock"]
+	path = dirtyjson-feedstock
+	url = ../dirtyjson-feedstock
+	branch = main
