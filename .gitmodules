@@ -12127,3 +12127,7 @@
 	path = banks-feedstock
 	url = ../banks-feedstock
 	branch = main
+[submodule "llama-index-instrumentation-feedstock"]
+	path = llama-index-instrumentation-feedstock
+	url = ../llama-index-instrumentation-feedstock
+	branch = main
