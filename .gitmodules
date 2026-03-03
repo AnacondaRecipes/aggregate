@@ -12127,3 +12127,21 @@
 	path = flax-feedstock
 	url = ../flax-feedstock
 	branch = main
+[submodule "dirtyjson-feedstock"]
+	path = dirtyjson-feedstock
+	url = ../dirtyjson-feedstock
+[submodule "striprtf-feedstock"]
+	path = striprtf-feedstock
+	url = ../striprtf-feedstock
+[submodule "tinytag-feedstock"]
+	path = tinytag-feedstock
+	url = ../tinytag-feedstock
+[submodule "llama-cloud-feedstock"]
+	path = llama-cloud-feedstock
+	url = ../llama-cloud-feedstock
+[submodule "banks-feedstock"]
+	path = banks-feedstock
+	url = ../banks-feedstock
+[submodule "llama-index-instrumentation-feedstock"]
+	path = llama-index-instrumentation-feedstock
+	url = ../llama-index-instrumentation-feedstock
