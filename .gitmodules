@@ -12170,3 +12170,7 @@
 	path = ultralytics-feedstock
 	url = ../ultralytics-feedstock
 	branch = main
+[submodule "llama-index-workflows-feedstock"]
+	path = llama-index-workflows-feedstock
+	url = ../llama-index-workflows-feedstock
+	branch = main
