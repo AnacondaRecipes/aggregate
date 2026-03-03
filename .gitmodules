@@ -12103,10 +12103,6 @@
 	path = libcuobjclient-feedstock
 	url = ../libcuobjclient-feedstock
 	branch = main
-[submodule "pydocket-feedstock"]
-	path = pydocket-feedstock
-	url = ../pydocket-feedstock
-	branch = main
 [submodule "fakeredis-feedstock"]
 	path = fakeredis-feedstock
 	url = ../fakeredis-feedstock
@@ -12115,27 +12111,19 @@
 	path = cyclopts-feedstock
 	url = ../cyclopts-feedstock
 	branch = main
-[submodule "py-key-value-feedstock"]
-	path = py-key-value-feedstock
-	url = ../py-key-value-feedstock
-	branch = main
 [submodule "beartype-feedstock"]
 	path = beartype-feedstock
 	url = ../beartype-feedstock
 	branch = main
-[submodule "banks-feedstock"]
-	path = banks-feedstock
-	url = ../banks-feedstock
+[submodule "anaconda-client-feedstock"]
+	path = anaconda-client-feedstock
+	url = ../anaconda-client-feedstock
+	branch = master
+[submodule "diagnostic-feedstock"]
+	path = diagnostic-feedstock
+	url = ../diagnostic-feedstock
 	branch = main
-[submodule "llama-index-instrumentation-feedstock"]
-	path = llama-index-instrumentation-feedstock
-	url = ../llama-index-instrumentation-feedstock
-	branch = main
-[submodule "dirtyjson-feedstock"]
-	path = dirtyjson-feedstock
-	url = ../dirtyjson-feedstock
-	branch = main
-[submodule "textual-feedstock"]
-	path = textual-feedstock
-	url = ../textual-feedstock
+[submodule "flax-feedstock"]
+	path = flax-feedstock
+	url = ../flax-feedstock
 	branch = main
