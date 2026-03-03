@@ -12145,3 +12145,24 @@
 [submodule "llama-index-instrumentation-feedstock"]
 	path = llama-index-instrumentation-feedstock
 	url = ../llama-index-instrumentation-feedstock
+[submodule "llama-index-embeddings-openai-feedstock"]
+	path = llama-index-embeddings-openai-feedstock
+	url = ../llama-index-embeddings-openai-feedstock
+[submodule "llama-index-llms-openai-feedstock"]
+	path = llama-index-llms-openai-feedstock
+	url = ../llama-index-llms-openai-feedstock
+[submodule "llama-index-readers-file-feedstock"]
+	path = llama-index-readers-file-feedstock
+	url = ../llama-index-readers-file-feedstock
+[submodule "llama-cloud-services-feedstock"]
+	path = llama-cloud-services-feedstock
+	url = ../llama-cloud-services-feedstock
+[submodule "llama-index-cli-feedstock"]
+	path = llama-index-cli-feedstock
+	url = ../llama-index-cli-feedstock
+[submodule "llama-parse-feedstock"]
+	path = llama-parse-feedstock
+	url = ../llama-parse-feedstock
+[submodule "llama-index-readers-llama-parse-feedstock"]
+	path = llama-index-readers-llama-parse-feedstock
+	url = ../llama-index-readers-llama-parse-feedstock
