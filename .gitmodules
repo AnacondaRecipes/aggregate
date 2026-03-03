@@ -12166,3 +12166,7 @@
 [submodule "llama-index-readers-llama-parse-feedstock"]
 	path = llama-index-readers-llama-parse-feedstock
 	url = ../llama-index-readers-llama-parse-feedstock
+[submodule "ultralytics-feedstock"]
+	path = ultralytics-feedstock
+	url = ../ultralytics-feedstock
+	branch = main
