@@ -12186,3 +12186,6 @@
 	path = llama-index-core-feedstock
 	url = ../llama-index-core-feedstock
 	branch = main
+[submodule "llama-index-indices-managed-llama-cloud-feedstock"]
+	path = llama-index-indices-managed-llama-cloud-feedstock
+	url = ../llama-index-indices-managed-llama-cloud-feedstock
