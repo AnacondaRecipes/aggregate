@@ -12193,3 +12193,7 @@
 	path = pybase64-feedstock
 	url = ../pybase64-feedstock
 	branch = main
+[submodule "depyf-feedstock"]
+	path = depyf-feedstock
+	url = ../depyf-feedstock
+	branch = main
