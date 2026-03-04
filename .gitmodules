@@ -12174,3 +12174,7 @@
 	path = llama-index-workflows-feedstock
 	url = ../llama-index-workflows-feedstock
 	branch = main
+[submodule "claude-agent-sdk-feedstock"]
+	path = claude-agent-sdk-feedstock
+	url = ../claude-agent-sdk-feedstock
+	branch = main
