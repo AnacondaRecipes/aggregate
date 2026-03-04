@@ -12182,3 +12182,7 @@
 	path = cdt_el9_x86_64-feedstock
 	url = ../cdt_el9_x86_64-feedstock
 	branch = main
+[submodule "llama-index-core-feedstock"]
+	path = llama-index-core-feedstock
+	url = ../llama-index-core-feedstock
+	branch = main
