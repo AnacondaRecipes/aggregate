@@ -12178,3 +12178,7 @@
 	path = claude-agent-sdk-feedstock
 	url = ../claude-agent-sdk-feedstock
 	branch = main
+[submodule "cdt_el9_x86_64-feedstock"]
+	path = cdt_el9_x86_64-feedstock
+	url = ../cdt_el9_x86_64-feedstock
+	branch = main
