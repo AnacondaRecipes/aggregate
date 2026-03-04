@@ -12189,3 +12189,7 @@
 [submodule "llama-index-indices-managed-llama-cloud-feedstock"]
 	path = llama-index-indices-managed-llama-cloud-feedstock
 	url = ../llama-index-indices-managed-llama-cloud-feedstock
+[submodule "pybase64-feedstock"]
+	path = pybase64-feedstock
+	url = ../pybase64-feedstock
+	branch = main
