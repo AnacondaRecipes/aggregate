@@ -12209,3 +12209,7 @@
 	path = auditwheel-feedstock
 	url = ../auditwheel-feedstock
 	branch = main
+[submodule "outlines-core-feedstock"]
+	path = outlines-core-feedstock
+	url = ../outlines-core-feedstock
+	branch = main
