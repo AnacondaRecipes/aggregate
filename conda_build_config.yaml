@@ -296,7 +296,7 @@ fftw:
 flatbuffers:
   - 25.2.10
 fmt:
-  - '11'
+  - '12'
 fontconfig:
   - '2'
 freeglut:
@@ -602,7 +602,7 @@ libkrb5:
 libksba:
   - '1.6'
 liblief:
-  - '0.16'
+  - '0.17'
 libllvm17:
   - '17.0'
 libllvm19:
@@ -874,7 +874,7 @@ pulseaudio_client:
 pulseaudio_daemon:
   - '17.0'
 py_lief:
-  - '0.16'
+  - '0.17'
 pyqt:
   - '6.10'
 pyqtchart:
