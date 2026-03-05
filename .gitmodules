@@ -12205,3 +12205,7 @@
 	path = streamlit-notify-feedstock
 	url = ../streamlit-notify-feedstock
 	branch = main
+[submodule "auditwheel-feedstock"]
+	path = auditwheel-feedstock
+	url = ../auditwheel-feedstock
+	branch = main
