@@ -12201,3 +12201,7 @@
 	path = vl-convert-python-feedstock
 	url = ../vl-convert-python-feedstock
 	branch = main
+[submodule "streamlit-notify-feedstock"]
+	path = streamlit-notify-feedstock
+	url = ../streamlit-notify-feedstock
+	branch = main
