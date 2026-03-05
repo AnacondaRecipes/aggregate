@@ -12151,25 +12151,6 @@
 [submodule "llama-index-llms-openai-feedstock"]
 	path = llama-index-llms-openai-feedstock
 	url = ../llama-index-llms-openai-feedstock
-[submodule "llama-index-readers-file-feedstock"]
-	path = llama-index-readers-file-feedstock
-	url = ../llama-index-readers-file-feedstock
-[submodule "llama-cloud-services-feedstock"]
-	path = llama-cloud-services-feedstock
-	url = ../llama-cloud-services-feedstock
-[submodule "llama-index-cli-feedstock"]
-	path = llama-index-cli-feedstock
-	url = ../llama-index-cli-feedstock
-[submodule "llama-parse-feedstock"]
-	path = llama-parse-feedstock
-	url = ../llama-parse-feedstock
-[submodule "llama-index-readers-llama-parse-feedstock"]
-	path = llama-index-readers-llama-parse-feedstock
-	url = ../llama-index-readers-llama-parse-feedstock
-[submodule "ultralytics-feedstock"]
-	path = ultralytics-feedstock
-	url = ../ultralytics-feedstock
-	branch = main
 [submodule "llama-index-workflows-feedstock"]
 	path = llama-index-workflows-feedstock
 	url = ../llama-index-workflows-feedstock
@@ -12177,10 +12158,6 @@
 [submodule "claude-agent-sdk-feedstock"]
 	path = claude-agent-sdk-feedstock
 	url = ../claude-agent-sdk-feedstock
-	branch = main
-[submodule "cdt_el9_x86_64-feedstock"]
-	path = cdt_el9_x86_64-feedstock
-	url = ../cdt_el9_x86_64-feedstock
 	branch = main
 [submodule "llama-index-core-feedstock"]
 	path = llama-index-core-feedstock
@@ -12197,9 +12174,17 @@
 	path = depyf-feedstock
 	url = ../depyf-feedstock
 	branch = main
-[submodule "vl-convert-python-feedstock"]
-	path = vl-convert-python-feedstock
-	url = ../vl-convert-python-feedstock
+[submodule "cdt_el9_aarch64-feedstock"]
+	path = cdt_el9_aarch64-feedstock
+	url = ../cdt_el9_aarch64-feedstock
+	branch = main
+[submodule "memray-feedstock"]
+	path = memray-feedstock
+	url = ../memray-feedstock
+	branch = main
+[submodule "textual-feedstock"]
+	path = textual-feedstock
+	url = ../textual-feedstock
 	branch = main
 [submodule "streamlit-notify-feedstock"]
 	path = streamlit-notify-feedstock
