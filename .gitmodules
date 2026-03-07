@@ -12190,11 +12190,27 @@
 	path = streamlit-notify-feedstock
 	url = ../streamlit-notify-feedstock
 	branch = main
-[submodule "auditwheel-feedstock"]
-	path = auditwheel-feedstock
-	url = ../auditwheel-feedstock
-	branch = main
 [submodule "outlines-core-feedstock"]
 	path = outlines-core-feedstock
 	url = ../outlines-core-feedstock
+	branch = main
+[submodule "llama-cloud-services-feedstock"]
+	path = llama-cloud-services-feedstock
+	url = ../llama-cloud-services-feedstock
+	branch = main
+[submodule "llama-index-readers-file-feedstock"]
+	path = llama-index-readers-file-feedstock
+	url = ../llama-index-readers-file-feedstock
+	branch = main
+[submodule "llama-index-readers-llama-parse-feedstock"]
+	path = llama-index-readers-llama-parse-feedstock
+	url = ../llama-index-readers-llama-parse-feedstock
+	branch = main
+[submodule "llama-parse-feedstock"]
+	path = llama-parse-feedstock
+	url = ../llama-parse-feedstock
+	branch = main
+[submodule "vl-convert-python-feedstock"]
+	path = vl-convert-python-feedstock
+	url = ../vl-convert-python-feedstock
 	branch = main
