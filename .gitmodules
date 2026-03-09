@@ -12189,3 +12189,9 @@
 [submodule "llama-index-indices-managed-llama-cloud-feedstock"]
 	path = llama-index-indices-managed-llama-cloud-feedstock
 	url = ../llama-index-indices-managed-llama-cloud-feedstock
+[submodule "av-feedstock"]
+	path = av-feedstock
+	url = ../av-feedstock
+[submodule "faster-whisper-feedstock"]
+	path = faster-whisper-feedstock
+	url = https://github.com/AnacondaRecipes/faster-whisper-feedstock.git
