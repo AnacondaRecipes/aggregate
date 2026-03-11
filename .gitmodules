@@ -3247,10 +3247,6 @@
 	path = binutils-feedstock
 	url = ../binutils-feedstock
 	branch = master
-[submodule "celery-redbeat-feedstock"]
-	path = celery-redbeat-feedstock
-	url = ../celery-redbeat-feedstock
-	branch = master
 [submodule "ctng-compiler-activation-feedstock"]
 	path = ctng-compiler-activation-feedstock
 	url = ../ctng-compiler-activation-feedstock
@@ -3930,10 +3926,6 @@
 [submodule "bpython-feedstock"]
 	path = bpython-feedstock
 	url = ../bpython-feedstock
-	branch = master
-[submodule "urwid-feedstock"]
-	path = urwid-feedstock
-	url = ../urwid-feedstock
 	branch = master
 [submodule "blessings-feedstock"]
 	path = blessings-feedstock
@@ -11796,10 +11788,6 @@
 	path = syncer-feedstock
 	url = ../syncer-feedstock
 	branch = services
-[submodule "tensorflow-gpu-feedstock"]
-	path = tensorflow-gpu-feedstock
-	url = ../tensorflow-gpu-feedstock
-	branch = main
 [submodule "protovalidate-python-feedstock"]
 	path = protovalidate-python-feedstock
 	url = ../protovalidate-python-feedstock
@@ -12198,7 +12186,35 @@
 	path = outlines-core-feedstock
 	url = ../outlines-core-feedstock
 	branch = main
-[submodule "highspy-feedstock"]
-	path = highspy-feedstock
-	url = ../highspy-feedstock
+[submodule "av-feedstock"]
+	path = av-feedstock
+	url = ../av-feedstock
+	branch = main
+[submodule "llama-cloud-services-feedstock"]
+	path = llama-cloud-services-feedstock
+	url = ../llama-cloud-services-feedstock
+	branch = main
+[submodule "llama-index-cli-feedstock"]
+	path = llama-index-cli-feedstock
+	url = ../llama-index-cli-feedstock
+	branch = main
+[submodule "llama-index-readers-file-feedstock"]
+	path = llama-index-readers-file-feedstock
+	url = ../llama-index-readers-file-feedstock
+	branch = main
+[submodule "llama-index-readers-llama-parse-feedstock"]
+	path = llama-index-readers-llama-parse-feedstock
+	url = ../llama-index-readers-llama-parse-feedstock
+	branch = main
+[submodule "llama-parse-feedstock"]
+	path = llama-parse-feedstock
+	url = ../llama-parse-feedstock
+	branch = main
+[submodule "pytest-twisted-feedstock"]
+	path = pytest-twisted-feedstock
+	url = ../pytest-twisted-feedstock
+	branch = main
+[submodule "vl-convert-python-feedstock"]
+	path = vl-convert-python-feedstock
+	url = ../vl-convert-python-feedstock
 	branch = main
