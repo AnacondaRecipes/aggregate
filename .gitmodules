@@ -12202,3 +12202,18 @@
 	path = highspy-feedstock
 	url = ../highspy-feedstock
 	branch = main
+[submodule "llama-cloud-services-feedstock"]
+	path = llama-cloud-services-feedstock
+	url = git@github.com-anaconda:AnacondaRecipes/llama-cloud-services-feedstock.git
+[submodule "llama-index-cli-feedstock"]
+	path = llama-index-cli-feedstock
+	url = git@github.com-anaconda:AnacondaRecipes/llama-index-cli-feedstock.git
+[submodule "llama-index-readers-file-feedstock"]
+	path = llama-index-readers-file-feedstock
+	url = git@github.com-anaconda:AnacondaRecipes/llama-index-readers-file-feedstock.git
+[submodule "llama-index-readers-llama-parse-feedstock"]
+	path = llama-index-readers-llama-parse-feedstock
+	url = git@github.com-anaconda:AnacondaRecipes/llama-index-readers-llama-parse-feedstock.git
+[submodule "llama-parse-feedstock"]
+	path = llama-parse-feedstock
+	url = git@github.com-anaconda:AnacondaRecipes/llama-parse-feedstock.git
