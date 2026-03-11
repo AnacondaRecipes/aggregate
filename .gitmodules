@@ -12198,3 +12198,7 @@
 	path = outlines-core-feedstock
 	url = ../outlines-core-feedstock
 	branch = main
+[submodule "highspy-feedstock"]
+	path = highspy-feedstock
+	url = ../highspy-feedstock
+	branch = main
