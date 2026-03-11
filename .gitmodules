@@ -12217,3 +12217,6 @@
 [submodule "llama-parse-feedstock"]
 	path = llama-parse-feedstock
 	url = git@github.com-anaconda:AnacondaRecipes/llama-parse-feedstock.git
+[submodule "ctranslate2-feedstock"]
+	path = ctranslate2-feedstock
+	url = https://github.com/AnacondaRecipes/ctranslate2-feedstock.git
