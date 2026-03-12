@@ -296,7 +296,7 @@ ffmpeg:
 fftw:
   - '3.3'
 flatbuffers:
-  - 25.2.10
+  - 25.9.23
 fmt:
   - '12'
 fontconfig:
