@@ -12238,3 +12238,7 @@
 	path = taskgroup-feedstock
 	url = ../taskgroup-feedstock
 	branch = main
+[submodule "py-key-value-feedstock"]
+	path = py-key-value-feedstock
+	url = ../py-key-value-feedstock
+	branch = main
