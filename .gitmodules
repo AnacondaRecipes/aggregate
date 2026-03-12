@@ -12222,3 +12222,7 @@
 	path = python-librt-feedstock
 	url = ../python-librt-feedstock
 	branch = main
+[submodule "stanio-feedstock"]
+	path = stanio-feedstock
+	url = ../stanio-feedstock
+	branch = main
