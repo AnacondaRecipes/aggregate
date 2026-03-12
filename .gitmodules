@@ -12230,3 +12230,7 @@
 	path = blake3-feedstock
 	url = ../blake3-feedstock
 	branch = main
+[submodule "partial-json-parser-feedstock"]
+	path = partial-json-parser-feedstock
+	url = ./partial-json-parser-feedstock
+	branch = main
