@@ -12226,3 +12226,7 @@
 	path = stanio-feedstock
 	url = ../stanio-feedstock
 	branch = main
+[submodule "blake3-feedstock"]
+	path = blake3-feedstock
+	url = ../blake3-feedstock
+	branch = main
