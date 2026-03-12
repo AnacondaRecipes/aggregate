@@ -12234,3 +12234,7 @@
 	path = partial-json-parser-feedstock
 	url = ./partial-json-parser-feedstock
 	branch = main
+[submodule "taskgroup-feedstock"]
+	path = taskgroup-feedstock
+	url = ../taskgroup-feedstock
+	branch = main
