@@ -12218,3 +12218,7 @@
 	path = vl-convert-python-feedstock
 	url = ../vl-convert-python-feedstock
 	branch = main
+[submodule "python-librt-feedstock"]
+	path = python-librt-feedstock
+	url = ../python-librt-feedstock
+	branch = main
