@@ -12250,3 +12250,7 @@
 	path = outlines-feedstock
 	url = ../outlines-feedstock
 	branch = main
+[submodule "openjph-feedstock"]
+	path = openjph-feedstock
+	url = ../openjph-feedstock
+	branch = main
