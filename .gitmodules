@@ -12242,10 +12242,6 @@
 	path = py-key-value-feedstock
 	url = ../py-key-value-feedstock
 	branch = main
-[submodule "cutile-python-feedstock"]
-	path = cutile-python-feedstock
-	url = ../cutile-python-feedstock
-	branch = main
 [submodule "outlines-feedstock"]
 	path = outlines-feedstock
 	url = ../outlines-feedstock
@@ -12253,4 +12249,12 @@
 [submodule "openjph-feedstock"]
 	path = openjph-feedstock
 	url = ../openjph-feedstock
+	branch = main
+[submodule "highspy-feedstock"]
+	path = highspy-feedstock
+	url = ../highspy-feedstock
+	branch = main
+[submodule "peft-feedstock"]
+	path = peft-feedstock
+	url = ../peft-feedstock
 	branch = main
