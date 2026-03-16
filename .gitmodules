@@ -5274,10 +5274,6 @@
 	path = cunit-feedstock
 	url = ../cunit-feedstock
 	branch = main
-[submodule "protobuf-3.19.1-feedstock"]
-	path = protobuf-3.19-feedstock
-	url = ../protobuf-feedstock
-	branch = main-3.19.1
 [submodule "getopt-win32-feedstock"]
 	path = getopt-win32-feedstock
 	url = ../getopt-win32-feedstock
@@ -11771,10 +11767,6 @@
 [submodule "ms-gsl-feedstock"]
 	path = ms-gsl-feedstock
 	url = ../ms-gsl-feedstock
-	branch = main
-[submodule "opentelemetry-python-feedstock"]
-	path = opentelemetry-python-feedstock
-	url = ../opentelemetry-python-feedstock
 	branch = main
 [submodule "python-chromedriver-binary-feedstock"]
 	path = python-chromedriver-binary-feedstock
