@@ -12266,3 +12266,7 @@
 	path = qa-multi-output-test-feedstock
 	url = ../qa-multi-output-test-feedstock
 	branch = main
+[submodule "qa-cuda-variant-test-feedstock"]
+	path = qa-cuda-variant-test-feedstock
+	url = ../qa-cuda-variant-test-feedstock
+	branch = main
