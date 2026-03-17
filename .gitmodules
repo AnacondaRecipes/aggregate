@@ -12262,3 +12262,7 @@
 	path = cdt_el10_aarch64-feedstock
 	url = ../cdt_el10_aarch64-feedstock
 	branch = main
+[submodule "qa-multi-output-test-feedstock"]
+	path = qa-multi-output-test-feedstock
+	url = ../qa-multi-output-test-feedstock
+	branch = main
