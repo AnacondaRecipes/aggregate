@@ -12254,3 +12254,7 @@
 	path = cdt_el9_x86_64-feedstock
 	url = ../cdt_el9_x86_64-feedstock
 	branch = main
+[submodule "hatch-feedstock"]
+	path = hatch-feedstock
+	url = ../hatch-feedstock
+	branch = main
