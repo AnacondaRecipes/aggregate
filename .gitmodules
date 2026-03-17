@@ -12250,3 +12250,7 @@
 	path = peft-feedstock
 	url = ../peft-feedstock
 	branch = main
+[submodule "cdt_el9_x86_64-feedstock"]
+	path = cdt_el9_x86_64-feedstock
+	url = ../cdt_el9_x86_64-feedstock
+	branch = main
