@@ -12278,3 +12278,7 @@
 	path = qa-noarch-test-feedstock
 	url = ../qa-noarch-test-feedstock
 	branch = main
+[submodule "lupa-feedstock"]
+	path = lupa-feedstock
+	url = ../lupa-feedstock
+	branch = main
