@@ -12270,3 +12270,7 @@
 	path = qa-cuda-variant-test-feedstock
 	url = ../qa-cuda-variant-test-feedstock
 	branch = main
+[submodule "qa-multiple-platform-test-feedstock"]
+	path = qa-multiple-platform-test-feedstock
+	url = ../qa-multiple-platform-test-feedstock
+	branch = main
