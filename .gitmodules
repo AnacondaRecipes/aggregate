@@ -12274,3 +12274,7 @@
 	path = qa-multiple-platform-test-feedstock
 	url = ../qa-multiple-platform-test-feedstock
 	branch = main
+[submodule "qa-noarch-test-feedstock"]
+	path = qa-noarch-test-feedstock
+	url = ../qa-noarch-test-feedstock
+	branch = main
