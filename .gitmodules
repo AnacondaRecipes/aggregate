@@ -12270,3 +12270,7 @@
 	path = huey-feedstock
 	url = ../huey-feedstock
 	branch = main
+[submodule "skops-feedstock"]
+	path = skops-feedstock
+	url = ../skops-feedstock
+	branch = main
