@@ -12282,3 +12282,7 @@
 	path = lupa-feedstock
 	url = ../lupa-feedstock
 	branch = main
+[submodule "huey-feedstock"]
+	path = huey-feedstock
+	url = ../huey-feedstock
+	branch = main
