@@ -12278,3 +12278,7 @@
 	path = pyperclip-feedstock
 	url = ../pyperclip-feedstock
 	branch = main
+[submodule "filecheck-feedstock"]
+	path = filecheck-feedstock
+	url = ../filecheck-feedstock
+	branch = main
