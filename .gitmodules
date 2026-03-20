@@ -12282,3 +12282,7 @@
 	path = filecheck-feedstock
 	url = ../filecheck-feedstock
 	branch = main
+[submodule "mcp-compose-feedstock"]
+	path = mcp-compose-feedstock
+	url = ../mcp-compose-feedstock
+	branch = main
