@@ -12290,3 +12290,7 @@
 	path = lupa-feedstock
 	url = ../lupa-feedstock
 	branch = main
+[submodule "uncalled-for-feedstock"]
+	path = uncalled-for-feedstock
+	url = ../uncalled-for-feedstock
+	branch = main
