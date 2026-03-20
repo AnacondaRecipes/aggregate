@@ -12286,3 +12286,7 @@
 	path = mcp-compose-feedstock
 	url = ../mcp-compose-feedstock
 	branch = main
+[submodule "lupa-feedstock"]
+	path = lupa-feedstock
+	url = ../lupa-feedstock
+	branch = main
