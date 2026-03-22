@@ -12298,3 +12298,7 @@
 	path = gwlearn-feedstock
 	url = ../gwlearn-feedstock
 	branch = main
+[submodule "geodatasets-feedstock"]
+	path = geodatasets-feedstock
+	url = ../geodatasets-feedstock
+	branch = main
