@@ -12294,3 +12294,7 @@
 	path = uncalled-for-feedstock
 	url = ../uncalled-for-feedstock
 	branch = main
+[submodule "gwlearn-feedstock"]
+	path = gwlearn-feedstock
+	url = ../gwlearn-feedstock
+	branch = main
