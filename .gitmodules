@@ -12290,13 +12290,13 @@
 	path = lupa-feedstock
 	url = ../lupa-feedstock
 	branch = main
-[submodule "uncalled-for-feedstock"]
-	path = uncalled-for-feedstock
-	url = ../uncalled-for-feedstock
+[submodule "cutile-python-feedstock"]
+	path = cutile-python-feedstock
+	url = ../cutile-python-feedstock
 	branch = main
-[submodule "gwlearn-feedstock"]
-	path = gwlearn-feedstock
-	url = ../gwlearn-feedstock
+[submodule "flash-attn-feedstock"]
+	path = flash-attn-feedstock
+	url = ../flash-attn-feedstock
 	branch = main
 [submodule "geodatasets-feedstock"]
 	path = geodatasets-feedstock
