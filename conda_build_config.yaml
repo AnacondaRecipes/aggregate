@@ -353,6 +353,8 @@ gnutls:
   - '3.8'
 graphite2:
   - '1'
+graphviz:
+  - '14'
 gsl:
   - '2.7'
 gst_plugins_base:
@@ -980,7 +982,7 @@ tk:
 ucc:
   - '1'
 ucx:
-  - '1.18'
+  - '1.20'
 unixodbc:
   - '2.3'
 util_linux:
