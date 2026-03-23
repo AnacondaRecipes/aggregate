@@ -12302,3 +12302,7 @@
 	path = geodatasets-feedstock
 	url = ../geodatasets-feedstock
 	branch = main
+[submodule "jsonref-feedstock"]
+	path = jsonref-feedstock
+	url = ../jsonref-feedstock
+	branch = main
