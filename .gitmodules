@@ -12306,3 +12306,7 @@
 	path = jsonref-feedstock
 	url = ../jsonref-feedstock
 	branch = main
+[submodule "pygeostat-feedstock"]
+	path = pygeostat-feedstock
+	url = ../pygeostat-feedstock
+	branch = main
