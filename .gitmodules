@@ -12310,3 +12310,7 @@
 	path = pygeostat-feedstock
 	url = ../pygeostat-feedstock
 	branch = main
+[submodule "mpl-probscale-feedstock"]
+	path = mpl-probscale-feedstock
+	url = ../mpl-probscale-feedstock
+	branch = main
