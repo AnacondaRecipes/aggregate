@@ -748,7 +748,7 @@ libvorbis:
 libvpl:
   - '2.15'
 libvpx:
-  - '1.15'
+  - '1.16'
 libvulkan:
   - 1.4
 libwebp:
