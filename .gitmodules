@@ -12306,11 +12306,15 @@
 	path = jsonref-feedstock
 	url = ../jsonref-feedstock
 	branch = main
-[submodule "pygeostat-feedstock"]
-	path = pygeostat-feedstock
-	url = ../pygeostat-feedstock
+[submodule "gwlearn-feedstock"]
+	path = gwlearn-feedstock
+	url = ../gwlearn-feedstock
 	branch = main
-[submodule "mpl-probscale-feedstock"]
-	path = mpl-probscale-feedstock
-	url = ../mpl-probscale-feedstock
+[submodule "libnvshmem-feedstock"]
+	path = libnvshmem-feedstock
+	url = ../libnvshmem-feedstock
+	branch = main
+[submodule "uncalled-for-feedstock"]
+	path = uncalled-for-feedstock
+	url = ../uncalled-for-feedstock
 	branch = main
