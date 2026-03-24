@@ -667,6 +667,8 @@ libnvjitlink:
   - '13'
 libnvjpeg:
   - '13'
+libnvshmem3:
+  - 3.4.5
 libogg:
   - '1.3'
 libopenblas:
@@ -730,7 +732,7 @@ libtirpc:
 libtmglib:
   - '3'
 libtorch:
-  - '2.8'
+  - '2.9'
 libunistring:
   - '1'
 libunwind:
@@ -748,7 +750,7 @@ libvorbis:
 libvpl:
   - '2.15'
 libvpx:
-  - '1.15'
+  - '1.16'
 libvulkan:
   - 1.4
 libwebp:
@@ -888,7 +890,7 @@ pyqtwebengine:
 python_igraph:
   - '0.10'
 pytorch:
-  - '2.8'
+  - '2.9'
 qhull:
   - '2020.2'
 qpdf:
