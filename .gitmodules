@@ -12318,3 +12318,7 @@
 	path = uncalled-for-feedstock
 	url = ../uncalled-for-feedstock
 	branch = main
+[submodule "rst2pdf-feedstock"]
+	path = rst2pdf-feedstock
+	url = ../rst2pdf-feedstock
+	branch = main
