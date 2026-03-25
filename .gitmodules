@@ -12322,3 +12322,7 @@
 	path = rst2pdf-feedstock
 	url = ../rst2pdf-feedstock
 	branch = main
+[submodule "jwcrypto-feedstock"]
+	path = jwcrypto-feedstock
+	url = ../jwcrypto-feedstock
+	branch = main
