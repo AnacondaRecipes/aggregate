@@ -196,7 +196,7 @@ aws_c_common:
 aws_c_compression:
   - 0.3.1
 aws_c_event_stream:
-  - 0.5.9
+  - 0.6.0
 aws_c_http:
   - 0.10.7
 aws_c_io:
@@ -204,11 +204,11 @@ aws_c_io:
 aws_c_mqtt:
   - 0.13.3
 aws_c_s3:
-  - 0.11.3
+  - 0.12.0
 aws_c_sdkutils:
   - 0.2.4
 aws_checksums:
-  - 0.2.8
+  - 0.2.10
 aws_crt_cpp:
   - 0.35.4
 aws_sdk_cpp:
