@@ -12326,3 +12326,7 @@
 	path = jwcrypto-feedstock
 	url = ../jwcrypto-feedstock
 	branch = main
+[submodule "onnxscript-feedstock"]
+	path = onnxscript-feedstock
+	url = ../onnxscript-feedstock
+	branch = main
