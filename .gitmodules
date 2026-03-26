@@ -12330,3 +12330,7 @@
 	path = onnxscript-feedstock
 	url = ../onnxscript-feedstock
 	branch = main
+[submodule "onnx-ir-feedstock"]
+	path = onnx-ir-feedstock
+	url = ../onnx-ir-feedstock
+	branch = main
