@@ -12334,3 +12334,7 @@
 	path = onnx-ir-feedstock
 	url = ../onnx-ir-feedstock
 	branch = main
+[submodule "glog-feedstock"]
+	path = glog-feedstock
+	url = ../glog-feedstock
+	branch = main
