@@ -12318,25 +12318,37 @@
 	path = uncalled-for-feedstock
 	url = ../uncalled-for-feedstock
 	branch = main
-[submodule "rst2pdf-feedstock"]
-	path = rst2pdf-feedstock
-	url = ../rst2pdf-feedstock
-	branch = main
 [submodule "jwcrypto-feedstock"]
 	path = jwcrypto-feedstock
 	url = ../jwcrypto-feedstock
-	branch = main
-[submodule "onnxscript-feedstock"]
-	path = onnxscript-feedstock
-	url = ../onnxscript-feedstock
 	branch = main
 [submodule "onnx-ir-feedstock"]
 	path = onnx-ir-feedstock
 	url = ../onnx-ir-feedstock
 	branch = main
-[submodule "glog-feedstock"]
-	path = glog-feedstock
-	url = ../glog-feedstock
+[submodule "candle-vllm-feedstock"]
+	path = candle-vllm-feedstock
+	url = ../candle-vllm-feedstock
+	branch = main
+[submodule "delvewheel-feedstock"]
+	path = delvewheel-feedstock
+	url = ../delvewheel-feedstock
+	branch = main
+[submodule "fastmcp-feedstock"]
+	path = fastmcp-feedstock
+	url = ../fastmcp-feedstock
+	branch = main
+[submodule "litestar-htmx-feedstock"]
+	path = litestar-htmx-feedstock
+	url = ../litestar-htmx-feedstock
+	branch = main
+[submodule "mpl-probscale-feedstock"]
+	path = mpl-probscale-feedstock
+	url = ../mpl-probscale-feedstock
+	branch = main
+[submodule "skbase-suite-feedstock"]
+	path = skbase-suite-feedstock
+	url = ../skbase-suite-feedstock
 	branch = main
 [submodule "cdt_el9_x86_64-feedstock"]
 	path = cdt_el9_x86_64-feedstock
