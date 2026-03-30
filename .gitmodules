@@ -12366,3 +12366,7 @@
 	path = pyautogen-feedstock
 	url = ../pyautogen-feedstock
 	branch = main
+[submodule "fast-depends-feedstock"]
+	path = fast-depends-feedstock
+	url = ../fast-depends-feedstock
+	branch = main
