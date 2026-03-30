@@ -12362,3 +12362,7 @@
 	path = cdt_el10_aarch64-feedstock
 	url = ../cdt_el10_aarch64-feedstock
 	branch = main
+[submodule "pyautogen-feedstock"]
+	path = pyautogen-feedstock
+	url = ../pyautogen-feedstock
+	branch = main
