@@ -12354,3 +12354,7 @@
 	path = cdt_el9_x86_64-feedstock
 	url = ../cdt_el9_x86_64-feedstock
 	branch = main
+[submodule "cdt_el10_x86_64-feedstock"]
+	path = cdt_el10_x86_64-feedstock
+	url = ../cdt_el10_x86_64-feedstock
+	branch = main
