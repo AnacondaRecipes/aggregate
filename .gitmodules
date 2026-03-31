@@ -4067,10 +4067,6 @@
 	path = extension-helpers-feedstock
 	url = ../extension-helpers-feedstock
 	branch = master
-[submodule "oniguruma-feedstock"]
-	path = oniguruma-feedstock
-	url = ../oniguruma-feedstock
-	branch = master
 [submodule "jq-feedstock"]
 	path = jq-feedstock
 	url = ../jq-feedstock
@@ -12361,12 +12357,4 @@
 [submodule "cdt_el10_aarch64-feedstock"]
 	path = cdt_el10_aarch64-feedstock
 	url = ../cdt_el10_aarch64-feedstock
-	branch = main
-[submodule "pyautogen-feedstock"]
-	path = pyautogen-feedstock
-	url = ../pyautogen-feedstock
-	branch = main
-[submodule "fast-depends-feedstock"]
-	path = fast-depends-feedstock
-	url = ../fast-depends-feedstock
 	branch = main
