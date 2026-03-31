@@ -358,11 +358,11 @@ graphviz:
 gsl:
   - '2.7'
 gst_plugins_base:
-  - '1.26'
+  - '1.28'
 gst_plugins_good:
-  - '1.26'
+  - '1.28'
 gstreamer:
-  - '1.26'
+  - '1.28'
 gstreamer_orc:
   - '0.4'
 gtest:
@@ -648,7 +648,7 @@ libmpdecxx:
 libnetcdf:
   - '4'
 libnghttp2:
-  - '1.67'
+  - '1.68'
 libnl:
   - '3'
 libnpp:
