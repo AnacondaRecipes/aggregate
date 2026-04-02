@@ -12358,3 +12358,7 @@
 	path = cdt_el10_aarch64-feedstock
 	url = ../cdt_el10_aarch64-feedstock
 	branch = main
+[submodule "krb5-1.21.3-feedstock"]
+	path = krb5-1.21.3-feedstock
+	url = ../krb5-feedstock
+	branch = master-1.21.3
