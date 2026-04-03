@@ -12362,3 +12362,7 @@
 	path = krb5-1.21.3-feedstock
 	url = ../krb5-feedstock
 	branch = master-1.21.3
+[submodule "vcs-versioning-feedstock"]
+	path = vcs-versioning-feedstock
+	url = ../vcs-versioning-feedstock
+	branch = main
