@@ -12366,3 +12366,7 @@
 	path = vcs-versioning-feedstock
 	url = ../vcs-versioning-feedstock
 	branch = main
+[submodule "conda-anaconda-trust-root-feedstock"]
+	path = conda-anaconda-trust-root-feedstock
+	url = ../conda-anaconda-trust-root-feedstock
+	branch = main
