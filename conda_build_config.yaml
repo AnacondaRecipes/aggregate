@@ -170,7 +170,7 @@ alsa_lib:
 ampl_mp:
   - '3.1'
 aom:
-  - '3.12'
+  - '3.13'
 armadillo:
   - '12'
 arpack:
@@ -258,7 +258,7 @@ coin_or_osi:
 coin_or_utils:
   - '2.11'
 cryptography_vectors:
-  - 46.0.5
+  - 46.0.6
 cuda_cudart:
   - '13'
 cuda_cupti:
@@ -271,6 +271,8 @@ cuda_opencl:
   - '13'
 cudnn:
   - '9'
+cusparselt:
+  - 0.9.0
 cutensor:
   - '2'
 cyrus_sasl:
@@ -388,7 +390,7 @@ icc_rt:
 icu:
   - '73'
 igraph:
-  - '0.10'
+  - '1.0'
 intel_cmplr_lib_rt:
   - '2025'
 intel_cmplr_lib_ur:
@@ -422,7 +424,7 @@ jpeg:
 json_c:
   - '0.18'
 jsoncpp:
-  - 1.9.6
+  - 1.9.7
 jxrlib:
   - '1.2'
 kealib:
@@ -673,6 +675,8 @@ libogg:
   - '1.3'
 libopenblas:
   - '0'
+libopencv:
+  - '4.13'
 libopengl:
   - '1'
 libopenjpeg:
@@ -841,6 +845,8 @@ openblas:
   - 0
 openblas_devel:
   - '0'
+opencv:
+  - '4.13'
 openh264:
   - '2.6'
 openjpeg:
@@ -881,6 +887,8 @@ pulseaudio_daemon:
   - '17.0'
 py_lief:
   - '0.17'
+py_opencv:
+  - '4.13'
 pyqt:
   - '6.10'
 pyqtchart:
