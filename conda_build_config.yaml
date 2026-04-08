@@ -170,7 +170,7 @@ alsa_lib:
 ampl_mp:
   - '3.1'
 aom:
-  - '3.12'
+  - '3.13'
 armadillo:
   - '12'
 arpack:
@@ -258,7 +258,7 @@ coin_or_osi:
 coin_or_utils:
   - '2.11'
 cryptography_vectors:
-  - 46.0.5
+  - 46.0.6
 cuda_cudart:
   - '13'
 cuda_cupti:
@@ -271,6 +271,8 @@ cuda_opencl:
   - '13'
 cudnn:
   - '9'
+cusparselt:
+  - 0.9.0
 cutensor:
   - '2'
 cyrus_sasl:
@@ -388,7 +390,7 @@ icc_rt:
 icu:
   - '73'
 igraph:
-  - '0.10'
+  - '1.0'
 intel_cmplr_lib_rt:
   - '2025'
 intel_cmplr_lib_ur:
@@ -422,7 +424,7 @@ jpeg:
 json_c:
   - '0.18'
 jsoncpp:
-  - 1.9.6
+  - 1.9.7
 jxrlib:
   - '1.2'
 kealib:
@@ -482,7 +484,7 @@ libbrotlienc:
 libcap:
   - '2.77'
 libclang13:
-  - 21.1.8
+  - 22.1.2
 libclang_cpp10:
   - '10.0'
 libclang_cpp12:
@@ -497,6 +499,8 @@ libclang_cpp20_1:
   - '20.1'
 libclang_cpp21_1:
   - '21.1'
+libclang_cpp22_1:
+  - '22.1'
 libcrc32c:
   - '1.1'
 libcryptominisat:
@@ -615,6 +619,8 @@ libllvm20:
   - '20.1'
 libllvm21:
   - '21.1'
+libllvm22:
+  - '22.1'
 libllvm_c17:
   - '17.0'
 libllvm_c19:
@@ -623,6 +629,8 @@ libllvm_c20:
   - '20.1'
 libllvm_c21:
   - '21.1'
+libllvm_c22:
+  - '22.1'
 libltdl:
   - '2.6'
 libmamba:
@@ -673,6 +681,8 @@ libogg:
   - '1.3'
 libopenblas:
   - '0'
+libopencv:
+  - '4.13'
 libopengl:
   - '1'
 libopenjpeg:
@@ -834,13 +844,15 @@ ocl_icd:
 oniguruma:
   - '6.9'
 onnxruntime_cpp:
-  - 1.22.2
+  - 1.24.4
 onnxruntime_novec_cpp:
-  - 1.22.2
+  - 1.24.4
 openblas:
   - 0
 openblas_devel:
   - '0'
+opencv:
+  - '4.13'
 openh264:
   - '2.6'
 openjpeg:
@@ -881,6 +893,8 @@ pulseaudio_daemon:
   - '17.0'
 py_lief:
   - '0.17'
+py_opencv:
+  - '4.13'
 pyqt:
   - '6.10'
 pyqtchart:
@@ -888,7 +902,7 @@ pyqtchart:
 pyqtwebengine:
   - '6.10'
 python_igraph:
-  - '0.10'
+  - '1.0'
 pytorch:
   - '2.9'
 qhull:
