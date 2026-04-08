@@ -12370,7 +12370,51 @@
 	path = conda-anaconda-trust-root-feedstock
 	url = ../conda-anaconda-trust-root-feedstock
 	branch = main
-[submodule "luajit-feedstock"]
-	path = luajit-feedstock
-	url = ../luajit-feedstock
-	branch = master
+[submodule "cronsim-feedstock"]
+	path = cronsim-feedstock
+	url = ../cronsim-feedstock
+	branch = main
+[submodule "cusparselt-feedstock"]
+	path = cusparselt-feedstock
+	url = ../cusparselt-feedstock
+	branch = main
+[submodule "delocate-feedstock"]
+	path = delocate-feedstock
+	url = ../delocate-feedstock
+	branch = main
+[submodule "fast-depends-feedstock"]
+	path = fast-depends-feedstock
+	url = ../fast-depends-feedstock
+	branch = main
+[submodule "lance-namespace-feedstock"]
+	path = lance-namespace-feedstock
+	url = ../lance-namespace-feedstock
+	branch = main
+[submodule "lancedb-feedstock"]
+	path = lancedb-feedstock
+	url = ../lancedb-feedstock
+	branch = main
+[submodule "llguidance-feedstock"]
+	path = llguidance-feedstock
+	url = ../llguidance-feedstock
+	branch = main
+[submodule "pyautogen-feedstock"]
+	path = pyautogen-feedstock
+	url = ../pyautogen-feedstock
+	branch = main
+[submodule "pylance-feedstock"]
+	path = pylance-feedstock
+	url = ../pylance-feedstock
+	branch = main
+[submodule "pyre-extensions-feedstock"]
+	path = pyre-extensions-feedstock
+	url = ../pyre-extensions-feedstock
+	branch = main
+[submodule "rst2pdf-feedstock"]
+	path = rst2pdf-feedstock
+	url = ../rst2pdf-feedstock
+	branch = main
+[submodule "ultralytics-feedstock"]
+	path = ultralytics-feedstock
+	url = ../ultralytics-feedstock
+	branch = main
