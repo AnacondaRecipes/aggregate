@@ -12422,3 +12422,7 @@
 	path = anaconda-ident-feedstock
 	url = ../anaconda-ident-feedstock
 	branch = main
+[submodule "anaconda-mirror-feedstock"]
+	path = anaconda-mirror-feedstock
+	url = ../anaconda-mirror-feedstock
+	branch = main
