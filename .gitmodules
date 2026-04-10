@@ -12462,3 +12462,7 @@
 	path = xformers-feedstock
 	url = ../xformers-feedstock
 	branch = main
+[submodule "nbgitpuller-feedstock"]
+	path = nbgitpuller-feedstock
+	url = ../nbgitpuller-feedstock
+	branch = main
