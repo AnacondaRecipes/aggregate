@@ -12418,11 +12418,47 @@
 	path = ultralytics-feedstock
 	url = ../ultralytics-feedstock
 	branch = main
-[submodule "anaconda-ident-feedstock"]
-	path = anaconda-ident-feedstock
-	url = ../anaconda-ident-feedstock
-	branch = main
 [submodule "anaconda-mirror-feedstock"]
 	path = anaconda-mirror-feedstock
 	url = ../anaconda-mirror-feedstock
+	branch = main
+[submodule "captcha-feedstock"]
+	path = captcha-feedstock
+	url = ../captcha-feedstock
+	branch = main
+[submodule "escapism-feedstock"]
+	path = escapism-feedstock
+	url = ../escapism-feedstock
+	branch = main
+[submodule "onnxscript-feedstock"]
+	path = onnxscript-feedstock
+	url = ../onnxscript-feedstock
+	branch = main
+[submodule "perl-class-inspector-feedstock"]
+	path = perl-class-inspector-feedstock
+	url = ../perl-class-inspector-feedstock
+	branch = master
+[submodule "perl-exporter-feedstock"]
+	path = perl-exporter-feedstock
+	url = ../perl-exporter-feedstock
+	branch = master
+[submodule "perl-file-path-feedstock"]
+	path = perl-file-path-feedstock
+	url = ../perl-file-path-feedstock
+	branch = master
+[submodule "perl-file-sharedir-install-feedstock"]
+	path = perl-file-sharedir-install-feedstock
+	url = ../perl-file-sharedir-install-feedstock
+	branch = master
+[submodule "pydocket-feedstock"]
+	path = pydocket-feedstock
+	url = ../pydocket-feedstock
+	branch = main
+[submodule "splink-feedstock"]
+	path = splink-feedstock
+	url = ../splink-feedstock
+	branch = main
+[submodule "xformers-feedstock"]
+	path = xformers-feedstock
+	url = ../xformers-feedstock
 	branch = main
