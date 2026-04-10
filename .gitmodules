@@ -12418,3 +12418,7 @@
 	path = ultralytics-feedstock
 	url = ../ultralytics-feedstock
 	branch = main
+[submodule "anaconda-ident-feedstock"]
+	path = anaconda-ident-feedstock
+	url = ../anaconda-ident-feedstock
+	branch = main
