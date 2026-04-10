@@ -128,11 +128,11 @@ r_implementation:
 #    For example, we need a win-64 vs2008_win-32 package, so that we compile win-32
 #    code on win-64 miniconda.
 cross_compiler_target_platform:
-  # - win-32                     # [win]
-  - win-64                     # [win]
+  - win-64                     # [win and x86_64]
+  - win-arm64                  # [win and arm64]
 target_platform:
-  - win-64                     # [win]
-  # - win-32                     # [win]
+  - win-64                     # [win and x86_64]
+  - win-arm64                  # [win and arm64]
 channel_targets:
   - defaults
 cdt_name:          # [linux]
