@@ -258,7 +258,7 @@ coin_or_osi:
 coin_or_utils:
   - '2.11'
 cryptography_vectors:
-  - 46.0.6
+  - 46.0.7
 cuda_cudart:
   - '13'
 cuda_cupti:
@@ -556,7 +556,7 @@ libflac:
 libflang:
   - 20.1.8
 libflang_rt:
-  - 21.1.8
+  - 22.1.2
 libgcrypt:
   - '1'
 libgd:
@@ -649,6 +649,8 @@ libmlir20:
   - '20.1'
 libmlir21:
   - '21.1'
+libmlir22:
+  - '22.1'
 libmpdec:
   - '4'
 libmpdecxx:
@@ -676,7 +678,7 @@ libnvjitlink:
 libnvjpeg:
   - '13'
 libnvshmem3:
-  - 3.4.5
+  - 3.5.21
 libogg:
   - '1.3'
 libopenblas:
@@ -690,7 +692,7 @@ libopenjpeg:
 libopus:
   - '1'
 libortools:
-  - '9.9'
+  - '9.15'
 libosqp:
   - 1.0.0
 libpcap:
@@ -788,7 +790,7 @@ libzlib_wapi:
 libzopfli:
   - '1.0'
 llvm_openmp:
-  - 21.1.8
+  - 22.1.2
 lmdb:
   - '0'
 lz4_c:
@@ -877,6 +879,16 @@ pdal:
   - '2.5'
 perl:
   - 5.42
+perl_class_inspector:
+  - '1.36'
+perl_exporter:
+  - '5.79'
+perl_file_path:
+  - '2.18'
+perl_file_sharedir:
+  - '1.118'
+perl_file_sharedir_install:
+  - '0.14'
 pixman:
   - 0.46.4
 popt:
@@ -910,35 +922,35 @@ qhull:
 qpdf:
   - '11'
 qt:
-  - '6.10'
+  - '6.11'
 qt5compat:
-  - '6.10'
+  - '6.11'
 qt_main:
-  - '6.10'
+  - '6.11'
 qt_webengine:
   - '5.15'
 qtbase:
-  - '6.10'
+  - '6.11'
 qtdeclarative:
-  - '6.10'
+  - '6.11'
 qtimageformats:
-  - '6.10'
+  - '6.11'
 qtshadertools:
-  - '6.10'
+  - '6.11'
 qtsvg:
-  - '6.10'
+  - '6.11'
 qttools:
-  - '6.10'
+  - '6.11'
 qttranslations:
-  - '6.10'
+  - '6.11'
 qtwayland:
-  - '6.10'
+  - '6.11'
 qtwebchannel:
-  - '6.10'
+  - '6.11'
 qtwebengine:
-  - '6.10'
+  - '6.11'
 qtwebsockets:
-  - '6.10'
+  - '6.11'
 quantlib:
   - '1'
 rdkit:
