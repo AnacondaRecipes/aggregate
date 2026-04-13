@@ -12466,3 +12466,19 @@
 	path = nbgitpuller-feedstock
 	url = ../nbgitpuller-feedstock
 	branch = main
+[submodule "anaconda-ident-feedstock"]
+	path = anaconda-ident-feedstock
+	url = ../anaconda-ident-feedstock
+	branch = main
+[submodule "jupyterhub-idle-culler-feedstock"]
+	path = jupyterhub-idle-culler-feedstock
+	url = ../jupyterhub-idle-culler-feedstock
+	branch = main
+[submodule "kubernetes_asyncio-feedstock"]
+	path = kubernetes_asyncio-feedstock
+	url = ../kubernetes_asyncio-feedstock
+	branch = main
+[submodule "num2words-feedstock"]
+	path = num2words-feedstock
+	url = ../num2words-feedstock
+	branch = main
