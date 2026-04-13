@@ -908,11 +908,11 @@ py_lief:
 py_opencv:
   - '4.13'
 pyqt:
-  - '6.10'
+  - '6.11'
 pyqtchart:
   - '5.15'
 pyqtwebengine:
-  - '6.10'
+  - '6.11'
 python_igraph:
   - '1.0'
 pytorch:
@@ -954,7 +954,7 @@ qtwebsockets:
 quantlib:
   - '1'
 rdkit:
-  - 2025.3.6
+  - 2025.9.6
 rdma_core:
   - '61.0'
 re2:
