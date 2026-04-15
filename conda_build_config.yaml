@@ -31,10 +31,11 @@ cxx_compiler:
 cxx_compiler_version:          # [linux or osx]
   - 14.3.0                     # [linux]
   - 20                         # [osx]
-cuda_compiler:
-  - cuda-nvcc
-cuda_compiler_version:
-  - 12.4
+cuda_compiler:                 # [linux or win]
+  - cuda-nvcc                  # [linux or win]
+cuda_compiler_version:         # [linux or win]
+  - 12.9                       # [linux or win]
+  - 13.1                       # [linux or win]
 fortran_compiler:
   - gfortran                   # [linux or osx]
   - intel-fortran              # [win]
