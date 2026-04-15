@@ -7,7 +7,7 @@ pin_run_as_build:
 
 blas_impl:
   - mkl                        # [(x86 or x86_64) and not osx]
-  - openblas                   # [not win]
+  - openblas
 c_compiler:
   - gcc                        # [linux]
   - clang                      # [osx]
@@ -24,7 +24,7 @@ cuda_compiler:
   - cuda-nvcc
 fortran_compiler:
   - gfortran                   # [linux or osx]
-  - intel-fortran              # [win]
+  - flang                      # [win]
 m2w64_c_compiler:              # [win]
   - m2w64-toolchain            # [win]
 m2w64_cxx_compiler:            # [win]
@@ -70,8 +70,8 @@ cxx_compiler_version:      # [linux or osx]
 cuda_compiler_version:
   - 12.4
 fortran_compiler_version:
-  - 2022.1.0                     # [win]
-  - 14.3.0                       # [osx or linux]
+  - 20                     # [win]
+  - 14.3.0                 # [osx or linux]
 clang_variant:
   - clang
 # The basic go-compiler with CGO disabled (CGO_ENABLED=0).
@@ -128,11 +128,11 @@ r_implementation:
 #    For example, we need a win-64 vs2008_win-32 package, so that we compile win-32
 #    code on win-64 miniconda.
 cross_compiler_target_platform:
-  # - win-32                     # [win]
-  - win-64                     # [win]
+  - win-64                     # [win and x86_64]
+  - win-arm64                  # [win and arm64]
 target_platform:
-  - win-64                     # [win]
-  # - win-32                     # [win]
+  - win-64                     # [win and x86_64]
+  - win-arm64                  # [win and arm64]
 channel_targets:
   - defaults
 cdt_name:          # [linux]
