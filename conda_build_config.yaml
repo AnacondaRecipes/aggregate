@@ -283,6 +283,8 @@ dav1d:
   - 1.5.3
 dbus:
   - '1'
+dlfcn_win32:
+  - '1'
 dpcpp_cpp_rt:
   - '2023'
 eigen:
@@ -340,7 +342,7 @@ glew:
 glfw:
   - '3'
 glib:
-  - 2
+  - '2'
 glog:
   - '0.5'
 glpk:
@@ -420,7 +422,7 @@ jemalloc:
 jemalloc_local:
   - 5.3.0
 jpeg:
-  - 9e
+  - 9f
 json_c:
   - '0.18'
 jsoncpp:
@@ -548,7 +550,9 @@ libevent:
 libexpat:
   - '2'
 libfaiss:
-  - 1.0.0
+  - 1.14.1
+libfaiss_avx2:
+  - 1.14.1
 libffi:
   - '3.4'
 libflac:
@@ -766,7 +770,7 @@ libvpx:
 libvulkan:
   - 1.4
 libwebp:
-  - 1.3.2
+  - '1'
 libwebp_base:
   - '1'
 libxcb:
@@ -850,7 +854,7 @@ onnxruntime_cpp:
 onnxruntime_novec_cpp:
   - 1.24.4
 openblas:
-  - 0
+  - '0'
 openblas_devel:
   - '0'
 opencv:
@@ -858,7 +862,7 @@ opencv:
 openh264:
   - '2.6'
 openjpeg:
-  - '2'
+  - '2.5'
 openldap:
   - '2.6'
 openmpi:
@@ -1024,7 +1028,7 @@ vtk_io_ffmpeg:
 wayland:
   - '1.24'
 x264:
-  - 1!152.20180806
+  - 1!157.20191217
 xcb_util:
   - '0.4'
 xcb_util_cursor:
@@ -1094,11 +1098,11 @@ yaml:
 yaml_cpp:
   - '0.8'
 zeromq:
-  - '4.3'
+  - 4.3.5
 zfp:
   - '1'
 zlib:
-  - '1.3'
+  - '1'
 zlib_ng:
   - '2.0'
 zstd:
