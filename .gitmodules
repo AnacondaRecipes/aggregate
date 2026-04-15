@@ -12482,3 +12482,23 @@
 	path = num2words-feedstock
 	url = ../num2words-feedstock
 	branch = main
+[submodule "fire-feedstock"]
+	path = fire-feedstock
+	url = ../fire-feedstock
+	branch = main
+[submodule "jupyterhub-kubespawner-feedstock"]
+	path = jupyterhub-kubespawner-feedstock
+	url = ../jupyterhub-kubespawner-feedstock
+	branch = main
+[submodule "jupyterhub-traefik-proxy-feedstock"]
+	path = jupyterhub-traefik-proxy-feedstock
+	url = ../jupyterhub-traefik-proxy-feedstock
+	branch = main
+[submodule "py-libnuma-feedstock"]
+	path = py-libnuma-feedstock
+	url = ../py-libnuma-feedstock
+	branch = main
+[submodule "pygeostat-feedstock"]
+	path = pygeostat-feedstock
+	url = ../pygeostat-feedstock
+	branch = main
