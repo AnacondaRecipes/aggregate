@@ -12,19 +12,36 @@ c_compiler:
   - gcc                        # [linux]
   - clang                      # [osx]
   - vs2022                     # [win]
+c_compiler_version:            # [linux or osx]
+  - 14.3.0                     # [linux]
+  - 20                         # [osx]
 c_stdlib:
   - sysroot                    # [linux]
   - macosx_deployment_target   # [osx]
   - vs                         # [win]
+c_stdlib_version:
+  - 2.28                       # [linux]
+  - 10.15                      # [osx and x86_64]
+  - 12.1                       # [osx and arm64]
+  - 2022.14                    # [win]
 cxx_compiler:
   - gxx                        # [linux]
   - clangxx                    # [osx]
   - vs2022                     # [win]
-cuda_compiler:
-  - cuda-nvcc
+cxx_compiler_version:          # [linux or osx]
+  - 14.3.0                     # [linux]
+  - 20                         # [osx]
+cuda_compiler:                 # [linux or win]
+  - cuda-nvcc                  # [linux or win]
+cuda_compiler_version:         # [linux or win]
+  - 12.9                       # [linux or win]
+  - 13.0                       # [linux or win]
 fortran_compiler:
   - gfortran                   # [linux or osx]
   - intel-fortran              # [win]
+fortran_compiler_version:
+  - 2022.1.0                   # [win]
+  - 14.3.0                     # [osx or linux]
 m2w64_c_compiler:              # [win]
   - m2w64-toolchain            # [win]
 m2w64_cxx_compiler:            # [win]
@@ -39,10 +56,10 @@ ucrt64_fortran_compiler:       # [win]
   - ucrt64-gcc-toolchain       # [win]
 rust_compiler:
   - rust
-rust_nightly_compiler:
-  - rust-nightly
 rust_compiler_version:
   - 1.93.1
+rust_nightly_compiler:
+  - rust-nightly
 rust_nightly_compiler_version:
   - 1.92.0_2025-10-13
 # use {{ compiler('rust-gnu') }} when requiring a build using the m2w64-toolchain
@@ -56,22 +73,6 @@ VERBOSE_CM:
   - VERBOSE=1
 cran_mirror:
   - https://cran.r-project.org
-c_compiler_version:        # [linux or osx]
-  - 14.3.0                 # [linux]
-  - 20                     # [osx]
-c_stdlib_version:
-  - 2.28                   # [linux]
-  - 10.15                  # [osx and x86_64]
-  - 12.1                   # [osx and arm64]
-  - 2022.14                # [win]
-cxx_compiler_version:      # [linux or osx]
-  - 14.3.0                 # [linux]
-  - 20                     # [osx]
-cuda_compiler_version:
-  - 12.4
-fortran_compiler_version:
-  - 2022.1.0                     # [win]
-  - 14.3.0                       # [osx or linux]
 clang_variant:
   - clang
 # The basic go-compiler with CGO disabled (CGO_ENABLED=0).
@@ -138,11 +139,6 @@ channel_targets:
 cdt_name:          # [linux]
   - el8            # [linux]
 
-# https://github.com/conda/conda-build/issues/5733
-BUILD:                           # [linux]
-  - x86_64-conda_el8-linux-gnu   # [linux and x86_64]
-  - aarch64-conda_el8-linux-gnu  # [linux and aarch64]
-
 OSX_SDK_DIR:                                  # [osx]
   - /opt                                      # [osx and x86_64]
   - /Library/Developer/CommandLineTools/SDKs  # [osx and arm64]
@@ -163,8 +159,6 @@ MACOSX_DEPLOYMENT_TARGET:
   - 12.1  # [osx and arm64]
 
 ## GLOBAL pinnings
-abseil_cpp:
-  - '20230802.0'
 alsa_lib:
   - '1.2'
 ampl_mp:
@@ -259,24 +253,8 @@ coin_or_utils:
   - '2.11'
 cryptography_vectors:
   - 46.0.7
-cuda_cudart:
-  - '13'
-cuda_cupti:
-  - '13'
-cuda_nvrtc:
-  - '13'
-cuda_nvtx:
-  - '13'
-cuda_opencl:
-  - '13'
-cudnn:
-  - '9'
-cusparselt:
-  - 0.9.0
-cutensor:
-  - '2'
 cyrus_sasl:
-  - 2.1.28
+  - '2'
 dal:
   - '2023'
 dav1d:
@@ -314,9 +292,7 @@ freetype:
 freexl:
   - '2'
 fribidi:
-  - '1'
-g2clib:
-  - '1.6'
+  - '1.0'
 gcab:
   - '1'
 gdbm:
@@ -344,13 +320,13 @@ glfw:
 glib:
   - '2'
 glog:
-  - '0.5'
+  - '0.7'
 glpk:
   - '4.65'
 glslang:
   - '15'
 gmp:
-  - 6.3.0
+  - '6'
 gnupg:
   - '2.4'
 gnutls:
@@ -381,10 +357,6 @@ hdf4:
   - 4.2.13
 hdf5:
   - 2.0.0
-hdfeos2:
-  - 2.20
-hdfeos5:
-  - 5.1
 hidapi:
   - '0.8'
 icc_rt:
@@ -441,8 +413,6 @@ lcms2:
   - '2'
 leptonica:
   - '1.82'
-lerc:
-  - '4'
 level_zero:
   - '1'
 leveldb:
@@ -472,9 +442,9 @@ libassuan:
 libavif:
   - '1'
 libboost:
-  - 1.88.0
+  - '1.88'
 libboost_devel:
-  - 1.88.0
+  - '1.88'
 libboost_python:
   - '1.88'
 libbrotlicommon:
@@ -507,30 +477,10 @@ libcrc32c:
   - '1.1'
 libcryptominisat:
   - '5.12'
-libcublas:
-  - '13'
-libcudnn:
-  - '9'
-libcudnn_jit:
-  - '9'
-libcufft:
-  - '12'
-libcufile:
-  - '1'
-libcuobjclient:
-  - '1'
 libcups:
   - '2.4'
-libcurand:
-  - '10'
 libcurl:
   - '8'
-libcusolver:
-  - '12'
-libcusparse:
-  - '12'
-libdap4:
-  - '3.19'
 libde265:
   - 1.0.15
 libdeflate:
@@ -554,11 +504,9 @@ libfaiss:
 libfaiss_avx2:
   - 1.14.1
 libffi:
-  - '3.4'
+  - '3'
 libflac:
   - '1.5'
-libflang:
-  - 20.1.8
 libflang_rt:
   - 22.1.2
 libgcrypt:
@@ -665,24 +613,12 @@ libnghttp2:
   - '1.68'
 libnl:
   - '3'
-libnpp:
-  - '13'
 libnsl:
   - '2.0'
 libntlm:
   - '1'
 libnuma:
   - '2'
-libnvcomp:
-  - '5'
-libnvfatbin:
-  - '13'
-libnvjitlink:
-  - '13'
-libnvjpeg:
-  - '13'
-libnvshmem3:
-  - 3.5.21
 libogg:
   - '1.3'
 libopenblas:
@@ -699,8 +635,6 @@ libortools:
   - '9.15'
 libosqp:
   - 1.0.0
-libpcap:
-  - '1.10'
 libpciaccess:
   - '0.18'
 libpng:
@@ -733,10 +667,6 @@ libssh2:
   - '1'
 libtasn1:
   - '4'
-libtensorflow:
-  - 2.18.1
-libtensorflow_cc:
-  - 2.18.1
 libtheora:
   - '1.2'
 libthrift:
@@ -767,8 +697,6 @@ libvpl:
   - '2.15'
 libvpx:
   - '1.16'
-libvulkan:
-  - 1.4
 libwebp:
   - '1'
 libwebp_base:
@@ -793,8 +721,6 @@ libzlib_wapi:
   - '1'
 libzopfli:
   - '1.0'
-llvm_openmp:
-  - 22.1.2
 lmdb:
   - '0'
 lz4_c:
@@ -807,8 +733,6 @@ mbedtls:
   - '3.5'
 mesalib:
   - '25.1'
-metis:
-  - '5.1'
 minizip:
   - '4'
 mkl:
@@ -827,8 +751,6 @@ mpich:
   - '4'
 mysql_libs:
   - '9.3'
-nanobind_abi:
-  - '15'
 nccl:
   - '2'
 ncurses:
@@ -847,8 +769,6 @@ ntbtls:
   - '0'
 ocl_icd:
   - '2'
-oniguruma:
-  - '6.9'
 onnxruntime_cpp:
   - 1.24.4
 onnxruntime_novec_cpp:
@@ -881,8 +801,6 @@ pcre2:
   - '10.46'
 pdal:
   - '2.5'
-perl:
-  - 5.42
 perl_class_inspector:
   - '1.36'
 perl_exporter:
@@ -894,13 +812,11 @@ perl_file_sharedir:
 perl_file_sharedir_install:
   - '0.14'
 pixman:
-  - 0.46.4
+  - '0'
 popt:
   - '1'
 proj:
   - 9.7.1
-ptscotch:
-  - 6.0.9
 pugixml:
   - '1.11'
 pulseaudio_client:
@@ -966,17 +882,15 @@ re2:
 readline:
   - '8'
 reproc:
-  - '14.2'
+  - '14'
 reproc_cpp:
-  - '14.2'
+  - '14'
 rhash:
   - '1'
 ruby:
   - '3.4'
 s2n:
   - 1.6.2
-scotch:
-  - 6.0.9
 serf:
   - '1.3'
 shaderc:
@@ -1019,14 +933,12 @@ unixodbc:
   - '2.3'
 util_linux:
   - '2.39'
-vc:
-  - '14'
 vtk_base:
   - 9.5.2
 vtk_io_ffmpeg:
   - 9.5.2
 wayland:
-  - '1.24'
+  - '1'
 x264:
   - 1!157.20191217
 xcb_util:
