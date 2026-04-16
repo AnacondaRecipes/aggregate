@@ -1,0 +1,141 @@
+name: Test downstreams of pybind11 3.0.3
+priority: 0
+user: iiziu
+src_channels:
+- https://staging.continuum.io/pbp/fs/pybind11-feedstock/pr24/ec93e3d
+- defaults
+dest_channel: main
+notification: []
+custom_metadata: {}
+system_metadata: {}
+task_counts_by_status: {}
+total_tasks: 8
+tasks:
+- description: Test task for https://repo.anaconda.com/pkgs/main/linux-64/nmslib-2.1.1-py310h3c18c91_0.tar.bz2
+    against pybind11 3.0.3 target_platform=linux-64 2026-04-13 11:26:24
+  public_name: test-main-linux-64-nmslib-2.1.1-py310h3c18c91_0.tar.bz2_downstream_of_pybind11_3.0.3
+  dependencies: []
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: main
+    platform: linux-64
+    target_platform: linux-64
+    python: '3.10'
+  package_def:
+    matchspec: nmslib
+  external_dependencies:
+  - matchspec: pybind11=3.0.3
+  - url: https://repo.anaconda.com/pkgs/main/linux-64/nmslib-2.1.1-py310h3c18c91_0.tar.bz2
+- description: Test task for https://repo.anaconda.com/pkgs/main/linux-64/nmslib-2.1.1-py311h4cb112f_0.tar.bz2
+    against pybind11 3.0.3 target_platform=linux-64 2026-04-13 11:26:24
+  public_name: test-main-linux-64-nmslib-2.1.1-py311h4cb112f_0.tar.bz2_downstream_of_pybind11_3.0.3
+  dependencies: []
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: main
+    platform: linux-64
+    target_platform: linux-64
+    python: '3.11'
+  package_def:
+    matchspec: nmslib
+  external_dependencies:
+  - matchspec: pybind11=3.0.3
+  - url: https://repo.anaconda.com/pkgs/main/linux-64/nmslib-2.1.1-py311h4cb112f_0.tar.bz2
+- description: Test task for https://repo.anaconda.com/pkgs/main/linux-aarch64/nmslib-2.1.1-py311h48caa3a_0.tar.bz2
+    against pybind11 3.0.3 target_platform=linux-aarch64 2026-04-13 11:26:24
+  public_name: test-main-linux-aarch64-nmslib-2.1.1-py311h48caa3a_0.tar.bz2_downstream_of_pybind11_3.0.3
+  dependencies: []
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: main
+    platform: linux-aarch64
+    target_platform: linux-aarch64
+    python: '3.11'
+  package_def:
+    matchspec: nmslib
+  external_dependencies:
+  - matchspec: pybind11=3.0.3
+  - url: https://repo.anaconda.com/pkgs/main/linux-aarch64/nmslib-2.1.1-py311h48caa3a_0.tar.bz2
+- description: Test task for https://repo.anaconda.com/pkgs/main/linux-aarch64/nmslib-2.1.1-py310h7b698d7_0.tar.bz2
+    against pybind11 3.0.3 target_platform=linux-aarch64 2026-04-13 11:26:24
+  public_name: test-main-linux-aarch64-nmslib-2.1.1-py310h7b698d7_0.tar.bz2_downstream_of_pybind11_3.0.3
+  dependencies: []
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: main
+    platform: linux-aarch64
+    target_platform: linux-aarch64
+    python: '3.10'
+  package_def:
+    matchspec: nmslib
+  external_dependencies:
+  - matchspec: pybind11=3.0.3
+  - url: https://repo.anaconda.com/pkgs/main/linux-aarch64/nmslib-2.1.1-py310h7b698d7_0.tar.bz2
+- description: Test task for https://repo.anaconda.com/pkgs/main/osx-arm64/nmslib-2.1.1-py310hb6aeb05_0.tar.bz2
+    against pybind11 3.0.3 target_platform=osx-arm64 2026-04-13 11:26:24
+  public_name: test-main-osx-arm64-nmslib-2.1.1-py310hb6aeb05_0.tar.bz2_downstream_of_pybind11_3.0.3
+  dependencies: []
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: main
+    platform: osx-arm64
+    target_platform: osx-arm64
+    python: '3.10'
+  package_def:
+    matchspec: nmslib
+  external_dependencies:
+  - matchspec: pybind11=3.0.3
+  - url: https://repo.anaconda.com/pkgs/main/osx-arm64/nmslib-2.1.1-py310hb6aeb05_0.tar.bz2
+- description: Test task for https://repo.anaconda.com/pkgs/main/osx-arm64/nmslib-2.1.1-py311h30ceab6_0.tar.bz2
+    against pybind11 3.0.3 target_platform=osx-arm64 2026-04-13 11:26:24
+  public_name: test-main-osx-arm64-nmslib-2.1.1-py311h30ceab6_0.tar.bz2_downstream_of_pybind11_3.0.3
+  dependencies: []
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: main
+    platform: osx-arm64
+    target_platform: osx-arm64
+    python: '3.11'
+  package_def:
+    matchspec: nmslib
+  external_dependencies:
+  - matchspec: pybind11=3.0.3
+  - url: https://repo.anaconda.com/pkgs/main/osx-arm64/nmslib-2.1.1-py311h30ceab6_0.tar.bz2
+- description: Test task for https://repo.anaconda.com/pkgs/main/win-64/nmslib-2.1.1-py310hf497b98_0.tar.bz2
+    against pybind11 3.0.3 target_platform=win-64 2026-04-13 11:26:24
+  public_name: test-main-win-64-nmslib-2.1.1-py310hf497b98_0.tar.bz2_downstream_of_pybind11_3.0.3
+  dependencies: []
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: main
+    platform: win-64
+    target_platform: win-64
+    python: '3.10'
+  package_def:
+    matchspec: nmslib
+  external_dependencies:
+  - matchspec: pybind11=3.0.3
+  - url: https://repo.anaconda.com/pkgs/main/win-64/nmslib-2.1.1-py310hf497b98_0.tar.bz2
+- description: Test task for https://repo.anaconda.com/pkgs/main/win-64/nmslib-2.1.1-py311h30df693_0.tar.bz2
+    against pybind11 3.0.3 target_platform=win-64 2026-04-13 11:26:24
+  public_name: test-main-win-64-nmslib-2.1.1-py311h30df693_0.tar.bz2_downstream_of_pybind11_3.0.3
+  dependencies: []
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: main
+    platform: win-64
+    target_platform: win-64
+    python: '3.11'
+  package_def:
+    matchspec: nmslib
+  external_dependencies:
+  - matchspec: pybind11=3.0.3
+  - url: https://repo.anaconda.com/pkgs/main/win-64/nmslib-2.1.1-py311h30df693_0.tar.bz2
