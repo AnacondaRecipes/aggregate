@@ -35,7 +35,7 @@ cuda_compiler:                 # [linux or win]
   - cuda-nvcc                  # [linux or win]
 cuda_compiler_version:         # [linux or win]
   - 12.9                       # [linux or win]
-  - 13.1                       # [linux or win]
+  - 13.0                       # [linux or win]
 fortran_compiler:
   - gfortran                   # [linux or osx]
   - intel-fortran              # [win]
