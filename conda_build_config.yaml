@@ -319,6 +319,8 @@ glfw:
   - '3'
 glib:
   - '2'
+glog:
+  - '0.7'
 glpk:
   - '4.65'
 glslang:
