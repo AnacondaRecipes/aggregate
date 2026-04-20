@@ -118,6 +118,10 @@ python_implementation:
   - cpython
 python_impl:
   - cpython
+perl:
+  - '5'
+lua:
+  - '5'
 r_base:
   - 4.3.1
 r_version:
