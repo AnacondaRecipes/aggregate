@@ -12502,3 +12502,7 @@
 	path = pygeostat-feedstock
 	url = ../pygeostat-feedstock
 	branch = main
+[submodule "xgrammar-feedstock"]
+	path = xgrammar-feedstock
+	url = ../xgrammar-feedstock
+	branch = main
