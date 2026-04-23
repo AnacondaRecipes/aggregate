@@ -12762,3 +12762,7 @@
 	path = azure-mgmt-servicebus-feedstock
 	url = ../azure-mgmt-servicebus-feedstock
 	branch = main
+[submodule "azure-mgmt-servicefabricmanagedclusters-feedstock"]
+	path = azure-mgmt-servicefabricmanagedclusters-feedstock
+	url = ../azure-mgmt-servicefabricmanagedclusters-feedstock
+	branch = main
