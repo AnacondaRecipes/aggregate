@@ -12678,3 +12678,7 @@
 	path = azure-mgmt-marketplaceordering-feedstock
 	url = ../azure-mgmt-marketplaceordering-feedstock
 	branch = main
+[submodule "azure-mgmt-media-feedstock"]
+	path = azure-mgmt-media-feedstock
+	url = ../azure-mgmt-media-feedstock
+	branch = main
