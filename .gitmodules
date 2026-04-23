@@ -12718,3 +12718,7 @@
 	path = azure-mgmt-recoveryservicesbackup-feedstock
 	url = ../azure-mgmt-recoveryservicesbackup-feedstock
 	branch = main
+[submodule "azure-mgmt-recoveryservices-feedstock"]
+	path = azure-mgmt-recoveryservices-feedstock
+	url = ../azure-mgmt-recoveryservices-feedstock
+	branch = main
