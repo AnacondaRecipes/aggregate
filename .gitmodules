@@ -12698,3 +12698,7 @@
 	path = azure-mgmt-policyinsights-feedstock
 	url = ../azure-mgmt-policyinsights-feedstock
 	branch = main
+[submodule "azure-mgmt-postgresqlflexibleservers-feedstock"]
+	path = azure-mgmt-postgresqlflexibleservers-feedstock
+	url = ../azure-mgmt-postgresqlflexibleservers-feedstock
+	branch = main
