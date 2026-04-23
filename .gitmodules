@@ -12786,3 +12786,7 @@
 	path = azure-mgmt-synapse-feedstock
 	url = ../azure-mgmt-synapse-feedstock
 	branch = main
+[submodule "azure-mgmt-trafficmanager-feedstock"]
+	path = azure-mgmt-trafficmanager-feedstock
+	url = ../azure-mgmt-trafficmanager-feedstock
+	branch = main
