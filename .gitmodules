@@ -12690,3 +12690,7 @@
 	path = azure-mgmt-msi-feedstock
 	url = ../azure-mgmt-msi-feedstock
 	branch = main
+[submodule "azure-mgmt-netapp-feedstock"]
+	path = azure-mgmt-netapp-feedstock
+	url = ../azure-mgmt-netapp-feedstock
+	branch = main
