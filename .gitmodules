@@ -12554,3 +12554,7 @@
 	path = azure-mgmt-apimanagement-feedstock
 	url = ../azure-mgmt-apimanagement-feedstock
 	branch = main
+[submodule "azure-mgmt-appconfiguration-feedstock"]
+	path = azure-mgmt-appconfiguration-feedstock
+	url = ../azure-mgmt-appconfiguration-feedstock
+	branch = main
