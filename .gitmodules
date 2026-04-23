@@ -12710,3 +12710,7 @@
 	path = azure-mgmt-rdbms-feedstock
 	url = ../azure-mgmt-rdbms-feedstock
 	branch = main
+[submodule "azure-mgmt-mysqlflexibleservers-feedstock"]
+	path = azure-mgmt-mysqlflexibleservers-feedstock
+	url = ../azure-mgmt-mysqlflexibleservers-feedstock
+	branch = main
