@@ -12542,3 +12542,7 @@
 	path = azure-keyvault-keys-feedstock
 	url = ../azure-keyvault-keys-feedstock
 	branch = main
+[submodule "azure-keyvault-securitydomain-feedstock"]
+	path = azure-keyvault-securitydomain-feedstock
+	url = ../azure-keyvault-securitydomain-feedstock
+	branch = main
