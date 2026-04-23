@@ -12586,3 +12586,7 @@
 	path = azure-mgmt-botservice-feedstock
 	url = ../azure-mgmt-botservice-feedstock
 	branch = main
+[submodule "azure-mgmt-cdn-feedstock"]
+	path = azure-mgmt-cdn-feedstock
+	url = ../azure-mgmt-cdn-feedstock
+	branch = main
