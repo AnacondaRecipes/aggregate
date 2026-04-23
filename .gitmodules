@@ -12566,3 +12566,7 @@
 	path = azure-mgmt-applicationinsights-feedstock
 	url = ../azure-mgmt-applicationinsights-feedstock
 	branch = main
+[submodule "azure-mgmt-authorization-feedstock"]
+	path = azure-mgmt-authorization-feedstock
+	url = ../azure-mgmt-authorization-feedstock
+	branch = main
