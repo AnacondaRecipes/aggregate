@@ -12682,3 +12682,7 @@
 	path = azure-mgmt-media-feedstock
 	url = ../azure-mgmt-media-feedstock
 	branch = main
+[submodule "azure-mgmt-monitor-feedstock"]
+	path = azure-mgmt-monitor-feedstock
+	url = ../azure-mgmt-monitor-feedstock
+	branch = main
