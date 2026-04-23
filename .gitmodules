@@ -12590,3 +12590,7 @@
 	path = azure-mgmt-cdn-feedstock
 	url = ../azure-mgmt-cdn-feedstock
 	branch = main
+[submodule "azure-mgmt-cognitiveservices-feedstock"]
+	path = azure-mgmt-cognitiveservices-feedstock
+	url = ../azure-mgmt-cognitiveservices-feedstock
+	branch = main
