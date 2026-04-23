@@ -12794,3 +12794,7 @@
 	path = azure-mgmt-web-feedstock
 	url = ../azure-mgmt-web-feedstock
 	branch = main
+[submodule "azure-monitor-query-feedstock"]
+	path = azure-monitor-query-feedstock
+	url = ../azure-monitor-query-feedstock
+	branch = main
