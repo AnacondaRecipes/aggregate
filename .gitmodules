@@ -12646,3 +12646,7 @@
 	path = azure-mgmt-imagebuilder-feedstock
 	url = ../azure-mgmt-imagebuilder-feedstock
 	branch = main
+[submodule "azure-mgmt-iotcentral-feedstock"]
+	path = azure-mgmt-iotcentral-feedstock
+	url = ../azure-mgmt-iotcentral-feedstock
+	branch = main
