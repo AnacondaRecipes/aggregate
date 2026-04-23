@@ -12826,3 +12826,7 @@
 	path = fabric-feedstock
 	url = ../fabric-feedstock
 	branch = master
+[submodule "javaproperties-feedstock"]
+	path = javaproperties-feedstock
+	url = ../javaproperties-feedstock
+	branch = main
