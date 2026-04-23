@@ -12514,3 +12514,7 @@
 	path = azure-ai-projects-feedstock
 	url = ../azure-ai-projects-feedstock
 	branch = main
+[submodule "azure-batch-feedstock"]
+	path = azure-batch-feedstock
+	url = ../azure-batch-feedstock
+	branch = main
