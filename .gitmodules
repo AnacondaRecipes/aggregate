@@ -12726,3 +12726,7 @@
 	path = azure-mgmt-redhatopenshift-feedstock
 	url = ../azure-mgmt-redhatopenshift-feedstock
 	branch = main
+[submodule "azure-mgmt-redis-feedstock"]
+	path = azure-mgmt-redis-feedstock
+	url = ../azure-mgmt-redis-feedstock
+	branch = main
