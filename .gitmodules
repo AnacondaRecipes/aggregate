@@ -12686,3 +12686,7 @@
 	path = azure-mgmt-monitor-feedstock
 	url = ../azure-mgmt-monitor-feedstock
 	branch = main
+[submodule "azure-mgmt-msi-feedstock"]
+	path = azure-mgmt-msi-feedstock
+	url = ../azure-mgmt-msi-feedstock
+	branch = main
