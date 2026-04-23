@@ -12774,3 +12774,7 @@
 	path = azure-mgmt-servicefabric-feedstock
 	url = ../azure-mgmt-servicefabric-feedstock
 	branch = main
+[submodule "azure-mgmt-signalr-feedstock"]
+	path = azure-mgmt-signalr-feedstock
+	url = ../azure-mgmt-signalr-feedstock
+	branch = main
