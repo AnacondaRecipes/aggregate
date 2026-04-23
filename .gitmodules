@@ -12674,3 +12674,7 @@
 	path = azure-mgmt-maps-feedstock
 	url = ../azure-mgmt-maps-feedstock
 	branch = main
+[submodule "azure-mgmt-marketplaceordering-feedstock"]
+	path = azure-mgmt-marketplaceordering-feedstock
+	url = ../azure-mgmt-marketplaceordering-feedstock
+	branch = main
