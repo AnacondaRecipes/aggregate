@@ -12578,3 +12578,7 @@
 	path = azure-mgmt-batch-feedstock
 	url = ../azure-mgmt-batch-feedstock
 	branch = main
+[submodule "azure-mgmt-billing-feedstock"]
+	path = azure-mgmt-billing-feedstock
+	url = ../azure-mgmt-billing-feedstock
+	branch = main
