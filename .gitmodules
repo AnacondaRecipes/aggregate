@@ -12806,3 +12806,7 @@
 	path = azure-storage-queue-feedstock
 	url = ../azure-storage-queue-feedstock
 	branch = main
+[submodule "azure-synapse-accesscontrol-feedstock"]
+	path = azure-synapse-accesscontrol-feedstock
+	url = ../azure-synapse-accesscontrol-feedstock
+	branch = main
