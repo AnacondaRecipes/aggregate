@@ -12818,3 +12818,7 @@
 	path = azure-synapse-managedprivateendpoints-feedstock
 	url = ../azure-synapse-managedprivateendpoints-feedstock
 	branch = main
+[submodule "azure-synapse-spark-feedstock"]
+	path = azure-synapse-spark-feedstock
+	url = ../azure-synapse-spark-feedstock
+	branch = main
