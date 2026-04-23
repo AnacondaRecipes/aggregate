@@ -12706,3 +12706,7 @@
 	path = azure-mgmt-privatedns-feedstock
 	url = ../azure-mgmt-privatedns-feedstock
 	branch = main
+[submodule "azure-mgmt-rdbms-feedstock"]
+	path = azure-mgmt-rdbms-feedstock
+	url = ../azure-mgmt-rdbms-feedstock
+	branch = main
