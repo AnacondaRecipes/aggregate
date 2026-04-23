@@ -12670,3 +12670,7 @@
 	path = azure-mgmt-managementgroups-feedstock
 	url = ../azure-mgmt-managementgroups-feedstock
 	branch = main
+[submodule "azure-mgmt-maps-feedstock"]
+	path = azure-mgmt-maps-feedstock
+	url = ../azure-mgmt-maps-feedstock
+	branch = main
