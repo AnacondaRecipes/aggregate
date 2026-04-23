@@ -12510,3 +12510,7 @@
 	path = azure-appconfiguration-feedstock
 	url = ../azure-appconfiguration-feedstock
 	branch = main
+[submodule "azure-ai-projects-feedstock"]
+	path = azure-ai-projects-feedstock
+	url = ../azure-ai-projects-feedstock
+	branch = main
