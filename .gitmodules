@@ -12834,3 +12834,7 @@
 	path = pycomposefile-feedstock
 	url = ../pycomposefile-feedstock
 	branch = main
+[submodule "azure-ai-agents-feedstock"]
+	path = azure-ai-agents-feedstock
+	url = ../azure-ai-agents-feedstock
+	branch = main
