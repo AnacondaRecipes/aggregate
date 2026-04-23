@@ -12518,3 +12518,7 @@
 	path = azure-batch-feedstock
 	url = ../azure-batch-feedstock
 	branch = main
+[submodule "azure-cli-core-feedstock"]
+	path = azure-cli-core-feedstock
+	url = ../azure-cli-core-feedstock
+	branch = main
