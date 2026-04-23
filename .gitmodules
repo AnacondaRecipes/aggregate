@@ -12750,3 +12750,7 @@
 	path = azure-mgmt-resource-templatespecs-feedstock
 	url = ../azure-mgmt-resource-templatespecs-feedstock
 	branch = main
+[submodule "azure-mgmt-search-feedstock"]
+	path = azure-mgmt-search-feedstock
+	url = ../azure-mgmt-search-feedstock
+	branch = main
