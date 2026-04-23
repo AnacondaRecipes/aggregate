@@ -12634,3 +12634,7 @@
 	path = azure-mgmt-eventhub-feedstock
 	url = ../azure-mgmt-eventhub-feedstock
 	branch = main
+[submodule "azure-mgmt-extendedlocation-feedstock"]
+	path = azure-mgmt-extendedlocation-feedstock
+	url = ../azure-mgmt-extendedlocation-feedstock
+	branch = main
