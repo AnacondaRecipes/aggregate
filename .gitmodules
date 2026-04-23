@@ -12658,3 +12658,7 @@
 	path = azure-mgmt-iothubprovisioningservices-feedstock
 	url = ../azure-mgmt-iothubprovisioningservices-feedstock
 	branch = main
+[submodule "azure-mgmt-keyvault-feedstock"]
+	path = azure-mgmt-keyvault-feedstock
+	url = ../azure-mgmt-keyvault-feedstock
+	branch = main
