@@ -12618,3 +12618,7 @@
 	path = azure-mgmt-cosmosdb-feedstock
 	url = ../azure-mgmt-cosmosdb-feedstock
 	branch = main
+[submodule "azure-mgmt-datalake-store-feedstock"]
+	path = azure-mgmt-datalake-store-feedstock
+	url = ../azure-mgmt-datalake-store-feedstock
+	branch = main
