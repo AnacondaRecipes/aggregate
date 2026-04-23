@@ -12526,3 +12526,7 @@
 	path = azure-data-tables-feedstock
 	url = ../azure-data-tables-feedstock
 	branch = main
+[submodule "azure-datalake-store-feedstock"]
+	path = azure-datalake-store-feedstock
+	url = ../azure-datalake-store-feedstock
+	branch = main
