@@ -12758,3 +12758,7 @@
 	path = azure-mgmt-security-feedstock
 	url = ../azure-mgmt-security-feedstock
 	branch = main
+[submodule "azure-mgmt-servicebus-feedstock"]
+	path = azure-mgmt-servicebus-feedstock
+	url = ../azure-mgmt-servicebus-feedstock
+	branch = main
