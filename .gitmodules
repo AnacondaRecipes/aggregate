@@ -12506,3 +12506,7 @@
 	path = xgrammar-feedstock
 	url = ../xgrammar-feedstock
 	branch = main
+[submodule "azure-appconfiguration-feedstock"]
+	path = azure-appconfiguration-feedstock
+	url = ../azure-appconfiguration-feedstock
+	branch = main
