@@ -12830,3 +12830,7 @@
 	path = javaproperties-feedstock
 	url = ../javaproperties-feedstock
 	branch = main
+[submodule "pycomposefile-feedstock"]
+	path = pycomposefile-feedstock
+	url = ../pycomposefile-feedstock
+	branch = main
