@@ -12550,3 +12550,7 @@
 	path = azure-mgmt-advisor-feedstock
 	url = ../azure-mgmt-advisor-feedstock
 	branch = main
+[submodule "azure-mgmt-apimanagement-feedstock"]
+	path = azure-mgmt-apimanagement-feedstock
+	url = ../azure-mgmt-apimanagement-feedstock
+	branch = main
