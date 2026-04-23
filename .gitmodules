@@ -12754,3 +12754,7 @@
 	path = azure-mgmt-search-feedstock
 	url = ../azure-mgmt-search-feedstock
 	branch = main
+[submodule "azure-mgmt-security-feedstock"]
+	path = azure-mgmt-security-feedstock
+	url = ../azure-mgmt-security-feedstock
+	branch = main
