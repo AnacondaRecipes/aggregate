@@ -12802,3 +12802,7 @@
 	path = azure-storage-common-feedstock
 	url = ../azure-storage-common-feedstock
 	branch = main
+[submodule "azure-storage-queue-feedstock"]
+	path = azure-storage-queue-feedstock
+	url = ../azure-storage-queue-feedstock
+	branch = main
