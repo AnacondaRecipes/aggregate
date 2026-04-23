@@ -12462,3 +12462,379 @@
 	path = xformers-feedstock
 	url = ../xformers-feedstock
 	branch = main
+[submodule "nbgitpuller-feedstock"]
+	path = nbgitpuller-feedstock
+	url = ../nbgitpuller-feedstock
+	branch = main
+[submodule "anaconda-ident-feedstock"]
+	path = anaconda-ident-feedstock
+	url = ../anaconda-ident-feedstock
+	branch = main
+[submodule "jupyterhub-idle-culler-feedstock"]
+	path = jupyterhub-idle-culler-feedstock
+	url = ../jupyterhub-idle-culler-feedstock
+	branch = main
+[submodule "kubernetes_asyncio-feedstock"]
+	path = kubernetes_asyncio-feedstock
+	url = ../kubernetes_asyncio-feedstock
+	branch = main
+[submodule "num2words-feedstock"]
+	path = num2words-feedstock
+	url = ../num2words-feedstock
+	branch = main
+[submodule "fire-feedstock"]
+	path = fire-feedstock
+	url = ../fire-feedstock
+	branch = main
+[submodule "jupyterhub-kubespawner-feedstock"]
+	path = jupyterhub-kubespawner-feedstock
+	url = ../jupyterhub-kubespawner-feedstock
+	branch = main
+[submodule "jupyterhub-traefik-proxy-feedstock"]
+	path = jupyterhub-traefik-proxy-feedstock
+	url = ../jupyterhub-traefik-proxy-feedstock
+	branch = main
+[submodule "py-libnuma-feedstock"]
+	path = py-libnuma-feedstock
+	url = ../py-libnuma-feedstock
+	branch = main
+[submodule "pygeostat-feedstock"]
+	path = pygeostat-feedstock
+	url = ../pygeostat-feedstock
+	branch = main
+[submodule "xgrammar-feedstock"]
+	path = xgrammar-feedstock
+	url = ../xgrammar-feedstock
+	branch = main
+[submodule "azure-appconfiguration-feedstock"]
+	path = azure-appconfiguration-feedstock
+	url = ../azure-appconfiguration-feedstock
+	branch = main
+[submodule "azure-ai-projects-feedstock"]
+	path = azure-ai-projects-feedstock
+	url = ../azure-ai-projects-feedstock
+	branch = main
+[submodule "azure-batch-feedstock"]
+	path = azure-batch-feedstock
+	url = ../azure-batch-feedstock
+	branch = main
+[submodule "azure-cli-core-feedstock"]
+	path = azure-cli-core-feedstock
+	url = ../azure-cli-core-feedstock
+	branch = main
+[submodule "azure-data-tables-feedstock"]
+	path = azure-data-tables-feedstock
+	url = ../azure-data-tables-feedstock
+	branch = main
+[submodule "azure-datalake-store-feedstock"]
+	path = azure-datalake-store-feedstock
+	url = ../azure-datalake-store-feedstock
+	branch = main
+[submodule "azure-keyvault-administration-feedstock"]
+	path = azure-keyvault-administration-feedstock
+	url = ../azure-keyvault-administration-feedstock
+	branch = main
+[submodule "azure-keyvault-certificates-feedstock"]
+	path = azure-keyvault-certificates-feedstock
+	url = ../azure-keyvault-certificates-feedstock
+	branch = main
+[submodule "azure-keyvault-keys-feedstock"]
+	path = azure-keyvault-keys-feedstock
+	url = ../azure-keyvault-keys-feedstock
+	branch = main
+[submodule "azure-keyvault-securitydomain-feedstock"]
+	path = azure-keyvault-securitydomain-feedstock
+	url = ../azure-keyvault-securitydomain-feedstock
+	branch = main
+[submodule "azure-mgmt-advisor-feedstock"]
+	path = azure-mgmt-advisor-feedstock
+	url = ../azure-mgmt-advisor-feedstock
+	branch = main
+[submodule "azure-mgmt-apimanagement-feedstock"]
+	path = azure-mgmt-apimanagement-feedstock
+	url = ../azure-mgmt-apimanagement-feedstock
+	branch = main
+[submodule "azure-mgmt-appconfiguration-feedstock"]
+	path = azure-mgmt-appconfiguration-feedstock
+	url = ../azure-mgmt-appconfiguration-feedstock
+	branch = main
+[submodule "azure-mgmt-appcontainers-feedstock"]
+	path = azure-mgmt-appcontainers-feedstock
+	url = ../azure-mgmt-appcontainers-feedstock
+	branch = main
+[submodule "azure-mgmt-applicationinsights-feedstock"]
+	path = azure-mgmt-applicationinsights-feedstock
+	url = ../azure-mgmt-applicationinsights-feedstock
+	branch = main
+[submodule "azure-mgmt-authorization-feedstock"]
+	path = azure-mgmt-authorization-feedstock
+	url = ../azure-mgmt-authorization-feedstock
+	branch = main
+[submodule "azure-mgmt-batchai-feedstock"]
+	path = azure-mgmt-batchai-feedstock
+	url = ../azure-mgmt-batchai-feedstock
+	branch = main
+[submodule "azure-mgmt-batch-feedstock"]
+	path = azure-mgmt-batch-feedstock
+	url = ../azure-mgmt-batch-feedstock
+	branch = main
+[submodule "azure-mgmt-billing-feedstock"]
+	path = azure-mgmt-billing-feedstock
+	url = ../azure-mgmt-billing-feedstock
+	branch = main
+[submodule "azure-mgmt-botservice-feedstock"]
+	path = azure-mgmt-botservice-feedstock
+	url = ../azure-mgmt-botservice-feedstock
+	branch = main
+[submodule "azure-mgmt-cdn-feedstock"]
+	path = azure-mgmt-cdn-feedstock
+	url = ../azure-mgmt-cdn-feedstock
+	branch = main
+[submodule "azure-mgmt-cognitiveservices-feedstock"]
+	path = azure-mgmt-cognitiveservices-feedstock
+	url = ../azure-mgmt-cognitiveservices-feedstock
+	branch = main
+[submodule "azure-mgmt-compute-feedstock"]
+	path = azure-mgmt-compute-feedstock
+	url = ../azure-mgmt-compute-feedstock
+	branch = main
+[submodule "azure-mgmt-containerinstance-feedstock"]
+	path = azure-mgmt-containerinstance-feedstock
+	url = ../azure-mgmt-containerinstance-feedstock
+	branch = main
+[submodule "azure-mgmt-containerregistry-feedstock"]
+	path = azure-mgmt-containerregistry-feedstock
+	url = ../azure-mgmt-containerregistry-feedstock
+	branch = main
+[submodule "azure-mgmt-containerregistrytasks-feedstock"]
+	path = azure-mgmt-containerregistrytasks-feedstock
+	url = ../azure-mgmt-containerregistrytasks-feedstock
+	branch = main
+[submodule "azure-mgmt-containerservice-feedstock"]
+	path = azure-mgmt-containerservice-feedstock
+	url = ../azure-mgmt-containerservice-feedstock
+	branch = main
+[submodule "azure-mgmt-cosmosdb-feedstock"]
+	path = azure-mgmt-cosmosdb-feedstock
+	url = ../azure-mgmt-cosmosdb-feedstock
+	branch = main
+[submodule "azure-mgmt-datalake-store-feedstock"]
+	path = azure-mgmt-datalake-store-feedstock
+	url = ../azure-mgmt-datalake-store-feedstock
+	branch = main
+[submodule "azure-mgmt-datamigration-feedstock"]
+	path = azure-mgmt-datamigration-feedstock
+	url = ../azure-mgmt-datamigration-feedstock
+	branch = main
+[submodule "azure-mgmt-eventgrid-feedstock"]
+	path = azure-mgmt-eventgrid-feedstock
+	url = ../azure-mgmt-eventgrid-feedstock
+	branch = main
+[submodule "azure-mgmt-eventhub-feedstock"]
+	path = azure-mgmt-eventhub-feedstock
+	url = ../azure-mgmt-eventhub-feedstock
+	branch = main
+[submodule "azure-mgmt-extendedlocation-feedstock"]
+	path = azure-mgmt-extendedlocation-feedstock
+	url = ../azure-mgmt-extendedlocation-feedstock
+	branch = main
+[submodule "azure-mgmt-hdinsight-feedstock"]
+	path = azure-mgmt-hdinsight-feedstock
+	url = ../azure-mgmt-hdinsight-feedstock
+	branch = main
+[submodule "azure-mgmt-imagebuilder-feedstock"]
+	path = azure-mgmt-imagebuilder-feedstock
+	url = ../azure-mgmt-imagebuilder-feedstock
+	branch = main
+[submodule "azure-mgmt-iotcentral-feedstock"]
+	path = azure-mgmt-iotcentral-feedstock
+	url = ../azure-mgmt-iotcentral-feedstock
+	branch = main
+[submodule "azure-mgmt-iothub-feedstock"]
+	path = azure-mgmt-iothub-feedstock
+	url = ../azure-mgmt-iothub-feedstock
+	branch = main
+[submodule "azure-mgmt-iothubprovisioningservices-feedstock"]
+	path = azure-mgmt-iothubprovisioningservices-feedstock
+	url = ../azure-mgmt-iothubprovisioningservices-feedstock
+	branch = main
+[submodule "azure-mgmt-keyvault-feedstock"]
+	path = azure-mgmt-keyvault-feedstock
+	url = ../azure-mgmt-keyvault-feedstock
+	branch = main
+[submodule "azure-mgmt-loganalytics-feedstock"]
+	path = azure-mgmt-loganalytics-feedstock
+	url = ../azure-mgmt-loganalytics-feedstock
+	branch = main
+[submodule "azure-mgmt-managementgroups-feedstock"]
+	path = azure-mgmt-managementgroups-feedstock
+	url = ../azure-mgmt-managementgroups-feedstock
+	branch = main
+[submodule "azure-mgmt-maps-feedstock"]
+	path = azure-mgmt-maps-feedstock
+	url = ../azure-mgmt-maps-feedstock
+	branch = main
+[submodule "azure-mgmt-marketplaceordering-feedstock"]
+	path = azure-mgmt-marketplaceordering-feedstock
+	url = ../azure-mgmt-marketplaceordering-feedstock
+	branch = main
+[submodule "azure-mgmt-media-feedstock"]
+	path = azure-mgmt-media-feedstock
+	url = ../azure-mgmt-media-feedstock
+	branch = main
+[submodule "azure-mgmt-monitor-feedstock"]
+	path = azure-mgmt-monitor-feedstock
+	url = ../azure-mgmt-monitor-feedstock
+	branch = main
+[submodule "azure-mgmt-msi-feedstock"]
+	path = azure-mgmt-msi-feedstock
+	url = ../azure-mgmt-msi-feedstock
+	branch = main
+[submodule "azure-mgmt-netapp-feedstock"]
+	path = azure-mgmt-netapp-feedstock
+	url = ../azure-mgmt-netapp-feedstock
+	branch = main
+[submodule "azure-mgmt-policyinsights-feedstock"]
+	path = azure-mgmt-policyinsights-feedstock
+	url = ../azure-mgmt-policyinsights-feedstock
+	branch = main
+[submodule "azure-mgmt-postgresqlflexibleservers-feedstock"]
+	path = azure-mgmt-postgresqlflexibleservers-feedstock
+	url = ../azure-mgmt-postgresqlflexibleservers-feedstock
+	branch = main
+[submodule "azure-mgmt-privatedns-feedstock"]
+	path = azure-mgmt-privatedns-feedstock
+	url = ../azure-mgmt-privatedns-feedstock
+	branch = main
+[submodule "azure-mgmt-rdbms-feedstock"]
+	path = azure-mgmt-rdbms-feedstock
+	url = ../azure-mgmt-rdbms-feedstock
+	branch = main
+[submodule "azure-mgmt-mysqlflexibleservers-feedstock"]
+	path = azure-mgmt-mysqlflexibleservers-feedstock
+	url = ../azure-mgmt-mysqlflexibleservers-feedstock
+	branch = main
+[submodule "azure-mgmt-recoveryservicesbackup-feedstock"]
+	path = azure-mgmt-recoveryservicesbackup-feedstock
+	url = ../azure-mgmt-recoveryservicesbackup-feedstock
+	branch = main
+[submodule "azure-mgmt-recoveryservices-feedstock"]
+	path = azure-mgmt-recoveryservices-feedstock
+	url = ../azure-mgmt-recoveryservices-feedstock
+	branch = main
+[submodule "azure-mgmt-redhatopenshift-feedstock"]
+	path = azure-mgmt-redhatopenshift-feedstock
+	url = ../azure-mgmt-redhatopenshift-feedstock
+	branch = main
+[submodule "azure-mgmt-redis-feedstock"]
+	path = azure-mgmt-redis-feedstock
+	url = ../azure-mgmt-redis-feedstock
+	branch = main
+[submodule "azure-mgmt-resource-feedstock"]
+	path = azure-mgmt-resource-feedstock
+	url = ../azure-mgmt-resource-feedstock
+	branch = master
+[submodule "azure-mgmt-resource-deployments-feedstock"]
+	path = azure-mgmt-resource-deployments-feedstock
+	url = ../azure-mgmt-resource-deployments-feedstock
+	branch = main
+[submodule "azure-mgmt-resource-deploymentscripts-feedstock"]
+	path = azure-mgmt-resource-deploymentscripts-feedstock
+	url = ../azure-mgmt-resource-deploymentscripts-feedstock
+	branch = main
+[submodule "azure-mgmt-resource-deploymentstacks-feedstock"]
+	path = azure-mgmt-resource-deploymentstacks-feedstock
+	url = ../azure-mgmt-resource-deploymentstacks-feedstock
+	branch = main
+[submodule "azure-mgmt-resource-templatespecs-feedstock"]
+	path = azure-mgmt-resource-templatespecs-feedstock
+	url = ../azure-mgmt-resource-templatespecs-feedstock
+	branch = main
+[submodule "azure-mgmt-search-feedstock"]
+	path = azure-mgmt-search-feedstock
+	url = ../azure-mgmt-search-feedstock
+	branch = main
+[submodule "azure-mgmt-security-feedstock"]
+	path = azure-mgmt-security-feedstock
+	url = ../azure-mgmt-security-feedstock
+	branch = main
+[submodule "azure-mgmt-servicebus-feedstock"]
+	path = azure-mgmt-servicebus-feedstock
+	url = ../azure-mgmt-servicebus-feedstock
+	branch = main
+[submodule "azure-mgmt-servicefabricmanagedclusters-feedstock"]
+	path = azure-mgmt-servicefabricmanagedclusters-feedstock
+	url = ../azure-mgmt-servicefabricmanagedclusters-feedstock
+	branch = main
+[submodule "azure-mgmt-servicelinker-feedstock"]
+	path = azure-mgmt-servicelinker-feedstock
+	url = ../azure-mgmt-servicelinker-feedstock
+	branch = main
+[submodule "azure-mgmt-servicefabric-feedstock"]
+	path = azure-mgmt-servicefabric-feedstock
+	url = ../azure-mgmt-servicefabric-feedstock
+	branch = main
+[submodule "azure-mgmt-signalr-feedstock"]
+	path = azure-mgmt-signalr-feedstock
+	url = ../azure-mgmt-signalr-feedstock
+	branch = main
+[submodule "azure-mgmt-sqlvirtualmachine-feedstock"]
+	path = azure-mgmt-sqlvirtualmachine-feedstock
+	url = ../azure-mgmt-sqlvirtualmachine-feedstock
+	branch = main
+[submodule "azure-mgmt-synapse-feedstock"]
+	path = azure-mgmt-synapse-feedstock
+	url = ../azure-mgmt-synapse-feedstock
+	branch = main
+[submodule "azure-mgmt-trafficmanager-feedstock"]
+	path = azure-mgmt-trafficmanager-feedstock
+	url = ../azure-mgmt-trafficmanager-feedstock
+	branch = main
+[submodule "azure-mgmt-web-feedstock"]
+	path = azure-mgmt-web-feedstock
+	url = ../azure-mgmt-web-feedstock
+	branch = main
+[submodule "azure-monitor-query-feedstock"]
+	path = azure-monitor-query-feedstock
+	url = ../azure-monitor-query-feedstock
+	branch = main
+[submodule "azure-storage-common-feedstock"]
+	path = azure-storage-common-feedstock
+	url = ../azure-storage-common-feedstock
+	branch = main
+[submodule "azure-storage-queue-feedstock"]
+	path = azure-storage-queue-feedstock
+	url = ../azure-storage-queue-feedstock
+	branch = main
+[submodule "azure-synapse-accesscontrol-feedstock"]
+	path = azure-synapse-accesscontrol-feedstock
+	url = ../azure-synapse-accesscontrol-feedstock
+	branch = main
+[submodule "azure-synapse-artifacts-feedstock"]
+	path = azure-synapse-artifacts-feedstock
+	url = ../azure-synapse-artifacts-feedstock
+	branch = main
+[submodule "azure-synapse-managedprivateendpoints-feedstock"]
+	path = azure-synapse-managedprivateendpoints-feedstock
+	url = ../azure-synapse-managedprivateendpoints-feedstock
+	branch = main
+[submodule "azure-synapse-spark-feedstock"]
+	path = azure-synapse-spark-feedstock
+	url = ../azure-synapse-spark-feedstock
+	branch = main
+[submodule "fabric-feedstock"]
+	path = fabric-feedstock
+	url = ../fabric-feedstock
+	branch = master
+[submodule "javaproperties-feedstock"]
+	path = javaproperties-feedstock
+	url = ../javaproperties-feedstock
+	branch = main
+[submodule "pycomposefile-feedstock"]
+	path = pycomposefile-feedstock
+	url = ../pycomposefile-feedstock
+	branch = main
+[submodule "azure-ai-agents-feedstock"]
+	path = azure-ai-agents-feedstock
+	url = ../azure-ai-agents-feedstock
+	branch = main
