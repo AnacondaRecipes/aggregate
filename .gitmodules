@@ -12714,3 +12714,7 @@
 	path = azure-mgmt-mysqlflexibleservers-feedstock
 	url = ../azure-mgmt-mysqlflexibleservers-feedstock
 	branch = main
+[submodule "azure-mgmt-recoveryservicesbackup-feedstock"]
+	path = azure-mgmt-recoveryservicesbackup-feedstock
+	url = ../azure-mgmt-recoveryservicesbackup-feedstock
+	branch = main
