@@ -12642,3 +12642,7 @@
 	path = azure-mgmt-hdinsight-feedstock
 	url = ../azure-mgmt-hdinsight-feedstock
 	branch = main
+[submodule "azure-mgmt-imagebuilder-feedstock"]
+	path = azure-mgmt-imagebuilder-feedstock
+	url = ../azure-mgmt-imagebuilder-feedstock
+	branch = main
