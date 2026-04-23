@@ -12638,3 +12638,7 @@
 	path = azure-mgmt-extendedlocation-feedstock
 	url = ../azure-mgmt-extendedlocation-feedstock
 	branch = main
+[submodule "azure-mgmt-hdinsight-feedstock"]
+	path = azure-mgmt-hdinsight-feedstock
+	url = ../azure-mgmt-hdinsight-feedstock
+	branch = main
