@@ -12770,3 +12770,7 @@
 	path = azure-mgmt-servicelinker-feedstock
 	url = ../azure-mgmt-servicelinker-feedstock
 	branch = main
+[submodule "azure-mgmt-servicefabric-feedstock"]
+	path = azure-mgmt-servicefabric-feedstock
+	url = ../azure-mgmt-servicefabric-feedstock
+	branch = main
