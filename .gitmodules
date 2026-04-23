@@ -12822,3 +12822,7 @@
 	path = azure-synapse-spark-feedstock
 	url = ../azure-synapse-spark-feedstock
 	branch = main
+[submodule "fabric-feedstock"]
+	path = fabric-feedstock
+	url = ../fabric-feedstock
+	branch = master
