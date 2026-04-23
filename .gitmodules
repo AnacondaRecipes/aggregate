@@ -12694,3 +12694,7 @@
 	path = azure-mgmt-netapp-feedstock
 	url = ../azure-mgmt-netapp-feedstock
 	branch = main
+[submodule "azure-mgmt-policyinsights-feedstock"]
+	path = azure-mgmt-policyinsights-feedstock
+	url = ../azure-mgmt-policyinsights-feedstock
+	branch = main
