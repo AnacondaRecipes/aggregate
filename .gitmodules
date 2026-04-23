@@ -12738,3 +12738,7 @@
 	path = azure-mgmt-resource-deployments-feedstock
 	url = ../azure-mgmt-resource-deployments-feedstock
 	branch = main
+[submodule "azure-mgmt-resource-deploymentscripts-feedstock"]
+	path = azure-mgmt-resource-deploymentscripts-feedstock
+	url = ../azure-mgmt-resource-deploymentscripts-feedstock
+	branch = main
