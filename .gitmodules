@@ -12530,3 +12530,7 @@
 	path = azure-datalake-store-feedstock
 	url = ../azure-datalake-store-feedstock
 	branch = main
+[submodule "azure-keyvault-administration-feedstock"]
+	path = azure-keyvault-administration-feedstock
+	url = ../azure-keyvault-administration-feedstock
+	branch = main
