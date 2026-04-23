@@ -12574,3 +12574,7 @@
 	path = azure-mgmt-batchai-feedstock
 	url = ../azure-mgmt-batchai-feedstock
 	branch = main
+[submodule "azure-mgmt-batch-feedstock"]
+	path = azure-mgmt-batch-feedstock
+	url = ../azure-mgmt-batch-feedstock
+	branch = main
