@@ -12790,3 +12790,7 @@
 	path = azure-mgmt-trafficmanager-feedstock
 	url = ../azure-mgmt-trafficmanager-feedstock
 	branch = main
+[submodule "azure-mgmt-web-feedstock"]
+	path = azure-mgmt-web-feedstock
+	url = ../azure-mgmt-web-feedstock
+	branch = main
