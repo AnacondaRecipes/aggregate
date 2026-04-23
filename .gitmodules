@@ -12722,3 +12722,7 @@
 	path = azure-mgmt-recoveryservices-feedstock
 	url = ../azure-mgmt-recoveryservices-feedstock
 	branch = main
+[submodule "azure-mgmt-redhatopenshift-feedstock"]
+	path = azure-mgmt-redhatopenshift-feedstock
+	url = ../azure-mgmt-redhatopenshift-feedstock
+	branch = main
