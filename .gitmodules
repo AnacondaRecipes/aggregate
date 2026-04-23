@@ -12630,3 +12630,7 @@
 	path = azure-mgmt-eventgrid-feedstock
 	url = ../azure-mgmt-eventgrid-feedstock
 	branch = main
+[submodule "azure-mgmt-eventhub-feedstock"]
+	path = azure-mgmt-eventhub-feedstock
+	url = ../azure-mgmt-eventhub-feedstock
+	branch = main
