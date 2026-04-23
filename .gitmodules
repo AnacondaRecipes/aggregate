@@ -12650,3 +12650,7 @@
 	path = azure-mgmt-iotcentral-feedstock
 	url = ../azure-mgmt-iotcentral-feedstock
 	branch = main
+[submodule "azure-mgmt-iothub-feedstock"]
+	path = azure-mgmt-iothub-feedstock
+	url = ../azure-mgmt-iothub-feedstock
+	branch = main
