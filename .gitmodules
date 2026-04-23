@@ -12626,3 +12626,7 @@
 	path = azure-mgmt-datamigration-feedstock
 	url = ../azure-mgmt-datamigration-feedstock
 	branch = main
+[submodule "azure-mgmt-eventgrid-feedstock"]
+	path = azure-mgmt-eventgrid-feedstock
+	url = ../azure-mgmt-eventgrid-feedstock
+	branch = main
