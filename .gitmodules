@@ -12730,3 +12730,7 @@
 	path = azure-mgmt-redis-feedstock
 	url = ../azure-mgmt-redis-feedstock
 	branch = main
+[submodule "azure-mgmt-resource-feedstock"]
+	path = azure-mgmt-resource-feedstock
+	url = ../azure-mgmt-resource-feedstock
+	branch = master
