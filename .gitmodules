@@ -12666,3 +12666,7 @@
 	path = azure-mgmt-loganalytics-feedstock
 	url = ../azure-mgmt-loganalytics-feedstock
 	branch = main
+[submodule "azure-mgmt-managementgroups-feedstock"]
+	path = azure-mgmt-managementgroups-feedstock
+	url = ../azure-mgmt-managementgroups-feedstock
+	branch = main
