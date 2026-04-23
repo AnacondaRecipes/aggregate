@@ -12534,3 +12534,7 @@
 	path = azure-keyvault-administration-feedstock
 	url = ../azure-keyvault-administration-feedstock
 	branch = main
+[submodule "azure-keyvault-certificates-feedstock"]
+	path = azure-keyvault-certificates-feedstock
+	url = ../azure-keyvault-certificates-feedstock
+	branch = main
