@@ -12798,3 +12798,7 @@
 	path = azure-monitor-query-feedstock
 	url = ../azure-monitor-query-feedstock
 	branch = main
+[submodule "azure-storage-common-feedstock"]
+	path = azure-storage-common-feedstock
+	url = ../azure-storage-common-feedstock
+	branch = main
