@@ -12746,3 +12746,7 @@
 	path = azure-mgmt-resource-deploymentstacks-feedstock
 	url = ../azure-mgmt-resource-deploymentstacks-feedstock
 	branch = main
+[submodule "azure-mgmt-resource-templatespecs-feedstock"]
+	path = azure-mgmt-resource-templatespecs-feedstock
+	url = ../azure-mgmt-resource-templatespecs-feedstock
+	branch = main
