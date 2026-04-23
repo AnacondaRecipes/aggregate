@@ -12622,3 +12622,7 @@
 	path = azure-mgmt-datalake-store-feedstock
 	url = ../azure-mgmt-datalake-store-feedstock
 	branch = main
+[submodule "azure-mgmt-datamigration-feedstock"]
+	path = azure-mgmt-datamigration-feedstock
+	url = ../azure-mgmt-datamigration-feedstock
+	branch = main
