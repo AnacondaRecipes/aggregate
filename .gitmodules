@@ -12546,3 +12546,7 @@
 	path = azure-keyvault-securitydomain-feedstock
 	url = ../azure-keyvault-securitydomain-feedstock
 	branch = main
+[submodule "azure-mgmt-advisor-feedstock"]
+	path = azure-mgmt-advisor-feedstock
+	url = ../azure-mgmt-advisor-feedstock
+	branch = main
