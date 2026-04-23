@@ -12570,3 +12570,7 @@
 	path = azure-mgmt-authorization-feedstock
 	url = ../azure-mgmt-authorization-feedstock
 	branch = main
+[submodule "azure-mgmt-batchai-feedstock"]
+	path = azure-mgmt-batchai-feedstock
+	url = ../azure-mgmt-batchai-feedstock
+	branch = main
