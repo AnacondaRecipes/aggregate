@@ -12778,3 +12778,7 @@
 	path = azure-mgmt-signalr-feedstock
 	url = ../azure-mgmt-signalr-feedstock
 	branch = main
+[submodule "azure-mgmt-sqlvirtualmachine-feedstock"]
+	path = azure-mgmt-sqlvirtualmachine-feedstock
+	url = ../azure-mgmt-sqlvirtualmachine-feedstock
+	branch = main
