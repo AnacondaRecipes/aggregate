@@ -12810,3 +12810,7 @@
 	path = azure-synapse-accesscontrol-feedstock
 	url = ../azure-synapse-accesscontrol-feedstock
 	branch = main
+[submodule "azure-synapse-artifacts-feedstock"]
+	path = azure-synapse-artifacts-feedstock
+	url = ../azure-synapse-artifacts-feedstock
+	branch = main
