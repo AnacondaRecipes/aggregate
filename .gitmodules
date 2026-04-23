@@ -12782,3 +12782,7 @@
 	path = azure-mgmt-sqlvirtualmachine-feedstock
 	url = ../azure-mgmt-sqlvirtualmachine-feedstock
 	branch = main
+[submodule "azure-mgmt-synapse-feedstock"]
+	path = azure-mgmt-synapse-feedstock
+	url = ../azure-mgmt-synapse-feedstock
+	branch = main
