@@ -12814,3 +12814,7 @@
 	path = azure-synapse-artifacts-feedstock
 	url = ../azure-synapse-artifacts-feedstock
 	branch = main
+[submodule "azure-synapse-managedprivateendpoints-feedstock"]
+	path = azure-synapse-managedprivateendpoints-feedstock
+	url = ../azure-synapse-managedprivateendpoints-feedstock
+	branch = main
