@@ -12598,3 +12598,7 @@
 	path = azure-mgmt-compute-feedstock
 	url = ../azure-mgmt-compute-feedstock
 	branch = main
+[submodule "azure-mgmt-containerinstance-feedstock"]
+	path = azure-mgmt-containerinstance-feedstock
+	url = ../azure-mgmt-containerinstance-feedstock
+	branch = main
