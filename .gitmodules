@@ -12662,3 +12662,7 @@
 	path = azure-mgmt-keyvault-feedstock
 	url = ../azure-mgmt-keyvault-feedstock
 	branch = main
+[submodule "azure-mgmt-loganalytics-feedstock"]
+	path = azure-mgmt-loganalytics-feedstock
+	url = ../azure-mgmt-loganalytics-feedstock
+	branch = main
