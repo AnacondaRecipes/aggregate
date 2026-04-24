@@ -12850,3 +12850,7 @@
 	path = applicationinsights-feedstock
 	url = ../applicationinsights-feedstock
 	branch = main
+[submodule "knack-feedstock"]
+	path = knack-feedstock
+	url = ../knack-feedstock
+	branch = main
