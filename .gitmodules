@@ -12846,3 +12846,7 @@
 	path = azure-cli-telemetry-feedstock
 	url = ../azure-cli-telemetry-feedstock
 	branch = main
+[submodule "applicationinsights-feedstock"]
+	path = applicationinsights-feedstock
+	url = ../applicationinsights-feedstock
+	branch = main
