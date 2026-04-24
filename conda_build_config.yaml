@@ -7,7 +7,7 @@ pin_run_as_build:
 
 blas_impl:
   - mkl                        # [(x86 or x86_64) and not osx]
-  - openblas                   # [not win]
+  - openblas
 c_compiler:
   - gcc                        # [linux]
   - clang                      # [osx]
@@ -31,29 +31,29 @@ cxx_compiler:
 cxx_compiler_version:          # [linux or osx]
   - 14.3.0                     # [linux]
   - 20                         # [osx]
-cuda_compiler:                 # [linux or win]
-  - cuda-nvcc                  # [linux or win]
-cuda_compiler_version:         # [linux or win]
-  - 12.9                       # [linux or win]
-  - 13.0                       # [linux or win]
+cuda_compiler:                 # [linux or (win and x86_64)]
+  - cuda-nvcc                  # [linux or (win and x86_64)]
+cuda_compiler_version:         # [linux or (win and x86_64)]
+  - 12.9                       # [linux or (win and x86_64)]
+  - 13.0                       # [linux or (win and x86_64)]
 fortran_compiler:
   - gfortran                   # [linux or osx]
-  - intel-fortran              # [win]
+  - flang                      # [win]
 fortran_compiler_version:
-  - 2022.1.0                   # [win]
+  - 20                         # [win]
   - 14.3.0                     # [osx or linux]
-m2w64_c_compiler:              # [win]
-  - m2w64-toolchain            # [win]
-m2w64_cxx_compiler:            # [win]
-  - m2w64-toolchain            # [win]
-m2w64_fortran_compiler:        # [win]
-  - m2w64-toolchain            # [win]
-ucrt64_c_compiler:             # [win]
-  - ucrt64-gcc-toolchain       # [win]
-ucrt64_cxx_compiler:           # [win]
-  - ucrt64-gcc-toolchain       # [win]
-ucrt64_fortran_compiler:       # [win]
-  - ucrt64-gcc-toolchain       # [win]
+m2w64_c_compiler:              # [win and x86_64]
+  - m2w64-toolchain            # [win and x86_64]
+m2w64_cxx_compiler:            # [win and x86_64]
+  - m2w64-toolchain            # [win and x86_64]
+m2w64_fortran_compiler:        # [win and x86_64]
+  - m2w64-toolchain            # [win and x86_64]
+ucrt64_c_compiler:             # [win and x86_64]
+  - ucrt64-gcc-toolchain       # [win and x86_64]
+ucrt64_cxx_compiler:           # [win and x86_64]
+  - ucrt64-gcc-toolchain       # [win and x86_64]
+ucrt64_fortran_compiler:       # [win and x86_64]
+  - ucrt64-gcc-toolchain       # [win and x86_64]
 rust_compiler:
   - rust
 rust_compiler_version:
@@ -63,10 +63,10 @@ rust_nightly_compiler:
 rust_nightly_compiler_version:
   - 1.92.0_2025-10-13
 # use {{ compiler('rust-gnu') }} when requiring a build using the m2w64-toolchain
-rust_gnu_compiler:             # [win]
-  - rust-gnu                   # [win]
-rust_gnu_compiler_version:     # [win]
-  - 1.93.1                     # [win]
+rust_gnu_compiler:             # [win and x86_64]
+  - rust-gnu                   # [win and x86_64]
+rust_gnu_compiler_version:     # [win and x86_64]
+  - 1.93.1                     # [win and x86_64]
 VERBOSE_AT:
   - V=1
 VERBOSE_CM:
@@ -128,16 +128,10 @@ r_version:
   - 4.3.1
 r_implementation:
   - 'r-base'    # [linux and x86_64]
-# This differs from target_platform in that it determines what subdir the compiler
-#    will target, not what subdir the compiler package will be itself.
-#    For example, we need a win-64 vs2008_win-32 package, so that we compile win-32
-#    code on win-64 miniconda.
-cross_compiler_target_platform:
-  # - win-32                     # [win]
-  - win-64                     # [win]
+
 target_platform:
-  - win-64                     # [win]
-  # - win-32                     # [win]
+  - win-64                     # [win and x86_64]
+  - win-arm64                  # [win and arm64]
 channel_targets:
   - defaults
 cdt_name:          # [linux]
