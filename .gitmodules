@@ -12838,3 +12838,7 @@
 	path = azure-ai-agents-feedstock
 	url = ../azure-ai-agents-feedstock
 	branch = main
+[submodule "argcomplete-3.5.3-feedstock"]
+	path = argcomplete-3.5.3-feedstock
+	url = ../argcomplete-feedstock
+	branch = master-3.5.x
