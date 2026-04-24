@@ -12842,3 +12842,7 @@
 	path = argcomplete-3.5.3-feedstock
 	url = ../argcomplete-feedstock
 	branch = master-3.5.x
+[submodule "azure-cli-telemetry-feedstock"]
+	path = azure-cli-telemetry-feedstock
+	url = ../azure-cli-telemetry-feedstock
+	branch = main
