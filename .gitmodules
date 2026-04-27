@@ -12514,3 +12514,7 @@
 	path = argcomplete-3.5.3-feedstock
 	url = ../argcomplete-feedstock
 	branch = master-3.5.x
+[submodule "sphinxcontrib-typer-feedstock"]
+	path = sphinxcontrib-typer-feedstock
+	url = ../sphinxcontrib-typer-feedstock
+	branch = main
