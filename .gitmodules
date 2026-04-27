@@ -12854,3 +12854,7 @@
 	path = knack-feedstock
 	url = ../knack-feedstock
 	branch = main
+[submodule "microsoft-security-utilities-secret-masker-feedstock"]
+	path = microsoft-security-utilities-secret-masker-feedstock
+	url = ../microsoft-security-utilities-secret-masker-feedstock
+	branch = main
