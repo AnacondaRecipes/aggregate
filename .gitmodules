@@ -12858,3 +12858,7 @@
 	path = microsoft-security-utilities-secret-masker-feedstock
 	url = ../microsoft-security-utilities-secret-masker-feedstock
 	branch = main
+[submodule "py-deviceid-feedstock"]
+	path = py-deviceid-feedstock
+	url = ../py-deviceid-feedstock
+	branch = main
