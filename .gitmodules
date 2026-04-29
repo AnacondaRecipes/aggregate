@@ -12522,3 +12522,7 @@
 	path = azure-mgmt-sql-feedstock
 	url = ../azure-mgmt-sql-feedstock
 	branch = main
+[submodule "fabric-feedstock"]
+	path = fabric-feedstock
+	url = ../fabric-feedstock
+	branch = master
