@@ -1835,10 +1835,6 @@
 	path = pyepsg-feedstock
 	url = ../pyepsg-feedstock
 	branch = master
-[submodule "hdfeos2-feedstock"]
-	path = hdfeos2-feedstock
-	url = ../hdfeos2-feedstock
-	branch = master
 [submodule "jasper-feedstock"]
 	path = jasper-feedstock
 	url = ../jasper-feedstock
@@ -1862,10 +1858,6 @@
 [submodule "jemalloc-feedstock"]
 	path = jemalloc-feedstock
 	url = ../jemalloc-feedstock/
-	branch = master
-[submodule "nlopt-feedstock"]
-	path = nlopt-feedstock
-	url = ../nlopt-feedstock
 	branch = master
 [submodule "libgpuarray-feedstock"]
 	path = libgpuarray-feedstock
@@ -3967,10 +3959,6 @@
 	path = groff-feedstock
 	url = ../groff-feedstock
 	branch = master
-[submodule "macports-legacy-support-feedstock"]
-	path = macports-legacy-support-feedstock
-	url = ../macports-legacy-support-feedstock
-	branch = master
 [submodule "click-didyoumean-feedstock"]
 	path = click-didyoumean-feedstock
 	url = ../click-didyoumean-feedstock
@@ -4455,10 +4443,6 @@
 	path = modin-feedstock
 	url = ../modin-feedstock
 	branch = master
-[submodule "opencensus-feedstock"]
-	path = opencensus-feedstock
-	url = ../opencensus-feedstock
-	branch = master
 [submodule "opencensus-context-feedstock"]
 	path = opencensus-context-feedstock
 	url = ../opencensus-context-feedstock
@@ -4471,10 +4455,6 @@
 	path = ray-packages-feedstock
 	url = ../ray-packages-feedstock
 	branch = master
-[submodule "librdkafka-feedstock"]
-	path = librdkafka-feedstock
-	url = ../librdkafka-feedstock
-	branch = master
 [submodule "menuinst-feedstock"]
 	path = menuinst-feedstock
 	url = ../menuinst-feedstock
@@ -4482,10 +4462,6 @@
 [submodule "bisonpp-feedstock"]
 	path = bisonpp-feedstock
 	url = ../bisonpp-feedstock
-	branch = master
-[submodule "rbc-feedstock"]
-	path = rbc-feedstock
-	url = ../rbc-feedstock
 	branch = master
 [submodule "lld-feedstock"]
 	path = lld-feedstock
@@ -4530,14 +4506,6 @@
 [submodule "libzip-feedstock"]
 	path = libzip-feedstock
 	url = ../libzip-feedstock
-	branch = master
-[submodule "pugixml-feedstock"]
-	path = pugixml-feedstock
-	url = ../pugixml-feedstock
-	branch = master
-[submodule "glew-feedstock"]
-	path = glew-feedstock
-	url = ../glew-feedstock
 	branch = master
 [submodule "utfcpp-feedstock"]
 	path = utfcpp-feedstock
@@ -4594,10 +4562,6 @@
 [submodule "fonts-conda-ecosystem-feedstock"]
 	path = fonts-conda-ecosystem-feedstock
 	url = ../fonts-conda-ecosystem-feedstock
-	branch = master
-[submodule "ampl-mp-feedstock"]
-	path = ampl-mp-feedstock
-	url = ../ampl-mp-feedstock
 	branch = master
 [submodule "pytest-filter-subpackage-feedstock"]
 	path = pytest-filter-subpackage-feedstock
@@ -5102,10 +5066,6 @@
 	path = cmdstan-feedstock
 	url = ../cmdstan-feedstock
 	branch = master
-[submodule "cpp-filesystem-feedstock"]
-	path = cpp-filesystem-feedstock
-	url = ../cpp-filesystem-feedstock
-	branch = main
 [submodule "reproc-feedstock"]
 	path = reproc-feedstock
 	url = ../reproc-feedstock
@@ -5114,25 +5074,13 @@
 	path = yaml-cpp-feedstock
 	url = ../yaml-cpp-feedstock
 	branch = main
-[submodule "termcolor-cpp-feedstock"]
-	path = termcolor-cpp-feedstock
-	url = ../termcolor-cpp-feedstock
-	branch = main
 [submodule "cli11-feedstock"]
 	path = cli11-feedstock
 	url = ../cli11-feedstock
 	branch = main
-[submodule "winreg-feedstock"]
-	path = winreg-feedstock
-	url = ../winreg-feedstock
-	branch = main
 [submodule "spirv-tools-feedstock"]
 	path = spirv-tools-feedstock
 	url = ../spirv-tools-feedstock
-	branch = master
-[submodule "mkl_umath-feedstock"]
-	path = mkl_umath-feedstock
-	url = ../mkl_umath-feedstock
 	branch = master
 [submodule "tldextract-feedstock"]
 	path = tldextract-feedstock
@@ -5186,10 +5134,6 @@
 	path = jellyfish-feedstock
 	url = ../jellyfish-feedstock
 	branch = master
-[submodule "neuralprophet-feedstock"]
-	path = neuralprophet-feedstock
-	url = ../neuralprophet-feedstock
-	branch = main
 [submodule "pmdarima-feedstock"]
 	path = pmdarima-feedstock
 	url = ../pmdarima-feedstock
@@ -5314,14 +5258,6 @@
 	path = libdate-feedstock
 	url = ../libdate-feedstock
 	branch = master
-[submodule "boost_mp11-feedstock"]
-	path = boost_mp11-feedstock
-	url = ../boost_mp11-feedstock
-	branch = master
-[submodule "safeint-feedstock"]
-	path = safeint-feedstock
-	url = ../safeint-feedstock
-	branch = main
 [submodule "optional-lite-feedstock"]
 	path = optional-lite-feedstock
 	url = ../optional-lite-feedstock
@@ -5550,10 +5486,6 @@
 	path = python-bidi-feedstock
 	url = ../python-bidi-feedstock
 	branch = main
-[submodule "easyocr-feedstock"]
-	path = easyocr-feedstock
-	url = ../easyocr-feedstock
-	branch = main
 [submodule "zeep-feedstock"]
 	path = zeep-feedstock
 	url = ../zeep-feedstock
@@ -5653,10 +5585,6 @@
 [submodule "python-dotenv-feedstock"]
 	path = python-dotenv-feedstock
 	url = ../python-dotenv-feedstock
-	branch = main
-[submodule "resolvelib-feedstock"]
-	path = resolvelib-feedstock
-	url = ../resolvelib-feedstock
 	branch = main
 [submodule "python-installer-feedstock"]
 	path = python-installer-feedstock
@@ -6127,17 +6055,9 @@
 	path = fugue-sql-antlr-feedstock
 	url = ../fugue-sql-antlr-feedstock
 	branch = main
-[submodule "python-isal-feedstock"]
-	path = python-isal-feedstock
-	url = ../python-isal-feedstock
-	branch = main
 [submodule "mathjax-feedstock"]
 	path = mathjax-feedstock
 	url = ../mathjax-feedstock
-	branch = main
-[submodule "isa-l-feedstock"]
-	path = isa-l-feedstock
-	url = ../isa-l-feedstock
 	branch = main
 [submodule "qpd-feedstock"]
 	path = qpd-feedstock
@@ -6215,14 +6135,6 @@
 [submodule "fugue-feedstock"]
 	path = fugue-feedstock
 	url = ../fugue-feedstock
-	branch = main
-[submodule "draco-feedstock"]
-	path = draco-feedstock
-	url = ../draco-feedstock
-	branch = main
-[submodule "nitro-feedstock"]
-	path = nitro-feedstock
-	url = ../nitro-feedstock
 	branch = main
 [submodule "ceres-solver-feedstock"]
 	path = ceres-solver-feedstock
@@ -6448,10 +6360,6 @@
 	path = k-means-constrained-feedstock
 	url = ../k-means-constrained-feedstock
 	branch = main
-[submodule "python-tblib-feedstock"]
-	path = python-tblib-feedstock
-	url = ../python-tblib-feedstock
-	branch = main
 [submodule "pytest-console-scripts-feedstock"]
 	path = pytest-console-scripts-feedstock
 	url = ../pytest-console-scripts-feedstock
@@ -6496,10 +6404,6 @@
 	path = cramjam-feedstock
 	url = ../cramjam-feedstock/
 	branch = main
-[submodule "lazrs-python-feedstock"]
-	path = lazrs-python-feedstock
-	url = ../lazrs-python-feedstock
-	branch = main
 [submodule "pytest-grpc-feedstock"]
 	path = pytest-grpc-feedstock
 	url = ../pytest-grpc-feedstock
@@ -6527,10 +6431,6 @@
 [submodule "scispacy-feedstock"]
 	path = scispacy-feedstock
 	url = ../scispacy-feedstock
-	branch = main
-[submodule "nmslib-feedstock"]
-	path = nmslib-feedstock
-	url = ../nmslib-feedstock
 	branch = main
 [submodule "tsai-feedstock"]
 	path = tsai-feedstock
@@ -6591,10 +6491,6 @@
 [submodule "mlxtend-feedstock"]
 	path = mlxtend-feedstock
 	url = ../mlxtend-feedstock
-	branch = main
-[submodule "kaleido-core-feedstock"]
-	path = kaleido-core-feedstock
-	url = ../kaleido-core-feedstock
 	branch = main
 [submodule "quantile-forest-feedstock"]
 	path = quantile-forest-feedstock
@@ -6751,10 +6647,6 @@
 [submodule "cornac-feedstock"]
 	path = cornac-feedstock
 	url = ../cornac-feedstock
-	branch = main
-[submodule "pandera-core-feedstock"]
-	path = pandera-core-feedstock
-	url = ../pandera-core-feedstock
 	branch = main
 [submodule "numpy-1.24-feedstock"]
 	path = numpy-1.24-feedstock
@@ -7107,17 +6999,9 @@
 	path = gevent-websocket-feedstock
 	url = ../gevent-websocket-feedstock
 	branch = main
-[submodule "git-cola-feedstock"]
-	path = git-cola-feedstock
-	url = ../git-cola-feedstock
-	branch = main
 [submodule "gridmap-feedstock"]
 	path = gridmap-feedstock
 	url = ../gridmap-feedstock
-	branch = main
-[submodule "hupper-feedstock"]
-	path = hupper-feedstock
-	url = ../hupper-feedstock
 	branch = main
 [submodule "snowflake-ml-python-feedstock"]
 	path = snowflake-ml-python-feedstock
@@ -7171,10 +7055,6 @@
 	path = ctypesgen-feedstock
 	url = ../ctypesgen-feedstock
 	branch = main
-[submodule "ctypesgen-pypdfium2-team-feedstock"]
-	path = ctypesgen-pypdfium2-team-feedstock
-	url = ../ctypesgen-pypdfium2-team-feedstock
-	branch = main
 [submodule "nose2-feedstock"]
 	path = nose2-feedstock
 	url = ../nose2-feedstock
@@ -7182,10 +7062,6 @@
 [submodule "json_stream-feedstock"]
 	path = json_stream-feedstock
 	url = ../json_stream-feedstock
-	branch = main
-[submodule "json-stream-rs-tokenizer-feedstock"]
-	path = json-stream-rs-tokenizer-feedstock
-	url = ../json-stream-rs-tokenizer-feedstock
 	branch = main
 [submodule "ppft-feedstock"]
 	path = ppft-feedstock
@@ -7278,10 +7154,6 @@
 [submodule "backoff-feedstock"]
 	path = backoff-feedstock
 	url = ../backoff-feedstock
-	branch = main
-[submodule "opencensus-proto-feedstock"]
-	path = opencensus-proto-feedstock
-	url = ../opencensus-proto-feedstock
 	branch = main
 [submodule "python-confluent-kafka-feedstock"]
 	path = python-confluent-kafka-feedstock
@@ -7413,10 +7285,6 @@
 [submodule "wirerope-feedstock"]
 	path = wirerope-feedstock
 	url = ../wirerope-feedstock
-	branch = main
-[submodule "spark-nlp-feedstock"]
-	path = spark-nlp-feedstock
-	url = ../spark-nlp-feedstock
 	branch = main
 [submodule "aext-assistant-feedstock"]
 	path = aext-assistant-feedstock
@@ -7645,10 +7513,6 @@
 [submodule "geoip2-feedstock"]
 	path = geoip2-feedstock
 	url = ../geoip2-feedstock
-	branch = main
-[submodule "robotframework-feedstock"]
-	path = robotframework-feedstock
-	url = ../robotframework-feedstock
 	branch = main
 [submodule "sse2neon-feedstock"]
 	path = sse2neon-feedstock
@@ -11744,10 +11608,6 @@
 	path = libdb-feedstock
 	url = ../libdb-feedstock
 	branch = master
-[submodule "llvm-spirv-feedstock"]
-	path = llvm-spirv-feedstock
-	url = ../llvm-spirv-feedstock
-	branch = master
 [submodule "ms-gsl-feedstock"]
 	path = ms-gsl-feedstock
 	url = ../ms-gsl-feedstock
@@ -12514,11 +12374,135 @@
 	path = argcomplete-3.5.3-feedstock
 	url = ../argcomplete-feedstock
 	branch = master-3.5.x
-[submodule "sphinxcontrib-typer-feedstock"]
-	path = sphinxcontrib-typer-feedstock
-	url = ../sphinxcontrib-typer-feedstock
+[submodule "applicationinsights-feedstock"]
+	path = applicationinsights-feedstock
+	url = ../applicationinsights-feedstock
 	branch = main
-[submodule "azure-mgmt-sql-feedstock"]
-	path = azure-mgmt-sql-feedstock
-	url = ../azure-mgmt-sql-feedstock
+[submodule "azure-cli-core-feedstock"]
+	path = azure-cli-core-feedstock
+	url = ../azure-cli-core-feedstock
+	branch = main
+[submodule "azure-cli-telemetry-feedstock"]
+	path = azure-cli-telemetry-feedstock
+	url = ../azure-cli-telemetry-feedstock
+	branch = main
+[submodule "azure-data-tables-feedstock"]
+	path = azure-data-tables-feedstock
+	url = ../azure-data-tables-feedstock
+	branch = main
+[submodule "azure-datalake-store-feedstock"]
+	path = azure-datalake-store-feedstock
+	url = ../azure-datalake-store-feedstock
+	branch = main
+[submodule "azure-keyvault-administration-feedstock"]
+	path = azure-keyvault-administration-feedstock
+	url = ../azure-keyvault-administration-feedstock
+	branch = main
+[submodule "azure-keyvault-certificates-feedstock"]
+	path = azure-keyvault-certificates-feedstock
+	url = ../azure-keyvault-certificates-feedstock
+	branch = main
+[submodule "azure-keyvault-keys-feedstock"]
+	path = azure-keyvault-keys-feedstock
+	url = ../azure-keyvault-keys-feedstock
+	branch = main
+[submodule "azure-keyvault-securitydomain-feedstock"]
+	path = azure-keyvault-securitydomain-feedstock
+	url = ../azure-keyvault-securitydomain-feedstock
+	branch = main
+[submodule "azure-mgmt-advisor-feedstock"]
+	path = azure-mgmt-advisor-feedstock
+	url = ../azure-mgmt-advisor-feedstock
+	branch = main
+[submodule "azure-mgmt-apimanagement-feedstock"]
+	path = azure-mgmt-apimanagement-feedstock
+	url = ../azure-mgmt-apimanagement-feedstock
+	branch = main
+[submodule "azure-mgmt-appconfiguration-feedstock"]
+	path = azure-mgmt-appconfiguration-feedstock
+	url = ../azure-mgmt-appconfiguration-feedstock
+	branch = main
+[submodule "azure-mgmt-appcontainers-feedstock"]
+	path = azure-mgmt-appcontainers-feedstock
+	url = ../azure-mgmt-appcontainers-feedstock
+	branch = main
+[submodule "azure-mgmt-applicationinsights-feedstock"]
+	path = azure-mgmt-applicationinsights-feedstock
+	url = ../azure-mgmt-applicationinsights-feedstock
+	branch = main
+[submodule "azure-mgmt-authorization-feedstock"]
+	path = azure-mgmt-authorization-feedstock
+	url = ../azure-mgmt-authorization-feedstock
+	branch = main
+[submodule "azure-mgmt-batch-feedstock"]
+	path = azure-mgmt-batch-feedstock
+	url = ../azure-mgmt-batch-feedstock
+	branch = main
+[submodule "azure-mgmt-batchai-feedstock"]
+	path = azure-mgmt-batchai-feedstock
+	url = ../azure-mgmt-batchai-feedstock
+	branch = main
+[submodule "azure-mgmt-botservice-feedstock"]
+	path = azure-mgmt-botservice-feedstock
+	url = ../azure-mgmt-botservice-feedstock
+	branch = main
+[submodule "azure-mgmt-cdn-feedstock"]
+	path = azure-mgmt-cdn-feedstock
+	url = ../azure-mgmt-cdn-feedstock
+	branch = main
+[submodule "azure-mgmt-cognitiveservices-feedstock"]
+	path = azure-mgmt-cognitiveservices-feedstock
+	url = ../azure-mgmt-cognitiveservices-feedstock
+	branch = main
+[submodule "azure-mgmt-compute-feedstock"]
+	path = azure-mgmt-compute-feedstock
+	url = ../azure-mgmt-compute-feedstock
+	branch = main
+[submodule "azure-mgmt-containerinstance-feedstock"]
+	path = azure-mgmt-containerinstance-feedstock
+	url = ../azure-mgmt-containerinstance-feedstock
+	branch = main
+[submodule "azure-mgmt-containerregistry-feedstock"]
+	path = azure-mgmt-containerregistry-feedstock
+	url = ../azure-mgmt-containerregistry-feedstock
+	branch = main
+[submodule "azure-mgmt-containerregistrytasks-feedstock"]
+	path = azure-mgmt-containerregistrytasks-feedstock
+	url = ../azure-mgmt-containerregistrytasks-feedstock
+	branch = main
+[submodule "azure-mgmt-containerservice-feedstock"]
+	path = azure-mgmt-containerservice-feedstock
+	url = ../azure-mgmt-containerservice-feedstock
+	branch = main
+[submodule "azure-mgmt-cosmosdb-feedstock"]
+	path = azure-mgmt-cosmosdb-feedstock
+	url = ../azure-mgmt-cosmosdb-feedstock
+	branch = main
+[submodule "azure-mgmt-datalake-store-feedstock"]
+	path = azure-mgmt-datalake-store-feedstock
+	url = ../azure-mgmt-datalake-store-feedstock
+	branch = main
+[submodule "azure-mgmt-datamigration-feedstock"]
+	path = azure-mgmt-datamigration-feedstock
+	url = ../azure-mgmt-datamigration-feedstock
+	branch = main
+[submodule "knack-feedstock"]
+	path = knack-feedstock
+	url = ../knack-feedstock
+	branch = main
+[submodule "microsoft-security-utilities-secret-masker-feedstock"]
+	path = microsoft-security-utilities-secret-masker-feedstock
+	url = ../microsoft-security-utilities-secret-masker-feedstock
+	branch = main
+[submodule "py-deviceid-feedstock"]
+	path = py-deviceid-feedstock
+	url = ../py-deviceid-feedstock
+	branch = main
+[submodule "python-marisa-trie-feedstock"]
+	path = python-marisa-trie-feedstock
+	url = ../python-marisa-trie-feedstock
+	branch = main
+[submodule "vllm-feedstock"]
+	path = vllm-feedstock
+	url = ../vllm-feedstock
 	branch = main
