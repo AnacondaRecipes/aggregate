@@ -12518,3 +12518,7 @@
 	path = sphinxcontrib-typer-feedstock
 	url = ../sphinxcontrib-typer-feedstock
 	branch = main
+[submodule "azure-mgmt-sql-feedstock"]
+	path = azure-mgmt-sql-feedstock
+	url = ../azure-mgmt-sql-feedstock
+	branch = main
