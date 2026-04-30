@@ -11015,6 +11015,7 @@
 	path = literalai-feedstock
 	url = ../literalai-feedstock
 	branch = services
+	services = main
 [submodule "pygwalker-feedstock"]
 	path = pygwalker-feedstock
 	url = ../pygwalker-feedstock
@@ -11507,6 +11508,7 @@
 	path = chainlit-feedstock
 	url = ../chainlit-feedstock
 	branch = services
+	services = main
 [submodule "chevron-feedstock"]
 	path = chevron-feedstock
 	url = ../chevron-feedstock
@@ -11531,6 +11533,7 @@
 	path = lazify-feedstock
 	url = ../lazify-feedstock
 	branch = services
+	services = main
 [submodule "ldid-feedstock"]
 	path = ldid-feedstock
 	url = ../ldid-feedstock
@@ -11555,6 +11558,7 @@
 	path = syncer-feedstock
 	url = ../syncer-feedstock
 	branch = services
+	services = main
 [submodule "protovalidate-python-feedstock"]
 	path = protovalidate-python-feedstock
 	url = ../protovalidate-python-feedstock
