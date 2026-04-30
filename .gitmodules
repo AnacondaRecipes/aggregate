@@ -5145,10 +5145,6 @@
 	path = cpp-expected-feedstock
 	url = ../cpp-expected-feedstock
 	branch = main
-[submodule "gcc_toolchain-feedstock"]
-	path = gcc_toolchain-feedstock
-	url = ../gcc_toolchain-feedstock
-	branch = main
 [submodule "typogrify-feedstock"]
 	path = typogrify-feedstock
 	url = ../typogrify-feedstock
@@ -5168,10 +5164,6 @@
 [submodule "anaconda-clean-feedstock"]
 	path = anaconda-clean-feedstock
 	url = ../anaconda-clean-feedstock
-	branch = main
-[submodule "gcc_activation-feedstock"]
-	path = gcc_activation-feedstock
-	url = ../gcc_activation-feedstock
 	branch = main
 [submodule "gdb-feedstock"]
 	path = gdb-feedstock
@@ -11459,10 +11451,6 @@
 	path = roman-numerals-feedstock
 	url = ../roman-numerals-feedstock
 	branch = main
-[submodule "snowpark-connect-deps-2-3.56.2-feedstock"]
-	path = snowpark-connect-deps-2-3.56.2-feedstock
-	url = ../snowpark-connect-deps-2-feedstock
-	branch = main_3.56.2
 [submodule "cutlass-feedstock"]
 	path = cutlass-feedstock
 	url = ../cutlass-feedstock
@@ -11659,10 +11647,6 @@
 	path = tabmat-feedstock
 	url = ../tabmat-feedstock
 	branch = main
-[submodule "pytorch-2.7.0-feedstock"]
-	path = pytorch-2.7.0-feedstock
-	url = ../pytorch-feedstock
-	branch = 2.7.0-release
 [submodule "llama-cpp-python-feedstock"]
 	path = llama-cpp-python-feedstock
 	url = ../llama-cpp-python-feedstock
