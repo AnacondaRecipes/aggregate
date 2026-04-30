@@ -2,7 +2,6 @@
 [submodule "imagesize-feedstock"]
 	url = ../imagesize-feedstock.git
 	path = imagesize-feedstock
-	branch = master
 [submodule "m4-feedstock"]
 	url = ../m4-feedstock.git
 	path = m4-feedstock
@@ -4246,7 +4245,7 @@
 [submodule "nccl-feedstock"]
 	path = nccl-feedstock
 	url = ../nccl-feedstock
-	branch = master
+	branch = main
 [submodule "cupy-feedstock"]
 	path = cupy-feedstock
 	url = ../cupy-feedstock
