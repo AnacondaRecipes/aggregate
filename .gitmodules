@@ -11007,11 +11007,6 @@
 	path = opentelemetry-instrumentation-weaviate-feedstock
 	url = ../opentelemetry-instrumentation-weaviate-feedstock
 	branch = main
-[submodule "literalai-feedstock"]
-	path = literalai-feedstock
-	url = ../literalai-feedstock
-	branch = services
-	services = main
 [submodule "pygwalker-feedstock"]
 	path = pygwalker-feedstock
 	url = ../pygwalker-feedstock
@@ -11452,10 +11447,6 @@
 	path = cutlass-feedstock
 	url = ../cutlass-feedstock
 	branch = main
-[submodule "snowpark-connect-1.2.0-feedstock"]
-	path = snowpark-connect-1.2.0-feedstock
-	url = ../snowpark-connect-feedstock
-	branch = main_1.2.0
 [submodule "libgumbo-feedstock"]
 	path = libgumbo-feedstock
 	url = ../libgumbo-feedstock
@@ -11500,11 +11491,6 @@
 	path = azure-common-feedstock
 	url = ../azure-common-feedstock
 	branch = master
-[submodule "chainlit-feedstock"]
-	path = chainlit-feedstock
-	url = ../chainlit-feedstock
-	branch = services
-	services = main
 [submodule "chevron-feedstock"]
 	path = chevron-feedstock
 	url = ../chevron-feedstock
@@ -11525,11 +11511,6 @@
 	path = glad-feedstock
 	url = ../glad-feedstock
 	branch = main
-[submodule "lazify-feedstock"]
-	path = lazify-feedstock
-	url = ../lazify-feedstock
-	branch = services
-	services = main
 [submodule "ldid-feedstock"]
 	path = ldid-feedstock
 	url = ../ldid-feedstock
@@ -11550,11 +11531,6 @@
 	path = setuptools-scm-git-archive-feedstock
 	url = ../setuptools-scm-git-archive-feedstock
 	branch = main
-[submodule "syncer-feedstock"]
-	path = syncer-feedstock
-	url = ../syncer-feedstock
-	branch = services
-	services = main
 [submodule "protovalidate-python-feedstock"]
 	path = protovalidate-python-feedstock
 	url = ../protovalidate-python-feedstock
@@ -12416,4 +12392,20 @@
 [submodule "jupyter-ai-feedstock"]
 	path = jupyter-ai-feedstock
 	url = ../jupyter-ai-feedstock
+	branch = main
+[submodule "chainlit-feedstock"]
+	path = chainlit-feedstock
+	url = ../chainlit-feedstock
+	branch = main
+[submodule "literalai-feedstock"]
+	path = literalai-feedstock
+	url = ../literalai-feedstock
+	branch = main
+[submodule "lazify-feedstock"]
+	path = lazify-feedstock
+	url = ../lazify-feedstock
+	branch = main
+[submodule "syncer-feedstock"]
+	path = syncer-feedstock
+	url = ../syncer-feedstock
 	branch = main
