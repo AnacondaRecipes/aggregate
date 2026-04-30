@@ -2978,10 +2978,6 @@
 	path = toolchain-feedstock
 	url = ../toolchain-feedstock
 	branch = master
-[submodule "python-3.8-feedstock"]
-	path = python-3.8-feedstock
-	url = ../python-feedstock
-	branch = master-3.8
 [submodule "ipympl-feedstock"]
 	path = ipympl-feedstock
 	url = ../ipympl-feedstock
@@ -4606,10 +4602,6 @@
 	path = mpg123-feedstock
 	url = ../mpg123-feedstock
 	branch = master
-[submodule "python-3.9-feedstock"]
-	path = python-3.9-feedstock
-	url = ../python-feedstock
-	branch = main-3.9
 [submodule "dm-tree-feedstock"]
 	path = dm-tree-feedstock
 	url = ../dm-tree-feedstock
@@ -5185,10 +5177,6 @@
 	path = gdb-feedstock
 	url = ../gdb-feedstock
 	branch = main
-[submodule "numpy-1.21-feedstock"]
-	path = numpy-1.21-feedstock
-	url = ../numpy-feedstock
-	branch = numpy121
 [submodule "snowpark-python-feedstock"]
 	path = snowpark-python-feedstock
 	url = ../snowpark-python-feedstock
@@ -5237,10 +5225,6 @@
 	path = streamlit-feedstock
 	url = ../streamlit-feedstock
 	branch = main
-[submodule "numpy-1.22-feedstock"]
-	path = numpy-1.22-feedstock
-	url = ../numpy-feedstock
-	branch = numpy122
 [submodule "qt-main-feedstock"]
 	path = qt-main-feedstock
 	url = ../qt-main-feedstock
@@ -6106,10 +6090,6 @@
 	path = streamlit-faker-feedstock
 	url = ../streamlit-faker-feedstock
 	branch = main
-[submodule "numpy-1.23-feedstock"]
-	path = numpy-1.23-feedstock
-	url = ../numpy-feedstock
-	branch = numpy123
 [submodule "plotly-resampler-feedstock"]
 	path = plotly-resampler-feedstock
 	url = ../plotly-resampler-feedstock
@@ -7238,10 +7218,6 @@
 	path = laszip-feedstock
 	url = ../laszip-feedstock
 	branch = main
-[submodule "numpy-1.25-feedstock"]
-	path = numpy-1.25-feedstock
-	url = ../numpy-feedstock
-	branch = numpy125
 [submodule "_pytorch_select-feedstock"]
 	path = _pytorch_select-feedstock
 	url = ../_pytorch_select-feedstock
@@ -11343,10 +11319,6 @@
 	path = madoka-feedstock
 	url = ../madoka-feedstock
 	branch = main
-[submodule "meson-python-0.16.0-feedstock"]
-	path = meson-python-0.16.0-feedstock
-	url = ../meson-python-feedstock
-	branch = main-0.16.0
 [submodule "gradio-feedstock"]
 	path = gradio-feedstock
 	url = ../gradio-feedstock
@@ -11407,14 +11379,6 @@
 	path = click-loglevel-feedstock
 	url = ../click-loglevel-feedstock
 	branch = main
-[submodule "boto3-1.39.8-feedstock"]
-	path = boto3-1.39.8-feedstock
-	url = ../boto3-feedstock
-	branch = master-1.39.8
-[submodule "s3transfer-0.13.1-feedstock"]
-	path = s3transfer-0.13.1-feedstock
-	url = ../s3transfer-feedstock
-	branch = master-0.13.1
 [submodule "dotnet-feedstock"]
 	path = dotnet-feedstock
 	url = ../dotnet-feedstock
@@ -11535,10 +11499,6 @@
 	path = google-re2-feedstock
 	url = ../google-re2-feedstock
 	branch = main
-[submodule "lark-0.12.0-feedstock"]
-	path = lark-0.12.0-feedstock
-	url = ../lark-feedstock
-	branch = main-0.12.0
 [submodule "cel-python-feedstock"]
 	path = cel-python-feedstock
 	url = ../cel-python-feedstock
@@ -11635,10 +11595,6 @@
 	path = xorg-xserver-xvfb-feedstock
 	url = ../xorg-xserver-xvfb-feedstock
 	branch = main
-[submodule "sphinx-7.3.7-feedstock"]
-	path = sphinx-7.3.7-feedstock
-	url = ../sphinx-feedstock
-	branch = master_7.3.7
 [submodule "interegular-feedstock"]
 	path = interegular-feedstock
 	url = ../interegular-feedstock
@@ -11667,10 +11623,6 @@
 	path = uv-dynamic-versioning-feedstock
 	url = ../uv-dynamic-versioning-feedstock
 	branch = main
-[submodule "pylint-3.3.8-feedstock"]
-	path = pylint-3.3.8-feedstock
-	url = ../pylint-feedstock
-	branch = master_3.3.8
 [submodule "pycrdt-store-feedstock"]
 	path = pycrdt-store-feedstock
 	url = ../pycrdt-store-feedstock
@@ -11786,10 +11738,6 @@
 	path = vala-feedstock
 	url = ../vala-feedstock
 	branch = master
-[submodule "langchain-1.2.6-feedstock"]
-	path = langchain-1.2.6-feedstock
-	url = ../langchain-feedstock
-	branch = main-1.2.6
 [submodule "libcap-feedstock"]
 	path = libcap-feedstock
 	url = ../libcap-feedstock
@@ -12369,10 +12317,6 @@
 	path = azure-ai-agents-feedstock
 	url = ../azure-ai-agents-feedstock
 	branch = main
-[submodule "argcomplete-3.5.3-feedstock"]
-	path = argcomplete-3.5.3-feedstock
-	url = ../argcomplete-feedstock
-	branch = master-3.5.x
 [submodule "applicationinsights-feedstock"]
 	path = applicationinsights-feedstock
 	url = ../applicationinsights-feedstock
