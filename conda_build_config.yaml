@@ -482,7 +482,7 @@ libcups:
 libcurl:
   - '8'
 libde265:
-  - 1.0.15
+  - 1.0.18
 libdeflate:
   - '1.22'
 libdrm:
@@ -504,7 +504,7 @@ libfaiss:
 libfaiss_avx2:
   - 1.14.1
 libffi:
-  - '3'
+  - '3.4'
 libflac:
   - '1.5'
 libflang_rt:
@@ -610,7 +610,7 @@ libmpdecxx:
 libnetcdf:
   - '4'
 libnghttp2:
-  - '1.68'
+  - '1.69'
 libnl:
   - '3'
 libnsl:
@@ -730,7 +730,7 @@ lzo:
 macports_legacy_support:
   - '1'
 mbedtls:
-  - '3.5'
+  - '4.1'
 mesalib:
   - '25.1'
 minizip:
