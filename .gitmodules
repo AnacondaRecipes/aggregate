@@ -12409,3 +12409,7 @@
 	path = syncer-feedstock
 	url = ../syncer-feedstock
 	branch = main
+[submodule "azure-cli-feedstock"]
+	path = azure-cli-feedstock
+	url = ../azure-cli-feedstock
+	branch = main
