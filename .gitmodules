@@ -12645,3 +12645,7 @@
 	path = jupyter-docprovider-feedstock
 	url = ../jupyter-docprovider-feedstock
 	branch = main
+[submodule "anaconda-auth-feedstock"]
+	path = anaconda-auth-feedstock
+	url = ../anaconda-auth-feedstock
+	branch = main
