@@ -12637,3 +12637,7 @@
 	path = jupyterlab-notebook-awareness-feedstock
 	url = ../jupyterlab-notebook-awareness-feedstock
 	branch = main
+[submodule "jupyter-ai-persona-manager-feedstock"]
+	path = jupyter-ai-persona-manager-feedstock
+	url = ../jupyter-ai-persona-manager-feedstock
+	branch = main
