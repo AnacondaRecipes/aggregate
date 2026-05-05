@@ -12641,3 +12641,7 @@
 	path = jupyter-ai-persona-manager-feedstock
 	url = ../jupyter-ai-persona-manager-feedstock
 	branch = main
+[submodule "jupyter-docprovider-feedstock"]
+	path = jupyter-docprovider-feedstock
+	url = ../jupyter-docprovider-feedstock
+	branch = main
