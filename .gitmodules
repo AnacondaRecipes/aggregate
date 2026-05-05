@@ -12633,3 +12633,7 @@
 	path = jupyter-ai-acp-client-feedstock
 	url = ../jupyter-ai-acp-client-feedstock
 	branch = main
+[submodule "jupyterlab-notebook-awareness-feedstock"]
+	path = jupyterlab-notebook-awareness-feedstock
+	url = ../jupyterlab-notebook-awareness-feedstock
+	branch = main
