@@ -12641,3 +12641,7 @@
 	path = conda-lockfiles-feedstock
 	url = git@github.com:AnacondaRecipes/conda-lockfiles-feedstock.git
 	branch = main
+[submodule "conda-spawn-feedstock"]
+	path = conda-spawn-feedstock
+	url = git@github.com:conda-forge/conda-spawn-feedstock.git
+	branch = main
