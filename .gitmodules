@@ -12633,3 +12633,7 @@
 	path = pypika-feedstock
 	url = ../pypika-feedstock
 	branch = main
+[submodule "libcudla-feedstock"]
+	path = libcudla-feedstock
+	url = ../libcudla-feedstock
+	branch = main
