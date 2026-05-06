@@ -12220,3 +12220,6 @@
 [submodule "ctranslate2-feedstock"]
 	path = ctranslate2-feedstock
 	url = https://github.com/AnacondaRecipes/ctranslate2-feedstock.git
+[submodule "pydantic-evals-feedstock"]
+	path = pydantic-evals-feedstock
+	url = git@github.com-anaconda:AnacondaRecipes/pydantic-evals-feedstock.git
