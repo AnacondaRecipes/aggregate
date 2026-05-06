@@ -12657,3 +12657,7 @@
 	path = jupyter-collaboration-feedstock
 	url = ../jupyter-collaboration-feedstock
 	branch = main
+[submodule "deepeval-feedstock"]
+	path = deepeval-feedstock
+	url = ../deepeval-feedstock
+	branch = main
