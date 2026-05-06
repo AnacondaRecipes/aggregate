@@ -4590,10 +4590,6 @@
 	path = sgmllib3k-feedstock
 	url = ../sgmllib3k-feedstock
 	branch = master
-[submodule "assimp-feedstock"]
-	path = assimp-feedstock
-	url = ../assimp-feedstock
-	branch = master
 [submodule "autotools_clang_conda-feedstock"]
 	path = autotools_clang_conda-feedstock
 	url = ../autotools_clang_conda-feedstock
@@ -7057,14 +7053,6 @@
 [submodule "allure-python-feedstock"]
 	path = allure-python-feedstock
 	url = ../allure-python-feedstock
-	branch = main
-[submodule "wasmtime-feedstock"]
-	path = wasmtime-feedstock
-	url = ../wasmtime-feedstock
-	branch = main
-[submodule "wasmtime-py-feedstock"]
-	path = wasmtime-py-feedstock
-	url = ../wasmtime-py-feedstock
 	branch = main
 [submodule "python-pdal-feedstock"]
 	path = python-pdal-feedstock
@@ -9657,10 +9645,6 @@
 	path = zopfli-feedstock
 	url = ../zopfli-feedstock
 	branch = main
-[submodule "securesystemslib-feedstock"]
-	path = securesystemslib-feedstock
-	url = ../securesystemslib-feedstock
-	branch = main
 [submodule "cssselect2-feedstock"]
 	path = cssselect2-feedstock
 	url = ../cssselect2-feedstock
@@ -9793,10 +9777,6 @@
 	path = trubar-feedstock
 	url = ../trubar-feedstock
 	branch = main
-[submodule "backtrace-feedstock"]
-	path = backtrace-feedstock
-	url = ../backtrace-feedstock
-	branch = main
 [submodule "pytest-xprocess-feedstock"]
 	path = pytest-xprocess-feedstock
 	url = ../pytest-xprocess-feedstock
@@ -9877,17 +9857,9 @@
 	path = hvac-feedstock
 	url = ../hvac-feedstock
 	branch = main
-[submodule "crc32c-feedstock"]
-	path = crc32c-feedstock
-	url = ../crc32c-feedstock
-	branch = main
 [submodule "donfig-feedstock"]
 	path = donfig-feedstock
 	url = ../donfig-feedstock
-	branch = main
-[submodule "benchmark-feedstock"]
-	path = benchmark-feedstock
-	url = ../benchmark-feedstock
 	branch = main
 [submodule "fredapi-feedstock"]
 	path = fredapi-feedstock
@@ -10237,10 +10209,6 @@
 	path = spirv-headers-feedstock
 	url = ../spirv-headers-feedstock
 	branch = main
-[submodule "python-blockbuster-feedstock"]
-	path = python-blockbuster-feedstock
-	url = ../python-blockbuster-feedstock
-	branch = main
 [submodule "forbiddenfruit-feedstock"]
 	path = forbiddenfruit-feedstock
 	url = ../forbiddenfruit-feedstock
@@ -10467,10 +10435,6 @@
 	path = libhiredis-feedstock
 	url = ../libhiredis-feedstock
 	branch = main
-[submodule "peewee-feedstock"]
-	path = peewee-feedstock
-	url = ../peewee-feedstock
-	branch = main
 [submodule "simple-parsing-feedstock"]
 	path = simple-parsing-feedstock
 	url = ../simple-parsing-feedstock
@@ -10543,10 +10507,6 @@
 	path = better-optimize-feedstock
 	url = ../better-optimize-feedstock
 	branch = main
-[submodule "multitasking-feedstock"]
-	path = multitasking-feedstock
-	url = ../multitasking-feedstock
-	branch = main
 [submodule "python-3.13-feedstock"]
 	path = python-3.13-feedstock
 	url = ../python-feedstock
@@ -10554,10 +10514,6 @@
 [submodule "conda-self-feedstock"]
 	path = conda-self-feedstock
 	url = ../conda-self-feedstock
-	branch = main
-[submodule "legacy-cgi-feedstock"]
-	path = legacy-cgi-feedstock
-	url = ../legacy-cgi-feedstock
 	branch = main
 [submodule "flang-feedstock"]
 	path = flang-feedstock
@@ -12629,35 +12585,51 @@
 	path = pycomposefile-feedstock
 	url = ../pycomposefile-feedstock
 	branch = main
-[submodule "jupyter-ai-acp-client-feedstock"]
-	path = jupyter-ai-acp-client-feedstock
-	url = ../jupyter-ai-acp-client-feedstock
-	branch = main
-[submodule "jupyterlab-notebook-awareness-feedstock"]
-	path = jupyterlab-notebook-awareness-feedstock
-	url = ../jupyterlab-notebook-awareness-feedstock
-	branch = main
-[submodule "jupyter-ai-persona-manager-feedstock"]
-	path = jupyter-ai-persona-manager-feedstock
-	url = ../jupyter-ai-persona-manager-feedstock
-	branch = main
-[submodule "jupyter-docprovider-feedstock"]
-	path = jupyter-docprovider-feedstock
-	url = ../jupyter-docprovider-feedstock
-	branch = main
 [submodule "anaconda-auth-feedstock"]
 	path = anaconda-auth-feedstock
 	url = ../anaconda-auth-feedstock
 	branch = main
-[submodule "jupyter-collaboration-ui-feedstock"]
-	path = jupyter-collaboration-ui-feedstock
-	url = ../jupyter-collaboration-ui-feedstock
+[submodule "azure-cli-feedstock"]
+	path = azure-cli-feedstock
+	url = ../azure-cli-feedstock
 	branch = main
-[submodule "jupyter-collaboration-feedstock"]
-	path = jupyter-collaboration-feedstock
-	url = ../jupyter-collaboration-feedstock
+[submodule "azure-mgmt-redis-feedstock"]
+	path = azure-mgmt-redis-feedstock
+	url = ../azure-mgmt-redis-feedstock
 	branch = main
-[submodule "deepeval-feedstock"]
-	path = deepeval-feedstock
-	url = ../deepeval-feedstock
+[submodule "chroma-hnswlib-feedstock"]
+	path = chroma-hnswlib-feedstock
+	url = ../chroma-hnswlib-feedstock
+	branch = main
+[submodule "fasta2a-feedstock"]
+	path = fasta2a-feedstock
+	url = ../fasta2a-feedstock
+	branch = main
+[submodule "genai-prices-feedstock"]
+	path = genai-prices-feedstock
+	url = ../genai-prices-feedstock
+	branch = main
+[submodule "groq-feedstock"]
+	path = groq-feedstock
+	url = ../groq-feedstock
+	branch = main
+[submodule "logfire-api-feedstock"]
+	path = logfire-api-feedstock
+	url = ../logfire-api-feedstock
+	branch = main
+[submodule "opentelemetry-instrumentation-asgi-feedstock"]
+	path = opentelemetry-instrumentation-asgi-feedstock
+	url = ../opentelemetry-instrumentation-asgi-feedstock
+	branch = main
+[submodule "opentelemetry-instrumentation-fastapi-feedstock"]
+	path = opentelemetry-instrumentation-fastapi-feedstock
+	url = ../opentelemetry-instrumentation-fastapi-feedstock
+	branch = main
+[submodule "py-rust-stemmers-feedstock"]
+	path = py-rust-stemmers-feedstock
+	url = ../py-rust-stemmers-feedstock
+	branch = main
+[submodule "pypika-feedstock"]
+	path = pypika-feedstock
+	url = ../pypika-feedstock
 	branch = main
