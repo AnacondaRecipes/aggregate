@@ -12653,3 +12653,7 @@
 	path = jupyter-collaboration-ui-feedstock
 	url = ../jupyter-collaboration-ui-feedstock
 	branch = main
+[submodule "jupyter-collaboration-feedstock"]
+	path = jupyter-collaboration-feedstock
+	url = ../jupyter-collaboration-feedstock
+	branch = main
