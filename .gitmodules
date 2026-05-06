@@ -12637,3 +12637,7 @@
 	path = libcudla-feedstock
 	url = ../libcudla-feedstock
 	branch = main
+[submodule "conda-lockfiles-feedstock"]
+	path = conda-lockfiles-feedstock
+	url = git@github.com:AnacondaRecipes/conda-lockfiles-feedstock.git
+	branch = main
