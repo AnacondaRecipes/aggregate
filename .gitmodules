@@ -12649,3 +12649,7 @@
 	path = anaconda-auth-feedstock
 	url = ../anaconda-auth-feedstock
 	branch = main
+[submodule "jupyter-collaboration-ui-feedstock"]
+	path = jupyter-collaboration-ui-feedstock
+	url = ../jupyter-collaboration-ui-feedstock
+	branch = main
