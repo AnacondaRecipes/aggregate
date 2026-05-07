@@ -12645,3 +12645,7 @@
 	path = conda-spawn-feedstock
 	url = ../conda-spawn-feedstock.git
 	branch = main
+[submodule "jupyterlab-chat-feedstock"]
+	path = jupyterlab-chat-feedstock
+	url = ../jupyterlab-chat-feedstock
+	branch = main
