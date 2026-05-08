@@ -12649,3 +12649,7 @@
 	path = jupyterlab-chat-feedstock
 	url = ../jupyterlab-chat-feedstock
 	branch = main
+[submodule "jupyter-ai-tools-feedstock"]
+	path = jupyter-ai-tools-feedstock
+	url = ../jupyter-ai-tools-feedstock
+	branch = main
