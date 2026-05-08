@@ -12653,3 +12653,7 @@
 	path = jupyter-ai-tools-feedstock
 	url = ../jupyter-ai-tools-feedstock
 	branch = main
+[submodule "jupyterlab-eventlistener-feedstock"]
+	path = jupyterlab-eventlistener-feedstock
+	url = ../jupyterlab-eventlistener-feedstock
+	branch = main
