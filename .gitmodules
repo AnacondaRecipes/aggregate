@@ -12645,15 +12645,23 @@
 	path = conda-spawn-feedstock
 	url = ../conda-spawn-feedstock.git
 	branch = main
-[submodule "jupyterlab-chat-feedstock"]
-	path = jupyterlab-chat-feedstock
-	url = ../jupyterlab-chat-feedstock
+[submodule "chromadb-feedstock"]
+	path = chromadb-feedstock
+	url = ../chromadb-feedstock
 	branch = main
-[submodule "jupyter-ai-tools-feedstock"]
-	path = jupyter-ai-tools-feedstock
-	url = ../jupyter-ai-tools-feedstock
+[submodule "deepeval-feedstock"]
+	path = deepeval-feedstock
+	url = ../deepeval-feedstock
 	branch = main
-[submodule "jupyterlab-eventlistener-feedstock"]
-	path = jupyterlab-eventlistener-feedstock
-	url = ../jupyterlab-eventlistener-feedstock
+[submodule "deepspeed-feedstock"]
+	path = deepspeed-feedstock
+	url = ../deepspeed-feedstock
+	branch = main
+[submodule "fastembed-feedstock"]
+	path = fastembed-feedstock
+	url = ../fastembed-feedstock
+	branch = master
+[submodule "logistro-feedstock"]
+	path = logistro-feedstock
+	url = ../logistro-feedstock
 	branch = main
