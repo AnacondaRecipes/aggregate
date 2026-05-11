@@ -12665,3 +12665,7 @@
 	path = logistro-feedstock
 	url = ../logistro-feedstock
 	branch = main
+[submodule "choreographer-feedstock"]
+	path = choreographer-feedstock
+	url = ../choreographer-feedstock
+	branch = main
