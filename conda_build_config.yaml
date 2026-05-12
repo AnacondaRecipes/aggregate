@@ -546,7 +546,7 @@ libheif:
 libhiredis:
   - '1.3'
 libhwloc:
-  - 2.12.1
+  - 2.13.0
 libiconv:
   - '1'
 libidn2:
@@ -937,6 +937,8 @@ vtk_base:
   - 9.5.2
 vtk_io_ffmpeg:
   - 9.5.2
+vulkan_loader:
+  - '1.4'
 wayland:
   - '1'
 x264:
