@@ -12689,3 +12689,7 @@
 	path = jupyterlab-notebook-awareness-feedstock
 	url = ../jupyterlab-notebook-awareness-feedstock
 	branch = main
+[submodule "backports.strenum-feedstock"]
+	path = backports.strenum-feedstock
+	url = ../backports.strenum-feedstock
+	branch = main
