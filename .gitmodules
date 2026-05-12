@@ -12669,11 +12669,23 @@
 	path = choreographer-feedstock
 	url = ../choreographer-feedstock
 	branch = main
-[submodule "jupyterlab-commands-toolkit-feedstock"]
-	path = jupyterlab-commands-toolkit-feedstock
-	url = ../jupyterlab-commands-toolkit-feedstock
+[submodule "jupyter-ai-tools-feedstock"]
+	path = jupyter-ai-tools-feedstock
+	url = ../jupyter-ai-tools-feedstock
 	branch = main
-[submodule "jupyter_server_documents-feedstock"]
-	path = jupyter_server_documents-feedstock
-	url = ../jupyter_server_documents-feedstock
+[submodule "jupyter-collaboration-ui-feedstock"]
+	path = jupyter-collaboration-ui-feedstock
+	url = ../jupyter-collaboration-ui-feedstock
+	branch = main
+[submodule "jupyter-docprovider-feedstock"]
+	path = jupyter-docprovider-feedstock
+	url = ../jupyter-docprovider-feedstock
+	branch = main
+[submodule "jupyterlab-eventlistener-feedstock"]
+	path = jupyterlab-eventlistener-feedstock
+	url = ../jupyterlab-eventlistener-feedstock
+	branch = main
+[submodule "jupyterlab-notebook-awareness-feedstock"]
+	path = jupyterlab-notebook-awareness-feedstock
+	url = ../jupyterlab-notebook-awareness-feedstock
 	branch = main
