@@ -12669,3 +12669,7 @@
 	path = choreographer-feedstock
 	url = ../choreographer-feedstock
 	branch = main
+[submodule "jupyterlab-commands-toolkit-feedstock"]
+	path = jupyterlab-commands-toolkit-feedstock
+	url = ../jupyterlab-commands-toolkit-feedstock
+	branch = main
