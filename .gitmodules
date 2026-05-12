@@ -12673,3 +12673,7 @@
 	path = jupyterlab-commands-toolkit-feedstock
 	url = ../jupyterlab-commands-toolkit-feedstock
 	branch = main
+[submodule "jupyter_server_documents-feedstock"]
+	path = jupyter_server_documents-feedstock
+	url = ../jupyter_server_documents-feedstock
+	branch = main
