@@ -12697,3 +12697,7 @@
 	path = jupyter-ai-router-feedstock
 	url = ../jupyter-ai-router-feedstock
 	branch = main
+[submodule "cccl-python-feedstock"]
+	path = cccl-python-feedstock
+	url = ../cccl-python-feedstock
+	branch = main
