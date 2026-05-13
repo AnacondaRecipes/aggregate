@@ -12693,3 +12693,7 @@
 	path = backports.strenum-feedstock
 	url = ../backports.strenum-feedstock
 	branch = main
+[submodule "jupyter-ai-router-feedstock"]
+	path = jupyter-ai-router-feedstock
+	url = ../jupyter-ai-router-feedstock
+	branch = main
