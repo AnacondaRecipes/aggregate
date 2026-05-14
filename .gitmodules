@@ -5217,10 +5217,6 @@
 	path = qt-main-feedstock
 	url = ../qt-main-feedstock
 	branch = main
-[submodule "qt-webengine-feedstock"]
-	path = qt-webengine-feedstock
-	url = ../qt-webengine-feedstock
-	branch = main
 [submodule "gdbm-feedstock"]
 	path = gdbm-feedstock
 	url = ../gdbm-feedstock
@@ -6851,10 +6847,6 @@
 	path = double-conversion-feedstock
 	url = ../double-conversion-feedstock
 	branch = main
-[submodule "crosstool-ng-bootstrap-feedstock"]
-	path = crosstool-ng-bootstrap-feedstock
-	url = ../crosstool-ng-bootstrap-feedstock
-	branch = main
 [submodule "cmake-binary-feedstock"]
 	path = cmake-binary-feedstock
 	url = ../cmake-binary-feedstock
@@ -7074,10 +7066,6 @@
 	path = pdfium2-binaries-feedstock
 	url = ../pdfium2-binaries-feedstock
 	branch = main
-[submodule "pdfium-binaries-feedstock"]
-	path = pdfium-binaries-feedstock
-	url = ../pdfium-binaries-feedstock
-	branch = main
 [submodule "parse_type-feedstock"]
 	path = parse_type-feedstock
 	url = ../parse_type-feedstock
@@ -7125,10 +7113,6 @@
 [submodule "anaconda-anon-usage-feedstock"]
 	path = anaconda-anon-usage-feedstock
 	url = ../anaconda-anon-usage-feedstock
-	branch = main
-[submodule "anaconda-cloud-auth-feedstock"]
-	path = anaconda-cloud-auth-feedstock
-	url = ../anaconda-cloud-auth-feedstock
 	branch = main
 [submodule "ml_dtypes-feedstock"]
 	path = ml_dtypes-feedstock
@@ -7952,10 +7936,6 @@
 [submodule "pytorch-tabnet-feedstock"]
 	path = pytorch-tabnet-feedstock
 	url = ../pytorch-tabnet-feedstock
-	branch = main
-[submodule "pysam-feedstock"]
-	path = pysam-feedstock
-	url = ../pysam-feedstock
 	branch = main
 [submodule "snowflake-sqlalchemy-feedstock"]
 	path = snowflake-sqlalchemy-feedstock
@@ -9700,10 +9680,6 @@
 [submodule "weasyprint-feedstock"]
 	path = weasyprint-feedstock
 	url = ../weasyprint-feedstock
-	branch = main
-[submodule "level-zero-feedstock"]
-	path = level-zero-feedstock
-	url = ../level-zero-feedstock
 	branch = main
 [submodule "pyap-feedstock"]
 	path = pyap-feedstock
@@ -12693,11 +12669,23 @@
 	path = backports.strenum-feedstock
 	url = ../backports.strenum-feedstock
 	branch = main
-[submodule "jupyter-ai-router-feedstock"]
-	path = jupyter-ai-router-feedstock
-	url = ../jupyter-ai-router-feedstock
+[submodule "jupyter-collaboration-feedstock"]
+	path = jupyter-collaboration-feedstock
+	url = ../jupyter-collaboration-feedstock
 	branch = main
-[submodule "cccl-python-feedstock"]
-	path = cccl-python-feedstock
-	url = ../cccl-python-feedstock
+[submodule "jupyter_server_documents-feedstock"]
+	path = jupyter_server_documents-feedstock
+	url = ../jupyter_server_documents-feedstock
+	branch = main
+[submodule "jupyterlab-chat-feedstock"]
+	path = jupyterlab-chat-feedstock
+	url = ../jupyterlab-chat-feedstock
+	branch = main
+[submodule "jupyterlab-commands-toolkit-feedstock"]
+	path = jupyterlab-commands-toolkit-feedstock
+	url = ../jupyterlab-commands-toolkit-feedstock
+	branch = main
+[submodule "sphinxcontrib-typer-feedstock"]
+	path = sphinxcontrib-typer-feedstock
+	url = ../sphinxcontrib-typer-feedstock
 	branch = main
