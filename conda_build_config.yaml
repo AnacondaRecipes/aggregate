@@ -520,7 +520,7 @@ libgdal_core:
 libgettextpo:
   - '0'
 libgit2:
-  - '1.6'
+  - '1.9'
 libgl:
   - '1'
 libgles:
@@ -934,9 +934,9 @@ unixodbc:
 util_linux:
   - '2.39'
 vtk_base:
-  - 9.5.2
+  - 9.6.1
 vtk_io_ffmpeg:
-  - 9.5.2
+  - 9.6.1
 vulkan_loader:
   - '1.4'
 wayland:
