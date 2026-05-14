@@ -12701,3 +12701,7 @@
 	path = cccl-python-feedstock
 	url = ../cccl-python-feedstock
 	branch = main
+[submodule "parsy-feedstock"]
+	path = parsy-feedstock
+	url = ../parsy-feedstock
+	branch = main
