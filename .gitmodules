@@ -12689,7 +12689,7 @@
 	path = sphinxcontrib-typer-feedstock
 	url = ../sphinxcontrib-typer-feedstock
 	branch = main
-[submodule "parsy-feedstock"]
-	path = parsy-feedstock
-	url = ../parsy-feedstock
+[submodule "jupyter-ai-router-feedstock"]
+	path = jupyter-ai-router-feedstock
+	url = ../jupyter-ai-router-feedstock
 	branch = main
