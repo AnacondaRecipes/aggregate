@@ -12697,3 +12697,7 @@
 	path = hf-gradio-feedstock
 	url = ../hf-gradio-feedstock
 	branch = main
+[submodule "trl-feedstock"]
+	path = trl-feedstock
+	url = ../trl-feedstock
+	branch = main
