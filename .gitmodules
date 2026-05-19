@@ -12701,3 +12701,7 @@
 	path = trl-feedstock
 	url = ../trl-feedstock
 	branch = main
+[submodule "tyro-feedstock"]
+	path = tyro-feedstock
+	url = ../tyro-feedstock
+	branch = main
