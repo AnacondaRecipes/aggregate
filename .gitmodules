@@ -12693,3 +12693,7 @@
 	path = jupyter-ai-router-feedstock
 	url = ../jupyter-ai-router-feedstock
 	branch = main
+[submodule "hf-gradio-feedstock"]
+	path = hf-gradio-feedstock
+	url = ../hf-gradio-feedstock
+	branch = main
