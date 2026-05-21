@@ -12705,3 +12705,7 @@
 	path = tyro-feedstock
 	url = ../tyro-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-agno-feedstock"]
+	path = opentelemetry-instrumentation-agno-feedstock
+	url = ../opentelemetry-instrumentation-agno-feedstock
+	branch = main
