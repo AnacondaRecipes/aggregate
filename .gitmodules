@@ -12709,3 +12709,7 @@
 	path = opentelemetry-instrumentation-agno-feedstock
 	url = ../opentelemetry-instrumentation-agno-feedstock
 	branch = main
+[submodule "flashinfer-python-feedstock"]
+	path = flashinfer-python-feedstock
+	url = ../flashinfer-python-feedstock
+	branch = main
