@@ -12713,3 +12713,7 @@
 	path = flashinfer-python-feedstock
 	url = ../flashinfer-python-feedstock
 	branch = main
+[submodule "opentelemetry-semantic-conventions-feedstock"]
+	path = opentelemetry-semantic-conventions-feedstock
+	url = ../opentelemetry-semantic-conventions-feedstock
+	branch = main
