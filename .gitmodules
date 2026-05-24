@@ -6831,10 +6831,6 @@
 	path = feedparser-feedstock
 	url = ../feedparser-feedstock
 	branch = main
-[submodule "libgcc-feedstock"]
-	path = libgcc-feedstock
-	url = ../libgcc-feedstock
-	branch = main
 [submodule "libopus-feedstock"]
 	path = libopus-feedstock
 	url = ../libopus-feedstock
@@ -12697,23 +12693,51 @@
 	path = hf-gradio-feedstock
 	url = ../hf-gradio-feedstock
 	branch = main
-[submodule "trl-feedstock"]
-	path = trl-feedstock
-	url = ../trl-feedstock
-	branch = main
-[submodule "tyro-feedstock"]
-	path = tyro-feedstock
-	url = ../tyro-feedstock
-	branch = main
 [submodule "opentelemetry-instrumentation-agno-feedstock"]
 	path = opentelemetry-instrumentation-agno-feedstock
 	url = ../opentelemetry-instrumentation-agno-feedstock
 	branch = main
-[submodule "flashinfer-python-feedstock"]
-	path = flashinfer-python-feedstock
-	url = ../flashinfer-python-feedstock
+[submodule "_openmp_mutex-feedstock"]
+	path = _openmp_mutex-feedstock
+	url = ../_openmp_mutex-feedstock
 	branch = main
-[submodule "opentelemetry-semantic-conventions-feedstock"]
-	path = opentelemetry-semantic-conventions-feedstock
-	url = ../opentelemetry-semantic-conventions-feedstock
+[submodule "agent-client-protocol-feedstock"]
+	path = agent-client-protocol-feedstock
+	url = ../agent-client-protocol-feedstock
+	branch = main
+[submodule "cccl-python-feedstock"]
+	path = cccl-python-feedstock
+	url = ../cccl-python-feedstock
+	branch = main
+[submodule "jupyter-ai-acp-client-feedstock"]
+	path = jupyter-ai-acp-client-feedstock
+	url = ../jupyter-ai-acp-client-feedstock
+	branch = main
+[submodule "jupyter-ai-chat-commands-feedstock"]
+	path = jupyter-ai-chat-commands-feedstock
+	url = ../jupyter-ai-chat-commands-feedstock
+	branch = main
+[submodule "jupyter-ai-persona-manager-feedstock"]
+	path = jupyter-ai-persona-manager-feedstock
+	url = ../jupyter-ai-persona-manager-feedstock
+	branch = main
+[submodule "langchain-protocol-feedstock"]
+	path = langchain-protocol-feedstock
+	url = ../langchain-protocol-feedstock
+	branch = main
+[submodule "model-hosting-container-standards-feedstock"]
+	path = model-hosting-container-standards-feedstock
+	url = ../model-hosting-container-standards-feedstock
+	branch = main
+[submodule "nccl4py-feedstock"]
+	path = nccl4py-feedstock
+	url = ../nccl4py-feedstock
+	branch = main
+[submodule "parsy-feedstock"]
+	path = parsy-feedstock
+	url = ../parsy-feedstock
+	branch = main
+[submodule "treelite-feedstock"]
+	path = treelite-feedstock
+	url = ../treelite-feedstock
 	branch = main
