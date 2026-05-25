@@ -308,7 +308,7 @@ gettext:
 gflags:
   - '2.3'
 giflib:
-  - '5.2'
+  - '6.1'
 gl2ps:
   - 1.4.2
 glew:
@@ -410,7 +410,7 @@ lame:
 lcms2:
   - '2'
 leptonica:
-  - '1.82'
+  - '1.87'
 lerc:
   - '4.1'
 level_zero:
@@ -933,6 +933,8 @@ unixodbc:
   - '2.3'
 util_linux:
   - '2.39'
+vcomp14:
+  - 14.44.35208
 vtk_base:
   - 9.6.1
 vtk_io_ffmpeg:
@@ -1010,7 +1012,7 @@ xz:
 yaml:
   - '0.2'
 yaml_cpp:
-  - '0.8'
+  - '0.9'
 zeromq:
   - 4.3.5
 zfp:
@@ -1018,6 +1020,6 @@ zfp:
 zlib:
   - '1'
 zlib_ng:
-  - '2.0'
+  - '2.3'
 zstd:
   - '1.5'
