@@ -12717,3 +12717,7 @@
 	path = opentelemetry-semantic-conventions-feedstock
 	url = ../opentelemetry-semantic-conventions-feedstock
 	branch = main
+[submodule "opentelemetry-instrumentation-voyageai-feedstock"]
+	path = opentelemetry-instrumentation-voyageai-feedstock
+	url = ../opentelemetry-instrumentation-voyageai-feedstock
+	branch = main
