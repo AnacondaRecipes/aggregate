@@ -896,7 +896,7 @@ serf:
 shaderc:
   - '2025.5'
 simdjson:
-  - '3.10'
+  - '4.6'
 sip:
   - '6.15'
 sleef:
