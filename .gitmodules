@@ -12745,3 +12745,7 @@
 	path = opentelemetry-instrumentation-voyageai-feedstock
 	url = ../opentelemetry-instrumentation-voyageai-feedstock
 	branch = main
+[submodule "pyglfw-feedstock"]
+	path = pyglfw-feedstock
+	url = ../pyglfw-feedstock
+	branch = main
