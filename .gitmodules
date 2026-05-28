@@ -12749,3 +12749,7 @@
 	path = pyglfw-feedstock
 	url = ../pyglfw-feedstock
 	branch = main
+[submodule "shtab-feedstock"]
+	path = shtab-feedstock
+	url = ../shtab-feedstock
+	branch = main
