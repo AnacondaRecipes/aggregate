@@ -644,7 +644,7 @@ libpq:
 libprotobuf:
   - 6.33.5
 libqdldl:
-  - 0.1.8
+  - 0.1.9
 librdkafka:
   - '2.2'
 libre2_11:
