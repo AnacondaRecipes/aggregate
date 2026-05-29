@@ -12749,11 +12749,27 @@
 	path = pyglfw-feedstock
 	url = ../pyglfw-feedstock
 	branch = main
-[submodule "shtab-feedstock"]
-	path = shtab-feedstock
-	url = ../shtab-feedstock
+[submodule "aiofile-feedstock"]
+	path = aiofile-feedstock
+	url = ../aiofile-feedstock
 	branch = main
-[submodule "dmgbuild-feedstock"]
-	path = dmgbuild-feedstock
-	url = ../dmgbuild-feedstock
+[submodule "arviz-base-feedstock"]
+	path = arviz-base-feedstock
+	url = ../arviz-base-feedstock
+	branch = main
+[submodule "arviz-stats-feedstock"]
+	path = arviz-stats-feedstock
+	url = ../arviz-stats-feedstock
+	branch = main
+[submodule "caio-feedstock"]
+	path = caio-feedstock
+	url = ../caio-feedstock
+	branch = main
+[submodule "preliz-feedstock"]
+	path = preliz-feedstock
+	url = ../preliz-feedstock
+	branch = main
+[submodule "pytensor-distributions-feedstock"]
+	path = pytensor-distributions-feedstock
+	url = ../pytensor-distributions-feedstock
 	branch = main
