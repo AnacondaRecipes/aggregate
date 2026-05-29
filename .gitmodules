@@ -12753,3 +12753,7 @@
 	path = shtab-feedstock
 	url = ../shtab-feedstock
 	branch = main
+[submodule "dmgbuild-feedstock"]
+	path = dmgbuild-feedstock
+	url = ../dmgbuild-feedstock
+	branch = main
