@@ -12777,3 +12777,7 @@
 	path = mac_alias-feedstock
 	url = ../mac_alias-feedstock
 	branch = main
+[submodule "ds_store-feedstock"]
+	path = ds_store-feedstock
+	url = ../ds_store-feedstock
+	branch = main
