@@ -12773,3 +12773,7 @@
 	path = pytensor-distributions-feedstock
 	url = ../pytensor-distributions-feedstock
 	branch = main
+[submodule "mac_alias-feedstock"]
+	path = mac_alias-feedstock
+	url = ../mac_alias-feedstock
+	branch = main
