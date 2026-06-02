@@ -57,7 +57,7 @@ ucrt64_fortran_compiler:       # [win and x86_64]
 rust_compiler:
   - rust
 rust_compiler_version:
-  - 1.93.1
+  - 1.96.0
 rust_nightly_compiler:
   - rust-nightly
 rust_nightly_compiler_version:
