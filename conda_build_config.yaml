@@ -1,0 +1,1073 @@
+## GLOBAL config
+## Compilers, blas, R, python...
+
+pin_run_as_build:
+  libboost:
+    max_pin: x.x.x
+
+blas_impl:
+  - mkl                        # [(x86 or x86_64) and not osx]
+  - openblas                   # [not win]
+c_compiler:
+  - gcc                        # [linux]
+  - clang                      # [osx]
+  - vs2022                     # [win]
+c_stdlib:
+  - sysroot                    # [linux]
+  - macosx_deployment_target   # [osx]
+  - vs                         # [win]
+cxx_compiler:
+  - gxx                        # [linux]
+  - clangxx                    # [osx]
+  - vs2022                     # [win]
+cuda_compiler:
+  - cuda-nvcc
+fortran_compiler:
+  - gfortran                   # [linux or osx]
+  - intel-fortran              # [win]
+m2w64_c_compiler:              # [win]
+  - m2w64-toolchain            # [win]
+m2w64_cxx_compiler:            # [win]
+  - m2w64-toolchain            # [win]
+m2w64_fortran_compiler:        # [win]
+  - m2w64-toolchain            # [win]
+ucrt64_c_compiler:             # [win]
+  - ucrt64-gcc-toolchain       # [win]
+ucrt64_cxx_compiler:           # [win]
+  - ucrt64-gcc-toolchain       # [win]
+ucrt64_fortran_compiler:       # [win]
+  - ucrt64-gcc-toolchain       # [win]
+rust_compiler:
+  - rust
+rust_nightly_compiler:
+  - rust-nightly
+rust_compiler_version:
+  - 1.93.1
+rust_nightly_compiler_version:
+  - 1.92.0_2025-10-13
+# use {{ compiler('rust-gnu') }} when requiring a build using the m2w64-toolchain
+rust_gnu_compiler:             # [win]
+  - rust-gnu                   # [win]
+rust_gnu_compiler_version:     # [win]
+  - 1.93.1                     # [win]
+VERBOSE_AT:
+  - V=1
+VERBOSE_CM:
+  - VERBOSE=1
+cran_mirror:
+  - https://cran.r-project.org
+c_compiler_version:        # [linux or osx]
+  - 14.3.0                 # [linux]
+  - 20                     # [osx]
+c_stdlib_version:
+  - 2.28                   # [linux]
+  - 10.15                  # [osx and x86_64]
+  - 12.1                   # [osx and arm64]
+  - 2022.14                # [win]
+cxx_compiler_version:      # [linux or osx]
+  - 14.3.0                 # [linux]
+  - 20                     # [osx]
+cuda_compiler_version:
+  - 12.4
+fortran_compiler_version:
+  - 2022.1.0                     # [win]
+  - 14.3.0                       # [osx or linux]
+clang_variant:
+  - clang
+# The basic go-compiler with CGO disabled (CGO_ENABLED=0).
+# It generates fat binaries without libc dependencies.
+go_compiler:
+  - go-nocgo
+go_compiler_version:
+  - 1.21
+# The go compiler build with CGO enabled (CGO_ENABLED=1).
+# It can generate fat binaries that depend on conda's libc.
+# You should use this compiler if the underlying
+# program needs to link against other C libraries, in which
+# case make sure to add 'c,cpp,fortran_compiler' for unix
+# and the m2w64 equivalent for windows.
+cgo_compiler:
+  - go-cgo
+cgo_compiler_version:
+  - 1.21
+python:
+  - "3.10"
+  - "3.11"
+  - "3.12"
+  - "3.13"
+  - "3.14"                 # [ANACONDA_ROCKET_ENABLE_PY314]
+# numpy will by default use a compatible ABI for the oldest still-supported numpy versions
+# `{{ pin_compatible("numpy") }}` is no longer needed as builds of numpy from version 2 have run_exports.
+numpy:
+  # python 3.10
+  - 2.1
+  # python 3.11
+  - 2.1
+  # python 3.12
+  - 2.1
+  # python 3.13
+  - 2.1
+  # python 3.14            # [ANACONDA_ROCKET_ENABLE_PY314]
+  - 2.3                    # [ANACONDA_ROCKET_ENABLE_PY314]
+zip_keys:
+  -
+    - python
+    - numpy
+python_implementation:
+  - cpython
+python_impl:
+  - cpython
+r_base:
+  - 4.3.1
+r_version:
+  - 4.3.1
+r_implementation:
+  - 'r-base'    # [linux and x86_64]
+# This differs from target_platform in that it determines what subdir the compiler
+#    will target, not what subdir the compiler package will be itself.
+#    For example, we need a win-64 vs2008_win-32 package, so that we compile win-32
+#    code on win-64 miniconda.
+cross_compiler_target_platform:
+  # - win-32                     # [win]
+  - win-64                     # [win]
+target_platform:
+  - win-64                     # [win]
+  # - win-32                     # [win]
+channel_targets:
+  - defaults
+cdt_name:          # [linux]
+  - el8            # [linux]
+
+# https://github.com/conda/conda-build/issues/5733
+BUILD:                           # [linux]
+  - x86_64-conda_el8-linux-gnu   # [linux and x86_64]
+  - aarch64-conda_el8-linux-gnu  # [linux and aarch64]
+
+OSX_SDK_DIR:                                  # [osx]
+  - /opt                                      # [osx and x86_64]
+  - /Library/Developer/CommandLineTools/SDKs  # [osx and arm64]
+
+# TODO: These are only necessary as we transition to using the stdlib('c') macro. They should be
+# removed once it is safe to do so.
+CONDA_BUILD_SYSROOT:
+  - /opt/MacOSX10.15.sdk                                     # [osx and x86_64]
+  - /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk  # [osx and arm64]
+macos_min_version:
+  - 10.15 # [osx and x86_64]
+  - 12.1  # [osx and arm64]
+macos_machine:
+  - x86_64-apple-darwin13.4.0  # [osx and x86_64]
+  - arm64-apple-darwin20.0.0   # [osx and arm64]
+MACOSX_DEPLOYMENT_TARGET:
+  - 10.15 # [osx and x86_64]
+  - 12.1  # [osx and arm64]
+
+## GLOBAL pinnings
+abseil_cpp:
+  - '20230802.0'
+alsa_lib:
+  - '1.2'
+ampl_mp:
+  - '3.1'
+aom:
+  - '3.12'
+armadillo:
+  - '12'
+arpack:
+  - '3.9'
+arrow_cpp:
+  - 23.0.1
+assimp:
+  - 6.0.2
+at_spi2_core:
+  - '2.36'
+atk_1_0:
+  - 2.38.0
+attr:
+  - '2.5'
+aws_c_auth:
+  - 0.9.4
+aws_c_cal:
+  - 0.9.13
+aws_c_common:
+  - 0.12.6
+aws_c_compression:
+  - 0.3.1
+aws_c_event_stream:
+  - 0.5.9
+aws_c_http:
+  - 0.10.7
+aws_c_io:
+  - 0.23.3
+aws_c_mqtt:
+  - 0.13.3
+aws_c_s3:
+  - 0.11.3
+aws_c_sdkutils:
+  - 0.2.4
+aws_checksums:
+  - 0.2.8
+aws_crt_cpp:
+  - 0.35.4
+aws_sdk_cpp:
+  - 1.11.720
+azure_core_cpp:
+  - 1.16.1
+azure_identity_cpp:
+  - 1.13.2
+azure_storage_blobs_cpp:
+  - 12.15.0
+azure_storage_common_cpp:
+  - 12.11.0
+azure_storage_files_datalake_cpp:
+  - 12.13.0
+backtrace:
+  - '20241216'
+blosc:
+  - '1'
+brotli:
+  - '1'
+brunsli:
+  - '0'
+bzip2:
+  - '1'
+c_ares:
+  - '1'
+c_blosc2:
+  - '2.22'
+cairo:
+  - '1'
+capnproto:
+  - 1.1.0
+ceres_solver:
+  - '2.2'
+cfitsio:
+  - 4.6.3
+charls:
+  - '2.4'
+coin_or_cbc:
+  - '2.10'
+coin_or_cgl:
+  - '0.60'
+coin_or_clp:
+  - '1.17'
+coin_or_osi:
+  - '0.108'
+coin_or_utils:
+  - '2.11'
+cryptography_vectors:
+  - 46.0.5
+cuda_cudart:
+  - '13'
+cuda_cupti:
+  - '13'
+cuda_nvrtc:
+  - '13'
+cuda_nvtx:
+  - '13'
+cuda_opencl:
+  - '13'
+cudnn:
+  - '9'
+cutensor:
+  - '2'
+cyrus_sasl:
+  - 2.1.28
+dal:
+  - '2023'
+dav1d:
+  - 1.2.1
+dbus:
+  - '1'
+dpcpp_cpp_rt:
+  - '2023'
+eigen:
+  - 3.3.7
+elfutils:
+  - '0.194'
+epoxy:
+  - '1.5'
+expat:
+  - '2'
+ffmpeg:
+  - '8'
+fftw:
+  - '3.3'
+flatbuffers:
+  - 25.2.10
+fmt:
+  - '12'
+fontconfig:
+  - '2'
+freeglut:
+  - '3'
+freetds:
+  - '1'
+freetype:
+  - '2'
+freexl:
+  - '2'
+fribidi:
+  - '1'
+g2clib:
+  - '1.6'
+gcab:
+  - '1'
+gdbm:
+  - '1.18'
+gdk_pixbuf:
+  - '2'
+geos:
+  - 3.10.6
+geotiff:
+  - '1.7'
+getopt_win32:
+  - '0.1'
+gettext:
+  - '0'
+gflags:
+  - '2.3'
+giflib:
+  - '5.2'
+gl2ps:
+  - 1.4.2
+glew:
+  - '2.2'
+glfw:
+  - '3'
+glib:
+  - 2
+glog:
+  - '0.5'
+glpk:
+  - '4.65'
+glslang:
+  - '15'
+gmp:
+  - 6.3.0
+gnupg:
+  - '2.4'
+gnutls:
+  - '3.8'
+graphite2:
+  - '1'
+gsl:
+  - '2.7'
+gst_plugins_base:
+  - '1.26'
+gst_plugins_good:
+  - '1.26'
+gstreamer:
+  - '1.26'
+gstreamer_orc:
+  - '0.4'
+gtest:
+  - 1.17.0
+gtk3:
+  - '3'
+gts:
+  - '0.7'
+harfbuzz:
+  - '12'
+hdf4:
+  - 4.2.13
+hdf5:
+  - 2.0.0
+hdfeos2:
+  - 2.20
+hdfeos5:
+  - 5.1
+hidapi:
+  - '0.8'
+icc_rt:
+  - 2022.1.0
+icu:
+  - '73'
+igraph:
+  - '0.10'
+intel_cmplr_lib_rt:
+  - '2025'
+intel_cmplr_lib_ur:
+  - '2025'
+intel_fortran_rt:
+  - '2025'
+intel_gmmlib:
+  - '22'
+intel_media_driver:
+  - '26.1'
+intel_opencl_rt:
+  - '2025'
+intel_sycl_rt:
+  - '2025'
+isl:
+  - '0.22'
+jack:
+  - '1.9'
+jansson:
+  - '2'
+jasper:
+  - '4'
+jbig2dec:
+  - '0.20'
+jemalloc:
+  - 5.3.0
+jemalloc_local:
+  - 5.3.0
+jpeg:
+  - 9e
+json_c:
+  - '0.18'
+jsoncpp:
+  - 1.9.6
+jxrlib:
+  - '1.2'
+kealib:
+  - '1.6'
+khronos_opencl_icd_loader:
+  - 2025.7.22
+krb5:
+  - '1.22'
+lame:
+  - '3.100'
+lcms2:
+  - '2'
+leptonica:
+  - '1.82'
+lerc:
+  - '4'
+level_zero:
+  - '1'
+leveldb:
+  - '1.23'
+libabseil:
+  - '20260107'
+libacl:
+  - '2.3'
+libaec:
+  - '1'
+libaio:
+  - '0.3'
+libapr:
+  - '1'
+libapriconv:
+  - '1'
+libaprutil:
+  - '1'
+libarchive:
+  - '3.8'
+libasprintf:
+  - '0'
+libass:
+  - 0.17.4
+libassuan:
+  - '3'
+libavif:
+  - '1'
+libboost:
+  - 1.88.0
+libboost_devel:
+  - 1.88.0
+libboost_python:
+  - '1.88'
+libbrotlicommon:
+  - '1.2'
+libbrotlidec:
+  - '1.2'
+libbrotlienc:
+  - '1.2'
+libcap:
+  - '2.77'
+libclang13:
+  - 21.1.8
+libclang_cpp10:
+  - '10.0'
+libclang_cpp12:
+  - '12.0'
+libclang_cpp14:
+  - '14.0'
+libclang_cpp17:
+  - '17.0'
+libclang_cpp19_1:
+  - '19.1'
+libclang_cpp20_1:
+  - '20.1'
+libclang_cpp21_1:
+  - '21.1'
+libcrc32c:
+  - '1.1'
+libcryptominisat:
+  - '5.12'
+libcublas:
+  - '13'
+libcudnn:
+  - '9'
+libcudnn_jit:
+  - '9'
+libcufft:
+  - '12'
+libcufile:
+  - '1'
+libcuobjclient:
+  - '1'
+libcups:
+  - '2.4'
+libcurand:
+  - '10'
+libcurl:
+  - '8'
+libcusolver:
+  - '12'
+libcusparse:
+  - '12'
+libdap4:
+  - '3.19'
+libde265:
+  - 1.0.15
+libdeflate:
+  - '1.22'
+libdrm:
+  - '2.4'
+libebm:
+  - 0.4.4
+libedit:
+  - '3.1'
+libegl:
+  - '1'
+libev:
+  - '4.33'
+libevent:
+  - 2.1.12
+libexpat:
+  - '2'
+libfaiss:
+  - 1.0.0
+libffi:
+  - '3.4'
+libflac:
+  - '1.5'
+libflang:
+  - 20.1.8
+libflang_rt:
+  - 21.1.8
+libgcrypt:
+  - '1'
+libgd:
+  - '2.3'
+libgdal:
+  - '3.11'
+libgdal_core:
+  - '3.11'
+libgettextpo:
+  - '0'
+libgit2:
+  - '1.6'
+libgl:
+  - '1'
+libgles:
+  - '1'
+libglib:
+  - '2'
+libglu:
+  - '9'
+libglvnd:
+  - '1'
+libglx:
+  - '1'
+libgpg_error:
+  - '1'
+libgrpc:
+  - '1.78'
+libgsasl:
+  - '1'
+libgsf:
+  - '1.14'
+libheif:
+  - '1.19'
+libhiredis:
+  - '1.3'
+libhwloc:
+  - 2.12.1
+libiconv:
+  - '1'
+libidn2:
+  - '2'
+libintl:
+  - '0'
+libjpeg_turbo:
+  - '3'
+libkml:
+  - '1.3'
+libkrb5:
+  - '1.22'
+libksba:
+  - '1.6'
+liblief:
+  - '0.17'
+libllvm17:
+  - '17.0'
+libllvm19:
+  - '19.1'
+libllvm20:
+  - '20.1'
+libllvm21:
+  - '21.1'
+libllvm_c17:
+  - '17.0'
+libllvm_c19:
+  - '19.1'
+libllvm_c20:
+  - '20.1'
+libllvm_c21:
+  - '21.1'
+libltdl:
+  - '2.6'
+libmamba:
+  - '2.3'
+libmambapy:
+  - '2.3'
+libmklml:
+  - 2019.0.5
+libmlir12:
+  - '12.0'
+libmlir17:
+  - '17.0'
+libmlir19:
+  - '19.1'
+libmlir20:
+  - '20.1'
+libmlir21:
+  - '21.1'
+libmpdec:
+  - '4'
+libmpdecxx:
+  - '4'
+libnetcdf:
+  - '4'
+libnghttp2:
+  - '1.67'
+libnl:
+  - '3'
+libnpp:
+  - '13'
+libnsl:
+  - '2.0'
+libntlm:
+  - '1'
+libnuma:
+  - '2'
+libnvcomp:
+  - '5'
+libnvfatbin:
+  - '13'
+libnvjitlink:
+  - '13'
+libnvjpeg:
+  - '13'
+libogg:
+  - '1.3'
+libopenblas:
+  - '0'
+libopengl:
+  - '1'
+libopenjpeg:
+  - '2.5'
+libopus:
+  - '1'
+libortools:
+  - '9.9'
+libosqp:
+  - 1.0.0
+libpcap:
+  - '1.10'
+libpciaccess:
+  - '0.18'
+libpng:
+  - '1.6'
+libpq:
+  - '17'
+libprotobuf:
+  - 6.33.5
+libqdldl:
+  - 0.1.8
+librdkafka:
+  - '2.2'
+libre2_11:
+  - '2025'
+librsvg:
+  - '2'
+libseccomp:
+  - '2'
+libsentencepiece:
+  - 0.2.1
+libsndfile:
+  - '1.2'
+libsodium:
+  - 1.0.21
+libspatialindex:
+  - 2.1.0
+libspatialite:
+  - '5.1'
+libssh2:
+  - '1'
+libtasn1:
+  - '4'
+libtensorflow:
+  - 2.18.1
+libtensorflow_cc:
+  - 2.18.1
+libtheora:
+  - '1.2'
+libthrift:
+  - '0.22'
+libtiff:
+  - '4'
+libtirpc:
+  - '1.3'
+libtmglib:
+  - '3'
+libtorch:
+  - '2.8'
+libunistring:
+  - '1'
+libunwind:
+  - '1'
+libutf8proc:
+  - '2'
+libuuid:
+  - '1'
+libuv:
+  - '1'
+libva:
+  - '2'
+libvorbis:
+  - '1'
+libvpl:
+  - '2.15'
+libvpx:
+  - '1.15'
+libvulkan:
+  - 1.4
+libwebp:
+  - 1.3.2
+libwebp_base:
+  - '1'
+libxcb:
+  - '1'
+libxcrypt:
+  - 4.5.2
+libxkbcommon:
+  - '1'
+libxkbfile:
+  - '1'
+libxml2:
+  - '2.13'
+libxmlsec1:
+  - '1.3'
+libxslt:
+  - '1'
+libzlib:
+  - '1'
+libzlib_wapi:
+  - '1'
+libzopfli:
+  - '1.0'
+llvm_openmp:
+  - 21.1.8
+lmdb:
+  - '0'
+lz4_c:
+  - '1.9'
+lzo:
+  - '2'
+macports_legacy_support:
+  - '1'
+mbedtls:
+  - '3.5'
+mesalib:
+  - '25.1'
+metis:
+  - '5.1'
+minizip:
+  - '4'
+mkl:
+  - '2025'
+mkl_dpcpp:
+  - '2023'
+mkl_service:
+  - '2'
+mpc:
+  - '1'
+mpfr:
+  - '4'
+mpg123:
+  - '1.33'
+mpich:
+  - '4'
+mysql_libs:
+  - '9.3'
+nanobind_abi:
+  - '15'
+nccl:
+  - '2'
+ncurses:
+  - '6'
+nettle:
+  - '4.0'
+nlopt:
+  - '2.7'
+npth:
+  - '1'
+nspr:
+  - '4'
+nss:
+  - '3'
+ntbtls:
+  - '0'
+ocl_icd:
+  - '2'
+oniguruma:
+  - '6.9'
+onnxruntime_cpp:
+  - 1.22.2
+onnxruntime_novec_cpp:
+  - 1.22.2
+openblas:
+  - 0
+openblas_devel:
+  - '0'
+openh264:
+  - '2.6'
+openjpeg:
+  - '2'
+openldap:
+  - '2.6'
+openmpi:
+  - '5.0'
+openssl:
+  - '3'
+orc:
+  - 2.2.0
+p11_kit:
+  - '0.26'
+pango:
+  - '1'
+pcre:
+  - '8'
+pcre2:
+  - '10.46'
+pdal:
+  - '2.5'
+perl:
+  - 5.42
+pixman:
+  - 0.46.4
+popt:
+  - '1'
+proj:
+  - 9.7.1
+ptscotch:
+  - 6.0.9
+pugixml:
+  - '1.11'
+pulseaudio_client:
+  - '17.0'
+pulseaudio_daemon:
+  - '17.0'
+py_lief:
+  - '0.17'
+pyqt:
+  - '6.10'
+pyqtchart:
+  - '5.15'
+pyqtwebengine:
+  - '6.10'
+python_igraph:
+  - '0.10'
+pytorch:
+  - '2.8'
+qhull:
+  - '2020.2'
+qpdf:
+  - '11'
+qt:
+  - '6.10'
+qt5compat:
+  - '6.10'
+qt_main:
+  - '6.10'
+qt_webengine:
+  - '5.15'
+qtbase:
+  - '6.10'
+qtdeclarative:
+  - '6.10'
+qtimageformats:
+  - '6.10'
+qtshadertools:
+  - '6.10'
+qtsvg:
+  - '6.10'
+qttools:
+  - '6.10'
+qttranslations:
+  - '6.10'
+qtwayland:
+  - '6.10'
+qtwebchannel:
+  - '6.10'
+qtwebengine:
+  - '6.10'
+qtwebsockets:
+  - '6.10'
+quantlib:
+  - '1'
+rdkit:
+  - 2025.3.6
+rdma_core:
+  - '61.0'
+re2:
+  - '2025'
+readline:
+  - '8'
+reproc:
+  - '14.2'
+reproc_cpp:
+  - '14.2'
+rhash:
+  - '1'
+ruby:
+  - '3.4'
+s2n:
+  - 1.6.2
+scotch:
+  - 6.0.9
+serf:
+  - '1.3'
+shaderc:
+  - '2025.5'
+simdjson:
+  - '3.10'
+sip:
+  - '6.15'
+sleef:
+  - '3'
+snappy:
+  - '1'
+soxr:
+  - 0.1.3
+spdlog:
+  - '1'
+spdlog_fmt_embed:
+  - '1'
+spirv_tools:
+  - '2025'
+sqlite:
+  - '3'
+suitesparse:
+  - '7'
+svt_av1:
+  - 3.1.2
+tbb:
+  - 2022.3.0
+tesseract:
+  - 5.2.0
+tiledb:
+  - '2.30'
+tk:
+  - '8.6'
+ucc:
+  - '1'
+ucx:
+  - '1.18'
+unixodbc:
+  - '2.3'
+util_linux:
+  - '2.39'
+vc:
+  - '14'
+vtk_base:
+  - 9.5.2
+vtk_io_ffmpeg:
+  - 9.5.2
+wayland:
+  - '1.24'
+x264:
+  - 1!152.20180806
+xcb_util:
+  - '0.4'
+xcb_util_cursor:
+  - '0.1'
+xcb_util_image:
+  - '0.4'
+xcb_util_keysyms:
+  - '0.4'
+xcb_util_renderutil:
+  - '0.3'
+xcb_util_wm:
+  - '0.4'
+xerces_c:
+  - '3.3'
+xorg_libice:
+  - '1'
+xorg_libsm:
+  - '1'
+xorg_libx11:
+  - '1'
+xorg_libxau:
+  - '1'
+xorg_libxcomposite:
+  - '0'
+xorg_libxcursor:
+  - '1'
+xorg_libxdamage:
+  - '1'
+xorg_libxdmcp:
+  - '1'
+xorg_libxext:
+  - '1'
+xorg_libxfixes:
+  - '6'
+xorg_libxft:
+  - '2'
+xorg_libxi:
+  - '1'
+xorg_libxinerama:
+  - '1.1'
+xorg_libxmu:
+  - '1'
+xorg_libxrandr:
+  - '1'
+xorg_libxrender:
+  - '0.9'
+xorg_libxscrnsaver:
+  - '1'
+xorg_libxshmfence:
+  - '1'
+xorg_libxt:
+  - '1'
+xorg_libxtst:
+  - '1'
+xorg_libxxf86vm:
+  - '1'
+xorg_xextproto:
+  - '7'
+xorg_xorgproto:
+  - '2024'
+xxhash:
+  - 0.8.0
+xz:
+  - '5'
+yaml:
+  - '0.2'
+yaml_cpp:
+  - '0.8'
+zeromq:
+  - '4.3'
+zfp:
+  - '1'
+zlib:
+  - '1.3'
+zlib_ng:
+  - '2.0'
+zstd:
+  - '1.5'
