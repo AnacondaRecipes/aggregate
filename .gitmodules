@@ -12781,3 +12781,7 @@
 	path = ds_store-feedstock
 	url = ../ds_store-feedstock
 	branch = main
+[submodule "snowpark-connect-deps-iceberg-feedstock"]
+	path = snowpark-connect-deps-iceberg-feedstock
+	url = ../snowpark-connect-deps-iceberg-feedstock
+	branch = main
