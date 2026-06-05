@@ -1866,10 +1866,6 @@
 	path = parameterized-feedstock
 	url = ../parameterized-feedstock
 	branch = master
-[submodule "libgsasl-feedstock"]
-	path = libgsasl-feedstock
-	url = ../libgsasl-feedstock
-	branch = master
 [submodule "libgcrypt-feedstock"]
 	path = libgcrypt-feedstock
 	url = ../libgcrypt-feedstock
@@ -12781,7 +12777,27 @@
 	path = ds_store-feedstock
 	url = ../ds_store-feedstock
 	branch = main
-[submodule "snowpark-connect-deps-iceberg-feedstock"]
-	path = snowpark-connect-deps-iceberg-feedstock
-	url = ../snowpark-connect-deps-iceberg-feedstock
+[submodule "arviz-plots-feedstock"]
+	path = arviz-plots-feedstock
+	url = ../arviz-plots-feedstock
+	branch = main
+[submodule "dmgbuild-feedstock"]
+	path = dmgbuild-feedstock
+	url = ../dmgbuild-feedstock
+	branch = main
+[submodule "jupyter-server-mcp-feedstock"]
+	path = jupyter-server-mcp-feedstock
+	url = ../jupyter-server-mcp-feedstock
+	branch = main
+[submodule "shtab-feedstock"]
+	path = shtab-feedstock
+	url = ../shtab-feedstock
+	branch = main
+[submodule "trl-feedstock"]
+	path = trl-feedstock
+	url = ../trl-feedstock
+	branch = main
+[submodule "tyro-feedstock"]
+	path = tyro-feedstock
+	url = ../tyro-feedstock
 	branch = main
