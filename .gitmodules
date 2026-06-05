@@ -12749,3 +12749,6 @@
 	path = pyglfw-feedstock
 	url = ../pyglfw-feedstock
 	branch = main
+[submodule "torchao-feedstock"]
+	path = torchao-feedstock
+	url = git@github.com-anaconda:AnacondaRecipes/torchao-feedstock.git
