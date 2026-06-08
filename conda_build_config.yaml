@@ -61,12 +61,12 @@ rust_compiler_version:
 rust_nightly_compiler:
   - rust-nightly
 rust_nightly_compiler_version:
-  - 1.92.0_2025-10-13
+  - 1.96.0_2026-04-01
 # use {{ compiler('rust-gnu') }} when requiring a build using the m2w64-toolchain
 rust_gnu_compiler:             # [win and x86_64]
   - rust-gnu                   # [win and x86_64]
 rust_gnu_compiler_version:     # [win and x86_64]
-  - 1.93.1                     # [win and x86_64]
+  - 1.96.0                     # [win and x86_64]
 VERBOSE_AT:
   - V=1
 VERBOSE_CM:
