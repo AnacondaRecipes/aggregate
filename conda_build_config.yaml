@@ -184,7 +184,7 @@ aws_c_auth:
 aws_c_cal:
   - 0.9.13
 aws_c_common:
-  - 0.12.6
+  - 0.13.1
 aws_c_compression:
   - 0.3.2
 aws_c_event_stream:
@@ -228,7 +228,7 @@ bzip2:
 c_ares:
   - '1'
 c_blosc2:
-  - '2.22'
+  - '3.1'
 cairo:
   - '1'
 capnproto:
@@ -250,7 +250,7 @@ coin_or_osi:
 coin_or_utils:
   - '2.11'
 cryptography_vectors:
-  - 46.0.7
+  - 48.0.0
 cyrus_sasl:
   - '2'
 dal:
@@ -302,7 +302,7 @@ geos:
 geotiff:
   - '1.7'
 getopt_win32:
-  - '0.1'
+  - '1.0'
 gettext:
   - '0'
 gflags:
@@ -678,7 +678,7 @@ libtirpc:
 libtmglib:
   - '3'
 libtorch:
-  - '2.11'
+  - '2.12'
 libunistring:
   - '1'
 libunwind:
@@ -836,7 +836,7 @@ pyqtwebengine:
 python_igraph:
   - '1.0'
 pytorch:
-  - '2.11'
+  - '2.12'
 qhull:
   - '2020.2'
 qpdf:
@@ -918,7 +918,7 @@ suitesparse:
 svt_av1:
   - 3.1.2
 tbb:
-  - 2022.3.0
+  - 2023.0.0
 tesseract:
   - 5.2.0
 tiledb:
@@ -1006,7 +1006,7 @@ xorg_xextproto:
 xorg_xorgproto:
   - '2024'
 xxhash:
-  - 0.8.0
+  - 0.8.3
 xz:
   - '5'
 yaml:
