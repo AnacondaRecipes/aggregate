@@ -12801,3 +12801,15 @@
 	path = tyro-feedstock
 	url = ../tyro-feedstock
 	branch = main
+[submodule "briefcase-feedstock"]
+	path = briefcase-feedstock
+	url = ../briefcase-feedstock
+	branch = main
+[submodule "jupyter-ai-feedstock"]
+	path = jupyter-ai-feedstock
+	url = ../jupyter-ai-feedstock
+	branch = main
+[submodule "snowpark-connect-deps-iceberg-feedstock"]
+	path = snowpark-connect-deps-iceberg-feedstock
+	url = ../snowpark-connect-deps-iceberg-feedstock
+	branch = main
