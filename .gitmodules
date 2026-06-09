@@ -12813,3 +12813,7 @@
 	path = snowpark-connect-deps-iceberg-feedstock
 	url = ../snowpark-connect-deps-iceberg-feedstock
 	branch = main
+[submodule "burner-redis-feedstock"]
+	path = burner-redis-feedstock
+	url = ../burner-redis-feedstock
+	branch = main
