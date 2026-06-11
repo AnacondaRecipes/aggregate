@@ -12817,3 +12817,7 @@
 	path = burner-redis-feedstock
 	url = ../burner-redis-feedstock
 	branch = main
+[submodule "aext-events-server-feedstock"]
+	path = aext-events-server-feedstock
+	url = ../aext-events-server-feedstock
+	branch = main
