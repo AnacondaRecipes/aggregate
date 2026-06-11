@@ -12829,3 +12829,7 @@
 	path = aext-notebook-info-server-feedstock
 	url = ../aext-notebook-info-server-feedstock
 	branch = main
+[submodule "aext-resource-manager-server-feedstock"]
+	path = aext-resource-manager-server-feedstock
+	url = ../aext-resource-manager-server-feedstock
+	branch = main
