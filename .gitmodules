@@ -12833,3 +12833,7 @@
 	path = aext-resource-manager-server-feedstock
 	url = ../aext-resource-manager-server-feedstock
 	branch = main
+[submodule "aext-data-catalog-server-feedstock"]
+	path = aext-data-catalog-server-feedstock
+	url = ../aext-data-catalog-server-feedstock
+	branch = main
