@@ -12837,3 +12837,7 @@
 	path = aext-data-catalog-server-feedstock
 	url = ../aext-data-catalog-server-feedstock
 	branch = main
+[submodule "hdfeos2-feedstock"]
+	path = hdfeos2-feedstock
+	url = ../hdfeos2-feedstock
+	branch = main
