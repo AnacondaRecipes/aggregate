@@ -12825,3 +12825,7 @@
 	path = aext-lms-notebooks-server-feedstock
 	url = ../aext-lms-notebooks-server-feedstock
 	branch = main
+[submodule "aext-notebook-info-server-feedstock"]
+	path = aext-notebook-info-server-feedstock
+	url = ../aext-notebook-info-server-feedstock
+	branch = main
