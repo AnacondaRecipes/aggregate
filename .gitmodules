@@ -12821,3 +12821,7 @@
 	path = aext-events-server-feedstock
 	url = ../aext-events-server-feedstock
 	branch = main
+[submodule "aext-lms-notebooks-server-feedstock"]
+	path = aext-lms-notebooks-server-feedstock
+	url = ../aext-lms-notebooks-server-feedstock
+	branch = main
