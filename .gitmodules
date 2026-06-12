@@ -12813,10 +12813,6 @@
 	path = snowpark-connect-deps-iceberg-feedstock
 	url = ../snowpark-connect-deps-iceberg-feedstock
 	branch = main
-[submodule "burner-redis-feedstock"]
-	path = burner-redis-feedstock
-	url = ../burner-redis-feedstock
-	branch = main
 [submodule "aext-events-server-feedstock"]
 	path = aext-events-server-feedstock
 	url = ../aext-events-server-feedstock
@@ -12837,15 +12833,7 @@
 	path = aext-data-catalog-server-feedstock
 	url = ../aext-data-catalog-server-feedstock
 	branch = main
-[submodule "hdfeos2-feedstock"]
-	path = hdfeos2-feedstock
-	url = ../hdfeos2-feedstock
+[submodule "keras-hub-feedstock"]
+	path = keras-hub-feedstock
+	url = ../keras-hub-feedstock
 	branch = main
-[submodule "aext-cloud-feedstock"]
-	path = aext-cloud-feedstock
-	url = ../aext-cloud-feedstock
-	branch = main
-[submodule "libgsasl-feedstock"]
-	path = libgsasl-feedstock
-	url = ../libgsasl-feedstock
-	branch = master
