@@ -182,15 +182,15 @@ av:
 aws_c_auth:
   - 0.10.1
 aws_c_cal:
-  - 0.9.13
+  - 0.9.14
 aws_c_common:
-  - 0.13.1
+  - 0.14.0
 aws_c_compression:
   - 0.3.2
 aws_c_event_stream:
   - 0.6.1
 aws_c_http:
-  - 0.10.13
+  - 0.11.0
 aws_c_io:
   - 0.26.3
 aws_c_mqtt:
@@ -684,7 +684,7 @@ libunistring:
 libunwind:
   - '1'
 libutf8proc:
-  - '2'
+  - '2.11'
 libuuid:
   - '1'
 libuv:
