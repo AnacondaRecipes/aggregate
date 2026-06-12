@@ -12849,3 +12849,7 @@
 	path = libgsasl-feedstock
 	url = ../libgsasl-feedstock
 	branch = master
+[submodule "libnvpl-feedstock"]
+	path = libnvpl-feedstock
+	url = ../libnvpl-feedstock
+	branch = main
