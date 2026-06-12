@@ -12845,3 +12845,7 @@
 	path = aext-cloud-feedstock
 	url = ../aext-cloud-feedstock
 	branch = main
+[submodule "libgsasl-feedstock"]
+	path = libgsasl-feedstock
+	url = ../libgsasl-feedstock
+	branch = master
