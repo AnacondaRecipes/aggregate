@@ -12841,3 +12841,7 @@
 	path = hdfeos2-feedstock
 	url = ../hdfeos2-feedstock
 	branch = main
+[submodule "aext-cloud-feedstock"]
+	path = aext-cloud-feedstock
+	url = ../aext-cloud-feedstock
+	branch = main
