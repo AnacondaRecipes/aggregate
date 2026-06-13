@@ -188,7 +188,7 @@ aws_c_common:
 aws_c_compression:
   - 0.3.2
 aws_c_event_stream:
-  - 0.6.1
+  - 0.7.1
 aws_c_http:
   - 0.11.0
 aws_c_io:
@@ -514,9 +514,9 @@ libgcrypt:
 libgd:
   - '2.3'
 libgdal:
-  - '3.12'
+  - '3.13'
 libgdal_core:
-  - '3.12'
+  - '3.13'
 libgettextpo:
   - '0'
 libgit2:
