@@ -12841,3 +12841,7 @@
 	path = simplejpeg-feedstock
 	url = ../simplejpeg-feedstock
 	branch = main
+[submodule "z3prover-feedstock"]
+	path = z3prover-feedstock
+	url = ../z3prover-feedstock
+	branch = main
