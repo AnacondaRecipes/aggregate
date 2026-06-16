@@ -12717,3 +12717,7 @@
 	path = libnvpl-sparse-feedstock
 	url = ../libnvpl-sparse-feedstock
 	branch = main
+[submodule "pyrefly-feedstock"]
+	path = pyrefly-feedstock
+	url = ../pyrefly-feedstock
+	branch = main
