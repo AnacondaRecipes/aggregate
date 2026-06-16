@@ -12841,3 +12841,7 @@
 	path = simplejpeg-feedstock
 	url = ../simplejpeg-feedstock
 	branch = main
+[submodule "pyrefly-feedstock"]
+	path = pyrefly-feedstock
+	url = ../pyrefly-feedstock
+	branch = main
