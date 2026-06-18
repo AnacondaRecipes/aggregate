@@ -12721,3 +12721,7 @@
 	path = pyrefly-feedstock
 	url = ../pyrefly-feedstock
 	branch = main
+[submodule "libmathdx-feedstock"]
+	path = libmathdx-feedstock
+	url = ../libmathdx-feedstock
+	branch = main
