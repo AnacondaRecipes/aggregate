@@ -12721,11 +12721,39 @@
 	path = pyrefly-feedstock
 	url = ../pyrefly-feedstock
 	branch = main
-[submodule "libmathdx-feedstock"]
-	path = libmathdx-feedstock
-	url = ../libmathdx-feedstock
+[submodule "libcudss-feedstock"]
+	path = libcudss-feedstock
+	url = ../libcudss-feedstock
 	branch = main
-[submodule "mathdx-feedstock"]
-	path = mathdx-feedstock
-	url = ../mathdx-feedstock
+[submodule "libcufftmp-feedstock"]
+	path = libcufftmp-feedstock
+	url = ../libcufftmp-feedstock
+	branch = main
+[submodule "libcusolvermp-feedstock"]
+	path = libcusolvermp-feedstock
+	url = ../libcusolvermp-feedstock
+	branch = main
+[submodule "libnvpl-lapack-feedstock"]
+	path = libnvpl-lapack-feedstock
+	url = ../libnvpl-lapack-feedstock
+	branch = main
+[submodule "libnvpl-scalapack-feedstock"]
+	path = libnvpl-scalapack-feedstock
+	url = ../libnvpl-scalapack-feedstock
+	branch = main
+[submodule "libnvpl-tensor-feedstock"]
+	path = libnvpl-tensor-feedstock
+	url = ../libnvpl-tensor-feedstock
+	branch = main
+[submodule "numbast-feedstock"]
+	path = numbast-feedstock
+	url = ../numbast-feedstock
+	branch = main
+[submodule "pybreaker-feedstock"]
+	path = pybreaker-feedstock
+	url = ../pybreaker-feedstock
+	branch = main
+[submodule "z3prover-feedstock"]
+	path = z3prover-feedstock
+	url = ../z3prover-feedstock
 	branch = main
