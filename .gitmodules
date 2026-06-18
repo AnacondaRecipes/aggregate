@@ -12725,3 +12725,7 @@
 	path = libmathdx-feedstock
 	url = ../libmathdx-feedstock
 	branch = main
+[submodule "mathdx-feedstock"]
+	path = mathdx-feedstock
+	url = ../mathdx-feedstock
+	branch = main
