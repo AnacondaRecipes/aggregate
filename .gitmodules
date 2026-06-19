@@ -12757,3 +12757,7 @@
 	path = z3prover-feedstock
 	url = ../z3prover-feedstock
 	branch = main
+[submodule "python-discovery-feedstock"]
+	path = python-discovery-feedstock
+	url = ../python-discovery-feedstock
+	branch = main
