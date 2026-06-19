@@ -12757,7 +12757,15 @@
 	path = z3prover-feedstock
 	url = ../z3prover-feedstock
 	branch = main
-[submodule "python-discovery-feedstock"]
-	path = python-discovery-feedstock
-	url = ../python-discovery-feedstock
+[submodule "libmathdx-feedstock"]
+	path = libmathdx-feedstock
+	url = ../libmathdx-feedstock
+	branch = main
+[submodule "mathdx-feedstock"]
+	path = mathdx-feedstock
+	url = ../mathdx-feedstock
+	branch = main
+[submodule "pyld-feedstock"]
+	path = pyld-feedstock
+	url = ../pyld-feedstock
 	branch = main
