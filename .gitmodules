@@ -12769,3 +12769,7 @@
 	path = pyld-feedstock
 	url = ../pyld-feedstock
 	branch = main
+[submodule "python-discovery-feedstock"]
+	path = python-discovery-feedstock
+	url = ../python-discovery-feedstock
+	branch = main
