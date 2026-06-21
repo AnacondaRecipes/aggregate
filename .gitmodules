@@ -12777,3 +12777,7 @@
 	path = addict-feedstock
 	url = ../addict-feedstock
 	branch = main
+[submodule "nvmath-feedstock"]
+	path = nvmath-feedstock
+	url = ../nvmath-feedstock
+	branch = main
