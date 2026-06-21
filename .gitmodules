@@ -12773,3 +12773,7 @@
 	path = python-discovery-feedstock
 	url = ../python-discovery-feedstock
 	branch = main
+[submodule "addict-feedstock"]
+	path = addict-feedstock
+	url = ../addict-feedstock
+	branch = main
