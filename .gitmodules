@@ -12785,3 +12785,7 @@
 	path = mteb-feedstock
 	url = ../mteb-feedstock
 	branch = main
+[submodule "pytrec-eval-terrier-feedstock"]
+	path = pytrec-eval-terrier-feedstock
+	url = ../pytrec-eval-terrier-feedstock
+	branch = main
