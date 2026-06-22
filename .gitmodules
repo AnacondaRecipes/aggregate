@@ -12781,3 +12781,7 @@
 	path = nvmath-feedstock
 	url = ../nvmath-feedstock
 	branch = main
+[submodule "mteb-feedstock"]
+	path = mteb-feedstock
+	url = ../mteb-feedstock
+	branch = main
