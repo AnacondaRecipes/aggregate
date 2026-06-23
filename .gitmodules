@@ -12793,3 +12793,7 @@
 	path = fastar-feedstock
 	url = ../fastar-feedstock
 	branch = main
+[submodule "catboost-1.2.9-feedstock"]
+	path = catboost-1.2.9-feedstock
+	url = ../catboost-feedstock
+	branch = master-1.2.9
