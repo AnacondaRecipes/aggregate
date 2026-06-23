@@ -97,6 +97,7 @@ python:
   - "3.12"
   - "3.13"
   - "3.14"
+  - "3.15"  # [ANACONDA_ROCKET_ENABLE_PY315]
 # numpy will by default use a compatible ABI for the oldest still-supported numpy versions
 # `{{ pin_compatible("numpy") }}` is no longer needed as builds of numpy from version 2 have run_exports.
 numpy:
@@ -110,6 +111,11 @@ numpy:
   - 2.1
   # python 3.14
   - 2.3
+  # python 3.15
+  # TODO: numpy 2.6.0 is not released yet;
+  # upstream says py315 support starts with Python 3.15.0rc1 (~Jul 2026)
+  # keep 2.4 for now. Recheck when 2.6.0 is released.
+  - 2.4  # [ANACONDA_ROCKET_ENABLE_PY315]
 zip_keys:
   -
     - python
