@@ -12797,3 +12797,7 @@
 	path = catboost-1.2.9-feedstock
 	url = ../catboost-feedstock
 	branch = master-1.2.9
+[submodule "dbt-core-feedstock"]
+	path = dbt-core-feedstock
+	url = ../dbt-core-feedstock
+	branch = services
