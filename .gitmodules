@@ -12801,3 +12801,7 @@
 	path = dbt-core-feedstock
 	url = ../dbt-core-feedstock
 	branch = services
+[submodule "python-3.14-feedstock"]
+	path = python-3.14-feedstock
+	url = ../python-feedstock
+	branch = main-3.14
