@@ -4882,10 +4882,6 @@
 	path = enscons-feedstock
 	url = ../enscons-feedstock
 	branch = main
-[submodule "flask_cors-feedstock"]
-	path = flask_cors-feedstock
-	url = ../flask_cors-feedstock
-	branch = master
 [submodule "intreehooks-feedstock"]
 	path = intreehooks-feedstock
 	url = ../intreehooks-feedstock
@@ -12777,14 +12773,6 @@
 	path = addict-feedstock
 	url = ../addict-feedstock
 	branch = main
-[submodule "nvmath-feedstock"]
-	path = nvmath-feedstock
-	url = ../nvmath-feedstock
-	branch = main
-[submodule "mteb-feedstock"]
-	path = mteb-feedstock
-	url = ../mteb-feedstock
-	branch = main
 [submodule "pytrec-eval-terrier-feedstock"]
 	path = pytrec-eval-terrier-feedstock
 	url = ../pytrec-eval-terrier-feedstock
@@ -12797,10 +12785,6 @@
 	path = catboost-1.2.9-feedstock
 	url = ../catboost-feedstock
 	branch = master-1.2.9
-[submodule "dbt-core-feedstock"]
-	path = dbt-core-feedstock
-	url = ../dbt-core-feedstock
-	branch = services
 [submodule "python-3.14-feedstock"]
 	path = python-3.14-feedstock
 	url = ../python-feedstock
