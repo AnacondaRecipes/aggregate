@@ -12793,3 +12793,7 @@
 	path = runtimed-feedstock
 	url = ../runtimed-feedstock
 	branch = main
+[submodule "testscenarios-feedstock"]
+	path = testscenarios-feedstock
+	url = ../testscenarios-feedstock
+	branch = main
