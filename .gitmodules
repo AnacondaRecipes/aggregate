@@ -12789,11 +12789,43 @@
 	path = python-3.14-feedstock
 	url = ../python-feedstock
 	branch = main-3.14
-[submodule "runtimed-feedstock"]
-	path = runtimed-feedstock
-	url = ../runtimed-feedstock
+[submodule "adlfs-feedstock"]
+	path = adlfs-feedstock
+	url = ../adlfs-feedstock
 	branch = main
-[submodule "testscenarios-feedstock"]
-	path = testscenarios-feedstock
-	url = ../testscenarios-feedstock
+[submodule "blobfile-feedstock"]
+	path = blobfile-feedstock
+	url = ../blobfile-feedstock
+	branch = main
+[submodule "cbor2-feedstock"]
+	path = cbor2-feedstock
+	url = ../cbor2-feedstock
+	branch = main
+[submodule "fla-core-feedstock"]
+	path = fla-core-feedstock
+	url = ../fla-core-feedstock
+	branch = main
+[submodule "hf-transfer-feedstock"]
+	path = hf-transfer-feedstock
+	url = ../hf-transfer-feedstock
+	branch = main
+[submodule "modelscope-feedstock"]
+	path = modelscope-feedstock
+	url = ../modelscope-feedstock
+	branch = main
+[submodule "ollama-python-feedstock"]
+	path = ollama-python-feedstock
+	url = ../ollama-python-feedstock
+	branch = main
+[submodule "openai-harmony-feedstock"]
+	path = openai-harmony-feedstock
+	url = ../openai-harmony-feedstock
+	branch = main
+[submodule "schedulefree-feedstock"]
+	path = schedulefree-feedstock
+	url = ../schedulefree-feedstock
+	branch = main
+[submodule "warp-lang-feedstock"]
+	path = warp-lang-feedstock
+	url = ../warp-lang-feedstock
 	branch = main
