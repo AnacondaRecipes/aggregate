@@ -12829,3 +12829,7 @@
 	path = warp-lang-feedstock
 	url = ../warp-lang-feedstock
 	branch = main
+[submodule "pyspark-client-feedstock"]
+	path = pyspark-client-feedstock
+	url = ../pyspark-client-feedstock
+	branch = main
