@@ -694,7 +694,7 @@ libva:
 libvorbis:
   - '1'
 libvpl:
-  - '2.15'
+  - '2.16'
 libvpx:
   - '1.16'
 libwebp:
