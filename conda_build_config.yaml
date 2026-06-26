@@ -920,7 +920,7 @@ svt_av1:
 tbb:
   - 2023.0.0
 tesseract:
-  - 5.2.0
+  - 5.5.2
 tiledb:
   - '2.30'
 tk:
