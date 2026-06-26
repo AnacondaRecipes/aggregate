@@ -589,6 +589,8 @@ libmamba:
   - '2.3'
 libmambapy:
   - '2.3'
+libmathdx0:
+  - 0.3.1
 libmklml:
   - 2019.0.5
 libmlir12:
