@@ -12865,3 +12865,27 @@
 	path = standard-sunau-feedstock
 	url = ../standard-sunau-feedstock
 	branch = main
+[submodule "audioread-feedstock"]
+	path = audioread-feedstock
+	url = ../audioread-feedstock
+	branch = main
+[submodule "cuquantum-feedstock"]
+	path = cuquantum-feedstock
+	url = ../cuquantum-feedstock
+	branch = main
+[submodule "flash-linear-attention-feedstock"]
+	path = flash-linear-attention-feedstock
+	url = ../flash-linear-attention-feedstock
+	branch = main
+[submodule "pyspark-client-feedstock"]
+	path = pyspark-client-feedstock
+	url = ../pyspark-client-feedstock
+	branch = main
+[submodule "standard-aifc-feedstock"]
+	path = standard-aifc-feedstock
+	url = ../standard-aifc-feedstock
+	branch = main
+[submodule "trackio-feedstock"]
+	path = trackio-feedstock
+	url = ../trackio-feedstock
+	branch = main
