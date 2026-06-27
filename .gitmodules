@@ -12889,8 +12889,7 @@
 	path = trackio-feedstock
 	url = ../trackio-feedstock
 	branch = main
-[submodule "syft-feedstock"]
-	path = syft-feedstock
-	url = ../syft-feedstock
+[submodule "librosa-feedstock"]
+	path = librosa-feedstock
+	url = ../librosa-feedstock
 	branch = main
-
