@@ -12893,3 +12893,7 @@
 	path = librosa-feedstock
 	url = ../librosa-feedstock
 	branch = main
+[submodule "orbax-export-feedstock"]
+	path = orbax-export-feedstock
+	url = ../orbax-export-feedstock
+	branch = main
