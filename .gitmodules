@@ -10679,10 +10679,6 @@
 	path = sphinx-book-theme-feedstock
 	url = ../sphinx-book-theme-feedstock
 	branch = main
-[submodule "stack-feedstock"]
-	path = stack-feedstock
-	url = ../stack-feedstock
-	branch = main
 [submodule "opentelemetry-instrumentation-llamaindex-feedstock"]
 	path = opentelemetry-instrumentation-llamaindex-feedstock
 	url = ../opentelemetry-instrumentation-llamaindex-feedstock
@@ -12165,10 +12161,6 @@
 	path = chainlit-feedstock
 	url = ../chainlit-feedstock
 	branch = main
-[submodule "literalai-feedstock"]
-	path = literalai-feedstock
-	url = ../literalai-feedstock
-	branch = main
 [submodule "syncer-feedstock"]
 	path = syncer-feedstock
 	url = ../syncer-feedstock
@@ -12893,10 +12885,6 @@
 	path = librosa-feedstock
 	url = ../librosa-feedstock
 	branch = main
-[submodule "orbax-export-feedstock"]
-	path = orbax-export-feedstock
-	url = ../orbax-export-feedstock
-	branch = main
 [submodule "jaxtyping-feedstock"]
 	path = jaxtyping-feedstock
 	url = ../jaxtyping-feedstock
@@ -12904,4 +12892,16 @@
 [submodule "wadler-lindig-feedstock"]
 	path = wadler-lindig-feedstock
 	url = ../wadler-lindig-feedstock
+	branch = main
+[submodule "mlx-lm-feedstock"]
+	path = mlx-lm-feedstock
+	url = ../mlx-lm-feedstock
+	branch = main
+[submodule "types-certifi-feedstock"]
+	path = types-certifi-feedstock
+	url = ../types-certifi-feedstock
+	branch = main
+[submodule "word2number-feedstock"]
+	path = word2number-feedstock
+	url = ../word2number-feedstock
 	branch = main
