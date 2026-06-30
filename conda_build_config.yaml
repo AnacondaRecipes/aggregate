@@ -595,6 +595,8 @@ libmamba:
   - '2.3'
 libmambapy:
   - '2.3'
+libmathdx0:
+  - 0.3.1
 libmklml:
   - 2019.0.5
 libmlir12:
@@ -700,7 +702,7 @@ libva:
 libvorbis:
   - '1'
 libvpl:
-  - '2.15'
+  - '2.16'
 libvpx:
   - '1.16'
 libwebp:
@@ -926,7 +928,7 @@ svt_av1:
 tbb:
   - 2023.0.0
 tesseract:
-  - 5.2.0
+  - 5.5.2
 tiledb:
   - '2.30'
 tk:

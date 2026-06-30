@@ -4882,10 +4882,6 @@
 	path = enscons-feedstock
 	url = ../enscons-feedstock
 	branch = main
-[submodule "flask_cors-feedstock"]
-	path = flask_cors-feedstock
-	url = ../flask_cors-feedstock
-	branch = master
 [submodule "intreehooks-feedstock"]
 	path = intreehooks-feedstock
 	url = ../intreehooks-feedstock
@@ -12777,14 +12773,6 @@
 	path = addict-feedstock
 	url = ../addict-feedstock
 	branch = main
-[submodule "nvmath-feedstock"]
-	path = nvmath-feedstock
-	url = ../nvmath-feedstock
-	branch = main
-[submodule "mteb-feedstock"]
-	path = mteb-feedstock
-	url = ../mteb-feedstock
-	branch = main
 [submodule "pytrec-eval-terrier-feedstock"]
 	path = pytrec-eval-terrier-feedstock
 	url = ../pytrec-eval-terrier-feedstock
@@ -12797,3 +12785,111 @@
 	path = catboost-1.2.9-feedstock
 	url = ../catboost-feedstock
 	branch = master-1.2.9
+[submodule "python-3.14-feedstock"]
+	path = python-3.14-feedstock
+	url = ../python-feedstock
+	branch = main-3.14
+[submodule "adlfs-feedstock"]
+	path = adlfs-feedstock
+	url = ../adlfs-feedstock
+	branch = main
+[submodule "blobfile-feedstock"]
+	path = blobfile-feedstock
+	url = ../blobfile-feedstock
+	branch = main
+[submodule "cbor2-feedstock"]
+	path = cbor2-feedstock
+	url = ../cbor2-feedstock
+	branch = main
+[submodule "fla-core-feedstock"]
+	path = fla-core-feedstock
+	url = ../fla-core-feedstock
+	branch = main
+[submodule "hf-transfer-feedstock"]
+	path = hf-transfer-feedstock
+	url = ../hf-transfer-feedstock
+	branch = main
+[submodule "modelscope-feedstock"]
+	path = modelscope-feedstock
+	url = ../modelscope-feedstock
+	branch = main
+[submodule "ollama-python-feedstock"]
+	path = ollama-python-feedstock
+	url = ../ollama-python-feedstock
+	branch = main
+[submodule "openai-harmony-feedstock"]
+	path = openai-harmony-feedstock
+	url = ../openai-harmony-feedstock
+	branch = main
+[submodule "schedulefree-feedstock"]
+	path = schedulefree-feedstock
+	url = ../schedulefree-feedstock
+	branch = main
+[submodule "warp-lang-feedstock"]
+	path = warp-lang-feedstock
+	url = ../warp-lang-feedstock
+	branch = main
+[submodule "cut_cross_entropy-feedstock"]
+	path = cut_cross_entropy-feedstock
+	url = ../cut_cross_entropy-feedstock
+	branch = main
+[submodule "liger-kernel-feedstock"]
+	path = liger-kernel-feedstock
+	url = ../liger-kernel-feedstock
+	branch = main
+[submodule "mlx-feedstock"]
+	path = mlx-feedstock
+	url = ../mlx-feedstock
+	branch = main
+[submodule "mteb-feedstock"]
+	path = mteb-feedstock
+	url = ../mteb-feedstock
+	branch = main
+[submodule "nvmath-feedstock"]
+	path = nvmath-feedstock
+	url = ../nvmath-feedstock
+	branch = main
+[submodule "runtimed-feedstock"]
+	path = runtimed-feedstock
+	url = ../runtimed-feedstock
+	branch = main
+[submodule "soxr-python-feedstock"]
+	path = soxr-python-feedstock
+	url = ../soxr-python-feedstock
+	branch = main
+[submodule "standard-chunk-feedstock"]
+	path = standard-chunk-feedstock
+	url = ../standard-chunk-feedstock
+	branch = main
+[submodule "standard-sunau-feedstock"]
+	path = standard-sunau-feedstock
+	url = ../standard-sunau-feedstock
+	branch = main
+[submodule "audioread-feedstock"]
+	path = audioread-feedstock
+	url = ../audioread-feedstock
+	branch = main
+[submodule "cuquantum-feedstock"]
+	path = cuquantum-feedstock
+	url = ../cuquantum-feedstock
+	branch = main
+[submodule "flash-linear-attention-feedstock"]
+	path = flash-linear-attention-feedstock
+	url = ../flash-linear-attention-feedstock
+	branch = main
+[submodule "pyspark-client-feedstock"]
+	path = pyspark-client-feedstock
+	url = ../pyspark-client-feedstock
+	branch = main
+[submodule "standard-aifc-feedstock"]
+	path = standard-aifc-feedstock
+	url = ../standard-aifc-feedstock
+	branch = main
+[submodule "trackio-feedstock"]
+	path = trackio-feedstock
+	url = ../trackio-feedstock
+	branch = main
+[submodule "librosa-feedstock"]
+	path = librosa-feedstock
+	url = ../librosa-feedstock
+	branch = main
