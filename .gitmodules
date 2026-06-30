@@ -12897,3 +12897,7 @@
 	path = orbax-export-feedstock
 	url = ../orbax-export-feedstock
 	branch = main
+[submodule "jaxtyping-feedstock"]
+	path = jaxtyping-feedstock
+	url = ../jaxtyping-feedstock
+	branch = main
