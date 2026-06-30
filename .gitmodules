@@ -12901,3 +12901,7 @@
 	path = jaxtyping-feedstock
 	url = ../jaxtyping-feedstock
 	branch = main
+[submodule "wadler-lindig-feedstock"]
+	path = wadler-lindig-feedstock
+	url = ../wadler-lindig-feedstock
+	branch = main
