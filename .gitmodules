@@ -12905,3 +12905,23 @@
 	path = word2number-feedstock
 	url = ../word2number-feedstock
 	branch = main
+[submodule "apache-tvm-ffi-feedstock"]
+	path = apache-tvm-ffi-feedstock
+	url = ../apache-tvm-ffi-feedstock
+	branch = main
+[submodule "libcuest-feedstock"]
+	path = libcuest-feedstock
+	url = ../libcuest-feedstock
+	branch = main
+[submodule "orbax-export-feedstock"]
+	path = orbax-export-feedstock
+	url = ../orbax-export-feedstock
+	branch = main
+[submodule "sqlitedict-feedstock"]
+	path = sqlitedict-feedstock
+	url = ../sqlitedict-feedstock
+	branch = main
+[submodule "synchronicity-feedstock"]
+	path = synchronicity-feedstock
+	url = ../synchronicity-feedstock
+	branch = main
