@@ -12937,3 +12937,7 @@
 	path = pydantic-graph-feedstock
 	url = ../pydantic-graph-feedstock
 	branch = main
+[submodule "logfire-feedstock"]
+	path = logfire-feedstock
+	url = ../logfire-feedstock
+	branch = main
