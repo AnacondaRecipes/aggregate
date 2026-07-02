@@ -12933,3 +12933,7 @@
 	path = pydantic-ai-feedstock
 	url = ../pydantic-ai-feedstock
 	branch = main
+[submodule "pydantic-graph-feedstock"]
+	path = pydantic-graph-feedstock
+	url = ../pydantic-graph-feedstock
+	branch = main
