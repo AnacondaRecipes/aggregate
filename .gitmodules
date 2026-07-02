@@ -12925,3 +12925,7 @@
 	path = synchronicity-feedstock
 	url = ../synchronicity-feedstock
 	branch = main
+[submodule "nushell-feedstock"]
+	path = nushell-feedstock
+	url = ../nushell-feedstock
+	branch = main
