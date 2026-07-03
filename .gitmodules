@@ -12941,3 +12941,7 @@
 	path = logfire-feedstock
 	url = ../logfire-feedstock
 	branch = main
+[submodule "httpx2-feedstock"]
+	path = httpx2-feedstock
+	url = ../httpx2-feedstock
+	branch = main
