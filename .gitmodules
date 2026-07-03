@@ -12945,3 +12945,7 @@
 	path = httpx2-feedstock
 	url = ../httpx2-feedstock
 	branch = main
+[submodule "httpcore2-feedstock"]
+	path = httpcore2-feedstock
+	url = ../httpcore2-feedstock
+	branch = main
