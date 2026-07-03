@@ -502,7 +502,7 @@ libegl:
 libev:
   - '4.33'
 libevent:
-  - 2.1.12
+  - 2.1.13
 libexpat:
   - '2'
 libfaiss:
