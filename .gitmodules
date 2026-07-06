@@ -12925,10 +12925,6 @@
 	path = synchronicity-feedstock
 	url = ../synchronicity-feedstock
 	branch = main
-[submodule "nushell-feedstock"]
-	path = nushell-feedstock
-	url = ../nushell-feedstock
-	branch = main
 [submodule "pydantic-ai-feedstock"]
 	path = pydantic-ai-feedstock
 	url = ../pydantic-ai-feedstock
