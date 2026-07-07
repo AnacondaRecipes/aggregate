@@ -760,7 +760,7 @@ mpg123:
 mpich:
   - '4'
 mysql_libs:
-  - '9.3'
+  - '9.7'
 nccl:
   - '2'
 ncurses:
