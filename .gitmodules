@@ -12969,3 +12969,7 @@
 	path = typepy-feedstock
 	url = ../typepy-feedstock
 	branch = main
+[submodule "pgvector-feedstock"]
+	path = pgvector-feedstock
+	url = ../pgvector-feedstock
+	branch = main
