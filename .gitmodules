@@ -10899,9 +10899,9 @@
 	path = asv_runner-feedstock
 	url = ../asv_runner-feedstock
 	branch = main
-[submodule "pgvector-feedstock"]
-	path = pgvector-feedstock
-	url = ../pgvector-feedstock
+[submodule "pgvector-python-feedstock"]
+	path = pgvector-python-feedstock
+	url = ../pgvector-python-feedstock
 	branch = main
 [submodule "cargo-auditable-feedstock"]
 	path = cargo-auditable-feedstock
