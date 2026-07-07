@@ -12933,10 +12933,6 @@
 	path = pydantic-graph-feedstock
 	url = ../pydantic-graph-feedstock
 	branch = main
-[submodule "logfire-feedstock"]
-	path = logfire-feedstock
-	url = ../logfire-feedstock
-	branch = main
 [submodule "httpx2-feedstock"]
 	path = httpx2-feedstock
 	url = ../httpx2-feedstock
@@ -12944,4 +12940,32 @@
 [submodule "httpcore2-feedstock"]
 	path = httpcore2-feedstock
 	url = ../httpcore2-feedstock
+	branch = main
+[submodule "anaconda-channel-guide-feedstock"]
+	path = anaconda-channel-guide-feedstock
+	url = ../anaconda-channel-guide-feedstock
+	branch = main
+[submodule "circuitbreaker-feedstock"]
+	path = circuitbreaker-feedstock
+	url = ../circuitbreaker-feedstock
+	branch = main
+[submodule "grpclib-feedstock"]
+	path = grpclib-feedstock
+	url = ../grpclib-feedstock
+	branch = main
+[submodule "mbstrdecoder-feedstock"]
+	path = mbstrdecoder-feedstock
+	url = ../mbstrdecoder-feedstock
+	branch = main
+[submodule "opensubdiv-feedstock"]
+	path = opensubdiv-feedstock
+	url = ../opensubdiv-feedstock
+	branch = main
+[submodule "tcolorpy-feedstock"]
+	path = tcolorpy-feedstock
+	url = ../tcolorpy-feedstock
+	branch = main
+[submodule "typepy-feedstock"]
+	path = typepy-feedstock
+	url = ../typepy-feedstock
 	branch = main
