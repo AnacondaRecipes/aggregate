@@ -3082,10 +3082,6 @@
 	path = pdoc3-feedstock
 	url = ../pdoc3-feedstock
 	branch = master
-[submodule "ruamel-feedstock"]
-	path = ruamel-feedstock
-	url = ../ruamel-feedstock
-	branch = master
 [submodule "ruamel.yaml-feedstock"]
 	path = ruamel.yaml-feedstock
 	url = ../ruamel.yaml-feedstock
@@ -4702,10 +4698,6 @@
 	path = pymeeus-feedstock
 	url = ../pymeeus-feedstock
 	branch = master
-[submodule "armpl-feedstock"]
-	path = armpl-feedstock
-	url = ../armpl-feedstock
-	branch = main
 [submodule "sacrebleu-feedstock"]
 	path = sacrebleu-feedstock
 	url = ../sacrebleu-feedstock
@@ -5068,10 +5060,6 @@
 [submodule "gi-docgen-feedstock"]
 	path = gi-docgen-feedstock
 	url = ../gi-docgen-feedstock
-	branch = master
-[submodule "spacy-model-en_core_web-feedstock"]
-	path = spacy-model-en_core_web-feedstock
-	url = ../spacy-model-en_core_web-feedstock
 	branch = master
 [submodule "anaconda-clean-feedstock"]
 	path = anaconda-clean-feedstock
@@ -6711,10 +6699,6 @@
 	path = magma-feedstock
 	url = ../magma-feedstock
 	branch = main
-[submodule "libpython-feedstock"]
-	path = libpython-feedstock
-	url = ../libpython-feedstock
-	branch = main
 [submodule "feedparser-feedstock"]
 	path = feedparser-feedstock
 	url = ../feedparser-feedstock
@@ -6750,10 +6734,6 @@
 [submodule "bwidget-feedstock"]
 	path = bwidget-feedstock
 	url = ../bwidget-feedstock
-	branch = main
-[submodule "7za-feedstock"]
-	path = 7za-feedstock
-	url = ../7za-feedstock
 	branch = main
 [submodule "python-kaleido-feedstock"]
 	path = python-kaleido-feedstock
@@ -6833,10 +6813,6 @@
 [submodule "hdbscan-feedstock"]
 	path = hdbscan-feedstock
 	url = ../hdbscan-feedstock
-	branch = main
-[submodule "amply-feedstock"]
-	path = amply-feedstock
-	url = ../amply-feedstock
 	branch = main
 [submodule "pulp-feedstock"]
 	path = pulp-feedstock
@@ -9765,10 +9741,6 @@
 	path = anaconda-assistant-sdk-feedstock
 	url = ../anaconda-assistant-sdk-feedstock
 	branch = main
-[submodule "anaconda-assistant-conda-feedstock"]
-	path = anaconda-assistant-conda-feedstock
-	url = ../anaconda-assistant-conda-feedstock
-	branch = main
 [submodule "python-grpc-prometheus-feedstock"]
 	path = python-grpc-prometheus-feedstock
 	url = ../python-grpc-prometheus-feedstock
@@ -11290,10 +11262,6 @@
 [submodule "ldid-feedstock"]
 	path = ldid-feedstock
 	url = ../ldid-feedstock
-	branch = master
-[submodule "libdb-feedstock"]
-	path = libdb-feedstock
-	url = ../libdb-feedstock
 	branch = master
 [submodule "ms-gsl-feedstock"]
 	path = ms-gsl-feedstock
@@ -12972,4 +12940,8 @@
 [submodule "pgvector-feedstock"]
 	path = pgvector-feedstock
 	url = ../pgvector-feedstock
+	branch = main
+[submodule "logfire-feedstock"]
+	path = logfire-feedstock
+	url = ../logfire-feedstock
 	branch = main
