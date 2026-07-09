@@ -680,7 +680,7 @@ libtasn1:
 libtheora:
   - '1.2'
 libthrift:
-  - '0.22'
+  - '0.23'
 libtiff:
   - '4'
 libtirpc:
