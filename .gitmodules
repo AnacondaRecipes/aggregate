@@ -5983,10 +5983,6 @@
 	path = versioneer-feedstock
 	url = ../versioneer-feedstock
 	branch = main
-[submodule "prefect-test-dependency-feedstock"]
-	path = prefect-test-dependency-feedstock
-	url = ../prefect-test-dependency-feedstock
-	branch = master
 [submodule "fugue-feedstock"]
 	path = fugue-feedstock
 	url = ../fugue-feedstock
@@ -6539,10 +6535,6 @@
 	path = workerpool-feedstock
 	url = ../workerpool-feedstock
 	branch = main
-[submodule "zope-feedstock"]
-	path = zope-feedstock
-	url = ../zope-feedstock
-	branch = main
 [submodule "zope.event-feedstock"]
 	path = zope.event-feedstock
 	url = ../zope.event-feedstock
@@ -6579,18 +6571,6 @@
 	path = sockjs-tornado-feedstock
 	url = ../sockjs-tornado-feedstock
 	branch = main
-[submodule "sphinxcontrib-feedstock"]
-	path = sphinxcontrib-feedstock
-	url = ../sphinxcontrib-feedstock
-	branch = main
-[submodule "spyder_parso_requirement-feedstock"]
-	path = spyder_parso_requirement-feedstock
-	url = ../spyder_parso_requirement-feedstock
-	branch = main
-[submodule "rust-nightly-activation-feedstock"]
-	path = rust-nightly-activation-feedstock
-	url = ../rust-nightly-activation-feedstock
-	branch = main
 [submodule "sas7bdat-feedstock"]
 	path = sas7bdat-feedstock
 	url = ../sas7bdat-feedstock
@@ -6602,10 +6582,6 @@
 [submodule "requests-file-feedstock"]
 	path = requests-file-feedstock
 	url = ../requests-file-feedstock
-	branch = main
-[submodule "qbs-feedstock"]
-	path = qbs-feedstock
-	url = ../qbs-feedstock
 	branch = main
 [submodule "queuelib-feedstock"]
 	path = queuelib-feedstock
@@ -6639,10 +6615,6 @@
 	path = perl-getopt-tabular-feedstock
 	url = ../perl-getopt-tabular-feedstock
 	branch = main
-[submodule "perl-regexp-common-feedstock"]
-	path = perl-regexp-common-feedstock
-	url = ../perl-regexp-common-feedstock
-	branch = main
 [submodule "persistent-feedstock"]
 	path = persistent-feedstock
 	url = ../persistent-feedstock
@@ -6655,17 +6627,9 @@
 	path = perl-carp-feedstock
 	url = ../perl-carp-feedstock
 	branch = main
-[submodule "perl-exporter-lite-feedstock"]
-	path = perl-exporter-lite-feedstock
-	url = ../perl-exporter-lite-feedstock
-	branch = main
 [submodule "perl-extutils-makemaker-feedstock"]
 	path = perl-extutils-makemaker-feedstock
 	url = ../perl-extutils-makemaker-feedstock
-	branch = main
-[submodule "perl-file-which-feedstock"]
-	path = perl-file-which-feedstock
-	url = ../perl-file-which-feedstock
 	branch = main
 [submodule "pandasql-feedstock"]
 	path = pandasql-feedstock
@@ -10959,10 +10923,6 @@
 	path = cucumber-expressions-feedstock
 	url = ../cucumber-expressions-feedstock
 	branch = main
-[submodule "tika-feedstock"]
-	path = tika-feedstock
-	url = ../tika-feedstock
-	branch = main
 [submodule "manuel-feedstock"]
 	path = manuel-feedstock
 	url = ../manuel-feedstock
@@ -12333,10 +12293,6 @@
 	path = azure-synapse-spark-feedstock
 	url = ../azure-synapse-spark-feedstock
 	branch = main
-[submodule "gcc_activation-feedstock"]
-	path = gcc_activation-feedstock
-	url = ../gcc_activation-feedstock
-	branch = main
 [submodule "gcc_toolchain-feedstock"]
 	path = gcc_toolchain-feedstock
 	url = ../gcc_toolchain-feedstock
@@ -12944,8 +12900,4 @@
 [submodule "logfire-feedstock"]
 	path = logfire-feedstock
 	url = ../logfire-feedstock
-	branch = main
-[submodule "scikit-network-feedstock"]
-	path = scikit-network-feedstock
-	url = ../scikit-network-feedstock
 	branch = main
