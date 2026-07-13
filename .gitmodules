@@ -12901,3 +12901,7 @@
 	path = logfire-feedstock
 	url = ../logfire-feedstock
 	branch = main
+[submodule "scikit-network-feedstock"]
+	path = scikit-network-feedstock
+	url = ../scikit-network-feedstock
+	branch = main
