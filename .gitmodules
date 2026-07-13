@@ -12905,3 +12905,8 @@
 	path = scikit-network-feedstock
 	url = ../scikit-network-feedstock
 	branch = main
+
+[submodule "anaconda-env-log-feedstock"]
+	path = anaconda-env-log-feedstock
+	url = ../anaconda-env-log-feedstock
+	branch = main
