@@ -12906,10 +12906,6 @@
 	url = ../scikit-network-feedstock
 	branch = main
 
-[submodule "anaconda-env-log-feedstock"]
-	path = anaconda-env-log-feedstock
-	url = ../anaconda-env-log-feedstock
-	branch = main
 [submodule "simple-azure-blob-downloader-feedstock"]
 	path = simple-azure-blob-downloader-feedstock
 	url = ../simple-azure-blob-downloader-feedstock
@@ -12918,3 +12914,11 @@
 	path = outerbounds-feedstock
 	url = ../outerbounds-feedstock
 	branch = master
+[submodule "looseversion-feedstock"]
+	path = looseversion-feedstock
+	url = ../looseversion-feedstock
+	branch = main
+[submodule "openrouteservice-feedstock"]
+	path = openrouteservice-feedstock
+	url = ../openrouteservice-feedstock
+	branch = main
