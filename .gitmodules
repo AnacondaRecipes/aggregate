@@ -12914,3 +12914,7 @@
 	path = simple-azure-blob-downloader-feedstock
 	url = ../simple-azure-blob-downloader-feedstock
 	branch = main
+[submodule "outerbounds-feedstock"]
+	path = outerbounds-feedstock
+	url = ../outerbounds-feedstock
+	branch = master
