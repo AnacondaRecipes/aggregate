@@ -12910,3 +12910,7 @@
 	path = anaconda-env-log-feedstock
 	url = ../anaconda-env-log-feedstock
 	branch = main
+[submodule "simple-azure-blob-downloader-feedstock"]
+	path = simple-azure-blob-downloader-feedstock
+	url = ../simple-azure-blob-downloader-feedstock
+	branch = main
