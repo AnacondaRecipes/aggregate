@@ -12926,3 +12926,7 @@
 	path = datasetsforecast-feedstock
 	url = ../datasetsforecast-feedstock
 	branch = main
+[submodule "ob-metaflow-feedstock"]
+	path = ob-metaflow-feedstock
+	url = ../ob-metaflow-feedstock
+	branch = master
