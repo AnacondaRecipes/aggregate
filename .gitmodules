@@ -12930,3 +12930,7 @@
 	path = ob-metaflow-feedstock
 	url = ../ob-metaflow-feedstock
 	branch = master
+[submodule "coreforecast-feedstock"]
+	path = coreforecast-feedstock
+	url = ../coreforecast-feedstock
+	branch = main
