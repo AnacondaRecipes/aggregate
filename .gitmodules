@@ -2494,10 +2494,6 @@
 	path = cryptominisat-feedstock
 	url = ../cryptominisat-feedstock
 	branch = master
-[submodule "m4ri-feedstock"]
-	path = m4ri-feedstock
-	url = ../m4ri-feedstock
-	branch = master
 [submodule "zc.lockfile-feedstock"]
 	path = zc.lockfile-feedstock
 	url = ../zc.lockfile-feedstock
@@ -6678,10 +6674,6 @@
 [submodule "double-conversion-feedstock"]
 	path = double-conversion-feedstock
 	url = ../double-conversion-feedstock
-	branch = main
-[submodule "cmake-binary-feedstock"]
-	path = cmake-binary-feedstock
-	url = ../cmake-binary-feedstock
 	branch = main
 [submodule "configobj-feedstock"]
 	path = configobj-feedstock
@@ -11211,10 +11203,6 @@
 	path = dlpack-feedstock
 	url = ../dlpack-feedstock
 	branch = main
-[submodule "ghc-feedstock"]
-	path = ghc-feedstock
-	url = ../ghc-feedstock
-	branch = master
 [submodule "glad-feedstock"]
 	path = glad-feedstock
 	url = ../glad-feedstock
@@ -12922,10 +12910,6 @@
 	path = openrouteservice-feedstock
 	url = ../openrouteservice-feedstock
 	branch = main
-[submodule "datasetsforecast-feedstock"]
-	path = datasetsforecast-feedstock
-	url = ../datasetsforecast-feedstock
-	branch = main
 [submodule "ob-metaflow-feedstock"]
 	path = ob-metaflow-feedstock
 	url = ../ob-metaflow-feedstock
@@ -12946,7 +12930,39 @@
 	path = metaflow-checkpoint-feedstock
 	url = ../metaflow-checkpoint-feedstock
 	branch = master
-[submodule "google-cloud-secret-manager-feedstock"]
-	path = google-cloud-secret-manager-feedstock
-	url = ../google-cloud-secret-manager-feedstock
+[submodule "arabic_reshaper-feedstock"]
+	path = arabic_reshaper-feedstock
+	url = ../arabic_reshaper-feedstock
+	branch = main
+[submodule "dataproperty-feedstock"]
+	path = dataproperty-feedstock
+	url = ../dataproperty-feedstock
+	branch = main
+[submodule "janitor-rs-feedstock"]
+	path = janitor-rs-feedstock
+	url = ../janitor-rs-feedstock
+	branch = main
+[submodule "modal-client-feedstock"]
+	path = modal-client-feedstock
+	url = ../modal-client-feedstock
+	branch = main
+[submodule "oci-feedstock"]
+	path = oci-feedstock
+	url = ../oci-feedstock
+	branch = main
+[submodule "pandas_flavor-feedstock"]
+	path = pandas_flavor-feedstock
+	url = ../pandas_flavor-feedstock
+	branch = main
+[submodule "python-cudnn-frontend-feedstock"]
+	path = python-cudnn-frontend-feedstock
+	url = ../python-cudnn-frontend-feedstock
+	branch = main
+[submodule "qpsolvers-feedstock"]
+	path = qpsolvers-feedstock
+	url = ../qpsolvers-feedstock
+	branch = main
+[submodule "tabledata-feedstock"]
+	path = tabledata-feedstock
+	url = ../tabledata-feedstock
 	branch = main
