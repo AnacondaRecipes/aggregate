@@ -12946,3 +12946,7 @@
 	path = metaflow-checkpoint-feedstock
 	url = ../metaflow-checkpoint-feedstock
 	branch = master
+[submodule "google-cloud-secret-manager-feedstock"]
+	path = google-cloud-secret-manager-feedstock
+	url = ../google-cloud-secret-manager-feedstock
+	branch = main
