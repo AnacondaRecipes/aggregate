@@ -12942,3 +12942,7 @@
 	path = ob-metaflow-extensions-feedstock
 	url = ../ob-metaflow-extensions-feedstock
 	branch = master
+[submodule "metaflow-checkpoint-feedstock"]
+	path = metaflow-checkpoint-feedstock
+	url = ../metaflow-checkpoint-feedstock
+	branch = master
