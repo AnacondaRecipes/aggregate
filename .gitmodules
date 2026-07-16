@@ -12938,3 +12938,7 @@
 	path = ob-metaflow-stubs-feedstock
 	url = ../ob-metaflow-stubs-feedstock
 	branch = main
+[submodule "ob-metaflow-extensions-feedstock"]
+	path = ob-metaflow-extensions-feedstock
+	url = ../ob-metaflow-extensions-feedstock
+	branch = master
