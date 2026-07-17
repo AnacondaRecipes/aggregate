@@ -12966,3 +12966,27 @@
 	path = tabledata-feedstock
 	url = ../tabledata-feedstock
 	branch = main
+[submodule "datasetsforecast-feedstock"]
+	path = datasetsforecast-feedstock
+	url = ../datasetsforecast-feedstock
+	branch = main
+[submodule "google-cloud-secret-manager-feedstock"]
+	path = google-cloud-secret-manager-feedstock
+	url = ../google-cloud-secret-manager-feedstock
+	branch = main
+[submodule "llamafactory-feedstock"]
+	path = llamafactory-feedstock
+	url = ../llamafactory-feedstock
+	branch = main
+[submodule "ocifs-feedstock"]
+	path = ocifs-feedstock
+	url = ../ocifs-feedstock
+	branch = main
+[submodule "pyjanitor-feedstock"]
+	path = pyjanitor-feedstock
+	url = ../pyjanitor-feedstock
+	branch = main
+[submodule "pytablewriter-feedstock"]
+	path = pytablewriter-feedstock
+	url = ../pytablewriter-feedstock
+	branch = main
