@@ -238,7 +238,7 @@ c_blosc2:
 cairo:
   - '1'
 capnproto:
-  - 1.1.0
+  - 1.5.0
 ceres_solver:
   - '2.2'
 cfitsio:
