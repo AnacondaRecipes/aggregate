@@ -178,7 +178,7 @@ arrow_cpp:
 assimp:
   - 6.0.2
 at_spi2_core:
-  - '2.36'
+  - '2.61'
 atk_1_0:
   - 2.38.0
 attr:
