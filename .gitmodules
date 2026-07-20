@@ -12990,3 +12990,7 @@
 	path = pytablewriter-feedstock
 	url = ../pytablewriter-feedstock
 	branch = main
+[submodule "anaconda-mcp-feedstock"]
+	path = anaconda-mcp-feedstock
+	url = ../anaconda-mcp-feedstock
+	branch = main
