@@ -12998,3 +12998,7 @@
 	path = temporalio-feedstock
 	url = ../temporalio-feedstock
 	branch = main
+[submodule "nexus-rpc-feedstock"]
+	path = nexus-rpc-feedstock
+	url = ../nexus-rpc-feedstock
+	branch = main
