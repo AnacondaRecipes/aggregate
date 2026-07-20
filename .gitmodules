@@ -12994,11 +12994,3 @@
 	path = anaconda-mcp-feedstock
 	url = ../anaconda-mcp-feedstock
 	branch = main
-[submodule "temporalio-feedstock"]
-	path = temporalio-feedstock
-	url = ../temporalio-feedstock
-	branch = main
-[submodule "nexus-rpc-feedstock"]
-	path = nexus-rpc-feedstock
-	url = ../nexus-rpc-feedstock
-	branch = main
