@@ -12994,3 +12994,7 @@
 	path = anaconda-mcp-feedstock
 	url = ../anaconda-mcp-feedstock
 	branch = main
+[submodule "latest-feedstock"]
+	path = latest-feedstock
+	url = ../latest-feedstock
+	branch = main
