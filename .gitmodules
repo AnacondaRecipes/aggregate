@@ -12998,3 +12998,7 @@
 	path = latest-feedstock
 	url = ../latest-feedstock
 	branch = main
+[submodule "jupyterlab-git-core-feedstock"]
+	path = jupyterlab-git-core-feedstock
+	url = ../jupyterlab-git-core-feedstock
+	branch = main
