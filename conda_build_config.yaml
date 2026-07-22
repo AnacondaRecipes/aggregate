@@ -300,7 +300,7 @@ fribidi:
 gcab:
   - '1'
 gdbm:
-  - '1.18'
+  - '1.26'
 gdk_pixbuf:
   - '2'
 geos:
