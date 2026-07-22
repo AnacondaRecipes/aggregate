@@ -12994,10 +12994,6 @@
 	path = anaconda-mcp-feedstock
 	url = ../anaconda-mcp-feedstock
 	branch = main
-[submodule "latest-feedstock"]
-	path = latest-feedstock
-	url = ../latest-feedstock
-	branch = main
 [submodule "jupyterlab-git-core-feedstock"]
 	path = jupyterlab-git-core-feedstock
 	url = ../jupyterlab-git-core-feedstock
