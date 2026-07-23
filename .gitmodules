@@ -12998,3 +12998,7 @@
 	path = jupyterlab-git-core-feedstock
 	url = ../jupyterlab-git-core-feedstock
 	branch = main
+[submodule "tree-feedstock"]
+	path = tree-feedstock
+	url = ../tree-feedstock
+	branch = main
