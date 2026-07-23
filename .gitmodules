@@ -2918,10 +2918,6 @@
 	path = filesystem-spec-feedstock
 	url = ../filesystem-spec-feedstock
 	branch = master
-[submodule "toolchain-feedstock"]
-	path = toolchain-feedstock
-	url = ../toolchain-feedstock
-	branch = master
 [submodule "ipympl-feedstock"]
 	path = ipympl-feedstock
 	url = ../ipympl-feedstock
@@ -8629,10 +8625,6 @@
 	path = auto-sklearn-feedstock
 	url = ../auto-sklearn-feedstock
 	branch = main
-[submodule "vs2022-feedstock"]
-	path = vs2022-feedstock
-	url = ../vs2022-feedstock
-	branch = main
 [submodule "optree-feedstock"]
 	path = optree-feedstock
 	url = ../optree-feedstock
@@ -11354,10 +11346,6 @@
 	path = ragel-feedstock
 	url = ../ragel-feedstock
 	branch = main
-[submodule "blas-feedstock"]
-	path = blas-feedstock
-	url = ../blas-feedstock
-	branch = master
 [submodule "cuda-culibos-feedstock"]
 	path = cuda-culibos-feedstock
 	url = ../cuda-culibos-feedstock
