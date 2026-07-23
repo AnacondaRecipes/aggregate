@@ -13002,3 +13002,19 @@
 	path = tree-feedstock
 	url = ../tree-feedstock
 	branch = main
+[submodule "nexus-rpc-feedstock"]
+	path = nexus-rpc-feedstock
+	url = ../nexus-rpc-feedstock
+	branch = main
+[submodule "nushell-feedstock"]
+	path = nushell-feedstock
+	url = ../nushell-feedstock
+	branch = main
+[submodule "ollama-feedstock"]
+	path = ollama-feedstock
+	url = ../ollama-feedstock
+	branch = main
+[submodule "temporalio-feedstock"]
+	path = temporalio-feedstock
+	url = ../temporalio-feedstock
+	branch = main
