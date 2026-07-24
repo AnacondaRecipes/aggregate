@@ -13006,3 +13006,19 @@
 	path = temporalio-feedstock
 	url = ../temporalio-feedstock
 	branch = main
+[submodule "blas-feedstock"]
+	path = blas-feedstock
+	url = ../blas-feedstock
+	branch = master
+[submodule "lm_eval-feedstock"]
+	path = lm_eval-feedstock
+	url = ../lm_eval-feedstock
+	branch = main
+[submodule "toolchain-feedstock"]
+	path = toolchain-feedstock
+	url = ../toolchain-feedstock
+	branch = master
+[submodule "vs2022-feedstock"]
+	path = vs2022-feedstock
+	url = ../vs2022-feedstock
+	branch = main
