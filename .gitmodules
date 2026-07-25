@@ -13022,3 +13022,7 @@
 	path = vs2022-feedstock
 	url = ../vs2022-feedstock
 	branch = main
+[submodule "unsloth-feedstock"]
+	path = unsloth-feedstock
+	url = ../unsloth-feedstock
+	branch = main
