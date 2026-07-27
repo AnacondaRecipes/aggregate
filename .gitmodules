@@ -13030,3 +13030,7 @@
 	path = questionary-feedstock
 	url = ../questionary-feedstock
 	branch = main
+[submodule "pytest-repeat-feedstock"]
+	path = pytest-repeat-feedstock
+	url = ../pytest-repeat-feedstock
+	branch = main
