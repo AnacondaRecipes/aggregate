@@ -13026,3 +13026,7 @@
 	path = unsloth-feedstock
 	url = ../unsloth-feedstock
 	branch = main
+[submodule "questionary-feedstock"]
+	path = questionary-feedstock
+	url = ../questionary-feedstock
+	branch = main
