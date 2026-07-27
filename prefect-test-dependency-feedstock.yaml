@@ -1,0 +1,157 @@
+name: Build/Test Graph 'prefect-test-dependency-feedstock' and 0 more
+priority: 0
+user: anumumair
+src_channels:
+- ad_package_build
+- defaults
+dest_channel: ad_package_build
+tasks:
+- description: Build task for prefect-test-dependency-feedstock @ d71c751 (d71c7516821f0ca66074c66f1b1fc0454c32436e)
+    linux-64 3.14 channel_targets=defaults target_platform=linux-64 2026-07-27 23:18:02
+  public_name: build-prefect-test-dependency-feedstock-linux-64_py3.14_7cc5435d747fe1ce
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.14'
+    target_platform: linux-64
+  feedstock_url: https://github.com/AnacondaRecipes/prefect-test-dependency-feedstock
+  feedstock_ref: d71c7516821f0ca66074c66f1b1fc0454c32436e
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --skip-existing
+  - --error-overlinking
+- description: Build task for prefect-test-dependency-feedstock @ d71c751 (d71c7516821f0ca66074c66f1b1fc0454c32436e)
+    linux-aarch64 3.14 channel_targets=defaults target_platform=linux-aarch64 2026-07-27
+    23:18:02
+  public_name: build-prefect-test-dependency-feedstock-linux-aarch64_py3.14_49e5605022a04d1c
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.14'
+    target_platform: linux-aarch64
+  feedstock_url: https://github.com/AnacondaRecipes/prefect-test-dependency-feedstock
+  feedstock_ref: d71c7516821f0ca66074c66f1b1fc0454c32436e
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --skip-existing
+  - --error-overlinking
+- description: Build task for prefect-test-dependency-feedstock @ d71c751 (d71c7516821f0ca66074c66f1b1fc0454c32436e)
+    osx-arm64 3.14 MACOSX_DEPLOYMENT_TARGET=12.1 OSX_SDK_DIR=/Library/Developer/CommandLineTools/SDKs
+    channel_targets=defaults target_platform=osx-arm64 2026-07-27 23:18:02
+  public_name: build-prefect-test-dependency-feedstock-osx-arm64_py3.14_79a08f2ee88afd13
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    MACOSX_DEPLOYMENT_TARGET: '12.1'
+    OSX_SDK_DIR: /Library/Developer/CommandLineTools/SDKs
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.14'
+    target_platform: osx-arm64
+  feedstock_url: https://github.com/AnacondaRecipes/prefect-test-dependency-feedstock
+  feedstock_ref: d71c7516821f0ca66074c66f1b1fc0454c32436e
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --skip-existing
+  - --error-overlinking
+- description: Build task for prefect-test-dependency-feedstock @ d71c751 (d71c7516821f0ca66074c66f1b1fc0454c32436e)
+    win-64 3.14 channel_targets=defaults target_platform=win-64 2026-07-27 23:18:02
+  public_name: build-prefect-test-dependency-feedstock-win-64_py3.14_1e8c8f29ee262f9e
+  dependencies: []
+  max_run_time: 7200
+  type: build
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.14'
+    target_platform: win-64
+  feedstock_url: https://github.com/AnacondaRecipes/prefect-test-dependency-feedstock
+  feedstock_ref: d71c7516821f0ca66074c66f1b1fc0454c32436e
+  recipe_dir: recipe
+  build_options:
+  - --suppress-variables
+  - --skip-existing
+  - --error-overlinking
+- description: Test task for prefect-test-dependency-feedstock prefect-test-dependency
+    @ d71c751 (d71c7516821f0ca66074c66f1b1fc0454c32436e) linux-64 3.14 channel_targets=defaults
+    2026-07-27 23:18:02
+  public_name: test-prefect-test-dependency-feedstock-prefect-test-dependency-linux-64_py3.14_7cc5435d747fe1ce
+  dependencies:
+  - build-prefect-test-dependency-feedstock-linux-64_py3.14_7cc5435d747fe1ce
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-64
+    python: '3.14'
+  package_def:
+    matchspec: prefect-test-dependency
+  external_dependencies: []
+- description: Test task for prefect-test-dependency-feedstock prefect-test-dependency
+    @ d71c751 (d71c7516821f0ca66074c66f1b1fc0454c32436e) linux-aarch64 3.14 channel_targets=defaults
+    2026-07-27 23:18:02
+  public_name: test-prefect-test-dependency-feedstock-prefect-test-dependency-linux-aarch64_py3.14_49e5605022a04d1c
+  dependencies:
+  - build-prefect-test-dependency-feedstock-linux-aarch64_py3.14_49e5605022a04d1c
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: linux-aarch64
+    python: '3.14'
+  package_def:
+    matchspec: prefect-test-dependency
+  external_dependencies: []
+- description: Test task for prefect-test-dependency-feedstock prefect-test-dependency
+    @ d71c751 (d71c7516821f0ca66074c66f1b1fc0454c32436e) osx-arm64 3.14 MACOSX_DEPLOYMENT_TARGET=12.1
+    OSX_SDK_DIR=/Library/Developer/CommandLineTools/SDKs channel_targets=defaults
+    2026-07-27 23:18:02
+  public_name: test-prefect-test-dependency-feedstock-prefect-test-dependency-osx-arm64_py3.14_79a08f2ee88afd13
+  dependencies:
+  - build-prefect-test-dependency-feedstock-osx-arm64_py3.14_79a08f2ee88afd13
+  max_run_time: 7200
+  type: test
+  variant:
+    MACOSX_DEPLOYMENT_TARGET: '12.1'
+    OSX_SDK_DIR: /Library/Developer/CommandLineTools/SDKs
+    channel_targets: defaults
+    platform: osx-arm64
+    python: '3.14'
+  package_def:
+    matchspec: prefect-test-dependency
+  external_dependencies: []
+- description: Test task for prefect-test-dependency-feedstock prefect-test-dependency
+    @ d71c751 (d71c7516821f0ca66074c66f1b1fc0454c32436e) win-64 3.14 channel_targets=defaults
+    2026-07-27 23:18:02
+  public_name: test-prefect-test-dependency-feedstock-prefect-test-dependency-win-64_py3.14_1e8c8f29ee262f9e
+  dependencies:
+  - build-prefect-test-dependency-feedstock-win-64_py3.14_1e8c8f29ee262f9e
+  max_run_time: 7200
+  type: test
+  variant:
+    channel_targets: defaults
+    platform: win-64
+    python: '3.14'
+  package_def:
+    matchspec: prefect-test-dependency
+  external_dependencies: []
+notification: []
+custom_metadata: {}
+system_metadata:
+  hotfix_channel: main
+  release_destination:
+    destination: pbp-release-api
+    channel: ad_package_build
+    release_name: null
+task_counts_by_status: {}
+total_tasks: 0
