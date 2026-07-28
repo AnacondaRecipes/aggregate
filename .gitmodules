@@ -13034,3 +13034,7 @@
 	path = pytest-repeat-feedstock
 	url = ../pytest-repeat-feedstock
 	branch = main
+[submodule "lockfile-feedstock"]
+	path = lockfile-feedstock
+	url = ../lockfile-feedstock
+	branch = main
