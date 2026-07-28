@@ -13042,3 +13042,7 @@
 	path = nest-asyncio2-feedstock
 	url = ../nest-asyncio2-feedstock
 	branch = main
+[submodule "kagglesdk-feedstock"]
+	path = kagglesdk-feedstock
+	url = ../kagglesdk-feedstock
+	branch = main
