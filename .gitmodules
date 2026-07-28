@@ -13034,15 +13034,3 @@
 	path = pytest-repeat-feedstock
 	url = ../pytest-repeat-feedstock
 	branch = main
-[submodule "lockfile-feedstock"]
-	path = lockfile-feedstock
-	url = ../lockfile-feedstock
-	branch = main
-[submodule "nest-asyncio2-feedstock"]
-	path = nest-asyncio2-feedstock
-	url = ../nest-asyncio2-feedstock
-	branch = main
-[submodule "kagglesdk-feedstock"]
-	path = kagglesdk-feedstock
-	url = ../kagglesdk-feedstock
-	branch = main
