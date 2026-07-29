@@ -13034,3 +13034,7 @@
 	path = pytest-repeat-feedstock
 	url = ../pytest-repeat-feedstock
 	branch = main
+[submodule "ast-serialize-feedstock"]
+	path = ast-serialize-feedstock
+	url = ../ast-serialize-feedstock
+	branch = main
