@@ -13034,7 +13034,7 @@
 	path = pytest-repeat-feedstock
 	url = ../pytest-repeat-feedstock
 	branch = main
-[submodule "ast-serialize-feedstock"]
-	path = ast-serialize-feedstock
-	url = ../ast-serialize-feedstock
+[submodule "kagglesdk-feedstock"]
+	path = kagglesdk-feedstock
+	url = ../kagglesdk-feedstock
 	branch = main
