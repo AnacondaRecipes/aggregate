@@ -13038,3 +13038,7 @@
 	path = kagglesdk-feedstock
 	url = ../kagglesdk-feedstock
 	branch = main
+[submodule "jupyter-builder-feedstock"]
+	path = jupyter-builder-feedstock
+	url = ../jupyter-builder-feedstock
+	branch = main
