@@ -732,7 +732,7 @@ libzlib_wapi:
 libzopfli:
   - '1.0'
 lmdb:
-  - '0'
+  - '1'
 lz4_c:
   - '1.9'
 lzo:
