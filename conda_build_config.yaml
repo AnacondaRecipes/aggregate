@@ -384,7 +384,7 @@ intel_opencl_rt:
 intel_sycl_rt:
   - '2025'
 isl:
-  - '0.22'
+  - '0.28'
 jack:
   - '1.9'
 jansson:
