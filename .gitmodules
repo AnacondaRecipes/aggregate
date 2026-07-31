@@ -13042,3 +13042,7 @@
 	path = nest-asyncio2-feedstock
 	url = ../nest-asyncio2-feedstock
 	branch = main
+[submodule "mcp-types-feedstock"]
+	path = mcp-types-feedstock
+	url = ../mcp-types-feedstock
+	branch = main
