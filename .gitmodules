@@ -13042,7 +13042,11 @@
 	path = nest-asyncio2-feedstock
 	url = ../nest-asyncio2-feedstock
 	branch = main
-[submodule "mcp-types-feedstock"]
-	path = mcp-types-feedstock
-	url = ../mcp-types-feedstock
+[submodule "lazy-feedstock"]
+	path = lazy-feedstock
+	url = ../lazy-feedstock
 	branch = main
+[submodule "nzpy-feedstock"]
+	path = nzpy-feedstock
+	url = ../nzpy-feedstock
+	branch = master
