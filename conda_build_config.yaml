@@ -97,7 +97,10 @@ python:
   - "3.12"
   - "3.13"
   - "3.14"
+  - "3.14"
+  - "3.14.* *_cp314t" # [ANACONDA_ROCKET_ENABLE_FREETHREADING]
   - "3.15"  # [ANACONDA_ROCKET_ENABLE_PY315]
+  - "3.15.* *_cp315t"  # [ANACONDA_ROCKET_ENABLE_PY315 and ANACONDA_ROCKET_ENABLE_FREETHREADING]
 # numpy will by default use a compatible ABI for the oldest still-supported numpy versions
 # `{{ pin_compatible("numpy") }}` is no longer needed as builds of numpy from version 2 have run_exports.
 numpy:
@@ -111,15 +114,65 @@ numpy:
   - 2.1
   # python 3.14
   - 2.3
+  # python 3.14t
+  - 2.3  # [ANACONDA_ROCKET_ENABLE_FREETHREADING]
   # python 3.15
   # TODO: numpy 2.6.0 is not released yet;
   # upstream says py315 support starts with Python 3.15.0rc1 (~Jul 2026)
   # keep 2.5 for now. Recheck when 2.6.0 is released.
   - 2.5  # [ANACONDA_ROCKET_ENABLE_PY315]
+  - 2.5  # [ANACONDA_ROCKET_ENABLE_PY315 and ANACONDA_ROCKET_ENABLE_FREETHREADING]
+is_freethreading:
+  # python 3.10
+  - false
+  # python 3.11
+  - false
+  # python 3.12
+  - false
+  # python 3.13
+  - false
+  # python 3.14
+  - false
+  # python 3.14t
+  - true  # [ANACONDA_ROCKET_ENABLE_FREETHREADING]
+  # python 3.15
+  # TODO: numpy 2.6.0 is not released yet;
+  # upstream says py315 support starts with Python 3.15.0rc1 (~Jul 2026)
+  # keep 2.5 for now. Recheck when 2.6.0 is released.
+  - false  # [ANACONDA_ROCKET_ENABLE_PY315]
+  - true  # [ANACONDA_ROCKET_ENABLE_PY315 and ANACONDA_ROCKET_ENABLE_FREETHREADING]
+python_min:
+  # minimum supported python version
+  # bump to next minor version when we drop python versions
+  - "3.10"         # [not (win and arm64)]
+  - "3.13"         # [win and arm64]
+is_python_min:
+  # python 3.10
+  - true           # [not (win and arm64)]
+  - false          # [win and arm64]
+  # python 3.11
+  - false
+  # python 3.12
+  - false
+  # python 3.13
+  - false          # [not (win and arm64)]
+  - true           # [win and arm64]
+  # python 3.14
+  - false
+  # python 3.14t
+  - false  # [ANACONDA_ROCKET_ENABLE_FREETHREADING]
+  # python 3.15
+  # TODO: numpy 2.6.0 is not released yet;
+  # upstream says py315 support starts with Python 3.15.0rc1 (~Jul 2026)
+  # keep 2.5 for now. Recheck when 2.6.0 is released.
+  - false  # [ANACONDA_ROCKET_ENABLE_PY315]
+  - false  # [ANACONDA_ROCKET_ENABLE_PY315 and ANACONDA_ROCKET_ENABLE_FREETHREADING]
 zip_keys:
   -
     - python
     - numpy
+    - is_freethreading
+    - is_python_min
 python_implementation:
   - cpython
 python_impl:
