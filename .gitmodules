@@ -13050,3 +13050,27 @@
 	path = nzpy-feedstock
 	url = ../nzpy-feedstock
 	branch = master
+[submodule "ast-serialize-feedstock"]
+	path = ast-serialize-feedstock
+	url = ../ast-serialize-feedstock
+	branch = main
+[submodule "camelot-py-feedstock"]
+	path = camelot-py-feedstock
+	url = ../camelot-py-feedstock
+	branch = main
+[submodule "mcp-types-feedstock"]
+	path = mcp-types-feedstock
+	url = ../mcp-types-feedstock
+	branch = main
+[submodule "nzpyida-feedstock"]
+	path = nzpyida-feedstock
+	url = ../nzpyida-feedstock
+	branch = main
+[submodule "playa-pdf-feedstock"]
+	path = playa-pdf-feedstock
+	url = ../playa-pdf-feedstock
+	branch = main
+[submodule "sqlanydb-feedstock"]
+	path = sqlanydb-feedstock
+	url = ../sqlanydb-feedstock
+	branch = main
