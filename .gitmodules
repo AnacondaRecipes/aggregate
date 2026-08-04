@@ -13074,7 +13074,7 @@
 	path = sqlanydb-feedstock
 	url = ../sqlanydb-feedstock
 	branch = main
-[submodule "win-precise-time-feedstock"]
-	path = win-precise-time-feedstock
-	url = ../win-precise-time-feedstock
+[submodule "torchcodec-feedstock"]
+	path = torchcodec-feedstock
+	url = ../torchcodec-feedstock
 	branch = main
