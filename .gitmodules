@@ -13078,3 +13078,7 @@
 	path = torchcodec-feedstock
 	url = ../torchcodec-feedstock
 	branch = main
+[submodule "cachebox-feedstock"]
+	path = cachebox-feedstock
+	url = ../cachebox-feedstock
+	branch = main
