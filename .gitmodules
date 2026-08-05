@@ -13078,7 +13078,15 @@
 	path = torchcodec-feedstock
 	url = ../torchcodec-feedstock
 	branch = main
-[submodule "cachebox-feedstock"]
-	path = cachebox-feedstock
-	url = ../cachebox-feedstock
+[submodule "jupyter-builder-feedstock"]
+	path = jupyter-builder-feedstock
+	url = ../jupyter-builder-feedstock
+	branch = main
+[submodule "libnvjpeg2k-feedstock"]
+	path = libnvjpeg2k-feedstock
+	url = ../libnvjpeg2k-feedstock
+	branch = main
+[submodule "repack_msys2"]
+	path = repack_msys2
+	url = ../repack_msys2
 	branch = main
