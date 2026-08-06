@@ -13090,3 +13090,7 @@
 	path = repack_msys2
 	url = ../repack_msys2
 	branch = main
+[submodule "cvss-feedstock"]
+	path = cvss-feedstock
+	url = ../cvss-feedstock
+	branch = main
