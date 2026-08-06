@@ -1654,10 +1654,6 @@
 	path = xorg-util-macros-feedstock
 	url = ../xorg-util-macros-feedstock
 	branch = master
-[submodule "the_silver_searcher-feedstock"]
-	path = the_silver_searcher-feedstock
-	url = ../the_silver_searcher-feedstock
-	branch = master
 [submodule "swig-feedstock"]
 	path = swig-feedstock
 	url = ../swig-feedstock
@@ -4561,10 +4557,6 @@
 [submodule "xxhash-feedstock"]
 	path = xxhash-feedstock
 	url = ../xxhash-feedstock
-	branch = master
-[submodule "conllu-feedstock"]
-	path = conllu-feedstock
-	url = ../conllu-feedstock
 	branch = master
 [submodule "sacremoses-feedstock"]
 	path = sacremoses-feedstock
@@ -11179,10 +11171,6 @@
 	path = asyncer-feedstock
 	url = ../asyncer-feedstock
 	branch = main
-[submodule "atlasclient-feedstock"]
-	path = atlasclient-feedstock
-	url = ../atlasclient-feedstock
-	branch = main
 [submodule "chevron-feedstock"]
 	path = chevron-feedstock
 	url = ../chevron-feedstock
@@ -13090,7 +13078,11 @@
 	path = repack_msys2
 	url = ../repack_msys2
 	branch = main
-[submodule "cvss-feedstock"]
-	path = cvss-feedstock
-	url = ../cvss-feedstock
+[submodule "cachebox-feedstock"]
+	path = cachebox-feedstock
+	url = ../cachebox-feedstock
+	branch = main
+[submodule "win-precise-time-feedstock"]
+	path = win-precise-time-feedstock
+	url = ../win-precise-time-feedstock
 	branch = main
