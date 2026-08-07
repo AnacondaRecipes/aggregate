@@ -542,7 +542,7 @@ libglx:
 libgpg_error:
   - '1'
 libgrpc:
-  - '1.78'
+  - '1.82'
 libgsasl:
   - '1'
 libgsf:
