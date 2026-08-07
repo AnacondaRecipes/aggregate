@@ -650,7 +650,7 @@ libpciaccess:
 libpng:
   - '1.6'
 libpq:
-  - '17'
+  - '18'
 libprotobuf:
   - 6.33.5
 libqdldl:
