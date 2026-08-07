@@ -13086,3 +13086,7 @@
 	path = win-precise-time-feedstock
 	url = ../win-precise-time-feedstock
 	branch = main
+[submodule "cvss-feedstock"]
+	path = cvss-feedstock
+	url = ../cvss-feedstock
+	branch = main
