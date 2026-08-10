@@ -13098,3 +13098,7 @@
 	path = furo-feedstock
 	url = ../furo-feedstock
 	branch = main
+[submodule "gdstk-feedstock"]
+	path = gdstk-feedstock
+	url = ../gdstk-feedstock
+	branch = main
