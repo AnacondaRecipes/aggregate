@@ -13094,3 +13094,7 @@
 	path = capstone-feedstock
 	url = ../capstone-feedstock
 	branch = main
+[submodule "furo-feedstock"]
+	path = furo-feedstock
+	url = ../furo-feedstock
+	branch = main
