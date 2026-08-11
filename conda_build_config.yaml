@@ -461,6 +461,8 @@ libbrotlienc:
   - '1.2'
 libcap:
   - '2.78'
+libcapstone:
+  - 5.0.9
 libclang13:
   - 22.1.2
 libclang_cpp10:
