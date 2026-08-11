@@ -13102,3 +13102,7 @@
 	path = gdstk-feedstock
 	url = ../gdstk-feedstock
 	branch = main
+[submodule "fsspec-feedstock"]
+	path = fsspec-feedstock
+	url = ../fsspec-feedstock
+	branch = main
