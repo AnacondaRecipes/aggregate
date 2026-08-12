@@ -13106,3 +13106,7 @@
 	path = occt-feedstock
 	url = ../occt-feedstock
 	branch = main
+[submodule "cadquery-ocp-feedstock"]
+	path = cadquery-ocp-feedstock
+	url = ../cadquery-ocp-feedstock
+	branch = main
