@@ -13110,3 +13110,7 @@
 	path = cadquery-ocp-feedstock
 	url = ../cadquery-ocp-feedstock
 	branch = main
+[submodule "pygobject-feedstock"]
+	path = pygobject-feedstock
+	url = ../pygobject-feedstock
+	branch = master
