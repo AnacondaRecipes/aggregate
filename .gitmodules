@@ -13102,3 +13102,7 @@
 	path = gdstk-feedstock
 	url = ../gdstk-feedstock
 	branch = main
+[submodule "occt-feedstock"]
+	path = occt-feedstock
+	url = ../occt-feedstock
+	branch = main
