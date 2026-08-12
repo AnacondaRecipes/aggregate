@@ -13114,3 +13114,7 @@
 	path = pygobject-feedstock
 	url = ../pygobject-feedstock
 	branch = master
+[submodule "conda-launchers-feedstock"]
+	path = conda-launchers-feedstock
+	url = ../conda-launchers-feedstock
+	branch = main
