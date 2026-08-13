@@ -934,7 +934,7 @@ tesseract:
 tiledb:
   - '2.30'
 tk:
-  - '8.6'
+  - '9.0'
 ucc:
   - '1'
 ucx:
