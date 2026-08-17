@@ -900,7 +900,7 @@ rhash:
 ruby:
   - '3.4'
 s2n:
-  - 1.6.2
+  - 1.7.7
 serf:
   - '1.3'
 shaderc:
