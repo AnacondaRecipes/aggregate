@@ -256,7 +256,7 @@ coin_or_osi:
 coin_or_utils:
   - '2.11'
 cryptography_vectors:
-  - 49.0.0
+  - 50.0.0
 cyrus_sasl:
   - '2'
 dal:
