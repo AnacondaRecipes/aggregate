@@ -742,7 +742,7 @@ macports_legacy_support:
 mbedtls:
   - '4.1'
 mesalib:
-  - '25.1'
+  - '26.1'
 minizip:
   - '4'
 mkl:
