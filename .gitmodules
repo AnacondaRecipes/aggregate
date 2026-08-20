@@ -13118,3 +13118,7 @@
 	path = conda-launchers-feedstock
 	url = ../conda-launchers-feedstock
 	branch = main
+[submodule "sphinxcontrib-mermaid-feedstock"]
+	path = sphinxcontrib-mermaid-feedstock
+	url = ../sphinxcontrib-mermaid-feedstock
+	branch = main
