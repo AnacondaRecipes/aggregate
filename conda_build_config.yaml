@@ -632,7 +632,7 @@ libogg:
 libopenblas:
   - '0'
 libopencv:
-  - '4.13'
+  - '4.14'
 libopengl:
   - '1'
 libopenjpeg:
@@ -788,7 +788,7 @@ openblas:
 openblas_devel:
   - '0'
 opencv:
-  - '4.13'
+  - '4.14'
 openh264:
   - '2.6'
 openjpeg:
@@ -836,7 +836,7 @@ pulseaudio_daemon:
 py_lief:
   - '0.17'
 py_opencv:
-  - '4.13'
+  - '4.14'
 pyqt:
   - '6.11'
 pyqtchart:
