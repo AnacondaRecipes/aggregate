@@ -13098,10 +13098,6 @@
 	path = furo-feedstock
 	url = ../furo-feedstock
 	branch = main
-[submodule "gdstk-feedstock"]
-	path = gdstk-feedstock
-	url = ../gdstk-feedstock
-	branch = main
 [submodule "occt-feedstock"]
 	path = occt-feedstock
 	url = ../occt-feedstock
