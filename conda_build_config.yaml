@@ -850,7 +850,7 @@ pytorch:
 qhull:
   - '2020.2'
 qpdf:
-  - '11'
+  - '12'
 qt:
   - '6.11'
 qt5compat:
