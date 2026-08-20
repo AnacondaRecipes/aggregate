@@ -648,7 +648,7 @@ libortools:
 libosqp:
   - 1.0.0
 libpciaccess:
-  - '0.18'
+  - '0.19'
 libpng:
   - '1.6'
 libpq:
