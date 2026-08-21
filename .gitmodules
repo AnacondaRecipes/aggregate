@@ -13094,27 +13094,43 @@
 	path = capstone-feedstock
 	url = ../capstone-feedstock
 	branch = main
-[submodule "furo-feedstock"]
-	path = furo-feedstock
-	url = ../furo-feedstock
-	branch = main
-[submodule "occt-feedstock"]
-	path = occt-feedstock
-	url = ../occt-feedstock
-	branch = main
-[submodule "cadquery-ocp-feedstock"]
-	path = cadquery-ocp-feedstock
-	url = ../cadquery-ocp-feedstock
-	branch = main
 [submodule "pygobject-feedstock"]
 	path = pygobject-feedstock
 	url = ../pygobject-feedstock
 	branch = master
-[submodule "conda-launchers-feedstock"]
-	path = conda-launchers-feedstock
-	url = ../conda-launchers-feedstock
-	branch = main
 [submodule "sphinxcontrib-mermaid-feedstock"]
 	path = sphinxcontrib-mermaid-feedstock
 	url = ../sphinxcontrib-mermaid-feedstock
+	branch = main
+[submodule "axolotl-feedstock"]
+	path = axolotl-feedstock
+	url = ../axolotl-feedstock
+	branch = main
+[submodule "gdstk-feedstock"]
+	path = gdstk-feedstock
+	url = ../gdstk-feedstock
+	branch = main
+[submodule "human-eval-feedstock"]
+	path = human-eval-feedstock
+	url = ../human-eval-feedstock
+	branch = main
+[submodule "ml-datasets-feedstock"]
+	path = ml-datasets-feedstock
+	url = ../ml-datasets-feedstock
+	branch = main
+[submodule "numba-cuda-mlir-feedstock"]
+	path = numba-cuda-mlir-feedstock
+	url = ../numba-cuda-mlir-feedstock
+	branch = main
+[submodule "opentelemetry-instrumentation-litellm-feedstock"]
+	path = opentelemetry-instrumentation-litellm-feedstock
+	url = ../opentelemetry-instrumentation-litellm-feedstock
+	branch = main
+[submodule "pytest-skip-slow-feedstock"]
+	path = pytest-skip-slow-feedstock
+	url = ../pytest-skip-slow-feedstock
+	branch = main
+[submodule "torch-c-dlpack-ext-feedstock"]
+	path = torch-c-dlpack-ext-feedstock
+	url = ../torch-c-dlpack-ext-feedstock
 	branch = main
