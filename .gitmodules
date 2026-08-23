@@ -13134,3 +13134,15 @@
 	path = torch-c-dlpack-ext-feedstock
 	url = ../torch-c-dlpack-ext-feedstock
 	branch = main
+[submodule "pytimeparse2-feedstock"]
+	path = pytimeparse2-feedstock
+	url = ../pytimeparse2-feedstock
+	branch = main
+[submodule "query-cache-common-feedstock"]
+	path = query-cache-common-feedstock
+	url = ../query-cache-common-feedstock
+	branch = main
+[submodule "query-cache-protobuf-feedstock"]
+	path = query-cache-protobuf-feedstock
+	url = ../query-cache-protobuf-feedstock
+	branch = main
