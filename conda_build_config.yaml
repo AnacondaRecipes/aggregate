@@ -123,9 +123,9 @@ numpy:
   - 2.5  # [ANACONDA_ROCKET_ENABLE_PY315 and ANACONDA_ROCKET_ENABLE_FREETHREADING]
 is_freethreading:
   # python 3.10
-  - false
+  - false  # [not (win and arm64)]
   # python 3.11
-  - false
+  - false  # [not (win and arm64)]
   # python 3.12
   - false
   # python 3.13
@@ -148,14 +148,13 @@ python_min:
 is_python_min:
   # python 3.10
   - true           # [not (win and arm64)]
-  - false          # [win and arm64]
   # python 3.11
-  - false
+  - false          # [not (win and arm64)]
   # python 3.12
-  - false
-  # python 3.13
   - false          # [not (win and arm64)]
   - true           # [win and arm64]
+  # python 3.13
+  - false
   # python 3.14
   - false
   # python 3.14t
