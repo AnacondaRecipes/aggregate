@@ -470,10 +470,6 @@
 	url = ../partd-feedstock.git
 	path = partd-feedstock
 	branch = master
-[submodule "path.py-feedstock"]
-	url = ../path.py-feedstock.git
-	path = path.py-feedstock
-	branch = master
 [submodule "patsy-feedstock"]
 	url = ../patsy-feedstock.git
 	path = patsy-feedstock
@@ -13145,4 +13141,16 @@
 [submodule "query-cache-protobuf-feedstock"]
 	path = query-cache-protobuf-feedstock
 	url = ../query-cache-protobuf-feedstock
+	branch = main
+[submodule "dbt-state-feedstock"]
+	path = dbt-state-feedstock
+	url = ../dbt-state-feedstock
+	branch = main
+[submodule "llama-swap-feedstock"]
+	path = llama-swap-feedstock
+	url = ../llama-swap-feedstock
+	branch = main
+[submodule "tilelang-feedstock"]
+	path = tilelang-feedstock
+	url = ../tilelang-feedstock
 	branch = main
