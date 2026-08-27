@@ -654,7 +654,7 @@ libpng:
 libpq:
   - '18'
 libprotobuf:
-  - 6.33.5
+  - 7.35.1
 libqdldl:
   - 0.1.9
 librdkafka:
