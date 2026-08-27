@@ -424,7 +424,7 @@ level_zero:
 leveldb:
   - '1.23'
 libabseil:
-  - '20260107'
+  - '20260526'
 libacl:
   - '2.3'
 libaec:
