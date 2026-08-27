@@ -1016,7 +1016,7 @@ xorg_libxxf86vm:
 xorg_xextproto:
   - '7'
 xorg_xorgproto:
-  - '2024'
+  - '2025'
 xxhash:
   - 0.8.3
 xz:
