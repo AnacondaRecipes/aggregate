@@ -13154,3 +13154,7 @@
 	path = tilelang-feedstock
 	url = ../tilelang-feedstock
 	branch = main
+[submodule "python-eccodes-feedstock"]
+	path = python-eccodes-feedstock
+	url = ../python-eccodes-feedstock
+	branch = main
