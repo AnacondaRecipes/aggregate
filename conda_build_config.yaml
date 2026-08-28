@@ -138,7 +138,7 @@ python_min:
   # minimum supported python version
   # bump to next minor version when we drop python versions
   - "3.10"         # [not (win and arm64)]
-  - "3.13"         # [win and arm64]
+  - "3.12"         # [win and arm64]
 is_python_min:
   # python 3.10
   - true           # [not (win and arm64)]
