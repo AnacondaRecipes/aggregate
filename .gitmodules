@@ -13154,3 +13154,11 @@
 	path = tilelang-feedstock
 	url = ../tilelang-feedstock
 	branch = main
+[submodule "presidio-analyzer-feedstock"]
+	path = presidio-analyzer-feedstock
+	url = ../presidio-analyzer-feedstock
+	branch = main
+[submodule "syft-feedstock"]
+	path = syft-feedstock
+	url = ../syft-feedstock
+	branch = main
