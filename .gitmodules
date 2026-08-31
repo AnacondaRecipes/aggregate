@@ -13162,3 +13162,7 @@
 	path = syft-feedstock
 	url = ../syft-feedstock
 	branch = main
+[submodule "py-cpuinfo2-feedstock"]
+	path = py-cpuinfo2-feedstock
+	url = ../py-cpuinfo2-feedstock
+	branch = main
