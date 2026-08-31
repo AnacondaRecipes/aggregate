@@ -10,10 +10,12 @@ blas_impl:
   - openblas
 c_compiler:
   - gcc                        # [linux]
+  - manylinux-gcc              # [linux]
   - clang                      # [osx]
   - vs2022                     # [win]
 c_compiler_version:            # [linux or osx]
   - 14.3.0                     # [linux]
+  - 15.2.1                     # [linux]
   - 20                         # [osx]
 c_stdlib:
   - sysroot                    # [linux]
@@ -26,10 +28,12 @@ c_stdlib_version:
   - 2022.14                    # [win]
 cxx_compiler:
   - gxx                        # [linux]
+  - manylinux-gxx              # [linux]
   - clangxx                    # [osx]
   - vs2022                     # [win]
 cxx_compiler_version:          # [linux or osx]
   - 14.3.0                     # [linux]
+  - 15.2.1                     # [linux]
   - 20                         # [osx]
 cuda_compiler:                 # [linux or (win and x86_64)]
   - cuda-nvcc                  # [linux or (win and x86_64)]
@@ -38,10 +42,15 @@ cuda_compiler_version:         # [linux or (win and x86_64)]
   - 13.0                       # [linux or (win and x86_64)]
 fortran_compiler:
   - gfortran                   # [linux or osx]
+  - manylinux-gfortran        # [linux]
   - flang                      # [win]
 fortran_compiler_version:
   - 20                         # [win]
   - 14.3.0                     # [osx or linux]
+  - 15.2.1                     # [linux]
+compiler_variant:              # [linux]
+  - main                       # [linux]
+  - manylinux                  # [linux]
 m2w64_c_compiler:              # [win and x86_64]
   - m2w64-toolchain            # [win and x86_64]
 m2w64_cxx_compiler:            # [win and x86_64]
@@ -120,6 +129,14 @@ zip_keys:
   -
     - python
     - numpy
+  -                                    # [linux]
+    - compiler_variant                 # [linux]
+    - c_compiler                       # [linux]
+    - c_compiler_version               # [linux]
+    - cxx_compiler                     # [linux]
+    - cxx_compiler_version             # [linux]
+    - fortran_compiler                 # [linux]
+    - fortran_compiler_version         # [linux]
 python_implementation:
   - cpython
 python_impl:
