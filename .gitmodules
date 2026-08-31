@@ -13166,3 +13166,95 @@
 	path = py-cpuinfo2-feedstock
 	url = ../py-cpuinfo2-feedstock
 	branch = main
+[submodule "anaconda-connector-conda-feedstock"]
+	path = anaconda-connector-conda-feedstock
+	url = ../anaconda-connector-conda-feedstock
+	branch = main
+[submodule "anaconda-connector-core-feedstock"]
+	path = anaconda-connector-core-feedstock
+	url = ../anaconda-connector-core-feedstock
+	branch = main
+[submodule "anaconda-connector-utilities-feedstock"]
+	path = anaconda-connector-utilities-feedstock
+	url = ../anaconda-connector-utilities-feedstock
+	branch = main
+[submodule "anaconda-env-log-feedstock"]
+	path = anaconda-env-log-feedstock
+	url = ../anaconda-env-log-feedstock
+	branch = main
+[submodule "anaconda-navigator-feedstock"]
+	path = anaconda-navigator-feedstock
+	url = ../anaconda-navigator-feedstock
+	branch = main
+[submodule "art-feedstock"]
+	path = art-feedstock
+	url = ../art-feedstock
+	branch = main
+[submodule "axolotl-contribs-lgpl-feedstock"]
+	path = axolotl-contribs-lgpl-feedstock
+	url = ../axolotl-contribs-lgpl-feedstock
+	branch = main
+[submodule "axolotl-contribs-mit-feedstock"]
+	path = axolotl-contribs-mit-feedstock
+	url = ../axolotl-contribs-mit-feedstock
+	branch = main
+[submodule "cadiback-feedstock"]
+	path = cadiback-feedstock
+	url = ../cadiback-feedstock
+	branch = main
+[submodule "environments-mcp-server-feedstock"]
+	path = environments-mcp-server-feedstock
+	url = ../environments-mcp-server-feedstock
+	branch = main
+[submodule "faster-whisper-feedstock"]
+	path = faster-whisper-feedstock
+	url = ../faster-whisper-feedstock
+	branch = main
+[submodule "fastsafetensors-feedstock"]
+	path = fastsafetensors-feedstock
+	url = ../fastsafetensors-feedstock
+	branch = main
+[submodule "gviz-api-feedstock"]
+	path = gviz-api-feedstock
+	url = ../gviz-api-feedstock
+	branch = main
+[submodule "kernels-data-feedstock"]
+	path = kernels-data-feedstock
+	url = ../kernels-data-feedstock
+	branch = main
+[submodule "metaflow-torchrun-feedstock"]
+	path = metaflow-torchrun-feedstock
+	url = ../metaflow-torchrun-feedstock
+	branch = master
+[submodule "navigator-updater-feedstock"]
+	path = navigator-updater-feedstock
+	url = ../navigator-updater-feedstock
+	branch = main
+[submodule "ob-project-utils-feedstock"]
+	path = ob-project-utils-feedstock
+	url = ../ob-project-utils-feedstock
+	branch = master
+[submodule "openenv-core-feedstock"]
+	path = openenv-core-feedstock
+	url = ../openenv-core-feedstock
+	branch = main
+[submodule "perl-file-sharedir-feedstock"]
+	path = perl-file-sharedir-feedstock
+	url = ../perl-file-sharedir-feedstock
+	branch = master
+[submodule "torchao-feedstock"]
+	path = torchao-feedstock
+	url = ../torchao-feedstock
+	branch = main
+[submodule "torchtune-feedstock"]
+	path = torchtune-feedstock
+	url = ../torchtune-feedstock
+	branch = main
+[submodule "unsloth-zoo-feedstock"]
+	path = unsloth-zoo-feedstock
+	url = ../unsloth-zoo-feedstock
+	branch = main
+[submodule "xprof-feedstock"]
+	path = xprof-feedstock
+	url = ../xprof-feedstock
+	branch = main
