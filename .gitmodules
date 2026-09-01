@@ -13258,3 +13258,7 @@
 	path = xprof-feedstock
 	url = ../xprof-feedstock
 	branch = main
+[submodule "libnvtiff-feedstock"]
+	path = libnvtiff-feedstock
+	url = ../libnvtiff-feedstock
+	branch = main
