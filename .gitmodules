@@ -13162,3 +13162,7 @@
 	path = syft-feedstock
 	url = ../syft-feedstock
 	branch = main
+[submodule "gribberish-feedstock"]
+	path = gribberish-feedstock
+	url = ../gribberish-feedstock
+	branch = main
