@@ -484,7 +484,7 @@ libarchive:
 libasprintf:
   - '0'
 libass:
-  - 0.17.4
+  - 0.17.5
 libassuan:
   - '3'
 libavif:
