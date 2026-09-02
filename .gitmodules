@@ -6523,10 +6523,6 @@
 	path = tensorflow-metadata-feedstock
 	url = ../tensorflow-metadata-feedstock
 	branch = main
-[submodule "tktable-feedstock"]
-	path = tktable-feedstock
-	url = ../tktable-feedstock
-	branch = main
 [submodule "tensorflow-datasets-feedstock"]
 	path = tensorflow-datasets-feedstock
 	url = ../tensorflow-datasets-feedstock
@@ -13261,4 +13257,16 @@
 [submodule "libnvtiff-feedstock"]
 	path = libnvtiff-feedstock
 	url = ../libnvtiff-feedstock
+	branch = main
+[submodule "dbt-core-experimental-parser-feedstock"]
+	path = dbt-core-experimental-parser-feedstock
+	url = ../dbt-core-experimental-parser-feedstock
+	branch = main
+[submodule "gribberish-feedstock"]
+	path = gribberish-feedstock
+	url = ../gribberish-feedstock
+	branch = main
+[submodule "metricflow-feedstock"]
+	path = metricflow-feedstock
+	url = ../metricflow-feedstock
 	branch = main
