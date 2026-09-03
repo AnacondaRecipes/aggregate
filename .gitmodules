@@ -13270,3 +13270,7 @@
 	path = metricflow-feedstock
 	url = ../metricflow-feedstock
 	branch = main
+[submodule "findlibs-feedstock"]
+	path = findlibs-feedstock
+	url = ../findlibs-feedstock
+	branch = main
