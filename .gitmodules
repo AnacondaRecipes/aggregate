@@ -13274,3 +13274,11 @@
 	path = findlibs-feedstock
 	url = ../findlibs-feedstock
 	branch = main
+[submodule "conda-anaconda-tos-feedstock"]
+	path = conda-anaconda-tos-feedstock
+	url = ../conda-anaconda-tos-feedstock
+	branch = main
+[submodule "libnvimgcodec-feedstock"]
+	path = libnvimgcodec-feedstock
+	url = ../libnvimgcodec-feedstock
+	branch = main
