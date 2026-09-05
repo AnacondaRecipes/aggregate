@@ -13282,3 +13282,7 @@
 	path = libnvimgcodec-feedstock
 	url = ../libnvimgcodec-feedstock
 	branch = main
+[submodule "conda-launchers-feedstock"]
+	path = conda-launchers-feedstock
+	url = ../conda-launchers-feedstock
+	branch = main
