@@ -13286,7 +13286,3 @@
 	path = conda-launchers-feedstock
 	url = ../conda-launchers-feedstock
 	branch = main
-[submodule "protobuf-py-feedstock"]
-	path = protobuf-py-feedstock
-	url = ../protobuf-py-feedstock
-	branch = main
