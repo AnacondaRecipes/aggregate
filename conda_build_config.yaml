@@ -671,6 +671,10 @@ libntlm:
   - '1'
 libnuma:
   - '2'
+libnvimgcodec:
+  - 0.9.0
+libnvimgcodec0:
+  - 0.9.0
 libogg:
   - '1.3'
 libopenblas:
