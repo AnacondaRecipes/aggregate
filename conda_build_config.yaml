@@ -856,7 +856,7 @@ pango:
 pcre:
   - '8'
 pcre2:
-  - '10.46'
+  - '10.48'
 pdal:
   - '2.5'
 perl_class_inspector:
