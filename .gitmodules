@@ -12265,10 +12265,6 @@
 	path = javaproperties-feedstock
 	url = ../javaproperties-feedstock
 	branch = main
-[submodule "metaflow-feedstock"]
-	path = metaflow-feedstock
-	url = ../metaflow-feedstock
-	branch = main
 [submodule "pycomposefile-feedstock"]
 	path = pycomposefile-feedstock
 	url = ../pycomposefile-feedstock
@@ -13285,4 +13281,12 @@
 [submodule "conda-launchers-feedstock"]
 	path = conda-launchers-feedstock
 	url = ../conda-launchers-feedstock
+	branch = main
+[submodule "protobuf-py-ext-feedstock"]
+	path = protobuf-py-ext-feedstock
+	url = ../protobuf-py-ext-feedstock
+	branch = main
+[submodule "ultralytics-platform-feedstock"]
+	path = ultralytics-platform-feedstock
+	url = ../ultralytics-platform-feedstock
 	branch = main
