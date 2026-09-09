@@ -990,7 +990,7 @@ ucx:
 unixodbc:
   - '2.3'
 util_linux:
-  - '2.39'
+  - '2.42'
 vcomp14:
   - 14.44.35208
 vtk_base:
