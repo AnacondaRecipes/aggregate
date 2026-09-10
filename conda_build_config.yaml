@@ -22,7 +22,7 @@ c_stdlib:
 c_stdlib_version:
   - 2.28                       # [linux]
   - 10.15                      # [osx and x86_64]
-  - 12.1                       # [osx and arm64]
+  - 13.3                       # [osx and arm64]
   - 2022.14                    # [win]
 cxx_compiler:
   - gxx                        # [linux]
@@ -191,18 +191,21 @@ OSX_SDK_DIR:                                  # [osx]
 
 # TODO: These are only necessary as we transition to using the stdlib('c') macro. They should be
 # removed once it is safe to do so.
+# On osx-arm64 the build SDK and the deployment target are intentionally decoupled:
+# we build against the 14.5 SDK (present on the workers, already used by qtbase,
+# qtdeclarative and qtsvg) while targeting 13.3.
 CONDA_BUILD_SYSROOT:
   - /opt/MacOSX10.15.sdk                                     # [osx and x86_64]
-  - /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk  # [osx and arm64]
+  - /Library/Developer/CommandLineTools/SDKs/MacOSX14.5.sdk  # [osx and arm64]
 macos_min_version:
   - 10.15 # [osx and x86_64]
-  - 12.1  # [osx and arm64]
+  - 13.3  # [osx and arm64]
 macos_machine:
   - x86_64-apple-darwin13.4.0  # [osx and x86_64]
   - arm64-apple-darwin20.0.0   # [osx and arm64]
 MACOSX_DEPLOYMENT_TARGET:
   - 10.15 # [osx and x86_64]
-  - 12.1  # [osx and arm64]
+  - 13.3  # [osx and arm64]
 
 ## GLOBAL pinnings
 alsa_lib:
