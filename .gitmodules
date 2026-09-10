@@ -13290,3 +13290,27 @@
 	path = ultralytics-platform-feedstock
 	url = ../ultralytics-platform-feedstock
 	branch = main
+[submodule "cublasmp-feedstock"]
+	path = cublasmp-feedstock
+	url = ../cublasmp-feedstock
+	branch = main
+[submodule "cusolvermp-feedstock"]
+	path = cusolvermp-feedstock
+	url = ../cusolvermp-feedstock
+	branch = main
+[submodule "eccodes-feedstock"]
+	path = eccodes-feedstock
+	url = ../eccodes-feedstock
+	branch = main
+[submodule "protobuf-py-feedstock"]
+	path = protobuf-py-feedstock
+	url = ../protobuf-py-feedstock
+	branch = main
+[submodule "ropwr-feedstock"]
+	path = ropwr-feedstock
+	url = ../ropwr-feedstock
+	branch = main
+[submodule "tabpy-feedstock"]
+	path = tabpy-feedstock
+	url = ../tabpy-feedstock
+	branch = main
