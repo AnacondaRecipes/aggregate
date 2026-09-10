@@ -311,6 +311,8 @@ dlfcn_win32:
   - '1'
 dpcpp_cpp_rt:
   - '2023'
+eccodes:
+  - '2.47'
 eigen:
   - 3.3.7
 elfutils:
