@@ -12805,10 +12805,6 @@
 	path = pydantic-ai-feedstock
 	url = ../pydantic-ai-feedstock
 	branch = main
-[submodule "pydantic-graph-feedstock"]
-	path = pydantic-graph-feedstock
-	url = ../pydantic-graph-feedstock
-	branch = main
 [submodule "httpx2-feedstock"]
 	path = httpx2-feedstock
 	url = ../httpx2-feedstock
