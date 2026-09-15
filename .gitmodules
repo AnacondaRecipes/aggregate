@@ -13314,3 +13314,15 @@
 	path = python-eccodes-feedstock
 	url = ../python-eccodes-feedstock
 	branch = main
+[submodule "ag2-feedstock"]
+	path = ag2-feedstock
+	url = ../ag2-feedstock
+	branch = main
+[submodule "cython-cmake-feedstock"]
+	path = cython-cmake-feedstock
+	url = ../cython-cmake-feedstock
+	branch = main
+[submodule "optbinning-feedstock"]
+	path = optbinning-feedstock
+	url = ../optbinning-feedstock
+	branch = main
