@@ -80,7 +80,7 @@ clang_variant:
 go_compiler:
   - go-nocgo
 go_compiler_version:
-  - 1.21
+  - 1.26
 # The go compiler build with CGO enabled (CGO_ENABLED=1).
 # It can generate fat binaries that depend on conda's libc.
 # You should use this compiler if the underlying
@@ -90,7 +90,7 @@ go_compiler_version:
 cgo_compiler:
   - go-cgo
 cgo_compiler_version:
-  - 1.21
+  - 1.26
 python:
   - "3.10"  # [not (win and arm64)]
   - "3.11"  # [not (win and arm64)]
