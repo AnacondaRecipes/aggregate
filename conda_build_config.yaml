@@ -90,7 +90,7 @@ go_compiler_version:
 cgo_compiler:
   - go-cgo
 cgo_compiler_version:
-  - 1.21
+  - 1.26
 python:
   - "3.10"  # [not (win and arm64)]
   - "3.11"  # [not (win and arm64)]
