@@ -615,7 +615,7 @@ libkrb5:
 libksba:
   - '1.6'
 liblief:
-  - '0.17'
+  - '1.0'
 libllvm17:
   - '17.0'
 libllvm19:
@@ -885,7 +885,7 @@ pulseaudio_client:
 pulseaudio_daemon:
   - '17.0'
 py_lief:
-  - '0.17'
+  - '1.0'
 py_opencv:
   - '4.14'
 pyqt:
