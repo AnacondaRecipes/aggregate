@@ -11382,10 +11382,6 @@
 	path = tensorstore-feedstock
 	url = ../tensorstore-feedstock
 	branch = main
-[submodule "libseccomp-feedstock"]
-	path = libseccomp-feedstock
-	url = ../libseccomp-feedstock
-	branch = main
 [submodule "jack-feedstock"]
 	path = jack-feedstock
 	url = ../jack-feedstock
@@ -13325,4 +13321,8 @@
 [submodule "optbinning-feedstock"]
 	path = optbinning-feedstock
 	url = ../optbinning-feedstock
+	branch = main
+[submodule "seccomp-split-feedstock"]
+	path = seccomp-split-feedstock
+	url = ../seccomp-split-feedstock
 	branch = main
