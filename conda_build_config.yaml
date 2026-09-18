@@ -600,6 +600,8 @@ libhiredis:
   - '1.3'
 libhwloc:
   - 2.14.0
+libhwy:
+  - '1.4'
 libiconv:
   - '1'
 libidn2:
