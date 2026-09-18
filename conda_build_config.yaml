@@ -937,7 +937,7 @@ quantlib:
 rdkit:
   - 2026.3.5
 rdma_core:
-  - '61.0'
+  - '65.0'
 re2:
   - '2025'
 readline:
