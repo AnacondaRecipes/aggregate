@@ -107,11 +107,11 @@ numpy:
   # python 3.10
   - 2.1  # [not (win and arm64)]
   # python 3.11
-  - 2.1  # [not (win and arm64)]
+  - 2.3  # [not (win and arm64)]
   # python 3.12
-  - 2.1
+  - 2.3
   # python 3.13
-  - 2.1
+  - 2.3
   # python 3.14
   - 2.3
   # python 3.14t
