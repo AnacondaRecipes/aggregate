@@ -13326,3 +13326,19 @@
 	path = seccomp-split-feedstock
 	url = ../seccomp-split-feedstock
 	branch = main
+[submodule "bubblewrap-feedstock"]
+	path = bubblewrap-feedstock
+	url = ../bubblewrap-feedstock
+	branch = main
+[submodule "libhwy-feedstock"]
+	path = libhwy-feedstock
+	url = ../libhwy-feedstock
+	branch = main
+[submodule "opendal-feedstock"]
+	path = opendal-feedstock
+	url = ../opendal-feedstock
+	branch = main
+[submodule "valgrind-feedstock"]
+	path = valgrind-feedstock
+	url = ../valgrind-feedstock
+	branch = main
