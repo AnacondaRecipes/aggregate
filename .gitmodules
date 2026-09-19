@@ -13342,3 +13342,11 @@
 	path = valgrind-feedstock
 	url = ../valgrind-feedstock
 	branch = main
+[submodule "hdrhistogram-c-feedstock"]
+	path = hdrhistogram-c-feedstock
+	url = ../hdrhistogram-c-feedstock
+	branch = main
+[submodule "lol-html-feedstock"]
+	path = lol-html-feedstock
+	url = ../lol-html-feedstock
+	branch = main
