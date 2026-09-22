@@ -1270,10 +1270,6 @@
 	path = gunicorn-feedstock
 	url = ../gunicorn-feedstock
 	branch = master
-[submodule "paste-feedstock"]
-	path = paste-feedstock
-	url = ../paste-feedstock
-	branch = master
 [submodule "pyserial-feedstock"]
 	path = pyserial-feedstock
 	url = ../pyserial-feedstock
@@ -3986,10 +3982,6 @@
 	path = editdistance-feedstock
 	url = ../editdistance-feedstock
 	branch = master
-[submodule "imgaug-feedstock"]
-	path = imgaug-feedstock
-	url = ../imgaug-feedstock
-	branch = master
 [submodule "pyclipper-feedstock"]
 	path = pyclipper-feedstock
 	url = ../pyclipper-feedstock
@@ -4909,10 +4901,6 @@
 	path = capnproto-feedstock
 	url = ../capnproto-feedstock
 	branch = master
-[submodule "crender-feedstock"]
-	path = crender-feedstock
-	url = ../crender-feedstock
-	branch = main
 [submodule "rust-activation-feedstock"]
 	path = rust-activation-feedstock
 	url = ../rust-activation-feedstock
@@ -5321,10 +5309,6 @@
 	path = onnxruntime-feedstock
 	url = ../onnxruntime-feedstock
 	branch = main
-[submodule "anaconda-linter-feedstock"]
-	path = anaconda-linter-feedstock
-	url = ../anaconda-linter-feedstock
-	branch = main
 [submodule "thefuzz-feedstock"]
 	path = thefuzz-feedstock
 	url = ../thefuzz-feedstock
@@ -5352,10 +5336,6 @@
 [submodule "tesseract-feedstock"]
 	path = tesseract-feedstock
 	url = ../tesseract-feedstock
-	branch = main
-[submodule "_libarchive_static_for_cph-feedstock"]
-	path = _libarchive_static_for_cph-feedstock
-	url = ../_libarchive_static_for_cph-feedstock
 	branch = main
 [submodule "p7zip-feedstock"]
 	path = p7zip-feedstock
@@ -7479,10 +7459,6 @@
 [submodule "lightning-cloud-feedstock"]
 	path = lightning-cloud-feedstock
 	url = ../lightning-cloud-feedstock
-	branch = main
-[submodule "lightning-feedstock"]
-	path = lightning-feedstock
-	url = ../lightning-feedstock
 	branch = main
 [submodule "autogluon-feedstock"]
 	path = autogluon-feedstock
