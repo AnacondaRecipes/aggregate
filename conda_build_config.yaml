@@ -595,7 +595,7 @@ libgsasl:
 libgsf:
   - '1.14'
 libheif:
-  - '1.19'
+  - '1.23'
 libhiredis:
   - '1.3'
 libhwloc:
