@@ -638,6 +638,8 @@ libllvm_c22:
   - '22.1'
 libltdl:
   - '2.6'
+libmagic:
+  - '5'
 libmamba:
   - '2.3'
 libmambapy:
