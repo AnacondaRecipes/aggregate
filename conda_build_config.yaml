@@ -35,11 +35,12 @@ cxx_compiler_version:          # [linux or osx]
   - 14.3.0                     # [linux]
   - 15.2.1                     # [linux]
   - 20                         # [osx]
-cuda_compiler:                 # [linux or (win and x86_64)]
-  - cuda-nvcc                  # [linux or (win and x86_64)]
-cuda_compiler_version:         # [linux or (win and x86_64)]
+cuda_compiler:                 # [linux or win]
+  - cuda-nvcc                  # [linux or win]
+cuda_compiler_version:         # [linux or win]
   - 12.9                       # [linux or (win and x86_64)]
   - 13.0                       # [linux or (win and x86_64)]
+  - 13.4                       # [win and arm64]
 fortran_compiler:
   - gfortran                   # [linux or osx]
   - manylinux-gfortran        # [linux]
@@ -89,7 +90,7 @@ clang_variant:
 go_compiler:
   - go-nocgo
 go_compiler_version:
-  - 1.21
+  - 1.26
 # The go compiler build with CGO enabled (CGO_ENABLED=1).
 # It can generate fat binaries that depend on conda's libc.
 # You should use this compiler if the underlying
@@ -99,36 +100,78 @@ go_compiler_version:
 cgo_compiler:
   - go-cgo
 cgo_compiler_version:
-  - 1.21
+  - 1.26
 python:
-  - "3.10"
-  - "3.11"
+  - "3.10"  # [not (win and arm64)]
+  - "3.11"  # [not (win and arm64)]
   - "3.12"
   - "3.13"
   - "3.14"
+  - "3.14.* *_cp314t" # [ANACONDA_ROCKET_ENABLE_FREETHREADING]
   - "3.15"  # [ANACONDA_ROCKET_ENABLE_PY315]
+  - "3.15.* *_cp315t"  # [ANACONDA_ROCKET_ENABLE_PY315 and ANACONDA_ROCKET_ENABLE_FREETHREADING]
 # numpy will by default use a compatible ABI for the oldest still-supported numpy versions
 # `{{ pin_compatible("numpy") }}` is no longer needed as builds of numpy from version 2 have run_exports.
 numpy:
   # python 3.10
-  - 2.1
+  - 2.1  # [not (win and arm64)]
   # python 3.11
-  - 2.1
+  - 2.3  # [not (win and arm64)]
   # python 3.12
-  - 2.1
+  - 2.3
   # python 3.13
-  - 2.1
+  - 2.3
   # python 3.14
   - 2.3
+  # python 3.14t
+  - 2.3  # [ANACONDA_ROCKET_ENABLE_FREETHREADING]
   # python 3.15
-  # TODO: numpy 2.6.0 is not released yet;
-  # upstream says py315 support starts with Python 3.15.0rc1 (~Jul 2026)
-  # keep 2.5 for now. Recheck when 2.6.0 is released.
   - 2.5  # [ANACONDA_ROCKET_ENABLE_PY315]
+  - 2.5  # [ANACONDA_ROCKET_ENABLE_PY315 and ANACONDA_ROCKET_ENABLE_FREETHREADING]
+is_freethreading:
+  # python 3.10
+  - false  # [not (win and arm64)]
+  # python 3.11
+  - false  # [not (win and arm64)]
+  # python 3.12
+  - false
+  # python 3.13
+  - false
+  # python 3.14
+  - false
+  # python 3.14t
+  - true  # [ANACONDA_ROCKET_ENABLE_FREETHREADING]
+  # python 3.15
+  - false  # [ANACONDA_ROCKET_ENABLE_PY315]
+  - true  # [ANACONDA_ROCKET_ENABLE_PY315 and ANACONDA_ROCKET_ENABLE_FREETHREADING]
+python_min:
+  # minimum supported python version
+  # bump to next minor version when we drop python versions
+  - "3.10"         # [not (win and arm64)]
+  - "3.12"         # [win and arm64]
+is_python_min:
+  # python 3.10
+  - true           # [not (win and arm64)]
+  # python 3.11
+  - false          # [not (win and arm64)]
+  # python 3.12
+  - false          # [not (win and arm64)]
+  - true           # [win and arm64]
+  # python 3.13
+  - false
+  # python 3.14
+  - false
+  # python 3.14t
+  - false  # [ANACONDA_ROCKET_ENABLE_FREETHREADING]
+  # python 3.15
+  - false  # [ANACONDA_ROCKET_ENABLE_PY315]
+  - false  # [ANACONDA_ROCKET_ENABLE_PY315 and ANACONDA_ROCKET_ENABLE_FREETHREADING]
 zip_keys:
   -
     - python
     - numpy
+    - is_freethreading
+    - is_python_min
   -                                    # [linux]
     - compiler_variant                 # [linux]
     - c_compiler                       # [linux]
@@ -185,7 +228,7 @@ alsa_lib:
 ampl_mp:
   - '3.1'
 aom:
-  - '3.13'
+  - '3.14'
 armadillo:
   - '12'
 arpack:
@@ -207,7 +250,7 @@ aws_c_auth:
 aws_c_cal:
   - 0.9.14
 aws_c_common:
-  - 0.14.0
+  - 0.14.5
 aws_c_compression:
   - 0.3.2
 aws_c_event_stream:
@@ -259,7 +302,7 @@ capnproto:
 ceres_solver:
   - '2.2'
 cfitsio:
-  - 4.6.3
+  - 4.7.0
 charls:
   - '2.4'
 coin_or_cbc:
@@ -273,7 +316,7 @@ coin_or_osi:
 coin_or_utils:
   - '2.11'
 cryptography_vectors:
-  - 49.0.0
+  - 50.0.0
 cyrus_sasl:
   - '2'
 dal:
@@ -286,6 +329,8 @@ dlfcn_win32:
   - '1'
 dpcpp_cpp_rt:
   - '2023'
+eccodes:
+  - '2.47'
 eigen:
   - 3.3.7
 elfutils:
@@ -441,7 +486,7 @@ level_zero:
 leveldb:
   - '1.23'
 libabseil:
-  - '20260107'
+  - '20260526'
 libacl:
   - '2.3'
 libaec:
@@ -459,7 +504,7 @@ libarchive:
 libasprintf:
   - '0'
 libass:
-  - 0.17.4
+  - 0.17.5
 libassuan:
   - '3'
 libavif:
@@ -478,6 +523,8 @@ libbrotlienc:
   - '1.2'
 libcap:
   - '2.78'
+libcapstone:
+  - 5.0.9
 libclang13:
   - 22.1.2
 libclang_cpp10:
@@ -523,9 +570,9 @@ libevent:
 libexpat:
   - '2'
 libfaiss:
-  - 1.14.1
+  - 1.15.0
 libfaiss_avx2:
-  - 1.14.1
+  - 1.15.0
 libffi:
   - '3.4'
 libflac:
@@ -559,7 +606,7 @@ libglx:
 libgpg_error:
   - '1'
 libgrpc:
-  - '1.78'
+  - '1.83'
 libgsasl:
   - '1'
 libgsf:
@@ -644,12 +691,16 @@ libntlm:
   - '1'
 libnuma:
   - '2'
+libnvimgcodec:
+  - 0.9.0
+libnvimgcodec0:
+  - 0.9.0
 libogg:
   - '1.3'
 libopenblas:
   - '0'
 libopencv:
-  - '4.13'
+  - '4.14'
 libopengl:
   - '1'
 libopenjpeg:
@@ -663,13 +714,13 @@ libortools:
 libosqp:
   - 1.0.0
 libpciaccess:
-  - '0.18'
+  - '0.19'
 libpng:
   - '1.6'
 libpq:
-  - '17'
+  - '18'
 libprotobuf:
-  - 6.33.5
+  - 7.35.1
 libqdldl:
   - 0.1.9
 librdkafka:
@@ -705,7 +756,7 @@ libtirpc:
 libtmglib:
   - '3'
 libtorch:
-  - '2.12'
+  - '2.14'
 libunistring:
   - '1'
 libunwind:
@@ -759,7 +810,7 @@ macports_legacy_support:
 mbedtls:
   - '4.1'
 mesalib:
-  - '25.1'
+  - '26.1'
 minizip:
   - '4'
 mkl:
@@ -805,7 +856,7 @@ openblas:
 openblas_devel:
   - '0'
 opencv:
-  - '4.13'
+  - '4.14'
 openh264:
   - '2.6'
 openjpeg:
@@ -825,7 +876,7 @@ pango:
 pcre:
   - '8'
 pcre2:
-  - '10.46'
+  - '10.48'
 pdal:
   - '2.5'
 perl_class_inspector:
@@ -853,7 +904,7 @@ pulseaudio_daemon:
 py_lief:
   - '0.17'
 py_opencv:
-  - '4.13'
+  - '4.14'
 pyqt:
   - '6.11'
 pyqtchart:
@@ -863,11 +914,11 @@ pyqtwebengine:
 python_igraph:
   - '1.0'
 pytorch:
-  - '2.12'
+  - '2.14'
 qhull:
   - '2020.2'
 qpdf:
-  - '11'
+  - '12'
 qt:
   - '6.11'
 qt5compat:
@@ -901,7 +952,7 @@ qtwebsockets:
 quantlib:
   - '1'
 rdkit:
-  - 2025.9.6
+  - 2026.3.5
 rdma_core:
   - '61.0'
 re2:
@@ -915,9 +966,9 @@ reproc_cpp:
 rhash:
   - '1'
 ruby:
-  - '3.4'
+  - '4.0'
 s2n:
-  - 1.6.2
+  - 1.7.7
 serf:
   - '1.3'
 shaderc:
@@ -959,7 +1010,7 @@ ucx:
 unixodbc:
   - '2.3'
 util_linux:
-  - '2.39'
+  - '2.42'
 vcomp14:
   - 14.44.35208
 vtk_base:
@@ -1031,7 +1082,7 @@ xorg_libxxf86vm:
 xorg_xextproto:
   - '7'
 xorg_xorgproto:
-  - '2024'
+  - '2025'
 xxhash:
   - 0.8.3
 xz:
