@@ -794,7 +794,8 @@ libxmlsec1:
 libxslt:
   - '1'
 libzlib:
-  - '1'
+  # We need this version precisely for manylinux
+  - '1.2.11'
 libzlib_wapi:
   - '1'
 libzopfli:
