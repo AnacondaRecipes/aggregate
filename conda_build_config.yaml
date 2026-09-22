@@ -453,7 +453,7 @@ jxrlib:
 kealib:
   - '1.6'
 khronos_opencl_icd_loader:
-  - 2025.7.22
+  - 2026.5.29
 krb5:
   - '1.22'
 lame:
