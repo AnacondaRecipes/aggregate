@@ -13326,3 +13326,7 @@
 	path = lol-html-feedstock
 	url = ../lol-html-feedstock
 	branch = main
+[submodule "icechunk-feedstock"]
+	path = icechunk-feedstock
+	url = ../icechunk-feedstock
+	branch = main
