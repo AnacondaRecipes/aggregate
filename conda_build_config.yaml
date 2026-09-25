@@ -97,9 +97,11 @@ python:
   - "3.11"  # [not (win and arm64)]
   - "3.12"
   - "3.13"
-  - "3.14"
+  - "3.14"  # [not ANACONDA_ROCKET_ENABLE_FREETHREADING]
+  - "3.14.* *_cp314"  # [ANACONDA_ROCKET_ENABLE_FREETHREADING]
   - "3.14.* *_cp314t" # [ANACONDA_ROCKET_ENABLE_FREETHREADING]
-  - "3.15"  # [ANACONDA_ROCKET_ENABLE_PY315]
+  - "3.15"  # [ANACONDA_ROCKET_ENABLE_PY315 and (not ANACONDA_ROCKET_ENABLE_FREETHREADING)]
+  - "3.15.* *_cp315"   # [ANACONDA_ROCKET_ENABLE_PY315 and ANACONDA_ROCKET_ENABLE_FREETHREADING]
   - "3.15.* *_cp315t"  # [ANACONDA_ROCKET_ENABLE_PY315 and ANACONDA_ROCKET_ENABLE_FREETHREADING]
 # numpy will by default use a compatible ABI for the oldest still-supported numpy versions
 # `{{ pin_compatible("numpy") }}` is no longer needed as builds of numpy from version 2 have run_exports.
@@ -131,10 +133,10 @@ is_freethreading:
   # python 3.14
   - false
   # python 3.14t
-  - true  # [ANACONDA_ROCKET_ENABLE_FREETHREADING]
+  - true   # [ANACONDA_ROCKET_ENABLE_FREETHREADING]
   # python 3.15
   - false  # [ANACONDA_ROCKET_ENABLE_PY315]
-  - true  # [ANACONDA_ROCKET_ENABLE_PY315 and ANACONDA_ROCKET_ENABLE_FREETHREADING]
+  - true   # [ANACONDA_ROCKET_ENABLE_PY315 and ANACONDA_ROCKET_ENABLE_FREETHREADING]
 python_min:
   # minimum supported python version
   # bump to next minor version when we drop python versions
