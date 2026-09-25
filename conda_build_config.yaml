@@ -319,6 +319,8 @@ cryptography_vectors:
   - 50.0.0
 cyrus_sasl:
   - '2'
+cmake:
+- '3.31.12'
 dal:
   - '2023'
 dav1d:
