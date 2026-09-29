@@ -13330,3 +13330,7 @@
 	path = icechunk-feedstock
 	url = ../icechunk-feedstock
 	branch = main
+[submodule "ls-hpack-feedstock"]
+	path = ls-hpack-feedstock
+	url = ../ls-hpack-feedstock
+	branch = main
