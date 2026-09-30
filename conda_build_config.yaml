@@ -406,6 +406,8 @@ hdf4:
   - 4.2.13
 hdf5:
   - 2.0.0
+hdrhistogram_c:
+  - 0.11.10
 hidapi:
   - '0.8'
 icc_rt:
