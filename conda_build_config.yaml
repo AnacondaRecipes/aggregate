@@ -231,7 +231,7 @@ av:
 aws_c_auth:
   - 0.10.4
 aws_c_cal:
-  - 0.9.15
+  - 1.0.0
 aws_c_common:
   - 1.0.1
 aws_c_compression:
