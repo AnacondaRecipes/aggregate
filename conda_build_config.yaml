@@ -235,7 +235,7 @@ aws_c_cal:
 aws_c_common:
   - 0.14.5
 aws_c_compression:
-  - 0.3.2
+  - 1.0.0
 aws_c_event_stream:
   - 0.7.1
 aws_c_http:
