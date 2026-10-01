@@ -13334,3 +13334,7 @@
 	path = ls-hpack-feedstock
 	url = ../ls-hpack-feedstock
 	branch = main
+[submodule "pipcl-feedstock"]
+	path = pipcl-feedstock
+	url = ../pipcl-feedstock
+	branch = main
