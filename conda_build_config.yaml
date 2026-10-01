@@ -1012,6 +1012,8 @@ vulkan_loader:
   - '1.4'
 wayland:
   - '1'
+whisper_cpp:
+  - 1.9.4
 x264:
   - 1!157.20191217
 xcb_util:
