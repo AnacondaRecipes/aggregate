@@ -229,7 +229,7 @@ attr:
 av:
   - '16'
 aws_c_auth:
-  - 0.10.4
+  - 1.0.0
 aws_c_cal:
   - 1.0.0
 aws_c_common:
