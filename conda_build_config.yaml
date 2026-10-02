@@ -721,7 +721,7 @@ librsvg:
 libseccomp:
   - '2'
 libsentencepiece:
-  - 0.2.1
+  - 0.2.2
 libsndfile:
   - '1.2'
 libsodium:
