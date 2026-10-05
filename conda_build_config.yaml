@@ -919,7 +919,7 @@ qt_main:
 qt_webengine:
   - '5.15'
 qtbase:
-  - '6.11'
+  - 6.12.0
 qtdeclarative:
   - '6.11'
 qtimageformats:
