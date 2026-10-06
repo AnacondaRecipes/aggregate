@@ -885,7 +885,7 @@ pixman:
 popt:
   - '1'
 proj:
-  - 9.7.1
+  - 9.9.0
 pugixml:
   - '1.11'
 pulseaudio_client:
