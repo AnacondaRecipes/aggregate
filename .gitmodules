@@ -13334,3 +13334,7 @@
 	path = pipcl-feedstock
 	url = ../pipcl-feedstock
 	branch = main
+[submodule "enkryptai-sdk-feedstock"]
+	path = enkryptai-sdk-feedstock
+	url = ../enkryptai-sdk-feedstock
+	branch = main
