@@ -921,7 +921,7 @@ qt_webengine:
 qtbase:
   - '6.11'
 qtdeclarative:
-  - '6.11'
+  - 6.12.0
 qtimageformats:
   - '6.11'
 qtshadertools:
