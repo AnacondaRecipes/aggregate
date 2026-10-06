@@ -839,9 +839,9 @@ ntbtls:
 ocl_icd:
   - '2'
 onnxruntime_cpp:
-  - 1.24.4
+  - 1.30.0
 onnxruntime_novec_cpp:
-  - 1.24.4
+  - 1.30.0
 openblas:
   - '0'
 openblas_devel:
