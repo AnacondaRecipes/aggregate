@@ -939,7 +939,7 @@ qtwebchannel:
 qtwebengine:
   - '6.11'
 qtwebsockets:
-  - '6.11'
+  - 6.12.0
 quantlib:
   - '1'
 rdkit:
