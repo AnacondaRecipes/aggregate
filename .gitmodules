@@ -13338,3 +13338,11 @@
 	path = enkryptai-sdk-feedstock
 	url = ../enkryptai-sdk-feedstock
 	branch = main
+[submodule "crcmod-feedstock"]
+	path = crcmod-feedstock
+	url = ../crcmod-feedstock
+	branch = main
+[submodule "rapidocr-feedstock"]
+	path = rapidocr-feedstock
+	url = ../rapidocr-feedstock
+	branch = main
