@@ -792,6 +792,8 @@ lmdb:
   - '1'
 lol_html:
   - 3.0.1
+lp_solve:
+  - '5.5'
 lz4_c:
   - '1.9'
 lzo:
