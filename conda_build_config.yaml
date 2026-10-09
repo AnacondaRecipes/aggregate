@@ -967,7 +967,7 @@ shaderc:
 simdjson:
   - '4.6'
 sip:
-  - '6.15'
+  - '6.17'
 sleef:
   - '3'
 snappy:
