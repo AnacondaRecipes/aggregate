@@ -539,7 +539,7 @@ libcurl:
 libde265:
   - 1.0.18
 libdeflate:
-  - '1.22'
+  - '1.26'
 libdrm:
   - '2.4'
 libebm:
