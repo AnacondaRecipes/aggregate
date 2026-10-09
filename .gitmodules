@@ -6415,10 +6415,6 @@
 	path = cmarkgfm-feedstock
 	url = ../cmarkgfm-feedstock
 	branch = main
-[submodule "cupti-feedstock"]
-	path = cupti-feedstock
-	url = ../cupti-feedstock
-	branch = main
 [submodule "pymc-marketing-feedstock"]
 	path = pymc-marketing-feedstock
 	url = ../pymc-marketing-feedstock
@@ -13345,4 +13341,16 @@
 [submodule "rapidocr-feedstock"]
 	path = rapidocr-feedstock
 	url = ../rapidocr-feedstock
+	branch = main
+[submodule "lp_solve-feedstock"]
+	path = lp_solve-feedstock
+	url = ../lp_solve-feedstock
+	branch = main
+[submodule "opentelemetry-instrumentation-tornado-feedstock"]
+	path = opentelemetry-instrumentation-tornado-feedstock
+	url = ../opentelemetry-instrumentation-tornado-feedstock
+	branch = main
+[submodule "pywr-feedstock"]
+	path = pywr-feedstock
+	url = ../pywr-feedstock
 	branch = main
