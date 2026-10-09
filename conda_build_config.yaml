@@ -929,7 +929,7 @@ qtshadertools:
 qtsvg:
   - '6.11'
 qttools:
-  - '6.11'
+  - 6.12.0
 qttranslations:
   - '6.11'
 qtwayland:
