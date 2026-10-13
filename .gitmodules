@@ -6415,10 +6415,6 @@
 	path = cmarkgfm-feedstock
 	url = ../cmarkgfm-feedstock
 	branch = main
-[submodule "cupti-feedstock"]
-	path = cupti-feedstock
-	url = ../cupti-feedstock
-	branch = main
 [submodule "pymc-marketing-feedstock"]
 	path = pymc-marketing-feedstock
 	url = ../pymc-marketing-feedstock
@@ -6626,10 +6622,6 @@
 [submodule "libopus-feedstock"]
 	path = libopus-feedstock
 	url = ../libopus-feedstock
-	branch = main
-[submodule "ctng-dbg-compilers-activation-feedstock"]
-	path = ctng-dbg-compilers-activation-feedstock
-	url = ../ctng-dbg-compilers-activation-feedstock
 	branch = main
 [submodule "double-conversion-feedstock"]
 	path = double-conversion-feedstock
@@ -13329,4 +13321,36 @@
 [submodule "icechunk-feedstock"]
 	path = icechunk-feedstock
 	url = ../icechunk-feedstock
+	branch = main
+[submodule "ls-hpack-feedstock"]
+	path = ls-hpack-feedstock
+	url = ../ls-hpack-feedstock
+	branch = main
+[submodule "pipcl-feedstock"]
+	path = pipcl-feedstock
+	url = ../pipcl-feedstock
+	branch = main
+[submodule "enkryptai-sdk-feedstock"]
+	path = enkryptai-sdk-feedstock
+	url = ../enkryptai-sdk-feedstock
+	branch = main
+[submodule "crcmod-feedstock"]
+	path = crcmod-feedstock
+	url = ../crcmod-feedstock
+	branch = main
+[submodule "rapidocr-feedstock"]
+	path = rapidocr-feedstock
+	url = ../rapidocr-feedstock
+	branch = main
+[submodule "lp_solve-feedstock"]
+	path = lp_solve-feedstock
+	url = ../lp_solve-feedstock
+	branch = main
+[submodule "opentelemetry-instrumentation-tornado-feedstock"]
+	path = opentelemetry-instrumentation-tornado-feedstock
+	url = ../opentelemetry-instrumentation-tornado-feedstock
+	branch = main
+[submodule "pywr-feedstock"]
+	path = pywr-feedstock
+	url = ../pywr-feedstock
 	branch = main
