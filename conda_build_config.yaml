@@ -790,6 +790,8 @@ libzopfli:
   - '1.0'
 lmdb:
   - '1'
+ls_hpack:
+  - 2.3.5
 lol_html:
   - 3.0.1
 lz4_c:
