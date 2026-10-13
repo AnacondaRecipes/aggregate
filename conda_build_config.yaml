@@ -737,7 +737,7 @@ libtasn1:
 libtheora:
   - '1.2'
 libthrift:
-  - '0.24'
+  - '0.25'
 libtiff:
   - '4'
 libtirpc:
