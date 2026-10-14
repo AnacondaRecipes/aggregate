@@ -937,7 +937,7 @@ qttools:
 qttranslations:
   - '6.11'
 qtwayland:
-  - '6.11'
+  - 6.12.0
 qtwebchannel:
   - '6.11'
 qtwebengine:
