@@ -919,7 +919,7 @@ qt:
 qt5compat:
   - '6.11'
 qt_main:
-  - '6.11'
+  - 6.12.0
 qt_webengine:
   - '5.15'
 qtbase:
