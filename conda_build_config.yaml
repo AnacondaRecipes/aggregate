@@ -931,7 +931,7 @@ qtimageformats:
 qtshadertools:
   - '6.11'
 qtsvg:
-  - '6.11'
+  - 6.12.0
 qttools:
   - '6.11'
 qttranslations:
