@@ -13354,3 +13354,15 @@
 	path = pywr-feedstock
 	url = ../pywr-feedstock
 	branch = main
+[submodule "meteostat-feedstock"]
+	path = meteostat-feedstock
+	url = ../meteostat-feedstock
+	branch = main
+[submodule "opentelemetry-instrumentation-httpx-feedstock"]
+	path = opentelemetry-instrumentation-httpx-feedstock
+	url = ../opentelemetry-instrumentation-httpx-feedstock
+	branch = main
+[submodule "requests-negotiate-sspi-feedstock"]
+	path = requests-negotiate-sspi-feedstock
+	url = ../requests-negotiate-sspi-feedstock
+	branch = main
