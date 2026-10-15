@@ -13366,3 +13366,7 @@
 	path = requests-negotiate-sspi-feedstock
 	url = ../requests-negotiate-sspi-feedstock
 	branch = main
+[submodule "bun-feedstock"]
+	path = bun-feedstock
+	url = ../bun-feedstock
+	branch = main
