@@ -13370,3 +13370,11 @@
 	path = bun-feedstock
 	url = ../bun-feedstock
 	branch = main
+[submodule "openai-whisper-feedstock"]
+	path = openai-whisper-feedstock
+	url = ../openai-whisper-feedstock
+	branch = main
+[submodule "spml-feedstock"]
+	path = spml-feedstock
+	url = ../spml-feedstock
+	branch = main
