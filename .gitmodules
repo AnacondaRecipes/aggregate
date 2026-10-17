@@ -13378,3 +13378,7 @@
 	path = spml-feedstock
 	url = ../spml-feedstock
 	branch = main
+[submodule "wslink-feedstock"]
+	path = wslink-feedstock
+	url = ../wslink-feedstock
+	branch = main
