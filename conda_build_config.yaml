@@ -791,12 +791,12 @@ libzopfli:
   - '1.0'
 lmdb:
   - '1'
-ls_hpack:
-  - 2.3.5
 lol_html:
   - 3.0.1
 lp_solve:
   - '5.5'
+ls_hpack:
+  - 2.3.5
 lz4_c:
   - '1.9'
 lzo:
@@ -1018,7 +1018,7 @@ vulkan_loader:
 wayland:
   - '1'
 whisper_cpp:
-  - 1.9.4
+  - 1.9.5
 x264:
   - 1!157.20191217
 xcb_util:
