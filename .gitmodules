@@ -13382,3 +13382,11 @@
 	path = wslink-feedstock
 	url = ../wslink-feedstock
 	branch = main
+[submodule "kilo-feedstock"]
+	path = kilo-feedstock
+	url = ../kilo-feedstock
+	branch = main
+[submodule "pyglet-feedstock"]
+	path = pyglet-feedstock
+	url = ../pyglet-feedstock
+	branch = main
