@@ -1010,9 +1010,9 @@ util_linux:
 vcomp14:
   - 14.44.35208
 vtk_base:
-  - 9.6.2
+  - 9.7.1
 vtk_io_ffmpeg:
-  - 9.6.2
+  - 9.7.1
 vulkan_loader:
   - '1.4'
 wayland:
