@@ -13390,3 +13390,11 @@
 	path = pyglet-feedstock
 	url = ../pyglet-feedstock
 	branch = main
+[submodule "pandapower-feedstock"]
+	path = pandapower-feedstock
+	url = ../pandapower-feedstock
+	branch = main
+[submodule "torch-geometric-feedstock"]
+	path = torch-geometric-feedstock
+	url = ../torch-geometric-feedstock
+	branch = main
