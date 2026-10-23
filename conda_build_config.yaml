@@ -631,6 +631,8 @@ libllvm21:
   - '21.1'
 libllvm22:
   - '22.1'
+libllvm23:
+  - '23.1'
 libllvm_c17:
   - '17.0'
 libllvm_c19:
@@ -641,6 +643,8 @@ libllvm_c21:
   - '21.1'
 libllvm_c22:
   - '22.1'
+libllvm_c23:
+  - '23.1'
 libltdl:
   - '2.6'
 libmagic:
