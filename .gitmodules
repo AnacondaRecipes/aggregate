@@ -13398,3 +13398,7 @@
 	path = torch-geometric-feedstock
 	url = ../torch-geometric-feedstock
 	branch = main
+[submodule "bracex-feedstock"]
+	path = bracex-feedstock
+	url = ../bracex-feedstock
+	branch = main
