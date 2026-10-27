@@ -564,7 +564,7 @@ libffi:
 libflac:
   - '1.5'
 libflang_rt:
-  - 22.1.2
+  - 23.1.4
 libgcrypt:
   - '1'
 libgd:
