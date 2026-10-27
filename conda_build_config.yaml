@@ -864,7 +864,7 @@ openmpi:
 openssl:
   - '3'
 orc:
-  - 2.2.0
+  - 2.3.1
 p11_kit:
   - '0.26'
 pango:
