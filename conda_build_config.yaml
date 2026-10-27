@@ -665,6 +665,8 @@ libmlir21:
   - '21.1'
 libmlir22:
   - '22.1'
+libmlir23:
+  - '23.1'
 libmpdec:
   - '4'
 libmpdecxx:
