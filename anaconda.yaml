@@ -8,7 +8,7 @@ package_build:
         variants:
           platform: win-arm64
       requirements:
-        dest_channels: [main]
+        # Inherit the graph destination (main, sfe1ed40, or another channel).
         # The publication-history check is not yet implemented;
         # block_on_optional currently behaves like block_none.
         # Future ratcheting behavior is described (out of scope) in SIR-2955:
