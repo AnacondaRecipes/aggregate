@@ -1,0 +1,16 @@
+anaconda_config_version: 1
+
+package_build:
+  schema_version: 1
+  build_config:
+    - matchers:
+        task: build
+        variants:
+          platform: win-arm64
+      requirements:
+        # Inherit the graph destination (main, sfe1ed40, or another channel).
+        # The publication-history check is not yet implemented;
+        # block_on_optional currently behaves like block_none.
+        # Future ratcheting behavior is described (out of scope) in SIR-2955:
+        # https://anaconda.atlassian.net/browse/SIR-2955
+        failure_mode: block_on_optional
