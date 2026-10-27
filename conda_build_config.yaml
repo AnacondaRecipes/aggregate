@@ -374,7 +374,7 @@ glog:
 glpk:
   - '4.65'
 glslang:
-  - '15'
+  - '16'
 gmp:
   - '6'
 gnupg:
