@@ -218,7 +218,7 @@ armadillo:
 arpack:
   - '3.9'
 arrow_cpp:
-  - 24.0.0
+  - 26.0.0
 assimp:
   - 6.0.2
 at_spi2_core:
