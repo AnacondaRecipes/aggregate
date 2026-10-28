@@ -512,7 +512,7 @@ libcap:
 libcapstone:
   - 5.0.9
 libclang13:
-  - 22.1.2
+  - 23.1.4
 libclang_cpp10:
   - '10.0'
 libclang_cpp12:
@@ -529,6 +529,8 @@ libclang_cpp21_1:
   - '21.1'
 libclang_cpp22_1:
   - '22.1'
+libclang_cpp23_1:
+  - '23.1'
 libcrc32c:
   - '1.1'
 libcryptominisat:
