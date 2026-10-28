@@ -928,7 +928,7 @@ qtdeclarative:
 qtimageformats:
   - '6.11'
 qtshadertools:
-  - '6.11'
+  - 6.12.0
 qtsvg:
   - '6.11'
 qttools:
