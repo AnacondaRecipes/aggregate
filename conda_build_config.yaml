@@ -752,7 +752,7 @@ libunwind:
 libutf8proc:
   - '2.11'
 libuuid:
-  - '1'
+  - '2'
 libuv:
   - '1'
 libva:
