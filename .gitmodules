@@ -11151,10 +11151,6 @@
 	path = ms-gsl-feedstock
 	url = ../ms-gsl-feedstock
 	branch = main
-[submodule "python-chromedriver-binary-feedstock"]
-	path = python-chromedriver-binary-feedstock
-	url = ../python-chromedriver-binary-feedstock
-	branch = master
 [submodule "setuptools-scm-git-archive-feedstock"]
 	path = setuptools-scm-git-archive-feedstock
 	url = ../setuptools-scm-git-archive-feedstock
