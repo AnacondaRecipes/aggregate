@@ -13422,3 +13422,15 @@
 	path = xbuild-feedstock
 	url = ../xbuild-feedstock
 	branch = main
+[submodule "azure-search-documents-feedstock"]
+	path = azure-search-documents-feedstock
+	url = ../azure-search-documents-feedstock
+	branch = main
+[submodule "opentelemetry-exporter-http-transport-feedstock"]
+	path = opentelemetry-exporter-http-transport-feedstock
+	url = ../opentelemetry-exporter-http-transport-feedstock
+	branch = main
+[submodule "opentelemetry-exporter-otlp-common-feedstock"]
+	path = opentelemetry-exporter-otlp-common-feedstock
+	url = ../opentelemetry-exporter-otlp-common-feedstock
+	branch = main
