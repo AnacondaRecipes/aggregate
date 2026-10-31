@@ -744,7 +744,7 @@ libtirpc:
 libtmglib:
   - '3'
 libtorch:
-  - '2.14'
+  - '2.15'
 libunistring:
   - '1'
 libunwind:
@@ -908,7 +908,7 @@ pyqtwebengine:
 python_igraph:
   - '1.0'
 pytorch:
-  - '2.14'
+  - '2.15'
 qhull:
   - '2020.2'
 qpdf:
