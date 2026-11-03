@@ -13434,3 +13434,19 @@
 	path = opentelemetry-exporter-otlp-common-feedstock
 	url = ../opentelemetry-exporter-otlp-common-feedstock
 	branch = main
+[submodule "azure-ai-contentsafety-feedstock"]
+	path = azure-ai-contentsafety-feedstock
+	url = ../azure-ai-contentsafety-feedstock
+	branch = main
+[submodule "azure-ai-contentunderstanding-feedstock"]
+	path = azure-ai-contentunderstanding-feedstock
+	url = ../azure-ai-contentunderstanding-feedstock
+	branch = main
+[submodule "fenics-basix-feedstock"]
+	path = fenics-basix-feedstock
+	url = ../fenics-basix-feedstock
+	branch = main
+[submodule "fenics-ufl-feedstock"]
+	path = fenics-ufl-feedstock
+	url = ../fenics-ufl-feedstock
+	branch = main
