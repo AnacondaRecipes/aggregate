@@ -1326,10 +1326,6 @@
 	path = iminuit-feedstock
 	url = ../iminuit-feedstock
 	branch = master
-[submodule "cyrus-sasl-feedstock"]
-	path = cyrus-sasl-feedstock
-	url = ../cyrus-sasl-feedstock
-	branch = master
 [submodule "libntlm-feedstock"]
 	path = libntlm-feedstock
 	url = ../libntlm-feedstock
@@ -13449,4 +13445,8 @@
 [submodule "fenics-ufl-feedstock"]
 	path = fenics-ufl-feedstock
 	url = ../fenics-ufl-feedstock
+	branch = main
+[submodule "fenics-ffcx-feedstock"]
+	path = fenics-ffcx-feedstock
+	url = ../fenics-ffcx-feedstock
 	branch = main
