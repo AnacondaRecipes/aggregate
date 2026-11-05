@@ -11737,10 +11737,6 @@
 	path = llguidance-feedstock
 	url = ../llguidance-feedstock
 	branch = main
-[submodule "pyautogen-feedstock"]
-	path = pyautogen-feedstock
-	url = ../pyautogen-feedstock
-	branch = main
 [submodule "pylance-feedstock"]
 	path = pylance-feedstock
 	url = ../pylance-feedstock
