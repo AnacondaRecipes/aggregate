@@ -311,7 +311,7 @@ eccodes:
 eigen:
   - 3.3.7
 elfutils:
-  - '0.194'
+  - '0.197'
 epoxy:
   - '1.5'
 expat:
