@@ -316,6 +316,8 @@ epoxy:
   - '1.5'
 expat:
   - '2'
+fenics_libbasix:
+  - 0.11.0
 ffmpeg:
   - '8'
 fftw:
