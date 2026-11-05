@@ -845,7 +845,7 @@ openblas_devel:
 opencv:
   - '4.14'
 openh264:
-  - '2.6'
+  - '2.7'
 openjpeg:
   - '2.5'
 openldap:
