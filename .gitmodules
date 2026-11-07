@@ -13446,3 +13446,43 @@
 	path = fenics-ffcx-feedstock
 	url = ../fenics-ffcx-feedstock
 	branch = main
+[submodule "asmjit-feedstock"]
+	path = asmjit-feedstock
+	url = ../asmjit-feedstock
+	branch = main
+[submodule "doclang-feedstock"]
+	path = doclang-feedstock
+	url = ../doclang-feedstock
+	branch = main
+[submodule "docling-ibm-models-feedstock"]
+	path = docling-ibm-models-feedstock
+	url = ../docling-ibm-models-feedstock
+	branch = main
+[submodule "frostwork-feedstock"]
+	path = frostwork-feedstock
+	url = ../frostwork-feedstock
+	branch = main
+[submodule "latex2mathml-feedstock"]
+	path = latex2mathml-feedstock
+	url = ../latex2mathml-feedstock
+	branch = main
+[submodule "mail-parser-feedstock"]
+	path = mail-parser-feedstock
+	url = ../mail-parser-feedstock
+	branch = main
+[submodule "opentelemetry-configuration-feedstock"]
+	path = opentelemetry-configuration-feedstock
+	url = ../opentelemetry-configuration-feedstock
+	branch = main
+[submodule "opentelemetry-opamp-client-feedstock"]
+	path = opentelemetry-opamp-client-feedstock
+	url = ../opentelemetry-opamp-client-feedstock
+	branch = main
+[submodule "pylatexenc-feedstock"]
+	path = pylatexenc-feedstock
+	url = ../pylatexenc-feedstock
+	branch = main
+[submodule "rank-bm25-feedstock"]
+	path = rank-bm25-feedstock
+	url = ../rank-bm25-feedstock
+	branch = main
