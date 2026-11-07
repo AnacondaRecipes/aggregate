@@ -212,6 +212,8 @@ arpack:
   - '3.9'
 arrow_cpp:
   - 26.0.0
+asmjit:
+  - 0.0.0.2026.3.26
 assimp:
   - 6.0.2
 at_spi2_core:
