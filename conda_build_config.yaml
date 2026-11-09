@@ -345,7 +345,7 @@ gdbm:
 gdk_pixbuf:
   - '2'
 geos:
-  - 3.10.6
+  - 3.14.1
 geotiff:
   - '1.7'
 getopt_win32:
