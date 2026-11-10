@@ -10,12 +10,12 @@ blas_impl:
   - openblas
 c_compiler:
   - gcc                        # [linux]
-  - gcc                        # [linux]
+  - gcc                        # [linux and ANACONDA_ROCKET_ENABLE_MANYLINUX]
   - clang                      # [osx]
   - vs2022                     # [win]
 c_compiler_version:            # [linux or osx]
   - 14.3.0                     # [linux]
-  - 15.2.1=manylinux_*         # [linux]
+  - 15.2.1=manylinux_*         # [linux and ANACONDA_ROCKET_ENABLE_MANYLINUX]
   - 20                         # [osx]
 c_stdlib:
   - sysroot                    # [linux]
@@ -28,12 +28,12 @@ c_stdlib_version:
   - 2022.14                    # [win]
 cxx_compiler:
   - gxx                        # [linux]
-  - gxx                        # [linux]
+  - gxx                        # [linux and ANACONDA_ROCKET_ENABLE_MANYLINUX]
   - clangxx                    # [osx]
   - vs2022                     # [win]
 cxx_compiler_version:          # [linux or osx]
   - 14.3.0                     # [linux]
-  - 15.2.1=manylinux_*         # [linux]
+  - 15.2.1=manylinux_*         # [linux and ANACONDA_ROCKET_ENABLE_MANYLINUX]
   - 20                         # [osx]
 cuda_compiler:                 # [linux or win]
   - cuda-nvcc                  # [linux or win]
@@ -44,15 +44,15 @@ cuda_compiler_version:
   - 13.4                       # [win and arm64]
 fortran_compiler:
   - gfortran                   # [linux or osx]
-  - gfortran                   # [linux]
+  - gfortran                   # [linux and ANACONDA_ROCKET_ENABLE_MANYLINUX]
   - flang                      # [win]
 fortran_compiler_version:
   - 20                         # [win]
   - 14.3.0                     # [osx or linux]
-  - 15.2.1=manylinux_*         # [linux]
-compiler_variant:              # [linux]
-  - main                       # [linux]
-  - manylinux                  # [linux]
+  - 15.2.1=manylinux_*         # [linux and ANACONDA_ROCKET_ENABLE_MANYLINUX]
+compiler_variant:              # [linux and ANACONDA_ROCKET_ENABLE_MANYLINUX]
+  - main                       # [linux and ANACONDA_ROCKET_ENABLE_MANYLINUX]
+  - manylinux                  # [linux and ANACONDA_ROCKET_ENABLE_MANYLINUX]
 m2w64_c_compiler:              # [win and x86_64]
   - m2w64-toolchain            # [win and x86_64]
 m2w64_cxx_compiler:            # [win and x86_64]
@@ -166,14 +166,14 @@ zip_keys:
     - numpy
     - is_freethreading
     - is_python_min
-  -                                    # [linux]
-    - compiler_variant                 # [linux]
-    - c_compiler                       # [linux]
-    - c_compiler_version               # [linux]
-    - cxx_compiler                     # [linux]
-    - cxx_compiler_version             # [linux]
-    - fortran_compiler                 # [linux]
-    - fortran_compiler_version         # [linux]
+  -                                    # [linux and ANACONDA_ROCKET_ENABLE_MANYLINUX]
+    - compiler_variant                 # [linux and ANACONDA_ROCKET_ENABLE_MANYLINUX]
+    - c_compiler                       # [linux and ANACONDA_ROCKET_ENABLE_MANYLINUX]
+    - c_compiler_version               # [linux and ANACONDA_ROCKET_ENABLE_MANYLINUX]
+    - cxx_compiler                     # [linux and ANACONDA_ROCKET_ENABLE_MANYLINUX]
+    - cxx_compiler_version             # [linux and ANACONDA_ROCKET_ENABLE_MANYLINUX]
+    - fortran_compiler                 # [linux and ANACONDA_ROCKET_ENABLE_MANYLINUX]
+    - fortran_compiler_version         # [linux and ANACONDA_ROCKET_ENABLE_MANYLINUX]
 python_implementation:
   - cpython
 python_impl:
@@ -796,8 +796,9 @@ libxmlsec1:
 libxslt:
   - '1'
 libzlib:
+  - '1'       # [not ANACONDA_ROCKET_ENABLE_MANYLINUX]
   # We need this version precisely for manylinux
-  - '1.2.11'
+  - '1.2.11'  # [linux and ANACONDA_ROCKET_ENABLE_MANYLINUX]
 libzlib_wapi:
   - '1'
 libzopfli:
