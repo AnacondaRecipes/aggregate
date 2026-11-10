@@ -13486,3 +13486,51 @@
 	path = rank-bm25-feedstock
 	url = ../rank-bm25-feedstock
 	branch = main
+[submodule "blend2d-feedstock"]
+	path = blend2d-feedstock
+	url = ../blend2d-feedstock
+	branch = main
+[submodule "cxxopts-feedstock"]
+	path = cxxopts-feedstock
+	url = ../cxxopts-feedstock
+	branch = main
+[submodule "docling-core-feedstock"]
+	path = docling-core-feedstock
+	url = ../docling-core-feedstock
+	branch = main
+[submodule "gperftools-feedstock"]
+	path = gperftools-feedstock
+	url = ../gperftools-feedstock
+	branch = master
+[submodule "imageio-ffmpeg-feedstock"]
+	path = imageio-ffmpeg-feedstock
+	url = ../imageio-ffmpeg-feedstock
+	branch = main
+[submodule "scooby-feedstock"]
+	path = scooby-feedstock
+	url = ../scooby-feedstock
+	branch = main
+[submodule "trame-common-feedstock"]
+	path = trame-common-feedstock
+	url = ../trame-common-feedstock
+	branch = main
+[submodule "tree-sitter-c-feedstock"]
+	path = tree-sitter-c-feedstock
+	url = ../tree-sitter-c-feedstock
+	branch = main
+[submodule "tree-sitter-javascript-feedstock"]
+	path = tree-sitter-javascript-feedstock
+	url = ../tree-sitter-javascript-feedstock
+	branch = main
+[submodule "tree-sitter-python-feedstock"]
+	path = tree-sitter-python-feedstock
+	url = ../tree-sitter-python-feedstock
+	branch = main
+[submodule "tree-sitter-typescript-feedstock"]
+	path = tree-sitter-typescript-feedstock
+	url = ../tree-sitter-typescript-feedstock
+	branch = main
+[submodule "tree_sitter-feedstock"]
+	path = tree_sitter-feedstock
+	url = ../tree_sitter-feedstock
+	branch = main
