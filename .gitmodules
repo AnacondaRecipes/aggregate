@@ -13534,3 +13534,47 @@
 	path = tree_sitter-feedstock
 	url = ../tree_sitter-feedstock
 	branch = main
+[submodule "docling-parse-feedstock"]
+	path = docling-parse-feedstock
+	url = ../docling-parse-feedstock
+	branch = main
+[submodule "isoduration-feedstock"]
+	path = isoduration-feedstock
+	url = ../isoduration-feedstock
+	branch = main
+[submodule "langchain-azure-ai-feedstock"]
+	path = langchain-azure-ai-feedstock
+	url = ../langchain-azure-ai-feedstock
+	branch = main
+[submodule "loguru-cpp-feedstock"]
+	path = loguru-cpp-feedstock
+	url = ../loguru-cpp-feedstock
+	branch = main
+[submodule "nab-index-feedstock"]
+	path = nab-index-feedstock
+	url = ../nab-index-feedstock
+	branch = main
+[submodule "nab-resolver-feedstock"]
+	path = nab-resolver-feedstock
+	url = ../nab-resolver-feedstock
+	branch = main
+[submodule "pyvista-feedstock"]
+	path = pyvista-feedstock
+	url = ../pyvista-feedstock
+	branch = main
+[submodule "pyvista-validation-feedstock"]
+	path = pyvista-validation-feedstock
+	url = ../pyvista-validation-feedstock
+	branch = main
+[submodule "trame-client-feedstock"]
+	path = trame-client-feedstock
+	url = ../trame-client-feedstock
+	branch = main
+[submodule "trame-feedstock"]
+	path = trame-feedstock
+	url = ../trame-feedstock
+	branch = main
+[submodule "trame-server-feedstock"]
+	path = trame-server-feedstock
+	url = ../trame-server-feedstock
+	branch = main
