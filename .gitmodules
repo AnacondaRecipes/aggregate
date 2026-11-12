@@ -13578,3 +13578,19 @@
 	path = trame-server-feedstock
 	url = ../trame-server-feedstock
 	branch = main
+[submodule "pyvistaqt-feedstock"]
+	path = pyvistaqt-feedstock
+	url = ../pyvistaqt-feedstock
+	branch = main
+[submodule "trame-vtk-feedstock"]
+	path = trame-vtk-feedstock
+	url = ../trame-vtk-feedstock
+	branch = main
+[submodule "trame-vuetify-feedstock"]
+	path = trame-vuetify-feedstock
+	url = ../trame-vuetify-feedstock
+	branch = main
+[submodule "webcolors-feedstock"]
+	path = webcolors-feedstock
+	url = ../webcolors-feedstock
+	branch = main
