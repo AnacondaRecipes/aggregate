@@ -260,6 +260,8 @@ azure_storage_files_datalake_cpp:
   - 12.16.0
 backtrace:
   - '20241216'
+blend2d:
+  - '0.21'
 blosc:
   - '1'
 brotli:
