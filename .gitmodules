@@ -13594,3 +13594,23 @@
 	path = webcolors-feedstock
 	url = ../webcolors-feedstock
 	branch = main
+[submodule "docling-feedstock"]
+	path = docling-feedstock
+	url = ../docling-feedstock
+	branch = main
+[submodule "nab-python-feedstock"]
+	path = nab-python-feedstock
+	url = ../nab-python-feedstock
+	branch = main
+[submodule "pipdeptree-feedstock"]
+	path = pipdeptree-feedstock
+	url = ../pipdeptree-feedstock
+	branch = main
+[submodule "prometheus-cpp-feedstock"]
+	path = prometheus-cpp-feedstock
+	url = ../prometheus-cpp-feedstock
+	branch = main
+[submodule "proto-opentelemetry-proto-feedstock"]
+	path = proto-opentelemetry-proto-feedstock
+	url = ../proto-opentelemetry-proto-feedstock
+	branch = main
