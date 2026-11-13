@@ -884,6 +884,8 @@ popt:
   - '1'
 proj:
   - 9.9.0
+prometheus_cpp:
+  - '1.3'
 pugixml:
   - '1.11'
 pulseaudio_client:
