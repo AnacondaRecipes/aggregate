@@ -13614,3 +13614,11 @@
 	path = proto-opentelemetry-proto-feedstock
 	url = ../proto-opentelemetry-proto-feedstock
 	branch = main
+[submodule "mapproxy-feedstock"]
+	path = mapproxy-feedstock
+	url = ../mapproxy-feedstock
+	branch = main
+[submodule "pyvista-zstd-feedstock"]
+	path = pyvista-zstd-feedstock
+	url = ../pyvista-zstd-feedstock
+	branch = main
