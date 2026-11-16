@@ -550,9 +550,9 @@ libevent:
 libexpat:
   - '2'
 libfaiss:
-  - 1.15.0
+  - 1.15.1
 libfaiss_avx2:
-  - 1.15.0
+  - 1.15.1
 libffi:
   - '3.4'
 libflac:
