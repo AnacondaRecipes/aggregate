@@ -5213,10 +5213,6 @@
 	path = lark-feedstock
 	url = ../lark-feedstock
 	branch = main
-[submodule "js2py-feedstock"]
-	path = js2py-feedstock
-	url = ../js2py-feedstock
-	branch = main
 [submodule "pyjsparser-feedstock"]
 	path = pyjsparser-feedstock
 	url = ../pyjsparser-feedstock
@@ -5260,10 +5256,6 @@
 [submodule "vyper-config-feedstock"]
 	path = vyper-config-feedstock
 	url = ../vyper-config-feedstock
-	branch = main
-[submodule "mkl-dnn-feedstock"]
-	path = mkl-dnn-feedstock
-	url = ../mkl-dnn-feedstock
 	branch = main
 [submodule "pynomaly-feedstock"]
 	path = pynomaly-feedstock
@@ -5713,10 +5705,6 @@
 [submodule "calver-feedstock"]
 	path = calver-feedstock
 	url = ../calver-feedstock
-	branch = main
-[submodule "ydata-profiling-feedstock"]
-	path = ydata-profiling-feedstock
-	url = ../ydata-profiling-feedstock
 	branch = main
 [submodule "xattr-feedstock"]
 	path = xattr-feedstock
@@ -13621,4 +13609,16 @@
 [submodule "pyvista-zstd-feedstock"]
 	path = pyvista-zstd-feedstock
 	url = ../pyvista-zstd-feedstock
+	branch = main
+[submodule "deepagents-feedstock"]
+	path = deepagents-feedstock
+	url = ../deepagents-feedstock
+	branch = main
+[submodule "nvidia-cutlass-dsl-feedstock"]
+	path = nvidia-cutlass-dsl-feedstock
+	url = ../nvidia-cutlass-dsl-feedstock
+	branch = main
+[submodule "zipremove-feedstock"]
+	path = zipremove-feedstock
+	url = ../zipremove-feedstock
 	branch = main
