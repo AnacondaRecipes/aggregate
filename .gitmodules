@@ -13622,3 +13622,11 @@
 	path = zipremove-feedstock
 	url = ../zipremove-feedstock
 	branch = main
+[submodule "fg-data-profiling-feedstock"]
+	path = fg-data-profiling-feedstock
+	url = ../fg-data-profiling-feedstock
+	branch = main
+[submodule "python-sbom-feedstock"]
+	path = python-sbom-feedstock
+	url = ../python-sbom-feedstock
+	branch = main
