@@ -13630,3 +13630,7 @@
 	path = python-sbom-feedstock
 	url = ../python-sbom-feedstock
 	branch = main
+[submodule "_gcc_mutex-feedstock"]
+	path = _gcc_mutex-feedstock
+	url = ../_gcc_mutex-feedstock
+	branch = main
