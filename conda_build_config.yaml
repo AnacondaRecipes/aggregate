@@ -318,7 +318,7 @@ expat:
 fenics_libbasix:
   - 0.11.0
 ffmpeg:
-  - '8'
+  - '9'
 fftw:
   - '3.3'
 flatbuffers:
