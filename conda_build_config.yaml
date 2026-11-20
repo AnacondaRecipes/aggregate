@@ -36,8 +36,7 @@ cuda_compiler:                 # [linux or win]
 cuda_compiler_version:
   - None                       # [not (linux or win)]
   - 12.9                       # [linux or (win and x86_64)]
-  - 13.0                       # [linux or (win and x86_64)]
-  - 13.4                       # [win and arm64]
+  - 13.4                       # [linux or win]
 fortran_compiler:
   - gfortran                   # [linux or osx]
   - flang                      # [win]
