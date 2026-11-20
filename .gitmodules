@@ -13634,3 +13634,7 @@
 	path = _gcc_mutex-feedstock
 	url = ../_gcc_mutex-feedstock
 	branch = main
+[submodule "cpp-opentelemetry-sdk-feedstock"]
+	path = cpp-opentelemetry-sdk-feedstock
+	url = ../cpp-opentelemetry-sdk-feedstock
+	branch = main
